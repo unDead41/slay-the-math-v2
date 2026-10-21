@@ -74,7 +74,8 @@ function scheduleMenu(){
 }
 async function selectMenuScene(index,manual=false){
  const scene=V.menuScenes[index],home=$('.illustrated-home');
- if(!scene||!home||index===ui.menuScene){scheduleMenu();return;}
+ if(!scene||!home){scheduleMenu();return;}
+ if(index===ui.menuScene){++menuGeneration;scheduleMenu();return;}
  clearTimeout(menuTimer);const generation=++menuGeneration;
  // Fixed scene images keep a fading layer's source intact during rapid selection.
  const next=home.querySelector('.menu-backdrop[data-scene-index="'+index+'"]');

@@ -13,6 +13,7 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
  server=require('node:child_process').spawn(process.execPath,[path.join(__dirname,'../server.cjs')],{env:{...process.env,PORT:'4194'},stdio:['ignore','pipe','pipe']});
  await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);server.stderr.once('data',d=>reject(new Error(String(d))));});
  const opts={headless:true,args:['--no-sandbox']};
+ if(process.env.QA_CHROMIUM_MODULE){const chrome=require(process.env.QA_CHROMIUM_MODULE);opts.executablePath=await chrome.executablePath();opts.args=[...chrome.args,...opts.args];}
  if(process.env.QA_DISABLE_GPU)opts.args.push('--disable-gpu');
  browser=await chromium.launch(opts);
  const context=await browser.newContext({viewport:{width:1920,height:1080},reducedMotion:'reduce'});
@@ -95,7 +96,7 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
 
   await page.setViewportSize({width:1920,height:1080});
   await click('help');assert.equal(await page.locator('#dialog').evaluate(e=>e.open),true);await page.keyboard.press('Escape');
-  await click('library');await page.locator('#card-search').fill('no-such-card');assert.equal(await page.locator('.no-results').count(),1);await page.keyboard.press('Escape');
+  await click('library');await page.locator('#card-search').fill('no-such-card');assert.equal(await page.locator('.no-results').count(),1);await click('close');
   report.checks.push('Tutorial and collection search/empty state still use the shared working dialogs.');
 
   await page.clock.install();await page.emulateMedia({reducedMotion:'no-preference'});
@@ -139,6 +140,18 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
   assert.equal(await slow.locator('.illustrated-home').getAttribute('data-art'),'door');
   await slow.close();
   report.checks.push('A late decode cannot overwrite a newer manual scene selection.');
+  let releaseCancel;
+  const cancelGate=new Promise(resolve=>{releaseCancel=resolve;});
+  const cancel=await context.newPage();
+  await cancel.route('**/assets/menu-archive.webp',async route=>{await cancelGate;await route.continue();});
+  await cancel.goto(url,{waitUntil:'domcontentloaded'});
+  await cancel.locator('.menu-backdrop.active').evaluate(e=>e.decode());
+  await cancel.locator('.scene-choice').nth(2).click();await cancel.locator('.scene-choice').first().click();
+  releaseCancel();await cancel.locator('.menu-backdrop[data-scene-index="2"]').evaluate(e=>e.decode());await cancel.waitForTimeout(100);
+  assert.equal(await cancel.locator('.illustrated-home').getAttribute('data-art'),'corridor');
+  await cancel.close();
+  report.checks.push('Choosing the current scene cancels any older pending decode.');
+
 
   const saved=await browser.newContext({viewport:{width:3440,height:1440},reducedMotion:'reduce'});
   await saved.addInitScript(r=>{localStorage.setItem('duel-cube-math.v1',JSON.stringify(r));localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true}));},E.newRun(7,'learn',2));

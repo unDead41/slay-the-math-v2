@@ -1,7 +1,7 @@
 (function(){'use strict';
 const C=window.DCConfig,E=window.DCEngine,M=window.DCMath,V=window.DCVisuals,A=window.DCArtifacts,AU=window.DCArtifactUI,Q=window.DCEducation,R=window.DCRichText,S=window.DCActorAnimation,$=s=>document.querySelector(s),SAVE='duel-cube-math.v1',SETTINGS='duel-cube-settings.v1',QUESTION_HISTORY='duel-cube-question-history.v1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let menuTimer,menuGeneration=0,actorAnimation=null;
+let menuTimer,menuGeneration=0,actorAnimation=null,heroAnimation=null;
 let run=null,settings={sound:true,motion:true,musicMuted:false,musicVolume:.45,sfxVolume:.65},ui={home:true,menuScene:0,modal:null,rewardChoice:null,restChoice:'heal',shopChoice:0,libraryRole:'all',libraryQuery:'',libraryCard:'strike',libraryPage:0,practiceAnswer:'',practiceChecked:false,artifactChoice:null,selected:[],filterCard:null,answer:'',feedback:null},toastTimer,previousFocus,audio;
 try{const raw=localStorage.getItem(SAVE);if(raw){const saved=E.restore(JSON.parse(raw));if(saved)run=saved;else storageWarning('This save cannot be loaded. Start a New Run or import a valid save file.');}const s=JSON.parse(localStorage.getItem(SETTINGS)||'{}');settings.sound=s.sound!==false;settings.motion=s.motion!==false;settings.musicMuted=s.musicMuted===undefined?s.sound===false:!!s.musicMuted;settings.musicVolume=Number.isFinite(s.musicVolume)?Math.max(0,Math.min(1,s.musicVolume)):.45;settings.sfxVolume=Number.isFinite(s.sfxVolume)?Math.max(0,Math.min(1,s.sfxVolume)):.65;}catch(_){storageWarning('Browser storage is not available. You can still play. Use Export to save your progress.');}
 function storageWarning(message){$('#storage-warning').hidden=false;$('#storage-warning').textContent=message;}
@@ -126,11 +126,11 @@ function battleView(){
  const pileButton=(zone,label,symbol,count)=>button('<span class="pile-art">'+icon(symbol)+'<b>'+count+'</b></span><span>'+label+'</span>','pile','pile-btn pile-'+zone,'data-zone="'+zone+'" aria-label="'+label+', '+count+' cards"');
  const fighter=(player)=>{
   const hp=player?run.hp:b.hp,max=player?run.maxHp:b.maxHp,block=player?b.block:b.enemyBlock,name=player?C.MC.name:e.name,title=player?C.MC.title:e.title;
-  const animated=!player&&S.supports(run.stage,b.enemyId),pose=!player&&b.enemyBlock?'defend':'standing';
-  return '<div class="combatant '+(player?'player':'enemy')+'" style="--figure-scale:'+(animated?S.data.figureScale:(V.scale[player?'hero':b.enemyId]||.85))+'"'+(!player?' data-enemy="'+b.enemyId+'" data-floating="'+V.floatingEnemies.includes(b.enemyId)+'"':'')+'><div class="fighter-figure">'+
+  const actorId=player?'mc_01':b.enemyId,animation=S.spec(run.stage,actorId),animated=!!animation,pose=!player&&b.enemyBlock?'defend':'standing';
+  return '<div class="combatant '+(player?'player':'enemy')+'" style="--figure-scale:'+(animation?.figureScale??(animated?S.data.figureScale:(V.scale[player?'hero':b.enemyId]||.85)))+'"'+(!player?' data-enemy="'+b.enemyId+'" data-floating="'+V.floatingEnemies.includes(b.enemyId)+'"':'')+'><div class="fighter-figure">'+
    '<span class="ground-shadow" aria-hidden="true"></span>'+
    (!player?'<div class="intent" aria-label="Enemy intent: '+it.damage+' damage'+(it.block?', '+it.block+' Block':'')+'"><strong>'+icon('sword')+' '+it.damage+' DAMAGE</strong><small>'+esc(it.label)+(it.block?' · '+it.block+' Block':'')+'</small></div>':'')+
-   '<div class="fighter-anchor"><img class="fighter-art '+(player?'hero-combat-art':'enemy-art')+'" width="1600" height="1200" data-pose="'+pose+'" src="assets/'+(player?V.hero(pose):V.enemy(b.enemyId,pose))+'" alt="'+esc(player?C.MC.name+' '+C.MC.title+' stands on the arena floor with her runic sword and shield':e.name)+'">'+(animated?'<canvas class="actor-animation" width="1600" height="1200" data-actor="'+b.enemyId+'" aria-hidden="true"></canvas>':'')+'</div></div>'+
+   '<div class="fighter-anchor"><img class="fighter-art '+(player?'hero-combat-art':'enemy-art')+'" width="1600" height="1200" data-pose="'+pose+'" src="assets/'+(player?V.hero(pose):V.enemy(b.enemyId,pose))+'" alt="'+esc(player?C.MC.name+' '+C.MC.title+' stands on the arena floor with her runic sword and shield':e.name)+'">'+(animated?'<canvas class="actor-animation" width="1600" height="1200" data-actor="'+actorId+'" aria-hidden="true"></canvas>':'')+'</div></div>'+
    '<div class="fighter-panel"><div class="fighter-label"><strong>'+esc(name)+'</strong><span class="fighter-stats">'+icon('heart')+' '+hp+' / '+max+'</span></div>'+bar(hp,max)+'<div class="fighter-status"><span>'+esc(title)+'</span>'+(block?'<span class="block-tag">'+icon('shield')+' '+block+' Block</span>':'')+'</div>'+(player&&b.artifacts&&(b.strength||b.agility)?'<div class="artifact-stats"><span>Strength '+b.strength+'</span><span>Agility '+b.agility+'</span></div>':'')+'</div></div>';
  };
  return '<section class="combat-layout" aria-label="Combat"><div class="battle-top"><div class="battle-location">'+button('‹ Menu','home','btn small subtle')+'<div><span>'+esc(C.stages[run.stage].name)+'</span> / '+(e.boss?'BOSS':b.elite?'ELITE':'BATTLE')+'<small>Room '+(run.depth+1)+' · '+(run.gold||0)+' Gold</small></div></div><div class="battle-round"><span>TURN '+b.turn+'</span><strong>YOUR TURN</strong></div>'+button(icon('cards')+' '+run.deck.length+' cards','deck','btn small battle-deck')+'</div>'+
@@ -150,6 +150,7 @@ function summaryView(){const win=run.scene==='victory',stage=run.scene==='stagec
 function resolveAssets(html){return !window.DC_ASSETS?html:html.replace(/src="assets\/([^"<>]+)"/g,(_,name)=>'src="'+(window.DC_ASSETS[name]||'assets/'+name)+'"');}
 function render(){
  actorAnimation?.destroy();actorAnimation=null;
+ heroAnimation?.destroy();heroAnimation=null;
  R.hide();
  clearTimeout(menuTimer);menuGeneration++;
  clearBattleFeedback();
@@ -161,9 +162,13 @@ function render(){
   if(oldKey===key){viewport.scrollTop=oldTop;viewport.scrollLeft=oldLeft;}
   else{const atlas=$('.dungeon-atlas'),next=$('.dungeon-room.available');
    viewport.scrollTop=Math.max(0,(next?parseFloat(next.style.top)/100*atlas.clientHeight:atlas.clientHeight)-viewport.clientHeight*.70);viewport.scrollLeft=Math.max(0,(next?parseFloat(next.style.left)/100*atlas.clientWidth:0)-viewport.clientWidth/2);}}
- if(!ui.home&&run?.scene==='battle')actorAnimation=S.mount($('.enemy .actor-animation'),run.stage,run.battle.enemyId,{motion:motionAllowed(),paused:document.hidden||$('#dialog').open});
+ if(!ui.home&&run?.scene==='battle'){
+  const options={motion:motionAllowed(),paused:document.hidden||$('#dialog').open};
+  actorAnimation=S.mount($('.enemy .actor-animation'),run.stage,run.battle.enemyId,options);
+  heroAnimation=S.mount($('.player .actor-animation'),run.stage,'mc_01',options);
+ }
  save();syncMusic();scheduleMenu();}
-function syncActorMotion(){actorAnimation?.configure({motion:motionAllowed(),paused:document.hidden||$('#dialog').open});}
+function syncActorMotion(){const options={motion:motionAllowed(),paused:document.hidden||$('#dialog').open};actorAnimation?.configure(options);heroAnimation?.configure(options);}
 function modal(title,body,wide=false){R.hide();$('#dialog').dataset.kind=ui.modal||'';music.duck(ui.modal==='forecast');const d=$('#dialog');if(!d.open)previousFocus=document.activeElement;$('#dialog-body').innerHTML=resolveAssets('<div class="dialog-head"><div><p class="eyebrow">DUNGEON OF CHANCE</p><h2 id="dialog-title">'+title+'</h2></div>'+button(icon('close'),'close','icon-btn','aria-label="Close Dialog"')+'</div>'+body);d.classList.toggle('wide',wide);if(!d.open)d.showModal();syncActorMotion();requestAnimationFrame(()=>{const el=d.querySelector('[autofocus]')||d.querySelector('input:not([type=file])')||d.querySelector('button');el?.focus();});}
 function close(){
  R.hide();
@@ -208,6 +213,7 @@ function battleFeedback(pose,value,enemyPose){
  const source=name=>window.DC_ASSETS?.[name]||'assets/'+name;
  function set(img,name,state){if(img?.isConnected){img.src=source(name);img.dataset.pose=state;}}
  set(player,V.hero(pose),pose);
+ heroAnimation?.play(pose);
  if(enemyPose){set(enemy,V.enemy(enemyId,enemyPose),enemyPose);actorAnimation?.play(enemyPose);}
  if(theatre){theatre.dataset.effect=pose;
   const badge=document.createElement('span');badge.className='combat-number '+pose;
@@ -234,7 +240,7 @@ function unlockAudio(){if(!settings.musicMuted||settings.sound)music.unlock();}
 document.addEventListener('pointerdown',unlockAudio,{capture:true,passive:true});
 document.addEventListener('keydown',unlockAudio,{capture:true});
 document.addEventListener('visibilitychange',()=>{music.setHidden(document.hidden);syncActorMotion();scheduleMenu();});
-window.addEventListener('pagehide',()=>{music.setHidden(true);actorAnimation?.configure({paused:true});});
+window.addEventListener('pagehide',()=>{music.setHidden(true);actorAnimation?.configure({paused:true});heroAnimation?.configure({paused:true});});
 window.addEventListener('pageshow',()=>{music.setHidden(document.hidden);syncActorMotion();});
 document.addEventListener('input',event=>{
  const el=event.target;if(el.id==='card-search'){if(event.isComposing)return;const start=el.selectionStart;ui.libraryQuery=el.value;ui.libraryPage=0;showLibrary();const input=$('#card-search');input.focus();try{input.setSelectionRange(start,start);}catch(_){}return;}if(!['music-volume','sfx-volume'].includes(el.id))return;

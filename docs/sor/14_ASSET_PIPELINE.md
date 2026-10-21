@@ -134,3 +134,7 @@ Four user mockups are edited with built-in imagegen precise-object-edit to remov
 `docs/animations/stage1-v3/import-audit.json` records ZIP/source/runtime hashes, frame alpha bounds and their fixed-matrix canvas bounds. Every atlas has identical visible pixels over black/white and identical alpha after encoding. Every active crop matches its source frame alpha. Every visible frame fits the registered canvas; no pose is individually recentered. Original source manifest/SOR/README/counts are retained next to the audit. Usage source: artwork supplied by Ijamm for this game; no separate license was supplied.
 
 The runtime loader decodes on demand with a bounded three-texture cache. The optional portable build embeds these same derivatives, and original static exports remain active fallbacks. MODEL(1).zip was reported unavailable; its contents have not been read or imported.
+
+## Supplied Alyssa atlas pack — 2.8.0
+
+The later instruction points to the readable source MODEL.zip. The Alyssa importer losslessly encodes five 3200×2144 sheets, retaining complete 1024px cells, frame order, alpha, variable durations and boot pivots. No trim, mirror, extra poses or new 4K detail is added. All 30 transformed alpha bounds fit the shared canvas. Source archive and static assets remain untouched. Hashes, bounds and black/white pixel comparisons: `docs/animations/alyssa-v2/import-audit.json`. Source documents are retained alongside it. The cache is now bounded to four sheets for independent hero/enemy playback.

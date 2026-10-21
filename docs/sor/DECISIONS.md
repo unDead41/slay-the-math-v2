@@ -222,3 +222,10 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 |---|---|---|
 | DEC-20261021-09 | DISAHKAN | Ijamm supplies NORMAL ELITE ENEMY.zip and MODEL(1).zip and requests Stage 1 non-boss enemy animations, then Alyssa animations. The former is readable; the latter failed workspace delivery. Its contents are not assumed or substituted. |
 | DEC-20261021-10 | DITERUSKAN | Import the 25 native atlases / 128 active frames losslessly, with a shared fixed matrix into the existing floor anchor and one canvas player. Preserve source timing/order, normal/Elite identity, direction and gameplay. Add bounded decode caching, stale-load cancellation, pause/static motion policies and independent outcome reactions. Retain current boss/Stage 2 models and current Alyssa assets until her ZIP is retried. Owners: SOR 07/08/11/14; evidence: docs/STAGE1_ANIMATION_2_7_0.md. |
+
+## Alyssa animations 2.8.0
+
+| ID | Status | Decision and evidence |
+|---|---|---|
+| DEC-20261021-11 | DISAHKAN | Ijamm identifies the existing source MODEL.zip and requests reading it to update Alyssa's motion. Its readable v2 archive contains five right-facing clips / 30 frames, runtime sheets, durations and boot pivots. This resolves the attachment blocker without assuming failed uploads were read. |
+| DEC-20261021-12 | DITERUSKAN | Losslessly import runtime sheets, preserving variable holds, complete cells and boot pivots. Use an independent hero player in both stages, preserve enemy/boss rendering, and keep outcomes/save/RNG independent of motion. Owners: SOR 08/11/14; evidence: docs/ALYSSA_ANIMATION_2_8_0.md and its verification records. |

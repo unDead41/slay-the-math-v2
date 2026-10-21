@@ -4,11 +4,11 @@
  const D=typeof module!=='undefined'?require('./animation-data.js'):root.DCAnimationData;
  const textures=new Map();
  const actionName=pose=>pose==='standing'?'idle':pose==='damage'?'damaged':pose;
- function spec(stage,id){const actor=D.actors[id];return actor&&actor.stage===stage?actor:null;}
+ function spec(stage,id){const actor=id==='mc_01'?D.hero:D.actors[id];return actor&&(actor.stages?actor.stages.includes(stage):actor.stage===stage)?actor:null;}
  function texture(path){
   if(textures.has(path)){const promise=textures.get(path);textures.delete(path);textures.set(path,promise);return promise;}
   const promise=(async()=>{const image=new root.Image();image.src=root.DC_ASSETS?.[path]||'assets/'+path;await image.decode();return image;})();
-  textures.set(path,promise);while(textures.size>3)textures.delete(textures.keys().next().value);
+  textures.set(path,promise);while(textures.size>4)textures.delete(textures.keys().next().value);
   promise.catch(()=>{if(textures.get(path)===promise)textures.delete(path);});return promise;
  }
  function create({canvas,spec:actor,load=texture,requestFrame=fn=>root.requestAnimationFrame(fn),cancelFrame=id=>root.cancelAnimationFrame(id),motion=true,paused=false}){
@@ -19,8 +19,9 @@
   function cancel(){if(raf!==null)cancelFrame(raf);raf=null;lastTime=null;}
   function paint(index){
    if(dead||!image)return;const clip=actor.animations[current],rect=clip.frames[index];
+   const pivot=clip.pivots?.[index]||actor.sourcePivot||D.sourcePivot,scale=actor.drawScale??D.drawScale;
    ctx.clearRect(0,0,D.canvas[0],D.canvas[1]);
-   ctx.drawImage(image,...rect,D.floorPivot[0]-D.sourcePivot[0]*D.drawScale,D.floorPivot[1]-D.sourcePivot[1]*D.drawScale,rect[2]*D.drawScale,rect[3]*D.drawScale);
+   ctx.drawImage(image,...rect,D.floorPivot[0]-pivot[0]*scale,D.floorPivot[1]-pivot[1]*scale,rect[2]*scale,rect[3]*scale);
    frame=index;ready=true;host.dataset.animationReady='true';
    canvas.dataset.action=current;canvas.dataset.frame=String(index);canvas.dataset.texture=clip.image;
   }
@@ -28,7 +29,13 @@
   function tick(time){
    raf=null;if(dead||paused||!motion||!image)return;
    if(lastTime!==null)elapsed+=Math.max(0,time-lastTime);lastTime=time;
-   const clip=actor.animations[current],index=Math.floor(elapsed*clip.fps/1000);
+   const clip=actor.animations[current];let index;
+   if(clip.durationsMs){
+    const total=clip.durationsMs.reduce((sum,ms)=>sum+ms,0);
+    if(!clip.loop&&elapsed>=total){play('idle');return;}
+    let time=clip.loop?elapsed%total:elapsed;index=0;
+    while(index<clip.frames.length-1&&time>=clip.durationsMs[index]){time-=clip.durationsMs[index];index++;}
+   }else index=Math.floor(elapsed*clip.fps/1000);
    if(!clip.loop&&index>=clip.frames.length){play('idle');return;}
    const next=clip.loop?index%clip.frames.length:Math.min(index,clip.frames.length-1);
    if(next!==frame)paint(next);schedule();

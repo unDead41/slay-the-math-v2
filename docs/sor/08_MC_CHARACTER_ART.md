@@ -84,3 +84,7 @@ The exact user reference and scope are recorded in [18](18_DESIGN_REFERENCES.md)
 ## Alyssa animation request — 21 October 2026
 
 Ijamm requests updating Alyssa's animation alongside Stage 1 enemies. MODEL(1).zip was not made available in the workspace; no contents or new hero frames from that file were read/used. Existing Alyssa artwork remains in place while a retry/upload is needed. The presentation reaction to End Turn now uses actual resolved HP loss, including automatic artifact Block, independently of future hero frame assets.
+
+## Supplied Alyssa motion — game 2.8.0
+
+The subsequent direct instruction identifies the already-stored `MODEL.zip`. That readable v2 pack resolves the pending-artwork status above: five clips / 30 frames now play in both stages, facing right without flipping. Preserve source durations and per-frame boot pivots, including horizontal shifts for wide Attack/Skill poses. Runtime cells are 1024px; the original 4K canvases are upscaled exports. Provenance, floor registration, fallback and verification: [Alyssa 2.8.0](../ALYSSA_ANIMATION_2_8_0.md).

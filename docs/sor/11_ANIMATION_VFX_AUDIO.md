@@ -9,6 +9,10 @@ Versi: 2.0.1. Dungeon dan keperluan cue room mengikut arahan terkini; timing/aud
 - **MOT-03:** Input yang boleh menimbulkan transaksi kedua dikunci sehingga state stabil. Butang Batal hanya berfungsi sebelum commit.
 - **MOT-04:** Reduced motion/skip animation tidak mengubah damage, RNG, soalan atau ganjaran.
 
+### Alyssa motion 2.8.0
+
+MODEL.zip owns Alyssa's five clip timings. Use its per-frame durations rather than uniform FPS. Idle loops; actions return to Idle after their final hold. Hero and enemy pause together behind dialogs and on hidden pages. Motion Off and OS Reduced Motion show Idle frame 0. Outcomes remain owned by the resolver. Source mapping, pivots and actual validation: [Alyssa 2.8.0](../ALYSSA_ANIMATION_2_8_0.md).
+
 ## Timing baseline
 
 | Peristiwa | Tempoh sasaran | Maklum balas |

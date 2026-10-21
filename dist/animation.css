@@ -2,3 +2,7 @@
 .combat-layout .fighter-anchor>.actor-animation{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;filter:drop-shadow(0 calc(2 * var(--combat-unit)) calc(4 * var(--combat-unit)) #0008)}
 .combat-layout .fighter-anchor[data-animation-ready='true']>.actor-animation{display:block}
 .combat-layout .fighter-anchor[data-animation-ready='true']>.fighter-art{visibility:hidden;animation:none!important}
+/* The earlier static hero is taller inside its cell than the new atlas art. */
+.combat-layout .player:has(.actor-animation) .fighter-anchor:not([data-animation-ready='true']){--figure-scale:1}
+/* Keep the supplied wide hero cells inside the phone arena. */
+@media(max-width:600px){.combat-layout .player:has(.actor-animation) .fighter-anchor{height:auto;width:min(calc(700 * var(--combat-unit)),90vw)}}

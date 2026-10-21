@@ -1,0 +1,892 @@
+{
+  "version": "2.0",
+  "facing": "right",
+  "flipX": false,
+  "frame_size": [
+    4096,
+    4096
+  ],
+  "native_source_sheet_size": [
+    1536,
+    1024
+  ],
+  "resolution_note": "4K export upscaled from generated source; not native 4K detail",
+  "padding_minimum_px": 512,
+  "anchor": [
+    2048,
+    3072
+  ],
+  "grid": {
+    "columns": 3,
+    "rows": 2,
+    "margin": 128,
+    "spacing": 128,
+    "frameWidth": 4096,
+    "frameHeight": 4096
+  },
+  "runtime_grid": {
+    "columns": 3,
+    "rows": 2,
+    "margin": 32,
+    "spacing": 32,
+    "frameWidth": 1024,
+    "frameHeight": 1024
+  },
+  "animations": {
+    "idle": {
+      "sheet_4k": "spritesheets_4k/alyssa_idle_right_4k.png",
+      "sheet_runtime": "runtime_sheets/alyssa_idle_right_1024.png",
+      "durations_ms": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "loop": true,
+      "frames": [
+        {
+          "index": 0,
+          "file": "frames_4k/idle/alyssa_idle_00_right_4096.png",
+          "source_bbox": [
+            0,
+            15,
+            566,
+            523
+          ],
+          "alpha_bbox": [
+            942,
+            1069,
+            3319,
+            3203
+          ],
+          "padding_ltrb": [
+            942,
+            1069,
+            777,
+            893
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 1,
+          "file": "frames_4k/idle/alyssa_idle_01_right_4096.png",
+          "source_bbox": [
+            501,
+            14,
+            1082,
+            544
+          ],
+          "alpha_bbox": [
+            873,
+            1064,
+            3313,
+            3290
+          ],
+          "padding_ltrb": [
+            873,
+            1064,
+            783,
+            806
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 2,
+          "file": "frames_4k/idle/alyssa_idle_02_right_4096.png",
+          "source_bbox": [
+            996,
+            15,
+            1536,
+            544
+          ],
+          "alpha_bbox": [
+            793,
+            1069,
+            3061,
+            3291
+          ],
+          "padding_ltrb": [
+            793,
+            1069,
+            1035,
+            805
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 3,
+          "file": "frames_4k/idle/alyssa_idle_03_right_4096.png",
+          "source_bbox": [
+            0,
+            517,
+            558,
+            1024
+          ],
+          "alpha_bbox": [
+            924,
+            1077,
+            3268,
+            3206
+          ],
+          "padding_ltrb": [
+            924,
+            1077,
+            828,
+            890
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 4,
+          "file": "frames_4k/idle/alyssa_idle_04_right_4096.png",
+          "source_bbox": [
+            495,
+            513,
+            1062,
+            998
+          ],
+          "alpha_bbox": [
+            839,
+            1060,
+            3220,
+            3097
+          ],
+          "padding_ltrb": [
+            839,
+            1060,
+            876,
+            999
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 5,
+          "file": "frames_4k/idle/alyssa_idle_05_right_4096.png",
+          "source_bbox": [
+            999,
+            515,
+            1536,
+            1024
+          ],
+          "alpha_bbox": [
+            800,
+            1069,
+            3055,
+            3207
+          ],
+          "padding_ltrb": [
+            800,
+            1069,
+            1041,
+            889
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        }
+      ]
+    },
+    "attack": {
+      "sheet_4k": "spritesheets_4k/alyssa_attack_right_4k.png",
+      "sheet_runtime": "runtime_sheets/alyssa_attack_right_1024.png",
+      "durations_ms": [
+        130,
+        150,
+        100,
+        120,
+        150,
+        160
+      ],
+      "loop": false,
+      "frames": [
+        {
+          "index": 0,
+          "file": "frames_4k/attack/alyssa_attack_00_right_4096.png",
+          "source_bbox": [
+            67,
+            80,
+            550,
+            556
+          ],
+          "alpha_bbox": [
+            888,
+            945,
+            3400,
+            3420
+          ],
+          "padding_ltrb": [
+            888,
+            945,
+            696,
+            676
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 1,
+          "file": "frames_4k/attack/alyssa_attack_01_right_4096.png",
+          "source_bbox": [
+            541,
+            9,
+            990,
+            552
+          ],
+          "alpha_bbox": [
+            753,
+            576,
+            3088,
+            3400
+          ],
+          "padding_ltrb": [
+            753,
+            576,
+            1008,
+            696
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 2,
+          "file": "frames_4k/attack/alyssa_attack_02_right_4096.png",
+          "source_bbox": [
+            983,
+            107,
+            1536,
+            558
+          ],
+          "alpha_bbox": [
+            520,
+            1096,
+            3396,
+            3441
+          ],
+          "padding_ltrb": [
+            520,
+            1096,
+            700,
+            655
+          ],
+          "anchor": [
+            2222,
+            3072
+          ]
+        },
+        {
+          "index": 3,
+          "file": "frames_4k/attack/alyssa_attack_03_right_4096.png",
+          "source_bbox": [
+            21,
+            559,
+            594,
+            978
+          ],
+          "alpha_bbox": [
+            520,
+            1262,
+            3500,
+            3441
+          ],
+          "padding_ltrb": [
+            520,
+            1262,
+            596,
+            655
+          ],
+          "anchor": [
+            2167,
+            3072
+          ]
+        },
+        {
+          "index": 4,
+          "file": "frames_4k/attack/alyssa_attack_04_right_4096.png",
+          "source_bbox": [
+            551,
+            553,
+            1069,
+            992
+          ],
+          "alpha_bbox": [
+            882,
+            1106,
+            3576,
+            3389
+          ],
+          "padding_ltrb": [
+            882,
+            1106,
+            520,
+            707
+          ],
+          "anchor": [
+            1970,
+            3072
+          ]
+        },
+        {
+          "index": 5,
+          "file": "frames_4k/attack/alyssa_attack_05_right_4096.png",
+          "source_bbox": [
+            1034,
+            547,
+            1520,
+            1005
+          ],
+          "alpha_bbox": [
+            908,
+            976,
+            3435,
+            3358
+          ],
+          "padding_ltrb": [
+            908,
+            976,
+            661,
+            738
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        }
+      ]
+    },
+    "defend": {
+      "sheet_4k": "spritesheets_4k/alyssa_defend_right_4k.png",
+      "sheet_runtime": "runtime_sheets/alyssa_defend_right_1024.png",
+      "durations_ms": [
+        130,
+        150,
+        180,
+        240,
+        160,
+        160
+      ],
+      "loop": false,
+      "frames": [
+        {
+          "index": 0,
+          "file": "frames_4k/defend/alyssa_defend_00_right_4096.png",
+          "source_bbox": [
+            25,
+            31,
+            542,
+            514
+          ],
+          "alpha_bbox": [
+            1113,
+            1178,
+            3284,
+            3207
+          ],
+          "padding_ltrb": [
+            1113,
+            1178,
+            812,
+            889
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 1,
+          "file": "frames_4k/defend/alyssa_defend_01_right_4096.png",
+          "source_bbox": [
+            511,
+            11,
+            1041,
+            540
+          ],
+          "alpha_bbox": [
+            896,
+            1094,
+            3122,
+            3316
+          ],
+          "padding_ltrb": [
+            896,
+            1094,
+            974,
+            780
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 2,
+          "file": "frames_4k/defend/alyssa_defend_02_right_4096.png",
+          "source_bbox": [
+            1019,
+            15,
+            1522,
+            520
+          ],
+          "alpha_bbox": [
+            861,
+            1106,
+            2974,
+            3227
+          ],
+          "padding_ltrb": [
+            861,
+            1106,
+            1122,
+            869
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 3,
+          "file": "frames_4k/defend/alyssa_defend_03_right_4096.png",
+          "source_bbox": [
+            0,
+            501,
+            524,
+            1024
+          ],
+          "alpha_bbox": [
+            914,
+            1052,
+            3115,
+            3249
+          ],
+          "padding_ltrb": [
+            914,
+            1052,
+            981,
+            847
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 4,
+          "file": "frames_4k/defend/alyssa_defend_04_right_4096.png",
+          "source_bbox": [
+            501,
+            495,
+            1062,
+            1024
+          ],
+          "alpha_bbox": [
+            934,
+            1031,
+            3290,
+            3253
+          ],
+          "padding_ltrb": [
+            934,
+            1031,
+            806,
+            843
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 5,
+          "file": "frames_4k/defend/alyssa_defend_05_right_4096.png",
+          "source_bbox": [
+            1007,
+            497,
+            1526,
+            1024
+          ],
+          "alpha_bbox": [
+            863,
+            1035,
+            3043,
+            3248
+          ],
+          "padding_ltrb": [
+            863,
+            1035,
+            1053,
+            848
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        }
+      ]
+    },
+    "skill": {
+      "sheet_4k": "spritesheets_4k/alyssa_skill_right_4k.png",
+      "sheet_runtime": "runtime_sheets/alyssa_skill_right_1024.png",
+      "durations_ms": [
+        130,
+        180,
+        180,
+        220,
+        180,
+        160
+      ],
+      "loop": false,
+      "frames": [
+        {
+          "index": 0,
+          "file": "frames_4k/skill/alyssa_skill_00_right_4096.png",
+          "source_bbox": [
+            35,
+            43,
+            552,
+            530
+          ],
+          "alpha_bbox": [
+            1142,
+            1216,
+            3313,
+            3261
+          ],
+          "padding_ltrb": [
+            1142,
+            1216,
+            783,
+            835
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 1,
+          "file": "frames_4k/skill/alyssa_skill_01_right_4096.png",
+          "source_bbox": [
+            505,
+            0,
+            1047,
+            528
+          ],
+          "alpha_bbox": [
+            885,
+            1035,
+            3161,
+            3253
+          ],
+          "padding_ltrb": [
+            885,
+            1035,
+            935,
+            843
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 2,
+          "file": "frames_4k/skill/alyssa_skill_02_right_4096.png",
+          "source_bbox": [
+            987,
+            1,
+            1526,
+            546
+          ],
+          "alpha_bbox": [
+            907,
+            1039,
+            3171,
+            3328
+          ],
+          "padding_ltrb": [
+            907,
+            1039,
+            925,
+            768
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 3,
+          "file": "frames_4k/skill/alyssa_skill_03_right_4096.png",
+          "source_bbox": [
+            0,
+            497,
+            654,
+            1004
+          ],
+          "alpha_bbox": [
+            829,
+            1077,
+            3576,
+            3206
+          ],
+          "padding_ltrb": [
+            829,
+            1077,
+            520,
+            890
+          ],
+          "anchor": [
+            1782,
+            3072
+          ]
+        },
+        {
+          "index": 4,
+          "file": "frames_4k/skill/alyssa_skill_04_right_4096.png",
+          "source_bbox": [
+            545,
+            539,
+            1052,
+            1024
+          ],
+          "alpha_bbox": [
+            1060,
+            1228,
+            3189,
+            3265
+          ],
+          "padding_ltrb": [
+            1060,
+            1228,
+            907,
+            831
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 5,
+          "file": "frames_4k/skill/alyssa_skill_05_right_4096.png",
+          "source_bbox": [
+            1034,
+            521,
+            1536,
+            1024
+          ],
+          "alpha_bbox": [
+            961,
+            1144,
+            3069,
+            3257
+          ],
+          "padding_ltrb": [
+            961,
+            1144,
+            1027,
+            839
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        }
+      ]
+    },
+    "damaged": {
+      "sheet_4k": "spritesheets_4k/alyssa_damaged_right_4k.png",
+      "sheet_runtime": "runtime_sheets/alyssa_damaged_right_1024.png",
+      "durations_ms": [
+        100,
+        90,
+        110,
+        130,
+        160,
+        180
+      ],
+      "loop": false,
+      "frames": [
+        {
+          "index": 0,
+          "file": "frames_4k/damaged/alyssa_damaged_00_right_4096.png",
+          "source_bbox": [
+            25,
+            15,
+            570,
+            526
+          ],
+          "alpha_bbox": [
+            1027,
+            1081,
+            3316,
+            3227
+          ],
+          "padding_ltrb": [
+            1027,
+            1081,
+            780,
+            869
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 1,
+          "file": "frames_4k/damaged/alyssa_damaged_01_right_4096.png",
+          "source_bbox": [
+            485,
+            19,
+            1076,
+            530
+          ],
+          "alpha_bbox": [
+            899,
+            1102,
+            3381,
+            3248
+          ],
+          "padding_ltrb": [
+            899,
+            1102,
+            715,
+            848
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 2,
+          "file": "frames_4k/damaged/alyssa_damaged_02_right_4096.png",
+          "source_bbox": [
+            1009,
+            31,
+            1535,
+            504
+          ],
+          "alpha_bbox": [
+            697,
+            1153,
+            2906,
+            3140
+          ],
+          "padding_ltrb": [
+            697,
+            1153,
+            1190,
+            956
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 3,
+          "file": "frames_4k/damaged/alyssa_damaged_03_right_4096.png",
+          "source_bbox": [
+            31,
+            535,
+            573,
+            998
+          ],
+          "alpha_bbox": [
+            1103,
+            1161,
+            3379,
+            3106
+          ],
+          "padding_ltrb": [
+            1103,
+            1161,
+            717,
+            990
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 4,
+          "file": "frames_4k/damaged/alyssa_damaged_04_right_4096.png",
+          "source_bbox": [
+            495,
+            543,
+            1058,
+            995
+          ],
+          "alpha_bbox": [
+            967,
+            1190,
+            3332,
+            3088
+          ],
+          "padding_ltrb": [
+            967,
+            1190,
+            764,
+            1008
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        },
+        {
+          "index": 5,
+          "file": "frames_4k/damaged/alyssa_damaged_05_right_4096.png",
+          "source_bbox": [
+            1003,
+            525,
+            1535,
+            1024
+          ],
+          "alpha_bbox": [
+            1019,
+            1090,
+            3253,
+            3186
+          ],
+          "padding_ltrb": [
+            1019,
+            1090,
+            843,
+            910
+          ],
+          "anchor": [
+            2048,
+            3072
+          ]
+        }
+      ]
+    }
+  }
+}

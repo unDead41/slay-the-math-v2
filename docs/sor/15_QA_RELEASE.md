@@ -92,3 +92,7 @@ Ujian runtime di atas ialah keperluan untuk implementation, bukan ujian game yan
 ## Combat polish regressions — 2.9.0
 
 Check all six Skill matrices/body heights and actual canvas frames, cap/partial/artifact draws, full-hand RNG stability, physical-card conservation and legacy restore. Resolve real lethal damage and verify result Time after menu, dialogs, refresh and elapsed waiting. Exercise crowded-hand hover dwell, rapid crossings, stationary pointer, cancellation, native keyboard/touch, reduced motion, empty hand and phone rail access through the tenth card. Evidence: `tests/run-polish.test.cjs`, `tests/hand-results-browser.cjs`, `tests/animation.test.cjs` and the 2.9.0 verification report.
+
+## Both-stage enemy motion — 2.10.0
+
+Verify native pixels/alpha for all supplied sheets and individual cells, padding and every fixed-matrix frame bound. Exercise all 10 actors / 50 clips in Chromium, native player-hit reactions and each Stage 2 intent cycle against an independent engine clone. Check blocked hits, dialogs, Motion Off/OS reduction, refresh, Canvas/atlas failures and same-source posters. Check all 135 Stage 2 bounds inside the arena across desktop, ultrawide, 4K and phone sizes. Preserve bosses, legacy cross-stage rendering and Alyssa's accepted registry/Skill projection; test the generated portable file offline. Evidence: `tests/enemy-motion.test.cjs`, `tests/enemy-motion-browser.cjs`, source import audits and [2.10.0 report](../ENEMY_MOTION_2_10_0.md). Distinguish browser automation from physical-device/Windows testing.

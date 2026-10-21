@@ -10,7 +10,9 @@
     enemies[id]=Object.fromEntries(['standing','attack','defend','skill','damage']
       .map(pose=>[pose,'ground-'+stem+'-'+pose+'.webp']));
   }
-  function enemy(id, pose='standing') {
+  function enemy(id, pose='standing', stage=0) {
+    const actor=root.DCAnimationData?.actors[id],action=pose==='standing'?'idle':pose==='damage'?'damaged':pose;
+    if(actor?.stage===stage&&actor.posters)return actor.posters[action]||actor.posters.idle;
     return enemies[id]?.[pose] || enemies[id]?.standing || 'ground-'+C.enemies[id].art;
   }
   function hero(pose='idle') {
@@ -23,7 +25,7 @@
       cards:'ui-card_collection.webp',bolt:'ui-energy.webp',heart:'ui-health.webp',
       coin:'ui-money.webp',close:'ui-close.webp',hand:'ui-on_hand.webp',
       drawPile:'ui-draw_pile.webp',discard:'ui-discard.webp',exhaust:'ui-exhaust.webp'},
-    floatingEnemies:['wisp','bat'],
+    floatingEnemies:['wisp','bat','weaver'],
     scale:{hero:1,wisp:.64,beetle:.76,knight:.91,shard:.70,bat:.61,
       sentinel:1.04,dealer:1.02,weaver:.82,shade:.82,mimic:.61,golem:.86,reaper:.95},
     arena:(stage,kind='normal')=>'arena-'+kind+'-'+(stage+1)+'.webp',

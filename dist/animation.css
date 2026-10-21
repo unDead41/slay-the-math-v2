@@ -4,5 +4,6 @@
 .combat-layout .fighter-anchor[data-animation-ready='true']>.fighter-art{visibility:hidden;animation:none!important}
 /* Posters and animated frames now use the same right-facing art and scale. */
 .combat-layout .player .fighter-art{animation:none!important}
+.combat-layout .enemy:has(.actor-animation) .fighter-art{animation:none!important}
 /* Keep the supplied wide hero cells inside the phone arena. */
 @media(max-width:600px){.combat-layout .player:has(.actor-animation) .fighter-anchor{height:auto;width:min(calc(700 * var(--combat-unit)),90vw)}}

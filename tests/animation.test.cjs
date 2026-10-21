@@ -9,8 +9,8 @@ function fixture(extra={}){
  return {player,canvas,host,draws,frames,async step(delta){clock+=delta;const pending=[...frames.values()];frames.clear();for(const fn of pending)fn(clock);await flush();}};
 }
 test('only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames',()=>{
- assert.equal(Object.keys(D.actors).length,5);let clips=0,frames=0;
- for(const [id,actor]of Object.entries(D.actors)){
+ const actors=Object.entries(D.actors).filter(([,a])=>a.stage===0);assert.equal(actors.length,5);let clips=0,frames=0;
+ for(const [id,actor]of actors){
   assert.equal(S.supports(0,id),true);assert.equal(S.supports(1,id),false);assert.equal(actor.facing,'left');
   for(const [action,a]of Object.entries(actor.animations)){clips++;frames+=a.frames.length;assert.equal(a.fps,{idle:6,attack:12,defend:10,skill:10,damaged:12}[action]);assert.equal(a.loop,action==='idle');assert.ok(a.frames.every(f=>f.length===4&&f[2]===768&&f[3]===768));}
  }
@@ -66,7 +66,7 @@ test('actor scale and supplied per-frame boot pivots register wide attacks at th
  await f.step(0);await f.step(84);assert.equal(f.player.snapshot().frame,1);
  assert.equal(f.draws.at(-1)[5],800-555.5*1.08);assert.equal(f.draws.at(-1)[6],1100-768*1.08);f.player.destroy();
 });
-test('Alyssa animation is available in both stages while enemy animation stays Stage 1 only',()=>{
+test('Alyssa animation spans both stages while enemy IDs remain stage scoped',()=>{
  assert.equal(S.supports(0,'mc_01'),true);assert.equal(S.supports(1,'mc_01'),true);
  assert.equal(S.supports(2,'mc_01'),false);assert.equal(S.supports(1,'beetle'),false);
  assert.equal(S.spec(0,'mc_01').facing,'right');

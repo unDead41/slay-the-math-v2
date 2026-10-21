@@ -246,3 +246,12 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 | DEC-20261021-17 | CADANGAN | Reversible implementation tuning: Hand limit 10 in config, 140ms hover dwell, 180ms transition, and 44px minimum exposed card step. User authorized the behavior; these exact numbers are implementation defaults. Card/artifact draws share the cap and leave excess cards/RNG untouched. |
 
 Owners: SOR 03/04/05/08/11/13/14/19. Verification and migration limits: `docs/COMBAT_POLISH_2_9_0.md`.
+
+## Both-stage Normal/Elite motion — 22 October 2026 (Malaysia), game 2.10.0
+
+| ID | Status | Decision |
+|---|---|---|
+| DEC-20261022-01 | DISAHKAN | Ijamm supplies the Normal/Elite enemy ZIPs for both stages and explicitly requests applying motion to both stages. |
+| DEC-20261022-02 | DITERUSKAN | Preserve all 25 accepted Stage 1 sheets after exact source-pixel verification of the repack. Import Stage 2 v2.1's 25 clips / 135 frames and 25 matching posters through the shared native importer/player, including the authored left-facing Chain Golem. Add a presentation-only intent mapping; preserve gameplay, saves, bosses, legacy cross-stage encounters and Alyssa's full accepted registry/Skill calibration. |
+
+Owners: SOR 07/11/14/15. Source mapping and actual checks: [both-stage motion](../ENEMY_MOTION_2_10_0.md).

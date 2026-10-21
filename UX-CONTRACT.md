@@ -150,3 +150,7 @@ Tooltip lookup and display are read-only: no random calls, acquisition, draws or
 | Result Time | engine result transaction + summaryView | Frozen finished timestamp for defeat/victory/stage clear; menu/dialog/reload/import preserves it. Legacy results are stamped once on restore. Stage 2 continuation clears intermediate timestamp. | engine + browser result checks |
 
 The existing live toast, dialog/focus, save key and English copy owners are reused. Palette/type/card art and sibling reward/Shop geometry retain DESIGN.md ownership.
+
+## Both-stage Normal/Elite motion 2.10.0
+
+`DCActorAnimation` remains the only atlas player, now for the ten canonical non-boss actors in both stages. Its stage-aware registry prevents legacy cross-stage IDs and bosses from selecting an unrelated sheet. The existing native End Turn action supplies the already resolved intent; a presentation-only table maps Stage 2 labels to Attack/Defend/Skill. Player-hit feedback uses actual HP loss or blocked-hit Defend. Animation never resolves damage, draws, saves or RNG. Same-source Stage 2 posters are visible until a successful paint or after texture/Canvas failure; Motion Off selects Idle. Existing hero, hand, result Time, dialog/focus, pause and scene disposal contracts remain authoritative. Verification: tests/enemy-motion-browser.cjs.

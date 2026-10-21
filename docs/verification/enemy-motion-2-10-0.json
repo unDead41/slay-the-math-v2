@@ -1,0 +1,487 @@
+{
+  "version": "2.10.0",
+  "status": "PASS",
+  "verified_at_utc": "2026-10-21T18:31:25.823495+00:00",
+  "base_commit": "f2bafc79ed15711bd30be35bffffe6a4912864cf",
+  "source": {
+    "stage1": {
+      "sha256": "aaf4ea376ac0732f5305fc376a5b25d9091f5e889345d37c889509068a969a51",
+      "verified_only": true,
+      "actors": 5,
+      "clips": 25,
+      "frames": 128,
+      "native_pixels_and_alpha_preserved": true
+    },
+    "stage2": {
+      "sha256": "e959ab008e6df186fd12227fd4c683e826afeb4ad6b643477bfbf703a9692fca",
+      "source_version": "2.1",
+      "actors": 5,
+      "clips": 25,
+      "frames": 135,
+      "native_pixels_and_alpha_preserved": true,
+      "posters": 25,
+      "atlas_bytes": 23124258,
+      "poster_bytes": 17882576
+    }
+  },
+  "commands": [
+    {
+      "command": "npm run check",
+      "status": "PASS"
+    },
+    {
+      "command": "npm test (DOM_QA_MODULE supplied)",
+      "status": "PASS",
+      "tests": 138,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "node --test tests/animation.test.cjs tests/enemy-motion.test.cjs",
+      "status": "PASS",
+      "tests": 15
+    },
+    {
+      "command": "npm run build",
+      "status": "PASS",
+      "bytes": 169886168,
+      "sha256": "2273a787f08fc347c0bd2e577ea9482abc49619076f35225ea9c6c55616bac99"
+    },
+    {
+      "command": "node --check on all three affected browser scripts; git diff --check on source/docs/tests/tools",
+      "status": "PASS"
+    }
+  ],
+  "enemy_browser": {
+    "status": "PASS across completed and focused groups",
+    "checks": [
+      "All 10 canonical Normal/Elite actors animate real canvas pixels for all 50 clips, play once/return to Idle, and resolve native player attacks once with exact saved engine state.",
+      "All five Stage 2 enemies use Attack, Defend and Skill for their resolved three-intent cycle; HP, Block, Energy, draws, RNG and logs exactly match the unmodified engine.",
+      "A blocked player hit uses Defend; dialogs pause/resume, Motion Off and OS reduced motion are static, and refresh resumes the exact Stage 2 actor.",
+      "All 135 Stage 2 frame bounds stay inside the arena at desktop/UWHD/4K and two phone widths; grounded actors retain the common floor and Chain Weaver retains its authored hover.",
+      "All 25 Stage 2 pose fallbacks use new left-facing source posters when Canvas or every atlas fails; Motion Off keeps Idle and never restores the old Chain Golem model.",
+      "Both bosses and legacy cross-stage encounters retain their renderer. The portable build embeds all 50 enemy clips and 25 new posters and runs Stage 2 offline without HTTP requests."
+    ],
+    "actors": [
+      {
+        "id": "wisp",
+        "stage": 1,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "beetle",
+        "stage": 1,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "bat",
+        "stage": 1,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "knight",
+        "stage": 1,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "shard",
+        "stage": 1,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "weaver",
+        "stage": 2,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "shade",
+        "stage": 2,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "mimic",
+        "stage": 2,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "golem",
+        "stage": 2,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      },
+      {
+        "id": "reaper",
+        "stage": 2,
+        "actions": [
+          "idle",
+          "attack",
+          "defend",
+          "skill",
+          "damaged"
+        ],
+        "exactEngineState": true
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "id": "weaver",
+        "floorError": -22.999979654947992,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "id": "shade",
+        "floorError": -0.8499552408854925,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "id": "mimic",
+        "floorError": -0.8499552408854925,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "id": "golem",
+        "floorError": -0.8499552408854925,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "id": "reaper",
+        "floorError": -0.8499552408854925,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "id": "weaver",
+        "floorError": -30.6661376953125,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "id": "shade",
+        "floorError": -1.1328125,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "id": "mimic",
+        "floorError": -1.1328125,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "id": "golem",
+        "floorError": -1.1328125,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "id": "reaper",
+        "floorError": -1.1328125,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "id": "weaver",
+        "floorError": -45.999918619791515,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "id": "shade",
+        "floorError": -1.699869791666515,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "id": "mimic",
+        "floorError": -1.699869791666515,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "id": "golem",
+        "floorError": -1.699869791666515,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "id": "reaper",
+        "floorError": -1.699869791666515,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "id": "weaver",
+        "floorError": -18.999989827473996,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "id": "shade",
+        "floorError": -0.5999959309896212,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "id": "mimic",
+        "floorError": -0.5999959309896212,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "id": "golem",
+        "floorError": -0.5999959309896212,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "id": "reaper",
+        "floorError": -0.5999959309896212,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "id": "weaver",
+        "floorError": -18.999979654947936,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "id": "shade",
+        "floorError": -0.5999857584635606,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "id": "mimic",
+        "floorError": -0.5999857584635606,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "id": "golem",
+        "floorError": -0.5999857584635606,
+        "overflow": false,
+        "clipped": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "id": "reaper",
+        "floorError": -0.5999857584635606,
+        "overflow": false,
+        "clipped": []
+      }
+    ],
+    "page_errors": [],
+    "runs": [
+      {
+        "scope": "Full invocation, first five groups",
+        "status": "PARTIAL",
+        "completed_groups": 5,
+        "remaining_issue": "The 169 MB portable reload exceeded the original 30s load deadline after all live-game assertions passed."
+      },
+      {
+        "scope": "fit,fallback,offline",
+        "status": "PASS",
+        "completed_groups": 3
+      },
+      {
+        "scope": "offline, final harness",
+        "status": "PASS",
+        "completed_groups": 1
+      }
+    ],
+    "harness_controls": "Wait for actual MediaQueryList change before sampling static pixels; poll texture readiness without relying on frozen presentation RAF. Release live fixtures before portable parsing; wait for DOM readiness with a 60s navigation bound."
+  },
+  "alyssa_browser": {
+    "tested_build": "2.10.0",
+    "version": "2.8.1",
+    "checks": [
+      "Real canvas pixels advance for Idle, Attack, Defend and Skill. Native card actions produce the exact engine HP, Block, Energy, piles, RNG, logs and save state before animation advances. Every action returns to Idle.",
+      "End Turn selects Damaged for actual HP loss and Defend for a fully blocked hit, while the enemy plays independently. Animation time never replays combat.",
+      "Dialogs pause Alyssa. Motion Off and OS Reduced Motion keep supplied Idle frame 0 static, then resume normally.",
+      "Alyssa animates in both stages and against both bosses; enemy models retain their current Stage 1 and Stage 2 rendering. Refresh resumes the saved battle.",
+      "Alyssa shares the registered floor and undistorted 4:3 presentation canvas at FHD, UWHD, 4K and two phone widths. All 30 source alpha bounds fit the canvas (import audit).",
+      "All five visible image fallbacks use the supplied right-facing source with Canvas disabled and with every hero atlas request deliberately failed. No legacy hero image is requested; Stage 2 damaged fallback is covered.",
+      "The generated offline HTML embeds all five Alyssa sheets and paints her animation with zero HTTP requests."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "floorAligned": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "legacyHeroRequests": []
+  },
+  "preserved": {
+    "stage1_registry_sha256": "c3a0a87e67123d41807b5e88746a6e33d323bb0cb076a847ccb419cb7c17be7c",
+    "alyssa_registry_sha256": "3a19d059c43b9c9004cef55c12c4f4ae17d4b9394a402cac28ac082c9852f556",
+    "byte_identical_source_and_accepted_art_files": 44,
+    "engine_config_math_maps_artifacts_education_hand_and_accepted_hero_enemy_art": "Compared byte-for-byte against base; unchanged.",
+    "save_schema_version": 1
+  },
+  "portable": {
+    "enemy_atlases": 50,
+    "stage2_posters": 25,
+    "http_requests": 0,
+    "status": "PASS"
+  },
+  "visual_review": {
+    "stage2_source_contact_boards": 5,
+    "source_frames_reviewed": 135,
+    "game_screenshots": [
+      "mimic-idle",
+      "golem-idle",
+      "reaper-idle",
+      "stage2-fit-320"
+    ],
+    "chain_golem_left": true,
+    "stage2_clipped_frame_cases": 0
+  },
+  "limits": {
+    "native_windows_execution": "NOT_RUN",
+    "physical_device_performance": "NOT_MEASURED",
+    "boss_and_legacy_cross_stage_motion": "Existing renderer retained."
+  }
+}

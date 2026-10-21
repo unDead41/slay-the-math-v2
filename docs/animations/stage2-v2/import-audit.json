@@ -1,0 +1,2939 @@
+{
+  "archive": "Stage_2_Normal_Elite_Enemies_Standardized_v2(1).zip",
+  "sha256": "e959ab008e6df186fd12227fd4c683e826afeb4ad6b643477bfbf703a9692fca",
+  "operation": "Verify supplied frames and losslessly encode native full-cell atlases; no trim, flip, scale by VFX bounds or gameplay changes.",
+  "canvas": [
+    1600,
+    1200
+  ],
+  "source_pivot": [
+    384,
+    578
+  ],
+  "floor_pivot": [
+    800,
+    1100
+  ],
+  "draw_scale": 2.5,
+  "figure_scale": 0.9,
+  "actors": [
+    {
+      "id": "weaver",
+      "source_id": "chain_weaver",
+      "type": "normal",
+      "facing": "left",
+      "flipX": false,
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/chain_weaver/sprites/chain_weaver_idle.png",
+          "source_sha256": "acde3eae32b54cac1854cdd0c990a4d18ea22848cb1fa0704207d7ef6d051301",
+          "runtime": "motion-s2-chain_weaver-idle.webp",
+          "runtime_sha256": "76eca613ff14f6c0cde8fe404306c549058440cb1e4c2362b3848fcdf1c3982f",
+          "runtime_bytes": 988510,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            },
+            {
+              "frame": 1,
+              "source": [
+                253,
+                177,
+                603,
+                565
+              ],
+              "canvas": [
+                472.5,
+                97.5,
+                1347.5,
+                1067.5
+              ],
+              "pixel_sha256": "7433b22f6bc4e52eddbddba198fc5d8c5009e453482741a3147c8431983779f2"
+            },
+            {
+              "frame": 2,
+              "source": [
+                261,
+                176,
+                604,
+                560
+              ],
+              "canvas": [
+                492.5,
+                95.0,
+                1350.0,
+                1055.0
+              ],
+              "pixel_sha256": "3c8709f23565780e52a6c1abc8a656c3ea38c8552c425054a396ea3951ac1228"
+            },
+            {
+              "frame": 3,
+              "source": [
+                257,
+                177,
+                617,
+                562
+              ],
+              "canvas": [
+                482.5,
+                97.5,
+                1382.5,
+                1060.0
+              ],
+              "pixel_sha256": "827a83d4a12da116cba95a36b43659cead109359815f3a60360b0ff844a359a2"
+            },
+            {
+              "frame": 4,
+              "source": [
+                262,
+                178,
+                616,
+                564
+              ],
+              "canvas": [
+                495.0,
+                100.0,
+                1380.0,
+                1065.0
+              ],
+              "pixel_sha256": "426d6083acf455a17184d3d4182a3116e073c2c52ca16fa7610729108e0ac23e"
+            },
+            {
+              "frame": 5,
+              "source": [
+                263,
+                177,
+                602,
+                563
+              ],
+              "canvas": [
+                497.5,
+                97.5,
+                1345.0,
+                1062.5
+              ],
+              "pixel_sha256": "62d5c453944d1061be463cc29c9e22c05114079acc55500a8b3a750d059650fa"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/chain_weaver/sprites/chain_weaver_attack.png",
+          "source_sha256": "fa64bee03bbfb5e204870ec85b9890347208f1f11d58d7e9914e320ed2eb005c",
+          "runtime": "motion-s2-chain_weaver-attack.webp",
+          "runtime_sha256": "cb8092f3c694f04d4c6d727ff4a27110d72aa4c7970cb46d2fe6caf58cae232a",
+          "runtime_bytes": 1000134,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            },
+            {
+              "frame": 1,
+              "source": [
+                206,
+                175,
+                597,
+                560
+              ],
+              "canvas": [
+                355.0,
+                92.5,
+                1332.5,
+                1055.0
+              ],
+              "pixel_sha256": "9e08d5f581ebd013da7d549856e18a1cc44e3b61a1fa679ee5b8176f29cd0441"
+            },
+            {
+              "frame": 2,
+              "source": [
+                158,
+                165,
+                587,
+                545
+              ],
+              "canvas": [
+                235.0,
+                67.5,
+                1307.5,
+                1017.5
+              ],
+              "pixel_sha256": "299d697ff50d5b10d97d02d14e9058c15615c0da6351a0f7168f9287dba2e59b"
+            },
+            {
+              "frame": 3,
+              "source": [
+                174,
+                176,
+                610,
+                550
+              ],
+              "canvas": [
+                275.0,
+                95.0,
+                1365.0,
+                1030.0
+              ],
+              "pixel_sha256": "33c21cd87362ac3468f68aed7edc1afface435a44a8a3b41b9d277c1cad08abd"
+            },
+            {
+              "frame": 4,
+              "source": [
+                227,
+                160,
+                621,
+                537
+              ],
+              "canvas": [
+                407.5,
+                55.0,
+                1392.5,
+                997.5
+              ],
+              "pixel_sha256": "bd7a6b3c3d54f3ecd742c3b00651365d3d1b91803f3a88eb5b83d2482ca39d78"
+            },
+            {
+              "frame": 5,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/chain_weaver/sprites/chain_weaver_defend.png",
+          "source_sha256": "47ff0f2e6d1d917003f0eb08cbf2e0a739c18efd6fa421b4a872b0f1342d1d71",
+          "runtime": "motion-s2-chain_weaver-defend.webp",
+          "runtime_sha256": "5c63fc7a9184a27c9dadd81feceb282946c25bb8c2730f96fcb67d0ad624449a",
+          "runtime_bytes": 1084692,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            },
+            {
+              "frame": 1,
+              "source": [
+                243,
+                172,
+                615,
+                558
+              ],
+              "canvas": [
+                447.5,
+                85.0,
+                1377.5,
+                1050.0
+              ],
+              "pixel_sha256": "49581fa0ff1f580a8eddd48424e54bc289610c664833d164ce45ead995bd139e"
+            },
+            {
+              "frame": 2,
+              "source": [
+                234,
+                172,
+                635,
+                558
+              ],
+              "canvas": [
+                425.0,
+                85.0,
+                1427.5,
+                1050.0
+              ],
+              "pixel_sha256": "8bfa0669514005bf1a250f5315a9eac7b05170d63c9ce65b399b7bb540f2703b"
+            },
+            {
+              "frame": 3,
+              "source": [
+                241,
+                171,
+                642,
+                548
+              ],
+              "canvas": [
+                442.5,
+                82.5,
+                1445.0,
+                1025.0
+              ],
+              "pixel_sha256": "00ec0f69c6489e285976402766e11bc01066ce2c8dd2000878790a2dfdbe5233"
+            },
+            {
+              "frame": 4,
+              "source": [
+                242,
+                173,
+                634,
+                559
+              ],
+              "canvas": [
+                445.0,
+                87.5,
+                1425.0,
+                1052.5
+              ],
+              "pixel_sha256": "9c734a2e8d4a3a70e38ed570264b629be9b2c76d3f65bb9277df97b030e2d7e4"
+            },
+            {
+              "frame": 5,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/chain_weaver/sprites/chain_weaver_skill.png",
+          "source_sha256": "06ed3f230affaeb36d1cd628bd52c58ae666a6b2f66e0c28692845ec6dc3d96b",
+          "runtime": "motion-s2-chain_weaver-skill.webp",
+          "runtime_sha256": "d7d42a77ca10a3c3f5667a81a84abbab8834d2877d79ab77c3b3005ee037292d",
+          "runtime_bytes": 1170504,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            },
+            {
+              "frame": 1,
+              "source": [
+                247,
+                175,
+                609,
+                563
+              ],
+              "canvas": [
+                457.5,
+                92.5,
+                1362.5,
+                1062.5
+              ],
+              "pixel_sha256": "28665e03f0fdeb9de8b8eae14323c7494a420866d0e6c70f2e80a8997f2a6db0"
+            },
+            {
+              "frame": 2,
+              "source": [
+                226,
+                174,
+                612,
+                562
+              ],
+              "canvas": [
+                405.0,
+                90.0,
+                1370.0,
+                1060.0
+              ],
+              "pixel_sha256": "ffdd7b638b62fb7745fd6e84fe31070a9a0db20f0592163c8c8a2743e9c4f6ee"
+            },
+            {
+              "frame": 3,
+              "source": [
+                99,
+                177,
+                670,
+                541
+              ],
+              "canvas": [
+                87.5,
+                97.5,
+                1515.0,
+                1007.5
+              ],
+              "pixel_sha256": "ff42ca804b65f3d96de4e0a245516cc3a0c69f856796d7b951da2531fdd41242"
+            },
+            {
+              "frame": 4,
+              "source": [
+                184,
+                174,
+                628,
+                550
+              ],
+              "canvas": [
+                300.0,
+                90.0,
+                1410.0,
+                1030.0
+              ],
+              "pixel_sha256": "e6d6e244fa2fd3b260617b14d3209820630aca6df7dd87f5de278f0506a992f1"
+            },
+            {
+              "frame": 5,
+              "source": [
+                264,
+                179,
+                600,
+                559
+              ],
+              "canvas": [
+                500.0,
+                102.5,
+                1340.0,
+                1052.5
+              ],
+              "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/chain_weaver/sprites/chain_weaver_damaged.png",
+          "source_sha256": "8e9511ce6b8a038c2390701aa615acd82c0876caa24b5cd435b5d0d9b989f4c4",
+          "runtime": "motion-s2-chain_weaver-damaged.webp",
+          "runtime_sha256": "bbb987bbddb68aee17006e91a20dcf135c74bb51044b818da3590c8f86429cf4",
+          "runtime_bytes": 577564,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                179,
+                191,
+                577,
+                561
+              ],
+              "canvas": [
+                287.5,
+                132.5,
+                1282.5,
+                1057.5
+              ],
+              "pixel_sha256": "c817defd591a873b3a30b96e21c53c1069cf44dbd141efa0e04fff1b23901196"
+            },
+            {
+              "frame": 1,
+              "source": [
+                115,
+                194,
+                544,
+                558
+              ],
+              "canvas": [
+                127.5,
+                140.0,
+                1200.0,
+                1050.0
+              ],
+              "pixel_sha256": "37d386ca35c0bed36b8b220c7caa6341e8b43dcd9a3b9080821ed51b0627804c"
+            },
+            {
+              "frame": 2,
+              "source": [
+                246,
+                177,
+                630,
+                543
+              ],
+              "canvas": [
+                455.0,
+                97.5,
+                1415.0,
+                1012.5
+              ],
+              "pixel_sha256": "02498eabaf7ab83bedcf318bfd45c441eb4289b78444e1f5a9d3928f77df2142"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ],
+      "posters": [
+        {
+          "action": "idle",
+          "runtime": "poster-s2-chain_weaver-idle.webp",
+          "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68",
+          "bytes": 685734,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            497,
+            99,
+            1341,
+            1058
+          ]
+        },
+        {
+          "action": "attack",
+          "runtime": "poster-s2-chain_weaver-attack.webp",
+          "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68",
+          "bytes": 685734,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            497,
+            99,
+            1341,
+            1058
+          ]
+        },
+        {
+          "action": "defend",
+          "runtime": "poster-s2-chain_weaver-defend.webp",
+          "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68",
+          "bytes": 685734,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            497,
+            99,
+            1341,
+            1058
+          ]
+        },
+        {
+          "action": "skill",
+          "runtime": "poster-s2-chain_weaver-skill.webp",
+          "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68",
+          "bytes": 685734,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            497,
+            99,
+            1341,
+            1058
+          ]
+        },
+        {
+          "action": "damaged",
+          "runtime": "poster-s2-chain_weaver-damaged.webp",
+          "sha256": "5673718e18cc9ab96756dd1d1d459dd53f287bcfe2475861fe7ee33266898d1a",
+          "bytes": 881180,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            282,
+            129,
+            1284,
+            1061
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shade",
+      "source_id": "deck_guard",
+      "type": "normal",
+      "facing": "left",
+      "flipX": false,
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/deck_guard/sprites/deck_guard_idle.png",
+          "source_sha256": "09874ed50e525f3fad0e1ea193dffa565cb463dc154b68c0e19f29627f0943d7",
+          "runtime": "motion-s2-deck_guard-idle.webp",
+          "runtime_sha256": "7b4739017f5b7c1f27c73c63a4c415d4143a8c40ce24c3e507ce195774ac8879",
+          "runtime_bytes": 1252262,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            },
+            {
+              "frame": 1,
+              "source": [
+                195,
+                197,
+                580,
+                577
+              ],
+              "canvas": [
+                327.5,
+                147.5,
+                1290.0,
+                1097.5
+              ],
+              "pixel_sha256": "df7273d147b893fd141e3aa1c57509d566e844f9ef9e00f244489170e358b5d1"
+            },
+            {
+              "frame": 2,
+              "source": [
+                193,
+                214,
+                572,
+                577
+              ],
+              "canvas": [
+                322.5,
+                190.0,
+                1270.0,
+                1097.5
+              ],
+              "pixel_sha256": "3b08b2c6d879a8dba45ee5e32be529802ec0269cd98ea620f502d78ba641d518"
+            },
+            {
+              "frame": 3,
+              "source": [
+                193,
+                221,
+                584,
+                579
+              ],
+              "canvas": [
+                322.5,
+                207.5,
+                1300.0,
+                1102.5
+              ],
+              "pixel_sha256": "0287b42208c7a4146788d5f7292fa81feaed96208ff2eaa95a68ac562c0311f5"
+            },
+            {
+              "frame": 4,
+              "source": [
+                197,
+                201,
+                580,
+                579
+              ],
+              "canvas": [
+                332.5,
+                157.5,
+                1290.0,
+                1102.5
+              ],
+              "pixel_sha256": "f9c67aaaede8f984debd7eda41513c448dc4c5d2bbd0c8b482655c45eba44984"
+            },
+            {
+              "frame": 5,
+              "source": [
+                193,
+                202,
+                577,
+                579
+              ],
+              "canvas": [
+                322.5,
+                160.0,
+                1282.5,
+                1102.5
+              ],
+              "pixel_sha256": "f396ece0d31ba5b7ab728776d1345f4418e1964a02acc51d2ecbbd223bddc026"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/deck_guard/sprites/deck_guard_attack.png",
+          "source_sha256": "88abc99a8942456cb8fbe3e18523d2a01471653781c38fee84dfd837a5655af9",
+          "runtime": "motion-s2-deck_guard-attack.webp",
+          "runtime_sha256": "ab2df45f89b522d93d90e973cf6766f5132b11b7f22d07058548ada92225a545",
+          "runtime_bytes": 1219108,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            },
+            {
+              "frame": 1,
+              "source": [
+                174,
+                210,
+                577,
+                579
+              ],
+              "canvas": [
+                275.0,
+                180.0,
+                1282.5,
+                1102.5
+              ],
+              "pixel_sha256": "2eae47774107cc5ad1c511f2e2397467af22dd9ced83cf9b4cf05f2da69bfb9f"
+            },
+            {
+              "frame": 2,
+              "source": [
+                137,
+                213,
+                569,
+                580
+              ],
+              "canvas": [
+                182.5,
+                187.5,
+                1262.5,
+                1105.0
+              ],
+              "pixel_sha256": "61c95ee2a98b0d5f65eb8ebddf0e67fff5da21189cc8914f445a323c85535d3f"
+            },
+            {
+              "frame": 3,
+              "source": [
+                114,
+                219,
+                575,
+                577
+              ],
+              "canvas": [
+                125.0,
+                202.5,
+                1277.5,
+                1097.5
+              ],
+              "pixel_sha256": "21052932bcd9865dfb248f151ae8a46602cc6a65c30946977e2fc3229ecedbde"
+            },
+            {
+              "frame": 4,
+              "source": [
+                194,
+                204,
+                577,
+                577
+              ],
+              "canvas": [
+                325.0,
+                165.0,
+                1282.5,
+                1097.5
+              ],
+              "pixel_sha256": "55ad16d844f368c739d4d5810fe639dc00b5be2812c652f6e63dec1548d8d4ae"
+            },
+            {
+              "frame": 5,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/deck_guard/sprites/deck_guard_defend.png",
+          "source_sha256": "bcb386e42c8c46e8c42ad3e49492d3fbd74f0b9cef05f7decee914215f6b7f69",
+          "runtime": "motion-s2-deck_guard-defend.webp",
+          "runtime_sha256": "3adb5c031b6c07a5be37da7ff56a423f860172ed83517a1ae7f5006b9641c263",
+          "runtime_bytes": 1166228,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            },
+            {
+              "frame": 1,
+              "source": [
+                187,
+                205,
+                548,
+                577
+              ],
+              "canvas": [
+                307.5,
+                167.5,
+                1210.0,
+                1097.5
+              ],
+              "pixel_sha256": "13b1a342c3d178e0ade7b6eab1cd786f1a617544fd4897ab1ff0d278c10212e3"
+            },
+            {
+              "frame": 2,
+              "source": [
+                178,
+                226,
+                548,
+                577
+              ],
+              "canvas": [
+                285.0,
+                220.0,
+                1210.0,
+                1097.5
+              ],
+              "pixel_sha256": "0b495a5bcf3ea65abee8d7062422de3642f813770495758c1fc15a3a74e9c98e"
+            },
+            {
+              "frame": 3,
+              "source": [
+                191,
+                218,
+                549,
+                577
+              ],
+              "canvas": [
+                317.5,
+                200.0,
+                1212.5,
+                1097.5
+              ],
+              "pixel_sha256": "3612e83dfd6c9caf2b707b939b5e2061323f6c032745f8574ec7800b8fb30420"
+            },
+            {
+              "frame": 4,
+              "source": [
+                209,
+                206,
+                587,
+                577
+              ],
+              "canvas": [
+                362.5,
+                170.0,
+                1307.5,
+                1097.5
+              ],
+              "pixel_sha256": "3d5b71fcf60b5044492e876d974fbd81816454a3782d23c216f30d41eea05e6e"
+            },
+            {
+              "frame": 5,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/deck_guard/sprites/deck_guard_skill.png",
+          "source_sha256": "4ce442a2de33787a7642244ea1e5ab884eb2895cea4ccd6e87c3d0750088dbce",
+          "runtime": "motion-s2-deck_guard-skill.webp",
+          "runtime_sha256": "03d4939436ade87e08efadba37ed272dd8eeffffc167da285f78d35882d8a2c1",
+          "runtime_bytes": 1348734,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            },
+            {
+              "frame": 1,
+              "source": [
+                170,
+                204,
+                577,
+                579
+              ],
+              "canvas": [
+                265.0,
+                165.0,
+                1282.5,
+                1102.5
+              ],
+              "pixel_sha256": "847f75c4ecb396727a3b1f06363262943b26e1bde8033807666885f2964ef03b"
+            },
+            {
+              "frame": 2,
+              "source": [
+                144,
+                205,
+                572,
+                579
+              ],
+              "canvas": [
+                200.0,
+                167.5,
+                1270.0,
+                1102.5
+              ],
+              "pixel_sha256": "b686bbcf8ec79bf8a914cb47231e1b49458b2bbf96ea73a2847d2823dc05af0e"
+            },
+            {
+              "frame": 3,
+              "source": [
+                99,
+                216,
+                572,
+                579
+              ],
+              "canvas": [
+                87.5,
+                195.0,
+                1270.0,
+                1102.5
+              ],
+              "pixel_sha256": "5fc2ffe15de06032d530d60d66c36ba4661f9cf95850e6d119dce2eec5d6fb7e"
+            },
+            {
+              "frame": 4,
+              "source": [
+                139,
+                211,
+                571,
+                577
+              ],
+              "canvas": [
+                187.5,
+                182.5,
+                1267.5,
+                1097.5
+              ],
+              "pixel_sha256": "29c38d2e5e5c0f27d66102821218dfe28d2500b2329d493ea7ba400667a00067"
+            },
+            {
+              "frame": 5,
+              "source": [
+                202,
+                203,
+                581,
+                577
+              ],
+              "canvas": [
+                345.0,
+                162.5,
+                1292.5,
+                1097.5
+              ],
+              "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/deck_guard/sprites/deck_guard_damaged.png",
+          "source_sha256": "8b606baf2af1eed58903d903d224e2c100b867e06bd771697d64f6c9dbc94e37",
+          "runtime": "motion-s2-deck_guard-damaged.webp",
+          "runtime_sha256": "2bb572301c067f0fb4dba4da9c6928ea21447c9f00448df3b3c905fa74359168",
+          "runtime_bytes": 623158,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                209,
+                214,
+                592,
+                577
+              ],
+              "canvas": [
+                362.5,
+                190.0,
+                1320.0,
+                1097.5
+              ],
+              "pixel_sha256": "4268a6f135781e225e8a1c50f990721a758427d6f1e1f148ba4de5d868dce7f3"
+            },
+            {
+              "frame": 1,
+              "source": [
+                212,
+                216,
+                639,
+                579
+              ],
+              "canvas": [
+                370.0,
+                195.0,
+                1437.5,
+                1102.5
+              ],
+              "pixel_sha256": "ede0344477cf54f040e7d9815a4015be1fb384b19d5c16185851f5bc325a798d"
+            },
+            {
+              "frame": 2,
+              "source": [
+                194,
+                227,
+                580,
+                577
+              ],
+              "canvas": [
+                325.0,
+                222.5,
+                1290.0,
+                1097.5
+              ],
+              "pixel_sha256": "ae71653367ec6bc79b66c13aced368cff46c9a9132c8ecfa8efe7bf861ff644b"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ],
+      "posters": [
+        {
+          "action": "idle",
+          "runtime": "poster-s2-deck_guard-idle.webp",
+          "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1",
+          "bytes": 839310,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            340,
+            157,
+            1298,
+            1103
+          ]
+        },
+        {
+          "action": "attack",
+          "runtime": "poster-s2-deck_guard-attack.webp",
+          "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1",
+          "bytes": 839310,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            340,
+            157,
+            1298,
+            1103
+          ]
+        },
+        {
+          "action": "defend",
+          "runtime": "poster-s2-deck_guard-defend.webp",
+          "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1",
+          "bytes": 839310,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            340,
+            157,
+            1298,
+            1103
+          ]
+        },
+        {
+          "action": "skill",
+          "runtime": "poster-s2-deck_guard-skill.webp",
+          "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1",
+          "bytes": 839310,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            340,
+            157,
+            1298,
+            1103
+          ]
+        },
+        {
+          "action": "damaged",
+          "runtime": "poster-s2-deck_guard-damaged.webp",
+          "sha256": "1cc9f5f76e64ee51aabb45f967666bdf22d98d71fe5a364b5df02e43db9eba3a",
+          "bytes": 896556,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            360,
+            187,
+            1326,
+            1103
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mimic",
+      "source_id": "card_mimic",
+      "type": "normal",
+      "facing": "left",
+      "flipX": false,
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/card_mimic/sprites/card_mimic_idle.png",
+          "source_sha256": "7ba0fe9b027dd80fde7471e43b5a4da8abcafbccac97092efa599aefc5206836",
+          "runtime": "motion-s2-card_mimic-idle.webp",
+          "runtime_sha256": "57b3a8645fb674ab9d4002f3cbaa5473a710540f8fa14a2acfa699f02cfe490a",
+          "runtime_bytes": 906508,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            },
+            {
+              "frame": 1,
+              "source": [
+                193,
+                271,
+                570,
+                577
+              ],
+              "canvas": [
+                322.5,
+                332.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "e6aac30b7da94b70e90c12151c495e0de0c8bf97f33800b7aabbf6cbe1d50aa5"
+            },
+            {
+              "frame": 2,
+              "source": [
+                195,
+                299,
+                572,
+                577
+              ],
+              "canvas": [
+                327.5,
+                402.5,
+                1270.0,
+                1097.5
+              ],
+              "pixel_sha256": "1ec71d37068e87f02abf472c4915aaff8330c0f34db05abd7ea40f63acb5f313"
+            },
+            {
+              "frame": 3,
+              "source": [
+                181,
+                323,
+                567,
+                577
+              ],
+              "canvas": [
+                292.5,
+                462.5,
+                1257.5,
+                1097.5
+              ],
+              "pixel_sha256": "8162adc5e7a34be5c4aea6a2a2f54189fbad1bcb746d7d2af22130c4f71e6bbb"
+            },
+            {
+              "frame": 4,
+              "source": [
+                186,
+                289,
+                577,
+                577
+              ],
+              "canvas": [
+                305.0,
+                377.5,
+                1282.5,
+                1097.5
+              ],
+              "pixel_sha256": "09448c660c5660649073031821485a7adf588866379a74ba38cf08227732d879"
+            },
+            {
+              "frame": 5,
+              "source": [
+                191,
+                305,
+                574,
+                577
+              ],
+              "canvas": [
+                317.5,
+                417.5,
+                1275.0,
+                1097.5
+              ],
+              "pixel_sha256": "b7027e08b0e9c3815f6855603e00755d0ad186ceb05ebd7f5e02d370ae84ac51"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/card_mimic/sprites/card_mimic_attack.png",
+          "source_sha256": "e2c7da045ab8c16ab315e3aec47d5993d419aef0d5177902916e9d5efca02741",
+          "runtime": "motion-s2-card_mimic-attack.webp",
+          "runtime_sha256": "4bd8cecb39db6c13fc2f02fbe9b3114d44b54518311c262c1de2aefa29f98b86",
+          "runtime_bytes": 923950,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            },
+            {
+              "frame": 1,
+              "source": [
+                154,
+                267,
+                569,
+                577
+              ],
+              "canvas": [
+                225.0,
+                322.5,
+                1262.5,
+                1097.5
+              ],
+              "pixel_sha256": "df9068cd94b44340da0db4b6211226f3fd7dac7aef0473afe70c723763af9dde"
+            },
+            {
+              "frame": 2,
+              "source": [
+                133,
+                274,
+                539,
+                577
+              ],
+              "canvas": [
+                172.5,
+                340.0,
+                1187.5,
+                1097.5
+              ],
+              "pixel_sha256": "bd9a7bbefa12ad2afa90183817ea0e076be7ccd732015a4e096c4394c596bfd7"
+            },
+            {
+              "frame": 3,
+              "source": [
+                172,
+                328,
+                572,
+                579
+              ],
+              "canvas": [
+                270.0,
+                475.0,
+                1270.0,
+                1102.5
+              ],
+              "pixel_sha256": "f9f7e2db1fbcdfaa1e8ad5df2380fcd81ec63002fc8a912ee29b50fca3478e78"
+            },
+            {
+              "frame": 4,
+              "source": [
+                160,
+                270,
+                571,
+                577
+              ],
+              "canvas": [
+                240.0,
+                330.0,
+                1267.5,
+                1097.5
+              ],
+              "pixel_sha256": "537ced3e2d03b6e5f51d314350b658a4465d42f20fdcce406694d1ed4019a443"
+            },
+            {
+              "frame": 5,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/card_mimic/sprites/card_mimic_defend.png",
+          "source_sha256": "fe1857beacc719852609550cb39128a6bd2be49b4677c2aff3d365d2d6b169a6",
+          "runtime": "motion-s2-card_mimic-defend.webp",
+          "runtime_sha256": "2a8db742d2481da299d9daaf8342d806658864dc386a41e33ea0a9cb6bd041cd",
+          "runtime_bytes": 802840,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            },
+            {
+              "frame": 1,
+              "source": [
+                218,
+                346,
+                534,
+                577
+              ],
+              "canvas": [
+                385.0,
+                520.0,
+                1175.0,
+                1097.5
+              ],
+              "pixel_sha256": "2cc56af3cf4b4d18281cbea309015bbaffce336af131c13c755da36df955f939"
+            },
+            {
+              "frame": 2,
+              "source": [
+                222,
+                349,
+                535,
+                577
+              ],
+              "canvas": [
+                395.0,
+                527.5,
+                1177.5,
+                1097.5
+              ],
+              "pixel_sha256": "789f16b1c1d1f6a858dbb24940a0687122884738524e69680dabefa006229465"
+            },
+            {
+              "frame": 3,
+              "source": [
+                197,
+                344,
+                550,
+                577
+              ],
+              "canvas": [
+                332.5,
+                515.0,
+                1215.0,
+                1097.5
+              ],
+              "pixel_sha256": "27510a38c01b694e232e72311e4266cd97979c6cfc5d2c17e4b8e8c4d54bd462"
+            },
+            {
+              "frame": 4,
+              "source": [
+                173,
+                315,
+                567,
+                577
+              ],
+              "canvas": [
+                272.5,
+                442.5,
+                1257.5,
+                1097.5
+              ],
+              "pixel_sha256": "2f1759edfbd5bc6c6474d44ec4cf20340d0c7fbf446dc26b68786ec4273e77e7"
+            },
+            {
+              "frame": 5,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/card_mimic/sprites/card_mimic_skill.png",
+          "source_sha256": "4b93e8f02c17502e4efeef51992cc01d53f05158fbf85800638a46a572a2df3c",
+          "runtime": "motion-s2-card_mimic-skill.webp",
+          "runtime_sha256": "443ee55040257075ffe263d51365c697ac62ef1df48f796254a44d4a2c7a49cf",
+          "runtime_bytes": 958846,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            },
+            {
+              "frame": 1,
+              "source": [
+                182,
+                271,
+                573,
+                577
+              ],
+              "canvas": [
+                295.0,
+                332.5,
+                1272.5,
+                1097.5
+              ],
+              "pixel_sha256": "f47b15c25f8aa1405c78f10ab02290919565a4df6585ba1e53aeb23647474e3d"
+            },
+            {
+              "frame": 2,
+              "source": [
+                186,
+                281,
+                570,
+                577
+              ],
+              "canvas": [
+                305.0,
+                357.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "1511fd2e84c5d28ebd88f3f6417b511706a0fd17697104ca62d843cc428da65d"
+            },
+            {
+              "frame": 3,
+              "source": [
+                103,
+                293,
+                623,
+                577
+              ],
+              "canvas": [
+                97.5,
+                387.5,
+                1397.5,
+                1097.5
+              ],
+              "pixel_sha256": "17147000abcc0ba3b5c618644944a0979a9ffcd74ce4a90217db703aac4f1147"
+            },
+            {
+              "frame": 4,
+              "source": [
+                171,
+                309,
+                573,
+                577
+              ],
+              "canvas": [
+                267.5,
+                427.5,
+                1272.5,
+                1097.5
+              ],
+              "pixel_sha256": "edd2a31d1308fb939e6689aee790830581f0a611d6e092bc4a4ed0909c769326"
+            },
+            {
+              "frame": 5,
+              "source": [
+                181,
+                307,
+                570,
+                577
+              ],
+              "canvas": [
+                292.5,
+                422.5,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/card_mimic/sprites/card_mimic_damaged.png",
+          "source_sha256": "7dadb062831f8ac3069955cbcd26e5f26b70936a618fa4b0ef7ae6b011d3c46c",
+          "runtime": "motion-s2-card_mimic-damaged.webp",
+          "runtime_sha256": "5ef14afb81a1a1b905b26da233b7f8c1798a8441d4a9803fc21e50ac7f887fef",
+          "runtime_bytes": 491036,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                177,
+                295,
+                579,
+                577
+              ],
+              "canvas": [
+                282.5,
+                392.5,
+                1287.5,
+                1097.5
+              ],
+              "pixel_sha256": "1557a4c8f0a32571bb0cb3633ed9a5c1ce0d3060c373e2322b34d4b8000b9a1e"
+            },
+            {
+              "frame": 1,
+              "source": [
+                200,
+                238,
+                613,
+                577
+              ],
+              "canvas": [
+                340.0,
+                250.0,
+                1372.5,
+                1097.5
+              ],
+              "pixel_sha256": "5552f335e2eae1c39391c694297fdd1b4aa8ddfe3e780640ff23dfb0f3e8210d"
+            },
+            {
+              "frame": 2,
+              "source": [
+                180,
+                292,
+                578,
+                577
+              ],
+              "canvas": [
+                290.0,
+                385.0,
+                1285.0,
+                1097.5
+              ],
+              "pixel_sha256": "16398b16179dd58d611e2fe8dfab14435f26eba158653ed0080de57d38117aed"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ],
+      "posters": [
+        {
+          "action": "idle",
+          "runtime": "poster-s2-card_mimic-idle.webp",
+          "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1",
+          "bytes": 613408,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            291,
+            417,
+            1268,
+            1103
+          ]
+        },
+        {
+          "action": "attack",
+          "runtime": "poster-s2-card_mimic-attack.webp",
+          "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1",
+          "bytes": 613408,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            291,
+            417,
+            1268,
+            1103
+          ]
+        },
+        {
+          "action": "defend",
+          "runtime": "poster-s2-card_mimic-defend.webp",
+          "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1",
+          "bytes": 613408,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            291,
+            417,
+            1268,
+            1103
+          ]
+        },
+        {
+          "action": "skill",
+          "runtime": "poster-s2-card_mimic-skill.webp",
+          "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1",
+          "bytes": 613408,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            291,
+            417,
+            1268,
+            1103
+          ]
+        },
+        {
+          "action": "damaged",
+          "runtime": "poster-s2-card_mimic-damaged.webp",
+          "sha256": "e179fb02c66e046bc30b5a460ce3ab9c11df68656ad8a9057b6ad3312aa6d79f",
+          "bytes": 683616,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            282,
+            387,
+            1291,
+            1103
+          ]
+        }
+      ]
+    },
+    {
+      "id": "golem",
+      "source_id": "chain_golem",
+      "type": "elite",
+      "facing": "left",
+      "flipX": false,
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/chain_golem/sprites/chain_golem_idle.png",
+          "source_sha256": "7bc5556f83bfeb34901c8fbe1bd1a0d613c59113b11bd4e03d893babd4409737",
+          "runtime": "motion-s2-chain_golem-idle.webp",
+          "runtime_sha256": "da82e56b60290dd3fce7b88ba68dc51e3702fc84cc8e691f3c9950c5a684ed53",
+          "runtime_bytes": 931140,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            },
+            {
+              "frame": 1,
+              "source": [
+                222,
+                249,
+                594,
+                577
+              ],
+              "canvas": [
+                395.0,
+                277.5,
+                1325.0,
+                1097.5
+              ],
+              "pixel_sha256": "daf2a5cbadb075bdb7012db0c6db0321f30c2c353f5c4b4b9eee879fa735a38c"
+            },
+            {
+              "frame": 2,
+              "source": [
+                221,
+                247,
+                590,
+                577
+              ],
+              "canvas": [
+                392.5,
+                272.5,
+                1315.0,
+                1097.5
+              ],
+              "pixel_sha256": "f17f664d2672787271dd01ca85dabb418170ac5d70653776095ff58779b66992"
+            },
+            {
+              "frame": 3,
+              "source": [
+                205,
+                241,
+                600,
+                578
+              ],
+              "canvas": [
+                352.5,
+                257.5,
+                1340.0,
+                1100.0
+              ],
+              "pixel_sha256": "0e7a99e1096d5b94d1f35659043dd0fd6cc6ac2b2b3e79caf62687075c160cf3"
+            },
+            {
+              "frame": 4,
+              "source": [
+                192,
+                241,
+                593,
+                577
+              ],
+              "canvas": [
+                320.0,
+                257.5,
+                1322.5,
+                1097.5
+              ],
+              "pixel_sha256": "a1c405b54ab79c0f0326d2549315b659a80e2b9ec6d9bd6828499a01028c0c1f"
+            },
+            {
+              "frame": 5,
+              "source": [
+                196,
+                243,
+                593,
+                577
+              ],
+              "canvas": [
+                330.0,
+                262.5,
+                1322.5,
+                1097.5
+              ],
+              "pixel_sha256": "20a16e12732b6afad727f90a164087811bfbfaed4d27b39de0e5df17a3746df4"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/chain_golem/sprites/chain_golem_attack.png",
+          "source_sha256": "b7a54c409f523ce6dd288773c97104b2e89f6563c892c446b3b157771f6cb2a1",
+          "runtime": "motion-s2-chain_golem-attack.webp",
+          "runtime_sha256": "389723395984457d830e8f730ead528845497f5b0d2b74d5a2a929d504dc2cd5",
+          "runtime_bytes": 956610,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            },
+            {
+              "frame": 1,
+              "source": [
+                276,
+                258,
+                596,
+                578
+              ],
+              "canvas": [
+                530.0,
+                300.0,
+                1330.0,
+                1100.0
+              ],
+              "pixel_sha256": "6c7a79b28a0fd0ae4a24c0a934908844dec3ef8b91cdf2c1bc02f1859aa495e3"
+            },
+            {
+              "frame": 2,
+              "source": [
+                212,
+                272,
+                621,
+                578
+              ],
+              "canvas": [
+                370.0,
+                335.0,
+                1392.5,
+                1100.0
+              ],
+              "pixel_sha256": "daeb0b9363f772757c69b2f0dc803dc3362593c3dc23e9a62e4f09306fdb0667"
+            },
+            {
+              "frame": 3,
+              "source": [
+                197,
+                279,
+                658,
+                577
+              ],
+              "canvas": [
+                332.5,
+                352.5,
+                1485.0,
+                1097.5
+              ],
+              "pixel_sha256": "964abfffbb826838b57835c4c4cbcdff621bc1fa1f558e63953e058f25b9dc6d"
+            },
+            {
+              "frame": 4,
+              "source": [
+                266,
+                262,
+                606,
+                577
+              ],
+              "canvas": [
+                505.0,
+                310.0,
+                1355.0,
+                1097.5
+              ],
+              "pixel_sha256": "9469fc7a24d6ba60636e4d80213965d33e461dc818511276e1b93fff35eb69df"
+            },
+            {
+              "frame": 5,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/chain_golem/sprites/chain_golem_defend.png",
+          "source_sha256": "1e74fd7f357435b1ff05232bafc59aa3330376f54e3c70d834df1b6945cff490",
+          "runtime": "motion-s2-chain_golem-defend.webp",
+          "runtime_sha256": "c53d8701e7ec60c31704cafc0769ab86dfaeadd4b520f5aa6f764702b1cff31f",
+          "runtime_bytes": 905400,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            },
+            {
+              "frame": 1,
+              "source": [
+                251,
+                248,
+                561,
+                577
+              ],
+              "canvas": [
+                467.5,
+                275.0,
+                1242.5,
+                1097.5
+              ],
+              "pixel_sha256": "cc74d23ca2a45e42687afd09401c928b55a43cf3b0268739371b6b1e7ffdaa58"
+            },
+            {
+              "frame": 2,
+              "source": [
+                233,
+                251,
+                551,
+                577
+              ],
+              "canvas": [
+                422.5,
+                282.5,
+                1217.5,
+                1097.5
+              ],
+              "pixel_sha256": "bf88ae00dd52edbdc26b83e84c0822e04007170fdf28c9ec698f4309530e6df6"
+            },
+            {
+              "frame": 3,
+              "source": [
+                240,
+                256,
+                563,
+                576
+              ],
+              "canvas": [
+                440.0,
+                295.0,
+                1247.5,
+                1095.0
+              ],
+              "pixel_sha256": "632d8a0203fb53bb32986b4cd1152fdd3be59034a6b4185608bc4604f6beb1f2"
+            },
+            {
+              "frame": 4,
+              "source": [
+                216,
+                254,
+                582,
+                577
+              ],
+              "canvas": [
+                380.0,
+                290.0,
+                1295.0,
+                1097.5
+              ],
+              "pixel_sha256": "1de1960cb3aa1cef88084ccd80b3041646a540f48e8c48fef9665daf1dcf37fd"
+            },
+            {
+              "frame": 5,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/chain_golem/sprites/chain_golem_skill.png",
+          "source_sha256": "b522566296967cc02250f728e6706be65eee61805755b87a30d0c944cd4cb6ef",
+          "runtime": "motion-s2-chain_golem-skill.webp",
+          "runtime_sha256": "9d9a0c1eefcf1f92ca22cb0bf26947be083dbe4ba16f0b4519497661d0553277",
+          "runtime_bytes": 997818,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            },
+            {
+              "frame": 1,
+              "source": [
+                222,
+                246,
+                589,
+                577
+              ],
+              "canvas": [
+                395.0,
+                270.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "6b74da02319e01851951c5ef08ad8d532413b81869122f88ca6c18e1efa57a4b"
+            },
+            {
+              "frame": 2,
+              "source": [
+                225,
+                245,
+                586,
+                577
+              ],
+              "canvas": [
+                402.5,
+                267.5,
+                1305.0,
+                1097.5
+              ],
+              "pixel_sha256": "2179737f2f17c5a54b161f9a9fab1ffee289de280cf41d8fcac468a9b5d9732f"
+            },
+            {
+              "frame": 3,
+              "source": [
+                207,
+                248,
+                621,
+                577
+              ],
+              "canvas": [
+                357.5,
+                275.0,
+                1392.5,
+                1097.5
+              ],
+              "pixel_sha256": "f7983b5ae6f51ae52a775ed65cfec5b595885fa81f68a1eb1ef2e27c68e8bd68"
+            },
+            {
+              "frame": 4,
+              "source": [
+                218,
+                248,
+                587,
+                577
+              ],
+              "canvas": [
+                385.0,
+                275.0,
+                1307.5,
+                1097.5
+              ],
+              "pixel_sha256": "da8a0b9fffacc7ec148ccf33407a4ef0a428064ebf6b6f8429be48e34ee17552"
+            },
+            {
+              "frame": 5,
+              "source": [
+                215,
+                252,
+                589,
+                577
+              ],
+              "canvas": [
+                377.5,
+                285.0,
+                1312.5,
+                1097.5
+              ],
+              "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/chain_golem/sprites/chain_golem_damaged.png",
+          "source_sha256": "78b3ab36989064778220cc98d1600f075a4e699abec56570f2277e08dd4afad9",
+          "runtime": "motion-s2-chain_golem-damaged.webp",
+          "runtime_sha256": "e57ffeb17678b275d33513af09199430303034457a29bfed51e46b5cd1917874",
+          "runtime_bytes": 532256,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                219,
+                227,
+                592,
+                578
+              ],
+              "canvas": [
+                387.5,
+                222.5,
+                1320.0,
+                1100.0
+              ],
+              "pixel_sha256": "cc25ddd1032f0b718cb8a6a8007c3419909dac6f00f2f8b0e54fa6cc5eebc7d9"
+            },
+            {
+              "frame": 1,
+              "source": [
+                196,
+                232,
+                645,
+                578
+              ],
+              "canvas": [
+                330.0,
+                235.0,
+                1452.5,
+                1100.0
+              ],
+              "pixel_sha256": "7348965a9a44a1d6ad50945c2b437ff39172ee56db06642edc78dad55ab0c832"
+            },
+            {
+              "frame": 2,
+              "source": [
+                224,
+                233,
+                597,
+                578
+              ],
+              "canvas": [
+                400.0,
+                237.5,
+                1332.5,
+                1100.0
+              ],
+              "pixel_sha256": "54d927714cf353255bd1c110bbad71ecb4e1ae9504c0a9ef06faddb7125f010b"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ],
+      "posters": [
+        {
+          "action": "idle",
+          "runtime": "poster-s2-chain_golem-idle.webp",
+          "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8",
+          "bytes": 634632,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            372,
+            279,
+            1318,
+            1103
+          ]
+        },
+        {
+          "action": "attack",
+          "runtime": "poster-s2-chain_golem-attack.webp",
+          "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8",
+          "bytes": 634632,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            372,
+            279,
+            1318,
+            1103
+          ]
+        },
+        {
+          "action": "defend",
+          "runtime": "poster-s2-chain_golem-defend.webp",
+          "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8",
+          "bytes": 634632,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            372,
+            279,
+            1318,
+            1103
+          ]
+        },
+        {
+          "action": "skill",
+          "runtime": "poster-s2-chain_golem-skill.webp",
+          "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8",
+          "bytes": 634632,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            372,
+            279,
+            1318,
+            1103
+          ]
+        },
+        {
+          "action": "damaged",
+          "runtime": "poster-s2-chain_golem-damaged.webp",
+          "sha256": "dab5b5a5d14623e4e1f6586bde8c7411ab8d3b49cbc70eea1b7d7f52d92db5ea",
+          "bytes": 824428,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            382,
+            221,
+            1323,
+            1103
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reaper",
+      "source_id": "rune_reaper",
+      "type": "elite",
+      "facing": "left",
+      "flipX": false,
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/rune_reaper/sprites/rune_reaper_idle.png",
+          "source_sha256": "0e5c3f2a42527d398c0060d66eae5101229e4ab4a0be383ea22032a883ecc254",
+          "runtime": "motion-s2-rune_reaper-idle.webp",
+          "runtime_sha256": "15031c2e77305cc9cd9cafcc115ac66de2b8ac38b42d4cb99f6eb880152f2406",
+          "runtime_bytes": 910690,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            },
+            {
+              "frame": 1,
+              "source": [
+                238,
+                193,
+                594,
+                578
+              ],
+              "canvas": [
+                435.0,
+                137.5,
+                1325.0,
+                1100.0
+              ],
+              "pixel_sha256": "ffdafb5ce095e64b07bd5d00032316bbffad07a1cd60f4f310acdfec2d82be50"
+            },
+            {
+              "frame": 2,
+              "source": [
+                237,
+                193,
+                586,
+                577
+              ],
+              "canvas": [
+                432.5,
+                137.5,
+                1305.0,
+                1097.5
+              ],
+              "pixel_sha256": "400156f1a7131d99c4f4478bc850f6dcaab9239232deeaed3d9731db983ef80d"
+            },
+            {
+              "frame": 3,
+              "source": [
+                224,
+                192,
+                597,
+                577
+              ],
+              "canvas": [
+                400.0,
+                135.0,
+                1332.5,
+                1097.5
+              ],
+              "pixel_sha256": "cbbe50aa6e540cd1d12b2077776a805fc9ee0da714d60e19afb2dfb7b66aefaa"
+            },
+            {
+              "frame": 4,
+              "source": [
+                226,
+                187,
+                594,
+                578
+              ],
+              "canvas": [
+                405.0,
+                122.5,
+                1325.0,
+                1100.0
+              ],
+              "pixel_sha256": "db065773b744ece8a0ceb87bfcdd266bee1f60e1c29982bf9df1843558c23a3f"
+            },
+            {
+              "frame": 5,
+              "source": [
+                223,
+                189,
+                578,
+                578
+              ],
+              "canvas": [
+                397.5,
+                127.5,
+                1285.0,
+                1100.0
+              ],
+              "pixel_sha256": "88e2a66753e4c27d1930a46560b6082724891dcb0de859eac18844d97d44a3b1"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/rune_reaper/sprites/rune_reaper_attack.png",
+          "source_sha256": "4bac951b48277c35236bc263fee0b223205d3508a3a53db5f5a441fd46ba2195",
+          "runtime": "motion-s2-rune_reaper-attack.webp",
+          "runtime_sha256": "5836eb84a0425a15f8e1ff8942273a300642979246af2d39a063c9fa31d2360e",
+          "runtime_bytes": 898060,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            },
+            {
+              "frame": 1,
+              "source": [
+                210,
+                184,
+                570,
+                577
+              ],
+              "canvas": [
+                365.0,
+                115.0,
+                1265.0,
+                1097.5
+              ],
+              "pixel_sha256": "3d00ebf6fd2b05347cca8b2c1b955a5778031baf28af7517f1419f5f7814d603"
+            },
+            {
+              "frame": 2,
+              "source": [
+                142,
+                211,
+                573,
+                577
+              ],
+              "canvas": [
+                195.0,
+                182.5,
+                1272.5,
+                1097.5
+              ],
+              "pixel_sha256": "df839cfc702b9ccb9f75a1fff00aa376ffd199dfb44296588b5cbb0345190c2c"
+            },
+            {
+              "frame": 3,
+              "source": [
+                118,
+                173,
+                561,
+                578
+              ],
+              "canvas": [
+                135.0,
+                87.5,
+                1242.5,
+                1100.0
+              ],
+              "pixel_sha256": "87e5ce8e50c3925e283574e70b2ead5869d1f3db57d1325a53177f45215bc0a3"
+            },
+            {
+              "frame": 4,
+              "source": [
+                203,
+                185,
+                583,
+                578
+              ],
+              "canvas": [
+                347.5,
+                117.5,
+                1297.5,
+                1100.0
+              ],
+              "pixel_sha256": "956eda2d4b1302765f600d53cd0ba101b5ff6c0220d65b4b53a5a9380c12c381"
+            },
+            {
+              "frame": 5,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/rune_reaper/sprites/rune_reaper_defend.png",
+          "source_sha256": "5479e786556fe1d307740b034ddc403d4fa065f887351da35e2dc6880f6a0796",
+          "runtime": "motion-s2-rune_reaper-defend.webp",
+          "runtime_sha256": "b55e2e37514e76768abb935e2a54612f9e0a7e4b80342357ff7f0b8688dc9157",
+          "runtime_bytes": 928190,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            },
+            {
+              "frame": 1,
+              "source": [
+                229,
+                198,
+                571,
+                577
+              ],
+              "canvas": [
+                412.5,
+                150.0,
+                1267.5,
+                1097.5
+              ],
+              "pixel_sha256": "10499cd44e97f742f6cc2d4ce6ddd0f66a5a7b91c2cc0f889553fcc4ca1dbf72"
+            },
+            {
+              "frame": 2,
+              "source": [
+                122,
+                247,
+                573,
+                577
+              ],
+              "canvas": [
+                145.0,
+                272.5,
+                1272.5,
+                1097.5
+              ],
+              "pixel_sha256": "f5f8ed783ea0a76a48d2493e3c4284a0f658029f0aa758a139b2bcd7648d71fc"
+            },
+            {
+              "frame": 3,
+              "source": [
+                198,
+                202,
+                577,
+                578
+              ],
+              "canvas": [
+                335.0,
+                160.0,
+                1282.5,
+                1100.0
+              ],
+              "pixel_sha256": "0a90795fdb4035131f686d4cbe808ee93f94a6a49b1a8dd9d3856b65833b486c"
+            },
+            {
+              "frame": 4,
+              "source": [
+                218,
+                197,
+                578,
+                577
+              ],
+              "canvas": [
+                385.0,
+                147.5,
+                1285.0,
+                1097.5
+              ],
+              "pixel_sha256": "6652b4cda64b96725a15ede442f6e24a1e9557b389dbf53464bb47deaa74c1f3"
+            },
+            {
+              "frame": 5,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/rune_reaper/sprites/rune_reaper_skill.png",
+          "source_sha256": "ad6de7fdc76fd7e0555fb0e6fddd8bad9084996c06b2e85098a999f65038107f",
+          "runtime": "motion-s2-rune_reaper-skill.webp",
+          "runtime_sha256": "912987baef788381a7725354e8296e0b44f1d270efac7f56e2580c8d57bfcc7e",
+          "runtime_bytes": 980400,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            },
+            {
+              "frame": 1,
+              "source": [
+                231,
+                193,
+                592,
+                577
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1320.0,
+                1097.5
+              ],
+              "pixel_sha256": "c6cd86f921e63ac85a3f39e782609e865797881942bbd3ba0037a2a3d50c1193"
+            },
+            {
+              "frame": 2,
+              "source": [
+                231,
+                193,
+                581,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1292.5,
+                1100.0
+              ],
+              "pixel_sha256": "ae0440d36474f0b5182445ef9d58a89c65a96f59ffe71438fde459c9b54a68c2"
+            },
+            {
+              "frame": 3,
+              "source": [
+                223,
+                186,
+                598,
+                578
+              ],
+              "canvas": [
+                397.5,
+                120.0,
+                1335.0,
+                1100.0
+              ],
+              "pixel_sha256": "7fd0ae44d52c507e7341b54c93ff0bf4ed841e395562560dcb085e6416c23bad"
+            },
+            {
+              "frame": 4,
+              "source": [
+                224,
+                185,
+                593,
+                578
+              ],
+              "canvas": [
+                400.0,
+                117.5,
+                1322.5,
+                1100.0
+              ],
+              "pixel_sha256": "a7818d46a479f31d12ff5b304fba6434baa96f9963452d1785acf016a41ac674"
+            },
+            {
+              "frame": 5,
+              "source": [
+                231,
+                193,
+                586,
+                578
+              ],
+              "canvas": [
+                417.5,
+                137.5,
+                1305.0,
+                1100.0
+              ],
+              "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/rune_reaper/sprites/rune_reaper_damaged.png",
+          "source_sha256": "7c7017c8bd48ca7743f69c725d181a81db4041061c98cceb75aae04390724359",
+          "runtime": "motion-s2-rune_reaper-damaged.webp",
+          "runtime_sha256": "411eeff741ce7501699b636ebc0ea311895ff717bd5ec98f5be3d38b1be5e709",
+          "runtime_bytes": 569620,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                167,
+                185,
+                590,
+                578
+              ],
+              "canvas": [
+                257.5,
+                117.5,
+                1315.0,
+                1100.0
+              ],
+              "pixel_sha256": "05d61a5c400190643a69e396ed5b0e5e80c4e53937ed261275cea5a3b8d594d0"
+            },
+            {
+              "frame": 1,
+              "source": [
+                157,
+                176,
+                593,
+                578
+              ],
+              "canvas": [
+                232.5,
+                95.0,
+                1322.5,
+                1100.0
+              ],
+              "pixel_sha256": "8ab29d0f228c5dcd68b05da6c9cd5971fba4d624b59cbe04f33edc7de2135bee"
+            },
+            {
+              "frame": 2,
+              "source": [
+                129,
+                182,
+                581,
+                578
+              ],
+              "canvas": [
+                162.5,
+                110.0,
+                1292.5,
+                1100.0
+              ],
+              "pixel_sha256": "5f791d722484961717a7908f1ca9f7057c0d1ccca87476b9f44763d0bd3c60aa"
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ],
+      "posters": [
+        {
+          "action": "idle",
+          "runtime": "poster-s2-rune_reaper-idle.webp",
+          "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a",
+          "bytes": 660352,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            417,
+            135,
+            1311,
+            1101
+          ]
+        },
+        {
+          "action": "attack",
+          "runtime": "poster-s2-rune_reaper-attack.webp",
+          "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a",
+          "bytes": 660352,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            417,
+            135,
+            1311,
+            1101
+          ]
+        },
+        {
+          "action": "defend",
+          "runtime": "poster-s2-rune_reaper-defend.webp",
+          "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a",
+          "bytes": 660352,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            417,
+            135,
+            1311,
+            1101
+          ]
+        },
+        {
+          "action": "skill",
+          "runtime": "poster-s2-rune_reaper-skill.webp",
+          "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a",
+          "bytes": 660352,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            417,
+            135,
+            1311,
+            1101
+          ]
+        },
+        {
+          "action": "damaged",
+          "runtime": "poster-s2-rune_reaper-damaged.webp",
+          "sha256": "bcc808d7266a2adf299814322ff338f326450da44f821230c7cf05be4e3534f7",
+          "bytes": 863052,
+          "source_frame": 0,
+          "canvas_origin": [
+            -160,
+            -345
+          ],
+          "alpha_bounds": [
+            257,
+            112,
+            1320,
+            1101
+          ]
+        }
+      ]
+    }
+  ],
+  "stage": 2,
+  "source_version": "2.1",
+  "verified_only": false
+}

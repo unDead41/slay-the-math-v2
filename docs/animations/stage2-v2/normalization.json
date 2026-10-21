@@ -1,0 +1,5876 @@
+{
+  "alpha_noise_cutoff": 3,
+  "calibration": {
+    "chain_weaver": {
+      "source_idle_median_long_edge_px": 461.0,
+      "source_neutral_eye_to_root_height_px": 391.9874034191628,
+      "target_idle_median_long_edge_px": 384,
+      "measured_idle_median_long_edge_px": 384.0,
+      "raster_rounding_correction": 1.0,
+      "global_root_translation": [
+        -30,
+        0
+      ],
+      "per_action_scale": {
+        "idle": 0.8329718004338394,
+        "attack": 0.8391105867011395,
+        "defend": 0.9217208277629577,
+        "skill": 0.9314263878224371,
+        "damaged": 0.6750026227740801
+      },
+      "uniform_scale_within_action": true,
+      "scale_is_independent_of_per_frame_VFX_bounds": true,
+      "root_registration": "cyan face centre with authored float/recoil offsets",
+      "shared_neutral_endpoints": [
+        "attack",
+        "defend",
+        "skill"
+      ]
+    },
+    "deck_guard": {
+      "source_idle_median_long_edge_px": 414.0,
+      "source_neutral_eye_to_root_height_px": 316.6650587880615,
+      "target_idle_median_long_edge_px": 384,
+      "measured_idle_median_long_edge_px": 383.5,
+      "raster_rounding_correction": 0.9986996098829649,
+      "global_root_translation": [
+        15,
+        0
+      ],
+      "per_action_scale": {
+        "idle": 0.926330072934924,
+        "attack": 0.9641887458104232,
+        "defend": 0.923496520190117,
+        "skill": 1.0051923202033681,
+        "damaged": 0.6875168507276754
+      },
+      "uniform_scale_within_action": true,
+      "scale_is_independent_of_per_frame_VFX_bounds": true,
+      "root_registration": "rear planted foot with fixed floor y; authored recoil offsets",
+      "shared_neutral_endpoints": [
+        "attack",
+        "defend",
+        "skill"
+      ]
+    },
+    "card_mimic": {
+      "source_idle_median_long_edge_px": 454.5,
+      "source_neutral_eye_to_root_height_px": 271.1128216044491,
+      "target_idle_median_long_edge_px": 384,
+      "measured_idle_median_long_edge_px": 384.0,
+      "raster_rounding_correction": 0.9986996098829649,
+      "global_root_translation": [
+        0,
+        0
+      ],
+      "per_action_scale": {
+        "idle": 0.8437858090100298,
+        "attack": 0.849986374730948,
+        "defend": 0.8420833128302458,
+        "skill": 0.929437214675139,
+        "damaged": 0.6783639040852785
+      },
+      "uniform_scale_within_action": true,
+      "scale_is_independent_of_per_frame_VFX_bounds": true,
+      "root_registration": "rear planted foot with fixed floor y; authored recoil offsets",
+      "shared_neutral_endpoints": [
+        "attack",
+        "defend",
+        "skill"
+      ]
+    },
+    "chain_golem": {
+      "source_idle_median_long_edge_px": 457.5,
+      "source_neutral_core_to_root_height_px": 252.7459276176643,
+      "target_idle_median_long_edge_px": 384,
+      "measured_idle_median_long_edge_px": 384.0,
+      "raster_rounding_correction": 1.0145310435931307,
+      "global_root_translation": [
+        0,
+        0
+      ],
+      "per_action_scale": {
+        "idle": 0.8420807866166015,
+        "attack": 0.7647395207378063,
+        "defend": 0.6863636363972887,
+        "skill": 0.7095653787560253,
+        "damaged": 0.5396840237713663
+      },
+      "uniform_scale_within_action": false,
+      "uniform_scale_within_non_idle_action": true,
+      "idle_anatomical_height_stabilization": "cyan chest core to planted sole; authored breathing amplitude <=0.8%; excludes ball, glow and shards",
+      "scale_is_independent_of_per_frame_VFX_bounds": true,
+      "root_registration": "rear planted foot with fixed floor y; authored recoil offsets",
+      "shared_neutral_endpoints": [
+        "attack",
+        "defend",
+        "skill"
+      ]
+    },
+    "rune_reaper": {
+      "source_idle_median_long_edge_px": 479.0,
+      "source_neutral_core_to_root_height_px": 344.3330610021786,
+      "target_idle_median_long_edge_px": 384,
+      "measured_idle_median_long_edge_px": 384.5,
+      "raster_rounding_correction": 1.001303780964798,
+      "global_root_translation": [
+        0,
+        0
+      ],
+      "per_action_scale": {
+        "idle": 0.8027153484143683,
+        "attack": 0.8123058753584381,
+        "defend": 0.8002747411658626,
+        "skill": 0.8165540574829221,
+        "damaged": 0.6027317456862017
+      },
+      "uniform_scale_within_action": true,
+      "scale_is_independent_of_per_frame_VFX_bounds": true,
+      "root_registration": "rear planted foot with fixed floor y; authored recoil offsets",
+      "shared_neutral_endpoints": [
+        "attack",
+        "defend",
+        "skill"
+      ]
+    }
+  },
+  "records": {
+    "chain_weaver": {
+      "idle": [
+        {
+          "index": 0,
+          "source": "chain_weaver_idle.png",
+          "source_crop": [
+            55,
+            25,
+            460,
+            482
+          ],
+          "eye_px": [
+            166.20622049011706,
+            64.42845857584423
+          ],
+          "root_px": [
+            166.20622049011706,
+            64.42845857584423
+          ],
+          "reference_body_height_px": 387.5715414241558,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8329718004338394,
+          "translation": [
+            263.5549052750435,
+            178.332910860902
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "chain_weaver_idle.png",
+          "source_crop": [
+            555,
+            24,
+            975,
+            490
+          ],
+          "eye_px": [
+            178.5228635394879,
+            64.15150394525426
+          ],
+          "root_px": [
+            178.5228635394879,
+            64.15150394525426
+          ],
+          "reference_body_height_px": 396.84849605474574,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8329718004338394,
+          "translation": [
+            253.29548893890814,
+            176.563606258183
+          ],
+          "final_bounds": [
+            253,
+            177,
+            603,
+            565
+          ],
+          "padding_ltrb_px": [
+            253,
+            177,
+            165,
+            203
+          ],
+          "pixel_sha256": "7433b22f6bc4e52eddbddba198fc5d8c5009e453482741a3147c8431983779f2",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_weaver_idle.png",
+          "source_crop": [
+            1075,
+            25,
+            1487,
+            486
+          ],
+          "eye_px": [
+            169.53278066970913,
+            63.19414395758477
+          ],
+          "root_px": [
+            169.53278066970913,
+            63.19414395758477
+          ],
+          "reference_body_height_px": 392.80585604241526,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8329718004338394,
+          "translation": [
+            260.7839744529972,
+            176.36106013077537
+          ],
+          "final_bounds": [
+            261,
+            176,
+            604,
+            560
+          ],
+          "padding_ltrb_px": [
+            261,
+            176,
+            164,
+            208
+          ],
+          "pixel_sha256": "3c8709f23565780e52a6c1abc8a656c3ea38c8552c425054a396ea3951ac1228",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_weaver_idle.png",
+          "source_crop": [
+            44,
+            533,
+            478,
+            997
+          ],
+          "eye_px": [
+            175.41642077240388,
+            67.67028910700604
+          ],
+          "root_px": [
+            175.41642077240388,
+            67.67028910700604
+          ],
+          "reference_body_height_px": 392.32971089299394,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8329718004338394,
+          "translation": [
+            255.88306816355077,
+            175.63255744665875
+          ],
+          "final_bounds": [
+            257,
+            177,
+            617,
+            562
+          ],
+          "padding_ltrb_px": [
+            257,
+            177,
+            151,
+            206
+          ],
+          "pixel_sha256": "827a83d4a12da116cba95a36b43659cead109359815f3a60360b0ff844a359a2",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_weaver_idle.png",
+          "source_crop": [
+            563,
+            532,
+            989,
+            995
+          ],
+          "eye_px": [
+            167.61683266259166,
+            67.35490405466835
+          ],
+          "root_px": [
+            167.61683266259166,
+            67.35490405466835
+          ],
+          "reference_body_height_px": 391.64509594533166,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8329718004338394,
+          "translation": [
+            262.3799051140235,
+            177.89526430153438
+          ],
+          "final_bounds": [
+            262,
+            178,
+            616,
+            564
+          ],
+          "padding_ltrb_px": [
+            262,
+            178,
+            152,
+            204
+          ],
+          "pixel_sha256": "426d6083acf455a17184d3d4182a3116e073c2c52ca16fa7610729108e0ac23e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_weaver_idle.png",
+          "source_crop": [
+            1077,
+            531,
+            1485,
+            995
+          ],
+          "eye_px": [
+            167.5908486207147,
+            69.23173848524368
+          ],
+          "root_px": [
+            167.5908486207147,
+            69.23173848524368
+          ],
+          "reference_body_height_px": 390.7682615147563,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8329718004338394,
+          "translation": [
+            262.4015490881683,
+            177.33191414678186
+          ],
+          "final_bounds": [
+            263,
+            177,
+            602,
+            563
+          ],
+          "padding_ltrb_px": [
+            263,
+            177,
+            166,
+            205
+          ],
+          "pixel_sha256": "62d5c453944d1061be463cc29c9e22c05114079acc55500a8b3a750d059650fa",
+          "shared_idle_endpoint": false
+        }
+      ],
+      "attack": [
+        {
+          "index": 0,
+          "source": "chain_weaver_attack.png",
+          "source_crop": [
+            26,
+            22,
+            464,
+            480
+          ],
+          "eye_px": [
+            187.61130460950375,
+            65.88030785418
+          ],
+          "root_px": [
+            187.61130460950375,
+            65.88030785418
+          ],
+          "reference_body_height_px": 389.11969214582,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8391105867011395,
+          "translation": [
+            244.57336811735308,
+            176.71913622442733
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "chain_weaver_attack.png",
+          "source_crop": [
+            521,
+            21,
+            989,
+            482
+          ],
+          "eye_px": [
+            236.40325529341615,
+            69.18668837931294
+          ],
+          "root_px": [
+            236.40325529341615,
+            69.18668837931294
+          ],
+          "reference_body_height_px": 386.81331162068705,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8391105867011395,
+          "translation": [
+            205.6315257526823,
+            173.94471732212583
+          ],
+          "final_bounds": [
+            206,
+            175,
+            597,
+            560
+          ],
+          "padding_ltrb_px": [
+            206,
+            175,
+            171,
+            208
+          ],
+          "pixel_sha256": "9e08d5f581ebd013da7d549856e18a1cc44e3b61a1fa679ee5b8176f29cd0441",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_weaver_attack.png",
+          "source_crop": [
+            1009,
+            28,
+            1520,
+            481
+          ],
+          "eye_px": [
+            288.43907935528597,
+            80.3575887404928
+          ],
+          "root_px": [
+            288.43907935528597,
+            80.3575887404928
+          ],
+          "reference_body_height_px": 369.6424112595072,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8391105867011395,
+          "translation": [
+            157.96771489464948,
+            164.57109656607622
+          ],
+          "final_bounds": [
+            158,
+            165,
+            587,
+            545
+          ],
+          "padding_ltrb_px": [
+            158,
+            165,
+            181,
+            223
+          ],
+          "pixel_sha256": "299d697ff50d5b10d97d02d14e9058c15615c0da6351a0f7168f9287dba2e59b",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_weaver_attack.png",
+          "source_crop": [
+            19,
+            539,
+            540,
+            985
+          ],
+          "eye_px": [
+            267.10983331468844,
+            67.08983107730171
+          ],
+          "root_px": [
+            267.10983331468844,
+            67.08983107730171
+          ],
+          "reference_body_height_px": 374.9101689226983,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8391105867011395,
+          "translation": [
+            173.86531105366822,
+            175.704212483045
+          ],
+          "final_bounds": [
+            174,
+            176,
+            610,
+            550
+          ],
+          "padding_ltrb_px": [
+            174,
+            176,
+            158,
+            218
+          ],
+          "pixel_sha256": "33c21cd87362ac3468f68aed7edc1afface435a44a8a3b41b9d277c1cad08abd",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_weaver_attack.png",
+          "source_crop": [
+            568,
+            531,
+            1037,
+            980
+          ],
+          "eye_px": [
+            206.12229689142515,
+            85.99647094158281
+          ],
+          "root_px": [
+            206.12229689142515,
+            85.99647094158281
+          ],
+          "reference_body_height_px": 359.0035290584172,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8391105867011395,
+          "translation": [
+            227.0405985232498,
+            159.83945081398093
+          ],
+          "final_bounds": [
+            227,
+            160,
+            621,
+            537
+          ],
+          "padding_ltrb_px": [
+            227,
+            160,
+            147,
+            231
+          ],
+          "pixel_sha256": "bd7a6b3c3d54f3ecd742c3b00651365d3d1b91803f3a88eb5b83d2482ca39d78",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_weaver_attack.png",
+          "source_crop": [
+            1062,
+            530,
+            1489,
+            983
+          ],
+          "eye_px": [
+            179.1963918428752,
+            67.55725373477061
+          ],
+          "root_px": [
+            179.1963918428752,
+            67.55725373477061
+          ],
+          "reference_body_height_px": 381.4427462652294,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8391105867011395,
+          "translation": [
+            251.63441050599772,
+            175.31199318269887
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "defend": [
+        {
+          "index": 0,
+          "source": "chain_weaver_defend.png",
+          "source_crop": [
+            54,
+            57,
+            458,
+            480
+          ],
+          "eye_px": [
+            169.72848366030985,
+            64.75558744190963
+          ],
+          "root_px": [
+            169.72848366030985,
+            64.75558744190963
+          ],
+          "reference_body_height_px": 354.2444125580904,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9217208277629577,
+          "translation": [
+            245.55772154566756,
+            172.31342634076645
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "chain_weaver_defend.png",
+          "source_crop": [
+            568,
+            63,
+            972,
+            482
+          ],
+          "eye_px": [
+            172.4231786249777,
+            65.19570592450866
+          ],
+          "root_px": [
+            172.4231786249777,
+            65.19570592450866
+          ],
+          "reference_body_height_px": 348.8042940754913,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9217208277629577,
+          "translation": [
+            243.0739650722652,
+            171.9077599686715
+          ],
+          "final_bounds": [
+            243,
+            172,
+            615,
+            558
+          ],
+          "padding_ltrb_px": [
+            243,
+            172,
+            153,
+            210
+          ],
+          "pixel_sha256": "49581fa0ff1f580a8eddd48424e54bc289610c664833d164ce45ead995bd139e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_weaver_defend.png",
+          "source_crop": [
+            1065,
+            63,
+            1500,
+            482
+          ],
+          "eye_px": [
+            182.58196787215084,
+            65.17124786311724
+          ],
+          "root_px": [
+            182.58196787215084,
+            65.17124786311724
+          ],
+          "reference_body_height_px": 350.82875213688277,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9217208277629577,
+          "translation": [
+            233.71039743829135,
+            171.93030347326268
+          ],
+          "final_bounds": [
+            234,
+            172,
+            635,
+            558
+          ],
+          "padding_ltrb_px": [
+            234,
+            172,
+            133,
+            210
+          ],
+          "pixel_sha256": "8bfa0669514005bf1a250f5315a9eac7b05170d63c9ce65b399b7bb540f2703b",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_weaver_defend.png",
+          "source_crop": [
+            57,
+            557,
+            493,
+            966
+          ],
+          "eye_px": [
+            175.2038853194991,
+            65.63992938819632
+          ],
+          "root_px": [
+            175.2038853194991,
+            65.63992938819632
+          ],
+          "reference_body_height_px": 339.3600706118037,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9217208277629577,
+          "translation": [
+            240.51092979602493,
+            171.4983099500096
+          ],
+          "final_bounds": [
+            241,
+            171,
+            642,
+            548
+          ],
+          "padding_ltrb_px": [
+            241,
+            171,
+            126,
+            220
+          ],
+          "pixel_sha256": "00ec0f69c6489e285976402766e11bc01066ce2c8dd2000878790a2dfdbe5233",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_weaver_defend.png",
+          "source_crop": [
+            564,
+            555,
+            989,
+            974
+          ],
+          "eye_px": [
+            173.33268054763593,
+            64.00087687807307
+          ],
+          "root_px": [
+            173.33268054763593,
+            64.00087687807307
+          ],
+          "reference_body_height_px": 350.9991231219269,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9217208277629577,
+          "translation": [
+            242.2356582072607,
+            173.00905878638736
+          ],
+          "final_bounds": [
+            242,
+            173,
+            634,
+            559
+          ],
+          "padding_ltrb_px": [
+            242,
+            173,
+            134,
+            209
+          ],
+          "pixel_sha256": "9c734a2e8d4a3a70e38ed570264b629be9b2c76d3f65bb9277df97b030e2d7e4",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_weaver_defend.png",
+          "source_crop": [
+            1068,
+            557,
+            1486,
+            976
+          ],
+          "eye_px": [
+            175.30534380792986,
+            65.86671391742905
+          ],
+          "root_px": [
+            175.30534380792986,
+            65.86671391742905
+          ],
+          "reference_body_height_px": 349.133286082571,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9217208277629577,
+          "translation": [
+            240.41741339408497,
+            171.28927792600138
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "skill": [
+        {
+          "index": 0,
+          "source": "chain_weaver_skill.png",
+          "source_crop": [
+            100,
+            65,
+            492,
+            481
+          ],
+          "eye_px": [
+            162.54526543024204,
+            62.446851149668085
+          ],
+          "root_px": [
+            162.54526543024204,
+            62.446851149668085
+          ],
+          "reference_body_height_px": 350.5531488503319,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9314263878224371,
+          "translation": [
+            250.60105056267037,
+            173.83535500277924
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "chain_weaver_skill.png",
+          "source_crop": [
+            607,
+            64,
+            995,
+            481
+          ],
+          "eye_px": [
+            166.16262713821817,
+            61.1371015803926
+          ],
+          "root_px": [
+            166.16262713821817,
+            61.1371015803926
+          ],
+          "reference_body_height_px": 352.8628984196074,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9314263878224371,
+          "translation": [
+            247.23174441356298,
+            175.0552903130415
+          ],
+          "final_bounds": [
+            247,
+            175,
+            609,
+            563
+          ],
+          "padding_ltrb_px": [
+            247,
+            175,
+            159,
+            205
+          ],
+          "pixel_sha256": "28665e03f0fdeb9de8b8eae14323c7494a420866d0e6c70f2e80a8997f2a6db0",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_weaver_skill.png",
+          "source_crop": [
+            1098,
+            65,
+            1516,
+            481
+          ],
+          "eye_px": [
+            190.16745881636356,
+            61.81526567533079
+          ],
+          "root_px": [
+            190.16745881636356,
+            61.81526567533079
+          ],
+          "reference_body_height_px": 351.1847343246692,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9314263878224371,
+          "translation": [
+            224.8730107533024,
+            174.42363037974235
+          ],
+          "final_bounds": [
+            226,
+            174,
+            612,
+            562
+          ],
+          "padding_ltrb_px": [
+            226,
+            174,
+            156,
+            206
+          ],
+          "pixel_sha256": "ffdd7b638b62fb7745fd6e84fe31070a9a0db20f0592163c8c8a2743e9c4f6ee",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_weaver_skill.png",
+          "source_crop": [
+            15,
+            570,
+            628,
+            961
+          ],
+          "eye_px": [
+            325.7596952720273,
+            58.926208054548056
+          ],
+          "root_px": [
+            325.7596952720273,
+            58.926208054548056
+          ],
+          "reference_body_height_px": 329.07379194545194,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9314263878224371,
+          "translation": [
+            98.57882373463781,
+            177.1145748836789
+          ],
+          "final_bounds": [
+            99,
+            177,
+            670,
+            541
+          ],
+          "padding_ltrb_px": [
+            99,
+            177,
+            98,
+            227
+          ],
+          "pixel_sha256": "ff42ca804b65f3d96de4e0a245516cc3a0c69f856796d7b951da2531fdd41242",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_weaver_skill.png",
+          "source_crop": [
+            601,
+            569,
+            1078,
+            974
+          ],
+          "eye_px": [
+            234.58146490824078,
+            62.74164503800041
+          ],
+          "root_px": [
+            234.58146490824078,
+            62.74164503800041
+          ],
+          "reference_body_height_px": 338.2583549619996,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9314263878224371,
+          "translation": [
+            183.5046334904215,
+            173.56077619621774
+          ],
+          "final_bounds": [
+            184,
+            174,
+            628,
+            550
+          ],
+          "padding_ltrb_px": [
+            184,
+            174,
+            140,
+            218
+          ],
+          "pixel_sha256": "e6d6e244fa2fd3b260617b14d3209820630aca6df7dd87f5de278f0506a992f1",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_weaver_skill.png",
+          "source_crop": [
+            1122,
+            569,
+            1507,
+            980
+          ],
+          "eye_px": [
+            155.46659883854514,
+            62.72125968836401
+          ],
+          "root_px": [
+            155.46659883854514,
+            62.72125968836401
+          ],
+          "reference_body_height_px": 344.278740311636,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9314263878224371,
+          "translation": [
+            257.194307416774,
+            173.57976364879408
+          ],
+          "final_bounds": [
+            264,
+            179,
+            600,
+            559
+          ],
+          "padding_ltrb_px": [
+            264,
+            179,
+            168,
+            209
+          ],
+          "pixel_sha256": "ef71c22a528024f3730600b7756eafc542ee7348da2378066e93ae7a04dbbe05",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "damaged": [
+        {
+          "index": 0,
+          "source": "chain_weaver_damaged.png",
+          "source_crop": [
+            110,
+            90,
+            700,
+            640
+          ],
+          "eye_px": [
+            338.75423550681603,
+            62.27676373825215
+          ],
+          "root_px": [
+            338.75423550681603,
+            62.27676373825215
+          ],
+          "reference_body_height_px": 483.72323626174784,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6750026227740801,
+          "translation": [
+            178.3400025570708,
+            189.96302113879807
+          ],
+          "final_bounds": [
+            179,
+            191,
+            577,
+            561
+          ],
+          "padding_ltrb_px": [
+            179,
+            191,
+            191,
+            207
+          ],
+          "pixel_sha256": "c817defd591a873b3a30b96e21c53c1069cf44dbd141efa0e04fff1b23901196",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "chain_weaver_damaged.png",
+          "source_crop": [
+            787,
+            96,
+            1425,
+            637
+          ],
+          "eye_px": [
+            446.18527492463187,
+            58.12949851481595
+          ],
+          "root_px": [
+            446.18527492463187,
+            58.12949851481595
+          ],
+          "reference_body_height_px": 478.87050148518404,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6750026227740801,
+          "translation": [
+            113.8237691826995,
+            192.76243604195724
+          ],
+          "final_bounds": [
+            115,
+            194,
+            544,
+            558
+          ],
+          "padding_ltrb_px": [
+            115,
+            194,
+            224,
+            210
+          ],
+          "pixel_sha256": "37d386ca35c0bed36b8b220c7caa6341e8b43dcd9a3b9080821ed51b0627804c",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_weaver_damaged.png",
+          "source_crop": [
+            1521,
+            99,
+            2090,
+            641
+          ],
+          "eye_px": [
+            236.43004818354134,
+            80.98167899411656
+          ],
+          "root_px": [
+            236.43004818354134,
+            80.98167899411656
+          ],
+          "reference_body_height_px": 457.0183210058834,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6750026227740801,
+          "translation": [
+            246.4090973735075,
+            177.3371542823227
+          ],
+          "final_bounds": [
+            246,
+            177,
+            630,
+            543
+          ],
+          "padding_ltrb_px": [
+            246,
+            177,
+            138,
+            225
+          ],
+          "pixel_sha256": "02498eabaf7ab83bedcf318bfd45c441eb4289b78444e1f5a9d3928f77df2142",
+          "shared_idle_endpoint": false
+        }
+      ]
+    },
+    "deck_guard": {
+      "idle": [
+        {
+          "index": 0,
+          "source": "deck_guard_idle.png",
+          "source_crop": [
+            58,
+            61,
+            467,
+            466
+          ],
+          "eye_px": [
+            197.00716845878136,
+            85.88172043010752
+          ],
+          "root_px": [
+            316.12144102266126,
+            403.0
+          ],
+          "reference_body_height_px": 317.1182795698925,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.926330072934924,
+          "translation": [
+            202.16720248118492,
+            202.68898060722563
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "deck_guard_idle.png",
+          "source_crop": [
+            559,
+            56,
+            975,
+            466
+          ],
+          "eye_px": [
+            202.9125874125874,
+            81.88461538461539
+          ],
+          "root_px": [
+            323.7970414201183,
+            409.0
+          ],
+          "reference_body_height_px": 327.11538461538464,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.926330072934924,
+          "translation": [
+            195.0570630051892,
+            197.13100016961607
+          ],
+          "final_bounds": [
+            195,
+            197,
+            580,
+            577
+          ],
+          "padding_ltrb_px": [
+            195,
+            197,
+            188,
+            191
+          ],
+          "pixel_sha256": "df7273d147b893fd141e3aa1c57509d566e844f9ef9e00f244489170e358b5d1",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "deck_guard_idle.png",
+          "source_crop": [
+            1062,
+            73,
+            1471,
+            467
+          ],
+          "eye_px": [
+            193.56794425087108,
+            89.71777003484321
+          ],
+          "root_px": [
+            325.5934819897084,
+            391.0
+          ],
+          "reference_body_height_px": 301.2822299651568,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.926330072934924,
+          "translation": [
+            193.3929660813376,
+            213.80494148244475
+          ],
+          "final_bounds": [
+            193,
+            214,
+            572,
+            577
+          ],
+          "padding_ltrb_px": [
+            193,
+            214,
+            196,
+            191
+          ],
+          "pixel_sha256": "3b08b2c6d879a8dba45ee5e32be529802ec0269cd98ea620f502d78ba641d518",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "deck_guard_idle.png",
+          "source_crop": [
+            56,
+            578,
+            479,
+            965
+          ],
+          "eye_px": [
+            188.1607843137255,
+            99.73725490196078
+          ],
+          "root_px": [
+            327.30318543799774,
+            384.0
+          ],
+          "reference_body_height_px": 284.2627450980392,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.926330072934924,
+          "translation": [
+            191.80921636138663,
+            220.2892519929892
+          ],
+          "final_bounds": [
+            193,
+            221,
+            584,
+            579
+          ],
+          "padding_ltrb_px": [
+            193,
+            221,
+            184,
+            189
+          ],
+          "pixel_sha256": "0287b42208c7a4146788d5f7292fa81feaed96208ff2eaa95a68ac562c0311f5",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "deck_guard_idle.png",
+          "source_crop": [
+            563,
+            560,
+            979,
+            968
+          ],
+          "eye_px": [
+            204.14388489208633,
+            79.25539568345324
+          ],
+          "root_px": [
+            323.2812865497076,
+            405.0
+          ],
+          "reference_body_height_px": 325.74460431654677,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.926330072934924,
+          "translation": [
+            195.53482225191328,
+            200.8363204613558
+          ],
+          "final_bounds": [
+            197,
+            201,
+            580,
+            579
+          ],
+          "padding_ltrb_px": [
+            197,
+            201,
+            188,
+            189
+          ],
+          "pixel_sha256": "f9c67aaaede8f984debd7eda41513c448dc4c5d2bbd0c8b482655c45eba44984",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "deck_guard_idle.png",
+          "source_crop": [
+            1060,
+            558,
+            1476,
+            965
+          ],
+          "eye_px": [
+            198.7570093457944,
+            87.78816199376946
+          ],
+          "root_px": [
+            327.7042093287827,
+            404.0
+          ],
+          "reference_body_height_px": 316.21183800623055,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.926330072934924,
+          "translation": [
+            191.43773587138713,
+            201.76265053429074
+          ],
+          "final_bounds": [
+            193,
+            202,
+            577,
+            579
+          ],
+          "padding_ltrb_px": [
+            193,
+            202,
+            191,
+            189
+          ],
+          "pixel_sha256": "f396ece0d31ba5b7ab728776d1345f4418e1964a02acc51d2ecbbd223bddc026",
+          "shared_idle_endpoint": false
+        }
+      ],
+      "attack": [
+        {
+          "index": 0,
+          "source": "deck_guard_attack.png",
+          "source_crop": [
+            82,
+            66,
+            488,
+            461
+          ],
+          "eye_px": [
+            195.02931596091204,
+            86.76872964169381
+          ],
+          "root_px": [
+            313.02440377149196,
+            391.0
+          ],
+          "reference_body_height_px": 304.2312703583062,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9641887458104232,
+          "translation": [
+            193.18539271950965,
+            199.0022003881245
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "deck_guard_attack.png",
+          "source_crop": [
+            572,
+            77,
+            992,
+            460
+          ],
+          "eye_px": [
+            208.2403846153846,
+            89.97115384615384
+          ],
+          "root_px": [
+            334.1900328587076,
+            380.0
+          ],
+          "reference_body_height_px": 290.0288461538462,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9641887458104232,
+          "translation": [
+            172.77773135561858,
+            209.60827659203915
+          ],
+          "final_bounds": [
+            174,
+            210,
+            577,
+            579
+          ],
+          "padding_ltrb_px": [
+            174,
+            210,
+            191,
+            189
+          ],
+          "pixel_sha256": "2eae47774107cc5ad1c511f2e2397467af22dd9ced83cf9b4cf05f2da69bfb9f",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "deck_guard_attack.png",
+          "source_crop": [
+            1042,
+            80,
+            1491,
+            461
+          ],
+          "eye_px": [
+            237.3920265780731,
+            90.68770764119601
+          ],
+          "root_px": [
+            371.58727477477476,
+            377.0
+          ],
+          "reference_body_height_px": 286.312292358804,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9641887458104232,
+          "translation": [
+            136.7197315757968,
+            212.50084282947046
+          ],
+          "final_bounds": [
+            137,
+            213,
+            569,
+            580
+          ],
+          "padding_ltrb_px": [
+            137,
+            213,
+            199,
+            188
+          ],
+          "pixel_sha256": "61c95ee2a98b0d5f65eb8ebddf0e67fff5da21189cc8914f445a323c85535d3f",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "deck_guard_attack.png",
+          "source_crop": [
+            32,
+            575,
+            510,
+            946
+          ],
+          "eye_px": [
+            261.74426229508197,
+            82.54098360655738
+          ],
+          "root_px": [
+            395.24972497249723,
+            370.0
+          ],
+          "reference_body_height_px": 287.45901639344265,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9641887458104232,
+          "translation": [
+            113.90466339685315,
+            219.25016405014338
+          ],
+          "final_bounds": [
+            114,
+            219,
+            575,
+            577
+          ],
+          "padding_ltrb_px": [
+            114,
+            219,
+            193,
+            191
+          ],
+          "pixel_sha256": "21052932bcd9865dfb248f151ae8a46602cc6a65c30946977e2fc3229ecedbde",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "deck_guard_attack.png",
+          "source_crop": [
+            598,
+            559,
+            995,
+            946
+          ],
+          "eye_px": [
+            177.0547112462006,
+            89.13677811550151
+          ],
+          "root_px": [
+            312.20011210762334,
+            386.0
+          ],
+          "reference_body_height_px": 296.8632218844985,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9641887458104232,
+          "translation": [
+            193.9801654650771,
+            203.82314411717664
+          ],
+          "final_bounds": [
+            194,
+            204,
+            577,
+            577
+          ],
+          "padding_ltrb_px": [
+            194,
+            204,
+            191,
+            191
+          ],
+          "pixel_sha256": "55ad16d844f368c739d4d5810fe639dc00b5be2812c652f6e63dec1548d8d4ae",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "deck_guard_attack.png",
+          "source_crop": [
+            1070,
+            557,
+            1488,
+            947
+          ],
+          "eye_px": [
+            198.89614243323442,
+            85.91097922848665
+          ],
+          "root_px": [
+            332.5061315496098,
+            388.0
+          ],
+          "reference_body_height_px": 302.08902077151333,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.9641887458104232,
+          "translation": [
+            174.40133004690614,
+            201.8947666255558
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "defend": [
+        {
+          "index": 0,
+          "source": "deck_guard_defend.png",
+          "source_crop": [
+            56,
+            60,
+            468,
+            465
+          ],
+          "eye_px": [
+            199.43598615916954,
+            86.36332179930795
+          ],
+          "root_px": [
+            318.9050086355786,
+            404.0
+          ],
+          "reference_body_height_px": 317.636678200692,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.923496520190117,
+          "translation": [
+            200.49233425384398,
+            202.90740584319275
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "deck_guard_defend.png",
+          "source_crop": [
+            553,
+            63,
+            945,
+            466
+          ],
+          "eye_px": [
+            183.83783783783784,
+            84.34121621621621
+          ],
+          "root_px": [
+            334.6848958333333,
+            402.0
+          ],
+          "reference_body_height_px": 317.6587837837838,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.923496520190117,
+          "translation": [
+            185.9196633377249,
+            204.754398883573
+          ],
+          "final_bounds": [
+            187,
+            205,
+            548,
+            577
+          ],
+          "padding_ltrb_px": [
+            187,
+            205,
+            220,
+            191
+          ],
+          "pixel_sha256": "13b1a342c3d178e0ade7b6eab1cd786f1a617544fd4897ab1ff0d278c10212e3",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "deck_guard_defend.png",
+          "source_crop": [
+            1054,
+            86,
+            1455,
+            466
+          ],
+          "eye_px": [
+            176.4830917874396,
+            81.57487922705315
+          ],
+          "root_px": [
+            344.10033222591363,
+            379.0
+          ],
+          "reference_body_height_px": 297.42512077294685,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.923496520190117,
+          "translation": [
+            177.2245405931056,
+            225.99481884794568
+          ],
+          "final_bounds": [
+            178,
+            226,
+            548,
+            577
+          ],
+          "padding_ltrb_px": [
+            178,
+            226,
+            220,
+            191
+          ],
+          "pixel_sha256": "0b495a5bcf3ea65abee8d7062422de3642f813770495758c1fc15a3a74e9c98e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "deck_guard_defend.png",
+          "source_crop": [
+            74,
+            575,
+            461,
+            964
+          ],
+          "eye_px": [
+            181.36150234741785,
+            79.98122065727699
+          ],
+          "root_px": [
+            328.9187145557656,
+            388.0
+          ],
+          "reference_body_height_px": 308.018779342723,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.923496520190117,
+          "translation": [
+            191.24471168234413,
+            217.68335016623462
+          ],
+          "final_bounds": [
+            191,
+            218,
+            549,
+            577
+          ],
+          "padding_ltrb_px": [
+            191,
+            218,
+            219,
+            191
+          ],
+          "pixel_sha256": "3612e83dfd6c9caf2b707b939b5e2061323f6c032745f8574ec7800b8fb30420",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "deck_guard_defend.png",
+          "source_crop": [
+            561,
+            562,
+            972,
+            966
+          ],
+          "eye_px": [
+            196.15960912052117,
+            84.50162866449512
+          ],
+          "root_px": [
+            310.915380217267,
+            401.0
+          ],
+          "reference_body_height_px": 316.4983713355049,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.923496520190117,
+          "translation": [
+            207.8707282957668,
+            205.6778954037631
+          ],
+          "final_bounds": [
+            209,
+            206,
+            587,
+            577
+          ],
+          "padding_ltrb_px": [
+            209,
+            206,
+            181,
+            191
+          ],
+          "pixel_sha256": "3d5b71fcf60b5044492e876d974fbd81816454a3782d23c216f30d41eea05e6e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "deck_guard_defend.png",
+          "source_crop": [
+            1064,
+            567,
+            1477,
+            966
+          ],
+          "eye_px": [
+            196.57366771159874,
+            87.2257053291536
+          ],
+          "root_px": [
+            322.2288329519451,
+            396.0
+          ],
+          "reference_body_height_px": 308.7742946708464,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.923496520190117,
+          "translation": [
+            197.4227940639562,
+            210.29537800471365
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "skill": [
+        {
+          "index": 0,
+          "source": "deck_guard_skill.png",
+          "source_crop": [
+            97,
+            81,
+            484,
+            455
+          ],
+          "eye_px": [
+            188.6382113821138,
+            79.17886178861788
+          ],
+          "root_px": [
+            303.70217917675546,
+            371.0
+          ],
+          "reference_body_height_px": 291.8211382113821,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 1.0051923202033681,
+          "translation": [
+            189.72090186249812,
+            203.0736492045504
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "deck_guard_skill.png",
+          "source_crop": [
+            577,
+            81,
+            984,
+            454
+          ],
+          "eye_px": [
+            210.02941176470588,
+            75.6470588235294
+          ],
+          "root_px": [
+            325.07741190063547,
+            370.0
+          ],
+          "reference_body_height_px": 294.3529411764706,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 1.0051923202033681,
+          "translation": [
+            168.23468208589424,
+            204.07884152475378
+          ],
+          "final_bounds": [
+            170,
+            204,
+            577,
+            579
+          ],
+          "padding_ltrb_px": [
+            170,
+            204,
+            191,
+            189
+          ],
+          "pixel_sha256": "847f75c4ecb396727a3b1f06363262943b26e1bde8033807666885f2964ef03b",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "deck_guard_skill.png",
+          "source_crop": [
+            1067,
+            82,
+            1494,
+            454
+          ],
+          "eye_px": [
+            228.25,
+            80.846875
+          ],
+          "root_px": [
+            350.60483870967744,
+            369.0
+          ],
+          "reference_body_height_px": 288.153125,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 1.0051923202033681,
+          "translation": [
+            142.57470870289166,
+            205.08403384495716
+          ],
+          "final_bounds": [
+            144,
+            205,
+            572,
+            579
+          ],
+          "padding_ltrb_px": [
+            144,
+            205,
+            196,
+            189
+          ],
+          "pixel_sha256": "b686bbcf8ec79bf8a914cb47231e1b49458b2bbf96ea73a2847d2823dc05af0e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "deck_guard_skill.png",
+          "source_crop": [
+            65,
+            580,
+            536,
+            941
+          ],
+          "eye_px": [
+            275.9365671641791,
+            78.82462686567165
+          ],
+          "root_px": [
+            394.44503233392123,
+            358.0
+          ],
+          "reference_body_height_px": 279.17537313432837,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 1.0051923202033681,
+          "translation": [
+            98.50688275557314,
+            216.1411493671942
+          ],
+          "final_bounds": [
+            99,
+            216,
+            572,
+            579
+          ],
+          "padding_ltrb_px": [
+            99,
+            216,
+            196,
+            189
+          ],
+          "pixel_sha256": "5fc2ffe15de06032d530d60d66c36ba4661f9cf95850e6d119dce2eec5d6fb7e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "deck_guard_skill.png",
+          "source_crop": [
+            592,
+            578,
+            1022,
+            943
+          ],
+          "eye_px": [
+            237.3531914893617,
+            77.91914893617022
+          ],
+          "root_px": [
+            354.18899082568805,
+            364.0
+          ],
+          "reference_body_height_px": 286.08085106382975,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 1.0051923202033681,
+          "translation": [
+            138.97194652143713,
+            210.109995445974
+          ],
+          "final_bounds": [
+            139,
+            211,
+            571,
+            577
+          ],
+          "padding_ltrb_px": [
+            139,
+            211,
+            197,
+            191
+          ],
+          "pixel_sha256": "29c38d2e5e5c0f27d66102821218dfe28d2500b2329d493ea7ba400667a00067",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "deck_guard_skill.png",
+          "source_crop": [
+            1117,
+            577,
+            1496,
+            941
+          ],
+          "eye_px": [
+            179.4,
+            77.79615384615384
+          ],
+          "root_px": [
+            298.87584097859326,
+            362.0
+          ],
+          "reference_body_height_px": 284.20384615384614,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 1.0051923202033681,
+          "translation": [
+            194.57229995399496,
+            212.12038008638075
+          ],
+          "final_bounds": [
+            202,
+            203,
+            581,
+            577
+          ],
+          "padding_ltrb_px": [
+            202,
+            203,
+            187,
+            191
+          ],
+          "pixel_sha256": "2ab70afbc24cf8ee6b35e60e5a655241742e488b65c25375c8a42fb4a53a44d4",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "damaged": [
+        {
+          "index": 0,
+          "source": "deck_guard_damaged.png",
+          "source_crop": [
+            103,
+            107,
+            662,
+            636
+          ],
+          "eye_px": [
+            271.20725388601034,
+            99.33937823834196
+          ],
+          "root_px": [
+            422.25804853888064,
+            526.0
+          ],
+          "reference_body_height_px": 426.66062176165804,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6875168507276754,
+          "translation": [
+            208.69047627413488,
+            214.3661365172427
+          ],
+          "final_bounds": [
+            209,
+            214,
+            592,
+            577
+          ],
+          "padding_ltrb_px": [
+            209,
+            214,
+            176,
+            191
+          ],
+          "pixel_sha256": "4268a6f135781e225e8a1c50f990721a758427d6f1e1f148ba4de5d868dce7f3",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "deck_guard_damaged.png",
+          "source_crop": [
+            798,
+            112,
+            1420,
+            640
+          ],
+          "eye_px": [
+            384.662447257384,
+            115.41983122362869
+          ],
+          "root_px": [
+            430.5468669083377,
+            524.0
+          ],
+          "reference_body_height_px": 408.5801687763713,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6875168507276754,
+          "translation": [
+            210.99177397251208,
+            215.74117021869807
+          ],
+          "final_bounds": [
+            212,
+            216,
+            639,
+            579
+          ],
+          "padding_ltrb_px": [
+            212,
+            216,
+            129,
+            189
+          ],
+          "pixel_sha256": "ede0344477cf54f040e7d9815a4015be1fb384b19d5c16185851f5bc325a798d",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "deck_guard_damaged.png",
+          "source_crop": [
+            1513,
+            125,
+            2074,
+            636
+          ],
+          "eye_px": [
+            239.28149606299212,
+            113.40551181102362
+          ],
+          "root_px": [
+            441.8529411764706,
+            508.0
+          ],
+          "reference_body_height_px": 394.59448818897636,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6875168507276754,
+          "translation": [
+            194.2186573975921,
+            226.74143983034088
+          ],
+          "final_bounds": [
+            194,
+            227,
+            580,
+            577
+          ],
+          "padding_ltrb_px": [
+            194,
+            227,
+            188,
+            191
+          ],
+          "pixel_sha256": "ae71653367ec6bc79b66c13aced368cff46c9a9132c8ecfa8efe7bf861ff644b",
+          "shared_idle_endpoint": false
+        }
+      ]
+    },
+    "card_mimic": {
+      "idle": [
+        {
+          "index": 0,
+          "source": "card_mimic_idle.png",
+          "source_crop": [
+            36,
+            158,
+            498,
+            479
+          ],
+          "eye_px": [
+            187.66314779270633,
+            51.673704414587334
+          ],
+          "root_px": [
+            354.0041916167665,
+            319.0
+          ],
+          "reference_body_height_px": 267.32629558541265,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8437858090100298,
+          "translation": [
+            181.2962867837051,
+            306.8323269258005
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "card_mimic_idle.png",
+          "source_crop": [
+            549,
+            115,
+            996,
+            479
+          ],
+          "eye_px": [
+            184.510556621881,
+            53.37619961612284
+          ],
+          "root_px": [
+            340.1334610472542,
+            363.0
+          ],
+          "reference_body_height_px": 309.62380038387715,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8437858090100298,
+          "translation": [
+            193.0002123988612,
+            269.7057513293592
+          ],
+          "final_bounds": [
+            193,
+            271,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            193,
+            271,
+            198,
+            191
+          ],
+          "pixel_sha256": "e6aac30b7da94b70e90c12151c495e0de0c8bf97f33800b7aabbf6cbe1d50aa5",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "card_mimic_idle.png",
+          "source_crop": [
+            1058,
+            152,
+            1506,
+            481
+          ],
+          "eye_px": [
+            177.5358807082945,
+            53.10065237651445
+          ],
+          "root_px": [
+            339.0651364764268,
+            328.0
+          ],
+          "reference_body_height_px": 274.89934762348554,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8437858090100298,
+          "translation": [
+            193.90164951114207,
+            299.23825464471025
+          ],
+          "final_bounds": [
+            195,
+            299,
+            572,
+            577
+          ],
+          "padding_ltrb_px": [
+            195,
+            299,
+            196,
+            191
+          ],
+          "pixel_sha256": "1ec71d37068e87f02abf472c4915aaff8330c0f34db05abd7ea40f63acb5f313",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "card_mimic_idle.png",
+          "source_crop": [
+            35,
+            629,
+            494,
+            931
+          ],
+          "eye_px": [
+            169.49571020019067,
+            67.55481410867493
+          ],
+          "root_px": [
+            355.3098676293622,
+            300.0
+          ],
+          "reference_body_height_px": 232.44518589132508,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8437858090100298,
+          "translation": [
+            180.19457589311202,
+            322.86425729699107
+          ],
+          "final_bounds": [
+            181,
+            323,
+            567,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            323,
+            201,
+            191
+          ],
+          "pixel_sha256": "8162adc5e7a34be5c4aea6a2a2f54189fbad1bcb746d7d2af22130c4f71e6bbb",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "card_mimic_idle.png",
+          "source_crop": [
+            540,
+            590,
+            1005,
+            931
+          ],
+          "eye_px": [
+            180.0120705663881,
+            52.39461467038069
+          ],
+          "root_px": [
+            349.5020945541592,
+            340.0
+          ],
+          "reference_body_height_px": 287.6053853296193,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8437858090100298,
+          "translation": [
+            185.09509239591887,
+            289.1128249365899
+          ],
+          "final_bounds": [
+            186,
+            289,
+            577,
+            577
+          ],
+          "padding_ltrb_px": [
+            186,
+            289,
+            191,
+            191
+          ],
+          "pixel_sha256": "09448c660c5660649073031821485a7adf588866379a74ba38cf08227732d879",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "card_mimic_idle.png",
+          "source_crop": [
+            1058,
+            610,
+            1511,
+            932
+          ],
+          "eye_px": [
+            183.59230769230768,
+            56.386538461538464
+          ],
+          "root_px": [
+            342.17092457420927,
+            321.0
+          ],
+          "reference_body_height_px": 264.61346153846154,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8437858090100298,
+          "translation": [
+            191.28102958844096,
+            305.14475530778043
+          ],
+          "final_bounds": [
+            191,
+            305,
+            574,
+            577
+          ],
+          "padding_ltrb_px": [
+            191,
+            305,
+            194,
+            191
+          ],
+          "pixel_sha256": "b7027e08b0e9c3815f6855603e00755d0ad186ceb05ebd7f5e02d370ae84ac51",
+          "shared_idle_endpoint": false
+        }
+      ],
+      "attack": [
+        {
+          "index": 0,
+          "source": "card_mimic_attack.png",
+          "source_crop": [
+            35,
+            158,
+            498,
+            480
+          ],
+          "eye_px": [
+            188.54637096774192,
+            51.86491935483871
+          ],
+          "root_px": [
+            357.3379483952171,
+            321.0
+          ],
+          "reference_body_height_px": 269.1350806451613,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.849986374730948,
+          "translation": [
+            176.26761268975486,
+            303.1543737113657
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "card_mimic_attack.png",
+          "source_crop": [
+            518,
+            118,
+            1006,
+            483
+          ],
+          "eye_px": [
+            203.01623686723974,
+            48.53008595988538
+          ],
+          "root_px": [
+            383.4850704225352,
+            364.0
+          ],
+          "reference_body_height_px": 315.46991404011465,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.849986374730948,
+          "translation": [
+            154.042915228107,
+            266.60495959793496
+          ],
+          "final_bounds": [
+            154,
+            267,
+            569,
+            577
+          ],
+          "padding_ltrb_px": [
+            154,
+            267,
+            199,
+            191
+          ],
+          "pixel_sha256": "df9068cd94b44340da0db4b6211226f3fd7dac7aef0473afe70c723763af9dde",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "card_mimic_attack.png",
+          "source_crop": [
+            1015,
+            125,
+            1495,
+            483
+          ],
+          "eye_px": [
+            156.4994413407821,
+            43.85474860335196
+          ],
+          "root_px": [
+            410.7293051359517,
+            356.0
+          ],
+          "reference_body_height_px": 312.14525139664806,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.849986374730948,
+          "translation": [
+            130.88568693173113,
+            273.40485059578253
+          ],
+          "final_bounds": [
+            133,
+            274,
+            539,
+            577
+          ],
+          "padding_ltrb_px": [
+            133,
+            274,
+            229,
+            191
+          ],
+          "pixel_sha256": "bd9a7bbefa12ad2afa90183817ea0e076be7ccd732015a4e096c4394c596bfd7",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "card_mimic_attack.png",
+          "source_crop": [
+            33,
+            640,
+            506,
+            935
+          ],
+          "eye_px": [
+            163.05481120584653,
+            59.68209500609014
+          ],
+          "root_px": [
+            362.2241703193488,
+            292.0
+          ],
+          "reference_body_height_px": 232.31790499390985,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.849986374730948,
+          "translation": [
+            172.1143906303313,
+            327.8039785785632
+          ],
+          "final_bounds": [
+            172,
+            328,
+            572,
+            579
+          ],
+          "padding_ltrb_px": [
+            172,
+            328,
+            196,
+            189
+          ],
+          "pixel_sha256": "f9f7e2db1fbcdfaa1e8ad5df2380fcd81ec63002fc8a912ee29b50fca3478e78",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "card_mimic_attack.png",
+          "source_crop": [
+            534,
+            576,
+            1020,
+            939
+          ],
+          "eye_px": [
+            171.48203592814372,
+            46.89720558882235
+          ],
+          "root_px": [
+            376.1806415306697,
+            360.0
+          ],
+          "reference_body_height_px": 313.1027944111776,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.849986374730948,
+          "translation": [
+            160.25158026138382,
+            270.00490509685875
+          ],
+          "final_bounds": [
+            160,
+            270,
+            571,
+            577
+          ],
+          "padding_ltrb_px": [
+            160,
+            270,
+            197,
+            191
+          ],
+          "pixel_sha256": "537ced3e2d03b6e5f51d314350b658a4465d42f20fdcce406694d1ed4019a443",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "card_mimic_attack.png",
+          "source_crop": [
+            1034,
+            608,
+            1502,
+            933
+          ],
+          "eye_px": [
+            190.82098171318574,
+            52.120307988450435
+          ],
+          "root_px": [
+            363.74417098445593,
+            324.0
+          ],
+          "reference_body_height_px": 271.87969201154954,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.849986374730948,
+          "translation": [
+            170.82241077540823,
+            300.60441458717287
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "defend": [
+        {
+          "index": 0,
+          "source": "card_mimic_defend.png",
+          "source_crop": [
+            34,
+            125,
+            504,
+            450
+          ],
+          "eye_px": [
+            190.9313824419778,
+            52.339051463168516
+          ],
+          "root_px": [
+            358.7835820895522,
+            324.0
+          ],
+          "reference_body_height_px": 271.6609485368315,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420833128302458,
+          "translation": [
+            177.87433260492742,
+            303.16500664300037
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "card_mimic_defend.png",
+          "source_crop": [
+            574,
+            191,
+            950,
+            466
+          ],
+          "eye_px": [
+            153.495670995671,
+            62.743506493506494
+          ],
+          "root_px": [
+            311.15629322268325,
+            273.0
+          ],
+          "reference_body_height_px": 210.2564935064935,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420833128302458,
+          "translation": [
+            217.9804777950635,
+            346.11125559734285
+          ],
+          "final_bounds": [
+            218,
+            346,
+            534,
+            577
+          ],
+          "padding_ltrb_px": [
+            218,
+            346,
+            234,
+            191
+          ],
+          "pixel_sha256": "2cc56af3cf4b4d18281cbea309015bbaffce336af131c13c755da36df955f939",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "card_mimic_defend.png",
+          "source_crop": [
+            1093,
+            196,
+            1468,
+            468
+          ],
+          "eye_px": [
+            141.76751269035532,
+            74.68832487309645
+          ],
+          "root_px": [
+            307.1333333333333,
+            270.0
+          ],
+          "reference_body_height_px": 195.31167512690354,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420833128302458,
+          "translation": [
+            221.36814518607048,
+            348.6375055358336
+          ],
+          "final_bounds": [
+            222,
+            349,
+            535,
+            577
+          ],
+          "padding_ltrb_px": [
+            222,
+            349,
+            233,
+            191
+          ],
+          "pixel_sha256": "789f16b1c1d1f6a858dbb24940a0687122884738524e69680dabefa006229465",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "card_mimic_defend.png",
+          "source_crop": [
+            70,
+            659,
+            489,
+            935
+          ],
+          "eye_px": [
+            142.34195402298852,
+            88.9353448275862
+          ],
+          "root_px": [
+            335.7048275862069,
+            275.0
+          ],
+          "reference_body_height_px": 186.06465517241378,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420833128302458,
+          "translation": [
+            197.3085666531004,
+            344.4270889716824
+          ],
+          "final_bounds": [
+            197,
+            344,
+            550,
+            577
+          ],
+          "padding_ltrb_px": [
+            197,
+            344,
+            218,
+            191
+          ],
+          "pixel_sha256": "27510a38c01b694e232e72311e4266cd97979c6cfc5d2c17e4b8e8c4d54bd462",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "card_mimic_defend.png",
+          "source_crop": [
+            537,
+            616,
+            1004,
+            928
+          ],
+          "eye_px": [
+            182.86158798283262,
+            53.75107296137339
+          ],
+          "root_px": [
+            364.2771883289125,
+            310.0
+          ],
+          "reference_body_height_px": 256.2489270386266,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420833128302458,
+          "translation": [
+            173.248258463502,
+            314.95417302262376
+          ],
+          "final_bounds": [
+            173,
+            315,
+            567,
+            577
+          ],
+          "padding_ltrb_px": [
+            173,
+            315,
+            201,
+            191
+          ],
+          "pixel_sha256": "2f1759edfbd5bc6c6474d44ec4cf20340d0c7fbf446dc26b68786ec4273e77e7",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "card_mimic_defend.png",
+          "source_crop": [
+            1042,
+            605,
+            1516,
+            930
+          ],
+          "eye_px": [
+            190.24233432245302,
+            52.746785361028685
+          ],
+          "root_px": [
+            360.41973766396,
+            323.0
+          ],
+          "reference_body_height_px": 270.2532146389713,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420833128302458,
+          "translation": [
+            176.49655329852442,
+            304.00708995583057
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "skill": [
+        {
+          "index": 0,
+          "source": "card_mimic_skill.png",
+          "source_crop": [
+            66,
+            167,
+            486,
+            462
+          ],
+          "eye_px": [
+            166.50857843137254,
+            46.87132352941177
+          ],
+          "root_px": [
+            315.1466836734694,
+            293.0
+          ],
+          "reference_body_height_px": 246.12867647058823,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.929437214675139,
+          "translation": [
+            187.09094411242353,
+            303.6748961001843
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "card_mimic_skill.png",
+          "source_crop": [
+            569,
+            133,
+            989,
+            462
+          ],
+          "eye_px": [
+            170.52100840336135,
+            47.09483793517407
+          ],
+          "root_px": [
+            320.35029742233974,
+            328.0
+          ],
+          "reference_body_height_px": 280.90516206482596,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.929437214675139,
+          "translation": [
+            182.2545118434282,
+            271.14459358655444
+          ],
+          "final_bounds": [
+            182,
+            271,
+            573,
+            577
+          ],
+          "padding_ltrb_px": [
+            182,
+            271,
+            195,
+            191
+          ],
+          "pixel_sha256": "f47b15c25f8aa1405c78f10ab02290919565a4df6585ba1e53aeb23647474e3d",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "card_mimic_skill.png",
+          "source_crop": [
+            1082,
+            147,
+            1498,
+            465
+          ],
+          "eye_px": [
+            153.48189762796505,
+            44.4481897627965
+          ],
+          "root_px": [
+            318.0825998645904,
+            317.0
+          ],
+          "reference_body_height_px": 272.5518102372035,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.929437214675139,
+          "translation": [
+            184.36219434522837,
+            281.36840294798094
+          ],
+          "final_bounds": [
+            186,
+            281,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            186,
+            281,
+            198,
+            191
+          ],
+          "pixel_sha256": "1511fd2e84c5d28ebd88f3f6417b511706a0fd17697104ca62d843cc428da65d",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "card_mimic_skill.png",
+          "source_crop": [
+            31,
+            638,
+            590,
+            943
+          ],
+          "eye_px": [
+            255.52341597796143,
+            43.260330578512395
+          ],
+          "root_px": [
+            405.2058212058212,
+            304.0
+          ],
+          "reference_body_height_px": 260.73966942148763,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.929437214675139,
+          "translation": [
+            103.38663016830918,
+            293.45108673875774
+          ],
+          "final_bounds": [
+            103,
+            293,
+            623,
+            577
+          ],
+          "padding_ltrb_px": [
+            103,
+            293,
+            145,
+            191
+          ],
+          "pixel_sha256": "17147000abcc0ba3b5c618644944a0979a9ffcd74ce4a90217db703aac4f1147",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "card_mimic_skill.png",
+          "source_crop": [
+            590,
+            655,
+            1023,
+            943
+          ],
+          "eye_px": [
+            188.36546762589927,
+            44.19136690647482
+          ],
+          "root_px": [
+            332.4880219028063,
+            287.0
+          ],
+          "reference_body_height_px": 242.80863309352517,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.929437214675139,
+          "translation": [
+            170.9732590098091,
+            309.2515193882351
+          ],
+          "final_bounds": [
+            171,
+            309,
+            573,
+            577
+          ],
+          "padding_ltrb_px": [
+            171,
+            309,
+            195,
+            191
+          ],
+          "pixel_sha256": "edd2a31d1308fb939e6689aee790830581f0a611d6e092bc4a4ed0909c769326",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "card_mimic_skill.png",
+          "source_crop": [
+            1095,
+            658,
+            1505,
+            944
+          ],
+          "eye_px": [
+            161.8047263681592,
+            46.33706467661692
+          ],
+          "root_px": [
+            311.8005249343832,
+            284.0
+          ],
+          "reference_body_height_px": 237.66293532338307,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.929437214675139,
+          "translation": [
+            190.20098857074066,
+            312.0398310322605
+          ],
+          "final_bounds": [
+            181,
+            307,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            181,
+            307,
+            198,
+            191
+          ],
+          "pixel_sha256": "c50239d87cd09bd19fb851eef66ac035e36ce7c7b5153ef4fd7501b659716497",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "damaged": [
+        {
+          "index": 0,
+          "source": "card_mimic_damaged.png",
+          "source_crop": [
+            76,
+            185,
+            669,
+            605
+          ],
+          "eye_px": [
+            238.3030303030303,
+            78.77517106549365
+          ],
+          "root_px": [
+            452.3517505470459,
+            416.0
+          ],
+          "reference_body_height_px": 337.2248289345064,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6783639040852785,
+          "translation": [
+            177.14090047909593,
+            293.8006159005242
+          ],
+          "final_bounds": [
+            177,
+            295,
+            579,
+            577
+          ],
+          "padding_ltrb_px": [
+            177,
+            295,
+            189,
+            191
+          ],
+          "pixel_sha256": "1557a4c8f0a32571bb0cb3633ed9a5c1ce0d3060c373e2322b34d4b8000b9a1e",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "card_mimic_damaged.png",
+          "source_crop": [
+            823,
+            113,
+            1433,
+            614
+          ],
+          "eye_px": [
+            338.6184738955823,
+            93.5160642570281
+          ],
+          "root_px": [
+            431.14028169014085,
+            498.0
+          ],
+          "reference_body_height_px": 404.4839357429719,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6783639040852785,
+          "translation": [
+            199.52999530424933,
+            238.1747757655313
+          ],
+          "final_bounds": [
+            200,
+            238,
+            613,
+            577
+          ],
+          "padding_ltrb_px": [
+            200,
+            238,
+            155,
+            191
+          ],
+          "pixel_sha256": "5552f335e2eae1c39391c694297fdd1b4aa8ddfe3e780640ff23dfb0f3e8210d",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "card_mimic_damaged.png",
+          "source_crop": [
+            1524,
+            186,
+            2111,
+            609
+          ],
+          "eye_px": [
+            240.31449631449632,
+            69.4017199017199
+          ],
+          "root_px": [
+            446.3859844271413,
+            420.0
+          ],
+          "reference_body_height_px": 350.5982800982801,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6783639040852785,
+          "translation": [
+            180.18786087505413,
+            291.087160284183
+          ],
+          "final_bounds": [
+            180,
+            292,
+            578,
+            577
+          ],
+          "padding_ltrb_px": [
+            180,
+            292,
+            190,
+            191
+          ],
+          "pixel_sha256": "16398b16179dd58d611e2fe8dfab14435f26eba158653ed0080de57d38117aed",
+          "shared_idle_endpoint": false
+        }
+      ]
+    },
+    "chain_golem": {
+      "idle": [
+        {
+          "index": 0,
+          "source": "chain_golem_idle.png",
+          "source_crop": [
+            13,
+            81,
+            459,
+            467
+          ],
+          "core_px": [
+            178.64173228346456,
+            129.41469816272965
+          ],
+          "root_px": [
+            314.90961145194274,
+            385.0
+          ],
+          "reference_body_height_px": 255.58530183727035,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8420807866166015,
+          "translation": [
+            214.82066667541972,
+            251.79889715260845
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "chain_golem_idle.png",
+          "source_crop": [
+            531,
+            67,
+            986,
+            469
+          ],
+          "core_px": [
+            174.53939393939393,
+            135.44242424242424
+          ],
+          "root_px": [
+            314.3523847063461,
+            399.0
+          ],
+          "reference_body_height_px": 263.55757575757576,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8206919826042852,
+          "translation": [
+            222.01351815896385,
+            248.5438989408902
+          ],
+          "final_bounds": [
+            222,
+            249,
+            594,
+            577
+          ],
+          "padding_ltrb_px": [
+            222,
+            249,
+            174,
+            191
+          ],
+          "pixel_sha256": "daf2a5cbadb075bdb7012db0c6db0321f30c2c353f5c4b4b9eee879fa735a38c",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_golem_idle.png",
+          "source_crop": [
+            1017,
+            47,
+            1489,
+            468
+          ],
+          "core_px": [
+            185.61246040126716,
+            142.96832101372755
+          ],
+          "root_px": [
+            331.18668767231196,
+            420.0
+          ],
+          "reference_body_height_px": 277.0316789862725,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.783106324117071,
+          "translation": [
+            220.64561042042732,
+            247.09534387083016
+          ],
+          "final_bounds": [
+            221,
+            247,
+            590,
+            577
+          ],
+          "padding_ltrb_px": [
+            221,
+            247,
+            178,
+            191
+          ],
+          "pixel_sha256": "f17f664d2672787271dd01ca85dabb418170ac5d70653776095ff58779b66992",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_golem_idle.png",
+          "source_crop": [
+            17,
+            582,
+            475,
+            973
+          ],
+          "core_px": [
+            176.73543689320388,
+            139.09344660194174
+          ],
+          "root_px": [
+            318.9734513274336,
+            389.0
+          ],
+          "reference_body_height_px": 249.90655339805826,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8637994462313435,
+          "translation": [
+            204.47090938086245,
+            239.98201541600736
+          ],
+          "final_bounds": [
+            205,
+            241,
+            600,
+            578
+          ],
+          "padding_ltrb_px": [
+            205,
+            241,
+            168,
+            190
+          ],
+          "pixel_sha256": "0e7a99e1096d5b94d1f35659043dd0fd6cc6ac2b2b3e79caf62687075c160cf3",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_golem_idle.png",
+          "source_crop": [
+            522,
+            582,
+            989,
+            974
+          ],
+          "core_px": [
+            187.4483188044832,
+            141.1519302615193
+          ],
+          "root_px": [
+            335.37268061587054,
+            391.0
+          ],
+          "reference_body_height_px": 249.8480697384807,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8596945547730641,
+          "translation": [
+            191.68193265489015,
+            239.85942908373192
+          ],
+          "final_bounds": [
+            192,
+            241,
+            593,
+            577
+          ],
+          "padding_ltrb_px": [
+            192,
+            241,
+            175,
+            191
+          ],
+          "pixel_sha256": "a1c405b54ab79c0f0326d2549315b659a80e2b9ec6d9bd6828499a01028c0c1f",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_golem_idle.png",
+          "source_crop": [
+            1043,
+            585,
+            1505,
+            973
+          ],
+          "core_px": [
+            184.60578186596584,
+            137.02628120893561
+          ],
+          "root_px": [
+            330.5166867712103,
+            386.0
+          ],
+          "reference_body_height_px": 248.97371879106439,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8635780900520813,
+          "translation": [
+            194.57303090777623,
+            242.65885723989663
+          ],
+          "final_bounds": [
+            196,
+            243,
+            593,
+            577
+          ],
+          "padding_ltrb_px": [
+            196,
+            243,
+            175,
+            191
+          ],
+          "pixel_sha256": "20a16e12732b6afad727f90a164087811bfbfaed4d27b39de0e5df17a3746df4",
+          "shared_idle_endpoint": false
+        }
+      ],
+      "attack": [
+        {
+          "index": 0,
+          "source": "chain_golem_attack.png",
+          "source_crop": [
+            29,
+            64,
+            538,
+            488
+          ],
+          "core_px": [
+            212.81754735792623,
+            141.56630109670988
+          ],
+          "root_px": [
+            357.1345646437995,
+            423.0
+          ],
+          "reference_body_height_px": 281.4336989032901,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7647395207378063,
+          "translation": [
+            206.88508419539568,
+            252.51518272790793
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "chain_golem_attack.png",
+          "source_crop": [
+            582,
+            71,
+            1000,
+            489
+          ],
+          "core_px": [
+            133.27946428571428,
+            157.19196428571428
+          ],
+          "root_px": [
+            266.86623453152623,
+            416.0
+          ],
+          "reference_body_height_px": 258.8080357142857,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7647395207378063,
+          "translation": [
+            275.91684370325765,
+            257.8683593730726
+          ],
+          "final_bounds": [
+            276,
+            258,
+            596,
+            578
+          ],
+          "padding_ltrb_px": [
+            276,
+            258,
+            172,
+            190
+          ],
+          "pixel_sha256": "6c7a79b28a0fd0ae4a24c0a934908844dec3ef8b91cdf2c1bc02f1859aa495e3",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_golem_attack.png",
+          "source_crop": [
+            988,
+            89,
+            1523,
+            490
+          ],
+          "core_px": [
+            249.4985465116279,
+            144.21947674418604
+          ],
+          "root_px": [
+            350.475656877898,
+            398.0
+          ],
+          "reference_body_height_px": 253.78052325581396,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7647395207378063,
+          "translation": [
+            211.97741412892844,
+            271.6336707463531
+          ],
+          "final_bounds": [
+            212,
+            272,
+            621,
+            578
+          ],
+          "padding_ltrb_px": [
+            212,
+            272,
+            147,
+            190
+          ],
+          "pixel_sha256": "daeb0b9363f772757c69b2f0dc803dc3362593c3dc23e9a62e4f09306fdb0667",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_golem_attack.png",
+          "source_crop": [
+            3,
+            577,
+            607,
+            969
+          ],
+          "core_px": [
+            239.34503816793892,
+            186.34503816793892
+          ],
+          "root_px": [
+            371.73805774278213,
+            389.0
+          ],
+          "reference_body_height_px": 202.65496183206108,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7647395207378063,
+          "translation": [
+            195.71721588178184,
+            278.51632643299337
+          ],
+          "final_bounds": [
+            197,
+            279,
+            658,
+            577
+          ],
+          "padding_ltrb_px": [
+            197,
+            279,
+            110,
+            191
+          ],
+          "pixel_sha256": "964abfffbb826838b57835c4c4cbcdff621bc1fa1f558e63953e058f25b9dc6d",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_golem_attack.png",
+          "source_crop": [
+            563,
+            562,
+            1008,
+            974
+          ],
+          "core_px": [
+            149.710843373494,
+            133.80455153949129
+          ],
+          "root_px": [
+            279.3781887755102,
+            411.0
+          ],
+          "reference_body_height_px": 277.1954484605087,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7647395207378063,
+          "translation": [
+            266.34845781122,
+            261.69205697676165
+          ],
+          "final_bounds": [
+            266,
+            262,
+            606,
+            577
+          ],
+          "padding_ltrb_px": [
+            266,
+            262,
+            162,
+            191
+          ],
+          "pixel_sha256": "9469fc7a24d6ba60636e4d80213965d33e461dc818511276e1b93fff35eb69df",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_golem_attack.png",
+          "source_crop": [
+            1019,
+            548,
+            1521,
+            975
+          ],
+          "core_px": [
+            205.6487647690655,
+            143.8002148227712
+          ],
+          "root_px": [
+            356.52954128440365,
+            426.0
+          ],
+          "reference_body_height_px": 282.1997851772288,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7647395207378063,
+          "translation": [
+            207.34776946929526,
+            250.2209641656945
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "defend": [
+        {
+          "index": 0,
+          "source": "chain_golem_defend.png",
+          "source_crop": [
+            7,
+            16,
+            545,
+            496
+          ],
+          "core_px": [
+            209.9186440677966,
+            165.42937853107344
+          ],
+          "root_px": [
+            375.3914981145012,
+            479.0
+          ],
+          "reference_body_height_px": 313.57062146892656,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6863636363972887,
+          "translation": [
+            222.34492628150502,
+            247.2318181656987
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "chain_golem_defend.png",
+          "source_crop": [
+            563,
+            18,
+            1020,
+            537
+          ],
+          "core_px": [
+            149.47068403908796,
+            172.11889250814332
+          ],
+          "root_px": [
+            336.07793522267207,
+            478.0
+          ],
+          "reference_body_height_px": 305.8811074918567,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6863636363972887,
+          "translation": [
+            249.32832626767436,
+            247.918181802096
+          ],
+          "final_bounds": [
+            251,
+            248,
+            561,
+            577
+          ],
+          "padding_ltrb_px": [
+            251,
+            248,
+            207,
+            191
+          ],
+          "pixel_sha256": "cc74d23ca2a45e42687afd09401c928b55a43cf3b0268739371b6b1e7ffdaa58",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_golem_defend.png",
+          "source_crop": [
+            1056,
+            20,
+            1520,
+            496
+          ],
+          "core_px": [
+            199.86458333333334,
+            81.59375
+          ],
+          "root_px": [
+            360.0392503536068,
+            475.0
+          ],
+          "reference_body_height_px": 393.40625,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6863636363972887,
+          "translation": [
+            232.88215088154462,
+            249.97727271128787
+          ],
+          "final_bounds": [
+            233,
+            251,
+            551,
+            577
+          ],
+          "padding_ltrb_px": [
+            233,
+            251,
+            217,
+            191
+          ],
+          "pixel_sha256": "bf88ae00dd52edbdc26b83e84c0822e04007170fdf28c9ec698f4309530e6df6",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_golem_defend.png",
+          "source_crop": [
+            28,
+            531,
+            498,
+            999
+          ],
+          "core_px": [
+            189.4673913043478,
+            75.6413043478261
+          ],
+          "root_px": [
+            349.09238938053096,
+            466.0
+          ],
+          "reference_body_height_px": 390.3586956521739,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6863636363972887,
+          "translation": [
+            240.39567818616052,
+            256.15454543886347
+          ],
+          "final_bounds": [
+            240,
+            256,
+            563,
+            576
+          ],
+          "padding_ltrb_px": [
+            240,
+            256,
+            205,
+            192
+          ],
+          "pixel_sha256": "632d8a0203fb53bb32986b4cd1152fdd3be59034a6b4185608bc4604f6beb1f2",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_golem_defend.png",
+          "source_crop": [
+            482,
+            531,
+            1017,
+            1003
+          ],
+          "core_px": [
+            218.26351351351352,
+            157.8581081081081
+          ],
+          "root_px": [
+            384.7966631908238,
+            469.0
+          ],
+          "reference_body_height_px": 311.1418918918919,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6863636363972887,
+          "translation": [
+            215.88956297880344,
+            254.0954545296716
+          ],
+          "final_bounds": [
+            216,
+            254,
+            582,
+            577
+          ],
+          "padding_ltrb_px": [
+            216,
+            254,
+            186,
+            191
+          ],
+          "pixel_sha256": "1de1960cb3aa1cef88084ccd80b3041646a540f48e8c48fef9665daf1dcf37fd",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_golem_defend.png",
+          "source_crop": [
+            987,
+            529,
+            1523,
+            1004
+          ],
+          "core_px": [
+            210.29174311926604,
+            158.29449541284404
+          ],
+          "root_px": [
+            377.5978480161399,
+            472.0
+          ],
+          "reference_body_height_px": 313.70550458715593,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6863636363972887,
+          "translation": [
+            220.8305679398515,
+            252.03636362047973
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "skill": [
+        {
+          "index": 0,
+          "source": "chain_golem_skill.png",
+          "source_crop": [
+            23,
+            31,
+            546,
+            495
+          ],
+          "core_px": [
+            210.59605488850772,
+            159.6826758147513
+          ],
+          "root_px": [
+            369.70300884955753,
+            463.0
+          ],
+          "reference_body_height_px": 303.3173241852487,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7095653787560253,
+          "translation": [
+            217.67154449842155,
+            247.4712296359603
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "chain_golem_skill.png",
+          "source_crop": [
+            492,
+            28,
+            1011,
+            495
+          ],
+          "core_px": [
+            197.3579359895493,
+            160.33442194644024
+          ],
+          "root_px": [
+            364.2778730703259,
+            466.0
+          ],
+          "reference_body_height_px": 305.6655780535598,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7095653787560253,
+          "translation": [
+            221.52103302241488,
+            245.3425334996922
+          ],
+          "final_bounds": [
+            222,
+            246,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            222,
+            246,
+            179,
+            191
+          ],
+          "pixel_sha256": "6b74da02319e01851951c5ef08ad8d532413b81869122f88ca6c18e1efa57a4b",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_golem_skill.png",
+          "source_crop": [
+            997,
+            27,
+            1507,
+            495
+          ],
+          "core_px": [
+            180.33470681458004,
+            151.95372424722663
+          ],
+          "root_px": [
+            360.47463639588506,
+            467.0
+          ],
+          "reference_body_height_px": 315.04627575277334,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7095653787560253,
+          "translation": [
+            224.21967809381331,
+            244.6329681209362
+          ],
+          "final_bounds": [
+            225,
+            245,
+            586,
+            577
+          ],
+          "padding_ltrb_px": [
+            225,
+            245,
+            182,
+            191
+          ],
+          "pixel_sha256": "2179737f2f17c5a54b161f9a9fab1ffee289de280cf41d8fcac468a9b5d9732f",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "chain_golem_skill.png",
+          "source_crop": [
+            11,
+            537,
+            596,
+            1002
+          ],
+          "core_px": [
+            198.368345323741,
+            141.41726618705036
+          ],
+          "root_px": [
+            385.68014059753955,
+            462.0
+          ],
+          "reference_body_height_px": 320.58273381294964,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7095653787560253,
+          "translation": [
+            206.33472495822974,
+            248.1807950147163
+          ],
+          "final_bounds": [
+            207,
+            248,
+            621,
+            577
+          ],
+          "padding_ltrb_px": [
+            207,
+            248,
+            147,
+            191
+          ],
+          "pixel_sha256": "f7983b5ae6f51ae52a775ed65cfec5b595885fa81f68a1eb1ef2e27c68e8bd68",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "chain_golem_skill.png",
+          "source_crop": [
+            517,
+            536,
+            1038,
+            1002
+          ],
+          "core_px": [
+            197.0479098168154,
+            165.33302019727572
+          ],
+          "root_px": [
+            369.80616302186877,
+            463.0
+          ],
+          "reference_body_height_px": 297.6669798027243,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7095653787560253,
+          "translation": [
+            217.59834986907526,
+            247.4712296359603
+          ],
+          "final_bounds": [
+            218,
+            248,
+            587,
+            577
+          ],
+          "padding_ltrb_px": [
+            218,
+            248,
+            181,
+            191
+          ],
+          "pixel_sha256": "da8a0b9fffacc7ec148ccf33407a4ef0a428064ebf6b6f8429be48e34ee17552",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "chain_golem_skill.png",
+          "source_crop": [
+            991,
+            536,
+            1524,
+            1002
+          ],
+          "core_px": [
+            216.81203007518798,
+            161.8736842105263
+          ],
+          "root_px": [
+            378.20771020272514,
+            463.0
+          ],
+          "reference_body_height_px": 301.12631578947367,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.7095653787560253,
+          "translation": [
+            211.6369028615543,
+            247.4712296359603
+          ],
+          "final_bounds": [
+            215,
+            252,
+            589,
+            577
+          ],
+          "padding_ltrb_px": [
+            215,
+            252,
+            179,
+            191
+          ],
+          "pixel_sha256": "c00f1d4f4e7aaa05af552a1d5d9b9d4134018a6c3b61f04307b807bef95c74ca",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "damaged": [
+        {
+          "index": 0,
+          "source": "chain_golem_damaged.png",
+          "source_crop": [
+            8,
+            39,
+            699,
+            688
+          ],
+          "core_px": [
+            277.47668393782385,
+            247.20466321243524
+          ],
+          "root_px": [
+            490.4273504273504,
+            646.0
+          ],
+          "reference_body_height_px": 398.7953367875648,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.5396840237713663,
+          "translation": [
+            219.32419415383765,
+            227.3641206436974
+          ],
+          "final_bounds": [
+            219,
+            227,
+            592,
+            578
+          ],
+          "padding_ltrb_px": [
+            219,
+            227,
+            176,
+            190
+          ],
+          "pixel_sha256": "cc25ddd1032f0b718cb8a6a8007c3419909dac6f00f2f8b0e54fa6cc5eebc7d9",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "chain_golem_damaged.png",
+          "source_crop": [
+            698,
+            48,
+            1530,
+            688
+          ],
+          "core_px": [
+            419.1394136807818,
+            182.42931596091205
+          ],
+          "root_px": [
+            548.0303217821782,
+            637.0
+          ],
+          "reference_body_height_px": 454.57068403908795,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.5396840237713663,
+          "translation": [
+            196.2367907918774,
+            232.22127685763968
+          ],
+          "final_bounds": [
+            196,
+            232,
+            645,
+            578
+          ],
+          "padding_ltrb_px": [
+            196,
+            232,
+            123,
+            190
+          ],
+          "pixel_sha256": "7348965a9a44a1d6ad50945c2b437ff39172ee56db06642edc78dad55ab0c832",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "chain_golem_damaged.png",
+          "source_crop": [
+            1462,
+            49,
+            2157,
+            687
+          ],
+          "core_px": [
+            273.07445355191254,
+            215.61885245901638
+          ],
+          "root_px": [
+            481.95743348982785,
+            635.0
+          ],
+          "reference_body_height_px": 419.38114754098365,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.5396840237713663,
+          "translation": [
+            222.89527300768907,
+            233.30064490518242
+          ],
+          "final_bounds": [
+            224,
+            233,
+            597,
+            578
+          ],
+          "padding_ltrb_px": [
+            224,
+            233,
+            171,
+            190
+          ],
+          "pixel_sha256": "54d927714cf353255bd1c110bbad71ecb4e1ae9504c0a9ef06faddb7125f010b",
+          "shared_idle_endpoint": false
+        }
+      ]
+    },
+    "rune_reaper": {
+      "idle": [
+        {
+          "index": 0,
+          "source": "rune_reaper_idle.png",
+          "source_crop": [
+            60,
+            14,
+            502,
+            493
+          ],
+          "core_px": [
+            210.9558823529412,
+            133.07843137254903
+          ],
+          "root_px": [
+            309.89034564958286,
+            477.0
+          ],
+          "reference_body_height_px": 343.92156862745094,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8027153484143683,
+          "translation": [
+            231.24626322164607,
+            193.1047788063463
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "rune_reaper_idle.png",
+          "source_crop": [
+            546,
+            14,
+            990,
+            494
+          ],
+          "core_px": [
+            210.16402116402116,
+            134.07407407407408
+          ],
+          "root_px": [
+            301.55675029868576,
+            478.0
+          ],
+          "reference_body_height_px": 343.9259259259259,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8027153484143683,
+          "translation": [
+            237.9357681172858,
+            192.30206345793192
+          ],
+          "final_bounds": [
+            238,
+            193,
+            594,
+            578
+          ],
+          "padding_ltrb_px": [
+            238,
+            193,
+            174,
+            190
+          ],
+          "pixel_sha256": "ffdafb5ce095e64b07bd5d00032316bbffad07a1cd60f4f310acdfec2d82be50",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "rune_reaper_idle.png",
+          "source_crop": [
+            1050,
+            14,
+            1485,
+            494
+          ],
+          "core_px": [
+            206.77835051546393,
+            133.08762886597938
+          ],
+          "root_px": [
+            302.66208476517755,
+            477.0
+          ],
+          "reference_body_height_px": 343.91237113402065,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8027153484143683,
+          "translation": [
+            237.0484991759014,
+            193.1047788063463
+          ],
+          "final_bounds": [
+            237,
+            193,
+            586,
+            577
+          ],
+          "padding_ltrb_px": [
+            237,
+            193,
+            182,
+            191
+          ],
+          "pixel_sha256": "400156f1a7131d99c4f4478bc850f6dcaab9239232deeaed3d9731db983ef80d",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "rune_reaper_idle.png",
+          "source_crop": [
+            59,
+            520,
+            526,
+            1001
+          ],
+          "core_px": [
+            211.75,
+            133.25980392156862
+          ],
+          "root_px": [
+            319.8295589988081,
+            478.0
+          ],
+          "reference_body_height_px": 344.7401960784314,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8027153484143683,
+          "translation": [
+            223.26790411505795,
+            192.30206345793192
+          ],
+          "final_bounds": [
+            224,
+            192,
+            597,
+            577
+          ],
+          "padding_ltrb_px": [
+            224,
+            192,
+            171,
+            191
+          ],
+          "pixel_sha256": "cbbe50aa6e540cd1d12b2077776a805fc9ee0da714d60e19afb2dfb7b66aefaa",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "rune_reaper_idle.png",
+          "source_crop": [
+            545,
+            515,
+            1003,
+            1002
+          ],
+          "core_px": [
+            210.97905759162305,
+            136.79057591623035
+          ],
+          "root_px": [
+            316.1635687732342,
+            485.0
+          ],
+          "reference_body_height_px": 348.20942408376965,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8027153484143683,
+          "translation": [
+            226.2106507362632,
+            186.68305601903137
+          ],
+          "final_bounds": [
+            226,
+            187,
+            594,
+            578
+          ],
+          "padding_ltrb_px": [
+            226,
+            187,
+            174,
+            190
+          ],
+          "pixel_sha256": "db065773b744ece8a0ceb87bfcdd266bee1f60e1c29982bf9df1843558c23a3f",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "rune_reaper_idle.png",
+          "source_crop": [
+            1064,
+            517,
+            1507,
+            1003
+          ],
+          "core_px": [
+            211.04591836734693,
+            136.64285714285714
+          ],
+          "root_px": [
+            319.6894803548796,
+            483.0
+          ],
+          "reference_body_height_px": 346.3571428571429,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8027153484143683,
+          "translation": [
+            223.38034739252447,
+            188.28848671586013
+          ],
+          "final_bounds": [
+            223,
+            189,
+            578,
+            578
+          ],
+          "padding_ltrb_px": [
+            223,
+            189,
+            190,
+            190
+          ],
+          "pixel_sha256": "88e2a66753e4c27d1930a46560b6082724891dcb0de859eac18844d97d44a3b1",
+          "shared_idle_endpoint": false
+        }
+      ],
+      "attack": [
+        {
+          "index": 0,
+          "source": "rune_reaper_attack.png",
+          "source_crop": [
+            76,
+            19,
+            497,
+            491
+          ],
+          "core_px": [
+            186.9949494949495,
+            128.73232323232324
+          ],
+          "root_px": [
+            291.68427095292765,
+            469.0
+          ],
+          "reference_body_height_px": 340.2676767676768,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8123058753584381,
+          "translation": [
+            243.06315295529427,
+            195.02854445689252
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "rune_reaper_attack.png",
+          "source_crop": [
+            539,
+            12,
+            982,
+            496
+          ],
+          "core_px": [
+            208.61951219512196,
+            162.4390243902439
+          ],
+          "root_px": [
+            332.7469733656174,
+            483.0
+          ],
+          "reference_body_height_px": 320.5609756097561,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8123058753584381,
+          "translation": [
+            209.70767852737123,
+            183.65626220187437
+          ],
+          "final_bounds": [
+            210,
+            184,
+            570,
+            577
+          ],
+          "padding_ltrb_px": [
+            210,
+            184,
+            198,
+            191
+          ],
+          "pixel_sha256": "3d00ebf6fd2b05347cca8b2c1b955a5778031baf28af7517f1419f5f7814d603",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "rune_reaper_attack.png",
+          "source_crop": [
+            971,
+            42,
+            1504,
+            496
+          ],
+          "core_px": [
+            298.18454935622316,
+            132.1716738197425
+          ],
+          "root_px": [
+            418.0627659574468,
+            452.0
+          ],
+          "reference_body_height_px": 319.8283261802575,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8123058753584381,
+          "translation": [
+            140.40515894416632,
+            208.83774433798595
+          ],
+          "final_bounds": [
+            142,
+            211,
+            573,
+            577
+          ],
+          "padding_ltrb_px": [
+            142,
+            211,
+            195,
+            191
+          ],
+          "pixel_sha256": "df839cfc702b9ccb9f75a1fff00aa376ffd199dfb44296588b5cbb0345190c2c",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "rune_reaper_attack.png",
+          "source_crop": [
+            15,
+            505,
+            561,
+            1004
+          ],
+          "core_px": [
+            329.80104712041884,
+            183.4502617801047
+          ],
+          "root_px": [
+            446.226034308779,
+            496.0
+          ],
+          "reference_body_height_px": 312.5497382198953,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8123058753584381,
+          "translation": [
+            117.52797059308284,
+            173.09628582221467
+          ],
+          "final_bounds": [
+            118,
+            173,
+            561,
+            578
+          ],
+          "padding_ltrb_px": [
+            118,
+            173,
+            207,
+            190
+          ],
+          "pixel_sha256": "87e5ce8e50c3925e283574e70b2ead5869d1f3db57d1325a53177f45215bc0a3",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "rune_reaper_attack.png",
+          "source_crop": [
+            545,
+            521,
+            1014,
+            1006
+          ],
+          "core_px": [
+            224.7979274611399,
+            157.53886010362694
+          ],
+          "root_px": [
+            341.8046103183315,
+            483.0
+          ],
+          "reference_body_height_px": 325.4611398963731,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8123058753584381,
+          "translation": [
+            202.3501068138179,
+            183.65626220187437
+          ],
+          "final_bounds": [
+            203,
+            185,
+            583,
+            578
+          ],
+          "padding_ltrb_px": [
+            203,
+            185,
+            185,
+            190
+          ],
+          "pixel_sha256": "956eda2d4b1302765f600d53cd0ba101b5ff6c0220d65b4b53a5a9380c12c381",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "rune_reaper_attack.png",
+          "source_crop": [
+            1070,
+            522,
+            1501,
+            1003
+          ],
+          "core_px": [
+            189.3706896551724,
+            135.375
+          ],
+          "root_px": [
+            312.0928652321631,
+            479.0
+          ],
+          "reference_body_height_px": 343.625,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8123058753584381,
+          "translation": [
+            226.4851319144647,
+            186.90548570330816
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "defend": [
+        {
+          "index": 0,
+          "source": "rune_reaper_defend.png",
+          "source_crop": [
+            47,
+            14,
+            507,
+            495
+          ],
+          "core_px": [
+            223.24766355140187,
+            132.61682242990653
+          ],
+          "root_px": [
+            325.73545554335897,
+            478.0
+          ],
+          "reference_body_height_px": 345.3831775700935,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8002747411658626,
+          "translation": [
+            219.32214262649404,
+            193.46867372271765
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "rune_reaper_defend.png",
+          "source_crop": [
+            561,
+            20,
+            990,
+            495
+          ],
+          "core_px": [
+            183.4413407821229,
+            163.30167597765364
+          ],
+          "root_px": [
+            315.1727982162765,
+            472.0
+          ],
+          "reference_body_height_px": 308.69832402234636,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8002747411658626,
+          "translation": [
+            227.7751704849487,
+            198.27032216971287
+          ],
+          "final_bounds": [
+            229,
+            198,
+            571,
+            577
+          ],
+          "padding_ltrb_px": [
+            229,
+            198,
+            197,
+            191
+          ],
+          "pixel_sha256": "10499cd44e97f742f6cc2d4ce6ddd0f66a5a7b91c2cc0f889553fcc4ca1dbf72",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "rune_reaper_defend.png",
+          "source_crop": [
+            951,
+            81,
+            1514,
+            494
+          ],
+          "core_px": [
+            318.63592233009706,
+            126.93203883495146
+          ],
+          "root_px": [
+            446.9156883671291,
+            411.0
+          ],
+          "reference_body_height_px": 284.06796116504853,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8002747411658626,
+          "translation": [
+            122.3446631690324,
+            247.08708138083045
+          ],
+          "final_bounds": [
+            122,
+            247,
+            573,
+            577
+          ],
+          "padding_ltrb_px": [
+            122,
+            247,
+            195,
+            191
+          ],
+          "pixel_sha256": "f5f8ed783ea0a76a48d2493e3c4284a0f658029f0aa758a139b2bcd7648d71fc",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "rune_reaper_defend.png",
+          "source_crop": [
+            64,
+            531,
+            539,
+            1003
+          ],
+          "core_px": [
+            239.82648401826484,
+            142.08675799086757
+          ],
+          "root_px": [
+            353.22595078299776,
+            469.0
+          ],
+          "reference_body_height_px": 326.91324200913243,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8002747411658626,
+          "translation": [
+            197.32219366407077,
+            200.67114639321045
+          ],
+          "final_bounds": [
+            198,
+            202,
+            577,
+            578
+          ],
+          "padding_ltrb_px": [
+            198,
+            202,
+            191,
+            190
+          ],
+          "pixel_sha256": "0a90795fdb4035131f686d4cbe808ee93f94a6a49b1a8dd9d3856b65833b486c",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "rune_reaper_defend.png",
+          "source_crop": [
+            555,
+            526,
+            1007,
+            1004
+          ],
+          "core_px": [
+            210.04433497536945,
+            133.4630541871921
+          ],
+          "root_px": [
+            329.15070093457945,
+            475.0
+          ],
+          "reference_body_height_px": 341.53694581280786,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8002747411658626,
+          "translation": [
+            216.5890080050172,
+            195.86949794621523
+          ],
+          "final_bounds": [
+            218,
+            197,
+            578,
+            577
+          ],
+          "padding_ltrb_px": [
+            218,
+            197,
+            190,
+            191
+          ],
+          "pixel_sha256": "6652b4cda64b96725a15ede442f6e24a1e9557b389dbf53464bb47deaa74c1f3",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "rune_reaper_defend.png",
+          "source_crop": [
+            1049,
+            521,
+            1505,
+            1005
+          ],
+          "core_px": [
+            221.04854368932038,
+            134.4126213592233
+          ],
+          "root_px": [
+            325.5016111707841,
+            481.0
+          ],
+          "reference_body_height_px": 346.5873786407767,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8002747411658626,
+          "translation": [
+            219.50928237122952,
+            191.06784949922007
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "skill": [
+        {
+          "index": 0,
+          "source": "rune_reaper_skill.png",
+          "source_crop": [
+            37,
+            11,
+            482,
+            481
+          ],
+          "core_px": [
+            209.28497409326425,
+            130.50259067357513
+          ],
+          "root_px": [
+            308.51073985680193,
+            469.0
+          ],
+          "reference_body_height_px": 338.4974093264249,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8165540574829221,
+          "translation": [
+            228.08430359287013,
+            193.03614704050955
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": true
+        },
+        {
+          "index": 1,
+          "source": "rune_reaper_skill.png",
+          "source_crop": [
+            546,
+            11,
+            990,
+            481
+          ],
+          "core_px": [
+            213.85353535353536,
+            130.8939393939394
+          ],
+          "root_px": [
+            306.8859857482185,
+            469.0
+          ],
+          "reference_body_height_px": 338.1060606060606,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8165540574829221,
+          "translation": [
+            229.41100315264597,
+            193.03614704050955
+          ],
+          "final_bounds": [
+            231,
+            193,
+            592,
+            577
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            176,
+            191
+          ],
+          "pixel_sha256": "c6cd86f921e63ac85a3f39e782609e865797881942bbd3ba0037a2a3d50c1193",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "rune_reaper_skill.png",
+          "source_crop": [
+            1087,
+            11,
+            1516,
+            482
+          ],
+          "core_px": [
+            207.88679245283018,
+            130.42924528301887
+          ],
+          "root_px": [
+            304.79302045728036,
+            469.0
+          ],
+          "reference_body_height_px": 338.5707547169811,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8165540574829221,
+          "translation": [
+            231.12002245313244,
+            193.03614704050955
+          ],
+          "final_bounds": [
+            231,
+            193,
+            581,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            187,
+            190
+          ],
+          "pixel_sha256": "ae0440d36474f0b5182445ef9d58a89c65a96f59ffe71438fde459c9b54a68c2",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 3,
+          "source": "rune_reaper_skill.png",
+          "source_crop": [
+            39,
+            523,
+            499,
+            1003
+          ],
+          "core_px": [
+            212.02358490566039,
+            135.19811320754718
+          ],
+          "root_px": [
+            314.47201017811705,
+            478.0
+          ],
+          "reference_body_height_px": 342.8018867924528,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8165540574829221,
+          "translation": [
+            223.21660412424774,
+            185.68716052316324
+          ],
+          "final_bounds": [
+            223,
+            186,
+            598,
+            578
+          ],
+          "padding_ltrb_px": [
+            223,
+            186,
+            170,
+            190
+          ],
+          "pixel_sha256": "7fd0ae44d52c507e7341b54c93ff0bf4ed841e395562560dcb085e6416c23bad",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 4,
+          "source": "rune_reaper_skill.png",
+          "source_crop": [
+            560,
+            522,
+            1013,
+            1003
+          ],
+          "core_px": [
+            209.165,
+            136.11
+          ],
+          "root_px": [
+            313.2818532818533,
+            479.0
+          ],
+          "reference_body_height_px": 342.89,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8165540574829221,
+          "translation": [
+            224.18843156693322,
+            184.87060646568034
+          ],
+          "final_bounds": [
+            224,
+            185,
+            593,
+            578
+          ],
+          "padding_ltrb_px": [
+            224,
+            185,
+            175,
+            190
+          ],
+          "pixel_sha256": "a7818d46a479f31d12ff5b304fba6434baa96f9963452d1785acf016a41ac674",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 5,
+          "source": "rune_reaper_skill.png",
+          "source_crop": [
+            1075,
+            520,
+            1518,
+            1003
+          ],
+          "core_px": [
+            215.66666666666666,
+            136.39344262295083
+          ],
+          "root_px": [
+            317.5247395833333,
+            481.0
+          ],
+          "reference_body_height_px": 344.60655737704917,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.8165540574829221,
+          "translation": [
+            220.72388554202098,
+            183.23749835071447
+          ],
+          "final_bounds": [
+            231,
+            193,
+            586,
+            578
+          ],
+          "padding_ltrb_px": [
+            231,
+            193,
+            182,
+            190
+          ],
+          "pixel_sha256": "507602c1674a3990d50c89cd69a23861a30746de6500a2391c8fb7b1ba5292f9",
+          "shared_idle_endpoint": true
+        }
+      ],
+      "damaged": [
+        {
+          "index": 0,
+          "source": "rune_reaper_damaged.png",
+          "source_crop": [
+            23,
+            31,
+            727,
+            683
+          ],
+          "core_px": [
+            323.2,
+            190.41882352941175
+          ],
+          "root_px": [
+            527.9981378026071,
+            649.0
+          ],
+          "reference_body_height_px": 458.5811764705883,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6027317456862017,
+          "translation": [
+            165.75876068317098,
+            184.8270970496551
+          ],
+          "final_bounds": [
+            167,
+            185,
+            590,
+            578
+          ],
+          "padding_ltrb_px": [
+            167,
+            185,
+            178,
+            190
+          ],
+          "pixel_sha256": "05d61a5c400190643a69e396ed5b0e5e80c4e53937ed261275cea5a3b8d594d0",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 1,
+          "source": "rune_reaper_damaged.png",
+          "source_crop": [
+            723,
+            16,
+            1447,
+            683
+          ],
+          "core_px": [
+            405.75566750629724,
+            200.67506297229218
+          ],
+          "root_px": [
+            555.8885047536733,
+            664.0
+          ],
+          "reference_body_height_px": 463.32493702770785,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6027317456862017,
+          "translation": [
+            156.9483511229261,
+            175.7861208643621
+          ],
+          "final_bounds": [
+            157,
+            176,
+            593,
+            578
+          ],
+          "padding_ltrb_px": [
+            157,
+            176,
+            175,
+            190
+          ],
+          "pixel_sha256": "8ab29d0f228c5dcd68b05da6c9cd5971fba4d624b59cbe04f33edc7de2135bee",
+          "shared_idle_endpoint": false
+        },
+        {
+          "index": 2,
+          "source": "rune_reaper_damaged.png",
+          "source_crop": [
+            1401,
+            31,
+            2150,
+            687
+          ],
+          "core_px": [
+            382.15479115479116,
+            198.997542997543
+          ],
+          "root_px": [
+            586.8599078341014,
+            653.0
+          ],
+          "reference_body_height_px": 454.002457002457,
+          "source_art_border_clear": true,
+          "extraction": "connected opaque pose seeds; nearest-seed ownership retains soft edges and detached VFX",
+          "scale": 0.6027317456862017,
+          "translation": [
+            129.28090327790864,
+            182.4161700669103
+          ],
+          "final_bounds": [
+            129,
+            182,
+            581,
+            578
+          ],
+          "padding_ltrb_px": [
+            129,
+            182,
+            187,
+            190
+          ],
+          "pixel_sha256": "5f791d722484961717a7908f1ca9f7057c0d1ccca87476b9f44763d0bd3c60aa",
+          "shared_idle_endpoint": false
+        }
+      ]
+    }
+  },
+  "source_reports": [
+    {
+      "enemy": "chain_weaver",
+      "action": "idle",
+      "source_sha256": "147fb2affeeb791e2f74848c35e6c17906be9440cebfbe7d2b3885ad13a914c0",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "chain_weaver",
+      "action": "attack",
+      "source_sha256": "118fa26ec078d925a6c2edb1ca303fb7ffa6f39a29c04bd04efe750447c88a02",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "chain_weaver",
+      "action": "defend",
+      "source_sha256": "630a6f65d09cebd4b3a3225f895b771d90237dee57c34738f83fbbbc8d1a68f4",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "chain_weaver",
+      "action": "skill",
+      "source_sha256": "baa36f3a0d248fc5ec6d100465ad4fd680ad6a02ccc0d3b3d073df770a9142b8",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "chain_weaver",
+      "action": "damaged",
+      "source_sha256": "49d7f931588fcb398a3f71e79857206fd234aee5710a5a2e4747867103ebd41b",
+      "source_size": [
+        2172,
+        724
+      ],
+      "poses": 3,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "deck_guard",
+      "action": "idle",
+      "source_sha256": "8d61e17e9b4fddd892b50774265748eb81e57b714978e19de3e4788026e167d9",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "deck_guard",
+      "action": "attack",
+      "source_sha256": "85cc37b778660d27ba46ea3b5c497af4270e328ac375ca5b4ef00549cb5084c6",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 0
+    },
+    {
+      "enemy": "deck_guard",
+      "action": "defend",
+      "source_sha256": "fca8ff2fa815da7867d010d54b4e1701919f60ff7a369c99b35bb6eabed1be77",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "deck_guard",
+      "action": "skill",
+      "source_sha256": "43fbbba2371e334e9d7b487b78a9c85795ec889baea2a38db0a5c3298653e7e0",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 0
+    },
+    {
+      "enemy": "deck_guard",
+      "action": "damaged",
+      "source_sha256": "8e80b9ad26880afe3ab8ac065efa985cee18275d58ad45703cec3f633341da3c",
+      "source_size": [
+        2172,
+        724
+      ],
+      "poses": 3,
+      "source_border_alpha_max": 0
+    },
+    {
+      "enemy": "card_mimic",
+      "action": "idle",
+      "source_sha256": "f888abbeb244cf4dd1cbe93af4c7cc66a3b016508f301f2303b91a8a551a27e0",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "card_mimic",
+      "action": "attack",
+      "source_sha256": "383b6936e420bd4571fb03273a651e705983ae552acbe8e3366190d50059d095",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "card_mimic",
+      "action": "defend",
+      "source_sha256": "c3bfcd49ee9beb7d8a6e176cbaa8094a4e71c780ecd93043614bbff836a33b36",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "card_mimic",
+      "action": "skill",
+      "source_sha256": "1a473d663a7d1f490f7d8a354f25fe9caf409c31364947ba284dd712472ce63b",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "card_mimic",
+      "action": "damaged",
+      "source_sha256": "8abed87ddd62c4018fd4b3e1da5fab2feebc262611fb3bf6fea75b4c7209d32f",
+      "source_size": [
+        2172,
+        724
+      ],
+      "poses": 3,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "rune_reaper",
+      "action": "idle",
+      "source_sha256": "127122b7230ff6caab23bd9da382a007077ef90931955bcfcf83c9c8a7c44ecd",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "rune_reaper",
+      "action": "attack",
+      "source_sha256": "b9a00fbdb2d66a2acd792a6f7804547014897e55c56fc4a90fcf0dc7be4a6541",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "rune_reaper",
+      "action": "defend",
+      "source_sha256": "0be51884a1c4210ad8bbeec47be1d08f348b48557f21f4f6d2cd9b1471108507",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "rune_reaper",
+      "action": "skill",
+      "source_sha256": "3bcfe2f757cfcc54a0d270aaec4dc75a70d3b4e80c6b32cfd121acaee53158bb",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "rune_reaper",
+      "action": "damaged",
+      "source_sha256": "1a094e3e7604278ef5a6e2dfc0da883f87b8e5824f992094663abaf4c12aef06",
+      "source_size": [
+        2172,
+        724
+      ],
+      "poses": 3,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "chain_golem",
+      "action": "idle",
+      "source_sha256": "c83d0fe4bbd1075650d52ddd61f23c30da030fe7d76adbde59a52033f2fe9417",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 0
+    },
+    {
+      "enemy": "chain_golem",
+      "action": "attack",
+      "source_sha256": "e4dd639e4a9b9bd24ce6845f782d4b18af05e2e116fe7bbd25717887a089aa11",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 3
+    },
+    {
+      "enemy": "chain_golem",
+      "action": "defend",
+      "source_sha256": "d957a6da9f2d3ed35ee4104d3a5234c96110da5b17e223f105faf2dd6273a65c",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 2
+    },
+    {
+      "enemy": "chain_golem",
+      "action": "skill",
+      "source_sha256": "86af6b18755cc09f24e6250cffa42a5e1d899f6d50efa66eae454d7ff3c23b83",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "poses": 6,
+      "source_border_alpha_max": 1
+    },
+    {
+      "enemy": "chain_golem",
+      "action": "damaged",
+      "source_sha256": "3db3a37909a37b2729a1894b907b1397df915a7a723d8109ab92cb828ee5c634",
+      "source_size": [
+        2172,
+        724
+      ],
+      "poses": 3,
+      "source_border_alpha_max": 2
+    }
+  ]
+}

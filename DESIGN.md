@@ -126,3 +126,9 @@ Desktop plates use contain framing, with the character at left and live panels a
 ## Reward and Shop card proportions 2.5.3
 
 The user's UWHD screenshot reports stretched cards in the reward panel. In the existing dungeon.css situation variant, cap reward/shop tracks at 210 menu units and center them; narrow rows retain horizontal scrolling from the first card. Cap only the reward panel and Shop stock/detail panels at 760 units. Keep their existing typography and row heights. Give the square source-art viewport its own aspect ratio inside the existing card-emblem so the atlas is not stretched to the card's available width. Rest, results, scene plates, Home and combat styles retain their prior geometry.
+
+## Artifact rich text 2.6.0
+
+The supplied ARTIFACT (2).zip adds three scoped token colors: calculation #B9A3E3 with dotted underline, math #E7A1C4 and game #9ED5B0 with dashed underlines. Ordinary text, card frames and background art keep their existing design. The 31 descriptions and 55 glossary entries come from the pack; core-dependent definitions are reconciled with config/engine.
+
+Artifact selection remains a native button for artwork/name. The adjacent effect paragraph contains independent native term buttons, so no interaction is nested and reading a term cannot select or claim a gift. One shared tooltip owner supports hover, keyboard focus, tap, Escape and outside dismissal, including inside the existing modal dialog. Resolved values live in the existing inventory and log flows plus a Calculations action; each value and unit are separate targets. Shop prices use the same engine price calculation, with no card geometry changes.

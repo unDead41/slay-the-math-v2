@@ -1,0 +1,2172 @@
+{
+  "standard_version": "1.1",
+  "artifacts": [
+    {
+      "id": "s01_emberheart_pendant",
+      "description_en": "After winning a combat, heal 2 HP.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After winning a "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "term",
+          "text": "heal",
+          "category": "game",
+          "glossary_id": "heal"
+        },
+        {
+          "type": "text",
+          "text": " 2 "
+        },
+        {
+          "type": "term",
+          "text": "HP",
+          "category": "game",
+          "glossary_id": "hp"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "heal",
+        "hp",
+        "max_hp",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "Victory; HP 19/20.",
+        "results": [
+          {
+            "label": "HP restored",
+            "value": "+1",
+            "unit": "HP",
+            "lines": [
+              "Emberheart Pendant: +2 HP",
+              "Available room: 20 − 19 = 1 HP",
+              "Actual healing: min(2, 1) = 1 HP",
+              "HP after effect: 19 + 1 = 20 HP"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Only after victory, while alive, once per won combat."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s02_cinder_whetstone",
+      "description_en": "Your first Attack each turn deals 1 extra damage.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Your "
+        },
+        {
+          "type": "term",
+          "text": "first Attack each turn",
+          "category": "game",
+          "glossary_id": "first_attack"
+        },
+        {
+          "type": "text",
+          "text": " deals 1 extra "
+        },
+        {
+          "type": "term",
+          "text": "damage",
+          "category": "game",
+          "glossary_id": "damage"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_attack",
+        "attack",
+        "damage",
+        "turn"
+      ],
+      "example_snapshot": {
+        "context": "Eligible card damage before artifact: 6; no other modifiers.",
+        "results": [
+          {
+            "label": "Card damage",
+            "value": "7",
+            "unit": "damage",
+            "lines": [
+              "Damage before artifact: 6",
+              "Cinder Whetstone: +1",
+              "Damage before enemy defenses: 6 + 1 = 7",
+              "This is not HP loss after enemy defenses."
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "For multiple hits or targets, apply to the first eligible positive damage event only."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s03_prism_buckler",
+      "description_en": "Your first Defend each turn gives 2 extra Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Your "
+        },
+        {
+          "type": "term",
+          "text": "first Defend each turn",
+          "category": "game",
+          "glossary_id": "first_defend"
+        },
+        {
+          "type": "text",
+          "text": " gives 2 extra "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_defend",
+        "defend",
+        "block",
+        "turn"
+      ],
+      "example_snapshot": {
+        "context": "Resolved card Block before artifact: 5.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+7",
+            "unit": "Block",
+            "lines": [
+              "Card Block after core calculation: 5",
+              "Prism Buckler: +2",
+              "Block gained: 5 + 2 = 7"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s04_clairvoyance_lens",
+      "description_en": "Gain 1 Focus on your first turn of each combat.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Gain 1 "
+        },
+        {
+          "type": "term",
+          "text": "Focus",
+          "category": "game",
+          "glossary_id": "focus"
+        },
+        {
+          "type": "text",
+          "text": " on your "
+        },
+        {
+          "type": "term",
+          "text": "first turn",
+          "category": "game",
+          "glossary_id": "first_turn"
+        },
+        {
+          "type": "text",
+          "text": " of each "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "focus",
+        "first_turn",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "No fixed numeric Focus example until its cap is confirmed.",
+        "results": [
+          {
+            "label": "Focus gained",
+            "value": "Pending",
+            "unit": "Focus",
+            "lines": [
+              "Requested artifact bonus: +1 Focus",
+              "Actual gain = Focus after effect − Focus before effect",
+              "Use the confirmed Focus cap from the core game."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": [
+        "Focus ability, cap value and interaction rules are not supplied."
+      ]
+    },
+    {
+      "id": "s05_scholars_bookmark",
+      "description_en": "Draw 1 extra card on your first turn of each combat.",
+      "description_segments": [
+        {
+          "type": "term",
+          "text": "Draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 1 extra card on your "
+        },
+        {
+          "type": "term",
+          "text": "first turn",
+          "category": "game",
+          "glossary_id": "first_turn"
+        },
+        {
+          "type": "text",
+          "text": " of each "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "draw",
+        "hand",
+        "draw_pile",
+        "discard",
+        "first_turn",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "Hand has 4 cards; at least one draw is possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+1",
+            "unit": "cards",
+            "lines": [
+              "Scholar’s Bookmark: draw 1 extra card(s)",
+              "Hand before effect: 4 cards",
+              "Hand after effect: 4 + 1 = 5 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s06_merchants_seal",
+      "description_en": "Get a 5% discount in the Shop.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Get a "
+        },
+        {
+          "type": "term",
+          "text": "5%",
+          "category": "math",
+          "glossary_id": "percent"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "term",
+          "text": "discount",
+          "category": "math",
+          "glossary_id": "discount"
+        },
+        {
+          "type": "text",
+          "text": " in the "
+        },
+        {
+          "type": "term",
+          "text": "Shop",
+          "category": "game",
+          "glossary_id": "shop"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "discount",
+        "percent",
+        "shop",
+        "gold",
+        "highest_discount",
+        "round_up"
+      ],
+      "example_snapshot": {
+        "context": "Original price 100 Gold; only this discount.",
+        "results": [
+          {
+            "label": "Final price",
+            "value": "95",
+            "unit": "Gold",
+            "lines": [
+              "Original price: 100 Gold",
+              "Discount: 100 × 5 ÷ 100 = 5 Gold",
+              "Price before rounding: 100 − 5 = 95 Gold",
+              "Final price: max(1, round up(95)) = 95 Gold"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s07_bronze_guard_pin",
+      "description_en": "Gain 3 Block on your first turn of each combat.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Gain 3 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": " on your "
+        },
+        {
+          "type": "term",
+          "text": "first turn",
+          "category": "game",
+          "glossary_id": "first_turn"
+        },
+        {
+          "type": "text",
+          "text": " of each "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "block",
+        "first_turn",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "Block before effect: 0.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+3",
+            "unit": "Block",
+            "lines": [
+              "Bronze Guard Pin: +3 Block",
+              "Before: 0 Block",
+              "After: 0 + 3 = 3 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s08_travelers_ration",
+      "description_en": "When obtained, gain 5 Max HP and heal 5 HP. Once per run.",
+      "description_segments": [
+        {
+          "type": "term",
+          "text": "When obtained",
+          "category": "game",
+          "glossary_id": "acquisition"
+        },
+        {
+          "type": "text",
+          "text": ", gain 5 "
+        },
+        {
+          "type": "term",
+          "text": "Max HP",
+          "category": "game",
+          "glossary_id": "max_hp"
+        },
+        {
+          "type": "text",
+          "text": " and "
+        },
+        {
+          "type": "term",
+          "text": "heal",
+          "category": "game",
+          "glossary_id": "heal"
+        },
+        {
+          "type": "text",
+          "text": " 5 "
+        },
+        {
+          "type": "term",
+          "text": "HP",
+          "category": "game",
+          "glossary_id": "hp"
+        },
+        {
+          "type": "text",
+          "text": ". Once per "
+        },
+        {
+          "type": "term",
+          "text": "run",
+          "category": "game",
+          "glossary_id": "run"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "acquisition",
+        "max_hp",
+        "heal",
+        "hp",
+        "run"
+      ],
+      "example_snapshot": {
+        "context": "Before acquisition: HP 18/20.",
+        "results": [
+          {
+            "label": "Max HP gained",
+            "value": "+5",
+            "unit": "Max HP",
+            "lines": [
+              "Max HP before: 20",
+              "Traveler’s Ration: +5",
+              "Max HP after: 20 + 5 = 25"
+            ]
+          },
+          {
+            "label": "HP restored",
+            "value": "+5",
+            "unit": "HP",
+            "lines": [
+              "Traveler’s Ration: +5 HP",
+              "Available room: 25 − 18 = 7 HP",
+              "Actual healing: min(5, 7) = 5 HP",
+              "HP after effect: 18 + 5 = 23 HP"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Apply once on acquisition for this run."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s09_copper_purse",
+      "description_en": "When obtained, gain 25 Gold. Once per run.",
+      "description_segments": [
+        {
+          "type": "term",
+          "text": "When obtained",
+          "category": "game",
+          "glossary_id": "acquisition"
+        },
+        {
+          "type": "text",
+          "text": ", gain 25 "
+        },
+        {
+          "type": "term",
+          "text": "Gold",
+          "category": "game",
+          "glossary_id": "gold"
+        },
+        {
+          "type": "text",
+          "text": ". Once per "
+        },
+        {
+          "type": "term",
+          "text": "run",
+          "category": "game",
+          "glossary_id": "run"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "acquisition",
+        "gold",
+        "run"
+      ],
+      "example_snapshot": {
+        "context": "Gold before acquisition: 40.",
+        "results": [
+          {
+            "label": "Gold gained",
+            "value": "+25",
+            "unit": "Gold",
+            "lines": [
+              "Copper Purse: +25 Gold",
+              "Before: 40 Gold",
+              "After: 40 + 25 = 65 Gold"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s10_ember_quill",
+      "description_en": "After your first Skill each combat, draw 1 card.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After your "
+        },
+        {
+          "type": "term",
+          "text": "first Skill each combat",
+          "category": "game",
+          "glossary_id": "first_skill_combat"
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "term",
+          "text": "draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 1 card."
+        }
+      ],
+      "glossary_ids": [
+        "first_skill_combat",
+        "skill",
+        "draw",
+        "hand",
+        "draw_pile",
+        "discard",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "First Skill has resolved; Hand now has 3 cards; draw is possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+1",
+            "unit": "cards",
+            "lines": [
+              "Ember Quill: draw 1 extra card(s)",
+              "Hand before effect: 3 cards",
+              "Hand after effect: 3 + 1 = 4 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s11_scribes_pebble",
+      "description_en": "After your first Exhaust each combat, gain 4 Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After your "
+        },
+        {
+          "type": "term",
+          "text": "first Exhaust each combat",
+          "category": "game",
+          "glossary_id": "first_exhaust_combat"
+        },
+        {
+          "type": "text",
+          "text": ", gain 4 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_exhaust_combat",
+        "exhaust",
+        "block",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "First owned card entered Exhaust; Block before effect: 2.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+4",
+            "unit": "Block",
+            "lines": [
+              "Scribe’s Pebble: +4 Block",
+              "Before: 2 Block",
+              "After: 2 + 4 = 6 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "s12_initiates_ring",
+      "description_en": "After your first Passive each combat, gain 3 Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After your "
+        },
+        {
+          "type": "term",
+          "text": "first Passive each combat",
+          "category": "game",
+          "glossary_id": "first_passive"
+        },
+        {
+          "type": "text",
+          "text": ", gain 3 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_passive",
+        "passive",
+        "block",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "First Passive has resolved; Block before effect: 2.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+3",
+            "unit": "Block",
+            "lines": [
+              "Initiate’s Ring: +3 Block",
+              "Before: 2 Block",
+              "After: 2 + 3 = 5 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e01_copper_abacus",
+      "description_en": "After 3 played cards in the same turn, gain 1 Energy. Once per turn.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After 3 played cards in the same "
+        },
+        {
+          "type": "term",
+          "text": "turn",
+          "category": "game",
+          "glossary_id": "turn"
+        },
+        {
+          "type": "text",
+          "text": ", gain 1 "
+        },
+        {
+          "type": "term",
+          "text": "Energy",
+          "category": "game",
+          "glossary_id": "energy"
+        },
+        {
+          "type": "text",
+          "text": ". "
+        },
+        {
+          "type": "term",
+          "text": "Once per turn",
+          "category": "game",
+          "glossary_id": "once_turn"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "played_card",
+        "energy",
+        "turn",
+        "once_turn"
+      ],
+      "example_snapshot": {
+        "context": "Three eligible cards resolved; Energy before bonus: 0.",
+        "results": [
+          {
+            "label": "Energy gained",
+            "value": "+1",
+            "unit": "Energy",
+            "lines": [
+              "Copper Abacus: +1 Energy",
+              "Before: 0 Energy",
+              "After: 0 + 1 = 1 Energy"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Canceled cards, draw, preview and artifact retaliation do not count."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e02_twin_sigil_medallion",
+      "description_en": "Play at least 1 Attack and 1 Defend in the same turn to gain 6 Block. Once per turn.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Play "
+        },
+        {
+          "type": "term",
+          "text": "at least",
+          "category": "math",
+          "glossary_id": "at_least"
+        },
+        {
+          "type": "text",
+          "text": " 1 "
+        },
+        {
+          "type": "term",
+          "text": "Attack",
+          "category": "game",
+          "glossary_id": "attack"
+        },
+        {
+          "type": "text",
+          "text": " and 1 "
+        },
+        {
+          "type": "term",
+          "text": "Defend",
+          "category": "game",
+          "glossary_id": "defend"
+        },
+        {
+          "type": "text",
+          "text": " in the same "
+        },
+        {
+          "type": "term",
+          "text": "turn",
+          "category": "game",
+          "glossary_id": "turn"
+        },
+        {
+          "type": "text",
+          "text": " to gain 6 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": ". "
+        },
+        {
+          "type": "term",
+          "text": "Once per turn",
+          "category": "game",
+          "glossary_id": "once_turn"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "at_least",
+        "attack",
+        "defend",
+        "played_card",
+        "turn",
+        "block",
+        "once_turn"
+      ],
+      "example_snapshot": {
+        "context": "One Attack and one Defend resolved this turn; Block before bonus: 4.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+6",
+            "unit": "Block",
+            "lines": [
+              "Twin Sigil Medallion: +6 Block",
+              "Before: 4 Block",
+              "After: 4 + 6 = 10 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e03_chance_die",
+      "description_en": "On the first turn of each combat, roll a d6 once. 1–2: gain 10 Block. 3–4: draw 2 cards. 5–6: gain 2 Energy.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "On the "
+        },
+        {
+          "type": "term",
+          "text": "first turn",
+          "category": "game",
+          "glossary_id": "first_turn"
+        },
+        {
+          "type": "text",
+          "text": " of each "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": ", roll a "
+        },
+        {
+          "type": "term",
+          "text": "d6",
+          "category": "math",
+          "glossary_id": "d6"
+        },
+        {
+          "type": "text",
+          "text": " once. "
+        },
+        {
+          "type": "term",
+          "text": "1–2",
+          "category": "math",
+          "glossary_id": "range"
+        },
+        {
+          "type": "text",
+          "text": ": gain 10 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": ". "
+        },
+        {
+          "type": "term",
+          "text": "3–4",
+          "category": "math",
+          "glossary_id": "range"
+        },
+        {
+          "type": "text",
+          "text": ": "
+        },
+        {
+          "type": "term",
+          "text": "draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 2 cards. "
+        },
+        {
+          "type": "term",
+          "text": "5–6",
+          "category": "math",
+          "glossary_id": "range"
+        },
+        {
+          "type": "text",
+          "text": ": gain 2 "
+        },
+        {
+          "type": "term",
+          "text": "Energy",
+          "category": "game",
+          "glossary_id": "energy"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_turn",
+        "d6",
+        "range",
+        "block",
+        "draw",
+        "hand",
+        "energy",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "Example roll: 4; Hand has 3 cards; draw is possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+2",
+            "unit": "cards",
+            "lines": [
+              "Chance Die (roll 4): draw 2 extra card(s)",
+              "Hand before effect: 3 cards",
+              "Hand after effect: 3 + 2 = 5 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "1–2 gives +10 Block; 3–4 draws 2; 5–6 gives +2 Energy."
+      ],
+      "pending_core_rules": [
+        "Do not promise 1/3 probability until the fair-die random distribution is confirmed."
+      ]
+    },
+    {
+      "id": "e04_ember_balance",
+      "description_en": "At End Turn, gain 6 Block if you have at least 1 unspent Energy.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "At "
+        },
+        {
+          "type": "term",
+          "text": "End Turn",
+          "category": "game",
+          "glossary_id": "end_turn"
+        },
+        {
+          "type": "text",
+          "text": ", gain 6 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": " if you have "
+        },
+        {
+          "type": "term",
+          "text": "at least",
+          "category": "math",
+          "glossary_id": "at_least"
+        },
+        {
+          "type": "text",
+          "text": " 1 "
+        },
+        {
+          "type": "term",
+          "text": "unspent Energy",
+          "category": "game",
+          "glossary_id": "unspent"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "end_turn",
+        "at_least",
+        "unspent",
+        "energy",
+        "block",
+        "once_turn"
+      ],
+      "example_snapshot": {
+        "context": "End Turn; 2 Energy left; Block before effect: 3.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+6",
+            "unit": "Block",
+            "lines": [
+              "Ember Balance: +6 Block",
+              "Before: 3 Block",
+              "After: 3 + 6 = 9 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Check before unused Energy is cleared."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e05_chainbreaker_clasp",
+      "description_en": "After your first Exhaust each turn, draw 1 card and gain 4 Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After your "
+        },
+        {
+          "type": "term",
+          "text": "first Exhaust each turn",
+          "category": "game",
+          "glossary_id": "first_exhaust_turn"
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "term",
+          "text": "draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 1 card and gain 4 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_exhaust_turn",
+        "exhaust",
+        "turn",
+        "draw",
+        "hand",
+        "block",
+        "once_turn"
+      ],
+      "example_snapshot": {
+        "context": "First Exhaust this turn; Hand 3 cards; Block 2; draw is possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+1",
+            "unit": "cards",
+            "lines": [
+              "Chainbreaker Clasp: draw 1 extra card(s)",
+              "Hand before effect: 3 cards",
+              "Hand after effect: 3 + 1 = 4 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          },
+          {
+            "label": "Block gained",
+            "value": "+4",
+            "unit": "Block",
+            "lines": [
+              "Chainbreaker Clasp: +4 Block",
+              "Before: 2 Block",
+              "After: 2 + 4 = 6 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e06_ashen_phoenix_feather",
+      "description_en": "After winning a combat, heal 5 HP.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After winning a "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "term",
+          "text": "heal",
+          "category": "game",
+          "glossary_id": "heal"
+        },
+        {
+          "type": "text",
+          "text": " 5 "
+        },
+        {
+          "type": "term",
+          "text": "HP",
+          "category": "game",
+          "glossary_id": "hp"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "heal",
+        "hp",
+        "max_hp",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "Victory; HP 18/20.",
+        "results": [
+          {
+            "label": "HP restored",
+            "value": "+2",
+            "unit": "HP",
+            "lines": [
+              "Ashen Phoenix Feather: +5 HP",
+              "Available room: 20 − 18 = 2 HP",
+              "Actual healing: min(5, 2) = 2 HP",
+              "HP after effect: 18 + 2 = 20 HP"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Only after victory, while alive, once per won combat."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e07_runesmith_tongs",
+      "description_en": "Your first Attack each turn deals 3 extra damage.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Your "
+        },
+        {
+          "type": "term",
+          "text": "first Attack each turn",
+          "category": "game",
+          "glossary_id": "first_attack"
+        },
+        {
+          "type": "text",
+          "text": " deals 3 extra "
+        },
+        {
+          "type": "term",
+          "text": "damage",
+          "category": "game",
+          "glossary_id": "damage"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_attack",
+        "attack",
+        "damage",
+        "turn"
+      ],
+      "example_snapshot": {
+        "context": "Eligible card damage before artifact: 6; no other modifiers.",
+        "results": [
+          {
+            "label": "Card damage",
+            "value": "9",
+            "unit": "damage",
+            "lines": [
+              "Damage before artifact: 6",
+              "Rune-smith Tongs: +3",
+              "Damage before enemy defenses: 6 + 3 = 9",
+              "Apply artifact bonus once per eligible card, not once per hit."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e08_sentinel_crest",
+      "description_en": "Your first Defend each turn gives 6 extra Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Your "
+        },
+        {
+          "type": "term",
+          "text": "first Defend each turn",
+          "category": "game",
+          "glossary_id": "first_defend"
+        },
+        {
+          "type": "text",
+          "text": " gives 6 extra "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "first_defend",
+        "defend",
+        "block",
+        "turn"
+      ],
+      "example_snapshot": {
+        "context": "Resolved card Block before artifact: 5.",
+        "results": [
+          {
+            "label": "Block gained",
+            "value": "+11",
+            "unit": "Block",
+            "lines": [
+              "Card Block after core calculation: 5",
+              "Sentinel Crest: +6",
+              "Block gained: 5 + 6 = 11"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e09_mirror_knights_brooch",
+      "description_en": "After an enemy hit is fully blocked, deal 6 retaliation damage to the attacker. Once per turn cycle.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After an enemy hit is "
+        },
+        {
+          "type": "term",
+          "text": "fully blocked",
+          "category": "game",
+          "glossary_id": "fully_blocked"
+        },
+        {
+          "type": "text",
+          "text": ", deal 6 "
+        },
+        {
+          "type": "term",
+          "text": "retaliation",
+          "category": "game",
+          "glossary_id": "retaliation"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "term",
+          "text": "damage",
+          "category": "game",
+          "glossary_id": "damage"
+        },
+        {
+          "type": "text",
+          "text": " to the attacker. "
+        },
+        {
+          "type": "term",
+          "text": "Once per turn cycle",
+          "category": "game",
+          "glossary_id": "cycle"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "fully_blocked",
+        "block",
+        "damage",
+        "retaliation",
+        "cycle"
+      ],
+      "example_snapshot": {
+        "context": "Incoming hit 5; Block 7. Enemy reduces retaliation by 2 in this example.",
+        "results": [
+          {
+            "label": "Enemy HP change",
+            "value": "−4",
+            "unit": "HP",
+            "lines": [
+              "Incoming damage 5 is fully absorbed by Block 7",
+              "Retaliation before enemy reduction: 6 damage",
+              "Enemy reduction in this example: 2 damage",
+              "Applied enemy HP change: −(6 − 2) = −4 HP"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Does not count as Attack, cannot generate endless retaliation, once per player/enemy turn cycle."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e10_rune_bats_bell",
+      "description_en": "After your first Skill each turn, draw 1 card.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After your "
+        },
+        {
+          "type": "term",
+          "text": "first Skill each turn",
+          "category": "game",
+          "glossary_id": "first_skill_turn"
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "term",
+          "text": "draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 1 card."
+        }
+      ],
+      "glossary_ids": [
+        "first_skill_turn",
+        "skill",
+        "draw",
+        "hand",
+        "draw_pile",
+        "discard",
+        "turn",
+        "once_turn"
+      ],
+      "example_snapshot": {
+        "context": "First Skill resolved this turn; Hand 3; draw is possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+1",
+            "unit": "cards",
+            "lines": [
+              "Rune Bat’s Bell: draw 1 extra card(s)",
+              "Hand before effect: 3 cards",
+              "Hand after effect: 3 + 1 = 4 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e11_scholars_satchel",
+      "description_en": "Draw 2 extra cards on your first turn of each combat.",
+      "description_segments": [
+        {
+          "type": "term",
+          "text": "Draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 2 extra cards on your "
+        },
+        {
+          "type": "term",
+          "text": "first turn",
+          "category": "game",
+          "glossary_id": "first_turn"
+        },
+        {
+          "type": "text",
+          "text": " of each "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "draw",
+        "hand",
+        "draw_pile",
+        "discard",
+        "first_turn",
+        "combat",
+        "once_combat"
+      ],
+      "example_snapshot": {
+        "context": "Hand 4; two extra draws possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+2",
+            "unit": "cards",
+            "lines": [
+              "Scholar’s Satchel: draw 2 extra card(s)",
+              "Hand before effect: 4 cards",
+              "Hand after effect: 4 + 2 = 6 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e12_lantern_keepers_flask",
+      "description_en": "The first time you have 50% Max HP or less while alive in a combat, gain 12 Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "The first time you have "
+        },
+        {
+          "type": "term",
+          "text": "50%",
+          "category": "math",
+          "glossary_id": "percent"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "term",
+          "text": "Max HP",
+          "category": "game",
+          "glossary_id": "max_hp"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "term",
+          "text": "or less",
+          "category": "math",
+          "glossary_id": "or_less"
+        },
+        {
+          "type": "text",
+          "text": " while alive in a "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": ", gain 12 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "hp_threshold",
+        "percent",
+        "max_hp",
+        "hp",
+        "or_less",
+        "block",
+        "once_combat",
+        "combat"
+      ],
+      "example_snapshot": {
+        "context": "Max HP 60; current HP 30; Block before effect 2.",
+        "results": [
+          {
+            "label": "HP threshold",
+            "value": "30",
+            "unit": "HP",
+            "lines": [
+              "Max HP: 60",
+              "Half of Max HP: 50 ÷ 100 × 60 = 30 HP",
+              "Current HP: 30",
+              "Alive and 30 ≤ 30: condition met"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "value": "+12",
+            "unit": "Block",
+            "lines": [
+              "Lantern Keeper’s Flask: +12 Block",
+              "Before: 2 Block",
+              "After: 2 + 12 = 14 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "If Max HP is 61, threshold is 30.5. With whole-number HP, 30 qualifies and 31 does not. Do not round threshold up.",
+        "Also checks at combat start; does not revive at 0 HP."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e13_chain_weavers_spool",
+      "description_en": "After the first Discard by a card effect each turn, draw 1 card and gain 3 Block.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "After the first "
+        },
+        {
+          "type": "term",
+          "text": "Discard by a card effect",
+          "category": "game",
+          "glossary_id": "effect_discard"
+        },
+        {
+          "type": "text",
+          "text": " each "
+        },
+        {
+          "type": "term",
+          "text": "turn",
+          "category": "game",
+          "glossary_id": "turn"
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "term",
+          "text": "draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 1 card and gain 3 "
+        },
+        {
+          "type": "term",
+          "text": "Block",
+          "category": "game",
+          "glossary_id": "block"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "effect_discard",
+        "hand",
+        "discard",
+        "draw",
+        "draw_pile",
+        "block",
+        "turn",
+        "once_turn"
+      ],
+      "example_snapshot": {
+        "context": "Eligible hand discard occurred; Hand now 3; Block 2; draw possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+1",
+            "unit": "cards",
+            "lines": [
+              "Chain Weaver’s Spool: draw 1 extra card(s)",
+              "Hand before effect: 3 cards",
+              "Hand after effect: 3 + 1 = 4 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          },
+          {
+            "label": "Block gained",
+            "value": "+3",
+            "unit": "Block",
+            "lines": [
+              "Chain Weaver’s Spool: +3 Block",
+              "Before: 2 Block",
+              "After: 2 + 3 = 5 Block"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "Exclude End Turn cleanup, played-card discard and Draw Pile → Discard."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e14_brams_contract",
+      "description_en": "Get a 15% discount in the Shop.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Get a "
+        },
+        {
+          "type": "term",
+          "text": "15%",
+          "category": "math",
+          "glossary_id": "percent"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "term",
+          "text": "discount",
+          "category": "math",
+          "glossary_id": "discount"
+        },
+        {
+          "type": "text",
+          "text": " in the "
+        },
+        {
+          "type": "term",
+          "text": "Shop",
+          "category": "game",
+          "glossary_id": "shop"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "discount",
+        "percent",
+        "shop",
+        "gold",
+        "highest_discount",
+        "round_up"
+      ],
+      "example_snapshot": {
+        "context": "Original price 102 Gold; Merchant’s Seal also owned.",
+        "results": [
+          {
+            "label": "Final price",
+            "value": "87",
+            "unit": "Gold",
+            "lines": [
+              "Owned artifact discounts: 5% and 15%",
+              "Effective discount: max(5%, 15%) = 15%",
+              "Discount amount: 102 × 15 ÷ 100 = 15.3 Gold",
+              "Price before rounding: 102 − 15.3 = 86.7 Gold",
+              "Final price: max(1, round up(86.7)) = 87 Gold"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e15_crimson_sword_charm",
+      "description_en": "Gain 2 Strength at the start of combat.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Gain 2 "
+        },
+        {
+          "type": "term",
+          "text": "Strength",
+          "category": "game",
+          "glossary_id": "strength"
+        },
+        {
+          "type": "text",
+          "text": " at the "
+        },
+        {
+          "type": "term",
+          "text": "start of combat",
+          "category": "game",
+          "glossary_id": "combat_start"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "strength",
+        "combat_start",
+        "combat"
+      ],
+      "example_snapshot": {
+        "context": "Strength before effect: 0.",
+        "results": [
+          {
+            "label": "Strength gained",
+            "value": "+2",
+            "unit": "Strength",
+            "lines": [
+              "Crimson Sword Charm: +2 Strength",
+              "Before: 0 Strength",
+              "After: 0 + 2 = 2 Strength"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "e16_guardians_armlet",
+      "description_en": "Gain 2 Agility at the start of combat.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Gain 2 "
+        },
+        {
+          "type": "term",
+          "text": "Agility",
+          "category": "game",
+          "glossary_id": "agility"
+        },
+        {
+          "type": "text",
+          "text": " at the "
+        },
+        {
+          "type": "term",
+          "text": "start of combat",
+          "category": "game",
+          "glossary_id": "combat_start"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "agility",
+        "combat_start",
+        "combat"
+      ],
+      "example_snapshot": {
+        "context": "Agility before effect: 0.",
+        "results": [
+          {
+            "label": "Agility gained",
+            "value": "+2",
+            "unit": "Agility",
+            "lines": [
+              "Guardian’s Armlet: +2 Agility",
+              "Before: 0 Agility",
+              "After: 0 + 2 = 2 Agility"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "b01_gatekeeper_core",
+      "description_en": "Gain 1 extra Energy at the start of each turn.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Gain 1 extra "
+        },
+        {
+          "type": "term",
+          "text": "Energy",
+          "category": "game",
+          "glossary_id": "energy"
+        },
+        {
+          "type": "text",
+          "text": " at the "
+        },
+        {
+          "type": "term",
+          "text": "start of each turn",
+          "category": "game",
+          "glossary_id": "start_turn"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "energy",
+        "start_turn",
+        "turn"
+      ],
+      "example_snapshot": {
+        "context": "Energy after the core turn reset is 3 in this example.",
+        "results": [
+          {
+            "label": "Energy gained",
+            "value": "+1",
+            "unit": "Energy",
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Before: 3 Energy",
+              "After: 3 + 1 = 4 Energy"
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    },
+    {
+      "id": "b02_sovereign_grimoire_clasp",
+      "description_en": "Start each combat with 3 Strength and 3 Agility. From turn 2, gain 1 of each per turn, up to an artifact contribution cap of 6 for each stat.",
+      "description_segments": [
+        {
+          "type": "text",
+          "text": "Start each "
+        },
+        {
+          "type": "term",
+          "text": "combat",
+          "category": "game",
+          "glossary_id": "combat"
+        },
+        {
+          "type": "text",
+          "text": " with 3 "
+        },
+        {
+          "type": "term",
+          "text": "Strength",
+          "category": "game",
+          "glossary_id": "strength"
+        },
+        {
+          "type": "text",
+          "text": " and 3 "
+        },
+        {
+          "type": "term",
+          "text": "Agility",
+          "category": "game",
+          "glossary_id": "agility"
+        },
+        {
+          "type": "text",
+          "text": ". From "
+        },
+        {
+          "type": "term",
+          "text": "turn",
+          "category": "game",
+          "glossary_id": "turn"
+        },
+        {
+          "type": "text",
+          "text": " 2, gain 1 of each per "
+        },
+        {
+          "type": "term",
+          "text": "turn",
+          "category": "game",
+          "glossary_id": "turn"
+        },
+        {
+          "type": "text",
+          "text": ", up to an "
+        },
+        {
+          "type": "term",
+          "text": "artifact",
+          "category": "game",
+          "glossary_id": "artifact"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "term",
+          "text": "contribution cap",
+          "category": "math",
+          "glossary_id": "cap"
+        },
+        {
+          "type": "text",
+          "text": " of 6 for "
+        },
+        {
+          "type": "term",
+          "text": "each stat",
+          "category": "math",
+          "glossary_id": "per_stat"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "strength",
+        "agility",
+        "combat_start",
+        "combat",
+        "turn",
+        "cap",
+        "per_stat",
+        "artifact"
+      ],
+      "example_snapshot": {
+        "context": "Turn 4; Clasp contribution reached 6. Charm +2 Strength and Armlet +2 Agility also owned.",
+        "results": [
+          {
+            "label": "Total Strength",
+            "value": "8",
+            "unit": "Strength",
+            "lines": [
+              "Clasp contribution by turn: 3 → 4 → 5 → 6",
+              "Clasp contribution cap: 6 Strength",
+              "Crimson Sword Charm: +2 Strength",
+              "Total: 6 + 2 = 8 Strength"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "value": "8",
+            "unit": "Agility",
+            "lines": [
+              "Clasp contribution by turn: 3 → 4 → 5 → 6",
+              "Clasp contribution cap: 6 Agility",
+              "Guardian’s Armlet: +2 Agility",
+              "Total: 6 + 2 = 8 Agility"
+            ]
+          }
+        ]
+      },
+      "constraints": [
+        "No new Clasp bonus after reaching +6; other sources still add."
+      ],
+      "pending_core_rules": []
+    },
+    {
+      "id": "b03_decklords_hourglass",
+      "description_en": "Draw 2 extra cards at the start of each turn.",
+      "description_segments": [
+        {
+          "type": "term",
+          "text": "Draw",
+          "category": "game",
+          "glossary_id": "draw"
+        },
+        {
+          "type": "text",
+          "text": " 2 extra cards at the "
+        },
+        {
+          "type": "term",
+          "text": "start of each turn",
+          "category": "game",
+          "glossary_id": "start_turn"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "glossary_ids": [
+        "draw",
+        "hand",
+        "draw_pile",
+        "discard",
+        "start_turn",
+        "turn"
+      ],
+      "example_snapshot": {
+        "context": "After normal draw, Hand has 4 cards; two extra draws are possible.",
+        "results": [
+          {
+            "label": "Cards drawn",
+            "value": "+2",
+            "unit": "cards",
+            "lines": [
+              "Decklord’s Hourglass: draw 2 extra card(s)",
+              "Hand before effect: 4 cards",
+              "Hand after effect: 4 + 2 = 6 cards",
+              "Example assumes enough cards and room in Hand. Live results use the actual resolved draw count."
+            ]
+          }
+        ]
+      },
+      "constraints": [],
+      "pending_core_rules": []
+    }
+  ]
+}

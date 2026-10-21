@@ -127,3 +127,12 @@ Shop selection previews, Buy commits once and sold state survives refresh. Rest/
 ## Reward and Shop proportions 2.5.3
 
 Extra horizontal screen space must not widen cards at a fixed viewport height. Reward and Shop retain three portrait choices in one horizontal row, with narrow rows scrolling from the first card. Card artwork preserves its square source ratio. Panel width is bounded for these two scenes only; selection, purchase, prices and reward actions use the same native owners. The regression suite checks card/illustration ratios, row alignment and fixed-height ultrawide comparisons, including the exact 2048×1038 screenshot size.
+
+## Artifact rich text and calculations 2.6.0
+
+| Capability | Canonical owner | Source of truth | Allowed variants | Verification |
+|---|---|---|---|---|
+| Term / number tooltip | dist/rich-text.js bind | V3.2 glossary + resolved event snapshots | hover / focus / tap, shared dialog or page | DOM + artifacts browser |
+| Resolved calculation history | dist/rich-text.js record / valid | engine and artifact resolution only | delta / total / price / saved die roll | engine boundary, save/reload, browser and portable tests |
+
+Tooltip lookup and display are read-only: no random calls, acquisition, draws or reward mutation. Escape dismisses a visible tooltip first, preserving its anchor and the surrounding dialog; the next Escape uses the existing dialog close/focus owner. Plain connector text inherits the game theme. Delta HP, remaining HP, Max HP and other units stay separate. Descriptions are static rules, not promised runtime outcomes. Shop quotes are the actual frozen offer price; history records a purchase only after it succeeds.

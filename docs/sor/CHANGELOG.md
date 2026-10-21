@@ -137,3 +137,11 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Preserve square illustration viewports and a horizontal row of three choices; retain narrow-screen scrolling.
 - Add real-browser ratio, row-alignment and fixed-height UWHD regression checks. Other menus and gameplay remain unchanged.
 - Evidence: docs/FIX_CARD_PROPORTIONS_2_5_3.md.
+
+## 2.6.0 — 21 October 2026: supplied Artifact Pack V3.2
+
+- Integrate 31 segmented artifact descriptions, 55 glossary terms and scoped purple/pink/green tokens.
+- One hover/focus/tap tooltip supports page and shared-dialog contexts without nested buttons or selecting an artifact while reading.
+- Record actual resolved contributions, deltas, caps, die branches, stat totals and Shop rounding; show calculations in inventory, room/map action and battle log. Preserve trigger/education/ownership behavior.
+- Optional bounded validated snapshot history is compatible with older saves and checkpoints. Reuse all 31 identical existing icons without adding duplicate large exports.
+- Decisions 07–08; verification and retained limitations: docs/ARTIFACT_RICH_TEXT_2_6_0.md.

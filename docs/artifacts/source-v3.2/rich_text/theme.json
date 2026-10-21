@@ -1,0 +1,31 @@
+{
+  "standard_version": "1.1",
+  "colors": {
+    "dark": {
+      "calculation": "#B9A3E3",
+      "surface": "#17131E",
+      "math": "#E7A1C4",
+      "game": "#9ED5B0"
+    },
+    "light": {
+      "calculation": "#70528F",
+      "surface": "#FAF8FD",
+      "math": "#984669",
+      "game": "#316A48"
+    }
+  },
+  "underline": {
+    "calculation": "dotted",
+    "math": "dashed",
+    "game": "dashed"
+  },
+  "normal_text": "inherit_game_design",
+  "scope": "Only explicitly annotated rich-text tokens",
+  "mixed_phrase_policy": "Split math and game spans; never color an entire paragraph",
+  "interaction": [
+    "hover",
+    "keyboard focus",
+    "tap"
+  ],
+  "calculation_policy": "Final applied result only; working shown on hover; actual event snapshot required"
+}

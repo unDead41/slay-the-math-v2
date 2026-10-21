@@ -130,3 +130,9 @@ The four newly supplied scene mockups govern Shop, Rest, chest reward/victory an
 ## Reward and Shop width correction 2.5.3
 
 Bound only Reward and Shop panel/card widths instead of filling arbitrary ultrawide space. Preserve portrait cards, square source-art proportions, a horizontal row of three choices and native row scrolling on phones. Keep artwork, other situation panels, Home, combat and existing actions unchanged. The browser suite now verifies geometry directly rather than only checking page overflow.
+
+## Rich text — 2.6.0
+
+Artifact Pack V3.2 uses soft purple dotted numbers for resolved calculations, pink dashed math terms and green dashed game terms. Only annotated tokens receive colors; normal text and card-role frames inherit the existing theme. One tooltip owner supports hover, keyboard focus and tap, can be reached by pointer, stays within the viewport, and closes with Escape/outside click. Its content is escaped and connected through aria-describedby. Inside a dialog, Escape dismisses the tooltip first. Selection, term and result buttons are siblings rather than nested. The existing native modal owns focus and inert background behavior.
+
+All 31 artifact rules use the same segmented-description owner in choices, pending trial and inventory. The 55-term glossary is available in inventory. Calculations expose before/after values, sources, actual caps and rounding; labels distinguish deltas, totals and price. No lesson answer or effect is committed by reading a definition.

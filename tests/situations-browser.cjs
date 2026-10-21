@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright');
 const E=require('../dist/engine.js'),C=require('../dist/config.js');
 const out=process.env.QA_SCREENSHOTS||path.join(os.tmpdir(),'slay-the-math-situations');
-const report={version:'2.5.3',checks:[],viewports:[],cards:[],errors:[]};
+const report={version:require('../package.json').version,checks:[],viewports:[],cards:[],errors:[]};
 let server,browser;
 function room(type,stage=0){
  const r=E.newRun(7);r.stage=stage;if(stage)r.route=require('../dist/map.js').begin(stage,r.seed,3);
@@ -45,6 +45,8 @@ function ending(scene){
    await restore(r);const before=await state();
    for(const [width,height]of cases){
     await page.setViewportSize({width,height});
+    // Measure the resting row, rather than an incidental card hover after resize.
+    await page.mouse.move(0,0);
     assert.match(await page.locator('.situation-art img').getAttribute('src'),new RegExp('situation-'+expected[scene]+'\\.webp$'));
     const g=await page.evaluate(()=>{
      const im=document.querySelector('.situation-art img'),rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};

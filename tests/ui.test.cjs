@@ -1,7 +1,44 @@
 const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
-const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','artifact-ui.js','app.js'];
+const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','artifact-ui.js','app.js'];
+test('DOM: artifact terms support focus, tap and Escape without selecting or claiming a gift',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot(E.newRun(7,'challenge'));
+ try{
+  click('continue');const before=state(),term=w.document.querySelector('.artifact-effect [data-rt-term]');assert.ok(term);
+  assert.equal(w.document.querySelector('button button'),null);term.focus();
+  const tooltip=w.document.querySelector('[role=tooltip]');assert.ok(tooltip);assert.equal(term.getAttribute('aria-describedby'),tooltip.id);
+  assert.ok(tooltip.textContent.includes(w.DCRichText.data.glossary[term.dataset.rtTerm].definition));
+  term.click();assert.deepEqual(state(),before);assert.equal(w.document.querySelector('[data-action=claim-artifact]').disabled,true);
+  term.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}));assert.equal(w.document.querySelector('[role=tooltip]'),null);
+  const pick=w.document.querySelector('[data-action=select-artifact]');pick.click();assert.equal(w.document.activeElement.dataset.action,'select-artifact');assert.equal(pick.isConnected,false);
+  assert.deepEqual(state(),before);
+ }finally{dom.window.close();}
+});
+test('DOM: resolved artifact calculations and glossary use the shared dialog and never replay effects',{skip:!JSDOM},()=>{
+ const A=require('../dist/artifacts.js');let r;
+ for(let seed=1;seed<300;seed++){const candidate=E.newRun(seed,'challenge');if(candidate.artifactState.offer.ids.includes(A.id('s09'))){r=candidate;break;}}
+ require('./helpers/education.cjs').claimArtifact(r,A.id('s09'));
+ const {dom,w,click,state}=boot(r);
+ try{
+  click('continue');click('artifacts');assert.ok(w.document.querySelector('#dialog').open);
+  assert.equal(w.document.querySelectorAll('.rt-glossary [data-rt-term]').length,55);
+  const number=w.document.querySelector('.artifact-last-result .rt-calculation');assert.equal(number.textContent,'+25');const before=state();number.focus();number.click();
+  assert.match(w.document.querySelector('[role=tooltip]').textContent,/80 \+ 25 = 105/);assert.deepEqual(state(),before);
+  number.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}));assert.ok(w.document.querySelector('#dialog').open);assert.equal(w.document.querySelector('[role=tooltip]'),null);
+  w.document.querySelector('#dialog [data-action=calculations]').click();assert.match(w.document.querySelector('#dialog-title').textContent,/Calculations/);assert.match(w.document.querySelector('.rt-event').textContent,/Gold gained: \+25 Gold/);
+  assert.deepEqual(state(),before);click('close');assert.equal(w.document.querySelector('#dialog').open,false);
+ }finally{dom.window.close();}
+});
+test('DOM: mixed math/game descriptions keep separate tokens and never color ordinary text',{skip:!JSDOM},()=>{
+ const {dom,w}=boot();
+ try{
+  const box=w.document.createElement('div');box.innerHTML=w.DCRichText.description('e12_lantern_keepers_flask');
+  const terms=[...box.querySelectorAll('.rt-term')];assert.ok(terms.some(t=>t.textContent==='50%'&&t.dataset.category==='math'));
+  assert.ok(terms.some(t=>t.textContent==='Max HP'&&t.dataset.category==='game'));assert.ok(terms.some(t=>t.textContent==='or less'&&t.dataset.category==='math'));
+  assert.equal(box.querySelector('button button'),null);assert.match(box.textContent,/50% Max HP or less/);
+ }finally{dom.window.close();}
+});
 test('DOM: branching map exposes connected choices and commits the exact selected entry',{skip:!JSDOM},()=>{
  const original=E.newRun(7,'learn',2);const {dom,w,click,state}=boot(original);
  try{

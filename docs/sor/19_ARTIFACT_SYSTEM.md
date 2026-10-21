@@ -69,3 +69,8 @@ Ijamm explicitly requests applying `ARTIFACT (2).zip`. It retains the V3.1 effec
 - **ART-22:** Opening tooltips/history/inventory never runs triggers or RNG. Separate selection and term buttons preserve keyboard access and prevent nested controls. Escape closes a tooltip before its containing dialog. Existing ownership, frozen offers, education questions and trigger limits remain unchanged. Initiate's Ring and Chain Weaver's Spool stay excluded until compatible card mechanics exist; all 31 descriptions/glossary mappings are available.
 
 Acceptance and actual checks: [Artifact Rich Text 2.6.0](../ARTIFACT_RICH_TEXT_2_6_0.md).
+
+
+## Parchment map and integrated mechanics — 2.11.0
+
+ART-23 (2.11.0): INTEGRATION.zip supplies Artifact 3.5 with the same 31 IDs, triggers and numeric values. Reuse existing icons and real effect owners. The supplied tracker/UI are bound manually to artifactState.owned, current turn/combat flags, Clasp contribution, actual calculation events and existing dialog/toast owners. A compact HUD inside combat resources shows counters/used states. Collection → Artifacts opens persistent discovery/collection, search/clear, native tier filter, source examples and read-only comparisons. The shared registry explicitly reconciles the nine existing engine-dependent definitions. No auto-wrapping engine adapter or duplicate reward owner is installed. Eligibility stays 29 obtainable/31 catalogued.

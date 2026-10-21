@@ -2,6 +2,7 @@
  'use strict';
  const D=typeof module!=='undefined'?require('./rich-text-data.js'):root.DCRichTextData;
  const A=typeof module!=='undefined'?require('./artifact-data.js'):root.DCArtifactData;
+ const shared=(typeof module!=='undefined'?require('./mechanics.js'):root.STMMechanics).shared;
  const ids=new Set(A.artifacts.map(a=>a.id)),units=new Set(['HP','Max HP','Block','Energy','Focus','cards','Gold','damage','Strength','Agility','d6']);
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const integer=n=>Number.isSafeInteger(n)&&n>=0;
@@ -31,7 +32,7 @@
  }
  function term(id,label){
   const item=D.glossary[id];if(!item)return esc(label);
-  return '<button type="button" class="rt-term" data-rt-term="'+esc(id)+'" data-category="'+item.category+'">'+esc(label||item.label)+'</button>';
+  return shared.termHTML('artifact',label||item.label,id).replace('data-richtext-kind=', 'data-rt-term="'+esc(id)+'" data-richtext-kind=');
  }
  function description(id){
   const item=D.artifacts[id];if(!item)return '';
@@ -41,42 +42,15 @@
  function resultHTML(result,source='Calculation',showLabel=true){
   const display=result.kind==='delta'?(result.value<0?'−'+Math.abs(result.value):'+'+result.value):String(result.value);
   const detail=esc(JSON.stringify({label:source+' · '+result.label,lines:result.lines}));
-  return '<span class="rt-result">'+(showLabel?'<span class="rt-result-label">'+esc(result.label)+': </span>':'')+'<button type="button" class="rt-calculation" data-rt-detail="'+detail+'" aria-label="'+esc(result.label+': '+display+' '+result.unit+'. Show calculation')+'">'+display+'</button> '+term(unitIds[result.unit],result.unit)+'</span>';
+  const calculation=esc(JSON.stringify(shared.calculation({origin:'resolved',value:display,unit:result.unit,label:source+' · '+result.label,steps:result.lines,before:result.before})));
+  return '<span class="rt-result">'+(showLabel?'<span class="rt-result-label">'+esc(result.label)+': </span>':'')+'<button type="button" class="rt-calculation" data-richtext-kind="calculation" data-richtext-scope="artifact" data-category="calculation" data-rt-calculation="'+calculation+'" data-rt-detail="'+detail+'" aria-label="'+esc(result.label+': '+display+' '+result.unit+'. Show calculation')+'">'+display+'</button> '+term(unitIds[result.unit],result.unit)+'</span>';
  }
  function eventHTML(entry){return '<article class="rt-event" data-stm-richtext><h3>'+esc(entry.label)+'</h3><p class="rt-context">Stage '+(entry.stage+1)+' · Room '+(entry.depth+1)+(entry.turn?' · Turn '+entry.turn:'')+'</p><div class="rt-results">'+entry.results.map(r=>resultHTML(r,entry.label)).join('')+'</div></article>';}
  function history(r){return '<p>Resolved results from this run. Select an underlined number for its calculation, or a term for its meaning.</p><div class="rt-history">'+(entries(r).length?entries(r).map(eventHTML).join(''):'<p>No results yet. Calculations appear after effects resolve.</p>')+'</div>';}
  function glossary(){return '<details class="rt-glossary" data-stm-richtext><summary>Game & math glossary · 55 terms</summary><p>Green: game terms · Pink: math terms · Purple: resolved calculations</p><div>'+Object.entries(D.glossary).map(([id,item])=>'<p>'+term(id)+': '+esc(item.definition)+'</p>').join('')+'</div></details>';}
- let dismiss=()=>{};
- function bind(doc){
-  let tip=null,anchor=null,timer=null;
-  const target=el=>el?.closest?.('[data-rt-term],[data-rt-detail]');
-  function hide(){clearTimeout(timer);if(anchor){const described=(anchor.getAttribute('aria-describedby')||'').split(' ').filter(id=>id!=='stm-rich-tooltip').join(' ');if(described)anchor.setAttribute('aria-describedby',described);else anchor.removeAttribute('aria-describedby');}tip?.remove();tip=null;anchor=null;}
-  dismiss=hide;
-  function place(){
-   if(!tip||!anchor?.isConnected){hide();return;}
-   const box=anchor.getBoundingClientRect(),width=doc.defaultView.innerWidth,height=doc.defaultView.innerHeight;
-   tip.style.left=Math.max(8,Math.min(width-tip.offsetWidth-8,box.left))+'px';
-   const below=box.bottom+10,above=box.top-tip.offsetHeight-10;
-   tip.style.top=Math.max(8,Math.min(height-tip.offsetHeight-8,below+tip.offsetHeight<=height-8?below:above))+'px';
-  }
-  function show(el){
-   clearTimeout(timer);if(el===anchor)return;hide();
-   const item=el.dataset.rtTerm?D.glossary[el.dataset.rtTerm]:null;
-   let detail;try{detail=item?{label:item.label,lines:[item.definition]}:JSON.parse(el.dataset.rtDetail);}catch(_){return;}
-   if(!detail||!Array.isArray(detail.lines))return;
-   anchor=el;tip=doc.createElement('div');tip.id='stm-rich-tooltip';tip.className='rt-tooltip';tip.setAttribute('role','tooltip');tip.setAttribute('data-stm-richtext','');
-   tip.dataset.category=item?.category||'calculation';
-   tip.innerHTML='<strong>'+esc(detail.label)+'</strong>'+detail.lines.map(line=>'<p'+(!item&&/[=≥≤]/.test(line)?' class="rt-equation"':'')+'>'+esc(line)+'</p>').join('');
-   (el.closest('dialog[open]')||doc.body).appendChild(tip);
-   el.setAttribute('aria-describedby',((el.getAttribute('aria-describedby')||'')+' stm-rich-tooltip').trim());place();
-  }
-  doc.addEventListener('pointerover',e=>{const el=target(e.target);if(el)show(el);else if(tip?.contains(e.target))clearTimeout(timer);});
-  doc.addEventListener('pointerout',e=>{if(!anchor)return;if(anchor.contains(e.relatedTarget)||tip?.contains(e.relatedTarget))return;clearTimeout(timer);timer=setTimeout(hide,180);});
-  doc.addEventListener('focusin',e=>{const el=target(e.target);if(el)show(el);else hide();});
-  doc.addEventListener('click',e=>{const el=target(e.target);if(el){e.preventDefault();show(el);}else if(!tip?.contains(e.target))hide();});
-  doc.addEventListener('keydown',e=>{if(e.key==='Escape'&&tip){e.preventDefault();e.stopImmediatePropagation();hide();}},true);
-  doc.addEventListener('scroll',place,true);doc.defaultView.addEventListener('resize',place);
- }
+ let controller=null;
+ function bind(doc){controller?.destroy();controller=shared.attachTooltips(doc,{domain:'artifact',getLanguage:()=> 'en',getTheme:()=> 'dark'});}
+ function dismiss(){controller?.close();}
  const api={data:D,delta,total,healing,record,entries,latest,valid,term,description,resultHTML,eventHTML,history,glossary,bind,hide:()=>dismiss()};
  if(typeof module!=='undefined')module.exports=api;else root.DCRichText=api;
 })(typeof window!=='undefined'?window:globalThis);

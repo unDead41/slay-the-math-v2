@@ -1,0 +1,31 @@
+{
+  "version": "2.11.0",
+  "reference": {
+    "filename": "image(20261021-185345).png",
+    "sha256": "ecbe94baa603b0e077f3e6ec7a23e3038a788ff7463093baf2be1338b0e5cbe0",
+    "size": [
+      1672,
+      941
+    ]
+  },
+  "generation": {
+    "tool": "imagegen.imagegen",
+    "nativeDimensions": [
+      1024,
+      1536
+    ],
+    "sourceSha256": "f4ca1be16bcf783643ccf153b3efdc0789accaf7bcf97fc7c4ceb3df0f211e24",
+    "promptSummary": "Clean tall 2:3 worn parchment plate following the supplied dungeon atlas: sepia isometric blue-stone fantasy dungeon cartography, rolled ragged edges, broad light paper areas. Remove all HUD, sidebar, text, counters, node icons, routes, labels and scrollbars; no characters. Live game controls, nodes and routes are rendered separately."
+  },
+  "runtime": {
+    "path": "dist/assets/map-dungeon-parchment-v2.webp",
+    "sha256": "68edc6d5bf43328d3236967b037d57e1dffe16bfd09d20a7ffb5f61569b1153c",
+    "size": [
+      1024,
+      1536
+    ],
+    "bytes": 785870,
+    "conversion": "Pillow WebP quality 94, method 6; native dimensions retained; no upscaling"
+  },
+  "composition": "Atlas artwork is decorative. Existing six category seals, graph coordinates, links, state labels and legal room buttons remain live game HTML/SVG."
+}

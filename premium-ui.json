@@ -1,0 +1,13 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["dist"],
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Form", "Scrollbar", "Toast", "Select/Listbox"],
+  "ownership": {"Select/Listbox": "native"},
+  "commands": {
+    "unit": "npm test",
+    "browser": "npm run test:integration-browser"
+  },
+  "requiredCommands": ["unit", "browser"],
+  "evidence": {"failurePaths": "tests/mechanics-integration.test.cjs"}
+}

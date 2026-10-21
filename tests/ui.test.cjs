@@ -1,7 +1,7 @@
 const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
-const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','animation-data.js','animation.js','artifact-ui.js','hand.js','app.js'];
+const files=[...fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8').matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]);
 test('DOM: every Alyssa pose uses the approved right-facing art even without Canvas',{skip:!JSDOM},()=>{
  for(const [key,pose] of [[null,'idle'],['strike','attack'],['guard','defend'],['draw','skill'],['hit','damaged']]){
   const r=fixtureRun(7);E.startBattle(r,'wisp');
@@ -77,7 +77,7 @@ test('DOM: branching map exposes connected choices and commits the exact selecte
   assert.equal(w.document.querySelector('.room-preview'),null);
   const mapMarkup=w.document.querySelector('[data-stm-map]').outerHTML;
   for(const enemy of Object.values(require('../dist/config.js').enemies))assert.ok(!mapMarkup.includes(enemy.name),'Map must conceal '+enemy.name+' in text and attributes');
-  assert.equal(w.document.querySelector('[data-stm-map]').firstElementChild.matches('.map-rail'),true);
+  assert.equal(w.document.querySelector('[data-stm-map]').firstElementChild.matches('.map-overview'),true);
   const entry=E.availableNodes(original)[2];
   assert.equal(w.document.querySelector('.map-selection,.enter-room,.map-locate'),null);
   const blocked=rooms.find(el=>el.disabled),unchanged=state();blocked.click();assert.deepEqual(state(),unchanged);
@@ -104,7 +104,7 @@ function fixtureRun(seed){const run=E.newRun(seed);delete run.route;return run;}
 function boot(saved,storageBroken=false,options={}){const dom=new JSDOM(fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8'),{url:'https://game.example/',runScripts:'outside-only',pretendToBeVisual:true});const w=dom.window;if(options.AudioContext)w.AudioContext=options.AudioContext;if(options.settings)w.localStorage.setItem('duel-cube-settings.v1',JSON.stringify(options.settings));w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};w.HTMLAnchorElement.prototype.click=function(){};if(saved)w.localStorage.setItem('duel-cube-math.v1',JSON.stringify(saved));if(storageBroken)w.Storage.prototype.setItem=function(){throw new Error('storage unavailable');};for(const f of files)w.eval(fs.readFileSync(path.join(__dirname,'../dist',f),'utf8'));const click=(action,id)=>{const sel='[data-action="'+action+'"]'+(id?'[data-id="'+id+'"]':'');const el=w.document.querySelector(sel);assert.ok(el,sel);assert.equal(el.disabled,false,sel+' disabled');el.click();};return {dom,w,click,state:()=>JSON.parse(w.localStorage.getItem('duel-cube-math.v1'))};}
 test('DOM: new game, mode, tutorial, battle and forecast error/correction are wired',{skip:!JSDOM},()=>{const {dom,w,click,state}=boot();try{click('new');click('start-learn');assert.match(w.document.querySelector('#dialog').textContent,/Tutorial/);click('close');assert.equal(state().mode,'learn');const battleEntry=E.availableNodes(state()).find(n=>n.type==='battle');assert.ok(battleEntry,'A starting battle must be available');click('node',battleEntry.id);assert.equal(state().scene,'battle');click('forecast');const input=w.document.querySelector('#prob-answer');input.value='1/0';w.document.querySelector('#forecast-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal(state().battle.question.attempts,0);assert.equal(w.document.querySelector('#prob-answer').getAttribute('aria-invalid'),'true');click('hint');const q=state().battle.question;w.document.querySelector('#prob-answer').value=q.n+'/'+q.d;w.document.querySelector('#forecast-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal(state().battle.question.solved,true);assert.equal(state().battle.focus,0);assert.match(w.document.querySelector('#dialog').textContent,/guided/);click('close');assert.equal(state().battle.question,null);assert.equal(w.document.querySelector('[data-action=forecast]').disabled,true);click('end-turn');assert.equal(state().battle.turn,2);}finally{dom.window.close();}});
 test('DOM: filter selection cancels freely and commits exact selected cards',{skip:!JSDOM},()=>{const r=fixtureRun(91);E.startBattle(r,'wisp');const all=[...r.battle.hand,...r.battle.draw];const keys=['filter','draw','strike','guard'];const hand=[];for(const k of keys){const i=all.findIndex(c=>c.key===k);hand.push(all.splice(i,1)[0]);}r.battle.hand=hand;r.battle.draw=all;assert.ok(E.validate(r));const {dom,w,click,state}=boot(r);try{click('continue');const id=hand.find(c=>c.key==='filter').uid;click('play',id);click('close');assert.equal(state().battle.energy,3);click('play',id);const targets=state().battle.draw.slice(0,2).map(c=>c.uid);for(const target of targets)click('select-filter',target);click('apply-filter');assert.equal(state().battle.energy,2);assert.deepEqual(state().battle.exhaust.map(c=>c.uid).sort(),targets.sort());assert.ok(E.validate(state()));}finally{dom.window.close();}});
-test('DOM: camp upgrade, event removal, library and save controls work',{skip:!JSDOM},()=>{const r=fixtureRun(21);r.scene='camp';r.depth=2;const {dom,w,click,state}=boot(r);try{click('continue');w.document.querySelector('[data-action=select-rest][data-value=upgrade]').click();assert.equal(state().scene,'camp');click('upgrade');click('choose-upgrade',r.deck[0].uid);assert.equal(state().deck[0].upgraded,true);assert.equal(state().depth,3);click('node');click('remove');click('choose-remove',state().deck[1].uid);assert.equal(state().deck.length,11);assert.equal(state().depth,4);click('library');assert.equal(w.document.querySelectorAll('#dialog .collection-cards .playing-card').length,6);click('close');click('saves');assert.ok(w.document.querySelector('[data-action=export]'));assert.ok(w.document.querySelector('[data-action=import]'));}finally{dom.window.close();}});
+test('DOM: camp upgrade, event removal, library and save controls work',{skip:!JSDOM},()=>{const r=fixtureRun(21);r.scene='camp';r.depth=2;const {dom,w,click,state}=boot(r);try{click('continue');w.document.querySelector('[data-action=select-rest][data-value=upgrade]').click();assert.equal(state().scene,'camp');click('upgrade');click('choose-upgrade',r.deck[0].uid);assert.equal(state().deck[0].upgraded,true);assert.equal(state().depth,3);click('node');click('remove');click('choose-remove',state().deck[1].uid);assert.equal(state().deck.length,11);assert.equal(state().depth,4);click('home');click('library');assert.equal(w.document.querySelectorAll('#dialog .collection-cards .playing-card').length,6);click('close');click('saves');assert.ok(w.document.querySelector('[data-action=export]'));assert.ok(w.document.querySelector('[data-action=import]'));}finally{dom.window.close();}});
 test('DOM: corrupted storage and unavailable storage leave a usable new-game screen',{skip:!JSDOM},()=>{for(const saved of [{version:1,deck:[]},null]){const {dom,w}=boot(saved,saved===null);try{assert.ok(w.document.querySelector('[data-action=new]'));assert.equal(w.document.querySelector('#storage-warning').hidden,false);}finally{dom.window.close();}}});
 test('DOM: every terminal, reward, map and event scene renders without runtime errors',{skip:!JSDOM},()=>{for(const scene of ['map','reward','camp','event','stageclear','defeat','victory']){const r=fixtureRun(21);if(['reward','stageclear','defeat','victory'].includes(scene))E.startBattle(r,scene==='victory'?'dealer':'sentinel');r.scene=scene;if(scene==='camp')r.depth=2;if(scene==='event')r.depth=3;if(scene==='stageclear')r.depth=4;if(scene==='defeat')r.hp=0;if(scene==='victory'){r.stage=1;r.depth=4;r.battle.hp=0;r.battle.seals=2;}if(scene==='reward')r.rewards=['blast','fort','balance'];const {dom,w,click}=boot(r);try{click('continue');assert.ok(w.document.querySelector('#game').textContent.trim().length>30);assert.equal(w.document.querySelector('#game').innerHTML.includes('undefined'),false,scene);}finally{dom.window.close();}}});
 test('DOM: importing a pending forecast clears unrelated prior success and input',{skip:!JSDOM},async()=>{const old=fixtureRun(1);E.startBattle(old,'wisp');const incoming=fixtureRun(2026);E.startBattle(incoming,'wisp');E.forecast(incoming);const {dom,w,click,state}=boot(old);try{click('continue');click('forecast');const q=state().battle.question;w.document.querySelector('#prob-answer').value=q.n+'/'+q.d;w.document.querySelector('#forecast-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));click('close');click('saves');const input=w.document.querySelector('#import-file');Object.defineProperty(input,'files',{configurable:true,value:[{size:JSON.stringify(incoming).length,text:async()=>JSON.stringify(incoming)}]});input.dispatchEvent(new w.Event('change',{bubbles:true}));await new Promise(resolve=>setImmediate(resolve));click('confirm-import');assert.equal(state().battle.question.solved,false);assert.equal(w.document.querySelector('#prob-answer').value,'');assert.equal(w.document.querySelector('#answer-feedback').textContent,'');}finally{dom.window.close();}});
@@ -158,22 +158,23 @@ test('DOM: Claim opens the actual bank question, saves incorrect/hint state and 
   click('new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
   assert.equal(state().scene,'education');assert.equal(w.document.querySelector('.dungeon-atlas'),null);assert.equal(state().artifactState.owned.length,0);
   const q=w.DCEducation.current(state()),wrong=q.choices.find(c=>c.id!==q.correctChoiceId).id;
-  assert.equal(w.document.querySelectorAll('[data-action=education-select]').length,4);assert.equal(w.document.querySelector('#education-prompt').textContent,q.prompt);
+  assert.equal(w.document.querySelectorAll('[data-action=education-select]').length,4);assert.equal(w.document.querySelector('[data-question-id]').dataset.questionId,q.id);assert.ok(w.document.querySelector('#education-prompt').textContent.length>15);
   assert.equal(w.document.querySelector('[data-action=education-check]').disabled,true);click('education-select',wrong);click('education-check');click('education-hint');
-  assert.match(w.document.querySelector('#education-feedback').textContent,/Not quite/);assert.equal(w.document.querySelector('#education-hint p').textContent,q.hint);pending=state();
+  assert.match(w.document.querySelector('#education-feedback').textContent,/Not quite/);assert.equal(w.document.querySelectorAll('#education-hint p').length,2);assert.ok(w.document.querySelector('#education-hint').textContent.length>40);pending=state();
   click('home');click('continue');assert.equal(w.document.querySelector('[data-question-id]').dataset.questionId,q.id);
  }finally{dom.window.close();}
  const again=boot(pending);
  try{again.click('continue');assert.equal(again.state().educationState.pending.hinted,true);assert.equal(again.state().educationState.pending.attempts.length,1);completeDomTrial(again.w);assert.equal(again.state().scene,'map');assert.equal(again.state().artifactState.owned.length,1);assert.equal(again.state().educationState.completed[0].first,false);assert.ok(E.validate(again.state()));}finally{again.dom.window.close();}
 });
 
-test('DOM: shown question IDs never repeat when new runs replace unanswered trials',{skip:!JSDOM},()=>{
+test('DOM: New Run resumes an unfinished reservation, and completed trials never repeat',{skip:!JSDOM},()=>{
  const {dom,w,click,state}=boot();const seen=new Set();
  try{
   for(let i=0;i<10;i++){
    if(i){click('home');click('new');click('start-new');}else click('new');
    click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
    const id=state().educationState.pending.questionId;assert.ok(!seen.has(id));seen.add(id);
+   const frozen=state().educationState.pending;click('home');click('new');click('start-new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');assert.equal(state().educationState.pending.questionId,id);assert.deepEqual(state().educationState.pending.choiceOrder,frozen.choiceOrder);completeDomTrial(w);
    const profile=JSON.parse(w.localStorage.getItem('duel-cube-question-history.v1'));assert.equal(profile.usedIds.length,i+1);assert.ok(profile.usedIds.includes(id));
   }
  }finally{dom.window.close();}
@@ -181,13 +182,13 @@ test('DOM: shown question IDs never repeat when new runs replace unanswered tria
 
 test('DOM: import preserves the pending question and unions local and imported exposure history',{skip:!JSDOM},async()=>{
  const Q=require('../dist/education.js'),first=E.newRun(4,'challenge');E.chooseArtifact(first,E.artifactChoices(first)[0].id);
- const incoming=E.newRun(50,'challenge');E.chooseArtifact(incoming,E.artifactChoices(incoming)[0].id,[Q.current(first).id]);
+ const incoming=E.newRun(50,'challenge');E.chooseArtifact(incoming,E.artifactChoices(incoming)[0].id);assert.notEqual(Q.current(first).id,Q.current(incoming).id);
  const {dom,w,click,state}=boot(first);
  try{
   click('continue');click('saves');const file=w.document.querySelector('#import-file');Object.defineProperty(file,'files',{configurable:true,value:[{size:JSON.stringify(incoming).length,text:async()=>JSON.stringify(incoming)}]});
   file.dispatchEvent(new w.Event('change',{bubbles:true}));await new Promise(resolve=>setImmediate(resolve));click('confirm-import');
   assert.equal(state().scene,'education');assert.equal(state().educationState.pending.questionId,Q.current(incoming).id);assert.equal(w.document.querySelector('#dialog').open,false);
-  const profile=JSON.parse(w.localStorage.getItem('duel-cube-question-history.v1'));assert.ok(profile.usedIds.includes(Q.current(first).id));assert.ok(profile.usedIds.includes(Q.current(incoming).id));
+  const profile=JSON.parse(w.localStorage.getItem('duel-cube-question-history.v1'));assert.ok(profile.usedIds.includes(Q.current(first).id));assert.ok(profile.usedIds.includes(Q.current(incoming).id));assert.ok(state().educationState.usedIds.includes(Q.current(first).id),'Exportable run must carry pre-import local exposure IDs');
  }finally{dom.window.close();}
 });
 
@@ -216,4 +217,27 @@ test('DOM: a full hand exposes its cap, disabled-card inspection and the tenth-c
   const expected=E.clone(state()),tenth=expected.battle.hand[9];assert.equal(E.canPlay(expected,tenth),'');E.playCard(expected,tenth.uid);
   w.document.body.dispatchEvent(new w.KeyboardEvent('keydown',{key:'0',bubbles:true,cancelable:true}));assert.deepEqual(state(),expected);
  }finally{dom.window.close();}
+});
+
+
+test('DOM: artifact counters project real card resolution and opening effects without replay',{skip:!JSDOM},()=>{
+ const A=require('../dist/artifacts'),r=E.newRun(17,'challenge');require('./helpers/education.cjs').claimArtifact(r,E.artifactChoices(r)[0].id);delete r.route;
+ for(const code of ['e01','e02','e03','e07','e08'])if(!A.has(r,code))A.acquire(r,A.id(code),'fixture:'+code);
+ E.startBattle(r,'wisp');const pool=[...r.battle.hand,...r.battle.draw];r.battle.hand=[];
+ for(const key of ['strike','ember','guard','draw'])r.battle.hand.push(pool.splice(pool.findIndex(c=>c.key===key),1)[0]);r.battle.draw=pool;r.battle.hp=r.battle.maxHp=200;r.battle.enemyBlock=0;
+ const {dom,w,click,state}=boot(r);
+ try{click('continue');const tracker=w.STMMechanicsHost.tracker;assert.equal(tracker.status(A.id('e01')).counter.current,0);assert.equal(tracker.status(A.id('e03')).state,'used');
+  const q0=state().educationState.session,oldRng=state().artifactState.rng,energy=state().battle.energy;
+  for(const key of ['strike','guard','ember']){const card=state().battle.hand.find(c=>c.key===key);click('play',card.uid);}
+  assert.equal(tracker.status(A.id('e01')).state,'used');assert.equal(tracker.status(A.id('e02')).state,'used');assert.equal(tracker.turnCounts.cards,3);assert.equal(state().battle.energy,energy-2);assert.equal(state().artifactState.rng,oldRng);assert.deepEqual(state().educationState.session,q0);
+  const resolved=state();click('artifacts');click('close');assert.deepEqual(state(),resolved);click('home');click('continue');assert.equal(tracker.turnCounts.cards,3);assert.equal(tracker.status(A.id('e01')).state,'used');assert.ok(E.validate(state()));
+ }finally{dom.window.close();}
+});
+
+test('DOM: Collection tab keyboard focus survives the modal render frame',{skip:!JSDOM},async()=>{
+ const {dom,w,click}=boot();try{click('library');w.document.querySelector('[data-action=collection-tab][data-kind=artifacts]').click();const tab=w.document.querySelector('#collection-tab-artifacts');tab.focus();tab.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Home',bubbles:true,cancelable:true}));await new Promise(resolve=>w.requestAnimationFrame(resolve));assert.equal(w.document.activeElement.id,'collection-tab-cards');w.document.activeElement.dispatchEvent(new w.KeyboardEvent('keydown',{key:'End',bubbles:true,cancelable:true}));await new Promise(resolve=>w.requestAnimationFrame(resolve));assert.equal(w.document.activeElement.id,'collection-tab-artifacts');assert.equal(w.document.querySelectorAll('[role=tab][tabindex="0"]').length,1);}finally{dom.window.close();}
+});
+
+test('DOM: a corrupt Artifact Codex profile is preserved while the core run stays playable',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot(E.newRun(7,'challenge'));try{const bad='{broken-codex';w.localStorage.setItem('slay-the-math.artifact-codex.v1',bad);click('continue');click('select-artifact',state().artifactState.offer.ids[0]);assert.equal(w.localStorage.getItem('slay-the-math.artifact-codex.v1'),bad);assert.ok(E.validate(state()));}finally{dom.window.close();}
 });

@@ -1,0 +1,120 @@
+{
+  "release": "2.11.0",
+  "baseCommit": "8e5ae698441a194ad296ec90c7e66d466297b56b",
+  "dateMalaysia": "2026-10-22",
+  "sourcePackages": {
+    "zip": "INTEGRATION.zip",
+    "sha256": "c9c457f6ba7af10d9bdcd7b1fbce06bc4e7adce5e9a94c4cc2b328d80287a450",
+    "artifactPackage": "3.5",
+    "questionPackage": "1.5.0",
+    "bankContent": "form4-review-1.4.0",
+    "shared": "1.0.0"
+  },
+  "checks": [
+    {
+      "name": "game Node/DOM regressions",
+      "command": "DOM_QA_MODULE=<jsdom path> npm test",
+      "status": "PASS",
+      "tests": 148,
+      "skipped": 0
+    },
+    {
+      "name": "supplier suite verifier",
+      "command": "node VERIFY_SUITE.cjs",
+      "status": "PASS",
+      "artifacts": 31,
+      "questions": 120,
+      "canonicalTerms": 176
+    },
+    {
+      "name": "supplier Node suite",
+      "status": "PASS",
+      "tests": 126
+    },
+    {
+      "name": "supplier Python suite",
+      "command": "python -m unittest discover -s QUESTION_BANK -p 'test_*.py'",
+      "status": "PASS",
+      "tests": 39
+    },
+    {
+      "name": "syntax",
+      "command": "npm run check",
+      "status": "PASS"
+    },
+    {
+      "name": "map module",
+      "command": "npm run test:maps",
+      "status": "PASS",
+      "tests": 7,
+      "seeds": 100,
+      "maps": 200,
+      "uniqueLayouts": 200
+    },
+    {
+      "name": "browser integration",
+      "status": "PASS",
+      "report": "map-integration-browser-2-11.json",
+      "viewports": 8,
+      "questionsRendered": 120,
+      "visualsRendered": 240
+    },
+    {
+      "name": "stage 2 and legacy browser",
+      "status": "PASS",
+      "report": "map-integration-routes-2-11.json"
+    },
+    {
+      "name": "offline browser",
+      "status": "PASS",
+      "report": "map-integration-offline-2-11.json",
+      "externalRequests": 0
+    },
+    {
+      "name": "premium strict UI audit",
+      "status": "PASS",
+      "report": "map-integration-premium-2-11.json",
+      "errors": 0,
+      "unresolved": 0
+    },
+    {
+      "name": "official designmd lint",
+      "command": "npx -y -p @google/design.md designmd lint DESIGN.md",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "original item/effect/icon alignment",
+      "status": "PASS",
+      "originalQuestions": 120,
+      "artifacts": 31,
+      "references": [
+        "../../modules/mechanics/question-alignment.json",
+        "../../modules/mechanics/icon-alignment.json",
+        "../../modules/mechanics/integration-audit.json"
+      ]
+    },
+    {
+      "name": "final complete learning feedback renderer",
+      "status": "PASS",
+      "report": "map-integration-learning-final-2-11.json",
+      "wrongFeedback": 360,
+      "moreHints": 120,
+      "questions": 120,
+      "visuals": 240
+    }
+  ],
+  "limitations": [
+    "Chromium and jsdom automation on Linux; no physical phone, Windows, Firefox or Safari run.",
+    "Legacy completed trials have no ordered learning evidence to reconstruct. Legacy Hint ordering is conservative.",
+    "MODEL.zip was not available; no new model or motion change is claimed. Existing accepted animation assets/player are preserved.",
+    "Old-generation giant portable HTML is intentionally not a source commit. Run npm.cmd run build after pulling."
+  ],
+  "portable": {
+    "bytes": 177280872,
+    "sha256": "11d1e7f1f2f814552de097370e5363cf7ad290c1d5cdc3880f4ccb0fcf4a2576",
+    "build": "npm run build",
+    "offline": "Actual current generated file tested from file:// with no HTTP/dependent local asset request."
+  }
+}

@@ -1,0 +1,45 @@
+/* Import theme.css first. Ordinary text and card frames retain the game theme. */
+[data-stm-richtext] .rt-term,
+[data-stm-richtext] .rt-calculation { cursor: help; }
+[data-stm-richtext] .rt-term:focus-visible,
+[data-stm-richtext] .rt-calculation:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+[data-stm-richtext] math {
+  font-size: 1.08em;
+  font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", math;
+}
+[data-stm-richtext] .rt-popover {
+  position: fixed;
+  z-index: 1000;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(370px, calc(100vw - 16px));
+  max-height: calc(100dvh - 16px);
+  overflow: auto;
+  padding: 14px 16px;
+  background: var(--rt-popover-surface, #211c2a);
+  color: var(--rt-popover-text, #f0eaf5);
+  border: 1px solid var(--rt-popover-border, #706479);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px #0004;
+  font: 400 14px/1.55 system-ui, sans-serif;
+  text-align: left;
+  pointer-events: auto;
+}
+[data-stm-richtext] .rt-popover[hidden] { display: none; }
+[data-stm-richtext][data-theme="light"] .rt-popover {
+  --rt-popover-surface: #fff;
+  --rt-popover-text: #282132;
+  --rt-popover-border: #b7aabf;
+}
+[data-stm-richtext] .rt-popover p { margin: 0 0 8px; }
+[data-stm-richtext] .rt-popover p:last-child { margin-bottom: 0; }
+[data-stm-richtext] .rt-tip-title { font-weight: 700; }
+[data-stm-richtext] .rt-tip-example { font-size: 13px; }
+[data-stm-richtext] .rt-popover [data-category="math"] { color: var(--rt-math); }
+[data-stm-richtext] .rt-popover [data-category="game"] { color: var(--rt-game); }
+[data-stm-richtext] .rt-popover [data-category="calculation"],
+[data-stm-richtext] .rt-equation { color: var(--rt-calculation); }

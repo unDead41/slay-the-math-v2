@@ -113,8 +113,8 @@ function chooseReward(r,key){
  if(r.artifactState?.offer?.kind==='elite'){r.artifactState.offer.ready=true;return r;}
  return finishNode(r);
 }
-function chooseArtifact(r,key,seen=[]){
- r.educationState=Q.prepare(r,key,seen);r.scene='education';return notify(r,'Answer the Dungeon Master’s question to claim your artifact.');
+function chooseArtifact(r,key,seen=[],profile=null){
+ r.educationState=Q.prepare(r,key,seen,profile);r.scene='education';return notify(r,'Answer the Dungeon Master’s question to claim your artifact.');
 }
 function continueEducation(r){
  const pending=Q.pending(r);if(!Q.ready(r))throw new Error('Answer the question correctly before continuing.');

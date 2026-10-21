@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.10.0
+# Slay the Math — Dungeon Edition 2.11.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -59,3 +59,11 @@ All 10 Normal/Elite enemies across both stages now use the supplied Idle, Attack
 ## Combat polish 2.9.0
 
 Skill frames now keep a consistent body size at the same boot pivot. Result Time freezes at stage clear, victory or defeat. Hand holds at most 10 cards; excess draws stay in the pile. A compact overlapping hand reveals cards after a 140ms hover dwell or immediate keyboard focus. Use 0 for the tenth card. See [details and verification](docs/COMBAT_POLISH_2_9_0.md).
+
+## Map and integrated learning 2.11.0
+
+The supplied map reference now guides a worn parchment dungeon atlas, live HUD and left legend. Actual saved room connections remain clickable native controls. Both stages and old five-level routes keep their generated topology.
+
+`INTEGRATION.zip` supplies Artifact 3.5, Question Bank 1.5 and the matched shared rich-text service. The 120 original questions now include ordered Hint/More Hint, specific wrong-choice feedback, hint/solution diagrams, worked steps after a correct answer, seven Basics modules with 14 unscored practice checks and 30-skill learning evidence. Collection → Artifacts opens the persistent Codex with search, tier filters and effect comparisons. Owned artifact counters use the real engine state. Details, compatibility and evidence: [Map & Integration 2.11.0](docs/MAP_INTEGRATION_2_11_0.md).
+
+After pulling, run `npm.cmd run build`, then `npm.cmd start`. Rebuilding updates the offline `MAIN-SEKARANG.html`. To regenerate only the supplied mechanics bundle from preserved source, use `npm.cmd run import:mechanics`.

@@ -52,3 +52,8 @@ The user explicitly supplies image(20261019-032240).png and requests implementat
 ## Education after Claim Artifact 2.5.0
 
 The latest user instruction explicitly requests the missing question implementation after Claim & Choose Your Path, using the existing 120-item bank. The review-only timing is superseded. The shared artifact Claim now reserves its gift, opens one saved unused Form 4 question, supports wrong-answer retry and Hint without HP penalty/timer, and shows the correct explanation before the final once-only claim/progression transaction. Starting, Elite/Mystery and Boss gifts share this gate. Same-origin exposure history survives New Run/import/refresh; no automatic question recycling. Existing Predict credit, combat values and artwork remain. Owners: SOR 02/13/19 and docs/EDUCATION_UPDATE_2_5_0.md.
+
+
+## Current map and learning integration — 2.11.0
+
+The supplied October 21 map reference now guides the parchment dungeon atlas with a live status header and left legend. INTEGRATION.zip adds the matched Artifact 3.5 / Question Bank 1.5 / STM_SHARED presentation and learning support. The original 120 Form 4 question IDs/answers remain: Hint, More Hint after a later wrong attempt, specific feedback, hint/solution visuals, worked steps after correct, optional unscored Basics and local skill evidence. Collection → Artifacts provides discovery, filters and read-only examples/comparisons. The engine remains the sole reward/resource owner. An unfinished trial resumes across New Run according to the supplied session contract; completed questions never re-enter the draw pool. See docs/MAP_INTEGRATION_2_11_0.md for the compatible-save details and actual verification.

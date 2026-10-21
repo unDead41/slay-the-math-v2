@@ -1,12 +1,12 @@
 {
   "name": "duel-cube-math",
-  "version": "2.10.0",
+  "version": "2.11.0",
   "private": true,
-  "description": "120 Form 4 questions after Claim Artifact, with saved trials and random draws without repeats",
+  "description": "Parchment dungeon map and Artifact 3.5 / Question Bank 1.5 integration",
   "scripts": {
     "start": "node server.cjs",
     "test": "node --test tests/*.test.cjs",
-    "check": "node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js",
+    "check": "node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js",
     "build": "node build-portable.cjs",
     "test:browser": "node tests/browser-smoke.cjs",
     "test:maps": "npm --prefix modules/map test && npm --prefix modules/map run validate",
@@ -21,6 +21,8 @@
     "test:animation-browser": "node tests/animation-browser.cjs",
     "test:alyssa-browser": "node tests/alyssa-animation-browser.cjs",
     "test:hand-browser": "node tests/hand-results-browser.cjs",
-    "test:enemy-browser": "node tests/enemy-motion-browser.cjs"
+    "test:enemy-browser": "node tests/enemy-motion-browser.cjs",
+    "import:mechanics": "node tools/import-mechanics.cjs",
+    "test:integration-browser": "node tests/map-integration-browser.cjs && node tests/integration-route-browser.cjs && node tests/integration-offline-browser.cjs"
   }
 }

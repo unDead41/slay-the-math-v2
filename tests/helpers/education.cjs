@@ -15,7 +15,7 @@ function completeDomTrial(w){
 async function completeBrowserTrial(page){
  const result=await page.evaluate(()=>{const run=JSON.parse(localStorage.getItem('duel-cube-math.v1'));return {scene:run.scene,id:window.DCEducation.current(run)?.correctChoiceId,solved:run.educationState?.pending?.solved};});
  if(result.scene!=='education')throw new Error('Expected the live education screen.');
- if(result.id&&!result.solved){await page.locator('[data-action=education-select][data-id="'+result.id+'"]').click();await page.locator('[data-action=education-check]').click();}
+ if(result.id&&!result.solved){await page.locator('[data-action=education-select][data-id="'+result.id+'"]').click({position:{x:20,y:20}});await page.locator('[data-action=education-check]').click();}
  await page.locator('[data-action=education-continue]').click();
 }
 module.exports={completeTrial,claimArtifact,completeDomTrial,completeBrowserTrial};

@@ -96,3 +96,8 @@ For new runs, modules/map/SOR/01_MAP_RNG.md is the current topology owner: ten l
 - **WRL-12:** Activating an enabled map icon immediately calls the existing engine entry for that exact node. Pointer click, Enter and Space enter directly; focus alone does not. Disabled rooms remain inert.
 - **WRL-13:** Remove the complete Selected Path/Enter Room/Current level area. The left rail is the six-category legend only. Keep map panning, level spacing and category-only surprise from WRL-08/10/11. No current-level shortcut or alternate confirmation is required.
 - **WRL-14:** After entry, focus the new scene and reset document scrolling. Preserve the existing legal-edge, source snapshot, autosave and once-only completion owners.
+
+
+## Parchment map and integrated mechanics — 2.11.0
+
+The 2.11.0 map presentation follows the supplied parchment dungeon reference. `journey.css` owns its viewport-aware layout, left legend and live top HUD. The generated paper architecture is decorative; existing graph snapshots, 2700/1450-unit extents, category-only labels, native legal room buttons and both-axis scroll restoration remain authoritative. Both stages and legacy paths use the same renderer.

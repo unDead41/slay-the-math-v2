@@ -104,3 +104,8 @@ Predict sebelum draw kekal khusus kepada peluang kad mengikut [03](03_COMBAT_MEC
 Jangan mendakwa semua topik ialah Matematik Tingkatan 4 hanya kerana prototaip asal begitu. Semak DSKP rasmi bagi setiap objektif sebelum menulis SK/SP atau dakwaan alignment.
 
 Lulus apabila topic ID jelas, formula sah, contoh di atas disemak secara bebas, teks English tepat, dan simbol dekoratif tidak menjadi soalan tanpa model yang lengkap.
+
+
+## Parchment map and integrated mechanics — 2.11.0
+
+MTH-14 (2.11.0) supersedes the 1.0 bank presentation/selection details with the supplied bank content form4-review-1.4.0, package 1.5.0. The original 120 IDs, source seeds, prompts, choices and correct keys are unchanged. The supplied ordered session reducers now own adaptive no-repeat reservation, per-choice feedback, Hint/More Hint ordering, 240 hint/solution visuals, 360 worked steps after correct, seven Basics lessons/14 unscored checks and 30-skill practice evidence. New reservations retain source choice order; legacy pending shuffled orders remain saved. New Run resumes the profile's unfinished reservation. Existing correct-plus-final-Claim timing and zero wrong-answer HP penalty remain. See docs/MAP_INTEGRATION_2_11_0.md for compatibility and evidence.

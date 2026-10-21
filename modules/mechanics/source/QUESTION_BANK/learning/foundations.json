@@ -1,0 +1,3420 @@
+{
+  "version": "1.0.0",
+  "assessmentQuestionsAdded": 0,
+  "unscoredChecks": 14,
+  "modules": [
+    {
+      "id": "fraction-basics",
+      "title": "Fractions before probability",
+      "topicCode": "PROB",
+      "cards": [
+        {
+          "title": "Part of the whole",
+          "text": "A fraction compares a part with a whole. If 3 of 8 equally likely items match, the matching chance is 3/8.",
+          "id": "fraction-basics:card-1",
+          "richText": [
+            {
+              "type": "text",
+              "text": "A "
+            },
+            {
+              "type": "term",
+              "text": "fraction",
+              "category": "math",
+              "glossary_id": "qb:fraction"
+            },
+            {
+              "type": "text",
+              "text": " compares a part with a whole. If 3 of 8 "
+            },
+            {
+              "type": "term",
+              "text": "equally likely",
+              "category": "math",
+              "glossary_id": "qb:equally-likely"
+            },
+            {
+              "type": "text",
+              "text": " items match, the matching "
+            },
+            {
+              "type": "term",
+              "text": "chance",
+              "category": "math",
+              "glossary_id": "qb:probability"
+            },
+            {
+              "type": "text",
+              "text": " is "
+            },
+            {
+              "type": "math",
+              "text": "3/8",
+              "math": {
+                "latex": "\\frac{3}{8}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>3</mn><mn>8</mn></mfrac></math>",
+                "plain": "3/8"
+              }
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Keep the value",
+          "text": "Simplify a fraction by dividing its numerator and denominator by the same nonzero number. For example, 6/8=3/4.",
+          "id": "fraction-basics:card-2",
+          "richText": [
+            {
+              "type": "text",
+              "text": "Simplify a "
+            },
+            {
+              "type": "term",
+              "text": "fraction",
+              "category": "math",
+              "glossary_id": "qb:fraction"
+            },
+            {
+              "type": "text",
+              "text": " by dividing its numerator and "
+            },
+            {
+              "type": "term",
+              "text": "denominator",
+              "category": "math",
+              "glossary_id": "qb:common-denominator"
+            },
+            {
+              "type": "text",
+              "text": " by the same nonzero number. For example, "
+            },
+            {
+              "type": "math",
+              "text": "6/8=3/4",
+              "math": {
+                "latex": "\\frac{6}{8} = \\frac{3}{4}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>6</mn><mn>8</mn></mfrac><mo>=</mo><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>3</mn><mn>4</mn></mfrac></mrow></math>",
+                "plain": "6/8 = 3/4"
+              },
+              "presentation": "working"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Successive events",
+          "text": "Multiply the first chance by the chance of the next event in its actual situation. If an item stays out, update the counts. For example, (1/2) × (2/3)=1/3.",
+          "id": "fraction-basics:card-3",
+          "richText": [
+            {
+              "type": "term",
+              "text": "Multiply",
+              "category": "math",
+              "glossary_id": "qb:product"
+            },
+            {
+              "type": "text",
+              "text": " the first "
+            },
+            {
+              "type": "term",
+              "text": "chance",
+              "category": "math",
+              "glossary_id": "qb:probability"
+            },
+            {
+              "type": "text",
+              "text": " by the "
+            },
+            {
+              "type": "term",
+              "text": "chance",
+              "category": "math",
+              "glossary_id": "qb:probability"
+            },
+            {
+              "type": "text",
+              "text": " of the next "
+            },
+            {
+              "type": "term",
+              "text": "event",
+              "category": "math",
+              "glossary_id": "qb:event"
+            },
+            {
+              "type": "text",
+              "text": " in its actual situation. If an item stays out, update the counts. For example, "
+            },
+            {
+              "type": "math",
+              "text": "(1/2) × (2/3)=1/3",
+              "math": {
+                "latex": "\\left( \\frac{1}{2}\\right) \\times \\left( \\frac{2}{3}\\right) = \\frac{1}{3}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mrow><mrow><mo>(</mo><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mo data-glossary-id=\"qb:product\" data-category=\"math\">×</mo><mrow><mo>(</mo><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>2</mn><mn>3</mn></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>1</mn><mn>3</mn></mfrac></mrow></math>",
+                "plain": "(1/2) × (2/3) = 1/3"
+              },
+              "presentation": "working"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "Three of eight equally likely items are marked. What is the matching chance?",
+          "choices": [
+            "1/3",
+            "3/8",
+            "8/3",
+            "3/5"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "The denominator counts all possible items.",
+            "Correct. Use matching items divided by all equally likely items.",
+            "This reverses the matching and total counts.",
+            "Use the whole collection, not only the unmarked items."
+          ],
+          "id": "warmup:fraction-basics:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Three of eight "
+            },
+            {
+              "type": "term",
+              "text": "equally likely",
+              "category": "math",
+              "glossary_id": "qb:equally-likely"
+            },
+            {
+              "type": "text",
+              "text": " items are marked. What is the matching "
+            },
+            {
+              "type": "term",
+              "text": "chance",
+              "category": "math",
+              "glossary_id": "qb:probability"
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "1/3",
+                "math": {
+                  "latex": "\\frac{1}{3}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>1</mn><mn>3</mn></mfrac></math>",
+                  "plain": "1/3"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "3/8",
+                "math": {
+                  "latex": "\\frac{3}{8}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>3</mn><mn>8</mn></mfrac></math>",
+                  "plain": "3/8"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "8/3",
+                "math": {
+                  "latex": "\\frac{8}{3}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>8</mn><mn>3</mn></mfrac></math>",
+                  "plain": "8/3"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "3/5",
+                "math": {
+                  "latex": "\\frac{3}{5}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>3</mn><mn>5</mn></mfrac></math>",
+                  "plain": "3/5"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "The "
+              },
+              {
+                "type": "term",
+                "text": "denominator",
+                "category": "math",
+                "glossary_id": "qb:common-denominator"
+              },
+              {
+                "type": "text",
+                "text": " counts "
+              },
+              {
+                "type": "term",
+                "text": "all",
+                "category": "math",
+                "glossary_id": "qb:all-every"
+              },
+              {
+                "type": "text",
+                "text": " possible items."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. Use matching items divided by "
+              },
+              {
+                "type": "term",
+                "text": "all",
+                "category": "math",
+                "glossary_id": "qb:all-every"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "term",
+                "text": "equally likely",
+                "category": "math",
+                "glossary_id": "qb:equally-likely"
+              },
+              {
+                "type": "text",
+                "text": " items."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "This reverses the matching and "
+              },
+              {
+                "type": "term",
+                "text": "total",
+                "category": "math",
+                "glossary_id": "qb:sum"
+              },
+              {
+                "type": "text",
+                "text": " counts."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Use the whole collection, not only the unmarked items."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "Simplify 6/8.",
+          "choices": [
+            "3/8",
+            "6/4",
+            "3/4",
+            "2/4"
+          ],
+          "correctIndex": 2,
+          "feedback": [
+            "Divide both parts by the same number.",
+            "The denominator cannot change on its own.",
+            "Correct. Divide both numerator and denominator by 2.",
+            "Check that the new fraction keeps the original value."
+          ],
+          "id": "warmup:fraction-basics:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Simplify "
+            },
+            {
+              "type": "math",
+              "text": "6/8",
+              "math": {
+                "latex": "\\frac{6}{8}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>6</mn><mn>8</mn></mfrac></math>",
+                "plain": "6/8"
+              }
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "3/8",
+                "math": {
+                  "latex": "\\frac{3}{8}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>3</mn><mn>8</mn></mfrac></math>",
+                  "plain": "3/8"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "6/4",
+                "math": {
+                  "latex": "\\frac{6}{4}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>6</mn><mn>4</mn></mfrac></math>",
+                  "plain": "6/4"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "3/4",
+                "math": {
+                  "latex": "\\frac{3}{4}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>3</mn><mn>4</mn></mfrac></math>",
+                  "plain": "3/4"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "2/4",
+                "math": {
+                  "latex": "\\frac{2}{4}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mn>2</mn><mn>4</mn></mfrac></math>",
+                  "plain": "2/4"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Divide both parts by the same number."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "The "
+              },
+              {
+                "type": "term",
+                "text": "denominator",
+                "category": "math",
+                "glossary_id": "qb:common-denominator"
+              },
+              {
+                "type": "text",
+                "text": " cannot change on its own."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. Divide both numerator and "
+              },
+              {
+                "type": "term",
+                "text": "denominator",
+                "category": "math",
+                "glossary_id": "qb:common-denominator"
+              },
+              {
+                "type": "text",
+                "text": " by 2."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Check that the new "
+              },
+              {
+                "type": "term",
+                "text": "fraction",
+                "category": "math",
+                "glossary_id": "qb:fraction"
+              },
+              {
+                "type": "text",
+                "text": " keeps the original "
+              },
+              {
+                "type": "term",
+                "text": "value",
+                "category": "math",
+                "glossary_id": "qb:value"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "counting-outcomes",
+      "title": "Outcomes and changing conditions",
+      "topicCode": "PROB",
+      "cards": [
+        {
+          "title": "Keep the order",
+          "text": "An ordered pair records the first result and then the second. The pairs (1,2) and (2,1) are different when their positions have different roles.",
+          "id": "counting-outcomes:card-1",
+          "richText": [
+            {
+              "type": "text",
+              "text": "An "
+            },
+            {
+              "type": "term",
+              "text": "ordered pair",
+              "category": "math",
+              "glossary_id": "qb:ordered-outcome"
+            },
+            {
+              "type": "text",
+              "text": " records the first result and then the second. The pairs "
+            },
+            {
+              "type": "math",
+              "text": "(1,2)",
+              "math": {
+                "latex": "\\left( 1, 2\\right)",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>)</mo></mrow></math>",
+                "plain": "(1, 2)"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "(2,1)",
+              "math": {
+                "latex": "\\left( 2, 1\\right)",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mo>(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>)</mo></mrow></math>",
+                "plain": "(2, 1)"
+              }
+            },
+            {
+              "type": "text",
+              "text": " are different when their positions have different roles."
+            }
+          ]
+        },
+        {
+          "title": "Make a complete list",
+          "text": "A coin with Heads/Tails paired with a die numbered 1 to 3 has 2 × 3=6 pairs. Use a grid so no pair is missed or counted twice.",
+          "id": "counting-outcomes:card-2",
+          "richText": [
+            {
+              "type": "text",
+              "text": "A coin with "
+            },
+            {
+              "type": "math",
+              "text": "Heads/Tails",
+              "math": {
+                "latex": "\\frac{\\mathrm{Heads}}{\\mathrm{Tails}}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac data-glossary-id=\"qb:fraction\" data-category=\"math\"><mi mathvariant=\"normal\" data-glossary-id=\"qb:heads-tails\" data-category=\"math\">Heads</mi><mi mathvariant=\"normal\" data-glossary-id=\"qb:heads-tails\" data-category=\"math\">Tails</mi></mfrac></math>",
+                "plain": "Heads/Tails"
+              }
+            },
+            {
+              "type": "text",
+              "text": " paired with a "
+            },
+            {
+              "type": "term",
+              "text": "die",
+              "category": "math",
+              "glossary_id": "qb:die-dice"
+            },
+            {
+              "type": "text",
+              "text": " numbered 1 to 3 has "
+            },
+            {
+              "type": "math",
+              "text": "2 × 3=6",
+              "math": {
+                "latex": "2 \\times 3 = 6",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mrow><mn>2</mn><mo data-glossary-id=\"qb:product\" data-category=\"math\">×</mo><mn>3</mn></mrow><mo>=</mo><mn>6</mn></mrow></math>",
+                "plain": "2 × 3 = 6"
+              },
+              "presentation": "working"
+            },
+            {
+              "type": "text",
+              "text": " pairs. Use a grid so "
+            },
+            {
+              "type": "term",
+              "text": "no",
+              "category": "math",
+              "glossary_id": "qb:none"
+            },
+            {
+              "type": "text",
+              "text": " pair is missed or counted twice."
+            }
+          ]
+        },
+        {
+          "title": "Check what changes",
+          "text": "With replacement and mixing, a teaching bag is restored. Without replacement, recount it. Independent means the first result does not change the chance of the second event; it does not mean the events cannot overlap.",
+          "id": "counting-outcomes:card-3",
+          "richText": [
+            {
+              "type": "term",
+              "text": "With replacement",
+              "category": "math",
+              "glossary_id": "qb:with-replacement"
+            },
+            {
+              "type": "text",
+              "text": " and mixing, a "
+            },
+            {
+              "type": "term",
+              "text": "teaching bag",
+              "category": "game",
+              "glossary_id": "qb:teaching-pool"
+            },
+            {
+              "type": "text",
+              "text": " is restored. "
+            },
+            {
+              "type": "term",
+              "text": "Without replacement",
+              "category": "math",
+              "glossary_id": "qb:without-replacement"
+            },
+            {
+              "type": "text",
+              "text": ", recount it. "
+            },
+            {
+              "type": "term",
+              "text": "Independent",
+              "category": "math",
+              "glossary_id": "qb:independent"
+            },
+            {
+              "type": "text",
+              "text": " means the first result does not change the "
+            },
+            {
+              "type": "term",
+              "text": "chance",
+              "category": "math",
+              "glossary_id": "qb:probability"
+            },
+            {
+              "type": "text",
+              "text": " of the second "
+            },
+            {
+              "type": "term",
+              "text": "event",
+              "category": "math",
+              "glossary_id": "qb:event"
+            },
+            {
+              "type": "text",
+              "text": "; it does not mean the "
+            },
+            {
+              "type": "term",
+              "text": "events",
+              "category": "math",
+              "glossary_id": "qb:event"
+            },
+            {
+              "type": "text",
+              "text": " cannot "
+            },
+            {
+              "type": "term",
+              "text": "overlap",
+              "category": "math",
+              "glossary_id": "qb:overlap"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "Are (1,2) and (2,1) the same ordered pair?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "Position is part of the result.",
+            "Correct. Their first and second entries are swapped."
+          ],
+          "id": "warmup:counting-outcomes:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Are "
+            },
+            {
+              "type": "math",
+              "text": "(1,2)",
+              "math": {
+                "latex": "\\left( 1, 2\\right)",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>)</mo></mrow></math>",
+                "plain": "(1, 2)"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "(2,1)",
+              "math": {
+                "latex": "\\left( 2, 1\\right)",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mo>(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>)</mo></mrow></math>",
+                "plain": "(2, 1)"
+              }
+            },
+            {
+              "type": "text",
+              "text": " the same "
+            },
+            {
+              "type": "term",
+              "text": "ordered pair",
+              "category": "math",
+              "glossary_id": "qb:ordered-outcome"
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Yes"
+              }
+            ],
+            [
+              {
+                "type": "term",
+                "text": "No",
+                "category": "math",
+                "glossary_id": "qb:none"
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Position is part of the result."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. Their first and second entries are swapped."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "One item stays out of a bag after a draw. What must you do before the next draw?",
+          "choices": [
+            "Keep the original total",
+            "Recount the remaining items"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "The bag has changed because an item stayed out.",
+            "Correct. Use the actual remaining colour counts and total."
+          ],
+          "id": "warmup:counting-outcomes:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "One item stays out of a bag after a "
+            },
+            {
+              "type": "term",
+              "text": "draw",
+              "category": "math",
+              "glossary_id": "qb:draw"
+            },
+            {
+              "type": "text",
+              "text": ". What must you do before the next "
+            },
+            {
+              "type": "term",
+              "text": "draw",
+              "category": "math",
+              "glossary_id": "qb:draw"
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Keep the original "
+              },
+              {
+                "type": "term",
+                "text": "total",
+                "category": "math",
+                "glossary_id": "qb:sum"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Recount the remaining items"
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "The bag has changed because an item stayed out."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. Use the actual remaining colour counts and "
+              },
+              {
+                "type": "term",
+                "text": "total",
+                "category": "math",
+                "glossary_id": "qb:sum"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set-basics",
+      "title": "Membership, union and intersection",
+      "topicCode": "SET",
+      "cards": [
+        {
+          "title": "An element is one item",
+          "text": "A set lists different elements. Repeating an element does not create another item in that set. The count n(A) is a number; A itself is the set.",
+          "id": "set-basics:card-1",
+          "richText": [
+            {
+              "type": "text",
+              "text": "A "
+            },
+            {
+              "type": "term",
+              "text": "set",
+              "category": "math",
+              "glossary_id": "qb:set"
+            },
+            {
+              "type": "text",
+              "text": " lists different "
+            },
+            {
+              "type": "term",
+              "text": "elements",
+              "category": "math",
+              "glossary_id": "qb:element"
+            },
+            {
+              "type": "text",
+              "text": ". Repeating an "
+            },
+            {
+              "type": "term",
+              "text": "element",
+              "category": "math",
+              "glossary_id": "qb:element"
+            },
+            {
+              "type": "text",
+              "text": " does not create another item in that "
+            },
+            {
+              "type": "term",
+              "text": "set",
+              "category": "math",
+              "glossary_id": "qb:set"
+            },
+            {
+              "type": "text",
+              "text": ". The count "
+            },
+            {
+              "type": "math",
+              "text": "n(A)",
+              "math": {
+                "latex": "\\operatorname{n}\\left(A\\right)",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi mathvariant=\"normal\" data-glossary-id=\"qb:cardinality\" data-category=\"math\">n</mi><mo>(</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo>)</mo></mrow></math>",
+                "plain": "n(A)"
+              }
+            },
+            {
+              "type": "text",
+              "text": " is a number; A itself is the "
+            },
+            {
+              "type": "term",
+              "text": "set",
+              "category": "math",
+              "glossary_id": "qb:set"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Both or either",
+          "text": "Intersection ∩ means in both sets. Union ∪ means in either set or both. With A={p,q} and B={q,r}, the intersection is {q} and the union is {p,q,r}.",
+          "id": "set-basics:card-2",
+          "richText": [
+            {
+              "type": "term",
+              "text": "Intersection",
+              "category": "math",
+              "glossary_id": "qb:intersection"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "math",
+              "text": "∩",
+              "math": {
+                "latex": "\\cap",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo data-glossary-id=\"qb:intersection\" data-category=\"math\">∩</mo></math>",
+                "plain": "∩"
+              }
+            },
+            {
+              "type": "text",
+              "text": " means in both "
+            },
+            {
+              "type": "term",
+              "text": "sets",
+              "category": "math",
+              "glossary_id": "qb:set"
+            },
+            {
+              "type": "text",
+              "text": ". "
+            },
+            {
+              "type": "term",
+              "text": "Union",
+              "category": "math",
+              "glossary_id": "qb:union"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "math",
+              "text": "∪",
+              "math": {
+                "latex": "\\cup",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo data-glossary-id=\"qb:union\" data-category=\"math\">∪</mo></math>",
+                "plain": "∪"
+              }
+            },
+            {
+              "type": "text",
+              "text": " means in either "
+            },
+            {
+              "type": "term",
+              "text": "set",
+              "category": "math",
+              "glossary_id": "qb:set"
+            },
+            {
+              "type": "text",
+              "text": " or both. With "
+            },
+            {
+              "type": "math",
+              "text": "A={p,q}",
+              "math": {
+                "latex": "A = \\left\\{ p, q\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>}</mo></mrow></mrow></math>",
+                "plain": "A = {p, q}"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "B={q,r}",
+              "math": {
+                "latex": "B = \\left\\{ q, r\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">r</mi><mo>}</mo></mrow></mrow></math>",
+                "plain": "B = {q, r}"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", the "
+            },
+            {
+              "type": "term",
+              "text": "intersection",
+              "category": "math",
+              "glossary_id": "qb:intersection"
+            },
+            {
+              "type": "text",
+              "text": " is "
+            },
+            {
+              "type": "math",
+              "text": "{q}",
+              "math": {
+                "latex": "\\left\\{ q\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>}</mo></mrow></math>",
+                "plain": "{q}"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and the "
+            },
+            {
+              "type": "term",
+              "text": "union",
+              "category": "math",
+              "glossary_id": "qb:union"
+            },
+            {
+              "type": "text",
+              "text": " is "
+            },
+            {
+              "type": "math",
+              "text": "{p,q,r}",
+              "math": {
+                "latex": "\\left\\{ p, q, r\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">r</mi><mo>}</mo></mrow></math>",
+                "plain": "{p, q, r}"
+              }
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Correct repeated counting",
+          "text": "When adding two group counts, a shared item is included twice. Subtract the shared count once to count their union.",
+          "id": "set-basics:card-3",
+          "richText": [
+            {
+              "type": "text",
+              "text": "When adding two group counts, a shared item is included twice. Subtract the shared count once to count their "
+            },
+            {
+              "type": "term",
+              "text": "union",
+              "category": "math",
+              "glossary_id": "qb:union"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "A={p,q} and B={q,r}. What is A ∩ B?",
+          "choices": [
+            "{p,q,r}",
+            "{q}",
+            "∅"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "This combines either membership.",
+            "Correct. q belongs to both sets.",
+            "Compare the two lists for a shared member."
+          ],
+          "id": "warmup:set-basics:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "math",
+              "text": "A={p,q}",
+              "math": {
+                "latex": "A = \\left\\{ p, q\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>}</mo></mrow></mrow></math>",
+                "plain": "A = {p, q}"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "B={q,r}",
+              "math": {
+                "latex": "B = \\left\\{ q, r\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">r</mi><mo>}</mo></mrow></mrow></math>",
+                "plain": "B = {q, r}"
+              }
+            },
+            {
+              "type": "text",
+              "text": ". What is "
+            },
+            {
+              "type": "math",
+              "text": "A ∩ B",
+              "math": {
+                "latex": "A \\cap B",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:intersection\" data-category=\"math\">∩</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi></mrow></math>",
+                "plain": "A ∩ B"
+              }
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "{p,q,r}",
+                "math": {
+                  "latex": "\\left\\{ p, q, r\\right\\}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>,</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">r</mi><mo>}</mo></mrow></math>",
+                  "plain": "{p, q, r}"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "{q}",
+                "math": {
+                  "latex": "\\left\\{ q\\right\\}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>}</mo></mrow></math>",
+                  "plain": "{q}"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "∅",
+                "math": {
+                  "latex": "\\varnothing",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo data-glossary-id=\"qb:empty-set\" data-category=\"math\">∅</mo></math>",
+                  "plain": "∅"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "This combines either "
+              },
+              {
+                "type": "term",
+                "text": "membership",
+                "category": "math",
+                "glossary_id": "qb:membership"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. "
+              },
+              {
+                "type": "math",
+                "text": "q",
+                "math": {
+                  "latex": "q",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></math>",
+                  "plain": "q"
+                }
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "term",
+                "text": "belongs to",
+                "category": "math",
+                "glossary_id": "qb:membership"
+              },
+              {
+                "type": "text",
+                "text": " both "
+              },
+              {
+                "type": "term",
+                "text": "sets",
+                "category": "math",
+                "glossary_id": "qb:set"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Compare the two lists for a shared "
+              },
+              {
+                "type": "term",
+                "text": "member",
+                "category": "math",
+                "glossary_id": "qb:element"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "Does listing the same element twice increase a set’s size?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "A set counts different elements, not repeated printing.",
+            "Correct. A repeated element is still one member."
+          ],
+          "id": "warmup:set-basics:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Does listing the same "
+            },
+            {
+              "type": "term",
+              "text": "element",
+              "category": "math",
+              "glossary_id": "qb:element"
+            },
+            {
+              "type": "text",
+              "text": " twice increase a "
+            },
+            {
+              "type": "term",
+              "text": "set",
+              "category": "math",
+              "glossary_id": "qb:set"
+            },
+            {
+              "type": "text",
+              "text": "’s size?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Yes"
+              }
+            ],
+            [
+              {
+                "type": "term",
+                "text": "No",
+                "category": "math",
+                "glossary_id": "qb:none"
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "A "
+              },
+              {
+                "type": "term",
+                "text": "set",
+                "category": "math",
+                "glossary_id": "qb:set"
+              },
+              {
+                "type": "text",
+                "text": " counts different "
+              },
+              {
+                "type": "term",
+                "text": "elements",
+                "category": "math",
+                "glossary_id": "qb:element"
+              },
+              {
+                "type": "text",
+                "text": ", not repeated printing."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. A repeated "
+              },
+              {
+                "type": "term",
+                "text": "element",
+                "category": "math",
+                "glossary_id": "qb:element"
+              },
+              {
+                "type": "text",
+                "text": " is still one "
+              },
+              {
+                "type": "term",
+                "text": "member",
+                "category": "math",
+                "glossary_id": "qb:element"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set-complement",
+      "title": "Universe, complements and brackets",
+      "topicCode": "SET",
+      "cards": [
+        {
+          "title": "Stay inside U",
+          "text": "A complement is relative to the stated universal set U. It keeps elements in U that fail the selected membership condition.",
+          "id": "set-complement:card-1",
+          "richText": [
+            {
+              "type": "text",
+              "text": "A "
+            },
+            {
+              "type": "term",
+              "text": "complement",
+              "category": "math",
+              "glossary_id": "qb:complement"
+            },
+            {
+              "type": "text",
+              "text": " is relative to the stated "
+            },
+            {
+              "type": "term",
+              "text": "universal set",
+              "category": "math",
+              "glossary_id": "qb:universe"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "U",
+              "category": "math",
+              "glossary_id": "qb:universe"
+            },
+            {
+              "type": "text",
+              "text": ". It keeps "
+            },
+            {
+              "type": "term",
+              "text": "elements",
+              "category": "math",
+              "glossary_id": "qb:element"
+            },
+            {
+              "type": "text",
+              "text": " in "
+            },
+            {
+              "type": "term",
+              "text": "U",
+              "category": "math",
+              "glossary_id": "qb:universe"
+            },
+            {
+              "type": "text",
+              "text": " that fail the "
+            },
+            {
+              "type": "term",
+              "text": "selected",
+              "category": "math",
+              "glossary_id": "qb:draw"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "membership",
+              "category": "math",
+              "glossary_id": "qb:membership"
+            },
+            {
+              "type": "text",
+              "text": " condition."
+            }
+          ]
+        },
+        {
+          "title": "A small example",
+          "text": "If U={2,5,9} and A={2,9}, then A′={5}. A complement never adds values outside U.",
+          "id": "set-complement:card-2",
+          "richText": [
+            {
+              "type": "text",
+              "text": "If "
+            },
+            {
+              "type": "math",
+              "text": "U={2,5,9}",
+              "math": {
+                "latex": "U = \\left\\{ 2, 5, 9\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:universe\" data-category=\"math\">U</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>2</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>9</mn><mo>}</mo></mrow></mrow></math>",
+                "plain": "U = {2, 5, 9}"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "A={2,9}",
+              "math": {
+                "latex": "A = \\left\\{ 2, 9\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>2</mn><mo>,</mo><mn>9</mn><mo>}</mo></mrow></mrow></math>",
+                "plain": "A = {2, 9}"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", then "
+            },
+            {
+              "type": "math",
+              "text": "A′={5}",
+              "math": {
+                "latex": "A^{\\prime} = \\left\\{ 5\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><msup data-glossary-id=\"qb:complement\" data-category=\"math\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:complement\" data-category=\"math\">′</mo></msup><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>5</mn><mo>}</mo></mrow></mrow></math>",
+                "plain": "A′ = {5}"
+              }
+            },
+            {
+              "type": "text",
+              "text": ". A "
+            },
+            {
+              "type": "term",
+              "text": "complement",
+              "category": "math",
+              "glossary_id": "qb:complement"
+            },
+            {
+              "type": "text",
+              "text": " never adds "
+            },
+            {
+              "type": "term",
+              "text": "values",
+              "category": "math",
+              "glossary_id": "qb:value"
+            },
+            {
+              "type": "text",
+              "text": " outside "
+            },
+            {
+              "type": "term",
+              "text": "U",
+              "category": "math",
+              "glossary_id": "qb:universe"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Follow the brackets",
+          "text": "In (A ∩ B)′, find the intersection first, then take its complement. In A ∩ B′, complement only B before applying the intersection. These expressions need not have the same result.",
+          "id": "set-complement:card-3",
+          "richText": [
+            {
+              "type": "text",
+              "text": "In "
+            },
+            {
+              "type": "math",
+              "text": "(A ∩ B)′",
+              "math": {
+                "latex": "\\left( A \\cap B\\right)^{\\prime}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup data-glossary-id=\"qb:complement\" data-category=\"math\"><mrow><mo>(</mo><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:intersection\" data-category=\"math\">∩</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi></mrow><mo>)</mo></mrow><mo data-glossary-id=\"qb:complement\" data-category=\"math\">′</mo></msup></math>",
+                "plain": "(A ∩ B)′"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", find the "
+            },
+            {
+              "type": "term",
+              "text": "intersection",
+              "category": "math",
+              "glossary_id": "qb:intersection"
+            },
+            {
+              "type": "text",
+              "text": " first, then take its "
+            },
+            {
+              "type": "term",
+              "text": "complement",
+              "category": "math",
+              "glossary_id": "qb:complement"
+            },
+            {
+              "type": "text",
+              "text": ". In "
+            },
+            {
+              "type": "math",
+              "text": "A ∩ B′",
+              "math": {
+                "latex": "A \\cap B^{\\prime}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:intersection\" data-category=\"math\">∩</mo><msup data-glossary-id=\"qb:complement\" data-category=\"math\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi><mo data-glossary-id=\"qb:complement\" data-category=\"math\">′</mo></msup></mrow></math>",
+                "plain": "A ∩ B′"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "term",
+              "text": "complement",
+              "category": "math",
+              "glossary_id": "qb:complement"
+            },
+            {
+              "type": "text",
+              "text": " only B before applying the "
+            },
+            {
+              "type": "term",
+              "text": "intersection",
+              "category": "math",
+              "glossary_id": "qb:intersection"
+            },
+            {
+              "type": "text",
+              "text": ". These expressions need not have the same result."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "U={2,5,9} and A={2,9}. Which is A′?",
+          "choices": [
+            "{2,9}",
+            "{5}",
+            "{1,3,4}"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "This repeats A instead of finding its outside within U.",
+            "Correct. Only 5 is in U and outside A.",
+            "A complement cannot add elements outside U."
+          ],
+          "id": "warmup:set-complement:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "math",
+              "text": "U={2,5,9}",
+              "math": {
+                "latex": "U = \\left\\{ 2, 5, 9\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:universe\" data-category=\"math\">U</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>2</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>9</mn><mo>}</mo></mrow></mrow></math>",
+                "plain": "U = {2, 5, 9}"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "A={2,9}",
+              "math": {
+                "latex": "A = \\left\\{ 2, 9\\right\\}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo>=</mo><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>2</mn><mo>,</mo><mn>9</mn><mo>}</mo></mrow></mrow></math>",
+                "plain": "A = {2, 9}"
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Which is "
+            },
+            {
+              "type": "math",
+              "text": "A′",
+              "math": {
+                "latex": "A^{\\prime}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup data-glossary-id=\"qb:complement\" data-category=\"math\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:complement\" data-category=\"math\">′</mo></msup></math>",
+                "plain": "A′"
+              }
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "{2,9}",
+                "math": {
+                  "latex": "\\left\\{ 2, 9\\right\\}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>2</mn><mo>,</mo><mn>9</mn><mo>}</mo></mrow></math>",
+                  "plain": "{2, 9}"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "{5}",
+                "math": {
+                  "latex": "\\left\\{ 5\\right\\}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>5</mn><mo>}</mo></mrow></math>",
+                  "plain": "{5}"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "{1,3,4}",
+                "math": {
+                  "latex": "\\left\\{ 1, 3, 4\\right\\}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-glossary-id=\"qb:set\" data-category=\"math\"><mo>{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>}</mo></mrow></math>",
+                  "plain": "{1, 3, 4}"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "This repeats A instead of finding its outside within "
+              },
+              {
+                "type": "term",
+                "text": "U",
+                "category": "math",
+                "glossary_id": "qb:universe"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. Only 5 is in "
+              },
+              {
+                "type": "term",
+                "text": "U",
+                "category": "math",
+                "glossary_id": "qb:universe"
+              },
+              {
+                "type": "text",
+                "text": " and outside A."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "A "
+              },
+              {
+                "type": "term",
+                "text": "complement",
+                "category": "math",
+                "glossary_id": "qb:complement"
+              },
+              {
+                "type": "text",
+                "text": " cannot add "
+              },
+              {
+                "type": "term",
+                "text": "elements",
+                "category": "math",
+                "glossary_id": "qb:element"
+              },
+              {
+                "type": "text",
+                "text": " outside "
+              },
+              {
+                "type": "term",
+                "text": "U",
+                "category": "math",
+                "glossary_id": "qb:universe"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "What comes first in (A ∩ B)′?",
+          "choices": [
+            "Find A ∩ B",
+            "Complement A only"
+          ],
+          "correctIndex": 0,
+          "feedback": [
+            "Correct. Finish the bracketed expression first.",
+            "The prime mark applies to the whole bracket, not A alone."
+          ],
+          "id": "warmup:set-complement:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "What comes first in "
+            },
+            {
+              "type": "math",
+              "text": "(A ∩ B)′",
+              "math": {
+                "latex": "\\left( A \\cap B\\right)^{\\prime}",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup data-glossary-id=\"qb:complement\" data-category=\"math\"><mrow><mo>(</mo><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:intersection\" data-category=\"math\">∩</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi></mrow><mo>)</mo></mrow><mo data-glossary-id=\"qb:complement\" data-category=\"math\">′</mo></msup></math>",
+                "plain": "(A ∩ B)′"
+              }
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Find "
+              },
+              {
+                "type": "math",
+                "text": "A ∩ B",
+                "math": {
+                  "latex": "A \\cap B",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">A</mi><mo data-glossary-id=\"qb:intersection\" data-category=\"math\">∩</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">B</mi></mrow></math>",
+                  "plain": "A ∩ B"
+                }
+              }
+            ],
+            [
+              {
+                "type": "term",
+                "text": "Complement",
+                "category": "math",
+                "glossary_id": "qb:complement"
+              },
+              {
+                "type": "text",
+                "text": " A only"
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Correct. Finish the "
+              },
+              {
+                "type": "term",
+                "text": "bracketed",
+                "category": "math",
+                "glossary_id": "qb:brackets"
+              },
+              {
+                "type": "text",
+                "text": " expression first."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "The "
+              },
+              {
+                "type": "term",
+                "text": "prime mark",
+                "category": "math",
+                "glossary_id": "qb:complement"
+              },
+              {
+                "type": "text",
+                "text": " applies to the whole "
+              },
+              {
+                "type": "term",
+                "text": "bracket",
+                "category": "math",
+                "glossary_id": "qb:brackets"
+              },
+              {
+                "type": "text",
+                "text": ", not A alone."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logic-basics",
+      "title": "Claims and truth values",
+      "topicCode": "LOGIC",
+      "cards": [
+        {
+          "title": "A claim can be false",
+          "text": "A statement makes a definite true-or-false claim. A question or command does not. A false mathematical claim is still a mathematical statement.",
+          "id": "logic-basics:card-1",
+          "richText": [
+            {
+              "type": "text",
+              "text": "A "
+            },
+            {
+              "type": "term",
+              "text": "statement",
+              "category": "math",
+              "glossary_id": "qb:statement"
+            },
+            {
+              "type": "text",
+              "text": " makes a definite "
+            },
+            {
+              "type": "term",
+              "text": "true",
+              "category": "math",
+              "glossary_id": "qb:true"
+            },
+            {
+              "type": "text",
+              "text": "-or-"
+            },
+            {
+              "type": "term",
+              "text": "false",
+              "category": "math",
+              "glossary_id": "qb:false"
+            },
+            {
+              "type": "text",
+              "text": " claim. A question or command does not. A "
+            },
+            {
+              "type": "term",
+              "text": "false",
+              "category": "math",
+              "glossary_id": "qb:false"
+            },
+            {
+              "type": "text",
+              "text": " mathematical claim is still a "
+            },
+            {
+              "type": "term",
+              "text": "mathematical statement",
+              "category": "math",
+              "glossary_id": "qb:statement"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Read the quantity words",
+          "text": "All means every allowed case. Some means at least one case. One exception disproves an all claim; one matching example establishes a some claim.",
+          "id": "logic-basics:card-2",
+          "richText": [
+            {
+              "type": "term",
+              "text": "All",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " means "
+            },
+            {
+              "type": "term",
+              "text": "every",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " allowed case. "
+            },
+            {
+              "type": "term",
+              "text": "Some",
+              "category": "math",
+              "glossary_id": "qb:some"
+            },
+            {
+              "type": "text",
+              "text": " means "
+            },
+            {
+              "type": "term",
+              "text": "at least",
+              "category": "math",
+              "glossary_id": "qb:at-least"
+            },
+            {
+              "type": "text",
+              "text": " one case. One "
+            },
+            {
+              "type": "term",
+              "text": "exception",
+              "category": "math",
+              "glossary_id": "qb:counterexample"
+            },
+            {
+              "type": "text",
+              "text": " disproves an "
+            },
+            {
+              "type": "term",
+              "text": "all",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " claim; one matching example establishes a "
+            },
+            {
+              "type": "term",
+              "text": "some",
+              "category": "math",
+              "glossary_id": "qb:some"
+            },
+            {
+              "type": "text",
+              "text": " claim."
+            }
+          ]
+        },
+        {
+          "title": "Join the claims",
+          "text": "AND requires both parts true. Inclusive OR requires at least one, including both. NOT reverses the truth condition. Keep the exact domain and inequality boundary when negating a claim.",
+          "id": "logic-basics:card-3",
+          "richText": [
+            {
+              "type": "term",
+              "text": "AND",
+              "category": "math",
+              "glossary_id": "qb:and"
+            },
+            {
+              "type": "text",
+              "text": " requires both parts "
+            },
+            {
+              "type": "term",
+              "text": "true",
+              "category": "math",
+              "glossary_id": "qb:true"
+            },
+            {
+              "type": "text",
+              "text": ". "
+            },
+            {
+              "type": "term",
+              "text": "Inclusive OR",
+              "category": "math",
+              "glossary_id": "qb:or"
+            },
+            {
+              "type": "text",
+              "text": " requires "
+            },
+            {
+              "type": "term",
+              "text": "at least",
+              "category": "math",
+              "glossary_id": "qb:at-least"
+            },
+            {
+              "type": "text",
+              "text": " one, including both. "
+            },
+            {
+              "type": "term",
+              "text": "NOT",
+              "category": "math",
+              "glossary_id": "qb:negation"
+            },
+            {
+              "type": "text",
+              "text": " reverses the truth condition. Keep the exact "
+            },
+            {
+              "type": "term",
+              "text": "domain",
+              "category": "math",
+              "glossary_id": "qb:domain"
+            },
+            {
+              "type": "text",
+              "text": " and inequality boundary when "
+            },
+            {
+              "type": "term",
+              "text": "negating",
+              "category": "math",
+              "glossary_id": "qb:negation"
+            },
+            {
+              "type": "text",
+              "text": " a claim."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "Which is a statement?",
+          "choices": [
+            "Close the book!",
+            "Is 4 even?",
+            "4 is even."
+          ],
+          "correctIndex": 2,
+          "feedback": [
+            "This is a command.",
+            "This asks a question.",
+            "Correct. This makes a definite mathematical claim."
+          ],
+          "id": "warmup:logic-basics:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Which is a "
+            },
+            {
+              "type": "term",
+              "text": "statement",
+              "category": "math",
+              "glossary_id": "qb:statement"
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Close the book!"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Is 4 "
+              },
+              {
+                "type": "term",
+                "text": "even",
+                "category": "math",
+                "glossary_id": "qb:is-even"
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "4 is "
+              },
+              {
+                "type": "term",
+                "text": "even",
+                "category": "math",
+                "glossary_id": "qb:is-even"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "This is a command."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "This asks a question."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. This makes a definite mathematical claim."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "If p and q are both true, is inclusive p OR q true?",
+          "choices": [
+            "True",
+            "False"
+          ],
+          "correctIndex": 0,
+          "feedback": [
+            "Correct. Inclusive OR includes the both-true case.",
+            "Inclusive OR does not mean exactly one."
+          ],
+          "id": "warmup:logic-basics:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "If "
+            },
+            {
+              "type": "math",
+              "text": "p",
+              "math": {
+                "latex": "p",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi></math>",
+                "plain": "p"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "q",
+              "math": {
+                "latex": "q",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></math>",
+                "plain": "q"
+              }
+            },
+            {
+              "type": "text",
+              "text": " are both "
+            },
+            {
+              "type": "term",
+              "text": "true",
+              "category": "math",
+              "glossary_id": "qb:true"
+            },
+            {
+              "type": "text",
+              "text": ", is "
+            },
+            {
+              "type": "term",
+              "text": "inclusive",
+              "category": "math",
+              "glossary_id": "qb:or"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "math",
+              "text": "p OR q",
+              "math": {
+                "latex": "p \\lor q",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo data-glossary-id=\"qb:or\" data-category=\"math\">∨</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></mrow></math>",
+                "plain": "p ∨ q"
+              }
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "true",
+              "category": "math",
+              "glossary_id": "qb:true"
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "True",
+                "math": {
+                  "latex": "\\mathrm{True}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\" data-glossary-id=\"qb:true\" data-category=\"math\">True</mi></math>",
+                  "plain": "True"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "False",
+                "math": {
+                  "latex": "\\mathrm{False}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\" data-glossary-id=\"qb:false\" data-category=\"math\">False</mi></math>",
+                  "plain": "False"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Correct. "
+              },
+              {
+                "type": "term",
+                "text": "Inclusive OR",
+                "category": "math",
+                "glossary_id": "qb:or"
+              },
+              {
+                "type": "text",
+                "text": " includes the "
+              },
+              {
+                "type": "term",
+                "text": "both-true",
+                "category": "math",
+                "glossary_id": "qb:and"
+              },
+              {
+                "type": "text",
+                "text": " case."
+              }
+            ],
+            [
+              {
+                "type": "term",
+                "text": "Inclusive OR",
+                "category": "math",
+                "glossary_id": "qb:or"
+              },
+              {
+                "type": "text",
+                "text": " does not mean "
+              },
+              {
+                "type": "term",
+                "text": "exactly one",
+                "category": "math",
+                "glossary_id": "qb:exactly-one"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logic-implications",
+      "title": "If-then rules and counterexamples",
+      "topicCode": "LOGIC",
+      "cards": [
+        {
+          "title": "One direction",
+          "text": "In p→q, p is the condition and q is the result. The implication fails only when p is true and q is false. Do not assume the reverse rule.",
+          "id": "logic-implications:card-1",
+          "richText": [
+            {
+              "type": "text",
+              "text": "In "
+            },
+            {
+              "type": "math",
+              "text": "p→q",
+              "math": {
+                "latex": "p \\to q",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo data-glossary-id=\"qb:implication\" data-category=\"math\">→</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></mrow></math>",
+                "plain": "p → q"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "math",
+              "text": "p",
+              "math": {
+                "latex": "p",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi></math>",
+                "plain": "p"
+              }
+            },
+            {
+              "type": "text",
+              "text": " is the condition and "
+            },
+            {
+              "type": "math",
+              "text": "q",
+              "math": {
+                "latex": "q",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></math>",
+                "plain": "q"
+              }
+            },
+            {
+              "type": "text",
+              "text": " is the result. The "
+            },
+            {
+              "type": "term",
+              "text": "implication",
+              "category": "math",
+              "glossary_id": "qb:implication"
+            },
+            {
+              "type": "text",
+              "text": " fails only when "
+            },
+            {
+              "type": "math",
+              "text": "p",
+              "math": {
+                "latex": "p",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi></math>",
+                "plain": "p"
+              }
+            },
+            {
+              "type": "text",
+              "text": " is "
+            },
+            {
+              "type": "term",
+              "text": "true",
+              "category": "math",
+              "glossary_id": "qb:true"
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "math",
+              "text": "q",
+              "math": {
+                "latex": "q",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></math>",
+                "plain": "q"
+              }
+            },
+            {
+              "type": "text",
+              "text": " is "
+            },
+            {
+              "type": "term",
+              "text": "false",
+              "category": "math",
+              "glossary_id": "qb:false"
+            },
+            {
+              "type": "text",
+              "text": ". Do not "
+            },
+            {
+              "type": "term",
+              "text": "assume",
+              "category": "math",
+              "glossary_id": "qb:assumption"
+            },
+            {
+              "type": "text",
+              "text": " the reverse rule."
+            }
+          ]
+        },
+        {
+          "title": "Change a rule carefully",
+          "text": "Converse swaps the parts. Inverse negates both without swapping. Contrapositive swaps and negates both. If and only if requires the forward and reverse implications together.",
+          "id": "logic-implications:card-2",
+          "richText": [
+            {
+              "type": "term",
+              "text": "Converse",
+              "category": "math",
+              "glossary_id": "qb:converse"
+            },
+            {
+              "type": "text",
+              "text": " swaps the parts. "
+            },
+            {
+              "type": "term",
+              "text": "Inverse",
+              "category": "math",
+              "glossary_id": "qb:inverse"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "negates",
+              "category": "math",
+              "glossary_id": "qb:negation"
+            },
+            {
+              "type": "text",
+              "text": " both without swapping. "
+            },
+            {
+              "type": "term",
+              "text": "Contrapositive",
+              "category": "math",
+              "glossary_id": "qb:contrapositive"
+            },
+            {
+              "type": "text",
+              "text": " swaps and "
+            },
+            {
+              "type": "term",
+              "text": "negates",
+              "category": "math",
+              "glossary_id": "qb:negation"
+            },
+            {
+              "type": "text",
+              "text": " both. "
+            },
+            {
+              "type": "term",
+              "text": "If and only if",
+              "category": "math",
+              "glossary_id": "qb:biconditional"
+            },
+            {
+              "type": "text",
+              "text": " requires the forward and reverse "
+            },
+            {
+              "type": "term",
+              "text": "implications",
+              "category": "math",
+              "glossary_id": "qb:implication"
+            },
+            {
+              "type": "text",
+              "text": " together."
+            }
+          ]
+        },
+        {
+          "title": "Refute with a permitted case",
+          "text": "An implication counterexample satisfies the condition but fails the result. The case must belong to the stated domain. A valid argument follows from its premises; a sound argument also has all premises true.",
+          "id": "logic-implications:card-3",
+          "richText": [
+            {
+              "type": "text",
+              "text": "An "
+            },
+            {
+              "type": "term",
+              "text": "implication",
+              "category": "math",
+              "glossary_id": "qb:implication"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "counterexample",
+              "category": "math",
+              "glossary_id": "qb:counterexample"
+            },
+            {
+              "type": "text",
+              "text": " satisfies the condition but fails the result. The case must "
+            },
+            {
+              "type": "term",
+              "text": "belong to",
+              "category": "math",
+              "glossary_id": "qb:membership"
+            },
+            {
+              "type": "text",
+              "text": " the stated "
+            },
+            {
+              "type": "term",
+              "text": "domain",
+              "category": "math",
+              "glossary_id": "qb:domain"
+            },
+            {
+              "type": "text",
+              "text": ". A "
+            },
+            {
+              "type": "term",
+              "text": "valid",
+              "category": "math",
+              "glossary_id": "qb:valid"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "argument",
+              "category": "math",
+              "glossary_id": "qb:argument"
+            },
+            {
+              "type": "text",
+              "text": " follows from its "
+            },
+            {
+              "type": "term",
+              "text": "premises",
+              "category": "math",
+              "glossary_id": "qb:premise"
+            },
+            {
+              "type": "text",
+              "text": "; a "
+            },
+            {
+              "type": "term",
+              "text": "sound",
+              "category": "math",
+              "glossary_id": "qb:sound"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "argument",
+              "category": "math",
+              "glossary_id": "qb:argument"
+            },
+            {
+              "type": "text",
+              "text": " also has "
+            },
+            {
+              "type": "term",
+              "text": "all",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "premises",
+              "category": "math",
+              "glossary_id": "qb:premise"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "true",
+              "category": "math",
+              "glossary_id": "qb:true"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "Which makes p→q false?",
+          "choices": [
+            "p=true, q=false",
+            "p=false, q=true",
+            "p=true, q=true"
+          ],
+          "correctIndex": 0,
+          "feedback": [
+            "Correct. The condition holds but the promised result fails.",
+            "A false condition does not violate this implication.",
+            "The promised result holds here."
+          ],
+          "id": "warmup:logic-implications:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Which makes "
+            },
+            {
+              "type": "math",
+              "text": "p→q",
+              "math": {
+                "latex": "p \\to q",
+                "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo data-glossary-id=\"qb:implication\" data-category=\"math\">→</mo><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi></mrow></math>",
+                "plain": "p → q"
+              }
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "false",
+              "category": "math",
+              "glossary_id": "qb:false"
+            },
+            {
+              "type": "text",
+              "text": "?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "p=true",
+                "math": {
+                  "latex": "p = \\mathrm{true}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>=</mo><mi mathvariant=\"normal\" data-glossary-id=\"qb:true\" data-category=\"math\">true</mi></mrow></math>",
+                  "plain": "p = true"
+                }
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "math",
+                "text": "q=false",
+                "math": {
+                  "latex": "q = \\mathrm{false}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>=</mo><mi mathvariant=\"normal\" data-glossary-id=\"qb:false\" data-category=\"math\">false</mi></mrow></math>",
+                  "plain": "q = false"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "p=false",
+                "math": {
+                  "latex": "p = \\mathrm{false}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>=</mo><mi mathvariant=\"normal\" data-glossary-id=\"qb:false\" data-category=\"math\">false</mi></mrow></math>",
+                  "plain": "p = false"
+                }
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "math",
+                "text": "q=true",
+                "math": {
+                  "latex": "q = \\mathrm{true}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>=</mo><mi mathvariant=\"normal\" data-glossary-id=\"qb:true\" data-category=\"math\">true</mi></mrow></math>",
+                  "plain": "q = true"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "p=true",
+                "math": {
+                  "latex": "p = \\mathrm{true}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">p</mi><mo>=</mo><mi mathvariant=\"normal\" data-glossary-id=\"qb:true\" data-category=\"math\">true</mi></mrow></math>",
+                  "plain": "p = true"
+                }
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "math",
+                "text": "q=true",
+                "math": {
+                  "latex": "q = \\mathrm{true}",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi data-glossary-id=\"qb:variable\" data-category=\"math\">q</mi><mo>=</mo><mi mathvariant=\"normal\" data-glossary-id=\"qb:true\" data-category=\"math\">true</mi></mrow></math>",
+                  "plain": "q = true"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Correct. The condition holds but the promised result fails."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "A "
+              },
+              {
+                "type": "term",
+                "text": "false",
+                "category": "math",
+                "glossary_id": "qb:false"
+              },
+              {
+                "type": "text",
+                "text": " condition does not violate this "
+              },
+              {
+                "type": "term",
+                "text": "implication",
+                "category": "math",
+                "glossary_id": "qb:implication"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "The promised result holds here."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "Which refutes “All multiples of 5 are odd”?",
+          "choices": [
+            "5",
+            "10",
+            "3",
+            "15"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "This is an odd multiple and agrees with this instance.",
+            "Correct. 10 is a multiple of 5 but is even.",
+            "This does not satisfy the multiple-of-5 condition.",
+            "This is an odd multiple and agrees with this instance."
+          ],
+          "id": "warmup:logic-implications:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Which refutes “"
+            },
+            {
+              "type": "term",
+              "text": "All",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "term",
+              "text": "multiples",
+              "category": "math",
+              "glossary_id": "qb:multiple"
+            },
+            {
+              "type": "text",
+              "text": " of 5 are "
+            },
+            {
+              "type": "term",
+              "text": "odd",
+              "category": "math",
+              "glossary_id": "qb:is-odd"
+            },
+            {
+              "type": "text",
+              "text": "”?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "math",
+                "text": "5",
+                "math": {
+                  "latex": "5",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>5</mn></math>",
+                  "plain": "5"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "10",
+                "math": {
+                  "latex": "10",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>10</mn></math>",
+                  "plain": "10"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "3",
+                "math": {
+                  "latex": "3",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>3</mn></math>",
+                  "plain": "3"
+                }
+              }
+            ],
+            [
+              {
+                "type": "math",
+                "text": "15",
+                "math": {
+                  "latex": "15",
+                  "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>15</mn></math>",
+                  "plain": "15"
+                }
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "This is an "
+              },
+              {
+                "type": "term",
+                "text": "odd",
+                "category": "math",
+                "glossary_id": "qb:is-odd"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "term",
+                "text": "multiple",
+                "category": "math",
+                "glossary_id": "qb:multiple"
+              },
+              {
+                "type": "text",
+                "text": " and agrees with this instance."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. 10 is a "
+              },
+              {
+                "type": "term",
+                "text": "multiple",
+                "category": "math",
+                "glossary_id": "qb:multiple"
+              },
+              {
+                "type": "text",
+                "text": " of 5 but is "
+              },
+              {
+                "type": "term",
+                "text": "even",
+                "category": "math",
+                "glossary_id": "qb:is-even"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "This does not satisfy the "
+              },
+              {
+                "type": "term",
+                "text": "multiple",
+                "category": "math",
+                "glossary_id": "qb:multiple"
+              },
+              {
+                "type": "text",
+                "text": "-of-5 condition."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "This is an "
+              },
+              {
+                "type": "term",
+                "text": "odd",
+                "category": "math",
+                "glossary_id": "qb:is-odd"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "term",
+                "text": "multiple",
+                "category": "math",
+                "glossary_id": "qb:multiple"
+              },
+              {
+                "type": "text",
+                "text": " and agrees with this instance."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reasoning-evidence",
+      "title": "Rules, predictions and evidence",
+      "topicCode": "LOGIC",
+      "cards": [
+        {
+          "title": "Use a rule",
+          "text": "Deductive reasoning applies stated rules to a case. A conclusion must follow if all the required premises hold.",
+          "id": "reasoning-evidence:card-1",
+          "richText": [
+            {
+              "type": "term",
+              "text": "Deductive reasoning",
+              "category": "math",
+              "glossary_id": "qb:deductive"
+            },
+            {
+              "type": "text",
+              "text": " applies stated rules to a case. A "
+            },
+            {
+              "type": "term",
+              "text": "conclusion",
+              "category": "math",
+              "glossary_id": "qb:conclusion"
+            },
+            {
+              "type": "text",
+              "text": " must follow if "
+            },
+            {
+              "type": "term",
+              "text": "all",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " the required "
+            },
+            {
+              "type": "term",
+              "text": "premises",
+              "category": "math",
+              "glossary_id": "qb:premise"
+            },
+            {
+              "type": "text",
+              "text": " hold."
+            }
+          ]
+        },
+        {
+          "title": "Extend observations",
+          "text": "Inductive reasoning uses observed cases to suggest a pattern or general claim. A useful prediction is not automatically a proof of every case.",
+          "id": "reasoning-evidence:card-2",
+          "richText": [
+            {
+              "type": "term",
+              "text": "Inductive reasoning",
+              "category": "math",
+              "glossary_id": "qb:inductive"
+            },
+            {
+              "type": "text",
+              "text": " uses "
+            },
+            {
+              "type": "term",
+              "text": "observed",
+              "category": "math",
+              "glossary_id": "qb:observation"
+            },
+            {
+              "type": "text",
+              "text": " cases to suggest a "
+            },
+            {
+              "type": "term",
+              "text": "pattern",
+              "category": "math",
+              "glossary_id": "qb:pattern"
+            },
+            {
+              "type": "text",
+              "text": " or general claim. A useful "
+            },
+            {
+              "type": "term",
+              "text": "prediction",
+              "category": "math",
+              "glossary_id": "qb:prediction"
+            },
+            {
+              "type": "text",
+              "text": " is not automatically a "
+            },
+            {
+              "type": "term",
+              "text": "proof",
+              "category": "math",
+              "glossary_id": "qb:proof"
+            },
+            {
+              "type": "text",
+              "text": " of "
+            },
+            {
+              "type": "term",
+              "text": "every",
+              "category": "math",
+              "glossary_id": "qb:all-every"
+            },
+            {
+              "type": "text",
+              "text": " case."
+            }
+          ]
+        },
+        {
+          "title": "Sample different cases",
+          "text": "A sample should represent its target population. Repeating one case is not sampling many different cases. Selecting only supportive cases creates bias.",
+          "id": "reasoning-evidence:card-3",
+          "richText": [
+            {
+              "type": "text",
+              "text": "A "
+            },
+            {
+              "type": "term",
+              "text": "sample",
+              "category": "math",
+              "glossary_id": "qb:sample"
+            },
+            {
+              "type": "text",
+              "text": " should represent its "
+            },
+            {
+              "type": "term",
+              "text": "target population",
+              "category": "math",
+              "glossary_id": "qb:population"
+            },
+            {
+              "type": "text",
+              "text": ". Repeating one case is not "
+            },
+            {
+              "type": "term",
+              "text": "sampling",
+              "category": "math",
+              "glossary_id": "qb:sample"
+            },
+            {
+              "type": "text",
+              "text": " many different cases. Selecting only supportive cases creates "
+            },
+            {
+              "type": "term",
+              "text": "bias",
+              "category": "math",
+              "glossary_id": "qb:selection-bias"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "prompt": "Several observed cases suggest an untested case will match. What is this?",
+          "choices": [
+            "Inductive reasoning",
+            "A proof of every case"
+          ],
+          "correctIndex": 0,
+          "feedback": [
+            "Correct. It extends observations to an untested case.",
+            "Examples alone do not prove every untested case."
+          ],
+          "id": "warmup:reasoning-evidence:1",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Several "
+            },
+            {
+              "type": "term",
+              "text": "observed",
+              "category": "math",
+              "glossary_id": "qb:observation"
+            },
+            {
+              "type": "text",
+              "text": " cases suggest an untested case will match. What is this?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "term",
+                "text": "Inductive reasoning",
+                "category": "math",
+                "glossary_id": "qb:inductive"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "A "
+              },
+              {
+                "type": "term",
+                "text": "proof",
+                "category": "math",
+                "glossary_id": "qb:proof"
+              },
+              {
+                "type": "text",
+                "text": " of "
+              },
+              {
+                "type": "term",
+                "text": "every",
+                "category": "math",
+                "glossary_id": "qb:all-every"
+              },
+              {
+                "type": "text",
+                "text": " case"
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Correct. It extends "
+              },
+              {
+                "type": "term",
+                "text": "observations",
+                "category": "math",
+                "glossary_id": "qb:observation"
+              },
+              {
+                "type": "text",
+                "text": " to an untested case."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Examples alone do not "
+              },
+              {
+                "type": "term",
+                "text": "prove",
+                "category": "math",
+                "glossary_id": "qb:proof"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "term",
+                "text": "every",
+                "category": "math",
+                "glossary_id": "qb:all-every"
+              },
+              {
+                "type": "text",
+                "text": " untested case."
+              }
+            ]
+          ]
+        },
+        {
+          "prompt": "Which gives broader evidence about two stages?",
+          "choices": [
+            "One room visited repeatedly",
+            "Different rooms randomly sampled across both stages"
+          ],
+          "correctIndex": 1,
+          "feedback": [
+            "Repeating one room does not add different sampled rooms.",
+            "Correct. The sample has wider coverage of the target population."
+          ],
+          "id": "warmup:reasoning-evidence:2",
+          "unscored": true,
+          "richText": [
+            {
+              "type": "text",
+              "text": "Which gives broader evidence about two stages?"
+            }
+          ],
+          "choiceRichText": [
+            [
+              {
+                "type": "text",
+                "text": "One room visited repeatedly"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Different rooms randomly sampled across both stages"
+              }
+            ]
+          ],
+          "feedbackRichText": [
+            [
+              {
+                "type": "text",
+                "text": "Repeating one room does not add different sampled rooms."
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "text": "Correct. The "
+              },
+              {
+                "type": "term",
+                "text": "sample",
+                "category": "math",
+                "glossary_id": "qb:sample"
+              },
+              {
+                "type": "text",
+                "text": " has wider coverage of the "
+              },
+              {
+                "type": "term",
+                "text": "target population",
+                "category": "math",
+                "glossary_id": "qb:population"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

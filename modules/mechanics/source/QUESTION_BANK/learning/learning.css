@@ -1,0 +1,49 @@
+/* Learning surfaces inherit the existing game palette; rich text tokens keep theme.css. */
+[data-stm-richtext] .learning-panel{padding:18px;border:1px solid #81728d66;border-radius:10px;margin:18px 0}
+[data-stm-richtext] .learning-panel[hidden]{display:none}
+[data-stm-richtext] .learning-visual h3{font-size:16px;margin:8px 0 14px}
+[data-stm-richtext] .learning-venn{display:block;width:100%;max-width:690px;height:auto;margin:0 auto 12px}
+[data-stm-richtext] .learning-venn text[data-role]{fill:currentColor}
+[data-stm-richtext] .learning-venn .rt-term{fill:currentColor}
+[data-stm-richtext] .learning-visual-caption{font-size:13px;line-height:1.6;margin-top:12px}
+[data-stm-richtext] .learning-table-scroll{overflow-x:auto;max-width:100%;border:1px solid #81728d66;border-radius:7px}
+[data-stm-richtext] .learning-table{border-collapse:collapse;width:100%;min-width:300px;font-size:14px}
+[data-stm-richtext] .learning-table th,[data-stm-richtext] .learning-table td{padding:10px 12px;border-bottom:1px solid #81728d55;text-align:center;vertical-align:middle}
+[data-stm-richtext] .learning-table th{font-weight:600}
+[data-stm-richtext] .learning-table tr:last-child>*{border-bottom:0}
+[data-stm-richtext] .learning-selected-cell,[data-stm-richtext] .learning-selected-region{background:#d9ba7720}
+[data-stm-richtext] .learning-flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0}
+[data-stm-richtext] .learning-flow li{border:1px solid #81728d66;border-radius:8px;padding:14px;font-size:14px}
+[data-stm-richtext] .learning-flow-number{display:block;font-size:12px;font-weight:700;margin-bottom:8px}
+[data-stm-richtext] .learning-pool{display:grid;gap:16px}
+[data-stm-richtext] .learning-pool-group{border:1px solid #81728d66;border-radius:8px;padding:12px}
+[data-stm-richtext] .learning-pool-tokens{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+[data-stm-richtext] .learning-pool-token{display:inline-flex;align-items:center;justify-content:center;width:32px;height:38px;border:1px solid currentColor;border-radius:6px;font:700 13px system-ui}
+[data-stm-richtext] [data-token-color="red"]{color:#edaaaa;background:#a2383822}
+[data-stm-richtext] [data-token-color="blue"]{color:#abc8ed;background:#3b6ea822}
+[data-stm-richtext] [data-token-color="gold"]{color:#e0c37f;background:#a0803522}
+[data-stm-richtext] [data-token-color="silver"]{color:#c9cad3;background:#797c9022}
+[data-stm-richtext][data-theme="light"] [data-token-color="red"]{color:#8e3030}
+[data-stm-richtext][data-theme="light"] [data-token-color="blue"]{color:#285c93}
+[data-stm-richtext][data-theme="light"] [data-token-color="gold"]{color:#795c18}
+[data-stm-richtext][data-theme="light"] [data-token-color="silver"]{color:#4f5265}
+[data-stm-richtext] .learning-worked-steps{padding-left:24px}
+[data-stm-richtext] .learning-worked-steps li{padding:8px 0 12px}
+[data-stm-richtext] .learning-worked-steps p{margin:5px 0}
+[data-stm-richtext] .learning-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+[data-stm-richtext] .learning-foundation-card{border:1px solid #81728d66;border-radius:8px;padding:14px;font-size:14px}
+[data-stm-richtext] .learning-foundation-card h3{font-size:15px;margin-top:0}
+[data-stm-richtext] .learning-check{padding:14px 0;border-top:1px solid #81728d66}
+[data-stm-richtext] .learning-check label{display:flex;align-items:baseline;gap:8px;margin:6px 0;font-size:14px}
+[data-stm-richtext] .learning-check input{flex:0 0 auto}
+[data-stm-richtext] .learning-check-option{display:flex;align-items:baseline;gap:8px;margin:7px 0;font-size:14px}
+[data-stm-richtext] .learning-progress-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+[data-stm-richtext] .learning-progress-summary div{padding:12px;border:1px solid #81728d66;border-radius:8px;font-size:13px}
+[data-stm-richtext] .learning-progress-summary strong{display:block;font-size:22px}
+[data-stm-richtext] progress{width:100%;height:9px;accent-color:#b9a3e3}
+[data-stm-richtext] .learning-progress-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+[data-stm-richtext] .learning-skill{padding:12px;border:1px solid #81728d66;border-radius:8px;font-size:13px}
+@media(max-width:700px){
+ [data-stm-richtext] .learning-flow,[data-stm-richtext] .learning-card-grid,[data-stm-richtext] .learning-progress-list{grid-template-columns:1fr}
+ [data-stm-richtext] .learning-progress-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+}

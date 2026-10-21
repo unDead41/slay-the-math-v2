@@ -255,3 +255,15 @@ Owners: SOR 03/04/05/08/11/13/14/19. Verification and migration limits: `docs/CO
 | DEC-20261022-02 | DITERUSKAN | Preserve all 25 accepted Stage 1 sheets after exact source-pixel verification of the repack. Import Stage 2 v2.1's 25 clips / 135 frames and 25 matching posters through the shared native importer/player, including the authored left-facing Chain Golem. Add a presentation-only intent mapping; preserve gameplay, saves, bosses, legacy cross-stage encounters and Alyssa's full accepted registry/Skill calibration. |
 
 Owners: SOR 07/11/14/15. Source mapping and actual checks: [both-stage motion](../ENEMY_MOTION_2_10_0.md).
+
+
+## Map and INTEGRATION.zip — 22 October 2026 (Malaysia), game 2.11.0
+
+| ID | Status | Decision |
+|---|---|---|
+| DEC-20261022-03 | DISAHKAN | Ijamm requests the supplied map aesthetic and applying INTEGRATION.zip to the game. |
+| DEC-20261022-04 | DITERUSKAN | Use a text-free generated parchment dungeon plate with live existing graph controls/HUD and the same category secrecy; preserve route snapshots and both stages. |
+| DEC-20261022-05 | DITERUSKAN | Integrate Artifact 3.5, Question Bank 1.5 and one matched STM_SHARED hub. Reuse the existing engine's synchronous transaction owner and supplied pure session reducers. Preserve IDs, answers, effect values, saves and eligible offers. Record host glossary reconciliation and honest legacy-evidence limits. |
+| DEC-20261022-06 | DITERUSKAN | Following the supplied session contract, retain unfinished reservations across New Run, use the supplied fixed order for new choices and adapt difficulty without repeats. Existing pending shuffled saves retain their order. Increase bounded import to 2 MB for event history/checkpoints. |
+
+Owners: SOR 02/09/10/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Source and actual checks: [Map & Integration 2.11.0](../MAP_INTEGRATION_2_11_0.md).

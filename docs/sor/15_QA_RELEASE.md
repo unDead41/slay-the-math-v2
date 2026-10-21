@@ -96,3 +96,8 @@ Check all six Skill matrices/body heights and actual canvas frames, cap/partial/
 ## Both-stage enemy motion — 2.10.0
 
 Verify native pixels/alpha for all supplied sheets and individual cells, padding and every fixed-matrix frame bound. Exercise all 10 actors / 50 clips in Chromium, native player-hit reactions and each Stage 2 intent cycle against an independent engine clone. Check blocked hits, dialogs, Motion Off/OS reduction, refresh, Canvas/atlas failures and same-source posters. Check all 135 Stage 2 bounds inside the arena across desktop, ultrawide, 4K and phone sizes. Preserve bosses, legacy cross-stage rendering and Alyssa's accepted registry/Skill projection; test the generated portable file offline. Evidence: `tests/enemy-motion.test.cjs`, `tests/enemy-motion-browser.cjs`, source import audits and [2.10.0 report](../ENEMY_MOTION_2_10_0.md). Distinguish browser automation from physical-device/Windows testing.
+
+
+## Parchment map and integrated mechanics — 2.11.0
+
+For 2.11.0 verify the supplied suite independently, original question/choice/effect alignment, both More Hint event orders, corrupt profile preservation, old pending saves, explicit exactly-once claim, no repeat/adaptive profile history, unscored Basics, reveal gating and all 120 rich-rendered items/240 visuals. Exercise Codex search/clear/tier, comparisons without mutation, keyboard tab focus, one shared tooltip across dialogs/domains and real counter projection. Check map at eight viewports, both stages/legacy paths and native entry/panning; smoke the generated portable file offline. Report actual results and physical-device/Windows limitations in docs/MAP_INTEGRATION_2_11_0.md.

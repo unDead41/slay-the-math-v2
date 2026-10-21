@@ -2,6 +2,15 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.11.0 — 22 Oktober 2026 (Malaysia)
+
+- Apply the supplied parchment dungeon map reference with live room icons, links and HUD; preserve both stages and legacy topology.
+- Integrate Artifact 3.5 / Question Bank 1.5 / STM_SHARED from INTEGRATION.zip: one tooltip hub, ordered Hint/More Hint, specific feedback, visual learning and gated worked steps.
+- Add seven Basics modules/14 unscored checks, 30-skill local evidence, persistent Codex search/tier/comparisons and real artifact counters in combat.
+- Preserve the 120 original question/choice/answer bindings and all 31 artifact numeric effects. Retain existing icons after visible-pixel/alpha verification; explicitly reconcile nine engine-dependent glossary definitions.
+- Extend compatible save/profile events, protect closed evidence from stale pending imports, preserve corrupted history and use a 2 MB bounded import.
+- Details and actual checks: [Map & Integration 2.11.0](../MAP_INTEGRATION_2_11_0.md).
+
 ## Game 2.9.0 — 21 Oktober 2026
 
 - Normalize all six Skill body silhouettes around the supplied boot pivots without changing source sheets, timing or right-facing direction.

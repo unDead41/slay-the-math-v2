@@ -126,3 +126,7 @@ The latest user instruction makes map icons native direct-entry buttons rather t
 ## Special situations 2.5.2 — 21 October 2026 (Malaysia)
 
 The four newly supplied scene mockups govern Shop, Rest, chest reward/victory and defeat art. Reuse the canonical ornate panels, buttons, card renderer, type and navy/gold/cyan tokens. Keep all prices, HP, card effects and statistics live. dungeon.css owns the responsive situation variant: contained art and right-side panels on desktop; art banner then naturally scrolling controls below 1000px. Narrow card rows alone scroll horizontally. Preserve native focus/dialogs, 44px action targets and all current scene actions. Mockup-only labels do not authorize extra mechanics. See docs/SITUATION_ART_2_5_2.md.
+
+## Reward and Shop width correction 2.5.3
+
+Bound only Reward and Shop panel/card widths instead of filling arbitrary ultrawide space. Preserve portrait cards, square source-art proportions, a horizontal row of three choices and native row scrolling on phones. Keep artwork, other situation panels, Home, combat and existing actions unchanged. The browser suite now verifies geometry directly rather than only checking page overflow.

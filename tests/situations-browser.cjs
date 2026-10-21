@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright');
 const E=require('../dist/engine.js'),C=require('../dist/config.js');
 const out=process.env.QA_SCREENSHOTS||path.join(os.tmpdir(),'slay-the-math-situations');
-const report={version:'2.5.2',checks:[],viewports:[],errors:[]};
+const report={version:'2.5.3',checks:[],viewports:[],cards:[],errors:[]};
 let server,browser;
 function room(type,stage=0){
  const r=E.newRun(7);r.stage=stage;if(stage)r.route=require('../dist/map.js').begin(stage,r.seed,3);
@@ -40,7 +40,7 @@ function ending(scene){
   await page.goto('http://127.0.0.1:4196/');
   const fixtures={shop:room('shop'),camp:room('camp'),reward:ending('reward'),stageclear:ending('stageclear'),victory:ending('victory'),defeat:ending('defeat')};
   const expected={shop:'shop',camp:'rest',reward:'reward',stageclear:'reward',victory:'reward',defeat:'defeat'};
-  const cases=[[1280,720],[1920,1080],[2560,1080],[3440,1440],[3840,2160],[844,390],[390,844],[320,740]];
+  const cases=[[1280,720],[1920,1080],[2048,1038],[2560,1080],[3440,1440],[5120,1440],[3840,2160],[1001,720],[844,390],[390,844],[320,740]];
   for(const [scene,r]of Object.entries(fixtures)){
    await restore(r);const before=await state();
    for(const [width,height]of cases){
@@ -48,17 +48,30 @@ function ending(scene){
     assert.match(await page.locator('.situation-art img').getAttribute('src'),new RegExp('situation-'+expected[scene]+'\\.webp$'));
     const g=await page.evaluate(()=>{
      const im=document.querySelector('.situation-art img'),rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
-     return {overflow:document.documentElement.scrollWidth>innerWidth,fit:getComputedStyle(im).objectFit,natural:[im.naturalWidth,im.naturalHeight],art:rect(im),buttons:[...document.querySelectorAll('.situation-layout .btn,.situation-layout .choice-panel')].map(rect)};
+     return {overflow:document.documentElement.scrollWidth>innerWidth,fit:getComputedStyle(im).objectFit,natural:[im.naturalWidth,im.naturalHeight],art:rect(im),buttons:[...document.querySelectorAll('.situation-layout .btn,.situation-layout .choice-panel')].map(rect),cards:[...document.querySelectorAll('.situation-layout .playing-card')].map(e=>({card:rect(e),illustration:rect(e.querySelector('.math-art'))}))};
     });
     assert.equal(g.overflow,false,JSON.stringify({scene,width,g}));assert.equal(g.fit,'contain');assert.ok(g.natural[0]>1600&&g.natural[1]>900);
     assert.ok(g.art.x>=-1&&g.art.right<=width+1,'Artwork overflows the viewport');
     for(const b of g.buttons)assert.ok(b.x>=-1&&b.right<=width+1&&b.height>=44,JSON.stringify({scene,width,b}));
+    for(const item of g.cards){
+     assert.ok(Math.abs(item.card.y-g.cards[0].card.y)<1,'All three choices must stay in one horizontal row: '+JSON.stringify({scene,width,cards:g.cards}));
+     const aspect=item.card.width/item.card.height;
+     assert.ok(aspect>=.5&&aspect<=.75,'Card must remain portrait: '+JSON.stringify({scene,width,height,...item}));
+     assert.ok(Math.abs(item.illustration.width/item.illustration.height-1)<.02,'Illustration must keep its square source ratio: '+JSON.stringify({scene,width,...item}));
+    }
+    if(g.cards.length)report.cards.push({scene,width,height,card:g.cards[0].card,illustration:g.cards[0].illustration});
     assert.deepEqual(await state(),before,'Rendering must not change the saved run');
-    if(width===1920||width===390||width===3440&&['shop','camp'].includes(scene))await shot(scene+'-'+width);
+    if(width===1920||width===390||width===2048&&scene==='reward'||width===3440&&['shop','camp','reward'].includes(scene))await shot(scene+'-'+width);
    }
   }
   report.viewports=cases.map(([width,height])=>({width,height,scenes:6,overflow:false}));
-  report.checks.push('All six situations decode the correct clean artwork at eight viewport sizes through UWHD and 4K; contained images, native 44px actions, no horizontal page overflow, exact saves preserved.');
+  report.checks.push('All six situations decode the correct clean artwork at eleven viewport sizes through UWHD and 4K; contained images, native 44px actions, no horizontal page overflow, exact saves preserved.');
+  for(const scene of ['shop','reward']){
+   const size=(w,h)=>report.cards.find(c=>c.scene===scene&&c.width===w&&c.height===h).card;
+   assert.ok(Math.abs(size(1920,1080).width-size(2560,1080).width)<1,'A wider display must not widen the cards at the same height');
+   assert.ok(Math.abs(size(3440,1440).width-size(5120,1440).width)<1,'Super-ultrawide space must not stretch cards');
+  }
+  report.checks.push('Reward and Shop cards stay portrait with square illustrations; adding ultrawide width does not enlarge cards at a fixed display height.');
   await page.setViewportSize({width:1920,height:1080});
   const shop=room('shop');await restore(shop);await page.locator('[data-action=select-shop]').nth(1).focus();await page.keyboard.press('Space');
   assert.equal(await page.locator('[data-action=select-shop]').nth(1).getAttribute('aria-pressed'),'true');

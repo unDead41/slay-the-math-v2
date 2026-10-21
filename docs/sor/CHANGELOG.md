@@ -130,3 +130,10 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Fit the full illustrations on desktop/UWHD and stack artwork above controls on narrow screens; preserve native interactions and natural scrolling.
 - Record asset hashes/prompts/dimensions and add browser coverage of scene geometry, purchases, Rest/Upgrade, rewards, summary progression and the offline build.
 - Scope and actual verification: docs/SITUATION_ART_2_5_2.md.
+
+## 2.5.3 card proportion correction — 21 October 2026
+
+- Fix stretched Reward and Shop cards on ultrawide displays with bounded portrait-card tracks and compact panels.
+- Preserve square illustration viewports and a horizontal row of three choices; retain narrow-screen scrolling.
+- Add real-browser ratio, row-alignment and fixed-height UWHD regression checks. Other menus and gameplay remain unchanged.
+- Evidence: docs/FIX_CARD_PROPORTIONS_2_5_3.md.

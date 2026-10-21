@@ -60,3 +60,7 @@ Probability, Expansion & Factorisation dan Indices boleh muncul sebagai motif ob
 **CDV-06:** Sediakan normal, keyboard focus, selected, playable, insufficient energy, invalid target dan resolving. Glow tidak menjadi satu-satunya petunjuk.
 
 Lulus apabila ukuran kad seragam, frame tidak clipping, English ringkas, afiniti dapat dikenal, nombor sepadan data dan konsep Passive tidak masuk deck tanpa kontrak mekanik.
+
+## Reward and Shop proportions 2.5.3 — 21 October 2026
+
+Ijamm reports horizontally swollen cards in the reward scene and requests checking Shop. The runtime situation variant now bounds the width of the shared portrait-card tracks and these two scene panels. The square artwork viewport is centered inside the card-emblem with its source aspect ratio preserved, including atlas tiles. All three choices stay in one row; phone overflow belongs to that row. Extra ultrawide width alone does not enlarge cards. Existing frame, data, type, effects, selection and purchase/reward owners remain. Verification: docs/FIX_CARD_PROPORTIONS_2_5_3.md.

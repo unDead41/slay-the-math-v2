@@ -1,0 +1,4 @@
+/* The atlas player draws into the existing 1600×1200 floor-registered canvas. */
+.combat-layout .fighter-anchor>.actor-animation{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;filter:drop-shadow(0 calc(2 * var(--combat-unit)) calc(4 * var(--combat-unit)) #0008)}
+.combat-layout .fighter-anchor[data-animation-ready='true']>.actor-animation{display:block}
+.combat-layout .fighter-anchor[data-animation-ready='true']>.fighter-art{visibility:hidden;animation:none!important}

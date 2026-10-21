@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.6.0
+# Slay the Math — Dungeon Edition 2.7.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -45,3 +45,5 @@ Special-situation artwork update: [2.5.2 notes](docs/SITUATION_ART_2_5_2.md). Ru
 Reward and Shop portrait-card correction: [2.5.3 notes](docs/FIX_CARD_PROPORTIONS_2_5_3.md).
 
 Artifact Pack V3.2 rich text and resolved calculations: [2.6.0 notes](docs/ARTIFACT_RICH_TEXT_2_6_0.md). Open **Artifacts → View Calculations**, **Calculations** on the map/rooms, or **Log** in combat. Underlined terms and numbers support hover, keyboard focus and tap.
+
+Stage 1 normal/Elite frame animations: [2.7.0 notes](docs/STAGE1_ANIMATION_2_7_0.md). Five supplied enemies use 25 clips / 128 frames, with unchanged combat rules and a stable arena floor. The unavailable MODEL(1).zip is still needed for the requested Alyssa artwork update.

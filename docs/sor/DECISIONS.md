@@ -215,3 +215,10 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 |---|---|---|
 | DEC-20261021-07 | DISAHKAN | Ijamm supplies ARTIFACT (2).zip and explicitly requests applying it to the game. The archive's new content is 31 rich descriptions, 55 glossary terms and the three-color calculation standard; catalogue trigger values and original icon hashes match the prior integrated pack. |
 | DEC-20261021-08 | DITERUSKAN | Reuse the exact existing 31 runtime icons; import only relevant source/data files, omit preview examples from runtime and preserve the 120-question claim gate. Add one shared accessible tooltip and optional bounded resolved-event history, rendered through existing artifact/log/dialog flows and Shop prices. Reconcile pending definitions to the actual core without inventing new cards, hand limits or d6 probability claims. Owners: SOR 10/13/19; evidence: docs/ARTIFACT_RICH_TEXT_2_6_0.md. |
+
+## Stage 1 animations 2.7.0
+
+| ID | Status | Decision and evidence |
+|---|---|---|
+| DEC-20261021-09 | DISAHKAN | Ijamm supplies NORMAL ELITE ENEMY.zip and MODEL(1).zip and requests Stage 1 non-boss enemy animations, then Alyssa animations. The former is readable; the latter failed workspace delivery. Its contents are not assumed or substituted. |
+| DEC-20261021-10 | DITERUSKAN | Import the 25 native atlases / 128 active frames losslessly, with a shared fixed matrix into the existing floor anchor and one canvas player. Preserve source timing/order, normal/Elite identity, direction and gameplay. Add bounded decode caching, stale-load cancellation, pause/static motion policies and independent outcome reactions. Retain current boss/Stage 2 models and current Alyssa assets until her ZIP is retried. Owners: SOR 07/08/11/14; evidence: docs/STAGE1_ANIMATION_2_7_0.md. |

@@ -126,3 +126,11 @@ The newest user image image(20261019-032240).png replaces the prior rift image. 
 ## Supplied special-situation artwork 2.5.2
 
 Four user mockups are edited with built-in imagegen precise-object-edit to remove baked panels, HUD, cards, labels and buttons while retaining the illustrated scene. The right wall/floor is extended for live HTML controls. Native source size is 1672×941; generated clean plates are 1672×941 except the chest plate at 1671×941. Quality-94 WebP conversion retains those native dimensions without upscaling. These are not native-4K assets. Original uploads and previous game assets remain untouched. Reference, clean-plate and runtime hashes, dimensions, prompt set and scene mappings are recorded in dist/assets/situation-art.json. The optional portable build embeds all four WebPs through the existing asset resolver.
+
+## Supplied enemy atlas pack — 2.7.0
+
+`tools/import-stage1-animations.py` imports NORMAL ELITE ENEMY.zip v3. It reads the supplied active rectangles, preserves all 128 frame orders, and losslessly encodes 25 2560×1728 RGBA sheets as WebP. Native cells remain 768×768, with the supplied 64px margins/gaps and at least 96px internal alpha padding. No 4K/native-resolution claim, redraw, interpolation frames or new VFX is added. Runtime uses only these 25 derivatives; duplicate individual PNGs and review media are omitted from the game payload.
+
+`docs/animations/stage1-v3/import-audit.json` records ZIP/source/runtime hashes, frame alpha bounds and their fixed-matrix canvas bounds. Every atlas has identical visible pixels over black/white and identical alpha after encoding. Every active crop matches its source frame alpha. Every visible frame fits the registered canvas; no pose is individually recentered. Original source manifest/SOR/README/counts are retained next to the audit. Usage source: artwork supplied by Ijamm for this game; no separate license was supplied.
+
+The runtime loader decodes on demand with a bounded three-texture cache. The optional portable build embeds these same derivatives, and original static exports remain active fallbacks. MODEL(1).zip was reported unavailable; its contents have not been read or imported.

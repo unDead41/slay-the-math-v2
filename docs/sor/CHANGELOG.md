@@ -145,3 +145,10 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Record actual resolved contributions, deltas, caps, die branches, stat totals and Shop rounding; show calculations in inventory, room/map action and battle log. Preserve trigger/education/ownership behavior.
 - Optional bounded validated snapshot history is compatible with older saves and checkpoints. Reuse all 31 identical existing icons without adding duplicate large exports.
 - Decisions 07–08; verification and retained limitations: docs/ARTIFACT_RICH_TEXT_2_6_0.md.
+
+## 2.7.0 — 21 October 2026: Stage 1 non-boss atlas animation
+
+- Import the supplied five-enemy v3 pack: 25 clips, 128 frames, left facing, native padding and one stable floor registration.
+- Play Idle/Attack/Defend/Skill/Damaged at source FPS with generation-safe decode, bounded texture cache, scene disposal and pause/static motion settings. Engine, RNG, artifact/education/save rules are independent of frames.
+- React to actual HP loss after automatic artifact Block. Both bosses and Stage 2 use existing assets. Alyssa's new MODEL(1).zip was unavailable and remains pending; no new hero frames are claimed.
+- Decisions 09–10; actual checks: docs/STAGE1_ANIMATION_2_7_0.md.

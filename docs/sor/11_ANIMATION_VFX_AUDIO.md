@@ -122,3 +122,13 @@ The menu cycles five decoded local backgrounds with a 1.4s fade, 14s scene inter
 ## Main menu transition 2.5.1 — 21 October 2026
 
 **MOT-06 (DISAHKAN):** The latest user request sets Home's artwork transition to 5s, superseding the previous 14s interval and 1.4s fade. DCVisuals.timing owns a 5000ms automatic interval and 5000ms crossfade. Five stable foreground/ambience pairs retain their source throughout a transition. Decoding and the generation guard precede active selection; an older pending decode cannot replace a newer choice. No game mutation waits for animation. Motion Off/OS reduction, hidden tabs, dialogs and main-menu focus/hover still pause automatic changes; manual choice remains available.
+
+## Stage 1 atlas animation — 2.7.0
+
+**MOT-07:** Ijamm supplies NORMAL ELITE ENEMY.zip and requests animations for Stage 1 enemies except bosses. Its v3 manifest now drives 25 clips / 128 active frames for Ember Mirror, Prism Guard, Rune Bat, Mirror Knight and Shard Beast. Idle is 6 FPS and loops; Attack and Damaged are 12 FPS; Defend and Skill are 10 FPS and play once before returning to Idle. Frame count and order remain supplied. Attack/Skill event markers do not resolve gameplay.
+
+`animation-data.js` owns clip rectangles/FPS and the shared registration. `animation.js` owns a cancelable canvas player using elapsed presentation time, a three-texture LRU and generation guards for slow decodes. The existing app owns native commands, resolved outcomes, focus, dialogs and scene changes. Render/navigation disposes the old player; new actions supersede old ones. Dialog/hidden/pagehide pause the current frame; resume excludes paused time. Motion Off and OS reduction show the supplied Idle frame without a frame loop. Failed textures keep/recover to a static image fallback.
+
+Enemy damage reactions follow resolved HP changes. End Turn Block intents use Defend for these five actors; burst intents use the existing Skill mapping. Alyssa's existing reaction now uses actual HP loss after artifact Block, rather than a pre-resolution estimate. Boss and Stage 2 artwork/pose ownership remain existing. The new Alyssa source archive was unavailable, so no new hero frames are claimed.
+
+All clips draw onto the existing 1600×1200 canvas with one matrix: source origin (384,578) → floor pivot (800,1100), scale 2.5; actor display scale 0.9 for all five. No frame-specific trim, recenter or width/height distortion. Bat/Ember retain their floating anatomy/offsets. Checks and limits: docs/STAGE1_ANIMATION_2_7_0.md.

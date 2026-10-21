@@ -1,0 +1,96 @@
+{
+  "version": "2.7.0",
+  "date": "2026-10-21",
+  "sourcePack": "NORMAL ELITE ENEMY.zip v3",
+  "import": {
+    "actors": 5,
+    "clips": 25,
+    "activeFrames": 128,
+    "runtimeBytes": 20193594,
+    "audit": "docs/animations/stage1-v3/import-audit.json"
+  },
+  "tests": {
+    "fullEngineDomSuite": {
+      "passed": 119,
+      "failed": 0,
+      "skipped": 0
+    },
+    "additionalResolvedHpReactionRegression": {
+      "passed": 1,
+      "failed": 0
+    },
+    "syntax": "passed",
+    "portableBuildBytes": 102712584
+  },
+  "browser": {
+    "version": "2.7.0",
+    "checks": [
+      "All five supplied Stage 1 actors paint different real pixels as Idle and Damaged frames advance; native Attack resolves exact engine damage before presentation and the saved run never changes with animation time.",
+      "Native End Turn uses Attack, Defend for actual Block intents, or Skill for the existing burst intent. Each source clip finishes once and returns to idle without changing HP, draws, Energy, RNG or logs.",
+      "The live player freezes behind the shared dialog, resumes without counting paused time, and paints a static supplied idle frame for Game Motion Off and OS Reduced Motion.",
+      "Prism Guard, Mirror Knight and Shard Beast share the exact registered arena floor at desktop, UWHD and two phone widths, without stretched frames or page overflow.",
+      "Both bosses and Stage 2/legacy encounters retain their original model renderer. No unavailable Alyssa file is used.",
+      "The generated portable HTML embeds all 25 native atlas derivatives and paints the new animation with zero HTTP requests."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "groundedActors": 3,
+        "overflow": false
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "groundedActors": 3,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "groundedActors": 3,
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "groundedActors": 3,
+        "overflow": false
+      }
+    ],
+    "actors": [
+      {
+        "id": "wisp",
+        "idlePixelsChange": true,
+        "damagedPixelsChange": true,
+        "exactEngineState": true
+      },
+      {
+        "id": "beetle",
+        "idlePixelsChange": true,
+        "damagedPixelsChange": true,
+        "exactEngineState": true
+      },
+      {
+        "id": "bat",
+        "idlePixelsChange": true,
+        "damagedPixelsChange": true,
+        "exactEngineState": true
+      },
+      {
+        "id": "knight",
+        "idlePixelsChange": true,
+        "damagedPixelsChange": true,
+        "exactEngineState": true
+      },
+      {
+        "id": "shard",
+        "idlePixelsChange": true,
+        "damagedPixelsChange": true,
+        "exactEngineState": true
+      }
+    ],
+    "errors": []
+  },
+  "pending": "MODEL(1).zip unavailable; Alyssa new frame assets not imported."
+}

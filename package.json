@@ -1,12 +1,12 @@
 {
   "name": "duel-cube-math",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "private": true,
   "description": "120 Form 4 questions after Claim Artifact, with saved trials and random draws without repeats",
   "scripts": {
     "start": "node server.cjs",
     "test": "node --test tests/*.test.cjs",
-    "check": "node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/app.js",
+    "check": "node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/app.js",
     "build": "node build-portable.cjs",
     "test:browser": "node tests/browser-smoke.cjs",
     "test:maps": "npm --prefix modules/map test && npm --prefix modules/map run validate",
@@ -17,6 +17,7 @@
     "test:journey-browser": "node tests/journey-browser.cjs",
     "test:education-browser": "node tests/education-browser.cjs",
     "test:menu-browser": "node tests/menu-fit-browser.cjs",
-    "test:situations-browser": "node tests/situations-browser.cjs"
+    "test:situations-browser": "node tests/situations-browser.cjs",
+    "test:animation-browser": "node tests/animation-browser.cjs"
   }
 }

@@ -136,3 +136,7 @@ Extra horizontal screen space must not widen cards at a fixed viewport height. R
 | Resolved calculation history | dist/rich-text.js record / valid | engine and artifact resolution only | delta / total / price / saved die roll | engine boundary, save/reload, browser and portable tests |
 
 Tooltip lookup and display are read-only: no random calls, acquisition, draws or reward mutation. Escape dismisses a visible tooltip first, preserving its anchor and the surrounding dialog; the next Escape uses the existing dialog close/focus owner. Plain connector text inherits the game theme. Delta HP, remaining HP, Max HP and other units stay separate. Descriptions are static rules, not promised runtime outcomes. Shop quotes are the actual frozen offer price; history records a purchase only after it succeeds.
+
+## Stage 1 atlas motion 2.7.0
+
+`DCActorAnimation` is the single atlas playback owner; `DCAnimationData` owns source frames and FPS. App render creates/disposes the active Stage 1 non-boss player, native actions provide resolved reaction cues, and existing dialog/visibility/motion owners configure pause/static behavior. Animation never grants damage, consumes Energy, rerolls, advances turns or delays a result. Its canvas is decorative; native controls and visible HUD labels remain the accessible interface. Static source exports remain a fallback until a texture has decoded and painted. Boss/Stage 2 encounters use the existing renderer.

@@ -1,0 +1,2404 @@
+{
+  "schema": "slay-the-math/stage-enemy-animation-pack/3.0",
+  "version": "3.0",
+  "stage": 1,
+  "enemy_count": 5,
+  "animation_count": 25,
+  "frame_count": 128,
+  "bosses_included": false,
+  "standard": {
+    "frame_size_px": [
+      768,
+      768
+    ],
+    "sheet_size_px": [
+      2560,
+      1728
+    ],
+    "grid": {
+      "columns": 3,
+      "rows": 2,
+      "margin_px": 64,
+      "spacing_px": 64,
+      "order": "row-major",
+      "index_base": 0
+    },
+    "internal_padding_minimum_px": 96,
+    "pivot_normalized": [
+      0.5,
+      0.5
+    ],
+    "auto_trim": false,
+    "pixel_format": "RGBA8",
+    "color_space": "sRGB",
+    "alpha_mode": "straight",
+    "idle_silhouette_long_edge_target_px": 384,
+    "idle_silhouette_tolerance_px": 1,
+    "idle_silhouette_alpha_threshold": 16,
+    "fps_by_action": {
+      "idle": 6,
+      "attack": 12,
+      "defend": 10,
+      "skill": 10,
+      "damaged": 12
+    },
+    "registration_policy": "fixed frame origin; preserve accepted body/foot registration; no per-frame bounding-box recentering"
+  },
+  "enemies": {
+    "rune_bat": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "rune_bat",
+      "display_name": "Rune Bat",
+      "stage": 1,
+      "type": "normal",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed frame origin; preserve accepted body/foot registration; no per-frame bounding-box recentering"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 23,
+      "animations": [
+        {
+          "key": "rune_bat_idle",
+          "action": "idle",
+          "file": "enemies/rune_bat/sprites/rune_bat_idle.png",
+          "atlas": "enemies/rune_bat/atlases/rune_bat_idle.json",
+          "frame_count": 4,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 0.6666666666666666,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_bat_idle_00",
+              "file": "enemies/rune_bat/frames/rune_bat_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "rune_bat_idle_01",
+              "file": "enemies/rune_bat/frames/rune_bat_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "rune_bat_idle_02",
+              "file": "enemies/rune_bat/frames/rune_bat_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "rune_bat_idle_03",
+              "file": "enemies/rune_bat/frames/rune_bat_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unused_cell_indices": [
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 145
+        },
+        {
+          "key": "rune_bat_attack",
+          "action": "attack",
+          "file": "enemies/rune_bat/sprites/rune_bat_attack.png",
+          "atlas": "enemies/rune_bat/atlases/rune_bat_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_bat_attack_00",
+              "file": "enemies/rune_bat/frames/rune_bat_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "rune_bat_attack_01",
+              "file": "enemies/rune_bat/frames/rune_bat_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "rune_bat_attack_02",
+              "file": "enemies/rune_bat/frames/rune_bat_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "rune_bat_attack_03",
+              "file": "enemies/rune_bat/frames/rune_bat_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "rune_bat_attack_04",
+              "file": "enemies/rune_bat/frames/rune_bat_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "rune_bat_attack_05",
+              "file": "enemies/rune_bat/frames/rune_bat_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 140
+        },
+        {
+          "key": "rune_bat_defend",
+          "action": "defend",
+          "file": "enemies/rune_bat/sprites/rune_bat_defend.png",
+          "atlas": "enemies/rune_bat/atlases/rune_bat_defend.json",
+          "frame_count": 4,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.4,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_bat_defend_00",
+              "file": "enemies/rune_bat/frames/rune_bat_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "rune_bat_defend_01",
+              "file": "enemies/rune_bat/frames/rune_bat_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "rune_bat_defend_02",
+              "file": "enemies/rune_bat/frames/rune_bat_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "rune_bat_defend_03",
+              "file": "enemies/rune_bat/frames/rune_bat_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unused_cell_indices": [
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 134,
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "rune_bat_skill",
+          "action": "skill",
+          "file": "enemies/rune_bat/sprites/rune_bat_skill.png",
+          "atlas": "enemies/rune_bat/atlases/rune_bat_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_bat_skill_00",
+              "file": "enemies/rune_bat/frames/rune_bat_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "rune_bat_skill_01",
+              "file": "enemies/rune_bat/frames/rune_bat_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "rune_bat_skill_02",
+              "file": "enemies/rune_bat/frames/rune_bat_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "rune_bat_skill_03",
+              "file": "enemies/rune_bat/frames/rune_bat_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "rune_bat_skill_04",
+              "file": "enemies/rune_bat/frames/rune_bat_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "rune_bat_skill_05",
+              "file": "enemies/rune_bat/frames/rune_bat_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 121
+        },
+        {
+          "key": "rune_bat_damaged",
+          "action": "damaged",
+          "file": "enemies/rune_bat/sprites/rune_bat_damaged.png",
+          "atlas": "enemies/rune_bat/atlases/rune_bat_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_bat_damaged_00",
+              "file": "enemies/rune_bat/frames/rune_bat_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "rune_bat_damaged_01",
+              "file": "enemies/rune_bat/frames/rune_bat_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "rune_bat_damaged_02",
+              "file": "enemies/rune_bat/frames/rune_bat_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ],
+          "minimum_actual_padding_px": 153
+        }
+      ],
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/rune_bat/animation_manifest.json"
+    },
+    "ember_mirror": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "ember_mirror",
+      "display_name": "Ember Mirror",
+      "stage": 1,
+      "type": "normal",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed frame origin; preserve accepted body/foot registration; no per-frame bounding-box recentering"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.5,
+        "tolerance_px": 1
+      },
+      "frames_total": 23,
+      "animations": [
+        {
+          "key": "ember_mirror_idle",
+          "action": "idle",
+          "file": "enemies/ember_mirror/sprites/ember_mirror_idle.png",
+          "atlas": "enemies/ember_mirror/atlases/ember_mirror_idle.json",
+          "frame_count": 4,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 0.6666666666666666,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "ember_mirror_idle_00",
+              "file": "enemies/ember_mirror/frames/ember_mirror_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "ember_mirror_idle_01",
+              "file": "enemies/ember_mirror/frames/ember_mirror_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "ember_mirror_idle_02",
+              "file": "enemies/ember_mirror/frames/ember_mirror_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "ember_mirror_idle_03",
+              "file": "enemies/ember_mirror/frames/ember_mirror_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unused_cell_indices": [
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 180
+        },
+        {
+          "key": "ember_mirror_attack",
+          "action": "attack",
+          "file": "enemies/ember_mirror/sprites/ember_mirror_attack.png",
+          "atlas": "enemies/ember_mirror/atlases/ember_mirror_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "ember_mirror_attack_00",
+              "file": "enemies/ember_mirror/frames/ember_mirror_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "ember_mirror_attack_01",
+              "file": "enemies/ember_mirror/frames/ember_mirror_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "ember_mirror_attack_02",
+              "file": "enemies/ember_mirror/frames/ember_mirror_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "ember_mirror_attack_03",
+              "file": "enemies/ember_mirror/frames/ember_mirror_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "ember_mirror_attack_04",
+              "file": "enemies/ember_mirror/frames/ember_mirror_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "ember_mirror_attack_05",
+              "file": "enemies/ember_mirror/frames/ember_mirror_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 119
+        },
+        {
+          "key": "ember_mirror_defend",
+          "action": "defend",
+          "file": "enemies/ember_mirror/sprites/ember_mirror_defend.png",
+          "atlas": "enemies/ember_mirror/atlases/ember_mirror_defend.json",
+          "frame_count": 4,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.4,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "ember_mirror_defend_00",
+              "file": "enemies/ember_mirror/frames/ember_mirror_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "ember_mirror_defend_01",
+              "file": "enemies/ember_mirror/frames/ember_mirror_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "ember_mirror_defend_02",
+              "file": "enemies/ember_mirror/frames/ember_mirror_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "ember_mirror_defend_03",
+              "file": "enemies/ember_mirror/frames/ember_mirror_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unused_cell_indices": [
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 180,
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "ember_mirror_skill",
+          "action": "skill",
+          "file": "enemies/ember_mirror/sprites/ember_mirror_skill.png",
+          "atlas": "enemies/ember_mirror/atlases/ember_mirror_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "ember_mirror_skill_00",
+              "file": "enemies/ember_mirror/frames/ember_mirror_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "ember_mirror_skill_01",
+              "file": "enemies/ember_mirror/frames/ember_mirror_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "ember_mirror_skill_02",
+              "file": "enemies/ember_mirror/frames/ember_mirror_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "ember_mirror_skill_03",
+              "file": "enemies/ember_mirror/frames/ember_mirror_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "ember_mirror_skill_04",
+              "file": "enemies/ember_mirror/frames/ember_mirror_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "ember_mirror_skill_05",
+              "file": "enemies/ember_mirror/frames/ember_mirror_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 125
+        },
+        {
+          "key": "ember_mirror_damaged",
+          "action": "damaged",
+          "file": "enemies/ember_mirror/sprites/ember_mirror_damaged.png",
+          "atlas": "enemies/ember_mirror/atlases/ember_mirror_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "ember_mirror_damaged_00",
+              "file": "enemies/ember_mirror/frames/ember_mirror_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "ember_mirror_damaged_01",
+              "file": "enemies/ember_mirror/frames/ember_mirror_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "ember_mirror_damaged_02",
+              "file": "enemies/ember_mirror/frames/ember_mirror_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ],
+          "minimum_actual_padding_px": 189
+        }
+      ],
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/ember_mirror/animation_manifest.json"
+    },
+    "prism_guard": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "prism_guard",
+      "display_name": "Prism Guard",
+      "stage": 1,
+      "type": "normal",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed frame origin; preserve accepted body/foot registration; no per-frame bounding-box recentering"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 28,
+      "animations": [
+        {
+          "key": "prism_guard_idle",
+          "action": "idle",
+          "file": "enemies/prism_guard/sprites/prism_guard_idle.png",
+          "atlas": "enemies/prism_guard/atlases/prism_guard_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "prism_guard_idle_00",
+              "file": "enemies/prism_guard/frames/prism_guard_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "prism_guard_idle_01",
+              "file": "enemies/prism_guard/frames/prism_guard_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "prism_guard_idle_02",
+              "file": "enemies/prism_guard/frames/prism_guard_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "prism_guard_idle_03",
+              "file": "enemies/prism_guard/frames/prism_guard_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "prism_guard_idle_04",
+              "file": "enemies/prism_guard/frames/prism_guard_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "prism_guard_idle_05",
+              "file": "enemies/prism_guard/frames/prism_guard_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 154
+        },
+        {
+          "key": "prism_guard_attack",
+          "action": "attack",
+          "file": "enemies/prism_guard/sprites/prism_guard_attack.png",
+          "atlas": "enemies/prism_guard/atlases/prism_guard_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "prism_guard_attack_00",
+              "file": "enemies/prism_guard/frames/prism_guard_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "prism_guard_attack_01",
+              "file": "enemies/prism_guard/frames/prism_guard_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "prism_guard_attack_02",
+              "file": "enemies/prism_guard/frames/prism_guard_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "prism_guard_attack_03",
+              "file": "enemies/prism_guard/frames/prism_guard_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "prism_guard_attack_04",
+              "file": "enemies/prism_guard/frames/prism_guard_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "prism_guard_attack_05",
+              "file": "enemies/prism_guard/frames/prism_guard_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 113
+        },
+        {
+          "key": "prism_guard_defend",
+          "action": "defend",
+          "file": "enemies/prism_guard/sprites/prism_guard_defend.png",
+          "atlas": "enemies/prism_guard/atlases/prism_guard_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "prism_guard_defend_00",
+              "file": "enemies/prism_guard/frames/prism_guard_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "prism_guard_defend_01",
+              "file": "enemies/prism_guard/frames/prism_guard_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "prism_guard_defend_02",
+              "file": "enemies/prism_guard/frames/prism_guard_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "prism_guard_defend_03",
+              "file": "enemies/prism_guard/frames/prism_guard_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "prism_guard_defend_04",
+              "file": "enemies/prism_guard/frames/prism_guard_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "prism_guard_defend_05",
+              "file": "enemies/prism_guard/frames/prism_guard_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [],
+          "minimum_actual_padding_px": 118,
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "prism_guard_skill",
+          "action": "skill",
+          "file": "enemies/prism_guard/sprites/prism_guard_skill.png",
+          "atlas": "enemies/prism_guard/atlases/prism_guard_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "prism_guard_skill_00",
+              "file": "enemies/prism_guard/frames/prism_guard_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "prism_guard_skill_01",
+              "file": "enemies/prism_guard/frames/prism_guard_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "prism_guard_skill_02",
+              "file": "enemies/prism_guard/frames/prism_guard_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "prism_guard_skill_03",
+              "file": "enemies/prism_guard/frames/prism_guard_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "prism_guard_skill_04",
+              "file": "enemies/prism_guard/frames/prism_guard_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "prism_guard_skill_05",
+              "file": "enemies/prism_guard/frames/prism_guard_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 164
+        },
+        {
+          "key": "prism_guard_damaged",
+          "action": "damaged",
+          "file": "enemies/prism_guard/sprites/prism_guard_damaged.png",
+          "atlas": "enemies/prism_guard/atlases/prism_guard_damaged.json",
+          "frame_count": 4,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.3333333333333333,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "prism_guard_damaged_00",
+              "file": "enemies/prism_guard/frames/prism_guard_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "prism_guard_damaged_01",
+              "file": "enemies/prism_guard/frames/prism_guard_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "prism_guard_damaged_02",
+              "file": "enemies/prism_guard/frames/prism_guard_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "prism_guard_damaged_03",
+              "file": "enemies/prism_guard/frames/prism_guard_damaged_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unused_cell_indices": [
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ],
+          "minimum_actual_padding_px": 142
+        }
+      ],
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/prism_guard/animation_manifest.json"
+    },
+    "mirror_knight": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "mirror_knight",
+      "display_name": "Mirror Knight",
+      "stage": 1,
+      "type": "elite",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed frame origin; preserve accepted body/foot registration; no per-frame bounding-box recentering"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "mirror_knight_idle",
+          "action": "idle",
+          "file": "enemies/mirror_knight/sprites/mirror_knight_idle.png",
+          "atlas": "enemies/mirror_knight/atlases/mirror_knight_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "mirror_knight_idle_00",
+              "file": "enemies/mirror_knight/frames/mirror_knight_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "mirror_knight_idle_01",
+              "file": "enemies/mirror_knight/frames/mirror_knight_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "mirror_knight_idle_02",
+              "file": "enemies/mirror_knight/frames/mirror_knight_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "mirror_knight_idle_03",
+              "file": "enemies/mirror_knight/frames/mirror_knight_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "mirror_knight_idle_04",
+              "file": "enemies/mirror_knight/frames/mirror_knight_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "mirror_knight_idle_05",
+              "file": "enemies/mirror_knight/frames/mirror_knight_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 124
+        },
+        {
+          "key": "mirror_knight_attack",
+          "action": "attack",
+          "file": "enemies/mirror_knight/sprites/mirror_knight_attack.png",
+          "atlas": "enemies/mirror_knight/atlases/mirror_knight_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "mirror_knight_attack_00",
+              "file": "enemies/mirror_knight/frames/mirror_knight_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "mirror_knight_attack_01",
+              "file": "enemies/mirror_knight/frames/mirror_knight_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "mirror_knight_attack_02",
+              "file": "enemies/mirror_knight/frames/mirror_knight_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "mirror_knight_attack_03",
+              "file": "enemies/mirror_knight/frames/mirror_knight_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "mirror_knight_attack_04",
+              "file": "enemies/mirror_knight/frames/mirror_knight_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "mirror_knight_attack_05",
+              "file": "enemies/mirror_knight/frames/mirror_knight_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 96
+        },
+        {
+          "key": "mirror_knight_defend",
+          "action": "defend",
+          "file": "enemies/mirror_knight/sprites/mirror_knight_defend.png",
+          "atlas": "enemies/mirror_knight/atlases/mirror_knight_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "mirror_knight_defend_00",
+              "file": "enemies/mirror_knight/frames/mirror_knight_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "mirror_knight_defend_01",
+              "file": "enemies/mirror_knight/frames/mirror_knight_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "mirror_knight_defend_02",
+              "file": "enemies/mirror_knight/frames/mirror_knight_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "mirror_knight_defend_03",
+              "file": "enemies/mirror_knight/frames/mirror_knight_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "mirror_knight_defend_04",
+              "file": "enemies/mirror_knight/frames/mirror_knight_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "mirror_knight_defend_05",
+              "file": "enemies/mirror_knight/frames/mirror_knight_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [],
+          "minimum_actual_padding_px": 114,
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "mirror_knight_skill",
+          "action": "skill",
+          "file": "enemies/mirror_knight/sprites/mirror_knight_skill.png",
+          "atlas": "enemies/mirror_knight/atlases/mirror_knight_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "mirror_knight_skill_00",
+              "file": "enemies/mirror_knight/frames/mirror_knight_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "mirror_knight_skill_01",
+              "file": "enemies/mirror_knight/frames/mirror_knight_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "mirror_knight_skill_02",
+              "file": "enemies/mirror_knight/frames/mirror_knight_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "mirror_knight_skill_03",
+              "file": "enemies/mirror_knight/frames/mirror_knight_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "mirror_knight_skill_04",
+              "file": "enemies/mirror_knight/frames/mirror_knight_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "mirror_knight_skill_05",
+              "file": "enemies/mirror_knight/frames/mirror_knight_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 119
+        },
+        {
+          "key": "mirror_knight_damaged",
+          "action": "damaged",
+          "file": "enemies/mirror_knight/sprites/mirror_knight_damaged.png",
+          "atlas": "enemies/mirror_knight/atlases/mirror_knight_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "mirror_knight_damaged_00",
+              "file": "enemies/mirror_knight/frames/mirror_knight_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "mirror_knight_damaged_01",
+              "file": "enemies/mirror_knight/frames/mirror_knight_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "mirror_knight_damaged_02",
+              "file": "enemies/mirror_knight/frames/mirror_knight_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ],
+          "minimum_actual_padding_px": 158
+        }
+      ],
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/mirror_knight/animation_manifest.json"
+    },
+    "shard_beast": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "shard_beast",
+      "display_name": "Shard Beast",
+      "stage": 1,
+      "type": "elite",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed frame origin; preserve accepted body/foot registration; no per-frame bounding-box recentering"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "shard_beast_idle",
+          "action": "idle",
+          "file": "enemies/shard_beast/sprites/shard_beast_idle.png",
+          "atlas": "enemies/shard_beast/atlases/shard_beast_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "shard_beast_idle_00",
+              "file": "enemies/shard_beast/frames/shard_beast_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "shard_beast_idle_01",
+              "file": "enemies/shard_beast/frames/shard_beast_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "shard_beast_idle_02",
+              "file": "enemies/shard_beast/frames/shard_beast_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "shard_beast_idle_03",
+              "file": "enemies/shard_beast/frames/shard_beast_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "shard_beast_idle_04",
+              "file": "enemies/shard_beast/frames/shard_beast_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "shard_beast_idle_05",
+              "file": "enemies/shard_beast/frames/shard_beast_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "events": [],
+          "minimum_actual_padding_px": 158
+        },
+        {
+          "key": "shard_beast_attack",
+          "action": "attack",
+          "file": "enemies/shard_beast/sprites/shard_beast_attack.png",
+          "atlas": "enemies/shard_beast/atlases/shard_beast_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "shard_beast_attack_00",
+              "file": "enemies/shard_beast/frames/shard_beast_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "shard_beast_attack_01",
+              "file": "enemies/shard_beast/frames/shard_beast_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "shard_beast_attack_02",
+              "file": "enemies/shard_beast/frames/shard_beast_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "shard_beast_attack_03",
+              "file": "enemies/shard_beast/frames/shard_beast_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "shard_beast_attack_04",
+              "file": "enemies/shard_beast/frames/shard_beast_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "shard_beast_attack_05",
+              "file": "enemies/shard_beast/frames/shard_beast_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 159
+        },
+        {
+          "key": "shard_beast_defend",
+          "action": "defend",
+          "file": "enemies/shard_beast/sprites/shard_beast_defend.png",
+          "atlas": "enemies/shard_beast/atlases/shard_beast_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "shard_beast_defend_00",
+              "file": "enemies/shard_beast/frames/shard_beast_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "shard_beast_defend_01",
+              "file": "enemies/shard_beast/frames/shard_beast_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "shard_beast_defend_02",
+              "file": "enemies/shard_beast/frames/shard_beast_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "shard_beast_defend_03",
+              "file": "enemies/shard_beast/frames/shard_beast_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "shard_beast_defend_04",
+              "file": "enemies/shard_beast/frames/shard_beast_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "shard_beast_defend_05",
+              "file": "enemies/shard_beast/frames/shard_beast_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [],
+          "minimum_actual_padding_px": 162,
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "shard_beast_skill",
+          "action": "skill",
+          "file": "enemies/shard_beast/sprites/shard_beast_skill.png",
+          "atlas": "enemies/shard_beast/atlases/shard_beast_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "shard_beast_skill_00",
+              "file": "enemies/shard_beast/frames/shard_beast_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "shard_beast_skill_01",
+              "file": "enemies/shard_beast/frames/shard_beast_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "shard_beast_skill_02",
+              "file": "enemies/shard_beast/frames/shard_beast_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "shard_beast_skill_03",
+              "file": "enemies/shard_beast/frames/shard_beast_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "shard_beast_skill_04",
+              "file": "enemies/shard_beast/frames/shard_beast_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "shard_beast_skill_05",
+              "file": "enemies/shard_beast/frames/shard_beast_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ],
+          "minimum_actual_padding_px": 130
+        },
+        {
+          "key": "shard_beast_damaged",
+          "action": "damaged",
+          "file": "enemies/shard_beast/sprites/shard_beast_damaged.png",
+          "atlas": "enemies/shard_beast/atlases/shard_beast_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "shard_beast_damaged_00",
+              "file": "enemies/shard_beast/frames/shard_beast_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "shard_beast_damaged_01",
+              "file": "enemies/shard_beast/frames/shard_beast_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "shard_beast_damaged_02",
+              "file": "enemies/shard_beast/frames/shard_beast_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ],
+          "minimum_actual_padding_px": 179
+        }
+      ],
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/shard_beast/animation_manifest.json"
+    }
+  },
+  "paths_relative_to": "pack root"
+}

@@ -132,3 +132,7 @@ The user's UWHD screenshot reports stretched cards in the reward panel. In the e
 The supplied ARTIFACT (2).zip adds three scoped token colors: calculation #B9A3E3 with dotted underline, math #E7A1C4 and game #9ED5B0 with dashed underlines. Ordinary text, card frames and background art keep their existing design. The 31 descriptions and 55 glossary entries come from the pack; core-dependent definitions are reconciled with config/engine.
 
 Artifact selection remains a native button for artwork/name. The adjacent effect paragraph contains independent native term buttons, so no interaction is nested and reading a term cannot select or claim a gift. One shared tooltip owner supports hover, keyboard focus, tap, Escape and outside dismissal, including inside the existing modal dialog. Resolved values live in the existing inventory and log flows plus a Calculations action; each value and unit are separate targets. Shop prices use the same engine price calculation, with no card geometry changes.
+
+## Stage 1 frame animation 2.7.0
+
+Five non-boss enemies share the supplied atlas origin and display scale. A canvas overlays the existing floor-registered static sprite; only a successfully painted frame hides its fallback. Source cells use their full accepted padding. Motion belongs to one presentation player; its state is never saved as combat. Dialogs/hidden tabs pause, Motion Off/reduced motion uses a static supplied frame, and navigation disposes the player. No artwork, model sizing or animation update for the unavailable Alyssa ZIP is claimed.

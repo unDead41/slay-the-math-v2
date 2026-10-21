@@ -80,3 +80,7 @@ The exact user reference and scope are recorded in [18](18_DESIGN_REFERENCES.md)
 ## Dungeon Edition 2.3 — grounded Alyssa
 
 **CHR-09:** The exact approved identity remains **Alyssa the Clairvoyance**. Finalize Design(2).zip / MC/MODEL/mc_standing_4_pov.png owns the new standing crop. Standing and retained action crops are exported onto the same 1600×1200 transparent canvas with foot pivot (800,1100). The scene transform anchors this pivot to the floor shadow; status panels do not own sprite positioning. No vertical standing-idle animation is applied. Menu artwork uses five user-supplied Alyssa scene references with baked UI removed; the real menu is rendered separately.
+
+## Alyssa animation request — 21 October 2026
+
+Ijamm requests updating Alyssa's animation alongside Stage 1 enemies. MODEL(1).zip was not made available in the workspace; no contents or new hero frames from that file were read/used. Existing Alyssa artwork remains in place while a retry/upload is needed. The presentation reaction to End Turn now uses actual resolved HP loss, including automatic artifact Block, independently of future hero frame assets.

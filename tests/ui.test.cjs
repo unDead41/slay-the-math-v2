@@ -1,7 +1,13 @@
 const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
-const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','artifact-ui.js','app.js'];
+const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','animation-data.js','animation.js','artifact-ui.js','app.js'];
+test('DOM: Alyssa reacts to resolved HP loss after automatic artifact Block, rather than a pre-turn estimate',{skip:!JSDOM},()=>{
+ const A=require('../dist/artifacts.js'),r=E.newRun(7,'challenge');require('./helpers/education.cjs').claimArtifact(r,r.artifactState.offer.ids[0]);delete r.route;A.acquire(r,A.id('e04'),'fixture:balance');E.startBattle(r,'wisp');r.battle.block=2;r.battle.currentIntent.damage=8;
+ const {dom,w,click,state}=boot(r);
+ try{click('continue');click('end-turn');assert.equal(state().hp,r.hp);assert.equal(w.document.querySelector('.player .fighter-art').dataset.pose,'defend');assert.ok(E.validate(state()));}
+ finally{dom.window.close();}
+});
 test('DOM: artifact terms support focus, tap and Escape without selecting or claiming a gift',{skip:!JSDOM},()=>{
  const {dom,w,click,state}=boot(E.newRun(7,'challenge'));
  try{

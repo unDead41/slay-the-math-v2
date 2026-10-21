@@ -1,0 +1,2247 @@
+{
+  "source": "NORMAL ELITE ENEMY.zip",
+  "sha256": "6141506f96fd9037c6cfb59b3966c15532d9afc91627533ab864e3769903347c",
+  "actors": [
+    {
+      "id": "wisp",
+      "source_id": "ember_mirror",
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/ember_mirror/sprites/ember_mirror_idle.png",
+          "source_sha256": "eb5ede5a1090a76f5d483d884aff3a8c47299e74a715ba07cb773cbaaa355246",
+          "runtime": "motion-s1-ember_mirror-idle.webp",
+          "runtime_sha256": "284e662bbd3cc2ebbe6fc31d3d735c26b1e35d45acfbfbf99bc411fdc88b42bf",
+          "runtime_bytes": 563176,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                249,
+                192,
+                546,
+                579
+              ],
+              "canvas": [
+                462.5,
+                135.0,
+                1205.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                233,
+                185,
+                588,
+                583
+              ],
+              "canvas": [
+                422.5,
+                117.5,
+                1310.0,
+                1112.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                208,
+                190,
+                550,
+                577
+              ],
+              "canvas": [
+                360.0,
+                130.0,
+                1215.0,
+                1097.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                255,
+                198,
+                548,
+                561
+              ],
+              "canvas": [
+                477.5,
+                150.0,
+                1210.0,
+                1057.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/ember_mirror/sprites/ember_mirror_attack.png",
+          "source_sha256": "700c8d87b6d8df3d6d25f0422b6dcc83878aed1f7478cacf75a33827e33b2689",
+          "runtime": "motion-s1-ember_mirror-attack.webp",
+          "runtime_sha256": "f0ba5f2fbe31a1722019d5bd7f2f2986b55bb7f31e1f5e5961ac8d1ac7b616ef",
+          "runtime_bytes": 854442,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                254,
+                196,
+                545,
+                570
+              ],
+              "canvas": [
+                475.0,
+                145.0,
+                1202.5,
+                1080.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                256,
+                195,
+                558,
+                553
+              ],
+              "canvas": [
+                480.0,
+                142.5,
+                1235.0,
+                1037.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                165,
+                194,
+                555,
+                566
+              ],
+              "canvas": [
+                252.5,
+                140.0,
+                1227.5,
+                1070.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                119,
+                194,
+                529,
+                554
+              ],
+              "canvas": [
+                137.5,
+                140.0,
+                1162.5,
+                1040.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                148,
+                194,
+                551,
+                555
+              ],
+              "canvas": [
+                210.0,
+                140.0,
+                1217.5,
+                1042.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                262,
+                194,
+                551,
+                566
+              ],
+              "canvas": [
+                495.0,
+                140.0,
+                1217.5,
+                1070.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/ember_mirror/sprites/ember_mirror_defend.png",
+          "source_sha256": "1a84773a0e34fba185cd2415566dfcda2a703d96becc6074df9318fa2919df68",
+          "runtime": "motion-s1-ember_mirror-defend.webp",
+          "runtime_sha256": "4c8c18a764137e2bb8ccb53fb345b1a52a05ddc23e5b668b5fceb27cfadff606",
+          "runtime_bytes": 578056,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                253,
+                196,
+                522,
+                556
+              ],
+              "canvas": [
+                472.5,
+                145.0,
+                1145.0,
+                1045.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                214,
+                196,
+                523,
+                557
+              ],
+              "canvas": [
+                375.0,
+                145.0,
+                1147.5,
+                1047.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                232,
+                196,
+                532,
+                557
+              ],
+              "canvas": [
+                420.0,
+                145.0,
+                1170.0,
+                1047.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                180,
+                199,
+                551,
+                551
+              ],
+              "canvas": [
+                290.0,
+                152.5,
+                1217.5,
+                1032.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/ember_mirror/sprites/ember_mirror_skill.png",
+          "source_sha256": "bda1cb4e981798d193cd6d52cd543f94a6b2400b56b213280ecdcfd5abee69f1",
+          "runtime": "motion-s1-ember_mirror-skill.webp",
+          "runtime_sha256": "47f0e817684935732aa9c1cb207f5713d4d9bdc0b2ff0e04b0fc8fcb91dd7fdb",
+          "runtime_bytes": 909438,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                254,
+                197,
+                548,
+                562
+              ],
+              "canvas": [
+                475.0,
+                147.5,
+                1210.0,
+                1060.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                186,
+                193,
+                593,
+                562
+              ],
+              "canvas": [
+                305.0,
+                137.5,
+                1322.5,
+                1060.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                154,
+                195,
+                553,
+                563
+              ],
+              "canvas": [
+                225.0,
+                142.5,
+                1222.5,
+                1062.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                125,
+                196,
+                552,
+                558
+              ],
+              "canvas": [
+                152.5,
+                145.0,
+                1220.0,
+                1050.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                129,
+                195,
+                551,
+                560
+              ],
+              "canvas": [
+                162.5,
+                142.5,
+                1217.5,
+                1055.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                253,
+                196,
+                554,
+                560
+              ],
+              "canvas": [
+                472.5,
+                145.0,
+                1225.0,
+                1055.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/ember_mirror/sprites/ember_mirror_damaged.png",
+          "source_sha256": "20a8484e79579d69f28cbb44417c816a45619b358e68f80642d16c808778a9e9",
+          "runtime": "motion-s1-ember_mirror-damaged.webp",
+          "runtime_sha256": "1a0e193123a99f27e38cbc66982b45b8d37773054e0927ed480277323552bc0b",
+          "runtime_bytes": 449260,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                200,
+                194,
+                543,
+                572
+              ],
+              "canvas": [
+                340.0,
+                140.0,
+                1197.5,
+                1085.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                211,
+                195,
+                538,
+                565
+              ],
+              "canvas": [
+                367.5,
+                142.5,
+                1185.0,
+                1067.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                247,
+                189,
+                555,
+                574
+              ],
+              "canvas": [
+                457.5,
+                127.5,
+                1227.5,
+                1090.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ]
+    },
+    {
+      "id": "beetle",
+      "source_id": "prism_guard",
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/prism_guard/sprites/prism_guard_idle.png",
+          "source_sha256": "782bef00dc32c65c66193814fc5688debc792f230e98fbdc78529d09df295ef4",
+          "runtime": "motion-s1-prism_guard-idle.webp",
+          "runtime_sha256": "b5f66a57888a574d69cea3a53e0d9e70b1bec1dc5d9b4a17939c4e8eab2232b8",
+          "runtime_bytes": 1040790,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                288,
+                186,
+                601,
+                578
+              ],
+              "canvas": [
+                560.0,
+                120.0,
+                1342.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                288,
+                186,
+                614,
+                578
+              ],
+              "canvas": [
+                560.0,
+                120.0,
+                1375.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                288,
+                199,
+                597,
+                578
+              ],
+              "canvas": [
+                560.0,
+                152.5,
+                1332.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                287,
+                202,
+                594,
+                578
+              ],
+              "canvas": [
+                557.5,
+                160.0,
+                1325.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                288,
+                202,
+                593,
+                578
+              ],
+              "canvas": [
+                560.0,
+                160.0,
+                1322.5,
+                1100.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/prism_guard/sprites/prism_guard_attack.png",
+          "source_sha256": "6f4cfe151ae13a847e426218faa09bbe8a171288e9113e8d8c092112fabebeb8",
+          "runtime": "motion-s1-prism_guard-attack.webp",
+          "runtime_sha256": "8da71cc0d4ab4588325608dba91817386fa46b0f60bb01db0662d6a45f9a3f7c",
+          "runtime_bytes": 1240584,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                252,
+                198,
+                610,
+                579
+              ],
+              "canvas": [
+                470.0,
+                150.0,
+                1365.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                149,
+                198,
+                591,
+                580
+              ],
+              "canvas": [
+                212.5,
+                150.0,
+                1317.5,
+                1105.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                113,
+                206,
+                580,
+                580
+              ],
+              "canvas": [
+                122.5,
+                170.0,
+                1290.0,
+                1105.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                152,
+                206,
+                580,
+                579
+              ],
+              "canvas": [
+                220.0,
+                170.0,
+                1290.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/prism_guard/sprites/prism_guard_defend.png",
+          "source_sha256": "cd9ca831fb69e7f758cad942f7197297b6fef110588ac302c85ba7eca1d76c88",
+          "runtime": "motion-s1-prism_guard-defend.webp",
+          "runtime_sha256": "350c34c4014fad484f087b7718a96718f20f4e34321fb966d6c14b2a4148d510",
+          "runtime_bytes": 966782,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                260,
+                191,
+                571,
+                578
+              ],
+              "canvas": [
+                490.0,
+                132.5,
+                1267.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                262,
+                191,
+                562,
+                578
+              ],
+              "canvas": [
+                495.0,
+                132.5,
+                1245.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                194,
+                234,
+                533,
+                579
+              ],
+              "canvas": [
+                325.0,
+                240.0,
+                1172.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                280,
+                217,
+                650,
+                579
+              ],
+              "canvas": [
+                540.0,
+                197.5,
+                1465.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/prism_guard/sprites/prism_guard_skill.png",
+          "source_sha256": "5b6123f81586643c1783c231ad414cda073b08086a984dedecdc48151484300d",
+          "runtime": "motion-s1-prism_guard-skill.webp",
+          "runtime_sha256": "6f9cfd15189f5323c9ffb99ab5eb5f6ccf93606efc90a588059f7ee9a31643a7",
+          "runtime_bytes": 1117722,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                254,
+                194,
+                600,
+                579
+              ],
+              "canvas": [
+                475.0,
+                140.0,
+                1340.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                229,
+                194,
+                604,
+                579
+              ],
+              "canvas": [
+                412.5,
+                140.0,
+                1350.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                223,
+                197,
+                604,
+                578
+              ],
+              "canvas": [
+                397.5,
+                147.5,
+                1350.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                249,
+                197,
+                604,
+                580
+              ],
+              "canvas": [
+                462.5,
+                147.5,
+                1350.0,
+                1105.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/prism_guard/sprites/prism_guard_damaged.png",
+          "source_sha256": "d2adfe237822ee4acc7cd14cfd2fa89e6daf5b0a1f54fe5a814f719e1149ba1e",
+          "runtime": "motion-s1-prism_guard-damaged.webp",
+          "runtime_sha256": "61e7734034366c75d71d9160cf7eb4880e311515f4437171ff2927873955f57a",
+          "runtime_bytes": 715784,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                288,
+                193,
+                610,
+                579
+              ],
+              "canvas": [
+                560.0,
+                137.5,
+                1365.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                288,
+                213,
+                626,
+                578
+              ],
+              "canvas": [
+                560.0,
+                187.5,
+                1405.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                282,
+                204,
+                609,
+                578
+              ],
+              "canvas": [
+                545.0,
+                165.0,
+                1362.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                290,
+                188,
+                598,
+                578
+              ],
+              "canvas": [
+                565.0,
+                125.0,
+                1335.0,
+                1100.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ]
+    },
+    {
+      "id": "bat",
+      "source_id": "rune_bat",
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/rune_bat/sprites/rune_bat_idle.png",
+          "source_sha256": "ab3308834602327881e96e442b22728a007d2e50c3ecd35ee52f30c186b12752",
+          "runtime": "motion-s1-rune_bat-idle.webp",
+          "runtime_sha256": "2daa12560d672d140446857675439bcdc5704af40ba1c06034c0b768e6e27177",
+          "runtime_bytes": 597570,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                202,
+                224,
+                591,
+                531
+              ],
+              "canvas": [
+                345.0,
+                215.0,
+                1317.5,
+                982.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                221,
+                195,
+                584,
+                521
+              ],
+              "canvas": [
+                392.5,
+                142.5,
+                1300.0,
+                957.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                194,
+                244,
+                580,
+                534
+              ],
+              "canvas": [
+                325.0,
+                265.0,
+                1290.0,
+                990.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                202,
+                255,
+                623,
+                546
+              ],
+              "canvas": [
+                345.0,
+                292.5,
+                1397.5,
+                1020.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/rune_bat/sprites/rune_bat_attack.png",
+          "source_sha256": "8cd5c5aa6574e1dd3735985661744cd9e87380ebdba23fce979e24361557c570",
+          "runtime": "motion-s1-rune_bat-attack.webp",
+          "runtime_sha256": "900af4935fddec371d346fa708ff6e76ccbf89a64d25fbfa2f8396bf2990c224",
+          "runtime_bytes": 1006318,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                215,
+                221,
+                610,
+                532
+              ],
+              "canvas": [
+                377.5,
+                207.5,
+                1365.0,
+                985.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                220,
+                181,
+                568,
+                543
+              ],
+              "canvas": [
+                390.0,
+                107.5,
+                1260.0,
+                1012.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                210,
+                213,
+                628,
+                517
+              ],
+              "canvas": [
+                365.0,
+                187.5,
+                1410.0,
+                947.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                145,
+                223,
+                588,
+                548
+              ],
+              "canvas": [
+                202.5,
+                212.5,
+                1310.0,
+                1025.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                175,
+                224,
+                610,
+                538
+              ],
+              "canvas": [
+                277.5,
+                215.0,
+                1365.0,
+                1000.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                214,
+                217,
+                625,
+                530
+              ],
+              "canvas": [
+                375.0,
+                197.5,
+                1402.5,
+                980.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/rune_bat/sprites/rune_bat_defend.png",
+          "source_sha256": "ccdffd52f764123309de7c00d51449a042413417a66e563e36dd65f2a7f5b109",
+          "runtime": "motion-s1-rune_bat-defend.webp",
+          "runtime_sha256": "e202c4f6f745d933f0b06977f13a4bd82f28ed3e43f3b9ad529a8269bacb223e",
+          "runtime_bytes": 616630,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                154,
+                236,
+                544,
+                532
+              ],
+              "canvas": [
+                225.0,
+                245.0,
+                1200.0,
+                985.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                140,
+                269,
+                492,
+                551
+              ],
+              "canvas": [
+                190.0,
+                327.5,
+                1070.0,
+                1032.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                134,
+                268,
+                492,
+                573
+              ],
+              "canvas": [
+                175.0,
+                325.0,
+                1070.0,
+                1087.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                166,
+                246,
+                555,
+                543
+              ],
+              "canvas": [
+                255.0,
+                270.0,
+                1227.5,
+                1012.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/rune_bat/sprites/rune_bat_skill.png",
+          "source_sha256": "9e29ff1ddc8b467826d9b2de38d83344bf1e450d9a4b9be76dcb523653a3cfc6",
+          "runtime": "motion-s1-rune_bat-skill.webp",
+          "runtime_sha256": "1c84d72a1e2a5c2e317ff24d9846c3a2a411717900411c25642865d3e7f3d90d",
+          "runtime_bytes": 855776,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                224,
+                220,
+                584,
+                525
+              ],
+              "canvas": [
+                400.0,
+                205.0,
+                1300.0,
+                967.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                183,
+                230,
+                574,
+                530
+              ],
+              "canvas": [
+                297.5,
+                230.0,
+                1275.0,
+                980.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                158,
+                224,
+                563,
+                530
+              ],
+              "canvas": [
+                235.0,
+                215.0,
+                1247.5,
+                980.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                121,
+                263,
+                477,
+                523
+              ],
+              "canvas": [
+                142.5,
+                312.5,
+                1032.5,
+                962.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                175,
+                243,
+                570,
+                537
+              ],
+              "canvas": [
+                277.5,
+                262.5,
+                1265.0,
+                997.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                218,
+                233,
+                571,
+                529
+              ],
+              "canvas": [
+                385.0,
+                237.5,
+                1267.5,
+                977.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/rune_bat/sprites/rune_bat_damaged.png",
+          "source_sha256": "d4d6c8deb0872f91ac37a79946b578eaccad253a4f60edfc78584853a7a232d0",
+          "runtime": "motion-s1-rune_bat-damaged.webp",
+          "runtime_sha256": "14c782d9528791d10166f796bb1f203d23854abf1fdf0e9523c60290c0219b1e",
+          "runtime_bytes": 407884,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                153,
+                236,
+                554,
+                561
+              ],
+              "canvas": [
+                222.5,
+                245.0,
+                1225.0,
+                1057.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                192,
+                257,
+                533,
+                548
+              ],
+              "canvas": [
+                320.0,
+                297.5,
+                1172.5,
+                1025.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                222,
+                241,
+                538,
+                534
+              ],
+              "canvas": [
+                395.0,
+                257.5,
+                1185.0,
+                990.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ]
+    },
+    {
+      "id": "knight",
+      "source_id": "mirror_knight",
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/mirror_knight/sprites/mirror_knight_idle.png",
+          "source_sha256": "a7ec2d246c33036b3bab85c49043b6fe3d188eff9b7c3673b03c137f487b2ea4",
+          "runtime": "motion-s1-mirror_knight-idle.webp",
+          "runtime_sha256": "5e5ead3b42677abecd71ca4e4adfa2c316605ffb2d74f0bff848d74c17d05b82",
+          "runtime_bytes": 667294,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                286,
+                191,
+                636,
+                579
+              ],
+              "canvas": [
+                555.0,
+                132.5,
+                1430.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                284,
+                191,
+                641,
+                579
+              ],
+              "canvas": [
+                550.0,
+                132.5,
+                1442.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                286,
+                195,
+                644,
+                583
+              ],
+              "canvas": [
+                555.0,
+                142.5,
+                1450.0,
+                1112.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                285,
+                196,
+                641,
+                578
+              ],
+              "canvas": [
+                552.5,
+                145.0,
+                1442.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                285,
+                196,
+                635,
+                579
+              ],
+              "canvas": [
+                552.5,
+                145.0,
+                1427.5,
+                1102.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/mirror_knight/sprites/mirror_knight_attack.png",
+          "source_sha256": "0949c3a23a1c5005c9f4c056be21c1a829ae531cbca58227c3c47c0be2240900",
+          "runtime": "motion-s1-mirror_knight-attack.webp",
+          "runtime_sha256": "1e124d433f7612ed59f0bcaa696476cfb782dd45e453611636eca915c11e1bc2",
+          "runtime_bytes": 871108,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                331,
+                174,
+                650,
+                579
+              ],
+              "canvas": [
+                667.5,
+                90.0,
+                1465.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                182,
+                235,
+                637,
+                579
+              ],
+              "canvas": [
+                295.0,
+                242.5,
+                1432.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                96,
+                235,
+                606,
+                579
+              ],
+              "canvas": [
+                80.0,
+                242.5,
+                1355.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                172,
+                242,
+                592,
+                579
+              ],
+              "canvas": [
+                270.0,
+                260.0,
+                1320.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/mirror_knight/sprites/mirror_knight_defend.png",
+          "source_sha256": "400d8c1cdccd71984f15acb503506e090d75273faf54cecfff41afedf778ff74",
+          "runtime": "motion-s1-mirror_knight-defend.webp",
+          "runtime_sha256": "8d42d1a167ee0da5241111db55c23488c9f89fbabaefcc8ee5f1e6941acf5a87",
+          "runtime_bytes": 732634,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                262,
+                197,
+                654,
+                582
+              ],
+              "canvas": [
+                495.0,
+                147.5,
+                1475.0,
+                1110.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                263,
+                203,
+                644,
+                579
+              ],
+              "canvas": [
+                497.5,
+                162.5,
+                1450.0,
+                1102.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                175,
+                250,
+                583,
+                580
+              ],
+              "canvas": [
+                277.5,
+                280.0,
+                1297.5,
+                1105.0
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                229,
+                214,
+                609,
+                580
+              ],
+              "canvas": [
+                412.5,
+                190.0,
+                1362.5,
+                1105.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/mirror_knight/sprites/mirror_knight_skill.png",
+          "source_sha256": "3db6f2729bb0bbe68686f993e7bb328f99607ba677a0fb80d67819fcccb6c8ef",
+          "runtime": "motion-s1-mirror_knight-skill.webp",
+          "runtime_sha256": "eabf2e64b8f10e94793e1d42579f3ddf25a75db2f669757f5e9151620b9c5a0a",
+          "runtime_bytes": 774754,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                369,
+                184,
+                647,
+                578
+              ],
+              "canvas": [
+                762.5,
+                115.0,
+                1457.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                320,
+                178,
+                644,
+                578
+              ],
+              "canvas": [
+                640.0,
+                100.0,
+                1450.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                286,
+                175,
+                643,
+                579
+              ],
+              "canvas": [
+                555.0,
+                92.5,
+                1447.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                304,
+                174,
+                649,
+                579
+              ],
+              "canvas": [
+                600.0,
+                90.0,
+                1462.5,
+                1102.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                289,
+                194,
+                631,
+                579
+              ],
+              "canvas": [
+                562.5,
+                140.0,
+                1417.5,
+                1102.5
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/mirror_knight/sprites/mirror_knight_damaged.png",
+          "source_sha256": "699f72adf3d0a2349e8612c6a1bdb7c24fd703941f8f36a1c4bc0ae2639e9794",
+          "runtime": "motion-s1-mirror_knight-damaged.webp",
+          "runtime_sha256": "406f603f3ce110e6570543a5b0ed4c648fd2f4152a955c687bab508640b5084e",
+          "runtime_bytes": 383314,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                227,
+                196,
+                608,
+                578
+              ],
+              "canvas": [
+                407.5,
+                145.0,
+                1360.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                254,
+                219,
+                562,
+                578
+              ],
+              "canvas": [
+                475.0,
+                202.5,
+                1245.0,
+                1100.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                270,
+                206,
+                610,
+                580
+              ],
+              "canvas": [
+                515.0,
+                170.0,
+                1365.0,
+                1105.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ]
+    },
+    {
+      "id": "shard",
+      "source_id": "shard_beast",
+      "animations": [
+        {
+          "action": "idle",
+          "source": "enemies/shard_beast/sprites/shard_beast_idle.png",
+          "source_sha256": "7a1498468329938075fe57cdc071bc50d0ab2a5448d0e7a3ef896e075f185de6",
+          "runtime": "motion-s1-shard_beast-idle.webp",
+          "runtime_sha256": "085ff86eaf0c91bb05c23eeecf918ec3583237819735903013b3bf0d8811536b",
+          "runtime_bytes": 1100542,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                224,
+                254,
+                597,
+                582
+              ],
+              "canvas": [
+                400.0,
+                290.0,
+                1332.5,
+                1110.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                220,
+                249,
+                597,
+                582
+              ],
+              "canvas": [
+                390.0,
+                277.5,
+                1332.5,
+                1110.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                218,
+                263,
+                610,
+                583
+              ],
+              "canvas": [
+                385.0,
+                312.5,
+                1365.0,
+                1112.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                222,
+                267,
+                603,
+                582
+              ],
+              "canvas": [
+                395.0,
+                322.5,
+                1347.5,
+                1110.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                217,
+                257,
+                605,
+                582
+              ],
+              "canvas": [
+                382.5,
+                297.5,
+                1352.5,
+                1110.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "attack",
+          "source": "enemies/shard_beast/sprites/shard_beast_attack.png",
+          "source_sha256": "55a7483a336db0ebd43e4e77d2c5f3577538496a2e4e6b5d89ae6be228689ae8",
+          "runtime": "motion-s1-shard_beast-attack.webp",
+          "runtime_sha256": "c7f5a7e606ac0bc2faf312e2cf28447bf35f92ffc8db2b24984288f360430281",
+          "runtime_bytes": 1124750,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                191,
+                294,
+                605,
+                578
+              ],
+              "canvas": [
+                317.5,
+                390.0,
+                1352.5,
+                1100.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                177,
+                265,
+                600,
+                577
+              ],
+              "canvas": [
+                282.5,
+                317.5,
+                1340.0,
+                1097.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                159,
+                272,
+                603,
+                577
+              ],
+              "canvas": [
+                237.5,
+                335.0,
+                1347.5,
+                1097.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                187,
+                270,
+                597,
+                577
+              ],
+              "canvas": [
+                307.5,
+                330.0,
+                1332.5,
+                1097.5
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "defend",
+          "source": "enemies/shard_beast/sprites/shard_beast_defend.png",
+          "source_sha256": "dddf0570bb018e1fff0d98a5c5944a149b4331c212f76c370ca8e435cace821f",
+          "runtime": "motion-s1-shard_beast-defend.webp",
+          "runtime_sha256": "c607e6edc6503e64357acd3a4ec13cf9dcb26cf7476b6132c97ea4a2a4728850",
+          "runtime_bytes": 999306,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                199,
+                310,
+                590,
+                586
+              ],
+              "canvas": [
+                337.5,
+                430.0,
+                1315.0,
+                1120.0
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                206,
+                327,
+                595,
+                588
+              ],
+              "canvas": [
+                355.0,
+                472.5,
+                1327.5,
+                1125.0
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                202,
+                340,
+                595,
+                589
+              ],
+              "canvas": [
+                345.0,
+                505.0,
+                1327.5,
+                1127.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                200,
+                284,
+                594,
+                580
+              ],
+              "canvas": [
+                340.0,
+                365.0,
+                1325.0,
+                1105.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "skill",
+          "source": "enemies/shard_beast/sprites/shard_beast_skill.png",
+          "source_sha256": "80ba010c4c6fb4e61ca8c134cbc5e56b5135e74a3582c6fb98907d8d44b3fc32",
+          "runtime": "motion-s1-shard_beast-skill.webp",
+          "runtime_sha256": "f6dec91acf8ff1518eb7c4cead88e468b859a6c84297c41102698e9e7ba5303d",
+          "runtime_bytes": 1117330,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                192,
+                285,
+                599,
+                581
+              ],
+              "canvas": [
+                320.0,
+                367.5,
+                1337.5,
+                1107.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                187,
+                283,
+                598,
+                581
+              ],
+              "canvas": [
+                307.5,
+                362.5,
+                1335.0,
+                1107.5
+              ]
+            },
+            {
+              "frame": 3,
+              "source": [
+                144,
+                293,
+                638,
+                581
+              ],
+              "canvas": [
+                200.0,
+                387.5,
+                1435.0,
+                1107.5
+              ]
+            },
+            {
+              "frame": 4,
+              "source": [
+                200,
+                300,
+                598,
+                582
+              ],
+              "canvas": [
+                340.0,
+                405.0,
+                1335.0,
+                1110.0
+              ]
+            },
+            {
+              "frame": 5,
+              "source": [
+                218,
+                258,
+                606,
+                582
+              ],
+              "canvas": [
+                385.0,
+                300.0,
+                1355.0,
+                1110.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        },
+        {
+          "action": "damaged",
+          "source": "enemies/shard_beast/sprites/shard_beast_damaged.png",
+          "source_sha256": "94b7b59860824c25b74d71776597687905e346499375903c7e9883f1b63d6418",
+          "runtime": "motion-s1-shard_beast-damaged.webp",
+          "runtime_sha256": "4943cda1ec4f481bee8a85b7c0545d91226d7643ef6910e6094390546ef0d239",
+          "runtime_bytes": 502350,
+          "frames": [
+            {
+              "frame": 0,
+              "source": [
+                217,
+                265,
+                583,
+                580
+              ],
+              "canvas": [
+                382.5,
+                317.5,
+                1297.5,
+                1105.0
+              ]
+            },
+            {
+              "frame": 1,
+              "source": [
+                223,
+                276,
+                585,
+                577
+              ],
+              "canvas": [
+                397.5,
+                345.0,
+                1302.5,
+                1097.5
+              ]
+            },
+            {
+              "frame": 2,
+              "source": [
+                229,
+                275,
+                589,
+                580
+              ],
+              "canvas": [
+                412.5,
+                342.5,
+                1312.5,
+                1105.0
+              ]
+            }
+          ],
+          "visible_pixels_and_alpha_preserved": true
+        }
+      ]
+    }
+  ],
+  "operation": "Lossless WebP atlas encoding; source rectangles and frame order unchanged. No frame trim or recenter.",
+  "canvas": [
+    1600,
+    1200
+  ],
+  "source_pivot": [
+    384,
+    578
+  ],
+  "floor_pivot": [
+    800,
+    1100
+  ],
+  "draw_scale": 2.5,
+  "figure_scale": 0.9,
+  "pending_attachment": "MODEL(1).zip was not available; no Alyssa frames imported."
+}

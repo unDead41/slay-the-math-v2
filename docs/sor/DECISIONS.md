@@ -236,3 +236,13 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 |---|---|---|
 | DEC-20261021-13 | DISAHKAN | Ijamm reports old Alyssa motion still appearing and explicitly requires only the right-facing source for Attack, Defend, Skill, Damaged and Idle. |
 | DEC-20261021-14 | DITERUSKAN | Replace all legacy hero image references with registered posters derived from the same motion source. Preserve this family during loading, Canvas/atlas failure and Motion Off; omit retired combat image entries from the new portable build. Owners: SOR 08/11/14; reproduced old fallback and actual verification: docs/ALYSSA_RIGHT_ONLY_2_8_1.md. |
+
+## Combat polish — 21 October 2026, game 2.9.0
+
+| ID | Status | Decision |
+|---|---|---|
+| DEC-20261021-15 | DISAHKAN | Ijamm requests triple-checking small Skill frames, freezing run Time after death (references 162435/162438), and a limited overlapping hand with delayed neighbor movement on hover (162533). |
+| DEC-20261021-16 | DITERUSKAN | Calibrate all six Skill body heights about the existing boot pivots without altering source artwork/direction/timing. Persist a result timestamp at outcome, retaining save version 1 and honest one-time legacy fallback. |
+| DEC-20261021-17 | CADANGAN | Reversible implementation tuning: Hand limit 10 in config, 140ms hover dwell, 180ms transition, and 44px minimum exposed card step. User authorized the behavior; these exact numbers are implementation defaults. Card/artifact draws share the cap and leave excess cards/RNG untouched. |
+
+Owners: SOR 03/04/05/08/11/13/14/19. Verification and migration limits: `docs/COMBAT_POLISH_2_9_0.md`.

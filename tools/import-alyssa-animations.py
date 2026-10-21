@@ -11,6 +11,26 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def calibrate_skill(data, audit):
+    """Normalize body size about the boot pivot, never about fire-effect bounds."""
+    clip = data["hero"]["animations"]["skill"]
+    # Crown landmarks measured on the six supplied 1024px cells, excluding cards/fire.
+    crowns = [322, 329, 360, 349, 341, 335]
+    reference_height = clip["pivots"][0][1] - crowns[0]
+    clip["scales"] = [round(reference_height / (pivot[1] - crown), 6)
+                      for pivot, crown in zip(clip["pivots"], crowns)]
+    entry = next(a for a in audit["animations"] if a["action"] == "skill")
+    entry["body_normalization"] = {"crown_y": crowns, "reference_height": reference_height,
+        "scales": clip["scales"], "pivot": "supplied per-frame boot anchor",
+        "operation": "Uniform frame projection only; preserve source atlas pixels, direction and timing."}
+    for frame, correction in zip(entry["frames"], clip["scales"]):
+        box, pivot = frame["alpha_bounds"], frame["source_pivot"]
+        scale = data["hero"]["drawScale"] * correction
+        bounds = [data["floorPivot"][i % 2] + (box[i] - pivot[i % 2]) * scale for i in range(4)]
+        assert bounds[0] >= 0 and bounds[1] >= 0 and bounds[2] <= 1600 and bounds[3] <= 1200
+        frame["canvas_bounds"] = bounds
+
+
 def write_right_posters(data, audit):
     """Project supplied frame 0 into the exact animation canvas for image fallbacks."""
     hero = data["hero"]
@@ -23,7 +43,7 @@ def write_right_posters(data, audit):
         sheet = Image.open(sheet_path).convert("RGBA")
         x, y, width, height = clip["frames"][0]
         cell = sheet.crop((x, y, x + width, y + height))
-        pivot, scale = clip["pivots"][0], hero["drawScale"]
+        pivot, scale = clip["pivots"][0], hero["drawScale"] * clip.get("scales", [1])[0]
         origin = [round(data["floorPivot"][i] - pivot[i] * scale) for i in range(2)]
         canvas = Image.new("RGBA", tuple(data["canvas"]), (0, 0, 0, 0))
         canvas.alpha_composite(cell.resize((round(width * scale), round(height * scale)), Image.Resampling.LANCZOS), tuple(origin))
@@ -63,6 +83,7 @@ def main():
     if args.posters_only:
         audit = json.loads((source / "import-audit.json").read_text())
         assert hashlib.sha256(args.archive.read_bytes()).hexdigest() == audit["source_sha256"]
+        calibrate_skill(data, audit)
         write_right_posters(data, audit)
         write_registry(target, source, data, audit)
         print(json.dumps({"right_facing_posters": len(audit["posters"]),
@@ -123,6 +144,7 @@ def main():
                 "runtime_sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
                 "runtime_bytes": output.stat().st_size, "frames": checks, "visible_pixels_and_alpha_preserved": True})
     data["hero"] = hero
+    calibrate_skill(data, audit)
     write_right_posters(data, audit)
     write_registry(target, source, data, audit)
     print(json.dumps({"clips": len(hero["animations"]), "frames": 30,

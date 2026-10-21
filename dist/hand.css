@@ -1,0 +1,17 @@
+/* The hand owns its rail; overlap never changes shared card/reward/shop geometry. */
+.combat-layout .hand{display:block;position:relative;padding:0 10px;margin:0;overflow:auto;scroll-snap-type:none;scrollbar-gutter:auto}
+.combat-layout .hand-fan{position:relative;margin-inline:auto;min-height:300px}
+.combat-layout .hand-slot{position:absolute;top:calc(24 * var(--combat-unit));left:var(--hand-x,0px);width:var(--combat-card);max-width:var(--combat-card);transform:translateX(var(--hand-shift,0px))!important;animation:none;transition:transform 180ms ease;z-index:calc(1 + var(--i))}
+.combat-layout .hand-slot:hover{transform:translateX(var(--hand-shift,0px))!important}
+.combat-layout .hand .playing-card{transform:rotate(var(--hand-angle,0deg));transition:transform 180ms ease,border-color 180ms,box-shadow 180ms}
+.combat-layout .hand .playing-card:disabled{opacity:1;filter:saturate(.45);color:var(--muted)}
+.combat-layout .hand button.playing-card:hover:not(:disabled){transform:rotate(var(--hand-angle,0deg));z-index:auto;border-color:var(--gold);box-shadow:0 5px 17px #0005}
+.combat-layout .hand-slot.is-focused,.combat-layout .hand-slot:focus-within{z-index:30}
+.combat-layout .hand .hand-slot.is-focused button.playing-card,.combat-layout .hand button.playing-card:focus-visible{transform:translateY(calc(-14 * var(--combat-unit))) scale(1.025);border-color:var(--gold-soft);box-shadow:0 calc(8 * var(--combat-unit)) calc(22 * var(--combat-unit)) #0009,0 0 calc(15 * var(--combat-unit)) #e4bd7050}
+.combat-layout .hand-slot.is-focused .hand-key{color:var(--gold-soft)}
+.combat-layout .hand-heading .hand-full{color:var(--gold-soft)}
+@media(prefers-reduced-motion:reduce){.combat-layout .hand-slot,.combat-layout .hand .playing-card{transition:none!important}}
+.reduce-motion .combat-layout .hand-slot,.reduce-motion .combat-layout .hand .playing-card{transition:none!important}
+
+.combat-layout .hand-slot:focus-visible{outline:none}
+.combat-layout .hand-slot:focus-visible>.playing-card{outline:3px solid var(--ice);outline-offset:4px}

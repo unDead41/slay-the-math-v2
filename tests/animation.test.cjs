@@ -71,3 +71,17 @@ test('Alyssa animation is available in both stages while enemy animation stays S
  assert.equal(S.supports(2,'mc_01'),false);assert.equal(S.supports(1,'beetle'),false);
  assert.equal(S.spec(0,'mc_01').facing,'right');
 });
+test('all six Skill body silhouettes keep the same crown-to-floor size, independently of fire effects',async()=>{
+ const clip=D.hero.animations.skill,crowns=[322,329,360,349,341,335];
+ const heights=crowns.map((c,i)=>(clip.pivots[i][1]-c)*(clip.scales?.[i]||1));
+ assert.ok(Math.max(...heights)-Math.min(...heights)<1,JSON.stringify(heights));
+ const f=fixture({spec:D.hero});await flush();f.player.play('skill');await flush();await f.step(0);
+ for(let i=0;i<6;i++){
+  if(i)await f.step(clip.durationsMs[i-1]);
+  assert.equal(f.player.snapshot().frame,i);
+  const draw=f.draws.at(-1),scale=D.hero.drawScale*clip.scales[i];
+  assert.ok(Math.abs(draw[6]+clip.pivots[i][1]*scale-D.floorPivot[1])<.000001);
+  assert.ok(Math.abs(draw[7]-1024*scale)<.000001);
+ }
+ f.player.destroy();
+});

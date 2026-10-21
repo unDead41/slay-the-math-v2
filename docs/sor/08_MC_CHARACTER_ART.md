@@ -92,3 +92,7 @@ The subsequent direct instruction identifies the already-stored `MODEL.zip`. Tha
 ## Right-facing-only correction — 2.8.1
 
 Ijamm explicitly requires the new right-facing family for all five combat motions. The earlier `ground-alyssa-*` image fallback is superseded by frame projections from the same approved motion source, owned by `DCAnimationData.hero.posters`. Use that registry for standing/Idle, Attack, Defend, Skill and Damage/Damaged, including loading, unavailable Canvas, texture failures and Motion Off. Do not revive earlier front-facing poses. Source hashes and verification: [2.8.1](../ALYSSA_RIGHT_ONLY_2_8_1.md).
+
+### Skill scale calibration — 2.9.0
+
+The six supplied Skill poses have different crown-to-boot body heights. Preserve source pixels and casting anatomy; apply a uniform per-frame projection correction about each supplied boot pivot, referenced to frame 0. Crown landmarks exclude fire/cards. All six corrected body heights match within one source pixel and every complete alpha bound remains inside the common canvas. The hero remains right-facing, with no mirrored or legacy poses. Measurements and factors are in the import audit; the importer reproduces the registry.

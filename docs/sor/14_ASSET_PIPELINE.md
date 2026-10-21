@@ -142,3 +142,7 @@ The later instruction points to the readable source MODEL.zip. The Alyssa import
 ### Right-facing fallback derivatives — 2.8.1
 
 Generate five `alyssa-right-*` image posters from supplied frame 0 at the same canvas projection as the live player. This is mechanical Lanczos resampling, with rounded pixel origins differing by less than one source canvas pixel; no redraw or mirroring. All poster alpha bounds, hashes and source rectangles are appended to the original import audit. The previous static files remain preserved, but they are no longer selected by the hero registry or embedded in the current portable image map. Source sheets remain byte-identical.
+
+### Skill body normalization — 2.9.0
+
+`calibrate_skill` in the existing Alyssa importer records crown y coordinates `[322,329,360,349,341,335]` on the 1024px cells. The reference crown-to-boot height is 446px. Runtime scale is hero drawScale times `clip.scales[i]`; all projections remain anchored to the recorded boot. No atlas bytes, posters, archived source manifests or source ZIP are altered. Updated projected alpha bounds and factors are recorded in the existing audit.

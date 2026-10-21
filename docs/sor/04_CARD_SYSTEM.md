@@ -67,3 +67,9 @@ Nama English kerja: Ward. Resource Focus di HUD kekal Focus. Sebelum Ward aktif,
 **CRD-10:** Nama/kesan di UI datang daripada data yang sama dengan resolver; tiada teks angka dalam bitmap art. Setiap instance ID unik dan alias tidak menduplikasi definisi.
 
 Starter tetap 12, lapan definisi aktif, upgrade/resume kekal sah dan imej rujukan tidak mengubah statistik dengan sendirinya. Lihat [05](05_CARD_VISUAL_DESIGN.md).
+
+## Hand capacity — 2.9.0
+
+**CRD-11:** Every normal, card and artifact draw shares `DCConfig.HAND_LIMIT` (implementation baseline: 10). Check capacity before taking a card or shuffling. Unavailable capacity stops the requested draw; no excess card is discarded/exhausted and no extra RNG call occurs. A played Draw card frees its own slot before its effect. Report actual cards drawn and show Hand full when the request exceeds capacity.
+
+Old overfull saves remain loadable: restore keeps the first 10 cards in Hand and places excess instances on top of Draw in their prior hand order. Preserve every UID, upgrade, RNG and locked Predict snapshot.

@@ -1,7 +1,7 @@
 const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
-const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','animation-data.js','animation.js','artifact-ui.js','app.js'];
+const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','animation-data.js','animation.js','artifact-ui.js','hand.js','app.js'];
 test('DOM: every Alyssa pose uses the approved right-facing art even without Canvas',{skip:!JSDOM},()=>{
  for(const [key,pose] of [[null,'idle'],['strike','attack'],['guard','defend'],['draw','skill'],['hit','damaged']]){
   const r=fixtureRun(7);E.startBattle(r,'wisp');
@@ -205,5 +205,15 @@ test('DOM: corrupt question history is preserved and cannot silently reset the d
  try{
   const raw='{invalid-history';w.localStorage.setItem('duel-cube-question-history.v1',raw);click('continue');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
   assert.equal(state().scene,'master');assert.equal(w.document.querySelector('[data-question-id]'),null);assert.equal(w.localStorage.getItem('duel-cube-question-history.v1'),raw);assert.match(w.document.querySelector('#storage-warning').textContent,/Question history cannot be read/);
+ }finally{dom.window.close();}
+});
+
+test('DOM: a full hand exposes its cap, disabled-card inspection and the tenth-card shortcut',{skip:!JSDOM},()=>{
+ const r=fixtureRun(7);E.startBattle(r,'wisp');r.battle.hp=r.battle.maxHp=200;E.draw(r,6);
+ const {dom,w,click,state}=boot(r);
+ try{click('continue');assert.match(w.document.querySelector('.hand-heading').textContent,/10 \/ 10.*FULL/);
+  for(const b of w.document.querySelectorAll('.hand button:disabled'))assert.equal(b.parentElement.tabIndex,0);
+  const expected=E.clone(state()),tenth=expected.battle.hand[9];assert.equal(E.canPlay(expected,tenth),'');E.playCard(expected,tenth.uid);
+  w.document.body.dispatchEvent(new w.KeyboardEvent('keydown',{key:'0',bubbles:true,cancelable:true}));assert.deepEqual(state(),expected);
  }finally{dom.window.close();}
 });

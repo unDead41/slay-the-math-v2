@@ -21,7 +21,7 @@ test('ZIP rich text covers all 31 artifacts and 55 terms without demo snapshots'
   assert.ok(!('example_snapshot' in rich));
   for(const s of rich.segments.filter(s=>s.type==='term'))assert.equal(D.glossary[s.glossary_id].category,s.category);
  }
- assert.match(D.glossary.focus.definition,/capped at 3/);assert.match(D.glossary.draw.definition,/no Hand cap/);
+ assert.match(D.glossary.focus.definition,/capped at 3/);assert.match(D.glossary.draw.definition,/full Hand stops further draws/);assert.doesNotMatch(D.glossary.draw.definition,/no Hand cap/);
 });
 test('Ration snapshots separate Max HP from actual healing and survive refresh without replay',()=>{
  const r=start('s08'),entry=R.latest(r,A.id('s08'));

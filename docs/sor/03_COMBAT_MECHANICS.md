@@ -84,3 +84,7 @@ Predict sebelum draw kekal T1 Probability. Challenge T2/T3 memerlukan penempatan
 ## Artifact Edition 2.4
 
 The explicit artifact implementation request adds event-driven Starting, Elite/Mystery and Boss effects. Base card, Focus and probability rules retain their owner. Strength modifies Attack damage, Agility modifies Defense Block; per-card bonuses occur before enemy mitigation. Reset order, Exhaust batch ordering, thresholds, retaliation and persistent counters are specified in SOR 19. All numeric artifact values are sourced from artifact-data.js, derived from the supplied V3.1 catalogue.
+
+## Run result clock — 2.9.0
+
+**CBT-11:** Record `finished` once in the synchronous defeat, final-victory or Stage 1 clear transaction. Result Time uses that timestamp minus `started`, never a fresh wall clock. Menu/dialog visits, reload, export and import preserve it. Continuing Stage 2 removes the intermediate timestamp before making its checkpoint. The existing elapsed wall-clock convention during an unfinished run is retained.

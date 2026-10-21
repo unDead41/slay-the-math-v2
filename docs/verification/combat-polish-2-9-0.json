@@ -1,0 +1,925 @@
+{
+  "version": "2.9.0",
+  "date": "2026-10-21",
+  "base_commit": "032b97a5e48de83f9813d1253b4f33160a8df64c",
+  "unit_dom": {
+    "command": "DOM_QA_MODULE=<installed jsdom>/lib/api.js npm test",
+    "tests": 134,
+    "pass": 134,
+    "fail": 0,
+    "skipped": 0
+  },
+  "syntax": "npm run check",
+  "portable_build": {
+    "command": "npm run build",
+    "bytes": 115199989,
+    "generated_html_committed": false
+  },
+  "browser_commands": {
+    "hand_results": "npm run test:hand-browser",
+    "alyssa": "npm run test:alyssa-browser",
+    "combat": "npm run test:combat-browser",
+    "screen_fit": "npm run test:screen-fit"
+  },
+  "browsers": {
+    "hand_results": {
+      "version": "2.9.0",
+      "checks": [
+        "A separate page with a real running clock also completes the hover/neighbor CSS transitions and holds the same card under a stationary pointer.",
+        "Ten cards overlap, neighbors move aside after a 140ms dwell, rapid crossings do not refocus, and a stationary pointer stays stable without changing the save.",
+        "Opening a dialog cancels hover; native keyboard focus exposes a card immediately. Motion Off and OS reduced motion keep focus usable without transitions.",
+        "Six viewport sizes through 4K preserve overlap and page width. Phone rails scroll, the tenth card is fully exposed by focus, and a touch tap commits exactly the chosen card once.",
+        "A real lethal End Turn freezes Time once; +150 seconds, Main Menu/View Results, Learning Record and reload preserve the exact same result and saved finished timestamp.",
+        "All six Skill frames render in order with the calibrated body scale and unchanged source timing; same-scale canvas filmstrip captured for visual review."
+      ],
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": false,
+          "rail": false,
+          "overlap": true,
+          "handHeight": 318,
+          "cardHeight": 260.28125,
+          "disabledOpaque": true,
+          "lastCardVisible": true
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "overflow": false,
+          "rail": false,
+          "overlap": true,
+          "handHeight": 418.859375,
+          "cardHeight": 345.75,
+          "disabledOpaque": true,
+          "lastCardVisible": true
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "overflow": false,
+          "rail": false,
+          "overlap": true,
+          "handHeight": 627.203125,
+          "cardHeight": 516.578125,
+          "disabledOpaque": true,
+          "lastCardVisible": true
+        },
+        {
+          "width": 1366,
+          "height": 768,
+          "overflow": false,
+          "rail": false,
+          "overlap": true,
+          "handHeight": 300,
+          "cardHeight": 231.046875,
+          "disabledOpaque": true,
+          "lastCardVisible": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "rail": true,
+          "overlap": true,
+          "handHeight": 300,
+          "cardHeight": 235,
+          "disabledOpaque": true,
+          "lastCardVisible": true
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false,
+          "rail": true,
+          "overlap": true,
+          "handHeight": 300,
+          "cardHeight": 235,
+          "disabledOpaque": true,
+          "lastCardVisible": true
+        }
+      ],
+      "errors": []
+    },
+    "alyssa": {
+      "version": "2.8.1",
+      "checks": [
+        "Real canvas pixels advance for Idle, Attack, Defend and Skill. Native card actions produce the exact engine HP, Block, Energy, piles, RNG, logs and save state before animation advances. Every action returns to Idle.",
+        "End Turn selects Damaged for actual HP loss and Defend for a fully blocked hit, while the enemy plays independently. Animation time never replays combat.",
+        "Dialogs pause Alyssa. Motion Off and OS Reduced Motion keep supplied Idle frame 0 static, then resume normally.",
+        "Alyssa animates in both stages and against both bosses; enemy models retain their current Stage 1 and Stage 2 rendering. Refresh resumes the saved battle.",
+        "Alyssa shares the registered floor and undistorted 4:3 presentation canvas at FHD, UWHD, 4K and two phone widths. All 30 source alpha bounds fit the canvas (import audit).",
+        "All five visible image fallbacks use the supplied right-facing source with Canvas disabled and with every hero atlas request deliberately failed. No legacy hero image is requested; Stage 2 damaged fallback is covered.",
+        "The generated offline HTML embeds all five Alyssa sheets and paints her animation with zero HTTP requests."
+      ],
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "floorAligned": true,
+          "overflow": false
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "floorAligned": true,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "floorAligned": true,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "floorAligned": true,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "floorAligned": true,
+          "overflow": false
+        }
+      ],
+      "errors": [],
+      "legacyHeroRequests": []
+    },
+    "combat": {
+      "checks": [
+        "Reference layout: source Alyssa and Rune Bat, separate Focus/Predict artwork, real HP and turn, grounded idle",
+        "Focus/keyboard: one boosted Block card, one spend, exact autosave/Continue and announced End Turn damage",
+        "Draw/Discard/Exhaust inspect, Escape restores each trigger; R opens Predict",
+        "FHD/1280 desktop, 844 landscape, 390/320 portrait and 4K: four decoded HUD icons, larger artwork, matching resource sizes, no root overflow and reachable actions",
+        "Empty hand explains recovery and End Turn draws real cards",
+        "Both source boss arenas and models load with exact configured HP and two live seals",
+        "Rest choice uses the supplied blue campfire seal on desktop/phone; preview preserves HP and Confirm Rest heals exactly once across reload"
+      ],
+      "errors": [],
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "rootOverflow": false,
+          "icons": {
+            "energy": {
+              "width": 72,
+              "height": 72.640625,
+              "loaded": true
+            },
+            "focus": {
+              "width": 72,
+              "height": 72,
+              "loaded": true
+            },
+            "predict": {
+              "width": 42,
+              "height": 42,
+              "loaded": true
+            },
+            "playerHealth": {
+              "width": 30,
+              "height": 30,
+              "loaded": true
+            },
+            "enemyHealth": {
+              "width": 30,
+              "height": 30,
+              "loaded": true
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "rootOverflow": false,
+          "icons": {
+            "energy": {
+              "width": 60,
+              "height": 60.53125,
+              "loaded": true
+            },
+            "focus": {
+              "width": 60,
+              "height": 60,
+              "loaded": true
+            },
+            "predict": {
+              "width": 42,
+              "height": 42,
+              "loaded": true
+            },
+            "playerHealth": {
+              "width": 30,
+              "height": 30,
+              "loaded": true
+            },
+            "enemyHealth": {
+              "width": 30,
+              "height": 30,
+              "loaded": true
+            }
+          }
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "rootOverflow": false,
+          "icons": {
+            "energy": {
+              "width": 66,
+              "height": 66.59375,
+              "loaded": true
+            },
+            "focus": {
+              "width": 66,
+              "height": 66,
+              "loaded": true
+            },
+            "predict": {
+              "width": 40,
+              "height": 40,
+              "loaded": true
+            },
+            "playerHealth": {
+              "width": 28,
+              "height": 28,
+              "loaded": true
+            },
+            "enemyHealth": {
+              "width": 28,
+              "height": 28,
+              "loaded": true
+            }
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "rootOverflow": false,
+          "icons": {
+            "energy": {
+              "width": 66,
+              "height": 66.59375,
+              "loaded": true
+            },
+            "focus": {
+              "width": 66,
+              "height": 66,
+              "loaded": true
+            },
+            "predict": {
+              "width": 40,
+              "height": 40,
+              "loaded": true
+            },
+            "playerHealth": {
+              "width": 24,
+              "height": 24,
+              "loaded": true
+            },
+            "enemyHealth": {
+              "width": 24,
+              "height": 24,
+              "loaded": true
+            }
+          }
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "rootOverflow": false,
+          "icons": {
+            "energy": {
+              "width": 66,
+              "height": 66.59375,
+              "loaded": true
+            },
+            "focus": {
+              "width": 66,
+              "height": 66,
+              "loaded": true
+            },
+            "predict": {
+              "width": 40,
+              "height": 40,
+              "loaded": true
+            },
+            "playerHealth": {
+              "width": 24,
+              "height": 24,
+              "loaded": true
+            },
+            "enemyHealth": {
+              "width": 24,
+              "height": 24,
+              "loaded": true
+            }
+          }
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "rootOverflow": false,
+          "icons": {
+            "energy": {
+              "width": 144,
+              "height": 145.296875,
+              "loaded": true
+            },
+            "focus": {
+              "width": 144,
+              "height": 144,
+              "loaded": true
+            },
+            "predict": {
+              "width": 84,
+              "height": 84,
+              "loaded": true
+            },
+            "playerHealth": {
+              "width": 60,
+              "height": 60,
+              "loaded": true
+            },
+            "enemyHealth": {
+              "width": 60,
+              "height": 60,
+              "loaded": true
+            }
+          }
+        }
+      ]
+    },
+    "screen_fit": {
+      "checks": 7,
+      "viewports": [
+        {
+          "width": 3413,
+          "height": 1708,
+          "dpr": 0.6,
+          "viewport": [
+            3413,
+            1708
+          ],
+          "game": {
+            "x": 0,
+            "y": 104.375,
+            "width": 3413,
+            "height": 1678.484375,
+            "right": 3413,
+            "bottom": 1782.859375
+          },
+          "layout": {
+            "x": 44.28125,
+            "y": 104.375,
+            "width": 3324.4375,
+            "height": 1678.484375,
+            "right": 3368.71875,
+            "bottom": 1782.859375
+          },
+          "arena": {
+            "x": 0,
+            "y": 202.421875,
+            "width": 3413,
+            "height": 901.4375,
+            "right": 3413,
+            "bottom": 1103.859375
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 3413,
+            "height": 104.375,
+            "right": 3413,
+            "bottom": 104.375
+          },
+          "hand": {
+            "x": 716.71875,
+            "y": 1107.015625,
+            "width": 1865.34375,
+            "height": 549.953125,
+            "right": 2582.0625,
+            "bottom": 1656.96875
+          },
+          "rootWidth": 3413,
+          "card": {
+            "x": 988.1036376953125,
+            "y": 1194.605224609375,
+            "width": 313.7178955078125,
+            "height": 414.5050048828125,
+            "right": 1301.821533203125,
+            "bottom": 1609.1102294921875
+          },
+          "end": {
+            "x": 3044.5,
+            "y": 1494.09375,
+            "width": 324.203125,
+            "height": 86.96875,
+            "right": 3368.703125,
+            "bottom": 1581.0625
+          },
+          "menuFont": 34.7926,
+          "floor": 815.3993750000001,
+          "foot": 896.515625,
+          "ground": 896.5156494140625
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "dpr": 1,
+          "viewport": [
+            2560,
+            1440
+          ],
+          "game": {
+            "x": 0,
+            "y": 88,
+            "width": 2560,
+            "height": 1415.4375,
+            "right": 2560,
+            "bottom": 1503.4375
+          },
+          "layout": {
+            "x": 37.328125,
+            "y": 88,
+            "width": 2485.34375,
+            "height": 1415.4375,
+            "right": 2522.671875,
+            "bottom": 1503.4375
+          },
+          "arena": {
+            "x": 0,
+            "y": 170.65625,
+            "width": 2560,
+            "height": 760,
+            "right": 2560,
+            "bottom": 930.65625
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 88,
+            "right": 2560,
+            "bottom": 88
+          },
+          "hand": {
+            "x": 541.5,
+            "y": 933.328125,
+            "width": 1391.765625,
+            "height": 463.828125,
+            "right": 1933.265625,
+            "bottom": 1397.15625
+          },
+          "rootWidth": 2560,
+          "card": {
+            "x": 680.058349609375,
+            "y": 1007.178466796875,
+            "width": 264.3917236328125,
+            "height": 350.036865234375,
+            "right": 944.4500732421875,
+            "bottom": 1357.21533203125
+          },
+          "end": {
+            "x": 2249.328125,
+            "y": 1259.828125,
+            "width": 273.328125,
+            "height": 73.328125,
+            "right": 2522.65625,
+            "bottom": 1333.15625
+          },
+          "menuFont": 29.3333,
+          "floor": 687.45625,
+          "foot": 755.8438313802084,
+          "ground": 755.8437377929688
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "dpr": 1,
+          "viewport": [
+            3440,
+            1440
+          ],
+          "game": {
+            "x": 0,
+            "y": 88,
+            "width": 3440,
+            "height": 1415.46875,
+            "right": 3440,
+            "bottom": 1503.46875
+          },
+          "layout": {
+            "x": 37.328125,
+            "y": 88,
+            "width": 3365.34375,
+            "height": 1415.46875,
+            "right": 3402.671875,
+            "bottom": 1503.46875
+          },
+          "arena": {
+            "x": 0,
+            "y": 170.65625,
+            "width": 3440,
+            "height": 760,
+            "right": 3440,
+            "bottom": 930.65625
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 3440,
+            "height": 88,
+            "right": 3440,
+            "bottom": 88
+          },
+          "hand": {
+            "x": 715.453125,
+            "y": 933.328125,
+            "width": 1893.171875,
+            "height": 463.859375,
+            "right": 2608.625,
+            "bottom": 1397.1875
+          },
+          "rootWidth": 3440,
+          "card": {
+            "x": 1104.4791259765625,
+            "y": 1007.177490234375,
+            "width": 264.5020751953125,
+            "height": 350.101318359375,
+            "right": 1368.981201171875,
+            "bottom": 1357.27880859375
+          },
+          "end": {
+            "x": 3129.34375,
+            "y": 1259.859375,
+            "width": 273.328125,
+            "height": 73.328125,
+            "right": 3402.671875,
+            "bottom": 1333.1875
+          },
+          "menuFont": 29.3333,
+          "floor": 687.4562500000001,
+          "foot": 755.8438313802084,
+          "ground": 755.8437377929688
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "dpr": 1,
+          "viewport": [
+            3840,
+            2160
+          ],
+          "game": {
+            "x": 0,
+            "y": 132,
+            "width": 3840,
+            "height": 2122.75,
+            "right": 3840,
+            "bottom": 2254.75
+          },
+          "layout": {
+            "x": 56,
+            "y": 132,
+            "width": 3728,
+            "height": 2122.75,
+            "right": 3784,
+            "bottom": 2254.75
+          },
+          "arena": {
+            "x": 0,
+            "y": 256,
+            "width": 3840,
+            "height": 1140,
+            "right": 3840,
+            "bottom": 1396
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 3840,
+            "height": 132,
+            "right": 3840,
+            "bottom": 132
+          },
+          "hand": {
+            "x": 812.265625,
+            "y": 1400,
+            "width": 2087.640625,
+            "height": 694.75,
+            "right": 2899.90625,
+            "bottom": 2094.75
+          },
+          "rootWidth": 3840,
+          "card": {
+            "x": 1020.1910400390625,
+            "y": 1510.775146484375,
+            "width": 396.5621337890625,
+            "height": 523.1026611328125,
+            "right": 1416.753173828125,
+            "bottom": 2033.8778076171875
+          },
+          "end": {
+            "x": 3373.984375,
+            "y": 1888.75,
+            "width": 410,
+            "height": 110,
+            "right": 3783.984375,
+            "bottom": 1998.75
+          },
+          "menuFont": 44,
+          "floor": 1031.1999999999998,
+          "foot": 1133.7969563802083,
+          "ground": 1133.7968994140624
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "dpr": 1,
+          "viewport": [
+            1920,
+            1080
+          ],
+          "game": {
+            "x": 0,
+            "y": 66,
+            "width": 1920,
+            "height": 1065,
+            "right": 1920,
+            "bottom": 1131
+          },
+          "layout": {
+            "x": 28,
+            "y": 66,
+            "width": 1864,
+            "height": 1065,
+            "right": 1892,
+            "bottom": 1131
+          },
+          "arena": {
+            "x": 0,
+            "y": 128,
+            "width": 1920,
+            "height": 570,
+            "right": 1920,
+            "bottom": 698
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 66,
+            "right": 1920,
+            "bottom": 66
+          },
+          "hand": {
+            "x": 406.125,
+            "y": 700,
+            "width": 1043.828125,
+            "height": 351,
+            "right": 1449.953125,
+            "bottom": 1051
+          },
+          "rootWidth": 1920,
+          "card": {
+            "x": 509.0069274902344,
+            "y": 755.387939453125,
+            "width": 198.30715942382812,
+            "height": 263.5430908203125,
+            "right": 707.3140869140625,
+            "bottom": 1018.9310302734375
+          },
+          "end": {
+            "x": 1686.984375,
+            "y": 948,
+            "width": 205,
+            "height": 55,
+            "right": 1891.984375,
+            "bottom": 1003
+          },
+          "menuFont": 22,
+          "floor": 515.5999999999999,
+          "foot": 566.8907063802084,
+          "ground": 566.8906372070312
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "dpr": 1,
+          "viewport": [
+            1280,
+            720
+          ],
+          "game": {
+            "x": 0,
+            "y": 66,
+            "width": 1280,
+            "height": 877,
+            "right": 1280,
+            "bottom": 943
+          },
+          "layout": {
+            "x": 28,
+            "y": 66,
+            "width": 1224,
+            "height": 877,
+            "right": 1252,
+            "bottom": 943
+          },
+          "arena": {
+            "x": 0,
+            "y": 128,
+            "width": 1280,
+            "height": 400,
+            "right": 1280,
+            "bottom": 528
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 66,
+            "right": 1280,
+            "bottom": 66
+          },
+          "hand": {
+            "x": 241,
+            "y": 530,
+            "width": 758,
+            "height": 333,
+            "right": 999,
+            "bottom": 863
+          },
+          "rootWidth": 1280,
+          "card": {
+            "x": 298.25091552734375,
+            "y": 585.791259765625,
+            "width": 149.910400390625,
+            "height": 233.497802734375,
+            "right": 448.16131591796875,
+            "bottom": 819.2890625
+          },
+          "end": {
+            "x": 1007,
+            "y": 784,
+            "width": 245,
+            "height": 55,
+            "right": 1252,
+            "bottom": 839
+          },
+          "menuFont": 19,
+          "floor": 400,
+          "foot": 436.0000203450521,
+          "ground": 436.00001220703126
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "dpr": 1,
+          "viewport": [
+            390,
+            844
+          ],
+          "game": {
+            "x": 0,
+            "y": 66,
+            "width": 390,
+            "height": 1194.59375,
+            "right": 390,
+            "bottom": 1260.59375
+          },
+          "layout": {
+            "x": 10,
+            "y": 66,
+            "width": 370,
+            "height": 1194.59375,
+            "right": 380,
+            "bottom": 1260.59375
+          },
+          "arena": {
+            "x": 0,
+            "y": 153,
+            "width": 390,
+            "height": 385,
+            "right": 390,
+            "bottom": 538
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 66,
+            "right": 390,
+            "bottom": 66
+          },
+          "hand": {
+            "x": 10,
+            "y": 708.59375,
+            "width": 370,
+            "height": 331,
+            "right": 380,
+            "bottom": 1039.59375
+          },
+          "rootWidth": 390,
+          "card": {
+            "x": 71.99687194824219,
+            "y": 762.300537109375,
+            "width": 159.97621154785156,
+            "height": 237.6204833984375,
+            "right": 231.97308349609375,
+            "bottom": 999.9210205078125
+          },
+          "end": {
+            "x": 191.3125,
+            "y": 1129.59375,
+            "width": 188.6875,
+            "height": 49,
+            "right": 380,
+            "bottom": 1178.59375
+          },
+          "menuFont": 20,
+          "floor": 414.8,
+          "foot": 434.046875,
+          "ground": 434.046875
+        }
+      ]
+    }
+  },
+  "assets": {
+    "version": "2.9.0",
+    "source_sha256": "d4a09e0d7f7ef49cba6bcf6a632857b7bbe2e98b7e0abcf3f6b9b8b213e1c0ec",
+    "source_atlases_and_posters_unchanged": true,
+    "clips": 5,
+    "frames": 30,
+    "all_projected_alpha_bounds_fit": true,
+    "facing": "right",
+    "flipX": false,
+    "skill_body_heights": [
+      446.0,
+      445.999855,
+      445.99989600000004,
+      445.999941,
+      445.999792,
+      445.999959
+    ],
+    "skill_scales": [
+      1.0,
+      1.015945,
+      1.093137,
+      1.064439,
+      1.044496,
+      1.030023
+    ],
+    "crown_y": [
+      322,
+      329,
+      360,
+      349,
+      341,
+      335
+    ],
+    "canvas": [
+      1600,
+      1200
+    ],
+    "floor_pivot": [
+      800,
+      1100
+    ]
+  },
+  "premium_audit": {
+    "findings": [],
+    "mode": "strict",
+    "projectRoot": "/workspace/scratch/c24b671e0da8/slay-the-math-polish",
+    "schemaVersion": 1,
+    "summary": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    }
+  },
+  "official_designmd_lint": {
+    "status": "TIMEOUT",
+    "limit_seconds": 25,
+    "tokens_frontmatter_changed": false
+  },
+  "manual_review": [
+    "Six original Skill cells at a common scale/floor",
+    "Six calibrated frames from actual browser canvas",
+    "Focused 10-card desktop hand",
+    "Phone tenth-card access",
+    "Frozen result after actual lethal damage"
+  ],
+  "limits": [
+    "A legacy result without finished is stamped at first restore; its historical death time is unavailable.",
+    "Unfinished runs retain the existing elapsed wall-clock convention.",
+    "Browser checks used headless Chromium; native Windows execution was not performed."
+  ]
+}

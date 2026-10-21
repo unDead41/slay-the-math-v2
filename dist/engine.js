@@ -8,7 +8,16 @@ function card(r,key,upgraded=false){return {uid:'c'+(++r.seq),key,upgraded};}
 function definition(c){const d=C.cards[c.key];if(!d)throw new Error('Unknown card.');const v={...d};if(c.upgraded){for(const k of ['damage','block','filter','draw','heal','focus'])if(v[k])v[k]+=d.up;}return v;}
 function notify(r,s){r.notice=s;if(r.battle){r.battle.log.unshift(s);r.battle.log=r.battle.log.slice(0,8);}return r;}
 function newRun(seed=Date.now(),mode='learn',routeVersion=3){const r={version:1,textLocale:'en',mode,rng:seed>>>0,seed:seed>>>0,seq:0,stage:0,depth:0,hp:C.MAX_HP,maxHp:C.MAX_HP,deck:[],cleared:[],route:G.begin(0,seed,routeVersion),scene:'map',battle:null,rewards:[],checkpoint:null,started:Date.now(),gold:C.ECONOMY.start,shop:null,stats:{cardsPlayed:0,hintsUsed:0,battles:0,turns:0,forecasts:0,firstCorrect:0,assisted:0,wrong:0,concepts:{}},notice:''};for(const [key,n] of [['strike',3],['ember',3],['guard',2],['flameguard',2],['filter',1],['draw',1]])for(let i=0;i<n;i++)r.deck.push(card(r,key));if(mode==='challenge')A.enable(r);return r;}
-function draw(r,n){const b=r.battle;for(let i=0;i<n;i++){if(!b.draw.length&&b.discard.length){b.draw=shuffle(r,b.discard.splice(0));notify(r,'Discard Pile shuffled into the Draw Pile.');}if(!b.draw.length)break;b.hand.push(b.draw.pop());}}
+function draw(r,n){
+ const b=r.battle;let drawn=0;
+ // Check capacity before touching either pile or the shuffle RNG.
+ while(drawn<n&&b.hand.length<C.HAND_LIMIT){
+  if(!b.draw.length&&b.discard.length){b.draw=shuffle(r,b.discard.splice(0));notify(r,'Discard Pile shuffled into the Draw Pile.');}
+  if(!b.draw.length)break;b.hand.push(b.draw.pop());drawn++;
+ }
+ if(drawn<n&&b.hand.length>=C.HAND_LIMIT)notify(r,'Hand full ('+C.HAND_LIMIT+'/'+C.HAND_LIMIT+'). Play a card before drawing more.');
+ return drawn;
+}
 function intent(r){const b=r.battle;if(!b)return null;if(b.currentIntent)return {...b.currentIntent};const e=C.enemies[b.enemyId],p=e.patterns[(b.turn-1)%e.patterns.length],rage=Math.floor((b.turn-1)/6)*2+(b.enemyId==='dealer'&&b.hp<=b.maxHp/2?2:0)+(b.elite?2:0);return {...p,damage:Math.ceil((p.damage+rage)*(r.mode==='learn'?.7:1)),rage};}
 function turnStart(r){const b=r.battle;b.turn++;b.energy=C.ENERGY;b.block=0;b.forecastUsed=false;b.question=null;b.boostArmed=false;b.boostUsed=false;b.currentIntent=null;draw(r,C.HAND);A.startTurn(r,artifactContext);b.currentIntent=intent(r);b.enemyBlock=b.currentIntent.block||0;notify(r,'Turn '+b.turn+' · Enemy intent: '+b.currentIntent.label+'.');}
 function startBattle(r,enemyId,elite=false){if(r.scene==='master'||r.scene==='education')throw new Error('Finish the Dungeon Master encounter before entering the dungeon.');const e=C.enemies[enemyId];r.scene='battle';r.battle={enemyId,elite,hp:e.hp+(elite?10:0),maxHp:e.hp+(elite?10:0),turn:0,energy:0,block:0,enemyBlock:0,focus:0,boostArmed:false,boostUsed:false,seals:0,draw:shuffle(r,clone(r.deck)),hand:[],discard:[],exhaust:[],question:null,forecastUsed:false,log:[]};A.startCombat(r);turnStart(r);return r;}
@@ -38,8 +47,8 @@ function win(r){
  const b=r.battle;A.won(r,artifactContext);r.stats.battles++;
  r.gold=(r.gold||0)+(C.enemies[b.enemyId].boss?C.ECONOMY.boss:b.elite?C.ECONOMY.elite:C.ECONOMY.battle);
  if(C.enemies[b.enemyId].boss){
-  if(r.stage===1){r.scene='victory';r.finished=Date.now();return notify(r,'You cleared both dungeons!');}
-  r.scene='stageclear';if(r.artifactState)A.offer(r,'boss');return notify(r,'Sigil Keep cleared.');
+  if(r.stage===1){r.scene='victory';r.finished=Math.max(r.started,Date.now());return notify(r,'You cleared both dungeons!');}
+  r.scene='stageclear';r.finished=Math.max(r.started,Date.now());if(r.artifactState)A.offer(r,'boss');return notify(r,'Sigil Keep cleared.');
  }
  r.scene='reward';r.rewards=shuffle(r,Object.keys(C.cards)).slice(0,3);
  if(b.elite&&r.artifactState)A.offer(r,'elite',false);
@@ -72,7 +81,7 @@ function playCard(r,uid,targets=[]){
  let exhaustCount=0;
  if(d.filter){for(const id of targets){const k=b.draw.findIndex(x=>x.uid===id);b.exhaust.push(b.draw.splice(k,1)[0]);exhaustCount++;}notify(r,targets.length+' cards exhausted for this battle.');}
  if(d.exhaust){b.exhaust.push(c);exhaustCount++;}else b.discard.push(c);
- if(d.draw){const before=b.hand.length;draw(r,d.draw);R.record(r,d.name,[],[R.delta('Cards drawn','cards',before,b.hand.length,['Requested draw: '+d.draw,'Hand after: '+before+' + '+(b.hand.length-before)+' = '+b.hand.length,'Only cards actually moved to Hand count.'])]);notify(r,'Draw '+d.draw+' cards.');}
+ if(d.draw){const before=b.hand.length,drawn=draw(r,d.draw);R.record(r,d.name,[],[R.delta('Cards drawn','cards',before,b.hand.length,['Requested draw: '+d.draw,'Hand limit: '+C.HAND_LIMIT,'Hand after: '+before+' + '+drawn+' = '+b.hand.length,'Only cards actually moved to Hand count.'])]);notify(r,'Draw '+drawn+' card'+(drawn===1?'':'s')+'.'+(drawn<d.draw&&b.hand.length>=C.HAND_LIMIT?' Hand full ('+C.HAND_LIMIT+'/'+C.HAND_LIMIT+').':''));}
  // Commit the full Exhaust batch before any artifact can draw from that pile.
  A.exhausted(r,exhaustCount,artifactContext);A.cardResolved(r,d,artifactContext);
  if(b.hp<=0)win(r);return r;
@@ -91,7 +100,7 @@ function endTurn(r){
  A.beforeEnemy(r,artifactContext);const it=intent(r),hit=Math.max(0,it.damage-b.block);
  const hpBefore=r.hp;r.hp=Math.max(0,r.hp-hit);R.record(r,it.label,[],[R.delta('HP lost','HP',hpBefore,r.hp,['Enemy damage: '+it.damage,'Block absorbed: '+Math.min(it.damage,b.block),'Damage after Block: max(0, '+it.damage+' − '+b.block+') = '+hit,'HP after: max(0, '+hpBefore+' − '+hit+') = '+r.hp]),R.total('Remaining HP','HP',r.hp,['Remaining HP: '+hpBefore+' − '+(hpBefore-r.hp)+' = '+r.hp])]);r.stats.turns++;b.discard.push(...b.hand.splice(0));
  notify(r,it.label+': '+hit+' damage taken.');
- if(r.hp<=0){r.scene='defeat';return r;}
+ if(r.hp<=0){r.scene='defeat';r.finished=Math.max(r.started,Date.now());return r;}
  if(hit===0)A.fullyBlocked(r,it.damage,artifactContext);
  if(b.hp<=0){win(r);return r;}
  // The next player-turn reset precedes the HP-threshold Block award.
@@ -128,12 +137,13 @@ function shopOffers(r,nodeId){const keys=Object.keys(C.cards);let value=(r.seed^
 function buyCard(r,index){if(r.scene!=='shop'||!Number.isInteger(index)||index<0||index>2||r.shop.bought.includes(index))throw new Error('This card is no longer for sale.');const offer=r.shop.offers[index];if(r.gold<offer.price)throw new Error('Not enough Gold. Win battles to earn more.');if(r.deck.length>=60)throw new Error('Your deck is full.');const before=r.gold;r.gold-=offer.price;R.record(r,C.cards[offer.key].name+' purchased',A.owned(r).filter(a=>a.values.discount_percent).map(a=>a.id),[A.priceCalculation(r,C.ECONOMY.prices[C.cards[offer.key].cost]),R.delta('Gold spent','Gold',before,r.gold,['Purchase price: '+offer.price+' Gold','Gold after: '+before+' − '+offer.price+' = '+r.gold])]);r.deck.push(card(r,offer.key));r.shop.bought.push(index);return r;}
 function leaveShop(r){if(r.scene!=='shop')throw new Error('No Shop is active.');return finishNode(r);}
 
-function nextStage(r){if(r.scene!=='stageclear'||r.artifactState?.offer)throw new Error('Choose your Boss artifact before entering Stage 2.');const routeVersion=r.route?.version===3?3:2;r.cleared.push(r.route?.active||'0:4');r.stage=1;r.depth=0;r.route=G.begin(1,r.seed,routeVersion);r.hp=Math.min(r.maxHp,r.hp+12);r.battle=null;r.scene='map';r.checkpoint=null;r.checkpoint=clone(r);return r;}
+function nextStage(r){if(r.scene!=='stageclear'||r.artifactState?.offer)throw new Error('Choose your Boss artifact before entering Stage 2.');const routeVersion=r.route?.version===3?3:2;r.cleared.push(r.route?.active||'0:4');r.stage=1;r.depth=0;r.route=G.begin(1,r.seed,routeVersion);r.hp=Math.min(r.maxHp,r.hp+12);r.battle=null;r.scene='map';delete r.finished;r.checkpoint=null;r.checkpoint=clone(r);return r;}
 function retry(r){if(!r.checkpoint){const out=newRun(r.seed,r.mode,r.route?.version||2);if(r.route===undefined)delete out.route;if(!r.artifactState){delete out.artifactState;out.scene='map';}return out;}const out=clone(r.checkpoint);out.checkpoint=clone({...r.checkpoint,checkpoint:null});return out;}
 function validate(s){try{return validateState(s);}catch(_){return false;}}
 function validateState(s){const nonnegative=n=>Number.isSafeInteger(n)&&n>=0;const cardOK=c=>c&&typeof c.uid==='string'&&/^c\d+$/.test(c.uid)&&Object.hasOwn(C.cards,c.key)&&typeof c.upgraded==='boolean';
  const phase=Q.context(s)?.scene;
  if(!s||typeof s!=='object'||s.version!==1||!['learn','challenge'].includes(s.mode)||!Array.isArray(s.deck)||s.deck.length<6||s.deck.length>60||!s.deck.every(cardOK)||new Set(s.deck.map(c=>c.uid)).size!==s.deck.length||![0,1].includes(s.stage)||!Number.isInteger(s.depth)||s.depth<0||s.depth>(s.route?.version===3?9:4)||!nonnegative(s.hp)||s.hp>s.maxHp||s.maxHp!==A.maxHp(s)||!nonnegative(s.rng)||s.rng>4294967295||!nonnegative(s.seed)||!nonnegative(s.seq)||s.deck.some(c=>Number(c.uid.slice(1))>s.seq)||!Array.isArray(s.cleared)||!s.cleared.every(v=>typeof v==='string')||!Number.isFinite(s.started)||!s.stats||typeof s.stats.concepts!=='object'||!['battles','turns','forecasts','firstCorrect','assisted','wrong'].every(k=>nonnegative(s.stats[k]))||s.stats.forecasts!==s.stats.firstCorrect+s.stats.assisted||!['master','education','map','battle','reward','camp','event','shop','stageclear','defeat','victory'].includes(s.scene))return false;
+ if(s.finished!==undefined&&(!Number.isFinite(s.finished)||s.finished<s.started||!['stageclear','defeat','victory'].includes(phase)))return false;
  if(!R.valid(s)||!Q.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
  if(['cardsPlayed','hintsUsed'].some(k=>s.stats[k]!==undefined&&!nonnegative(s.stats[k])))return false;
  if(s.gold!==undefined&&(!nonnegative(s.gold)||s.gold>100000))return false;
@@ -153,8 +163,11 @@ function restore(saved){
  if(!validate(saved))return null;
  const out=clone(saved);
  function refresh(r){
+  if(['stageclear','defeat','victory'].includes(Q.context(r)?.scene)&&r.finished===undefined)r.finished=Math.max(r.started,Date.now());
   const b=r.battle;
   if(b){
+   // Old uncapped hands remain loadable; preserve each excess card on top of Draw.
+   if(b.hand.length>C.HAND_LIMIT)b.draw.push(...b.hand.splice(C.HAND_LIMIT).reverse());
    if(b.question){const q=b.question,display=M.makeQuestion(q.source,q.kind);for(const key of ['text','why','label','steps'])q[key]=display[key];}
    b.currentIntent.label=C.enemies[b.enemyId].patterns[(b.turn-1)%C.enemies[b.enemyId].patterns.length].label;
    if(r.textLocale!=='en'){b.log=['Game resumed. Your progress is safe.'];r.notice='Game resumed.';}

@@ -21,9 +21,19 @@ Canonical owners: DESIGN.md, UX-CONTRACT.md, SOR 10/11 and decisions DEC-2026102
 
 Project-owned QA is in tests/menu-fit-browser.cjs. It checks 1280×720, 1920×1080, 2560×1440, 2560×1080, 3440×1440, the observed 3413×1740 viewport, 3840×2160, 5120×1440, 844×390, 390×844 and 320×740.
 
-Checks include whole-image bounds, menu/dialog geometry, display scaling, native controls, static scene sources, keyboard/focus, exactly 5s scheduling/fade, pause/reduced motion, failed and stale image decodes, exact saved-run preservation and a real Challenge artifact/question transition. Existing dungeon and education browser suites remain regressions. The GitHub Actions run records actual test results and preview artifacts; pending jobs must not be described as passed.
+Checks include whole-image bounds, menu/dialog geometry, display scaling, native controls, static scene sources, keyboard/focus, exactly 5s scheduling/fade, pause/reduced motion, failed and stale image decodes, exact saved-run preservation and a real Challenge artifact/question transition.
 
-The local execution container was unavailable for this task, so shell verification runs on the repository's GitHub Actions runner. Browser-device observations and CI renderings are separate evidence. Chromium coverage does not claim a physical test of every monitor/browser.
+Actual final verification on 21 October 2026:
+
+- Script syntax and optional portable build pass.
+- All 100 engine/education/DOM tests pass with zero skips; all seven map tests and validation of 100 seeds / 200 maps pass.
+- DESIGN.md lint reports zero errors/warnings. Strict premium audit of actual runtime source reports zero findings.
+- All nine new menu check groups pass across the 11 listed viewports. Existing dungeon (six groups) and education (seven groups) suites pass with no browser page errors. Arena grounding, artifact effects, original question keys, no-repeat history, exact saves and the offline build remain covered.
+- UWHD menu and 4K Settings renderings were visually inspected.
+
+Execution used isolated Linux, Node v26.8.2, Google Chrome 153.0.8010.52 and Playwright 1.64.1. The local execution container was unavailable, and the GitHub-hosted job could not start. The passing checks above ran in the independent execution environment, not GitHub Actions. The workflow remains available for future runs. Chromium viewport coverage does not claim a physical test of every monitor/browser or Windows shell execution.
+
+Machine-readable results, runtime commit and exact tested-file hashes: [verification/menu-fit-2-5-1.json](verification/menu-fit-2-5-1.json). The final test-only overlays freeze the clock before exact millisecond assertions, scope Settings to the Home menu, and explicitly choose a legal Battle in the older DOM test instead of assuming the random first room is Battle. Game generation rules remain unchanged.
 
 ## Apply to the same Windows project
 

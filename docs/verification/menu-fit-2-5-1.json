@@ -1,0 +1,791 @@
+{
+  "version": "2.5.1",
+  "date": "2026-10-21",
+  "runtimeCommit": "4f525b94512b8aab0538ac742c015e02637e4730",
+  "execution": "Isolated Linux execution; system Google Chrome headless via Playwright. GitHub-hosted job blocked before startup.",
+  "status": {
+    "sha": "4f525b94512b8aab0538ac742c015e02637e4730",
+    "completed": [
+      {
+        "step": "check",
+        "exit": 0,
+        "seconds": 0.24
+      },
+      {
+        "step": "build",
+        "exit": 0,
+        "seconds": 0.48
+      },
+      {
+        "step": "unit-dom",
+        "exit": 0,
+        "seconds": 2.94
+      },
+      {
+        "step": "maps",
+        "exit": 0,
+        "seconds": 0.53
+      },
+      {
+        "step": "design-lint",
+        "exit": 0,
+        "seconds": 0.08
+      },
+      {
+        "step": "premium-audit",
+        "exit": 0,
+        "seconds": 37.83
+      },
+      {
+        "step": "menu-browser",
+        "exit": 0,
+        "seconds": 10.76
+      },
+      {
+        "step": "dungeon-browser",
+        "exit": 0,
+        "seconds": 11.35
+      },
+      {
+        "step": "education-browser",
+        "exit": 0,
+        "seconds": 11.43
+      }
+    ],
+    "status": "passed",
+    "current": null,
+    "started": 1792566203.778179,
+    "finished": 1792566279.422954
+  },
+  "environment": {
+    "node": "v26.8.2",
+    "chrome": "Google Chrome 153.0.8010.52",
+    "playwright": "1.64.1"
+  },
+  "unitSummary": "tate and resumes it before the map (55.981362ms)\n✔ DOM: shown question IDs never repeat when new runs replace unanswered trials (96.920995ms)\n✔ DOM: import preserves the pending question and unions local and imported exposure history (22.198151ms)\n✔ DOM: storage failure keeps the trial playable and warns that progress needs Export (24.665361ms)\n✔ DOM: corrupt question history is preserved and cannot silently reset the draw pool (11.528131ms)\nℹ tests 100\nℹ suites 0\nℹ pass 100\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 2855.784426\n",
+  "mapsSummary": " modules/map run validate\nnpm notice run slay-the-math-map-module@1.0.0 test\nnpm notice run node --test test/map-rng.test.cjs test/browser-global.test.cjs\n✔ browser-global API reproduces all exported maps without CommonJS (71.334353ms)\n✔ ES module API reproduces all 200 saved maps (29.126251ms)\n✔ all original 50 seeds preserve their saved map snapshots in both stages (14.641681ms)\n✔ confirmed quotas and mandatory levels hold for every path count in both stages (23.284631ms)\n✔ 100 seeds are unique, reproducible, and include expanding and merging maps (48.232712ms)\n✔ validator detects broken guarantees, counts, and disconnected rooms (1.59433ms)\n✔ invalid seed and options fail clearly (0.33365ms)\nℹ tests 7\nℹ suites 0\nℹ pass 7\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 252.729592\nnpm notice run slay-the-math-map-module@1.0.0 validate\nnpm notice run node tools/validate.cjs\n{\"seeds\":100,\"maps\":200,\"uniqueLayouts\":200,\"pngs\":12,\"pngHashes\":\"passed\",\"sorFiles\":4,\"htmlFiles\":0}\n",
+  "designLint": "{\n  \"findings\": [\n    {\n      \"severity\": \"info\",\n      \"message\": \"Design system defines 6 colors, 2 typography scales, 2 rounding levels, 1 spacing token, 3 components.\",\n      \"rule\": \"token-summary\"\n    }\n  ],\n  \"summary\": {\n    \"errors\": 0,\n    \"warnings\": 0,\n    \"infos\": 1\n  }\n}\n",
+  "premiumAudit": {
+    "findings": [],
+    "mode": "strict",
+    "projectRoot": "/data/workspace/stm-runtime-audit",
+    "schemaVersion": 1,
+    "summary": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    }
+  },
+  "menu": {
+    "version": "2.5.1",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 720,
+        "art": {
+          "x": 51.512858660998766,
+          "y": 28.8,
+          "width": 1176.9742826780023,
+          "height": 662.4000000000001
+        },
+        "menu": {
+          "x": 172.78125,
+          "y": 277.40625,
+          "width": 384,
+          "height": 291.1875,
+          "right": 556.78125,
+          "bottom": 568.59375
+        },
+        "dialog": {
+          "x": 360,
+          "y": 183.125,
+          "width": 560,
+          "height": 353.75,
+          "right": 920,
+          "bottom": 536.875,
+          "scroll": 350,
+          "client": 350,
+          "font": "14px"
+        }
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "art": {
+          "x": 77.26928799149854,
+          "y": 43.2,
+          "width": 1765.461424017003,
+          "height": 993.5999999999999
+        },
+        "menu": {
+          "x": 306.796875,
+          "y": 452.515625,
+          "width": 480,
+          "height": 358,
+          "right": 786.796875,
+          "bottom": 810.515625
+        },
+        "dialog": {
+          "x": 610,
+          "y": 340.859375,
+          "width": 700,
+          "height": 398.265625,
+          "right": 1310,
+          "bottom": 739.125,
+          "scroll": 394,
+          "client": 394,
+          "font": "16px"
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "art": {
+          "x": 103.02571732199753,
+          "y": 57.6,
+          "width": 2353.9485653560046,
+          "height": 1324.8000000000002
+        },
+        "menu": {
+          "x": 409.046875,
+          "y": 603.546875,
+          "width": 640,
+          "height": 477.28125,
+          "right": 1049.046875,
+          "bottom": 1080.828125
+        },
+        "dialog": {
+          "x": 813.328125,
+          "y": 471.59375,
+          "width": 933.328125,
+          "height": 496.8125,
+          "right": 1746.65625,
+          "bottom": 968.40625,
+          "scroll": 493,
+          "client": 493,
+          "font": "21.3333px"
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "art": {
+          "x": 397.2692879914983,
+          "y": 43.2,
+          "width": 1765.461424017003,
+          "height": 993.5999999999999
+        },
+        "menu": {
+          "x": 332.390625,
+          "y": 452.515625,
+          "width": 480,
+          "height": 358,
+          "right": 812.390625,
+          "bottom": 810.515625
+        },
+        "dialog": {
+          "x": 930,
+          "y": 340.859375,
+          "width": 700,
+          "height": 398.265625,
+          "right": 1630,
+          "bottom": 739.125,
+          "scroll": 394,
+          "client": 394,
+          "font": "16px"
+        }
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "art": {
+          "x": 543.025717321998,
+          "y": 57.6,
+          "width": 2353.9485653560046,
+          "height": 1324.8000000000002
+        },
+        "menu": {
+          "x": 444.25,
+          "y": 603.546875,
+          "width": 640,
+          "height": 477.28125,
+          "right": 1084.25,
+          "bottom": 1080.828125
+        },
+        "dialog": {
+          "x": 1253.328125,
+          "y": 471.59375,
+          "width": 933.328125,
+          "height": 496.8125,
+          "right": 2186.65625,
+          "bottom": 968.40625,
+          "scroll": 493,
+          "client": 493,
+          "font": "21.3333px"
+        }
+      },
+      {
+        "width": 3413,
+        "height": 1740,
+        "art": {
+          "x": 284.32274176408066,
+          "y": 69.6,
+          "width": 2844.354516471839,
+          "height": 1600.8000000000002
+        },
+        "menu": {
+          "x": 507.0625,
+          "y": 729.390625,
+          "width": 773.328125,
+          "height": 576.671875,
+          "right": 1280.390625,
+          "bottom": 1306.0625
+        },
+        "dialog": {
+          "x": 1142.609375,
+          "y": 581.015625,
+          "width": 1127.765625,
+          "height": 577.96875,
+          "right": 2270.375,
+          "bottom": 1158.984375,
+          "scroll": 574,
+          "client": 574,
+          "font": "25.7778px"
+        }
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "art": {
+          "x": 154.5385759829971,
+          "y": 86.4,
+          "width": 3530.922848034006,
+          "height": 1987.1999999999998
+        },
+        "menu": {
+          "x": 613.59375,
+          "y": 905.53125,
+          "width": 960,
+          "height": 716,
+          "right": 1573.59375,
+          "bottom": 1621.53125
+        },
+        "dialog": {
+          "x": 1220,
+          "y": 733.625,
+          "width": 1400,
+          "height": 692.75,
+          "right": 2620,
+          "bottom": 1426.375,
+          "scroll": 689,
+          "client": 689,
+          "font": "32px"
+        }
+      },
+      {
+        "width": 5120,
+        "height": 1440,
+        "art": {
+          "x": 1383.0257173219973,
+          "y": 57.6,
+          "width": 2353.9485653560046,
+          "height": 1324.8000000000002
+        },
+        "menu": {
+          "x": 506.65625,
+          "y": 603.546875,
+          "width": 640,
+          "height": 477.28125,
+          "right": 1146.65625,
+          "bottom": 1080.828125
+        },
+        "dialog": {
+          "x": 2093.328125,
+          "y": 471.59375,
+          "width": 933.328125,
+          "height": 496.8125,
+          "right": 3026.65625,
+          "bottom": 968.40625,
+          "scroll": 493,
+          "client": 493,
+          "font": "21.3333px"
+        }
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "art": {
+          "x": 103.23613177470776,
+          "y": 15.6,
+          "width": 637.5277364505844,
+          "height": 358.79999999999995
+        },
+        "menu": {
+          "x": 35.875,
+          "y": 216.953125,
+          "width": 384,
+          "height": 291.1875,
+          "right": 419.875,
+          "bottom": 508.140625
+        },
+        "dialog": {
+          "x": 142,
+          "y": 18.125,
+          "width": 560,
+          "height": 353.75,
+          "right": 702,
+          "bottom": 371.875,
+          "scroll": 350,
+          "client": 350,
+          "font": "14px"
+        }
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "art": {
+          "x": 12,
+          "y": 48.92183761961722,
+          "width": 366,
+          "height": 205.98444976076556
+        },
+        "menu": {
+          "x": 16,
+          "y": 434.140625,
+          "width": 358,
+          "height": 296,
+          "right": 374,
+          "bottom": 730.140625
+        },
+        "dialog": {
+          "x": 11.703125,
+          "y": 222.734375,
+          "width": 366.59375,
+          "height": 398.53125,
+          "right": 378.296875,
+          "bottom": 621.265625,
+          "scroll": 395,
+          "client": 395,
+          "font": "14px"
+        }
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "art": {
+          "x": 12,
+          "y": 49.90105412679425,
+          "width": 296,
+          "height": 166.5885167464115
+        },
+        "menu": {
+          "x": 16,
+          "y": 388.859375,
+          "width": 288,
+          "height": 296,
+          "right": 304,
+          "bottom": 684.859375
+        },
+        "dialog": {
+          "x": 9.59375,
+          "y": 131.984375,
+          "width": 300.796875,
+          "height": 476.03125,
+          "right": 310.390625,
+          "bottom": 608.015625,
+          "scroll": 472,
+          "client": 472,
+          "font": "14px"
+        }
+      }
+    ],
+    "checks": [
+      "Five decoded scenes retain fixed sources, aligned ambience, stable controls and one selected native scene button.",
+      "11 viewports: whole foreground image, responsive title/menu/dialogs, 44px targets, desktop footer, phone/short-screen scrolling and Escape focus.",
+      "Tutorial and collection search/empty state still use the shared working dialogs.",
+      "Exactly 5s autoplay with 5s fade; hover/focus/dialog pause; Motion Off and OS reduction stop autoplay while manual selection remains usable.",
+      "Failed artwork decode retains the prior image and all usable menu controls.",
+      "A late decode cannot overwrite a newer manual scene selection.",
+      "Choosing the current scene cancels any older pending decode.",
+      "Scene selection preserves the exact saved run; Continue still resumes its map.",
+      "Responsive mode selection still starts Challenge, offers artifacts and opens the actual bank question."
+    ],
+    "errors": []
+  },
+  "dungeon": {
+    "checks": [
+      "Five supplied illustrated scenes; five native menu buttons; disabled Continue without a save; scene changes do not move controls",
+      "Tutorial, collection empty state, Settings and Escape/focus restoration work from the new menu",
+      "Menu and grounded combat reflow at 1920, 1280, 844, 390 and 320px; 44px menu controls; no page overflow",
+      "All 12 enemies and all six stage/encounter arenas are visible; feet/shadows share the floor; exact HP retained",
+      "Real Attack, Block and End Turn pose changes preserve the same foot pivot for all five supplied action sheets",
+      "Autoplay advances; Motion Off, OS reduced motion and open dialogs pause it"
+    ],
+    "grounding": [
+      {
+        "id": "beetle",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "beetle",
+        "width": 1280,
+        "maxFootError": 0.000008138020803016843
+      },
+      {
+        "id": "beetle",
+        "width": 844,
+        "maxFootError": 0.000014241536462122895
+      },
+      {
+        "id": "beetle",
+        "width": 390,
+        "maxFootError": 0.000004069010401508422
+      },
+      {
+        "id": "beetle",
+        "width": 320,
+        "maxFootError": 0.000014241536462122895
+      },
+      {
+        "id": "wisp",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "beetle",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "bat",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "knight",
+        "width": 1920,
+        "maxFootError": 0.00006510416676519526
+      },
+      {
+        "id": "shard",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "sentinel",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "weaver",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "shade",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "mimic",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "golem",
+        "width": 1920,
+        "maxFootError": 0.00006510416676519526
+      },
+      {
+        "id": "reaper",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "dealer",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "wisp",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "wisp",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "wisp",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "beetle",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "beetle",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "beetle",
+        "width": 1920,
+        "maxFootError": 0.000044759114530279476
+      },
+      {
+        "id": "bat",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "bat",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "bat",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "knight",
+        "width": 1920,
+        "maxFootError": 0.00006510416676519526
+      },
+      {
+        "id": "knight",
+        "width": 1920,
+        "maxFootError": 0.00006510416676519526
+      },
+      {
+        "id": "knight",
+        "width": 1920,
+        "maxFootError": 0.00006510416676519526
+      },
+      {
+        "id": "shard",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "shard",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      },
+      {
+        "id": "shard",
+        "width": 1920,
+        "maxFootError": 0.000028483073037932627
+      }
+    ],
+    "errors": []
+  },
+  "education": {
+    "checks": [
+      "The real Claim & Choose Your Path button opens one saved question from the original bank, before ownership, Gold or map entry; double activation cannot reroll it",
+      "Keyboard answers, incorrect choice, Hint, Menu/Continue, refresh, correct explanation and solved-state refresh work; the final claim grants exactly 25 Gold once without an HP penalty",
+      "Six actual viewport sizes from 320px to 4K: full questions and four native answer targets fit, artwork decodes, document scrolling remains usable and the trial reaches the map",
+      "Probability, Sets and Logic display the original prompts/options and resolve their original exact answer keys",
+      "Ten replaced New Runs and an intervening refresh preserve exposure history: every shown ID is unique, even when its question was never answered",
+      "Exhaustion is explicit: no question is repeated or silently recycled, and the journey remains playable",
+      "Unmodified offline HTML embeds all 120 questions and the supplied Master artwork; Claim, answer, effect, map and room entry work with zero HTTP requests"
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "overflow": false,
+        "answers": [
+          {
+            "left": 839.390625,
+            "right": 1814.984375,
+            "height": 56.71875
+          },
+          {
+            "left": 839.390625,
+            "right": 1814.984375,
+            "height": 56.71875
+          },
+          {
+            "left": 839.390625,
+            "right": 1814.984375,
+            "height": 56.71875
+          },
+          {
+            "left": 839.390625,
+            "right": 1814.984375,
+            "height": 56.71875
+          }
+        ],
+        "images": true,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": false,
+        "answers": [
+          {
+            "left": 568.984375,
+            "right": 1206.046875,
+            "height": 56
+          },
+          {
+            "left": 568.984375,
+            "right": 1206.046875,
+            "height": 56
+          },
+          {
+            "left": 568.984375,
+            "right": 1206.046875,
+            "height": 56
+          },
+          {
+            "left": 568.984375,
+            "right": 1206.046875,
+            "height": 56
+          }
+        ],
+        "images": true,
+        "scrollHeight": 996
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "answers": [
+          {
+            "left": 61,
+            "right": 783,
+            "height": 56
+          },
+          {
+            "left": 61,
+            "right": 783,
+            "height": 56
+          },
+          {
+            "left": 61,
+            "right": 783,
+            "height": 56
+          },
+          {
+            "left": 61,
+            "right": 783,
+            "height": 56
+          }
+        ],
+        "images": true,
+        "scrollHeight": 1171
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "overflow": false,
+        "answers": [
+          {
+            "left": 35,
+            "right": 355,
+            "height": 70.78125
+          },
+          {
+            "left": 35,
+            "right": 355,
+            "height": 70.78125
+          },
+          {
+            "left": 35,
+            "right": 355,
+            "height": 70.78125
+          },
+          {
+            "left": 35,
+            "right": 355,
+            "height": 70.78125
+          }
+        ],
+        "images": true,
+        "scrollHeight": 1280
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "overflow": false,
+        "answers": [
+          {
+            "left": 35,
+            "right": 285,
+            "height": 93.171875
+          },
+          {
+            "left": 35,
+            "right": 285,
+            "height": 93.171875
+          },
+          {
+            "left": 35,
+            "right": 285,
+            "height": 70.78125
+          },
+          {
+            "left": 35,
+            "right": 285,
+            "height": 70.78125
+          }
+        ],
+        "images": true,
+        "scrollHeight": 1351
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "overflow": false,
+        "answers": [
+          {
+            "left": 1698.578125,
+            "right": 3017.390625,
+            "height": 58
+          },
+          {
+            "left": 1698.578125,
+            "right": 3017.390625,
+            "height": 58
+          },
+          {
+            "left": 1698.578125,
+            "right": 3017.390625,
+            "height": 58
+          },
+          {
+            "left": 1698.578125,
+            "right": 3017.390625,
+            "height": 58
+          }
+        ],
+        "images": true,
+        "scrollHeight": 2160
+      }
+    ],
+    "topics": [
+      "PROB-035",
+      "SET-038",
+      "LOGIC-040"
+    ],
+    "errors": []
+  },
+  "testedFilesSHA256": {
+    "dist/app.js": "f235c8d21bbb0f5debd8facdc44e1ed519870df11566cd3cd58009d8613913e4",
+    "dist/visuals.js": "1f49cfe7f4f71345c166bdf473438ccc03033c4bc3a1fe2791ae1766859dc3dd",
+    "dist/dungeon-2-3.css": "9fcd666e9980b0d8d45d89208cfa05e945d662fc672a2df0c394e5511eb7e89c",
+    "tests/menu-fit-browser.cjs": "ac38df3444db1e8e963cd6a013e63dbf9819b5b45224899373a3c897b962ba21",
+    "tests/ui.test.cjs": "64fa6cff39218ca76439f015b4633f42ef6ddfc0c22ff043b884fee33161f352",
+    "tests/dungeon-browser.cjs": "61e82fb633affe99ffebc7d3efee244ec9548fa1a46365b8eb694093a95245f4"
+  }
+}

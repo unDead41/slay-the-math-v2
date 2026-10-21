@@ -99,7 +99,9 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
   await click('library');await page.locator('#card-search').fill('no-such-card');assert.equal(await page.locator('.no-results').count(),1);await click('close');
   report.checks.push('Tutorial and collection search/empty state still use the shared working dialogs.');
 
-  await page.clock.install();await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.clock.install({time:new Date('2030-01-01T00:00:00Z')});
+   await page.clock.pauseAt(new Date('2030-01-01T00:00:00Z'));
+   await page.emulateMedia({reducedMotion:'no-preference'});
   await page.locator('.scene-choice').last().click();await page.waitForFunction(()=>document.querySelector('.illustrated-home').dataset.art==='door');
   await page.locator('.scene-choice').last().blur();await page.mouse.move(1900,100);
   assert.equal(await page.locator('.menu-backdrop.active').evaluate(e=>getComputedStyle(e).transitionDuration),'5s');
@@ -108,7 +110,7 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
   let art=await active();await page.locator('[data-action=new]').focus();await page.clock.runFor(5001);assert.equal(await active(),art);
   await page.locator('[data-action=new]').blur();await page.locator('[data-action=new]').hover();await page.clock.runFor(5001);assert.equal(await active(),art);
   await page.mouse.move(1900,100);await click('saves');art=await active();await page.clock.runFor(15001);assert.equal(await active(),art);await page.keyboard.press('Escape');
-  await page.locator('[data-action=saves]').blur();await page.mouse.move(1900,100);
+  await page.locator('.main-menu-actions [data-action=saves]').blur();await page.mouse.move(1900,100);
   await click('motion');art=await active();await page.clock.runFor(15001);assert.equal(await active(),art);
   await page.locator('.scene-choice').nth(2).click();await page.waitForFunction(()=>document.querySelector('.illustrated-home').dataset.art==='archive');
   assert.equal(await page.locator('.menu-backdrop.active').evaluate(e=>getComputedStyle(e).transitionDuration),'0s');

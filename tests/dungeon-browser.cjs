@@ -111,7 +111,7 @@ let server;
   await page.clock.runFor(15000);assert.equal(await page.locator('.illustrated-home').getAttribute('data-art'),art);
   await click('motion');await page.locator('.scene-choice').last().click();await page.waitForFunction(()=>document.querySelector('.illustrated-home').dataset.art==='door');
   await page.locator('.scene-choice').last().blur();
-  await page.mouse.move(1900,200);await page.clock.runFor(15000);await page.waitForFunction(()=>document.querySelector('.illustrated-home').dataset.art==='corridor');
+  await page.mouse.move(1900,200);await page.clock.runFor(5001);await page.waitForFunction(()=>document.querySelector('.illustrated-home').dataset.art==='corridor');
   await click('saves');art=await page.locator('.illustrated-home').getAttribute('data-art');await page.clock.runFor(15000);assert.equal(await page.locator('.illustrated-home').getAttribute('data-art'),art);await page.keyboard.press('Escape');
   await page.emulateMedia({reducedMotion:'reduce'});art=await page.locator('.illustrated-home').getAttribute('data-art');await page.clock.runFor(30000);assert.equal(await page.locator('.illustrated-home').getAttribute('data-art'),art);
   report.checks.push('Autoplay advances; Motion Off, OS reduced motion and open dialogs pause it');

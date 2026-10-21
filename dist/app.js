@@ -47,8 +47,8 @@ function header(){return '<button class="brand" data-action="home" aria-label="S
 function homeView(){
  const active=run&&!['victory','defeat'].includes(run.scene);
  const scene=V.menuScenes[ui.menuScene];
- return '<section class="dungeon-home illustrated-home" aria-label="Slay the Math Main Menu" data-art="'+scene.id+'">'+
-  '<div class="home-art" aria-hidden="true"><img class="menu-backdrop active" src="assets/'+scene.art+'" alt="" width="1672" height="941" fetchpriority="high"><img class="menu-backdrop" src="assets/'+scene.art+'" alt="" width="1672" height="941"></div>'+
+ return '<section class="dungeon-home illustrated-home" aria-label="Slay the Math Main Menu" data-art="'+scene.id+'" style="--menu-fade:'+V.timing.menuFade+'ms">'+
+  '<div class="home-art" aria-hidden="true">'+V.menuScenes.map((s,i)=>'<img class="menu-ambience'+(i===ui.menuScene?' active':'')+'" data-scene-index="'+i+'" src="assets/'+s.art+'" alt="" width="1672" height="941" decoding="async" fetchpriority="low"><img class="menu-backdrop'+(i===ui.menuScene?' active':'')+'" data-scene-index="'+i+'" src="assets/'+s.art+'" alt="" width="1672" height="941" decoding="async" fetchpriority="'+(i===ui.menuScene?'high':'low')+'">').join('')+'</div>'+
   '<div class="home-vignette" aria-hidden="true"></div><div class="home-title">'+
   '<div class="title-sigil">'+icon('chance')+'</div><h1>Slay <span>the</span> Math</h1>'+
   '<p class="home-subtitle">DUNGEON OF CHANCE</p><div class="ornament" aria-hidden="true">◆</div>'+
@@ -76,14 +76,15 @@ async function selectMenuScene(index,manual=false){
  const scene=V.menuScenes[index],home=$('.illustrated-home');
  if(!scene||!home||index===ui.menuScene){scheduleMenu();return;}
  clearTimeout(menuTimer);const generation=++menuGeneration;
- const next=home.querySelector('.menu-backdrop:not(.active)'),current=home.querySelector('.menu-backdrop.active');
- next.src=window.DC_ASSETS?.[scene.art]||'assets/'+scene.art;
+ // Fixed scene images keep a fading layer's source intact during rapid selection.
+ const next=home.querySelector('.menu-backdrop[data-scene-index="'+index+'"]');
  try{
   if(next.decode)await next.decode();
   else await new Promise((resolve,reject)=>{if(next.complete&&next.naturalWidth)resolve();else{next.onload=resolve;next.onerror=reject;}});
  }catch(_){if(generation===menuGeneration){if(manual)toast('Artwork could not be loaded. Choose another scene.',true);scheduleMenu();}return;}
  if(generation!==menuGeneration||!home.isConnected)return;
- current.classList.remove('active');next.classList.add('active');
+ if(!manual&&(document.hidden||!motionAllowed()||$('#dialog').open||$('.main-menu-actions:hover')||$('.main-menu-actions:focus-within'))){scheduleMenu();return;}
+ home.querySelectorAll('.menu-backdrop,.menu-ambience').forEach(el=>el.classList.toggle('active',Number(el.dataset.sceneIndex)===index));
  ui.menuScene=index;home.dataset.art=scene.id;
  home.querySelector('#home-scene-name').textContent=scene.label;
  home.querySelectorAll('.scene-choice').forEach((el,i)=>el.setAttribute('aria-pressed',String(i===index)));

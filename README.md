@@ -1,4 +1,4 @@
-# Slay the Math — Combat Edition 2.2
+# Slay the Math — Dungeon Edition 2.5.1
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -37,3 +37,5 @@ The game itself has no dependency on either QA package.
 See [implementation and limits](docs/DUNGEON_EDITION_2_1.md), [verification](docs/VERIFICATION_2_1.md),
 [DESIGN.md](DESIGN.md), [UX-CONTRACT.md](UX-CONTRACT.md) and [SOR_README.md](SOR_README.md).
 Probability remains the implemented mathematics mode.
+
+Main menu UWHD/display fit and 5s transitions: [Menu fit 2.5.1](docs/MENU_FIT_2_5_1.md). Browser QA: `npm run test:menu-browser` with Playwright supplied through `BROWSER_QA_MODULE`.

@@ -69,6 +69,10 @@ jobs:
         run: npm run test:dungeon-browser
       - name: Existing education and artifact flow regression
         run: npm run test:education-browser
+      - name: Artifact rich text and resolved calculations
+        env:
+          QA_SCREENSHOTS: qa-menu/artifacts
+        run: npm run test:artifacts-browser
       - name: Upload geometry report and rendered previews
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

@@ -2,6 +2,7 @@
  'use strict';
  const C=typeof module!=='undefined'?require('./config.js'):root.DCConfig;
  const data=typeof module!=='undefined'?require('./artifact-data.js'):root.DCArtifactData;
+ const R=typeof module!=='undefined'?require('./rich-text.js'):root.DCRichText;
  const catalog=Object.fromEntries(data.artifacts.map(a=>[a.id,a]));
  const codes=Object.fromEntries(data.artifacts.map(a=>[a.id.slice(0,3),a.id]));
  const id=code=>codes[code]||code;
@@ -37,8 +38,11 @@
   const s=r.artifactState,a=catalog[key];
   if(!s||!a||has(r,key)||s.acquired.some(x=>x.source===event))throw new Error('This artifact was already claimed.');
   s.owned.push(key);s.acquired.push({id:key,source:event});
-  if(key===id('s08')){r.maxHp=maxHp(r);r.hp=Math.min(r.maxHp,r.hp+a.values.heal);}
-  if(key===id('s09'))r.gold+=a.values.gold;
+  if(key===id('s08')){
+   const maxBefore=r.maxHp,hpBefore=r.hp;r.maxHp=maxHp(r);r.hp=Math.min(r.maxHp,r.hp+a.values.heal);
+   R.record(r,a.name,[key],[R.delta('Max HP gained','Max HP',maxBefore,r.maxHp,[a.name+': +'+a.values.max_hp,'Max HP after: '+maxBefore+' + '+a.values.max_hp+' = '+r.maxHp]),R.healing(a.values.heal,hpBefore,r.hp,r.maxHp)]);
+  }
+  if(key===id('s09')){const before=r.gold;r.gold+=a.values.gold;R.record(r,a.name,[key],[R.delta('Gold gained','Gold',before,r.gold,[a.name+': +'+a.values.gold+' Gold','Gold after: '+before+' + '+a.values.gold+' = '+r.gold])]);}
   return a;
  }
  function claim(r,key){
@@ -50,14 +54,24 @@
  }
  function choices(r){return r.artifactState?.offer?.ready?r.artifactState.offer.ids.map(key=>catalog[key]):[];}
  function discount(r){return Math.max(0,...owned(r).map(a=>a.values.discount_percent||0));}
- function price(r,base){return Math.max(1,Math.ceil(base*(100-discount(r))/100));}
+ function priceCalculation(r,base){
+  const rate=discount(r),unrounded=base*(100-rate)/100,final=Math.max(1,Math.ceil(unrounded));
+  const labels=owned(r).filter(a=>a.values.discount_percent).map(a=>a.name+': '+a.values.discount_percent+'%');
+  return {label:'Final price',unit:'Gold',kind:'price',value:final,before:base,after:final,lines:[
+   'Original price: '+base+' Gold',...labels,'Highest discount: '+rate+'% (discounts do not add)',
+   'Price before rounding: '+base+' × (100 − '+rate+') ÷ 100 = '+unrounded,
+   'Final price: max(1, round up('+unrounded+')) = '+final+' Gold'
+  ]};
+ }
+ function price(r,base){return priceCalculation(r,base).value;}
  function report(r,code,message,ctx){ctx.notify(r,get(code).name+': '+message);}
- function gain(r,code,values,ctx){
-  const b=r.battle,notes=[];
-  if(values.block){b.block+=values.block;notes.push('+'+values.block+' Block');}
-  if(values.energy){b.energy+=values.energy;b.artifacts.turn.energyBudget+=values.energy;notes.push('+'+values.energy+' Energy');}
-  if(values.focus){const before=b.focus;b.focus=Math.min(C.FOCUS_CAP,b.focus+values.focus);notes.push('+'+(b.focus-before)+' Focus');}
-  if(values.draw){const before=b.hand.length;ctx.draw(r,values.draw);notes.push('draw '+(b.hand.length-before));}
+ function gain(r,code,values,ctx,context=[],initial=[]){
+  const b=r.battle,notes=[],results=initial.slice(),name=get(code).name;
+  if(values.block){const before=b.block;b.block+=values.block;notes.push('+'+values.block+' Block');results.push(R.delta('Block gained','Block',before,b.block,[...context,name+': +'+values.block+' Block','Block after: '+before+' + '+values.block+' = '+b.block]));}
+  if(values.energy){const before=b.energy;b.energy+=values.energy;b.artifacts.turn.energyBudget+=values.energy;notes.push('+'+values.energy+' Energy');results.push(R.delta('Energy gained','Energy',before,b.energy,[...context,name+': +'+values.energy+' Energy','Energy after: '+before+' + '+values.energy+' = '+b.energy]));}
+  if(values.focus){const before=b.focus;b.focus=Math.min(C.FOCUS_CAP,b.focus+values.focus);notes.push('+'+(b.focus-before)+' Focus');results.push(R.delta('Focus gained','Focus',before,b.focus,[...context,name+': +'+values.focus+' Focus','Focus cap: '+C.FOCUS_CAP,'Focus after: min('+C.FOCUS_CAP+', '+before+' + '+values.focus+') = '+b.focus]));}
+  if(values.draw){const before=b.hand.length;ctx.draw(r,values.draw);notes.push('draw '+(b.hand.length-before));results.push(R.delta('Cards drawn','cards',before,b.hand.length,[...context,name+': draw '+values.draw,'Hand before: '+before+' cards','Actual moved into Hand: '+(b.hand.length-before),'Hand after: '+before+' + '+(b.hand.length-before)+' = '+b.hand.length,'No Hand cap. Empty Draw Pile reshuffles Discard; no available cards stops the draw.']));}
+  R.record(r,name,[id(code)],results);
   report(r,code,notes.join(', ')+'.',ctx);
  }
  function startCombat(r){
@@ -70,7 +84,7 @@
  function checkHp(r,ctx){
   const b=r.battle,a=b?.artifacts;
   if(a&&has(r,'e12')&&!a.combat.flask&&r.hp>0&&r.hp*100<=r.maxHp*value('e12','hp_threshold_percent')){
-   a.combat.flask=true;gain(r,'e12',{block:value('e12','block')},ctx);
+   a.combat.flask=true;gain(r,'e12',{block:value('e12','block')},ctx,['Alive: '+r.hp+' > 0','HP threshold: 2 × '+r.hp+' = '+(2*r.hp)+' ≤ '+r.maxHp+' Max HP']);
   }
  }
  function startTurn(r,ctx){
@@ -79,6 +93,15 @@
   if(has(r,'b02')&&b.turn>1){
    const next=Math.min(value('b02','max_artifact_contribution_each_stat'),a.clasp+value('b02','strength_per_later_turn'));
    b.strength+=next-a.clasp;b.agility+=next-a.clasp;a.clasp=next;
+  }
+  const statIds=['b02','e15','e16'].filter(code=>has(r,code));
+  if(statIds.length&&(b.turn===1||has(r,'b02'))){
+   const common=has(r,'b02')?['Clasp contribution: min('+value('b02','max_artifact_contribution_each_stat')+', '+value('b02','initial_strength')+' + '+b.turn+' − 1) = '+a.clasp]:[];
+   const strength=has(r,'e15')?value('e15','strength'):0,agility=has(r,'e16')?value('e16','agility'):0;
+   R.record(r,'Combat stat totals',statIds.map(id),[
+    R.total('Total Strength','Strength',b.strength,[...common,'Crimson Sword Charm: +'+strength+' Strength','Total Strength: '+a.clasp+' + '+strength+' = '+b.strength]),
+    R.total('Total Agility','Agility',b.agility,[...common,"Guardian's Armlet: +"+agility+' Agility','Total Agility: '+a.clasp+' + '+agility+' = '+b.agility])
+   ]);
   }
   if(has(r,'b01'))gain(r,'b01',{energy:value('b01','energy')},ctx);
   // Base draw has completed; stable IDs own the additional-draw order.
@@ -91,24 +114,27 @@
    if(has(r,'e03')){
     a.die=Math.floor(random(r)*value('e03','sides'))+1;
     const values=get('e03').values[a.die<=2?'faces_1_2':a.die<=4?'faces_3_4':'faces_5_6'];
-    gain(r,'e03',values,ctx);report(r,'e03','rolled '+a.die+'.',ctx);
+    const context=['Saved d6 result: '+a.die,'Resolved branch: '+(a.die<=2?'1–2 → 10 Block':a.die<=4?'3–4 → draw 2 cards':'5–6 → 2 Energy')];
+    gain(r,'e03',values,ctx,context,[{label:'Die result',unit:'d6',kind:'roll',value:a.die,before:a.die,after:a.die,lines:context}]);report(r,'e03','rolled '+a.die+'.',ctx);
    }
   }
   checkHp(r,ctx);
  }
- function cardBonuses(r,d){
-  const b=r.battle,a=b?.artifacts;let damage=0,block=0;
+ function cardContributions(r,d){
+  const b=r.battle,a=b?.artifacts,damage=[],block=[];
   if(!a)return {damage,block};
+  const add=(list,code,key)=>{if(has(r,code))list.push({id:id(code),name:get(code).name,value:value(code,key)});};
   if(d.role==='attack'){
-   damage=b.strength;
-   if(!a.turn.attack)for(const code of ['s02','e07'])if(has(r,code))damage+=value(code,'damage_bonus_per_card');
+   add(damage,'e15','strength');if(has(r,'b02'))damage.push({id:id('b02'),name:get('b02').name,value:a.clasp});
+   if(!a.turn.attack)for(const code of ['s02','e07'])add(damage,code,'damage_bonus_per_card');
   }
   if(d.role==='guard'){
-   block=b.agility;
-   if(!a.turn.guard)for(const code of ['s03','e08'])if(has(r,code))block+=value(code,'block_bonus');
+   add(block,'e16','agility');if(has(r,'b02'))block.push({id:id('b02'),name:get('b02').name,value:a.clasp});
+   if(!a.turn.guard)for(const code of ['s03','e08'])add(block,code,'block_bonus');
   }
   return {damage,block};
  }
+ function cardBonuses(r,d){const sources=cardContributions(r,d);return {damage:sources.damage.reduce((sum,x)=>sum+x.value,0),block:sources.block.reduce((sum,x)=>sum+x.value,0)};}
  function cardResolved(r,d,ctx){
   const a=r.battle.artifacts;if(!a)return;const t=a.turn;
   t.cards++;
@@ -138,7 +164,7 @@
  function fullyBlocked(r,damage,ctx){
   const a=r.battle.artifacts;
   if(a&&damage>0&&!a.turn.retaliation&&has(r,'e09')){
-   a.turn.retaliation=true;const hit=ctx.deal(r,value('e09','retaliation_damage'));
+   a.turn.retaliation=true;const hit=ctx.deal(r,value('e09','retaliation_damage'),false,{label:get('e09').name+' retaliation',artifactIds:[id('e09')],lines:['Fully blocked enemy hit: '+damage+' damage',get('e09').name+': '+value('e09','retaliation_damage')+' retaliation damage']});
    report(r,'e09','retaliated for '+hit+' damage.',ctx);
   }
  }
@@ -146,7 +172,7 @@
   const a=r.battle.artifacts;if(!a||a.combat.won||r.hp<=0)return;
   a.combat.won=true;
   for(const code of ['e06','s01'])if(has(r,code)){
-   const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+value(code,'heal'));report(r,code,'healed '+(r.hp-before)+' HP.',ctx);
+   const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+value(code,'heal'));R.record(r,get(code).name,[id(code)],[R.healing(value(code,'heal'),before,r.hp,r.maxHp)]);report(r,code,'healed '+(r.hp-before)+' HP.',ctx);
   }
  }
  function maxEnergy(r){
@@ -179,7 +205,7 @@
   }
   return true;
  }
- const api={catalog,codes,id,get,has,owned,eligible,pool,enable,offer,claim,choices,acquire,source,maxHp,discount,price,random,
+ const api={catalog,codes,id,get,has,owned,eligible,pool,enable,offer,claim,choices,acquire,source,maxHp,discount,price,priceCalculation,random,cardContributions,
   startCombat,startTurn,checkHp,cardBonuses,cardResolved,exhausted,discardedByCard,beforeEnemy,fullyBlocked,won,maxEnergy,valid};
  if(typeof module!=='undefined')module.exports=api;else root.DCArtifacts=api;
 })(typeof window!=='undefined'?window:globalThis);

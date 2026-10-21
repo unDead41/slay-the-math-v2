@@ -1,0 +1,35 @@
+{
+  "standard_version": "1.1",
+  "game_integration_status": "not_integrated",
+  "display_contract": {
+    "result": {
+      "value": "actual resolved numeric result",
+      "unit": "explicit unit",
+      "kind": "delta | total | price | threshold"
+    },
+    "tooltip": [
+      "source labels and contributions",
+      "value before",
+      "calculation steps",
+      "caps and rounding",
+      "value after"
+    ],
+    "examples_are_runtime_values": false
+  },
+  "rules": {
+    "healing": "actual_heal = min(requested_heal, max_hp - hp_before)",
+    "hp_loss": "hp_after = max(0, hp_before - damage_after_mitigation); hp_delta = hp_after - hp_before",
+    "shop_price": "max(1, ceil(base_price * (1 - highest_applicable_discount)))",
+    "hp_threshold": "0 < hp and 2 * hp <= max_hp",
+    "clasp_contribution": "min(6, 3 + turn_number - 1), separately for each stat; other sources still add",
+    "attack_artifact_bonus": "once per eligible Attack card, on the first positive damage event before enemy mitigation",
+    "defend_artifact_bonus": "flat addition after core card Block calculation",
+    "draw": "use actual successful moves into Hand; obey confirmed core draw rules"
+  },
+  "pending": [
+    "Focus function and cap",
+    "exact core stat scaling and reset rules",
+    "hand/resource cap and overflow behavior",
+    "fair-die distribution before promising probability 1/3"
+  ]
+}

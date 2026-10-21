@@ -1,0 +1,26 @@
+/* Artifact Pack V3.2: token colors, never whole paragraphs or card frames. */
+[data-stm-richtext]{--rt-calculation:#b9a3e3;--rt-math:#e7a1c4;--rt-game:#9ed5b0}
+[data-stm-richtext][data-theme="light"]{--rt-calculation:#70528f;--rt-math:#984669;--rt-game:#316a48}
+[data-stm-richtext] .rt-term,[data-stm-richtext] .rt-calculation{display:inline;margin:0;padding:2px 1px;min-width:0;min-height:0;border:0;border-radius:2px;background:none;box-shadow:none;font:inherit;line-height:inherit;letter-spacing:inherit;text-transform:none;cursor:help;white-space:normal;text-underline-offset:4px}
+[data-stm-richtext] .rt-term{color:var(--rt-game);text-decoration:underline dashed}
+[data-stm-richtext] .rt-term[data-category="math"]{color:var(--rt-math)}
+[data-stm-richtext] .rt-calculation{color:var(--rt-calculation);text-decoration:underline dotted;font-variant-numeric:tabular-nums}
+[data-stm-richtext] .rt-term:focus-visible,[data-stm-richtext] .rt-calculation:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+[data-stm-richtext] .rt-term:hover,[data-stm-richtext] .rt-calculation:hover{text-decoration-thickness:2px}
+.rt-tooltip{position:fixed;z-index:1000;box-sizing:border-box;width:max-content;max-width:min(390px,calc(100vw - 16px));max-height:50dvh;overflow:auto;padding:15px 18px;border:1px solid #6f687e;border-radius:8px;background:#17131e;color:#eee8f4;box-shadow:0 8px 28px #0009;font:14px/1.6 var(--sans, sans-serif);overflow-wrap:anywhere;text-align:left}
+.rt-tooltip>strong{display:block;color:var(--rt-calculation);font-size:15px;line-height:1.5}
+.rt-tooltip[data-category="game"]>strong{color:var(--rt-game)}
+.rt-tooltip[data-category="math"]>strong{color:var(--rt-math)}
+.rt-tooltip>p{margin:8px 0 0}.rt-tooltip .rt-equation{color:var(--rt-calculation);font-variant-numeric:tabular-nums}
+.rt-results{display:flex;flex-direction:column;gap:7px}.rt-result{line-height:1.8}.rt-result-label{color:var(--muted,#b9c5ce)}
+.rt-history{display:grid;gap:16px;margin-top:22px}.rt-event{padding:16px 18px;border:1px solid var(--line,#344454);border-radius:8px;background:#09131f;text-align:left;min-width:0;overflow-wrap:anywhere}
+.rt-event h3{font:20px/1.3 var(--font-display,serif);margin:0 0 5px;color:var(--gold-soft,#eed6a2)}
+.rt-context{font-size:11px;color:var(--muted,#b9c5ce);margin:0 0 10px}
+.rt-glossary{margin-top:24px;padding:16px;border:1px solid var(--line);border-radius:8px;background:#09131f}.rt-glossary summary{cursor:pointer;min-height:28px;color:var(--gold-soft);font-weight:600}.rt-glossary p{line-height:1.8}
+.artifact-select{display:flex;flex-direction:column;align-items:center;gap:9px;width:100%;padding:0;border:0;border-radius:5px;background:none;color:inherit;font:inherit;text-align:inherit;box-shadow:none;cursor:pointer}
+.artifact-select:focus-visible{outline:3px solid var(--ice);outline-offset:5px}.artifact-select .artifact-name{width:100%}.artifact-card:focus-within{border-color:var(--gold-soft)}
+.artifact-card .artifact-effect{margin:0}.artifact-last-result{width:100%;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font:13px/1.8 var(--sans);text-align:left}.artifact-last-result>strong{font-size:11px;color:var(--muted);font-weight:400;display:block;margin-bottom:6px}
+.artifact-result-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.artifact-result-actions .btn{min-height:44px}
+.education-gift .rt-term{font-size:inherit}.education-gift .artifact-effect{min-height:0}
+@media(max-width:600px){.artifact-select{display:grid;grid-template-columns:76px minmax(0,1fr);gap:5px 14px;grid-column:1/-1;align-items:start}.artifact-select .artifact-illustration{grid-row:1/3;height:85px}.artifact-select .artifact-tier,.artifact-select .artifact-name{grid-column:2}.artifact-card .artifact-effect,.artifact-last-result{grid-column:1/-1}.rt-tooltip{font-size:14px;max-height:45dvh}.rt-event{padding:14px}}
+@media(forced-colors:active){[data-stm-richtext] .rt-term,[data-stm-richtext] .rt-calculation{color:LinkText}.rt-tooltip,.rt-event,.rt-glossary{background:Canvas;color:CanvasText;border-color:CanvasText}}

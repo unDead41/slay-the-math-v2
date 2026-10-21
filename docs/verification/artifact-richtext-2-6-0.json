@@ -1,0 +1,299 @@
+{
+  "version": "2.6.0",
+  "artifactPack": "3.2",
+  "date": "2026-10-21",
+  "unitAndDom": {
+    "passed": 112,
+    "failed": 0,
+    "skipped": 0,
+    "command": "DOM_QA_MODULE=<isolated jsdom> npm test"
+  },
+  "syntax": {
+    "passed": true,
+    "command": "npm run check"
+  },
+  "portable": {
+    "passed": true,
+    "command": "npm run build",
+    "bytes": 75775674
+  },
+  "browser": {
+    "artifacts": {
+      "version": "2.6.0",
+      "checks": [
+        "New Challenge meets the Dungeon Master before the map, with three frozen unique Starting choices, native disabled confirmation, no tutorial overlay, and stable Continue/reload offers",
+        "Artifact descriptions use separate pink math and green game tokens; hover and keyboard focus open escaped definitions; Escape dismisses without selection, claims, RNG changes or nested buttons",
+        "Keyboard selection preserves focus; preview grants nothing; claiming Copper Purse grants exactly 25 Gold once; ownership and inventory dialog survive reload with Escape focus restoration",
+        "Purple calculation values show actual saved before/after arithmetic; all 55 glossary terms are available; tooltip Escape leaves the shared inventory dialog open; viewing calculations does not replay effects",
+        "Ration shows 65 Max HP and Strength changes both the visible Attack value and actual enemy damage",
+        "Boss offers all three real artifacts; Gatekeeper Core is committed before the Stage 2 checkpoint and gives 4 Energy in the next combat",
+        "Mystery Discover Artifact uses the same preview/claim owner on phone and returns to the map with one new effect",
+        "Shop quotes and purchases show highest-discount-only arithmetic and separate actual Gold spending at 3440\u00d71440; real touch taps open/dismiss definitions on phone without selecting or granting an artifact",
+        "Unmodified portable HTML runs through Dungeon Master, decoded embedded artwork, claim and map without an HTTP request"
+      ],
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "noPageOverflow": true,
+          "decodedChoices": 3,
+          "tooltipWithinViewport": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "noPageOverflow": true,
+          "decodedChoices": 3,
+          "tooltipWithinViewport": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "noPageOverflow": true,
+          "decodedChoices": 3,
+          "tooltipWithinViewport": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "noPageOverflow": true,
+          "decodedChoices": 3,
+          "tooltipWithinViewport": true
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "noPageOverflow": true,
+          "decodedChoices": 3,
+          "tooltipWithinViewport": true
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "noPageOverflow": true,
+          "decodedChoices": 3,
+          "tooltipWithinViewport": true
+        }
+      ],
+      "errors": []
+    },
+    "education": {
+      "checks": [
+        "The real Claim & Choose Your Path button opens one saved question from the original bank, before ownership, Gold or map entry; double activation cannot reroll it",
+        "Keyboard answers, incorrect choice, Hint, Menu/Continue, refresh, correct explanation and solved-state refresh work; the final claim grants exactly 25 Gold once without an HP penalty",
+        "Six actual viewport sizes from 320px to 4K: full questions and four native answer targets fit, artwork decodes, document scrolling remains usable and the trial reaches the map",
+        "Probability, Sets and Logic display the original prompts/options and resolve their original exact answer keys",
+        "Ten replaced New Runs and an intervening refresh preserve exposure history: every shown ID is unique, even when its question was never answered",
+        "Exhaustion is explicit: no question is repeated or silently recycled, and the journey remains playable",
+        "Unmodified offline HTML embeds all 120 questions and the supplied Master artwork; Claim, answer, effect, map and room entry work with zero HTTP requests"
+      ],
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "overflow": false,
+          "answers": [
+            {
+              "left": 839.390625,
+              "right": 1814.984375,
+              "height": 56.71875
+            },
+            {
+              "left": 839.390625,
+              "right": 1814.984375,
+              "height": 56.71875
+            },
+            {
+              "left": 839.390625,
+              "right": 1814.984375,
+              "height": 56.71875
+            },
+            {
+              "left": 839.390625,
+              "right": 1814.984375,
+              "height": 56.71875
+            }
+          ],
+          "images": true,
+          "scrollHeight": 1111
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "overflow": false,
+          "answers": [
+            {
+              "left": 568.984375,
+              "right": 1206.046875,
+              "height": 56
+            },
+            {
+              "left": 568.984375,
+              "right": 1206.046875,
+              "height": 56
+            },
+            {
+              "left": 568.984375,
+              "right": 1206.046875,
+              "height": 56
+            },
+            {
+              "left": 568.984375,
+              "right": 1206.046875,
+              "height": 56
+            }
+          ],
+          "images": true,
+          "scrollHeight": 1000
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "answers": [
+            {
+              "left": 61,
+              "right": 783,
+              "height": 56
+            },
+            {
+              "left": 61,
+              "right": 783,
+              "height": 56
+            },
+            {
+              "left": 61,
+              "right": 783,
+              "height": 56
+            },
+            {
+              "left": 61,
+              "right": 783,
+              "height": 56
+            }
+          ],
+          "images": true,
+          "scrollHeight": 1203
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "answers": [
+            {
+              "left": 35,
+              "right": 355,
+              "height": 70.78125
+            },
+            {
+              "left": 35,
+              "right": 355,
+              "height": 70.78125
+            },
+            {
+              "left": 35,
+              "right": 355,
+              "height": 70.78125
+            },
+            {
+              "left": 35,
+              "right": 355,
+              "height": 70.78125
+            }
+          ],
+          "images": true,
+          "scrollHeight": 1284
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false,
+          "answers": [
+            {
+              "left": 35,
+              "right": 285,
+              "height": 93.171875
+            },
+            {
+              "left": 35,
+              "right": 285,
+              "height": 93.171875
+            },
+            {
+              "left": 35,
+              "right": 285,
+              "height": 70.78125
+            },
+            {
+              "left": 35,
+              "right": 285,
+              "height": 70.78125
+            }
+          ],
+          "images": true,
+          "scrollHeight": 1402
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "overflow": false,
+          "answers": [
+            {
+              "left": 1698.578125,
+              "right": 3017.390625,
+              "height": 58
+            },
+            {
+              "left": 1698.578125,
+              "right": 3017.390625,
+              "height": 58
+            },
+            {
+              "left": 1698.578125,
+              "right": 3017.390625,
+              "height": 58
+            },
+            {
+              "left": 1698.578125,
+              "right": 3017.390625,
+              "height": 58
+            }
+          ],
+          "images": true,
+          "scrollHeight": 2160
+        }
+      ],
+      "topics": [
+        "PROB-035",
+        "SET-038",
+        "LOGIC-040"
+      ],
+      "errors": []
+    }
+  },
+  "situationRegression": {
+    "status": "partial",
+    "fullSuitePassed": false,
+    "completedGeometry": {
+      "scenes": 6,
+      "viewports": 11,
+      "cases": 66,
+      "assertionsPassed": true,
+      "evidence": "Runs reached native actions after the complete geometry loops; measurements were not retained because the full suite did not finish."
+    },
+    "observedTimeouts": [
+      "Full-page screenshot capture after fonts loaded (12000ms)",
+      "Continue locator during a late Victory restore (12000ms)",
+      "Leave Shop native auto-scroll (12000ms)"
+    ],
+    "independentTerminalProbe": {
+      "passed": true,
+      "stageClearReloads": 2,
+      "victoryReloads": 2,
+      "exactSnapshotsPreserved": true,
+      "browserErrors": []
+    },
+    "note": "Artifact and education browser suites passed in full, including actual Shop purchases, touch, responsive layouts and offline flow. Broader situation-suite completion is not claimed."
+  },
+  "sourceAssetAudit": "docs/artifacts/source-v3.2/integration-audit.json"
+}

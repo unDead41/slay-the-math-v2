@@ -208,3 +208,10 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 |---|---|---|
 | DEC-20261021-05 | DISAHKAN | Ijamm reports the reward/card menu looks expanded in image(20261021-093914).png (2048×1038), says the other menus are fine and explicitly asks to check Shop too. |
 | DEC-20261021-06 | DITERUSKAN | The 2.5.2 row stretched card widths with 1fr tracks while keeping height tied to the viewport unit; the atlas viewport inherited the unequal width/height. Bound reward/shop tracks and panels, preserve square source-art viewports and keep three choices in one row with phone scrolling. Other scenes and mechanics are unchanged. Verification: docs/FIX_CARD_PROPORTIONS_2_5_3.md. |
+
+## Artifact Pack V3.2 — game 2.6.0
+
+| ID | Status | Decision and evidence |
+|---|---|---|
+| DEC-20261021-07 | DISAHKAN | Ijamm supplies ARTIFACT (2).zip and explicitly requests applying it to the game. The archive's new content is 31 rich descriptions, 55 glossary terms and the three-color calculation standard; catalogue trigger values and original icon hashes match the prior integrated pack. |
+| DEC-20261021-08 | DITERUSKAN | Reuse the exact existing 31 runtime icons; import only relevant source/data files, omit preview examples from runtime and preserve the 120-question claim gate. Add one shared accessible tooltip and optional bounded resolved-event history, rendered through existing artifact/log/dialog flows and Shop prices. Reconcile pending definitions to the actual core without inventing new cards, hand limits or d6 probability claims. Owners: SOR 10/13/19; evidence: docs/ARTIFACT_RICH_TEXT_2_6_0.md. |

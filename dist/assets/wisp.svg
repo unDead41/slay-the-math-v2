@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 440" fill="none" role="img" aria-label="Roh Ais terapung dengan api biru">
+  <defs>
+    <linearGradient id="flame" x1="151" y1="95" x2="224" y2="365" gradientUnits="userSpaceOnUse"><stop stop-color="#e2fff8"/><stop offset=".31" stop-color="#9ee4df"/><stop offset=".7" stop-color="#489db2"/><stop offset="1" stop-color="#24485f"/></linearGradient>
+    <linearGradient id="inner" x1="190" y1="165" x2="211" y2="338" gradientUnits="userSpaceOnUse"><stop stop-color="#557c90"/><stop offset="1" stop-color="#153044"/></linearGradient>
+    <linearGradient id="gold" x1="106" y1="254" x2="271" y2="306" gradientUnits="userSpaceOnUse"><stop stop-color="#897145"/><stop offset=".5" stop-color="#eed49a"/><stop offset="1" stop-color="#897145"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#85ced3" stop-opacity=".3"/><stop offset="1" stop-color="#85ced3" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="190" cy="387" rx="94" ry="13" fill="#050c17" fill-opacity=".45"/>
+  <circle cx="190" cy="229" r="160" fill="url(#halo)"/>
+  <ellipse cx="190" cy="250" rx="128" ry="66" stroke="#85ced3" stroke-opacity=".15" transform="rotate(-25 190 250)"/>
+  <path d="M194 62C211 120 166 127 176 169C184 147 215 143 219 115C243 150 238 180 251 193C263 177 267 169 264 149C300 183 298 226 281 261C272 281 267 308 279 330C261 330 248 323 242 311C240 347 214 370 189 372C161 357 142 343 139 312C126 327 112 331 96 327C113 298 108 287 96 268C73 231 81 194 110 171C109 198 118 208 124 209C119 170 142 151 155 126C173 102 175 86 174 72L194 62Z" fill="url(#flame)" stroke="#b7f5ed" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M191 122C183 157 205 169 216 183C228 200 226 223 222 236C240 231 248 215 248 203C270 227 261 260 247 282C233 302 236 328 219 345C212 326 203 314 192 308C184 329 174 337 164 342C146 314 146 293 134 273C120 254 119 228 129 209C133 228 142 239 150 242C145 206 151 179 175 163C187 153 192 140 191 122Z" fill="url(#inner)"/>
+  <path d="M149 221C164 205 181 200 191 203C210 202 225 209 238 224L233 263L215 284L172 284L150 263L149 221Z" fill="#122838" stroke="#98ddd9" stroke-opacity=".3" stroke-width="1.5"/>
+  <path d="M161 235L177 241L171 247L159 242L161 235ZM226 235L210 241L216 247L228 242L226 235Z" fill="#dcfff6"/>
+  <path d="M181 266L191 260L201 266" stroke="#85ced3" stroke-width="2" stroke-linecap="round"/>
+  <path d="M113 275C130 292 153 300 189 300C225 300 253 290 270 273L268 291C247 310 221 316 190 316C158 316 132 308 112 293L113 275Z" fill="url(#gold)"/>
+  <path d="M114 279C143 303 232 308 270 277" stroke="#f3dfb0" stroke-width="2"/>
+  <path d="M175 301L190 292L206 301L204 318L190 329L177 318L175 301Z" fill="#314d60" stroke="#ead49b" stroke-width="2"/>
+  <path d="M190 300L198 310L190 321L182 310L190 300Z" fill="#c2f7ed"/>
+  <path d="M115 251C99 235 103 217 110 205M257 250C274 235 274 217 270 205" stroke="#d9fff3" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M62 235L70 225L78 235L70 246L62 235ZM295 210L305 197L315 210L305 223L295 210ZM111 123L117 115L123 123L117 131L111 123ZM252 102L258 95L264 102L258 110L252 102Z" fill="#cfad68" fill-opacity=".8"/>
+  <circle cx="91" cy="304" r="2" fill="#c3fff0"/><circle cx="287" cy="309" r="2" fill="#c3fff0"/><circle cx="233" cy="83" r="2" fill="#85ced3"/>
+</svg>

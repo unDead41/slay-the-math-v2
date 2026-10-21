@@ -1,0 +1,31 @@
+{
+  "release": "2.4.3",
+  "assetId": "dungeon-master-encounter",
+  "source": "image(20261019-032240).png",
+  "sourcePixels": [
+    1672,
+    941
+  ],
+  "source_sha256": "cdc747a508df8740288fba60b756d9a6c0cfcd94ac785f5d81c560e03f6d4c89",
+  "sourceType": "User-supplied approved illustration",
+  "usageRights": "User-supplied reference; no additional licence inferred",
+  "identity": "Non-human obsidian/stone Dungeon Master with cyan eyes, carved face, gold fissures and stone hands; Alyssa at left; native artifact controls at right.",
+  "png": "ARTWORK/Dungeon_Master_4K.png",
+  "pngPixels": [
+    3840,
+    2160
+  ],
+  "png_sha256": "02e6edfb4be0a04661aa16d9bff7b47feb5860dad4361b32951e9d2e04b05833",
+  "runtime": "dist/assets/dungeon-master.webp",
+  "runtimePixels": [
+    3840,
+    2160
+  ],
+  "runtime_sha256": "76d91054d6a84bff8b765dbf3142e7e944701d16ee3f64d385da861193d6d265",
+  "method": "Mechanical Lanczos resize to 3840x2160, PNG export and WebP quality 95 encoding. Upscaled, not native 4K. No redraw or generation. Original upload unchanged.",
+  "commands": [
+    "convert 'upload/image(20261019-032240).png' -filter Lanczos -resize '3840x2160!' artwork-2.4.3/Dungeon_Master_4K.png",
+    "convert artwork-2.4.3/Dungeon_Master_4K.png -quality 95 work/slay-the-math-v2/dist/assets/dungeon-master.webp"
+  ],
+  "supersedes": "2.4.1 rift entity / 2.4.2 PNG export; prior provenance retained as history"
+}

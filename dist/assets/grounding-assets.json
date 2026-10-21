@@ -1,0 +1,1318 @@
+{
+  "version": "2.3.0",
+  "source_package": "Finalize Design(2).zip",
+  "pivot_normalized": [
+    0.5,
+    0.9166666666666666
+  ],
+  "records": [
+    {
+      "asset": "ground-alyssa-standing.webp",
+      "character": "Alyssa",
+      "source": "mc_standing_4_pov.png",
+      "source_sha256": "054c268ab13f215d4cb10fb9c7b972cd255b1042a4255b63cfb066b3b781a3ef",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        0,
+        418,
+        941
+      ],
+      "alpha_bounds": [
+        32,
+        157,
+        417,
+        844
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-alyssa-attack.webp",
+      "character": "Alyssa",
+      "source": "hero-attack.webp",
+      "source_sha256": "6edc47b91ce909d028f40dd9d363016f31558f8ff9605468ac9df1ce79fb6b87",
+      "source_size": [
+        480,
+        615
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        1,
+        480,
+        614
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-alyssa-defend.webp",
+      "character": "Alyssa",
+      "source": "hero-defend.webp",
+      "source_sha256": "459f475d0c5474f09f7ce1c0e2e65e50c936eeff2cc14cc2d4f9d1ec65a24e61",
+      "source_size": [
+        480,
+        652
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        1,
+        480,
+        651
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-alyssa-skill.webp",
+      "character": "Alyssa",
+      "source": "hero-skill.webp",
+      "source_sha256": "8dc5da6517d8aeee013769bfe2a5f06c8cfe10688ce22718edad8ca2e7cf2048",
+      "source_size": [
+        455,
+        684
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        0,
+        454,
+        683
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-alyssa-damage.webp",
+      "character": "Alyssa",
+      "source": "hero-damage.webp",
+      "source_sha256": "8753f97887d403e82f9b3bfc4edbdedadb36d55d86eefc72c11824ec9da9b412",
+      "source_size": [
+        480,
+        668
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        1,
+        480,
+        667
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-ember_mirror-standing.webp",
+      "character": "Ember Mirror",
+      "source": "ember_mirror_model.png",
+      "source_sha256": "971e1b1cc44f7cb2f205c592eb7b460bfdd901cfb90a2159e69145ff4c83a718",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        0,
+        418,
+        941
+      ],
+      "alpha_bounds": [
+        60,
+        215,
+        418,
+        747
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-ember_mirror-attack.webp",
+      "character": "Ember Mirror",
+      "source": "ember_mirror_actions.png",
+      "source_sha256": "d2353f1025f47b14ab0a26a329a189601e3f46f5c74951ae7b18ed76b4e09f6d",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "alpha_bounds": [
+        296,
+        100,
+        751,
+        469
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-ember_mirror-defend.webp",
+      "character": "Ember Mirror",
+      "source": "ember_mirror_actions.png",
+      "source_sha256": "d2353f1025f47b14ab0a26a329a189601e3f46f5c74951ae7b18ed76b4e09f6d",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop": [
+        960,
+        0,
+        1920,
+        540
+      ],
+      "alpha_bounds": [
+        321,
+        102,
+        661,
+        469
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-ember_mirror-skill.webp",
+      "character": "Ember Mirror",
+      "source": "ember_mirror_actions.png",
+      "source_sha256": "d2353f1025f47b14ab0a26a329a189601e3f46f5c74951ae7b18ed76b4e09f6d",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop": [
+        0,
+        540,
+        960,
+        1080
+      ],
+      "alpha_bounds": [
+        322,
+        83,
+        752,
+        462
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-ember_mirror-damage.webp",
+      "character": "Ember Mirror",
+      "source": "ember_mirror_actions.png",
+      "source_sha256": "d2353f1025f47b14ab0a26a329a189601e3f46f5c74951ae7b18ed76b4e09f6d",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop": [
+        960,
+        540,
+        1920,
+        1080
+      ],
+      "alpha_bounds": [
+        324,
+        97,
+        664,
+        462
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-prism_guard-standing.webp",
+      "character": "Prism Guard",
+      "source": "prism_guard_model.png",
+      "source_sha256": "cb678ce23baf199a9dde7a7a151ee9dc9523322aeeed9dd81aa3167d59576e91",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_bounds": [
+        88,
+        82,
+        574,
+        567
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-prism_guard-attack.webp",
+      "character": "Prism Guard",
+      "source": "prism_guard_actions.png",
+      "source_sha256": "2c337c8e02d84bcd8ba7de0a3284347bd6aa634f44743e748888722f9408d580",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        0,
+        836,
+        470
+      ],
+      "alpha_bounds": [
+        194,
+        112,
+        723,
+        422
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-prism_guard-defend.webp",
+      "character": "Prism Guard",
+      "source": "prism_guard_actions.png",
+      "source_sha256": "2c337c8e02d84bcd8ba7de0a3284347bd6aa634f44743e748888722f9408d580",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        0,
+        1672,
+        470
+      ],
+      "alpha_bounds": [
+        185,
+        109,
+        602,
+        430
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-prism_guard-skill.webp",
+      "character": "Prism Guard",
+      "source": "prism_guard_actions.png",
+      "source_sha256": "2c337c8e02d84bcd8ba7de0a3284347bd6aa634f44743e748888722f9408d580",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        470,
+        836,
+        941
+      ],
+      "alpha_bounds": [
+        254,
+        63,
+        667,
+        386
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-prism_guard-damage.webp",
+      "character": "Prism Guard",
+      "source": "prism_guard_actions.png",
+      "source_sha256": "2c337c8e02d84bcd8ba7de0a3284347bd6aa634f44743e748888722f9408d580",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        470,
+        1672,
+        941
+      ],
+      "alpha_bounds": [
+        214,
+        69,
+        603,
+        389
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-rune_bat-standing.webp",
+      "character": "Rune Bat",
+      "source": "rune_bat_model.png",
+      "source_sha256": "ff9bfc0c61b44d09f4fbcf632ec27e256c64a7c205a71ccfca6501c0c6dad979",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_bounds": [
+        54,
+        151,
+        586,
+        546
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-rune_bat-attack.webp",
+      "character": "Rune Bat",
+      "source": "rune_bat_actions.png",
+      "source_sha256": "d981e7023456e4c7ed50119a294c262b2eea3b5e6ea20bd56e7c81d82df67de5",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        0,
+        836,
+        470
+      ],
+      "alpha_bounds": [
+        194,
+        116,
+        714,
+        417
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-rune_bat-defend.webp",
+      "character": "Rune Bat",
+      "source": "rune_bat_actions.png",
+      "source_sha256": "d981e7023456e4c7ed50119a294c262b2eea3b5e6ea20bd56e7c81d82df67de5",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        0,
+        1672,
+        470
+      ],
+      "alpha_bounds": [
+        234,
+        137,
+        617,
+        426
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-rune_bat-skill.webp",
+      "character": "Rune Bat",
+      "source": "rune_bat_actions.png",
+      "source_sha256": "d981e7023456e4c7ed50119a294c262b2eea3b5e6ea20bd56e7c81d82df67de5",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        470,
+        836,
+        941
+      ],
+      "alpha_bounds": [
+        200,
+        85,
+        741,
+        356
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-rune_bat-damage.webp",
+      "character": "Rune Bat",
+      "source": "rune_bat_actions.png",
+      "source_sha256": "d981e7023456e4c7ed50119a294c262b2eea3b5e6ea20bd56e7c81d82df67de5",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        470,
+        1672,
+        941
+      ],
+      "alpha_bounds": [
+        221,
+        69,
+        671,
+        375
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-mirror_knight-standing.webp",
+      "character": "Mirror Knight",
+      "source": "mirror_knight_model.png",
+      "source_sha256": "c5c8db219dfaa603f929cde07d978590a1c7ae26fe21512723d9db8b46fe6d6a",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_bounds": [
+        63,
+        73,
+        545,
+        592
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-mirror_knight-attack.webp",
+      "character": "Mirror Knight",
+      "source": "mirror_knight_actions.png",
+      "source_sha256": "3a12e8aca13507a6ec253a3797410230ce25086f25ce578933eb20c10172b0f1",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        0,
+        836,
+        470
+      ],
+      "alpha_bounds": [
+        179,
+        98,
+        791,
+        417
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-mirror_knight-defend.webp",
+      "character": "Mirror Knight",
+      "source": "mirror_knight_actions.png",
+      "source_sha256": "3a12e8aca13507a6ec253a3797410230ce25086f25ce578933eb20c10172b0f1",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        0,
+        1672,
+        470
+      ],
+      "alpha_bounds": [
+        180,
+        95,
+        666,
+        426
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-mirror_knight-skill.webp",
+      "character": "Mirror Knight",
+      "source": "mirror_knight_actions.png",
+      "source_sha256": "3a12e8aca13507a6ec253a3797410230ce25086f25ce578933eb20c10172b0f1",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        470,
+        836,
+        941
+      ],
+      "alpha_bounds": [
+        239,
+        17,
+        739,
+        393
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-mirror_knight-damage.webp",
+      "character": "Mirror Knight",
+      "source": "mirror_knight_actions.png",
+      "source_sha256": "3a12e8aca13507a6ec253a3797410230ce25086f25ce578933eb20c10172b0f1",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        470,
+        1672,
+        941
+      ],
+      "alpha_bounds": [
+        138,
+        58,
+        642,
+        387
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-polished_shard_beast-standing.webp",
+      "character": "Polished Shard Beast",
+      "source": "polished_shard_beast_model.png",
+      "source_sha256": "2c0d55d2e923619ba4d231766c98cdf3ed2e267aae2dbfeb29c4532a8fc528cd",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_bounds": [
+        123,
+        123,
+        550,
+        552
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-polished_shard_beast-attack.webp",
+      "character": "Polished Shard Beast",
+      "source": "polished_shard_beast_actions.png",
+      "source_sha256": "141918a09178fb8fd2370b209be91580e7457d0ce1721448acde0aa05d7ce5cf",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        0,
+        836,
+        470
+      ],
+      "alpha_bounds": [
+        109,
+        103,
+        733,
+        427
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-polished_shard_beast-defend.webp",
+      "character": "Polished Shard Beast",
+      "source": "polished_shard_beast_actions.png",
+      "source_sha256": "141918a09178fb8fd2370b209be91580e7457d0ce1721448acde0aa05d7ce5cf",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        0,
+        1672,
+        470
+      ],
+      "alpha_bounds": [
+        159,
+        136,
+        692,
+        428
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-polished_shard_beast-skill.webp",
+      "character": "Polished Shard Beast",
+      "source": "polished_shard_beast_actions.png",
+      "source_sha256": "141918a09178fb8fd2370b209be91580e7457d0ce1721448acde0aa05d7ce5cf",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        0,
+        470,
+        836,
+        941
+      ],
+      "alpha_bounds": [
+        248,
+        24,
+        733,
+        410
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-polished_shard_beast-damage.webp",
+      "character": "Polished Shard Beast",
+      "source": "polished_shard_beast_actions.png",
+      "source_sha256": "141918a09178fb8fd2370b209be91580e7457d0ce1721448acde0aa05d7ce5cf",
+      "source_size": [
+        1672,
+        941
+      ],
+      "crop": [
+        836,
+        470,
+        1672,
+        941
+      ],
+      "alpha_bounds": [
+        154,
+        96,
+        682,
+        408
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s1_twin_sigil_guardian.webp",
+      "character": "s1_twin_sigil_guardian",
+      "source": "s1_twin_sigil_guardian.webp",
+      "source_sha256": "1debd94526bbcd22d046c5a47c7ebcb386199bb3258cf070c8f1de63620a1a86",
+      "source_size": [
+        232,
+        254
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        1,
+        0,
+        231,
+        254
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s2_deck_lord.webp",
+      "character": "s2_deck_lord",
+      "source": "s2_deck_lord.webp",
+      "source_sha256": "d80469bde10f08da2d2caab62d0372844d75c04faed41d9e53da564de19743d1",
+      "source_size": [
+        252,
+        257
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        1,
+        0,
+        251,
+        257
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s2_chain_weaver.webp",
+      "character": "s2_chain_weaver",
+      "source": "s2_chain_weaver.webp",
+      "source_sha256": "dac8d4328d9c27b90893b3d860cd0ce933adc2f7f994a61b3d1acca90e904501",
+      "source_size": [
+        232,
+        225
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        1,
+        0,
+        231,
+        225
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s2_deck_guard.webp",
+      "character": "s2_deck_guard",
+      "source": "s2_deck_guard.webp",
+      "source_sha256": "89f50a0f78d7f8f96eb6653b1c3143c3e9ba54ff6ccb0f9de045e9988c474c9c",
+      "source_size": [
+        286,
+        215
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        0,
+        285,
+        215
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s2_card_mimic.webp",
+      "character": "s2_card_mimic",
+      "source": "s2_card_mimic.webp",
+      "source_sha256": "da162d41e7cb47885433594ece28a7ffd481d012f767aa7dd38b8156a5ba4989",
+      "source_size": [
+        294,
+        186
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        0,
+        293,
+        186
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s2_chain_golem.webp",
+      "character": "s2_chain_golem",
+      "source": "s2_chain_golem.webp",
+      "source_sha256": "ae3c1342d6f12cab0ee75ab23ec58568d04d1eff21adb32b31f3bb6d7a8daae0",
+      "source_size": [
+        292,
+        210
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        0,
+        291,
+        210
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "ground-s2_rune_reaper.webp",
+      "character": "s2_rune_reaper",
+      "source": "s2_rune_reaper.webp",
+      "source_sha256": "9dc21b34dc97ee27b788ea5b407498858a274955f36aef9849dbfc48a4c6e8d5",
+      "source_size": [
+        290,
+        277
+      ],
+      "crop": null,
+      "alpha_bounds": [
+        0,
+        0,
+        289,
+        277
+      ],
+      "canvas": [
+        1600,
+        1200
+      ],
+      "foot_pivot": [
+        800,
+        1100
+      ],
+      "operation": "Crop, alpha-noise trim, uniform resize, foot-aligned transparent canvas; no redraw"
+    },
+    {
+      "asset": "arena-normal-1.webp",
+      "source": "SCENE/STAGE 1/ARENA SCENE/normal_arena.png",
+      "source_sha256": "7bc4c430c82fa13533b72d8838f811b39984086501ee2683cbbf1415ee2c7a8f",
+      "size": [
+        1672,
+        941
+      ],
+      "operation": "WebP encoding; unchanged composition"
+    },
+    {
+      "asset": "arena-elite-1.webp",
+      "source": "SCENE/STAGE 1/ARENA SCENE/elite_arena.png",
+      "source_sha256": "d6e48ea326ea58c04cd026d10e4b23683f5587712eb172f91cd39dfe85b2b0d7",
+      "size": [
+        1672,
+        941
+      ],
+      "operation": "WebP encoding; unchanged composition"
+    },
+    {
+      "asset": "arena-boss-1.webp",
+      "source": "SCENE/STAGE 1/ARENA SCENE/boss_arena.png",
+      "source_sha256": "314f8f78725f49487d55efd01155faf3f2946784b2b8071f69671d15c7988947",
+      "size": [
+        1672,
+        941
+      ],
+      "operation": "WebP encoding; unchanged composition"
+    },
+    {
+      "asset": "arena-normal-2.webp",
+      "source": "SCENE/STAGE 2/ARENA SCENE/normal_arena.png",
+      "source_sha256": "58089625314e75b714f66fac4608dbfe00c38dcbb0a8e2f0179de5d20fa9f020",
+      "size": [
+        1672,
+        941
+      ],
+      "operation": "WebP encoding; unchanged composition"
+    },
+    {
+      "asset": "arena-elite-2.webp",
+      "source": "SCENE/STAGE 2/ARENA SCENE/elite_arena.png",
+      "source_sha256": "9465f62501a837e20f6fe8d9b65e8d76b6cd606d1a35a66abadbe7f66e10ebda",
+      "size": [
+        1672,
+        941
+      ],
+      "operation": "WebP encoding; unchanged composition"
+    },
+    {
+      "asset": "arena-boss-2.webp",
+      "source": "SCENE/STAGE 2/ARENA SCENE/boss_arena.png",
+      "source_sha256": "7297a2d51bb53af9f17a4456897a3216051b96110cc7790bad7278ec90067e61",
+      "size": [
+        1672,
+        941
+      ],
+      "operation": "WebP encoding; unchanged composition"
+    },
+    {
+      "asset": "ui-on_hand.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        126,
+        128,
+        354,
+        356
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-exhaust.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        495,
+        126,
+        724,
+        356
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-discard.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        846,
+        126,
+        1074,
+        356
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-tutorial.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        1196,
+        126,
+        1426,
+        356
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-card_collection.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        1567,
+        127,
+        1795,
+        356
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-settings.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        125,
+        433,
+        354,
+        663
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-sound.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        494,
+        433,
+        724,
+        664
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-energy.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        846,
+        433,
+        1075,
+        664
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-focus.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        1196,
+        433,
+        1426,
+        664
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-draw_pile.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        1567,
+        433,
+        1795,
+        663
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-close.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        494,
+        736,
+        724,
+        966
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-health.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        845,
+        736,
+        1075,
+        966
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    },
+    {
+      "asset": "ui-money.webp",
+      "source": "Slay_the_Math_UI_Icons_13_Sheet_FHD.png",
+      "source_sha256": "43c99dd37b3d72fae1e5d96da073dec1a09017310fe5e33ff6a90632705099b9",
+      "crop": [
+        1196,
+        736,
+        1426,
+        966
+      ],
+      "operation": "Atlas crop with original padding and alpha"
+    }
+  ]
+}

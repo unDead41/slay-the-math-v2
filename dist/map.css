@@ -1,0 +1,62 @@
+.dungeon-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:36px;align-items:start;padding:3px 0 44px}
+.dungeon-atlas{--map-paper:#ddd0b4;--map-ink:#433a36;position:relative;height:640px;min-width:0;border:1px solid #d7b47588;border-radius:4px 32px 5px 25px;background:radial-gradient(ellipse at 45% 40%,#eee4cf 0%,var(--map-paper) 67%,#b9a17b 100%);box-shadow:inset 0 0 70px #74533435,0 18px 50px #0005;isolation:isolate;overflow:hidden;color:var(--map-ink)}
+.dungeon-atlas:before{content:'';position:absolute;inset:15px;border:1px solid #77634c55;pointer-events:none;border-radius:2px 19px 2px 13px}
+.atlas-inscription{position:absolute;top:22px;left:20px;right:20px;text-align:center;font:10px var(--sans);letter-spacing:3px;color:#796649}
+.atlas-coordinate{position:absolute;left:23px;transform:translateY(-50%);font:italic 13px var(--serif);opacity:.55}
+.atlas-compass{position:absolute;right:25px;top:26px;display:grid;place-items:center;width:54px;height:54px;border:1px solid #77634c55;border-radius:50%;font:20px var(--serif);color:#796649;opacity:.65}
+.atlas-compass:before,.atlas-compass:after{content:'';position:absolute;background:currentColor;width:1px;height:41px;transform:rotate(45deg)}
+.atlas-compass:after{transform:rotate(-45deg)}
+.dungeon-connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.dungeon-path{fill:none;stroke:#75635088;stroke-width:1.6;stroke-dasharray:3 7;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.dungeon-path.travelled{stroke:#983e37;stroke-width:3;stroke-dasharray:none}
+.dungeon-path.open{stroke:#983e37;stroke-width:2.3;stroke-dasharray:5 6}
+.dungeon-room{position:absolute;transform:translate(-50%,-50%);width:108px;min-height:94px;padding:0;border:0;background:transparent;color:var(--map-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;z-index:1;font:12px var(--sans);transition:filter .18s,opacity .18s}
+.dungeon-room:disabled{opacity:.53;cursor:default}
+.room-seal{position:relative;width:53px;height:53px;display:grid;place-items:center;border:1.5px solid #665744;border-radius:50%;background:#dfd1b6;box-shadow:0 0 0 5px #ddd0b466;transition:transform .18s,box-shadow .18s,background .18s}
+.room-seal>.icon{width:27px;height:27px;stroke-width:1.8}
+.room-name{font-size:11px;line-height:1.3;max-width:108px;font-weight:600;text-align:center;text-wrap:balance}
+.room-state{font-size:7px;letter-spacing:1.4px;text-transform:uppercase;line-height:1;min-height:7px}
+.dungeon-room.available{color:#7e2e29;cursor:pointer}
+.available .room-seal{border:2px solid #943b31;background:#f4e8cb;box-shadow:0 0 0 5px #9b44311a,0 0 0 7px #973a3177,0 5px 14px #5b241b20}
+.available .room-state{font-weight:800}
+.dungeon-room.available:hover .room-seal{transform:translateY(-3px);background:#fff4d9;box-shadow:0 0 0 5px #9b443122,0 0 0 8px #973a31bb,0 8px 18px #5b241b25}
+.dungeon-room.available:active .room-seal{transform:scale(.96)}
+.dungeon-room:focus-visible{outline:3px solid #7e2e29;outline-offset:6px;border-radius:7px}
+.dungeon-room.visited{opacity:1;color:#983e37}
+.visited .room-seal{background:#d2b490;border-color:#983e37;box-shadow:0 0 0 4px #983e3715}
+.room-check{position:absolute;right:-4px;top:-4px;background:#983e37;color:#f6e8d0;border:2px solid #dfd1b6;border-radius:50%;height:18px;width:18px;display:grid;place-items:center}
+.room-check .icon{height:11px;width:11px;stroke-width:3}
+.dungeon-room.is-position .room-state{font-weight:800;letter-spacing:.8px}
+.dungeon-room.boss{width:190px}
+.boss .room-seal{height:68px;width:68px;border-radius:18px;transform:rotate(45deg);background:#c7ad86;border-width:2px}
+.boss .room-seal>.icon{height:38px;width:38px;transform:rotate(-45deg)}
+.boss.available .room-seal{background:#f5e4bc}
+.boss.available:hover .room-seal{transform:rotate(45deg) translate(-2px,-2px)}
+.boss .room-name{font:17px var(--serif);max-width:190px}
+.map-origin{position:absolute;bottom:25px;left:0;right:0;text-align:center;font:8px var(--sans);letter-spacing:2px;color:#796649}
+.dungeon-sidebar{padding-top:5px}
+.dungeon-sidebar h2{font:35px/1.12 var(--serif);margin:12px 0 13px;letter-spacing:-.5px}
+.dungeon-sidebar h2 em{color:var(--gold);font-weight:400}
+.dungeon-intro{font-size:12px;line-height:1.8;color:var(--muted);max-width:32ch}
+.route-progress{display:flex;align-items:center;gap:9px;border-block:1px solid var(--line);padding:13px 0;margin:19px 0 20px;font-size:11px;color:var(--gold)}
+.route-progress>.icon{height:18px;width:18px}
+.route-legend{list-style:none;padding:0;margin:12px 0 25px;display:grid;gap:13px}
+.route-legend li{display:grid;grid-template-columns:30px 1fr;column-gap:9px;align-items:center}
+.route-legend .icon{width:25px;height:25px;color:var(--gold)}
+.route-legend strong{display:block;font-size:11px;font-weight:600}
+.route-legend small{display:block;color:var(--muted);font-size:10px;margin-top:3px;line-height:1.5}
+.route-next-label{font-size:9px;letter-spacing:1.7px;color:var(--gold);margin-bottom:10px}
+.route-options{display:grid;gap:8px}
+.route-option{display:grid;grid-template-columns:26px 1fr 15px;align-items:center;gap:9px;width:100%;border:1px solid var(--line);border-radius:7px;background:#d7b47508;color:var(--text);text-align:left;padding:11px 12px;cursor:pointer}
+.route-option:hover{border-color:var(--gold);background:#d7b47511}
+.route-option:active{transform:translateY(1px)}
+.route-option>.icon{width:23px;height:23px;color:var(--gold)}
+.route-option>.icon:last-child{width:15px;height:15px}
+.route-option strong{display:block;font-size:11px;font-weight:600;line-height:1.4}
+.route-option small{display:block;font-size:9px;color:var(--muted);line-height:1.6;margin-top:3px}
+.route-hint{font-size:10px;line-height:1.7;color:var(--muted);margin-top:12px}
+.route-legend-title{font:19px var(--serif);margin-top:23px}
+@media(min-width:1450px){.dungeon-layout{grid-template-columns:minmax(0,850px) 300px;justify-content:center;gap:48px}.dungeon-atlas{height:680px}}
+@media(max-width:1000px){.dungeon-layout{grid-template-columns:minmax(0,1fr) 220px;gap:24px}.dungeon-sidebar h2{font-size:29px}.dungeon-atlas{height:630px}.atlas-compass{display:none}}
+@media(max-width:760px){.dungeon-layout{display:flex;flex-direction:column;gap:20px;padding-bottom:28px}.dungeon-atlas{width:100%;height:580px;order:1}.dungeon-sidebar{display:contents}.dungeon-heading{order:0;width:100%}.dungeon-sidebar h2{font-size:27px;margin:0 0 9px}.dungeon-sidebar h2 br{display:none}.dungeon-sidebar>.dungeon-heading>.eyebrow{display:none}.dungeon-intro{font-size:11px;max-width:none}.route-progress{margin:10px 0 0;padding:9px 0}.dungeon-sidebar-actions{order:2;width:100%}.route-legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 15px;margin-bottom:14px}.route-legend-title{margin-top:0}.route-legend strong{font-size:10px}.route-legend small{font-size:9px}.route-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.route-option{grid-template-columns:1fr;justify-items:center;gap:5px;text-align:center;padding:10px 6px}.route-option strong{font-size:10px}.route-option small,.route-option>.icon:last-child{display:none}.route-hint{font-size:10px}.room-seal{width:46px;height:46px}.room-seal>.icon{width:23px;height:23px}.dungeon-room{width:85px;min-height:87px;gap:5px}.room-name{font-size:9px;max-width:82px}.room-state{font-size:6px;letter-spacing:.7px}.dungeon-room.boss{width:155px}.boss .room-seal{height:57px;width:57px;border-radius:14px}.boss .room-seal>.icon{height:30px;width:30px}.boss .room-name{font-size:14px;max-width:155px}.atlas-inscription{font-size:8px;letter-spacing:2px;top:20px}.atlas-coordinate{left:18px;font-size:11px}.map-origin{font-size:7px;bottom:25px;letter-spacing:1px}}
+@media(forced-colors:active){.dungeon-atlas{background:Canvas;color:CanvasText;border:1px solid CanvasText}.dungeon-room,.dungeon-room:disabled{color:CanvasText;opacity:1}.room-seal{background:Canvas!important;border-color:CanvasText!important}.dungeon-room.available{color:LinkText}.dungeon-path{stroke:GrayText}.dungeon-path.open,.dungeon-path.travelled{stroke:Highlight}.dungeon-room:focus-visible{outline-color:Highlight}}

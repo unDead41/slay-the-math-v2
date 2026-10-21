@@ -1,0 +1,90 @@
+# 15 — QA, bukti semakan dan release
+
+Status: CADANGAN. Pakej ini belum menjalankan ujian runtime game.
+
+## Prinsip semakan
+
+**QA-01:** Pilih semakan mengikut risiko perubahan. Jangan jalankan suite besar berulang apabila tiada perubahan, kegagalan atau kebimbangan baharu.
+
+**QA-02:** Jangan menulis ujian yang hanya mengulang nombor/struktur implementation tanpa menguji keputusan penting. Gunakan hasil bebas, boundary dan aliran pemain sebenar.
+
+**QA-03:** Bezakan PASS, FAIL, NOT_RUN dan BLOCKED. Simpan arahan/langkah, input, hasil sebenar dan versi yang diuji.
+
+## Matriks minimum
+
+| Risiko | Senario | Hasil yang dijangka |
+| --- | --- | --- |
+| Formula gabungan | 8 Serangan, 3 Api yang subset Serangan, N=12 | P(Serangan atau Api)=2/3 |
+| Penggantian | Dua Serangan daripada pool 8/12 | Tanpa ganti 14/33; dengan ganti 4/9 |
+| Peristiwa | Serangan dan Perisai pada satu kad | Saling eksklusif; bukan disimpulkan “tidak bersandar” |
+| Snapshot | Tapis dua kad kemudian jana soalan baharu | Counts/penyebut daripada draw pile baharu |
+| Kos/transaksi | Klik kad dua kali dan ketika resolving | Satu kos dan satu kesan |
+| Tapis boundary | Draw pile <4 atau aktif selepas tapis <6 | Disabled; tiada kos/zon berubah |
+| Shuffle | Draw habis, discard ada; kedua-duanya habis | Reshuffle sah; atau cabut yang tersedia tanpa crash |
+| Fasa boss | HP 36→35 pada boss 70 HP | Fasa 2 pending; intent semasa kekal; pola baharu selepas itu |
+| Lethal | Musuh mati semasa tindakan pemain | Battle tamat; musuh tidak bertindak/reward berganda |
+| Resume | Refresh sebelum/selepas jawapan, kad, reward, kem | State dan RNG kekal; tiada cubaan/ganjaran tambahan |
+| Save rosak | JSON/schema/ID kad tidak sah | Mesej jelas, recovery atau run baharu; tiada crash loop |
+| Responsif/akses | Tiga viewport, keyboard, tap, reduced motion | Tindakan utama lengkap; tiada overlap atau drag wajib |
+
+Bagi bug sebenar, tambah regresi khusus apabila ia melindungi tingkah laku penting. Perubahan ejaan atau padding biasanya cukup dengan semakan visual yang berkaitan.
+
+## Semakan visual
+
+- Kad: ukuran seragam, teks Tapis tidak terpotong, kos dan damage jelas.
+- Ikon: tenaga/Fokus dan Tarik/Tapis dibezakan.
+- MC: identiti serta sisi anatomi konsisten.
+- Musuh: intent/fasa dapat dibaca, VFX tidak menutup teks.
+- Telefon: butang tindakan dan hand boleh dicapai.
+- Warna: ukuran kontras bagi pasangan penting direkod sebelum mendakwa target tercapai.
+
+## Playtest
+
+Uji satu aliran tutorial, satu run penuh hingga boss kedua, satu kekalahan, satu save/resume pertengahan battle dan satu run dengan banyak Ramalan dilangkau.
+
+Rekod pemain/penyemak sebagai kod tempatan jika perlu, versi, seed, deck, masa aktif, bilangan giliran, sebab gagal dan pemerhatian. Jangan mengada-adakan hasil atau menganggap seorang pemain mewakili semua murid.
+
+## Tahap isu
+
+| Tahap | Contoh | Keputusan release |
+| --- | --- | --- |
+| P0 | Jawapan matematik salah, kehilangan save, exploit ganjaran besar | Sekat release kandungan terlibat |
+| P1 | Soft-lock battle, intent salah, kos berganda, flow telefon tidak boleh tamat | Baiki sebelum release |
+| P2 | Clipping kecil, animasi kasar, mesej kurang jelas | Baiki jika mengganggu keputusan; selain itu rekod |
+| P3 | Dekorasi, variasi art tambahan | Backlog |
+
+## Syarat “siap”
+
+**QA-04:** Kod/data/teks sepadan dengan SOR, semakan berkaitan mempunyai bukti, isu P0/P1 selesai, save boleh diteruskan, dan batas yang diketahui dilaporkan.
+
+**QA-05:** Untuk release, catat versi game, contentVersion, schemaVersion, versi SOR, commit/tag jika ada, senarai semakan dan cara kembali kepada versi stabil.
+
+**QA-06:** Jangan memanggil build/deploy sebagai berjaya hanya kerana command dimulakan. Tunggu hasil dan semak aliran yang berubah.
+
+## Templat bukti
+
+> Perubahan/versi: …  
+> Risiko: …  
+> Semakan dan input: …  
+> Jangkaan: …  
+> Hasil sebenar: …  
+> Status: PASS / FAIL / NOT_RUN / BLOCKED  
+> Had atau isu susulan: …
+
+Pakej dokumentasi ini hanya boleh mendakwa semakan fail, pautan, struktur dan pengiraan contoh apabila semakan tersebut benar-benar dibuat.
+
+## Semakan tambahan 2.0
+
+| Risiko | Semakan | Jangkaan |
+| --- | --- | --- |
+| Rujukan | Hash dua JPEG terhadap sumber | Byte sama, saiz sumber dilabel tepat |
+| Topik | T1/T2/T3 dan subfokus Probability | Tiada kehilangan Expansion/Factorisation atau Indices |
+| Algebra/indices | Semak empat contoh setiap domain secara bebas | Pengembangan, faktor penuh dan hukum eksponen tepat |
+| Kategori | Alias Guard dan konsep Ward | Starter kekal 12; Ward dikecualikan |
+| Bahasa | Semua copy pemain dan bitmap sumber | Produksi English; JPEG BM hanya rujukan |
+| Map | Semua path, cycle, next edges, boss | DAG sah, boss reachable, tiada jump/backtrack |
+| Shop/Event | Refresh sebelum/selepas pilihan | Gold/kad/claim tepat sekali |
+| Audio | Stage/room berubah dan rerender | Tujuh cue wajib dikenal; Elite 1/2 berbeza; satu loop aktif |
+| MC | Lantern/folio dalam semua pandangan | Sisi konsisten, belakang mengikut sheet baharu |
+
+Ujian runtime di atas ialah keperluan untuk implementation, bukan ujian game yang sudah dijalankan oleh pakej dokumen.

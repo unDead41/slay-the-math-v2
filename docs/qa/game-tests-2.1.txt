@@ -1,0 +1,86 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.1.0 test
+> node --test tests/*.test.cjs
+
+✔ music follows the site, stage and enemy rank (1.327725ms)
+✔ music waits for a player gesture and never restarts on the same scene (4.339444ms)
+✔ a slow previous track cannot replace a newer scene or start after mute (2.111909ms)
+✔ showing the page while suspension is pending resumes after that suspension finishes (1.919339ms)
+✔ ten-level maps can complete both stages through real combat, events, rests and rewards (1162.056495ms)
+ℹ {"map":"10 levels","seed":7,"result":"victory","hp":38,"trace":[{"enemy":"bat","turns":3,"hp":59,"result":"reward"},{"enemy":"wisp","turns":2,"hp":59,"result":"reward"},{"enemy":"wisp","turns":2,"hp":60,"result":"reward"},{"enemy":"beetle","turns":3,"hp":58,"result":"reward"},{"enemy":"wisp","turns":2,"hp":60,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":54,"result":"stageclear"},{"enemy":"mimic","turns":3,"hp":58,"result":"reward"},{"enemy":"weaver","turns":3,"hp":57,"result":"reward"},{"enemy":"shade","turns":4,"hp":57,"result":"reward"},{"enemy":"shade","turns":4,"hp":53,"result":"reward"},{"enemy":"mimic","turns":5,"hp":43,"result":"reward"},{"enemy":"weaver","turns":3,"hp":43,"result":"reward"},{"enemy":"dealer","turns":9,"hp":38,"result":"victory"}]}
+ℹ {"map":"10 levels","seed":42,"result":"victory","hp":37,"trace":[{"enemy":"beetle","turns":4,"hp":55,"result":"reward"},{"enemy":"bat","turns":2,"hp":55,"result":"reward"},{"enemy":"beetle","turns":3,"hp":57,"result":"reward"},{"enemy":"beetle","turns":4,"hp":60,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":57,"result":"stageclear"},{"enemy":"shade","turns":4,"hp":58,"result":"reward"},{"enemy":"weaver","turns":3,"hp":59,"result":"reward"},{"enemy":"weaver","turns":3,"hp":60,"result":"reward"},{"enemy":"shade","turns":5,"hp":58,"result":"reward"},{"enemy":"mimic","turns":4,"hp":57,"result":"reward"},{"enemy":"dealer","turns":9,"hp":37,"result":"victory"}]}
+ℹ {"map":"10 levels","seed":81,"result":"victory","hp":33,"trace":[{"enemy":"beetle","turns":3,"hp":58,"result":"reward"},{"enemy":"wisp","turns":2,"hp":58,"result":"reward"},{"enemy":"bat","turns":2,"hp":60,"result":"reward"},{"enemy":"wisp","turns":2,"hp":60,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":50,"result":"stageclear"},{"enemy":"mimic","turns":4,"hp":50,"result":"reward"},{"enemy":"golem","turns":4,"hp":38,"result":"reward"},{"enemy":"mimic","turns":3,"hp":35,"result":"reward"},{"enemy":"weaver","turns":2,"hp":30,"result":"reward"},{"enemy":"weaver","turns":2,"hp":53,"result":"reward"},{"enemy":"dealer","turns":7,"hp":33,"result":"victory"}]}
+✔ challenge mode has a complete winnable two-stage route through real actions (320.425852ms)
+ℹ {"seed":1,"result":"victory","hp":21,"trace":[{"enemy":"wisp","turns":2,"hp":59,"result":"reward"},{"enemy":"beetle","turns":4,"hp":55,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":48,"result":"stageclear"},{"enemy":"weaver","turns":2,"hp":60,"result":"reward"},{"enemy":"shade","turns":4,"hp":52,"result":"reward"},{"enemy":"dealer","turns":7,"hp":21,"result":"victory"}]}
+ℹ {"seed":7,"result":"victory","hp":26,"trace":[{"enemy":"wisp","turns":3,"hp":60,"result":"reward"},{"enemy":"beetle","turns":3,"hp":56,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":48,"result":"stageclear"},{"enemy":"shade","turns":4,"hp":51,"result":"reward"},{"enemy":"mimic","turns":5,"hp":43,"result":"reward"},{"enemy":"dealer","turns":10,"hp":26,"result":"victory"}]}
+ℹ {"seed":42,"result":"victory","hp":18,"trace":[{"enemy":"wisp","turns":3,"hp":54,"result":"reward"},{"enemy":"beetle","turns":3,"hp":52,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":48,"result":"stageclear"},{"enemy":"weaver","turns":2,"hp":59,"result":"reward"},{"enemy":"shade","turns":5,"hp":47,"result":"reward"},{"enemy":"dealer","turns":7,"hp":18,"result":"victory"}]}
+ℹ {"seed":112,"result":"victory","hp":23,"trace":[{"enemy":"wisp","turns":2,"hp":59,"result":"reward"},{"enemy":"beetle","turns":3,"hp":57,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":45,"result":"stageclear"},{"enemy":"weaver","turns":2,"hp":56,"result":"reward"},{"enemy":"shade","turns":4,"hp":52,"result":"reward"},{"enemy":"dealer","turns":9,"hp":23,"result":"victory"}]}
+ℹ {"seed":2026,"result":"victory","hp":22,"trace":[{"enemy":"beetle","turns":3,"hp":58,"result":"reward"},{"enemy":"bat","turns":4,"hp":57,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":46,"result":"stageclear"},{"enemy":"shade","turns":6,"hp":48,"result":"reward"},{"enemy":"weaver","turns":2,"hp":48,"result":"reward"},{"enemy":"dealer","turns":14,"hp":22,"result":"victory"}]}
+✔ guided learning mode remains accessible across representative full campaigns (202.802557ms)
+ℹ {"mode":"learn","seed":1,"result":"victory","hp":33,"trace":[{"enemy":"wisp","turns":4,"hp":59,"result":"reward"},{"enemy":"beetle","turns":4,"hp":55,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":55,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":60,"result":"reward"},{"enemy":"shade","turns":5,"hp":50,"result":"reward"},{"enemy":"dealer","turns":9,"hp":33,"result":"victory"}]}
+ℹ {"mode":"learn","seed":7,"result":"victory","hp":34,"trace":[{"enemy":"wisp","turns":3,"hp":59,"result":"reward"},{"enemy":"beetle","turns":4,"hp":53,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":55,"result":"stageclear"},{"enemy":"shade","turns":4,"hp":53,"result":"reward"},{"enemy":"mimic","turns":3,"hp":51,"result":"reward"},{"enemy":"dealer","turns":13,"hp":34,"result":"victory"}]}
+ℹ {"mode":"learn","seed":42,"result":"victory","hp":35,"trace":[{"enemy":"wisp","turns":4,"hp":55,"result":"reward"},{"enemy":"beetle","turns":4,"hp":53,"result":"reward"},{"enemy":"sentinel","turns":8,"hp":46,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":57,"result":"reward"},{"enemy":"shade","turns":4,"hp":52,"result":"reward"},{"enemy":"dealer","turns":9,"hp":35,"result":"victory"}]}
+ℹ {"mode":"learn","seed":112,"result":"victory","hp":38,"trace":[{"enemy":"wisp","turns":2,"hp":60,"result":"reward"},{"enemy":"beetle","turns":4,"hp":60,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":44,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":55,"result":"reward"},{"enemy":"shade","turns":5,"hp":52,"result":"reward"},{"enemy":"dealer","turns":12,"hp":38,"result":"victory"}]}
+ℹ {"mode":"learn","seed":2026,"result":"victory","hp":30,"trace":[{"enemy":"beetle","turns":4,"hp":60,"result":"reward"},{"enemy":"bat","turns":4,"hp":59,"result":"reward"},{"enemy":"sentinel","turns":10,"hp":45,"result":"stageclear"},{"enemy":"shade","turns":7,"hp":55,"result":"reward"},{"enemy":"weaver","turns":2,"hp":55,"result":"reward"},{"enemy":"dealer","turns":9,"hp":30,"result":"victory"}]}
+✔ stage checkpoint remains exact and reusable after repeated defeats and save/reload (0.90726ms)
+✔ starting-run retry restores the same seed and full starter deck (0.237238ms)
+✔ all forecast formulas match physical-card enumeration across varied sources (17.146142ms)
+✔ starter state, draw/discard recycling and serialization conserve every physical card (5.990718ms)
+✔ filter moves selected physical cards once, enforces draw floor and restores next battle (2.910676ms)
+✔ filter also enforces six active cards after prior exhaustion (0.91358ms)
+✔ invalid probability input is not an attempt; equivalent exact first answer earns Focus once (1.850836ms)
+✔ hint survives reload and disqualifies first-answer Focus (1.294675ms)
+✔ cancelling after hint consumes the chance across save/reload (1.288997ms)
+✔ wrong survives reload and disqualifies first-answer Focus (0.55607ms)
+✔ cancelling after wrong consumes the chance across save/reload (2.048945ms)
+✔ untouched forecast cancellation is reversible, and pending source is frozen over reload (1.036376ms)
+✔ unanswered forecasts lock card mutations and turn changes (0.80079ms)
+✔ Focus caps at three, boosts only one eligible card once per turn, then resets eligibility (2.302438ms)
+✔ both bosses enforce seal floor; guided solutions open seals without awarding Focus (2.796033ms)
+✔ event removal floor rejects a permanent deck smaller than ten (0.682561ms)
+✔ Dealer crossing half HP preserves the announced intent until the next turn, including reload (0.739086ms)
+✔ save validation safely rejects corrupt gameplay fields and malformed forecast sources (2.056846ms)
+✔ an existing Malay save resumes in English without changing the battle or answer credit (7.646248ms)
+✔ presentation migration still rejects corrupt probability answers and duplicate physical cards (2.946621ms)
+✔ new runs use the supplied 100-seed ten-level maps with the exact global quotas (136.151173ms)
+✔ all ten rooms, both bosses, save restore and the stage-two checkpoint follow the frozen graph (41.369192ms)
+✔ restoring a map rejects invalid snapshots and disconnected route progress (1.51662ms)
+✔ every generated route branches, merges and reaches exactly one boss without changing combat RNG (8.727521ms)
+✔ travel rejects skipped floors, disconnected rooms and already completed nodes without mutation (3.599616ms)
+✔ connected rest and event rooms have their own actions on either middle floor (26.797574ms)
+✔ elite risk awards an upgraded card while ordinary rewards remain unupgraded (0.773818ms)
+✔ save/reload preserves the exact chosen branch and rejects a forged path or active room (0.804995ms)
+✔ stage-two checkpoint restarts its saved map and legacy saves can still complete their route (2.152932ms)
+✔ overlapping union counts each physical card once (1.28488ms)
+✔ replacement and without-replacement are different experiments (0.240833ms)
+✔ at least one is checked through complementary event (0.166381ms)
+✔ equivalent fractions, decimals and rounded percentages (0.567548ms)
+✔ pair questions reject insufficient source (0.18545ms)
+✔ shop prices, inventory, purchases and Gold survive reload without restocking or duplicate claims (8.192924ms)
+✔ legacy routes remain unchanged and old saves migrate Gold without altering HP, deck or RNG (1.283649ms)
+✔ save rejects forged stock, negative Gold and nonnumeric added counters (4.353976ms)
+✔ DOM: branching map exposes connected choices and commits the exact selected entry (192.517637ms)
+✔ DOM: restored map highlights the travelled branch and disables every disconnected location (41.787235ms)
+✔ DOM: new game, mode, tutorial, battle and forecast error/correction are wired (115.203155ms)
+✔ DOM: filter selection cancels freely and commits exact selected cards (75.487865ms)
+✔ DOM: camp upgrade, event removal, library and save controls work (80.167272ms)
+✔ DOM: corrupted storage and unavailable storage leave a usable new-game screen (29.532284ms)
+✔ DOM: every terminal, reward, map and event scene renders without runtime errors (122.573501ms)
+✔ DOM: importing a pending forecast clears unrelated prior success and input (67.690137ms)
+✔ DOM: retry asks before replacing the terminal run (43.471588ms)
+✔ DOM: cancelling an untouched forecast restores its keyboard trigger (24.869772ms)
+✔ DOM: Music controls preserve volume, preview every track and return to game music (26.503511ms)
+✔ DOM: Unmute Music enables audio on that click when both channels were saved off (20.146975ms)
+✔ DOM: portable HTML boots without external scripts/styles and embeds all images (21669.850333ms)
+✔ DOM: reward preview does not claim a card until Add is pressed (58.390241ms)
+✔ DOM: collection search, category, empty result, clear and pagination retain working details (105.653721ms)
+✔ DOM: tutorial practice gives feedback without changing the run or awarding Focus (28.355096ms)
+ℹ tests 60
+ℹ suites 0
+ℹ pass 60
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23299.731722

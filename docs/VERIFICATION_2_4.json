@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-19",
+  "release": "2.4.0",
+  "fullSuite": {
+    "command": "DOM_QA_MODULE=<jsdom>/node_modules/jsdom node --test --test-reporter=dot tests/*.test.cjs",
+    "testsPassed": 83,
+    "failed": 0,
+    "skipped": 0,
+    "exitCode": 0
+  },
+  "artifactEngine": {
+    "passed": 22,
+    "failed": 0,
+    "evidence": "tests/artifacts.test.cjs"
+  },
+  "browser": {
+    "artifactChecks": 6,
+    "combatRegressionChecks": 7,
+    "viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ],
+      [
+        3840,
+        2160
+      ]
+    ],
+    "pageErrors": 0,
+    "evidence": [
+      "docs/browser-artifacts-2-4.json",
+      "docs/browser-combat-2-4.json"
+    ]
+  },
+  "portable": {
+    "syntax": "PASS",
+    "build": "PASS",
+    "unmodifiedHtmlFileBrowser": "PASS",
+    "httpRequests": 0,
+    "sizeBytes": 72999508,
+    "sha256": "b0767875eda2e2966d9105e7f83308dfd76d2cf128cd11552f9a51f9a071b3f7"
+  },
+  "uiAudit": {
+    "mode": "strict",
+    "findings": 0
+  },
+  "icons": {
+    "decoded": 31,
+    "size": [
+      800,
+      800
+    ],
+    "realAlpha": true,
+    "hashManifest": "dist/assets/artifact-assets.json"
+  },
+  "windowsInstallerExecution": "NOT_RUN",
+  "balancePlaytest": "NOT_RUN",
+  "obtainableArtifacts": 29,
+  "lockedUntilCardSupport": [
+    "s12_initiates_ring",
+    "e13_chain_weavers_spool"
+  ]
+}

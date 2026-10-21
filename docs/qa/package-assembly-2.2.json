@@ -1,0 +1,25 @@
+{
+  "kind": "manifest and assembly simulation, not PowerShell execution",
+  "sources": [
+    {
+      "version": "2.0",
+      "filesInstalled": 115,
+      "runtimeMatchesTestedSource": true,
+      "syntax": "PASS",
+      "portableMatchesTestedBuild": true,
+      "customGuideAndNotesPreserved": true,
+      "modifiedConfigRejectedByManifest": true
+    },
+    {
+      "version": "2.1",
+      "filesInstalled": 33,
+      "runtimeMatchesTestedSource": true,
+      "syntax": "PASS",
+      "portableMatchesTestedBuild": true,
+      "customGuideAndNotesPreserved": true,
+      "modifiedConfigRejectedByManifest": true
+    }
+  ],
+  "payloadFiles": 115,
+  "requiredExistingFiles": 74
+}

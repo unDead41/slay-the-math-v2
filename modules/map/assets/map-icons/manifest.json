@@ -1,0 +1,229 @@
+{
+  "project": "Slay the Math",
+  "assetSet": "Map icons",
+  "version": "1.0",
+  "generation": "Built-in image_gen, six separately generated transparent images; normal_enemy is the shared frame reference.",
+  "export": "Uniform badge footprint; crop/resize/pad only. FHD exports are size-normalized from the recorded native resolutions, not native FHD generations.",
+  "fhdDimensions": [
+    1920,
+    1080
+  ],
+  "squareDimensions": [
+    1080,
+    1080
+  ],
+  "background": "Alpha-transparent exterior. The colored recessed disc is part of the icon.",
+  "sharedFrame": "Circular gunmetal rim, double antique-gold edge, four gold diamond ornaments.",
+  "icons": [
+    {
+      "id": "battle",
+      "name": "normal_enemy",
+      "categoryColor": "red",
+      "sourceNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceCrop": {
+        "left": 416,
+        "top": 27,
+        "width": 837,
+        "height": 859
+      },
+      "outputs": [
+        {
+          "file": "fhd/normal_enemy.png",
+          "width": 1920,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 1449272,
+          "sha256": "becbfee46e9c8eb38b63b9bf42310de670f2b7a7f99f67448ebd70eef979a0ba"
+        },
+        {
+          "file": "square/normal_enemy.png",
+          "width": 1080,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 542072,
+          "sha256": "2d28af6640269cc7d7c753a75c6d6cd5bd4e695df25506a6257b9376e02f27cf"
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "elite_enemy",
+      "categoryColor": "red",
+      "sourceNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceCrop": {
+        "left": 413,
+        "top": 19,
+        "width": 846,
+        "height": 873
+      },
+      "outputs": [
+        {
+          "file": "fhd/elite_enemy.png",
+          "width": 1920,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 1463016,
+          "sha256": "5cd2c314dee82c4865ea2766d175e50b550800eb7a32c7ed2c6538bfb9fc8eca"
+        },
+        {
+          "file": "square/elite_enemy.png",
+          "width": 1080,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 555816,
+          "sha256": "848621dd75b6b3678a8b32a77009895db411a497de54c8ec71a49d95a04cc88a"
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "name": "shop",
+      "categoryColor": "blue",
+      "sourceNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceCrop": {
+        "left": 415,
+        "top": 24,
+        "width": 840,
+        "height": 864
+      },
+      "outputs": [
+        {
+          "file": "fhd/shop.png",
+          "width": 1920,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 1453178,
+          "sha256": "f90946b54b1c97646629086789deab935aa8afdf3e1abce5aa87944ed7fce464"
+        },
+        {
+          "file": "square/shop.png",
+          "width": 1080,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 545978,
+          "sha256": "766bd3870e325a28461e8cc2a7b11b3b187d8f842ae9ae5855b364e016afbd9f"
+        }
+      ]
+    },
+    {
+      "id": "mystery",
+      "name": "mystery",
+      "categoryColor": "purple",
+      "sourceNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceCrop": {
+        "left": 414,
+        "top": 24,
+        "width": 842,
+        "height": 865
+      },
+      "outputs": [
+        {
+          "file": "fhd/mystery.png",
+          "width": 1920,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 1452045,
+          "sha256": "b068977d6de49799340e8b9cbfdceee812ff877ce34103a6533cfd8c4b95289b"
+        },
+        {
+          "file": "square/mystery.png",
+          "width": 1080,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 544845,
+          "sha256": "437ce7f65efc9cb7446e7f6dddddf2685703f2808c2b3927e6fdfc32eb90ebb9"
+        }
+      ]
+    },
+    {
+      "id": "boss",
+      "name": "boss",
+      "categoryColor": "red",
+      "sourceNativeDimensions": [
+        1671,
+        941
+      ],
+      "sourceCrop": {
+        "left": 414,
+        "top": 19,
+        "width": 842,
+        "height": 870
+      },
+      "outputs": [
+        {
+          "file": "fhd/boss.png",
+          "width": 1920,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 1458002,
+          "sha256": "b3f7641d14a84a8e37864b1e97094ee9258fc2a39953a2e79f66e5f890929bd9"
+        },
+        {
+          "file": "square/boss.png",
+          "width": 1080,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 550802,
+          "sha256": "436907ba78d89fab92637be9f7eb1984b24919cd48489e5946904fc73cdf605c"
+        }
+      ]
+    },
+    {
+      "id": "rest",
+      "name": "rest",
+      "categoryColor": "blue",
+      "sourceNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceCrop": {
+        "left": 415,
+        "top": 23,
+        "width": 841,
+        "height": 866
+      },
+      "outputs": [
+        {
+          "file": "fhd/rest.png",
+          "width": 1920,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 1452645,
+          "sha256": "d845f54efb3bff894e98dafef483eb0d9f4300ffd5fb0217f526ab2dea6e20d1"
+        },
+        {
+          "file": "square/rest.png",
+          "width": 1080,
+          "height": 1080,
+          "alpha": true,
+          "borderClear": true,
+          "transparentPixels": 545445,
+          "sha256": "a31a3aa04fed00b49bda13ff9ae651ba574da8d1ea7c05c239386c536521e164"
+        }
+      ]
+    }
+  ]
+}

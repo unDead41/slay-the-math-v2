@@ -1,0 +1,151 @@
+/* Crimson mathematician edition. Canonical visual tokens remain in style.css. */
+body { background: radial-gradient(ellipse at 78% 23%, #722a2438, transparent 48%), var(--bg); }
+body.home-active { background: radial-gradient(ellipse at 76% 38%, #71251d35, transparent 47%), radial-gradient(ellipse at 20% 75%, #34243025, transparent 46%), var(--bg); }
+#header { background: #1111198c; backdrop-filter: blur(16px); }
+.math-art { display: inline-block; position: relative; flex: 0 0 auto; width: 60px; aspect-ratio: 1; overflow: hidden; vertical-align: middle; }
+.math-art > img { position: absolute; width: 400%; height: 300%; max-width: none; object-fit: fill; pointer-events: none; }
+.brand > .math-art { width: 49px; filter: drop-shadow(0 0 12px #e4b96a25); }
+.brand > span:not(.math-art) { font-family: var(--serif); }
+.crimson-home { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: min(760px, calc(100svh - 170px)); isolation: isolate; }
+.hero-copy { position: relative; z-index: 2; padding: 54px 0 62px; animation: heroReveal .9s .05s both; }
+.hero-copy > .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: 2.6px; }
+.status-spark { width: 5px; height: 5px; background: var(--gold-soft); transform: rotate(45deg); box-shadow: 0 0 15px var(--ember); }
+.hero-kicker { margin-top: 39px; color: var(--muted); font-size: 10px; letter-spacing: 4px; }
+.hero-copy h1 { font: 400 clamp(52px, 6.3vw, 93px)/1.03 var(--serif); letter-spacing: -3.6px; margin: 15px 0 0; }
+.hero-copy h1 em { color: var(--gold-soft); }
+.title-dot { color: var(--ember); }
+.hero-lead { font: 22px/1.5 var(--serif); margin-top: 27px; color: var(--text); }
+.hero-description { max-width: 340px; color: var(--muted); font-size: 13px; line-height: 1.9; margin-top: 13px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 11px; align-items: center; margin-top: 29px; }
+.hero-start { position: relative; overflow: hidden; border-radius: 4px; min-height: 57px; padding-inline: 24px; }
+.hero-start:after { content: ''; position: absolute; inset: -60% auto -60% -80%; width: 45%; background: linear-gradient(90deg, transparent, #fff7, transparent); transform: skewX(-25deg); animation: buttonGleam 7s 2s infinite; pointer-events: none; }
+.hero-guide { min-height: 48px; font-size: 11px; padding-inline: 17px; }
+.hero-guide .icon { width: 17px; height: 17px; }
+.hero-save { color: var(--ice); font-size: 11px; margin-top: 17px; }
+.hero-principles { display: flex; align-items: center; flex-wrap: wrap; gap: 19px; margin-top: 28px; color: var(--muted); font-size: 10px; }
+.hero-principles > span { display: flex; align-items: center; gap: 7px; }
+.hero-principles .icon { width: 15px; height: 15px; color: var(--gold); }
+.crimson-scene { position: relative; height: clamp(530px, 47vw, 710px); min-width: 0; isolation: isolate; animation: sceneReveal 1.2s both; }
+.crimson-scene:before { content: ''; position: absolute; inset: 8% -2% 0 -8%; background: radial-gradient(ellipse, #b8432e1c 10%, #c54e1910 35%, transparent 67%); border-radius: 50%; animation: firelight 6s ease-in-out infinite; }
+.arcane-gate { position: absolute; width: 74%; height: 88%; left: 17%; top: 4%; border: 1px solid #d7b47536; border-radius: 48% 48% 3px 3px; background: linear-gradient(180deg, #a6624120, transparent 68%); box-shadow: inset 0 0 70px #e47b1710, 0 0 70px #ae38240b; z-index: -3; }
+.arcane-gate:before { content: ''; position: absolute; inset: 11px; border: 1px solid #d7b47518; border-radius: inherit; }
+.arcane-gate:after { content: ''; position: absolute; inset: 25px; border: 1px dashed #d7b4751a; border-radius: inherit; }
+.math-halo { position: absolute; top: 8%; left: 7%; width: 91%; aspect-ratio: 1; color: var(--gold); opacity: .42; z-index: -2; animation: haloTurn 100s linear infinite; }
+.math-halo svg { width: 100%; height: 100%; }
+.math-halo:after { content: ''; position: absolute; inset: 9%; border-radius: 50%; border: 1px dashed #ecc0804d; }
+.hero-parallax { position: absolute; inset: 0; transform: translate3d(calc(var(--pointer-x, 0) * 15px), calc(var(--pointer-y, 0) * 9px), 0); transition: transform .55s ease-out; }
+.hero-sprite { position: absolute; width: 108%; height: 97%; max-width: none; object-fit: contain; left: -2%; bottom: 0; filter: drop-shadow(0 13px 25px #0008); animation: mageIdle 7s ease-in-out infinite; }
+.scene-floor { position: absolute; bottom: -2%; left: 6%; right: -3%; height: 14%; border: 1px solid #d7b47526; border-radius: 50%; transform: perspective(180px) rotateX(45deg); background: radial-gradient(ellipse, #a64e2133, #7a4b1710 40%, transparent 70%); z-index: -1; }
+.equation-chip { position: absolute; border: 1px solid #d1ac683b; border-radius: 3px; background: #1b1621c9; color: var(--gold-soft); padding: 8px 13px; font: 16px/1.3 var(--serif); backdrop-filter: blur(8px); box-shadow: 0 10px 30px #0004; animation: chipIdle 8s ease-in-out infinite; z-index: 2; }
+.chip-union { left: 0; top: 23%; transform: rotate(-9deg); }
+.chip-pair { right: -1%; top: 15%; transform: rotate(8deg); animation-delay: -4s; font-size: 19px; }
+.floating-relic { position: absolute; width: clamp(61px, 6vw, 92px); filter: drop-shadow(0 8px 14px #000a); animation: relicIdle 8s ease-in-out infinite; z-index: 2; }
+.floating-relic > .math-art { width: 100%; }
+.relic-compass { bottom: 22%; left: -3%; transform: rotate(-14deg); }
+.relic-orb { right: -3%; bottom: 31%; transform: rotate(12deg); animation-delay: -3s; }
+.mage-caption { position: absolute; right: 1%; bottom: 2%; text-align: right; border-right: 1px solid var(--gold); padding: 1px 12px 1px 0; z-index: 3; }
+.mage-caption small { color: var(--muted); display: block; font-size: 7px; letter-spacing: 2px; }
+.mage-caption strong { color: var(--gold-soft); display: block; font: 16px/1.5 var(--serif); margin-top: 4px; }
+.embers { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
+.embers i { position: absolute; width: 2px; height: 2px; background: #f4b96e; border-radius: 50%; left: calc(var(--i) * 5.1%); top: 90%; opacity: 0; box-shadow: 0 0 8px #ff662b; animation: emberRise calc(5s + var(--i) * .17s) calc(var(--i) * -.71s) linear infinite; }
+.home-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 20px 0 22px; position: relative; }
+.journey-preview { display: flex; align-items: center; gap: 24px; }
+.chapter-preview { display: flex; align-items: center; gap: 13px; }
+.chapter-preview > .math-art { width: 44px; }
+.chapter-preview small { color: var(--muted); font-size: 8px; letter-spacing: 1.5px; display: block; }
+.chapter-preview strong { font: 16px/1.6 var(--serif); color: var(--gold-soft); }
+.journey-connector { width: 49px; height: 1px; background: linear-gradient(90deg, #d7b47544, #d7b47588, #d7b47544); }
+.home-meta { display: flex; align-items: flex-end; flex-direction: column; gap: 9px; color: var(--muted); font-size: 8px; letter-spacing: 1px; }
+.motion-switch { display: inline-flex; align-items: center; gap: 7px; border: 0; background: none; color: var(--muted); font-size: 10px; min-height: 36px; padding: 0; letter-spacing: 0; }
+.motion-switch .icon { width: 14px; height: 14px; color: var(--gold); }
+.motion-switch:hover { color: var(--gold-soft); }
+/* The artwork slot is shared by battle, rewards, collection and selection dialogs. */
+.playing-card { background: radial-gradient(ellipse at 50% 24%, #74442922, transparent 58%), linear-gradient(155deg, #29232c, #151720 70%); border-color: #b68b5d9c; padding-top: 12px; }
+.playing-card.fire { background: radial-gradient(ellipse at 50% 27%, #94332338, transparent 64%), linear-gradient(155deg, #33232b, #191720 75%); }
+.playing-card.ice { background: radial-gradient(ellipse at 50% 27%, #39748230, transparent 64%), linear-gradient(155deg, #263039, #141b25 75%); }
+.playing-card .card-emblem { width: min(114px, 100%); height: auto; aspect-ratio: 1; margin: 0 0 5px; }
+.playing-card .card-emblem:before { display: none; }
+.card-emblem > .math-art { width: 100%; filter: drop-shadow(0 3px 8px #0005); }
+.playing-card .card-role { font-size: 7px; color: var(--muted); }
+.playing-card .card-title { font-size: 20px; min-height: 24px; }
+.playing-card .card-description { font-size: 10px; line-height: 1.55; }
+.playing-card .card-effect { margin: 9px 0; }
+.library-grid { grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); gap: 18px; }
+.library-grid .playing-card { min-height: 303px; }
+.hand-slot .playing-card { min-height: 293px; height: 100%; }
+.hand { min-height: 333px; }
+.card-cost { background: #171721; border-color: var(--gold); }
+.player .fighter-art { width: 112%; margin-left: -6%; height: 252px; }
+.player .fighter-label strong { color: var(--gold-soft); }
+.arena-sky { background: radial-gradient(ellipse at 25% 70%, #a7372b25, transparent 37%), radial-gradient(ellipse at 80% 60%, #79633f27, transparent 38%); }
+.won .ending-art { filter: drop-shadow(0 0 25px #da634820); }
+.utility-art { width: 32px; }
+.tutorial-icon .math-art { width: 85px; transform: rotate(-45deg); }
+.scene-emblem > .math-art { width: 88px; }
+.chapter-preview .math-art, .hero-principles .math-art { animation: none; }
+@keyframes heroReveal { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes sceneReveal { from { opacity: 0; transform: translateY(15px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes haloTurn { to { transform: rotate(360deg); } }
+@keyframes mageIdle { 0%,100% { transform: translateY(0) rotate(-.25deg); } 50% { transform: translateY(-9px) rotate(.25deg); } }
+@keyframes chipIdle { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
+@keyframes relicIdle { 0%,100% { translate: 0 0; } 50% { translate: 0 -13px; } }
+@keyframes firelight { 0%,100% { opacity: .6; transform: scale(.97); } 50% { opacity: 1; transform: scale(1.03); } }
+@keyframes emberRise { 0% { opacity: 0; transform: translate(0, 0); } 15% { opacity: .65; } 80% { opacity: .35; } 100% { opacity: 0; transform: translate(25px, -540px); } }
+@keyframes buttonGleam { 0%,65%,100% { left: -80%; } 85% { left: 130%; } }
+@media (min-width: 1500px) { .hero-copy { padding-right: 0; } .crimson-scene { height: 720px; } .playing-card .card-emblem { width: 122px; } }
+@media (max-width: 1100px) { .hero-copy h1 { font-size: clamp(51px, 6.5vw, 72px); letter-spacing: -2.5px; } .hero-kicker { margin-top: 30px; } .hero-lead { font-size: 21px; } .hero-description { max-width: 300px; font-size: 12px; } .hero-actions { flex-direction: column; align-items: flex-start; gap: 8px; } .hero-start { padding-inline: 18px; font-size: 12px; } .hero-guide { min-height: 42px; } .hero-principles { gap: 10px; font-size: 9px; } .chip-union { left: 0; } .chip-pair { right: 0; } .relic-orb { right: 0; } .relic-compass { left: 0; } .mage-caption { right: 4%; } }
+@media (max-width: 760px) {
+  #header { height: 77px; }
+  .brand > .math-art { width: 38px; }
+  .crimson-home { grid-template-columns: 1fr; min-height: auto; }
+  .hero-copy { padding: 31px 0 0; text-align: center; }
+  .hero-copy > .eyebrow { font-size: 8px; letter-spacing: 1.6px; justify-content: center; }
+  .hero-kicker { font-size: 8px; letter-spacing: 3.4px; margin-top: 24px; }
+  .hero-copy h1 { font-size: clamp(43px, 10.8vw, 70px); letter-spacing: -2.4px; margin-top: 11px; line-height: 1.02; }
+  .hero-copy h1 br { display: none; }
+  .hero-copy h1 em { display: block; }
+  .hero-lead { font-size: 18px; margin-top: 20px; }
+  .hero-description { font-size: 11px; max-width: 310px; margin: 8px auto 0; line-height: 1.8; }
+  .hero-actions { flex-direction: row; justify-content: center; align-items: center; gap: 8px; margin-top: 20px; }
+  .hero-start { min-height: 49px; padding-inline: 15px; font-size: 11px; }
+  .hero-start .icon { width: 16px; height: 16px; }
+  .hero-guide { font-size: 10px; min-height: 45px; padding-inline: 12px; }
+  .hero-principles { justify-content: center; font-size: 8px; margin-top: 17px; gap: 14px; }
+  .hero-principles .icon { width: 13px; height: 13px; }
+  .crimson-scene { height: clamp(370px, 100vw, 520px); width: min(100%, 490px); justify-self: center; margin-top: 12px; }
+  .hero-sprite { height: 100%; width: 104%; left: -2%; }
+  .arcane-gate { top: 3%; height: 88%; left: 15%; width: 74%; }
+  .math-halo { width: 90%; left: 5%; top: 7%; }
+  .equation-chip { font-size: 12px; padding: 7px 10px; }
+  .chip-union { top: 22%; left: 0; }
+  .chip-pair { right: 0; top: 9%; font-size: 16px; }
+  .floating-relic { width: 62px; }
+  .relic-compass { left: 1%; bottom: 21%; }
+  .relic-orb { right: 0; bottom: 28%; }
+  .mage-caption { right: 2%; bottom: 2%; padding-right: 8px; }
+  .mage-caption small { font-size: 6px; }
+  .mage-caption strong { font-size: 12px; }
+  .home-bottom { gap: 20px; flex-direction: column; align-items: stretch; padding: 19px 0 22px; margin-top: 14px; }
+  .journey-preview { justify-content: center; gap: 12px; }
+  .chapter-preview { gap: 7px; }
+  .chapter-preview > .math-art { width: 35px; }
+  .chapter-preview small { font-size: 6px; letter-spacing: 1px; }
+  .chapter-preview strong { font-size: 13px; }
+  .journey-connector { width: 18px; }
+  .home-meta { flex-direction: row; align-items: center; justify-content: space-between; font-size: 6px; gap: 12px; }
+  .motion-switch { font-size: 9px; min-height: 36px; }
+  .player .fighter-art { height: 166px; width: 136%; margin-left: -18%; }
+  .playing-card .card-emblem { width: 92px; }
+  .playing-card .card-title { font-size: 18px; }
+  .playing-card .card-description { font-size: 9px; }
+  .hand-slot .playing-card { min-height: 276px; }
+  .hand { min-height: 303px; }
+  .library-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+  .library-grid .playing-card { min-height: 290px; padding-inline: 8px; }
+}
+@media (max-width: 370px) { .hero-actions { gap: 6px; } .hero-start { padding-inline: 12px; } .hero-guide { padding-inline: 9px; } .journey-preview { gap: 8px; } .chapter-preview > .math-art { width: 30px; } .chapter-preview strong { font-size: 12px; } .library-grid .playing-card { min-height: 303px; } }
+/* Both the in-game switch and the OS preference stop all decorative movement. */
+.reduce-motion *, .reduce-motion *:before, .reduce-motion *:after { animation: none !important; transition: none !important; }
+.reduce-motion .hero-parallax { transform: none; }
+.reduce-motion .embers { display: none; }
+@media (prefers-reduced-motion: reduce) { *, *:before, *:after { animation: none !important; transition: none !important; } .hero-parallax { transform: none; } .embers { display: none; } }

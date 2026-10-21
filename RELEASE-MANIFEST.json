@@ -1,0 +1,82 @@
+{
+  "version": "2.4.2",
+  "edition": "Direct Map Update",
+  "newRouteVersion": 3,
+  "gameSaveVersion": 1,
+  "artifactStateVersion": 1,
+  "verification": {
+    "release": "2.4.2",
+    "uiDomTests": {
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    },
+    "journeyBrowserGroups": 7,
+    "existingBrowserGroups": 7,
+    "browserErrors": 0,
+    "viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ],
+      [
+        3840,
+        2160
+      ]
+    ],
+    "allSixRoomTypesDirectEntry": "PASS",
+    "offlineHtml": {
+      "unmodified": true,
+      "httpRequests": 0,
+      "sha256": "b73912086fadcfd53428fba91a6f70dcd348321b3182ebf8359916e8e0d7914f"
+    },
+    "pngPixels": [
+      3840,
+      2160
+    ],
+    "pngExport": "Lanczos upscale of the exact approved 1672x941 image; not native 4K",
+    "syntax": "PASS",
+    "build": "PASS",
+    "designLintErrors": 0,
+    "strictUiFindings": 0,
+    "unchangedCoreHashes": "PASS",
+    "windowsExecution": "NOT_RUN"
+  },
+  "sha256": {
+    "AGENTS.md": "9c128c14a06bd5630496ca14e6d5b2c72023a7c9edd9125c8b7b1b33fac65006",
+    "dist/config.js": "b635761ed10a6074d8b224eb018283653c575f3ad13ff22fb5a5f814a360a531",
+    "dist/engine.js": "1cfb0c2036f15dcd230f7d1bfa17bf0b520ae982c4bc9c41512ac9062c372d94",
+    "dist/math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "dist/map.js": "45e29574e555d19ce9fd8338560096d8823e8075de7ea0f46e213e5cc63f4af0",
+    "dist/map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "dist/artifacts.js": "07a94322fa46d19be751c4fc95f5adfa3f725f14bdf05067d33ebbbed6355f76",
+    "dist/artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "dist/audio.js": "ccddc4f8d85396f9d612131ec6108505dabdb2425e404dd267894754ec7ecb22",
+    "dist/visuals.js": "c8f17419ab0e6073ac9fa91cc14a0863dd9e43dab9bc59359e9702f4013a3961",
+    "dist/assets/dungeon-master.webp": "06aa07548bcb2ba350bd52cfe2c20234af4d19cedd3e1af279ebf1331ada4607",
+    "dist/app.js": "9a53a9ccd4b9207a11f47d9e3ecdec903e8dd3600b6fc68e88dccb7fc68ab212",
+    "dist/index.html": "bd4909ba97f5719ac9b6ec0a09f72ae5f4f98a1a737dba061a0699fadcb772af",
+    "dist/journey.css": "13e31fc51f894b444c1fcc8465ded32b0bd749a5e3d4447a8bfc276c1cbe688f",
+    "dist/assets/dungeon-master-png-2-4-2.json": "848b4d0bc6663feb2fa0ec9e56b4f0808f27f75eab51a8e55a1d6174a2d57832",
+    "package.json": "80e1cd0c7bba9310716bf70652f48b9f26f5631a01772620cbc1714d3d7b5cd2",
+    "MAIN-SEKARANG.html": "b73912086fadcfd53428fba91a6f70dcd348321b3182ebf8359916e8e0d7914f",
+    "docs/VERIFICATION_2_4_2.json": "b4a594469f45ad6c0f53ab816108fb7a577d55e266345ef7188049127555940a",
+    "tools/windows/Apply-DirectMapUpdate.ps1": "bdb493637d431a12f282ad2846d534373609df736749ecace6b95b24c490f27b"
+  }
+}

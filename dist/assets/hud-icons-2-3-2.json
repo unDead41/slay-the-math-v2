@@ -1,0 +1,29 @@
+{
+  "version": "2.3.2",
+  "generator": "built-in imagegen",
+  "operation": "Companion Predict icon: replace only the Focus eye with divination sphere and three cards; retain atlas frame/style.",
+  "reference": {
+    "path": "ui-focus.webp",
+    "origin": "Finalize Design(2).zip / UI ICON atlas, focus padded crop",
+    "sha256": "c5fc2e7f7aa8936829f6a2ef5a597edba8f23180d4063e3f348d3322dc934c3e"
+  },
+  "output": {
+    "path": "ui-predict.png",
+    "sha256": "ecca4394ebc2657237a25773afcf2612292d2451a36c80941b2e5f4ff2ec6ba6",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "cornerAlpha": 0,
+    "operation": "Original generated PNG copied unchanged"
+  },
+  "prompt": "Edit the supplied local Focus game icon into ONE companion PREDICT action icon for Slay the Math. Preserve the existing painterly fantasy RPG material, double antique-gold circular rim with four gold diamond studs at the cardinal points, dark gunmetal/navy centre, clean beveled highlights and consistent visual weight. Change ONLY the central symbol: remove the cyan eye crystal completely and replace it with a luminous smooth cyan-blue crystal divination sphere hovering above a compact fan of THREE dark navy cards with gold edges. The sphere is large and simple, with a bright white-cyan four-point glint inside. It represents predicting the next card. NO eye, NO lightning bolt, NO up/down arrow, NO letters or numbers. Keep this design clearly different from the source Focus eye crystal and from a Draw Pile stack. Crisp stylized painted rendering, readable at 32-48px. Single centred icon, square canvas, entire circular frame and all studs visible, approximately 8% transparent padding on all four edges. Genuine RGBA TRANSPARENT background outside the circular frame; no checkerboard, floor, drop shadow sheet or opaque rectangular background.",
+  "rest": {
+    "runtimePath": "map-camp.webp",
+    "registry": "icons.rest references mapIcons.camp",
+    "source": "Existing supplied Rest map seal; reused without pixel changes"
+  }
+}

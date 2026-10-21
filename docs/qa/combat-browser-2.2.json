@@ -1,0 +1,38 @@
+{
+  "checks": [
+    "Reference layout: source Alyssa and Rune Bat, separate Focus/Predict artwork, real HP and turn, grounded idle",
+    "Focus/keyboard: one boosted Block card, one spend, exact autosave/Continue and announced End Turn damage",
+    "Draw/Discard/Exhaust inspect, Escape restores each trigger; R opens Predict",
+    "1920/1280 desktop, 844 landscape, 390/320 portrait: no root overflow, separated fighters, readable hand, reachable 44px actions",
+    "Empty hand explains recovery and End Turn draws real cards",
+    "Both source boss arenas and models load with exact configured HP and two live seals"
+  ],
+  "errors": [],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "rootOverflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "rootOverflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rootOverflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "rootOverflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "rootOverflow": false
+    }
+  ]
+}

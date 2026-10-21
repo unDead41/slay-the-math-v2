@@ -1,0 +1,120 @@
+/* Dungeon 2.3: five clean illustrated menu scenes and one arena coordinate space.
+   Every combat sprite uses the same 1600×1200 canvas / (800,1100) foot pivot. */
+.home-active #header{display:none}
+.illustrated-home{display:flex;align-items:center;min-height:max(680px,100dvh);background:var(--bg)}
+.illustrated-home .home-art{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.illustrated-home .menu-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:0;transition:opacity 1.4s ease;pointer-events:none}
+.illustrated-home .menu-backdrop.active{opacity:1}
+.illustrated-home .home-vignette{z-index:-1;background:linear-gradient(90deg,#020b16ba,transparent 58%),linear-gradient(0deg,#020b16d9,transparent 18%)}
+.illustrated-home .home-title{flex:none;width:49%;max-width:940px;padding:65px 2vw 95px 5vw}
+.illustrated-home .title-sigil>.icon{width:66px;height:66px;stroke-width:1.1}
+.illustrated-home .home-title h1{font-size:clamp(48px,5.35vw,100px);margin:8px 0;color:#ffe7a0;letter-spacing:-.045em;text-shadow:0 2px 0 #a85f24,0 0 18px #d78b3444,0 5px 18px #000}
+.illustrated-home .home-subtitle{font-size:clamp(11px,1.08vw,20px);letter-spacing:.35em}
+.illustrated-home .ornament{margin:22px auto 29px;width:90%;font-size:13px}
+.illustrated-home .ornament::before,.illustrated-home .ornament::after{width:42%}
+.illustrated-home .main-menu-actions{width:88%;max-width:480px;gap:15px;align-items:center}
+.illustrated-home .main-menu-actions>.btn{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;width:90%;min-height:62px;padding:11px 24px;border:0;border-radius:0;background:linear-gradient(120deg,#9d6b2a,#ffe5a6 35%,#c18b3b 60%,#e9c779);color:#fff3dc;font:26px/1.2 var(--font-display);letter-spacing:0;clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);box-shadow:none;transition:filter .18s,background .18s}
+.illustrated-home .main-menu-actions>.btn::before{content:'';position:absolute;inset:2px;z-index:-1;clip-path:inherit;background:linear-gradient(150deg,#18212a,#090e16 80%);box-shadow:inset 0 0 0 3px #ac854c55}
+.illustrated-home .main-menu-actions>.btn::after{content:'◆';position:absolute;left:5%;color:#e5ba66;font-size:10px;text-shadow:0 0 6px #fbbf62}
+.illustrated-home .main-menu-actions>.menu-continue{width:100%;min-height:77px;font-size:35px}
+.illustrated-home .main-menu-actions>.menu-small{min-height:53px;width:80%;font-size:22px}
+.illustrated-home .main-menu-actions>.primary{color:#1b160c;background:linear-gradient(110deg,#e5a338,#fff4bc,#e2a13a);filter:drop-shadow(0 0 9px #eaa62d80)}
+.illustrated-home .main-menu-actions>.primary::before{background:radial-gradient(ellipse at 45% 10%,#fff1bd,#e6b34f);box-shadow:inset 0 0 0 3px #9c692e88}
+.illustrated-home .main-menu-actions>.primary::after{color:#7f471f}
+.illustrated-home .main-menu-actions>.btn:hover:not(:disabled){filter:brightness(1.22) drop-shadow(0 0 7px #e9ad3c77);transform:none}
+.illustrated-home .main-menu-actions>.btn:focus-visible{outline:0;background:var(--ice);filter:drop-shadow(0 0 7px var(--ice));transform:none}
+.illustrated-home .main-menu-actions>.btn:active:not(:disabled){filter:brightness(1.35);transform:translateY(1px)}
+.illustrated-home .main-menu-actions>.btn:disabled{opacity:.42;filter:saturate(.25);cursor:default}
+.illustrated-home .continue-caption{min-height:18px;margin:20px 0 0;font-size:12px;line-height:1.5;color:#ead6b4;text-shadow:0 1px 4px #000}
+.illustrated-home>.home-hero-name{display:none}
+.illustrated-home .dungeon-home-footer{left:4vw;right:4vw;bottom:15px;gap:20px;border-color:#d6aa4b55;padding-top:9px}
+.illustrated-home .dungeon-home-footer .text-btn{font-size:12px;min-height:44px;white-space:nowrap}
+.illustrated-home .dungeon-home-footer>span{font:12px/1.4 var(--font-display);color:#e8d4af;margin:0;min-width:130px;text-shadow:0 1px 3px #000}
+.scene-picker{display:flex;gap:0;margin-left:auto;align-items:center}
+.scene-choice{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:5px;background:transparent;cursor:pointer}
+.scene-dot{width:8px;height:8px;border:1px solid var(--gold);transform:rotate(45deg);background:#06111be0;transition:background .2s,box-shadow .2s}
+.scene-choice[aria-pressed='true'] .scene-dot{background:var(--gold-soft);box-shadow:0 0 10px #ffc76588}
+.scene-choice:hover .scene-dot{background:var(--gold);box-shadow:0 0 10px #ffc76588}
+.scene-choice:focus-visible{outline:2px solid var(--ice);outline-offset:0;background:#0b2339b3}
+.scene-choice:active{background:#cba15c33}
+
+/* The background and fighters share this theatre, never the document body. */
+body[data-scene='battle']{background:#06101a!important}
+body[data-scene='battle']::before,body[data-scene='battle']>.ambient{display:none}
+.combat-layout .battle-theatre{--ground-y:77%;height:clamp(calc(400 * var(--combat-unit)),calc(100dvh - calc(510 * var(--combat-unit))),calc(650 * var(--combat-unit)));min-height:calc(400 * var(--combat-unit));overflow:hidden;width:calc(100% + calc(56 * var(--combat-unit)));margin-inline:calc(-28 * var(--combat-unit));isolation:isolate}
+.combat-layout .battle-theatre .arena-sky{display:block;position:absolute;inset:0;z-index:0;background:none;overflow:hidden}
+.combat-layout .arena-backdrop{display:block;width:100%;height:100%;object-fit:cover;object-position:center 68%;max-width:none}
+.combat-layout .arena-sky::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,#06101a 0%,#06101a33 20%,transparent 42%),linear-gradient(180deg,#06101a66,transparent 18%);pointer-events:none}
+.combat-layout .combatant{position:absolute;top:0;bottom:0;height:100%;width:32%;max-width:none;display:block;padding:0;z-index:1}
+.combat-layout .combatant.player{left:6%}.combat-layout .combatant.enemy{right:6%}
+.combat-layout .fighter-figure,.combat-layout .enemy .fighter-figure,.combat-layout .enemy[data-floating='true'] .fighter-figure{position:absolute;inset:0;width:100%;height:100%;padding:0;isolation:auto}
+.combat-layout .fighter-figure::before{display:none}
+.combat-layout .fighter-anchor{position:absolute;z-index:2;left:50%;top:var(--ground-y);height:calc(86% * var(--figure-scale,1));width:auto;aspect-ratio:4/3;transform:translate(-50%,-91.6666667%);pointer-events:none}
+.combat-layout .battle-theatre .fighter-art{display:block;width:100%!important;height:100%!important;max-width:none;object-fit:fill;object-position:center;filter:drop-shadow(0 calc(2 * var(--combat-unit)) calc(4 * var(--combat-unit)) #0008);margin:0;animation:none}
+.combat-layout .ground-shadow{position:absolute;z-index:1;left:50%;top:var(--ground-y);width:46%;height:calc(17 * var(--combat-unit));transform:translate(-50%,-45%);border-radius:50%;background:radial-gradient(ellipse,#000d 0%,#0008 38%,transparent 72%);filter:blur(calc(2 * var(--combat-unit)));pointer-events:none}
+.combat-layout .player .ground-shadow{width:44%;height:calc(14 * var(--combat-unit));filter:blur(calc(1 * var(--combat-unit)))}
+.combat-layout .enemy[data-floating='true'] .fighter-anchor{translate:0 calc(-22 * var(--combat-unit))}
+.combat-layout .enemy[data-floating='true'] .ground-shadow{width:60%;height:calc(20 * var(--combat-unit));opacity:.6;filter:blur(calc(4 * var(--combat-unit)))}
+.combat-layout .enemy[data-enemy='wisp'] .fighter-anchor{translate:0 calc(-9 * var(--combat-unit))}
+.combat-layout .enemy[data-enemy='wisp'] .ground-shadow{background:radial-gradient(ellipse,#9a331c99,#0008 48%,transparent 72%)}
+.combat-layout .enemy[data-floating='true'] .fighter-art[data-pose='standing']{animation:enemy-hover 4.2s ease-in-out infinite}
+.combat-layout .fighter-panel{position:absolute;z-index:3;top:calc(var(--ground-y) + calc(18 * var(--combat-unit)));left:50%;transform:translateX(-50%);width:88%;padding:calc(8 * var(--combat-unit)) calc(15 * var(--combat-unit)) 0;min-height:calc(72 * var(--combat-unit))}
+.combat-layout .intent{z-index:4;top:calc(13 * var(--combat-unit))}
+.combat-layout .arena-center{z-index:2;top:calc(var(--ground-y) + calc(25 * var(--combat-unit)));bottom:auto;left:42%;width:16%}
+.combat-layout .combat-dock{z-index:3;margin-top:calc(-2 * var(--combat-unit));background:linear-gradient(0deg,#03101bf7,#06101a)}
+.combat-layout .energy>span .icon{filter:drop-shadow(0 0 calc(4 * var(--combat-unit)) #edaa2b55)}
+.combat-layout .pile-art>img.icon{width:calc(66 * var(--combat-unit));height:calc(74 * var(--combat-unit));object-fit:contain}
+
+@media(max-width:1050px){
+ .illustrated-home .home-title{width:52%;padding:65px 14px 95px 3vw}
+ .illustrated-home .home-title h1{font-size:clamp(40px,5.25vw,56px)}
+ .illustrated-home .main-menu-actions{width:95%;gap:13px}
+ .illustrated-home .main-menu-actions>.menu-continue{font-size:29px;min-height:69px}
+ .illustrated-home .main-menu-actions>.btn{font-size:23px;min-height:57px}
+ .illustrated-home .main-menu-actions>.menu-small{font-size:19px;min-height:50px}
+ .combat-layout .battle-theatre{width:calc(100% + calc(36 * var(--combat-unit)));margin-inline:calc(-18 * var(--combat-unit));height:calc(430 * var(--combat-unit))}
+ .combat-layout .combatant{width:39%}.combat-layout .combatant.player{left:2%}.combat-layout .combatant.enemy{right:2%}
+ .combat-layout .fighter-panel{width:98%;padding-inline:calc(9 * var(--combat-unit))}
+}
+@media(max-width:600px){
+ .illustrated-home{display:block;min-height:850px}
+ .illustrated-home .home-art{height:440px;bottom:auto}
+ .illustrated-home .menu-backdrop{object-position:70% bottom}
+ .illustrated-home .home-vignette{background:linear-gradient(0deg,#06101a 47%,#06101a55 62%,transparent 87%)}
+ .illustrated-home .home-title{width:100%;max-width:none;padding:330px 20px 130px;text-align:center}
+ .illustrated-home .title-sigil{display:none}
+ .illustrated-home .home-title h1{font-size:clamp(39px,10.9vw,64px);max-width:none;white-space:nowrap;margin:0 0 8px}
+ .illustrated-home .home-subtitle{font-size:10px;letter-spacing:.24em}
+ .illustrated-home .ornament{margin:17px auto 23px;width:83%}
+ .illustrated-home .main-menu-actions{width:100%;max-width:390px;gap:13px}
+ .illustrated-home .main-menu-actions>.btn{width:94%;min-height:56px;font-size:25px}
+ .illustrated-home .main-menu-actions>.menu-continue{width:100%;min-height:64px;font-size:29px}
+ .illustrated-home .main-menu-actions>.menu-small{width:86%;font-size:22px;min-height:52px}
+ .illustrated-home .continue-caption{font-size:11px}
+ .illustrated-home .dungeon-home-footer{left:18px;right:18px;bottom:10px;display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
+ .illustrated-home .dungeon-home-footer>.text-btn{justify-self:center}
+ .illustrated-home .scene-picker{grid-column:1/-1;grid-row:2;margin:0;justify-content:center}
+ .illustrated-home .dungeon-home-footer>span{display:none}
+ .combat-layout .battle-theatre{--ground-y:73%;width:calc(100% + calc(20 * var(--combat-unit)));margin-inline:calc(-10 * var(--combat-unit));height:calc(385 * var(--combat-unit));min-height:calc(385 * var(--combat-unit))}
+ .combat-layout .combatant{width:48%;height:100%}.combat-layout .combatant.player{left:1%}.combat-layout .combatant.enemy{right:1%}
+ .combat-layout .fighter-panel{top:calc(var(--ground-y) + calc(12 * var(--combat-unit)));width:97%;padding:calc(6 * var(--combat-unit)) calc(5 * var(--combat-unit)) 0;min-height:calc(88 * var(--combat-unit))}
+ .combat-layout .intent{top:calc(12 * var(--combat-unit));min-width:calc(128 * var(--combat-unit));max-width:100%;padding:calc(7 * var(--combat-unit)) calc(5 * var(--combat-unit))}
+ .combat-layout .intent>strong{font-size:calc(14 * var(--combat-unit))}.combat-layout .intent>small{font-size:calc(10 * var(--combat-unit))}
+ .combat-layout .fighter-label>strong{font-size:calc(15 * var(--combat-unit))}
+ .combat-layout .fighter-anchor{height:calc(83% * var(--figure-scale,1))}
+ /* Wide shield/wing poses fit their half of a phone screen. The common
+    canvas keeps the foot pivot valid when this width cap changes height. */
+ .combat-layout .enemy .fighter-anchor{height:auto;width:min(calc(calc(426 * var(--combat-unit)) * var(--figure-scale,1)),54vw)}
+ .combat-layout .enemy[data-floating='true'] .fighter-anchor{translate:0 calc(-18 * var(--combat-unit))}
+ .combat-layout .enemy[data-enemy='wisp'] .fighter-anchor{translate:0 calc(-6 * var(--combat-unit))}
+ .combat-layout .arena-center{top:0;bottom:auto;left:37%;width:26%}
+ .combat-layout .arena-center .turn-hint{display:none}
+ .combat-layout .ground-shadow{height:calc(12 * var(--combat-unit))}.combat-layout .player .ground-shadow{height:calc(10 * var(--combat-unit))}
+}
+.reduce-motion .menu-backdrop{transition:none}
+.reduce-motion .enemy .fighter-art{animation:none!important}
+@media(prefers-reduced-motion:reduce){.illustrated-home .menu-backdrop{transition:none}.combat-layout .fighter-art{animation:none!important}}
+
+/* Rest uses the supplied blue campfire seal, shared with its map node. */
+.rest-layout .choice-panel[data-value='heal']>img.icon{width:68px;height:68px;object-fit:contain}
+@media(max-width:600px){.rest-layout .choice-panel[data-value='heal']>img.icon{width:60px;height:60px}}

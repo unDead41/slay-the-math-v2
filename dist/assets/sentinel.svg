@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 600" fill="none" role="img" aria-label="Penjaga Dua Lambang, gergasi batu dengan segel emas">
+  <defs>
+    <linearGradient id="stone" x1="166" y1="118" x2="370" y2="538" gradientUnits="userSpaceOnUse"><stop stop-color="#8b9595"/><stop offset=".42" stop-color="#4a5963"/><stop offset="1" stop-color="#253442"/></linearGradient>
+    <linearGradient id="edge" x1="158" y1="88" x2="400" y2="529" gradientUnits="userSpaceOnUse"><stop stop-color="#f2d69a"/><stop offset=".45" stop-color="#c4a365"/><stop offset="1" stop-color="#776044"/></linearGradient>
+    <linearGradient id="dark" x1="270" y1="147" x2="314" y2="484" gradientUnits="userSpaceOnUse"><stop stop-color="#253440"/><stop offset="1" stop-color="#111f2e"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#cfad68" stop-opacity=".2"/><stop offset="1" stop-color="#cfad68" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core"><stop stop-color="#e5fff9"/><stop offset=".5" stop-color="#85ced3"/><stop offset="1" stop-color="#327f8e"/></radialGradient>
+  </defs>
+  <ellipse cx="280" cy="560" rx="180" ry="21" fill="#050b15" fill-opacity=".55"/>
+  <circle cx="280" cy="286" r="229" fill="url(#halo)"/>
+  <circle cx="280" cy="222" r="143" stroke="#cfad68" stroke-opacity=".11" stroke-width="2"/>
+  <path d="M280 55L291 68L280 81L269 68L280 55ZM165 82L173 91L165 100L157 91L165 82ZM395 82L403 91L395 100L387 91L395 82Z" fill="#cfad68" fill-opacity=".6"/>
+  <path d="M192 198L163 242L177 387L200 426L280 440L360 426L383 387L397 242L368 198L192 198Z" fill="url(#dark)"/>
+  <path d="M202 389L191 463L184 528L219 552L260 533L264 420L202 389Z" fill="url(#stone)" stroke="#87918a" stroke-width="2"/>
+  <path d="M295 420L300 533L343 552L378 528L368 463L356 389L295 420Z" fill="url(#stone)" stroke="#87918a" stroke-width="2"/>
+  <path d="M203 432L249 442L244 499L196 491L203 432ZM310 443L358 431L366 491L315 500L310 443Z" fill="#394b58" stroke="url(#edge)" stroke-width="2"/>
+  <path d="M183 522L219 534L258 519L267 552L250 565L178 563L168 549L183 522ZM301 519L341 534L378 522L393 549L383 563L310 565L293 552L301 519Z" fill="#324452" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M189 542L217 549L249 538M312 538L341 549L372 542" stroke="#e3c386" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M194 210L152 207L111 230L109 286L131 319L174 303L194 268L194 210Z" fill="url(#stone)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M367 210L409 207L450 230L452 286L430 319L387 303L367 268L367 210Z" fill="url(#stone)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M148 215L123 238L124 271L165 258L180 220L148 215ZM412 215L438 238L437 271L396 258L382 220L412 215Z" fill="#a99d7c" fill-opacity=".28"/>
+  <path d="M126 302L108 335L110 392L151 414L176 394L177 343L161 309L126 302Z" fill="url(#stone)" stroke="#7e8b8b" stroke-width="2"/>
+  <path d="M433 302L451 335L449 392L408 414L383 394L382 343L398 309L433 302Z" fill="url(#stone)" stroke="#7e8b8b" stroke-width="2"/>
+  <path d="M111 332L135 319L165 335L161 366L137 378L113 365L111 332ZM447 332L423 319L393 335L397 366L421 378L445 365L447 332Z" fill="#324756" stroke="url(#edge)" stroke-width="2"/>
+  <path d="M112 379L135 389L159 380L176 400L172 439L154 454L115 445L103 425L112 379ZM447 379L424 389L400 380L383 400L387 439L405 454L444 445L456 425L447 379Z" fill="#53626b" stroke="url(#edge)" stroke-width="2"/>
+  <path d="M119 409L117 432M135 414L135 439M152 410L154 436M441 409L443 432M425 414L425 439M408 410L406 436" stroke="#233442" stroke-width="5" stroke-linecap="round"/>
+  <path d="M190 207L222 190L338 190L370 207L359 328L332 375L280 393L228 375L201 328L190 207Z" fill="url(#stone)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M207 219L229 209L280 240L330 209L353 219L343 310L319 344L280 361L241 344L217 310L207 219Z" fill="#253846" stroke="#c2a46a" stroke-width="2"/>
+  <path d="M224 226L242 221L280 247L318 221L337 226L330 269L280 302L230 269L224 226Z" fill="#536a72"/>
+  <path d="M280 249L309 270L309 303L280 325L251 303L251 270L280 249Z" fill="#142635" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M280 262L297 274L297 295L280 308L263 295L263 274L280 262Z" fill="url(#core)"/>
+  <path d="M280 268L287 283L280 300L273 283L280 268Z" fill="#dffffa" fill-opacity=".6"/>
+  <path d="M231 287L242 296M318 296L329 287M238 319L253 330M306 330L322 319" stroke="#85ced3" stroke-opacity=".65" stroke-width="2"/>
+  <path d="M217 357L234 378L280 393L326 378L344 357L351 404L280 429L210 404L217 357Z" fill="#172a3a" stroke="url(#edge)" stroke-width="2"/>
+  <path d="M245 391L280 404L315 391L312 417L280 429L247 417L245 391Z" fill="url(#edge)"/>
+  <path d="M270 402L290 402L290 419L270 419L270 402Z" fill="#263e4e"/>
+  <path d="M221 111L239 91L321 91L339 111L334 176L312 207L249 207L226 176L221 111Z" fill="url(#stone)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M233 121L247 110L314 110L327 121L320 168L305 189L256 189L241 168L233 121Z" fill="#263947"/>
+  <path d="M240 132L267 140L262 151L240 146L240 132ZM321 132L294 140L299 151L321 146L321 132Z" fill="#9ce3dc"/>
+  <path d="M277 129L284 129L290 169L280 177L270 169L277 129Z" fill="#6d7a7b"/>
+  <path d="M256 181L268 189L292 189L305 181" stroke="#c9b077" stroke-width="3"/>
+  <path d="M225 110L218 75L248 93L261 67L280 92L301 67L313 93L343 75L336 110L225 110Z" fill="url(#edge)" stroke="#e7cb8a" stroke-width="2"/>
+  <path d="M231 107L245 103M267 107L280 104L295 107M316 103L330 107" stroke="#5d594a" stroke-width="3"/>
+  <path d="M181 239L171 255L177 280M347 304L338 319L340 335M215 461L223 478L219 491M330 120L320 126" stroke="#152a3a" stroke-width="2"/>
+  <g transform="translate(100 148)">
+    <circle r="43" fill="#152333" stroke="#cfad68" stroke-width="2"/><circle r="34" stroke="#cfad68" stroke-opacity=".5"/>
+    <path d="M0-25L24 0L0 25L-24 0L0-25Z" fill="#cfad68" fill-opacity=".16" stroke="#efd598" stroke-width="2"/>
+    <path d="M0-14L14 0L0 14L-14 0L0-14Z" stroke="#efd598" stroke-width="2"/>
+    <path d="M0-49L0-43M0 43L0 49M-49 0L-43 0M43 0L49 0" stroke="#cfad68" stroke-width="2"/>
+  </g>
+  <g transform="translate(460 148)">
+    <circle r="43" fill="#152333" stroke="#cfad68" stroke-width="2"/><circle r="34" stroke="#cfad68" stroke-opacity=".5"/>
+    <circle cx="-8" r="14" stroke="#efd598" stroke-width="2"/><circle cx="8" r="14" stroke="#efd598" stroke-width="2"/>
+    <path d="M0-49L0-43M0 43L0 49M-49 0L-43 0M43 0L49 0" stroke="#cfad68" stroke-width="2"/>
+  </g>
+  <path d="M132 184L160 203M429 184L401 203" stroke="#cfad68" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="3 8"/>
+</svg>

@@ -1,0 +1,59 @@
+{
+  "release": "2.5.0",
+  "syntax": "PASS",
+  "portableBuild": "PASS",
+  "nodeTests": {
+    "total": 100,
+    "groups": {
+      "dom": 22,
+      "core": 44,
+      "educationAndArtifactModels": 34
+    },
+    "result": "PASS",
+    "skipped": 0
+  },
+  "realChromium": {
+    "groups": {
+      "education": 7,
+      "artifacts": 6,
+      "journey": 7
+    },
+    "viewports": [
+      "1920x1080",
+      "1280x720",
+      "844x390",
+      "390x844",
+      "320x740",
+      "3840x2160"
+    ],
+    "errors": [],
+    "result": "PASS",
+    "offline": "actual unmodified portable HTML; 120 embedded items; no HTTP requests"
+  },
+  "exactBankImport": "120 original items; 40 per topic; prompts/options/key/hint/explanation preserved",
+  "noRepeat": "120 unique draws across new runs in model tests; ten replaced unanswered runs plus refresh in browser",
+  "visualReview": "desktop 1280 and phone 390 screenshots reviewed; original Master background and four native answer choices",
+  "designLint": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1
+  },
+  "uiAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "windowsInstallerExecution": "NOT_RUN",
+  "commands": [
+    "npm run check",
+    "npm run build",
+    "DOM_QA_MODULE=<jsdom> node --test tests/education.test.cjs tests/artifacts.test.cjs tests/ui.test.cjs",
+    "DOM_QA_MODULE=<jsdom> node --test tests/ui.test.cjs (final)",
+    "node --test tests/audio.test.cjs tests/campaign.test.cjs tests/engine.test.cjs tests/map-integration.test.cjs tests/map.test.cjs tests/shop.test.cjs tests/language.test.cjs tests/math.test.cjs",
+    "node tests/education-browser.cjs",
+    "node tests/artifacts-browser.cjs",
+    "node tests/journey-browser.cjs"
+  ]
+}

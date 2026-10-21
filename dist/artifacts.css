@@ -1,0 +1,58 @@
+/* The existing dungeon palette, native controls and serif display type own this scene. */
+body[data-artifact-choice='true']{background:var(--bg)}
+body[data-artifact-choice='true'] #game{max-width:none;padding:0}
+body[data-artifact-choice='true']::before,body[data-artifact-choice='true']>.ambient{display:none}
+.artifact-encounter{position:relative;isolation:isolate;min-height:calc(100dvh - 78px);display:grid;grid-template-columns:43% 57%;gap:0;padding:clamp(24px,4vw,72px);overflow:hidden}
+.artifact-scene-art{position:absolute;inset:0;z-index:-2;background:var(--bg)}
+.artifact-scene-art>img{width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
+.artifact-scene-art::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 30%,#06101a66 44%,#06101ac9 59%),linear-gradient(0deg,#06101ac9,transparent 37%)}
+.master-dialogue{align-self:end;max-width:430px;padding:25px 28px 8px;margin:0 30px 0 0;background:linear-gradient(90deg,#06101ae8,#06101a88);border-left:2px solid var(--gold)}
+.master-dialogue .eyebrow{font-size:11px;letter-spacing:.18em;color:var(--gold)}
+.master-dialogue blockquote{margin:12px 0 10px;font:clamp(18px,1.5vw,25px)/1.5 var(--font-display);color:var(--text)}
+.master-dialogue .text-btn{padding-left:0;min-height:44px;color:var(--muted)}
+.artifact-choice-panel{align-self:center;min-width:0;padding:20px 0 20px 24px;max-width:1200px}
+.artifact-choice-panel>.eyebrow{color:var(--gold);letter-spacing:.21em;font-size:11px}
+.artifact-choice-panel h1{font:clamp(34px,3.6vw,64px)/1.08 var(--font-display);color:var(--gold-soft);margin:14px 0 16px;max-width:800px;text-wrap:balance;text-shadow:0 3px 10px #0008}
+.artifact-intro{color:var(--muted);font-size:16px;line-height:1.6;margin:0 0 30px}
+.artifact-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.artifact-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:9px;padding:20px 14px 24px;min-width:0;width:100%;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,#152635e8,#06101af2);color:var(--text);text-align:center;box-shadow:0 12px 25px #0004;transition:border-color .2s,background .2s,box-shadow .2s}
+button.artifact-card{cursor:pointer}
+.artifact-card:hover{border-color:var(--gold);background:linear-gradient(160deg,#203345f2,#081623f2)}
+.artifact-card:focus-visible{outline:3px solid var(--ice);outline-offset:3px}
+.artifact-card.selected{border-color:var(--gold-soft);background:linear-gradient(160deg,#51402bd9,#0b1928f2);box-shadow:inset 0 0 0 1px var(--gold),0 0 25px #dca35330}
+.artifact-illustration{position:relative;display:grid;place-items:center;width:clamp(96px,8.3vw,165px);height:clamp(96px,8.3vw,165px);flex:none;margin:4px 0 8px}
+.artifact-illustration::before{content:'';position:absolute;inset:6%;border-radius:50%;background:radial-gradient(ellipse,#db9a2830,transparent 68%)}
+.artifact-illustration>img{position:relative;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 8px #0008)}
+.artifact-card.selected .artifact-illustration::before{background:radial-gradient(ellipse,#edb54d55,transparent 70%)}
+.artifact-tier{color:var(--gold);font-size:10px;font-family:var(--sans);letter-spacing:.12em;text-transform:uppercase;line-height:1.4}
+.artifact-name{display:block;font:clamp(19px,1.65vw,27px)/1.2 var(--font-display);font-weight:400;min-height:2.4em;text-wrap:balance}
+.artifact-effect{font:14px/1.65 var(--sans);color:#d2dce4;min-height:6.5em}
+.artifact-selection{font-size:13px;line-height:1.6;min-height:21px;color:var(--gold-soft);margin:23px 0 13px}
+.artifact-choice-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.artifact-choice-actions .btn{min-height:56px;padding:14px 25px;min-width:min(100%,290px);font-size:19px}
+.artifact-save-note{color:var(--muted);font-size:11px;line-height:1.6;margin:16px 0 0}
+.artifacts-trigger{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.artifacts-trigger>img{width:28px;height:28px;object-fit:contain;flex:none}
+.combat-layout .battle-log .artifacts-trigger{margin-left:auto;margin-right:10px;gap:5px;padding:4px;min-height:44px;font-size:12px}
+.combat-layout .artifact-stats{display:flex;justify-content:space-between;gap:7px;font-size:11px;line-height:1.4;color:var(--gold-soft);padding-top:3px}
+.run-status{flex-wrap:wrap}
+.owned-artifacts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.owned-artifacts-grid .artifact-effect,.owned-artifacts-grid .artifact-name{min-height:0}
+.owned-artifacts-grid .artifact-illustration{width:110px;height:110px}
+@media(min-width:2500px){
+ .artifact-choice-panel{padding-left:4vw;max-width:1500px}.artifact-card{padding:35px 25px;gap:16px}.artifact-name{font-size:36px}.artifact-effect{font-size:21px}.artifact-tier,.artifact-choice-panel>.eyebrow{font-size:16px}.artifact-intro{font-size:23px}.artifact-selection{font-size:20px}.artifact-save-note{font-size:15px}.artifact-choice-actions .btn{font-size:25px;min-height:72px}.artifact-illustration{width:220px;height:220px}.master-dialogue{max-width:650px}
+}
+@media(max-width:1100px) and (min-width:901px){.artifact-encounter{grid-template-columns:35% 65%;padding-inline:24px}.artifact-choice-panel{padding-left:15px}.artifact-card{padding-inline:10px}.master-dialogue{padding:18px;margin-right:15px}.artifact-effect{font-size:13px}}
+@media(max-width:900px){
+ .artifact-encounter{display:block;padding:0 24px 40px}.artifact-scene-art{height:460px;bottom:auto}.artifact-scene-art>img{object-position:left center}.artifact-scene-art::after{background:linear-gradient(0deg,var(--bg),transparent 65%)}
+ .master-dialogue{padding:12px 18px 0;margin:0;padding-top:290px;max-width:660px;background:none;border:0}.master-dialogue blockquote{font-size:21px;margin:7px 0}.master-dialogue .eyebrow{font-size:10px}.master-dialogue .text-btn{font-size:12px}
+ .artifact-choice-panel{padding:25px 0 0;margin:auto;max-width:800px}.artifact-choice-panel h1{font-size:41px}.artifact-intro{font-size:15px;margin-bottom:22px}.artifact-name{font-size:21px}.owned-artifacts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .artifact-encounter{padding-inline:18px}.artifact-scene-art{height:400px}.master-dialogue{padding-top:260px;padding-left:0;padding-right:0}.master-dialogue blockquote{font-size:19px}.artifact-choice-panel{padding-top:16px}.artifact-choice-panel h1{font-size:35px;line-height:1.12}.artifact-choice-panel>.eyebrow{font-size:10px;line-height:1.7}
+ .artifact-choices{grid-template-columns:1fr;gap:12px}.artifact-card{display:grid;grid-template-columns:76px minmax(0,1fr);gap:5px 14px;align-items:start;text-align:left;padding:18px 14px;min-height:142px}.artifact-illustration{grid-row:1/4;width:76px;height:90px;margin:0;align-self:center}.artifact-name{font-size:23px;min-height:0;line-height:1.2}.artifact-tier{font-size:9px;grid-column:2}.artifact-effect{font-size:14px;min-height:0;line-height:1.6}.artifact-choice-actions{gap:10px;align-items:stretch}.artifact-choice-actions .btn{width:100%;min-width:0;font-size:18px}.artifact-choice-actions>.text-btn{width:100%}.artifact-save-note{font-size:11px}
+ .owned-artifacts-grid{grid-template-columns:1fr}.owned-artifacts-grid .artifact-illustration{width:76px;height:90px}.combat-layout .battle-log .artifacts-trigger{font-size:10px;margin-right:6px}.combat-layout .battle-log .artifacts-trigger>img{width:23px;height:23px}.combat-layout .artifact-stats{font-size:9px;flex-wrap:wrap;justify-content:center;padding-top:2px}
+}
+@media(prefers-reduced-motion:reduce){.artifact-card{transition:none}}
+.reduce-motion .artifact-card{transition:none}
+@media(forced-colors:active){.artifact-card,.master-dialogue{background:Canvas;color:CanvasText;border-color:CanvasText}.artifact-effect,.artifact-name{color:CanvasText}.artifact-card.selected{outline:2px solid Highlight}}

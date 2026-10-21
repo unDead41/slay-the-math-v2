@@ -1,0 +1,576 @@
+{
+  "project": "Slay the Math: Dungeon of Chance",
+  "version": "3.1",
+  "date": "2026-10-19",
+  "status": "design_proposal_not_game_implementation",
+  "tiers": {
+    "starting": 12,
+    "elite_mystery": 16,
+    "boss": 3
+  },
+  "export": {
+    "sheet_width": 4096,
+    "sheet_height": 4096,
+    "icon_canvas": 800,
+    "art_max_extent": 720,
+    "gutter": 100,
+    "minimum_outer_padding": 100,
+    "individual_4k_canvas": 4096,
+    "individual_4k_art_extent": 3600
+  },
+  "artifacts": [
+    {
+      "id": "s01_emberheart_pendant",
+      "tier": "starting",
+      "name": "Emberheart Pendant",
+      "effect_ms": "Pulihkan 2 HP selepas menang combat.",
+      "trigger": "combat_won",
+      "values": {
+        "heal": 2
+      },
+      "limit": "once_per_combat_won",
+      "visual": "A hanging crimson-orange faceted ember pendant, antique copper-gold flame clasp, strong teardrop silhouette.",
+      "palette": [
+        "crimson",
+        "ember orange",
+        "copper gold"
+      ]
+    },
+    {
+      "id": "s02_cinder_whetstone",
+      "tier": "starting",
+      "name": "Cinder Whetstone",
+      "effect_ms": "Kad Attack pertama setiap giliran mendapat +1 jumlah damage.",
+      "trigger": "first_attack_card_each_turn",
+      "values": {
+        "damage_bonus_per_card": 1
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A dark charcoal oblong sharpening stone in a brushed gunmetal tray, just a narrow restrained orange sharpening seam, gray silhouette.",
+      "palette": [
+        "charcoal",
+        "steel gray",
+        "small orange seam"
+      ]
+    },
+    {
+      "id": "s03_prism_buckler",
+      "tier": "starting",
+      "name": "Prism Buckler",
+      "effect_ms": "Kad Defend pertama setiap giliran memberikan +2 Block.",
+      "trigger": "first_defend_card_each_turn",
+      "values": {
+        "block_bonus": 2
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A small angular silver and ivory shield, dark navy inset panels, one vivid cyan faceted central prism.",
+      "palette": [
+        "silver",
+        "ivory",
+        "navy",
+        "cyan"
+      ]
+    },
+    {
+      "id": "s04_clairvoyance_lens",
+      "tier": "starting",
+      "name": "Clairvoyance Lens",
+      "effect_ms": "Dapat +1 Focus pada giliran pertama setiap combat, tertakluk kepada had Focus.",
+      "trigger": "first_player_turn_after_opening_draw",
+      "values": {
+        "focus": 1
+      },
+      "limit": "once_per_combat",
+      "visual": "An antique silver handheld magnifying lens with a luminous amethyst violet glass disc, short plum wrapped handle, no eye glyph.",
+      "palette": [
+        "amethyst",
+        "silver",
+        "plum"
+      ]
+    },
+    {
+      "id": "s05_scholars_bookmark",
+      "tier": "starting",
+      "name": "Scholar's Bookmark",
+      "effect_ms": "Draw 1 kad tambahan pada giliran pertama setiap combat.",
+      "trigger": "first_player_turn_after_opening_draw",
+      "values": {
+        "draw": 1
+      },
+      "limit": "once_per_combat",
+      "visual": "A broad forest-green leather bookmark ribbon, V-cut tail, cream inner strip, muted brass top clip, pale sage tassel. No book.",
+      "palette": [
+        "forest green",
+        "cream",
+        "sage",
+        "muted brass"
+      ]
+    },
+    {
+      "id": "s06_merchants_seal",
+      "tier": "starting",
+      "name": "Merchant's Seal",
+      "effect_ms": "Diskaun 5% untuk pembelian di Shop.",
+      "trigger": "shop_price_calculation",
+      "values": {
+        "discount_percent": 5
+      },
+      "limit": "persistent_while_owned",
+      "visual": "A royal-blue wax seal on two warm cream parchment tails with one antique-gold signet ring leaning over it, diamond imprint without letters.",
+      "palette": [
+        "royal blue",
+        "cream",
+        "gold"
+      ]
+    },
+    {
+      "id": "s07_bronze_guard_pin",
+      "tier": "starting",
+      "name": "Bronze Guard Pin",
+      "effect_ms": "Dapat 3 Block pada giliran pertama setiap combat.",
+      "trigger": "first_player_turn_after_opening_draw",
+      "values": {
+        "block": 3
+      },
+      "limit": "once_per_combat",
+      "visual": "A small broad antique-bronze triangular guard pin with a slate-blue enamel center and chunky clasp, simple physical armor brooch.",
+      "palette": [
+        "antique bronze",
+        "slate blue"
+      ]
+    },
+    {
+      "id": "s08_travelers_ration",
+      "tier": "starting",
+      "name": "Traveler's Ration",
+      "effect_ms": "Apabila diperoleh, +5 Max HP dan pulihkan 5 HP. Digunakan sekali untuk run tersebut.",
+      "trigger": "first_acquisition_in_run",
+      "values": {
+        "max_hp": 5,
+        "heal": 5
+      },
+      "limit": "once_per_run_acquisition_persisted",
+      "visual": "One compact round golden-brown travel bread roll half wrapped in warm cream cloth, tied with a small moss-green cord; readable food-bundle silhouette, no plate.",
+      "palette": [
+        "golden brown",
+        "cream",
+        "moss green"
+      ]
+    },
+    {
+      "id": "s09_copper_purse",
+      "tier": "starting",
+      "name": "Copper Purse",
+      "effect_ms": "Apabila diperoleh, dapat 25 Gold. Digunakan sekali untuk run tersebut.",
+      "trigger": "first_acquisition_in_run",
+      "values": {
+        "gold": 25
+      },
+      "limit": "once_per_run_acquisition_persisted",
+      "visual": "A small honey-tan leather coin pouch with a dark green cord and two large copper coins peeking out of its open top, no printed symbols.",
+      "palette": [
+        "honey tan",
+        "dark green",
+        "copper"
+      ]
+    },
+    {
+      "id": "s10_ember_quill",
+      "tier": "starting",
+      "name": "Ember Quill",
+      "effect_ms": "Selepas memainkan kad Skill pertama setiap combat, draw 1 kad.",
+      "trigger": "first_resolved_skill_card_in_combat",
+      "values": {
+        "draw": 1
+      },
+      "limit": "once_per_combat",
+      "visual": "One curved deep-crimson writing quill with a dark burgundy shaft and a small matte brass nib, one ember-orange highlight, long clear feather silhouette, not on fire.",
+      "palette": [
+        "deep crimson",
+        "burgundy",
+        "matte brass"
+      ]
+    },
+    {
+      "id": "s11_scribes_pebble",
+      "tier": "starting",
+      "name": "Scribe's Pebble",
+      "effect_ms": "Kali pertama kad milik Alyssa memasuki Exhaust setiap combat, dapat 4 Block.",
+      "trigger": "first_player_card_entering_exhaust_in_combat",
+      "values": {
+        "block": 4
+      },
+      "limit": "once_per_combat",
+      "visual": "A smooth oval pale-turquoise stone with one deeply inset geometric diamond groove and one small silver corner clasp; physical polished talisman, no letters.",
+      "palette": [
+        "pale turquoise",
+        "silver",
+        "slate"
+      ]
+    },
+    {
+      "id": "s12_initiates_ring",
+      "tier": "starting",
+      "name": "Initiate's Ring",
+      "effect_ms": "Selepas memainkan kad Passive pertama setiap combat, dapat 3 Block.",
+      "trigger": "first_resolved_passive_card_in_combat",
+      "values": {
+        "block": 3
+      },
+      "limit": "once_per_combat",
+      "visual": "One simple chunky dark-silver initiate signet ring with a large oval pale-mint glass stone in a shallow bronze setting, no inscription.",
+      "palette": [
+        "dark silver",
+        "pale mint",
+        "muted bronze"
+      ]
+    },
+    {
+      "id": "e01_copper_abacus",
+      "tier": "elite_mystery",
+      "name": "Copper Abacus",
+      "effect_ms": "Selepas memainkan 3 kad dalam satu giliran, dapat +1 Energy. Sekali setiap giliran.",
+      "trigger": "third_resolved_player_card_each_turn",
+      "values": {
+        "cards_required": 3,
+        "energy": 1
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A miniature walnut-brown counting frame with copper fittings, three open rods with chunky jade-green and cream beads, slight three-quarter view.",
+      "palette": [
+        "walnut brown",
+        "copper",
+        "jade",
+        "cream"
+      ]
+    },
+    {
+      "id": "e02_twin_sigil_medallion",
+      "tier": "elite_mystery",
+      "name": "Twin Sigil Medallion",
+      "effect_ms": "Main sekurang-kurangnya 1 Attack dan 1 Defend dalam giliran sama untuk mendapat 6 Block. Sekali setiap giliran.",
+      "trigger": "first_turn_with_both_attack_and_defend_resolved",
+      "values": {
+        "block": 6
+      },
+      "limit": "once_per_player_turn",
+      "visual": "Two chunky interlocking physical rings, one cobalt-blue enamel with silver edges, one bright silver, turquoise diamond gemstone at overlap; figure-eight silhouette.",
+      "palette": [
+        "cobalt",
+        "silver",
+        "turquoise"
+      ]
+    },
+    {
+      "id": "e03_chance_die",
+      "tier": "elite_mystery",
+      "name": "Chance Die",
+      "effect_ms": "Giliran pertama: baling d6 sekali. 1–2: +10 Block; 3–4: draw 2 kad; 5–6: +2 Energy.",
+      "trigger": "first_player_turn_after_opening_draw",
+      "values": {
+        "sides": 6,
+        "faces_1_2": {
+          "block": 10
+        },
+        "faces_3_4": {
+          "draw": 2
+        },
+        "faces_5_6": {
+          "energy": 2
+        }
+      },
+      "limit": "once_per_combat_no_reroll",
+      "visual": "One chunky clean ivory six-sided die in three-quarter view, three visible faces, regular recessed black round pips and muted dark metal corner caps, no printed numerals.",
+      "palette": [
+        "ivory",
+        "black",
+        "gunmetal"
+      ]
+    },
+    {
+      "id": "e04_ember_balance",
+      "tier": "elite_mystery",
+      "name": "Ember Balance",
+      "effect_ms": "Jika sekurang-kurangnya 1 Energy masih berbaki ketika End Turn, dapat 6 Block.",
+      "trigger": "end_player_turn_before_unspent_energy_is_cleared",
+      "values": {
+        "min_unspent_energy": 1,
+        "block": 6
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A small balanced physical scale made of oxidized verdigris-teal bronze, two shallow suspended bowls each holding small restrained amber ember stones.",
+      "palette": [
+        "verdigris teal",
+        "aged bronze",
+        "amber"
+      ]
+    },
+    {
+      "id": "e05_chainbreaker_clasp",
+      "tier": "elite_mystery",
+      "name": "Chainbreaker Clasp",
+      "effect_ms": "Kali pertama kad milik Alyssa memasuki Exhaust setiap giliran, draw 1 kad dan dapat 4 Block.",
+      "trigger": "first_player_card_entering_exhaust_each_turn",
+      "values": {
+        "draw": 1,
+        "block": 4
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A broken gunmetal-gray iron shackle with pewter clasp and two snapped chain links, a small contained violet/indigo magical crack glow, no flames.",
+      "palette": [
+        "gunmetal",
+        "pewter",
+        "violet"
+      ]
+    },
+    {
+      "id": "e06_ashen_phoenix_feather",
+      "tier": "elite_mystery",
+      "name": "Ashen Phoenix Feather",
+      "effect_ms": "Pulihkan 5 HP selepas menang combat.",
+      "trigger": "combat_won",
+      "values": {
+        "heal": 5
+      },
+      "limit": "once_per_combat_won",
+      "visual": "One curved golden-orange phoenix feather with an ash-white tip and a copper quill, sweeping recognizable feather silhouette, tiny contained amber glint, not a wing or bird.",
+      "palette": [
+        "golden orange",
+        "ash white",
+        "copper"
+      ]
+    },
+    {
+      "id": "e07_runesmith_tongs",
+      "tier": "elite_mystery",
+      "name": "Rune-smith Tongs",
+      "effect_ms": "Kad Attack pertama setiap giliran mendapat +3 jumlah damage.",
+      "trigger": "first_attack_card_each_turn",
+      "values": {
+        "damage_bonus_per_card": 3
+      },
+      "limit": "once_per_player_turn",
+      "visual": "One pair of chunky dark iron blacksmith tongs at a diagonal gripping a short bright yellow-gold hot metal billet, olive-bronze pivot, clear long V-shaped tool silhouette.",
+      "palette": [
+        "dark iron",
+        "olive bronze",
+        "yellow gold"
+      ]
+    },
+    {
+      "id": "e08_sentinel_crest",
+      "tier": "elite_mystery",
+      "name": "Sentinel Crest",
+      "effect_ms": "Kad Defend pertama setiap giliran memberikan +6 Block.",
+      "trigger": "first_defend_card_each_turn",
+      "values": {
+        "block_bonus": 6
+      },
+      "limit": "once_per_player_turn",
+      "visual": "An ornate sentinel armor crest brooch, broad navy enamel central kite with white-silver geometric wings and one small pale sapphire gem. A physical heraldic armor clasp with an unmistakable wide winged silhouette.",
+      "palette": [
+        "navy",
+        "white silver",
+        "sapphire"
+      ]
+    },
+    {
+      "id": "e09_mirror_knights_brooch",
+      "tier": "elite_mystery",
+      "name": "Mirror Knight's Brooch",
+      "effect_ms": "Kali pertama Block menghalang sepenuhnya damage serangan musuh dalam satu giliran, balas 6 damage kepada penyerang. Sekali setiap giliran.",
+      "trigger": "first_positive_enemy_attack_fully_blocked_each_turn_cycle",
+      "values": {
+        "retaliation_damage": 6
+      },
+      "limit": "once_per_player_enemy_turn_cycle",
+      "visual": "An upright miniature oval mirror brooch in ornate pale-silver armor trim with midnight-navy side fins and pale blue glass reflection, no face, no eye, clear mirror silhouette.",
+      "palette": [
+        "pale silver",
+        "midnight navy",
+        "pale blue"
+      ]
+    },
+    {
+      "id": "e10_rune_bats_bell",
+      "tier": "elite_mystery",
+      "name": "Rune Bat's Bell",
+      "effect_ms": "Selepas memainkan kad Skill pertama setiap giliran, draw 1 kad.",
+      "trigger": "first_resolved_skill_card_each_turn",
+      "values": {
+        "draw": 1
+      },
+      "limit": "once_per_player_turn",
+      "visual": "One chunky small dark-violet hanging bell with muted brass rim and top loop, two tiny stylized bat-wing side tabs attached to the bell, small lilac clapper, physical relic rather than a creature.",
+      "palette": [
+        "dark violet",
+        "muted brass",
+        "lilac"
+      ]
+    },
+    {
+      "id": "e11_scholars_satchel",
+      "tier": "elite_mystery",
+      "name": "Scholar's Satchel",
+      "effect_ms": "Draw 2 kad tambahan pada giliran pertama setiap combat.",
+      "trigger": "first_player_turn_after_opening_draw",
+      "values": {
+        "draw": 2
+      },
+      "limit": "once_per_combat",
+      "visual": "A compact deep-teal leather scholar satchel with antique brass buckle and two cream parchment page corners peeking from its top, short curled strap contained close to the bag, no letters.",
+      "palette": [
+        "deep teal",
+        "cream",
+        "antique brass"
+      ]
+    },
+    {
+      "id": "e12_lantern_keepers_flask",
+      "tier": "elite_mystery",
+      "name": "Lantern Keeper's Flask",
+      "effect_ms": "Kali pertama HP berada pada 50% Max HP atau kurang semasa Alyssa masih hidup dalam combat, dapat 12 Block.",
+      "trigger": "first_alive_hp_threshold_reached_in_combat_including_start",
+      "values": {
+        "hp_threshold_percent": 50,
+        "block": 12
+      },
+      "limit": "once_per_combat",
+      "visual": "One squat round amber glass lantern-flask encased in dark forest-green metal ribs with a wide bronze cap and a small contained warm golden light, short top handle, bottle silhouette, no fire plume.",
+      "palette": [
+        "amber glass",
+        "forest green",
+        "bronze"
+      ]
+    },
+    {
+      "id": "e13_chain_weavers_spool",
+      "tier": "elite_mystery",
+      "name": "Chain Weaver's Spool",
+      "effect_ms": "Kali pertama kesan kad membuang kad daripada hand ke Discard setiap giliran, draw 1 kad dan dapat 3 Block.",
+      "trigger": "first_effect_caused_hand_discard_each_turn_not_end_turn_cleanup",
+      "values": {
+        "draw": 1,
+        "block": 3
+      },
+      "limit": "once_per_player_turn",
+      "visual": "One stout walnut wooden spool wound with cobalt-blue enchanted thread, bright pewter end rims, one short curved blue thread end close to spool, tiny silver chain-link charm fixed to the spool. No spider, no scene.",
+      "palette": [
+        "walnut",
+        "cobalt blue",
+        "pewter"
+      ]
+    },
+    {
+      "id": "e14_brams_contract",
+      "tier": "elite_mystery",
+      "name": "Bram's Contract",
+      "effect_ms": "Diskaun 15% untuk pembelian di Shop.",
+      "trigger": "shop_price_calculation",
+      "values": {
+        "discount_percent": 15
+      },
+      "limit": "persistent_while_owned_best_discount_only",
+      "visual": "One partially rolled warm ivory parchment contract secured by a deep emerald wax seal and a small copper clasp, broad scroll silhouette, tiny abstract line marks without readable text, no letters.",
+      "palette": [
+        "ivory parchment",
+        "emerald",
+        "copper"
+      ]
+    },
+    {
+      "id": "e15_crimson_sword_charm",
+      "tier": "elite_mystery",
+      "name": "Crimson Sword Charm",
+      "effect_ms": "Dapat +2 Strength pada awal setiap combat.",
+      "trigger": "combat_start",
+      "values": {
+        "strength": 2
+      },
+      "limit": "once_per_combat",
+      "visual": "A miniature upright sword-shaped charm with a crimson enamel hilt, antique bronze guard and dark polished steel blade, one small ruby at the pommel and a short top loop, physical amulet no trail.",
+      "palette": [
+        "crimson",
+        "bronze",
+        "dark steel",
+        "ruby"
+      ]
+    },
+    {
+      "id": "e16_guardians_armlet",
+      "tier": "elite_mystery",
+      "name": "Guardian's Armlet",
+      "effect_ms": "Dapat +2 Agility pada awal setiap combat.",
+      "trigger": "combat_start",
+      "values": {
+        "agility": 2
+      },
+      "limit": "once_per_combat",
+      "visual": "A broad C-shaped silver forearm cuff with lapis-blue enamel panels, one pale sapphire rectangular gem and ivory geometric edge insets, solid wearable armlet silhouette, no hand or arm.",
+      "palette": [
+        "silver",
+        "lapis blue",
+        "pale sapphire",
+        "ivory"
+      ]
+    },
+    {
+      "id": "b01_gatekeeper_core",
+      "tier": "boss",
+      "name": "Gatekeeper Core",
+      "effect_ms": "Dapat +1 Energy pada awal setiap giliran pemain.",
+      "trigger": "player_turn_start_after_base_energy_reset",
+      "values": {
+        "energy": 1
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A legendary angular ivory-stone and silver mechanical gate core, luminous emerald-green diamond suspended within a broken hexagonal frame, heavy charcoal side brackets, elegant restrained green light.",
+      "palette": [
+        "emerald",
+        "ivory stone",
+        "silver",
+        "charcoal"
+      ]
+    },
+    {
+      "id": "b02_sovereign_grimoire_clasp",
+      "tier": "boss",
+      "name": "Sovereign Grimoire Clasp",
+      "effect_ms": "Mula combat dengan +3 Strength dan +3 Agility. Pada giliran kedua dan seterusnya, tambah +1 kedua-duanya sehingga sumbangan artifak mencapai +6 bagi setiap stat.",
+      "trigger": "combat_start_then_player_turn_start_from_turn_2",
+      "values": {
+        "initial_strength": 3,
+        "initial_agility": 3,
+        "strength_per_later_turn": 1,
+        "agility_per_later_turn": 1,
+        "max_artifact_contribution_each_stat": 6
+      },
+      "limit": "once_per_player_turn_contribution_cap_6_each_stat",
+      "visual": "A legendary physical grimoire fastening clasp, an amethyst-purple faceted diamond held in ornate antique-gold wing-shaped brackets, two heavy small violet-enamel hinged arms and a short silver locking chain. A broad regal book-lock silhouette, no full book, no eye glyph.",
+      "palette": [
+        "amethyst purple",
+        "antique gold",
+        "silver",
+        "violet enamel"
+      ]
+    },
+    {
+      "id": "b03_decklords_hourglass",
+      "tier": "boss",
+      "name": "Decklord's Hourglass",
+      "effect_ms": "Draw 2 kad tambahan pada awal setiap giliran pemain.",
+      "trigger": "player_turn_start_after_normal_draw",
+      "values": {
+        "draw": 2
+      },
+      "limit": "once_per_player_turn",
+      "visual": "A legendary physical hourglass with cobalt-blue crystal endcaps and bright silver architectural struts, clear glass containing flowing pearl-white luminous sand, elegant cyan internal highlights, tall symmetric hourglass silhouette. No floating cards, no separate objects.",
+      "palette": [
+        "cobalt",
+        "silver",
+        "pearl white",
+        "clear cyan glass"
+      ]
+    }
+  ]
+}

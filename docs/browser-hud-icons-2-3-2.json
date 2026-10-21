@@ -1,0 +1,206 @@
+{
+  "checks": [
+    "Reference layout: source Alyssa and Rune Bat, separate Focus/Predict artwork, real HP and turn, grounded idle",
+    "Focus/keyboard: one boosted Block card, one spend, exact autosave/Continue and announced End Turn damage",
+    "Draw/Discard/Exhaust inspect, Escape restores each trigger; R opens Predict",
+    "FHD/1280 desktop, 844 landscape, 390/320 portrait and 4K: four decoded HUD icons, larger artwork, matching resource sizes, no root overflow and reachable actions",
+    "Empty hand explains recovery and End Turn draws real cards",
+    "Both source boss arenas and models load with exact configured HP and two live seals",
+    "Rest choice uses the supplied blue campfire seal on desktop/phone; preview preserves HP and Confirm Rest heals exactly once across reload"
+  ],
+  "errors": [],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "rootOverflow": false,
+      "icons": {
+        "energy": {
+          "width": 72,
+          "height": 72.640625,
+          "loaded": true
+        },
+        "focus": {
+          "width": 72,
+          "height": 72,
+          "loaded": true
+        },
+        "predict": {
+          "width": 42,
+          "height": 42,
+          "loaded": true
+        },
+        "playerHealth": {
+          "width": 30,
+          "height": 30,
+          "loaded": true
+        },
+        "enemyHealth": {
+          "width": 30,
+          "height": 30,
+          "loaded": true
+        }
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "rootOverflow": false,
+      "icons": {
+        "energy": {
+          "width": 60,
+          "height": 60.53125,
+          "loaded": true
+        },
+        "focus": {
+          "width": 60,
+          "height": 60,
+          "loaded": true
+        },
+        "predict": {
+          "width": 42,
+          "height": 42,
+          "loaded": true
+        },
+        "playerHealth": {
+          "width": 30,
+          "height": 30,
+          "loaded": true
+        },
+        "enemyHealth": {
+          "width": 30,
+          "height": 30,
+          "loaded": true
+        }
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rootOverflow": false,
+      "icons": {
+        "energy": {
+          "width": 66,
+          "height": 66.59375,
+          "loaded": true
+        },
+        "focus": {
+          "width": 66,
+          "height": 66,
+          "loaded": true
+        },
+        "predict": {
+          "width": 40,
+          "height": 40,
+          "loaded": true
+        },
+        "playerHealth": {
+          "width": 28,
+          "height": 28,
+          "loaded": true
+        },
+        "enemyHealth": {
+          "width": 28,
+          "height": 28,
+          "loaded": true
+        }
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "rootOverflow": false,
+      "icons": {
+        "energy": {
+          "width": 66,
+          "height": 66.59375,
+          "loaded": true
+        },
+        "focus": {
+          "width": 66,
+          "height": 66,
+          "loaded": true
+        },
+        "predict": {
+          "width": 40,
+          "height": 40,
+          "loaded": true
+        },
+        "playerHealth": {
+          "width": 24,
+          "height": 24,
+          "loaded": true
+        },
+        "enemyHealth": {
+          "width": 24,
+          "height": 24,
+          "loaded": true
+        }
+      }
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "rootOverflow": false,
+      "icons": {
+        "energy": {
+          "width": 66,
+          "height": 66.59375,
+          "loaded": true
+        },
+        "focus": {
+          "width": 66,
+          "height": 66,
+          "loaded": true
+        },
+        "predict": {
+          "width": 40,
+          "height": 40,
+          "loaded": true
+        },
+        "playerHealth": {
+          "width": 24,
+          "height": 24,
+          "loaded": true
+        },
+        "enemyHealth": {
+          "width": 24,
+          "height": 24,
+          "loaded": true
+        }
+      }
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "rootOverflow": false,
+      "icons": {
+        "energy": {
+          "width": 144,
+          "height": 145.296875,
+          "loaded": true
+        },
+        "focus": {
+          "width": 144,
+          "height": 144,
+          "loaded": true
+        },
+        "predict": {
+          "width": 84,
+          "height": 84,
+          "loaded": true
+        },
+        "playerHealth": {
+          "width": 60,
+          "height": 60,
+          "loaded": true
+        },
+        "enemyHealth": {
+          "width": 60,
+          "height": 60,
+          "loaded": true
+        }
+      }
+    }
+  ]
+}

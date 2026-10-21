@@ -1,0 +1,67 @@
+{
+  "version": "2.3.0",
+  "date": "2026-10-19",
+  "records": [
+    {
+      "id": "corridor",
+      "asset": "menu-corridor.webp",
+      "size": [
+        1672,
+        941
+      ],
+      "reference": "Crimson Warrior in the Chance Dungeon-2.png",
+      "referenceSha256": "59ae0f840a459e71dede87153f63ada2a3c4e70f7e23be7a4a65f26259d1b8a2",
+      "cleanPlateSha256": "916a95b627ee320a78a4502f03b6d285932b1242d4f7d8909af70c4748f9d12f",
+      "operation": "Built-in imagegen precise-object-edit: remove baked logo, text and menu only; retain dungeon, Alyssa and scene pose. Runtime WebP derivative."
+    },
+    {
+      "id": "campfire",
+      "asset": "menu-campfire.webp",
+      "size": [
+        1672,
+        941
+      ],
+      "reference": "Firelit dungeon rest alcove-1.png",
+      "referenceSha256": "93b1547d14ae19d6970200189140e187b6dc131111f507340a8f06483c910351",
+      "cleanPlateSha256": "139858d6fd18096074a81226ded42f379004bc923455e899d3d7bae8a79b1870",
+      "operation": "Built-in imagegen precise-object-edit: remove baked logo, text and menu only; retain dungeon, Alyssa and scene pose. Runtime WebP derivative."
+    },
+    {
+      "id": "archive",
+      "asset": "menu-archive.webp",
+      "size": [
+        1672,
+        941
+      ],
+      "reference": "Rune Cards in the Dungeon Archive-3.png",
+      "referenceSha256": "a56755b6698f84f22c2af069244bf13d9ab203a80a9db41d613ce320b2dca7c7",
+      "cleanPlateSha256": "b1920e88ff8249e4cd0b41f85b917f419a163791379ddb7eb1a5ead3edd9e46c",
+      "operation": "Built-in imagegen precise-object-edit: remove baked logo, text and menu only; retain dungeon, Alyssa and scene pose. Runtime WebP derivative."
+    },
+    {
+      "id": "map",
+      "asset": "menu-map.webp",
+      "size": [
+        1672,
+        941
+      ],
+      "reference": "Alyssa Studies the Dungeon Map-4.png",
+      "referenceSha256": "366ff1a8c944a5fc2732290aee8b8d51326fd0bd6a8d0c7a441903b4f1e7e65a",
+      "cleanPlateSha256": "6fc492566bab7c20d90c285791df26aef0efe38d75bfc769a1bb8ada79982a6e",
+      "operation": "Built-in imagegen precise-object-edit: remove baked logo, text and menu only; retain dungeon, Alyssa and scene pose. Runtime WebP derivative."
+    },
+    {
+      "id": "door",
+      "asset": "menu-door.webp",
+      "size": [
+        1672,
+        941
+      ],
+      "reference": "Opening the Dungeon of Chance-5.png",
+      "referenceSha256": "1116f7ea0c3ce065acd6a1d07974f18b517d2903e2c4acfca27e7229d8830d50",
+      "cleanPlateSha256": "4a6d60fd20bbc8487b47fd28546f7bd1961aee7e5aa88b71496fe021c50cc079",
+      "operation": "Built-in imagegen precise-object-edit: remove baked logo, text and menu only; retain dungeon, Alyssa and scene pose. Runtime WebP derivative."
+    }
+  ],
+  "prompt": "Remove only the complete left-side logo, text and five UI buttons; inpaint quiet blue dungeon scenery. Preserve Alyssa on the right with the same face, hair, armour, weapons, current scene pose, camera and lighting. No typography, UI, watermark or new character."
+}

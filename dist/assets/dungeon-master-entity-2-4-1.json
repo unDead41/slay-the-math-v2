@@ -1,0 +1,21 @@
+{
+  "release": "2.4.1",
+  "mode": "built-in image generation/edit",
+  "sourceReference": "image(20261019-022006).png",
+  "firstPrompt": "Use case: precise-object-edit. Asset type: full-screen background artwork for Slay the Math. Edit the supplied illustration. Replace ONLY the old human Dungeon Master with an utterly unidentifiable, non-human supernatural entity. Keep Alyssa, the red-haired armored adventurer at left, exactly recognizable in the same back three-quarter pose, outfit, boots, grounded contact shadow and placement; preserve the original blue-stone dungeon, altar, doorway, cyan crystal, warm reflections and quiet right-hand wall.\n\nThe entity occupies the old master's position behind the altar at centre-left. It is an ancient impossible presence: a floating, ragged vertical tear of absolute darkness with mist-like fragmented edges, suspended broken gold rune arcs at incompatible angles, a small hollow central aperture with restrained cyan light and tiny ember motes. Its form cannot be identified as any person or animal. NO visible human face, eyes, beard, nose, mouth, skin, human hands, hooded head, humanoid anatomy or human silhouette. The darkness and floating sigils themselves offer the artifact's tiny gold light above the altar. Mysterious, composed, enigmatic; no horror gore, no cartoon ghost.\n\nStyle: polished high-detail painted anime fantasy concept art matching the source. Preserve source restrained navy, charcoal stone, deep red hair, antique gold and cyan palette. Maintain left-side character grouping within the left 48 percent. Keep the entire right 50 percent dark, simple, empty stone with usable negative space for native UI cards. No text, no logos, no frames, no UI. Render the final image as a true 4K landscape canvas, exactly 3840 by 2160 pixels, with crisp fine detail and a clean 16:9 composition. Do not output a low-resolution preview.",
+  "refinementPrompt": "Upscale and refine the attached completed artwork into a final deliverable with exact output pixel dimensions 3840\u00d72160 (4K UHD, 16:9). The prior 1672\u00d7941 version is only a draft: the requested output FILE itself must be 3840 pixels wide and 2160 pixels tall. Preserve every composition decision: Alyssa at left, the wholly non-human black rift entity with gold rune arcs at centre-left, altar, blue stone dungeon and the empty dark right wall. Add crisp stone/metal/fabric detail at the larger resolution. No human Dungeon Master, no face, hands or humanoid anatomy on the entity. No text, no UI. This request is specifically a resolution upgrade, not a new composition.",
+  "generatedSource": "exec-3d1ff736-b504-4fa9-a119-068885f3b9ce.png",
+  "generatedSourcePixels": [
+    1672,
+    941
+  ],
+  "runtime": "dungeon-master.webp",
+  "runtimePixels": [
+    3840,
+    2160
+  ],
+  "export": "Lanczos resampling to 3840\u00d72160, WebP quality 95. This is an upscaled 4K export; the AI source is not native 4K.",
+  "identity": "Unidentifiable non-human rift entity with broken floating runes; Alyssa and original dungeon composition retained.",
+  "runtime_sha256": "06aa07548bcb2ba350bd52cfe2c20234af4d19cedd3e1af279ebf1331ada4607",
+  "generated_source_sha256": "04f1c126223ceb1398b31d12bfd0f5343244ca1784f370fd5f5406839c26c081"
+}

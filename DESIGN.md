@@ -142,3 +142,7 @@ Five non-boss enemies share the supplied atlas origin and display scale. A canva
 The current user instruction replaces separated crowded-hand cards with an overlapping rail. Reuse the existing gold/parchment portrait cards, Georgia labels, dungeon.css palette and combat unit; hand.css scopes the geometry. Opaque disabled cards prevent text from showing through from lower cards. A hovered card lifts after a 140ms dwell and neighbors slide aside; keyboard focus is immediate. Local scrolling preserves readable cards on phones, with no page-width expansion. This extends the battle hand only; reward, Shop and Collection keep cardView and their established layouts.
 
 Skill keeps the source right-facing poses and timing. Per-frame uniform body projection removes apparent size changes around the same boot pivot. Source sheets and posters remain unchanged.
+
+## Both-stage enemy motion 2.10.0
+
+Extend the existing floor-registered atlas player to all ten Normal/Elite actors. Preserve accepted Stage 1 art and the complete Alyssa registry. Stage 2 uses the supplied v2.1 left-facing family, including Chain Golem's correction, full padded cells, common scale and grounded shadows. Chain Weaver retains its authored hover. Same-source posters cover loading and failures; disable legacy CSS transforms on atlas-backed enemy images. Existing arena, HUD, typography, palette, hand and input owners remain canonical. Source registration and QA: docs/ENEMY_MOTION_2_10_0.md.

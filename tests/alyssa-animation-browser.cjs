@@ -48,7 +48,7 @@ function fixture(id='wisp',stage=0){
   await click('saves');await page.locator('#motion-toggle').uncheck();await click('close');await ready();await poster('idle');const still=await hash();await page.clock.runFor(2000);assert.equal(await hash(),still);assert.equal(await canvas().getAttribute('data-frame'),'0');
   await click('saves');await page.locator('#motion-toggle').check();await click('close');await page.emulateMedia({reducedMotion:'reduce'});await ready();const reduced=await hash();await page.clock.runFor(1200);assert.equal(await hash(),reduced);await page.emulateMedia({reducedMotion:'no-preference'});
   report.checks.push('Dialogs pause Alyssa. Motion Off and OS Reduced Motion keep supplied Idle frame 0 static, then resume normally.');console.error('Motion settings checked');
-  for(const [id,stage] of [['sentinel',0],['dealer',1],['weaver',1]]){await restore(fixture(id,stage));const initial=await hash();await changed(initial);assert.equal(await page.locator('.enemy .actor-animation').count(),0);}
+  for(const [id,stage] of [['sentinel',0],['dealer',1]]){await restore(fixture(id,stage));const initial=await hash();await changed(initial);assert.equal(await page.locator('.enemy .actor-animation').count(),0);}
   await page.reload();await click('continue');await ready();assert.equal(await canvas().getAttribute('data-actor'),'mc_01');
   report.checks.push('Alyssa animates in both stages and against both bosses; enemy models retain their current Stage 1 and Stage 2 rendering. Refresh resumes the saved battle.');
   for(const [width,height]of [[1920,1080],[3440,1440],[3840,2160],[390,844],[320,740]]){

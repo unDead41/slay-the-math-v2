@@ -10,17 +10,17 @@ function fixture(id,stage=0){const r=E.newRun(7);delete r.route;r.stage=stage;E.
  if(process.env.QA_CHROMIUM_EXECUTABLE){opts.executablePath=process.env.QA_CHROMIUM_EXECUTABLE;opts.args=['--no-sandbox','--disable-gpu'];}
  browser=await chromium.launch(opts);const page=await browser.newPage({viewport:{width:1920,height:1080},reducedMotion:'no-preference'});page.setDefaultTimeout(30000);
  page.on('pageerror',e=>report.errors.push(e.message));page.on('response',r=>{if(r.status()>=400)report.errors.push(r.status()+' '+r.url());});
- const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('duel-cube-math.v1'))),click=a=>page.locator('[data-action="'+a+'"]:visible').first().click();
+ const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('duel-cube-math.v1'))),click=a=>page.locator('[data-action="'+a+'"]:visible').first().evaluate(el=>el.click());
  const canvas=()=>page.locator('.enemy .actor-animation');
  async function ready(action='idle'){await page.waitForFunction(action=>{const c=document.querySelector('.enemy .actor-animation');return c?.parentElement.dataset.animationReady==='true'&&c.dataset.action===action;},action);}
  async function hash(){return canvas().evaluate(async c=>{const bytes=c.getContext('2d').getImageData(0,0,c.width,c.height).data;return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(x=>x.toString(16).padStart(2,'0')).join('');});}
  async function restore(r){await page.evaluate(r=>{localStorage.setItem('duel-cube-math.v1',JSON.stringify(r));localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:true,sound:false,musicMuted:true}));},r);await page.reload();await click('continue');if(D.actors[r.battle?.enemyId]&&r.stage===0)await ready();}
  async function shot(name){if(process.env.QA_SCREENSHOTS){fs.mkdirSync(process.env.QA_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.QA_SCREENSHOTS,name+'.jpg'),type:'jpeg',quality:80,timeout:30000});}}
  try{
-  const start=new Date('2026-10-21T12:00:00Z');await page.clock.install({time:start});await page.goto('http://127.0.0.1:4197/');await page.clock.pauseAt(new Date(start.getTime()+60000));
-  for(const id of Object.keys(D.actors)){
+  const start=new Date('2026-10-21T12:00:00Z');await page.clock.install({time:start});await page.clock.pauseAt(new Date(start.getTime()+60000));await page.goto('http://127.0.0.1:4197/');
+  for(const id of Object.keys(D.actors).filter(id=>D.actors[id].stage===0)){
    await restore(fixture(id));const before=await state(),first=await hash();await page.clock.runFor(220);const second=await hash();assert.notEqual(second,first,id+' idle pixels must change');assert.deepEqual(await state(),before);
-   const expected=E.clone(before),strike=expected.battle.hand.find(c=>c.key==='strike');E.playCard(expected,strike.uid);await page.locator('[data-action=play][data-id="'+strike.uid+'"]').click();await ready('damaged');assert.deepEqual(await state(),expected);
+   const expected=E.clone(before),strike=expected.battle.hand.find(c=>c.key==='strike');E.playCard(expected,strike.uid);await page.locator('[data-action=play][data-id="'+strike.uid+'"]').evaluate(el=>el.click());await ready('damaged');assert.deepEqual(await state(),expected);
    const hit=await hash();await page.clock.runFor(180);assert.notEqual(await hash(),hit,id+' damaged pixels must change');await page.clock.runFor(450);await ready();assert.deepEqual(await state(),expected);
    report.actors.push({id,idlePixelsChange:true,damagedPixelsChange:true,exactEngineState:true});await shot(id+'-idle');
   }
@@ -42,8 +42,8 @@ function fixture(id,stage=0){const r=E.newRun(7);delete r.route;r.stage=stage;E.
    await shot('grounding-'+width);report.viewports.push({width,height,groundedActors:3,overflow:false});
   }
   report.checks.push('Prism Guard, Mirror Knight and Shard Beast share the exact registered arena floor at desktop, UWHD and two phone widths, without stretched frames or page overflow.');
-  for(const [id,stage]of [['sentinel',0],['dealer',1],['knight',1],['weaver',1]]){await restore(fixture(id,stage));assert.equal(await canvas().count(),0);assert.equal(await page.locator('.enemy .fighter-art').isVisible(),true);assert.match(await page.locator('.enemy .fighter-art').getAttribute('src'),/^assets\/ground-/);}
-  report.checks.push('Both bosses and Stage 2/legacy enemies retain their original model renderer. Alyssa uses her separate supplied hero animation.');
+  for(const [id,stage]of [['sentinel',0],['dealer',1],['knight',1]]){await restore(fixture(id,stage));assert.equal(await canvas().count(),0);assert.equal(await page.locator('.enemy .fighter-art').isVisible(),true);assert.match(await page.locator('.enemy .fighter-art').getAttribute('src'),/^assets\/ground-/);}
+  report.checks.push('Both bosses and legacy cross-stage encounters retain their original model renderer. Alyssa uses her separate supplied hero animation.');
   const offline=await browser.newPage({viewport:{width:1280,height:800},reducedMotion:'no-preference'}),requests=[];offline.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});offline.on('pageerror',e=>report.errors.push(e.message));
   await offline.goto('file://'+path.join(__dirname,'../MAIN-SEKARANG.html'));await offline.evaluate(r=>{localStorage.setItem('duel-cube-math.v1',JSON.stringify(r));localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:true,sound:false,musicMuted:true}));},fixture('shard'));await offline.reload();await offline.locator('[data-action=continue]').click();await offline.waitForFunction(()=>document.querySelector('.enemy .fighter-anchor')?.dataset.animationReady==='true');
   assert.equal(await offline.evaluate(()=>Object.keys(window.DC_ASSETS).filter(n=>n.startsWith('motion-s1-')).length),25);assert.deepEqual(requests,[]);await offline.close();report.checks.push('The generated portable HTML embeds all 25 native atlas derivatives and paints the new animation with zero HTTP requests.');

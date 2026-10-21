@@ -146,3 +146,9 @@ Generate five `alyssa-right-*` image posters from supplied frame 0 at the same c
 ### Skill body normalization — 2.9.0
 
 `calibrate_skill` in the existing Alyssa importer records crown y coordinates `[322,329,360,349,341,335]` on the 1024px cells. The reference crown-to-boot height is 446px. Runtime scale is hero drawScale times `clip.scales[i]`; all projections remain anchored to the recorded boot. No atlas bytes, posters, archived source manifests or source ZIP are altered. Updated projected alpha bounds and factors are recorded in the existing audit.
+
+### Both-stage enemy importer — 2.10.0
+
+`tools/import-enemy-animations.py` is the shared import/verification owner for both supplied enemy packs. The old Stage 1 command is a compatibility wrapper. Loading the existing registry before replacing only one stage preserves all other actors and Alyssa. `--verify-existing` validates source sheets/cells against installed atlases without rewriting accepted assets or registry entries. The supplied Stage 1 repack passes this exact-pixel check; its different container hash is recorded separately.
+
+Stage 2 v2.1 contributes 25 native 2560×1728 sheets / 135 frames, losslessly encoded with full alpha and 768px cells. Twenty-five static posters use the same 1600×1200 floor registration. The import audit records source/runtime hashes, per-frame source/projected bounds, pixel equality and poster provenance. Source README, manifest, count table, SOR, baked-normalization record and left-facing Chain Golem fix are retained in `docs/animations/stage2-v2/`. Duplicate individual PNGs, review videos and source sheets are omitted from runtime. No redraw, extra flip, interpolated frames or native-4K claim is added. Source rights: supplied by Ijamm for this game; no separate license supplied.

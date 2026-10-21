@@ -172,3 +172,11 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Play Idle/Attack/Defend/Skill/Damaged at source FPS with generation-safe decode, bounded texture cache, scene disposal and pause/static motion settings. Engine, RNG, artifact/education/save rules are independent of frames.
 - React to actual HP loss after automatic artifact Block. Both bosses and Stage 2 use existing assets. Alyssa's new MODEL(1).zip was unavailable and remains pending; no new hero frames are claimed.
 - Decisions 09–10; actual checks: docs/STAGE1_ANIMATION_2_7_0.md.
+
+## 2.10.0 — 22 October 2026 (Malaysia): Normal/Elite motion in both stages
+
+- Complete supplied motion for all 10 canonical non-boss enemies: 50 clips / 263 frames across Idle, Attack, Defend, Skill and Damaged.
+- Verify the Stage 1 repack against all 25 installed sheets without replacing accepted bytes. Import Stage 2 v2.1 losslessly, preserving full cells, timing, baked normalization and Chain Golem's authored left direction.
+- Use matching Stage 2 source posters during loading/failure, retain static Idle with Motion Off, and map each resolved Stage 2 intent to its proper action without changing the engine.
+- Preserve Alyssa's right-facing family/Skill correction, bosses, save format, hand limit, frozen result Time and current combat rules.
+- Add source-pixel audits and focused browser regression coverage. Actual results and limits: docs/ENEMY_MOTION_2_10_0.md.

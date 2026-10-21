@@ -5,6 +5,10 @@
  const textures=new Map();
  const actionName=pose=>pose==='standing'?'idle':pose==='damage'?'damaged':pose;
  function spec(stage,id){const actor=id==='mc_01'?D.hero:D.actors[id];return actor&&(actor.stages?actor.stages.includes(stage):actor.stage===stage)?actor:null;}
+ function intentAction(stage,id,intent){
+  const actor=spec(stage,id);
+  return actor?.intentActions?.[intent.label]||(actor&&intent.block?'defend':intent.block||/burst|storm|pulse|wave/i.test(intent.label)?'skill':'attack');
+ }
  function texture(path){
   if(textures.has(path)){const promise=textures.get(path);textures.delete(path);textures.set(path,promise);return promise;}
   const promise=(async()=>{const image=new root.Image();image.src=root.DC_ASSETS?.[path]||'assets/'+path;await image.decode();return image;})();
@@ -67,6 +71,6 @@
   if(!actor||!canvas||typeof root.CanvasRenderingContext2D!=='function')return null;
   return create({canvas,spec:actor,...options});
  }
- const api={data:D,spec,supports:(stage,id)=>!!spec(stage,id),create,mount};
+ const api={data:D,spec,intentAction,supports:(stage,id)=>!!spec(stage,id),create,mount};
  if(typeof module!=='undefined')module.exports=api;else root.DCActorAnimation=api;
 })(typeof window!=='undefined'?window:globalThis);

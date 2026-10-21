@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.9.0
+# Slay the Math — Dungeon Edition 2.10.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -51,6 +51,10 @@ Stage 1 normal/Elite frame animations: [2.7.0 notes](docs/STAGE1_ANIMATION_2_7_0
 Alyssa's source `MODEL.zip` is integrated in [2.8.0](docs/ALYSSA_ANIMATION_2_8_0.md): 30 right-facing frames across Idle, Attack, Defend, Skill and Damaged, in both stages. Source timing and boot pivots are preserved. Run `npm run test:alyssa-browser` for focused browser checks.
 
 [2.8.1](docs/ALYSSA_RIGHT_ONLY_2_8_1.md) removes the older hero image fallback. All five combat poses, loading/failure fallbacks and Motion Off now use the same approved right-facing family. Run `npm run build` after pulling to refresh the offline HTML.
+
+## Both-stage enemy motion 2.10.0
+
+All 10 Normal/Elite enemies across both stages now use the supplied Idle, Attack, Defend, Skill and Damaged sequences: 50 clips / 263 frames. The supplied Stage 1 repack matches the installed sheets exactly. Stage 2 adds its five source models, including the corrected left-facing Chain Golem and matching loading/failure posters. Alyssa retains her accepted right-facing motion and Skill calibration. See [source mappings and verification](docs/ENEMY_MOTION_2_10_0.md). Run `npm run test:enemy-browser` with the existing Playwright QA setup. Rebuild the optional offline HTML after pulling.
 
 ## Combat polish 2.9.0
 

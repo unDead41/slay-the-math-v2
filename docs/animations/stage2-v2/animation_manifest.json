@@ -1,0 +1,2559 @@
+{
+  "schema": "slay-the-math/stage-enemy-animation-pack/3.0",
+  "version": "2.1",
+  "stage": 2,
+  "stage_name": "Deck Tower",
+  "enemy_count": 5,
+  "animation_count": 25,
+  "frame_count": 135,
+  "normal_only": false,
+  "bosses_included": false,
+  "elites_included": true,
+  "compatible_standard": "Stage_1_Enemies_Standardized_v3",
+  "standard": {
+    "frame_size_px": [
+      768,
+      768
+    ],
+    "sheet_size_px": [
+      2560,
+      1728
+    ],
+    "grid": {
+      "columns": 3,
+      "rows": 2,
+      "margin_px": 64,
+      "spacing_px": 64,
+      "order": "row-major",
+      "index_base": 0
+    },
+    "internal_padding_minimum_px": 96,
+    "pivot_normalized": [
+      0.5,
+      0.5
+    ],
+    "auto_trim": false,
+    "pixel_format": "RGBA8",
+    "color_space": "sRGB",
+    "alpha_mode": "straight",
+    "idle_silhouette_long_edge_target_px": 384,
+    "idle_silhouette_tolerance_px": 1,
+    "idle_silhouette_alpha_threshold": 16,
+    "fps_by_action": {
+      "idle": 6,
+      "attack": 12,
+      "defend": 10,
+      "skill": 10,
+      "damaged": 12
+    },
+    "registration_policy": "fixed exported frame origin and pivot; root/foot landmark alignment; no runtime trim or per-frame bounds autoscale"
+  },
+  "enemies": {
+    "chain_weaver": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "chain_weaver",
+      "roster_id": "s2_chain_weaver",
+      "display_name": "Chain Weaver",
+      "stage": 2,
+      "stage_name": "Deck Tower",
+      "type": "normal",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed exported frame origin and pivot; root/foot landmark alignment; no runtime trim or per-frame bounds autoscale"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "chain_weaver_idle",
+          "action": "idle",
+          "file": "enemies/chain_weaver/sprites/chain_weaver_idle.png",
+          "atlas": "enemies/chain_weaver/atlases/chain_weaver_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_weaver_idle_00",
+              "file": "enemies/chain_weaver/frames/chain_weaver_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "chain_weaver_idle_01",
+              "file": "enemies/chain_weaver/frames/chain_weaver_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "chain_weaver_idle_02",
+              "file": "enemies/chain_weaver/frames/chain_weaver_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "chain_weaver_idle_03",
+              "file": "enemies/chain_weaver/frames/chain_weaver_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "chain_weaver_idle_04",
+              "file": "enemies/chain_weaver/frames/chain_weaver_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "chain_weaver_idle_05",
+              "file": "enemies/chain_weaver/frames/chain_weaver_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 151,
+          "events": []
+        },
+        {
+          "key": "chain_weaver_attack",
+          "action": "attack",
+          "file": "enemies/chain_weaver/sprites/chain_weaver_attack.png",
+          "atlas": "enemies/chain_weaver/atlases/chain_weaver_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_weaver_attack_00",
+              "file": "enemies/chain_weaver/frames/chain_weaver_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "chain_weaver_attack_01",
+              "file": "enemies/chain_weaver/frames/chain_weaver_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "chain_weaver_attack_02",
+              "file": "enemies/chain_weaver/frames/chain_weaver_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "chain_weaver_attack_03",
+              "file": "enemies/chain_weaver/frames/chain_weaver_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "chain_weaver_attack_04",
+              "file": "enemies/chain_weaver/frames/chain_weaver_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "chain_weaver_attack_05",
+              "file": "enemies/chain_weaver/frames/chain_weaver_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 147,
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "chain_weaver_defend",
+          "action": "defend",
+          "file": "enemies/chain_weaver/sprites/chain_weaver_defend.png",
+          "atlas": "enemies/chain_weaver/atlases/chain_weaver_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_weaver_defend_00",
+              "file": "enemies/chain_weaver/frames/chain_weaver_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "chain_weaver_defend_01",
+              "file": "enemies/chain_weaver/frames/chain_weaver_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "chain_weaver_defend_02",
+              "file": "enemies/chain_weaver/frames/chain_weaver_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "chain_weaver_defend_03",
+              "file": "enemies/chain_weaver/frames/chain_weaver_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "chain_weaver_defend_04",
+              "file": "enemies/chain_weaver/frames/chain_weaver_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "chain_weaver_defend_05",
+              "file": "enemies/chain_weaver/frames/chain_weaver_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 126,
+          "events": [],
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "chain_weaver_skill",
+          "action": "skill",
+          "file": "enemies/chain_weaver/sprites/chain_weaver_skill.png",
+          "atlas": "enemies/chain_weaver/atlases/chain_weaver_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_weaver_skill_00",
+              "file": "enemies/chain_weaver/frames/chain_weaver_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "chain_weaver_skill_01",
+              "file": "enemies/chain_weaver/frames/chain_weaver_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "chain_weaver_skill_02",
+              "file": "enemies/chain_weaver/frames/chain_weaver_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "chain_weaver_skill_03",
+              "file": "enemies/chain_weaver/frames/chain_weaver_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "chain_weaver_skill_04",
+              "file": "enemies/chain_weaver/frames/chain_weaver_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "chain_weaver_skill_05",
+              "file": "enemies/chain_weaver/frames/chain_weaver_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 98,
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "chain_weaver_damaged",
+          "action": "damaged",
+          "file": "enemies/chain_weaver/sprites/chain_weaver_damaged.png",
+          "atlas": "enemies/chain_weaver/atlases/chain_weaver_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_weaver_damaged_00",
+              "file": "enemies/chain_weaver/frames/chain_weaver_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "chain_weaver_damaged_01",
+              "file": "enemies/chain_weaver/frames/chain_weaver_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "chain_weaver_damaged_02",
+              "file": "enemies/chain_weaver/frames/chain_weaver_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 115,
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ]
+        }
+      ],
+      "animation_brief": {
+        "identity": "Hooded violet wraith with two cyan eye slits, two skeletal hands and exactly two chained lanterns: cyan in front, violet behind.",
+        "attack": "Whips its existing cyan lantern toward the left, keeping the second lantern attached.",
+        "defend": "Braces the existing chains in front of its torso; no carried shield is added.",
+        "skill": "Channels a compact intertwined cyan-violet pulse through the two original lanterns.",
+        "damaged": "Chest impact, backward floating recoil, then distinct settling pose."
+      },
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/chain_weaver/animation_manifest.json"
+    },
+    "deck_guard": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "deck_guard",
+      "roster_id": "s2_deck_guard",
+      "display_name": "Deck Guard",
+      "stage": 2,
+      "stage_name": "Deck Tower",
+      "type": "normal",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed exported frame origin and pivot; root/foot landmark alignment; no runtime trim or per-frame bounds autoscale"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 383.5,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "deck_guard_idle",
+          "action": "idle",
+          "file": "enemies/deck_guard/sprites/deck_guard_idle.png",
+          "atlas": "enemies/deck_guard/atlases/deck_guard_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "deck_guard_idle_00",
+              "file": "enemies/deck_guard/frames/deck_guard_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "deck_guard_idle_01",
+              "file": "enemies/deck_guard/frames/deck_guard_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "deck_guard_idle_02",
+              "file": "enemies/deck_guard/frames/deck_guard_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "deck_guard_idle_03",
+              "file": "enemies/deck_guard/frames/deck_guard_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "deck_guard_idle_04",
+              "file": "enemies/deck_guard/frames/deck_guard_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "deck_guard_idle_05",
+              "file": "enemies/deck_guard/frames/deck_guard_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 184,
+          "events": []
+        },
+        {
+          "key": "deck_guard_attack",
+          "action": "attack",
+          "file": "enemies/deck_guard/sprites/deck_guard_attack.png",
+          "atlas": "enemies/deck_guard/atlases/deck_guard_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "deck_guard_attack_00",
+              "file": "enemies/deck_guard/frames/deck_guard_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "deck_guard_attack_01",
+              "file": "enemies/deck_guard/frames/deck_guard_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "deck_guard_attack_02",
+              "file": "enemies/deck_guard/frames/deck_guard_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "deck_guard_attack_03",
+              "file": "enemies/deck_guard/frames/deck_guard_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "deck_guard_attack_04",
+              "file": "enemies/deck_guard/frames/deck_guard_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "deck_guard_attack_05",
+              "file": "enemies/deck_guard/frames/deck_guard_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 114,
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "deck_guard_defend",
+          "action": "defend",
+          "file": "enemies/deck_guard/sprites/deck_guard_defend.png",
+          "atlas": "enemies/deck_guard/atlases/deck_guard_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "deck_guard_defend_00",
+              "file": "enemies/deck_guard/frames/deck_guard_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "deck_guard_defend_01",
+              "file": "enemies/deck_guard/frames/deck_guard_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "deck_guard_defend_02",
+              "file": "enemies/deck_guard/frames/deck_guard_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "deck_guard_defend_03",
+              "file": "enemies/deck_guard/frames/deck_guard_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "deck_guard_defend_04",
+              "file": "enemies/deck_guard/frames/deck_guard_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "deck_guard_defend_05",
+              "file": "enemies/deck_guard/frames/deck_guard_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 178,
+          "events": [],
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "deck_guard_skill",
+          "action": "skill",
+          "file": "enemies/deck_guard/sprites/deck_guard_skill.png",
+          "atlas": "enemies/deck_guard/atlases/deck_guard_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "deck_guard_skill_00",
+              "file": "enemies/deck_guard/frames/deck_guard_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "deck_guard_skill_01",
+              "file": "enemies/deck_guard/frames/deck_guard_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "deck_guard_skill_02",
+              "file": "enemies/deck_guard/frames/deck_guard_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "deck_guard_skill_03",
+              "file": "enemies/deck_guard/frames/deck_guard_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "deck_guard_skill_04",
+              "file": "enemies/deck_guard/frames/deck_guard_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "deck_guard_skill_05",
+              "file": "enemies/deck_guard/frames/deck_guard_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 99,
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "deck_guard_damaged",
+          "action": "damaged",
+          "file": "enemies/deck_guard/sprites/deck_guard_damaged.png",
+          "atlas": "enemies/deck_guard/atlases/deck_guard_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "deck_guard_damaged_00",
+              "file": "enemies/deck_guard/frames/deck_guard_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "deck_guard_damaged_01",
+              "file": "enemies/deck_guard/frames/deck_guard_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "deck_guard_damaged_02",
+              "file": "enemies/deck_guard/frames/deck_guard_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 129,
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ]
+        }
+      ],
+      "animation_brief": {
+        "identity": "Navy card-armored golem with silver edging, shoulder card fans, one violet eye and one shield on its anatomical left forearm.",
+        "attack": "Right-hand punch toward the left; the shield remains attached to the left arm.",
+        "defend": "Lifts and braces its single existing left-arm card shield, then lowers the same shield.",
+        "skill": "Emits translucent violet card glyphs from the free hand; physical armor remains attached.",
+        "damaged": "Breastplate impact, compressed backward recoil, then distinct balanced recovery."
+      },
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/deck_guard/animation_manifest.json"
+    },
+    "card_mimic": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "card_mimic",
+      "roster_id": "s2_card_mimic",
+      "display_name": "Card Mimic",
+      "stage": 2,
+      "stage_name": "Deck Tower",
+      "type": "normal",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed exported frame origin and pivot; root/foot landmark alignment; no runtime trim or per-frame bounds autoscale"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "card_mimic_idle",
+          "action": "idle",
+          "file": "enemies/card_mimic/sprites/card_mimic_idle.png",
+          "atlas": "enemies/card_mimic/atlases/card_mimic_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "card_mimic_idle_00",
+              "file": "enemies/card_mimic/frames/card_mimic_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "card_mimic_idle_01",
+              "file": "enemies/card_mimic/frames/card_mimic_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "card_mimic_idle_02",
+              "file": "enemies/card_mimic/frames/card_mimic_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "card_mimic_idle_03",
+              "file": "enemies/card_mimic/frames/card_mimic_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "card_mimic_idle_04",
+              "file": "enemies/card_mimic/frames/card_mimic_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "card_mimic_idle_05",
+              "file": "enemies/card_mimic/frames/card_mimic_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 181,
+          "events": []
+        },
+        {
+          "key": "card_mimic_attack",
+          "action": "attack",
+          "file": "enemies/card_mimic/sprites/card_mimic_attack.png",
+          "atlas": "enemies/card_mimic/atlases/card_mimic_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "card_mimic_attack_00",
+              "file": "enemies/card_mimic/frames/card_mimic_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "card_mimic_attack_01",
+              "file": "enemies/card_mimic/frames/card_mimic_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "card_mimic_attack_02",
+              "file": "enemies/card_mimic/frames/card_mimic_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "card_mimic_attack_03",
+              "file": "enemies/card_mimic/frames/card_mimic_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "card_mimic_attack_04",
+              "file": "enemies/card_mimic/frames/card_mimic_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "card_mimic_attack_05",
+              "file": "enemies/card_mimic/frames/card_mimic_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 133,
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "card_mimic_defend",
+          "action": "defend",
+          "file": "enemies/card_mimic/sprites/card_mimic_defend.png",
+          "atlas": "enemies/card_mimic/atlases/card_mimic_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "card_mimic_defend_00",
+              "file": "enemies/card_mimic/frames/card_mimic_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "card_mimic_defend_01",
+              "file": "enemies/card_mimic/frames/card_mimic_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "card_mimic_defend_02",
+              "file": "enemies/card_mimic/frames/card_mimic_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "card_mimic_defend_03",
+              "file": "enemies/card_mimic/frames/card_mimic_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "card_mimic_defend_04",
+              "file": "enemies/card_mimic/frames/card_mimic_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "card_mimic_defend_05",
+              "file": "enemies/card_mimic/frames/card_mimic_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 173,
+          "events": [],
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "card_mimic_skill",
+          "action": "skill",
+          "file": "enemies/card_mimic/sprites/card_mimic_skill.png",
+          "atlas": "enemies/card_mimic/atlases/card_mimic_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "card_mimic_skill_00",
+              "file": "enemies/card_mimic/frames/card_mimic_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "card_mimic_skill_01",
+              "file": "enemies/card_mimic/frames/card_mimic_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "card_mimic_skill_02",
+              "file": "enemies/card_mimic/frames/card_mimic_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "card_mimic_skill_03",
+              "file": "enemies/card_mimic/frames/card_mimic_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "card_mimic_skill_04",
+              "file": "enemies/card_mimic/frames/card_mimic_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "card_mimic_skill_05",
+              "file": "enemies/card_mimic/frames/card_mimic_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 103,
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "card_mimic_damaged",
+          "action": "damaged",
+          "file": "enemies/card_mimic/sprites/card_mimic_damaged.png",
+          "atlas": "enemies/card_mimic/atlases/card_mimic_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "card_mimic_damaged_00",
+              "file": "enemies/card_mimic/frames/card_mimic_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "card_mimic_damaged_01",
+              "file": "enemies/card_mimic/frames/card_mimic_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "card_mimic_damaged_02",
+              "file": "enemies/card_mimic/frames/card_mimic_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 155,
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ]
+        }
+      ],
+      "animation_brief": {
+        "identity": "Third normal enemy: squat navy card-deck chest, silver trim, one cyan eye on its hinged lid, teeth, two claw arms and two short legs.",
+        "attack": "A short anticipatory lean and snap bite using the original hinged lid.",
+        "defend": "Crouches, closes its own lid and braces both claws against its chest; no shield object.",
+        "skill": "Spits violet card-shaped light glyphs from its mouth.",
+        "damaged": "Corner impact, surprised backward recoil, then distinct settling pose."
+      },
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/card_mimic/animation_manifest.json"
+    },
+    "chain_golem": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "chain_golem",
+      "roster_id": "s2_chain_golem",
+      "display_name": "Chain Golem",
+      "stage": 2,
+      "stage_name": "Deck Tower",
+      "type": "elite",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed exported frame origin and pivot; root/foot landmark alignment; no runtime trim or per-frame bounds autoscale"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.0,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "chain_golem_idle",
+          "action": "idle",
+          "file": "enemies/chain_golem/sprites/chain_golem_idle.png",
+          "atlas": "enemies/chain_golem/atlases/chain_golem_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_golem_idle_00",
+              "file": "enemies/chain_golem/frames/chain_golem_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "chain_golem_idle_01",
+              "file": "enemies/chain_golem/frames/chain_golem_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "chain_golem_idle_02",
+              "file": "enemies/chain_golem/frames/chain_golem_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "chain_golem_idle_03",
+              "file": "enemies/chain_golem/frames/chain_golem_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "chain_golem_idle_04",
+              "file": "enemies/chain_golem/frames/chain_golem_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "chain_golem_idle_05",
+              "file": "enemies/chain_golem/frames/chain_golem_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 168,
+          "events": []
+        },
+        {
+          "key": "chain_golem_attack",
+          "action": "attack",
+          "file": "enemies/chain_golem/sprites/chain_golem_attack.png",
+          "atlas": "enemies/chain_golem/atlases/chain_golem_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_golem_attack_00",
+              "file": "enemies/chain_golem/frames/chain_golem_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "chain_golem_attack_01",
+              "file": "enemies/chain_golem/frames/chain_golem_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "chain_golem_attack_02",
+              "file": "enemies/chain_golem/frames/chain_golem_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "chain_golem_attack_03",
+              "file": "enemies/chain_golem/frames/chain_golem_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "chain_golem_attack_04",
+              "file": "enemies/chain_golem/frames/chain_golem_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "chain_golem_attack_05",
+              "file": "enemies/chain_golem/frames/chain_golem_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 110,
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "chain_golem_defend",
+          "action": "defend",
+          "file": "enemies/chain_golem/sprites/chain_golem_defend.png",
+          "atlas": "enemies/chain_golem/atlases/chain_golem_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_golem_defend_00",
+              "file": "enemies/chain_golem/frames/chain_golem_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "chain_golem_defend_01",
+              "file": "enemies/chain_golem/frames/chain_golem_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "chain_golem_defend_02",
+              "file": "enemies/chain_golem/frames/chain_golem_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "chain_golem_defend_03",
+              "file": "enemies/chain_golem/frames/chain_golem_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "chain_golem_defend_04",
+              "file": "enemies/chain_golem/frames/chain_golem_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "chain_golem_defend_05",
+              "file": "enemies/chain_golem/frames/chain_golem_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 179,
+          "events": [],
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "chain_golem_skill",
+          "action": "skill",
+          "file": "enemies/chain_golem/sprites/chain_golem_skill.png",
+          "atlas": "enemies/chain_golem/atlases/chain_golem_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_golem_skill_00",
+              "file": "enemies/chain_golem/frames/chain_golem_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "chain_golem_skill_01",
+              "file": "enemies/chain_golem/frames/chain_golem_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "chain_golem_skill_02",
+              "file": "enemies/chain_golem/frames/chain_golem_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "chain_golem_skill_03",
+              "file": "enemies/chain_golem/frames/chain_golem_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "chain_golem_skill_04",
+              "file": "enemies/chain_golem/frames/chain_golem_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "chain_golem_skill_05",
+              "file": "enemies/chain_golem/frames/chain_golem_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 147,
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "chain_golem_damaged",
+          "action": "damaged",
+          "file": "enemies/chain_golem/sprites/chain_golem_damaged.png",
+          "atlas": "enemies/chain_golem/atlases/chain_golem_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "chain_golem_damaged_00",
+              "file": "enemies/chain_golem/frames/chain_golem_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "chain_golem_damaged_01",
+              "file": "enemies/chain_golem/frames/chain_golem_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "chain_golem_damaged_02",
+              "file": "enemies/chain_golem/frames/chain_golem_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 123,
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ]
+        }
+      ],
+      "animation_brief": {
+        "identity": "Headless slate-rock elite in a strong left-facing side profile, two original chest cores, two arms, two legs and one short-chain wrecking ball in its original right hand.",
+        "attack": "Short leftward strike using the same single chained ball.",
+        "defend": "Braces its original iron cuffs and chained chest; no added shield.",
+        "skill": "A small leftward cyan-violet pulse from the existing chest cores; both arms stay on their original sides.",
+        "damaged": "Shoulder impact, backward recoil with ball inertia, distinct settling pose.",
+        "idle": "Six distinct left-facing breathing poses with planted foot registration and stabilized anatomical scale."
+      },
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/chain_golem/animation_manifest.json",
+      "art_revision": "2.1-chain-golem-left",
+      "visual_facing_contract": "Strong left-facing side-three-quarter profile: chest and both boot toes toward screen left, back toward screen right; all actions retain this orientation.",
+      "runtime_orientation": {
+        "source_facing": "left",
+        "flip_x": false,
+        "note": "Use the authored left-facing PNGs directly; do not mirror them again."
+      }
+    },
+    "rune_reaper": {
+      "schema": "slay-the-math/enemy-animation-pack/3.0",
+      "enemy": "rune_reaper",
+      "roster_id": "s2_rune_reaper",
+      "display_name": "Rune Reaper",
+      "stage": 2,
+      "stage_name": "Deck Tower",
+      "type": "elite",
+      "facing": "left",
+      "standard": {
+        "frame_size_px": [
+          768,
+          768
+        ],
+        "sheet_size_px": [
+          2560,
+          1728
+        ],
+        "grid": {
+          "columns": 3,
+          "rows": 2,
+          "margin_px": 64,
+          "spacing_px": 64,
+          "order": "row-major",
+          "index_base": 0
+        },
+        "internal_padding_minimum_px": 96,
+        "pivot_normalized": [
+          0.5,
+          0.5
+        ],
+        "auto_trim": false,
+        "pixel_format": "RGBA8",
+        "color_space": "sRGB",
+        "alpha_mode": "straight",
+        "idle_silhouette_long_edge_target_px": 384,
+        "idle_silhouette_tolerance_px": 1,
+        "idle_silhouette_alpha_threshold": 16,
+        "fps_by_action": {
+          "idle": 6,
+          "attack": 12,
+          "defend": 10,
+          "skill": 10,
+          "damaged": 12
+        },
+        "registration_policy": "fixed exported frame origin and pivot; root/foot landmark alignment; no runtime trim or per-frame bounds autoscale"
+      },
+      "size_normalization": {
+        "target_idle_median_long_edge_px": 384,
+        "measured_idle_median_long_edge_px": 384.5,
+        "tolerance_px": 1
+      },
+      "frames_total": 27,
+      "animations": [
+        {
+          "key": "rune_reaper_idle",
+          "action": "idle",
+          "file": "enemies/rune_reaper/sprites/rune_reaper_idle.png",
+          "atlas": "enemies/rune_reaper/atlases/rune_reaper_idle.json",
+          "frame_count": 6,
+          "fps": 6,
+          "frame_duration_ms": 166.66666666666666,
+          "duration_seconds": 1.0,
+          "loop": true,
+          "on_complete": null,
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_reaper_idle_00",
+              "file": "enemies/rune_reaper/frames/rune_reaper_idle_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 1,
+              "name": "rune_reaper_idle_01",
+              "file": "enemies/rune_reaper/frames/rune_reaper_idle_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 2,
+              "name": "rune_reaper_idle_02",
+              "file": "enemies/rune_reaper/frames/rune_reaper_idle_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 3,
+              "name": "rune_reaper_idle_03",
+              "file": "enemies/rune_reaper/frames/rune_reaper_idle_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 4,
+              "name": "rune_reaper_idle_04",
+              "file": "enemies/rune_reaper/frames/rune_reaper_idle_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            },
+            {
+              "index": 5,
+              "name": "rune_reaper_idle_05",
+              "file": "enemies/rune_reaper/frames/rune_reaper_idle_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 166.66666666666666
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 171,
+          "events": []
+        },
+        {
+          "key": "rune_reaper_attack",
+          "action": "attack",
+          "file": "enemies/rune_reaper/sprites/rune_reaper_attack.png",
+          "atlas": "enemies/rune_reaper/atlases/rune_reaper_attack.json",
+          "frame_count": 6,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.5,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_reaper_attack_00",
+              "file": "enemies/rune_reaper/frames/rune_reaper_attack_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "rune_reaper_attack_01",
+              "file": "enemies/rune_reaper/frames/rune_reaper_attack_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "rune_reaper_attack_02",
+              "file": "enemies/rune_reaper/frames/rune_reaper_attack_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 3,
+              "name": "rune_reaper_attack_03",
+              "file": "enemies/rune_reaper/frames/rune_reaper_attack_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 4,
+              "name": "rune_reaper_attack_04",
+              "file": "enemies/rune_reaper/frames/rune_reaper_attack_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 5,
+              "name": "rune_reaper_attack_05",
+              "file": "enemies/rune_reaper/frames/rune_reaper_attack_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 118,
+          "events": [
+            {
+              "name": "attack_contact",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "rune_reaper_defend",
+          "action": "defend",
+          "file": "enemies/rune_reaper/sprites/rune_reaper_defend.png",
+          "atlas": "enemies/rune_reaper/atlases/rune_reaper_defend.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_reaper_defend_00",
+              "file": "enemies/rune_reaper/frames/rune_reaper_defend_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "rune_reaper_defend_01",
+              "file": "enemies/rune_reaper/frames/rune_reaper_defend_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "rune_reaper_defend_02",
+              "file": "enemies/rune_reaper/frames/rune_reaper_defend_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "rune_reaper_defend_03",
+              "file": "enemies/rune_reaper/frames/rune_reaper_defend_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "rune_reaper_defend_04",
+              "file": "enemies/rune_reaper/frames/rune_reaper_defend_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "rune_reaper_defend_05",
+              "file": "enemies/rune_reaper/frames/rune_reaper_defend_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 122,
+          "events": [],
+          "optional_hold_frame_index": 2,
+          "resume_after_hold_frame_index": 3
+        },
+        {
+          "key": "rune_reaper_skill",
+          "action": "skill",
+          "file": "enemies/rune_reaper/sprites/rune_reaper_skill.png",
+          "atlas": "enemies/rune_reaper/atlases/rune_reaper_skill.json",
+          "frame_count": 6,
+          "fps": 10,
+          "frame_duration_ms": 100.0,
+          "duration_seconds": 0.6,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_reaper_skill_00",
+              "file": "enemies/rune_reaper/frames/rune_reaper_skill_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 1,
+              "name": "rune_reaper_skill_01",
+              "file": "enemies/rune_reaper/frames/rune_reaper_skill_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 2,
+              "name": "rune_reaper_skill_02",
+              "file": "enemies/rune_reaper/frames/rune_reaper_skill_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 3,
+              "name": "rune_reaper_skill_03",
+              "file": "enemies/rune_reaper/frames/rune_reaper_skill_03.png",
+              "x": 64,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 4,
+              "name": "rune_reaper_skill_04",
+              "file": "enemies/rune_reaper/frames/rune_reaper_skill_04.png",
+              "x": 896,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            },
+            {
+              "index": 5,
+              "name": "rune_reaper_skill_05",
+              "file": "enemies/rune_reaper/frames/rune_reaper_skill_05.png",
+              "x": 1728,
+              "y": 896,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 100.0
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unused_cell_indices": [],
+          "identical_frame_pairs": [
+            [
+              0,
+              5
+            ]
+          ],
+          "minimum_actual_padding_px": 170,
+          "events": [
+            {
+              "name": "skill_release",
+              "frame_index": 3
+            }
+          ]
+        },
+        {
+          "key": "rune_reaper_damaged",
+          "action": "damaged",
+          "file": "enemies/rune_reaper/sprites/rune_reaper_damaged.png",
+          "atlas": "enemies/rune_reaper/atlases/rune_reaper_damaged.json",
+          "frame_count": 3,
+          "fps": 12,
+          "frame_duration_ms": 83.33333333333333,
+          "duration_seconds": 0.25,
+          "loop": false,
+          "on_complete": "idle_or_current_state",
+          "frames": [
+            {
+              "index": 0,
+              "name": "rune_reaper_damaged_00",
+              "file": "enemies/rune_reaper/frames/rune_reaper_damaged_00.png",
+              "x": 64,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 1,
+              "name": "rune_reaper_damaged_01",
+              "file": "enemies/rune_reaper/frames/rune_reaper_damaged_01.png",
+              "x": 896,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            },
+            {
+              "index": 2,
+              "name": "rune_reaper_damaged_02",
+              "file": "enemies/rune_reaper/frames/rune_reaper_damaged_02.png",
+              "x": 1728,
+              "y": 64,
+              "width": 768,
+              "height": 768,
+              "duration_ms": 83.33333333333333
+            }
+          ],
+          "active_cell_indices": [
+            0,
+            1,
+            2
+          ],
+          "unused_cell_indices": [
+            3,
+            4,
+            5
+          ],
+          "identical_frame_pairs": [],
+          "minimum_actual_padding_px": 129,
+          "events": [
+            {
+              "name": "hit_reaction",
+              "frame_index": 0
+            }
+          ]
+        }
+      ],
+      "animation_brief": {
+        "identity": "Navy and silver armored elite with one violet helmet slit, cyan sternum core, split coat-tails and one straight-shaft scythe in the right hand.",
+        "attack": "Compact one-handed leftward scythe chop; single rigid shaft and blade remain continuous.",
+        "defend": "Two-hand parry on the same scythe shaft; no extra weapon or shield.",
+        "skill": "Self-channel rune seal above its original free left palm on image right; the right hand keeps the one scythe.",
+        "damaged": "Shoulder impact, controlled backward recoil, distinct settling pose."
+      },
+      "paths_relative_to": "pack root",
+      "runtime_integration_included": false,
+      "manifest": "enemies/rune_reaper/animation_manifest.json"
+    }
+  },
+  "paths_relative_to": "pack root",
+  "source_normal_pack_sha256": "3cf8c30338a98d9d0db5124e83d779340c63762f92e41dbe983feef6724a592c",
+  "revision_note": "Only Chain Golem artwork was redrawn to face screen left; other four enemies are preserved byte for byte."
+}

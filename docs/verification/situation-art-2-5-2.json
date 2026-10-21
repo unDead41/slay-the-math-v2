@@ -1,0 +1,97 @@
+{
+  "version": "2.5.2",
+  "date": "2026-10-21",
+  "baseCommit": "54e98686acdf4b584264e95a2b4f8e633c1603f4",
+  "environment": {
+    "platform": "Linux",
+    "node": "24.19.0",
+    "chromium": "153.0.8010.0",
+    "playwright": "1.62.1",
+    "fonts": "System fontconfig /etc/fonts/fonts.conf"
+  },
+  "checks": {
+    "scriptSyntax": "passed",
+    "build": "passed",
+    "unitDOM": {
+      "passed": 100,
+      "failed": 0,
+      "skipped": 0
+    },
+    "situationsBrowser": {
+      "version": "2.5.2",
+      "checks": [
+        "All six situations decode the correct clean artwork at eight viewport sizes through UWHD and 4K; contained images, native 44px actions, no horizontal page overflow, exact saves preserved.",
+        "Both stage shops retain actual stock and names; keyboard selection, exact price/deck update, once-only purchase, sold-state refresh and Leave work.",
+        "Rest heals the live HP value once; Upgrade uses the original native card-selection dialog, Escape and actual upgrade/progression.",
+        "Reward keyboard preview is presentation only; Add grants the selected real card once, while Skip preserves the deck.",
+        "Defeat, Stage Clear and Victory retain their live summaries, learning record, confirmed Retry and actual Stage 2 checkpoint.",
+        "The generated offline build embeds all four new artworks and completes Rest to map without HTTP requests."
+      ],
+      "viewports": [
+        {
+          "width": 1280,
+          "height": 720,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "scenes": 6,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scenes": 6,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    "educationBrowser": "passed",
+    "menuBrowser": {
+      "status": "incomplete",
+      "reason": "The pre-existing full menu suite hit its 9000ms locator timeout during Settings checks on this QA host. No pass is claimed. Home styling and 5000ms timing were not changed."
+    }
+  },
+  "testedFilesSHA256": {
+    "dist/app.js": "e68ec88f67697e25d633f98488fa28ca725a5050518c63e46362a973e3cdad98",
+    "dist/dungeon.css": "fa2d24f049c7e7d25175890ab20f332651e98419117cd710c4e7836078926876",
+    "dist/visuals.js": "86eae320e42271d0cf1bb354c8c5b3cb7e52adc0d80803b4051ffeac71bf4219",
+    "tests/situations-browser.cjs": "7c19809e87aef7319ee3c4d1882b86bbae36639e144a4f2c461fd7f9b3d10518"
+  },
+  "limits": [
+    "Browser viewport coverage; no physical-monitor or Windows shell execution."
+  ]
+}

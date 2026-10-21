@@ -27,5 +27,8 @@
       {id:'archive',label:'Rune Archive',art:'menu-archive.webp'},
       {id:'map',label:'A Path Ahead',art:'menu-map.webp'},
       {id:'door',label:'The Dungeon Door',art:'menu-door.webp'}],
+    situationScenes:{shop:{art:'situation-shop.webp'},camp:{art:'situation-rest.webp'},
+      reward:{art:'situation-reward.webp'},stageclear:{art:'situation-reward.webp'},
+      victory:{art:'situation-reward.webp'},defeat:{art:'situation-defeat.webp'}},
     portrait:'alyssa-front.webp', timing:{pose:760,guard:330,menu:5000,menuFade:5000}, enemyPoseSheets:enemies};
 })(window);

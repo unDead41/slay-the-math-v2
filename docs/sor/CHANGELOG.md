@@ -122,3 +122,11 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Change artwork interval and crossfade to 5s; preserve fixed sources during rapid selection and reject stale decodes.
 - Keep Motion Off/reduced-motion/pause, menu actions, original assets, combat and saves intact.
 - Add project-owned browser geometry/lifecycle QA and CI verification; current evidence: docs/MENU_FIT_2_5_1.md.
+
+## 2.5.2 special-situation art — 21 October 2026
+
+- Apply the four supplied scene art directions to Shop, Rest, Reward, Stage Clear, Victory and Defeat.
+- Remove baked mockup UI and retain live prices, cards, HP and summary controls.
+- Fit the full illustrations on desktop/UWHD and stack artwork above controls on narrow screens; preserve native interactions and natural scrolling.
+- Record asset hashes/prompts/dimensions and add browser coverage of scene geometry, purchases, Rest/Upgrade, rewards, summary progression and the offline build.
+- Scope and actual verification: docs/SITUATION_ART_2_5_2.md.

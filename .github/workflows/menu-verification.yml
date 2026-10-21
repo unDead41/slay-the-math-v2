@@ -61,6 +61,10 @@ jobs:
         env:
           QA_PREVIEW_LOG: "1"
         run: npm run test:menu-browser
+      - name: Special-situation artwork and native actions
+        env:
+          QA_SCREENSHOTS: qa-menu/situations
+        run: npm run test:situations-browser
       - name: Existing menu and arena regression
         run: npm run test:dungeon-browser
       - name: Existing education and artifact flow regression

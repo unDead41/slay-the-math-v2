@@ -80,3 +80,7 @@ The reference owns placement and visual hierarchy. The live engine owns HP, card
 ## Current reference override — Dungeon Edition 2.3
 
 Ijamm's five named menu PNGs (Crimson Warrior in the Chance Dungeon-2; Firelit dungeon rest alcove-1; Rune Cards in the Dungeon Archive-3; Alyssa Studies the Dungeon Map-4; Opening the Dungeon of Chance-5) control Home's art. `Finalize Design(2).zip` controls latest MC standing model, Stage 1 enemy key poses, six arena images, map seals and utility icon sheet. The explicit instruction that Alyssa/enemies visibly stand on the floor overrides earlier body-background anchoring. Reference values never replace configured HP, costs or damage. Full provenance and implemented limits: docs/DUNGEON_EDITION_2_3.md and asset manifests.
+
+## Special situations — 21 October 2026 (Malaysia)
+
+Ijamm requests application of Mysterious merchant's dungeon card shop-1.png, Alyssa opens a glowing victory chest(1).png, Alyssa’s Quiet Defeat(1).png and Dungeon rest site with explore-2.png. These four images own the new Shop, reward/win, defeat and Rest compositions respectively. They contain illustrative UI; runtime card/price/HP/statistic values and actions remain owned by the current engine. Clean-plate derivatives, exact provenance and mappings are in dist/assets/situation-art.json. Details and actual verification: docs/SITUATION_ART_2_5_2.md.

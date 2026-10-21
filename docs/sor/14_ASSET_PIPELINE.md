@@ -122,3 +122,7 @@ The latest upload image(20261019-025055).png is pixel-identical to the approved 
 ## Supplied stone Master artwork 2.4.3
 
 The newest user image image(20261019-032240).png replaces the prior rift image. It has a stone/obsidian Master with a carved face and hands; that explicit new reference supersedes the old no-face/no-hands prompt. The exact original 1672×941 PNG is preserved in the user's upload. Mechanical ImageMagick Lanczos export supplies a 3840×2160 PNG and WebP quality 95 runtime. No creative edit or new generation is performed. These are upscaled 4K canvases, not native 4K. The source/runtime/PNG hashes are in dist/assets/dungeon-master-stone-2-4-3.json; dungeon-master-art.json keeps prior records as history. The update's ARTWORK folder contains the new PNG, not the superseded 2.4.2 art.
+
+## Supplied special-situation artwork 2.5.2
+
+Four user mockups are edited with built-in imagegen precise-object-edit to remove baked panels, HUD, cards, labels and buttons while retaining the illustrated scene. The right wall/floor is extended for live HTML controls. Native source size is 1672×941; generated clean plates are 1672×941 except the chest plate at 1671×941. Quality-94 WebP conversion retains those native dimensions without upscaling. These are not native-4K assets. Original uploads and previous game assets remain untouched. Reference, clean-plate and runtime hashes, dimensions, prompt set and scene mappings are recorded in dist/assets/situation-art.json. The optional portable build embeds all four WebPs through the existing asset resolver.

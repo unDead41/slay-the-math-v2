@@ -1,6 +1,6 @@
 {
   "name": "duel-cube-math",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "private": true,
   "description": "120 Form 4 questions after Claim Artifact, with saved trials and random draws without repeats",
   "scripts": {
@@ -16,6 +16,7 @@
     "test:artifacts-browser": "node tests/artifacts-browser.cjs",
     "test:journey-browser": "node tests/journey-browser.cjs",
     "test:education-browser": "node tests/education-browser.cjs",
-    "test:menu-browser": "node tests/menu-fit-browser.cjs"
+    "test:menu-browser": "node tests/menu-fit-browser.cjs",
+    "test:situations-browser": "node tests/situations-browser.cjs"
   }
 }

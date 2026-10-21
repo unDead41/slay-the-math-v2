@@ -194,3 +194,10 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 |---|---|---|
 | DEC-20261021-01 | DISAHKAN | User reports Home model clipping on UWHD, requests smaller model framing, display-scaled menu and 5s artwork transition. Six supplied screenshots could not be opened in the execution environment; the running menu was independently inspected at a 3413×1740 CSS viewport. |
 | DEC-20261021-02 | DITERUSKAN | Reuse the five existing plates with a contained, padded foreground and dim ambience fill. Home and its existing non-wide dialogs share a viewport unit; scene controls remain native and stationary. Timing is 5000ms interval and 5000ms fade, with fixed image sources, decode/generation guards and existing motion/pause policy. Gameplay, saved runs, assets and combat styling are preserved. Verification and limits: docs/MENU_FIT_2_5_1.md. |
+
+## Special situations 2.5.2 — 21 October 2026 (Malaysia)
+
+| ID | Status | Decision and evidence |
+|---|---|---|
+| DEC-20261021-03 | DISAHKAN | Ijamm supplies four Shop, victory chest, quiet defeat and Rest/Explore mockups and explicitly requests applying their art style in the game. |
+| DEC-20261021-04 | DITERUSKAN | Remove baked UI with built-in imagegen while preserving Alyssa, props and dungeon composition. Reuse the existing scene renderers and live controls. One visual registry maps four native-size WebP plates across six situations; contained responsive framing and phone stacking are owned by dungeon.css. This visual request does not change Shop stock counts, add artifact purchases or activate Explore. Actual coverage and limits: docs/SITUATION_ART_2_5_2.md. |

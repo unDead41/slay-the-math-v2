@@ -140,3 +140,13 @@ Tooltip lookup and display are read-only: no random calls, acquisition, draws or
 ## Stage 1 atlas motion 2.7.0
 
 `DCActorAnimation` is the single atlas playback owner; `DCAnimationData` owns source frames and FPS. App render creates/disposes the active Stage 1 non-boss player, native actions provide resolved reaction cues, and existing dialog/visibility/motion owners configure pause/static behavior. Animation never grants damage, consumes Energy, rerolls, advances turns or delays a result. Its canvas is decorative; native controls and visible HUD labels remain the accessible interface. Static source exports remain a fallback until a texture has decoded and painted. Boss/Stage 2 encounters use the existing renderer.
+
+## Combat polish 2.9.0
+
+| Capability | Canonical owner | Observable contract | Verification |
+|---|---|---|---|
+| Hand capacity | config.HAND_LIMIT + engine.draw | Limit 10; stop before moving/shuffling extra cards; preserve physical cards and show actual draw count/full state. Legacy excess goes to top of Draw without RNG. | run-polish.test.cjs |
+| Overlapping hand | cardView + hand.js/hand.css | Pointer dwell 140ms; one raised card; neighbors shift; stationary pointer cannot refocus from layout. Keyboard immediate; 0 plays tenth card; touch activation remains native; local phone rail; opaque disabled cards. Dispose on rerender; clear on dialogs/hidden pages. Reduced motion removes transitions. | hand-results-browser.cjs |
+| Result Time | engine result transaction + summaryView | Frozen finished timestamp for defeat/victory/stage clear; menu/dialog/reload/import preserves it. Legacy results are stamped once on restore. Stage 2 continuation clears intermediate timestamp. | engine + browser result checks |
+
+The existing live toast, dialog/focus, save key and English copy owners are reused. Palette/type/card art and sibling reward/Shop geometry retain DESIGN.md ownership.

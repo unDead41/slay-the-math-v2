@@ -2,6 +2,14 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.9.0 — 21 Oktober 2026
+
+- Normalize all six Skill body silhouettes around the supplied boot pivots without changing source sheets, timing or right-facing direction.
+- Freeze and persist result time at resolution; preserve it on reload and result revisits.
+- Cap every draw at 10 cards, preserving excess cards and shuffle RNG. Normalize older overfull saves without deleting cards.
+- Overlap crowded hands; reveal the hovered card and move neighbors after 140ms, with immediate keyboard focus, reduced motion and phone scrolling.
+- Details: [Combat polish](../COMBAT_POLISH_2_9_0.md).
+
 ## Game 2.8.1 — 21 Oktober 2026
 
 - Correct the older hero image fallback retained by 2.8.0. All five battle pose images now use the approved right-facing motion family, including loading/failure paths and Motion Off.

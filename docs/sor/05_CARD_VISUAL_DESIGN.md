@@ -64,3 +64,7 @@ Lulus apabila ukuran kad seragam, frame tidak clipping, English ringkas, afiniti
 ## Reward and Shop proportions 2.5.3 — 21 October 2026
 
 Ijamm reports horizontally swollen cards in the reward scene and requests checking Shop. The runtime situation variant now bounds the width of the shared portrait-card tracks and these two scene panels. The square artwork viewport is centered inside the card-emblem with its source aspect ratio preserved, including atlas tiles. All three choices stay in one row; phone overflow belongs to that row. Extra ultrawide width alone does not enlarge cards. Existing frame, data, type, effects, selection and purchase/reward owners remain. Verification: docs/FIX_CARD_PROPORTIONS_2_5_3.md.
+
+## Overlapping live hand — 2.9.0
+
+**CDV-03:** Reuse `cardView` and the portrait geometry. `hand.js`/`hand.css` own only the live hand rail. Fit cards with overlap when needed, retaining a 44px minimum exposed step and local scrolling on small screens. Disabled cards remain opaque so lower card text cannot bleed through. A 140ms pointer dwell lifts one card and shifts its neighbors; pointer movement, rather than layout-triggered enter/leave, changes the candidate. Keyboard focus is immediate. Touch retains native card activation and rail panning. Motion Off and OS reduced motion remove transitions. Reward, Shop and Collection retain their shared card presentation.

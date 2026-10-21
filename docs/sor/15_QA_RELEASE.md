@@ -88,3 +88,7 @@ Pakej dokumentasi ini hanya boleh mendakwa semakan fail, pautan, struktur dan pe
 | MC | Lantern/folio dalam semua pandangan | Sisi konsisten, belakang mengikut sheet baharu |
 
 Ujian runtime di atas ialah keperluan untuk implementation, bukan ujian game yang sudah dijalankan oleh pakej dokumen.
+
+## Combat polish regressions — 2.9.0
+
+Check all six Skill matrices/body heights and actual canvas frames, cap/partial/artifact draws, full-hand RNG stability, physical-card conservation and legacy restore. Resolve real lethal damage and verify result Time after menu, dialogs, refresh and elapsed waiting. Exercise crowded-hand hover dwell, rapid crossings, stationary pointer, cancellation, native keyboard/touch, reduced motion, empty hand and phone rail access through the tenth card. Evidence: `tests/run-polish.test.cjs`, `tests/hand-results-browser.cjs`, `tests/animation.test.cjs` and the 2.9.0 verification report.

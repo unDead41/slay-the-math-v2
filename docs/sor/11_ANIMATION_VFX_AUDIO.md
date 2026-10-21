@@ -138,3 +138,7 @@ The menu cycles five decoded local backgrounds with a 1.4s fade, 14s scene inter
 Enemy damage reactions follow resolved HP changes. End Turn Block intents use Defend for these five actors; burst intents use the existing Skill mapping. Alyssa's existing reaction now uses actual HP loss after artifact Block, rather than a pre-resolution estimate. Boss and Stage 2 artwork/pose ownership remain existing. The new Alyssa source archive was unavailable, so no new hero frames are claimed.
 
 All clips draw onto the existing 1600×1200 canvas with one matrix: source origin (384,578) → floor pivot (800,1100), scale 2.5; actor display scale 0.9 for all five. No frame-specific trim, recenter or width/height distortion. Bat/Ember retain their floating anatomy/offsets. Checks and limits: docs/STAGE1_ANIMATION_2_7_0.md.
+
+### Hand and Skill consistency — 2.9.0
+
+Skill uses the importer's per-frame body-scale correction at the same floor pivot, without changing durations, frame order, idle return or atlas bytes. Hand hover has a 140ms dwell and 180ms presentation transition; keyboard focus is immediate. Destroy/cancel hand timers on replacement, dialogs and hidden pages. Motion never changes draw limits, gameplay or the run clock.

@@ -19,7 +19,7 @@
   function cancel(){if(raf!==null)cancelFrame(raf);raf=null;lastTime=null;}
   function paint(index){
    if(dead||!image)return;const clip=actor.animations[current],rect=clip.frames[index];
-   const pivot=clip.pivots?.[index]||actor.sourcePivot||D.sourcePivot,scale=actor.drawScale??D.drawScale;
+   const pivot=clip.pivots?.[index]||actor.sourcePivot||D.sourcePivot,scale=(actor.drawScale??D.drawScale)*(clip.scales?.[index]??1);
    ctx.clearRect(0,0,D.canvas[0],D.canvas[1]);
    ctx.drawImage(image,...rect,D.floorPivot[0]-pivot[0]*scale,D.floorPivot[1]-pivot[1]*scale,rect[2]*scale,rect[3]*scale);
    frame=index;ready=true;host.dataset.animationReady='true';

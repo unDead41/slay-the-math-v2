@@ -2,6 +2,26 @@ const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
 const files=['config.js','math.js','map-rng.js','map.js','artifact-data.js','rich-text-data.js','rich-text.js','artifacts.js','question-data.js','education.js','engine.js','music-data.js','audio.js','visuals.js','animation-data.js','animation.js','artifact-ui.js','app.js'];
+test('DOM: every Alyssa pose uses the approved right-facing art even without Canvas',{skip:!JSDOM},()=>{
+ for(const [key,pose] of [[null,'idle'],['strike','attack'],['guard','defend'],['draw','skill'],['hit','damaged']]){
+  const r=fixtureRun(7);E.startBattle(r,'wisp');
+  const pool=[...r.battle.hand,...r.battle.draw];r.battle.hand=[];
+  for(const name of ['strike','guard','draw','ember'])r.battle.hand.push(pool.splice(pool.findIndex(c=>c.key===name),1)[0]);
+  r.battle.draw=pool;r.battle.enemyBlock=0;
+  const {dom,w,click}=boot(r);
+  try{
+   click('continue');if(key==='hit')click('end-turn');else if(key)click('play',r.battle.hand.find(c=>c.key===key).uid);
+   assert.match(w.document.querySelector('.player .fighter-art').src,new RegExp('/assets/alyssa-right-'+pose+'\\.webp$'));
+  }finally{dom.window.close();}
+ }
+});
+test('DOM: Motion Off keeps the right-facing idle poster when Canvas is unavailable',{skip:!JSDOM},()=>{
+ const r=fixtureRun(7);E.startBattle(r,'wisp');const pool=[...r.battle.hand,...r.battle.draw];
+ const attack=pool.splice(pool.findIndex(c=>c.key==='strike'),1)[0];r.battle.hand=[attack];r.battle.draw=pool;r.battle.enemyBlock=0;
+ const {dom,w,click}=boot(r,false,{settings:{motion:false,sound:false,musicMuted:true}});
+ try{click('continue');click('play',attack.uid);assert.match(w.document.querySelector('.player .fighter-art').src,/\/assets\/alyssa-right-idle\.webp$/);click('end-turn');assert.match(w.document.querySelector('.player .fighter-art').src,/\/assets\/alyssa-right-idle\.webp$/);}
+ finally{dom.window.close();}
+});
 test('DOM: Alyssa reacts to resolved HP loss after automatic artifact Block, rather than a pre-turn estimate',{skip:!JSDOM},()=>{
  const A=require('../dist/artifacts.js'),r=E.newRun(7,'challenge');require('./helpers/education.cjs').claimArtifact(r,r.artifactState.offer.ids[0]);delete r.route;A.acquire(r,A.id('e04'),'fixture:balance');E.startBattle(r,'wisp');r.battle.block=2;r.battle.currentIntent.damage=8;
  const {dom,w,click,state}=boot(r);

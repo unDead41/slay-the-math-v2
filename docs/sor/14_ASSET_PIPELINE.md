@@ -138,3 +138,7 @@ The runtime loader decodes on demand with a bounded three-texture cache. The opt
 ## Supplied Alyssa atlas pack — 2.8.0
 
 The later instruction points to the readable source MODEL.zip. The Alyssa importer losslessly encodes five 3200×2144 sheets, retaining complete 1024px cells, frame order, alpha, variable durations and boot pivots. No trim, mirror, extra poses or new 4K detail is added. All 30 transformed alpha bounds fit the shared canvas. Source archive and static assets remain untouched. Hashes, bounds and black/white pixel comparisons: `docs/animations/alyssa-v2/import-audit.json`. Source documents are retained alongside it. The cache is now bounded to four sheets for independent hero/enemy playback.
+
+### Right-facing fallback derivatives — 2.8.1
+
+Generate five `alyssa-right-*` image posters from supplied frame 0 at the same canvas projection as the live player. This is mechanical Lanczos resampling, with rounded pixel origins differing by less than one source canvas pixel; no redraw or mirroring. All poster alpha bounds, hashes and source rectangles are appended to the original import audit. The previous static files remain preserved, but they are no longer selected by the hero registry or embedded in the current portable image map. Source sheets remain byte-identical.

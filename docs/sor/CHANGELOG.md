@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.8.1 — 21 Oktober 2026
+
+- Correct the older hero image fallback retained by 2.8.0. All five battle pose images now use the approved right-facing motion family, including loading/failure paths and Motion Off.
+- Preserve the original animation sheets, remove legacy hero CSS pose movement and omit retired hero images from the refreshed portable build.
+- Root cause, reproduction and verification: [Alyssa right-only](../ALYSSA_RIGHT_ONLY_2_8_1.md).
+
 ## Game 2.8.0 — 21 Oktober 2026
 
 - Resolve the prior Alyssa attachment blocker using Ijamm's specified existing MODEL.zip source.

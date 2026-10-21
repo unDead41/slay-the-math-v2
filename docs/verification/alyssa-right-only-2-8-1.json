@@ -1,0 +1,93 @@
+{
+  "version": "2.8.1",
+  "date": "2026-10-21",
+  "root_cause": "The previous hero image registry still selected legacy ground-alyssa poses beneath the right-facing canvas. Loading, Canvas unavailability and atlas failure could expose them.",
+  "reproduction": {
+    "test": "DOM: every Alyssa pose uses the approved right-facing art even without Canvas",
+    "before_fix": "Failed: ground-alyssa-standing.webp selected instead of the right-facing source."
+  },
+  "unit": {
+    "tests": 125,
+    "passed": 125,
+    "failed": 0,
+    "skipped": 0,
+    "command": "npm test with DOM_QA_MODULE pointing to installed jsdom"
+  },
+  "syntax": {
+    "command": "npm run check",
+    "passed": true
+  },
+  "source": {
+    "archive": "MODEL.zip",
+    "sha256": "d4a09e0d7f7ef49cba6bcf6a632857b7bbe2e98b7e0abcf3f6b9b8b213e1c0ec",
+    "animation_sheets_unchanged": 5,
+    "frames": 30,
+    "right_facing_posters": 5,
+    "poster_bytes": 1577384
+  },
+  "browser": {
+    "version": "2.8.1",
+    "checks": [
+      "Real canvas pixels advance for Idle, Attack, Defend and Skill. Native card actions produce the exact engine HP, Block, Energy, piles, RNG, logs and save state before animation advances. Every action returns to Idle.",
+      "End Turn selects Damaged for actual HP loss and Defend for a fully blocked hit, while the enemy plays independently. Animation time never replays combat.",
+      "Dialogs pause Alyssa. Motion Off and OS Reduced Motion keep supplied Idle frame 0 static, then resume normally.",
+      "Alyssa animates in both stages and against both bosses; enemy models retain their current Stage 1 and Stage 2 rendering. Refresh resumes the saved battle.",
+      "Alyssa shares the registered floor and undistorted 4:3 presentation canvas at FHD, UWHD, 4K and two phone widths. All 30 source alpha bounds fit the canvas (import audit).",
+      "All five visible image fallbacks use the supplied right-facing source with Canvas disabled and with every hero atlas request deliberately failed. No legacy hero image is requested; Stage 2 damaged fallback is covered.",
+      "The generated offline HTML embeds all five Alyssa sheets and paints her animation with zero HTTP requests."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "floorAligned": true,
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "floorAligned": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "legacyHeroRequests": []
+  },
+  "portable": {
+    "passed": true,
+    "bytes": 115192981,
+    "right_facing_animation_sheets": 5,
+    "right_facing_image_posters": 5,
+    "retired_hero_entries": 0,
+    "http_requests": 0,
+    "committed": false,
+    "rebuild_command": "npm run build"
+  },
+  "limits": [
+    "No Windows-host execution or user-PC performance claim.",
+    "Original artwork is preserved; only current runtime image selection and portable image entries are replaced."
+  ],
+  "visual_review": {
+    "source_frames_reviewed": 30,
+    "right_facing_posters_reviewed": 5,
+    "result": "The supplied right-facing character family is used throughout the source motion and poster review."
+  }
+}

@@ -212,7 +212,8 @@ function battleFeedback(pose,value,enemyPose){
  const theatre=$('.battle-theatre'),player=$('.player .fighter-art'),enemy=$('.enemy .fighter-art'),enemyId=run.battle.enemyId;
  const source=name=>window.DC_ASSETS?.[name]||'assets/'+name;
  function set(img,name,state){if(img?.isConnected){img.src=source(name);img.dataset.pose=state;}}
- set(player,V.hero(pose),pose);
+ const heroPose=motionAllowed()?pose:'standing';
+ set(player,V.hero(heroPose),heroPose);
  heroAnimation?.play(pose);
  if(enemyPose){set(enemy,V.enemy(enemyId,enemyPose),enemyPose);actorAnimation?.play(enemyPose);}
  if(theatre){theatre.dataset.effect=pose;

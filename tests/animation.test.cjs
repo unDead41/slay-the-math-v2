@@ -48,3 +48,26 @@ test('missing action textures recover to idle and a missing idle leaves the orig
  const f=fixture({load:async path=>{if(path.includes('-attack'))throw new Error('missing');return {path};}});await flush();f.player.play('attack');await flush();assert.equal(f.player.snapshot().action,'idle');assert.equal(f.host.dataset.animationReady,'true');f.player.destroy();
  const failed=fixture({load:async()=>{throw new Error('missing');}});await flush();assert.equal(failed.host.dataset.animationReady,undefined);assert.equal(failed.frames.size,0);failed.player.destroy();
 });
+test('variable frame durations keep windup and recovery timing and finish exactly at the source total',async()=>{
+ const actor=structuredClone(D.actors.beetle);actor.animations.attack.durationsMs=[130,150,100,120,150,160];
+ const f=fixture({spec:actor});await flush();f.player.play('attack');await flush();await f.step(0);
+ await f.step(129);assert.equal(f.player.snapshot().frame,0);
+ await f.step(1);assert.equal(f.player.snapshot().frame,1);
+ await f.step(149);assert.equal(f.player.snapshot().frame,1);
+ await f.step(1);assert.equal(f.player.snapshot().frame,2);
+ await f.step(529);assert.equal(f.player.snapshot().frame,5);assert.equal(f.player.snapshot().action,'attack');
+ await f.step(1);assert.equal(f.player.snapshot().action,'idle');f.player.destroy();
+});
+test('actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor',async()=>{
+ const actor=structuredClone(D.actors.beetle);actor.sourcePivot=[512,768];actor.drawScale=1.08;
+ actor.animations.attack.pivots=actor.animations.attack.frames.map((_,i)=>[i===1?555.5:512,768]);
+ const f=fixture({spec:actor});await flush();f.player.play('attack');await flush();
+ assert.deepEqual(f.draws.at(-1).slice(5),[800-512*1.08,1100-768*1.08,768*1.08,768*1.08]);
+ await f.step(0);await f.step(84);assert.equal(f.player.snapshot().frame,1);
+ assert.equal(f.draws.at(-1)[5],800-555.5*1.08);assert.equal(f.draws.at(-1)[6],1100-768*1.08);f.player.destroy();
+});
+test('Alyssa animation is available in both stages while enemy animation stays Stage 1 only',()=>{
+ assert.equal(S.supports(0,'mc_01'),true);assert.equal(S.supports(1,'mc_01'),true);
+ assert.equal(S.supports(2,'mc_01'),false);assert.equal(S.supports(1,'beetle'),false);
+ assert.equal(S.spec(0,'mc_01').facing,'right');
+});

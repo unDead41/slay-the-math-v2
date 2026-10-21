@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import io
 import json
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 MAPPING = {"wisp": "ember_mirror", "beetle": "prism_guard", "bat": "rune_bat",
@@ -82,6 +83,11 @@ def main():
             runtime["actors"][game_id] = out
             audit["actors"].append(actor_audit)
     target = ROOT / "dist/animation-data.js"
+    if target.exists():
+        previous = json.loads(subprocess.check_output(["node", "-e",
+            "process.stdout.write(JSON.stringify(require(process.argv[1])))", str(target)], text=True))
+        if "hero" in previous:
+            runtime["hero"] = previous["hero"]
     target.write_text("(function(root){'use strict';\n const data=" + json.dumps(runtime, separators=(",", ":")) +
         ";\n if(typeof module!=='undefined')module.exports=data;else root.DCAnimationData=data;\n})(typeof window!=='undefined'?window:globalThis);\n")
     (source / "import-audit.json").write_text(json.dumps(audit, indent=2) + "\n")

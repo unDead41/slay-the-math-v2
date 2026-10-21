@@ -1,0 +1,1 @@
+Open PREVIEW.html. Use frames_4k for individual 4096px transparent frames; spritesheets_4k for full-resolution atlases; runtime_sheets for lighter game textures. Read SOR_ANIMATION.md and animation_manifest.json before importing.

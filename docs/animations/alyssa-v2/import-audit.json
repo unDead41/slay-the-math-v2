@@ -1,0 +1,644 @@
+{
+  "source": "MODEL.zip",
+  "source_sha256": "d4a09e0d7f7ef49cba6bcf6a632857b7bbe2e98b7e0abcf3f6b9b8b213e1c0ec",
+  "operation": "Lossless WebP encoding of the supplied 1024px runtime cells. No trimming, mirroring or new poses.",
+  "resolution_note": "4096px source exports are upscaled; supplied 1024px runtime sheets are used unchanged.",
+  "canvas": [
+    1600,
+    1200
+  ],
+  "floor_pivot": [
+    800,
+    1100
+  ],
+  "draw_scale": 1.08,
+  "figure_scale": 1.7,
+  "animations": [
+    {
+      "action": "idle",
+      "source": "runtime_sheets/alyssa_idle_right_1024.png",
+      "source_sha256": "9348cab5505ec69fd128f4330aef9ab59eeb2b7d05588179b9f69060417f183b",
+      "runtime": "motion-alyssa-idle.webp",
+      "runtime_sha256": "fe5b106ad280f6f6d4ef879791c19cb06cb9277722d14f4fac73ddfdeaa72431",
+      "runtime_bytes": 1793266,
+      "frames": [
+        {
+          "frame": 0,
+          "alpha_bounds": [
+            235,
+            267,
+            830,
+            801
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            500.84,
+            558.92,
+            1143.44,
+            1135.64
+          ]
+        },
+        {
+          "frame": 1,
+          "alpha_bounds": [
+            218,
+            266,
+            828,
+            823
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            482.47999999999996,
+            557.8399999999999,
+            1141.28,
+            1159.4
+          ]
+        },
+        {
+          "frame": 2,
+          "alpha_bounds": [
+            198,
+            267,
+            766,
+            823
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            460.88,
+            558.92,
+            1074.32,
+            1159.4
+          ]
+        },
+        {
+          "frame": 3,
+          "alpha_bounds": [
+            231,
+            269,
+            817,
+            802
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            496.52,
+            561.0799999999999,
+            1129.4,
+            1136.72
+          ]
+        },
+        {
+          "frame": 4,
+          "alpha_bounds": [
+            210,
+            265,
+            805,
+            773
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            473.84,
+            556.76,
+            1116.44,
+            1105.4
+          ]
+        },
+        {
+          "frame": 5,
+          "alpha_bounds": [
+            200,
+            267,
+            764,
+            802
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            463.03999999999996,
+            558.92,
+            1072.16,
+            1136.72
+          ]
+        }
+      ],
+      "visible_pixels_and_alpha_preserved": true
+    },
+    {
+      "action": "attack",
+      "source": "runtime_sheets/alyssa_attack_right_1024.png",
+      "source_sha256": "1fe2955ff535cbcae9116f261afcc18ed0e2b82f5bdb9044ab59b9448da7d988",
+      "runtime": "motion-alyssa-attack.webp",
+      "runtime_sha256": "247f38a4189f37676a9a0283c702be9d781879e8359242dcb9f658f61c44b132",
+      "runtime_bytes": 1741290,
+      "frames": [
+        {
+          "frame": 0,
+          "alpha_bounds": [
+            222,
+            236,
+            850,
+            855
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            486.79999999999995,
+            525.4399999999999,
+            1165.04,
+            1193.96
+          ]
+        },
+        {
+          "frame": 1,
+          "alpha_bounds": [
+            188,
+            144,
+            772,
+            850
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            450.08,
+            426.0799999999999,
+            1080.8,
+            1188.56
+          ]
+        },
+        {
+          "frame": 2,
+          "alpha_bounds": [
+            130,
+            274,
+            849,
+            860
+          ],
+          "source_pivot": [
+            555.5,
+            768.0
+          ],
+          "canvas_bounds": [
+            340.46,
+            566.48,
+            1116.98,
+            1199.3600000000001
+          ]
+        },
+        {
+          "frame": 3,
+          "alpha_bounds": [
+            130,
+            315,
+            875,
+            860
+          ],
+          "source_pivot": [
+            541.75,
+            768.0
+          ],
+          "canvas_bounds": [
+            355.30999999999995,
+            610.76,
+            1159.91,
+            1199.3600000000001
+          ]
+        },
+        {
+          "frame": 4,
+          "alpha_bounds": [
+            220,
+            276,
+            894,
+            847
+          ],
+          "source_pivot": [
+            492.5,
+            768.0
+          ],
+          "canvas_bounds": [
+            505.7,
+            568.64,
+            1233.62,
+            1185.32
+          ]
+        },
+        {
+          "frame": 5,
+          "alpha_bounds": [
+            227,
+            244,
+            859,
+            839
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            492.2,
+            534.0799999999999,
+            1174.76,
+            1176.68
+          ]
+        }
+      ],
+      "visible_pixels_and_alpha_preserved": true
+    },
+    {
+      "action": "defend",
+      "source": "runtime_sheets/alyssa_defend_right_1024.png",
+      "source_sha256": "9116a94b5f6de05b37b01858a1782ff19ce1e8a5ff2963100184d0ca97ded2a1",
+      "runtime": "motion-alyssa-defend.webp",
+      "runtime_sha256": "df873a234f2ba2a926496cc80956c8e5ae2d200d822946de9cf178a7a59f7e7c",
+      "runtime_bytes": 1798112,
+      "frames": [
+        {
+          "frame": 0,
+          "alpha_bounds": [
+            278,
+            294,
+            821,
+            802
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            547.28,
+            588.0799999999999,
+            1133.72,
+            1136.72
+          ]
+        },
+        {
+          "frame": 1,
+          "alpha_bounds": [
+            224,
+            273,
+            781,
+            829
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            488.96,
+            565.4,
+            1090.52,
+            1165.88
+          ]
+        },
+        {
+          "frame": 2,
+          "alpha_bounds": [
+            215,
+            276,
+            744,
+            807
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            479.23999999999995,
+            568.64,
+            1050.56,
+            1142.12
+          ]
+        },
+        {
+          "frame": 3,
+          "alpha_bounds": [
+            228,
+            263,
+            779,
+            812
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            493.28,
+            554.5999999999999,
+            1088.3600000000001,
+            1147.52
+          ]
+        },
+        {
+          "frame": 4,
+          "alpha_bounds": [
+            233,
+            258,
+            823,
+            813
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            498.68,
+            549.1999999999999,
+            1135.88,
+            1148.6
+          ]
+        },
+        {
+          "frame": 5,
+          "alpha_bounds": [
+            216,
+            259,
+            761,
+            812
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            480.32,
+            550.28,
+            1068.92,
+            1147.52
+          ]
+        }
+      ],
+      "visible_pixels_and_alpha_preserved": true
+    },
+    {
+      "action": "skill",
+      "source": "runtime_sheets/alyssa_skill_right_1024.png",
+      "source_sha256": "6c129478d4dc181fea22bebd473a143e60819f7fd18df4fff314ca72501b6018",
+      "runtime": "motion-alyssa-skill.webp",
+      "runtime_sha256": "2f08c79add104102424a6264c83b33c626cc9049f3f1cb587327cb7299897af6",
+      "runtime_bytes": 1832828,
+      "frames": [
+        {
+          "frame": 0,
+          "alpha_bounds": [
+            285,
+            304,
+            828,
+            815
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            554.8399999999999,
+            598.88,
+            1141.28,
+            1150.76
+          ]
+        },
+        {
+          "frame": 1,
+          "alpha_bounds": [
+            221,
+            259,
+            790,
+            813
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            485.71999999999997,
+            550.28,
+            1100.24,
+            1148.6
+          ]
+        },
+        {
+          "frame": 2,
+          "alpha_bounds": [
+            227,
+            260,
+            793,
+            832
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            492.2,
+            551.36,
+            1103.48,
+            1169.12
+          ]
+        },
+        {
+          "frame": 3,
+          "alpha_bounds": [
+            207,
+            269,
+            894,
+            802
+          ],
+          "source_pivot": [
+            445.5,
+            768.0
+          ],
+          "canvas_bounds": [
+            542.42,
+            561.0799999999999,
+            1284.38,
+            1136.72
+          ]
+        },
+        {
+          "frame": 4,
+          "alpha_bounds": [
+            265,
+            307,
+            797,
+            816
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            533.24,
+            602.1199999999999,
+            1107.8,
+            1151.84
+          ]
+        },
+        {
+          "frame": 5,
+          "alpha_bounds": [
+            240,
+            286,
+            767,
+            814
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            506.24,
+            579.4399999999999,
+            1075.4,
+            1149.68
+          ]
+        }
+      ],
+      "visible_pixels_and_alpha_preserved": true
+    },
+    {
+      "action": "damaged",
+      "source": "runtime_sheets/alyssa_damaged_right_1024.png",
+      "source_sha256": "9b5b3428098b3638d8f7424411a75f756576cc60576b66a76cdf2d1195e1694f",
+      "runtime": "motion-alyssa-damaged.webp",
+      "runtime_sha256": "bb35ef40f1b1ca7d11d3c8f7ecbd4214f8b7d95b1a7bd6d4ed0f38da60a3a79c",
+      "runtime_bytes": 1857664,
+      "frames": [
+        {
+          "frame": 0,
+          "alpha_bounds": [
+            257,
+            270,
+            829,
+            807
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            524.5999999999999,
+            562.16,
+            1142.3600000000001,
+            1142.12
+          ]
+        },
+        {
+          "frame": 1,
+          "alpha_bounds": [
+            225,
+            275,
+            845,
+            812
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            490.03999999999996,
+            567.56,
+            1159.64,
+            1147.52
+          ]
+        },
+        {
+          "frame": 2,
+          "alpha_bounds": [
+            174,
+            288,
+            727,
+            785
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            434.96,
+            581.5999999999999,
+            1032.2,
+            1118.36
+          ]
+        },
+        {
+          "frame": 3,
+          "alpha_bounds": [
+            276,
+            290,
+            845,
+            777
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            545.12,
+            583.76,
+            1159.64,
+            1109.72
+          ]
+        },
+        {
+          "frame": 4,
+          "alpha_bounds": [
+            242,
+            297,
+            833,
+            772
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            508.4,
+            591.3199999999999,
+            1146.68,
+            1104.32
+          ]
+        },
+        {
+          "frame": 5,
+          "alpha_bounds": [
+            255,
+            272,
+            813,
+            797
+          ],
+          "source_pivot": [
+            512.0,
+            768.0
+          ],
+          "canvas_bounds": [
+            522.44,
+            564.3199999999999,
+            1125.08,
+            1131.32
+          ]
+        }
+      ],
+      "visible_pixels_and_alpha_preserved": true
+    }
+  ],
+  "usage_source": "Artwork supplied by Ijamm for Slay the Math; no separate license supplied."
+}

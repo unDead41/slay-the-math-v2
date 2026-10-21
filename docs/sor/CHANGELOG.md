@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.8.0 — 21 Oktober 2026
+
+- Resolve the prior Alyssa attachment blocker using Ijamm's specified existing MODEL.zip source.
+- Import five right-facing clips / 30 frames with original durations and boot pivots, in both stages.
+- Preserve Stage 1 enemy playback and gameplay. Details and actual validation: [Alyssa motion](../ALYSSA_ANIMATION_2_8_0.md).
+
 ## 2.0.1 — 18 Oktober 2026
 
 - Catat implementation game 1.3.0: 10 komposisi sebenar dengan 20 fail OGG/MP3, skor, hash dan sumber sintesis.

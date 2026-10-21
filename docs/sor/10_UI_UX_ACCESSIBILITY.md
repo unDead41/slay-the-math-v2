@@ -122,3 +122,7 @@ The latest user instruction makes map icons native direct-entry buttons rather t
 ## Main menu fit 2.5.1 — 21 October 2026
 
 **UX-10 (DISAHKAN):** Ijamm requests a smaller, unclipped Home model on UWHD and menu sizing that follows the display. Full foreground artwork uses contain framing with padding; a muted cover layer fills the edges. One viewport-derived menu unit scales the title, native menu buttons, footer and existing Settings/mode dialogs. At narrow or short heights the page/dialog scrolls; 44px controls remain reachable. The five menu actions, keyboard/focus, saved run and game rules retain their existing owners. Sources and limits: docs/MENU_FIT_2_5_1.md and tests/menu-fit-browser.cjs.
+
+## Special situations 2.5.2 — 21 October 2026 (Malaysia)
+
+The four newly supplied scene mockups govern Shop, Rest, chest reward/victory and defeat art. Reuse the canonical ornate panels, buttons, card renderer, type and navy/gold/cyan tokens. Keep all prices, HP, card effects and statistics live. dungeon.css owns the responsive situation variant: contained art and right-side panels on desktop; art banner then naturally scrolling controls below 1000px. Narrow card rows alone scroll horizontally. Preserve native focus/dialogs, 44px action targets and all current scene actions. Mockup-only labels do not authorize extra mechanics. See docs/SITUATION_ART_2_5_2.md.

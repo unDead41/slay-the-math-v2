@@ -1,0 +1,106 @@
+{
+  "version": "2.5.2",
+  "date": "2026-10-21",
+  "method": "Built-in imagegen precise-object-edit: remove baked UI, retain supplied composition; WebP format conversion without upscaling.",
+  "usageRights": "User-supplied reference; rights review before redistribution.",
+  "assets": [
+    {
+      "assetId": "situation-shop",
+      "referenceSource": "Mysterious merchant's dungeon card shop-1.png",
+      "referenceSHA256": "15b58e9c72612807ea827b28b68e667712cc9de55e2da1e71fd47d8907f9792a",
+      "referenceSize": [
+        1672,
+        941
+      ],
+      "cleanPlateSHA256": "9a1e8c3e356ba7f9c30419f2f410ee4d08fe034ebf1121830766984a6bfd54a0",
+      "cleanPlateSize": [
+        1672,
+        941
+      ],
+      "filePath": "assets/situation-shop.webp",
+      "runtimeSHA256": "fe9597f7af3cd9eb739adc1f949791af27409a966518c789b7a691838be7d5c4",
+      "runtimeSize": [
+        1672,
+        941
+      ],
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target, not a style inspiration. Asset type: clean background plate for the existing Slay the Math game. Remove ALL baked game UI, including every panel, frame, card, icon, button, label, letter, number and HUD bar. Replace only those UI-covered regions with a seamless continuation of the existing dark blue stone dungeon wall and floor, quiet and low contrast on the right for live HTML controls. Preserve Alyssa standing on the left and the hooded elderly merchant behind the counter in the left-centre, exactly their existing faces, poses, armor and props. Preserve the exact existing painted fantasy anime art style, composition, camera, scene lighting, crimson hair, gold details and all non-UI scene pixels as closely as possible. Do not move or enlarge the character; keep the full body and feet inside the canvas with the same margin. Preserve the wide 1672:941 landscape aspect ratio. No UI, no lettering, no gold UI frames, no floating game cards, no new characters. Opaque background.",
+      "scenes": [
+        "shop"
+      ]
+    },
+    {
+      "assetId": "situation-reward",
+      "referenceSource": "Alyssa opens a glowing victory chest(1).png",
+      "referenceSHA256": "c533f3ef6e1e64f3bc26ff825cd36434321da120d14f2b4517a7911a7a172899",
+      "referenceSize": [
+        1672,
+        941
+      ],
+      "cleanPlateSHA256": "7610415f515f0154a031cfd5f4375aa045e21da0fbdf9ae003590501531aa29b",
+      "cleanPlateSize": [
+        1671,
+        941
+      ],
+      "filePath": "assets/situation-reward.webp",
+      "runtimeSHA256": "d2c4b8b1f96c707d27122697bee8064d1e67da9f2c86576d96e14fa452345c2c",
+      "runtimeSize": [
+        1671,
+        941
+      ],
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target, not a style inspiration. Asset type: clean background plate for the existing Slay the Math game. Remove ALL baked game UI, including every panel, frame, card, icon, button, label, letter, number and HUD bar. Replace only those UI-covered regions with a seamless continuation of the existing dark blue stone dungeon wall and floor, quiet and low contrast on the right for live HTML controls. Preserve Alyssa kneeling on the left opening the glowing treasure chest, exactly her existing face, pose, armor, shield, sword and chest. Preserve the exact existing painted fantasy anime art style, composition, camera, scene lighting, crimson hair, gold details and all non-UI scene pixels as closely as possible. Do not move or enlarge the character; keep the full body and feet inside the canvas with the same margin. Preserve the wide 1672:941 landscape aspect ratio. No UI, no lettering, no gold UI frames, no floating game cards, no new characters. Opaque background.",
+      "scenes": [
+        "reward",
+        "stageclear",
+        "victory"
+      ]
+    },
+    {
+      "assetId": "situation-defeat",
+      "referenceSource": "Alyssa\u2019s Quiet Defeat(1).png",
+      "referenceSHA256": "5b66ee8dbeaeb4f533030826756d3b0d91dc3188b3d053b0c7f631bffa067c03",
+      "referenceSize": [
+        1672,
+        941
+      ],
+      "cleanPlateSHA256": "04256076a8ca520d3524d0be1dc219b34aa3667604c9a539834f8cb94c6d493f",
+      "cleanPlateSize": [
+        1672,
+        941
+      ],
+      "filePath": "assets/situation-defeat.webp",
+      "runtimeSHA256": "30ebb9ee43e735d2ad2a70a6731441689944f604b0f48f0a0d2a1141e21e7487",
+      "runtimeSize": [
+        1672,
+        941
+      ],
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target, not a style inspiration. Asset type: clean background plate for the existing Slay the Math game. Remove ALL baked game UI, including every panel, frame, card, icon, button, label, letter, number and HUD bar. Replace only those UI-covered regions with a seamless continuation of the existing dark blue stone dungeon wall and floor, quiet and low contrast on the right for live HTML controls. Preserve Alyssa kneeling sadly on the left, her hands resting on the sword, exactly her face, pose, armor, shield and sword. Preserve the exact existing painted fantasy anime art style, composition, camera, scene lighting, crimson hair, gold details and all non-UI scene pixels as closely as possible. Do not move or enlarge the character; keep the full body and feet inside the canvas with the same margin. Preserve the wide 1672:941 landscape aspect ratio. No UI, no lettering, no gold UI frames, no floating game cards, no new characters. Opaque background.",
+      "scenes": [
+        "defeat"
+      ]
+    },
+    {
+      "assetId": "situation-rest",
+      "referenceSource": "Dungeon rest site with explore-2.png",
+      "referenceSHA256": "3d1f6a3dac4d127588f3afcc1195265487718d66af59c060e019a3228653d0cd",
+      "referenceSize": [
+        1672,
+        941
+      ],
+      "cleanPlateSHA256": "494141e8de2580abcbf6ffa6939738bc7675d8c07deac05cea39f2983ddc733b",
+      "cleanPlateSize": [
+        1672,
+        941
+      ],
+      "filePath": "assets/situation-rest.webp",
+      "runtimeSHA256": "a816616910bf53018564c3029853692780e5a54f77e1f47cb49c76c99193474f",
+      "runtimeSize": [
+        1672,
+        941
+      ],
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target, not a style inspiration. Asset type: clean background plate for the existing Slay the Math game. Remove ALL baked game UI, including every panel, frame, card, icon, button, label, letter, number and HUD bar. Replace only those UI-covered regions with a seamless continuation of the existing dark blue stone dungeon wall and floor, quiet and low contrast on the right for live HTML controls. Preserve Alyssa sitting on the left beside the campfire, exactly her existing face, pose, armor, shield, sword, camping gear and campfire. Preserve the exact existing painted fantasy anime art style, composition, camera, scene lighting, crimson hair, gold details and all non-UI scene pixels as closely as possible. Do not move or enlarge the character; keep the full body and feet inside the canvas with the same margin. Preserve the wide 1672:941 landscape aspect ratio. No UI, no lettering, no gold UI frames, no floating game cards, no new characters. Opaque background.",
+      "scenes": [
+        "camp"
+      ]
+    }
+  ]
+}

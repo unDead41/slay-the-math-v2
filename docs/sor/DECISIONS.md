@@ -187,3 +187,10 @@ Nama stage English semasa ialah Rune Keep / Draw Tower; Twin Seal Guardian / Dec
 | DEC-20261019-30 | DISAHKAN | User reports no question after Claim & Choose Your Path and explicitly requests implementation using the existing 120 questions. This replaces the earlier review-only timing. |
 | DEC-20261019-31 | DITERUSKAN | Shared artifact Claim now opens a saved trial: random unused item from the exact 40/40/40 bank, native four-choice answers, Hint, retry, correct explanation and final once-only artifact/progression commit. Exposure persists across New Runs/import/refresh; no auto-reset or HP penalty. Owners and verification: SOR 02/13/19, docs/EDUCATION_UPDATE_2_5_0.md. |
 | DEC-20261019-32 | DITERUSKAN | The longer pending Elite flow exposes a prior snapshot gap after adding its card reward. Represent that new owned card in the ended battle discard snapshot until room completion, without firing effects. This preserves valid save/restore while the artifact question waits. Regression covers card reward, trial refresh and final claim. |
+
+## Main menu fit 2.5.1 — 21 October 2026 (Malaysia)
+
+| ID | Status | Decision and evidence |
+|---|---|---|
+| DEC-20261021-01 | DISAHKAN | User reports Home model clipping on UWHD, requests smaller model framing, display-scaled menu and 5s artwork transition. Six supplied screenshots could not be opened in the execution environment; the running menu was independently inspected at a 3413×1740 CSS viewport. |
+| DEC-20261021-02 | DITERUSKAN | Reuse the five existing plates with a contained, padded foreground and dim ambience fill. Home and its existing non-wide dialogs share a viewport unit; scene controls remain native and stationary. Timing is 5000ms interval and 5000ms fade, with fixed image sources, decode/generation guards and existing motion/pause policy. Gameplay, saved runs, assets and combat styling are preserved. Verification and limits: docs/MENU_FIT_2_5_1.md. |

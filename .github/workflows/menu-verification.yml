@@ -1,0 +1,74 @@
+name: Menu and game verification
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+      QA_DISABLE_GPU: "1"
+      QA_SCREENSHOTS: qa-menu
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: "24"
+      - name: Install isolated QA dependencies
+        run: |
+          npm install --no-save --no-package-lock --prefix "$RUNNER_TEMP/stm-menu-qa" playwright jsdom@26.1.0 @google/design.md
+          node "$RUNNER_TEMP/stm-menu-qa/node_modules/playwright/cli.js" install --with-deps chromium
+          echo "BROWSER_QA_MODULE=$RUNNER_TEMP/stm-menu-qa/node_modules/playwright" >> "$GITHUB_ENV"
+          echo "DOM_QA_MODULE=$RUNNER_TEMP/stm-menu-qa/node_modules/jsdom" >> "$GITHUB_ENV"
+      - name: Check game scripts and build optional portable output
+        run: |
+          npm run check
+          npm run build
+      - name: Engine, learning and DOM regression tests
+        run: npm test
+      - name: Map catalogue and invariants
+        run: npm run test:maps
+      - name: Design context lint
+        run: node "$RUNNER_TEMP/stm-menu-qa/node_modules/@google/design.md/dist/index.js" lint DESIGN.md
+      - name: Audit the actual runtime source in strict mode
+        run: |
+          python3 - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          audit_root = Path(os.environ["RUNNER_TEMP"]) / "stm-menu-audit"
+          runtime = audit_root / "runtime"
+          runtime.mkdir(parents=True, exist_ok=True)
+          for source in Path("dist").iterdir():
+              if source.is_file() and source.suffix in {".js", ".css", ".html"}:
+                  shutil.copy2(source, runtime / source.name)
+          for name in ["DESIGN.md", "UX-CONTRACT.md", "PRODUCT.md"]:
+              shutil.copy2(name, audit_root / name)
+          (audit_root / "premium-ui.json").write_text(json.dumps({
+              "profile": "product-admin", "sourceRoots": ["runtime"],
+              "canonicalMap": "UX-CONTRACT.md",
+              "requiredCapabilities": ["Form", "Scrollbar", "Toast"]
+          }))
+          Path("qa-menu").mkdir(exist_ok=True)
+          PY
+          python3 .github/scripts/premium-ui-audit.py "$RUNNER_TEMP/stm-menu-audit" --mode strict --output qa-menu/premium-audit.json
+      - name: Responsive menu and scene lifecycle
+        env:
+          QA_PREVIEW_LOG: "1"
+        run: npm run test:menu-browser
+      - name: Existing menu and arena regression
+        run: npm run test:dungeon-browser
+      - name: Existing education and artifact flow regression
+        run: npm run test:education-browser
+      - name: Upload geometry report and rendered previews
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: menu-fit-2-5-1
+          path: qa-menu/
+          retention-days: 3

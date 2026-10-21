@@ -118,3 +118,7 @@ Dedicated Ember Mirror Attack/Defend/Skill/Damaged pose swaps and model-based en
 ## Dungeon Edition 2.3 — art fade and grounding
 
 The menu cycles five decoded local backgrounds with a 1.4s fade, 14s scene interval. Motion Off/OS reduced motion, hidden tab, open dialog and interaction with the main controls pause autoplay. Manual selection remains available. One cancelable menu timer and generation counter reject stale loads after navigation. No animation mutates game state. Five supplied Stage 1 enemy pose sets now follow resolved outcomes. Shared foot pivots stop pose swaps moving actors off the floor; grounded idle has no vertical bob. Existing soundtrack and sound settings remain.
+
+## Main menu transition 2.5.1 — 21 October 2026
+
+**MOT-06 (DISAHKAN):** The latest user request sets Home's artwork transition to 5s, superseding the previous 14s interval and 1.4s fade. DCVisuals.timing owns a 5000ms automatic interval and 5000ms crossfade. Five stable foreground/ambience pairs retain their source throughout a transition. Decoding and the generation guard precede active selection; an older pending decode cannot replace a newer choice. No game mutation waits for animation. Motion Off/OS reduction, hidden tabs, dialogs and main-menu focus/hover still pause automatic changes; manual choice remains available.

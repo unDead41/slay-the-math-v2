@@ -27,5 +27,5 @@
       {id:'archive',label:'Rune Archive',art:'menu-archive.webp'},
       {id:'map',label:'A Path Ahead',art:'menu-map.webp'},
       {id:'door',label:'The Dungeon Door',art:'menu-door.webp'}],
-    portrait:'alyssa-front.webp', timing:{pose:760,guard:330,menu:14000}, enemyPoseSheets:enemies};
+    portrait:'alyssa-front.webp', timing:{pose:760,guard:330,menu:5000,menuFade:5000}, enemyPoseSheets:enemies};
 })(window);

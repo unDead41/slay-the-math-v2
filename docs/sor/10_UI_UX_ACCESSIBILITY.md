@@ -118,3 +118,7 @@ The additional Rest correction uses the original blue campfire seal on the heali
 ## Map activation 2.4.2
 
 The latest user instruction makes map icons native direct-entry buttons rather than preview toggles. Enabled icons expose category, level and Enter Room state without enemy identity. There is no aria-pressed state or separate confirmation button. Focus alone is safe; click, Enter and Space enter the exact legal node. Successful navigation moves focus to the main scene. Disabled nodes cannot enter. Existing atlas scrolling and global scrollbar ownership remain.
+
+## Main menu fit 2.5.1 — 21 October 2026
+
+**UX-10 (DISAHKAN):** Ijamm requests a smaller, unclipped Home model on UWHD and menu sizing that follows the display. Full foreground artwork uses contain framing with padding; a muted cover layer fills the edges. One viewport-derived menu unit scales the title, native menu buttons, footer and existing Settings/mode dialogs. At narrow or short heights the page/dialog scrolls; 44px controls remain reachable. The five menu actions, keyboard/focus, saved run and game rules retain their existing owners. Sources and limits: docs/MENU_FIT_2_5_1.md and tests/menu-fit-browser.cjs.

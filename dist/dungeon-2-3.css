@@ -1,23 +1,28 @@
 /* Dungeon 2.3: five clean illustrated menu scenes and one arena coordinate space.
    Every combat sprite uses the same 1600×1200 canvas / (800,1100) foot pivot. */
+/* Menu 2.5.1: fit the supplied artwork, rather than crop Alyssa to fill UWHD. */
 .home-active #header{display:none}
-.illustrated-home{display:flex;align-items:center;min-height:max(680px,100dvh);background:var(--bg)}
-.illustrated-home .home-art{position:absolute;inset:0;z-index:-2;overflow:hidden}
-.illustrated-home .menu-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:0;transition:opacity 1.4s ease;pointer-events:none}
-.illustrated-home .menu-backdrop.active{opacity:1}
-.illustrated-home .home-vignette{z-index:-1;background:linear-gradient(90deg,#020b16ba,transparent 58%),linear-gradient(0deg,#020b16d9,transparent 18%)}
-.illustrated-home .home-title{flex:none;width:49%;max-width:940px;padding:65px 2vw 95px 5vw}
-.illustrated-home .title-sigil>.icon{width:66px;height:66px;stroke-width:1.1}
-.illustrated-home .home-title h1{font-size:clamp(48px,5.35vw,100px);margin:8px 0;color:#ffe7a0;letter-spacing:-.045em;text-shadow:0 2px 0 #a85f24,0 0 18px #d78b3444,0 5px 18px #000}
-.illustrated-home .home-subtitle{font-size:clamp(11px,1.08vw,20px);letter-spacing:.35em}
-.illustrated-home .ornament{margin:22px auto 29px;width:90%;font-size:13px}
+body.home-active{--menu-unit:clamp(.8px,min(.052083333vw,.092592593dvh),2px)}
+.illustrated-home{display:flex;flex-direction:column;align-items:stretch;justify-content:center;min-height:100dvh;overflow:visible;padding:0;background:var(--bg)}
+.illustrated-home .home-art{position:absolute;inset:0 0 auto;height:100dvh;z-index:-2;overflow:hidden;pointer-events:none}
+.illustrated-home .menu-backdrop,.illustrated-home .menu-ambience{position:absolute;inset:0;width:100%;height:100%;max-width:none;opacity:0;transition:opacity var(--menu-fade) ease;pointer-events:none}
+.illustrated-home .menu-ambience{object-fit:cover;object-position:center;filter:blur(12px) brightness(.42);transform:scale(1.04)}
+.illustrated-home .menu-backdrop{box-sizing:border-box;object-fit:contain;object-position:center;padding:clamp(12px,4dvh,90px) clamp(12px,3vw,180px);z-index:1}
+.illustrated-home .menu-backdrop.active,.illustrated-home .menu-ambience.active{opacity:1}
+.illustrated-home .home-vignette{z-index:-1;background:linear-gradient(90deg,#020b16c9,transparent 62%),linear-gradient(0deg,#020b16e6,transparent 24%);pointer-events:none}
+.illustrated-home .home-title{flex:none;position:relative;width:min(49%,calc(940 * var(--menu-unit)));max-width:none;margin:auto auto auto clamp(16px,4vw,200px);padding:calc(30 * var(--menu-unit)) calc(24 * var(--menu-unit));text-align:center}
+.illustrated-home .title-sigil{justify-content:center}
+.illustrated-home .title-sigil>.icon{width:calc(66 * var(--menu-unit));height:calc(66 * var(--menu-unit));stroke-width:1.1}
+.illustrated-home .home-title h1{font-size:clamp(32px,min(5.1vw,calc(92 * var(--menu-unit))),calc(184 * var(--menu-unit)));line-height:1.12;white-space:nowrap;max-width:none;margin:calc(8 * var(--menu-unit)) 0;color:var(--gold-soft);letter-spacing:-.045em;text-align:center;text-shadow:0 2px 0 #a85f24,0 0 18px #d78b3444,0 5px 18px #000}
+.illustrated-home .home-subtitle{font-size:clamp(10px,calc(17 * var(--menu-unit)),34px);letter-spacing:.32em;text-align:center}
+.illustrated-home .ornament{justify-content:center;margin:calc(22 * var(--menu-unit)) auto calc(29 * var(--menu-unit));width:90%;font-size:calc(13 * var(--menu-unit))}
 .illustrated-home .ornament::before,.illustrated-home .ornament::after{width:42%}
-.illustrated-home .main-menu-actions{width:88%;max-width:480px;gap:15px;align-items:center}
-.illustrated-home .main-menu-actions>.btn{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;width:90%;min-height:62px;padding:11px 24px;border:0;border-radius:0;background:linear-gradient(120deg,#9d6b2a,#ffe5a6 35%,#c18b3b 60%,#e9c779);color:#fff3dc;font:26px/1.2 var(--font-display);letter-spacing:0;clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);box-shadow:none;transition:filter .18s,background .18s}
+.illustrated-home .main-menu-actions{width:88%;max-width:calc(480 * var(--menu-unit));margin:0 auto;gap:calc(15 * var(--menu-unit));align-items:center}
+.illustrated-home .main-menu-actions>.btn{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;width:90%;min-height:max(44px,calc(62 * var(--menu-unit)));padding:calc(11 * var(--menu-unit)) calc(24 * var(--menu-unit));border:0;border-radius:0;background:linear-gradient(120deg,#9d6b2a,#ffe5a6 35%,#c18b3b 60%,#e9c779);color:#fff3dc;font:calc(26 * var(--menu-unit))/1.2 var(--font-display);letter-spacing:0;clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);box-shadow:none;transition:filter .18s,background .18s}
 .illustrated-home .main-menu-actions>.btn::before{content:'';position:absolute;inset:2px;z-index:-1;clip-path:inherit;background:linear-gradient(150deg,#18212a,#090e16 80%);box-shadow:inset 0 0 0 3px #ac854c55}
-.illustrated-home .main-menu-actions>.btn::after{content:'◆';position:absolute;left:5%;color:#e5ba66;font-size:10px;text-shadow:0 0 6px #fbbf62}
-.illustrated-home .main-menu-actions>.menu-continue{width:100%;min-height:77px;font-size:35px}
-.illustrated-home .main-menu-actions>.menu-small{min-height:53px;width:80%;font-size:22px}
+.illustrated-home .main-menu-actions>.btn::after{content:'◆';position:absolute;left:5%;color:var(--gold);font-size:calc(10 * var(--menu-unit));text-shadow:0 0 6px #fbbf62}
+.illustrated-home .main-menu-actions>.menu-continue{width:100%;min-height:max(48px,calc(77 * var(--menu-unit)));font-size:calc(35 * var(--menu-unit))}
+.illustrated-home .main-menu-actions>.menu-small{min-height:max(44px,calc(53 * var(--menu-unit)));width:80%;font-size:calc(22 * var(--menu-unit))}
 .illustrated-home .main-menu-actions>.primary{color:#1b160c;background:linear-gradient(110deg,#e5a338,#fff4bc,#e2a13a);filter:drop-shadow(0 0 9px #eaa62d80)}
 .illustrated-home .main-menu-actions>.primary::before{background:radial-gradient(ellipse at 45% 10%,#fff1bd,#e6b34f);box-shadow:inset 0 0 0 3px #9c692e88}
 .illustrated-home .main-menu-actions>.primary::after{color:#7f471f}
@@ -25,18 +30,66 @@
 .illustrated-home .main-menu-actions>.btn:focus-visible{outline:0;background:var(--ice);filter:drop-shadow(0 0 7px var(--ice));transform:none}
 .illustrated-home .main-menu-actions>.btn:active:not(:disabled){filter:brightness(1.35);transform:translateY(1px)}
 .illustrated-home .main-menu-actions>.btn:disabled{opacity:.42;filter:saturate(.25);cursor:default}
-.illustrated-home .continue-caption{min-height:18px;margin:20px 0 0;font-size:12px;line-height:1.5;color:#ead6b4;text-shadow:0 1px 4px #000}
+.illustrated-home .continue-caption{min-height:calc(18 * var(--menu-unit));margin:calc(20 * var(--menu-unit)) 0 0;font-size:max(11px,calc(12 * var(--menu-unit)));line-height:1.5;color:#ead6b4;text-shadow:0 1px 4px #000}
 .illustrated-home>.home-hero-name{display:none}
-.illustrated-home .dungeon-home-footer{left:4vw;right:4vw;bottom:15px;gap:20px;border-color:#d6aa4b55;padding-top:9px}
-.illustrated-home .dungeon-home-footer .text-btn{font-size:12px;min-height:44px;white-space:nowrap}
-.illustrated-home .dungeon-home-footer>span{font:12px/1.4 var(--font-display);color:#e8d4af;margin:0;min-width:130px;text-shadow:0 1px 3px #000}
-.scene-picker{display:flex;gap:0;margin-left:auto;align-items:center}
-.scene-choice{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:5px;background:transparent;cursor:pointer}
-.scene-dot{width:8px;height:8px;border:1px solid var(--gold);transform:rotate(45deg);background:#06111be0;transition:background .2s,box-shadow .2s}
-.scene-choice[aria-pressed='true'] .scene-dot{background:var(--gold-soft);box-shadow:0 0 10px #ffc76588}
-.scene-choice:hover .scene-dot{background:var(--gold);box-shadow:0 0 10px #ffc76588}
-.scene-choice:focus-visible{outline:2px solid var(--ice);outline-offset:0;background:#0b2339b3}
-.scene-choice:active{background:#cba15c33}
+.illustrated-home .dungeon-home-footer{position:relative;left:auto;right:auto;bottom:auto;flex:none;width:92%;margin:0 auto;min-height:calc(62 * var(--menu-unit));padding:calc(9 * var(--menu-unit)) 0;gap:calc(20 * var(--menu-unit));border-color:#d6aa4b55;flex-wrap:wrap}
+.illustrated-home .dungeon-home-footer .text-btn{font-size:max(12px,calc(12 * var(--menu-unit)));min-height:max(44px,calc(44 * var(--menu-unit)));white-space:nowrap}
+.illustrated-home .dungeon-home-footer .text-btn>.icon{width:calc(22 * var(--menu-unit));height:calc(22 * var(--menu-unit))}
+.illustrated-home .dungeon-home-footer>span{font:max(11px,calc(12 * var(--menu-unit)))/1.4 var(--font-display);color:#e8d4af;margin:0;min-width:calc(130 * var(--menu-unit));text-shadow:0 1px 3px #000}
+.illustrated-home .scene-picker{display:flex;gap:0;margin-left:auto;align-items:center}
+.illustrated-home .scene-choice{display:grid;place-items:center;width:max(44px,calc(44 * var(--menu-unit)));height:max(44px,calc(44 * var(--menu-unit)));padding:0;border:0;border-radius:5px;background:transparent;cursor:pointer}
+.illustrated-home .scene-dot{width:max(8px,calc(8 * var(--menu-unit)));height:max(8px,calc(8 * var(--menu-unit)));border:1px solid var(--gold);transform:rotate(45deg);background:#06111be0;transition:background .2s,box-shadow .2s}
+.illustrated-home .scene-choice[aria-pressed='true'] .scene-dot{background:var(--gold-soft);box-shadow:0 0 10px #ffc76588}
+.illustrated-home .scene-choice:hover .scene-dot{background:var(--gold);box-shadow:0 0 10px #ffc76588}
+.illustrated-home .scene-choice:focus-visible{outline:2px solid var(--ice);outline-offset:0;background:#0b2339b3}
+.illustrated-home .scene-choice:active{background:#cba15c33}
+/* Main-menu dialogs share the viewport scale, native scrolling and focus owner. */
+body.home-active #dialog:not(.wide){width:min(calc(700 * var(--menu-unit)),94vw);max-height:calc(100dvh - 24px);font-size:max(14px,calc(16 * var(--menu-unit)))}
+body.home-active #dialog:not(.wide) #dialog-body{padding:calc(24 * var(--menu-unit)) calc(30 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .dialog-head{gap:calc(12 * var(--menu-unit));padding-bottom:calc(18 * var(--menu-unit));margin-bottom:calc(22 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .dialog-head>div{min-width:0}
+body.home-active #dialog:not(.wide) .dialog-head h2{font-size:calc(36 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .dialog-head .eyebrow{font-size:max(9px,calc(9 * var(--menu-unit)))}
+body.home-active #dialog:not(.wide) .icon-btn{width:max(44px,calc(44 * var(--menu-unit)));height:max(44px,calc(44 * var(--menu-unit)));flex:none}
+body.home-active #dialog:not(.wide) .icon-btn>.icon{width:calc(22 * var(--menu-unit));height:calc(22 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .btn{font-size:max(14px,calc(17 * var(--menu-unit)));min-height:max(44px,calc(48 * var(--menu-unit)));padding:calc(10 * var(--menu-unit)) calc(18 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .save-panel h3{font-size:max(18px,calc(24 * var(--menu-unit)))}
+body.home-active #dialog:not(.wide) .save-panel p,body.home-active #dialog:not(.wide) .setting-row{font-size:inherit}
+body.home-active #dialog:not(.wide) .button-row{gap:calc(12 * var(--menu-unit));flex-wrap:wrap}
+body.home-active #dialog:not(.wide) input[type='checkbox']{width:max(20px,calc(20 * var(--menu-unit)));height:max(20px,calc(20 * var(--menu-unit)))}
+body.home-active #dialog:not(.wide) .choice-panels{gap:calc(20 * var(--menu-unit));margin:calc(25 * var(--menu-unit)) 0}
+body.home-active #dialog:not(.wide) .choice-panel{min-width:0;min-height:calc(220 * var(--menu-unit));padding:calc(25 * var(--menu-unit)) calc(12 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .choice-panel>.icon{width:calc(52 * var(--menu-unit));height:calc(52 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .choice-panel h3{font-size:calc(30 * var(--menu-unit))}
+body.home-active #dialog:not(.wide) .choice-panel p{font-size:max(14px,calc(16 * var(--menu-unit)))}
+body.home-active #dialog:not(.wide) .choice-panel>strong{font-size:max(13px,calc(15 * var(--menu-unit)))}
+@media(max-width:1050px){
+ .illustrated-home .home-title{width:52%;margin-left:1vw;padding-inline:16px}
+ .illustrated-home .main-menu-actions{width:95%}
+}
+@media(max-width:600px){
+ body.home-active{--menu-art-banner:clamp(180px,36dvh,320px)}
+ .illustrated-home .home-art{height:var(--menu-art-banner);bottom:auto}
+ .illustrated-home .menu-backdrop{padding:12px;object-position:center}
+ .illustrated-home .home-vignette{background:linear-gradient(180deg,transparent calc(var(--menu-art-banner) - 80px),var(--bg) var(--menu-art-banner))}
+ .illustrated-home .home-title{width:100%;max-width:none;margin:0 auto;padding:calc(var(--menu-art-banner) + 10px) 16px 24px;text-align:center}
+ .illustrated-home .title-sigil{display:none}
+ .illustrated-home .home-title h1{font-size:clamp(32px,10vw,56px);margin:0 0 8px}
+ .illustrated-home .home-subtitle{font-size:10px;letter-spacing:.24em}
+ .illustrated-home .ornament{margin:16px auto 20px;width:83%}
+ .illustrated-home .main-menu-actions{width:100%;max-width:390px;gap:10px}
+ .illustrated-home .main-menu-actions>.btn{width:94%;min-height:52px;font-size:23px}
+ .illustrated-home .main-menu-actions>.menu-continue{width:100%;min-height:60px;font-size:28px}
+ .illustrated-home .main-menu-actions>.menu-small{width:86%;font-size:21px;min-height:48px}
+ .illustrated-home .continue-caption{font-size:11px}
+ .illustrated-home .dungeon-home-footer{width:calc(100% - 32px);display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+ .illustrated-home .dungeon-home-footer>.text-btn{justify-self:center}
+ .illustrated-home .scene-picker{grid-column:1/-1;grid-row:2;margin:0;justify-content:center}
+ .illustrated-home .dungeon-home-footer>span{display:none}
+ body.home-active #dialog:not(.wide) .choice-panels{grid-template-columns:1fr}
+}
+.reduce-motion .menu-backdrop,.reduce-motion .menu-ambience{transition:none}
+@media(prefers-reduced-motion:reduce){.illustrated-home .menu-backdrop,.illustrated-home .menu-ambience{transition:none}}
 
 /* The background and fighters share this theatre, never the document body. */
 body[data-scene='battle']{background:#06101a!important}
@@ -66,35 +119,11 @@ body[data-scene='battle']::before,body[data-scene='battle']>.ambient{display:non
 .combat-layout .pile-art>img.icon{width:calc(66 * var(--combat-unit));height:calc(74 * var(--combat-unit));object-fit:contain}
 
 @media(max-width:1050px){
- .illustrated-home .home-title{width:52%;padding:65px 14px 95px 3vw}
- .illustrated-home .home-title h1{font-size:clamp(40px,5.25vw,56px)}
- .illustrated-home .main-menu-actions{width:95%;gap:13px}
- .illustrated-home .main-menu-actions>.menu-continue{font-size:29px;min-height:69px}
- .illustrated-home .main-menu-actions>.btn{font-size:23px;min-height:57px}
- .illustrated-home .main-menu-actions>.menu-small{font-size:19px;min-height:50px}
  .combat-layout .battle-theatre{width:calc(100% + calc(36 * var(--combat-unit)));margin-inline:calc(-18 * var(--combat-unit));height:calc(430 * var(--combat-unit))}
  .combat-layout .combatant{width:39%}.combat-layout .combatant.player{left:2%}.combat-layout .combatant.enemy{right:2%}
  .combat-layout .fighter-panel{width:98%;padding-inline:calc(9 * var(--combat-unit))}
 }
 @media(max-width:600px){
- .illustrated-home{display:block;min-height:850px}
- .illustrated-home .home-art{height:440px;bottom:auto}
- .illustrated-home .menu-backdrop{object-position:70% bottom}
- .illustrated-home .home-vignette{background:linear-gradient(0deg,#06101a 47%,#06101a55 62%,transparent 87%)}
- .illustrated-home .home-title{width:100%;max-width:none;padding:330px 20px 130px;text-align:center}
- .illustrated-home .title-sigil{display:none}
- .illustrated-home .home-title h1{font-size:clamp(39px,10.9vw,64px);max-width:none;white-space:nowrap;margin:0 0 8px}
- .illustrated-home .home-subtitle{font-size:10px;letter-spacing:.24em}
- .illustrated-home .ornament{margin:17px auto 23px;width:83%}
- .illustrated-home .main-menu-actions{width:100%;max-width:390px;gap:13px}
- .illustrated-home .main-menu-actions>.btn{width:94%;min-height:56px;font-size:25px}
- .illustrated-home .main-menu-actions>.menu-continue{width:100%;min-height:64px;font-size:29px}
- .illustrated-home .main-menu-actions>.menu-small{width:86%;font-size:22px;min-height:52px}
- .illustrated-home .continue-caption{font-size:11px}
- .illustrated-home .dungeon-home-footer{left:18px;right:18px;bottom:10px;display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
- .illustrated-home .dungeon-home-footer>.text-btn{justify-self:center}
- .illustrated-home .scene-picker{grid-column:1/-1;grid-row:2;margin:0;justify-content:center}
- .illustrated-home .dungeon-home-footer>span{display:none}
  .combat-layout .battle-theatre{--ground-y:73%;width:calc(100% + calc(20 * var(--combat-unit)));margin-inline:calc(-10 * var(--combat-unit));height:calc(385 * var(--combat-unit));min-height:calc(385 * var(--combat-unit))}
  .combat-layout .combatant{width:48%;height:100%}.combat-layout .combatant.player{left:1%}.combat-layout .combatant.enemy{right:1%}
  .combat-layout .fighter-panel{top:calc(var(--ground-y) + calc(12 * var(--combat-unit)));width:97%;padding:calc(6 * var(--combat-unit)) calc(5 * var(--combat-unit)) 0;min-height:calc(88 * var(--combat-unit))}

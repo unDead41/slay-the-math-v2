@@ -114,3 +114,11 @@ Imported the newest user-supplied stone Dungeon Master illustration without a re
 ## Education 2.5.0 - 19 October 2026
 
 Connected Claim Artifact to the exact original 120 questions, 40 per approved Form 4 topic. Added independent seeded selection without repeated IDs, frozen choice order, persistent exposure history, answer/Hint/explanation UI and strict saved-trial validation. Final correct-answer continuation commits the artifact effect and original room/stage progression once. Fixed the Elite card-reward snapshot so the pending offer/trial can be restored. Old saves keep their scene; no retroactive question injection. Actual checks and Windows limitation: docs/EDUCATION_UPDATE_2_5_0.md.
+
+## 2.5.1 menu fit — 21 October 2026
+
+- Fix UWHD Home clipping with contained, padded foreground artwork and muted ambient fill.
+- Scale native title/actions/footer and non-wide Home dialogs from one viewport unit; retain phone/short-screen scrolling.
+- Change artwork interval and crossfade to 5s; preserve fixed sources during rapid selection and reject stale decodes.
+- Keep Motion Off/reduced-motion/pause, menu actions, original assets, combat and saves intact.
+- Add project-owned browser geometry/lifecycle QA and CI verification; current evidence: docs/MENU_FIT_2_5_1.md.

@@ -88,3 +88,7 @@ Ijamm requests updating Alyssa's animation alongside Stage 1 enemies. MODEL(1).z
 ## Supplied Alyssa motion — game 2.8.0
 
 The subsequent direct instruction identifies the already-stored `MODEL.zip`. That readable v2 pack resolves the pending-artwork status above: five clips / 30 frames now play in both stages, facing right without flipping. Preserve source durations and per-frame boot pivots, including horizontal shifts for wide Attack/Skill poses. Runtime cells are 1024px; the original 4K canvases are upscaled exports. Provenance, floor registration, fallback and verification: [Alyssa 2.8.0](../ALYSSA_ANIMATION_2_8_0.md).
+
+## Right-facing-only correction — 2.8.1
+
+Ijamm explicitly requires the new right-facing family for all five combat motions. The earlier `ground-alyssa-*` image fallback is superseded by frame projections from the same approved motion source, owned by `DCAnimationData.hero.posters`. Use that registry for standing/Idle, Attack, Defend, Skill and Damage/Damaged, including loading, unavailable Canvas, texture failures and Motion Off. Do not revive earlier front-facing poses. Source hashes and verification: [2.8.1](../ALYSSA_RIGHT_ONLY_2_8_1.md).

@@ -13,7 +13,12 @@
   function enemy(id, pose='standing') {
     return enemies[id]?.[pose] || enemies[id]?.standing || 'ground-'+C.enemies[id].art;
   }
-  root.DCVisuals = {mapIcons, enemy, hero:pose=>'ground-alyssa-'+pose+'.webp',
+  function hero(pose='idle') {
+    const action=pose==='standing'?'idle':pose==='damage'?'damaged':pose;
+    const posters=root.DCAnimationData.hero.posters;
+    return posters[action]||posters.idle;
+  }
+  root.DCVisuals = {mapIcons, enemy, hero,
     icons:{focus:'ui-focus.webp',predict:'ui-predict.png',rest:mapIcons.camp,settings:'ui-settings.webp',book:'ui-tutorial.webp',
       cards:'ui-card_collection.webp',bolt:'ui-energy.webp',heart:'ui-health.webp',
       coin:'ui-money.webp',close:'ui-close.webp',hand:'ui-on_hand.webp',

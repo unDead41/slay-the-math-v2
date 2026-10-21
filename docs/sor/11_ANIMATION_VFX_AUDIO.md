@@ -13,6 +13,8 @@ Versi: 2.0.1. Dungeon dan keperluan cue room mengikut arahan terkini; timing/aud
 
 MODEL.zip owns Alyssa's five clip timings. Use its per-frame durations rather than uniform FPS. Idle loops; actions return to Idle after their final hold. Hero and enemy pause together behind dialogs and on hidden pages. Motion Off and OS Reduced Motion show Idle frame 0. Outcomes remain owned by the resolver. Source mapping, pivots and actual validation: [Alyssa 2.8.0](../ALYSSA_ANIMATION_2_8_0.md).
 
+In 2.8.1 the image fallback must also use that right-facing source for every pose. Its poster canvas and registration match the animated canvas. Do not apply the legacy CSS hero pose motion. Motion Off selects the same source's Idle poster even without Canvas. Details: [right-only correction](../ALYSSA_RIGHT_ONLY_2_8_1.md).
+
 ## Timing baseline
 
 | Peristiwa | Tempoh sasaran | Maklum balas |

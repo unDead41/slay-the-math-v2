@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.8.0
+# Slay the Math — Dungeon Edition 2.8.1
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -49,3 +49,5 @@ Artifact Pack V3.2 rich text and resolved calculations: [2.6.0 notes](docs/ARTIF
 Stage 1 normal/Elite frame animations: [2.7.0 notes](docs/STAGE1_ANIMATION_2_7_0.md). Five supplied enemies use 25 clips / 128 frames, with unchanged combat rules and a stable arena floor.
 
 Alyssa's source `MODEL.zip` is integrated in [2.8.0](docs/ALYSSA_ANIMATION_2_8_0.md): 30 right-facing frames across Idle, Attack, Defend, Skill and Damaged, in both stages. Source timing and boot pivots are preserved. Run `npm run test:alyssa-browser` for focused browser checks.
+
+[2.8.1](docs/ALYSSA_RIGHT_ONLY_2_8_1.md) removes the older hero image fallback. All five combat poses, loading/failure fallbacks and Motion Off now use the same approved right-facing family. Run `npm run build` after pulling to refresh the offline HTML.

@@ -3,7 +3,8 @@ html=html.replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,name)=>'<style>'+
 html=html.replace(/<script src="([^"]+)"><\/script>/g,(_,name)=>'<script>'+fs.readFileSync(path.join(root,'dist',name),'utf8').replace(/<\/script/gi,'<\\/script')+'</script>');
 const mime=name=>({'.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'}[path.extname(name)]);
 html=html.replace(/(href=")assets\/([^"<>]+)(")/g,(_,a,file,z)=>a+'data:'+mime(file)+';base64,'+fs.readFileSync(path.join(root,'dist/assets',file)).toString('base64')+z);
-const images={};for(const name of fs.readdirSync(path.join(root,'dist/assets')).filter(n=>mime(n)))images[name]='data:'+mime(name)+';base64,'+fs.readFileSync(path.join(root,'dist/assets',name)).toString('base64');
+const retiredHero=/^ground-alyssa-(?:standing|attack|defend|skill|damage)\.webp$/;
+const images={};for(const name of fs.readdirSync(path.join(root,'dist/assets')).filter(n=>mime(n)&&!retiredHero.test(n)))images[name]='data:'+mime(name)+';base64,'+fs.readFileSync(path.join(root,'dist/assets',name)).toString('base64');
 html=html.replace(/url\(['"]?assets\/([^)'"]+)['"]?\)/g,(_,file)=>images[file]?'url("'+images[file]+'")':_);
 const music={};const musicDir=path.join(root,'dist/assets/music');
 for(const name of fs.readdirSync(musicDir).filter(n=>n.endsWith('.mp3')))music[path.basename(name,'.mp3')]='data:audio/mpeg;base64,'+fs.readFileSync(path.join(musicDir,name)).toString('base64');

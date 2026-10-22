@@ -189,3 +189,12 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Use matching Stage 2 source posters during loading/failure, retain static Idle with Motion Off, and map each resolved Stage 2 intent to its proper action without changing the engine.
 - Preserve Alyssa's right-facing family/Skill correction, bosses, save format, hand limit, frozen result Time and current combat rules.
 - Add source-pixel audits and focused browser regression coverage. Actual results and limits: docs/ENEMY_MOTION_2_10_0.md.
+
+
+## 2.12.0 — 22 October 2026 (Malaysia)
+
+- Clarify parchment map routes, Floor/room labels and entry badges; update illustrated mode choices.
+- Add both supplied Boss animation families (10 clips / 60 frames), grounded source pivots and matching fallback posters through the same player.
+- Expand Shop to two 3×2 racks, one 60%-off card, tiered artifact purchases in both modes and a paid once-per-visit removal service. Preserve legacy visits and free-gift questions.
+- Audit all 120 items and report denominator/common-denominator support harmonization to the source owner without modifying the bank.
+- Exact rules and verification: docs/GAME_UPDATE_2_12_0.md and docs/verification/release-2-12.json.

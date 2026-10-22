@@ -67,3 +67,8 @@ The user requested a rebuild against nine current menu references plus the suppl
 ## Artifact Edition 2.4 override
 
 The user's implementation request supersedes the earlier no-artifact scope. New Challenge: one of three eligible random Starting offers before map. Elite: existing card reward then one artifact; Mystery: optional artifact discovery; Boss Stage 1: one of all three Boss artifacts before the next checkpoint. Ration gives +5 Max HP once, Purse +25 Gold once, and Shop uses the best owned 5%/15% discount with ceil rounding. Values remain source-proposal tuning, not a balance guarantee. Complete ownership/compatibility rules: SOR 19.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12 user override: six unique Shop card offers (3×2), exactly one random seeded 60% sale, paid removal once per visit, six artifact slots (3 Starting/2 Elite-Mystery/1 Boss, 3×2). Both modes support paid purchases; Challenge free gift education remains. Config defaults: artifacts 80/140/220 Gold, removal 50 Gold, minimum deck ten. Sale reduces normal card base price by 60%, then best owned artifact discount applies with ceil/minimum-one rounding; discounts update immediately after purchase. IDs/base prices/sale slot never reroll. Sold-out artifact tiers keep empty slots. Existing visits retain their legacy three-card stock. These numbers are reversible implementation tuning. Full transactional/save policy: GAME_UPDATE_2_12_0.md.

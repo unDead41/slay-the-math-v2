@@ -97,3 +97,8 @@ The supplied NORMAL ELITE ENEMY.zip replaces key-pose-only presentation for the 
 ## Latest override — both-stage Normal/Elite motion, game 2.10.0
 
 Ijamm requests motion for Normal and Elite enemies in both stages. The new Stage 1 ZIP contains the same 25 accepted sheets; preserve them. Stage 2 v2.1 adds `weaver` → Chain Weaver, `shade` → Deck Guard, `mimic` → Card Mimic, `golem` → Chain Golem and `reaper` → Rune Reaper. Each has five actions / 27 frames. Chain Golem's supplied correction faces left with `flipX=false`; do not mirror it again. Chain Weaver retains its floating anatomy. All 10 canonical non-boss encounters now animate; legacy cross-stage IDs and both bosses retain their existing renderer. Actual config still owns names, HP, patterns, encounters and loot. Presentation maps each resolved Stage 2 intent to Attack, Defend or Skill without changing its effects. Source/verification: [both-stage motion](../ENEMY_MOTION_2_10_0.md).
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12 supersedes static Boss presentation: sentinel → Twin Sigil Guardian (Stage 1), dealer → Deck Lord (Stage 2), five clips/six frames each. Resolved intent cycles map Attack/Defend/Skill; actual hit/blocked reaction maps Damaged/Defend. HP, seals, patterns, damage, reward and phase timing remain unchanged.

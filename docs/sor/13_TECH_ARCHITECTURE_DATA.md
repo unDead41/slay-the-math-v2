@@ -127,3 +127,8 @@ Restore normalizes overfull legacy hands after validation, preserving excess UID
 ## Parchment map and integrated mechanics — 2.11.0
 
 2.11.0 preserves run format 1 and educationState version 1, accepting old bankVersion form4-review-1.0.0. Its optional session field stores the supplied canonical ordered event log and dedicated question RNG. Host pending data is checked against replayed attempts, Hint and correct status; a revealed/forged record cannot unlock Claim. The same-origin question history optionally carries the session; merging retains exposures and closed evidence while allowing only one pending reservation. Abandoned conflicting pending records retain exposure without new credit. Legacy completed records lack enough evidence to invent skill scores. Optional stmArtifactUI is derived Challenge presentation state; core resources/ownership never read it as authority. Import cap is 2 MB for session/checkpoint growth. STM_SHARED is the single tooltip hub; source renderers sanitize MathML/SVG and keep calculations gated.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12 additive shop version 2: six frozen card offers/base prices/sale, card bought indices, ownedBefore entry snapshot, six tiered artifact offers and bought indices, and removed physical card or null. Restore recomputes offers, validates all purchase/ownership sources and rejects forged price/tier/sale/removal state. Legacy three-card shops continue until departure. Paid purchases are synchronous, once-only and independent of question/animation RNG. Artifact state may exist in Learn after paid purchase; optional shopOnly:true represents a legacy Challenge without an opening gift, without retroactive acquisition. No replay of purse/ration on restore. Run schema/key stays 1.

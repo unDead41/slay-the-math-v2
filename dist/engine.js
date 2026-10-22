@@ -28,7 +28,7 @@ function enterNode(r,choice='normal'){
  if(!node)throw new Error('This room is not connected to your path. Choose a glowing room.');
  if(r.route)r.route.active=node.id;
  r.nodeChoice=node.type==='elite'?'elite':'normal';
- if(node.type==='shop'){r.scene='shop';r.shop={offers:shopOffers(r,node.id),bought:[]};}else if(node.type==='camp'||node.type==='event')r.scene=node.type;
+ if(node.type==='shop'){r.scene='shop';r.shop=createShop(r,node.id);}else if(node.type==='camp'||node.type==='event')r.scene=node.type;
  else startBattle(r,node.enemyId,node.type==='elite');
  return r;
 }
@@ -48,10 +48,10 @@ function win(r){
  r.gold=(r.gold||0)+(C.enemies[b.enemyId].boss?C.ECONOMY.boss:b.elite?C.ECONOMY.elite:C.ECONOMY.battle);
  if(C.enemies[b.enemyId].boss){
   if(r.stage===1){r.scene='victory';r.finished=Math.max(r.started,Date.now());return notify(r,'You cleared both dungeons!');}
-  r.scene='stageclear';r.finished=Math.max(r.started,Date.now());if(r.artifactState)A.offer(r,'boss');return notify(r,'Sigil Keep cleared.');
+  r.scene='stageclear';r.finished=Math.max(r.started,Date.now());if(r.mode==='challenge'&&r.artifactState)A.offer(r,'boss');return notify(r,'Sigil Keep cleared.');
  }
  r.scene='reward';r.rewards=shuffle(r,Object.keys(C.cards)).slice(0,3);
- if(b.elite&&r.artifactState)A.offer(r,'elite',false);
+ if(b.elite&&r.mode==='challenge'&&r.artifactState)A.offer(r,'elite',false);
  return notify(r,'Battle won. Choose one reward.');
 }
 function deal(r,n,pierce=false,detail=null){
@@ -131,10 +131,51 @@ function skipArtifact(r){
  r.artifactState.offer=null;return finishNode(r);
 }
 function camp(r,action,uid){if(r.scene!=='camp')throw new Error('No Rest site is active.');if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+12);R.record(r,'Rest',[],[R.healing(12,before,r.hp,r.maxHp)]);}else if(action==='upgrade'){const c=r.deck.find(x=>x.uid===uid&&!x.upgraded);if(!c)throw new Error('Choose a card that is not upgraded.');c.upgraded=true;}else throw new Error('Choose Rest or Upgrade.');return finishNode(r);}
-function event(r,action,uid){if(r.scene!=='event'||r.artifactState?.offer)throw new Error('No Mystery event is active.');if(action==='artifact'){if(!r.artifactState||!A.offer(r,'mystery'))throw new Error('No new artifacts are available.');return r;}if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+8);R.record(r,'Mystery healing',[],[R.healing(8,before,r.hp,r.maxHp)]);}else if(action==='remove'){if(r.deck.length<=10)throw new Error('Keep at least 10 cards in your deck.');const i=r.deck.findIndex(c=>c.uid===uid);if(i<0)throw new Error('Card not found.');r.deck.splice(i,1);}else if(action!=='skip')throw new Error('Choose a valid option.');return finishNode(r);}
+function event(r,action,uid){if(r.scene!=='event'||r.artifactState?.offer)throw new Error('No Mystery event is active.');if(action==='artifact'){if(r.mode!=='challenge'||!r.artifactState||!A.offer(r,'mystery'))throw new Error('No new artifacts are available.');return r;}if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+8);R.record(r,'Mystery healing',[],[R.healing(8,before,r.hp,r.maxHp)]);}else if(action==='remove'){if(r.deck.length<=10)throw new Error('Keep at least 10 cards in your deck.');const i=r.deck.findIndex(c=>c.uid===uid);if(i<0)throw new Error('Card not found.');r.deck.splice(i,1);}else if(action!=='skip')throw new Error('Choose a valid option.');return finishNode(r);}
 
-function shopOffers(r,nodeId){const keys=Object.keys(C.cards);let value=(r.seed^Math.imul(r.stage+1,2246822519))>>>0;for(const ch of nodeId)value=(Math.imul(value,31)+ch.charCodeAt(0))>>>0;const pool=keys.slice();const offers=[];for(let i=0;i<3;i++){value=(Math.imul(value,1664525)+1013904223)>>>0;const key=pool.splice(value%pool.length,1)[0];offers.push({key,price:A.price(r,C.ECONOMY.prices[C.cards[key].cost])});}return offers;}
-function buyCard(r,index){if(r.scene!=='shop'||!Number.isInteger(index)||index<0||index>2||r.shop.bought.includes(index))throw new Error('This card is no longer for sale.');const offer=r.shop.offers[index];if(r.gold<offer.price)throw new Error('Not enough Gold. Win battles to earn more.');if(r.deck.length>=60)throw new Error('Your deck is full.');const before=r.gold;r.gold-=offer.price;R.record(r,C.cards[offer.key].name+' purchased',A.owned(r).filter(a=>a.values.discount_percent).map(a=>a.id),[A.priceCalculation(r,C.ECONOMY.prices[C.cards[offer.key].cost]),R.delta('Gold spent','Gold',before,r.gold,['Purchase price: '+offer.price+' Gold','Gold after: '+before+' − '+offer.price+' = '+r.gold])]);r.deck.push(card(r,offer.key));r.shop.bought.push(index);return r;}
+// Shop uses a private deterministic stream. Combat and artifact RNG never reroll stock.
+function shopRandom(r,nodeId){let value=(r.seed^Math.imul(r.stage+1,2246822519))>>>0;for(const ch of nodeId)value=(Math.imul(value,31)+ch.charCodeAt(0))>>>0;return ()=>{value=(Math.imul(value,1664525)+1013904223)>>>0;return value;};}
+function shopOffers(r,nodeId,legacy=false){const next=shopRandom(r,nodeId),pool=Object.keys(C.cards),offers=[];for(let i=0;i<(legacy?3:6);i++){const key=pool.splice(next()%pool.length,1)[0],basePrice=C.ECONOMY.prices[C.cards[key].cost];offers.push(legacy?{key,price:A.price(r,basePrice)}:{key,basePrice,price:basePrice,sale:false});}if(!legacy){const sale=next()%offers.length;offers[sale].sale=true;offers[sale].price=Math.ceil(offers[sale].basePrice*(100-C.ECONOMY.shop.salePercent)/100);}return offers;}
+function shopArtifacts(r,nodeId,ownedBefore){const next=shopRandom(r,nodeId+':artifacts'),offers=[];for(const [tier,count] of [['starting',3],['elite_mystery',2],['boss',1]]){const pool=Object.values(A.catalog).filter(a=>a.tier===tier&&!ownedBefore.includes(a.id)&&!a.requires).map(a=>a.id);for(let i=0;i<count;i++)offers.push({id:pool.length?pool.splice(next()%pool.length,1)[0]:null,tier,price:C.ECONOMY.shop.artifactPrices[tier]});}return offers;}
+function createShop(r,nodeId){const ownedBefore=A.owned(r).map(a=>a.id);return {version:2,offers:shopOffers(r,nodeId),bought:[],ownedBefore,artifacts:shopArtifacts(r,nodeId,ownedBefore),artifactBought:[],removed:null};}
+function shopPriceCalculation(r,offer){if(r.shop?.version!==2)return {...A.priceCalculation(r,C.ECONOMY.prices[C.cards[offer.key].cost]),value:offer.price,after:offer.price};const result=A.priceCalculation(r,offer.price);if(offer.sale){result.before=offer.basePrice;result.lines.unshift('Card sale: '+C.ECONOMY.shop.salePercent+'% off '+offer.basePrice+' Gold → '+offer.price+' Gold before artifact discount.');}return result;}
+function shopPrice(r,offer){return shopPriceCalculation(r,offer).value;}
+function buyCard(r,index){
+ if(r.scene!=='shop'||!Number.isInteger(index)||index<0||index>=r.shop.offers.length||r.shop.bought.includes(index))throw new Error('This card is no longer for sale.');
+ const offer=r.shop.offers[index],price=shopPrice(r,offer);
+ if(r.gold<price)throw new Error('Not enough Gold. Win battles to earn more.');if(r.deck.length>=60)throw new Error('Your deck is full.');
+ const before=r.gold;r.gold-=price;r.deck.push(card(r,offer.key));r.shop.bought.push(index);
+ R.record(r,C.cards[offer.key].name+' purchased',A.owned(r).filter(a=>a.values.discount_percent).map(a=>a.id),[shopPriceCalculation(r,offer),R.delta('Gold spent','Gold',before,r.gold,['Purchase price: '+price+' Gold','Gold after: '+before+' − '+price+' = '+r.gold])]);return notify(r,C.cards[offer.key].name+' purchased.');
+}
+function buyArtifact(r,index){
+ if(r.scene!=='shop'||r.shop?.version!==2||!Number.isInteger(index)||index<0||index>=6||r.shop.artifactBought.includes(index))throw new Error('This artifact is no longer for sale.');
+ const offer=r.shop.artifacts[index],price=shopPrice(r,offer),item=A.catalog[offer.id],source='shop:'+r.stage+':'+r.route.active+':'+index;
+ if(!item||A.has(r,offer.id)||r.artifactState?.acquired.some(x=>x.source===source))throw new Error('This artifact is no longer for sale.');
+ if(r.gold<price)throw new Error('Not enough Gold. Win battles to earn more.');
+ if(!r.artifactState)r.artifactState={version:1,shopOnly:true,rng:(r.seed^0xa741c6e5)>>>0,owned:[],acquired:[],startingId:null,offer:null};
+ const calculation=shopPriceCalculation(r,offer),before=r.gold;r.gold-=price;A.acquire(r,item.id,source);r.shop.artifactBought.push(index);
+ R.record(r,item.name+' purchased',[item.id],[calculation,R.delta('Gold spent','Gold',before,before-price,['Purchase price: '+price+' Gold','Gold after payment: '+before+' − '+price+' = '+(before-price)])]);return notify(r,item.name+' purchased.');
+}
+function shopRemovalPrice(r){return A.price(r,C.ECONOMY.shop.removePrice);}
+function removeShopCard(r,uid){
+ if(r.scene!=='shop'||r.shop?.version!==2||r.shop.removed)throw new Error('Card removal is no longer available here.');
+ if(r.deck.length<=C.ECONOMY.shop.minimumDeck)throw new Error('Keep at least '+C.ECONOMY.shop.minimumDeck+' cards in your deck.');
+ const index=r.deck.findIndex(c=>c.uid===uid),price=shopRemovalPrice(r);if(index<0)throw new Error('Card not found.');if(r.gold<price)throw new Error('Not enough Gold.');
+ const before=r.gold;r.gold-=price;r.shop.removed=r.deck.splice(index,1)[0];
+ R.record(r,'Card removed',[],[R.delta('Gold spent','Gold',before,r.gold,['Remove '+definition(r.shop.removed).name+': '+price+' Gold'])]);return notify(r,definition(r.shop.removed).name+' removed from your deck.');
+}
+function validShop(r){
+ const s=r.shop,indices=(a,n)=>Array.isArray(a)&&new Set(a).size===a.length&&a.every(i=>Number.isInteger(i)&&i>=0&&i<n);
+ if(!s||!indices(s.bought,s.version===2?6:3))return false;
+ if(s.version===undefined)return JSON.stringify(shopOffers(r,r.route.active,true))===JSON.stringify(s.offers);
+ if(s.version!==2||!Array.isArray(s.ownedBefore)||new Set(s.ownedBefore).size!==s.ownedBefore.length||s.ownedBefore.some(id=>!A.has(r,id))||!indices(s.artifactBought,6))return false;
+ if(JSON.stringify(s.offers)!==JSON.stringify(shopOffers(r,r.route.active))||JSON.stringify(s.artifacts)!==JSON.stringify(shopArtifacts(r,r.route.active,s.ownedBefore)))return false;
+ const purchased=s.artifactBought.map(i=>s.artifacts[i].id);if(purchased.some((id,i)=>!id||!r.artifactState?.acquired.some(x=>x.id===id&&x.source==='shop:'+r.stage+':'+r.route.active+':'+s.artifactBought[i])))return false;
+ if(A.owned(r).some(a=>!s.ownedBefore.includes(a.id)&&!purchased.includes(a.id)))return false;
+ if(s.artifacts.some((o,i)=>!s.artifactBought.includes(i)&&o.id&&A.has(r,o.id)))return false;
+ if(s.removed!==null&&(!s.removed||typeof s.removed.uid!=='string'||!/^c\d+$/.test(s.removed.uid)||!Object.hasOwn(C.cards,s.removed.key)||typeof s.removed.upgraded!=='boolean'||Number(s.removed.uid.slice(1))>r.seq||r.deck.some(c=>c.uid===s.removed.uid)))return false;
+ return true;
+}
 function leaveShop(r){if(r.scene!=='shop')throw new Error('No Shop is active.');return finishNode(r);}
 
 function nextStage(r){if(r.scene!=='stageclear'||r.artifactState?.offer)throw new Error('Choose your Boss artifact before entering Stage 2.');const routeVersion=r.route?.version===3?3:2;r.cleared.push(r.route?.active||'0:4');r.stage=1;r.depth=0;r.route=G.begin(1,r.seed,routeVersion);r.hp=Math.min(r.maxHp,r.hp+12);r.battle=null;r.scene='map';delete r.finished;r.checkpoint=null;r.checkpoint=clone(r);return r;}
@@ -147,7 +188,7 @@ function validateState(s){const nonnegative=n=>Number.isSafeInteger(n)&&n>=0;con
  if(!R.valid(s)||!Q.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
  if(['cardsPlayed','hintsUsed'].some(k=>s.stats[k]!==undefined&&!nonnegative(s.stats[k])))return false;
  if(s.gold!==undefined&&(!nonnegative(s.gold)||s.gold>100000))return false;
- if(s.scene==='shop'){if(!s.shop||!Array.isArray(s.shop.offers)||!Array.isArray(s.shop.bought)||new Set(s.shop.bought).size!==s.shop.bought.length)return false;const expected=shopOffers(s,s.route.active);if(JSON.stringify(expected)!==JSON.stringify(s.shop.offers)||s.shop.bought.some(i=>!Number.isInteger(i)||i<0||i>2))return false;}
+ if(s.scene==='shop'&&!validShop(s))return false;
 
  for(const st of Object.values(s.stats.concepts))if(!st||!['total','first','assisted'].every(k=>nonnegative(st[k]))||st.total!==st.first+st.assisted)return false;
  if((!s.route&&phase==='camp'&&s.depth!==2)||(!s.route&&phase==='event'&&s.depth!==3)||(phase==='stageclear'&&(s.stage!==0||s.depth!==(s.route?.version===3?9:4)))||(phase==='victory'&&(s.stage!==1||s.depth!==(s.route?.version===3?9:4)))||(phase==='defeat'&&s.hp!==0)||(['battle','reward','stageclear','victory','defeat'].includes(phase)&&!s.battle))return false;
@@ -176,5 +217,5 @@ function restore(saved){
  }
  refresh(out);return out;
 }
-const E={chooseArtifact,continueEducation,selectEducation:Q.select,answerEducation:Q.answer,hintEducation:Q.hint,skipArtifact,artifactChoices:r=>r.scene==='education'?[]:A.choices(r),ownedArtifacts:A.owned,effectiveDefinition,energyLimit:r=>r.battle?.artifacts?.turn.energyBudget||C.ENERGY,shopOffers,buyCard,leaveShop,getMap:G.get,availableNodes:G.available,restore,newRun,definition,card,shuffle,rng,draw,intent,startBattle,enterNode,finishNode,playCard,canPlay,filterLimit,armFocus,forecast,answer,hint,closeForecast,endTurn,chooseReward,camp,event,nextStage,retry,validate,clone};if(typeof module!=='undefined')module.exports=E;else root.DCEngine=E;
+const E={chooseArtifact,continueEducation,selectEducation:Q.select,answerEducation:Q.answer,hintEducation:Q.hint,skipArtifact,artifactChoices:r=>r.scene==='education'?[]:A.choices(r),ownedArtifacts:A.owned,effectiveDefinition,energyLimit:r=>r.battle?.artifacts?.turn.energyBudget||C.ENERGY,shopOffers,shopPrice,shopPriceCalculation,shopRemovalPrice,buyCard,buyArtifact,removeShopCard,leaveShop,getMap:G.get,availableNodes:G.available,restore,newRun,definition,card,shuffle,rng,draw,intent,startBattle,enterNode,finishNode,playCard,canPlay,filterLimit,armFocus,forecast,answer,hint,closeForecast,endTurn,chooseReward,camp,event,nextStage,retry,validate,clone};if(typeof module!=='undefined')module.exports=E;else root.DCEngine=E;
 })(typeof window!=='undefined'?window:globalThis);

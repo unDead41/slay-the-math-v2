@@ -130,8 +130,8 @@ test('shop discounts use the best rate only, with ceil rounding and exact saved 
  const r=start('s06');own(r,'e14');const map=E.getMap(r),shop=map.nodes.find(n=>n.type==='shop');
  let path=[shop];for(let d=shop.depth-1;d>=0;d--)path.unshift(map.nodes.find(n=>n.depth===d&&n.next.includes(path[0].id)));
  r.depth=shop.depth;r.route.path=path.slice(0,-1).map(n=>n.id);r.cleared=r.route.path.slice();E.enterNode(r,shop.id);
- for(const o of r.shop.offers)assert.equal(o.price,Math.ceil(C.ECONOMY.prices[C.cards[o.key].cost]*.85));
- const price=r.shop.offers[0].price,old=r.gold;E.buyCard(r,0);assert.equal(r.gold,old-price);assert.ok(E.restore(copy(r)));
+ for(const o of r.shop.offers)assert.equal(E.shopPrice(r,o),Math.ceil((o.sale?o.basePrice*.4:o.basePrice)*.85));
+ const price=E.shopPrice(r,r.shop.offers[0]),old=r.gold;E.buyCard(r,0);assert.equal(r.gold,old-price);assert.ok(E.restore(copy(r)));
 });
 test('Boss artifacts add Energy/draw every turn and Clasp caps only its own stat contribution',()=>{
  const r=battle('s02',['b01','b02','b03','e15','e16']);assert.equal(r.battle.energy,4);assert.equal(r.battle.hand.length,6);

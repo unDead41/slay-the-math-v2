@@ -10,7 +10,7 @@ test('every canonical Normal and Elite encounter in both stages has all five sou
  }
  assert.equal(clips,50);assert.equal(frames,263);
  for(const [id,stem]of Object.entries(mapping)){const a=S.spec(1,id);assert.equal(a.id,stem);assert.equal(a.flipX,false);assert.equal(a.animations.damaged.frames.length,3);assert.equal(Object.values(a.animations).reduce((n,c)=>n+c.frames.length,0),27);}
- assert.equal(S.spec(0,'sentinel'),null);assert.equal(S.spec(1,'dealer'),null);
+ assert.ok(S.spec(0,'sentinel'));assert.ok(S.spec(1,'dealer'));assert.equal(S.spec(1,'sentinel'),null);
 });
 test('Stage 2 loading and failure posters use the same left-facing source for every reaction',()=>{
  const V=visuals();for(const [id,stem]of Object.entries(mapping))for(const [pose,action]of [['standing','idle'],['attack','attack'],['defend','defend'],['skill','skill'],['damage','damaged']]){
@@ -18,7 +18,7 @@ test('Stage 2 loading and failure posters use the same left-facing source for ev
   assert.equal(S.spec(1,id).posters[action],V.enemy(id,pose,1));
  }
  assert.match(V.enemy('knight','attack',1),/^ground-/,'legacy cross-stage encounters retain their renderer');
- assert.match(V.enemy('dealer','standing',1),/^ground-/);
+ assert.match(V.enemy('dealer','standing',1),/^poster-s2-deck_lord-/);
 });
 test('Stage 2 resolved intents choose Attack, Defend and Skill independently of damage/RNG',()=>{
  for(const id of Object.keys(mapping)){
@@ -27,12 +27,12 @@ test('Stage 2 resolved intents choose Attack, Defend and Skill independently of 
  }
  assert.equal(S.intentAction(0,'wisp',{label:'Flame Burst',damage:8}),'skill');
  assert.equal(S.intentAction(0,'beetle',{label:'Shell Guard',block:3}),'defend');
- assert.equal(S.intentAction(1,'dealer',{label:'Dark Veil',block:4}),'skill');
+ assert.equal(S.intentAction(1,'dealer',{label:'Dark Veil',block:4}),'defend');
 });
 
 test('the accepted Stage 1 registry and all Alyssa frames/pivots/scales remain unchanged',()=>{
  const hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
- const stage1=Object.fromEntries(Object.keys(D.actors).filter(k=>D.actors[k].stage===0).sort().map(k=>[k,D.actors[k]]));
+ const stage1=Object.fromEntries(Object.keys(D.actors).filter(k=>D.actors[k].stage===0&&k!=='sentinel').sort().map(k=>[k,D.actors[k]]));
  assert.equal(hash(stage1),'c3a0a87e67123d41807b5e88746a6e33d323bb0cb076a847ccb419cb7c17be7c');
  assert.equal(hash(D.hero),'3a19d059c43b9c9004cef55c12c4f4ae17d4b9394a402cac28ac082c9852f556');
 });

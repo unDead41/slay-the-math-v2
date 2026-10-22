@@ -109,3 +109,8 @@ Lulus apabila topic ID jelas, formula sah, contoh di atas disemak secara bebas, 
 ## Parchment map and integrated mechanics — 2.11.0
 
 MTH-14 (2.11.0) supersedes the 1.0 bank presentation/selection details with the supplied bank content form4-review-1.4.0, package 1.5.0. The original 120 IDs, source seeds, prompts, choices and correct keys are unchanged. The supplied ordered session reducers now own adaptive no-repeat reservation, per-choice feedback, Hint/More Hint ordering, 240 hint/solution visuals, 360 worked steps after correct, seven Basics lessons/14 unscored checks and 30-skill practice evidence. New reservations retain source choice order; legacy pending shuffled orders remain saved. New Run resumes the profile's unfinished reservation. Existing correct-plus-final-Claim timing and zero wrong-answer HP penalty remain. See docs/MAP_INTEGRATION_2_11_0.md for compatibility and evidence.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12 audit only: all original authored bank bytes/IDs/answers remain unchanged. Read-only support review found generic denominator/denominators bindings opening Common denominator in multiplication/equation contexts (confirmed PROB-008, 015, 038). Report precise locations and request a harmonized source package from the question owner; do not silently rewrite hints/examples. Projection checks cover all 120 items with zero plain/rich text mismatches. Details: docs/QUESTION_SUPPORT_AUDIT_2_12.md.

@@ -9,12 +9,12 @@ function fixture(extra={}){
  return {player,canvas,host,draws,frames,async step(delta){clock+=delta;const pending=[...frames.values()];frames.clear();for(const fn of pending)fn(clock);await flush();}};
 }
 test('only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames',()=>{
- const actors=Object.entries(D.actors).filter(([,a])=>a.stage===0);assert.equal(actors.length,5);let clips=0,frames=0;
+ const actors=Object.entries(D.actors).filter(([,a])=>a.stage===0&&a.type!=='boss');assert.equal(actors.length,5);let clips=0,frames=0;
  for(const [id,actor]of actors){
   assert.equal(S.supports(0,id),true);assert.equal(S.supports(1,id),false);assert.equal(actor.facing,'left');
   for(const [action,a]of Object.entries(actor.animations)){clips++;frames+=a.frames.length;assert.equal(a.fps,{idle:6,attack:12,defend:10,skill:10,damaged:12}[action]);assert.equal(a.loop,action==='idle');assert.ok(a.frames.every(f=>f.length===4&&f[2]===768&&f[3]===768));}
  }
- assert.equal(clips,25);assert.equal(frames,128);assert.equal(S.supports(0,'sentinel'),false);assert.equal(S.supports(1,'dealer'),false);assert.equal(S.supports(0,'hero'),false);
+ assert.equal(clips,25);assert.equal(frames,128);assert.equal(S.supports(0,'sentinel'),true);assert.equal(S.supports(1,'dealer'),true);assert.equal(S.supports(0,'hero'),false);
 });
 test('idle advances at source FPS; non-looping Attack completes once and returns to idle',async()=>{
  const f=fixture();await flush();await f.step(0);await f.step(170);assert.equal(f.player.snapshot().frame,1);

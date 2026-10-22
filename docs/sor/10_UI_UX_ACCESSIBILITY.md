@@ -136,3 +136,8 @@ Bound only Reward and Shop panel/card widths instead of filling arbitrary ultraw
 Artifact Pack V3.2 uses soft purple dotted numbers for resolved calculations, pink dashed math terms and green dashed game terms. Only annotated tokens receive colors; normal text and card-role frames inherit the existing theme. One tooltip owner supports hover, keyboard focus and tap, can be reached by pointer, stays within the viewport, and closes with Escape/outside click. Its content is escaped and connected through aria-describedby. Inside a dialog, Escape dismisses the tooltip first. Selection, term and result buttons are siblings rather than nested. The existing native modal owns focus and inert background behavior.
 
 All 31 artifact rules use the same segmented-description owner in choices, pending trial and inventory. The 55-term glossary is available in inventory. Calculations expose before/after values, sources, actual caps and rounding; labels distinguish deltas, totals and price. No lesson answer or effect is committed by reading a definition.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12: mode choices share illustrated medallion size, native buttons and explicit difficulty descriptions. Shop has separate 3×2 card/artifact racks with visible prices/effects, Sold/not-enough-Gold states and natural document scrolling. Narrow racks alone scroll horizontally. Removal reuses the native selector plus named consequence/Gold confirmation. Shared tooltip, toast, dialog focus and English copy remain canonical.

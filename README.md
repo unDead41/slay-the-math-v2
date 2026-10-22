@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.11.0
+# Slay the Math — Dungeon Edition 2.12.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -67,3 +67,9 @@ The supplied map reference now guides a worn parchment dungeon atlas, live HUD a
 `INTEGRATION.zip` supplies Artifact 3.5, Question Bank 1.5 and the matched shared rich-text service. The 120 original questions now include ordered Hint/More Hint, specific wrong-choice feedback, hint/solution diagrams, worked steps after a correct answer, seven Basics modules with 14 unscored practice checks and 30-skill learning evidence. Collection → Artifacts opens the persistent Codex with search, tier filters and effect comparisons. Owned artifact counters use the real engine state. Details, compatibility and evidence: [Map & Integration 2.11.0](docs/MAP_INTEGRATION_2_11_0.md).
 
 After pulling, run `npm.cmd run build`, then `npm.cmd start`. Rebuilding updates the offline `MAIN-SEKARANG.html`. To regenerate only the supplied mechanics bundle from preserved source, use `npm.cmd run import:mechanics`.
+
+## Map, modes, Bosses and Shop 2.12.0
+
+Clearer map routes/Floor labels, illustrated Learn/Challenge choices, full motion for both bosses and two 3×2 Shop racks: six cards (one at 60% off), six artifacts (3 Starting / 2 Mid-tier / 1 Boss), and paid card removal. Purchases work in both modes and survive reload. [Details and save compatibility](docs/GAME_UPDATE_2_12_0.md). **Question audit found a glossary harmonization issue**; authored content stays unchanged. [Audit for the question owner](docs/QUESTION_SUPPORT_AUDIT_2_12.md).
+
+After pulling, rebuild `MAIN-SEKARANG.html` with `npm.cmd run build`, restart using `npm.cmd start`, then Ctrl+F5.

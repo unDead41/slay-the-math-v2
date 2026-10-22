@@ -69,7 +69,7 @@ const report={checks:[],viewports:[],topics:[],errors:[]};let server;
 
   const offline=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'}),requests=[];
   offline.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});offline.on('pageerror',e=>report.errors.push(e.message));
-  await offline.goto('file://'+path.join(__dirname,'../MAIN-SEKARANG.html'));await offline.locator('[data-action=new]').click();await offline.locator('[data-action=start-challenge]').click();await offline.locator('[data-action=select-artifact]').first().click();await offline.locator('[data-action=claim-artifact]').click();
+  await offline.goto('file://'+path.join(__dirname,'../SLAY-THE-MATH-OFFLINE.html'));await offline.locator('[data-action=new]').click();await offline.locator('[data-action=start-challenge]').click();await offline.locator('[data-action=select-artifact]').first().click();await offline.locator('[data-action=claim-artifact]').click();
   assert.equal(await offline.locator('[data-action=education-select]').count(),4);await offline.locator('.artifact-scene-art img').evaluate(im=>im.decode());assert.equal(await offline.evaluate(()=>window.DCEducation.bank.questions.length),120);await completeBrowserTrial(offline);assert.equal(await offline.locator('.map-rail').count(),1);await offline.locator('.dungeon-room.available').first().click();assert.deepEqual(requests,[]);await offline.close();
   report.checks.push('Unmodified offline HTML embeds all 120 questions and the supplied Master artwork; Claim, answer, effect, map and room entry work with zero HTTP requests');
   assert.deepEqual(report.errors,[]);console.log(JSON.stringify(report,null,2));

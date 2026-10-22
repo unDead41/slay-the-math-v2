@@ -1,3 +1,4 @@
+export {selectSupportVisual} from '../learning/support-visual.mjs';
 import {sharedRichText,configureRichText} from '../../STM_SHARED/index.mjs';
 export {configureRichText};
 /** One integration entry. Uses the existing session owner and the game's save callback. */

@@ -1,6 +1,6 @@
 {
   "name": "duel-cube-math",
-  "version": "2.16.0",
+  "version": "2.16.1",
   "private": true,
   "description": "Source-aligned English and Bahasa Melayu for all 120 questions, guidance, diagrams and practice feedback",
   "scripts": {
@@ -30,6 +30,7 @@
     "test:mystery-offline": "node tests/mystery-offline-browser.cjs",
     "test:education-practice-browser": "node tests/education-practice-browser.cjs",
     "pretest": "npm run build",
-    "test:room-ui-browser": "node tests/room-ui-browser.cjs"
+    "test:room-ui-browser": "node tests/room-ui-browser.cjs",
+    "prestart": "node tools/import-mechanics.cjs"
   }
 }

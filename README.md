@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon & Education Edition 2.16.0
+# Slay the Math — Dungeon & Education Edition 2.16.1
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -6,7 +6,8 @@ Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructio
 npm.cmd start
 ```
 
-Open http://localhost:4173. No npm packages are required to play or edit the source.
+Open http://localhost:4173. `npm start` rebuilds the education modules automatically.
+The tracked `MAIN-SEKARANG.html` and root `index.html` load the current `dist/` scripts and styles at the original file URL. No npm packages are required to play or edit the source.
 Use Ctrl+C to stop. `dist/` contains the editable game; `modules/map/` contains the
 supplied 100-seed map module, original icon PNGs, exported layouts, tests and SOR.
 
@@ -38,7 +39,7 @@ npm run test:maps
 npm run build
 ```
 
-`npm run build` rebuilds optional `MAIN-SEKARANG.html` with embedded art/music.
+`npm run build` rebuilds optional `SLAY-THE-MATH-OFFLINE.html` with embedded art/music.
 This generated file is no longer tracked: the current full-animation build exceeds GitHub’s single-file limit.
 Build it locally after checkout, or use `npm start` directly.
 DOM tests need jsdom via `DOM_QA_MODULE` (otherwise explicitly skipped); optional
@@ -77,19 +78,19 @@ The supplied map reference now guides a worn parchment dungeon atlas, live HUD a
 
 `INTEGRATION.zip` supplies Artifact 3.5, Question Bank 1.5 and the matched shared rich-text service. The 120 original questions now include ordered Hint/More Hint, specific wrong-choice feedback, hint/solution diagrams, worked steps after a correct answer, seven Basics modules with 14 unscored practice checks and 30-skill learning evidence. Collection → Artifacts opens the persistent Codex with search, tier filters and effect comparisons. Owned artifact counters use the real engine state. Details, compatibility and evidence: [Map & Integration 2.11.0](docs/MAP_INTEGRATION_2_11_0.md).
 
-After pulling, run `npm.cmd run build`, then `npm.cmd start`. Rebuilding updates the offline `MAIN-SEKARANG.html`. To regenerate only the supplied mechanics bundle from preserved source, use `npm.cmd run import:mechanics`.
+After pulling, run `npm.cmd run build`, then `npm.cmd start`. Rebuilding updates the offline `SLAY-THE-MATH-OFFLINE.html`. To regenerate only the supplied mechanics bundle from preserved source, use `npm.cmd run import:mechanics`.
 
 ## Map, modes, Bosses and Shop 2.12.0
 
 Clearer map routes/Floor labels, illustrated Learn/Challenge choices, full motion for both bosses and two 3×2 Shop racks: six cards (one at 60% off), six artifacts (3 Starting / 2 Mid-tier / 1 Boss), and paid card removal. Purchases work in both modes and survive reload. [Details and save compatibility](docs/GAME_UPDATE_2_12_0.md). **Question audit found a glossary harmonization issue**; authored content stays unchanged. [Audit for the question owner](docs/QUESTION_SUPPORT_AUDIT_2_12.md).
 
-After pulling, rebuild `MAIN-SEKARANG.html` with `npm.cmd run build`, restart using `npm.cmd start`, then Ctrl+F5.
+After pulling, rebuild `SLAY-THE-MATH-OFFLINE.html` with `npm.cmd run build`, restart using `npm.cmd start`, then Ctrl+F5.
 
 ## Mystery Events 2.13.0
 
 Fifteen supplied Mystery Events now run in both stages and modes, using the active shared question bank, fixed 30/45/60-second deadlines, final answer review and atomic once-only consequences. Artwork loads only for the current event; 8K masters remain in the source ZIPs. Refresh retains the same question, deadline, choices and reward candidates. New runs retain the existing question-history profile.
 
-Run `npm run build` after pulling to refresh `MAIN-SEKARANG.html`, then restart `npm start`. The large generated portable file is verified locally; source and runtime artwork are the release inputs. Integration rules, source PNG recovery and verification are in [MYSTERY_EVENTS_2_13_0.md](docs/MYSTERY_EVENTS_2_13_0.md).
+Run `npm run build` after pulling to refresh `SLAY-THE-MATH-OFFLINE.html`, then restart `npm start`. The large generated portable file is verified locally; source and runtime artwork are the release inputs. Integration rules, source PNG recovery and verification are in [MYSTERY_EVENTS_2_13_0.md](docs/MYSTERY_EVENTS_2_13_0.md).
 
 ## Mystery backgrounds and Shop tabs 2.13.1
 

@@ -18,17 +18,27 @@
  }
  function teachingHTML(q,closed,{esc}){
   const h=q?.harmonization;if(!h)return '';
-  const context=h.contextNote?'<h3>In this question</h3><p data-q-rich="context">'+esc(h.contextNote)+'</p>':'';
-  const given=h.given?.length?'<h3>Given</h3><ul>'+h.given.map((text,i)=>'<li data-q-rich="given:'+i+'">'+esc(text)+'</li>').join('')+'</ul>':'';
-  const asked=h.asked?'<h3>Find</h3><p data-q-rich="asked">'+esc(h.asked)+'</p>':'';
+  const context=h.contextNote?'<div class="education-context"><h3>In this question</h3><p data-q-rich="context">'+esc(h.contextNote)+'</p></div>':'';
+  const given=h.given?.length?'<div class="education-given"><h3>Given</h3><ul>'+h.given.map((text,i)=>'<li data-q-rich="given:'+i+'">'+esc(text)+'</li>').join('')+'</ul></div>':'';
+  const asked=h.asked?'<div class="education-find"><h3>Find</h3><p data-q-rich="asked">'+esc(h.asked)+'</p></div>':'';
   return '<section class="education-teaching" aria-label="Question guide">'+context+given+asked+'</section>'+
    '<details class="education-sources"><summary>Sources &amp; curriculum fit</summary><p>'+esc(h.alignment)+' · Form 4</p>'+h.sources.map(s=>{
     const ref=M.data.bank.sourceRegistry[s.sourceId];
     return '<article><strong>'+esc(ref.title)+'</strong><p>'+esc(s.section)+' · PDF pages '+esc(s.pdfPages.join(', '))+' · Printed pages '+esc(s.printedPages)+'</p>'+(closed?'<p>'+esc(s.basis)+'</p>':'')+'</article>';
    }).join('')+(closed?'<p>'+esc(h.alignmentNote)+'</p>':'<p>Authoring notes appear after the question is finished.</p>')+'</details>';
  }
+ function supportHTML(q,record,view,{esc,kind='education',singleAttempt=false}){
+  const hint=record.hintState;
+  const rule=view.closed?'This question is finished. You can review the solution below.':singleAttempt?'One answer only. Use Hint before answering. More Hint is available in the final review.':hint.moreHintUnlocked?'More Hint is ready. Open it for a more specific next step.':hint.hintUsed?'Hint is open. A wrong answer submitted now unlocks More Hint.':'Open Hint first. A wrong answer after that unlocks More Hint.';
+  const steps=q.hintSteps.map(step=>'<div><h4>'+(step.id==='concept'?'Understand':'Try')+'</h4><p data-q-rich="hint:'+step.id+'">'+esc(step.text)+'</p></div>').join('');
+  return '<section class="question-guidance" aria-label="Question guidance"><h2>Work through the idea</h2><p class="question-hint-rule">'+esc(rule)+'</p>'+
+   (hint.hintUsed?'<section id="'+kind+'-hint" class="education-hint" tabindex="-1"><h3>Hint</h3>'+steps+'<figure class="learning-visual" data-q-visual="hint" aria-label="Hint visual"></figure></section>':'')+
+   (hint.moreHintViewed?'<section id="'+kind+'-more-hint" class="education-hint" tabindex="-1"><h3>More Hint</h3><p data-q-rich="moreHint">'+esc(q.moreHint)+'</p><figure class="learning-visual" data-q-visual="hint" aria-label="More Hint visual"></figure></section>':'')+
+   (view.closed?'<details class="question-solution-visual"><summary>Solution visual</summary><figure class="learning-visual" data-q-visual="solution" aria-label="Solution visual"></figure></details>':'')+
+   (view.workedSteps?'<section id="'+kind+'-steps" class="education-hint" tabindex="-1"><h2>Worked solution</h2><ol>'+view.workedSteps.map(step=>'<li><strong>'+esc(step.label)+'</strong><div data-q-rich="step:'+step.id+'">'+esc(step.text)+'</div></li>').join('')+'</ol></section>':'')+'</section>';
+ }
  function hydrateQuestion(host,q,view){
-  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');host.lang=L.language();
+  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');host.dataset.theme='light';host.lang=L.language();
   const existing=host.querySelector('#question-language-select');if(!existing)host.insertAdjacentHTML('afterbegin',L.control());
   const index=new Map();
   for(const el of host.querySelectorAll('[data-q-rich]')){
@@ -45,7 +55,10 @@
    else if(key.startsWith('step:'))parts=view.workedSteps?.find(s=>s.id===key.slice(5))?.richText;
    if(parts)renderParts(el,parts,view.allowCalculations,index);
   }
-  const visual=host.querySelector('[data-q-visual]');if(visual&&view.visual)M.renderVisual(visual,L.visual(view.visual,L.language(),q.topicCode),{glossary:M.data.glossary,allowCalculations:view.allowCalculations,calculationIndex:index});
+  for(const visual of host.querySelectorAll('[data-q-visual]')){
+   const value=visual.dataset.qVisual==='hint'?M.selectSupportVisual(q):view.visual;
+   if(value)M.renderVisual(visual,L.visual(value,L.language(),q.topicCode),{glossary:M.data.glossary,allowCalculations:view.allowCalculations&&visual.dataset.qVisual!=='hint',calculationIndex:index});
+  }
   questionTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getLanguage:()=>L.language(),getTheme:()=> 'dark'});
   L.applyInterface(host,L.language());
  }
@@ -106,5 +119,5 @@
   dialogTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getLanguage:()=>L.language(),getTheme:()=> 'dark'});L.applyInterface(host,L.language());
  }
  function progressHTML(run,{esc}){const rows=Q.progress(run);return '<p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
- root.STMMechanicsHost={teachingHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
+ root.STMMechanicsHost={teachingHTML,supportHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
 })(window);

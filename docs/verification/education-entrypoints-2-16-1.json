@@ -1,0 +1,40 @@
+{
+  "version": "2.16.1",
+  "mainBase": "146bc753cf4d6cf780c04f586b3ef753dd3e0670",
+  "sourceFindings": [
+    "The prior main commit contains language and Practice features, but the user launch file/URL was not directly available.",
+    "Ignored embedded MAIN-SEKARANG output can remain stale after source updates.",
+    "Shared learning.css was omitted from game CSS build.",
+    "Trial guidance had a separate layout."
+  ],
+  "checks": {
+    "nodeTests": {
+      "passed": 211,
+      "failed": 0,
+      "skipped": 0
+    },
+    "syntax": "passed",
+    "portableBuildBytes": 229574012,
+    "browser": [
+      "Root and MAIN-SEKARANG current runtime entry",
+      "Main Menu BM selection persists into a real new Challenge Artifact question",
+      "Live BM prompt, Given/Find and Hint rendered",
+      "Learning flow has list-style:none and three columns on desktop",
+      "Practice is the generated 120-question folio",
+      "375px folio scrollWidth equals clientWidth; BM PROB-001 filled Hint values visible"
+    ],
+    "screenshot": "education-menu-2-16-1.jpg"
+  },
+  "limits": [
+    "User Windows file path and original launch environment not directly inspected",
+    "Native OS sharing recipient not tested"
+  ],
+  "unchangedFiles": {
+    "dist/engine.js": "40aaaee3c5738aa2fdc6d0addd05d285d50ea2c25bc09a1e51f8e1c1ee85708e",
+    "dist/animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
+    "dist/animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
+    "dist/shop.css": "1f56a629d91cbeebb04382f633610b149641874ef3ce61dee04c26910471f332",
+    "dist/mystery.css": "2e8d9bab0002d6fd7e95b815b58de6b27f3f66953126b4cd941729b2512ec447",
+    "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json": "417bf840382a05ccc264de1dcc4c192ebbc03facfa1ed9bc688c539d6a22dda4"
+  }
+}

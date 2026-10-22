@@ -2,6 +2,11 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.16.1 — 22 October 2026
+
+- Fix stale HTML entry paths and missing shared learning CSS; expose question language and the 120-question Practice entry on Main Menu.
+- Align live Artifact/Mystery support with the folio and keep save/transaction ownership intact. [Details](../EDUCATION_ENTRYPOINTS_2_16_1.md).
+
 ## Education 2.16.0 integration into main — 22 October 2026
 
 - Apply the education branch by explicit user request, preserving main Boss size, Shop tabs and Mystery backgrounds/rich text.

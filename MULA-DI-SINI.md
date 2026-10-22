@@ -1,27 +1,28 @@
-# Slay the Math — Education 2.15.0
+# Slay the Math — 2.16.1
 
-Branch `education` menambah **Education Practice** pada main menu dan mengaktifkan bank harmonisasi buku teks/DSKP 1.6. Hint 1 terus mengisi nilai jadual/rajah, tanpa tanda soal. Rekod latihan berasingan daripada run/ganjaran.
+## Buka game terkini
 
-Dalam terminal PowerShell VS Code untuk projek asal, hentikan server dengan Ctrl+C, kemudian:
+Dalam folder projek yang sama, hentikan server lama dengan Ctrl+C dan jalankan:
 
 ```powershell
-git fetch origin
-git switch education
-git pull --ff-only origin education
+git switch main
+git pull --ff-only origin main
 npm.cmd start
 ```
 
-Buka http://localhost:4173 dan tekan Ctrl+F5. Pilih **Education Practice** untuk semua 120 soalan, atau Continue untuk sambung run. Tiada pakej npm diperlukan untuk bermain. Di bawah setiap soalan ada kategori penambahbaikan dan ruang komen. Komen disimpan pada peranti; gunakan Download comments atau Share comments untuk menghantarnya kepada Ijamm. Apabila keluar ke Main Menu, popup mengingatkan pemain supaya berkongsi komen untuk penambahbaikan.
+Buka **http://localhost:4173**. `npm start` menyediakan semula modul pendidikan secara automatik. Main menu mempunyai **Education Practice — 120 questions** dan pilihan **Question language / Bahasa soalan** (English atau Bahasa Melayu). Pilihan itu juga tersedia dalam setiap trial Artifact dan Mystery.
 
-Untuk fail offline terkini:
+Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.16.1**.
+
+**Education Practice** menggunakan dokumen folio yang sama seperti preview 120 soalan. Ia merangkumi Hint, More Hint, jalan kerja, Asas dan komen. Komen kekal pada peranti sehingga dikongsi atau dimuat turun.
+
+Jika mahu satu fail yang mengandungi semua artwork/audio untuk dipindahkan sendiri:
 
 ```powershell
 npm.cmd run build
 ```
 
-Buka `MAIN-SEKARANG.html` yang baru dijana. Fail ini kini hasil binaan tempatan, bukan fail yang disimpan di Git, kerana versi penuh artwork/animasi melebihi had satu fail GitHub. Jangan guna salinan HTML lama untuk menilai perubahan branch ini.
-
-Rujukan semasa dan bukti: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
+Hasilnya **SLAY-THE-MATH-OFFLINE.html**. Fail besar ini perlu dibina semula selepas kemas kini; ia berasingan daripada launcher MAIN-SEKARANG.html.
 
 ---
 

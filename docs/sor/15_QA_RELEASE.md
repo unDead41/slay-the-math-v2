@@ -116,3 +116,8 @@ Verify all 120 question-to-comment bindings and reload/edit behavior; Hint/Revie
 ## Question language — 2.16.0
 
 Whole-question English/Bahasa Melayu is implemented on education. Source review, scope and validation: [Question language](../QUESTION_LANGUAGE_2_16_0.md).
+
+
+## Education entry points — 2.16.1
+
+Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). Offline generated output is now SLAY-THE-MATH-OFFLINE.html.

@@ -108,7 +108,7 @@ const report={version:'2.6.0',checks:[],viewports:[],errors:[]};let server;
   await touch.locator('#artifact-title').tap();assert.equal(await touch.locator('[role=tooltip]').count(),0);assert.equal(await touch.evaluate(()=>localStorage.getItem('duel-cube-math.v1')),touchBefore);await mobile.close();
   report.checks.push('Shop quotes and purchases show highest-discount-only arithmetic and separate actual Gold spending at 3440×1440; real touch taps open/dismiss definitions on phone without selecting or granting an artifact');
   await decode();const offlineRequests=[];page.on('request',req=>{if(/^https?:/.test(req.url()))offlineRequests.push(req.url());});
-  await page.goto('file://'+path.join(__dirname,'../MAIN-SEKARANG.html'));
+  await page.goto('file://'+path.join(__dirname,'../SLAY-THE-MATH-OFFLINE.html'));
   await page.evaluate(()=>{localStorage.removeItem('duel-cube-math.v1');localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true}));});
   await page.reload();await click('new');await click('start-challenge');await decode();assert.equal(await page.locator('.artifact-card').count(),3);
   assert.ok(await page.locator('.artifact-encounter img').evaluateAll(els=>els.every(im=>im.src.startsWith('data:image/')&&im.complete&&im.naturalWidth>0)));

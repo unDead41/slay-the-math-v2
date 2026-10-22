@@ -158,7 +158,7 @@ test('DOM: Unmute Music enables audio on that click when both channels were save
  const {dom,w,click}=boot(null,false,{AudioContext:Context,settings:{sound:false,musicMuted:true}});
  try{click('music');assert.equal(contexts,0);click('music-mute');await new Promise(r=>setImmediate(r));assert.equal(contexts,1);assert.equal(w.DCAudio.state.unlocked,true);assert.equal(w.DCAudio.state.muted,false);}finally{dom.window.close();}
 });
-test('DOM: portable HTML boots without external scripts/styles and embeds all images',{skip:!JSDOM},async()=>{const portableSource=fs.readFileSync(path.join(__dirname,'../MAIN-SEKARANG.html'),'utf8');
+test('DOM: portable HTML boots without external scripts/styles and embeds all images',{skip:!JSDOM},async()=>{const portableSource=fs.readFileSync(path.join(__dirname,'../SLAY-THE-MATH-OFFLINE.html'),'utf8');
 // Verify the real bytes, then elide them only for jsdom's DOM/interaction test.
 // Its HTML parser duplicates very large base64 script text; Chromium decodes
 // the unmodified portable file in artifacts-browser.cjs.
@@ -201,7 +201,7 @@ test('DOM: Claim opens the actual bank question, saves incorrect/hint state and 
   const q=w.DCEducation.current(state()),wrong=q.choices.find(c=>c.id!==q.correctChoiceId).id;
   assert.equal(w.document.querySelectorAll('[data-action=education-select]').length,4);assert.equal(w.document.querySelector('[data-question-id]').dataset.questionId,q.id);assert.ok(w.document.querySelector('#education-prompt').textContent.length>15);
   assert.equal(w.document.querySelector('[data-action=education-check]').disabled,true);click('education-select',wrong);click('education-check');click('education-hint');
-  assert.match(w.document.querySelector('#education-feedback').textContent,/Not quite/);assert.equal(w.document.querySelectorAll('#education-hint p').length,2);assert.ok(w.document.querySelector('#education-hint').textContent.length>40);pending=state();
+  assert.match(w.document.querySelector('#education-feedback').textContent,/Not quite/);assert.equal(w.document.querySelectorAll('#education-hint [data-q-rich^="hint:"]').length,2);assert.ok(w.document.querySelector('#education-hint').textContent.length>40);pending=state();
   click('home');click('continue');assert.equal(w.document.querySelector('[data-question-id]').dataset.questionId,q.id);
  }finally{dom.window.close();}
  const again=boot(pending);
@@ -364,5 +364,37 @@ test('DOM: Mystery failed review distinguishes maximum HP loss from the capped c
   assert.ok(number,'The authored maximum loss must retain its preview in review');assert.equal(number.textContent,'4');number.focus();
   const popup=w.document.querySelector('[role=tooltip]').textContent;assert.match(popup,/Maximum HP loss/);assert.match(popup,/Actual loss: min\(4, max\(0, 2 − 1\)\) = 1 HP/);
   assert.deepEqual(state(),before);assert.equal(state().hp,2);
+ }finally{dom.window.close();}
+});
+
+
+test('DOM: Main Menu language control carries BM through the real Artifact trial without a new save schema',{skip:!JSDOM},async()=>{
+ const {dom,w,click,state}=boot();
+ try{
+  const menu=w.document.querySelector('[data-action=education-practice]');assert.match(menu.textContent,/120 questions/);
+  const language=w.document.getElementById('menu-question-language-select');assert.ok(language);language.value='ms';language.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert.equal(w.DCQuestionLanguage.language(),'ms');assert.equal(w.localStorage.getItem('duel-cube-math.v1'),null);
+  click('new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
+  const source=w.DCEducation.current(state()),expected=w.DCQuestionLanguage.question(source,'ms');
+  assert.equal(w.document.getElementById('question-language-select').value,'ms');assert.equal(w.document.getElementById('education-prompt').textContent,expected.prompt);
+  assert.ok(w.document.querySelector('.education-given'));assert.ok(w.document.querySelector('.education-find'));
+  assert.match(w.document.querySelector('.question-hint-rule').textContent,/Petunjuk/);const before=state();
+  click('home');assert.equal(w.document.getElementById('menu-question-language-select').value,'ms');assert.deepEqual(state().educationState,before.educationState);
+  await new Promise(resolve=>setImmediate(resolve));
+ }finally{dom.window.close();}
+});
+test('DOM: in-game Hint retains the folio reference grid after solution, in both languages',{skip:!JSDOM},()=>{
+ const {dom,w}=boot();
+ try{
+  for(const language of ['en','ms']){
+   w.DCQuestionLanguage.setLanguage(language);const source=w.STMMechanics.data.bank.questions.find(q=>q.id==='PROB-001'),q=w.DCQuestionLanguage.question(source,language),M=w.STMMechanics;
+   let session=M.session.reserveNext(M.session.createSession({seed:1}),{...w.DCEducation.bank,questions:[source]}).session;
+   session=M.session.openSupport(session,source.id,'hint');
+   session=M.session.submitAnswer(session,w.DCEducation.bank,{questionId:source.id,choiceId:source.correctChoiceId,attemptId:'parity-'+language});
+   const record=session.records[source.id],view=M.session.selectLearningView(q,record),host=w.document.createElement('section');host.className='education-question';w.document.body.append(host);
+   host.innerHTML=w.STMMechanicsHost.supportHTML(q,record,view,{esc:text=>String(text)});w.STMMechanicsHost.hydrateQuestion(host,q,view);
+   const cells=[...host.querySelectorAll('#education-hint td')].map(c=>c.textContent.replace(/\s/g,''));assert.ok(cells.includes('(H,1)'));assert.ok(cells.includes('(T,4)'));assert.ok(!cells.includes('?'));
+   assert.equal(host.querySelectorAll('#education-hint [data-q-rich^="hint:"]').length,2);assert.ok(host.querySelector('details.question-solution-visual'));host.remove();
+  }
  }finally{dom.window.close();}
 });

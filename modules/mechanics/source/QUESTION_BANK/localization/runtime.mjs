@@ -74,6 +74,7 @@ export function createQuestionLanguageService(data){
  function interfaceText(text,lang){
   const direct=t(text,lang);if(direct!==text||lang!=='ms')return direct;
   const patterns=[
+   [/^(\d+) \/ (\d+) questions seen$/,(_,a,b)=>a+' / '+b+' soalan telah dilihat'],
    [/^Question (\d+) \/ (\d+)$/i,(_,a,b)=>'Soalan '+a+' / '+b],
    [/^(\d+) of (\d+) questions$/i,(_,a,b)=>a+' daripada '+b+' soalan'],
    [/^(\d+) questions$/i,(_,a)=>a+' soalan'],

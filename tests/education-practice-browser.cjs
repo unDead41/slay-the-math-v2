@@ -100,11 +100,11 @@ let browser,server;
  }
  const offline=await browser.newPage({viewport:{width:1280,height:800},reducedMotion:'reduce'}),requests=[];
  offline.on('pageerror',e=>report.errors.push(e.message));offline.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});
- await offline.goto('file://'+path.join(root,'MAIN-SEKARANG.html'));
+ await offline.goto('file://'+path.join(root,'SLAY-THE-MATH-OFFLINE.html'));
  await offline.locator('[data-action=education-practice]').click();
  const of=offline.frameLocator('#education-practice-frame');await of.locator('#question-heading').waitFor();
  assert.equal(await of.locator('.atlas-question').count(),120);await of.locator('#hint-tab').click();
- assert.deepEqual(requests,[]);report.checks.push('Portable MAIN-SEKARANG.html opens Education Practice with all 120 questions and zero network requests.');
+ assert.deepEqual(requests,[]);report.checks.push('Portable SLAY-THE-MATH-OFFLINE.html opens Education Practice with all 120 questions and zero network requests.');
  assert.deepEqual(report.errors,[]);
  fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify(report,null,2));

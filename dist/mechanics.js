@@ -2,6 +2,7 @@
 (function(root){"use strict";
 const factories={
 "QUESTION_BANK/integration/index.mjs":function(require,module,exports){
+exports.selectSupportVisual=require("QUESTION_BANK/learning/support-visual.mjs").selectSupportVisual;
 const {sharedRichText,configureRichText}=require("STM_SHARED/index.mjs");
 
 /** One integration entry. Uses the existing session owner and the game's save callback. */

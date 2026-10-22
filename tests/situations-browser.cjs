@@ -99,7 +99,7 @@ function ending(scene){
   await restore(ending('victory'));assert.equal(await page.locator('.results-panel h1').innerText(),'Victory');
   report.checks.push('Defeat, Stage Clear and Victory retain their live summaries, learning record, confirmed Retry and actual Stage 2 checkpoint.');
   const offline=await context.newPage(),requests=[];offline.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});offline.on('pageerror',e=>report.errors.push(e.message));
-  await offline.goto('file://'+path.join(__dirname,'../MAIN-SEKARANG.html'));await restore(camp,offline);
+  await offline.goto('file://'+path.join(__dirname,'../SLAY-THE-MATH-OFFLINE.html'));await restore(camp,offline);
   assert.equal(await offline.locator('.situation-art img').evaluate(im=>im.src.startsWith('data:image/')&&im.naturalWidth>0),true);
   assert.equal(await offline.evaluate(()=>['shop','rest','reward','defeat'].every(id=>window.DC_ASSETS['situation-'+id+'.webp']?.startsWith('data:image/'))),true);
   await offline.locator('[data-action=rest]').click();assert.equal(await offline.locator('[data-stm-map]').count(),1);assert.deepEqual(requests,[]);await offline.close();

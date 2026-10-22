@@ -11,4 +11,4 @@ for(const name of fs.readdirSync(musicDir).filter(n=>n.endsWith('.mp3')))music[p
 if(Object.keys(music).length!==10)throw new Error('Build requires all 10 soundtrack loops');
 html=html.replace('<body>','<body><script>window.DC_ASSETS='+JSON.stringify(images)+';window.DC_MUSIC='+JSON.stringify(music)+';</script>');
 // Dynamic src attributes are produced by app.js. Resolve local asset names to embedded bytes.
-const out=path.join(root,'MAIN-SEKARANG.html');fs.writeFileSync(out,html);console.log('Portable game generated: '+fs.statSync(out).size+' bytes');
+const out=path.join(root,'SLAY-THE-MATH-OFFLINE.html');fs.writeFileSync(out,html);console.log('Portable game generated: '+fs.statSync(out).size+' bytes');

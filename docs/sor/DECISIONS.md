@@ -340,3 +340,9 @@ Owners: SOR 10/13/15; implementation and delivery limits: [Question feedback](..
 
 - DEC-20261022-EDUCATION-MAIN-01 — DISAHKAN: Ijamm authorizes applying education to main in this chat. This supersedes the previous branch-only release boundary.
 - DITERUSKAN: Preserve main 2.13.2 Boss/Shop/Mystery fixes and combine full Education 2.16.0. [Integration and actual verification](../EDUCATION_MAIN_INTEGRATION.md).
+
+
+## Education visibility — 2.16.1
+
+- DEC-20261022-EDUCATION-ENTRY-01 — DISAHKAN: Ijamm requests fixing missing BM/English/Practice and aligning the live question display with the preview on main.
+- DITERUSKAN: Version small current-runtime entry pages, expose language on Main Menu, share learning CSS/support presentation, and separate generated offline snapshots. [Evidence and limits](../EDUCATION_ENTRYPOINTS_2_16_1.md).

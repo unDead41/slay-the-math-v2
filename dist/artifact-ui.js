@@ -34,10 +34,7 @@
    const choice=q.choices.find(c=>c.id===id),wrong=p.attempts.includes(id)&&id!==q.correctChoiceId;
    return '<div class="education-option">'+button('<span class="education-letter" aria-hidden="true">'+'ABCD'[i]+'</span><span class="sr-only">'+esc(choice.text)+'</span>','education-select','education-answer'+(p.selectedId===id?' selected':'')+(wrong?' incorrect':'')+(p.solved&&id===q.correctChoiceId?' correct':''),'data-id="'+id+'" aria-label="Answer '+'ABCD'[i]+': '+esc(choice.text)+'" aria-pressed="'+(p.selectedId===id)+'" '+(p.solved||wrong?'disabled':''))+'<div class="education-answer-copy"><span data-q-rich="choice:'+id+'">'+esc(choice.text)+'</span>'+(wrong?'<small>Try another answer</small>':'')+'</div></div>';
   }).join('')+'</div>':'';
-  const supports=q?((p.hinted?'<section id="education-hint" class="education-hint" tabindex="-1"><strong>Hint</strong>'+q.hintSteps.map(step=>'<p data-q-rich="hint:'+step.id+'">'+esc(step.text)+'</p>').join('')+'</section>':'')+
-   (record.hintState.moreHintViewed?'<section id="education-more-hint" class="education-hint" tabindex="-1"><strong>More Hint</strong><p data-q-rich="moreHint">'+esc(q.moreHint)+'</p></section>':'')+
-   (view.visual?'<figure class="learning-visual" data-q-visual aria-label="'+(p.solved?'Solution':'Hint')+' visual"></figure>':'')+
-   (view.workedSteps?'<section id="education-steps" class="education-hint" tabindex="-1"><h2>Worked solution</h2><ol>'+view.workedSteps.map(step=>'<li><strong>'+esc(step.label)+'</strong><div data-q-rich="step:'+step.id+'">'+esc(step.text)+'</div></li>').join('')+'</ol></section>':'')):'';
+  const supports=q?root.STMMechanicsHost.supportHTML(q,record,view,{esc}):'';
   return '<section class="artifact-encounter education-encounter" data-question-id="'+(q?.id||'exhausted')+'" data-topic="'+(q?.topicCode||'')+'" aria-labelledby="education-title">'+sceneArt()+
    '<aside class="master-dialogue"><p class="eyebrow">THE DUNGEON MASTER</p><blockquote>“Knowledge opens the way. Show me what you know.”</blockquote>'+button('‹ Main Menu','home','text-btn')+'</aside>'+
    '<div class="education-panel"><p class="eyebrow">'+(q?'CHAPTER '+q.chapter+' · '+esc(q.topic):'ALL QUESTIONS SEEN')+'</p><h1 id="education-title" tabindex="-1">The Master’s trial</h1>'+

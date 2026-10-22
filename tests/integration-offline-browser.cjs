@@ -5,9 +5,9 @@ const {chromium}=require('playwright'),E=require('../dist/engine.js');
  const report={checks:[],externalRequests:[],errors:[]};
  try{
   const page=await browser.newPage({viewport:{width:1280,height:720},reducedMotion:'reduce'});
-  page.on('pageerror',e=>report.errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())||r.url().startsWith('file:')&&!r.url().endsWith('/MAIN-SEKARANG.html'))report.externalRequests.push(r.url());});
+  page.on('pageerror',e=>report.errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())||r.url().startsWith('file:')&&!r.url().endsWith('/SLAY-THE-MATH-OFFLINE.html'))report.externalRequests.push(r.url());});
   await page.addInitScript(()=>{localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true}));});
-  await page.goto('file://'+path.join(__dirname,'../MAIN-SEKARANG.html'),{waitUntil:'domcontentloaded',timeout:60000});
+  await page.goto('file://'+path.join(__dirname,'../SLAY-THE-MATH-OFFLINE.html'),{waitUntil:'domcontentloaded',timeout:60000});
   const click=a=>page.locator('[data-action="'+a+'"]:visible').first().click();
   await click('new');await click('start-challenge');await page.locator('[data-action=select-artifact]').first().click();await click('claim-artifact');
   const pending=await page.evaluate(()=>{const r=JSON.parse(localStorage.getItem('duel-cube-math.v1'));return {id:DCEducation.current(r).id,correct:DCEducation.current(r).correctChoiceId};});

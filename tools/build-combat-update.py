@@ -37,7 +37,7 @@ for archive in args.base:
 manifest = {'schemaVersion': 1, 'release': '2.2.0',
             'projectName': 'duel-cube-math', 'supportedSourceVersions': ['2.0.0', '2.1.0'],
             'files': [], 'requires': [], 'portableBuiltLocally': True}
-excluded = {'MAIN-SEKARANG.html', 'AGENTS.md', 'APPLY-UPDATE.ps1'}
+excluded = {'MAIN-SEKARANG.html', 'SLAY-THE-MATH-OFFLINE.html', 'AGENTS.md', 'APPLY-UPDATE.ps1'}
 for source in sorted(project.rglob('*')):
     if not source.is_file() or any(part in {'.git', 'node_modules', '__pycache__'} for part in source.parts):
         continue

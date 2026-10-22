@@ -58,9 +58,9 @@ Buka http://localhost:4173 dan tekan **Ctrl+F5**. Untuk mencuba aliran awal: **N
 - Claim mengunci gift dan satu soalan rawak. Artifact/effect belum diberi. Pilih jawapan dan Check Answer.
 - Jawapan salah boleh dicuba semula atau dibantu Hint. Tiada penalti HP atau countdown wajib.
 - Jawapan betul memaparkan jawapan serta penerangan. Tindakan Claim/Continue terakhir memberi artifact sekali sahaja dan menyambung map/bilik/stage yang betul.
-- Soalan yang sudah keluar direkod sebagai seen, termasuk soalan yang ditinggalkan ketika memulakan New Run. Ia tidak dicabut lagi. Sejarah disimpan pada browser/origin yang sama dan turut dibawa oleh Export/Import run.
+- Soalan yang telah dibuka direkod sebagai seen dan tidak diulang dalam run yang sama, termasuk soalan yang ditutup tanpa jawapan. New Run mengosongkan rekod run; sejarah lifetime kekal pada browser/origin yang sama dan turut dibawa oleh Export/Import run.
 - Refresh atau Menu > Continue menyambung soalan, pilihan, cubaan dan hint yang sama. Tiada reroll.
-- Setelah 120 item habis, mesej jelas dipaparkan dan perjalanan boleh disambung tanpa mengulang soalan. Tiada auto-reset.
+- Setelah 120 item run ini habis, mesej jelas dipaparkan dan perjalanan boleh disambung tanpa mengulang soalan. Penyelesaian tanpa markah boleh membuka meterai bos tanpa Focus. New Run memulakan kitaran soalan baharu.
 - Elite/Mystery/Boss artifact menggunakan gate yang sama. Predict dalam battle kini menggunakan bank 120 soalan yang sama, tanpa ulangan antara Predict, Artifact dan Mystery dalam run yang sama. Jawapan pertama betul tanpa bantuan memberi +1 Focus (had 3). New Run menetapkan semula rekod run; lifetime dikekalkan.
 
 ## Save dan rollback

@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.17.0 delivery fix — 22 October 2026
+
+- Move the main-menu question-language selector into Settings and retain its saved preference.
+- Derive version from package.json, invalidate changed runtime scripts/styles and clarify correct-server startup.
+- 217 tests pass; desktop/phone Settings and all runtime resource hashes verified. [Details](../SETTINGS_RELEASE_2_17_0.md).
+
 ## Game 2.17.0 — 22 October 2026
 
 - Keep question artwork fixed while Hint, More Hint and worked steps scroll inside Artifact/Mystery panels.

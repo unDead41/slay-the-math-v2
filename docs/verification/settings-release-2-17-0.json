@@ -1,0 +1,29 @@
+{
+  "version": "2.17.0",
+  "runtimeResourcesWithMatchingContentHash": 46,
+  "tests": {
+    "passed": 217,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "mainFloatingLanguage": false,
+    "settingsPreference": "ms retained after reload; en selectable on phone",
+    "menuVersion": "v2.17.0",
+    "settingsVersion": "v2.17.0",
+    "phone": {
+      "viewport": [
+        390,
+        844
+      ],
+      "documentWidth": 380,
+      "dialogWidth": 366.59375,
+      "dialogRight": 373.296875
+    }
+  },
+  "limits": [
+    "User screenshot shows 2.16.1; local Chrome tab listing did not return, so old checkout, offline snapshot and cache could not be distinguished on the Windows PC.",
+    "Browser checks used the current game source in managed Chromium. User must pull main and restart the correct local server.",
+    "MODEL.zip unavailable and not used."
+  ]
+}

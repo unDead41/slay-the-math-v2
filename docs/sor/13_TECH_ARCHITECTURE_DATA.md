@@ -161,3 +161,8 @@ Current menu language/Practice controls, shared learning presentation and stable
 ## Question menu — 2.17.0
 
 Q.coverage derives current-run IDs from Artifact completed/pending and Mystery settled/pending receipts, deduplicated against the canonical bank. The existing accumulated usedIds/profile union supplies lifetime coverage and the no-repeat pool. No additional stored counter or save version is introduced. [Details](../QUESTION_MENU_2_17_0.md).
+
+
+## Settings and release delivery — 2.17.0
+
+package.json owns release version metadata. Generate release.js and content-hashed script/style URLs after all runtime modules, then synchronize the three launchers. Preserve file addresses/storage and strip query suffixes when embedding the portable build. Do not imply Git publication updates the user’s PC automatically. [Details](../SETTINGS_RELEASE_2_17_0.md).

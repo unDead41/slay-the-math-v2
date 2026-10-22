@@ -126,3 +126,8 @@ Current menu language/Practice controls, shared learning presentation and stable
 ## Question menu — 2.17.0
 
 215 complete Node/jsdom tests pass, 0 skipped; build and syntax pass. Browser measurements verify fixed scene/art dimensions through Hint, More Hint, worked steps and BM, plus phone/landscape Artifact/Mystery panels. [Evidence and Windows limit](../QUESTION_MENU_2_17_0.md).
+
+
+## Settings and release delivery — 2.17.0
+
+217 Node/jsdom tests pass, 0 skipped; portable build and syntax pass. Verify package-derived version, content invalidation within a release, idempotence, all 46 current resource hashes, Settings focus/BM persistence and phone bounds. The user’s Windows installation still needs a pull/restart. [Evidence](../SETTINGS_RELEASE_2_17_0.md).

@@ -3,7 +3,7 @@ const {shopRoom}=require('./helpers/shop.cjs');
 const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
-const files=[...fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8').matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]);
+const files=[...fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8').matchAll(/<script src="([^"]+)"/g)].map(m=>m[1].split(/[?#]/)[0]);
 test('DOM: question menus use Ink and a bilingual legend, preserve panel scroll, and distinguish run from lifetime coverage',{skip:!JSDOM},()=>{
  const Q=require('../dist/education.js'),r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,Q.ids.slice(0,35));
  const {dom,w,click,state}=boot(r);
@@ -388,11 +388,14 @@ test('DOM: Mystery failed review distinguishes maximum HP loss from the capped c
 });
 
 
-test('DOM: Main Menu language control carries BM through the real Artifact trial without a new save schema',{skip:!JSDOM},async()=>{
+test('DOM: Settings owns the menu language preference and carries BM into the real Artifact trial',{skip:!JSDOM},async()=>{
  const {dom,w,click,state}=boot();
  try{
   const menu=w.document.querySelector('[data-action=education-practice]');assert.match(menu.textContent,/120 questions/);
-  const language=w.document.getElementById('menu-question-language-select');assert.ok(language);language.value='ms';language.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert.equal(w.document.querySelector('.home-question-language'),null);
+  click('saves');const language=w.document.getElementById('settings-question-language-select');assert.ok(language);language.value='ms';language.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert.equal(w.document.getElementById('dialog').open,true);assert.equal(w.document.activeElement.id,'settings-question-language-select');
+  assert.equal(w.document.querySelector('[data-game-version]').textContent,'v2.17.0');click('close');
   assert.equal(w.DCQuestionLanguage.language(),'ms');assert.equal(w.localStorage.getItem('duel-cube-math.v1'),null);
   click('new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
   const source=w.DCEducation.current(state()),expected=w.DCQuestionLanguage.question(source,'ms');
@@ -401,7 +404,7 @@ test('DOM: Main Menu language control carries BM through the real Artifact trial
   assert.equal(w.document.getElementById('question-language-select').value,'ms');assert.equal(w.document.getElementById('education-prompt').textContent.replace(/\s/g,''),expected.prompt.replace(/\s/g,''));
   assert.ok(w.document.querySelector('.education-given'));assert.ok(w.document.querySelector('.education-find'));
   assert.match(w.document.querySelector('.question-hint-rule').textContent,/Petunjuk/);const before=state();
-  click('home');assert.equal(w.document.getElementById('menu-question-language-select').value,'ms');assert.deepEqual(state().educationState,before.educationState);
+  click('home');click('saves');assert.equal(w.document.getElementById('settings-question-language-select').value,'ms');assert.deepEqual(state().educationState,before.educationState);
   await new Promise(resolve=>setImmediate(resolve));
  }finally{dom.window.close();}
 });

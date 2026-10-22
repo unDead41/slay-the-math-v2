@@ -1,6 +1,6 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const scripts=html=>[...html.matchAll(/<script src="([^"]+)"/g)].map(x=>x[1]);
+const scripts=html=>[...html.matchAll(/<script src="([^"]+)"/g)].map(x=>x[1].split(/[?#]/)[0]);
 test('all game entry pages load the same current education and language modules in order',()=>{
  const canonical=scripts(read('dist/index.html'));assert.ok(canonical.includes('question-language.js'));assert.ok(canonical.includes('education-practice.js'));
  for(const name of ['MAIN-SEKARANG.html','index.html']){

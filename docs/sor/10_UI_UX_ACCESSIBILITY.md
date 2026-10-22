@@ -171,3 +171,8 @@ Current menu language/Practice controls, shared learning presentation and stable
 ## Question menu — 2.17.0
 
 Bound Artifact/Mystery scene height to the available viewport and give their focusable question panels internal vertical scrolling. Preserve scroll for the same encounter and focus new guidance. Use Ink and a small bilingual Math term / Game term / Calculation legend; Practice defaults to Ink. [Checks and screenshot](../QUESTION_MENU_2_17_0.md).
+
+
+## Settings and release delivery — 2.17.0
+
+By Ijamm’s request, the floating main-menu Question language control moves into Save and Settings. Changing it keeps the dialog open and focused, and uses the existing saved whole-question preference. Display the generated runtime version in both menu and Settings. In-question/practice controls remain available. [Details](../SETTINGS_RELEASE_2_17_0.md).

@@ -1,0 +1,13 @@
+# Settings language and release delivery — 2.17.0
+
+Ijamm reports a main-menu screenshot still showing v2.16.1 and requests moving its floating Question language control into Settings. Remote main was a63b9e0, package 2.17.0, with the previous scroll/Ink/coverage changes. That remote source does not prove the Windows checkout was updated. The screenshot proves an older runtime is displayed, but cannot distinguish an old checkout/server, offline snapshot or cached page. Local Chrome tab listing did not complete.
+
+The floating main-menu selector is removed. Save and Settings now owns this saved preference, retains focus and stays open when switching. In-question and practice selectors continue using the same preference. Settings displays the actual runtime release version. No run/profile/comment storage key, question content, RNG, rewards or scene artwork changed.
+
+The previous menu version was a manually maintained app.js literal, and the current-start guide still said 2.16.1. package.json now owns the version: the entrypoint builder generates release.js plus a version meta tag, and menu/Settings read that metadata. Every local script/stylesheet gets a deterministic content hash in its URL, including fixes within the same version. Generate these URLs after language/practice modules are built. An unchanged rebuild is idempotent. All three launchers use identical runtime URLs and preserve their original addresses/storage origin. The portable builder strips query suffixes when embedding actual files, so the generated offline file remains self-contained.
+
+Version intentionally remains 2.17.0 as requested. The source commit and content hashes identify this delivery fix. npm start prints the version and project folder only after binding successfully, and reports a clear error when an older server already occupies the port. The start guide stops if git pull fails and explains restarting the correct checkout. GitHub publication cannot replace files or a generated offline snapshot on the user's PC automatically.
+
+Verification: 217 Node/jsdom tests pass, 0 failed/skipped; full portable build and syntax checks pass. New build tests reproduce unchanged URLs before the fix and verify content invalidation, package-derived metadata, synchronized launchers and idempotence. Settings DOM test verifies removal, focus, BM selection and the real Artifact trial. Browser checks verify v2.17.0 in menu/Settings, BM persistence after refresh, and a usable 390×844 Settings dialog without horizontal overflow. All 46 runtime resource hashes match their actual generated contents. Windows startup was not executed.
+
+[Settings screenshot](verification/settings-language-2-17-0.jpg) · [Verification](verification/settings-release-2-17-0.json)

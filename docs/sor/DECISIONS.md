@@ -351,3 +351,8 @@ Owners: SOR 10/13/15; implementation and delivery limits: [Question feedback](..
 ## Question menu — 2.17.0
 
 DEC-20261022-QUESTION-MENU-01 — DISAHKAN: Ijamm requests internal scroll instead of artwork zoom, Ink with a small legend, current-run coverage resetting on New Run, and retained lifetime coverage. DITERUSKAN: derive counts from existing receipts/profile; preserve question draw/assessment/reward behavior. [Implementation and verification](../QUESTION_MENU_2_17_0.md).
+
+
+## Settings and release delivery — 2.17.0
+
+DEC-20261022-SETTINGS-RELEASE-01 — DISAHKAN: Ijamm requests moving the main-menu Question language selector into Settings and fixing the displayed old version to v2.17.0. DITERUSKAN: retain game version 2.17.0, derive its display from package metadata, invalidate changed runtime resources by content and clarify pull/restart steps. [Implementation and limits](../SETTINGS_RELEASE_2_17_0.md).

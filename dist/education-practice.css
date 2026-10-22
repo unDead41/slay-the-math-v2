@@ -21,9 +21,6 @@ body[data-scene="education-practice"] .ambient{display:none}
 .question-language-control{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px;margin:0 0 16px;font:13px/1.4 var(--sans);color:var(--muted)}
 .question-language-control select{width:auto;min-height:44px;max-width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
 
-/* The menu exposes the same saved question language used by the folio and trials. */
-.home-question-language{position:absolute;top:14px;right:clamp(12px,3vw,60px);z-index:6;max-width:calc(100% - 24px);padding:8px 12px;background:#101b29e8;border:1px solid var(--line);border-radius:8px}
-.home-question-language .question-language-control{margin:0;gap:8px;color:var(--gold-soft)}
 .illustrated-home .main-menu-actions>.menu-education{flex-direction:column;gap:3px;min-height:62px;border-color:var(--gold)}
 .menu-education small{font:11px/1.3 var(--sans);color:var(--gold-soft);letter-spacing:.02em}
 .game-release{font:11px/1.5 var(--sans);color:var(--muted);white-space:nowrap}
@@ -52,4 +49,9 @@ body[data-scene="education-practice"] .ambient{display:none}
 .question-guidance h3{font:22px/1.3 var(--font-display);margin:0 0 16px;color:var(--gold-soft)}
 .question-guidance h4{font:600 11px/1.5 var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:14px 0 5px;color:var(--gold-soft)}
 .question-solution-visual summary{cursor:pointer;min-height:44px;padding-block:12px;font:14px var(--sans);color:var(--gold-soft)}
-@media(max-width:600px){.home-question-language{padding:6px 8px;top:8px}.home-question-language .question-language-control{font-size:11px;gap:6px}.home-question-language select{min-height:44px;padding:6px}.education-question .education-teaching{grid-template-columns:minmax(0,1fr)}.education-context{grid-column:1}.question-guidance>h2{font-size:22px}}
+@media(max-width:600px){.education-question .education-teaching{grid-template-columns:minmax(0,1fr)}.education-context{grid-column:1}.question-guidance>h2{font-size:22px}}
+
+.settings-question-language{padding:0 0 20px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.settings-question-language .question-language-control{justify-content:space-between;font-size:15px;color:var(--text);margin-bottom:8px}
+.settings-question-language p,.settings-version{font-size:12px;color:var(--muted);margin:0}
+.settings-version{margin-top:20px}.settings-version strong{color:var(--gold-soft);font-weight:400}

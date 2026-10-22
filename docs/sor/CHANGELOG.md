@@ -260,3 +260,7 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 ## 2.16.0 — Bahasa soalan
 
 Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Perubahan kekal pada branch education.
+
+## Supplied card language 1.1 — 22 October 2026, dual-language-bm-bi
+
+Localized the supplied 40-card pack and 25 tooltips into simple BM/English, including names/details/controls/calculations and two-name search. Added a read-only Collection catalogue using the same preference and offline asset owner. Preserved original art and mechanical definitions; combat activation remains separate. Source KSSM/DSKP page mapping and actual checks: docs/CARD_PACK_LANGUAGE_1_1.md.

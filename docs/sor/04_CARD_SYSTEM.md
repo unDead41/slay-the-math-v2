@@ -73,3 +73,7 @@ Starter tetap 12, lapan definisi aktif, upgrade/resume kekal sah dan imej rujuka
 **CRD-11:** Every normal, card and artifact draw shares `DCConfig.HAND_LIMIT` (implementation baseline: 10). Check capacity before taking a card or shuffling. Unavailable capacity stops the requested draw; no excess card is discarded/exhausted and no extra RNG call occurs. A played Draw card frees its own slot before its effect. Report actual cards drawn and show Hand full when the request exceeds capacity.
 
 Old overfull saves remain loadable: restore keeps the first 10 cards in Hand and places excess instances on top of Draw in their prior hand order. Preserve every UID, upgrade, RNG and locked Predict snapshot.
+
+## Supplied card language pack — 22 October 2026
+
+The 40-card supplied catalogue is localized into simple BM/English on `dual-language-bm-bi`. Display names, descriptions and details use the same source planner; original ID/value/action definitions remain unchanged. A read-only Collection tab previews these cards. No new combat effects or pool entries are activated. Owner: [Card pack language](../CARD_PACK_LANGUAGE_1_1.md) and `modules/cards/source/docs/04_BILINGUAL_LANGUAGE_SOR.md`.

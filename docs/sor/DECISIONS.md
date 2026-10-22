@@ -351,3 +351,8 @@ Owners: SOR 10/13/15; implementation and delivery limits: [Question feedback](..
 ## Question menu — 2.17.0
 
 DEC-20261022-QUESTION-MENU-01 — DISAHKAN: Ijamm requests internal scroll instead of artwork zoom, Ink with a small legend, current-run coverage resetting on New Run, and retained lifetime coverage. DITERUSKAN: derive counts from existing receipts/profile; preserve question draw/assessment/reward behavior. [Implementation and verification](../QUESTION_MENU_2_17_0.md).
+
+## Supplied card dual language — 22 October 2026
+
+- DEC-20261022-CARD-LANGUAGE-01 — DISAHKAN: Ijamm requests BM/BI support for contents of STM_Cards_Consolidated_v1.zip, with simple language understandable to Form 1 readers and math terminology grounded in the supplied KSSM BM/English textbooks or DSKP.
+- DITERUSKAN: All 40 cards and 25 tooltips receive authored copy, localized display names and a read-only Collection catalogue on `dual-language-bm-bi`. Preserve source artwork/IDs/numbers/Focus/Passive definitions and existing combat pools. The null runtime mapping remains explicit. Simple-language suitability is an editorial target, not a claim of student comprehension testing. Source review, implementation and checks: [Card pack language](../CARD_PACK_LANGUAGE_1_1.md).

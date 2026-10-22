@@ -1,0 +1,58 @@
+{
+  "package_version": "1.1.0-bilingual",
+  "date": "2026-10-22",
+  "language_cards": 40,
+  "glossary_entries": 25,
+  "languages": [
+    "en",
+    "bm"
+  ],
+  "game_aliases": [
+    "ms",
+    "ms-MY",
+    "bi"
+  ],
+  "original_artwork_files_byte_identical": 92,
+  "original_mechanics_structurally_preserved": true,
+  "language_contract_tests_passed": 5,
+  "source_mechanics_checks_passed": 40,
+  "host_contract_tests_passed": 2,
+  "browser": {
+    "checks": [
+      "All 40 names, interface copy and search work in BM and English.",
+      "All categories, Passive without Focus, bilingual details and accessible math tooltips work.",
+      "Collection catalogue shares the existing game language, supports Escape, and leaves saves/history unchanged.",
+      "Generated offline game opens the same catalogue with embedded PNG bytes and BM/BI controls."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "doc": 1920,
+        "minFont": 12.943,
+        "titleOverflow": 0
+      },
+      {
+        "width": 390,
+        "doc": 390,
+        "minFont": 12.5357,
+        "titleOverflow": 0
+      },
+      {
+        "width": 320,
+        "doc": 320,
+        "minFont": 12,
+        "titleOverflow": 0
+      }
+    ],
+    "errors": []
+  },
+  "game_scope": "Read-only Collection catalogue. No new combat effects activated. No gameplay balance or pupil reading-age trial claimed.",
+  "game_regression": {
+    "tests": 217,
+    "passed": 217,
+    "failed": 0,
+    "skipped": 0,
+    "dom_environment": "jsdom 26.1.0",
+    "full_command": "npm test with DOM_QA_MODULE pointing to jsdom 26.1.0"
+  }
+}

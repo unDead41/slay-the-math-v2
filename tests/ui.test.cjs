@@ -296,7 +296,9 @@ test('DOM: artifact counters project real card resolution and opening effects wi
 });
 
 test('DOM: Collection tab keyboard focus survives the modal render frame',{skip:!JSDOM},async()=>{
- const {dom,w,click}=boot();try{click('library');w.document.querySelector('[data-action=collection-tab][data-kind=artifacts]').click();const tab=w.document.querySelector('#collection-tab-artifacts');tab.focus();tab.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Home',bubbles:true,cancelable:true}));await new Promise(resolve=>w.requestAnimationFrame(resolve));assert.equal(w.document.activeElement.id,'collection-tab-cards');w.document.activeElement.dispatchEvent(new w.KeyboardEvent('keydown',{key:'End',bubbles:true,cancelable:true}));await new Promise(resolve=>w.requestAnimationFrame(resolve));assert.equal(w.document.activeElement.id,'collection-tab-artifacts');assert.equal(w.document.querySelectorAll('[role=tab][tabindex="0"]').length,1);}finally{dom.window.close();}
+ const {dom,w,click}=boot();
+ const key=async(value,expected)=>{w.document.activeElement.dispatchEvent(new w.KeyboardEvent('keydown',{key:value,bubbles:true,cancelable:true}));await new Promise(resolve=>w.requestAnimationFrame(resolve));assert.equal(w.document.activeElement.id,'collection-tab-'+expected);assert.equal(w.document.querySelectorAll('[role=tab][tabindex="0"]').length,1);};
+ try{click('library');w.document.querySelector('[data-action=collection-tab][data-kind=artifacts]').click();w.document.querySelector('#collection-tab-artifacts').focus();await key('Home','cards');await key('End','cardpack');await key('ArrowLeft','artifacts');await key('ArrowRight','cardpack');await key('ArrowRight','cards');}finally{dom.window.close();}
 });
 
 test('DOM: a corrupt Artifact Codex profile is preserved while the core run stays playable',{skip:!JSDOM},()=>{

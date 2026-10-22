@@ -171,3 +171,7 @@ Current menu language/Practice controls, shared learning presentation and stable
 ## Question menu — 2.17.0
 
 Bound Artifact/Mystery scene height to the available viewport and give their focusable question panels internal vertical scrolling. Preserve scroll for the same encounter and focus new guidance. Use Ink and a small bilingual Math term / Game term / Calculation legend; Practice defaults to Ink. [Checks and screenshot](../QUESTION_MENU_2_17_0.md).
+
+## Supplied card catalogue language — 22 October 2026
+
+BM/BI in the new 40-card Collection catalogue switches names, descriptions, details, calculation/term tooltips, filters, rarity and all catalogue controls together. Search accepts either name in either language. It shares the existing question-language preference, accepts `ms`/`bm` and `en`/`bi`, and works without persistent storage. Preserve fixed art geometry; long text scrolls within the card, with a 12px minimum and full-size Details. The visible notice distinguishes the read-only catalogue from active combat cards. Source pages and actual verification: [Card pack language](../CARD_PACK_LANGUAGE_1_1.md).

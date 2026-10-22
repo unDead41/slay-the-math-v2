@@ -6,3 +6,6 @@
 @media(max-width:370px){#header{padding:0 14px}#game{padding:0 14px}nav{gap:4px}.title-copy h1{font-size:44px}.title-features{gap:10px}.title-detail{font-size:11px}.route-copy h3{font-size:16px}.route-row{gap:12px}.route-row:after{left:56px}.battle-location h1{font-size:17px}.intent{padding:8px 6px}.intent strong{font-size:11px}.fighter-label strong{font-size:9px}.run-top h1{font-size:25px}.run-status{max-width:155px}.choice-panel{padding:18px 12px}.choice-panel h3{font-size:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){button,input,.playing-card,.route-node{border:1px solid ButtonText}.meter span{background:Highlight}*{scrollbar-color:auto}.playing-card:before{display:none}}
+
+/* The supplied bilingual catalogue scrolls independently inside Collection. */
+.card-pack-frame{display:block;width:100%;height:min(70vh,900px);min-height:320px;border:1px solid #665132;border-radius:10px;background:#0e0d12}.card-pack-notice{font-size:14px;line-height:1.5;color:var(--muted)}

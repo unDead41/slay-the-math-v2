@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slay the Math · Card Grimoire</title>
+<link rel="stylesheet" href="src/rich-text.css">
+<link rel="stylesheet" href="src/preview.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div><p class="eyebrow" data-copy="eyebrow">SLAY THE MATH / CARD BOOK</p><h1 data-copy="heading">Explore 40 cards.</h1>
+    <p class="intro" id="intro">Explore the chosen card set. Switch Focus on to compare effects, then hover or tap underlined terms for details.</p></div>
+    <div class="set-meta"><span class="edition" data-copy="edition">CARD PREVIEW · 1.1</span><dl><div><dt data-copy="cards">Cards</dt><dd>40</dd></div><div><dt data-copy="focusEligible">Can use Focus</dt><dd>30</dd></div><div><dt data-copy="passive">Passive</dt><dd>10</dd></div></dl><p data-copy="metaNote">Chosen icons and frames. Card rules are playtest proposals.</p></div>
+  </header>
+  <div class="controls">
+    <nav id="categories" data-copy-aria="categories" aria-label="Card types"></nav>
+    <div class="tools"><input type="search" id="search" aria-label="Search cards" data-copy-aria="search" data-copy-placeholder="searchPlaceholder" placeholder="Find a card…">
+      <button type="button" id="focus" class="focus-toggle" aria-pressed="false">✦ Focus OFF</button>
+      <div class="language" role="group" aria-label="Language / Bahasa"><button id="en" aria-pressed="true">BI</button><button id="bm" aria-pressed="false">BM</button></div>
+    </div>
+  </div>
+  <details class="context"><summary id="context-label">Preview context · 3 Energy, 0 Strength, 0 Agility</summary>
+    <p id="preview-note">These controls calculate the card preview. They do not start or modify a game.</p>
+    <div class="context-fields">
+      <label><span data-copy="energy">Energy</span> <input id="energy" type="number" min="0" max="10" value="3"></label>
+      <label><span data-copy="strength">Strength</span> <input id="strength" type="number" min="0" max="20" value="0"></label>
+      <label><span data-copy="agility">Agility</span> <input id="agility" type="number" min="0" max="20" value="0"></label>
+      <label><span data-copy="handAfterPlay">Cards left in hand</span> <input id="handAfterPlay" type="number" min="0" max="10" value="4"></label>
+      <label><input id="lostHpLastEnemyTurn" type="checkbox"><span data-copy="lostHp">Lost HP last enemy turn</span></label>
+      <label><input id="hasBlock" type="checkbox"><span data-copy="hasBlock">Already have Block</span></label>
+      <label><input id="enemyAttacks" type="checkbox"><span data-copy="enemyAttacks">Enemy plans to Attack</span></label>
+    </div>
+  </details>
+  <div class="legend"><span class="legend-calc" data-copy="calculation">Calculation</span><span class="legend-math" data-copy="mathTerm">Math term</span><span class="legend-game" data-copy="gameTerm">Game term</span><p id="count" aria-live="polite"></p></div>
+  <aside class="details-panel" id="card-details" hidden aria-live="polite"></aside>
+  <section class="cards" id="cards" data-copy-aria="collection" aria-label="Card collection"></section>
+  <footer><p id="footer-note">Design pack and offline preview. Mechanics are proposed for playtest; this pack has not been installed in the main game.</p><p class="developer-links"><a data-copy="mechanicsGuide" href="docs/01_CARD_MECHANICS_SOR.md">Card rules</a> · <a data-copy="richGuide" href="docs/02_RICH_TEXT_SOR.md">Rich text guide</a> · <a data-copy="integrationGuide" href="docs/03_INTEGRATION.md">Game integration</a> · <a data-copy="languageGuide" href="docs/04_BILINGUAL_LANGUAGE_SOR.md">Language and sources</a></p></footer>
+</main>
+<div id="stm-tooltip" role="tooltip" hidden></div>
+<script src="data/card-data.js"></script><script src="src/card-kit.js"></script><script src="src/interface-copy.js"></script><script src="src/preview.js"></script>
+</body></html>

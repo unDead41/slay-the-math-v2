@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.cjs",
     "test": "node --test tests/*.test.cjs",
-    "check": "node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/mystery-data.js && node --check dist/mystery.js && node --check dist/mystery-ui.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js && node --check dist/education-practice.js && node --check dist/question-language.js",
-    "build": "node tools/import-mechanics.cjs && node build-portable.cjs",
+    "check": "node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/mystery-data.js && node --check dist/mystery.js && node --check dist/mystery-ui.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js && node --check dist/education-practice.js && node --check dist/question-language.js && node --check dist/card-preview.js",
+    "build": "node tools/import-mechanics.cjs && node tools/import-cards.cjs && node build-portable.cjs",
     "test:browser": "node tests/browser-smoke.cjs",
     "test:maps": "npm --prefix modules/map test && npm --prefix modules/map run validate",
     "test:combat-browser": "node tests/combat-browser.cjs",
@@ -31,6 +31,8 @@
     "test:education-practice-browser": "node tests/education-practice-browser.cjs",
     "pretest": "npm run build",
     "test:room-ui-browser": "node tests/room-ui-browser.cjs",
-    "prestart": "node tools/import-mechanics.cjs"
+    "prestart": "node tools/import-mechanics.cjs && node tools/import-cards.cjs",
+    "test:card-language": "node --test tests/card-pack-language.test.cjs && node --test modules/cards/source/tests/language.test.cjs && node modules/cards/source/tests/card-kit.test.cjs",
+    "test:card-language-browser": "node tests/card-pack-browser.cjs"
   }
 }

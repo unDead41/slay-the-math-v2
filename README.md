@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.13.1
+# Slay the Math — Dungeon Edition 2.13.2
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -83,3 +83,7 @@ Run `npm run build` after pulling to refresh `MAIN-SEKARANG.html`, then restart 
 ## Mystery backgrounds and Shop tabs 2.13.1
 
 Mystery now uses its supplied illustration as the full encounter background, like the Dungeon Master. Intro, review and reward rules share green game terms and purple snapshot previews; questions keep the existing pink math terms and worked calculations. Shop has **Buy Cards / Buy Artifacts / Remove Card** tabs with keyboard navigation. See [changes and verification](docs/ROOM_UI_2_13_1.md). Rebuild the portable HTML after pulling.
+
+## Boss size correction — 2.13.2
+
+Both bosses now match Alyssa’s visible height on desktop and phones. Preserve the supplied left-facing art, full source frames and shared floor; tablet placement keeps the widest VFX inside the arena. Details and executed checks: [Boss size](docs/BOSS_SIZE_2_13_2.md). Rebuild the portable HTML after pulling.

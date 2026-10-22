@@ -153,3 +153,7 @@ Stage 2 fallback posters come from these new source sheets on the same registere
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12: both bosses now use the existing atlas player for all five actions / sixty frames, left facing and original variable holds. Original runtime pivot [512,768] maps to boss canvas floor [800,1000], with host foot percentage matched to preserve grounding and all faint VFX. Static posters use the same matrix. Damage/Block/turn/save never await source event hooks. Pause, static reduced motion, disposal and loading/failure fallback retain their owners.
+
+## Boss framing — game 2.13.2
+
+The boss host uses explicit figureScale 1.1, independent of the ordinary-enemy default 0.9. All five clips and their posters share this host; drawScale, source frame cells, holds, pivots, floor and motion policies remain canonical. A phone width cap and tablet-only horizontal containment preserve equal visible size without trimming source VFX. See [Boss size](../BOSS_SIZE_2_13_2.md).

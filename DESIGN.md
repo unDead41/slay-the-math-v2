@@ -170,3 +170,7 @@ Mystery Events extend the established dungeon palette, Georgia/Cambria headings,
 The user’s 22 October references 053117/053219/053417 supersede the inset Mystery illustration and stacked Shop sections. Mystery follows the Dungeon Master composition: full-bleed supplied art, live HUD and one quiet right-side panel; phones show an art banner above natural content flow. mystery.css remains its layout owner. Intro/review/reward rules reuse the existing shared tooltip service and green game/purple preview tokens; question mathematics retain their source pink tokens and final-review calculations. Ordinary narrative prose keeps its normal color. No art is redrawn.
 
 Shop keeps the supplied merchant plate and portrait 3×2 racks inside one ornate counter. Buy Cards, Buy Artifacts and Remove Card select one native ARIA tab panel. shop.css scopes the counter/tabs and consumes dungeon.css type/color/button/focus/scrollbar owners. Inactive panels are hidden from layout and assistive navigation. Narrow stock racks scroll locally; the page retains natural scrolling. Rest uses its existing approved composition.
+
+## Boss size — 2.13.2
+
+The two padded boss atlases have an explicit host figureScale of 1.1 in the animation registry/importer. This replaces their inherited ordinary-enemy 0.9 while keeping drawScale 1.65, source pivots, complete frames and matching posters. Phones allow a 58vw boss host; tablets shift only enough to contain the widest source VFX. Alyssa and Normal/Elite scales retain their existing owners. Evidence: docs/BOSS_SIZE_2_13_2.md.

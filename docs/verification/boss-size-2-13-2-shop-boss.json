@@ -1,0 +1,81 @@
+{
+  "checks": [
+    "Tabbed inventories 3×2 across five sizes; sale payment, sold reload, artifact acquisition, removal cancel/confirm/reload, valid return to map",
+    "Mode icons decode, native keyboard/Escape, desktop and narrow dialog without horizontal clipping",
+    "sentinel: real three-intent cycle matches engine state without an animation wait",
+    "sentinel: all five clips change pixels, no gameplay mutation, same-source poster and normal live mount",
+    "dealer: real three-intent cycle matches engine state without an animation wait",
+    "dealer: all five clips change pixels, no gameplay mutation, same-source poster and normal live mount",
+    "Both bosses: no-canvas retains decoded same-source posters",
+    "Both bosses: failed-atlas retains decoded same-source posters"
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "cards": {
+        "rows": 2,
+        "columns": 3
+      },
+      "artifacts": {
+        "rows": 2,
+        "columns": 3
+      },
+      "rootOverflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "cards": {
+        "rows": 2,
+        "columns": 3
+      },
+      "artifacts": {
+        "rows": 2,
+        "columns": 3
+      },
+      "rootOverflow": false
+    },
+    {
+      "width": 3440,
+      "height": 1440,
+      "cards": {
+        "rows": 2,
+        "columns": 3
+      },
+      "artifacts": {
+        "rows": 2,
+        "columns": 3
+      },
+      "rootOverflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "cards": {
+        "rows": 2,
+        "columns": 3
+      },
+      "artifacts": {
+        "rows": 2,
+        "columns": 3
+      },
+      "rootOverflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "cards": {
+        "rows": 2,
+        "columns": 3
+      },
+      "artifacts": {
+        "rows": 2,
+        "columns": 3
+      },
+      "rootOverflow": false
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

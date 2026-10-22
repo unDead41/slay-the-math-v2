@@ -300,3 +300,10 @@ Owners: SOR 02/07/09/10/11/12/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Impleme
 | DEC-20261022-ROOM-UI-02 | DITERUSKAN | Retain the source artwork, dungeon tokens, shared tooltip hub, question content and engine transaction/save owners. Use read-only cost/reward previews and native roving Shop tabs; current tabs persist during the visit, while reload opens Cards with existing purchases/services preserved. |
 
 Owners: SOR 10 and MYSTERY_EVENTS.md, DESIGN.md, UX-CONTRACT.md. Actual verification: docs/ROOM_UI_2_13_1.md.
+
+## Boss size correction — 22 October 2026 (Malaysia), game 2.13.2
+
+| ID | Status | Decision and evidence |
+| --- | --- | --- |
+| DEC-20261022-BOSS-SIZE-01 | DISAHKAN | Ijamm reports the boss looks smaller than Alyssa in image(20261022-063153).png and requests comparable size, using the normal encounter in image(20261022-063228).png as reference. |
+| DEC-20261022-BOSS-SIZE-02 | DITERUSKAN | Both bosses inherited the ordinary-enemy host scale despite different source padding. Use explicit per-boss calibration with phone/tablet containment; retain source art, timings, pivots and gameplay. Owners: SOR 07/11, DESIGN.md and UX-CONTRACT.md. Evidence: docs/BOSS_SIZE_2_13_2.md. |

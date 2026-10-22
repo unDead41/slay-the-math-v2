@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.13.2 — 22 Oktober 2026 (Malaysia)
+
+- Match both bosses’ visible height to Alyssa with explicit host calibration.
+- Keep full VFX visible on tablets and comparable framing on phones, including fallback posters.
+- Preserve source artwork, all 60 frames/holds, floor registration and gameplay.
+- Verification: [Boss size](../BOSS_SIZE_2_13_2.md).
+
 ## Game 2.13.0 — 22 Oktober 2026 (Malaysia)
 
 - Apply all fifteen Mystery v2 scenes/mechanics to both stages/modes with the active shared bank.

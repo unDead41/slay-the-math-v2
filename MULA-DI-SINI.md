@@ -1,4 +1,4 @@
-# Slay the Math — 2.18.0
+# Slay the Math — 2.19.0
 
 ## Buka game terkini
 
@@ -13,7 +13,7 @@ npm.cmd start
 
 Buka **http://localhost:4173**. `npm start` menyediakan semula modul pendidikan secara automatik. Main menu mempunyai **Education Practice — 120 questions**. Pilihan **Question language / Bahasa soalan** (English atau Bahasa Melayu) kini berada di **Settings**, dan turut tersedia dalam setiap trial Artifact dan Mystery.
 
-Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.18.0**, sama seperti versi dalam Settings dan package.json. Selepas pull berjaya, hentikan server lama dan mulakan semula dari folder projek yang betul sebelum refresh browser. Launcher dan semua skrip/CSS menggunakan penanda kandungan build untuk mengelakkan campuran cache lama.
+Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.19.0**, sama seperti versi dalam Settings dan package.json. Selepas pull berjaya, hentikan server lama dan mulakan semula dari folder projek yang betul sebelum refresh browser. Launcher dan semua skrip/CSS menggunakan penanda kandungan build untuk mengelakkan campuran cache lama.
 
 **Education Practice** menggunakan dokumen folio yang sama seperti preview 120 soalan. Ia merangkumi Hint, More Hint, jalan kerja, Asas dan komen. Komen kekal pada peranti sehingga dikongsi atau dimuat turun.
 
@@ -61,7 +61,7 @@ Buka http://localhost:4173 dan tekan **Ctrl+F5**. Untuk mencuba aliran awal: **N
 - Soalan yang sudah keluar direkod sebagai seen, termasuk soalan yang ditinggalkan ketika memulakan New Run. Ia tidak dicabut lagi. Sejarah disimpan pada browser/origin yang sama dan turut dibawa oleh Export/Import run.
 - Refresh atau Menu > Continue menyambung soalan, pilihan, cubaan dan hint yang sama. Tiada reroll.
 - Setelah 120 item habis, mesej jelas dipaparkan dan perjalanan boleh disambung tanpa mengulang soalan. Tiada auto-reset.
-- Elite/Mystery/Boss artifact menggunakan gate yang sama. Predict dalam battle mengekalkan sistem Focus dan pemarkahan terdahulu.
+- Elite/Mystery/Boss artifact menggunakan gate yang sama. Predict dalam battle kini menggunakan bank 120 soalan yang sama, tanpa ulangan antara Predict, Artifact dan Mystery dalam run yang sama. Jawapan pertama betul tanpa bantuan memberi +1 Focus (had 3). New Run menetapkan semula rekod run; lifetime dikekalkan.
 
 ## Save dan rollback
 

@@ -365,3 +365,13 @@ DEC-20261022-SETTINGS-RELEASE-01 — DISAHKAN: Ijamm requests moving the main-me
 - CADANGAN: The twelve-instance package starter, all-40 reward/Shop pool and X-card two-Energy price are reversible integration defaults. Base package values stay unchanged; a separately configured host upgrade extension preserves Rest, Mystery upgrade bundles and Elite upgraded rewards, with its own playtest tuning. Do not claim playtested balance or pupil comprehension.
 
 Owners and actual evidence: [Cards and display](../CARDS_AND_DISPLAY_2_18_0.md).
+
+
+## Combat and Predict — 2.19.0, 22 October 2026 (Malaysia)
+
+- DEC-20261022-COMBAT-01 — DISAHKAN: Ijamm requests whole reward-card selection, a buff/debuff icon package under fighter HP, compact combat without document scrolling, relocated artifacts/piles/run information, a simple actor/turn combat log, fixed-size Read Ahead and visible Passive triggers.
+- DEC-20261022-PREDICT-01 — DISAHKAN: Predict opens randomized items from the same 120-question bank, with no repeated gameplay question in the current run. This supersedes the earlier live-deck-only Predict baseline and lifetime-wide exclusion.
+- DITERUSKAN: local panning/native dialog scrolling keeps actions reachable on small screens. Opening reserves a question even when closed unsolved. New Run resets the exclusion ledger; lifetime/mastery and genuine saved pending questions remain. Practice/tutorial remain isolated review; bank exhaustion permits explicit unscored boss-seal completion without Focus. Preserve source card values, art, save IDs and existing mathematical content.
+- PERLU_VERIFIKASI: classroom comprehension and balance playtesting remain future work.
+
+Scope and evidence: [Combat and Predict](../COMBAT_AND_PREDICT_2_19_0.md).

@@ -93,3 +93,8 @@ The explicit artifact implementation request adds event-driven Starting, Elite/M
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Combat and Predict — 2.19.0
+
+DISAHKAN: the compact combat HUD has live status badges, active/triggered Passive cards and chronological actor/turn logs. Preserve all supplied card amounts and conditions: only Last Ember grants Focus in the 40-card package, alive at HP <=30%, once/combat, cap 3. Show actual capped gains. Passive cards never spend armed Focus. Ember Core stops its trigger bookkeeping when the focused card already killed the sole enemy. Predict now uses the shared 120-question run ledger; legacy saved predictions remain supported. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

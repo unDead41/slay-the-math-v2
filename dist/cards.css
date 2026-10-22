@@ -56,11 +56,12 @@
 .playing-card.package-card .package-card-description > div {
  display:block;width:100%;min-height:100%;align-content:safe center;
 }
-/* The native action hit area ends before the parchment token area begins. */
+/* Match the visible frame inside the canvas padding. Parchment and its tokens
+   stay above this native action so reading or scrolling never plays a card. */
 .playing-card.package-card > .package-card-action,
 .playing-card.package-card > .package-card-action:hover,
 .playing-card.package-card > .package-card-action[aria-pressed=true] {
- position:absolute;left:10%;top:10%;width:80%;height:54.25%;z-index:4;
+ position:absolute;left:10%;top:10%;width:80%;height:80%;z-index:4;
  display:block;min-width:0;min-height:0;margin:0;padding:0;border:0;border-radius:4%;
  background:transparent;box-shadow:none;color:inherit;transform:none;cursor:pointer;
 }
@@ -104,6 +105,36 @@
  min-height:0;height:auto!important;padding:0;aspect-ratio:2 / 3;
 }
 .library-grid .playing-card.package-card {align-self:start}
+/* One portrait size for the whole choice, including Read Ahead's order stage.
+   Removing a candidate only shortens the row; it never enlarges its neighbours.
+   Narrow rows pan locally while short dialogs retain their native scroll. */
+#dialog[data-kind='card-choice'] {
+ --card-choice-card-width:clamp(190px,22vw,280px);
+ max-height:calc(100dvh - 16px);overflow:auto;overscroll-behavior:contain;
+}
+#dialog[data-kind='card-choice'] #dialog-body {min-width:0}
+#dialog[data-kind='card-choice'] .dialog-head {gap:16px}
+#dialog[data-kind='card-choice'] .dialog-head > div {min-width:0}
+#dialog[data-kind='card-choice'] .dialog-head h2 {
+ font-size:clamp(24px,3.6vw,36px);overflow-wrap:anywhere;
+}
+#dialog[data-kind='card-choice'] .dialog-head .icon-btn {
+ min-width:44px;min-height:44px;width:44px;height:44px;flex-shrink:0;
+}
+#dialog[data-kind='card-choice'] .library-grid {
+ display:grid;grid-template-columns:none;grid-auto-flow:column;
+ grid-auto-columns:var(--card-choice-card-width);align-items:start;
+ justify-content:safe center;gap:16px;min-width:0;max-width:100%;
+ margin:12px 0;padding:8px 4px 12px;overflow-x:auto;overscroll-behavior-x:contain;
+}
+#dialog[data-kind='card-choice'] .library-grid:empty {display:none}
+#dialog[data-kind='card-choice'] .library-grid .playing-card.package-card {
+ width:100%;min-width:0;max-width:none;margin:0;
+}
+#dialog[data-kind='card-choice'] .dialog-actions {flex-wrap:wrap;gap:12px}
+#dialog[data-kind='card-choice'] .dialog-actions > .btn {
+ min-height:44px;max-width:100%;white-space:normal;
+}
 .card-detail-compare > div {
  padding:14px;border:1px solid #bda984;border-radius:5px;background:#efe3c9;
  color:#2c2129;font:400 14px/1.55 system-ui,sans-serif;

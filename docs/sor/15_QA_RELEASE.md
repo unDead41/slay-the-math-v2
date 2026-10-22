@@ -136,3 +136,8 @@ Current menu language/Practice controls, shared learning presentation and stable
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Combat and Predict — 2.19.0
+
+Build/portable/syntax and all 398 Node/jsdom tests passed with zero skips. Browser measurements cover 320x568,390x844,540x390,844x390,1280x720,1363x936,2048x1033 and2560x1080, local Hint/More Hint scrolling, native math, 4-to-1 Read Ahead geometry and complete reward selection. Later small-layout/header refinements received targeted DOM and browser checks. Implementation evidence does not establish classroom comprehension or playtested balance; the user must pull/restart the local Windows checkout. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

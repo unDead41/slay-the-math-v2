@@ -1,4 +1,4 @@
-const {legacyRun}=require('./helpers/legacy-run.cjs');
+const {legacyRun,legacyForecast}=require('./helpers/legacy-run.cjs');
 const {claimArtifact,completeTrial,completeBrowserTrial}=require('./helpers/education.cjs');
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -14,7 +14,7 @@ function battle(seed = 112, enemy = 'wisp') {
 }
 function restored(r) { return JSON.parse(JSON.stringify(r)); }
 function answerExactly(r) {
-  const q = E.forecast(r);
+  const q = legacyForecast(r);
   return E.answer(r, `${q.n}/${q.d}`);
 }
 function allCards(r) {
@@ -130,9 +130,9 @@ test('filter also enforces six active cards after prior exhaustion', () => {
   assertConserved(r);
 });
 
-test('invalid probability input is not an attempt; equivalent exact first answer earns Focus once', () => {
+test('saved legacy prediction: invalid probability input is not an attempt; equivalent exact first answer earns Focus once', () => {
   const r = battle();
-  const q = E.forecast(r);
+  const q = legacyForecast(r);
   for (const raw of ['', 'hello', '1/0', '-1', '101%']) {
     assert.equal(E.answer(r, raw).valid, false);
     assert.equal(q.attempts, 0);
@@ -142,13 +142,13 @@ test('invalid probability input is not an attempt; equivalent exact first answer
   assert.equal(r.stats.firstCorrect, 1);
   assert.throws(() => E.answer(r, `${q.n}/${q.d}`));
   E.closeForecast(r);
-  assert.throws(() => E.forecast(r));
+  assert.throws(() => legacyForecast(r));
 });
 
 for (const assistedBy of ['hint', 'wrong']) {
   test(`${assistedBy} survives reload and disqualifies first-answer Focus`, () => {
     let r = battle();
-    let q = E.forecast(r);
+    let q = legacyForecast(r);
     if (assistedBy === 'hint') E.hint(r);
     else E.answer(r, q.value === 0 ? '1' : '0');
     r = restored(r);
@@ -162,22 +162,22 @@ for (const assistedBy of ['hint', 'wrong']) {
   });
   test(`cancelling after ${assistedBy} consumes the chance across save/reload`, () => {
     let r = battle();
-    const q = E.forecast(r);
+    const q = legacyForecast(r);
     if (assistedBy === 'hint') E.hint(r);
     else E.answer(r, q.value === 0 ? '1' : '0');
     E.closeForecast(r);
     r = restored(r);
     assert.ok(E.validate(r));
     assert.equal(r.battle.focus, 0);
-    assert.throws(() => E.forecast(r));
+    assert.throws(() => legacyForecast(r));
   });
 }
 
-test('untouched forecast cancellation is reversible, and pending source is frozen over reload', () => {
+test('saved legacy prediction: untouched forecast cancellation is reversible, and pending source is frozen over reload', () => {
   let r = battle();
-  const first = restored(E.forecast(r));
+  const first = restored(legacyForecast(r));
   E.closeForecast(r);
-  const second = E.forecast(r);
+  const second = legacyForecast(r);
   assert.deepEqual(second.source, first.source);
   assert.equal(second.value, first.value);
   r = restored(r);
@@ -188,7 +188,7 @@ test('untouched forecast cancellation is reversible, and pending source is froze
 
 test('unanswered forecasts lock card mutations and turn changes', () => {
   const r = battle();
-  E.forecast(r);
+  legacyForecast(r);
   const before = restored(r);
   assert.throws(() => E.playCard(r, r.battle.hand[0].uid));
   assert.throws(() => E.endTurn(r));
@@ -227,7 +227,7 @@ test('both bosses enforce seal floor; guided solutions open seals without awardi
     E.playCard(r, c.uid);
     assert.equal(b.hp, 1);
     assert.equal(r.scene, 'battle');
-    const q = E.forecast(r);
+    const q = legacyForecast(r);
     E.hint(r);
     assert.equal(E.answer(r, `${q.n}/${q.d}`).first, false);
     assert.equal(b.seals, 1);
@@ -288,7 +288,7 @@ test('Dealer crossing half HP preserves the announced intent until the next turn
 
 test('save validation safely rejects corrupt gameplay fields and malformed forecast sources', () => {
   const good = battle();
-  E.forecast(good);
+  legacyForecast(good);
   assert.ok(E.validate(good));
   const mutations = [
     r => { r.stats.forecasts = 'broken'; },

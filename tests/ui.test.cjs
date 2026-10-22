@@ -21,7 +21,7 @@ test('DOM: question menus use Ink and a bilingual legend, preserve panel scroll,
   completeDomTrial(w);click('home');click('new');click('start-new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
   assert.equal(w.document.querySelector('.education-panel').scrollTop,0);
   assert.match(w.document.querySelector('[data-question-coverage="run"]').textContent,/1 \/ 120/);
-  assert.match(w.document.querySelector('[data-question-coverage="lifetime"]').textContent,/37 \/ 120/);
+  assert.match(w.document.querySelector('[data-question-coverage="lifetime"]').textContent,/3[67] \/ 120/);
  }finally{dom.window.close();}
 });
 test('DOM: every Alyssa pose uses the approved right-facing art even without Canvas',{skip:!JSDOM},()=>{
@@ -163,14 +163,35 @@ test('DOM: Education Practice exit waits for the trusted folio confirmation and 
  }finally{dom.window.close();}
 });
 function boot(saved,storageBroken=false,options={}){const dom=new JSDOM(fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8'),{url:'https://game.example/',runScripts:'outside-only',pretendToBeVisual:true});const w=dom.window;if(options.AudioContext)w.AudioContext=options.AudioContext;if(options.settings)w.localStorage.setItem('duel-cube-settings.v1',JSON.stringify(options.settings));w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};w.HTMLAnchorElement.prototype.click=function(){};if(saved)w.localStorage.setItem('duel-cube-math.v1',JSON.stringify(saved));if(storageBroken)w.Storage.prototype.setItem=function(){throw new Error('storage unavailable');};for(const f of files)w.eval(fs.readFileSync(path.join(__dirname,'../dist',f),'utf8'));const click=(action,id)=>{const sel='[data-action="'+action+'"]'+(id?'[data-id="'+id+'"]':'');const el=w.document.querySelector(sel);assert.ok(el,sel);assert.equal(el.disabled,false,sel+' disabled');el.click();};return {dom,w,click,state:()=>JSON.parse(w.localStorage.getItem('duel-cube-math.v1'))};}
-test('DOM: new game, mode, tutorial, battle and forecast error/correction are wired',{skip:!JSDOM},()=>{const {dom,w,click,state}=boot();try{click('new');click('start-learn');assert.match(w.document.querySelector('#dialog').textContent,/Tutorial/);click('close');assert.equal(state().mode,'learn');const battleEntry=E.availableNodes(state()).find(n=>n.type==='battle');assert.ok(battleEntry,'A starting battle must be available');click('node',battleEntry.id);assert.equal(state().scene,'battle');click('forecast');const input=w.document.querySelector('#prob-answer');input.value='1/0';w.document.querySelector('#forecast-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal(state().battle.question.attempts,0);assert.equal(w.document.querySelector('#prob-answer').getAttribute('aria-invalid'),'true');click('hint');const q=state().battle.question;w.document.querySelector('#prob-answer').value=q.n+'/'+q.d;w.document.querySelector('#forecast-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal(state().battle.question.solved,true);assert.equal(state().battle.focus,0);assert.match(w.document.querySelector('#dialog').textContent,/guided/);click('close');assert.equal(state().battle.question,null);assert.equal(w.document.querySelector('[data-action=forecast]').disabled,true);click('end-turn');assert.equal(state().battle.turn,2);}finally{dom.window.close();}});
+test('DOM: new game, mode, tutorial, battle and bank prediction guidance are wired',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot();
+ try{
+  click('new');click('start-learn');assert.match(w.document.querySelector('#dialog').textContent,/Tutorial/);click('close');
+  const entry=E.availableNodes(state()).find(n=>n.type==='battle');click('node',entry.id);click('forecast');
+  const q=w.DCEducation.catalog[state().battle.question.questionId],wrong=q.choices.find(c=>c.id!==q.correctChoiceId).id;
+  assert.equal(w.document.querySelector('#prob-answer'),null);assert.ok(w.document.querySelector('[data-question-id="'+q.id+'"]'));
+  click('forecast-support');click('forecast-select',wrong);click('forecast-check');
+  assert.equal(state().battle.question.attempts.length,1);assert.equal(state().hp,60);
+  const more=w.document.querySelector('[data-action=forecast-support][data-kind=moreHint]');assert.equal(more.disabled,false);more.click();assert.ok(w.document.querySelector('#forecast-more-hint'));
+  click('forecast-select',q.correctChoiceId);click('forecast-check');assert.equal(state().battle.question.solved,true);assert.equal(state().battle.focus,0);assert.match(w.document.querySelector('.education-feedback').textContent,/support|retry/);
+  click('close');assert.equal(state().battle.question,null);assert.equal(w.document.querySelector('[data-action=forecast]').disabled,true);click('end-turn');assert.equal(state().battle.turn,2);
+ }finally{dom.window.close();}
+});
 test('DOM: filter selection cancels freely and commits exact selected cards',{skip:!JSDOM},()=>{const r=fixtureRun(91);E.startBattle(r,'wisp');const all=[...r.battle.hand,...r.battle.draw];const keys=['filter','draw','strike','guard'];const hand=[];for(const k of keys){const i=all.findIndex(c=>c.key===k);hand.push(all.splice(i,1)[0]);}r.battle.hand=hand;r.battle.draw=all;assert.ok(E.validate(r));const {dom,w,click,state}=boot(r);try{click('continue');const id=hand.find(c=>c.key==='filter').uid;click('play',id);click('close');assert.equal(state().battle.energy,3);click('play',id);const targets=state().battle.draw.slice(0,2).map(c=>c.uid);for(const target of targets)click('select-filter',target);click('apply-filter');assert.equal(state().battle.energy,2);assert.deepEqual(state().battle.exhaust.map(c=>c.uid).sort(),targets.sort());assert.ok(E.validate(state()));}finally{dom.window.close();}});
 test('DOM: camp upgrade, Mystery intro/leave, library and save controls work',{skip:!JSDOM},()=>{const r=fixtureRun(21);r.scene='camp';r.depth=2;const {dom,w,click,state}=boot(r);try{click('continue');w.document.querySelector('[data-action=select-rest][data-value=upgrade]').click();assert.equal(state().scene,'camp');click('upgrade');click('choose-upgrade',r.deck[0].uid);assert.equal(state().deck[0].upgraded,true);assert.equal(state().depth,3);click('node');assert.ok(w.document.querySelector('[data-action=mystery-start]'));click('mystery-leave');assert.equal(state().deck.length,12);assert.equal(state().depth,4);click('home');click('library');assert.equal(w.document.querySelectorAll('#dialog .collection-cards .playing-card').length,6);click('close');click('saves');assert.ok(w.document.querySelector('[data-action=export]'));assert.ok(w.document.querySelector('[data-action=import]'));}finally{dom.window.close();}});
 test('DOM: corrupted storage and unavailable storage leave a usable new-game screen',{skip:!JSDOM},()=>{for(const saved of [{version:1,deck:[]},null]){const {dom,w}=boot(saved,saved===null);try{assert.ok(w.document.querySelector('[data-action=new]'));assert.equal(w.document.querySelector('#storage-warning').hidden,false);}finally{dom.window.close();}}});
 test('DOM: every terminal, reward, map and event scene renders without runtime errors',{skip:!JSDOM},()=>{for(const scene of ['map','reward','camp','event','stageclear','defeat','victory']){const r=fixtureRun(21);if(['reward','stageclear','defeat','victory'].includes(scene))E.startBattle(r,scene==='victory'?'dealer':'sentinel');r.scene=scene;if(scene==='camp')r.depth=2;if(scene==='event')r.depth=3;if(scene==='stageclear')r.depth=4;if(scene==='defeat')r.hp=0;if(scene==='victory'){r.stage=1;r.depth=4;r.battle.hp=0;r.battle.seals=2;}if(scene==='reward')r.rewards=['blast','fort','balance'];const {dom,w,click}=boot(r);try{click('continue');assert.ok(w.document.querySelector('#game').textContent.trim().length>30);assert.equal(w.document.querySelector('#game').innerHTML.includes('undefined'),false,scene);}finally{dom.window.close();}}});
-test('DOM: importing a pending forecast clears unrelated prior success and input',{skip:!JSDOM},async()=>{const old=fixtureRun(1);E.startBattle(old,'wisp');const incoming=fixtureRun(2026);E.startBattle(incoming,'wisp');E.forecast(incoming);const {dom,w,click,state}=boot(old);try{click('continue');click('forecast');const q=state().battle.question;w.document.querySelector('#prob-answer').value=q.n+'/'+q.d;w.document.querySelector('#forecast-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));click('close');click('saves');const input=w.document.querySelector('#import-file');Object.defineProperty(input,'files',{configurable:true,value:[{size:JSON.stringify(incoming).length,text:async()=>JSON.stringify(incoming)}]});input.dispatchEvent(new w.Event('change',{bubbles:true}));await new Promise(resolve=>setImmediate(resolve));click('confirm-import');assert.equal(state().battle.question.solved,false);assert.equal(w.document.querySelector('#prob-answer').value,'');assert.equal(w.document.querySelector('#answer-feedback').textContent,'');}finally{dom.window.close();}});
+test('DOM: importing a pending prediction clears unrelated success and restores exact question',{skip:!JSDOM},async()=>{
+ const old=fixtureRun(1);E.startBattle(old,'wisp');const incoming=fixtureRun(2026);E.startBattle(incoming,'wisp');E.forecast(incoming);
+ const {dom,w,click,state}=boot(old);
+ try{
+  click('continue');click('forecast');let q=w.DCEducation.catalog[state().battle.question.questionId];click('forecast-select',q.correctChoiceId);click('forecast-check');click('close');click('saves');
+  const input=w.document.querySelector('#import-file');Object.defineProperty(input,'files',{configurable:true,value:[{size:JSON.stringify(incoming).length,text:async()=>JSON.stringify(incoming)}]});input.dispatchEvent(new w.Event('change',{bubbles:true}));await new Promise(resolve=>setImmediate(resolve));click('confirm-import');
+  assert.equal(state().battle.question.solved,false);assert.equal(w.document.querySelector('.forecast-bank').dataset.questionId,incoming.battle.question.questionId);assert.equal(w.document.querySelector('#prob-answer'),null);assert.equal(w.document.querySelector('.education-feedback.solved'),null);assert.equal(w.document.querySelector('[data-action=forecast-check]').disabled,true);
+ }finally{dom.window.close();}
+});
 test('DOM: retry asks before replacing the terminal run',{skip:!JSDOM},()=>{const r=fixtureRun(81);E.startBattle(r,'wisp');r.hp=0;r.scene='defeat';const {dom,w,click,state}=boot(r);try{click('continue');click('retry');assert.equal(state().scene,'defeat');assert.ok(w.document.querySelector('[data-action=confirm-retry]'));click('confirm-retry');assert.equal(state().scene,'map');assert.equal(state().hp,60);}finally{dom.window.close();}});
-test('DOM: cancelling an untouched forecast restores its keyboard trigger',{skip:!JSDOM},()=>{const r=fixtureRun(1);E.startBattle(r,'wisp');const {dom,w,click}=boot(r);try{click('continue');w.document.querySelector('[data-action=forecast]').focus();click('forecast');click('close');assert.equal(w.document.activeElement.dataset.action,'forecast');}finally{dom.window.close();}});
+test('DOM: closing an untouched prediction consumes exposure and focuses End Turn',{skip:!JSDOM},()=>{const r=fixtureRun(1);E.startBattle(r,'wisp');const {dom,w,click}=boot(r);try{click('continue');w.document.querySelector('[data-action=forecast]').focus();click('forecast');click('close');assert.equal(w.document.activeElement.dataset.action,'end-turn');}finally{dom.window.close();}});
 test('DOM: Music controls preserve volume, preview every track and return to game music',{skip:!JSDOM},()=>{const {dom,w,click}=boot();try{assert.equal(w.document.documentElement.lang,'en');click('music');const range=w.document.querySelector('#music-volume');range.focus();range.value='23';range.dispatchEvent(new w.Event('input',{bubbles:true}));assert.equal(w.document.activeElement,range);assert.equal(JSON.parse(w.localStorage.getItem('duel-cube-settings.v1')).musicVolume,.23);assert.equal(w.document.querySelectorAll('[data-action=preview-track]').length,10);click('music-mute');assert.equal(w.DCAudio.state.muted,true);const elite=w.document.querySelector('[data-track=stage2_elite]');elite.click();assert.equal(w.DCAudio.state.requested,'stage2_elite');assert.equal(w.DCAudio.state.muted,false);click('close');assert.equal(w.DCAudio.state.requested,'menu');assert.equal(w.DCAudio.state.preview,null);}finally{dom.window.close();}});
 test('DOM: Unmute Music enables audio on that click when both channels were saved off',{skip:!JSDOM},async()=>{
  let contexts=0;const param=()=>({value:0,cancelScheduledValues(){},setValueAtTime(v){this.value=v;},linearRampToValueAtTime(v){this.value=v;}});
@@ -228,19 +249,20 @@ test('DOM: Claim opens the actual bank question, saves incorrect/hint state and 
  try{again.click('continue');assert.equal(again.state().educationState.pending.hinted,true);assert.equal(again.state().educationState.pending.attempts.length,1);completeDomTrial(again.w);assert.equal(again.state().scene,'map');assert.equal(again.state().artifactState.owned.length,1);assert.equal(again.state().educationState.completed[0].first,false);assert.ok(E.validate(again.state()));}finally{again.dom.window.close();}
 });
 
-test('DOM: New Run resumes an unfinished reservation, and completed trials never repeat',{skip:!JSDOM},()=>{
- const {dom,w,click,state}=boot();const seen=new Set();
+test('DOM: continue preserves an unfinished trial; New Run resets exclusion and keeps lifetime history',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot();
  try{
-  for(let i=0;i<10;i++){
-   if(i){click('home');click('new');click('start-new');}else click('new');
-   click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
-   const id=state().educationState.pending.questionId;assert.ok(!seen.has(id));seen.add(id);
-   const frozen=state().educationState.pending;click('home');click('new');click('start-new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');assert.equal(state().educationState.pending.questionId,id);assert.deepEqual(state().educationState.pending.choiceOrder,frozen.choiceOrder);completeDomTrial(w);
-   const profile=JSON.parse(w.localStorage.getItem('duel-cube-question-history.v1'));assert.equal(profile.usedIds.length,i+1);assert.ok(profile.usedIds.includes(id));
-  }
+  click('new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
+  const frozen=state().educationState.pending,first=frozen.questionId;
+  click('home');click('continue');assert.deepEqual(state().educationState.pending,frozen);
+  click('home');click('new');click('start-new');click('start-challenge');
+  assert.equal(state().educationState?.runUsedIds?.length||0,0);assert.equal(state().educationState?.pending||null,null);
+  click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
+  const id=state().educationState.pending.questionId;assert.equal(state().educationState.runUsedIds.length,1);
+  completeDomTrial(w);const profile=JSON.parse(w.localStorage.getItem('duel-cube-question-history.v1'));
+  assert.ok(profile.usedIds.includes(first));assert.ok(profile.usedIds.includes(id));assert.equal(profile.usedIds.length,new Set([first,id]).size);
  }finally{dom.window.close();}
 });
-
 test('DOM: import preserves the pending question and unions local and imported exposure history',{skip:!JSDOM},async()=>{
  const Q=require('../dist/education.js'),first=E.newRun(4,'challenge');E.chooseArtifact(first,E.artifactChoices(first)[0].id);
  const incoming=E.newRun(50,'challenge');E.chooseArtifact(incoming,E.artifactChoices(incoming)[0].id);assert.notEqual(Q.current(first).id,Q.current(incoming).id);
@@ -273,7 +295,7 @@ test('DOM: corrupt question history is preserved and cannot silently reset the d
 test('DOM: a full hand exposes its cap, disabled-card inspection and the tenth-card shortcut',{skip:!JSDOM},()=>{
  const r=fixtureRun(7);E.startBattle(r,'wisp');r.battle.hp=r.battle.maxHp=200;E.draw(r,6);
  const {dom,w,click,state}=boot(r);
- try{click('continue');assert.match(w.document.querySelector('.hand-heading').textContent,/10 \/ 10.*FULL/);
+ try{click('continue');assert.match(w.document.querySelector('.hand-count').textContent,/10 \/ 10/);
   for(const b of w.document.querySelectorAll('.hand button:disabled'))assert.equal(b.parentElement.tabIndex,0);
   const expected=E.clone(state()),tenth=expected.battle.hand[9];assert.equal(E.canPlay(expected,tenth),'');E.playCard(expected,tenth.uid);
   w.document.body.dispatchEvent(new w.KeyboardEvent('keydown',{key:'0',bubbles:true,cancelable:true}));assert.deepEqual(state(),expected);
@@ -401,7 +423,7 @@ test('DOM: Settings owns the menu language preference and carries BM into the re
   const source=w.DCEducation.current(state()),expected=w.DCQuestionLanguage.question(source,'ms');
   // MathML layout omits whitespace around operators and set members. Compare
   // authored content independently of those presentation-only text boundaries.
-  assert.equal(w.document.getElementById('question-language-select').value,'ms');assert.equal(w.document.getElementById('education-prompt').textContent.replace(/\s/g,''),expected.prompt.replace(/\s/g,''));
+  assert.equal(w.document.getElementById('question-language-select').value,'ms');const reference=w.document.createElement('p'),expectedView=w.STMMechanics.session.selectLearningView(expected,w.DCEducation.record(state()));w.STMMechanics.renderRichText(reference,expectedView.prompt,{glossary:w.STMMechanics.data.glossary});assert.equal(w.document.getElementById('education-prompt').textContent.replace(/\s/g,''),reference.textContent.replace(/\s/g,''));
   assert.ok(w.document.querySelector('.education-given'));assert.ok(w.document.querySelector('.education-find'));
   assert.match(w.document.querySelector('.question-hint-rule').textContent,/Petunjuk/);const before=state();
   click('home');click('saves');assert.equal(w.document.getElementById('settings-question-language-select').value,'ms');assert.deepEqual(state().educationState,before.educationState);

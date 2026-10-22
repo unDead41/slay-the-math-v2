@@ -171,3 +171,8 @@ package.json owns release version metadata. Generate release.js and content-hash
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Combat and Predict — 2.19.0
+
+DITERUSKAN: combat-log.js owns optional v1 bounded structured battle history (80 entries, actor snapshots, dedupe keys); card-combat owns pure passiveView; combat-status projects signed stats, statuses and queues. combat-predict owns new bank sessions; educationState selectionVersion 2 adds runUsedIds while usedIds and archived reducer records preserve lifetime/mastery. The question RNG remains separate from combat RNG. Save restore supports missing legacy fields, frozen live-deck predictions and exact pending choices; checkpoint retries carry all current-run exposures. Version 2.19.0 entrypoints include all new modules before app.js. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

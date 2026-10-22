@@ -55,7 +55,7 @@
  function enter(r,seen=[],profile=null){
   if(r.scene!=='event'||r.artifactState?.offer)throw Error('Enter a Mystery room first.');
   const s=ensure(r);if(s.pending)return r;Q.syncMystery(r,seen,profile);
-  const candidates=data.events.filter(e=>e.stages.includes(r.stage+1)&&!s.usedEventIds.includes(e.id)&&e.success.options.some(o=>actionable(r,o))&&Q.bank.questions.some(q=>q.topicCode===e.topicCode&&!r.educationState.usedIds.includes(q.id)));
+  const candidates=data.events.filter(e=>e.stages.includes(r.stage+1)&&!s.usedEventIds.includes(e.id)&&e.success.options.some(o=>actionable(r,o))&&Q.bank.questions.some(q=>q.topicCode===e.topicCode&&!r.educationState.runUsedIds.includes(q.id)));
   const event=candidates[Math.floor(random(s,'eventRng')*candidates.length)];
   s.pending={key:r.seed+':'+r.started+':'+r.stage+':'+nodeId(r)+':'+(event?.id||'empty'),stage:r.stage,nodeId:nodeId(r),eventId:event?.id||null,bankVersion:Q.bank.version,phase:event?'intro':'empty',questionId:null,choiceOrder:[],selectedId:null,startedAt:null,deadline:null,outcome:null,offers:event?makeOffers(r,event):{},selectedOption:null,targetId:null,committed:false};
   if(event)s.usedEventIds.push(event.id);return r;
@@ -158,7 +158,7 @@
   }
   if(p.phase==='intro')return p.questionId===null&&p.deadline===null;
   const q=Q.catalog[p.questionId],rec=r.educationState?.session?.records[p.questionId];
-  if(!q||q.topicCode!==event.topicCode||!r.educationState.usedIds.includes(q.id)||JSON.stringify(p.choiceOrder)!==JSON.stringify(q.choices.map(c=>c.id))||!integer(p.startedAt)||p.deadline!==p.startedAt+event.timeLimitSeconds*1000||!rec)return false;
+  if(!q||q.topicCode!==event.topicCode||!(r.educationState.runUsedIds||r.educationState.usedIds).includes(q.id)||JSON.stringify(p.choiceOrder)!==JSON.stringify(q.choices.map(c=>c.id))||!integer(p.startedAt)||p.deadline!==p.startedAt+event.timeLimitSeconds*1000||!rec)return false;
   if(p.phase==='question')return p.outcome===null&&p.selectedId===null&&rec.status==='pending'&&rec.attempts.length===0;
   if(!['CORRECT','INCORRECT','TIMEOUT','ABANDONED_AFTER_START'].includes(p.outcome)||!integer(p.resolvedAt)||p.resolvedAt<p.startedAt)return false;
   if(p.outcome==='CORRECT')return p.resolvedAt<p.deadline&&p.selectedId===q.correctChoiceId&&rec.status==='correct'&&rec.attempts.length===1;

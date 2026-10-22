@@ -3,6 +3,7 @@ const {claimArtifact,completeTrial,completeBrowserTrial}=require('./helpers/educ
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const E = require('../dist/engine.js');
+const Q = require('../dist/education.js');
 
 const copy = r => JSON.parse(JSON.stringify(r));
 // Resolve only the actual bounded choices offered by the public engine.
@@ -27,7 +28,10 @@ function solveForecast(r, useHint = false) {
     throw error;
   }
   if (useHint) E.hint(r);
-  assert.equal(E.answer(r, `${q.n}/${q.d}`).correct, true);
+  if(q.source==='bank'){
+    if(q.exhausted){const result=E.completeExhaustedForecast(r);assert.equal(result.scored,false);assert.equal(result.focusGained,0);}
+    else {E.selectForecast(r,Q.catalog[q.questionId].correctChoiceId);assert.equal(E.answerBankForecast(r).correct,true);}
+  }else assert.equal(E.answer(r, `${q.n}/${q.d}`).correct, true);
   E.closeForecast(r);
 }
 

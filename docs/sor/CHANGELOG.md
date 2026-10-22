@@ -271,3 +271,8 @@ Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Pe
 ## Game 2.18.0 — 22 October 2026
 
 Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
+
+
+## Game 2.19.0 — 22 October 2026 (Malaysia)
+
+Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat with relocated run information, artifacts and piles; ten status icons, visible Passive triggers and actor/turn combat journal. Predict shares the authored 120-item bank and run-wide exclusion with Artifact/Mystery; retain lifetime/mastery, pending saves and capped Focus. [Scope and checks](../COMBAT_AND_PREDICT_2_19_0.md).

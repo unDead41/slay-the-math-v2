@@ -101,7 +101,7 @@
    lastEvent=run.calculationState?.nextId||0;if(run.artifactState)run.stmArtifactUI=tracker.save();
   }
   try{if(profileWritable)localStorage.setItem(PROFILE,JSON.stringify(tracker.save()));}catch(_){warn?.('Artifact Codex history could not be saved. Use Export before closing.');}
-  const resources=visible&&run?.scene==='battle'&&document.querySelector('.combat-resources');
+  const resources=visible&&run?.scene==='battle'&&document.querySelector('.combat-artifacts');
   if(resources&&tracker.ownedIds.size){const host=document.createElement('div');host.className='artifact-live-hud';resources.append(host);artUI.mountHUD(host);}
  }
  function mountCodex(host){

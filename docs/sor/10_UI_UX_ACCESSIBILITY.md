@@ -181,3 +181,8 @@ By Ijamm’s request, the floating main-menu Question language control moves int
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Combat and Predict — 2.19.0
+
+DISAHKAN: combat occupies one viewport. Consolidate room/Gold/turn/deck in the header; move Menu into Settings; place Hand count over resources; move used piles above Predict and artifacts along the arena upper edge. The former piles area shows a small actor/turn log with a full native dialog. Passive icons/trigger counts sit beside Alyssa. Keep 44px actions and keyboard access. Narrow/short layouts preserve local hand/status/Passive panning and dialog scroll without a combat document scrollbar. Predict uses the same Ink BM/English math/support renderer as Artifact/Mystery. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

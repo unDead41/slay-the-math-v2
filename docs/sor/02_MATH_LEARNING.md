@@ -135,3 +135,8 @@ Whole-question English/Bahasa Melayu is implemented on education. Source review,
 ## Question menu — 2.17.0
 
 MTH-17 — This run counts distinct Artifact/Mystery IDs from the current run receipts and pending encounters; New Run starts at zero. Lifetime retains profile exposure history. These are coverage counts, not answer/mastery scores. Existing no-repeat selection and Practice record separation remain. [Details](../QUESTION_MENU_2_17_0.md).
+
+
+## Combat and Predict — 2.19.0
+
+DISAHKAN: Ijamm replaces newly generated live-deck Predict with the authored 120-question bank. Predict, Artifact and Mystery share one exclusion ledger for the current run. Opening consumes an exposure, including abandonment. New Run resets exclusion; lifetime and mastery evidence remain. Practice/tutorial stay independent unscored review. Old saved live-deck predictions finish with their frozen source. First-try unaided correctness earns capped Focus once; guidance/retry earns none. Bank exhaustion has explicit unscored completion and no Focus; it can release a pending boss seal to prevent a completed bank blocking the run. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

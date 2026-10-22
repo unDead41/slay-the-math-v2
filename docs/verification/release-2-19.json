@@ -1,0 +1,153 @@
+{
+  "version": "2.19.0",
+  "verifiedAt": "2026-10-22T17:16:53.473317+00:00",
+  "baseCommit": "86f8df90b01d3c22f1e9eeee1d81301b3fbf5d47",
+  "commands": {
+    "build": "passed; includes generated portable HTML",
+    "syntax": "npm run check passed",
+    "tests": {
+      "command": "DOM_QA_MODULE=<QA jsdom> npm test",
+      "passed": 398,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 84014.818233
+    }
+  },
+  "browser": {
+    "surface": "Managed Chrome, actual game UI on internal QA server",
+    "fixtures": "Validated engine-generated saves for dense statuses, six Passives, Read Ahead and rewards. QA-only pages are excluded from the release.",
+    "combatViewports": [
+      {
+        "width": 320,
+        "height": 568,
+        "documentScrollWidth": 320,
+        "documentScrollHeight": 568,
+        "minActionTarget": 44
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "documentScrollWidth": 390,
+        "documentScrollHeight": 844,
+        "minActionTarget": 44
+      },
+      {
+        "width": 540,
+        "height": 390,
+        "documentScrollWidth": 540,
+        "documentScrollHeight": 390,
+        "minActionTarget": 44
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "documentScrollWidth": 844,
+        "documentScrollHeight": 390,
+        "minActionTarget": 44
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "documentScrollWidth": 1280,
+        "documentScrollHeight": 720,
+        "minActionTarget": 44
+      },
+      {
+        "width": 1363,
+        "height": 936,
+        "documentScrollWidth": 1363,
+        "documentScrollHeight": 936,
+        "minActionTarget": 44
+      },
+      {
+        "width": 2048,
+        "height": 1033,
+        "documentScrollWidth": 2048,
+        "documentScrollHeight": 1033,
+        "minActionTarget": 44
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "documentScrollWidth": 2560,
+        "documentScrollHeight": 1080,
+        "minActionTarget": 44
+      }
+    ],
+    "readAhead": {
+      "remaining": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "cardWidth": 280,
+      "cardHeight": 420,
+      "fixed": true,
+      "normalThreeCandidateSequenceAlsoVerified": true
+    },
+    "rewardSelection": {
+      "cardWidth": 178.5,
+      "cardHeight": 267.75,
+      "actionWidth": 142.796875,
+      "actionHeight": 214.1875,
+      "insetX": 17.84375,
+      "insetY": 26.765625,
+      "visibleFrameRatio": 0.8
+    },
+    "predict": {
+      "observedQuestion": "SET-008",
+      "wholeQuestionLanguages": [
+        "en",
+        "ms"
+      ],
+      "flow": [
+        "open",
+        "switch to ms",
+        "Hint",
+        "wrong answer",
+        "More Hint"
+      ],
+      "hintAndMoreHintContainFilledReference": true,
+      "dialogClientHeight": 908,
+      "dialogScrollHeight": 3214,
+      "battleArenaHeightUnchanged": 557.765625,
+      "documentScrollHeight": 936,
+      "viewportHeight": 936
+    },
+    "settingsMainMenu": "Verified present and functional",
+    "journal": "Verified real card labels, actual passive/carry/queued outcomes and Prism Guard turn grouped independently from Alyssa; compact view retains last opposing actor even after retention effects."
+  },
+  "content": {
+    "canonicalQuestionCount": 120,
+    "canonicalCardCount": 40,
+    "cardMasterDataChanged": false,
+    "textbookQuestionContentChanged": false,
+    "statusIconCount": 10,
+    "statusProvenance": "dist/assets/status-icons.json",
+    "historyLimit": 80
+  },
+  "screenshots": [
+    {
+      "path": "docs/verification/combat-2-19-combat.jpg",
+      "sha256": "99bad754be5f0f73c1cdb819948d932195cf8c714780877e92c7fd70a56bf384"
+    },
+    {
+      "path": "docs/verification/combat-2-19-phone.jpg",
+      "sha256": "e7fdfd4fed1907ca9be8ca7e60a6c20f149acc38817ff4e1f3db0efcfe0d1435"
+    },
+    {
+      "path": "docs/verification/combat-2-19-read-ahead.jpg",
+      "sha256": "d0b02814d4d4c2275fd7859dd3f02d2f361651d7b54ab4177382dc3a1371e6bf"
+    },
+    {
+      "path": "docs/verification/combat-2-19-reward.jpg",
+      "sha256": "38f7e50205c22c11d5d5d2131c37708fa16e23ac99882800507ec5b5b439bf72"
+    }
+  ],
+  "limits": [
+    "Browser QA uses isolated fixture saves, not the user Windows checkout.",
+    "Balance and classroom comprehension require playtesting.",
+    "Practice/tutorial remain independent unscored review; shared no-repeat ledger covers Predict, Artifact and Mystery gameplay questions."
+  ]
+}

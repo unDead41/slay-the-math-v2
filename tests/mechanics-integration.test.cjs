@@ -17,7 +17,7 @@ test('learning support cannot grant or reveal a claim, and worked steps open onl
  E.continueEducation(r);assert.equal(r.artifactState.owned.length,1);assert.throws(()=>E.continueEducation(r));
 });
 test('legacy pending saves retain item, shuffled choices and attempts with conservative Hint ordering',()=>{
- const r=trial();wrong(r);E.hintEducation(r);delete r.educationState.session;r.educationState.bankVersion='form4-review-1.0.0';
+ const r=trial();wrong(r);E.hintEducation(r);delete r.educationState.session;delete r.educationState.selectionVersion;delete r.educationState.runUsedIds;r.educationState.bankVersion='form4-review-1.0.0';
  const before=clone(r.educationState.pending),restored=E.restore(clone(r));assert.ok(restored);assert.deepEqual(restored.educationState.pending,before);
  assert.equal(Q.learningView(restored).moreHint,null);assert.equal(Q.current(restored).id,before.questionId);
 });

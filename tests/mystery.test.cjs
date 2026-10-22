@@ -19,11 +19,12 @@ test('Mystery coverage counts opening once, persists through review and settleme
  const r=room('ME01','challenge'),oldIds=Q.ids.filter(id=>id.startsWith('PROB-')).slice(0,35);
  assert.deepEqual(Q.coverage(r,oldIds),{run:1,lifetime:36,total:120});
  E.startMystery(r,oldIds,null,100000);const q=Q.catalog[r.mysteryState.pending.questionId];
- assert.deepEqual(Q.coverage(r),{run:2,lifetime:37,total:120});Q.mysterySupport(r,'hint');
- assert.deepEqual(Q.coverage(E.restore(copy(r))),{run:2,lifetime:37,total:120});
+ const expected={run:2,lifetime:Q.merge(oldIds,r.educationState.usedIds).length,total:120};
+ assert.deepEqual(Q.coverage(r),expected);Q.mysterySupport(r,'hint');
+ assert.deepEqual(Q.coverage(E.restore(copy(r))),expected);
  E.answerMystery(r,q.correctChoiceId,100001);E.continueMystery(r);
- assert.equal(r.scene,'map');assert.deepEqual(Q.coverage(r),{run:2,lifetime:37,total:120});
- assert.ok(E.restore(copy(r)));assert.deepEqual(Q.coverage(E.restore(copy(r))),{run:2,lifetime:37,total:120});
+ assert.equal(r.scene,'map');assert.deepEqual(Q.coverage(r),expected);
+ assert.ok(E.restore(copy(r)));delete r.educationState.runUsedIds;delete r.educationState.selectionVersion;assert.deepEqual(Q.coverage(E.restore(copy(r))),expected);
 });
 function battle(r){const map=E.getMap(r),node=map.nodes.find(n=>n.depth>=r.depth&&n.type==='battle')||map.nodes.find(n=>n.type==='battle');let path=[node];for(let d=node.depth-1;d>=0;d--)path.unshift(map.nodes.find(n=>n.depth===d&&n.next.includes(path[0].id)));r.depth=node.depth;r.route.path=path.slice(0,-1).map(n=>n.id);r.cleared=r.route.path.slice();E.enterNode(r,node.id);return r;}
 test('all fifteen events use the active question bank, correct topic and fixed timers in both stages',()=>{
@@ -35,6 +36,12 @@ test('intro/Leave exposes no question and gives nothing; fixed event and offers 
  const r=room(),old=copy(r),p=copy(r.mysteryState.pending),seen=copy(r.educationState.usedIds);assert.deepEqual(E.restore(copy(r)).mysteryState.pending,p);
  assert.throws(()=>E.finishNode(r));assert.deepEqual(r,old);
  E.leaveMystery(r);assert.equal(r.scene,'map');assert.equal(r.gold,old.gold);assert.equal(r.hp,old.hp);assert.deepEqual(r.educationState.usedIds,seen);assert.ok(E.restore(copy(r)));assert.throws(()=>E.leaveMystery(r));
+});
+test('legacy pending Mystery preserves question, support, offers and exact deadline without a run ledger',()=>{
+ const r=room(),q=start(r);Q.mysterySupport(r,'hint');const pending=copy(r.mysteryState.pending),session=copy(r.educationState.session);
+ delete r.educationState.runUsedIds;delete r.educationState.selectionVersion;
+ const restored=E.restore(copy(r));assert.ok(restored);assert.deepEqual(restored.mysteryState.pending,pending);assert.deepEqual(restored.educationState.session,session);
+ E.answerMystery(restored,q.correctChoiceId,pending.startedAt+1);E.continueMystery(restored);assert.equal(restored.scene,'map');assert.ok(E.restore(copy(restored)));
 });
 test('first wrong answer ends the challenge, nonlethal damage applies once after review',()=>{
  const r=room();r.hp=2;const q=start(r);E.answerMystery(r,q.choices.find(c=>c.id!==q.correctChoiceId).id,100001);assert.equal(r.hp,2);assert.equal(r.mysteryState.pending.outcome,'INCORRECT');assert.throws(()=>E.answerMystery(r,q.correctChoiceId,100002));
@@ -50,7 +57,7 @@ test('automatic gold commits once, question exposure is shared with artifacts an
  const profile=Q.history(r.educationState.usedIds,r.educationState.session);assert.ok(Q.validHistory(profile));const x=room('ME01','challenge',19);E.startMystery(x,profile.usedIds,profile.session,100000);assert.notEqual(x.mysteryState.pending.questionId,q.id);assert.ok(E.restore(copy(x)));
 });
 test('exhausted question pools skip without cost/reward/penalty and never recycle or switch topics',()=>{
- const r=room();const old=copy(r);E.startMystery(r,Q.ids,null,100000);assert.equal(r.mysteryState.pending.phase,'empty');E.continueMystery(r);assert.equal(r.hp,old.hp);assert.equal(r.gold,old.gold);assert.equal(r.scene,'map');assert.ok(E.restore(copy(r)));
+ const r=room();r.educationState.runUsedIds=Q.ids.slice();r.educationState.usedIds=Q.ids.slice();r.educationState.session.exposureIds=Q.ids.slice();const old=copy(r);E.startMystery(r,[],null,100000);assert.equal(r.mysteryState.pending.phase,'empty');E.continueMystery(r);assert.equal(r.hp,old.hp);assert.equal(r.gold,old.gold);assert.equal(r.scene,'map');assert.ok(E.restore(copy(r)));
 });
 test('HP and Gold upgrades require full cost, target selection and explicit atomic confirmation',()=>{
  for(const [event,cost,resource]of [['ME02',5,'hp'],['ME09',35,'gold']]){const r=room(event);solve(r);const target=r.deck[0],before=r[resource];E.selectMysteryOption(r,event==='ME02'?'upgrade':'forge_upgrade');const old=copy(r);assert.throws(()=>E.claimMystery(r));assert.deepEqual(r,old);E.selectMysteryTarget(r,target.uid);E.claimMystery(r);assert.equal(r[resource],before-cost);assert.equal(r.deck.find(c=>c.uid===target.uid).upgraded,true);assert.ok(E.restore(copy(r)));}
@@ -95,8 +102,8 @@ test('Learn mode Mystery shares profile history and artifact grants remain valid
  const r=room('ME11','learn');solve(r);claim(r,'artifact');assert.ok(A.owned(r).some(a=>a.tier==='starting'));assert.ok(E.restore(copy(r)));assert.ok(Q.validHistory(Q.history(r.educationState.usedIds,r.educationState.session)));
 });
 test('starting a new Artifact trial never resumes a different run\'s exposed Mystery question',()=>{
- const r=room();const q=start(r),history=Q.history(r.educationState.usedIds,r.educationState.session);
- const x=E.newRun(123,'challenge');E.chooseArtifact(x,x.artifactState.offer.ids[0],history.usedIds,history.session);assert.notEqual(Q.current(x).id,q.id);assert.ok(E.restore(copy(x)));
+ const r=room();start(r);Q.mysterySupport(r,'hint');const history=Q.history(r.educationState.usedIds,r.educationState.session);
+ const x=E.newRun(123,'challenge');E.chooseArtifact(x,x.artifactState.offer.ids[0],history.usedIds,history.session);assert.ok(Q.current(x));assert.deepEqual(x.educationState.pending.attempts,[]);assert.equal(x.educationState.pending.hinted,false);assert.ok(E.restore(copy(x)));assert.equal(r.educationState.session.pendingQuestionId,r.mysteryState.pending.questionId);assert.equal(Q.getSession(r).records[r.mysteryState.pending.questionId].hintState.hintUsed,true);
 });
 test('Archive protects the final card and protected instances; legitimate small decks remain loadable',()=>{
  const r=room('ME10');r.deck=r.deck.slice(0,2);solve(r);claim(r,'remove',r.deck[0].uid);assert.equal(r.deck.length,1);assert.ok(E.restore(copy(r)));

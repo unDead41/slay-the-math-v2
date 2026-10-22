@@ -73,3 +73,8 @@ Ijamm reports horizontally swollen cards in the reward scene and requests checki
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Combat and Predict — 2.19.0
+
+DISAHKAN: reward selection/focus outlines surround the entire visible native frame (10% inset, 80% width/height), preserving token/scroll interactions above the action. Read Ahead tracks use a fixed viewport-bounded width, so 4/3/2/1 remaining choices never grow; only their row pans on narrow screens. Keep original source frame/art anchors. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

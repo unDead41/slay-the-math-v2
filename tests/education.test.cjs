@@ -2,6 +2,7 @@ const test=require('node:test'),assert=require('node:assert/strict');
 const E=require('../dist/engine.js'),Q=require('../dist/education.js'),A=require('../dist/artifacts.js');
 const {completeTrial,claimArtifact}=require('./helpers/education.cjs');
 const clone=x=>JSON.parse(JSON.stringify(x));
+function exposedInRun(run,seen){const state=Q.ensureRunState(run);state.runUsedIds=Q.merge(state.runUsedIds,seen);state.usedIds=Q.merge(state.usedIds,seen);state.session.exposureIds=state.usedIds.slice();}
 function offered(code){for(let seed=1;seed<300;seed++){const r=E.newRun(seed,'challenge');if(r.artifactState.offer.ids.includes(A.id(code)))return r;}throw new Error('No fixture offer');}
 
 test('education: New Run resets run coverage while retaining unique lifetime history',()=>{
@@ -14,11 +15,12 @@ test('education: New Run resets run coverage while retaining unique lifetime his
  completeTrial(restored);const profile=Q.history(restored.educationState.usedIds,restored.educationState.session),next=E.newRun(8,'challenge');
  assert.deepEqual(Q.coverage(next,profile.usedIds),{run:0,lifetime:36,total:120});
  E.chooseArtifact(next,E.artifactChoices(next)[0].id,profile.usedIds,profile.session);
- assert.deepEqual(Q.coverage(next),{run:1,lifetime:37,total:120});assert.notEqual(Q.current(next).id,q.id);
+ assert.deepEqual(Q.coverage(next),{run:1,lifetime:Q.merge(profile.usedIds,[Q.current(next).id]).length,total:120});assert.deepEqual(next.educationState.pending.attempts,[]);assert.equal(next.educationState.pending.hinted,false);
 });
 
 test('education: legacy saves infer run coverage from encounter receipts without importing profile exposures',()=>{
  const r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,Q.ids.slice(0,35));
+ delete r.educationState.runUsedIds;delete r.educationState.selectionVersion;
  assert.ok(E.restore(clone(r)));assert.deepEqual(Q.coverage?.(r),{run:1,lifetime:36,total:120});
  E.hintEducation(r);assert.deepEqual(Q.coverage(r),{run:1,lifetime:36,total:120});
 });
@@ -51,15 +53,15 @@ test('education: a correct answer unlocks one explicit claim; Purse applies +25 
  const done=clone(r);assert.throws(()=>E.continueEducation(r));assert.deepEqual(r,done);assert.deepEqual(E.restore(done),r);
 });
 test('education: each of the 120 items can render an answer transaction and pass strict save validation',()=>{
- for(const q of Q.bank.questions){const r=E.newRun(100,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,Q.ids.filter(id=>id!==q.id));assert.equal(Q.current(r).id,q.id);assert.ok(E.validate(r),q.id);completeTrial(r);assert.ok(E.restore(clone(r)),q.id);}
+ for(const q of Q.bank.questions){const r=E.newRun(100,'challenge');exposedInRun(r,Q.ids.filter(id=>id!==q.id));E.chooseArtifact(r,E.artifactChoices(r)[0].id);assert.equal(Q.current(r).id,q.id);assert.ok(E.validate(r),q.id);completeTrial(r);assert.ok(E.restore(clone(r)),q.id);}
 });
-test('education: 120 new runs using saved exposure history never repeat and cover all three topics',()=>{
- let history=[];const topics={PROB:0,SET:0,LOGIC:0};
- for(let i=0;i<120;i++){const r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,history);const q=Q.current(r);assert.ok(q);assert.ok(!history.includes(q.id));topics[q.topicCode]++;history=Q.merge(history,r.educationState.usedIds);}
- assert.equal(history.length,120);assert.deepEqual(topics,{PROB:40,SET:40,LOGIC:40});assert.ok(Q.validHistory(Q.history(history)));
+test('education: 120 new runs reset exclusion while lifetime history remains unique',()=>{
+ let history=[],first=null;
+ for(let i=0;i<120;i++){const r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,history);const q=Q.current(r);assert.ok(q);first=first||q.id;assert.equal(q.id,first);assert.equal(Q.coverage(r).run,1);history=Q.merge(history,r.educationState.usedIds);}
+ assert.equal(history.length,1);assert.ok(Q.validHistory(Q.history(history)));
 });
 test('education: an exhausted bank is explicit and never resets or repeats old questions',()=>{
- const r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,Q.ids);assert.equal(Q.current(r),null);assert.equal(r.scene,'education');assert.ok(E.validate(r));assert.equal(Q.ready(r),true);
+ const r=E.newRun(7,'challenge');exposedInRun(r,Q.ids);E.chooseArtifact(r,E.artifactChoices(r)[0].id);assert.equal(Q.current(r),null);assert.equal(r.scene,'education');assert.ok(E.validate(r));assert.equal(Q.ready(r),true);
  completeTrial(r);assert.equal(r.scene,'map');assert.equal(r.educationState.usedIds.length,120);assert.equal(r.educationState.completed[0].questionId,null);assert.ok(E.validate(r));
 });
 test('education: forged pending IDs, answer flags, history and owner fields are rejected',()=>{

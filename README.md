@@ -1,6 +1,6 @@
-# Slay the Math — Cards & Education Edition 2.18.0
+# Slay the Math — Combat & Predict Edition 2.19.0
 
-Current update: all 40 supplied cards are playable with Focus and Passive mechanics, BM/English descriptions, corrected mathematical layout and internal Shop scrolling. [Changes and validation](docs/CARDS_AND_DISPLAY_2_18_0.md).
+Current update: compact combat, whole-card reward selection, fixed-size Read Ahead choices, status icons, visible Passive triggers, a turn-by-turn log and Predict using all 120 questions without repeats during a run. [Changes and validation](docs/COMBAT_AND_PREDICT_2_19_0.md).
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -19,12 +19,12 @@ Basics, full English/Bahasa Melayu question switching and a separate saved learn
 Each question now has improvement categories and a comment box. Comments save on
 this device; the exit reminder offers CSV/JSON download and file sharing for Ijamm.
 See [question feedback and delivery limits](docs/QUESTION_FEEDBACK_2_15_0.md).
-The same harmonized 1.6 bank is active in Artifact trials and Mystery challenges.
+The same harmonized 1.6 bank is active in Predict, Artifact trials and Mystery challenges. Its shared run ledger prevents repeat questions; New Run resets exclusion while lifetime history remains.
 See [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
 
 The MC is **Alyssa the Clairvoyance**. Combat follows the latest supplied reference:
 Alyssa left, enemy/intent right, HP underneath, hand/resources/actions below. Focus
-has a new gold target/ruby icon distinct from Predict. The main menu keeps Alyssa
+uses the supplied cyan eye crystal, distinct from the Predict sphere above cards. The main menu keeps Alyssa
 on the right of the supplied dark dungeon/gold design.
 Ember Mirror has dedicated Attack/Defend/Skill/Damaged poses. New runs have 10 levels
 per stage, 3–5 initial paths and the supplied Mystery/Rest/Boss and quota rules.

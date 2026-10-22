@@ -89,3 +89,8 @@ Use the latest Finalize Design UI ICON atlas for Hand, Draw, Discard, Exhaust, T
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Combat and Predict — 2.19.0
+
+DISAHKAN: add ten original native SVG utility badges for Strength, Agility, Defense, Block, Weak, Vulnerable, Thorns, Next Draw, Next Block and Retain Block. Keep the navy/gold family, distinct glyphs, actual numeric counts and named 44px detail buttons below the correct fighter HP. Icons project engine state and never invent effects. Provenance and all paths: dist/assets/status-icons.json. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).

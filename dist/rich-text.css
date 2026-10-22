@@ -3,11 +3,11 @@
 [data-stm-richtext][data-theme="light"]{--rt-calculation:#70528f;--rt-math:#984669;--rt-game:#316a48}
 /* HTML controls need the inline reset; native mrow/mfrac tokens keep MathML layout. */
 [data-stm-richtext] :is(button,span):is(.rt-term,.rt-calculation){display:inline;margin:0;padding:2px 1px;min-width:0;min-height:0;border:0;border-radius:2px;background:none;box-shadow:none;font:inherit;line-height:inherit;letter-spacing:inherit;text-transform:none;cursor:help;white-space:normal;text-underline-offset:4px}
-[data-stm-richtext] .rt-term{color:var(--rt-game);text-decoration:underline dashed}
+[data-stm-richtext] .rt-term{color:var(--rt-game);text-decoration:none}
 [data-stm-richtext] .rt-term[data-category="math"]{color:var(--rt-math)}
-[data-stm-richtext] .rt-calculation{color:var(--rt-calculation);text-decoration:underline dotted;font-variant-numeric:tabular-nums}
+[data-stm-richtext] .rt-calculation{color:var(--rt-calculation);text-decoration:none;font-variant-numeric:tabular-nums}
 [data-stm-richtext] .rt-term:focus-visible,[data-stm-richtext] .rt-calculation:focus-visible{outline:2px solid currentColor;outline-offset:2px}
-[data-stm-richtext] .rt-term:hover,[data-stm-richtext] .rt-calculation:hover{text-decoration-thickness:2px}
+[data-stm-richtext] .rt-term:hover,[data-stm-richtext] .rt-calculation:hover{text-decoration:none}
 .rt-tooltip{position:fixed;z-index:1000;box-sizing:border-box;width:max-content;max-width:min(390px,calc(100vw - 16px));max-height:50dvh;overflow:auto;padding:15px 18px;border:1px solid #6f687e;border-radius:8px;background:#17131e;color:#eee8f4;box-shadow:0 8px 28px #0009;font:14px/1.6 var(--sans, sans-serif);overflow-wrap:anywhere;text-align:left}
 .rt-tooltip>strong{display:block;color:var(--rt-calculation);font-size:15px;line-height:1.5}
 .rt-tooltip[data-category="game"]>strong{color:var(--rt-game)}

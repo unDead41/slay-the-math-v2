@@ -198,8 +198,8 @@ summary:hover{color:var(--accent-strong)}
 #next-question-note{flex-basis:100%;text-align:right;margin:-2px 0 0;font-size:10px;min-height:0}
 .term-guide{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:21px 0 0;color:#adbac4}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:10px;white-space:nowrap}
-.legend span{padding-bottom:2px;text-decoration:underline dashed;text-underline-offset:4px}
-.legend [data-key="math"]{color:#e7a1c4}.legend [data-key="game"]{color:#9ed5b0}.legend [data-key="calculation"]{color:#b9a3e3;text-decoration-style:dotted}
+.legend span{padding-bottom:2px;text-decoration:none;text-underline-offset:4px}
+.legend [data-key="math"]{color:#e7a1c4}.legend [data-key="game"]{color:#9ed5b0}.legend [data-key="calculation"]{color:#b9a3e3}
 .term-guide p{font-size:9px;line-height:1.6;margin:0;max-width:250px;text-align:right}
 .page-footnote{font-size:9px;text-align:center;color:#7f93a3;margin:22px 0 0}
 .storage-notice{font-size:12px;border:1px solid #c7a36d66;background:#202c3b;padding:13px 16px;color:#ebd6b7;border-radius:4px;margin:0 0 16px}

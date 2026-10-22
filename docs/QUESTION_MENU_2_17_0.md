@@ -19,3 +19,5 @@ The actual user's browser was inspected before the fix: viewport 2560×1305, doc
 [Geometry evidence](verification/question-scroll-2-17-0.json) · [Ink screenshot](verification/question-menu-ink-2-17-0.jpg)
 
 The after-fix QA uses real engine-generated fixture saves and real game scripts/styles. The user's Windows checkout has not been modified locally by this session; it needs to pull the published main commit and refresh. Native sharing, full Windows browser execution and OS behavior are outside this change's verification.
+
+> Superseded styling rule (2.21.3): category colors only; no decorative rich-text underlines or token bottom borders. Preserve actual fraction bars. See docs/sor/10_UI_UX_ACCESSIBILITY.md.

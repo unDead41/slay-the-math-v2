@@ -40,3 +40,5 @@ npm.cmd run build
 ```
 
 Reload the game with Ctrl+F5. If its local server is stopped, run `npm.cmd start` and open http://localhost:4173.
+
+> Superseded styling rule (2.21.3): category colors only; no decorative rich-text underlines or token bottom borders. Preserve actual fraction bars. See docs/sor/10_UI_UX_ACCESSIBILITY.md.

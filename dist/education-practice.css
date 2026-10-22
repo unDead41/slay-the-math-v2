@@ -34,10 +34,10 @@ body[data-scene="education-practice"] .ambient{display:none}
 .education-question .education-teaching{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;border:0;padding:0}
 .education-context{grid-column:1/-1;background:#233444;padding:14px 16px;border-left:3px solid #c7a36d}
 .question-term-legend{display:flex;gap:14px;flex-wrap:wrap;font:11px/1.6 var(--sans);margin:0 0 18px}
-.question-term-legend span{padding-bottom:2px;text-decoration:underline dashed;text-underline-offset:4px}
+.question-term-legend span{padding-bottom:2px;text-decoration:none;text-underline-offset:4px}
 .question-term-legend [data-key="math"]{color:#e7a1c4}
 .question-term-legend [data-key="game"]{color:#9ed5b0}
-.question-term-legend [data-key="calculation"]{color:#b9a3e3;text-decoration-style:dotted}
+.question-term-legend [data-key="calculation"]{color:#b9a3e3;text-decoration:none}
 .question-coverage{display:flex;flex-wrap:wrap;gap:4px 16px;font:12px/1.6 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
 .education-meta .question-coverage{margin-left:auto}
 .education-question .education-teaching h3{font:600 11px/1.5 var(--sans);text-transform:uppercase;letter-spacing:.08em}

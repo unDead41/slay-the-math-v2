@@ -133,7 +133,7 @@ Bound only Reward and Shop panel/card widths instead of filling arbitrary ultraw
 
 ## Rich text — 2.6.0
 
-Artifact Pack V3.2 uses soft purple dotted numbers for resolved calculations, pink dashed math terms and green dashed game terms. Only annotated tokens receive colors; normal text and card-role frames inherit the existing theme. One tooltip owner supports hover, keyboard focus and tap, can be reached by pointer, stays within the viewport, and closes with Escape/outside click. Its content is escaped and connected through aria-describedby. Inside a dialog, Escape dismisses the tooltip first. Selection, term and result buttons are siblings rather than nested. The existing native modal owns focus and inert background behavior.
+Artifact Pack V3.2 uses soft purple numbers for resolved calculations, pink math terms and green game terms, distinguished by color only. Only annotated tokens receive colors; normal text and card-role frames inherit the existing theme. One tooltip owner supports hover, keyboard focus and tap, can be reached by pointer, stays within the viewport, and closes with Escape/outside click. Its content is escaped and connected through aria-describedby. Inside a dialog, Escape dismisses the tooltip first. Selection, term and result buttons are siblings rather than nested. The existing native modal owns focus and inert background behavior.
 
 All 31 artifact rules use the same segmented-description owner in choices, pending trial and inventory. The 55-term glossary is available in inventory. Calculations expose before/after values, sources, actual caps and rounding; labels distinguish deltas, totals and price. No lesson answer or effect is committed by reading a definition.
 
@@ -191,3 +191,7 @@ DISAHKAN: combat occupies one viewport. Consolidate room/Gold/turn/deck in the h
 ## Passive and supplied audio — 2.20.0
 
 Show the active `/3` counter and an incoming-card/cost summary with full-frame outgoing candidates. Cancel is free before swap commit; an explicitly closed legacy trim remains reopenable. Bind to rendered choice IDs and ignore native double-click repeats. Keep fixed card sizing and native local dialog scrolling/panning. Sound settings expose independent Voice volume/mute alongside existing Music and Sound FX; do not invent spoken subtitles. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+## Rich text: color only — 2.21.3
+
+DISAHKAN oleh Ijamm (22 October 2026): remove all decorative rich-text underlines and token bottom borders, including hover states and legends. Apply across questions, answers, hints, cards, artifacts, tooltips and Education Practice. Keep real fraction bars, mathematical notation, keyboard focus outlines and existing tooltip interactions. This rule supersedes all previous dashed/dotted rich-text rules.

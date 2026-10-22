@@ -11,18 +11,18 @@
 }
 [data-stm-richtext] .rt-calculation {
   color: var(--rt-calculation);
-  text-decoration: underline dotted;
+  text-decoration: none;
   text-underline-offset: 5px;
   font-variant-numeric: tabular-nums;
 }
 [data-stm-richtext] .rt-term[data-category="math"] {
   color: var(--rt-math);
-  text-decoration: underline dashed;
+  text-decoration: none;
   text-underline-offset: 4px;
 }
 [data-stm-richtext] .rt-term[data-category="game"] {
   color: var(--rt-game);
-  text-decoration: underline dashed;
+  text-decoration: none;
   text-underline-offset: 4px;
 }
 /* All ordinary text inherits the existing game's design. */

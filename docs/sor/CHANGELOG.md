@@ -303,3 +303,9 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 - Use uniform unused-question selection for first/later Artifact trials, Predict and Mystery; remove difficulty weighting and preferred-subset bias from gameplay.
 - Preserve Stage 1 Retry exposures as well as Stage 2 checkpoints. Keep New Run reset, lifetime history, frozen pending questions and explicit bank exhaustion.
 - Verify all 120 IDs are reachable first, cross-consumer uniqueness, Shop/Rest continuity, restore, retry and a real browser Artifact → Predict → next Predict flow.
+
+## Game 2.21.3 — 22 October 2026
+
+- Remove decorative rich-text underlines and token bottom borders from runtime and source styles, including cards, artifact runtime and Practice legends.
+- Preserve category colors, true mathematical fraction bars and keyboard focus/tooltip behavior.
+- Record the new color-only rule in AGENTS.md and the UI/UX SOR.

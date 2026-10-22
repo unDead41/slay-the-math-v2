@@ -77,7 +77,7 @@
 .playing-card.package-card > .package-card-action:focus-visible {outline-color:#fff0bd;outline-offset:-3px}
 .playing-card.package-card .stm-rt,
 .stm-rt[data-tooltip] {
- border:0;border-bottom:1px dashed currentColor;border-radius:2px;
+ border:0;border-bottom:0;border-radius:2px;
  padding:0 1px;cursor:help;text-decoration:none;font:inherit;
  box-decoration-break:clone;-webkit-box-decoration-break:clone;
 }

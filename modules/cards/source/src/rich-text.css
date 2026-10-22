@@ -1,5 +1,5 @@
-/* Soft colors on the supplied cream description panel. Each type has its own dashed underline. */
-.stm-rt{position:relative;cursor:help;border-bottom:1px dashed currentColor;border-radius:3px;padding:0 .06em;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+/* Soft colors on the supplied cream description panel. Categories use color only; decorative underlines are forbidden. */
+.stm-rt{position:relative;cursor:help;border-bottom:0;border-radius:3px;padding:0 .06em;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
 .stm-rt-calculation{color:#6b3c98;background:rgba(171,126,215,.14);font-weight:750}
 .stm-rt-math{color:#943066;background:rgba(231,133,181,.15)}
 .stm-rt-game{color:#17593d;background:rgba(104,181,139,.14)}

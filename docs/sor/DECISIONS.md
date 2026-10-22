@@ -397,3 +397,7 @@ DISAHKAN: Ijamm reports an empty background with DEV SANDBOX badge and missing m
 ## DEC-20261023-RANDOM — Uniform no-repeat gameplay questions (2.21.2)
 
 DISAHKAN: Ijamm requests random, nonrepeating questions throughout each current run, regardless of context. Replace difficulty/weakness-weighted rewarded draws with uniform unused draws; remove Mystery preferred-subset bias while retaining topic compatibility. Preserve profile/lifetime history separately from current-run exclusion. Retry is the same run for question exposure; only New Run resets it. Existing Shop/Rest do not acquire new quiz mechanics.
+
+## 22 October 2026 — Rich text color only (2.21.3)
+
+DISAHKAN: Ijamm removes decorative underlines from rich text because they compete with fraction bars. Category colors remain pink/math, green/game and purple/calculation. Preserve true fraction bars and focus/tooltip behavior. Supersedes previous underline styling. Owner: 10_UI_UX_ACCESSIBILITY.md.

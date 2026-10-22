@@ -392,3 +392,8 @@ DISAHKAN: Ijamm requested implementation from main v2.20.0 using the Developer T
 ## DEC-20261023-DEV-WINDOWS — Compatible dev loader (2.21.1)
 
 DISAHKAN: Ijamm reports an empty background with DEV SANDBOX badge and missing main menu. Reproduced by converting app.js to CRLF: the dev loader rejects its literal LF-only closing marker. Normalize newline characters only in the server response copy before injection. Preserve source files, gameplay and save storage; regression-test Windows line endings.
+
+
+## DEC-20261023-RANDOM — Uniform no-repeat gameplay questions (2.21.2)
+
+DISAHKAN: Ijamm requests random, nonrepeating questions throughout each current run, regardless of context. Replace difficulty/weakness-weighted rewarded draws with uniform unused draws; remove Mystery preferred-subset bias while retaining topic compatibility. Preserve profile/lifetime history separately from current-run exclusion. Retry is the same run for question exposure; only New Run resets it. Existing Shop/Rest do not acquire new quiz mechanics.

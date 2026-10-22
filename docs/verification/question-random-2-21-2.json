@@ -1,0 +1,52 @@
+{
+  "version": "2.21.2",
+  "baseCommit": "777dc30a2be6349af6083e4e9106db5d65f7f486",
+  "policy": "uniform random without replacement for newly opened gameplay questions",
+  "ledger": "educationState.runUsedIds shared by Artifact, Predict and Mystery",
+  "scope": {
+    "artifact": "All unused bank questions, including Starting gift",
+    "predict": "All unused bank questions",
+    "mystery": "All unused questions in the event topic; no preferred subset",
+    "shopRest": "No current question trigger; room actions preserve the shared ledger",
+    "retry": "Stage 1 and Stage 2 retain exposures",
+    "newRun": "Resets run exclusion, retains lifetime/mastery",
+    "pending": "Frozen ID, choices, attempts and hints survive rerender/reload",
+    "practice": "Independent adaptive default remains unchanged"
+  },
+  "checks": {
+    "build": "npm run build passed; portable output regenerated",
+    "syntax": "npm run check passed",
+    "nodeTests": {
+      "tests": 95,
+      "passed": 95,
+      "failed": 0,
+      "skipped": 0
+    },
+    "openingCoverage": {
+      "seeds": 1024,
+      "reachableQuestions": 120,
+      "difficulties": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ]
+    },
+    "crossConsumerExhaustion": {
+      "uniqueReservations": 120,
+      "repeated": 0,
+      "exhaustionRecycles": false
+    },
+    "realBrowser": {
+      "status": "PASS",
+      "firstArtifact": "PROB-028",
+      "predict": "LOGIC-035",
+      "nextPredict": "LOGIC-040",
+      "reloadPreserved": true,
+      "newRunReset": true,
+      "browserErrors": []
+    },
+    "developerBrowser": "PASS: scenes, card states, real card play, motion, exact restart, presets, storage isolation and small viewport"
+  },
+  "compatibility": "No bank question, answer, hint, ID or save schema changes; existing pending questions stay frozen. One legacy integration assertion was updated to current-run rather than lifetime exclusion.",
+  "limits": "This reports the focused regression groups, not the entire historical QA suite. Browser tests ran on this host, not native Windows."
+}

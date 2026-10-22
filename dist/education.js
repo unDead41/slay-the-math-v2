@@ -50,7 +50,7 @@
   const state=ensureRunState(run,seen,profile);
   if(state.session.pendingQuestionId)throw Error('Finish the active question first.');
   const selection={...state.session,exposureIds:state.runUsedIds.slice()};
-  const result=S.reserveNext(selection,{...bank,questions:questions.filter(q=>!state.runUsedIds.includes(q.id))},{topicCode});
+  const result=S.reserveNext(selection,{...bank,questions:questions.filter(q=>!state.runUsedIds.includes(q.id))},{topicCode,selectionPolicy:'random'});
   if(result.question){const old=state.session.records[result.question.id];if(old){const prefix='previous:'+result.question.id+':';let n=1;while(result.session.archivedRecords[prefix+n])n++;result.session.archivedRecords[prefix+n]=copy(old);}}
   state.runUsedIds=merge(state.runUsedIds,result.question?[result.question.id]:[]);
   state.usedIds=merge(state.usedIds,state.runUsedIds);state.session={...result.session,exposureIds:state.usedIds.slice()};state.rng=state.session.rngState;
@@ -68,9 +68,8 @@
  }
  function reserveMystery(run,event,seen=[],profile=null){
   const state=syncMystery(run,seen,profile),available=bank.questions.filter(q=>q.topicCode===event.topicCode&&!state.runUsedIds.includes(q.id));
-  const preferred=available.filter(q=>event.education.preferredQuestionIds.includes(q.id));
-  const result=reserveForConsumer(run,'mystery',[],null,{questions:preferred.length?preferred:available,topicCode:event.topicCode});
-  return {question:result.question,preferred:preferred.length>0};
+  const result=reserveForConsumer(run,'mystery',[],null,{questions:available,topicCode:event.topicCode});
+  return {question:result.question,preferred:!!result.question&&event.education.preferredQuestionIds.includes(result.question.id)};
  }
  function resolveMystery(run,questionId,choiceId=null){
   let session=getSession(run);if(choiceId)session=S.submitAnswer(session,bank,{questionId,choiceId,attemptId:questionId+':mystery'});

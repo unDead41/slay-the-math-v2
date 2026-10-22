@@ -296,3 +296,10 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 
 - Normalize line endings in the development response adapter so CRLF checkouts load the main menu and Developer Hub previews.
 - Add newline regression tests; preserve original source bytes and production behavior.
+
+
+## 2.21.2 — Random questions across a run
+
+- Use uniform unused-question selection for first/later Artifact trials, Predict and Mystery; remove difficulty weighting and preferred-subset bias from gameplay.
+- Preserve Stage 1 Retry exposures as well as Stage 2 checkpoints. Keep New Run reset, lifetime history, frozen pending questions and explicit bank exhaustion.
+- Verify all 120 IDs are reachable first, cross-consumer uniqueness, Shop/Rest continuity, restore, retry and a real browser Artifact → Predict → next Predict flow.

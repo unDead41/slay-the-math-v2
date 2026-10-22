@@ -218,7 +218,7 @@ function validShop(r){
 function leaveShop(r){if(r.scene!=='shop')throw new Error('No Shop is active.');return finishNode(r);}
 
 function nextStage(r){if(r.scene!=='stageclear'||r.artifactState?.offer)throw new Error('Choose your Boss artifact before entering Stage 2.');const routeVersion=r.route?.version===3?3:2;r.cleared.push(r.route?.active||'0:4');r.stage=1;r.depth=0;r.route=G.begin(1,r.seed,routeVersion);r.hp=Math.min(r.maxHp,r.hp+12);r.battle=null;r.scene='map';delete r.finished;r.checkpoint=null;r.checkpoint=clone(r);return r;}
-function retry(r){if(!r.checkpoint){const out=newRun(r.seed,r.mode,r.route?.version||2);if(r.route===undefined)delete out.route;if(!r.artifactState){delete out.artifactState;out.scene='map';}return out;}const out=clone(r.checkpoint);out.checkpoint=clone({...r.checkpoint,checkpoint:null});return Q.carryRunQuestions(out,r);}
+function retry(r){if(!r.checkpoint){const out=newRun(r.seed,r.mode,r.route?.version||2);if(r.route===undefined)delete out.route;if(!r.artifactState){delete out.artifactState;out.scene='map';}return Q.carryRunQuestions(out,r);}const out=clone(r.checkpoint);out.checkpoint=clone({...r.checkpoint,checkpoint:null});return Q.carryRunQuestions(out,r);}
 function validate(s){try{return validateState(s);}catch(_){return false;}}
 function validateState(s){const nonnegative=n=>Number.isSafeInteger(n)&&n>=0;const cardOK=c=>c&&typeof c.uid==='string'&&/^c\d+$/.test(c.uid)&&Object.hasOwn(C.cards,c.key)&&typeof c.upgraded==='boolean';
  const phase=Q.context(s)?.scene;

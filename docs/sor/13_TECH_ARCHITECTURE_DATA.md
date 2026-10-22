@@ -186,3 +186,8 @@ DITERUSKAN: combat-log.js owns optional v1 bounded structured battle history (80
 ## Developer Tools — 2.21.0
 
 Development-only server response adapters and memory storage isolate previews from player progress; production copies dist without tools/dev. Run schema is unchanged. Ownership: [20](20_DEVELOPER_TOOLS.md).
+
+
+## Run question sampling — 2.21.2
+
+Rewarded consumers explicitly request the shared reducer selectionPolicy random; independent Practice retains its adaptive default. All sampling consumes only question RNG and filters the shared runUsedIds ledger. Stage 1 Retry now uses carryRunQuestions like checkpoint Retry. No save schema or bank content changes; existing pending IDs and ordered attempts remain frozen. [Contract](../QUESTION_RANDOM_2_21_2.md).

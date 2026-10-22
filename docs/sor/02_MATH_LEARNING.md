@@ -140,3 +140,8 @@ MTH-17 — This run counts distinct Artifact/Mystery IDs from the current run re
 ## Combat and Predict — 2.19.0
 
 DISAHKAN: Ijamm replaces newly generated live-deck Predict with the authored 120-question bank. Predict, Artifact and Mystery share one exclusion ledger for the current run. Opening consumes an exposure, including abandonment. New Run resets exclusion; lifetime and mastery evidence remain. Practice/tutorial stay independent unscored review. Old saved live-deck predictions finish with their frozen source. First-try unaided correctness earns capped Focus once; guidance/retry earns none. Bank exhaustion has explicit unscored completion and no Focus; it can release a pending boss seal to prevent a completed bank blocking the run. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## Random gameplay questions — 2.21.2
+
+DISAHKAN: every newly opened gameplay question must be random and unique in the current run, including the first Artifact trial and Predict. Rewarded consumers use uniform selection from unused eligible IDs, without difficulty/mastery weighting. Mystery draws from every unused item in its event topic; preferred IDs no longer restrict the draw. Shop and Rest currently have no quiz trigger and must not reset the ledger. New Run resets exclusion while lifetime evidence remains; Stage 1/2 Retry retains run exposures. Frozen pending questions survive reload and cannot be rerolled by reopening. Exhaustion never recycles a used ID. Owner and evidence: [Random questions 2.21.2](../QUESTION_RANDOM_2_21_2.md).

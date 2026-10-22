@@ -25,7 +25,7 @@ test('profile learning records and reservations persist between runs without com
  const r=trial();E.selectEducation(r,Q.current(r).correctChoiceId);E.answerEducation(r);E.continueEducation(r);
  const history=Q.history(r.educationState.usedIds,r.educationState.session);assert.ok(Q.validHistory(history));
  const next=E.newRun(17,'challenge'),rng=next.rng;E.chooseArtifact(next,E.artifactChoices(next)[0].id,history.usedIds,history.session);
- assert.notEqual(Q.current(next).id,r.educationState.completed[0].questionId);assert.equal(Q.progress(next).some(p=>p.correct>0),true);assert.equal(next.rng,rng);
+ const control=E.newRun(17,'challenge');E.chooseArtifact(control,E.artifactChoices(control)[0].id);assert.equal(Q.current(next).id,Q.current(control).id);assert.equal(Q.coverage(next).run,1);assert.ok(next.educationState.usedIds.includes(r.educationState.completed[0].questionId));assert.equal(Q.progress(next).some(p=>p.correct>0),true);assert.equal(next.rng,rng);
  const bad=clone(next);bad.educationState.session.records[Q.current(next).id].events.push({type:'FINAL_REVEALED'});assert.equal(E.restore(bad),null);
 });
 test('a completed profile record cannot be downgraded by an older imported pending fork',()=>{

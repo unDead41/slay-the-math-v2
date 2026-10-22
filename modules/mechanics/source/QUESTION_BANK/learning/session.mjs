@@ -97,7 +97,8 @@ function dedicatedRandom(state) {
   return {state:next,value:((t^(t>>>14))>>>0)/4294967296};
 }
 
-export function reserveNext(session,bank,{topicCode=null}={}) {
+export function reserveNext(session,bank,{topicCode=null,selectionPolicy='adaptive'}={}) {
+  if(!['adaptive','random'].includes(selectionPolicy))throw new Error('Unknown question selection policy');
   if(session.pendingQuestionId){
     const question=getQuestion(bank,session.pendingQuestionId);
     if(!question)throw new Error('Pending question is missing from this bank');
@@ -118,14 +119,15 @@ export function reserveNext(session,bank,{topicCode=null}={}) {
   const distance=Math.min(...ranked.map(x=>x.distance));
   const near=ranked.filter(x=>x.distance===distance);
   const weakness=Math.max(...near.map(x=>x.weakness));
-  const candidates=near.filter(x=>Math.abs(x.weakness-weakness)<1e-9);
+  // Rewarded gameplay requests uniform sampling; Practice keeps adaptive learning.
+  const candidates=selectionPolicy==='random'?ranked:near.filter(x=>Math.abs(x.weakness-weakness)<1e-9);
   const random=dedicatedRandom(session.rngState);
   const question=candidates[Math.floor(random.value*candidates.length)].q;
   const record=projectRecord(question,[]);
   const next={...session,bankVersion:bank.bankVersion,rngState:random.state,
     exposureIds:[...session.exposureIds,question.id],records:{...session.records,[question.id]:record},
     pendingQuestionId:question.id,lastQuestionId:question.id};
-  return {session:next,question,reason:'new',targetDifficulty:['Easy','Medium','Hard'][desired-1]};
+  return {session:next,question,reason:'new',targetDifficulty:selectionPolicy==='random'?null:['Easy','Medium','Hard'][desired-1]};
 }
 
 export function submitAnswer(session,bank,{questionId,choiceId,attemptId}) {

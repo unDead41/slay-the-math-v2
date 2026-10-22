@@ -1,4 +1,6 @@
-# Slay the Math — Dungeon & Education Edition 2.16.1
+# Slay the Math — Cards & Education Edition 2.18.0
+
+Current update: all 40 supplied cards are playable with Focus and Passive mechanics, BM/English descriptions, corrected mathematical layout and internal Shop scrolling. [Changes and validation](docs/CARDS_AND_DISPLAY_2_18_0.md).
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 

@@ -10,7 +10,12 @@
 [data-stm-richtext] math {
   font-size: 1.08em;
   font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", math;
+  /* Keep numerator/denominator text at reading size, rather than compact
+     inline fractions with script-sized digits. Layout remains native MathML. */
+  math-style: normal;
 }
+[data-stm-richtext] .education-answer-copy math:has(mfrac),
+[data-stm-richtext] .choice-text math:has(mfrac) { font-size: max(20px, 1.15em); }
 [data-stm-richtext] .rt-popover {
   position: fixed;
   z-index: 1000;

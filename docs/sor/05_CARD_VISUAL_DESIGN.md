@@ -68,3 +68,8 @@ Ijamm reports horizontally swollen cards in the reward scene and requests checki
 ## Overlapping live hand — 2.9.0
 
 **CDV-03:** Reuse `cardView` and the portrait geometry. `hand.js`/`hand.css` own only the live hand rail. Fit cards with overlap when needed, retaining a 44px minimum exposed step and local scrolling on small screens. Disabled cards remain opaque so lower card text cannot bleed through. A 140ms pointer dwell lifts one card and shifts its neighbors; pointer movement, rather than layout-triggered enter/leave, changes the candidate. Keyboard focus is immediate. Touch retains native card activation and rail panning. Motion Off and OS reduced motion remove transitions. Reward, Shop and Collection retain their shared card presentation.
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

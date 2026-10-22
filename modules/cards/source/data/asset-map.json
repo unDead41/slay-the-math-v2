@@ -1,0 +1,345 @@
+{
+  "version": "1.0.0",
+  "frames": {
+    "version": "2.1.0",
+    "canvas": [
+      1280,
+      1920
+    ],
+    "original_card_rect": {
+      "x": 128,
+      "y": 192,
+      "width": 1024,
+      "height": 1536
+    },
+    "canvas_4K": [
+      2560,
+      3840
+    ],
+    "original_card_rect_4K": {
+      "x": 256,
+      "y": 384,
+      "width": 2048,
+      "height": 3072
+    },
+    "trim": false,
+    "categories": {
+      "attack": {
+        "focus_supported": true,
+        "color": "#FF243D",
+        "normal": "assets/frames/frames_native/card_frame_attack_normal.png",
+        "focus": "assets/frames/frames_native/card_frame_attack_focus.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_attack_normal.png",
+        "focus_4K": "assets/frames/frames_4K/card_frame_attack_focus.png",
+        "back_glow_4K": "assets/frames/overlays_4K/card_frame_attack_glow_back.png",
+        "front_highlights_4K": "assets/frames/overlays_4K/card_frame_attack_highlights_front.png"
+      },
+      "defend": {
+        "focus_supported": true,
+        "color": "#168DFF",
+        "normal": "assets/frames/frames_native/card_frame_defend_normal.png",
+        "focus": "assets/frames/frames_native/card_frame_defend_focus.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_defend_normal.png",
+        "focus_4K": "assets/frames/frames_4K/card_frame_defend_focus.png",
+        "back_glow_4K": "assets/frames/overlays_4K/card_frame_defend_glow_back.png",
+        "front_highlights_4K": "assets/frames/overlays_4K/card_frame_defend_highlights_front.png"
+      },
+      "skill": {
+        "focus_supported": true,
+        "color": "#0AF385",
+        "normal": "assets/frames/frames_native/card_frame_skill_normal.png",
+        "focus": "assets/frames/frames_native/card_frame_skill_focus.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_skill_normal.png",
+        "focus_4K": "assets/frames/frames_4K/card_frame_skill_focus.png",
+        "back_glow_4K": "assets/frames/overlays_4K/card_frame_skill_glow_back.png",
+        "front_highlights_4K": "assets/frames/overlays_4K/card_frame_skill_highlights_front.png"
+      },
+      "passive": {
+        "focus_supported": false,
+        "color": "#BA63FF",
+        "normal": "assets/frames/frames_native/card_frame_passive_normal.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_passive_normal.png",
+        "on_focus": "retain normal frame; no Focus variant or glow overlays"
+      }
+    },
+    "layout": {
+      "native_canvas": [
+        1280,
+        1920
+      ],
+      "artwork_rect": {
+        "x": 255,
+        "y": 470,
+        "width": 768,
+        "height": 654,
+        "fit": "contain",
+        "clip": true
+      },
+      "title_rect": {
+        "x": 407,
+        "y": 315,
+        "width": 625,
+        "height": 110
+      },
+      "energy_center": {
+        "x": 284,
+        "y": 372
+      },
+      "category_rect": {
+        "x": 410,
+        "y": 1130,
+        "width": 475,
+        "height": 95
+      },
+      "description_rect": {
+        "x": 278,
+        "y": 1254,
+        "width": 720,
+        "height": 248
+      },
+      "notes": "All rectangles are in the common padded native canvas. Multiply all coordinates by 2 for 4K. Original raster files remain byte-identical."
+    }
+  },
+  "cards": [
+    {
+      "id": "stm.attack.rune_strike",
+      "category": "attack",
+      "selection_code": "B01",
+      "icon": "assets/icons/Attack/Icons/01_Rune_Strike_B01.png"
+    },
+    {
+      "id": "stm.attack.weak_point",
+      "category": "attack",
+      "selection_code": "A02",
+      "icon": "assets/icons/Attack/Icons/02_Weak_Point_A02.png"
+    },
+    {
+      "id": "stm.attack.scout_strike",
+      "category": "attack",
+      "selection_code": "B03",
+      "icon": "assets/icons/Attack/Icons/03_Scout_Strike_B03.png"
+    },
+    {
+      "id": "stm.attack.return_strike",
+      "category": "attack",
+      "selection_code": "B04",
+      "icon": "assets/icons/Attack/Icons/04_Return_Strike_B04.png"
+    },
+    {
+      "id": "stm.attack.sure_hit",
+      "category": "attack",
+      "selection_code": "C05",
+      "icon": "assets/icons/Attack/Icons/05_Sure_Hit_C05.png"
+    },
+    {
+      "id": "stm.attack.twin_shot",
+      "category": "attack",
+      "selection_code": "C06",
+      "icon": "assets/icons/Attack/Icons/06_Twin_Shot_C06.png"
+    },
+    {
+      "id": "stm.attack.shield_shot",
+      "category": "attack",
+      "selection_code": "B07",
+      "icon": "assets/icons/Attack/Icons/07_Shield_Shot_B07.png"
+    },
+    {
+      "id": "stm.attack.crack_shot",
+      "category": "attack",
+      "selection_code": "C08",
+      "icon": "assets/icons/Attack/Icons/08_Crack_Shot_C08.png"
+    },
+    {
+      "id": "stm.attack.rune_sweep",
+      "category": "attack",
+      "selection_code": "C09",
+      "icon": "assets/icons/Attack/Icons/09_Rune_Sweep_C09.png"
+    },
+    {
+      "id": "stm.attack.fate_storm",
+      "category": "attack",
+      "selection_code": "A10",
+      "icon": "assets/icons/Attack/Icons/10_Fate_Storm_A10.png"
+    },
+    {
+      "id": "stm.defend.rune_guard",
+      "category": "defend",
+      "selection_code": "C01",
+      "icon": "assets/icons/Defend/Icons/01_Rune_Guard_C01.png"
+    },
+    {
+      "id": "stm.defend.flash_ward",
+      "category": "defend",
+      "selection_code": "B02",
+      "icon": "assets/icons/Defend/Icons/02_Flash_Ward_B02.png"
+    },
+    {
+      "id": "stm.defend.tower_shield",
+      "category": "defend",
+      "selection_code": "B03",
+      "icon": "assets/icons/Defend/Icons/03_Tower_Shield_B03.png"
+    },
+    {
+      "id": "stm.defend.ember_wall",
+      "category": "defend",
+      "selection_code": "A04",
+      "icon": "assets/icons/Defend/Icons/04_Ember_Wall_A04.png"
+    },
+    {
+      "id": "stm.defend.foreseen_guard",
+      "category": "defend",
+      "selection_code": "B05",
+      "icon": "assets/icons/Defend/Icons/05_Foreseen_Guard_B05.png"
+    },
+    {
+      "id": "stm.defend.layered_shield",
+      "category": "defend",
+      "selection_code": "A06",
+      "icon": "assets/icons/Defend/Icons/06_Layered_Shield_A06.png"
+    },
+    {
+      "id": "stm.defend.burning_pages",
+      "category": "defend",
+      "selection_code": "B07",
+      "icon": "assets/icons/Defend/Icons/07_Burning_Pages_B07.png"
+    },
+    {
+      "id": "stm.defend.cinder_guard",
+      "category": "defend",
+      "selection_code": "C08",
+      "icon": "assets/icons/Defend/Icons/08_Cinder_Guard_C08.png"
+    },
+    {
+      "id": "stm.defend.hold_the_line",
+      "category": "defend",
+      "selection_code": "B09",
+      "icon": "assets/icons/Defend/Icons/09_Hold_the_Line_B09.png"
+    },
+    {
+      "id": "stm.defend.mana_barrier",
+      "category": "defend",
+      "selection_code": "B10",
+      "icon": "assets/icons/Defend/Icons/10_Mana_Barrier_B10.png"
+    },
+    {
+      "id": "stm.skill.quick_study",
+      "category": "skill",
+      "selection_code": "B01",
+      "icon": "assets/icons/Skill/Icons/01_Quick_Study_B01.png"
+    },
+    {
+      "id": "stm.skill.deep_study",
+      "category": "skill",
+      "selection_code": "C02",
+      "icon": "assets/icons/Skill/Icons/02_Deep_Study_C02.png"
+    },
+    {
+      "id": "stm.skill.mana_reading",
+      "category": "skill",
+      "selection_code": "B03",
+      "icon": "assets/icons/Skill/Icons/03_Mana_Reading_B03.png"
+    },
+    {
+      "id": "stm.skill.read_ahead",
+      "category": "skill",
+      "selection_code": "A04",
+      "icon": "assets/icons/Skill/Icons/04_Read_Ahead_A04.png"
+    },
+    {
+      "id": "stm.skill.burning_page",
+      "category": "skill",
+      "selection_code": "A05",
+      "icon": "assets/icons/Skill/Icons/05_Burning_Page_A05.png"
+    },
+    {
+      "id": "stm.skill.clear_choice",
+      "category": "skill",
+      "selection_code": "A06",
+      "icon": "assets/icons/Skill/Icons/06_Clear_Choice_A06.png"
+    },
+    {
+      "id": "stm.skill.card_search",
+      "category": "skill",
+      "selection_code": "B07",
+      "icon": "assets/icons/Skill/Icons/07_Card_Search_B07.png"
+    },
+    {
+      "id": "stm.skill.recall",
+      "category": "skill",
+      "selection_code": "B08",
+      "icon": "assets/icons/Skill/Icons/08_Recall_B08.png"
+    },
+    {
+      "id": "stm.skill.next_chapter",
+      "category": "skill",
+      "selection_code": "B09",
+      "icon": "assets/icons/Skill/Icons/09_Next_Chapter_B09.png"
+    },
+    {
+      "id": "stm.skill.last_page",
+      "category": "skill",
+      "selection_code": "C10",
+      "icon": "assets/icons/Skill/Icons/10_Last_Page_C10.png"
+    },
+    {
+      "id": "stm.passive.blazing_spirit",
+      "category": "passive",
+      "selection_code": "A01",
+      "icon": "assets/icons/Passive/Icons/01_Blazing_Spirit_A01.png"
+    },
+    {
+      "id": "stm.passive.growing_flame",
+      "category": "passive",
+      "selection_code": "B02",
+      "icon": "assets/icons/Passive/Icons/02_Growing_Flame_B02.png"
+    },
+    {
+      "id": "stm.passive.swift_step",
+      "category": "passive",
+      "selection_code": "C03",
+      "icon": "assets/icons/Passive/Icons/03_Swift_Step_C03.png"
+    },
+    {
+      "id": "stm.passive.battle_rhythm",
+      "category": "passive",
+      "selection_code": "C04",
+      "icon": "assets/icons/Passive/Icons/04_Battle_Rhythm_C04.png"
+    },
+    {
+      "id": "stm.passive.rune_armor",
+      "category": "passive",
+      "selection_code": "B05",
+      "icon": "assets/icons/Passive/Icons/05_Rune_Armor_B05.png"
+    },
+    {
+      "id": "stm.passive.lasting_shield",
+      "category": "passive",
+      "selection_code": "B06",
+      "icon": "assets/icons/Passive/Icons/06_Lasting_Shield_B06.png"
+    },
+    {
+      "id": "stm.passive.grimoire_ward",
+      "category": "passive",
+      "selection_code": "C07",
+      "icon": "assets/icons/Passive/Icons/07_Grimoire_Ward_C07.png"
+    },
+    {
+      "id": "stm.passive.ember_core",
+      "category": "passive",
+      "selection_code": "A08",
+      "icon": "assets/icons/Passive/Icons/08_Ember_Core_A08.png"
+    },
+    {
+      "id": "stm.passive.clear_mind",
+      "category": "passive",
+      "selection_code": "B09",
+      "icon": "assets/icons/Passive/Icons/09_Clear_Mind_B09.png"
+    },
+    {
+      "id": "stm.passive.last_ember",
+      "category": "passive",
+      "selection_code": "C10",
+      "icon": "assets/icons/Passive/Icons/10_Last_Ember_C10.png"
+    }
+  ]
+}

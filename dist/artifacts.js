@@ -98,10 +98,10 @@
   if(statIds.length&&(b.turn===1||has(r,'b02'))){
    const common=has(r,'b02')?['Clasp contribution: min('+value('b02','max_artifact_contribution_each_stat')+', '+value('b02','initial_strength')+' + '+b.turn+' − 1) = '+a.clasp]:[];
    const strength=has(r,'e15')?value('e15','strength'):0,agility=has(r,'e16')?value('e16','agility'):0;
-   const oracleStrength=b.mysteryModifiers?.strength||0,oracleAgility=b.mysteryModifiers?.agility||0;
+   const oracleStrength=b.mysteryModifiers?.strength||0,oracleAgility=b.mysteryModifiers?.agility||0,passiveStrength=b.cardCombat?.stats.strength||0,passiveAgility=b.cardCombat?.stats.agility||0;
    R.record(r,'Combat stat totals',statIds.map(id),[
-    R.total('Total Strength','Strength',b.strength,[...common,'Crimson Sword Charm: +'+strength+' Strength',...(oracleStrength?['Oracle Strength: +'+oracleStrength]:[]),'Total Strength: '+a.clasp+' + '+strength+(oracleStrength?' + '+oracleStrength:'')+' = '+b.strength]),
-    R.total('Total Agility','Agility',b.agility,[...common,"Guardian's Armlet: +"+agility+' Agility',...(oracleAgility?['Oracle Agility: +'+oracleAgility]:[]),'Total Agility: '+a.clasp+' + '+agility+(oracleAgility?' + '+oracleAgility:'')+' = '+b.agility])
+    R.total('Total Strength','Strength',b.strength,[...common,'Crimson Sword Charm: +'+strength+' Strength',...(oracleStrength?['Oracle Strength: +'+oracleStrength]:[]),...(passiveStrength?['Card Passives: +'+passiveStrength+' Strength']:[]),'Total Strength: '+a.clasp+' + '+strength+(oracleStrength?' + '+oracleStrength:'')+(passiveStrength?' + '+passiveStrength:'')+' = '+b.strength]),
+    R.total('Total Agility','Agility',b.agility,[...common,"Guardian's Armlet: +"+agility+' Agility',...(oracleAgility?['Oracle Agility: +'+oracleAgility]:[]),...(passiveAgility?['Card Passives: +'+passiveAgility+' Agility']:[]),'Total Agility: '+a.clasp+' + '+agility+(oracleAgility?' + '+oracleAgility:'')+(passiveAgility?' + '+passiveAgility:'')+' = '+b.agility])
    ]);
   }
   if(has(r,'b01'))gain(r,'b01',{energy:value('b01','energy')},ctx);
@@ -126,6 +126,7 @@
   const m=b?.mysteryModifiers;
   if(d.role==='attack'&&m?.strength)damage.push({id:null,name:'Oracle Strength',value:m.strength});
   if(d.role==='guard'&&m?.agility)block.push({id:null,name:'Oracle Agility',value:m.agility});
+  const passive=b?.cardCombat?.stats;if(d.role==='attack'&&passive?.strength)damage.push({id:null,name:'Card Passives',value:passive.strength});if(d.role==='guard'&&passive?.agility)block.push({id:null,name:'Card Passives',value:passive.agility});
   if(!a)return {damage,block};
   const add=(list,code,key)=>{if(has(r,code))list.push({id:id(code),name:get(code).name,value:value(code,key)});};
   if(d.role==='attack'){
@@ -211,7 +212,7 @@
    const b=r.battle,a=b.artifacts;
    if(!a||!a.combat||!a.turn||!integer(a.turn.energyBudget)||a.turn.energyBudget<Math.max(0,C.ENERGY+(b.turn===1?(b.mysteryModifiers?.energy||0):0))||a.turn.energyBudget>maxEnergy(r)||b.energy>a.turn.energyBudget||!['quill','pebble','ring','flask','won'].every(k=>typeof a.combat[k]==='boolean')||!['attack','guard','skill','exhaust','discard','pair','abacus','retaliation'].every(k=>typeof a.turn[k]==='boolean')||!integer(a.turn.cards)||a.turn.cards>200)return false;
    const clasp=has(r,'b02')?Math.min(value('b02','max_artifact_contribution_each_stat'),value('b02','initial_strength')+b.turn-1):0;
-   if(a.clasp!==clasp||b.strength!==(has(r,'e15')?value('e15','strength'):0)+clasp+(b.mysteryModifiers?.strength||0)||b.agility!==(has(r,'e16')?value('e16','agility'):0)+clasp+(b.mysteryModifiers?.agility||0))return false;
+   if(a.clasp!==clasp||b.strength!==(has(r,'e15')?value('e15','strength'):0)+clasp+(b.mysteryModifiers?.strength||0)+(b.cardCombat?.stats.strength||0)||b.agility!==(has(r,'e16')?value('e16','agility'):0)+clasp+(b.mysteryModifiers?.agility||0)+(b.cardCombat?.stats.agility||0))return false;
    if(has(r,'e03')?(!integer(a.die)||a.die<1||a.die>6):a.die!==null)return false;
   }
   return true;

@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "package": "Slay the Math - Focus Card Balance",
+  "version": "1.0-proposal",
+  "date": "2026-10-22",
+  "status": "DESIGN_PROPOSAL_NOT_RUNTIME_PATCH",
+  "user_confirmed_scope": [
+    "Focus tersedia untuk Attack, Defend dan Skill",
+    "Passive tidak mempunyai sistem Focus",
+    "Peningkatan perlu sederhana dan mudah difahami"
+  ],
+  "source_snapshot": {
+    "repository": "unDead41/slay-the-math-v2",
+    "commit": "4233d1d2cad547a6d48cda948ce3c10ddea1b4b8",
+    "files": [
+      "dist/config.js",
+      "dist/engine.js",
+      "docs/sor/03_COMBAT_MECHANICS.md",
+      "docs/sor/04_CARD_SYSTEM.md",
+      "docs/sor/12_PROGRESSION_ECONOMY_BALANCE.md"
+    ],
+    "observed_runtime": {
+      "focus_cap": 3,
+      "focus_cost": 1,
+      "uses_per_turn": 1,
+      "attack_or_block_bonus": 3,
+      "skill_boost_supported": false,
+      "focus_is_existing_resource": true
+    },
+    "important": "Runtime config currently contains 12 card definitions with older names. The approved 40-icon set is a design selection, not proof that these 40 card mechanics exist in runtime. Older SOR numeric examples are superseded by inspected config for runtime facts."
+  },
+  "rules": {
+    "focus_cost": 1,
+    "focus_cap": 3,
+    "max_focused_cards_per_turn": 1,
+    "toggle_cost": 0,
+    "consume_at": "successful_card_play_commit",
+    "auto_off": "after_a_focused_card_or_end_turn",
+    "carry_stock_between_turns": true,
+    "reset_stock_at_new_combat": true,
+    "energy_cost_changes": false,
+    "exhaust_changes": false,
+    "passive_eligible": false,
+    "hand_limit": 10,
+    "no_bonus_focus_generation": true,
+    "no_focus_discount_or_refund": true,
+    "no_same_card_stacking": true,
+    "hybrid_card_policy": "Enhance one primary effect only: Attack damage, Defend Block, Skill its explicitly listed effect.",
+    "damage_timing": "Compute ordinary upgraded/stat-modified attack, then add flat Focus bonus once, then apply ordinary mitigation.",
+    "block_timing": "Compute ordinary upgraded/stat-modified Block, then add flat Focus bonus once.",
+    "no_effect_policy": "If preview proves the Focus-specific bonus cannot produce any benefit (such as no capacity beyond base draw), show ordinary effect and preserve the Focus stock and armed state. A legal random/search attempt may still fail after commit; that is not refunded."
+  },
+  "numeric_example_status": "Quick Study 2, Deep Study 4, Read Ahead 3 and Next Chapter 2 continue the supplied design examples. Clear Choice group size 3 and Last Page D=1/E=2 are explicit proposed defaults. Damage/Block bases are not invented for the 40-card designs. Energy, rarity and unprovided side effects require their own authoritative definitions.",
+  "cards": [
+    {
+      "category": "Attack",
+      "card": "Rune Strike",
+      "icon_source_code": "B01",
+      "icon_file_in_selected_pack": "Attack/Icons/01_Rune_Strike_B01.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage pada jumlah serangan kad.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Weak Point",
+      "icon_source_code": "A02",
+      "icon_file_in_selected_pack": "Attack/Icons/02_Weak_Point_A02.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage; syarat dan kesan Weak Point asal kekal.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Scout Strike",
+      "icon_source_code": "B03",
+      "icon_file_in_selected_pack": "Attack/Icons/03_Scout_Strike_B03.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage sahaja; kesan draw/pergerakan asal tidak ditambah.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Return Strike",
+      "icon_source_code": "B04",
+      "icon_file_in_selected_pack": "Attack/Icons/04_Return_Strike_B04.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage pada serangan balas; tidak menambah Block serentak.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Sure Hit",
+      "icon_source_code": "C05",
+      "icon_file_in_selected_pack": "Attack/Icons/05_Sure_Hit_C05.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage; ketepatan/penembusan asal tidak diubah.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Twin Shot",
+      "icon_source_code": "C06",
+      "icon_file_in_selected_pack": "Attack/Icons/06_Twin_Shot_C06.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage jumlah pada hit pertama sahaja; hit kedua kekal nilai asal.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Shield Shot",
+      "icon_source_code": "B07",
+      "icon_file_in_selected_pack": "Attack/Icons/07_Shield_Shot_B07.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage shield bash; tidak memberi bonus Block tambahan.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Crack Shot",
+      "icon_source_code": "C08",
+      "icon_file_in_selected_pack": "Attack/Icons/08_Crack_Shot_C08.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage sahaja; kadar/status pecah pertahanan asal kekal.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Rune Sweep",
+      "icon_source_code": "C09",
+      "icon_file_in_selected_pack": "Attack/Icons/09_Rune_Sweep_C09.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage pada sasaran utama/hit pertama yang diselesaikan; sasaran/hit lain kekal.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Attack",
+      "card": "Fate Storm",
+      "icon_source_code": "A10",
+      "icon_file_in_selected_pack": "Attack/Icons/10_Fate_Storm_A10.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Damage dan kesan asal kad.",
+      "focus": "Tambah 3 damage pada hit pertama sahaja; bilangan hit dan sasaran asal kekal.",
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Rune Guard",
+      "icon_source_code": "C01",
+      "icon_file_in_selected_pack": "Defend/Icons/01_Rune_Guard_C01.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Flash Ward",
+      "icon_source_code": "B02",
+      "icon_file_in_selected_pack": "Defend/Icons/02_Flash_Ward_B02.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Tower Shield",
+      "icon_source_code": "B03",
+      "icon_file_in_selected_pack": "Defend/Icons/03_Tower_Shield_B03.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Ember Wall",
+      "icon_source_code": "A04",
+      "icon_file_in_selected_pack": "Defend/Icons/04_Ember_Wall_A04.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Foreseen Guard",
+      "icon_source_code": "B05",
+      "icon_file_in_selected_pack": "Defend/Icons/05_Foreseen_Guard_B05.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Layered Shield",
+      "icon_source_code": "A06",
+      "icon_file_in_selected_pack": "Defend/Icons/06_Layered_Shield_A06.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Burning Pages",
+      "icon_source_code": "B07",
+      "icon_file_in_selected_pack": "Defend/Icons/07_Burning_Pages_B07.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Cinder Guard",
+      "icon_source_code": "C08",
+      "icon_file_in_selected_pack": "Defend/Icons/08_Cinder_Guard_C08.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Hold the Line",
+      "icon_source_code": "B09",
+      "icon_file_in_selected_pack": "Defend/Icons/09_Hold_the_Line_B09.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Defend",
+      "card": "Mana Barrier",
+      "icon_source_code": "B10",
+      "icon_file_in_selected_pack": "Defend/Icons/10_Mana_Barrier_B10.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Block dan kesan asal kad.",
+      "focus": "Tambah 3 Block jumlah pada pemberian Block pertama kad. Kesan/trigger/tempoh/carry cap asal kekal.",
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Quick Study",
+      "icon_source_code": "B01",
+      "icon_file_in_selected_pack": "Skill/Icons/01_Quick_Study_B01.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Draw 2 kad.",
+      "focus": "Draw 3 kad.",
+      "note": "Tambah 1 kad pada jumlah draw.",
+      "focus_rule": {
+        "kind": "draw_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Deep Study",
+      "icon_source_code": "C02",
+      "icon_file_in_selected_pack": "Skill/Icons/02_Deep_Study_C02.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Draw 4 kad.",
+      "focus": "Draw 5 kad.",
+      "note": "Tambah 1 kad pada jumlah draw.",
+      "focus_rule": {
+        "kind": "draw_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Mana Reading",
+      "icon_source_code": "B03",
+      "icon_file_in_selected_pack": "Skill/Icons/03_Mana_Reading_B03.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Draw 2X kad; X ialah Energy dibelanjakan, minimum 1.",
+      "focus": "Draw 2X + 1 kad.",
+      "note": "Bonus +1 kepada jumlah akhir, bukan +1 bagi setiap Energy.",
+      "focus_rule": {
+        "kind": "draw_total_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Read Ahead",
+      "icon_source_code": "A04",
+      "icon_file_in_selected_pack": "Skill/Icons/04_Read_Ahead_A04.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Lihat 3 kad teratas, ambil 1 dan susun baki.",
+      "focus": "Lihat 4 kad teratas, ambil 1 dan susun baki.",
+      "note": "Tambah 1 kad dilihat; bilangan yang diambil kekal 1.",
+      "focus_rule": {
+        "kind": "look_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Burning Page",
+      "icon_source_code": "A05",
+      "icon_file_in_selected_pack": "Skill/Icons/05_Burning_Page_A05.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Lihat kad teratas; boleh ganti kad itu sekali sahaja.",
+      "focus": "Boleh buat maksimum 2 penggantian; akhirnya ambil 1 kad.",
+      "note": "Setiap penggantian membuang kad yang ditolak ke Discard Pile; tiada kad tambahan disimpan.",
+      "focus_rule": {
+        "kind": "replacement_limit_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Clear Choice",
+      "icon_source_code": "A06",
+      "icon_file_in_selected_pack": "Skill/Icons/06_Clear_Choice_A06.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Lihat 3 kad; ambil 1, buang baki 2.",
+      "focus": "Lihat 4 kad; ambil 1, buang baki 3.",
+      "note": "Tambah 1 pilihan; bilangan kad yang diambil kekal 1.",
+      "focus_rule": {
+        "kind": "look_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Card Search",
+      "icon_source_code": "B07",
+      "icon_file_in_selected_pack": "Skill/Icons/07_Card_Search_B07.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Cari kategori dalam maksimum N kad teratas.",
+      "focus": "Cari kategori dalam maksimum N + 1 kad teratas.",
+      "note": "Ambil padanan pertama, buang yang dilangkau dan berhenti. Carian masih boleh gagal.",
+      "focus_rule": {
+        "kind": "search_limit_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Recall",
+      "icon_source_code": "B08",
+      "icon_file_in_selected_pack": "Skill/Icons/08_Recall_B08.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Ambil 1 kad pilihan daripada Discard Pile.",
+      "focus": "Ambil 1 kad pilihan daripada Discard Pile, kemudian draw 1.",
+      "note": "Kad tambahan datang dari Draw Pile; bukan memilih kad kedua daripada Discard Pile.",
+      "focus_rule": {
+        "kind": "draw_after_return_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Next Chapter",
+      "icon_source_code": "B09",
+      "icon_file_in_selected_pack": "Skill/Icons/09_Next_Chapter_B09.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Giliran berikutnya, draw tambahan 2 kad.",
+      "focus": "Giliran berikutnya, draw tambahan 3 kad.",
+      "note": "Bonus kekal tertunda; tidak draw sekarang atau berulang setiap giliran.",
+      "focus_rule": {
+        "kind": "next_turn_draw_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Skill",
+      "card": "Last Page",
+      "icon_source_code": "C10",
+      "icon_file_in_selected_pack": "Skill/Icons/10_Last_Page_C10.png",
+      "focus_eligible": true,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Draw D kad; tambah E lagi jika tangan kosong selepas kad dimainkan, sebelum draw.",
+      "focus": "Draw D + 1 kad; bonus kosong E kekal.",
+      "note": "Contoh draf D=1, E=2: biasa 1/3 kad; Focus 2/4 kad. Syarat kosong diperiksa sebelum mana-mana draw.",
+      "focus_rule": {
+        "kind": "base_draw_bonus",
+        "amount": 1
+      }
+    },
+    {
+      "category": "Passive",
+      "card": "Blazing Spirit",
+      "icon_source_code": "A01",
+      "icon_file_in_selected_pack": "Passive/Icons/01_Blazing_Spirit_A01.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Growing Flame",
+      "icon_source_code": "B02",
+      "icon_file_in_selected_pack": "Passive/Icons/02_Growing_Flame_B02.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Swift Step",
+      "icon_source_code": "C03",
+      "icon_file_in_selected_pack": "Passive/Icons/03_Swift_Step_C03.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Battle Rhythm",
+      "icon_source_code": "C04",
+      "icon_file_in_selected_pack": "Passive/Icons/04_Battle_Rhythm_C04.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Rune Armor",
+      "icon_source_code": "B05",
+      "icon_file_in_selected_pack": "Passive/Icons/05_Rune_Armor_B05.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Lasting Shield",
+      "icon_source_code": "B06",
+      "icon_file_in_selected_pack": "Passive/Icons/06_Lasting_Shield_B06.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Grimoire Ward",
+      "icon_source_code": "C07",
+      "icon_file_in_selected_pack": "Passive/Icons/07_Grimoire_Ward_C07.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Ember Core",
+      "icon_source_code": "A08",
+      "icon_file_in_selected_pack": "Passive/Icons/08_Ember_Core_A08.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Clear Mind",
+      "icon_source_code": "B09",
+      "icon_file_in_selected_pack": "Passive/Icons/09_Clear_Mind_B09.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    },
+    {
+      "category": "Passive",
+      "card": "Last Ember",
+      "icon_source_code": "C10",
+      "icon_file_in_selected_pack": "Passive/Icons/10_Last_Ember_C10.png",
+      "focus_eligible": false,
+      "status": "CADANGAN_NILAI_AWAL_BELUM_IMPLEMENTASI",
+      "runtime_card_mapping": "not_assigned; preserve existing runtime IDs during integration",
+      "base": "Kesan Passive asal.",
+      "focus": "Tiada Focus. Tidak menggunakan mata Focus.",
+      "focus_rule": null
+    }
+  ]
+}

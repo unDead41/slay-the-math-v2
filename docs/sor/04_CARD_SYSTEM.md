@@ -73,3 +73,8 @@ Starter tetap 12, lapan definisi aktif, upgrade/resume kekal sah dan imej rujuka
 **CRD-11:** Every normal, card and artifact draw shares `DCConfig.HAND_LIMIT` (implementation baseline: 10). Check capacity before taking a card or shuffling. Unavailable capacity stops the requested draw; no excess card is discarded/exhausted and no extra RNG call occurs. A played Draw card frees its own slot before its effect. Report actual cards drawn and show Hand full when the request exceeds capacity.
 
 Old overfull saves remain loadable: restore keeps the first 10 cards in Hand and places excess instances on top of Draw in their prior hand order. Preserve every UID, upgrade, RNG and locked Predict snapshot.
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

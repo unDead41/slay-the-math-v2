@@ -122,7 +122,7 @@ test('DOM: restored map highlights the travelled branch and disables every disco
   assert.ok(w.document.querySelector('.dungeon-room.visited').disabled);
  }finally{dom.window.close();}
 });
-function fixtureRun(seed){const run=E.newRun(seed);delete run.route;return run;} // Legacy/standalone scene fixtures.
+function fixtureRun(seed){const run=require('./helpers/legacy-run.cjs').newRun(seed);delete run.route;return run;} // Legacy/standalone scene fixtures.
 test('DOM: actual Artifact language switch keeps the pending question, attempt state and selected choice',{skip:!JSDOM},async()=>{
  const fixture=require('./fixtures/education-v1_4-pending.json'),{dom,w,click,state}=boot(fixture);
  try{
@@ -207,7 +207,7 @@ test('DOM: reward preview does not claim a card until Add is pressed',{skip:!JSD
  try{click('continue');w.document.querySelector('[data-action=select-reward][data-key=filter]').click();assert.equal(state().scene,'reward');assert.equal(state().deck.length,12);w.document.querySelector('[data-action=reward]').click();assert.equal(state().deck.length,13);assert.equal(state().deck.at(-1).key,'filter');}finally{dom.window.close();}
 });
 test('DOM: collection search, category, empty result, clear and pagination retain working details',{skip:!JSDOM},()=>{
- const {dom,w,click}=boot();try{click('library');assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);w.document.querySelector('[data-action=library-page][data-page="1"]').click();assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);let input=w.document.querySelector('#card-search');input.value='nonexistent';input.dispatchEvent(new w.Event('input',{bubbles:true}));assert.ok(w.document.querySelector('.no-results'));click('clear-search');assert.equal(w.document.querySelector('#card-search').value,'');w.document.querySelector('[data-action=library-role][data-value=guard]').click();assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,3);assert.ok([...w.document.querySelectorAll('.collection-cards .playing-card')].every(el=>el.classList.contains('guard')));}finally{dom.window.close();}
+ const {dom,w,click}=boot();try{click('library');assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);w.document.querySelector('[data-action=library-page][data-page="1"]').click();assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);let input=w.document.querySelector('#card-search');input.value='nonexistent';input.dispatchEvent(new w.Event('input',{bubbles:true}));assert.match(w.document.querySelector('.collection-cards').textContent,/No cards found/);click('clear-search');assert.equal(w.document.querySelector('#card-search').value,'');w.document.querySelector('[data-action=library-role][data-value=guard]').click();assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);assert.ok(w.document.querySelector('.collection-count').textContent.includes('10 / 40'));assert.ok([...w.document.querySelectorAll('.collection-cards .playing-card')].every(el=>el.classList.contains('guard')));}finally{dom.window.close();}
 });
 test('DOM: tutorial practice gives feedback without changing the run or awarding Focus',{skip:!JSDOM},()=>{
  const r=E.newRun(7);const {dom,w,click,state}=boot(r);try{click('help');w.document.querySelector('[data-action=help-page][data-page="1"]').click();w.document.querySelector('[data-action=practice-answer][data-value="1/2"]').click();click('check-practice');assert.match(w.document.querySelector('.practice-feedback').textContent,/Correct/);assert.deepEqual(state(),r);}finally{dom.window.close();}
@@ -282,7 +282,7 @@ test('DOM: a full hand exposes its cap, disabled-card inspection and the tenth-c
 
 
 test('DOM: artifact counters project real card resolution and opening effects without replay',{skip:!JSDOM},()=>{
- const A=require('../dist/artifacts'),r=E.newRun(17,'challenge');require('./helpers/education.cjs').claimArtifact(r,E.artifactChoices(r)[0].id);delete r.route;
+ const A=require('../dist/artifacts'),r=require('./helpers/legacy-run.cjs').newRun(17,'challenge');require('./helpers/education.cjs').claimArtifact(r,E.artifactChoices(r)[0].id);delete r.route;
  for(const code of ['e01','e02','e03','e07','e08'])if(!A.has(r,code))A.acquire(r,A.id(code),'fixture:'+code);
  E.startBattle(r,'wisp');const pool=[...r.battle.hand,...r.battle.draw];r.battle.hand=[];
  for(const key of ['strike','ember','guard','draw'])r.battle.hand.push(pool.splice(pool.findIndex(c=>c.key===key),1)[0]);r.battle.draw=pool;r.battle.hp=r.battle.maxHp=200;r.battle.enemyBlock=0;
@@ -395,7 +395,7 @@ test('DOM: Settings owns the menu language preference and carries BM into the re
   assert.equal(w.document.querySelector('.home-question-language'),null);
   click('saves');const language=w.document.getElementById('settings-question-language-select');assert.ok(language);language.value='ms';language.dispatchEvent(new w.Event('change',{bubbles:true}));
   assert.equal(w.document.getElementById('dialog').open,true);assert.equal(w.document.activeElement.id,'settings-question-language-select');
-  assert.equal(w.document.querySelector('[data-game-version]').textContent,'v2.17.0');click('close');
+  assert.equal(w.document.querySelector('[data-game-version]').textContent,'v'+require('../package.json').version);click('close');
   assert.equal(w.DCQuestionLanguage.language(),'ms');assert.equal(w.localStorage.getItem('duel-cube-math.v1'),null);
   click('new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
   const source=w.DCEducation.current(state()),expected=w.DCQuestionLanguage.question(source,'ms');

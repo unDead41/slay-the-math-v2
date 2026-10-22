@@ -77,3 +77,8 @@ The user's implementation request supersedes the earlier no-artifact scope. New 
 ## Mystery Events — 2.13.0
 
 Mystery v2 rewards/costs/failures now follow [MYSTERY_EVENTS.md](MYSTERY_EVENTS.md). Correct optional trades charge only at confirmation, costs and bundles commit atomically, and wrong/timeout/abandon damages are nonlethal outside combat. Mystery removal may leave one card (nonempty deck), superseding the old generic Mystery minimum ten. Shop removal retains its own minimum ten. An event Artifact is earned through that event’s shared-bank question and is not gated by a second Artifact question.
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

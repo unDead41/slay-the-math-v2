@@ -1,0 +1,9 @@
+/* Soft colors on the supplied cream description panel. Each type has its own dashed underline. */
+.stm-rt{position:relative;cursor:help;border-bottom:1px dashed currentColor;border-radius:3px;padding:0 .06em;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.stm-rt-calculation{color:#6b3c98;background:rgba(171,126,215,.14);font-weight:750}
+.stm-rt-math{color:#943066;background:rgba(231,133,181,.15)}
+.stm-rt-game{color:#17593d;background:rgba(104,181,139,.14)}
+.stm-rt:focus-visible{outline:2px solid #302354;outline-offset:3px}
+#stm-tooltip{position:fixed;z-index:9999;max-width:310px;padding:13px 16px;border:1px solid #c3a474;border-radius:8px;background:#171523;color:#fff3de;font:14px/1.55 system-ui,sans-serif;box-shadow:0 8px 30px #0009;pointer-events:none;overflow-wrap:anywhere}
+#stm-tooltip[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}

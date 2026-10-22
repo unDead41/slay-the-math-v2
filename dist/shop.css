@@ -1,5 +1,22 @@
+/* Shop keeps the supplied artwork in the scene; only the live menu scrolls. */
+body[data-scene='shop']:not([data-artifact-choice='true']){display:flex;flex-direction:column;height:100dvh;min-height:0;overflow:hidden;background:var(--bg)}
+body[data-scene='shop']:not([data-artifact-choice='true']) #header,
+body[data-scene='shop']:not([data-artifact-choice='true']) #storage-warning{flex:none}
+body[data-scene='shop']:not([data-artifact-choice='true']) #game{flex:1 1 0%;width:100%;max-width:none;min-height:0;margin:0;padding:0;overflow:hidden}
+body[data-scene='shop']:not([data-artifact-choice='true'])::before,
+body[data-scene='shop']:not([data-artifact-choice='true'])>.ambient{display:none}
+.shop-layout.shop-tabbed{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);grid-template-rows:auto minmax(0,1fr);align-items:stretch;align-content:stretch;gap:clamp(14px,2vw,28px);width:100%;height:100%;min-height:0;padding:clamp(16px,2.2vw,48px);overflow:hidden}
+.shop-layout.shop-tabbed .situation-art{position:absolute;inset:0;grid-column:auto;grid-row:auto;width:100%;height:100%;margin:0;z-index:-2;overflow:hidden;pointer-events:none;background:var(--bg)}
+.shop-layout.shop-tabbed .situation-art img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:left center}
+.shop-layout.shop-tabbed .situation-art::after{background:linear-gradient(90deg,#06101a0d 20%,#06101a66 45%,#06101acc 76%),linear-gradient(0deg,#06101a66,transparent 35%)}
+.shop-hud{grid-column:1/-1;min-width:0}
+.shop-hud .run-top{margin:0;padding:0;gap:12px;text-shadow:0 2px 8px #000}
+.shop-hud .run-status{min-width:0;max-width:none;flex-wrap:wrap;gap:8px}
+.shop-hud .run-status>.btn,.shop-hud .hp-pill,.shop-hud .gold-pill{min-height:44px}
+.shop-tabbed .shop-counter{grid-column:2;display:flex;flex-direction:column;align-self:stretch;height:100%;max-height:100%;min-height:0;min-width:0;width:100%;max-width:960px;justify-self:end;padding:clamp(18px,2vw,32px);overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scroll-padding-block:20px;overflow-wrap:anywhere;background:linear-gradient(125deg,#0b1722f0,#07111cf2)}
+.shop-tabbed .shop-counter>*{flex:none}
+.shop-tabbed .shop-counter:focus-visible{outline:2px solid var(--ice);outline-offset:-2px}
 /* Merchant tabs share the dungeon palette, card renderer and native actions. */
-.shop-tabbed .shop-counter{grid-column:2;min-width:0;width:100%;max-width:960px;justify-self:center;padding:clamp(18px,2vw,32px);background:linear-gradient(125deg,#0b1722f0,#07111cf2)}
 .shop-heading{text-align:left;margin-bottom:20px}
 .shop-tabbed .shop-heading h2{font-size:clamp(28px,2.2vw,42px);margin:8px 0 0}
 .shop-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:24px}
@@ -24,7 +41,8 @@
 .shop-tabbed .shop-removal p{max-width:38em;line-height:1.7}
 .shop-tabbed .shop-removal-note{color:var(--muted);margin-top:14px}
 .shop-footer{display:flex;justify-content:flex-end;padding-top:20px;margin-top:20px;border-top:1px solid var(--line)}
-@media(max-width:1100px){.shop-tabbed .shop-counter{grid-column:1;max-width:760px}.shop-tabbed .shop-counter{padding:24px 18px}}
-@media(max-width:600px){.shop-tabbed .shop-counter{padding:22px 14px}.shop-tab{font-size:14px;padding:12px 5px}.shop-tabs{gap:0;margin-bottom:20px}.shop-tabbed.shop-expanded .shop-detail{grid-template-columns:minmax(0,1fr);gap:16px}.shop-tabbed .shop-removal{min-height:300px}.shop-footer>.btn{width:100%}}
+@media(max-width:1100px){.shop-layout.shop-tabbed{grid-template-columns:minmax(0,1fr);padding:16px 18px;gap:14px}.shop-hud{min-height:min(170px,23dvh)}.shop-tabbed .shop-counter{grid-column:1;max-width:760px;justify-self:center;padding:24px 18px}}
+@media(max-width:600px){.shop-layout.shop-tabbed{padding:12px;gap:12px}.shop-tabbed .shop-counter{padding:22px 14px}.shop-hud .run-status{justify-content:flex-start;gap:6px}.shop-tab{font-size:14px;padding:12px 5px}.shop-tabs{gap:0;margin-bottom:20px}.shop-tabbed.shop-expanded .shop-detail{grid-template-columns:minmax(0,1fr);gap:16px}.shop-tabbed .shop-removal{min-height:300px}.shop-footer>.btn{width:100%}}
+@media(max-height:500px){.shop-layout.shop-tabbed{padding:10px 14px;gap:10px}.shop-hud{min-height:0}.shop-hud .run-top{flex-direction:row;align-items:center;gap:6px 12px}.shop-hud .run-top h1{font-size:20px}.shop-hud .run-top .eyebrow{font-size:9px}.shop-hud .run-status{width:auto;gap:6px}.shop-tabbed .shop-counter{padding:18px 14px}}
 @media(forced-colors:active){.shop-tab{border-color:ButtonText}.shop-tab[aria-selected='true']{border-bottom-color:Highlight;color:Highlight}.shop-counter{background:Canvas;color:CanvasText}}
 .shop-tabbed [role='tabpanel'][hidden],.shop-tabbed .shop-detail[hidden]{display:none}

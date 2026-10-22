@@ -176,3 +176,8 @@ Bound Artifact/Mystery scene height to the available viewport and give their foc
 ## Settings and release delivery — 2.17.0
 
 By Ijamm’s request, the floating main-menu Question language control moves into Save and Settings. Changing it keeps the dialog open and focused, and uses the existing saved whole-question preference. Display the generated runtime version in both menu and Settings. In-question/practice controls remain available. [Details](../SETTINGS_RELEASE_2_17_0.md).
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

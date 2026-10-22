@@ -131,3 +131,8 @@ Current menu language/Practice controls, shared learning presentation and stable
 ## Settings and release delivery — 2.17.0
 
 217 Node/jsdom tests pass, 0 skipped; portable build and syntax pass. Verify package-derived version, content invalidation within a release, idempotence, all 46 current resource hashes, Settings focus/BM persistence and phone bounds. The user’s Windows installation still needs a pull/restart. [Evidence](../SETTINGS_RELEASE_2_17_0.md).
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

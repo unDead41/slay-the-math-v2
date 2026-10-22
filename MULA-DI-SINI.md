@@ -1,4 +1,4 @@
-# Slay the Math — 2.17.0
+# Slay the Math — 2.18.0
 
 ## Buka game terkini
 
@@ -13,7 +13,7 @@ npm.cmd start
 
 Buka **http://localhost:4173**. `npm start` menyediakan semula modul pendidikan secara automatik. Main menu mempunyai **Education Practice — 120 questions**. Pilihan **Question language / Bahasa soalan** (English atau Bahasa Melayu) kini berada di **Settings**, dan turut tersedia dalam setiap trial Artifact dan Mystery.
 
-Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.17.0**, sama seperti versi dalam Settings dan package.json. Selepas pull berjaya, hentikan server lama dan mulakan semula dari folder projek yang betul sebelum refresh browser. Launcher dan semua skrip/CSS menggunakan penanda kandungan build untuk mengelakkan campuran cache lama.
+Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.18.0**, sama seperti versi dalam Settings dan package.json. Selepas pull berjaya, hentikan server lama dan mulakan semula dari folder projek yang betul sebelum refresh browser. Launcher dan semua skrip/CSS menggunakan penanda kandungan build untuk mengelakkan campuran cache lama.
 
 **Education Practice** menggunakan dokumen folio yang sama seperti preview 120 soalan. Ia merangkumi Hint, More Hint, jalan kerja, Asas dan komen. Komen kekal pada peranti sehingga dikongsi atau dimuat turun.
 

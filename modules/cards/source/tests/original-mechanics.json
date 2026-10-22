@@ -1,0 +1,1899 @@
+{
+  "cards": [
+    {
+      "id": "stm.attack.rune_strike",
+      "name": "Rune Strike",
+      "category": "attack",
+      "selection_code": "B01",
+      "icon": "assets/icons/Attack/Icons/01_Rune_Strike_B01.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "strength"
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.weak_point",
+      "name": "Weak Point",
+      "category": "attack",
+      "selection_code": "A02",
+      "icon": "assets/icons/Attack/Icons/02_Weak_Point_A02.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "stacks": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy"
+        },
+        {
+          "op": "apply_status",
+          "status": "vulnerable",
+          "value": "stacks",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.scout_strike",
+      "name": "Scout Strike",
+      "category": "attack",
+      "selection_code": "B03",
+      "icon": "assets/icons/Attack/Icons/03_Scout_Strike_B03.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy"
+        },
+        {
+          "op": "draw",
+          "value": "draw",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.return_strike",
+      "name": "Return Strike",
+      "category": "attack",
+      "selection_code": "B04",
+      "icon": "assets/icons/Attack/Icons/04_Return_Strike_B04.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength",
+          "condition": {
+            "key": "lost_hp_last_enemy_turn",
+            "bonus": 3
+          }
+        },
+        "constant_3": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.sure_hit",
+      "name": "Sure Hit",
+      "category": "attack",
+      "selection_code": "C05",
+      "icon": "assets/icons/Attack/Icons/05_Sure_Hit_C05.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength"
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy",
+          "ignore_block": true
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.twin_shot",
+      "name": "Twin Shot",
+      "category": "attack",
+      "selection_code": "C06",
+      "icon": "assets/icons/Attack/Icons/06_Twin_Shot_C06.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "first": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "second": {
+          "base": 3,
+          "focus_bonus": 0,
+          "stat": "strength"
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "first",
+          "target": "selected_enemy"
+        },
+        {
+          "op": "damage",
+          "value": "second",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.shield_shot",
+      "name": "Shield Shot",
+      "category": "attack",
+      "selection_code": "B07",
+      "icon": "assets/icons/Attack/Icons/07_Shield_Shot_B07.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength",
+          "condition": {
+            "key": "has_block",
+            "bonus": 3
+          }
+        },
+        "constant_3": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.crack_shot",
+      "name": "Crack Shot",
+      "category": "attack",
+      "selection_code": "C08",
+      "icon": "assets/icons/Attack/Icons/08_Crack_Shot_C08.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "remove": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "remove_block",
+          "value": "remove",
+          "target": "selected_enemy"
+        },
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.rune_sweep",
+      "name": "Rune Sweep",
+      "category": "attack",
+      "selection_code": "C09",
+      "icon": "assets/icons/Attack/Icons/09_Rune_Sweep_C09.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "damage": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "other": {
+          "base": 6,
+          "focus_bonus": 0,
+          "stat": "strength"
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "damage",
+          "target": "main_enemy"
+        },
+        {
+          "op": "damage",
+          "value": "other",
+          "target": "each_other_living_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.attack.fate_storm",
+      "name": "Fate Storm",
+      "category": "attack",
+      "selection_code": "A10",
+      "icon": "assets/icons/Attack/Icons/10_Fate_Storm_A10.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "rare",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "damage_total_bonus",
+        "amount": 3,
+        "allocation": "first_resolved_damage_event_only"
+      },
+      "values": {
+        "first": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "other": {
+          "base": 3,
+          "focus_bonus": 0,
+          "stat": "strength"
+        },
+        "hits": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "damage",
+          "value": "first",
+          "target": "random_living_enemy"
+        },
+        {
+          "op": "damage",
+          "value": "other",
+          "target": "random_living_enemy",
+          "repeat": 2
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.rune_guard",
+      "name": "Rune Guard",
+      "category": "defend",
+      "selection_code": "C01",
+      "icon": "assets/icons/Defend/Icons/01_Rune_Guard_C01.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.flash_ward",
+      "name": "Flash Ward",
+      "category": "defend",
+      "selection_code": "B02",
+      "icon": "assets/icons/Defend/Icons/02_Flash_Ward_B02.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 0
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "exhaust"
+    },
+    {
+      "id": "stm.defend.tower_shield",
+      "name": "Tower Shield",
+      "category": "defend",
+      "selection_code": "B03",
+      "icon": "assets/icons/Defend/Icons/03_Tower_Shield_B03.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 14,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.ember_wall",
+      "name": "Ember Wall",
+      "category": "defend",
+      "selection_code": "A04",
+      "icon": "assets/icons/Defend/Icons/04_Ember_Wall_A04.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "thorns": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        },
+        {
+          "op": "apply_status",
+          "status": "thorns",
+          "value": "thorns",
+          "target": "self",
+          "expires": "next_enemy_turn_end"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.foreseen_guard",
+      "name": "Foreseen Guard",
+      "category": "defend",
+      "selection_code": "B05",
+      "icon": "assets/icons/Defend/Icons/05_Foreseen_Guard_B05.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "agility",
+          "condition": {
+            "key": "enemy_attacks",
+            "bonus": 4
+          }
+        },
+        "constant_4": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.layered_shield",
+      "name": "Layered Shield",
+      "category": "defend",
+      "selection_code": "A06",
+      "icon": "assets/icons/Defend/Icons/06_Layered_Shield_A06.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "later": {
+          "base": 4,
+          "focus_bonus": 0,
+          "stat": "agility"
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        },
+        {
+          "op": "grant_block",
+          "value": "later",
+          "target": "self",
+          "timing": "next_player_turn_start_after_block_reset",
+          "snapshot_value": true
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.burning_pages",
+      "name": "Burning Pages",
+      "category": "defend",
+      "selection_code": "B07",
+      "icon": "assets/icons/Defend/Icons/07_Burning_Pages_B07.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        },
+        {
+          "op": "draw",
+          "value": "draw",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.cinder_guard",
+      "name": "Cinder Guard",
+      "category": "defend",
+      "selection_code": "C08",
+      "icon": "assets/icons/Defend/Icons/08_Cinder_Guard_C08.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "stacks": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        },
+        {
+          "op": "apply_status",
+          "status": "weak",
+          "value": "stacks",
+          "target": "selected_enemy"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.hold_the_line",
+      "name": "Hold the Line",
+      "category": "defend",
+      "selection_code": "B09",
+      "icon": "assets/icons/Defend/Icons/09_Hold_the_Line_B09.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 10,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "retain": {
+          "base": 5,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        },
+        {
+          "op": "retain_block",
+          "value": "retain",
+          "timing": "next_player_turn_start",
+          "combine": "maximum_cap_not_sum"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.defend.mana_barrier",
+      "name": "Mana Barrier",
+      "category": "defend",
+      "selection_code": "B10",
+      "icon": "assets/icons/Defend/Icons/10_Mana_Barrier_B10.png",
+      "energy": {
+        "kind": "all_remaining",
+        "minimum": 1
+      },
+      "rarity": "rare",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "block_total_bonus",
+        "amount": 3,
+        "allocation": "first_block_grant_only"
+      },
+      "values": {
+        "block": {
+          "base": 0,
+          "focus_bonus": 3,
+          "stat": "agility",
+          "energy_multiplier": 5
+        }
+      },
+      "actions": [
+        {
+          "op": "grant_block",
+          "value": "block",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.quick_study",
+      "name": "Quick Study",
+      "category": "skill",
+      "selection_code": "B01",
+      "icon": "assets/icons/Skill/Icons/01_Quick_Study_B01.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "draw_bonus",
+        "amount": 1
+      },
+      "values": {
+        "draw": {
+          "base": 2,
+          "focus_bonus": 1
+        }
+      },
+      "actions": [
+        {
+          "op": "draw",
+          "value": "draw",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.deep_study",
+      "name": "Deep Study",
+      "category": "skill",
+      "selection_code": "C02",
+      "icon": "assets/icons/Skill/Icons/02_Deep_Study_C02.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "draw_bonus",
+        "amount": 1
+      },
+      "values": {
+        "draw": {
+          "base": 4,
+          "focus_bonus": 1
+        }
+      },
+      "actions": [
+        {
+          "op": "draw",
+          "value": "draw",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.mana_reading",
+      "name": "Mana Reading",
+      "category": "skill",
+      "selection_code": "B03",
+      "icon": "assets/icons/Skill/Icons/03_Mana_Reading_B03.png",
+      "energy": {
+        "kind": "all_remaining",
+        "minimum": 1
+      },
+      "rarity": "rare",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "draw_total_bonus",
+        "amount": 1
+      },
+      "values": {
+        "draw": {
+          "base": 0,
+          "focus_bonus": 1,
+          "energy_multiplier": 2
+        }
+      },
+      "actions": [
+        {
+          "op": "draw",
+          "value": "draw",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.read_ahead",
+      "name": "Read Ahead",
+      "category": "skill",
+      "selection_code": "A04",
+      "icon": "assets/icons/Skill/Icons/04_Read_Ahead_A04.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "look_bonus",
+        "amount": 1
+      },
+      "values": {
+        "look": {
+          "base": 3,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "look_choose_reorder",
+          "look": "look",
+          "take": "take",
+          "remaining": "top_of_draw_pile_in_player_selected_order"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.burning_page",
+      "name": "Burning Page",
+      "category": "skill",
+      "selection_code": "A05",
+      "icon": "assets/icons/Skill/Icons/05_Burning_Page_A05.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "common",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "replacement_limit_bonus",
+        "amount": 1
+      },
+      "values": {
+        "replace": {
+          "base": 1,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "look_replace_take",
+          "replacement_limit": "replace",
+          "take": "take",
+          "rejected_to": "discard",
+          "optional_replacements": true
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.clear_choice",
+      "name": "Clear Choice",
+      "category": "skill",
+      "selection_code": "A06",
+      "icon": "assets/icons/Skill/Icons/06_Clear_Choice_A06.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "look_bonus",
+        "amount": 1
+      },
+      "values": {
+        "look": {
+          "base": 3,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "look_choose_discard",
+          "look": "look",
+          "take": "take",
+          "remaining": "discard"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.card_search",
+      "name": "Card Search",
+      "category": "skill",
+      "selection_code": "B07",
+      "icon": "assets/icons/Skill/Icons/07_Card_Search_B07.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "search_limit_bonus",
+        "amount": 1
+      },
+      "values": {
+        "search": {
+          "base": 4,
+          "focus_bonus": 1
+        }
+      },
+      "actions": [
+        {
+          "op": "search_category",
+          "limit": "search",
+          "category_choice": [
+            "attack",
+            "defend",
+            "skill",
+            "passive"
+          ],
+          "take": "first_match",
+          "skipped_to": "discard"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.recall",
+      "name": "Recall",
+      "category": "skill",
+      "selection_code": "B08",
+      "icon": "assets/icons/Skill/Icons/08_Recall_B08.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "draw_after_return_bonus",
+        "amount": 1
+      },
+      "values": {
+        "return": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "extra": {
+          "base": 0,
+          "focus_bonus": 1
+        }
+      },
+      "actions": [
+        {
+          "op": "return_discard_card",
+          "value": "return",
+          "choice": "player_selected_instance",
+          "exclude": "currently_played_instance"
+        },
+        {
+          "op": "draw",
+          "value": "extra",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "exhaust"
+    },
+    {
+      "id": "stm.skill.next_chapter",
+      "name": "Next Chapter",
+      "category": "skill",
+      "selection_code": "B09",
+      "icon": "assets/icons/Skill/Icons/09_Next_Chapter_B09.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "next_turn_draw_bonus",
+        "amount": 1
+      },
+      "values": {
+        "laterDraw": {
+          "base": 2,
+          "focus_bonus": 1
+        }
+      },
+      "actions": [
+        {
+          "op": "draw",
+          "value": "laterDraw",
+          "target": "self",
+          "timing": "next_player_turn_draw_phase",
+          "once": true
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.skill.last_page",
+      "name": "Last Page",
+      "category": "skill",
+      "selection_code": "C10",
+      "icon": "assets/icons/Skill/Icons/10_Last_Page_C10.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": true,
+      "focus_rule": {
+        "kind": "base_draw_bonus",
+        "amount": 1
+      },
+      "values": {
+        "draw": {
+          "base": 1,
+          "focus_bonus": 1
+        },
+        "emptyBonus": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "draw",
+          "value": "draw",
+          "target": "self"
+        },
+        {
+          "op": "draw",
+          "value": "emptyBonus",
+          "target": "self",
+          "condition": "empty_hand_after_play_snapshot"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "discard_after_resolution"
+    },
+    {
+      "id": "stm.passive.blazing_spirit",
+      "name": "Blazing Spirit",
+      "category": "passive",
+      "selection_code": "A01",
+      "icon": "assets/icons/Passive/Icons/01_Blazing_Spirit_A01.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "strength": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "on_activation",
+        "effects": [
+          {
+            "op": "add_attribute",
+            "attribute": "strength",
+            "value": "strength"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.growing_flame",
+      "name": "Growing Flame",
+      "category": "passive",
+      "selection_code": "B02",
+      "icon": "assets/icons/Passive/Icons/02_Growing_Flame_B02.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "rare",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "every": {
+          "base": 3,
+          "focus_bonus": 0
+        },
+        "strength": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "cap": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "after_attack_card_resolved",
+        "effects": [
+          {
+            "op": "add_attribute",
+            "attribute": "strength",
+            "value": "strength"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true,
+          "every_n_cards": 3,
+          "max_triggers_per_combat": 3
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.swift_step",
+      "name": "Swift Step",
+      "category": "passive",
+      "selection_code": "C03",
+      "icon": "assets/icons/Passive/Icons/03_Swift_Step_C03.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "agility": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "on_activation",
+        "effects": [
+          {
+            "op": "add_attribute",
+            "attribute": "agility",
+            "value": "agility"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.battle_rhythm",
+      "name": "Battle Rhythm",
+      "category": "passive",
+      "selection_code": "C04",
+      "icon": "assets/icons/Passive/Icons/04_Battle_Rhythm_C04.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "rare",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "every": {
+          "base": 3,
+          "focus_bonus": 0
+        },
+        "agility": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "cap": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "after_defend_card_resolved",
+        "effects": [
+          {
+            "op": "add_attribute",
+            "attribute": "agility",
+            "value": "agility"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true,
+          "every_n_cards": 3,
+          "max_triggers_per_combat": 3
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.rune_armor",
+      "name": "Rune Armor",
+      "category": "passive",
+      "selection_code": "B05",
+      "icon": "assets/icons/Passive/Icons/05_Rune_Armor_B05.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "rare",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "defense": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "on_activation",
+        "effects": [
+          {
+            "op": "add_attribute",
+            "attribute": "defense",
+            "value": "defense"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.lasting_shield",
+      "name": "Lasting Shield",
+      "category": "passive",
+      "selection_code": "B06",
+      "icon": "assets/icons/Passive/Icons/06_Lasting_Shield_B06.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "retain": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "player_turn_start_before_block_reset",
+        "effects": [
+          {
+            "op": "retain_block",
+            "value": "retain",
+            "combine": "maximum_cap_not_sum"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.grimoire_ward",
+      "name": "Grimoire Ward",
+      "category": "passive",
+      "selection_code": "C07",
+      "icon": "assets/icons/Passive/Icons/07_Grimoire_Ward_C07.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "block": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "after_skill_card_resolved",
+        "effects": [
+          {
+            "op": "grant_block",
+            "value": "block",
+            "target": "self"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true,
+          "max_triggers_per_player_turn": 1
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.ember_core",
+      "name": "Ember Core",
+      "category": "passive",
+      "selection_code": "A08",
+      "icon": "assets/icons/Passive/Icons/08_Ember_Core_A08.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "uncommon",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "damage": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "after_focused_card_resolved",
+        "effects": [
+          {
+            "op": "fixed_hp_damage",
+            "value": "damage",
+            "target": "main_living_enemy"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true,
+          "max_triggers_per_player_turn": 1
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.clear_mind",
+      "name": "Clear Mind",
+      "category": "passive",
+      "selection_code": "B09",
+      "icon": "assets/icons/Passive/Icons/09_Clear_Mind_B09.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "rarity": "rare",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "player_turn_draw_phase",
+        "effects": [
+          {
+            "op": "draw",
+            "value": "draw",
+            "target": "self"
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true,
+          "max_triggers_per_player_turn": 1
+        },
+        "expires": "combat_end"
+      }
+    },
+    {
+      "id": "stm.passive.last_ember",
+      "name": "Last Ember",
+      "category": "passive",
+      "selection_code": "C10",
+      "icon": "assets/icons/Passive/Icons/10_Last_Ember_C10.png",
+      "energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "rarity": "rare",
+      "focus_eligible": false,
+      "focus_rule": null,
+      "values": {
+        "threshold": {
+          "base": 30,
+          "focus_bonus": 0
+        },
+        "block": {
+          "base": 6,
+          "focus_bonus": 0
+        },
+        "focus": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "actions": [
+        {
+          "op": "activate_unique_passive",
+          "target": "self"
+        }
+      ],
+      "base_mechanic_status": "PROPOSED_COMPLETE_PLAYTEST_DEFAULT",
+      "focus_mechanic_source": "supplied_focus_balance_v1",
+      "runtime_integration_status": "not_integrated",
+      "lifecycle": "activate_unique_passive_until_combat_end",
+      "passive": {
+        "trigger": "after_nonlethal_hp_loss_or_activation_below_threshold",
+        "effects": [
+          {
+            "op": "grant_block",
+            "value": "block",
+            "target": "self"
+          },
+          {
+            "op": "gain_focus",
+            "value": "focus",
+            "cap": 3
+          }
+        ],
+        "limits": {
+          "one_active_copy_per_card_id": true,
+          "max_triggers_per_combat": 1
+        },
+        "expires": "combat_end"
+      }
+    }
+  ],
+  "rules": {
+    "focus_cost": 1,
+    "focus_cap": 3,
+    "max_focused_cards_per_turn": 1,
+    "toggle_cost": 0,
+    "consume_at": "successful_card_play_commit",
+    "auto_off": "after_a_focused_card_or_end_turn",
+    "carry_stock_between_turns": true,
+    "reset_stock_at_new_combat": true,
+    "energy_cost_changes": false,
+    "exhaust_changes": false,
+    "passive_eligible": false,
+    "hand_limit": 10,
+    "no_bonus_focus_generation": true,
+    "no_focus_discount_or_refund": true,
+    "no_same_card_stacking": true,
+    "hybrid_card_policy": "Enhance one primary effect only: Attack damage, Defend Block, Skill its explicitly listed effect.",
+    "damage_timing": "Compute ordinary upgraded/stat-modified attack, then add flat Focus bonus once, then apply ordinary mitigation.",
+    "block_timing": "Compute ordinary upgraded/stat-modified Block, then add flat Focus bonus once.",
+    "no_effect_policy": "If preview proves the Focus-specific bonus cannot produce any benefit (such as no capacity beyond base draw), show ordinary effect and preserve the Focus stock and armed state. A legal random/search attempt may still fail after commit; that is not refunded."
+  },
+  "status_definitions": {
+    "vulnerable": {
+      "stack_cap": 3,
+      "amount_per_hit": 2,
+      "modifier": "flat_incoming_attack_damage_bonus",
+      "consume": "one_stack_per_incoming_attack_hit",
+      "expires": "affected_side_next_turn_end"
+    },
+    "weak": {
+      "stack_cap": 3,
+      "amount_per_hit": 2,
+      "modifier": "flat_outgoing_attack_damage_reduction",
+      "consume": "one_stack_per_outgoing_attack_hit_including_zero_damage",
+      "expires": "affected_side_next_turn_end"
+    },
+    "thorns": {
+      "stacking": "add_amount_until_expiry",
+      "damage_kind": "fixed_hp_damage",
+      "trigger": "connecting_enemy_attack_hit_even_if_fully_blocked",
+      "expires": "next_enemy_turn_end",
+      "recursive_triggers": false
+    }
+  },
+  "design_defaults": {
+    "energy_per_turn": 3,
+    "max_hand": 10,
+    "retain_combine": "maximum_not_sum",
+    "passive_stacking": "one_active_instance_per_card_id",
+    "new_combat": "restore deck and exhaust; clear temporary attributes, passives, counters, queues, Focus stock and armed/used flags",
+    "turn_start_order": [
+      "expire end-of-turn effects",
+      "snapshot existing Block; apply highest carry cap",
+      "add queued Block grants",
+      "reset Energy to design default and Focus-used flag",
+      "draw normal amount plus queued/Passive bonuses"
+    ],
+    "normal_draw": "if Draw Pile empty, seeded-shuffle eligible Discard Pile; never include currently resolving/exhausted/active Passive cards; stop if both piles empty",
+    "choice_windows": "before starting, refill only if Draw Pile empty; no reshuffle during bounded look/search/replace sequence; resolve available cards only",
+    "no_target": "Attack cards and selected-enemy effects require a living target before commit; combat-end aborts remaining damage/queues",
+    "on_play_order": [
+      "validate and freeze target/choices",
+      "snapshot context including empty hand after removing card",
+      "pay Energy and eligible Focus once atomically",
+      "resolve printed actions in order",
+      "move played instance to discard/exhaust/active Passive zone",
+      "resolve passive after-card triggers"
+    ],
+    "damage_order": "base + Strength + conditional bonus + Focus(first event only) + Vulnerable(+2) - Weak(2), clamp >=0; then Defense, clamp >=0; then Block unless bypassed; then HP",
+    "trigger_rules": "triggered damage and Block do not count as played cards; fixed Passive damage bypasses mitigation and cannot trigger Attack/on-hit/Thorns loops"
+  },
+  "frames": {
+    "version": "2.1.0",
+    "canvas": [
+      1280,
+      1920
+    ],
+    "original_card_rect": {
+      "x": 128,
+      "y": 192,
+      "width": 1024,
+      "height": 1536
+    },
+    "canvas_4K": [
+      2560,
+      3840
+    ],
+    "original_card_rect_4K": {
+      "x": 256,
+      "y": 384,
+      "width": 2048,
+      "height": 3072
+    },
+    "trim": false,
+    "categories": {
+      "attack": {
+        "focus_supported": true,
+        "color": "#FF243D",
+        "normal": "assets/frames/frames_native/card_frame_attack_normal.png",
+        "focus": "assets/frames/frames_native/card_frame_attack_focus.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_attack_normal.png",
+        "focus_4K": "assets/frames/frames_4K/card_frame_attack_focus.png",
+        "back_glow_4K": "assets/frames/overlays_4K/card_frame_attack_glow_back.png",
+        "front_highlights_4K": "assets/frames/overlays_4K/card_frame_attack_highlights_front.png"
+      },
+      "defend": {
+        "focus_supported": true,
+        "color": "#168DFF",
+        "normal": "assets/frames/frames_native/card_frame_defend_normal.png",
+        "focus": "assets/frames/frames_native/card_frame_defend_focus.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_defend_normal.png",
+        "focus_4K": "assets/frames/frames_4K/card_frame_defend_focus.png",
+        "back_glow_4K": "assets/frames/overlays_4K/card_frame_defend_glow_back.png",
+        "front_highlights_4K": "assets/frames/overlays_4K/card_frame_defend_highlights_front.png"
+      },
+      "skill": {
+        "focus_supported": true,
+        "color": "#0AF385",
+        "normal": "assets/frames/frames_native/card_frame_skill_normal.png",
+        "focus": "assets/frames/frames_native/card_frame_skill_focus.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_skill_normal.png",
+        "focus_4K": "assets/frames/frames_4K/card_frame_skill_focus.png",
+        "back_glow_4K": "assets/frames/overlays_4K/card_frame_skill_glow_back.png",
+        "front_highlights_4K": "assets/frames/overlays_4K/card_frame_skill_highlights_front.png"
+      },
+      "passive": {
+        "focus_supported": false,
+        "color": "#BA63FF",
+        "normal": "assets/frames/frames_native/card_frame_passive_normal.png",
+        "normal_4K": "assets/frames/frames_4K/card_frame_passive_normal.png",
+        "on_focus": "retain normal frame; no Focus variant or glow overlays"
+      }
+    },
+    "layout": {
+      "native_canvas": [
+        1280,
+        1920
+      ],
+      "artwork_rect": {
+        "x": 255,
+        "y": 470,
+        "width": 768,
+        "height": 654,
+        "fit": "contain",
+        "clip": true
+      },
+      "title_rect": {
+        "x": 407,
+        "y": 315,
+        "width": 625,
+        "height": 110
+      },
+      "energy_center": {
+        "x": 284,
+        "y": 372
+      },
+      "category_rect": {
+        "x": 410,
+        "y": 1130,
+        "width": 475,
+        "height": 95
+      },
+      "description_rect": {
+        "x": 278,
+        "y": 1254,
+        "width": 720,
+        "height": 248
+      },
+      "notes": "All rectangles are in the common padded native canvas. Multiply all coordinates by 2 for 4K. Original raster files remain byte-identical."
+    }
+  }
+}

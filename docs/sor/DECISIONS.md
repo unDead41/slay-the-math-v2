@@ -356,3 +356,12 @@ DEC-20261022-QUESTION-MENU-01 — DISAHKAN: Ijamm requests internal scroll inste
 ## Settings and release delivery — 2.17.0
 
 DEC-20261022-SETTINGS-RELEASE-01 — DISAHKAN: Ijamm requests moving the main-menu Question language selector into Settings and fixing the displayed old version to v2.17.0. DITERUSKAN: retain game version 2.17.0, derive its display from package metadata, invalidate changed runtime resources by content and clarify pull/restart steps. [Implementation and limits](../SETTINGS_RELEASE_2_17_0.md).
+
+
+## Cards and display — 2.18.0, 22 October 2026
+
+- DEC-20261022-CARDS-DISPLAY-01 — DISAHKAN: Ijamm asks to fix mathematical rendering for every question, give Shop internal scrolling and large background artwork, and apply STM_Cards_Consolidated_v1(1).zip.
+- DITERUSKAN: Integrate all 40 supplied identities/mechanics, Focus and ten Passive cards with original EN/BM data, full frames and icons. Preserve legacy definitions/saves/offers, boss seals and the one-enemy encounter model. Native MathML remains authoritative for notation.
+- CADANGAN: The twelve-instance package starter, all-40 reward/Shop pool and X-card two-Energy price are reversible integration defaults. Base package values stay unchanged; a separately configured host upgrade extension preserves Rest, Mystery upgrade bundles and Elite upgraded rewards, with its own playtest tuning. Do not claim playtested balance or pupil comprehension.
+
+Owners and actual evidence: [Cards and display](../CARDS_AND_DISPLAY_2_18_0.md).

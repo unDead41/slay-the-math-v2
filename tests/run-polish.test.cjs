@@ -1,6 +1,6 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const E=require('../dist/engine.js'),A=require('../dist/artifacts.js');
-function battle(){const r=E.newRun(14);delete r.route;E.startBattle(r,'wisp');return r;}
+function battle(){const r=require('./helpers/legacy-run.cjs').newRun(14);delete r.route;E.startBattle(r,'wisp');return r;}
 const ids=r=>['hand','draw','discard','exhaust'].flatMap(k=>r.battle[k].map(c=>c.uid)).sort();
 test('draw stops at ten without consuming the next card or shuffling a full hand',()=>{
  const r=battle(),all=ids(r);E.draw(r,50);

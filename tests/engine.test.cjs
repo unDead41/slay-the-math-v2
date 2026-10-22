@@ -1,3 +1,4 @@
+const {legacyRun}=require('./helpers/legacy-run.cjs');
 const {claimArtifact,completeTrial,completeBrowserTrial}=require('./helpers/education.cjs');
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -6,7 +7,7 @@ const E = require('../dist/engine.js');
 const M = require('../dist/math.js');
 
 function battle(seed = 112, enemy = 'wisp') {
-  const r = E.newRun(seed);
+  const r = legacyRun(seed);
   delete r.route; // Standalone combat fixture also covers original v1 saves.
   E.startBattle(r, enemy);
   return r;
@@ -85,7 +86,7 @@ test('starter state, draw/discard recycling and serialization conserve every phy
 });
 
 test('filter moves selected physical cards once, enforces draw floor and restores next battle', () => {
-  const r = E.newRun(13);
+  const r = legacyRun(13);
   delete r.route;
   r.deck = [];
   for (let i = 0; i < 6; i++) r.deck.push(E.card(r, 'filter'));
@@ -246,7 +247,7 @@ test('both bosses enforce seal floor; guided solutions open seals without awardi
 });
 
 test('event removal floor rejects a permanent deck smaller than ten', () => {
-  const r = E.newRun(3);
+  const r = legacyRun(3);
   delete r.route;
   r.scene = 'event'; r.depth = 3;
   E.event(r, 'remove', r.deck[0].uid);
@@ -260,7 +261,7 @@ test('event removal floor rejects a permanent deck smaller than ten', () => {
 });
 
 test('Dealer crossing half HP preserves the announced intent until the next turn, including reload', () => {
-  let r = E.newRun(112,'challenge');
+  let r = legacyRun(112,'challenge');
   claimArtifact(r,E.artifactChoices(r)[0].id);
   delete r.route;
   E.startBattle(r,'dealer');

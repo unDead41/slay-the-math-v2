@@ -84,3 +84,8 @@ Use the latest Finalize Design UI ICON atlas for Hand, Draw, Discard, Exhaust, T
 **ICO-08:** At 1920×1080, Energy/Focus use 72px artwork boxes, Predict 42px, and both HP badges 30px. Energy has no additional CSS circle shrinking its source badge. Smaller layouts use 60–66px resource badges, 40–42px Predict and 24–30px Health; 4K uses the shared combat unit. Preserve aspect ratio, alpha, labels and numeric values. Actual checks: `docs/FIX_HUD_ICONS_2_3_2.md`.
 
 **ICO-09:** Rest's healing choice uses `DCVisuals.icons.rest`, referencing the same supplied blue campfire seal as `DCVisuals.mapIcons.camp`. The choice displays a 68px asset on desktop / 60px on phones. Keep its native select/preview/confirm flow and heal value owned by the engine. The separate decorative fire behind Alyssa is not a UI control.
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

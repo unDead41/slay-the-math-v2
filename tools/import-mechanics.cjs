@@ -2,6 +2,7 @@
  * Original modules remain under modules/mechanics/source. No runtime fetches. */
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const project=path.resolve(__dirname,'..'),source=path.join(project,'modules/mechanics/source');
+require('./import-cards.cjs')(project);
 const read=id=>fs.readFileSync(path.join(source,id),'utf8');
 const json=id=>JSON.parse(read(id));
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');

@@ -5,7 +5,7 @@ const {claimArtifact}=require('./helpers/education.cjs');
 const copy=x=>JSON.parse(JSON.stringify(x));
 function start(code='s02',extras=[]){
  for(let seed=1;seed<300;seed++){
-  const r=E.newRun(seed,'challenge');
+  const r=require('./helpers/legacy-run.cjs').newRun(seed,'challenge');
   if(!r.artifactState.offer.ids.includes(A.id(code)))continue;
   claimArtifact(r,A.id(code));delete r.route;
   for(const key of extras)A.acquire(r,A.id(key),'fixture:'+key);

@@ -166,3 +166,8 @@ Q.coverage derives current-run IDs from Artifact completed/pending and Mystery s
 ## Settings and release delivery — 2.17.0
 
 package.json owns release version metadata. Generate release.js and content-hashed script/style URLs after all runtime modules, then synchronize the three launchers. Preserve file addresses/storage and strip query suffixes when embedding the portable build. Do not imply Git publication updates the user’s PC automatically. [Details](../SETTINGS_RELEASE_2_17_0.md).
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

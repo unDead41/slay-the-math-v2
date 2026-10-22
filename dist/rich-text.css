@@ -1,7 +1,8 @@
 /* Artifact Pack V3.2: token colors, never whole paragraphs or card frames. */
 [data-stm-richtext]{--rt-calculation:#b9a3e3;--rt-math:#e7a1c4;--rt-game:#9ed5b0}
 [data-stm-richtext][data-theme="light"]{--rt-calculation:#70528f;--rt-math:#984669;--rt-game:#316a48}
-[data-stm-richtext] .rt-term,[data-stm-richtext] .rt-calculation{display:inline;margin:0;padding:2px 1px;min-width:0;min-height:0;border:0;border-radius:2px;background:none;box-shadow:none;font:inherit;line-height:inherit;letter-spacing:inherit;text-transform:none;cursor:help;white-space:normal;text-underline-offset:4px}
+/* HTML controls need the inline reset; native mrow/mfrac tokens keep MathML layout. */
+[data-stm-richtext] :is(button,span):is(.rt-term,.rt-calculation){display:inline;margin:0;padding:2px 1px;min-width:0;min-height:0;border:0;border-radius:2px;background:none;box-shadow:none;font:inherit;line-height:inherit;letter-spacing:inherit;text-transform:none;cursor:help;white-space:normal;text-underline-offset:4px}
 [data-stm-richtext] .rt-term{color:var(--rt-game);text-decoration:underline dashed}
 [data-stm-richtext] .rt-term[data-category="math"]{color:var(--rt-math)}
 [data-stm-richtext] .rt-calculation{color:var(--rt-calculation);text-decoration:underline dotted;font-variant-numeric:tabular-nums}

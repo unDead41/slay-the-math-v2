@@ -1,10 +1,11 @@
+const {legacyRun}=require('./helpers/legacy-run.cjs');
 const {claimArtifact,completeTrial,completeBrowserTrial}=require('./helpers/education.cjs');
 const test=require('node:test'),assert=require('node:assert/strict');
 const E=require('../dist/engine.js'),A=require('../dist/artifacts.js'),C=require('../dist/config.js');
 const copy=x=>JSON.parse(JSON.stringify(x));
 function start(code='s02',seed=1){
  for(let n=seed;n<seed+300;n++){
-  const r=E.newRun(n,'challenge');
+  const r=legacyRun(n,'challenge');
   if(r.artifactState?.offer.ids.includes(A.id(code))){claimArtifact(r,A.id(code));return r;}
  }
  throw new Error('No offer found for '+code);
@@ -19,12 +20,12 @@ function play(r,key){const c=r.battle.hand.find(c=>c.key===key);assert.ok(c,key)
 function win(r){r.battle.hp=1;r.battle.enemyBlock=0;r.battle.energy=3;hand(r,['strike']);play(r,'strike');}
 
 test('new Challenge freezes three unique working Starting choices before any map entry',()=>{
- const r=E.newRun(7,'challenge'),rng=r.rng;
+ const r=legacyRun(7,'challenge'),rng=r.rng;
  assert.equal(r.scene,'master');assert.equal(E.availableNodes(r).length,0);
  const ids=r.artifactState.offer.ids;assert.equal(new Set(ids).size,3);
  assert.ok(ids.every(key=>A.catalog[key].tier==='starting'&&!A.catalog[key].requires));
- assert.deepEqual(E.newRun(7,'challenge').artifactState.offer.ids,ids);
- assert.ok(new Set(Array.from({length:12},(_,i)=>E.newRun(i,'challenge').artifactState.offer.ids.join(','))).size>1);
+ assert.deepEqual(legacyRun(7,'challenge').artifactState.offer.ids,ids);
+ assert.ok(new Set(Array.from({length:12},(_,i)=>legacyRun(i,'challenge').artifactState.offer.ids.join(','))).size>1);
  assert.throws(()=>E.enterNode(r));assert.throws(()=>E.startBattle(r,'wisp'));
  assert.deepEqual(E.restore(copy(r)).artifactState,r.artifactState);
  const before=copy(r);assert.throws(()=>claimArtifact(r,A.id('b01')));assert.deepEqual(r,before);
@@ -32,8 +33,8 @@ test('new Challenge freezes three unique working Starting choices before any map
  const after=copy(r);assert.throws(()=>claimArtifact(r,ids[1]));assert.deepEqual(r,after);assert.ok(E.validate(r));
 });
 test('Learn and existing Challenge saves retain their original flow',()=>{
- assert.equal(E.newRun(7).scene,'map');
- const old=E.newRun(7,'challenge');delete old.artifactState;old.scene='map';
+ assert.equal(legacyRun(7).scene,'map');
+ const old=legacyRun(7,'challenge');delete old.artifactState;old.scene='map';
  assert.ok(E.restore(old));E.enterNode(old);assert.equal(old.battle.energy,3);assert.equal(old.battle.hand.length,4);assert.ok(E.validate(old));
 });
 test('Ration and Purse apply once on acquisition and never on restore',()=>{
@@ -102,7 +103,7 @@ test('Chance Die uses one persisted independent roll and grants the documented f
   const b=r.battle,n=b.artifacts.die;seen.add(n);
   assert.equal(b.block,n<=2?10:0);assert.equal(b.hand.length,n>=3&&n<=4?6:4);assert.equal(b.energy,n>=5?5:3);
   const saved=E.restore(copy(r));assert.equal(saved.battle.artifacts.die,n);assert.equal(saved.artifactState.rng,r.artifactState.rng);
-  const plain=E.newRun(r.seed);E.startBattle(plain,'wisp');assert.equal(plain.rng,r.rng);assert.equal(combatRng,r.seed);
+  const plain=legacyRun(r.seed);E.startBattle(plain,'wisp');assert.equal(plain.rng,r.rng);assert.equal(combatRng,r.seed);
   E.endTurn(saved);assert.equal(saved.battle.artifacts.die,n);assert.equal(saved.battle.energy,3);assert.ok(E.validate(saved));
  }
  assert.equal(seen.size,6);
@@ -177,5 +178,5 @@ test('invalid ownership, offer tiers, acquisition records, counters and extra Ma
  for(const mutate of [x=>x.artifactState.owned.push(x.artifactState.owned[0]),x=>x.artifactState.acquired=[],x=>x.battle.artifacts.die=9,x=>x.battle.strength=99,x=>x.maxHp=70,x=>x.battle.energy=20]){
   const bad=copy(r);mutate(bad);assert.equal(E.restore(bad),null);
  }
- const opening=E.newRun(1,'challenge');opening.artifactState.offer.ids[0]=A.id('b01');assert.equal(E.restore(opening),null);
+ const opening=legacyRun(1,'challenge');opening.artifactState.offer.ids[0]=A.id('b01');assert.equal(E.restore(opening),null);
 });

@@ -88,3 +88,8 @@ The explicit artifact implementation request adds event-driven Starting, Elite/M
 ## Run result clock — 2.9.0
 
 **CBT-11:** Record `finished` once in the synchronous defeat, final-victory or Stage 1 clear transaction. Result Time uses that timestamp minus `started`, never a fresh wall clock. Menu/dialog visits, reload, export and import preserve it. Continuing Stage 2 removes the intermediate timestamp before making its checkpoint. The existing elapsed wall-clock convention during an unfinished run is retained.
+
+
+## Supplied 40-card mechanics and display — 2.18.0
+
+The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.

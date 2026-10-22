@@ -5,6 +5,19 @@ const assert = require('node:assert/strict');
 const E = require('../dist/engine.js');
 
 const copy = r => JSON.parse(JSON.stringify(r));
+// Resolve only the actual bounded choices offered by the public engine.
+function finishCardChoices(r){
+ const decisions=[];
+ for(let i=0;E.cardChoice(r);i++){
+  assert.ok(i<12,'bounded card choices must finish');
+  const choice=E.cardChoice(r),cards=choice.candidates||[],preferred=cards.find(c=>E.definition(c).role==='attack')||cards[0];
+  let value=choice.kind==='card_search'?'attack':choice.kind==='burning_page'?'take':preferred.uid;
+  if(choice.kind==='read_ahead')value={take:preferred.uid,order:cards.filter(c=>c.uid!==preferred.uid).map(c=>c.uid)};
+  E.chooseCardOption(r,value);decisions.push(value);
+ }
+ return decisions;
+}
+
 
 function solveForecast(r, useHint = false) {
   let q;
@@ -50,12 +63,13 @@ function planTurn(r) {
             .sort((a,b) => (E.definition(b).role === role) - (E.definition(a).role === role))
             .slice(0,n).map(card => card.uid));
         }
-        const boostOptions = (def.damage || def.block) && state.battle.focus && !state.battle.boostUsed ? [false,true] : [false];
+        const boostOptions = (E.cardPlan(state,c)?.card.focus_eligible || def.damage || def.block) && state.battle.focus && !state.battle.boostUsed ? [false,true] : [false];
         for (const targets of targetSets) for (const boost of boostOptions) {
           const changed = copy(state);
           if (boost) E.armFocus(changed);
           E.playCard(changed, c.uid, targets);
-          const candidate = {state: changed, actions: [...node.actions, {uid: c.uid, targets, boost}]};
+          const choices=finishCardChoices(changed);
+          const candidate = {state: changed, actions: [...node.actions, {uid: c.uid, targets, boost,choices}]};
           if (score(candidate.state) > score(best.state)) best = candidate;
           next.push(candidate);
         }
@@ -77,6 +91,7 @@ function fight(r, trace, hints = false) {
     for (const action of plan) {
       if (action.boost) E.armFocus(r);
       E.playCard(r, action.uid, action.targets);
+      for(const choice of action.choices||[])E.chooseCardOption(r,choice);
       assert.ok(E.validate(r), `invalid state after ${encounter} card`);
       if (r.scene !== 'battle') break;
     }
@@ -92,7 +107,7 @@ function fight(r, trace, hints = false) {
 function campaign(seed, hints = false, mode = 'learn', routeVersion = 2) {
   const r = E.newRun(seed, mode, routeVersion);
   const trace = [];
-  const priority = ['balance','blast','fort','guard','flameguard','clarity','pierce','ember','strike','draw','filter','renew'];
+  const priority = ['stm.attack.twin_shot','stm.attack.rune_strike','stm.attack.weak_point','stm.defend.rune_guard','stm.defend.foreseen_guard','stm.attack.sure_hit','balance','blast','fort','guard','flameguard','clarity','pierce','ember','strike','draw','filter','renew'];
   let steps = 0;
   while (!['victory','defeat'].includes(r.scene)) {
     assert.ok(++steps < 80);
@@ -112,7 +127,7 @@ function campaign(seed, hints = false, mode = 'learn', routeVersion = 2) {
     } else if (r.scene === 'camp') {
       if (r.hp < 49) E.camp(r,'heal');
       else {
-        const target=r.deck.find(c => !c.upgraded && ['blast','balance','ember','strike'].includes(c.key)) || r.deck.find(c=>!c.upgraded);
+        const target=r.deck.find(c => E.canUpgrade(c) && ['stm.attack.twin_shot','stm.attack.rune_strike','stm.attack.weak_point','blast','balance','ember','strike'].includes(c.key)) || r.deck.find(c=>E.canUpgrade(c));
         if(target)E.camp(r,'upgrade',target.uid);else E.camp(r,'heal');
       }
     } else if (r.scene === 'event') completeMystery(r);

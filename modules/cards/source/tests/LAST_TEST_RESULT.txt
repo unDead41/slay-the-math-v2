@@ -1,0 +1,69 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.17.0 test:card-language
+> node --test tests/card-pack-language.test.cjs && node --test modules/cards/source/tests/language.test.cjs && node modules/cards/source/tests/card-kit.test.cjs
+
+✔ supplied card preview works with the game language and offline asset owner (5.958372ms)
+✔ the supplied 40 cards keep stable combat definitions while language changes (7.934029ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 107.737092
+✔ every card has a BM and English display name without changing canonical identity (1.344817ms)
+✔ game ms and player BM/BI aliases render whole descriptions including Recall (6.974103ms)
+✔ language rendering preserves all original rules, IDs, card effects, timings and values (8.949159ms)
+✔ math terms link to supplied curriculum sources and distinguish game rules (0.273783ms)
+✔ calculations explain Focus and conditions in the chosen language (0.582227ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.696943
+PASS 40 unique cards and 10 per category
+PASS selected source icon codes match the supplied 40-icon set
+PASS all token references and numeric expressions resolve in EN and BM
+PASS all 30 Focus cards preserve supplied enhancement kinds
+PASS Twin Shot gets +3 total, Strength per hit
+PASS Rune Sweep does not Focus every target
+PASS Fate Storm has 3 total hits and Focus on first hit
+PASS Defend adds Agility before Focus once
+PASS Layered Shield keeps delayed grant unFocused and snapshotted
+PASS Flash Ward keeps zero Energy and Exhaust while using Focus
+PASS X-cost Mana Barrier adds +3 once to the total
+PASS Mana Reading at X=2 is 4/5 draws, never 6
+PASS X-cost cards require at least 1 Energy
+PASS insufficient Energy preserves Focus and pays nothing
+PASS no target rejects an Attack before payment
+PASS one Focus card per turn even with remaining Focus stock
+PASS zero Focus stock prevents Focus
+PASS Focus stock clamps at 3
+PASS Passive never gets Focus, uses normal frame at native and 4K
+PASS Passive has an exact trigger, duration and unique active limit
+PASS duplicate active Passive rejects before payment
+PASS Growing Flame and Battle Rhythm cap growth at 3 triggers
+PASS hand almost full preserves Focus when extra draw cannot fit
+PASS draw-pool shortage preserves useless Focus
+PASS severe stat penalties preserve Focus if bonus remains clamped at zero
+PASS Recall returns one card plus at most one Draw-Pile card
+PASS Recall with one hand slot has no beneficial extra draw
+PASS Recall requires a legal Discard-Pile choice
+PASS Read Ahead and Clear Choice add one option, not one take
+PASS Burning Page permits 1/2 replacements and takes one
+PASS Card Search limits 4/5, first match, bounded choices
+PASS Next Chapter Focus bonus remains delayed once
+PASS Last Page empty-hand snapshot gives 1/3 or 2/4 draws
+PASS conditional attack and guard bonuses use pre-play snapshot
+PASS Crack Shot and hybrid cards enhance primary effect only
+PASS retention uses max cap, never sum
+PASS rich text has separate calculation / math / game categories
+PASS renderer escapes HTML and tooltip attributes
+PASS preview planner is pure and cannot charge on double preview
+PASS JSON is authoritative and browser data matches it
+RESULT 40 checks passed. No gameplay balance playtest claimed.

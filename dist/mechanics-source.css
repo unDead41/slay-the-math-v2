@@ -98,7 +98,12 @@
 [data-stm-richtext] math {
   font-size: 1.08em;
   font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", math;
+  /* Keep numerator/denominator text at reading size, rather than compact
+     inline fractions with script-sized digits. Layout remains native MathML. */
+  math-style: normal;
 }
+[data-stm-richtext] .education-answer-copy math:has(mfrac),
+[data-stm-richtext] .choice-text math:has(mfrac) { font-size: max(20px, 1.15em); }
 [data-stm-richtext] .rt-popover {
   position: fixed;
   z-index: 1000;
@@ -186,7 +191,8 @@
 /* ARTIFACT/runtime/artifact-ui.css */
 .stm-artifacts{--art-panel:#101d2c;--art-ink:#eee9de;--art-muted:#b7b6b2;--art-line:#53606c;--art-gold:#d5b273;font:inherit;color:inherit}
 .stm-artifacts *{box-sizing:border-box}.stm-artifacts button,.stm-artifacts input,.stm-artifacts select{font:inherit}.stm-artifacts [hidden]{display:none!important}
-.stm-artifacts .rt-term,.stm-artifacts .rt-calculation{display:inline;padding:0 1px;border:0;background:transparent;font:inherit;border-radius:2px;text-underline-offset:4px;cursor:pointer}
+/* The same token classes annotate native MathML; reset only HTML controls. */
+.stm-artifacts :is(button,span):is(.rt-term,.rt-calculation){display:inline;padding:0 1px;border:0;background:transparent;font:inherit;border-radius:2px;text-underline-offset:4px;cursor:pointer}
 .stm-artifacts .rt-calculation{color:var(--rt-calculation);text-decoration:underline dotted;font-variant-numeric:tabular-nums}.stm-artifacts .rt-term{color:var(--rt-game);text-decoration:underline dashed}.stm-artifacts .rt-term[data-category=math]{color:var(--rt-math)}
 .stm-artifacts .rt-term:hover,.stm-artifacts .rt-calculation:hover{background:#ffffff12}.stm-artifacts button:focus-visible,.stm-artifacts input:focus-visible,.stm-artifacts select:focus-visible{outline:2px solid #75c9df;outline-offset:3px}
 .stm-artifacts .art-muted,.stm-artifacts .art-timing{color:var(--art-muted)}.stm-artifacts .art-timing{font-size:.82em;margin:3px 0 12px}.stm-artifacts h2,.stm-artifacts h3,.stm-artifacts h4{margin:4px 0 12px}.stm-artifacts .art-kicker{letter-spacing:.1em;font-size:.75em;color:var(--art-gold);margin:0}

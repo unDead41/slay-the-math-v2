@@ -1,0 +1,39 @@
+{
+  "package_version": "1.0.0-playtest",
+  "created_date": "2026-10-22",
+  "source_inputs": [
+    {
+      "filename": "STM_Selected_40_Icons_v1(2).zip",
+      "bytes": 24290242,
+      "sha256": "1b738f112d82a3aaff40563f679fae5fa5edbfe7df6a5afd4ab69ac27b964ed7"
+    },
+    {
+      "filename": "Slay_the_Math_Focus_Card_Frames(1).zip",
+      "bytes": 90628914,
+      "sha256": "5a48e69f56b93ec088e4e4ccc9ce392ca1a5c10ca42a2e8ef341532ce602ae28"
+    },
+    {
+      "filename": "STM_Focus_Cards_Balance_v1(2).zip",
+      "bytes": 40816,
+      "sha256": "978f82af1616770851a93cbcb09cd25a7ecf03af3e8002c0196871559d7adb5a"
+    }
+  ],
+  "artwork_policy": "All supplied images, SVGs and original source records are byte-identical. Preview composes layers without modifying asset bytes.",
+  "license_policy": "Source artwork retained as supplied by the user; no new license assignment or external rights claim.",
+  "mechanic_authority": {
+    "approved": "40 names, category/code pairs and supplied artwork; no artwork regenerated",
+    "preserved": "supplied Focus bonuses and cap/cost/turn limits",
+    "new_proposal": "base damage/Block, Energy, rarity, all Passive mechanics, side effects and explicit timing",
+    "balance_validation": "automated contract checks and offline UI checks; no gameplay balance playtest claimed"
+  },
+  "excluded": "MODEL.zip was not available; no model bytes or textbook PDF content was used for this card consolidation.",
+  "localization_1_1": {
+    "source_zip_sha256": "990e3b0e689a7f6983c13822c5d9351cecc493273d9545eec4f1c81e27dc3792",
+    "branch": "dual-language-bm-bi",
+    "date": "2026-10-22",
+    "card_count": 40,
+    "glossary_count": 25,
+    "sources": "data/cards.master.json#/localization_sources",
+    "scope": "player-facing language and read-only catalogue; source mechanics retained"
+  }
+}

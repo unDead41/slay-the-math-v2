@@ -266,3 +266,8 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 ## 2.16.0 — Bahasa soalan
 
 Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Perubahan kekal pada branch education.
+
+
+## Game 2.18.0 — 22 October 2026
+
+Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).

@@ -14,7 +14,7 @@
  function choose(s,values){return values[Math.floor(random(s,'rewardRng')*values.length)];}
  function definition(r){return catalog[r.mysteryState?.pending?.eventId]||null;}
  function pending(r){const p=r.mysteryState?.pending;if(r.scene!=='event'||!p||p.committed)throw Error('No Mystery challenge is waiting.');return p;}
- function cardPool(effect){return Object.keys(C.cards).filter(k=>!effect.category||C.cards[k].role===category[effect.category]);}
+ function cardPool(effect,legacy=false){return (legacy?Object.keys(C.cards):C.CARD_POOL||Object.keys(C.cards)).filter(k=>!effect.category||C.cards[k].role===category[effect.category]);}
  function artifactPool(r,effect){return Object.values(A.catalog).filter(a=>effect.tiers.map(t=>tiers[t]).includes(a.tier)&&!A.has(r,a.id)&&A.eligible(r,a));}
  function targets(r,option){
   const e=option.effects.find(e=>['UPGRADE_CARD','REMOVE_CARD','TRANSFORM_CARD','CONSUME_ARTIFACT','CHOOSE_CARD_REWARD'].includes(e.type));
@@ -47,7 +47,7 @@
    for(const e of option.effects){
     if(e.type==='GRANT_ARTIFACT')offer.artifactId=choose(s,artifactPool(r,e).map(a=>a.id))||null;
     if(e.type==='CHOOSE_CARD_REWARD'){const pool=cardPool(e);offer.cards=[];while(pool.length&&offer.cards.length<e.offerCount){const key=choose(s,pool);offer.cards.push(key);pool.splice(pool.indexOf(key),1);}}
-    if(e.type==='TRANSFORM_CARD'){offer.transforms={};for(const uid of targets(r,option)){const c=r.deck.find(c=>c.uid===uid);offer.transforms[uid]=choose(s,Object.keys(C.cards).filter(k=>k!==c.key&&C.cards[k].role===C.cards[c.key].role));}}
+    if(e.type==='TRANSFORM_CARD'){offer.transforms={};for(const uid of targets(r,option)){const c=r.deck.find(c=>c.uid===uid);offer.transforms[uid]=choose(s,(C.CARD_POOL||Object.keys(C.cards)).filter(k=>k!==c.key&&C.cards[k].role===C.cards[c.key].role));}}
    }
   }
   return offers;
@@ -149,7 +149,7 @@
   if(p.targetId!==null){const option=event.success.options.find(o=>o.id===p.selectedOption);if(!option||!targets(r,option).includes(p.targetId)||(p.offers[option.id].cards&&!p.offers[option.id].cards.includes(p.targetId)))return false;}
   for(const o of event.success.options){const offer=p.offers[o.id];if(!offer||typeof offer!=='object'||Array.isArray(offer))return false;
    const cardEffect=o.effects.find(e=>e.type==='CHOOSE_CARD_REWARD'),artifactEffect=o.effects.find(e=>e.type==='GRANT_ARTIFACT'),transform=o.effects.some(e=>e.type==='TRANSFORM_CARD');
-   if(cardEffect){const pool=cardPool(cardEffect);if(!Array.isArray(offer.cards)||offer.cards.length!==Math.min(cardEffect.offerCount,pool.length)||new Set(offer.cards).size!==offer.cards.length||offer.cards.some(k=>!pool.includes(k)))return false;}
+   if(cardEffect){const pool=cardPool(cardEffect,true);if(!Array.isArray(offer.cards)||offer.cards.length!==Math.min(cardEffect.offerCount,pool.length)||new Set(offer.cards).size!==offer.cards.length||offer.cards.some(k=>!pool.includes(k)))return false;}
    else if(offer.cards!==undefined)return false;
    if(artifactEffect){if(!Object.hasOwn(offer,'artifactId'))return false;const pool=artifactPool(r,artifactEffect);if(offer.artifactId===null?pool.length>0:!pool.some(a=>a.id===offer.artifactId))return false;}
    else if(offer.artifactId!==undefined)return false;

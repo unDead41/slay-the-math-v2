@@ -283,3 +283,10 @@ Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual pre
 ## Game 2.19.0 — 22 October 2026 (Malaysia)
 
 Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat with relocated run information, artifacts and piles; ten status icons, visible Passive triggers and actor/turn combat journal. Predict shares the authored 120-item bank and run-wide exclusion with Artifact/Mystery; retain lifetime/mastery, pending saves and capped Focus. [Scope and checks](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## 2.21.0 — 23 October 2026 (Malaysia)
+
+- Added Developer Hub for direct scene access, real card-state comparison/combat tests, temporary motion inspection, scene presets and diagnostics.
+- Added start:dev/start:prod/build:prod; development previews isolate storage and production excludes developer files/routes.
+- Added fixture, isolation and browser regression coverage. Owner and limitations: [20](20_DEVELOPER_TOOLS.md).

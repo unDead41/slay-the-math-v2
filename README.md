@@ -106,3 +106,18 @@ Both bosses now match Alyssa’s visible height on desktop and phones. Preserve 
 ## 2.16.0 — Bahasa soalan
 
 Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Fungsi pendidikan ini kini tersedia pada main.
+
+
+## Developer Tools (v2.21.0)
+
+```sh
+npm run start:dev
+```
+
+Open http://localhost:4174 for scene selection, card upgrade/Focus comparisons and motion inspection. Sandbox progress is temporary; scene presets save separately. For a fresh player build and local preview:
+
+```sh
+npm run start:prod
+```
+
+Open http://localhost:4173. `npm run build:prod` only builds, and `npm start` keeps its previous player-mode behavior. Full instructions and limits: [Developer Tools](docs/sor/20_DEVELOPER_TOOLS.md).

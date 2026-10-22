@@ -382,3 +382,8 @@ Scope and evidence: [Combat and Predict](../COMBAT_AND_PREDICT_2_19_0.md).
 - DEC-20261022-PASSIVE-01 — DISAHKAN: Ijamm requests a maximum of three Passives and a popup to choose which existing Passive to replace. DITERUSKAN: interpret this as three active Passives in combat, allowing more in the deck; this assumption was stated after the optional clarification received no answer. Preserve source combat duration, costs and trigger limits; cancellation before choosing is free.
 - DEC-20261022-AUDIO-01 — DISAHKAN: Ijamm now asks to apply supplied MUSIC(3).zip to the game. This overrides the source archive's earlier SOR-only music-branch planning instructions. DITERUSKAN: integrate eight BGM/seven voices with canonical byte-preserved assets, retain missing Menu/Mystery cues, separate Voice controls and deterministic per-run encounters.
 - PERLU_VERIFIKASI: human listening/loop seams, final greeting repeat suitability and balance/classroom playtesting. MODEL.zip was unavailable. [Implementation and actual validation](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+
+## DEC-20261023-DEV — Developer sandbox (2.21.0)
+
+DISAHKAN: Ijamm requested implementation from main v2.20.0 using the Developer Tools SOR. Development/production use separate npm scripts; dev-only response adapters reuse the real game engine/renderers with memory storage. Developer files stay outside dist and portable output. Source artwork, player saves and card balance remain unchanged. Scope, limits and verification contract: [Developer Tools](20_DEVELOPER_TOOLS.md). MODEL.zip was unavailable; existing Slay the Math motion data is used, without claiming a Mathmon editor import.

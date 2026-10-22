@@ -185,3 +185,8 @@ Mystery art covers the encounter rather than appearing in an inset frame. Intro/
 ## Boss size — 2.13.2
 
 Both bosses match Alyssa’s visible idle height across desktop and phone layouts, including static fallback. Responsive positioning preserves the shared ground line and keeps all five actions’ faint VFX inside the arena. Intent, HP, cards and native actions keep their existing layers and owners. Size changes do not commit gameplay or save mutations.
+
+
+## Education Practice — 2.14.0
+
+The user requests the full 120-question folio directly from Main Menu on branch `education`, using the reviewed textbook/DSKP 1.6 bank. Hint 1 immediately displays actual table/Venn values as in the latest screenshots; unspecified data says “Not given”. More Hint explains the same filled reference. Final answer/selection marks and Artifact Claim keep their existing state ownership. Practice has its own saved Learning record and no run/rewarded-exposure mutation. Source, compatibility, responsive behavior and actual verification: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).

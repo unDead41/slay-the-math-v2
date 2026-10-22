@@ -2,7 +2,7 @@
  'use strict';
  const bank=typeof module!=='undefined'?require('./question-data.js'):root.DCQuestionBank;
  const M=typeof module!=='undefined'?require('./mechanics.js'):root.STMMechanics,S=M.session;
- const versions=new Set([bank.version,'form4-review-1.0.0']);
+ const versions=new Set([bank.version,'form4-review-1.0.0','form4-review-1.4.0','form4-review-1.5.0']);
  const catalog=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
  const integer=n=>Number.isSafeInteger(n)&&n>=0;
  const copy=x=>JSON.parse(JSON.stringify(x));

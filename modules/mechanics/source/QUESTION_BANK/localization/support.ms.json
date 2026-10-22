@@ -1,0 +1,851 @@
+{
+  "locale": "ms",
+  "strings": {
+    "Fractions before probability": "Pecahan sebelum kebarangkalian",
+    "Part of the whole": "Bahagian daripada keseluruhan",
+    "A fraction compares a part with a whole. If 3 of 8 equally likely items match, the matching chance is 3/8.": "Pecahan membandingkan suatu bahagian dengan keseluruhan. Jika setiap item mempunyai peluang yang sama untuk dipilih dan 3 daripada 8 item memenuhi syarat, kebarangkalian memilih item yang memenuhi syarat ialah 3/8.",
+    "Keep the value": "Kekalkan nilai",
+    "Simplify a fraction by dividing its numerator and denominator by the same nonzero number. For example, 6/8=3/4.": "Permudahkan pecahan dengan membahagi pengangka dan penyebutnya dengan nombor bukan sifar yang sama. Contohnya, 6/8=3/4.",
+    "Successive events": "Peristiwa berturutan",
+    "Multiply the first chance by the chance of the next event in its actual situation. If an item stays out, update the counts. For example, (1/2) × (2/3)=1/3.": "Darabkan kebarangkalian peristiwa pertama dengan kebarangkalian peristiwa seterusnya berdasarkan keadaan sebenar. Jika item yang dicabut tidak dipulangkan, kemas kini bilangan item yang tinggal. Contohnya, (1/2) × (2/3)=1/3.",
+    "Three of eight equally likely items are marked. What is the matching chance?": "Tiga daripada lapan item telah ditandakan. Setiap item mempunyai peluang yang sama untuk dipilih. Apakah kebarangkalian memilih item bertanda?",
+    "1/3": "1/3",
+    "3/8": "3/8",
+    "8/3": "8/3",
+    "3/5": "3/5",
+    "The denominator counts all possible items.": "Penyebut ialah jumlah semua item yang boleh dipilih.",
+    "Correct. Use matching items divided by all equally likely items.": "Betul. Bahagikan bilangan item bertanda dengan jumlah semua item. Setiap item mempunyai peluang yang sama untuk dipilih.",
+    "This reverses the matching and total counts.": "Bilangan item bertanda dan jumlah semua item telah diterbalikkan.",
+    "Use the whole collection, not only the unmarked items.": "Gunakan jumlah semua item, bukan bilangan item yang tidak bertanda sahaja.",
+    "Simplify 6/8.": "Permudahkan 6/8.",
+    "6/4": "6/4",
+    "3/4": "3/4",
+    "2/4": "2/4",
+    "Divide both parts by the same number.": "Bahagikan pengangka dan penyebut dengan nombor yang sama.",
+    "The denominator cannot change on its own.": "Penyebut tidak boleh diubah secara berasingan.",
+    "Correct. Divide both numerator and denominator by 2.": "Betul. Bahagikan pengangka dan penyebut dengan 2.",
+    "Check that the new fraction keeps the original value.": "Semak bahawa pecahan baharu mengekalkan nilai asal.",
+    "Outcomes and changing conditions": "Kesudahan dan perubahan keadaan",
+    "Keep the order": "Kekalkan tertib",
+    "An ordered pair records the first result and then the second. The pairs (1,2) and (2,1) are different when their positions have different roles.": "Pasangan tertib merekodkan keputusan pertama diikuti keputusan kedua. Pasangan (1,2) dan (2,1) berbeza apabila kedudukan masing-masing mempunyai peranan yang berbeza.",
+    "Make a complete list": "Senaraikan dengan lengkap",
+    "A coin with Heads/Tails paired with a die numbered 1 to 3 has 2 × 3=6 pairs. Use a grid so no pair is missed or counted twice.": "Lambungan syiling yang mempunyai muka gambar (H) dan muka angka (T), bersama balingan dadu bernombor 1 hingga 3, menghasilkan 2 × 3=6 pasangan kesudahan. Gunakan grid supaya tiada pasangan tertinggal atau dikira dua kali.",
+    "Check what changes": "Semak perubahan",
+    "With replacement and mixing, a teaching bag is restored. Without replacement, recount it. Independent means the first result does not change the chance of the second event; it does not mean the events cannot overlap.": "Apabila item yang dicabut dipulangkan dan kandungan beg dicampurkan semula, kandungannya kembali seperti asal. Jika item tidak dipulangkan, hitung semula item yang tinggal. Dua peristiwa adalah tak bersandar apabila keputusan pertama tidak mengubah kebarangkalian peristiwa kedua; kedua-dua peristiwa itu masih boleh bertindih.",
+    "Are (1,2) and (2,1) the same ordered pair?": "Adakah (1,2) dan (2,1) pasangan tertib yang sama?",
+    "Yes": "Ya",
+    "No": "Tidak",
+    "Position is part of the result.": "Kedudukan merupakan sebahagian daripada keputusan.",
+    "Correct. Their first and second entries are swapped.": "Betul. Unsur pertama dan kedua telah bertukar tempat.",
+    "One item stays out of a bag after a draw. What must you do before the next draw?": "Satu item tidak dipulangkan ke dalam beg selepas dicabut. Apakah yang mesti dilakukan sebelum cabutan seterusnya?",
+    "Keep the original total": "Kekalkan jumlah asal",
+    "Recount the remaining items": "Hitung semula item yang masih ada",
+    "The bag has changed because an item stayed out.": "Kandungan beg telah berubah kerana satu item tidak dipulangkan.",
+    "Correct. Use the actual remaining colour counts and total.": "Betul. Gunakan bilangan item yang tinggal bagi setiap warna dan jumlah keseluruhannya.",
+    "Membership, union and intersection": "Keahlian, kesatuan dan persilangan",
+    "An element is one item": "Unsur ialah satu item",
+    "A set lists different elements. Repeating an element does not create another item in that set. The count n(A) is a number; A itself is the set.": "Set mengandungi unsur yang berbeza. Menulis unsur yang sama berulang kali tidak menambah unsur dalam set itu. n(A) mewakili bilangan unsur, manakala A mewakili set itu sendiri.",
+    "Both or either": "Kedua-duanya atau salah satu",
+    "Intersection ∩ means in both sets. Union ∪ means in either set or both. With A={p,q} and B={q,r}, the intersection is {q} and the union is {p,q,r}.": "Persilangan ∩ bermaksud dalam kedua-dua set. Kesatuan ∪ bermaksud dalam salah satu set atau kedua-duanya. Jika A={p,q} dan B={q,r}, persilangannya ialah {q} dan kesatuannya ialah {p,q,r}.",
+    "Correct repeated counting": "Betulkan pengiraan berulang",
+    "When adding two group counts, a shared item is included twice. Subtract the shared count once to count their union.": "Apabila bilangan ahli dua kumpulan ditambah, ahli yang berada dalam kedua-dua kumpulan dikira dua kali. Tolak bilangan ahli sepunya sekali untuk mendapatkan bilangan unsur dalam kesatuan.",
+    "A={p,q} and B={q,r}. What is A ∩ B?": "A={p,q} dan B={q,r}. Apakah A ∩ B?",
+    "{p,q,r}": "{p,q,r}",
+    "{q}": "{q}",
+    "∅": "∅",
+    "This combines either membership.": "Ini menggabungkan unsur daripada salah satu set atau kedua-duanya.",
+    "Correct. q belongs to both sets.": "Betul. q ialah unsur dalam kedua-dua set.",
+    "Compare the two lists for a shared member.": "Bandingkan kedua-dua senarai untuk mencari unsur sepunya.",
+    "Does listing the same element twice increase a set’s size?": "Adakah menyenaraikan unsur yang sama dua kali menambah bilangan unsur dalam set?",
+    "A set counts different elements, not repeated printing.": "Bilangan unsur dalam set bergantung pada unsur yang berbeza, bukan berapa kali unsur itu ditulis.",
+    "Correct. A repeated element is still one member.": "Betul. Unsur yang diulang masih dikira sebagai satu unsur.",
+    "Universe, complements and brackets": "Set semesta, pelengkap dan kurungan",
+    "Stay inside U": "Kekal dalam U",
+    "A complement is relative to the stated universal set U. It keeps elements in U that fail the selected membership condition.": "Pelengkap ditentukan berdasarkan set semesta U yang dinyatakan. Pelengkap sesuatu set mengandungi unsur dalam U yang bukan unsur set tersebut.",
+    "A small example": "Contoh ringkas",
+    "If U={2,5,9} and A={2,9}, then A′={5}. A complement never adds values outside U.": "Jika U={2,5,9} dan A={2,9}, maka A′={5}. Pelengkap tidak menambah nilai di luar U.",
+    "Follow the brackets": "Ikut kurungan",
+    "In (A ∩ B)′, find the intersection first, then take its complement. In A ∩ B′, complement only B before applying the intersection. These expressions need not have the same result.": "Dalam (A ∩ B)′, cari persilangan dahulu, kemudian tentukan pelengkapnya. Dalam A ∩ B′, tentukan pelengkap B sahaja sebelum mencari persilangan. Kedua-dua ungkapan ini tidak semestinya memberikan hasil yang sama.",
+    "U={2,5,9} and A={2,9}. Which is A′?": "U={2,5,9} dan A={2,9}. Yang manakah A′?",
+    "{2,9}": "{2,9}",
+    "{5}": "{5}",
+    "{1,3,4}": "{1,3,4}",
+    "This repeats A instead of finding its outside within U.": "Ini mengulangi A, bukannya mencari unsur di luar A yang masih berada dalam U.",
+    "Correct. Only 5 is in U and outside A.": "Betul. Hanya 5 berada dalam U tetapi di luar A.",
+    "A complement cannot add elements outside U.": "Pelengkap tidak boleh menambah unsur di luar U.",
+    "What comes first in (A ∩ B)′?": "Apakah yang perlu dilakukan dahulu dalam (A ∩ B)′?",
+    "Find A ∩ B": "Cari A ∩ B",
+    "Complement A only": "Tentukan pelengkap A sahaja",
+    "Correct. Finish the bracketed expression first.": "Betul. Selesaikan ungkapan dalam kurungan dahulu.",
+    "The prime mark applies to the whole bracket, not A alone.": "Tanda prima digunakan pada seluruh ungkapan dalam kurungan, bukan A sahaja.",
+    "Claims and truth values": "Pernyataan dan nilai kebenaran",
+    "A claim can be false": "Pernyataan boleh palsu",
+    "A statement makes a definite true-or-false claim. A question or command does not. A false mathematical claim is still a mathematical statement.": "Pernyataan ialah ayat yang boleh ditentukan benar atau palsu. Soalan atau arahan bukan pernyataan. Ayat matematik yang palsu masih merupakan pernyataan matematik.",
+    "Read the quantity words": "Baca pengkuantiti",
+    "All means every allowed case. Some means at least one case. One exception disproves an all claim; one matching example establishes a some claim.": "“Semua” merangkumi setiap kes yang dibenarkan. “Sebilangan” bermaksud sekurang-kurangnya satu kes. Satu pengecualian cukup untuk menyangkal pernyataan yang menggunakan “semua”; satu contoh yang memenuhi syarat cukup untuk membuktikan pernyataan yang menggunakan “sebilangan”.",
+    "Join the claims": "Gabungkan pernyataan",
+    "AND requires both parts true. Inclusive OR requires at least one, including both. NOT reverses the truth condition. Keep the exact domain and inequality boundary when negating a claim.": "DAN memerlukan kedua-dua bahagian benar. ATAU inklusif memerlukan sekurang-kurangnya satu bahagian benar, termasuk apabila kedua-duanya benar. BUKAN membalikkan nilai kebenaran. Kekalkan domain dan sempadan ketaksamaan yang tepat apabila membentuk penafian.",
+    "Which is a statement?": "Yang manakah pernyataan?",
+    "Close the book!": "Tutup buku itu!",
+    "Is 4 even?": "Adakah 4 nombor genap?",
+    "4 is even.": "4 ialah nombor genap.",
+    "This is a command.": "Ini ialah arahan.",
+    "This asks a question.": "Ini ialah soalan.",
+    "Correct. This makes a definite mathematical claim.": "Betul. Ayat ini ialah pernyataan matematik yang boleh ditentukan nilai kebenarannya.",
+    "If p and q are both true, is inclusive p OR q true?": "Jika p dan q kedua-duanya benar, adakah pernyataan p ATAU q juga benar apabila ATAU digunakan secara inklusif?",
+    "True": "Benar",
+    "False": "Palsu",
+    "Correct. Inclusive OR includes the both-true case.": "Betul. ATAU inklusif merangkumi keadaan apabila kedua-dua bahagian benar.",
+    "Inclusive OR does not mean exactly one.": "ATAU inklusif tidak bermaksud tepat satu bahagian sahaja benar.",
+    "If-then rules and counterexamples": "Peraturan jika-maka dan contoh penyangkal",
+    "One direction": "Satu arah",
+    "In p→q, p is the condition and q is the result. The implication fails only when p is true and q is false. Do not assume the reverse rule.": "Dalam p→q, p ialah syarat dan q ialah akibat. Implikasi hanya palsu apabila p benar dan q palsu. Jangan anggap implikasi dalam arah sebaliknya juga benar.",
+    "Change a rule carefully": "Ubah peraturan dengan teliti",
+    "Converse swaps the parts. Inverse negates both without swapping. Contrapositive swaps and negates both. If and only if requires the forward and reverse implications together.": "Akas menukar tempat kedua-dua bahagian. Songsangan menafikan kedua-dua bahagian tanpa menukar tempat. Kontrapositif menukar tempat dan menafikan kedua-dua bahagian. Jika dan hanya jika memerlukan implikasi dalam kedua-dua arah benar.",
+    "Refute with a permitted case": "Sangkal dengan kes yang dibenarkan",
+    "An implication counterexample satisfies the condition but fails the result. The case must belong to the stated domain. A valid argument follows from its premises; a sound argument also has all premises true.": "Contoh penyangkal bagi implikasi memenuhi syarat tetapi tidak memenuhi akibatnya. Contoh itu mesti berada dalam domain yang dinyatakan. Dalam hujah yang sah, kesimpulan terhasil secara logik daripada premis; hujah yang munasabah juga mempunyai semua premis yang benar.",
+    "Which makes p→q false?": "Yang manakah menjadikan p→q palsu?",
+    "p=true, q=false": "p=benar, q=palsu",
+    "p=false, q=true": "p=palsu, q=benar",
+    "p=true, q=true": "p=benar, q=benar",
+    "Correct. The condition holds but the promised result fails.": "Betul. Syarat dipenuhi tetapi akibatnya tidak dipenuhi.",
+    "A false condition does not violate this implication.": "Syarat yang palsu tidak menjadikan implikasi ini palsu.",
+    "The promised result holds here.": "Akibatnya dipenuhi dalam kes ini.",
+    "Which refutes “All multiples of 5 are odd”?": "Yang manakah menyangkal “Semua gandaan 5 ialah nombor ganjil”?",
+    "5": "5",
+    "10": "10",
+    "3": "3",
+    "15": "15",
+    "This is an odd multiple and agrees with this instance.": "Nombor ini ialah gandaan 5 yang ganjil, jadi kes ini memenuhi pernyataan tersebut.",
+    "Correct. 10 is a multiple of 5 but is even.": "Betul. 10 ialah gandaan 5 tetapi merupakan nombor genap.",
+    "This does not satisfy the multiple-of-5 condition.": "Ini tidak memenuhi syarat sebagai gandaan 5.",
+    "Rules, predictions and evidence": "Peraturan, ramalan dan bukti",
+    "Use a rule": "Gunakan peraturan",
+    "Deductive reasoning applies stated rules to a case. A conclusion must follow if all the required premises hold.": "Penaakulan deduktif menggunakan peraturan yang dinyatakan untuk membuat kesimpulan tentang sesuatu kes. Kesimpulan mesti benar jika semua premis yang diperlukan benar.",
+    "Extend observations": "Perluaskan pemerhatian",
+    "Inductive reasoning uses observed cases to suggest a pattern or general claim. A useful prediction is not automatically a proof of every case.": "Penaakulan induktif menggunakan kes yang diperhatikan untuk mencadangkan pola atau pernyataan umum. Ramalan yang berguna tidak semestinya menjadi bukti bagi setiap kes.",
+    "Sample different cases": "Pilih sampel daripada kes yang berbeza",
+    "A sample should represent its target population. Repeating one case is not sampling many different cases. Selecting only supportive cases creates bias.": "Sampel sepatutnya mewakili populasi sasaran. Mengkaji kes yang sama berulang kali tidak sama dengan mengambil sampel daripada banyak kes yang berbeza. Memilih hanya kes yang menyokong pernyataan menyebabkan bias.",
+    "Several observed cases suggest an untested case will match. What is this?": "Berdasarkan pemerhatian beberapa kes, kita menjangkakan bahawa kes yang belum diuji akan menunjukkan hasil yang sama. Apakah jenis penaakulan ini?",
+    "Inductive reasoning": "Penaakulan induktif",
+    "A proof of every case": "Bukti bagi setiap kes",
+    "Correct. It extends observations to an untested case.": "Betul. Pemerhatian diperluas kepada kes yang belum diuji.",
+    "Examples alone do not prove every untested case.": "Contoh sahaja tidak membuktikan setiap kes yang belum diuji.",
+    "Which gives broader evidence about two stages?": "Yang manakah memberikan bukti yang lebih menyeluruh tentang dua peringkat?",
+    "One room visited repeatedly": "Satu bilik dikunjungi berulang kali",
+    "Different rooms randomly sampled across both stages": "Bilik yang berbeza disampel secara rawak daripada kedua-dua peringkat",
+    "Repeating one room does not add different sampled rooms.": "Mengunjungi bilik yang sama berulang kali tidak menambah bilangan bilik berbeza dalam sampel.",
+    "Correct. The sample has wider coverage of the target population.": "Betul. Sampel ini meliputi populasi sasaran dengan lebih luas.",
+    "Spotting unsupported reversals": "Mengenal pasti kesimpulan akas yang tidak berasas",
+    "Checking both directions": "Menyemak kedua-dua arah",
+    "Using AND and inclusive OR": "Menggunakan DAN dan ATAU inklusif",
+    "Finding a permitted exception": "Mencari pengecualian yang dibenarkan",
+    "Reading an if-then rule": "Membaca peraturan jika-maka",
+    "Converse, inverse and contrapositive": "Akas, songsangan dan kontrapositif",
+    "Separating rules from predictions": "Membezakan peraturan dengan ramalan",
+    "Negating the exact claim": "Menafikan pernyataan dengan tepat",
+    "Reading all and some": "Memahami semua dan sebilangan",
+    "Choosing representative evidence": "Memilih bukti yang mewakili populasi",
+    "Recognising mathematical statements": "Mengenal pasti pernyataan matematik",
+    "Checking component truth values": "Menyemak nilai kebenaran setiap bahagian",
+    "Checking what follows from premises": "Menyemak kesimpulan berdasarkan premis",
+    "Using the opposite event": "Menggunakan peristiwa pelengkap",
+    "Updating counts without replacement": "Mengemas kini bilangan tanpa pemulangan",
+    "Combining separate orders": "Menggabungkan turutan yang berbeza",
+    "Counting matching outcomes": "Mengira kesudahan yang memenuhi syarat",
+    "Testing independence": "Menguji sama ada peristiwa tak bersandar",
+    "Multiplying successive chances": "Mendarab kebarangkalian berturutan",
+    "Checking whether events can overlap": "Menyemak sama ada peristiwa boleh bertindih",
+    "Listing ordered outcomes": "Menyenaraikan kesudahan mengikut tertib",
+    "Probability of either event": "Kebarangkalian salah satu peristiwa atau kedua-duanya",
+    "Counting different elements": "Mengira unsur yang berbeza",
+    "Finding the outside within U": "Mencari unsur di luar set yang masih dalam U",
+    "Following a combined set expression": "Menyelesaikan ungkapan gabungan set",
+    "Correcting overlapping group counts": "Membetulkan pengiraan ahli kumpulan yang bertindih",
+    "Elements in every required set": "Unsur dalam setiap set yang diperlukan",
+    "Explaining set equivalence": "Menerangkan kesetaraan set",
+    "Reconstructing a set from given regions": "Membina semula set daripada rantau yang diberi",
+    "Combining set members": "Menggabungkan unsur set",
+    "true": "benar",
+    "false": "palsu",
+    "p=true": "p=benar",
+    "p=false": "p=palsu",
+    "q=true": "q=benar",
+    "q=false": "q=palsu",
+    "Heads/Tails": "muka gambar (H)/muka angka (T)",
+    "p OR q": "p ATAU q"
+  },
+  "termLabels": {
+    "qb:guard": "Guard (kategori kad)",
+    "qb:fire-mark": "Fire (tanda bercetak)",
+    "qb:ice-mark": "Ice (tanda bercetak)",
+    "qb:neutral-mark": "Neutral (tanda bercetak)",
+    "qb:card": "Kad",
+    "qb:integer": "Integer",
+    "qb:positive-integer": "Integer positif",
+    "qb:nonnegative-integer": "Integer bukan negatif",
+    "qb:variable": "Pemboleh ubah",
+    "qb:value": "Nilai",
+    "qb:factor": "Faktor",
+    "qb:multiple": "Gandaan",
+    "qb:is-divisible-by": "Boleh dibahagi tepat dengan",
+    "qb:is-even": "Nombor genap",
+    "qb:is-odd": "Nombor ganjil",
+    "qb:is-prime": "Nombor perdana",
+    "qb:square": "Kuasa dua",
+    "qb:sum": "Hasil tambah / jumlah",
+    "qb:product": "Hasil darab / darab",
+    "qb:fraction": "Pecahan",
+    "qb:common-denominator": "Penyebut / penyebut sepunya",
+    "qb:remainder": "Baki",
+    "qb:strict-greater": "Lebih besar daripada",
+    "qb:strict-less": "Lebih kecil daripada",
+    "qb:greater-or-equal": "Lebih besar daripada atau sama dengan",
+    "qb:less-or-equal": "Lebih kecil daripada atau sama dengan",
+    "qb:at-least": "Sekurang-kurangnya",
+    "qb:at-most": "Paling banyak",
+    "qb:exactly": "Tepat",
+    "qb:exactly-one": "Tepat satu",
+    "qb:ellipsis": "Titik berturutan",
+    "qb:in-that-order": "Mengikut turutan itu",
+    "qb:probability": "Kebarangkalian",
+    "qb:experiment": "Eksperimen / percubaan",
+    "qb:outcome": "Kesudahan",
+    "qb:ordered-outcome": "Pasangan tertib / kesudahan mengikut tertib",
+    "qb:sample-space": "Ruang sampel",
+    "qb:favourable-outcomes": "Kesudahan yang memenuhi syarat peristiwa",
+    "qb:fair": "Adil",
+    "qb:uniform-draw": "Cabutan dengan peluang yang sama bagi setiap item",
+    "qb:equally-likely": "Sama boleh jadi",
+    "qb:event": "Peristiwa",
+    "qb:independent": "Peristiwa tak bersandar",
+    "qb:dependent": "Peristiwa bersandar",
+    "qb:with-replacement": "Dengan pemulangan",
+    "qb:without-replacement": "Tanpa pemulangan",
+    "qb:mutually-exclusive": "Saling eksklusif / tidak bertindih",
+    "qb:overlap": "Pertindihan",
+    "qb:in-either-order": "Dalam mana-mana turutan",
+    "qb:heads-tails": "Muka gambar (H) / muka angka (T)",
+    "qb:die-dice": "Dadu",
+    "qb:conditional-probability": "Kebarangkalian bersyarat",
+    "qb:set": "Set",
+    "qb:element": "Unsur",
+    "qb:membership": "Keahlian set",
+    "qb:universe": "Set semesta",
+    "qb:finite-set": "Set terhingga",
+    "qb:subset": "Subset",
+    "qb:intersection": "Persilangan",
+    "qb:union": "Kesatuan",
+    "qb:complement": "Pelengkap",
+    "qb:empty-set": "Set kosong",
+    "qb:cardinality": "Bilangan unsur",
+    "qb:brackets": "Kurungan",
+    "qb:inclusion-exclusion": "Prinsip rangkuman dan pengecualian",
+    "qb:pairwise": "Persilangan berpasangan / tiga set",
+    "qb:de-morgan": "Hukum De Morgan",
+    "qb:statement": "Pernyataan",
+    "qb:truth-value": "Nilai kebenaran",
+    "qb:true": "Benar",
+    "qb:false": "Palsu",
+    "qb:open-sentence": "Ayat terbuka",
+    "qb:quantifier": "Pengkuantiti",
+    "qb:all-every": "Semua / setiap",
+    "qb:some": "Sebilangan / sekurang-kurangnya satu",
+    "qb:none": "Tiada satu pun",
+    "qb:neither": "Bukan A dan bukan B",
+    "qb:domain": "Domain / nilai yang dibenarkan",
+    "qb:compound-statement": "Pernyataan majmuk",
+    "qb:and": "Dan",
+    "qb:or": "Atau inklusif",
+    "qb:negation": "Penafian",
+    "qb:implication": "Implikasi / jika p maka q",
+    "qb:biconditional": "Jika dan hanya jika",
+    "qb:premise": "Premis",
+    "qb:conclusion": "Kesimpulan",
+    "qb:converse": "Akas",
+    "qb:inverse": "Songsangan",
+    "qb:contrapositive": "Kontrapositif",
+    "qb:logically-equivalent": "Setara secara logik",
+    "qb:truth-table": "Jadual kebenaran",
+    "qb:counterexample": "Contoh penyangkal",
+    "qb:argument": "Hujah",
+    "qb:valid": "Hujah sah",
+    "qb:invalid": "Hujah tidak sah",
+    "qb:sound": "Hujah munasabah",
+    "qb:sufficient-condition": "Syarat mencukupi",
+    "qb:modus-ponens": "Modus ponens",
+    "qb:modus-tollens": "Modus tollens",
+    "qb:affirming-consequent": "Kesilapan menyimpulkan syarat daripada akibat",
+    "qb:denying-antecedent": "Kesilapan menolak akibat apabila syarat gagal",
+    "qb:deductive": "Penaakulan deduktif",
+    "qb:inductive": "Penaakulan induktif",
+    "qb:generalisation": "Pengitlakan",
+    "qb:proof": "Bukti",
+    "qb:assumption": "Andaian / diberi",
+    "qb:sample": "Sampel",
+    "qb:random-sample": "Sampel rawak",
+    "qb:population": "Populasi / kumpulan sasaran",
+    "qb:sample-size": "Saiz sampel",
+    "qb:selection-bias": "Bias pemilihan",
+    "qb:observation": "Pemerhatian",
+    "qb:prediction": "Ramalan",
+    "qb:sequence": "Jujukan / sebutan",
+    "qb:pattern": "Pola",
+    "qb:teaching-pool": "Koleksi contoh dalam soalan",
+    "qb:draw": "Cabut / ambil / pilih",
+    "qb:unique-id": "ID kad yang berbeza / unik",
+    "qb:category": "Kategori",
+    "qb:energy-cost": "Energy / kos",
+    "qb:upgraded": "Ditandakan telah ditambah baik"
+  },
+  "termDefinitions": {
+    "qb:heads-tails": "Dua muka syiling: H mewakili muka gambar dan T mewakili muka angka. Rentetan H/T mengikut tertib lambungan.",
+    "qb:converse": "Akas bagi implikasi jika p maka q ialah jika q maka p. Kedudukan kedua-dua bahagian ditukar; nilai kebenarannya mungkin berbeza.",
+    "qb:universe": "Set semua unsur yang dibenarkan dalam soalan. Pelengkap mesti ditentukan dalam set semesta ini.",
+    "qb:complement": "Unsur dalam set semesta U yang tidak berada dalam set berkenaan. Simbol ′ menandakan pelengkap."
+  },
+  "sourceReview": {
+    "notes": [
+      "Kesudahan, pasangan tertib, peristiwa bersandar dan peristiwa tak bersandar mengikuti istilah bab Kebarangkalian Peristiwa Bergabung.",
+      "Set semesta, unsur, persilangan, kesatuan dan pelengkap mengikuti istilah bab Operasi Set. Notasi U dalam bahan asal dikekalkan walaupun buku teks menggunakan ξ.",
+      "Akas dibezakan daripada songsangan dan kontrapositif. Penafian, nilai kebenaran, penaakulan induktif dan penaakulan deduktif mengikuti bab Penaakulan Logik.",
+      "H/T dikekalkan sebagai notasi: H ialah muka gambar dan T ialah muka angka. Tiada kuantiti, indeks pilihan, ID atau kesan artifak diubah.",
+      "Semua 7 modul, 21 kad, 14 semakan tanpa skor dan 30 label kemahiran diliputi melalui medan paparan teks biasa. Perkataan benar/palsu yang dipaparkan dalam ungkapan matematik turut dipadankan.",
+      "Prosa disemak untuk kelancaran Bahasa Melayu: peluang pemilihan yang sama diterangkan dalam ayat lengkap, dan penyebut kebarangkalian merujuk jumlah semua item yang boleh dipilih. Alias istilah ringkas serta kategori asal glosari disediakan untuk paparan dalam ayat."
+    ],
+    "references": [
+      {
+        "source": "PROB-sources.txt",
+        "chapter": "Kebarangkalian Peristiwa Bergabung / Probability of Combined Events",
+        "evidence": "Pasangan tertib, kesudahan, peristiwa bersandar dan peristiwa tak bersandar; petikan buku teks dalam fail semakan sumber."
+      },
+      {
+        "source": "SET-sources.txt",
+        "chapter": "Operasi Set / Operations on Sets",
+        "evidence": "Set semesta dan pelengkap bagi persilangan set; petikan buku teks dalam fail semakan sumber."
+      },
+      {
+        "source": "LOGIC-sources.txt",
+        "chapter": "Penaakulan Logik / Logical Reasoning",
+        "evidence": "Penafian serta akas, songsangan dan kontrapositif; petikan buku teks dalam fail semakan sumber."
+      }
+    ]
+  },
+  "termCategories": {
+    "qb:guard": "game",
+    "qb:fire-mark": "game",
+    "qb:ice-mark": "game",
+    "qb:neutral-mark": "game",
+    "qb:card": "game",
+    "qb:integer": "math",
+    "qb:positive-integer": "math",
+    "qb:nonnegative-integer": "math",
+    "qb:variable": "math",
+    "qb:value": "math",
+    "qb:factor": "math",
+    "qb:multiple": "math",
+    "qb:is-divisible-by": "math",
+    "qb:is-even": "math",
+    "qb:is-odd": "math",
+    "qb:is-prime": "math",
+    "qb:square": "math",
+    "qb:sum": "math",
+    "qb:product": "math",
+    "qb:fraction": "math",
+    "qb:common-denominator": "math",
+    "qb:remainder": "math",
+    "qb:strict-greater": "math",
+    "qb:strict-less": "math",
+    "qb:greater-or-equal": "math",
+    "qb:less-or-equal": "math",
+    "qb:at-least": "math",
+    "qb:at-most": "math",
+    "qb:exactly": "math",
+    "qb:exactly-one": "math",
+    "qb:ellipsis": "math",
+    "qb:in-that-order": "math",
+    "qb:probability": "math",
+    "qb:experiment": "math",
+    "qb:outcome": "math",
+    "qb:ordered-outcome": "math",
+    "qb:sample-space": "math",
+    "qb:favourable-outcomes": "math",
+    "qb:fair": "math",
+    "qb:uniform-draw": "math",
+    "qb:equally-likely": "math",
+    "qb:event": "math",
+    "qb:independent": "math",
+    "qb:dependent": "math",
+    "qb:with-replacement": "math",
+    "qb:without-replacement": "math",
+    "qb:mutually-exclusive": "math",
+    "qb:overlap": "math",
+    "qb:in-either-order": "math",
+    "qb:heads-tails": "math",
+    "qb:die-dice": "math",
+    "qb:conditional-probability": "math",
+    "qb:set": "math",
+    "qb:element": "math",
+    "qb:membership": "math",
+    "qb:universe": "math",
+    "qb:finite-set": "math",
+    "qb:subset": "math",
+    "qb:intersection": "math",
+    "qb:union": "math",
+    "qb:complement": "math",
+    "qb:empty-set": "math",
+    "qb:cardinality": "math",
+    "qb:brackets": "math",
+    "qb:inclusion-exclusion": "math",
+    "qb:pairwise": "math",
+    "qb:de-morgan": "math",
+    "qb:statement": "math",
+    "qb:truth-value": "math",
+    "qb:true": "math",
+    "qb:false": "math",
+    "qb:open-sentence": "math",
+    "qb:quantifier": "math",
+    "qb:all-every": "math",
+    "qb:some": "math",
+    "qb:none": "math",
+    "qb:neither": "math",
+    "qb:domain": "math",
+    "qb:compound-statement": "math",
+    "qb:and": "math",
+    "qb:or": "math",
+    "qb:negation": "math",
+    "qb:implication": "math",
+    "qb:biconditional": "math",
+    "qb:premise": "math",
+    "qb:conclusion": "math",
+    "qb:converse": "math",
+    "qb:inverse": "math",
+    "qb:contrapositive": "math",
+    "qb:logically-equivalent": "math",
+    "qb:truth-table": "math",
+    "qb:counterexample": "math",
+    "qb:argument": "math",
+    "qb:valid": "math",
+    "qb:invalid": "math",
+    "qb:sound": "math",
+    "qb:sufficient-condition": "math",
+    "qb:modus-ponens": "math",
+    "qb:modus-tollens": "math",
+    "qb:affirming-consequent": "math",
+    "qb:denying-antecedent": "math",
+    "qb:deductive": "math",
+    "qb:inductive": "math",
+    "qb:generalisation": "math",
+    "qb:proof": "math",
+    "qb:assumption": "math",
+    "qb:sample": "math",
+    "qb:random-sample": "math",
+    "qb:population": "math",
+    "qb:sample-size": "math",
+    "qb:selection-bias": "math",
+    "qb:observation": "math",
+    "qb:prediction": "math",
+    "qb:sequence": "math",
+    "qb:pattern": "math",
+    "qb:teaching-pool": "game",
+    "qb:draw": "math",
+    "qb:unique-id": "math",
+    "qb:category": "math",
+    "qb:energy-cost": "game",
+    "qb:upgraded": "game"
+  },
+  "termAliases": {
+    "qb:guard": [
+      "Guard"
+    ],
+    "qb:fire-mark": [
+      "Fire"
+    ],
+    "qb:ice-mark": [
+      "Ice"
+    ],
+    "qb:neutral-mark": [
+      "Neutral"
+    ],
+    "qb:card": [
+      "kad"
+    ],
+    "qb:integer": [
+      "integer"
+    ],
+    "qb:positive-integer": [
+      "integer positif"
+    ],
+    "qb:nonnegative-integer": [
+      "integer bukan negatif"
+    ],
+    "qb:variable": [
+      "pemboleh ubah"
+    ],
+    "qb:value": [
+      "nilai"
+    ],
+    "qb:factor": [
+      "faktor"
+    ],
+    "qb:multiple": [
+      "gandaan"
+    ],
+    "qb:is-divisible-by": [
+      "boleh dibahagi tepat dengan"
+    ],
+    "qb:is-even": [
+      "nombor genap"
+    ],
+    "qb:is-odd": [
+      "nombor ganjil"
+    ],
+    "qb:is-prime": [
+      "nombor perdana"
+    ],
+    "qb:square": [
+      "kuasa dua"
+    ],
+    "qb:sum": [
+      "Hasil tambah",
+      "jumlah"
+    ],
+    "qb:product": [
+      "Hasil darab",
+      "darab"
+    ],
+    "qb:fraction": [
+      "pecahan"
+    ],
+    "qb:common-denominator": [
+      "penyebut",
+      "penyebut sepunya"
+    ],
+    "qb:remainder": [
+      "baki"
+    ],
+    "qb:strict-greater": [
+      "lebih besar daripada"
+    ],
+    "qb:strict-less": [
+      "lebih kecil daripada"
+    ],
+    "qb:greater-or-equal": [
+      "lebih besar daripada atau sama dengan"
+    ],
+    "qb:less-or-equal": [
+      "lebih kecil daripada atau sama dengan"
+    ],
+    "qb:at-least": [
+      "sekurang-kurangnya"
+    ],
+    "qb:at-most": [
+      "paling banyak"
+    ],
+    "qb:exactly": [
+      "tepat"
+    ],
+    "qb:exactly-one": [
+      "tepat satu"
+    ],
+    "qb:ellipsis": [
+      "titik berturutan"
+    ],
+    "qb:in-that-order": [
+      "mengikut turutan itu"
+    ],
+    "qb:probability": [
+      "kebarangkalian",
+      "peluang"
+    ],
+    "qb:experiment": [
+      "Eksperimen",
+      "percubaan"
+    ],
+    "qb:outcome": [
+      "kesudahan"
+    ],
+    "qb:ordered-outcome": [
+      "pasangan tertib",
+      "kesudahan mengikut tertib"
+    ],
+    "qb:sample-space": [
+      "ruang sampel"
+    ],
+    "qb:favourable-outcomes": [
+      "kesudahan yang memenuhi syarat peristiwa"
+    ],
+    "qb:fair": [
+      "adil"
+    ],
+    "qb:uniform-draw": [
+      "cabutan dengan peluang yang sama bagi setiap item"
+    ],
+    "qb:equally-likely": [
+      "sama boleh jadi",
+      "peluang yang sama"
+    ],
+    "qb:event": [
+      "peristiwa"
+    ],
+    "qb:independent": [
+      "tak bersandar",
+      "peristiwa tak bersandar"
+    ],
+    "qb:dependent": [
+      "bersandar",
+      "peristiwa bersandar"
+    ],
+    "qb:with-replacement": [
+      "dengan pemulangan"
+    ],
+    "qb:without-replacement": [
+      "tanpa pemulangan"
+    ],
+    "qb:mutually-exclusive": [
+      "Saling eksklusif",
+      "tidak bertindih"
+    ],
+    "qb:overlap": [
+      "pertindihan"
+    ],
+    "qb:in-either-order": [
+      "dalam mana-mana turutan"
+    ],
+    "qb:heads-tails": [
+      "muka gambar",
+      "muka angka",
+      "H",
+      "T"
+    ],
+    "qb:die-dice": [
+      "dadu"
+    ],
+    "qb:conditional-probability": [
+      "kebarangkalian bersyarat"
+    ],
+    "qb:set": [
+      "set"
+    ],
+    "qb:element": [
+      "unsur"
+    ],
+    "qb:membership": [
+      "keahlian set"
+    ],
+    "qb:universe": [
+      "set semesta"
+    ],
+    "qb:finite-set": [
+      "set terhingga"
+    ],
+    "qb:subset": [
+      "subset"
+    ],
+    "qb:intersection": [
+      "persilangan"
+    ],
+    "qb:union": [
+      "kesatuan"
+    ],
+    "qb:complement": [
+      "pelengkap"
+    ],
+    "qb:empty-set": [
+      "set kosong"
+    ],
+    "qb:cardinality": [
+      "bilangan unsur"
+    ],
+    "qb:brackets": [
+      "kurungan"
+    ],
+    "qb:inclusion-exclusion": [
+      "rangkuman dan pengecualian",
+      "membetulkan pengiraan bertindih"
+    ],
+    "qb:pairwise": [
+      "Persilangan berpasangan",
+      "tiga set"
+    ],
+    "qb:de-morgan": [
+      "hukum de morgan"
+    ],
+    "qb:statement": [
+      "pernyataan"
+    ],
+    "qb:truth-value": [
+      "nilai kebenaran"
+    ],
+    "qb:true": [
+      "benar"
+    ],
+    "qb:false": [
+      "palsu"
+    ],
+    "qb:open-sentence": [
+      "ayat terbuka"
+    ],
+    "qb:quantifier": [
+      "pengkuantiti"
+    ],
+    "qb:all-every": [
+      "Semua",
+      "setiap"
+    ],
+    "qb:some": [
+      "Sebilangan",
+      "sekurang-kurangnya satu"
+    ],
+    "qb:none": [
+      "tiada satu pun"
+    ],
+    "qb:neither": [
+      "bukan a dan bukan b"
+    ],
+    "qb:domain": [
+      "Domain",
+      "nilai yang dibenarkan"
+    ],
+    "qb:compound-statement": [
+      "pernyataan majmuk"
+    ],
+    "qb:and": [
+      "dan"
+    ],
+    "qb:or": [
+      "atau",
+      "atau inklusif"
+    ],
+    "qb:negation": [
+      "penafian",
+      "bukan",
+      "tidak"
+    ],
+    "qb:implication": [
+      "implikasi",
+      "jika … maka …"
+    ],
+    "qb:biconditional": [
+      "jika dan hanya jika"
+    ],
+    "qb:premise": [
+      "premis"
+    ],
+    "qb:conclusion": [
+      "kesimpulan"
+    ],
+    "qb:converse": [
+      "akas"
+    ],
+    "qb:inverse": [
+      "songsangan"
+    ],
+    "qb:contrapositive": [
+      "kontrapositif"
+    ],
+    "qb:logically-equivalent": [
+      "setara secara logik"
+    ],
+    "qb:truth-table": [
+      "jadual kebenaran"
+    ],
+    "qb:counterexample": [
+      "contoh penyangkal"
+    ],
+    "qb:argument": [
+      "hujah"
+    ],
+    "qb:valid": [
+      "hujah sah"
+    ],
+    "qb:invalid": [
+      "hujah tidak sah"
+    ],
+    "qb:sound": [
+      "hujah munasabah"
+    ],
+    "qb:sufficient-condition": [
+      "syarat mencukupi"
+    ],
+    "qb:modus-ponens": [
+      "modus ponens"
+    ],
+    "qb:modus-tollens": [
+      "modus tollens"
+    ],
+    "qb:affirming-consequent": [
+      "kesilapan menyimpulkan syarat daripada akibat"
+    ],
+    "qb:denying-antecedent": [
+      "kesilapan menolak akibat apabila syarat gagal"
+    ],
+    "qb:deductive": [
+      "penaakulan deduktif"
+    ],
+    "qb:inductive": [
+      "penaakulan induktif"
+    ],
+    "qb:generalisation": [
+      "pengitlakan"
+    ],
+    "qb:proof": [
+      "bukti"
+    ],
+    "qb:assumption": [
+      "Andaian",
+      "diberi"
+    ],
+    "qb:sample": [
+      "sampel"
+    ],
+    "qb:random-sample": [
+      "sampel rawak"
+    ],
+    "qb:population": [
+      "Populasi",
+      "kumpulan sasaran"
+    ],
+    "qb:sample-size": [
+      "saiz sampel"
+    ],
+    "qb:selection-bias": [
+      "bias pemilihan"
+    ],
+    "qb:observation": [
+      "pemerhatian"
+    ],
+    "qb:prediction": [
+      "ramalan"
+    ],
+    "qb:sequence": [
+      "Jujukan",
+      "sebutan"
+    ],
+    "qb:pattern": [
+      "pola"
+    ],
+    "qb:teaching-pool": [
+      "koleksi contoh dalam soalan"
+    ],
+    "qb:draw": [
+      "Cabut",
+      "ambil",
+      "pilih"
+    ],
+    "qb:unique-id": [
+      "ID kad yang berbeza",
+      "unik"
+    ],
+    "qb:category": [
+      "kategori"
+    ],
+    "qb:energy-cost": [
+      "Energy",
+      "kos"
+    ],
+    "qb:upgraded": [
+      "ditandakan telah ditambah baik"
+    ]
+  }
+}

@@ -147,3 +147,17 @@ All 31 artifact rules use the same segmented-description owner in choices, pendi
 **DISAHKAN:** Ijamm requests a full-background Mystery scene matching the Dungeon Master, separate Buy Cards / Buy Artifacts / Remove Card tabs, and the existing rich-text style in Mystery. Rest in reference 053417 is approved.
 
 The existing supplied Mystery artwork fills the scene behind the live HUD and right panel; phones retain an art banner and natural scrolling. Only one Shop tab panel is exposed. Native tabs support pointer, keyboard and 44px targets; hidden stocks cannot crowd the current service. Green terms and purple snapshot previews use the existing STM_SHARED tooltip owner, while questions retain pink mathematical terms. Previews are read-only and do not become resolved rewards. Source and verification: [room UI 2.13.1](../ROOM_UI_2_13_1.md).
+
+## Education Practice — 2.14.0
+
+The user requests a sixth Main Menu action for education only. **Education Practice** opens the full 120-question folio with a persistent, native Main Menu return and focus restored to its trigger. Keep the existing menu artwork and 44px minimum targets. The folio owns its responsive atlas, theme/language controls and tooltip document. Fill table/Venn values directly in Hint 1 as requested in the latest screenshots; use “Not given” only for mathematically unspecified data. More Hint explains the filled reference. Keep final selection marks and the final answer panel in the solution stage. Artifact/Mystery screens use the same clearer question context and gated source notes. Details: [Education 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).
+
+
+## Question feedback — 2.15.0
+
+Education Practice adds categories and plain-text comments below every question, with “Yes, we do read your comments.” Use native checkbox labels, textarea, Save, live status and 44px controls. Main Menu/Finish practice opens one native exit dialog with comment count, delivery explanation, export/share and keep-reviewing/return actions. Restore focus on cancellation and return. Clearly distinguish saved-on-device comments from comments shared with Ijamm. Owner and limits: [Question feedback](../QUESTION_FEEDBACK_2_15_0.md).
+
+
+## Question language — 2.16.0
+
+Whole-question English/Bahasa Melayu is implemented on education. Source review, scope and validation: [Question language](../QUESTION_LANGUAGE_2_16_0.md).

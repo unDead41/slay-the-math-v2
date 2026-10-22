@@ -40,7 +40,7 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
  try{
   await page.goto(url);await ready();
   assert.equal(await page.locator('.menu-continue').isDisabled(),true);
-  assert.equal(await page.locator('.main-menu-actions>button').count(),5);
+  assert.equal(await page.locator('.main-menu-actions>button').count(),6);
   assert.equal(await page.locator('.menu-backdrop').count(),5);
   assert.equal(await page.locator('.menu-ambience').count(),5);
   const sources=await page.locator('.menu-backdrop').evaluateAll(es=>es.map(e=>e.getAttribute('src')));
@@ -125,7 +125,7 @@ const cases=[[1280,720],[1920,1080],[2560,1440],[2560,1080],[3440,1440],[3413,17
   await failure.waitForFunction(()=>document.querySelector('#toast').textContent.includes('Artwork could not be loaded'));
   assert.equal(await failure.locator('.illustrated-home').getAttribute('data-art'),'corridor');
   assert.equal(await failure.locator('.menu-backdrop.active').getAttribute('data-scene-index'),'0');
-  assert.equal(await failure.locator('.main-menu-actions>button').count(),5);
+  assert.equal(await failure.locator('.main-menu-actions>button').count(),6);
   await failure.close();
   report.checks.push('Failed artwork decode retains the prior image and all usable menu controls.');
 

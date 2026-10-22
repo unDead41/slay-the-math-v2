@@ -2,12 +2,26 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Education 2.16.0 integration into main — 22 October 2026
+
+- Apply the education branch by explicit user request, preserving main Boss size, Shop tabs and Mystery backgrounds/rich text.
+- Combined build and 207 tests passed. [Details](../EDUCATION_MAIN_INTEGRATION.md).
+
 ## Game 2.13.2 — 22 Oktober 2026 (Malaysia)
 
 - Match both bosses’ visible height to Alyssa with explicit host calibration.
 - Keep full VFX visible on tablets and comparable framing on phones, including fallback posters.
 - Preserve source artwork, all 60 frames/holds, floor registration and gameplay.
 - Verification: [Boss size](../BOSS_SIZE_2_13_2.md).
+
+## Game 2.14.0 — 22 Oktober 2026 (Malaysia)
+
+- Integrate reviewed Question Bank 1.6 with attached textbook/DSKP sources, simpler teaching definitions and explicit context/Given/Find in game.
+- Add Education Practice directly on Main Menu with the full 120-question folio, separate saved Learning and resettable Review.
+- Per the latest screenshot instruction, fill actual table/Venn values from Hint 1 immediately; More Hint explains those values. Unspecified regions remain “Not given” and solution-only selection marks stay gated.
+- Preserve stable IDs, answer bindings, prior pending trials, Claim ownership and Mystery-specific rules.
+- Generate the practice document from the active bank. Build the oversized offline HTML locally instead of committing a stale generated artifact.
+- Details and actual checks: [Education Practice 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).
 
 ## Game 2.13.0 — 22 Oktober 2026 (Malaysia)
 
@@ -221,3 +235,16 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Separate Shop into Buy Cards / Buy Artifacts / Remove Card native tabs; retain exact prices, frozen stock, purchase/removal confirmation and saved Sold/service status.
 - Apply shared game-term help and honest current-snapshot calculation previews to Mystery intro/review/reward rules. Preserve authored question rich text, real transaction logs and strict deadlines.
 - Retain the approved Rest composition and source artwork. Verification: docs/ROOM_UI_2_13_1.md.
+
+
+## 2.15.0 — 22 October 2026 (Malaysia)
+
+- Add improvement categories, editable per-question comments and the requested reassurance to all 120 Education Practice questions.
+- Persist independently of game/reward/Learning; preserve unreadable originals and surface storage failures.
+- Add an exit reminder, CSV/JSON download and explicit native file sharing/download fallback. Clarify local saving versus delivery to Ijamm.
+- Keep the active question bank, answers, Hint values, artwork and engine unchanged. See docs/QUESTION_FEEDBACK_2_15_0.md.
+
+
+## 2.16.0 — Bahasa soalan
+
+Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Perubahan kekal pada branch education.

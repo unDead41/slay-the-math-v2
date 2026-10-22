@@ -10,7 +10,7 @@ export {renderVisual} from '../learning/visual-renderer.mjs';
 export {LEARNING_POLICY} from '../learning/session.mjs';
 
 const EXPECTED_SHARED_REGISTRY_ID=/* STM_SHARED_REGISTRY_ID */'881ed46c93d9444d01853bf2056a09e5216a8b5278ecb3aacdb069ca21818201';
-export const PACKAGE_VERSION='1.5.0';
+export const PACKAGE_VERSION='1.6.0';
 const copy=value=>JSON.parse(JSON.stringify(value));
 const isObject=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
 const SUPPORT_KINDS=new Set(['hint','moreHint','foundation','steps']);
@@ -71,7 +71,7 @@ export function validateQuestionBankBundle({bank,glossary,foundations}={}) {
 
 export function createQuestionBankRuntime({bank,glossary,foundations,savedSession=null,seed=127031,persist}={}) {
   validateQuestionBankBundle({bank,glossary,foundations});
-  if(sharedRichText.version!=='1.0.0'||sharedRichText.registryId!==EXPECTED_SHARED_REGISTRY_ID)throw new Error('Use the matched STM_SHARED service for Question Bank 1.5.');
+  if(sharedRichText.version!=='1.0.0'||sharedRichText.registryId!==EXPECTED_SHARED_REGISTRY_ID||!sharedRichText.teachingExplanations)throw new Error('Use the matched STM_SHARED service supplied with Question Bank 1.6.');
   sharedRichText.assertDomain('question-bank',glossary);
   if(typeof persist!=='function')throw new Error('Pass persist(session) using the existing game save owner. It must reject if saving fails.');
   // Detach from imported JSON so callers cannot modify the active bank or save by alias.
@@ -87,7 +87,11 @@ export function createQuestionBankRuntime({bank,glossary,foundations,savedSessio
     const visible=selectLearningView(q,record);
     return {...visible,question:{id:q.id,topicId:q.topicId,topicCode:q.topicCode,topic:q.topic,
       difficulty:q.difficulty,seed:q.seed,curriculumStandards:q.curriculumStandards,
-      choices:q.choices.map(c=>({id:c.id,label:c.label,text:c.text}))},
+      choices:q.choices.map(c=>({id:c.id,label:c.label,text:c.text})),
+      teaching:q.harmonization?copy({contextNote:q.harmonization.contextNote,given:q.harmonization.given,asked:q.harmonization.asked,
+        contextRichText:q.harmonization.contextRichText,givenRichText:q.harmonization.givenRichText,askedRichText:q.harmonization.askedRichText,
+        sources:q.harmonization.sources.map(s=>visible.closed?s:Object.fromEntries(Object.entries(s).filter(([key])=>key!=='basis'))),
+        alignment:q.harmonization.alignment,alignmentNote:visible.closed?q.harmonization.alignmentNote:''}):null},
       status:record.status,lastChoiceId:record.lastChoiceId,
       support:{hintUsed:record.hintState.hintUsed,moreHintUnlocked:record.hintState.moreHintUnlocked,
         moreHintViewed:record.hintState.moreHintViewed,foundationViewed:record.foundationViewed,stepsViewed:record.stepsViewed},

@@ -1,5 +1,5 @@
 (function(root){'use strict';
- const X=root.DCMystery,Q=root.DCEducation,M=root.STMMechanics,C=root.DCConfig,A=root.DCArtifacts,R=root.DCRichText;
+ const X=root.DCMystery,Q=root.DCEducation,M=root.STMMechanics,C=root.DCConfig,A=root.DCArtifacts,R=root.DCRichText,L=root.DCQuestionLanguage;
  const escapeText=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const words=['max_hp','hp','gold','heal','strength','agility','energy','focus','attack','defend','skill','artifact','combat','first_turn','draw','hand','block'].map(id=>[R.data.glossary[id].label.toLowerCase(),id]);
  words.push(['artifacts','artifact']);words.sort((a,b)=>b[0].length-a[0].length);
@@ -47,7 +47,7 @@
   return html+escapeText(text.slice(last));
  }
  function view(r,{esc,button,cardView,runTop}){
-  const p=r.mysteryState.pending,e=X.definition(r),q=Q.catalog[p.questionId],record=q?Q.getSession(r).records[q.id]:null;
+  const p=r.mysteryState.pending,e=X.definition(r),q=L.question(Q.catalog[p.questionId],L.language()),record=q?Q.getSession(r).records[q.id]:null;
   const final=p.phase!=='question',learning=q?M.session.selectLearningView(q,record,{finalReview:final}):null;
   const artwork=e?'mystery-'+e.id.toLowerCase()+(innerWidth<=760?'-small':'')+'.webp':null;
   const art=artwork?'<div class="mystery-art" aria-hidden="true"><img src="assets/'+artwork+'" width="1920" height="1080" alt="" decoding="async"></div>':'';
@@ -58,7 +58,7 @@
    body='<p class="eyebrow">'+esc(X.data.topics[e.topicCode].name)+' · '+e.timeLimitSeconds+' SECONDS</p><h1 id="mystery-title" tabindex="-1">'+esc(e.name)+'</h1><p class="mystery-intro">'+esc(e.intro)+'</p><dl class="mystery-stakes" data-stm-richtext><div><dt>On success</dt><dd>'+rich(e.success.summary,r,e)+'</dd></div><div><dt>Wrong answer or time up</dt><dd>'+rich(penalty,r,e,'failure')+'</dd></div></dl><p class="mystery-help">Select an underlined term for its meaning, or a purple number for a preview.</p><p>One answer. The timer starts when you open the question and keeps running if you leave this screen.</p><div class="mystery-actions">'+button('Start Challenge','mystery-start','btn primary')+button('Leave','mystery-leave','btn subtle')+'</div>';
   }else if(p.phase==='question'||p.phase==='review'){
    const correct=q.choices.find(c=>c.id===q.correctChoiceId),label=p.outcome==='CORRECT'?'Correct':p.outcome==='TIMEOUT'?'Time Up':p.outcome==='ABANDONED_AFTER_START'?'Challenge ended':'Incorrect';
-   body='<p class="eyebrow">'+esc(e.name)+'</p><div class="mystery-question-heading"><h1 id="mystery-title" tabindex="-1">'+(final?label:'Solve this challenge')+'</h1>'+(!final?'<span class="mystery-countdown"><output id="mystery-countdown" role="timer" aria-live="off">'+Math.max(0,Math.ceil((p.deadline-Date.now())/1000))+'</output><span>seconds</span></span>':'')+'</div><div class="education-question mystery-question"><div class="education-meta"><span>'+esc(q.id)+' · '+esc(q.difficulty)+'</span><span>'+esc(q.topic)+'</span></div><p class="education-answer-help">Choose A–D to submit one answer. Underlined terms explain their meaning.</p><p id="mystery-prompt" class="education-prompt" data-q-rich="prompt">'+esc(q.prompt)+'</p>'+
+   body='<p class="eyebrow">'+esc(e.name)+'</p><div class="mystery-question-heading"><h1 id="mystery-title" tabindex="-1">'+(final?label:'Solve this challenge')+'</h1>'+(!final?'<span class="mystery-countdown"><output id="mystery-countdown" role="timer" aria-live="off">'+Math.max(0,Math.ceil((p.deadline-Date.now())/1000))+'</output><span>seconds</span></span>':'')+'</div><div class="education-question mystery-question"><div class="education-meta"><span>'+esc(q.id)+' · '+esc(q.difficulty)+'</span><span>'+esc(q.topic)+'</span></div><p class="education-answer-help">Choose A–D to submit one answer. Underlined terms explain their meaning.</p><p id="mystery-prompt" class="education-prompt" data-q-rich="prompt">'+esc(q.prompt)+'</p>'+root.STMMechanicsHost.teachingHTML(q,final,{esc})+
     '<div class="education-answers" role="group" aria-labelledby="mystery-prompt">'+p.choiceOrder.map((id,i)=>{const c=q.choices.find(c=>c.id===id);return '<div class="education-option"><button type="button" class="education-answer'+(final&&id===q.correctChoiceId?' correct':final&&id===p.selectedId?' incorrect':'')+'" data-action="mystery-answer" data-id="'+id+'" aria-label="Answer '+'ABCD'[i]+': '+esc(c.text)+'" '+(final?'disabled':'')+'><span class="education-letter" aria-hidden="true">'+'ABCD'[i]+'</span><span class="sr-only">'+esc(c.text)+'</span></button><div class="education-answer-copy"><span data-q-rich="choice:'+id+'">'+esc(c.text)+'</span></div></div>';}).join('')+'</div>'+
     (final?'<section class="mystery-review education-feedback '+(p.outcome==='CORRECT'?'solved':'')+'" aria-live="polite"><h2>'+label+'</h2><p>Correct answer: <strong>'+esc(correct.text)+'</strong></p><p data-q-rich="explanation">'+esc(q.explanation)+'</p>'+(learning.feedback?'<p data-q-rich="feedback">'+esc(learning.feedback.text)+'</p>':'')+'<p data-stm-richtext>'+rich(p.outcome==='CORRECT'?e.success.summary:e.failure.summary,r,e,p.outcome==='CORRECT'?'success':'failure')+'</p></section>':'')+
     (record.hintState.hintUsed?'<section id="mystery-hint" class="education-hint" tabindex="-1"><h2>Hint</h2>'+q.hintSteps.map(s=>'<p data-q-rich="hint:'+s.id+'">'+esc(s.text)+'</p>').join('')+'</section>':'')+
@@ -80,7 +80,7 @@
   }
   return '<section class="mystery-layout" data-event-id="'+(e?.id||'empty')+'" data-phase="'+p.phase+'" aria-labelledby="mystery-title">'+art+'<div class="mystery-hud">'+runTop()+'</div><div class="mystery-panel ornate-panel" data-stm-richtext>'+body+'</div></section>';
  }
- function hydrate(r){const p=r.mysteryState?.pending,q=Q.catalog[p?.questionId],host=document.querySelector('.mystery-question');if(host&&q)root.STMMechanicsHost.hydrateQuestion(host,q,M.session.selectLearningView(q,Q.getSession(r).records[q.id],{finalReview:p.phase!=='question'}));}
+ function hydrate(r){const p=r.mysteryState?.pending,q=L.question(Q.catalog[p?.questionId],L.language()),host=document.querySelector('.mystery-question');if(host&&q)root.STMMechanicsHost.hydrateQuestion(host,q,M.session.selectLearningView(q,Q.getSession(r).records[q.id],{finalReview:p.phase!=='question'}));}
  let clockAnchor=null;
  function clock(r,onExpire){
   const p=r.mysteryState?.pending;if(p?.phase!=='question')return null;

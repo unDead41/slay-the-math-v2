@@ -174,3 +174,8 @@ Shop keeps the supplied merchant plate and portrait 3×2 racks inside one ornate
 ## Boss size — 2.13.2
 
 The two padded boss atlases have an explicit host figureScale of 1.1 in the animation registry/importer. This replaces their inherited ordinary-enemy 0.9 while keeping drawScale 1.65, source pivots, complete frames and matching posters. Phones allow a 58vw boss host; tablets shift only enough to contain the widest source VFX. Alyssa and Normal/Elite scales retain their existing owners. Evidence: docs/BOSS_SIZE_2_13_2.md.
+
+
+## Education Practice — 2.14.0
+
+The user requests the full 120-question folio directly from Main Menu on branch `education`, using the reviewed textbook/DSKP 1.6 bank. Hint 1 immediately displays actual table/Venn values as in the latest screenshots; unspecified data says “Not given”. More Hint explains the same filled reference. Final answer/selection marks and Artifact Claim keep their existing state ownership. Practice has its own saved Learning record and no run/rewarded-exposure mutation. Source, compatibility, responsive behavior and actual verification: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).

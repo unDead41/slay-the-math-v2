@@ -1,0 +1,703 @@
+{
+  "version": 1,
+  "textLocale": "en",
+  "mode": "challenge",
+  "rng": 17,
+  "seed": 17,
+  "seq": 12,
+  "stage": 0,
+  "depth": 0,
+  "hp": 60,
+  "maxHp": 60,
+  "deck": [
+    {
+      "uid": "c1",
+      "key": "strike",
+      "upgraded": false
+    },
+    {
+      "uid": "c2",
+      "key": "strike",
+      "upgraded": false
+    },
+    {
+      "uid": "c3",
+      "key": "strike",
+      "upgraded": false
+    },
+    {
+      "uid": "c4",
+      "key": "ember",
+      "upgraded": false
+    },
+    {
+      "uid": "c5",
+      "key": "ember",
+      "upgraded": false
+    },
+    {
+      "uid": "c6",
+      "key": "ember",
+      "upgraded": false
+    },
+    {
+      "uid": "c7",
+      "key": "guard",
+      "upgraded": false
+    },
+    {
+      "uid": "c8",
+      "key": "guard",
+      "upgraded": false
+    },
+    {
+      "uid": "c9",
+      "key": "flameguard",
+      "upgraded": false
+    },
+    {
+      "uid": "c10",
+      "key": "flameguard",
+      "upgraded": false
+    },
+    {
+      "uid": "c11",
+      "key": "filter",
+      "upgraded": false
+    },
+    {
+      "uid": "c12",
+      "key": "draw",
+      "upgraded": false
+    }
+  ],
+  "cleared": [],
+  "route": {
+    "version": 3,
+    "path": [],
+    "active": null,
+    "catalogueSeed": "STM-018",
+    "snapshot": {
+      "generatorVersion": "1.0.0",
+      "rulesVersion": "1.0.0",
+      "seed": "STM-018",
+      "stage": 1,
+      "stageName": "Sigil Keep",
+      "bossId": "s1_twin_sigil_guardian",
+      "bossName": "Twin Sigil Guardian",
+      "initialPaths": 5,
+      "preRestPaths": 4,
+      "quotas": {
+        "shop": 3,
+        "elite": 7,
+        "rest": 4
+      },
+      "levels": [
+        {
+          "level": 1,
+          "nodeIds": [
+            "s1-l01-n1",
+            "s1-l01-n2",
+            "s1-l01-n3",
+            "s1-l01-n4",
+            "s1-l01-n5"
+          ]
+        },
+        {
+          "level": 2,
+          "nodeIds": [
+            "s1-l02-n1",
+            "s1-l02-n2",
+            "s1-l02-n3",
+            "s1-l02-n4"
+          ]
+        },
+        {
+          "level": 3,
+          "nodeIds": [
+            "s1-l03-n1",
+            "s1-l03-n2",
+            "s1-l03-n3"
+          ]
+        },
+        {
+          "level": 4,
+          "nodeIds": [
+            "s1-l04-n1",
+            "s1-l04-n2",
+            "s1-l04-n3"
+          ]
+        },
+        {
+          "level": 5,
+          "nodeIds": [
+            "s1-l05-n1",
+            "s1-l05-n2",
+            "s1-l05-n3"
+          ]
+        },
+        {
+          "level": 6,
+          "nodeIds": [
+            "s1-l06-n1",
+            "s1-l06-n2",
+            "s1-l06-n3",
+            "s1-l06-n4"
+          ]
+        },
+        {
+          "level": 7,
+          "nodeIds": [
+            "s1-l07-n1",
+            "s1-l07-n2",
+            "s1-l07-n3"
+          ]
+        },
+        {
+          "level": 8,
+          "nodeIds": [
+            "s1-l08-n1",
+            "s1-l08-n2",
+            "s1-l08-n3",
+            "s1-l08-n4"
+          ]
+        },
+        {
+          "level": 9,
+          "nodeIds": [
+            "s1-l09-n1",
+            "s1-l09-n2",
+            "s1-l09-n3"
+          ]
+        },
+        {
+          "level": 10,
+          "nodeIds": [
+            "s1-l10-n1"
+          ]
+        }
+      ],
+      "nodes": [
+        {
+          "id": "s1-l01-n1",
+          "level": 1,
+          "column": 0,
+          "x": 0.12,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l01-n2",
+          "level": 1,
+          "column": 1,
+          "x": 0.31,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l01-n3",
+          "level": 1,
+          "column": 2,
+          "x": 0.5,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l01-n4",
+          "level": 1,
+          "column": 3,
+          "x": 0.69,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l01-n5",
+          "level": 1,
+          "column": 4,
+          "x": 0.88,
+          "type": "shop"
+        },
+        {
+          "id": "s1-l02-n1",
+          "level": 2,
+          "column": 0,
+          "x": 0.12,
+          "type": "shop"
+        },
+        {
+          "id": "s1-l02-n2",
+          "level": 2,
+          "column": 1,
+          "x": 0.373333,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l02-n3",
+          "level": 2,
+          "column": 2,
+          "x": 0.626667,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l02-n4",
+          "level": 2,
+          "column": 3,
+          "x": 0.88,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l03-n1",
+          "level": 3,
+          "column": 0,
+          "x": 0.12,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l03-n2",
+          "level": 3,
+          "column": 1,
+          "x": 0.5,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l03-n3",
+          "level": 3,
+          "column": 2,
+          "x": 0.88,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l04-n1",
+          "level": 4,
+          "column": 0,
+          "x": 0.12,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l04-n2",
+          "level": 4,
+          "column": 1,
+          "x": 0.5,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l04-n3",
+          "level": 4,
+          "column": 2,
+          "x": 0.88,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l05-n1",
+          "level": 5,
+          "column": 0,
+          "x": 0.12,
+          "type": "mystery"
+        },
+        {
+          "id": "s1-l05-n2",
+          "level": 5,
+          "column": 1,
+          "x": 0.5,
+          "type": "mystery"
+        },
+        {
+          "id": "s1-l05-n3",
+          "level": 5,
+          "column": 2,
+          "x": 0.88,
+          "type": "mystery"
+        },
+        {
+          "id": "s1-l06-n1",
+          "level": 6,
+          "column": 0,
+          "x": 0.12,
+          "type": "rest"
+        },
+        {
+          "id": "s1-l06-n2",
+          "level": 6,
+          "column": 1,
+          "x": 0.373333,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l06-n3",
+          "level": 6,
+          "column": 2,
+          "x": 0.626667,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l06-n4",
+          "level": 6,
+          "column": 3,
+          "x": 0.88,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l07-n1",
+          "level": 7,
+          "column": 0,
+          "x": 0.12,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l07-n2",
+          "level": 7,
+          "column": 1,
+          "x": 0.5,
+          "type": "shop"
+        },
+        {
+          "id": "s1-l07-n3",
+          "level": 7,
+          "column": 2,
+          "x": 0.88,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l08-n1",
+          "level": 8,
+          "column": 0,
+          "x": 0.12,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l08-n2",
+          "level": 8,
+          "column": 1,
+          "x": 0.373333,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l08-n3",
+          "level": 8,
+          "column": 2,
+          "x": 0.626667,
+          "type": "elite"
+        },
+        {
+          "id": "s1-l08-n4",
+          "level": 8,
+          "column": 3,
+          "x": 0.88,
+          "type": "battle"
+        },
+        {
+          "id": "s1-l09-n1",
+          "level": 9,
+          "column": 0,
+          "x": 0.12,
+          "type": "rest"
+        },
+        {
+          "id": "s1-l09-n2",
+          "level": 9,
+          "column": 1,
+          "x": 0.5,
+          "type": "rest"
+        },
+        {
+          "id": "s1-l09-n3",
+          "level": 9,
+          "column": 2,
+          "x": 0.88,
+          "type": "rest"
+        },
+        {
+          "id": "s1-l10-n1",
+          "level": 10,
+          "column": 0,
+          "x": 0.5,
+          "type": "boss"
+        }
+      ],
+      "edges": [
+        {
+          "from": "s1-l01-n1",
+          "to": "s1-l02-n1"
+        },
+        {
+          "from": "s1-l01-n2",
+          "to": "s1-l02-n1"
+        },
+        {
+          "from": "s1-l01-n3",
+          "to": "s1-l02-n2"
+        },
+        {
+          "from": "s1-l01-n4",
+          "to": "s1-l02-n3"
+        },
+        {
+          "from": "s1-l01-n5",
+          "to": "s1-l02-n4"
+        },
+        {
+          "from": "s1-l01-n4",
+          "to": "s1-l02-n4"
+        },
+        {
+          "from": "s1-l01-n3",
+          "to": "s1-l02-n3"
+        },
+        {
+          "from": "s1-l02-n1",
+          "to": "s1-l03-n1"
+        },
+        {
+          "from": "s1-l02-n2",
+          "to": "s1-l03-n1"
+        },
+        {
+          "from": "s1-l02-n3",
+          "to": "s1-l03-n2"
+        },
+        {
+          "from": "s1-l02-n4",
+          "to": "s1-l03-n3"
+        },
+        {
+          "from": "s1-l02-n2",
+          "to": "s1-l03-n2"
+        },
+        {
+          "from": "s1-l03-n1",
+          "to": "s1-l04-n1"
+        },
+        {
+          "from": "s1-l03-n2",
+          "to": "s1-l04-n2"
+        },
+        {
+          "from": "s1-l03-n3",
+          "to": "s1-l04-n3"
+        },
+        {
+          "from": "s1-l04-n1",
+          "to": "s1-l05-n1"
+        },
+        {
+          "from": "s1-l04-n2",
+          "to": "s1-l05-n2"
+        },
+        {
+          "from": "s1-l04-n3",
+          "to": "s1-l05-n3"
+        },
+        {
+          "from": "s1-l04-n3",
+          "to": "s1-l05-n2"
+        },
+        {
+          "from": "s1-l05-n1",
+          "to": "s1-l06-n1"
+        },
+        {
+          "from": "s1-l05-n1",
+          "to": "s1-l06-n2"
+        },
+        {
+          "from": "s1-l05-n2",
+          "to": "s1-l06-n3"
+        },
+        {
+          "from": "s1-l05-n3",
+          "to": "s1-l06-n4"
+        },
+        {
+          "from": "s1-l05-n2",
+          "to": "s1-l06-n4"
+        },
+        {
+          "from": "s1-l06-n1",
+          "to": "s1-l07-n1"
+        },
+        {
+          "from": "s1-l06-n2",
+          "to": "s1-l07-n1"
+        },
+        {
+          "from": "s1-l06-n3",
+          "to": "s1-l07-n2"
+        },
+        {
+          "from": "s1-l06-n4",
+          "to": "s1-l07-n3"
+        },
+        {
+          "from": "s1-l06-n3",
+          "to": "s1-l07-n3"
+        },
+        {
+          "from": "s1-l06-n2",
+          "to": "s1-l07-n2"
+        },
+        {
+          "from": "s1-l07-n1",
+          "to": "s1-l08-n1"
+        },
+        {
+          "from": "s1-l07-n1",
+          "to": "s1-l08-n2"
+        },
+        {
+          "from": "s1-l07-n2",
+          "to": "s1-l08-n3"
+        },
+        {
+          "from": "s1-l07-n3",
+          "to": "s1-l08-n4"
+        },
+        {
+          "from": "s1-l08-n1",
+          "to": "s1-l09-n1"
+        },
+        {
+          "from": "s1-l08-n2",
+          "to": "s1-l09-n1"
+        },
+        {
+          "from": "s1-l08-n3",
+          "to": "s1-l09-n2"
+        },
+        {
+          "from": "s1-l08-n4",
+          "to": "s1-l09-n3"
+        },
+        {
+          "from": "s1-l09-n1",
+          "to": "s1-l10-n1"
+        },
+        {
+          "from": "s1-l09-n2",
+          "to": "s1-l10-n1"
+        },
+        {
+          "from": "s1-l09-n3",
+          "to": "s1-l10-n1"
+        }
+      ]
+    }
+  },
+  "scene": "education",
+  "battle": null,
+  "rewards": [],
+  "checkpoint": null,
+  "started": 1792646220689,
+  "gold": 80,
+  "shop": null,
+  "stats": {
+    "cardsPlayed": 0,
+    "hintsUsed": 0,
+    "battles": 0,
+    "turns": 0,
+    "forecasts": 0,
+    "firstCorrect": 0,
+    "assisted": 0,
+    "wrong": 0,
+    "concepts": {}
+  },
+  "notice": "Answer the Dungeon Master’s question to claim your artifact.",
+  "artifactState": {
+    "version": 1,
+    "rng": 1148144365,
+    "owned": [],
+    "acquired": [],
+    "startingId": null,
+    "offer": {
+      "kind": "starting",
+      "source": "starting",
+      "ids": [
+        "s05_scholars_bookmark",
+        "s09_copper_purse",
+        "s03_prism_buckler"
+      ],
+      "ready": true
+    }
+  },
+  "educationState": {
+    "version": 1,
+    "bankVersion": "form4-review-1.4.0",
+    "rng": 1835103353,
+    "usedIds": [
+      "PROB-021"
+    ],
+    "completed": [],
+    "pending": {
+      "kind": "starting",
+      "source": "starting",
+      "artifactId": "s05_scholars_bookmark",
+      "questionId": "PROB-021",
+      "choiceOrder": [
+        "PROB-021-choice-27305843",
+        "PROB-021-choice-49ea8cd5",
+        "PROB-021-choice-f4f48710",
+        "PROB-021-choice-f19f65f6"
+      ],
+      "selectedId": null,
+      "attempts": [
+        "PROB-021-choice-27305843"
+      ],
+      "hinted": true,
+      "solved": false
+    },
+    "session": {
+      "version": 1,
+      "bankVersion": "form4-review-1.4.0",
+      "rngState": 3666669166,
+      "runIndex": 1,
+      "exposureIds": [
+        "PROB-021"
+      ],
+      "records": {
+        "PROB-021": {
+          "questionId": "PROB-021",
+          "choiceOrder": [
+            "PROB-021-choice-27305843",
+            "PROB-021-choice-49ea8cd5",
+            "PROB-021-choice-f4f48710",
+            "PROB-021-choice-f19f65f6"
+          ],
+          "sourceSeed": 1021,
+          "events": [
+            {
+              "type": "HINT_REVEALED"
+            },
+            {
+              "type": "ANSWER_SUBMITTED",
+              "attemptId": "PROB-021:1",
+              "choiceId": "PROB-021-choice-27305843"
+            }
+          ],
+          "attempts": [
+            {
+              "id": "PROB-021:1",
+              "choiceId": "PROB-021-choice-27305843",
+              "correct": false,
+              "hintUsed": true,
+              "moreHintViewed": false,
+              "foundationViewed": false
+            }
+          ],
+          "hintState": {
+            "version": 1,
+            "questionId": "PROB-021",
+            "hintUsed": true,
+            "attempts": 1,
+            "wrongAfterHint": 1,
+            "moreHintUnlocked": true,
+            "moreHintViewed": false,
+            "completed": false
+          },
+          "foundationViewed": false,
+          "stepsViewed": false,
+          "status": "pending",
+          "completion": null,
+          "lastChoiceId": "PROB-021-choice-27305843"
+        }
+      },
+      "archivedRecords": {},
+      "pendingQuestionId": "PROB-021",
+      "lastQuestionId": "PROB-021"
+    }
+  }
+}

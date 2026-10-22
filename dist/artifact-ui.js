@@ -25,11 +25,11 @@
    (!opening&&!boss?button('Leave Without It','skip-artifact','text-btn'):'')+'</div><p class="artifact-save-note">Your choices are saved. Returning to the menu keeps the same offers.</p></div></section>';
  }
  function education(run,{esc,button}){
-  const Q=root.DCEducation,p=run.educationState.pending,q=Q.current(run),gift=A.catalog[p.artifactId];
+  const Q=root.DCEducation,L=root.DCQuestionLanguage,p=run.educationState.pending,q=L.question(Q.current(run),L.language()),gift=A.catalog[p.artifactId];
   const destination=p.kind==='boss'?'Claim & Enter Deck Tower':p.kind==='starting'?'Claim & Choose Your Path':'Claim & Continue';
   const selected=q?.choices.find(c=>c.id===p.selectedId),correct=q?.choices.find(c=>c.id===q.correctChoiceId);
   const feedback=p.solved?'Correct. Your path is ready.':p.attempts.length?'Not quite. Try another answer or use a hint.':'Choose one answer, then check it.';
-  const view=q?Q.learningView(run):null,record=q?Q.record(run):null;
+  const record=q?Q.record(run):null,view=q?root.STMMechanics.session.selectLearningView(q,record):null;
   const answers=q?'<div class="education-answers" role="group" aria-labelledby="education-prompt">'+p.choiceOrder.map((id,i)=>{
    const choice=q.choices.find(c=>c.id===id),wrong=p.attempts.includes(id)&&id!==q.correctChoiceId;
    return '<div class="education-option">'+button('<span class="education-letter" aria-hidden="true">'+'ABCD'[i]+'</span><span class="sr-only">'+esc(choice.text)+'</span>','education-select','education-answer'+(p.selectedId===id?' selected':'')+(wrong?' incorrect':'')+(p.solved&&id===q.correctChoiceId?' correct':''),'data-id="'+id+'" aria-label="Answer '+'ABCD'[i]+': '+esc(choice.text)+'" aria-pressed="'+(p.selectedId===id)+'" '+(p.solved||wrong?'disabled':''))+'<div class="education-answer-copy"><span data-q-rich="choice:'+id+'">'+esc(choice.text)+'</span>'+(wrong?'<small>Try another answer</small>':'')+'</div></div>';
@@ -42,7 +42,7 @@
    '<aside class="master-dialogue"><p class="eyebrow">THE DUNGEON MASTER</p><blockquote>“Knowledge opens the way. Show me what you know.”</blockquote>'+button('‹ Main Menu','home','text-btn')+'</aside>'+
    '<div class="education-panel"><p class="eyebrow">'+(q?'CHAPTER '+q.chapter+' · '+esc(q.topic):'ALL QUESTIONS SEEN')+'</p><h1 id="education-title" tabindex="-1">The Master’s trial</h1>'+
    '<div class="education-gift"><img src="assets/'+gift.icon+'" width="52" height="52" alt=""><p><span>Your chosen artifact</span><strong>'+esc(gift.name)+'</strong><small data-stm-richtext>'+R.description(gift.id)+'</small></p></div>'+
-   (q?'<div class="education-question"><div class="education-meta"><span>'+esc(q.id)+' · '+esc(q.difficulty)+'</span><span>'+run.educationState.usedIds.length+' / '+Q.bank.total+' questions seen</span></div><p class="education-answer-help">Choose A–D to answer. Underlined terms explain their meaning.</p><p id="education-prompt" class="education-prompt" data-q-rich="prompt">'+esc(q.prompt)+'</p>'+answers+
+   (q?'<div class="education-question"><div class="education-meta"><span>'+esc(q.id)+' · '+esc(q.difficulty)+'</span><span>'+run.educationState.usedIds.length+' / '+Q.bank.total+' questions seen</span></div><p class="education-answer-help">Choose A–D to answer. Underlined terms explain their meaning.</p><p id="education-prompt" class="education-prompt" data-q-rich="prompt">'+esc(q.prompt)+'</p>'+root.STMMechanicsHost.teachingHTML(q,p.solved,{esc})+answers+
     '<div id="education-feedback" class="education-feedback'+(p.solved?' solved':'')+'" role="status" aria-live="polite"><strong>'+feedback+'</strong>'+(view.feedback?'<p data-q-rich="feedback">'+esc(view.feedback.text)+'</p>':'')+(p.solved?'<p>Answer: '+esc(correct.text)+'</p><p data-q-rich="explanation">'+esc(q.explanation)+'</p>':'')+'</div>'+
     supports+
     '<div class="education-actions">'+(p.solved?button(destination,'education-continue','btn primary')+button(record.stepsViewed?'Hide Steps':'Show Steps','education-steps','btn subtle','aria-expanded="'+record.stepsViewed+'"'):button('Check Answer','education-check','btn primary',selected?'':'disabled')+button(p.hinted?'Hint Shown':'Hint','education-hint','btn subtle',p.hinted?'disabled':'')+button(record.hintState.moreHintViewed?'More Hint Shown':'More Hint','education-more-hint','btn subtle',!view.moreHint||record.hintState.moreHintViewed?'disabled':''))+button('Basics','education-basics','btn subtle')+button('Learning Progress','education-progress','text-btn')+'</div></div>':

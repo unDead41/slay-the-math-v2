@@ -1,3 +1,34 @@
+# Slay the Math — Education 2.15.0
+
+Branch `education` menambah **Education Practice** pada main menu dan mengaktifkan bank harmonisasi buku teks/DSKP 1.6. Hint 1 terus mengisi nilai jadual/rajah, tanpa tanda soal. Rekod latihan berasingan daripada run/ganjaran.
+
+Dalam terminal PowerShell VS Code untuk projek asal, hentikan server dengan Ctrl+C, kemudian:
+
+```powershell
+git fetch origin
+git switch education
+git pull --ff-only origin education
+npm.cmd start
+```
+
+Buka http://localhost:4173 dan tekan Ctrl+F5. Pilih **Education Practice** untuk semua 120 soalan, atau Continue untuk sambung run. Tiada pakej npm diperlukan untuk bermain. Di bawah setiap soalan ada kategori penambahbaikan dan ruang komen. Komen disimpan pada peranti; gunakan Download comments atau Share comments untuk menghantarnya kepada Ijamm. Apabila keluar ke Main Menu, popup mengingatkan pemain supaya berkongsi komen untuk penambahbaikan.
+
+Untuk fail offline terkini:
+
+```powershell
+npm.cmd run build
+```
+
+Buka `MAIN-SEKARANG.html` yang baru dijana. Fail ini kini hasil binaan tempatan, bukan fail yang disimpan di Git, kerana versi penuh artwork/animasi melebihi had satu fail GitHub. Jangan guna salinan HTML lama untuk menilai perubahan branch ini.
+
+Rujukan semasa dan bukti: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
+
+---
+
+## Panduan ZIP 2.5.0 terdahulu
+
+Kandungan di bawah ialah rekod installer lama; cara Git di atas ialah arahan untuk branch semasa.
+
 # Slay the Math - Education Update 2.5.0
 
 Sekarang Claim & Choose Your Path membuka soalan sebenar daripada bank 120. Bukan PDF sahaja. Pilih A-D, tekan Check Answer, baca penerangan, kemudian claim artifact dan pilih laluan.
@@ -41,3 +72,8 @@ Runtime 2.5 diperlukan untuk membuka save yang sedang berada di scene soalan. Ek
 Syntax/build, model soalan, save/restore, no-repeat 120 item, DOM, browser desktop/phone/4K, tiga topik, effects artifact, checkpoint Boss, map dan HTML offline sebenar disemak. Bukti terperinci: payload/docs/EDUCATION_UPDATE_2_5_0.md, payload/VERIFICATION-EDUCATION.json dan PACKAGE-VALIDATION.json.
 
 Installer belum dijalankan pada Windows di sini; semakan statik dan simulasi hash pemasangan/idempotence/rollback disediakan. Artwork 4K dalam ARTWORK ialah eksport upscale 3840x2160 daripada sumber 1672x941 yang sama, bukan native 4K baharu.
+
+
+## 2.16.0 — Bahasa soalan
+
+Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Fungsi pendidikan ini kini tersedia pada main.

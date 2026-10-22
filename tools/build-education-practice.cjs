@@ -3,8 +3,8 @@ const fs=require('node:fs'),path=require('node:path');
 module.exports=function buildEducationPractice(project,registry){
  const source=path.join(project,'modules/mechanics/source'),qb=path.join(source,'QUESTION_BANK');
  const read=name=>fs.readFileSync(path.join(qb,name),'utf8');
- const css=['../STM_SHARED/rich-text.css','learning/learning.css','learning/preview.css'].map(read).join('\n');
- const modules=['more-hint-state.mjs','rich_text/renderer.mjs','learning/support-visual.mjs','learning/session.mjs','learning/visual-renderer.mjs','learning/preview.mjs'];
+ const css=['../STM_SHARED/rich-text.css','learning/learning.css','learning/preview.css','learning/question-feedback.css'].map(read).join('\n');
+ const modules=['more-hint-state.mjs','rich_text/renderer.mjs','learning/support-visual.mjs','learning/session.mjs','learning/visual-renderer.mjs','learning/question-feedback.mjs','learning/question-feedback-ui.mjs','learning/preview.mjs'];
  let script=modules.map(read).join('\n').replace(/^import [^\n]+\n/gm,'').replace(/\bexport (?=(?:function|const|class)\b)/g,'');
  script='globalThis.STMSharedGlossary='+JSON.stringify(registry)+';\n'+read('../STM_SHARED/rich-text.js')+'\nconst sharedRichText=globalThis.STMSharedRichText;\n'+script;
  const template=read('learning/preview.html').replace('__STYLE__',()=>css).replace('__SCRIPT__',()=>script);

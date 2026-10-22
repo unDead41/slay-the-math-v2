@@ -106,3 +106,8 @@ For 2.11.0 verify the supplied suite independently, original question/choice/eff
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12 acceptance: six-card/six-artifact 3×2 layouts, exactly one 60% sale, all purchase/removal/discount/cancel/reload paths, legacy shops and giftless Challenge, no duplicate one-shot effects or forged state; both bosses all sixty frame timings, anatomy floor and VFX bounds, live reactions/reduced motion/fallback/offline. Keep the all-120-item integration browser regression and read-only question audit. Actual results: docs/verification/release-2-12.json.
+
+
+## Question feedback — 2.15.0
+
+Verify all 120 question-to-comment bindings and reload/edit behavior; Hint/Review/Learning reset must preserve comments, run and rewarded history. Cover multi-tab writes, corrupt/quota storage, inert text, CSV formula safety, explicit file download/share, cancelled/unsupported sharing, and trusted frame/origin exit gating. Inspect the real game popup and narrow layout. Distinguish stubbed native Share from OS recipient testing. Evidence: docs/verification/question-feedback/report.json and docs/QUESTION_FEEDBACK_2_15_0.md.

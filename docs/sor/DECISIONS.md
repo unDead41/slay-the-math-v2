@@ -302,3 +302,13 @@ Owners: SOR 02/07/09/10/11/12/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Impleme
 | DEC-20261022-MYSTERY-02 | DITERUSKAN | Active Question Bank/STM service and profile exposure history are reused. The older bank snapshot is not imported. Event/reward/question RNG remain independent; saved choices/deadline/targets/offers persist. |
 | DEC-20261022-MYSTERY-03 | DITERUSKAN | Atomic effect dispatcher, once-only receipts, consumed-artifact ledger, Max HP sacrifice, stage-correct Echo combat and next-combat/first-turn modifiers are implemented and regression-tested. Source numeric balance remains proposed. |
 | DEC-20261022-MYSTERY-04 | DITERUSKAN | Runtime uses current-scene 1920/960 WebP derivatives; source hashes and documented four-row ME04 margin recovery are in mystery-art.json. Native dungeon UI/rich text is retained. Legacy pending Artifact gifts and checkpoints keep their existing flow. |
+
+
+## Question feedback — 22 October 2026, game 2.15.0
+
+| ID | Status | Decision |
+|---|---|---|
+| DEC-20261022-FEEDBACK-01 | DISAHKAN | Ijamm requests per-question improvement comments/categories in education-only practice, the reassurance that comments are read, and an exit popup explaining collection for future improvements. |
+| DEC-20261022-FEEDBACK-02 | DITERUSKAN | Reuse Main Menu Education Practice and all 120 questions. Save one editable comment per question/bank on the device; provide CSV/JSON download and native file sharing with fallback so players can send to Ijamm when connected. State clearly that no automatic delivery is configured. Keep comments separate from game/reward/Learning data and preserve the education branch boundary. |
+
+Owners: SOR 10/13/15; implementation and delivery limits: [Question feedback](../QUESTION_FEEDBACK_2_15_0.md).

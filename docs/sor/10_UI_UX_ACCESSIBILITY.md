@@ -145,3 +145,8 @@ All 31 artifact rules use the same segmented-description owner in choices, pendi
 ## Education Practice — 2.14.0
 
 The user requests a sixth Main Menu action for education only. **Education Practice** opens the full 120-question folio with a persistent, native Main Menu return and focus restored to its trigger. Keep the existing menu artwork and 44px minimum targets. The folio owns its responsive atlas, theme/language controls and tooltip document. Fill table/Venn values directly in Hint 1 as requested in the latest screenshots; use “Not given” only for mathematically unspecified data. More Hint explains the filled reference. Keep final selection marks and the final answer panel in the solution stage. Artifact/Mystery screens use the same clearer question context and gated source notes. Details: [Education 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).
+
+
+## Question feedback — 2.15.0
+
+Education Practice adds categories and plain-text comments below every question, with “Yes, we do read your comments.” Use native checkbox labels, textarea, Save, live status and 44px controls. Main Menu/Finish practice opens one native exit dialog with comment count, delivery explanation, export/share and keep-reviewing/return actions. Restore focus on cancellation and return. Clearly distinguish saved-on-device comments from comments shared with Ijamm. Owner and limits: [Question feedback](../QUESTION_FEEDBACK_2_15_0.md).

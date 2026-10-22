@@ -24,6 +24,10 @@ let browser,server;
  await page.reload();
  const saved=()=>page.evaluate(()=>Object.fromEntries(['duel-cube-math.v1','duel-cube-question-history.v1'].map(k=>[k,localStorage.getItem(k)])));
  const before=await saved();
+ const closePractice=async()=>{
+  await page.locator('[data-action=education-practice-back]').click();
+  await page.frameLocator('#education-practice-frame').locator('#feedback-exit-confirm').click();
+ };
  const open=async()=>{
   await page.locator('[data-action=education-practice]').click();
   const frame=page.frameLocator('#education-practice-frame');
@@ -76,7 +80,7 @@ let browser,server;
  const learningKey='slay-the-math.education-practice.v1';
  assert.ok(await page.evaluate(key=>localStorage.getItem(key),learningKey));
  assert.deepEqual(await saved(),before,'practice must not write the run or rewarded exposure history');
- await page.locator('[data-action=education-practice-back]').click();
+ await closePractice();
  assert.equal(await page.locator('[data-action=education-practice]').isVisible(),true);
  await page.reload();frame=await open();await frame.locator('#resume-learning').click();
  assert.equal(await frame.locator('#question-select').inputValue(),pendingId);
@@ -88,7 +92,7 @@ let browser,server;
   const outer=await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
   const inner=await frame.locator('body').evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
   assert.ok(outer&&inner,'practice overflow at '+width);
-  await page.locator('[data-action=education-practice-back]').click();
+  await closePractice();
   const buttons=await page.locator('.main-menu-actions>button').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {height:r.height,left:r.left,right:r.right};}));
   assert.equal(buttons.length,6);for(const b of buttons)assert.ok(b.height>=44&&b.left>=0&&b.right<=width);
   frame=await open();report.viewports.push({width,height,overflow:false});

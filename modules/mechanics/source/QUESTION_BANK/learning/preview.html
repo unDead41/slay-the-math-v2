@@ -75,14 +75,28 @@
    <section class="support" role="tabpanel" aria-labelledby="more-hint-tab" id="more-hint-panel" hidden><h4>A more specific next step</h4><p id="more-hint-text"></p><div class="learning-visual" id="more-hint-visual"></div></section>
   </section>
   <section class="answer-panel" id="answer-panel" hidden aria-labelledby="answer-title"><p class="section-kicker" id="solution-kicker">The completed idea</p><h3 id="answer-title"></h3><p id="explanation"></p><button id="show-steps" aria-expanded="false" aria-controls="worked-steps">Show Steps</button><ol class="learning-worked-steps" id="worked-steps" hidden></ol><details id="solution-visual-details"><summary>See the completed visual</summary><div class="learning-visual" id="solution-visual"></div></details></section>
+  <section class="question-feedback" id="question-feedback" aria-labelledby="feedback-title">
+   <div class="feedback-heading"><div><p class="section-kicker">Help shape the next version</p><h3 id="feedback-title">Help improve this question</h3><p class="feedback-reassurance">Yes, we do read your comments.</p></div><span id="feedback-question-id" class="feedback-question-id"></span></div>
+   <p class="small-note">Tell us what needs work. Choose any that apply, or write your own comment.</p>
+   <form id="question-feedback-form">
+    <fieldset><legend>What could we improve?</legend><div class="feedback-categories" id="feedback-categories"></div></fieldset>
+    <label class="feedback-text-label" for="feedback-comment">Your comment <span>(optional)</span></label>
+    <textarea id="feedback-comment" rows="4" maxlength="2000" placeholder="For example: the Hint explains the rule, but I need a clearer example." aria-describedby="feedback-input-help feedback-character-count feedback-status"></textarea>
+    <div class="feedback-input-note"><span id="feedback-input-help">Saved automatically on this device. Please leave out personal details.</span><span id="feedback-character-count">0 / 2,000</span></div>
+    <button type="submit" id="feedback-save">Save comment</button><p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
+   </form>
+   <div class="feedback-tools"><strong id="feedback-count">0 questions have a comment</strong><p>Download or share your comments with Ijamm for future improvements. Nothing is sent automatically.</p><p class="feedback-warning" id="feedback-storage-warning" role="status" hidden></p><div class="feedback-buttons"><button data-feedback-export="csv">Download comments (.csv)</button><button data-feedback-export="json">Download JSON</button><button data-feedback-share>Share comments</button></div></div>
+  </section>
   <details class="source-details" id="source-details"><summary><span>Sources &amp; curriculum fit</span><span class="alignment-badge" id="alignment-badge"></span></summary><div id="source-alignment"></div><div id="question-sources"></div><p class="source-explainer">PDF pages count from the first page of each file. Printed pages are the page labels inside the book. These references support the mathematics; the game scenario is local to this question.</p></details>
   <footer class="folio-navigation"><div><button id="previous-question" class="text-button">← Previous</button><button id="restart-review" class="text-button">Reset this review</button></div><button id="next-question">Next review <span aria-hidden="true">→</span></button><p id="next-question-note" class="small-note"></p></footer>
  </article>
  <div class="term-guide"><div class="legend" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div><p>Hover, focus or tap an underlined term. Press Escape or tap outside to close it.</p></div>
- <p class="page-footnote">An offline question bank for Slay the Math. Your learning record stays in this browser.</p>
+ <div class="feedback-session-footer"><p>Finished testing? Your comments can help improve the next version.</p><button id="feedback-finish">Finish practice</button></div>
+ <p class="page-footnote">An offline question bank for Slay the Math. Your learning record and comments stay in this browser until you share them.</p>
 </div>
 </div>
 <dialog id="reset-learning-dialog" aria-labelledby="reset-title" aria-describedby="reset-description"><p class="section-kicker">A fresh page</p><h2 id="reset-title">Start a fresh learning record?</h2><p id="reset-description">This clears the learning progress saved in this browser. Every question will be unseen again. Your open Review questions stay available.</p><div class="dialog-actions"><button id="cancel-reset-learning" autofocus>Keep my progress</button><button id="confirm-reset-learning" class="primary-button">Start fresh</button></div></dialog>
+<dialog id="feedback-exit-dialog" aria-labelledby="feedback-exit-title" aria-describedby="feedback-exit-summary feedback-exit-delivery"><p class="section-kicker">Help shape future improvements</p><h2 id="feedback-exit-title">Thank you for trying the questions.</h2><p class="feedback-reassurance">Yes, we do read your comments.</p><p id="feedback-exit-summary"></p><p id="feedback-exit-delivery"></p><div class="feedback-buttons"><button data-feedback-export="csv">Download comments (.csv)</button><button data-feedback-export="json">Download JSON</button><button data-feedback-share>Share comments</button></div><p id="feedback-exit-status" class="feedback-status" role="status" aria-live="polite"></p><div class="dialog-actions"><button id="feedback-exit-cancel" autofocus>Keep reviewing</button><button id="feedback-exit-confirm" class="primary-button">Return to Main Menu</button></div></dialog>
 </main>
 <script type="application/json" id="preview-data">__DATA__</script>
 <script>__SCRIPT__</script>

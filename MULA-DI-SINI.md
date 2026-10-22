@@ -1,4 +1,4 @@
-# Slay the Math — Education 2.14.0
+# Slay the Math — Education 2.15.0
 
 Branch `education` menambah **Education Practice** pada main menu dan mengaktifkan bank harmonisasi buku teks/DSKP 1.6. Hint 1 terus mengisi nilai jadual/rajah, tanpa tanda soal. Rekod latihan berasingan daripada run/ganjaran.
 
@@ -7,10 +7,11 @@ Dalam terminal PowerShell VS Code untuk projek asal, hentikan server dengan Ctrl
 ```powershell
 git fetch origin
 git switch education
+git pull --ff-only origin education
 npm.cmd start
 ```
 
-Buka http://localhost:4173 dan tekan Ctrl+F5. Pilih **Education Practice** untuk semua 120 soalan, atau Continue untuk sambung run. Tiada pakej npm diperlukan untuk bermain.
+Buka http://localhost:4173 dan tekan Ctrl+F5. Pilih **Education Practice** untuk semua 120 soalan, atau Continue untuk sambung run. Tiada pakej npm diperlukan untuk bermain. Di bawah setiap soalan ada kategori penambahbaikan dan ruang komen. Komen disimpan pada peranti; gunakan Download comments atau Share comments untuk menghantarnya kepada Ijamm. Apabila keluar ke Main Menu, popup mengingatkan pemain supaya berkongsi komen untuk penambahbaikan.
 
 Untuk fail offline terkini:
 

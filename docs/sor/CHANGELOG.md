@@ -216,3 +216,11 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Expand Shop to two 3×2 racks, one 60%-off card, tiered artifact purchases in both modes and a paid once-per-visit removal service. Preserve legacy visits and free-gift questions.
 - Audit all 120 items and report denominator/common-denominator support harmonization to the source owner without modifying the bank.
 - Exact rules and verification: docs/GAME_UPDATE_2_12_0.md and docs/verification/release-2-12.json.
+
+
+## 2.15.0 — 22 October 2026 (Malaysia)
+
+- Add improvement categories, editable per-question comments and the requested reassurance to all 120 Education Practice questions.
+- Persist independently of game/reward/Learning; preserve unreadable originals and surface storage failures.
+- Add an exit reminder, CSV/JSON download and explicit native file sharing/download fallback. Clarify local saving versus delivery to Ijamm.
+- Keep the active question bank, answers, Hint values, artwork and engine unchanged. See docs/QUESTION_FEEDBACK_2_15_0.md.

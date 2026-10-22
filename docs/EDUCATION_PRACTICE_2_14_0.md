@@ -45,3 +45,8 @@ Actual results and screenshots are recorded in `docs/verification/education-prac
 - `git diff --check`: clean.
 
 Physical Windows/browser-device testing is outside this automated Linux/Chromium check.
+
+
+## Follow-up 2.15.0 — question comments
+
+The practice folio now adds independent improvement comments and explicit collection/export sharing. Main Menu return opens an exit reminder before closing the folio. See [Question feedback](QUESTION_FEEDBACK_2_15_0.md) for current behavior, delivery limits and verification.

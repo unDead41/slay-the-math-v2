@@ -1,4 +1,4 @@
-# Slay the Math — Education Edition 2.14.0
+# Slay the Math — Education Edition 2.15.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -13,6 +13,9 @@ supplied 100-seed map module, original icon PNGs, exported layouts, tests and SO
 **Education Practice** is available directly on the main menu, without starting a run.
 It reuses the full 120-question folio: browse, Hint/More Hint, worked solutions,
 Basics, English/BM term meanings and a separate saved learning session.
+Each question now has improvement categories and a comment box. Comments save on
+this device; the exit reminder offers CSV/JSON download and file sharing for Ijamm.
+See [question feedback and delivery limits](docs/QUESTION_FEEDBACK_2_15_0.md).
 The same harmonized 1.6 bank is active in Artifact trials and Mystery challenges.
 See [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
 

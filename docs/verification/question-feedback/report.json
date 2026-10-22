@@ -1,0 +1,49 @@
+{
+  "version": "2.15.0",
+  "branch": "education",
+  "node": {
+    "command": "DOM_QA_MODULE=<qa-runtime>/node_modules/jsdom node --test tests/*.test.cjs",
+    "tests": 193,
+    "pass": 193,
+    "fail": 0,
+    "skipped": 0
+  },
+  "feedbackChecks": {
+    "questions": 120,
+    "independentPersistence": true,
+    "survivesReopenAndReset": true,
+    "multiCategoryAndEditing": true,
+    "corruptAndQuotaStorage": true,
+    "crossTabMerge": true,
+    "csvFormulaSafety": true,
+    "shareCancelAndFallback": true,
+    "trustedFrameExitOnly": true
+  },
+  "browser": {
+    "route": "Main Menu → Education Practice → question comment → exit reminder → cancel/confirm → reopen",
+    "passed": true,
+    "standaloneFinishDialog": true,
+    "csvDownload": {
+      "actualDownloadedFile": true,
+      "records": 2,
+      "questionIds": [
+        "PROB-001",
+        "PROB-003"
+      ]
+    },
+    "narrowLayout": {
+      "gameWidth": 390,
+      "practiceViewportWidth": 375,
+      "documentScrollWidth": 375,
+      "dialogWidth": 343,
+      "dialogHeight": 665.8125,
+      "viewportHeight": 771,
+      "horizontalOverflow": false
+    }
+  },
+  "limits": [
+    "Native sharing was verified with stubs; real OS recipient selection was not automated.",
+    "Physical Windows/mobile testing remains manual.",
+    "No automatic server delivery is configured. Comments are shared/downloaded explicitly."
+  ]
+}

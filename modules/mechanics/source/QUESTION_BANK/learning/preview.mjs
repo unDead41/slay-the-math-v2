@@ -11,6 +11,7 @@ let session,storageError='',storagePaused=false,storageAvailable=true,savedLearn
 let question=bank.questions[0],selectedChoice=null,attemptCounter=0,mode='review',empty=false;
 let lastRenderedQuestionKey=null,atlasIsOpen=false;
 const tips=attachRichTextTooltips(root,{glossary,calculationIndex,getLanguage:()=>byId('language-select').value,getTheme:()=>root.dataset.theme});
+const questionFeedback=attachQuestionFeedback({bank,root,getQuestion:()=>question,getRecord:()=>currentRecord(),getMode:()=>mode});
 
 try{savedLearningText=localStorage.getItem(storageKey);}
 catch{storageAvailable=false;storageError='Saving between visits is unavailable. Your progress will stay available while this page is open.';}
@@ -304,7 +305,7 @@ function render(){
  byId('choice-feedback-panel').hidden=!wrongFeedback;
  byId('choice-feedback-title').textContent=wrongFeedback?`Answer ${question.choices.find(c=>c.id===record.lastChoiceId)?.label||''} · try this idea`:'Try this idea';
  rich('choice-feedback',wrongFeedback?view.feedback.richText:[]);
- renderSupport(view,record);renderSolution(view,record);
+ renderSupport(view,record);renderSolution(view,record);questionFeedback.render();
  byId('next-question').disabled=mode==='learn'&&!!session.pendingQuestionId;
  byId('next-question').textContent=mode==='learn'?'Next unseen question →':'Next review →';
  byId('next-question-note').textContent=mode==='learn'&&session.pendingQuestionId?'Finish this question or view its solution to continue.':mode==='learn'?'Your next question has not been seen in this learning record.':'';
@@ -390,5 +391,5 @@ byId('confirm-reset-learning').addEventListener('click',()=>{
  persist();byId('reset-learning-dialog').close();
  if(mode==='learn')nextLearningQuestion();else render();
 });
-for(const button of root.querySelectorAll('button'))button.type='button';
+for(const button of root.querySelectorAll('button'))if(button.id!=='feedback-save')button.type='button';
 render();setAtlasOpen(false);

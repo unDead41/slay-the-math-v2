@@ -84,3 +84,6 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 ## Boss size — game 2.13.2
 
 [Boss size correction and verification](docs/BOSS_SIZE_2_13_2.md): per-boss host calibration and responsive framing; owners SOR 07/11.
+
+
+- [20 — Developer Tools](docs/sor/20_DEVELOPER_TOOLS.md): development/production commands, sandbox scenes, card states, motion, presets and diagnostics.

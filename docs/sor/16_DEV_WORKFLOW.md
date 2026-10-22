@@ -66,3 +66,8 @@ Templat tersedia dalam [17](17_AI_PROMPTS_TEMPLATES.md).
 Sheet MC/kad baharu ialah input reka bentuk. Pelan perlu mengutamakan graph, alias/English dan room minimum; jangan membina semula statistik tempur yang tidak berubah. T2/T3 memerlukan bank/flow yang diuji, bukan sekadar menambah simbol pada art.
 
 Sasaran 14 hari perlu dinilai semula terhadap source dan masa sebenar kerana skop room bertambah. Kurangkan variasi event, stok, animasi dan dialog dahulu; jangan membuang permintaan map bercabang atau ketepatan matematik.
+
+
+## Developer Hub — 2.21.0
+
+Use `npm run start:dev` for the sandbox on port 4174, and `npm run start:prod` for a fresh player build/preview on port 4173. `npm start` remains compatible. Setup, isolation and actual supported controls: [Developer Tools](20_DEVELOPER_TOOLS.md).

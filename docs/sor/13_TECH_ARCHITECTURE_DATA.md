@@ -181,3 +181,8 @@ DITERUSKAN: combat-log.js owns optional v1 bounded structured battle history (80
 ## Passive and supplied audio — 2.20.0
 
 `cardCombat.passiveRule`, bounded `passiveHistory`, `passive_swap` and legacy `passive_trim` extend existing atomic card/save validation; the cap is configured once. Optional `run.audioPresentation` stores a bounded encounter ledger outside gameplay and checkpoint copies retain its own snapshot. The app recovers only audio metadata, observes visible surfaces before save and dispatches frozen encounters to audio. Registry-generated catalog, canonical `DC_MUSIC`/`DC_VOICE` portable keys and independent settings retain offline behavior. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+
+## Developer Tools — 2.21.0
+
+Development-only server response adapters and memory storage isolate previews from player progress; production copies dist without tools/dev. Run schema is unchanged. Ownership: [20](20_DEVELOPER_TOOLS.md).

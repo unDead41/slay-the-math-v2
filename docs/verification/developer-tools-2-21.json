@@ -1,0 +1,61 @@
+{
+  "version": "2.21.0",
+  "baseVersion": "2.20.0",
+  "baseCommit": "0b00688512a55767ceec24f340110e7dfde9f22a",
+  "status": "DEV_FEATURE_CHECKS_PASSED_WITH_LEGACY_QA_LIMITATIONS",
+  "checks": {
+    "syntax": "npm run check passed",
+    "fixtures": {
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "engineCardAnimationMysteryPassiveRegression": {
+      "tests": 174,
+      "passed": 174,
+      "failed": 0
+    },
+    "cardGameDOM": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "shopDOM_jsdom26": {
+      "tests": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "devBrowser": "passed: real scenes, actual card play, four/two card states, motion seek/step/teardown, exact restart, presets, player and practice storage isolation, 750px viewport",
+    "productionBuild": "npm run build:prod passed; release-prod and portable artifact exclude tools/dev",
+    "productionHTTP": "four direct developer routes returned 404; player metadata is 2.21.0",
+    "productionPlayerBrowser": "passed: Menu \u2192 New Run \u2192 Learn \u2192 Map \u2192 Combat; no developer API and no page errors"
+  },
+  "broaderSuiteAttempts": {
+    "withoutJsdom": "352 pass, 68 skip; 3 files could not load jsdom",
+    "jsdom30PerFile": {
+      "finishedTests": 401,
+      "passed": 400,
+      "failed": 1,
+      "timedOutFiles": [
+        "math-display.test.cjs",
+        "question-feedback-ui.test.cjs"
+      ],
+      "failure": "shop-layout expected CSS 0 versus jsdom 0px; passed when rerun with jsdom 26.1.0"
+    },
+    "jsdom26Remaining": "math-display.test.cjs and question-feedback-ui.test.cjs still exceeded a 40 second focused timeout",
+    "legacyBrowserSmoke": "blocked on disabled Continue after fixture setup; not counted as a passing end-to-end run"
+  },
+  "limits": [
+    "MODEL.zip was unavailable; existing Slay the Math animation data used; no Mathmon editor import claimed",
+    "Full motion timeline/VFX authoring and additional setup extensions are listed in docs/sor/20_DEVELOPER_TOOLS.md",
+    "No assertion that the entire historical QA suite passes"
+  ],
+  "unchangedGameplaySources": [
+    "dist/app.js",
+    "dist/engine.js",
+    "dist/card-combat.js",
+    "dist/mystery.js",
+    "dist/animation.js"
+  ],
+  "notes": "Original artwork, balances and player save schema unchanged. Development APIs exist only in server-transformed responses."
+}

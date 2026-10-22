@@ -132,3 +132,8 @@ Restore normalizes overfull legacy hands after validation, preserving excess UID
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12 additive shop version 2: six frozen card offers/base prices/sale, card bought indices, ownedBefore entry snapshot, six tiered artifact offers and bought indices, and removed physical card or null. Restore recomputes offers, validates all purchase/ownership sources and rejects forged price/tier/sale/removal state. Legacy three-card shops continue until departure. Paid purchases are synchronous, once-only and independent of question/animation RNG. Artifact state may exist in Learn after paid purchase; optional shopOnly:true represents a legacy Challenge without an opening gift, without retroactive acquisition. No replay of purse/ration on restore. Run schema/key stays 1.
+
+
+## Mystery Events — 2.13.0
+
+Optional mysteryState v2 owns independent RNG, used event IDs, frozen offers, question/choice/deadline/outcome, selected targets, settlement keys, modifier queue and Max HP sacrifice. Artifact trades add a validated consumed ledger; education accepts Mystery exposures in both modes. Required random payloads are validated before restoring/importing. Run envelope stays version 1; source and schema details: [MYSTERY_EVENTS.md](MYSTERY_EVENTS.md).

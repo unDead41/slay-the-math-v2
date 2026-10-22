@@ -159,3 +159,8 @@ The current dialog wrapper, toast, collection search and button owners remain sh
 ## Map, modes, Boss motion and Shop 2.12.0
 
 Map art receives a parchment wash so navigation ink leads. Explicit Floor labels and stronger text-backed entry badges share the existing journey owner. Mode choices use balanced illustrated book/sword medallions. Shop extends cardView/ornate panels to two 3×2 racks, with local narrow scrolling, visible artifact effects, natural page height and a sticky contained merchant-art column. Bosses extend the shared player, preserving source direction and anatomical pivots with a matching per-boss host floor. Existing palette/type, native buttons, rich text, dialog/toast and scrollbars stay canonical.
+
+
+## Mystery Events — 2.13.0
+
+Mystery Events extend the established dungeon palette, Georgia/Cambria headings, Trebuchet/Segoe body, ornate-panel, cardView, button/dialog/toast and shared rich-text renderer. mystery.css owns only the two-column room composition; the full supplied artwork appears before the live panel on narrow screens. Cards own local horizontal scrolling; the document remains naturally scrollable. Native A–D controls submit one answer, while sibling underlined terms open help. A textual fixed countdown uses tabular digits and restrained urgency color; no motion changes numeric outcomes. Source/runtime contracts: docs/MYSTERY_EVENTS_2_13_0.md.

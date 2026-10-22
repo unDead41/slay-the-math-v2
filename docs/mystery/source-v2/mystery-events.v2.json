@@ -1,0 +1,1696 @@
+{
+  "schemaVersion": 2,
+  "packageVersion": "2.0.0",
+  "status": "ART_AND_MECHANIC_SPECIFICATION_FOR_INTEGRATION",
+  "language": "en",
+  "eventCount": 15,
+  "topics": {
+    "PROB": {
+      "topicId": "T1",
+      "chapter": 9,
+      "name": "Probability of Combined Events",
+      "malay": "Kebarangkalian Peristiwa Bergabung",
+      "seedBase": 1000
+    },
+    "SET": {
+      "topicId": "T2",
+      "chapter": 4,
+      "name": "Operations on Sets",
+      "malay": "Operasi Set",
+      "seedBase": 2000
+    },
+    "LOGIC": {
+      "topicId": "T3",
+      "chapter": 3,
+      "name": "Logical Reasoning",
+      "malay": "Penaakulan Logik",
+      "seedBase": 3000
+    }
+  },
+  "questionBank": {
+    "file": "data/question-bank-form4-120.json",
+    "bankVersion": "form4-review-1.0.0",
+    "sha256": "d3c272674a4dfefc22ef2ef6a7be0d7c62ca115ea5efd6dadfabdb2ecf12a1d0",
+    "questionCount": 120,
+    "perTopic": 40,
+    "sourceStatus": "DRAFT_FOR_IJAMM_REVIEW",
+    "edited": false,
+    "snapshotOnly": true,
+    "activeIntegration": "REUSE_CURRENT_SHARED_QUESTION_SERVICE; validate topicCode, id, choices and correctChoiceId through an adapter."
+  },
+  "rules": {
+    "eventSelection": {
+      "withoutReplacement": true,
+      "exposureScope": "RUN",
+      "markUsedWhen": "EVENT_INTRO_FIRST_RENDER",
+      "eligibleOnly": true,
+      "rngStream": "MYSTERY_EVENTS",
+      "emptyPool": "SHOW_NO_CHALLENGE_CONTINUE_WITHOUT_REWARD_OR_PENALTY"
+    },
+    "questionSelection": {
+      "withoutReplacement": true,
+      "exposureScope": "PROFILE_UNTIL_EXPLICIT_BANK_RESET",
+      "sharedConsumers": [
+        "ARTIFACT_SELECTION",
+        "MYSTERY_EVENT"
+      ],
+      "reserveWhen": "QUESTION_FIRST_RENDER",
+      "persistPendingQuestionAndChoiceOrder": true,
+      "newRunResetsUsedQuestionIds": false,
+      "preferredPoolFirst": true,
+      "fallbackSameTopicOnly": true,
+      "neverSilentlyRecycle": true,
+      "rngStream": "EDUCATION_QUESTIONS",
+      "exhaustion": "DO_NOT_APPLY_EFFECTS_OR_CONSUME_RESOURCES"
+    },
+    "timer": {
+      "durationPolicy": "FIXED_PER_EVENT",
+      "durationSource": "event.timeLimitSeconds",
+      "allowAutomaticDifficultyExtension": false,
+      "startWhen": "QUESTION_AND_CHOICES_VISIBLE_AND_INTERACTIVE",
+      "pauseOnBlur": false,
+      "persistAbsoluteDeadline": true,
+      "resumeExistingDeadline": true,
+      "successBoundary": "ANSWER_RECEIVED_AT_STRICTLY_BEFORE_DEADLINE",
+      "wrongAnswerEndsChallenge": true,
+      "attempts": 1,
+      "answerAfterDeadline": "TIMEOUT"
+    },
+    "costs": {
+      "chargeOnlyAfterCorrectAnswerAndPlayerConfirmation": true,
+      "requireFullCost": true,
+      "minimumHpAfterHpPayment": 1,
+      "minimumMaxHpAfterMaxHpPayment": 1,
+      "clampCurrentHpOnMaxHpReduction": true,
+      "atomicWithReward": true
+    },
+    "failureDamage": {
+      "nonLethal": true,
+      "minimumHp": 1,
+      "ignoreCombatBlockAndDefense": true,
+      "fullPenaltyPreviewBeforeStart": true
+    },
+    "cardRewards": {
+      "displayUniqueCardIds": true,
+      "allowDuplicateOwnedCardsInDeck": true,
+      "offerCountMaximum": 3,
+      "persistOffersBeforeDisplay": true,
+      "randomStream": "MYSTERY_REWARDS",
+      "doNotMixCardCategories": true
+    },
+    "artifactRewards": {
+      "allowedTiers": [
+        "STARTING",
+        "ELITE_MYSTERY"
+      ],
+      "excludeBoss": true,
+      "excludeOwned": true,
+      "persistRandomArtifactBeforeDisplayOrConfirmation": true,
+      "tradeRemovalRecalculatesStats": true
+    },
+    "modifiers": {
+      "applyTo": "NEXT_REAL_COMBAT_INCLUDING_ELITE_BOSS_OR_FORCED_ECHO",
+      "stackPolicy": "SUM_ADDITIVE_MODIFIERS",
+      "clampEnergyMinimum": 0,
+      "consumeOncePerCombatId": true,
+      "discardAfterRunEnds": true,
+      "doNotConsumeInTutorialPracticeOrFailedCombatLoad": true
+    },
+    "settlement": {
+      "atomic": true,
+      "idempotencyKey": "RUN_ID_NODE_ID_EVENT_ID",
+      "persistDecisionBeforeTransition": true,
+      "noSecondRewardAfterReload": true,
+      "failedQuestionReviewBeforeForcedCombat": true
+    },
+    "skipPolicy": {
+      "beforeStart": "NO_QUESTION_EXPOSURE_NO_EFFECTS_EVENT_REMAINS_USED",
+      "afterStart": "SAME_AS_FAILURE",
+      "afterSuccess": "MAY_DECLINE_OPTIONAL_REWARDS_NO_COST",
+      "loadError": "NO_PENALTY_RESUME_SAME_PENDING_ITEM"
+    },
+    "balanceStatus": "PROPOSED_VALUES_REQUIRE_GAME_PLAYTESTING",
+    "richText": {
+      "themeSource": "EXISTING_STM_SHARED_THEME",
+      "calculation": {
+        "hover": "SOFT_PURPLE",
+        "underline": "DASHED"
+      },
+      "mathTerm": {
+        "hover": "SOFT_PINK",
+        "underline": "DASHED"
+      },
+      "gameTerm": {
+        "hover": "SOFT_GREEN",
+        "underline": "DASHED"
+      },
+      "preserveStructuredTokensFromActiveQuestionBank": true,
+      "doNotInjectRawHTML": true
+    }
+  },
+  "events": [
+    {
+      "id": "ME01",
+      "order": 1,
+      "name": "The Suspicious Chest",
+      "assetKey": "mystery_01_suspicious_chest",
+      "artwork": "scenes_8k/01_suspicious_chest_8k.png",
+      "artDirectionMalay": "Alyssa memeriksa peti dengan mekanisme perangkap.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "PROB",
+      "topicId": "T1",
+      "chapter": 9,
+      "education": {
+        "objectiveMalay": "Kira peluang memperoleh harta daripada kandungan peti yang ditunjukkan.",
+        "preferredQuestionIds": [
+          "PROB-001",
+          "PROB-002",
+          "PROB-003",
+          "PROB-004",
+          "PROB-005",
+          "PROB-006",
+          "PROB-007"
+        ],
+        "preferredCurriculumStandards": [
+          "9.1.1",
+          "9.2.3",
+          "9.3.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 30,
+      "intro": "A chest glows in the dark. Can you unlock it safely?",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "AUTOMATIC",
+        "summary": "+40 Gold.",
+        "options": [
+          {
+            "id": "claim_gold",
+            "label": "Take 40 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 40
+              }
+            ]
+          }
+        ],
+        "mayDecline": false
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 4 HP. No reward.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 4,
+            "nonLethal": true
+          }
+        ]
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 30,
+      "mechanicTable": {
+        "number": 1,
+        "eventName": "The Suspicious Chest",
+        "topicShortCode": "P",
+        "challengeMalay": "Kira peluang memperoleh harta daripada kandungan peti yang ditunjukkan.",
+        "timeLimitSeconds": 30,
+        "artworkMalay": "Alyssa memeriksa peti dengan mekanisme perangkap.",
+        "successMalay": "Peti terbuka dengan selamat. Dapat 40 Gold.",
+        "failureMalay": "Perangkap aktif. Hilang 4 HP, tanpa ganjaran."
+      }
+    },
+    {
+      "id": "ME02",
+      "order": 2,
+      "name": "The Ember Shrine",
+      "assetKey": "mystery_02_ember_shrine",
+      "artwork": "scenes_8k/02_ember_shrine_8k.png",
+      "artDirectionMalay": "Altar api dengan dua ukiran rune bertentangan.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "LOGIC",
+      "topicId": "T3",
+      "chapter": 3,
+      "education": {
+        "objectiveMalay": "Pilih penafian yang betul bagi pernyataan pada altar.",
+        "preferredQuestionIds": [
+          "LOGIC-007",
+          "LOGIC-008",
+          "LOGIC-009",
+          "LOGIC-010"
+        ],
+        "preferredCurriculumStandards": [
+          "3.1.2",
+          "3.1.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 30,
+      "intro": "The shrine offers power in exchange for a small sacrifice.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May pay 5 HP to upgrade one card.",
+        "options": [
+          {
+            "id": "upgrade",
+            "label": "Pay 5 HP: Upgrade a card",
+            "costs": [
+              {
+                "resource": "hp",
+                "amount": 5,
+                "minimumAfter": 1
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_UPGRADABLE_CARD"
+              }
+            ],
+            "effects": [
+              {
+                "type": "UPGRADE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "categories": [
+                  "Attack",
+                  "Defend",
+                  "Skill",
+                  "Passive"
+                ],
+                "excludeAtUpgradeCap": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 2 HP. No upgrade.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 2,
+            "nonLethal": true
+          }
+        ]
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 30,
+      "mechanicTable": {
+        "number": 2,
+        "eventName": "The Ember Shrine",
+        "topicShortCode": "L",
+        "challengeMalay": "Pilih penafian yang betul bagi pernyataan pada altar.",
+        "timeLimitSeconds": 30,
+        "artworkMalay": "Altar api dengan dua ukiran rune bertentangan.",
+        "successMalay": "Boleh korbankan 5 HP untuk upgrade satu kad.",
+        "failureMalay": "Api menyambar. Hilang 2 HP dan peluang upgrade tamat."
+      }
+    },
+    {
+      "id": "ME03",
+      "order": 3,
+      "name": "The Whispering Grimoire",
+      "assetKey": "mystery_03_whispering_grimoire",
+      "artwork": "scenes_8k/03_whispering_grimoire_8k.png",
+      "artDirectionMalay": "Grimoire terbuka dengan simbol terapung.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "SET",
+      "topicId": "T2",
+      "chapter": 4,
+      "education": {
+        "objectiveMalay": "Tentukan kesatuan dua set simbol pada halaman buku.",
+        "preferredQuestionIds": [
+          "SET-011",
+          "SET-012",
+          "SET-013",
+          "SET-014",
+          "SET-019"
+        ],
+        "preferredCurriculumStandards": [
+          "4.2.1"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "A forgotten book whispers about cards you have not learned.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "CHOOSE_REWARD",
+        "summary": "Choose one of up to three Skill cards for free.",
+        "options": [
+          {
+            "id": "learn_skill",
+            "label": "Learn a Skill",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_CARD_REWARD_CANDIDATE",
+                "category": "Skill"
+              }
+            ],
+            "effects": [
+              {
+                "type": "CHOOSE_CARD_REWARD",
+                "offerCount": 3,
+                "uniqueOffers": true,
+                "category": "Skill",
+                "pool": "EXISTING_GAME_CARD_REWARD_POOL",
+                "addCount": 1
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The book closes. No card.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 3,
+        "eventName": "The Whispering Grimoire",
+        "topicShortCode": "S",
+        "challengeMalay": "Tentukan kesatuan dua set simbol pada halaman buku.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Grimoire terbuka dengan simbol terapung.",
+        "successMalay": "Pilih satu daripada tiga Skill cards, secara percuma.",
+        "failureMalay": "Buku tertutup. Tiada kad diperoleh."
+      }
+    },
+    {
+      "id": "ME04",
+      "order": 4,
+      "name": "The Cracked Mirror",
+      "assetKey": "mystery_04_cracked_mirror",
+      "artwork": "scenes_8k/04_cracked_mirror_8k.png",
+      "artDirectionMalay": "Pantulan Alyssa memegang kad berbeza.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "LOGIC",
+      "topicId": "T3",
+      "chapter": 3,
+      "education": {
+        "objectiveMalay": "Kenal pasti implikasi yang sepadan dengan petunjuk cermin.",
+        "preferredQuestionIds": [
+          "LOGIC-014",
+          "LOGIC-016",
+          "LOGIC-017",
+          "LOGIC-018",
+          "LOGIC-019",
+          "LOGIC-020",
+          "LOGIC-021",
+          "LOGIC-022",
+          "LOGIC-023"
+        ],
+        "preferredCurriculumStandards": [
+          "3.1.4",
+          "3.1.5",
+          "3.1.6"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "Your reflection holds a different card. Will you change your fate?",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May transform one card into a random card of the same category.",
+        "options": [
+          {
+            "id": "transform",
+            "label": "Transform a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_TRANSFORMABLE_CARD"
+              }
+            ],
+            "effects": [
+              {
+                "type": "TRANSFORM_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "sameCategory": true,
+                "excludeOriginalCardId": true,
+                "resultUpgradeLevel": 0,
+                "randomResult": "PERSIST_BEFORE_CONFIRM"
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The mirror breaks. No change to your deck.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 4,
+        "eventName": "The Cracked Mirror",
+        "topicShortCode": "L",
+        "challengeMalay": "Kenal pasti implikasi yang sepadan dengan petunjuk cermin.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Pantulan Alyssa memegang kad berbeza.",
+        "successMalay": "Boleh transform satu kad menjadi kad rawak daripada kategori sama.",
+        "failureMalay": "Cermin pecah. Peluang transform hilang."
+      }
+    },
+    {
+      "id": "ME05",
+      "order": 5,
+      "name": "The Forgotten Fountain",
+      "assetKey": "mystery_05_forgotten_fountain",
+      "artwork": "scenes_8k/05_forgotten_fountain_8k.png",
+      "artDirectionMalay": "Pancuran batu bercahaya dengan syiling di dasar.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "SET",
+      "topicId": "T2",
+      "chapter": 4,
+      "education": {
+        "objectiveMalay": "Cari persilangan dua set rune untuk mengaktifkan pancuran.",
+        "preferredQuestionIds": [
+          "SET-001",
+          "SET-002",
+          "SET-003",
+          "SET-004",
+          "SET-005",
+          "SET-006",
+          "SET-008",
+          "SET-009",
+          "SET-010"
+        ],
+        "preferredCurriculumStandards": [
+          "4.1.1",
+          "4.1.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 30,
+      "intro": "Clear water and old coins rest beneath the fountain runes.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: heal 15 HP OR gain 25 Gold.",
+        "options": [
+          {
+            "id": "heal",
+            "label": "Heal 15 HP",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_MISSING_HP"
+              }
+            ],
+            "effects": [
+              {
+                "type": "HEAL_HP",
+                "amount": 15
+              }
+            ]
+          },
+          {
+            "id": "gold",
+            "label": "Take 25 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 25
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The fountain dries up. No reward.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 30,
+      "mechanicTable": {
+        "number": 5,
+        "eventName": "The Forgotten Fountain",
+        "topicShortCode": "S",
+        "challengeMalay": "Cari persilangan dua set rune untuk mengaktifkan pancuran.",
+        "timeLimitSeconds": 30,
+        "artworkMalay": "Pancuran batu bercahaya dengan syiling di dasar.",
+        "successMalay": "Pilih pulihkan 15 HP atau dapatkan 25 Gold.",
+        "failureMalay": "Pancuran menjadi kering. Tiada ganjaran."
+      }
+    },
+    {
+      "id": "ME06",
+      "order": 6,
+      "name": "The Bound Collector",
+      "assetKey": "mystery_06_bound_collector",
+      "artwork": "scenes_8k/06_bound_collector_8k.png",
+      "artDirectionMalay": "Pengumpul berantai dengan rak artifact.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "PROB",
+      "topicId": "T1",
+      "chapter": 9,
+      "education": {
+        "objectiveMalay": "Kira peluang mendapat artifact tertentu daripada kumpulan cabutan.",
+        "preferredQuestionIds": [
+          "PROB-008",
+          "PROB-009",
+          "PROB-010",
+          "PROB-011",
+          "PROB-012",
+          "PROB-013",
+          "PROB-014",
+          "PROB-035",
+          "PROB-036",
+          "PROB-038",
+          "PROB-039"
+        ],
+        "preferredCurriculumStandards": [
+          "9.2.1",
+          "9.2.3",
+          "9.4.1"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "The chained collector offers an unusual exchange.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May trade one Starting artifact + 30 Gold for one random Elite/Mystery artifact.",
+        "options": [
+          {
+            "id": "trade",
+            "label": "Trade an artifact and 30 Gold",
+            "costs": [
+              {
+                "resource": "gold",
+                "amount": 30,
+                "minimumAfter": 0
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_OWNED_ARTIFACT",
+                "tier": "STARTING"
+              },
+              {
+                "type": "HAS_UNOWNED_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "CONSUME_ARTIFACT",
+                "tier": "STARTING",
+                "selection": "PLAYER_CHOSEN_INSTANCE"
+              },
+              {
+                "type": "GRANT_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ],
+                "excludeOwned": true,
+                "selection": "SEEDED_RANDOM_PERSISTED",
+                "excludeBoss": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The offer ends. No payment is taken.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 6,
+        "eventName": "The Bound Collector",
+        "topicShortCode": "P",
+        "challengeMalay": "Kira peluang mendapat artifact tertentu daripada kumpulan cabutan.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Pengumpul berantai dengan rak artifact.",
+        "successMalay": "Boleh tukar satu Starting artifact + 30 Gold untuk satu Elite/Mystery artifact rawak.",
+        "failureMalay": "Pengumpul menutup tawaran. Pertukaran dibatalkan, tanpa bayaran."
+      }
+    },
+    {
+      "id": "ME07",
+      "order": 7,
+      "name": "The Lost Scholar",
+      "assetKey": "mystery_07_lost_scholar",
+      "artwork": "scenes_8k/07_lost_scholar_8k.png",
+      "artDirectionMalay": "Sarjana misteri menunjukkan helaian soalan kepada Alyssa.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "LOGIC",
+      "topicId": "T3",
+      "chapter": 3,
+      "education": {
+        "objectiveMalay": "Tentukan sama ada kesimpulan mengikuti premis yang diberikan.",
+        "preferredQuestionIds": [
+          "LOGIC-029",
+          "LOGIC-030",
+          "LOGIC-031",
+          "LOGIC-032",
+          "LOGIC-033",
+          "LOGIC-034",
+          "LOGIC-039",
+          "LOGIC-040"
+        ],
+        "preferredCurriculumStandards": [
+          "3.2.1",
+          "3.2.2",
+          "3.2.3",
+          "3.2.6"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 60,
+      "intro": "A lost scholar asks you to check a piece of reasoning.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "SELECT_TARGET_THEN_COMMIT",
+        "summary": "Gain 30 Gold AND upgrade one chosen card.",
+        "options": [
+          {
+            "id": "scholar_reward",
+            "label": "Take 30 Gold and upgrade a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_UPGRADABLE_CARD"
+              }
+            ],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 30
+              },
+              {
+                "type": "UPGRADE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "categories": [
+                  "Attack",
+                  "Defend",
+                  "Skill",
+                  "Passive"
+                ],
+                "excludeAtUpgradeCap": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "No reward. Read the scholar's explanation.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 60,
+      "mechanicTable": {
+        "number": 7,
+        "eventName": "The Lost Scholar",
+        "topicShortCode": "L",
+        "challengeMalay": "Tentukan sama ada kesimpulan mengikuti premis yang diberikan.",
+        "timeLimitSeconds": 60,
+        "artworkMalay": "Sarjana misteri menunjukkan helaian soalan kepada Alyssa.",
+        "successMalay": "Dapat 30 Gold dan upgrade satu kad.",
+        "failureMalay": "Tiada ganjaran; sarjana menerangkan penyelesaian."
+      }
+    },
+    {
+      "id": "ME08",
+      "order": 8,
+      "name": "The Blind Oracle",
+      "assetKey": "mystery_08_blind_oracle",
+      "artwork": "scenes_8k/08_blind_oracle_8k.png",
+      "artDirectionMalay": "Peramal bertutup mata dengan dua rune ramalan.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "PROB",
+      "topicId": "T1",
+      "chapter": 9,
+      "education": {
+        "objectiveMalay": "Kenal pasti peristiwa saling eksklusif daripada ramalan yang diberikan.",
+        "preferredQuestionIds": [
+          "PROB-005",
+          "PROB-021",
+          "PROB-024",
+          "PROB-028",
+          "PROB-029"
+        ],
+        "preferredCurriculumStandards": [
+          "9.2.2",
+          "9.3.1",
+          "9.3.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 30,
+      "intro": "The oracle reveals two paths to strength.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose +2 Strength OR +2 Agility for the next combat.",
+        "options": [
+          {
+            "id": "strength",
+            "label": "Next combat: +2 Strength",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "QUEUE_COMBAT_MODIFIER",
+                "stat": "STRENGTH",
+                "amount": 2,
+                "duration": "NEXT_COMBAT",
+                "trigger": "COMBAT_START",
+                "consumesOnCombatId": true
+              }
+            ]
+          },
+          {
+            "id": "agility",
+            "label": "Next combat: +2 Agility",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "QUEUE_COMBAT_MODIFIER",
+                "stat": "AGILITY",
+                "amount": 2,
+                "duration": "NEXT_COMBAT",
+                "trigger": "COMBAT_START",
+                "consumesOnCombatId": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The vision fades. No buff.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 30,
+      "mechanicTable": {
+        "number": 8,
+        "eventName": "The Blind Oracle",
+        "topicShortCode": "P",
+        "challengeMalay": "Kenal pasti peristiwa saling eksklusif daripada ramalan yang diberikan.",
+        "timeLimitSeconds": 30,
+        "artworkMalay": "Peramal bertutup mata dengan dua rune ramalan.",
+        "successMalay": "Pilih +2 Strength atau +2 Agility untuk pertarungan seterusnya.",
+        "failureMalay": "Ramalan menjadi kabur. Tiada buff diperoleh."
+      }
+    },
+    {
+      "id": "ME09",
+      "order": 9,
+      "name": "The Broken Forge",
+      "assetKey": "mystery_09_broken_forge",
+      "artwork": "scenes_8k/09_broken_forge_8k.png",
+      "artDirectionMalay": "Relau berbara dengan bahan bertanda rune.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "SET",
+      "topicId": "T2",
+      "chapter": 4,
+      "education": {
+        "objectiveMalay": "Cari beza dua set untuk memilih bahan penempaan yang betul.",
+        "preferredQuestionIds": [
+          "SET-021",
+          "SET-028",
+          "SET-033",
+          "SET-039"
+        ],
+        "preferredCurriculumStandards": [
+          "4.3.1",
+          "4.3.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "The old forge has enough heat for one more improvement.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May pay 35 Gold to upgrade an Attack or Defend card.",
+        "options": [
+          {
+            "id": "forge_upgrade",
+            "label": "Pay 35 Gold: Upgrade Attack or Defend",
+            "costs": [
+              {
+                "resource": "gold",
+                "amount": 35,
+                "minimumAfter": 0
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_UPGRADABLE_CARD",
+                "categories": [
+                  "Attack",
+                  "Defend"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "UPGRADE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "categories": [
+                  "Attack",
+                  "Defend"
+                ],
+                "excludeAtUpgradeCap": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The forge goes cold. No payment is taken.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 9,
+        "eventName": "The Broken Forge",
+        "topicShortCode": "S",
+        "challengeMalay": "Cari beza dua set untuk memilih bahan penempaan yang betul.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Relau berbara dengan bahan bertanda rune.",
+        "successMalay": "Boleh bayar 35 Gold untuk upgrade satu Attack atau Defend card.",
+        "failureMalay": "Relau padam. Peluang upgrade hilang, tanpa bayaran."
+      }
+    },
+    {
+      "id": "ME10",
+      "order": 10,
+      "name": "The Burning Archive",
+      "assetKey": "mystery_10_burning_archive",
+      "artwork": "scenes_8k/10_burning_archive_8k.png",
+      "artDirectionMalay": "Alyssa memilih manuskrip dalam perpustakaan terbakar.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "SET",
+      "topicId": "T2",
+      "chapter": 4,
+      "education": {
+        "objectiveMalay": "Tentukan pelengkap suatu set untuk mengenal pasti manuskrip yang perlu diselamatkan.",
+        "preferredQuestionIds": [
+          "SET-007",
+          "SET-015",
+          "SET-020",
+          "SET-024",
+          "SET-025",
+          "SET-026",
+          "SET-029",
+          "SET-030",
+          "SET-031",
+          "SET-032"
+        ],
+        "preferredCurriculumStandards": [
+          "4.1.2",
+          "4.2.2",
+          "4.3.1",
+          "4.3.2"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "The shelves are burning. Decide what is worth saving.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: remove one card OR gain 25 Gold.",
+        "options": [
+          {
+            "id": "remove",
+            "label": "Remove a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_REMOVABLE_CARD",
+                "minimumDeckAfter": 1
+              }
+            ],
+            "effects": [
+              {
+                "type": "REMOVE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "minimumDeckAfter": 1
+              }
+            ]
+          },
+          {
+            "id": "gold",
+            "label": "Take 25 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 25
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 3 HP. No reward.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 3,
+            "nonLethal": true
+          }
+        ]
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 10,
+        "eventName": "The Burning Archive",
+        "topicShortCode": "S",
+        "challengeMalay": "Tentukan pelengkap suatu set untuk mengenal pasti manuskrip yang perlu diselamatkan.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Alyssa memilih manuskrip dalam perpustakaan terbakar.",
+        "successMalay": "Pilih buang satu kad daripada deck atau dapatkan 25 Gold.",
+        "failureMalay": "Terkena bara. Hilang 3 HP, tanpa ganjaran."
+      }
+    },
+    {
+      "id": "ME11",
+      "order": 11,
+      "name": "The Cinder Garden",
+      "assetKey": "mystery_11_cinder_garden",
+      "artwork": "scenes_8k/11_cinder_garden_8k.png",
+      "artDirectionMalay": "Taman dungeon dengan buah dan tumbuhan bersimbol.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "PROB",
+      "topicId": "T1",
+      "chapter": 9,
+      "education": {
+        "objectiveMalay": "Kira peluang memperoleh buah dengan sifat A atau B, termasuk pertindihan.",
+        "preferredQuestionIds": [
+          "PROB-006",
+          "PROB-022",
+          "PROB-023",
+          "PROB-025",
+          "PROB-026",
+          "PROB-027",
+          "PROB-030",
+          "PROB-031"
+        ],
+        "preferredCurriculumStandards": [
+          "9.3.1",
+          "9.3.2",
+          "9.3.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "Glowing fruit and a hidden treasure wait among the roots.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: heal 10 HP OR gain one random Starting artifact.",
+        "options": [
+          {
+            "id": "heal",
+            "label": "Heal 10 HP",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_MISSING_HP"
+              }
+            ],
+            "effects": [
+              {
+                "type": "HEAL_HP",
+                "amount": 10
+              }
+            ]
+          },
+          {
+            "id": "artifact",
+            "label": "Take a Starting artifact",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_UNOWNED_ARTIFACT",
+                "tiers": [
+                  "STARTING"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "GRANT_ARTIFACT",
+                "tiers": [
+                  "STARTING"
+                ],
+                "excludeOwned": true,
+                "selection": "SEEDED_RANDOM_PERSISTED",
+                "excludeBoss": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 3 HP. No reward.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 3,
+            "nonLethal": true
+          }
+        ]
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 11,
+        "eventName": "The Cinder Garden",
+        "topicShortCode": "P",
+        "challengeMalay": "Kira peluang memperoleh buah dengan sifat A atau B, termasuk pertindihan.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Taman dungeon dengan buah dan tumbuhan bersimbol.",
+        "successMalay": "Pilih pulihkan 10 HP atau satu Starting artifact rawak.",
+        "failureMalay": "Tumbuhan mengeluarkan duri. Hilang 3 HP, tanpa ganjaran."
+      }
+    },
+    {
+      "id": "ME12",
+      "order": 12,
+      "name": "The Fallen Adventurer",
+      "assetKey": "mystery_12_fallen_adventurer",
+      "artwork": "scenes_8k/12_fallen_adventurer_8k.png",
+      "artDirectionMalay": "Beg, kad dan pedang patah milik pengembara lama.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "SET",
+      "topicId": "T2",
+      "chapter": 4,
+      "education": {
+        "objectiveMalay": "Gunakan maklumat rajah Venn untuk menentukan bilangan bekalan.",
+        "preferredQuestionIds": [
+          "SET-016",
+          "SET-017",
+          "SET-018",
+          "SET-033",
+          "SET-034",
+          "SET-035",
+          "SET-036",
+          "SET-037",
+          "SET-038",
+          "SET-040"
+        ],
+        "preferredCurriculumStandards": [
+          "4.2.3",
+          "4.3.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 60,
+      "intro": "An old pack holds the last supplies of a lost adventurer.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: 40 Gold OR one card from up to three offers.",
+        "options": [
+          {
+            "id": "gold",
+            "label": "Take 40 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 40
+              }
+            ]
+          },
+          {
+            "id": "card",
+            "label": "Choose a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_CARD_REWARD_CANDIDATE"
+              }
+            ],
+            "effects": [
+              {
+                "type": "CHOOSE_CARD_REWARD",
+                "offerCount": 3,
+                "uniqueOffers": true,
+                "category": null,
+                "pool": "EXISTING_GAME_CARD_REWARD_POOL",
+                "addCount": 1
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The supplies turn to dust. No reward.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 60,
+      "mechanicTable": {
+        "number": 12,
+        "eventName": "The Fallen Adventurer",
+        "topicShortCode": "S",
+        "challengeMalay": "Gunakan maklumat rajah Venn untuk menentukan bilangan bekalan.",
+        "timeLimitSeconds": 60,
+        "artworkMalay": "Beg, kad dan pedang patah milik pengembara lama.",
+        "successMalay": "Pilih 40 Gold atau satu daripada tiga kad yang ditawarkan.",
+        "failureMalay": "Bekalan menjadi debu. Tiada ganjaran."
+      }
+    },
+    {
+      "id": "ME13",
+      "order": 13,
+      "name": "The Echo Chamber",
+      "assetKey": "mystery_13_echo_chamber",
+      "artwork": "scenes_8k/13_echo_chamber_8k.png",
+      "artDirectionMalay": "Alyssa dikelilingi bayangan musuh daripada debu.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "LOGIC",
+      "topicId": "T3",
+      "chapter": 3,
+      "education": {
+        "objectiveMalay": "Nilai pernyataan menggunakan “dan” atau “atau” untuk mengenal pasti gema palsu.",
+        "preferredQuestionIds": [
+          "LOGIC-010",
+          "LOGIC-011",
+          "LOGIC-012",
+          "LOGIC-013",
+          "LOGIC-015"
+        ],
+        "preferredCurriculumStandards": [
+          "3.1.2",
+          "3.1.3"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 45,
+      "intro": "Two echoes take shape. Find the false one before it becomes real.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "AUTOMATIC",
+        "summary": "Banish the echoes without combat. Gain 40 Gold.",
+        "options": [
+          {
+            "id": "banish",
+            "label": "Banish the echoes",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 40
+              }
+            ]
+          }
+        ],
+        "mayDecline": false
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "A Normal Enemy combat begins after the explanation.",
+        "effects": [
+          {
+            "type": "START_COMBAT",
+            "enemyTier": "NORMAL",
+            "stage": "CURRENT_STAGE",
+            "seededEncounter": true,
+            "rewardPolicy": "NORMAL_COMBAT_ONLY",
+            "startAfterReviewContinue": true
+          }
+        ]
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 45,
+      "mechanicTable": {
+        "number": 13,
+        "eventName": "The Echo Chamber",
+        "topicShortCode": "L",
+        "challengeMalay": "Nilai pernyataan menggunakan “dan” atau “atau” untuk mengenal pasti gema palsu.",
+        "timeLimitSeconds": 45,
+        "artworkMalay": "Alyssa dikelilingi bayangan musuh daripada debu.",
+        "successMalay": "Gema dimusnahkan tanpa bertarung. Dapat 40 Gold.",
+        "failureMalay": "Gema menjadi nyata. Pertarungan Normal Enemy bermula."
+      }
+    },
+    {
+      "id": "ME14",
+      "order": 14,
+      "name": "The Shattered Hourglass",
+      "assetKey": "mystery_14_shattered_hourglass",
+      "artwork": "scenes_8k/14_shattered_hourglass_8k.png",
+      "artDirectionMalay": "Jam pasir pecah dengan pasir dan kad membeku di udara.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "PROB",
+      "topicId": "T1",
+      "chapter": 9,
+      "education": {
+        "objectiveMalay": "Lengkapkan pengiraan kebarangkalian peristiwa bergabung berdasarkan petunjuk jam pasir.",
+        "preferredQuestionIds": [
+          "PROB-003",
+          "PROB-004",
+          "PROB-009",
+          "PROB-010",
+          "PROB-011",
+          "PROB-015",
+          "PROB-016",
+          "PROB-017",
+          "PROB-018",
+          "PROB-019",
+          "PROB-020",
+          "PROB-033",
+          "PROB-034",
+          "PROB-037",
+          "PROB-040"
+        ],
+        "preferredCurriculumStandards": [
+          "9.2.1",
+          "9.2.2",
+          "9.2.3",
+          "9.4.1"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 60,
+      "intro": "Time is frozen around the broken hourglass.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "AUTOMATIC",
+        "summary": "Draw 2 extra cards on the first turn of the next combat.",
+        "options": [
+          {
+            "id": "time_gift",
+            "label": "Accept the time gift",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "QUEUE_COMBAT_MODIFIER",
+                "stat": "DRAW",
+                "amount": 2,
+                "duration": "NEXT_COMBAT_FIRST_TURN",
+                "trigger": "FIRST_TURN_DRAW",
+                "consumesOnCombatId": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": false
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose 1 Energy on the first turn of the next combat.",
+        "effects": [
+          {
+            "type": "QUEUE_COMBAT_MODIFIER",
+            "stat": "ENERGY",
+            "amount": -1,
+            "duration": "NEXT_COMBAT_FIRST_TURN",
+            "trigger": "FIRST_TURN_ENERGY",
+            "consumesOnCombatId": true
+          }
+        ]
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 60,
+      "mechanicTable": {
+        "number": 14,
+        "eventName": "The Shattered Hourglass",
+        "topicShortCode": "P",
+        "challengeMalay": "Lengkapkan pengiraan kebarangkalian peristiwa bergabung berdasarkan petunjuk jam pasir.",
+        "timeLimitSeconds": 60,
+        "artworkMalay": "Jam pasir pecah dengan pasir dan kad membeku di udara.",
+        "successMalay": "Draw dua kad tambahan pada giliran pertama pertarungan seterusnya.",
+        "failureMalay": "Kurang 1 Energy pada giliran pertama pertarungan seterusnya."
+      }
+    },
+    {
+      "id": "ME15",
+      "order": 15,
+      "name": "The Dungeon Master's Bargain",
+      "assetKey": "mystery_15_dungeon_masters_bargain",
+      "artwork": "scenes_8k/15_dungeon_masters_bargain_8k.png",
+      "artDirectionMalay": "Dungeon Master menghulurkan artifact dan rune pengorbanan.",
+      "weight": 1,
+      "stages": [
+        1,
+        2
+      ],
+      "topicCode": "LOGIC",
+      "topicId": "T3",
+      "chapter": 3,
+      "education": {
+        "objectiveMalay": "Gunakan beberapa premis untuk memilih kesimpulan yang sah tentang perjanjian.",
+        "preferredQuestionIds": [
+          "LOGIC-029",
+          "LOGIC-030",
+          "LOGIC-031",
+          "LOGIC-032",
+          "LOGIC-033",
+          "LOGIC-034",
+          "LOGIC-039",
+          "LOGIC-040"
+        ],
+        "preferredCurriculumStandards": [
+          "3.2.1",
+          "3.2.2",
+          "3.2.3",
+          "3.2.6"
+        ],
+        "fallback": "UNUSED_QUESTION_SAME_TOPIC_ONLY",
+        "promptPolicy": "USE_BANK_PROMPT_CHOICES_HINT_AND_EXPLANATION_UNCHANGED",
+        "flavourDoesNotOverrideQuestionData": true
+      },
+      "baseTimeSeconds": 60,
+      "intro": "The dungeon itself offers a gift. The price is part of your life.",
+      "eligibility": "AT_LEAST_ONE_SUCCESS_OPTION_ACTIONABLE_AND_UNUSED_QUESTION_IN_TOPIC",
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May pay 5 Max HP for one random Elite/Mystery artifact.",
+        "options": [
+          {
+            "id": "bargain",
+            "label": "Pay 5 Max HP: Take an artifact",
+            "costs": [
+              {
+                "resource": "maxHp",
+                "amount": 5,
+                "minimumAfter": 1,
+                "clampCurrentHpAfter": true
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_UNOWNED_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "GRANT_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ],
+                "excludeOwned": true,
+                "selection": "SEEDED_RANDOM_PERSISTED",
+                "excludeBoss": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The offer is withdrawn. No Max HP is lost.",
+        "effects": []
+      },
+      "review": {
+        "showCorrectAnswer": true,
+        "showExplanation": true,
+        "allowUnrewardedPractice": true,
+        "showAfterSuccessAlso": true
+      },
+      "timeLimitSeconds": 60,
+      "mechanicTable": {
+        "number": 15,
+        "eventName": "The Dungeon Master's Bargain",
+        "topicShortCode": "L",
+        "challengeMalay": "Gunakan beberapa premis untuk memilih kesimpulan yang sah tentang perjanjian.",
+        "timeLimitSeconds": 60,
+        "artworkMalay": "Dungeon Master menghulurkan artifact dan rune pengorbanan.",
+        "successMalay": "Boleh korbankan 5 Max HP untuk satu Elite/Mystery artifact rawak.",
+        "failureMalay": "Tawaran ditarik balik. Tiada artifact dan tiada pengorbanan Max HP."
+      }
+    }
+  ],
+  "createdForLocalDate": "2026-10-22",
+  "artworkStandard": {
+    "layout": "WIDE_FULL_SCENE",
+    "alyssaSide": "LEFT",
+    "alyssaFaces": "RIGHT",
+    "bodyProportions": "APPROVED_TALL_ADULT_4POV_MODEL",
+    "imageWidth": 7680,
+    "imageHeight": 4320,
+    "native8K": false,
+    "newModelZipUsed": false
+  }
+}

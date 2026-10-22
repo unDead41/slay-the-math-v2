@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.12.0
+# Slay the Math — Dungeon Edition 2.13.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -73,3 +73,9 @@ After pulling, run `npm.cmd run build`, then `npm.cmd start`. Rebuilding updates
 Clearer map routes/Floor labels, illustrated Learn/Challenge choices, full motion for both bosses and two 3×2 Shop racks: six cards (one at 60% off), six artifacts (3 Starting / 2 Mid-tier / 1 Boss), and paid card removal. Purchases work in both modes and survive reload. [Details and save compatibility](docs/GAME_UPDATE_2_12_0.md). **Question audit found a glossary harmonization issue**; authored content stays unchanged. [Audit for the question owner](docs/QUESTION_SUPPORT_AUDIT_2_12.md).
 
 After pulling, rebuild `MAIN-SEKARANG.html` with `npm.cmd run build`, restart using `npm.cmd start`, then Ctrl+F5.
+
+## Mystery Events 2.13.0
+
+Fifteen supplied Mystery Events now run in both stages and modes, using the active shared question bank, fixed 30/45/60-second deadlines, final answer review and atomic once-only consequences. Artwork loads only for the current event; 8K masters remain in the source ZIPs. Refresh retains the same question, deadline, choices and reward candidates. New runs retain the existing question-history profile.
+
+Run `npm run build` after pulling to refresh `MAIN-SEKARANG.html`, then restart `npm start`. The large generated portable file is verified locally; source and runtime artwork are the release inputs. Integration rules, source PNG recovery and verification are in [MYSTERY_EVENTS_2_13_0.md](docs/MYSTERY_EVENTS_2_13_0.md).

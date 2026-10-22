@@ -106,3 +106,8 @@ The 2.11.0 map presentation follows the supplied parchment dungeon reference. `j
 ## Map, modes, Boss and Shop — 2.12.0
 
 Map presentation 2.12: the existing plate is subdued; future/open/travelled paths have distinct weight, dash/color and text key. Explicit Floor, room category and Enter Room badges improve navigation. Narrow Floor labels sit above seals. No graph/RNG, secrecy or direct-entry rule changes.
+
+
+## Mystery Events — 2.13.0
+
+New Mystery rooms use the fifteen-event v2 owner [MYSTERY_EVENTS.md](MYSTERY_EVENTS.md): intro, optional timed question, final review and one settlement on the same legal node. Echo failure can host one Normal battle there. Map still conceals the specific event until entry.

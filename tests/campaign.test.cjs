@@ -1,3 +1,4 @@
+const {completeMystery}=require('./helpers/mystery.cjs');
 const {claimArtifact,completeTrial,completeBrowserTrial}=require('./helpers/education.cjs');
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -114,7 +115,7 @@ function campaign(seed, hints = false, mode = 'learn', routeVersion = 2) {
         const target=r.deck.find(c => !c.upgraded && ['blast','balance','ember','strike'].includes(c.key)) || r.deck.find(c=>!c.upgraded);
         if(target)E.camp(r,'upgrade',target.uid);else E.camp(r,'heal');
       }
-    } else if (r.scene === 'event') E.event(r,'heal');
+    } else if (r.scene === 'event') completeMystery(r);
     else if (r.scene === 'shop') E.leaveShop(r);
     else if (r.scene === 'stageclear') {
       const hp = r.hp;

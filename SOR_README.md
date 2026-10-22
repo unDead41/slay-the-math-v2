@@ -76,3 +76,5 @@ Pakej mengandungi **23 fail Markdown dan dua imej rujukan**. Ia tidak memasang s
 Nota implementation 2.0.1: dokumen 10/11 dan daftar keputusan merekod audio/English game 1.3.0. Kekalkan perbezaan kontrak reka bentuk daripada fitur runtime sebenar.
 
 - [19 — Artifact system](docs/sor/19_ARTIFACT_SYSTEM.md): current Dungeon Master, offers, real effects and save rules.
+
+Mystery v2 current owner: [MYSTERY_EVENTS.md](docs/sor/MYSTERY_EVENTS.md).

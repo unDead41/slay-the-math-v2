@@ -33,7 +33,7 @@
   r.artifactState={version:1,rng:(r.seed^0xa741c6e5)>>>0,owned:[],acquired:[],startingId:null,offer:null};
   offer(r,'starting');r.scene='master';return r;
  }
- function maxHp(r){return C.MAX_HP+(has(r,'s08')?value('s08','max_hp'):0);}
+ function maxHp(r){return C.MAX_HP+(has(r,'s08')?value('s08','max_hp'):0)-(r.mysteryState?.hpSacrificed||0);}
  function acquire(r,key,event){
   const s=r.artifactState,a=catalog[key];
   if(!s||!a||has(r,key)||s.acquired.some(x=>x.source===event))throw new Error('This artifact was already claimed.');
@@ -98,9 +98,10 @@
   if(statIds.length&&(b.turn===1||has(r,'b02'))){
    const common=has(r,'b02')?['Clasp contribution: min('+value('b02','max_artifact_contribution_each_stat')+', '+value('b02','initial_strength')+' + '+b.turn+' − 1) = '+a.clasp]:[];
    const strength=has(r,'e15')?value('e15','strength'):0,agility=has(r,'e16')?value('e16','agility'):0;
+   const oracleStrength=b.mysteryModifiers?.strength||0,oracleAgility=b.mysteryModifiers?.agility||0;
    R.record(r,'Combat stat totals',statIds.map(id),[
-    R.total('Total Strength','Strength',b.strength,[...common,'Crimson Sword Charm: +'+strength+' Strength','Total Strength: '+a.clasp+' + '+strength+' = '+b.strength]),
-    R.total('Total Agility','Agility',b.agility,[...common,"Guardian's Armlet: +"+agility+' Agility','Total Agility: '+a.clasp+' + '+agility+' = '+b.agility])
+    R.total('Total Strength','Strength',b.strength,[...common,'Crimson Sword Charm: +'+strength+' Strength',...(oracleStrength?['Oracle Strength: +'+oracleStrength]:[]),'Total Strength: '+a.clasp+' + '+strength+(oracleStrength?' + '+oracleStrength:'')+' = '+b.strength]),
+    R.total('Total Agility','Agility',b.agility,[...common,"Guardian's Armlet: +"+agility+' Agility',...(oracleAgility?['Oracle Agility: +'+oracleAgility]:[]),'Total Agility: '+a.clasp+' + '+agility+(oracleAgility?' + '+oracleAgility:'')+' = '+b.agility])
    ]);
   }
   if(has(r,'b01'))gain(r,'b01',{energy:value('b01','energy')},ctx);
@@ -122,6 +123,9 @@
  }
  function cardContributions(r,d){
   const b=r.battle,a=b?.artifacts,damage=[],block=[];
+  const m=b?.mysteryModifiers;
+  if(d.role==='attack'&&m?.strength)damage.push({id:null,name:'Oracle Strength',value:m.strength});
+  if(d.role==='guard'&&m?.agility)block.push({id:null,name:'Oracle Agility',value:m.agility});
   if(!a)return {damage,block};
   const add=(list,code,key)=>{if(has(r,code))list.push({id:id(code),name:get(code).name,value:value(code,key)});};
   if(d.role==='attack'){
@@ -176,21 +180,25 @@
   }
  }
  function maxEnergy(r){
-  const b=r.battle;if(!b?.artifacts)return C.ENERGY;
-  return C.ENERGY+(has(r,'b01')?value('b01','energy'):0)+(has(r,'e01')?value('e01','energy'):0)+
-   (has(r,'e03')&&b.turn===1&&b.artifacts.die>=5?get('e03').values.faces_5_6.energy:0);
+  const b=r.battle,modifier=b?.turn===1?(b.mysteryModifiers?.energy||0):0;if(!b?.artifacts)return Math.max(0,C.ENERGY+modifier);
+  return Math.max(0,C.ENERGY+(has(r,'b01')?value('b01','energy'):0)+(has(r,'e01')?value('e01','energy'):0)+
+   (has(r,'e03')&&b.turn===1&&b.artifacts.die>=5?get('e03').values.faces_5_6.energy:0)+modifier);
  }
  function valid(r){
   const s=r.artifactState;
   if(s===undefined)return r.scene!=='master';
   if(!s||s.version!==1||!['learn','challenge'].includes(r.mode)||!integer(s.rng)||s.rng>4294967295||!Array.isArray(s.owned)||s.owned.length>31||new Set(s.owned).size!==s.owned.length||s.owned.some(key=>!catalog[key])||!Array.isArray(s.acquired)||s.acquired.length!==s.owned.length)return false;
   if(new Set(s.acquired.map(x=>x?.id)).size!==s.owned.length||new Set(s.acquired.map(x=>x?.source)).size!==s.acquired.length||s.acquired.some(x=>!x||!s.owned.includes(x.id)||typeof x.source!=='string'||!x.source||x.source.length>120))return false;
+  const consumed=s.consumed||[];
+  if(!Array.isArray(consumed)||consumed.length>15||consumed.some(x=>!x||!catalog[x.id]||catalog[x.id].tier!=='starting'||typeof x.source!=='string'||x.source.length>120||typeof x.consumedBy!=='string'||!/^mystery:[01]:/.test(x.consumedBy)))return false;
+  const ledger=[...s.acquired,...consumed];if(new Set(ledger.map(x=>x.source)).size!==ledger.length)return false;
+  const extraSource=x=>/^(shop|mystery):[01]:/.test(x.source);
   if(s.shopOnly!==undefined&&s.shopOnly!==true)return false;
-  const starters=s.owned.filter(key=>catalog[key].tier==='starting');
-  if(r.mode==='learn'){if(s.startingId!==null||s.offer||s.acquired.some(x=>!/^shop:[01]:/.test(x.source)))return false;}
-  else if(s.shopOnly===true){if(s.startingId!==null||r.scene==='master'||starters.some(key=>!s.acquired.some(x=>x.id===key&&/^shop:[01]:/.test(x.source)))||s.offer?.kind==='starting')return false;}
+  const starters=ledger.filter(x=>catalog[x.id].tier==='starting');
+  if(r.mode==='learn'){if(s.startingId!==null||s.offer||ledger.some(x=>!extraSource(x)))return false;}
+  else if(s.shopOnly===true){if(s.startingId!==null||r.scene==='master'||starters.some(x=>!extraSource(x))||s.offer?.kind==='starting')return false;}
   else if(s.startingId===null){if(r.scene!=='master'||s.owned.length||r.stage!==0||r.depth!==0||r.battle||s.offer?.kind!=='starting')return false;}
-  else if(!starters.includes(s.startingId)||starters.some(key=>key!==s.startingId&&!s.acquired.some(x=>x.id===key&&/^shop:[01]:/.test(x.source)))||r.scene==='master'||!s.acquired.some(x=>x.id===s.startingId&&x.source==='starting'))return false;
+  else if(!starters.some(x=>x.id===s.startingId&&x.source==='starting')||starters.some(x=>x.source!=='starting'&&!extraSource(x))||r.scene==='master')return false;
   if(s.offer){
    const o=s.offer,tier=o.kind==='starting'?'starting':o.kind==='boss'?'boss':'elite_mystery';
    if(!['starting','elite','mystery','boss'].includes(o.kind)||typeof o.ready!=='boolean'||!Array.isArray(o.ids)||!o.ids.length||o.ids.length>3||new Set(o.ids).size!==o.ids.length||o.source!==source(r,o.kind)||s.acquired.some(x=>x.source===o.source)||o.ids.some(key=>!catalog[key]||catalog[key].tier!==tier||has(r,key)||!eligible(r,catalog[key])))return false;
@@ -201,9 +209,9 @@
   }
   if(r.battle){
    const b=r.battle,a=b.artifacts;
-   if(!a||!a.combat||!a.turn||!integer(a.turn.energyBudget)||a.turn.energyBudget<C.ENERGY||a.turn.energyBudget>maxEnergy(r)||b.energy>a.turn.energyBudget||!['quill','pebble','ring','flask','won'].every(k=>typeof a.combat[k]==='boolean')||!['attack','guard','skill','exhaust','discard','pair','abacus','retaliation'].every(k=>typeof a.turn[k]==='boolean')||!integer(a.turn.cards)||a.turn.cards>200)return false;
+   if(!a||!a.combat||!a.turn||!integer(a.turn.energyBudget)||a.turn.energyBudget<Math.max(0,C.ENERGY+(b.turn===1?(b.mysteryModifiers?.energy||0):0))||a.turn.energyBudget>maxEnergy(r)||b.energy>a.turn.energyBudget||!['quill','pebble','ring','flask','won'].every(k=>typeof a.combat[k]==='boolean')||!['attack','guard','skill','exhaust','discard','pair','abacus','retaliation'].every(k=>typeof a.turn[k]==='boolean')||!integer(a.turn.cards)||a.turn.cards>200)return false;
    const clasp=has(r,'b02')?Math.min(value('b02','max_artifact_contribution_each_stat'),value('b02','initial_strength')+b.turn-1):0;
-   if(a.clasp!==clasp||b.strength!==(has(r,'e15')?value('e15','strength'):0)+clasp||b.agility!==(has(r,'e16')?value('e16','agility'):0)+clasp)return false;
+   if(a.clasp!==clasp||b.strength!==(has(r,'e15')?value('e15','strength'):0)+clasp+(b.mysteryModifiers?.strength||0)||b.agility!==(has(r,'e16')?value('e16','agility'):0)+clasp+(b.mysteryModifiers?.agility||0))return false;
    if(has(r,'e03')?(!integer(a.die)||a.die<1||a.die>6):a.die!==null)return false;
   }
   return true;

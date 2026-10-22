@@ -1,7 +1,19 @@
 (function(root){'use strict';
 const C=typeof module!=='undefined'?require('./config.js'):root.DCConfig,M=typeof module!=='undefined'?require('./math.js'):root.DCMath,G=typeof module!=='undefined'?require('./map.js'):root.DCMap,A=typeof module!=='undefined'?require('./artifacts.js'):root.DCArtifacts,Q=typeof module!=='undefined'?require('./education.js'):root.DCEducation,R=typeof module!=='undefined'?require('./rich-text.js'):root.DCRichText;
 const clone=x=>JSON.parse(JSON.stringify(x));
+const X=typeof module!=='undefined'?require('./mystery.js'):root.DCMystery;
 const artifactContext={draw,deal,notify};
+const mysteryContext={card,draw,startBattle,finishNode};
+function mysteryAction(r,fn){const next=clone(r);fn(next);if(!validate(next))throw Error('This Mystery action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);return r;}
+function openMystery(r,seen=[],profile=null){return mysteryAction(r,x=>X.enter(x,seen,profile));}
+function startMystery(r,seen=[],profile=null,now=Date.now()){return mysteryAction(r,x=>X.start(x,seen,profile,now));}
+function answerMystery(r,id,now=Date.now()){return mysteryAction(r,x=>X.resolve(x,id,now));}
+function expireMystery(r,now=Date.now()){return mysteryAction(r,x=>X.expire(x,now));}
+function continueMystery(r){return mysteryAction(r,x=>X.proceed(x,mysteryContext));}
+function leaveMystery(r,now=Date.now()){return mysteryAction(r,x=>X.leave(x,mysteryContext,now));}
+function selectMysteryOption(r,id){return mysteryAction(r,x=>X.selectOption(x,id));}
+function selectMysteryTarget(r,id){return mysteryAction(r,x=>X.selectTarget(x,id));}
+function claimMystery(r){return mysteryAction(r,x=>X.commit(x,mysteryContext));}
 function rng(r){r.rng=(Math.imul(r.rng,1664525)+1013904223)>>>0;return r.rng/4294967296;}
 function shuffle(r,a){for(let i=a.length-1;i>0;i--){const j=Math.floor(rng(r)*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function card(r,key,upgraded=false){return {uid:'c'+(++r.seq),key,upgraded};}
@@ -19,35 +31,38 @@ function draw(r,n){
  return drawn;
 }
 function intent(r){const b=r.battle;if(!b)return null;if(b.currentIntent)return {...b.currentIntent};const e=C.enemies[b.enemyId],p=e.patterns[(b.turn-1)%e.patterns.length],rage=Math.floor((b.turn-1)/6)*2+(b.enemyId==='dealer'&&b.hp<=b.maxHp/2?2:0)+(b.elite?2:0);return {...p,damage:Math.ceil((p.damage+rage)*(r.mode==='learn'?.7:1)),rage};}
-function turnStart(r){const b=r.battle;b.turn++;b.energy=C.ENERGY;b.block=0;b.forecastUsed=false;b.question=null;b.boostArmed=false;b.boostUsed=false;b.currentIntent=null;draw(r,C.HAND);A.startTurn(r,artifactContext);b.currentIntent=intent(r);b.enemyBlock=b.currentIntent.block||0;notify(r,'Turn '+b.turn+' · Enemy intent: '+b.currentIntent.label+'.');}
-function startBattle(r,enemyId,elite=false){if(r.scene==='master'||r.scene==='education')throw new Error('Finish the Dungeon Master encounter before entering the dungeon.');const e=C.enemies[enemyId];r.scene='battle';r.battle={enemyId,elite,hp:e.hp+(elite?10:0),maxHp:e.hp+(elite?10:0),turn:0,energy:0,block:0,enemyBlock:0,focus:0,boostArmed:false,boostUsed:false,seals:0,draw:shuffle(r,clone(r.deck)),hand:[],discard:[],exhaust:[],question:null,forecastUsed:false,log:[]};A.startCombat(r);turnStart(r);return r;}
-function enterNode(r,choice='normal'){
+function turnStart(r){const b=r.battle;b.turn++;b.energy=C.ENERGY;b.block=0;b.forecastUsed=false;b.question=null;b.boostArmed=false;b.boostUsed=false;b.currentIntent=null;draw(r,C.HAND);A.startTurn(r,artifactContext);X.firstTurn(r,mysteryContext);b.currentIntent=intent(r);b.enemyBlock=b.currentIntent.block||0;notify(r,'Turn '+b.turn+' · Enemy intent: '+b.currentIntent.label+'.');}
+function startBattle(r,enemyId,elite=false){if(r.scene==='master'||r.scene==='education')throw new Error('Finish the Dungeon Master encounter before entering the dungeon.');const e=C.enemies[enemyId];if(!e)throw Error('This encounter is not available.');r.scene='battle';r.battle={enemyId,elite,hp:e.hp+(elite?10:0),maxHp:e.hp+(elite?10:0),turn:0,energy:0,block:0,enemyBlock:0,focus:0,boostArmed:false,boostUsed:false,seals:0,draw:shuffle(r,clone(r.deck)),hand:[],discard:[],exhaust:[],question:null,forecastUsed:false,log:[]};A.startCombat(r);X.combatStart(r);turnStart(r);return r;}
+function enterNode(r,choice='normal',seen=[],profile=null){
  if(r.scene!=='map')throw new Error('Return to the Map first.');
  const options=G.available(r);
  const node=choice==='normal'?(options.find(n=>n.type!=='elite')||options[0]):choice==='elite'?options.find(n=>n.type==='elite'):options.find(n=>n.id===choice);
  if(!node)throw new Error('This room is not connected to your path. Choose a glowing room.');
+ if(node.type==='event')return mysteryAction(r,x=>{if(x.route)x.route.active=node.id;x.nodeChoice='normal';x.scene='event';X.enter(x,seen,profile);});
  if(r.route)r.route.active=node.id;
  r.nodeChoice=node.type==='elite'?'elite':'normal';
- if(node.type==='shop'){r.scene='shop';r.shop=createShop(r,node.id);}else if(node.type==='camp'||node.type==='event')r.scene=node.type;
+ if(node.type==='shop'){r.scene='shop';r.shop=createShop(r,node.id);}else if(node.type==='camp'||node.type==='event'){r.scene=node.type;if(node.type==='event')X.enter(r,seen,profile);}
  else startBattle(r,node.enemyId,node.type==='elite');
  return r;
 }
 function finishNode(r){
  if(r.educationState?.pending)throw new Error('Finish your artifact question first.');
  if(r.artifactState?.offer)throw new Error('Finish your artifact choice first.');
+ if(r.mysteryState?.pending&&!r.mysteryState.pending.committed)throw new Error('Finish your Mystery encounter first.');
  let id=r.stage+':'+r.depth;
  if(r.route){
   const node=G.get(r).nodes.find(n=>n.id===r.route.active&&n.depth===r.depth);
   if(!node||node.type==='boss')throw new Error('This room is not active.');
   id=node.id;r.route.path.push(id);r.route.active=null;
  }
+ if(r.mysteryState?.pending?.phase==='combat')r.mysteryState.pending=null;
  r.cleared.push(id);r.depth++;r.battle=null;r.shop=null;r.rewards=[];r.scene='map';return r;
 }
 function win(r){
  const b=r.battle;A.won(r,artifactContext);r.stats.battles++;
  r.gold=(r.gold||0)+(C.enemies[b.enemyId].boss?C.ECONOMY.boss:b.elite?C.ECONOMY.elite:C.ECONOMY.battle);
  if(C.enemies[b.enemyId].boss){
-  if(r.stage===1){r.scene='victory';r.finished=Math.max(r.started,Date.now());return notify(r,'You cleared both dungeons!');}
+  if(r.stage===1){r.scene='victory';if(r.mysteryState)r.mysteryState.nextCombat=[];r.finished=Math.max(r.started,Date.now());return notify(r,'You cleared both dungeons!');}
   r.scene='stageclear';r.finished=Math.max(r.started,Date.now());if(r.mode==='challenge'&&r.artifactState)A.offer(r,'boss');return notify(r,'Sigil Keep cleared.');
  }
  r.scene='reward';r.rewards=shuffle(r,Object.keys(C.cards)).slice(0,3);
@@ -74,8 +89,8 @@ function playCard(r,uid,targets=[]){
  const artifactBonus=A.cardBonuses(r,d),contributions=A.cardContributions(r,d);
  b.hand.splice(i,1);b.energy-=d.cost;r.stats.cardsPlayed=(r.stats.cardsPlayed||0)+1;
  let bonus=0;if((d.damage||d.block)&&b.boostArmed&&!b.boostUsed&&b.focus>0){b.focus--;b.boostUsed=true;b.boostArmed=false;bonus=C.BOOST;}
- if(d.damage){const hit=deal(r,d.damage+bonus+artifactBonus.damage,!!d.pierce,{label:d.name,artifactIds:contributions.damage.map(x=>x.id),lines:['Card damage after upgrade: '+d.damage,...contributions.damage.map(x=>x.name+': +'+x.value),'Focus boost: +'+bonus,'Damage before defenses: '+d.damage+' + '+artifactBonus.damage+' + '+bonus+' = '+(d.damage+bonus+artifactBonus.damage)]});notify(r,d.name+' gives '+hit+' damage.');}
- if(d.block){const before=b.block,focus=!d.damage?bonus:0,amount=d.block+focus+artifactBonus.block;b.block+=amount;R.record(r,d.name,contributions.block.map(x=>x.id),[R.delta('Block gained','Block',before,b.block,['Card Block after upgrade: '+d.block,...contributions.block.map(x=>x.name+': +'+x.value),'Focus boost: +'+focus,'Block gained: '+d.block+' + '+artifactBonus.block+' + '+focus+' = '+amount,'Block after: '+before+' + '+amount+' = '+b.block])]);notify(r,d.name+' gives '+amount+' Block.');}
+ if(d.damage){const hit=deal(r,d.damage+bonus+artifactBonus.damage,!!d.pierce,{label:d.name,artifactIds:contributions.damage.map(x=>x.id).filter(Boolean),lines:['Card damage after upgrade: '+d.damage,...contributions.damage.map(x=>x.name+': +'+x.value),'Focus boost: +'+bonus,'Damage before defenses: '+d.damage+' + '+artifactBonus.damage+' + '+bonus+' = '+(d.damage+bonus+artifactBonus.damage)]});notify(r,d.name+' gives '+hit+' damage.');}
+ if(d.block){const before=b.block,focus=!d.damage?bonus:0,amount=d.block+focus+artifactBonus.block;b.block+=amount;R.record(r,d.name,contributions.block.map(x=>x.id).filter(Boolean),[R.delta('Block gained','Block',before,b.block,['Card Block after upgrade: '+d.block,...contributions.block.map(x=>x.name+': +'+x.value),'Focus boost: +'+focus,'Block gained: '+d.block+' + '+artifactBonus.block+' + '+focus+' = '+amount,'Block after: '+before+' + '+amount+' = '+b.block])]);notify(r,d.name+' gives '+amount+' Block.');}
  if(d.heal){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+d.heal);R.record(r,d.name,[],[R.healing(d.heal,before,r.hp,r.maxHp)]);notify(r,'Restore '+d.heal+' HP.');A.checkHp(r,artifactContext);}
  if(d.focus){const before=b.focus;b.focus=Math.min(C.FOCUS_CAP,b.focus+d.focus);R.record(r,d.name,[],[R.delta('Focus gained','Focus',before,b.focus,['Requested Focus: +'+d.focus,'Focus cap: '+C.FOCUS_CAP,'Focus after: min('+C.FOCUS_CAP+', '+before+' + '+d.focus+') = '+b.focus])]);notify(r,'Focus gained.');}
  let exhaustCount=0;
@@ -100,7 +115,7 @@ function endTurn(r){
  A.beforeEnemy(r,artifactContext);const it=intent(r),hit=Math.max(0,it.damage-b.block);
  const hpBefore=r.hp;r.hp=Math.max(0,r.hp-hit);R.record(r,it.label,[],[R.delta('HP lost','HP',hpBefore,r.hp,['Enemy damage: '+it.damage,'Block absorbed: '+Math.min(it.damage,b.block),'Damage after Block: max(0, '+it.damage+' − '+b.block+') = '+hit,'HP after: max(0, '+hpBefore+' − '+hit+') = '+r.hp]),R.total('Remaining HP','HP',r.hp,['Remaining HP: '+hpBefore+' − '+(hpBefore-r.hp)+' = '+r.hp])]);r.stats.turns++;b.discard.push(...b.hand.splice(0));
  notify(r,it.label+': '+hit+' damage taken.');
- if(r.hp<=0){r.scene='defeat';r.finished=Math.max(r.started,Date.now());return r;}
+ if(r.hp<=0){r.scene='defeat';if(r.mysteryState)r.mysteryState.nextCombat=[];r.finished=Math.max(r.started,Date.now());return r;}
  if(hit===0)A.fullyBlocked(r,it.damage,artifactContext);
  if(b.hp<=0){win(r);return r;}
  // The next player-turn reset precedes the HP-threshold Block award.
@@ -131,7 +146,7 @@ function skipArtifact(r){
  r.artifactState.offer=null;return finishNode(r);
 }
 function camp(r,action,uid){if(r.scene!=='camp')throw new Error('No Rest site is active.');if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+12);R.record(r,'Rest',[],[R.healing(12,before,r.hp,r.maxHp)]);}else if(action==='upgrade'){const c=r.deck.find(x=>x.uid===uid&&!x.upgraded);if(!c)throw new Error('Choose a card that is not upgraded.');c.upgraded=true;}else throw new Error('Choose Rest or Upgrade.');return finishNode(r);}
-function event(r,action,uid){if(r.scene!=='event'||r.artifactState?.offer)throw new Error('No Mystery event is active.');if(action==='artifact'){if(r.mode!=='challenge'||!r.artifactState||!A.offer(r,'mystery'))throw new Error('No new artifacts are available.');return r;}if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+8);R.record(r,'Mystery healing',[],[R.healing(8,before,r.hp,r.maxHp)]);}else if(action==='remove'){if(r.deck.length<=10)throw new Error('Keep at least 10 cards in your deck.');const i=r.deck.findIndex(c=>c.uid===uid);if(i<0)throw new Error('Card not found.');r.deck.splice(i,1);}else if(action!=='skip')throw new Error('Choose a valid option.');return finishNode(r);}
+function event(r,action,uid){if(r.scene!=='event'||r.artifactState?.offer||r.mysteryState?.pending)throw new Error('No Mystery event is active.');if(action==='artifact'){if(r.mode!=='challenge'||!r.artifactState||!A.offer(r,'mystery'))throw new Error('No new artifacts are available.');return r;}if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+8);R.record(r,'Mystery healing',[],[R.healing(8,before,r.hp,r.maxHp)]);}else if(action==='remove'){if(r.deck.length<=10)throw new Error('Keep at least 10 cards in your deck.');const i=r.deck.findIndex(c=>c.uid===uid);if(i<0)throw new Error('Card not found.');r.deck.splice(i,1);}else if(action!=='skip')throw new Error('Choose a valid option.');return finishNode(r);}
 
 // Shop uses a private deterministic stream. Combat and artifact RNG never reroll stock.
 function shopRandom(r,nodeId){let value=(r.seed^Math.imul(r.stage+1,2246822519))>>>0;for(const ch of nodeId)value=(Math.imul(value,31)+ch.charCodeAt(0))>>>0;return ()=>{value=(Math.imul(value,1664525)+1013904223)>>>0;return value;};}
@@ -183,9 +198,9 @@ function retry(r){if(!r.checkpoint){const out=newRun(r.seed,r.mode,r.route?.vers
 function validate(s){try{return validateState(s);}catch(_){return false;}}
 function validateState(s){const nonnegative=n=>Number.isSafeInteger(n)&&n>=0;const cardOK=c=>c&&typeof c.uid==='string'&&/^c\d+$/.test(c.uid)&&Object.hasOwn(C.cards,c.key)&&typeof c.upgraded==='boolean';
  const phase=Q.context(s)?.scene;
- if(!s||typeof s!=='object'||s.version!==1||!['learn','challenge'].includes(s.mode)||!Array.isArray(s.deck)||s.deck.length<6||s.deck.length>60||!s.deck.every(cardOK)||new Set(s.deck.map(c=>c.uid)).size!==s.deck.length||![0,1].includes(s.stage)||!Number.isInteger(s.depth)||s.depth<0||s.depth>(s.route?.version===3?9:4)||!nonnegative(s.hp)||s.hp>s.maxHp||s.maxHp!==A.maxHp(s)||!nonnegative(s.rng)||s.rng>4294967295||!nonnegative(s.seed)||!nonnegative(s.seq)||s.deck.some(c=>Number(c.uid.slice(1))>s.seq)||!Array.isArray(s.cleared)||!s.cleared.every(v=>typeof v==='string')||!Number.isFinite(s.started)||!s.stats||typeof s.stats.concepts!=='object'||!['battles','turns','forecasts','firstCorrect','assisted','wrong'].every(k=>nonnegative(s.stats[k]))||s.stats.forecasts!==s.stats.firstCorrect+s.stats.assisted||!['master','education','map','battle','reward','camp','event','shop','stageclear','defeat','victory'].includes(s.scene))return false;
+ if(!s||typeof s!=='object'||s.version!==1||!['learn','challenge'].includes(s.mode)||!Array.isArray(s.deck)||s.deck.length<1||s.deck.length>60||!s.deck.every(cardOK)||new Set(s.deck.map(c=>c.uid)).size!==s.deck.length||![0,1].includes(s.stage)||!Number.isInteger(s.depth)||s.depth<0||s.depth>(s.route?.version===3?9:4)||!nonnegative(s.hp)||s.hp>s.maxHp||s.maxHp!==A.maxHp(s)||!nonnegative(s.rng)||s.rng>4294967295||!nonnegative(s.seed)||!nonnegative(s.seq)||s.deck.some(c=>Number(c.uid.slice(1))>s.seq)||!Array.isArray(s.cleared)||!s.cleared.every(v=>typeof v==='string')||!Number.isFinite(s.started)||!s.stats||typeof s.stats.concepts!=='object'||!['battles','turns','forecasts','firstCorrect','assisted','wrong'].every(k=>nonnegative(s.stats[k]))||s.stats.forecasts!==s.stats.firstCorrect+s.stats.assisted||!['master','education','map','battle','reward','camp','event','shop','stageclear','defeat','victory'].includes(s.scene))return false;
  if(s.finished!==undefined&&(!Number.isFinite(s.finished)||s.finished<s.started||!['stageclear','defeat','victory'].includes(phase)))return false;
- if(!R.valid(s)||!Q.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
+ if(!R.valid(s)||!Q.valid(s)||!X.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
  if(['cardsPlayed','hintsUsed'].some(k=>s.stats[k]!==undefined&&!nonnegative(s.stats[k])))return false;
  if(s.gold!==undefined&&(!nonnegative(s.gold)||s.gold>100000))return false;
  if(s.scene==='shop'&&!validShop(s))return false;
@@ -213,9 +228,10 @@ function restore(saved){
    b.currentIntent.label=C.enemies[b.enemyId].patterns[(b.turn-1)%C.enemies[b.enemyId].patterns.length].label;
    if(r.textLocale!=='en'){b.log=['Game resumed. Your progress is safe.'];r.notice='Game resumed.';}
   }
+  if(r.scene==='event'&&!r.mysteryState?.pending&&!r.artifactState?.offer)X.enter(r);
   r.gold=r.gold??C.ECONOMY.start;r.stats.cardsPlayed=r.stats.cardsPlayed??0;r.stats.hintsUsed=r.stats.hintsUsed??0;r.textLocale='en';if(r.checkpoint)refresh(r.checkpoint);
  }
  refresh(out);return out;
 }
-const E={chooseArtifact,continueEducation,selectEducation:Q.select,answerEducation:Q.answer,hintEducation:Q.hint,skipArtifact,artifactChoices:r=>r.scene==='education'?[]:A.choices(r),ownedArtifacts:A.owned,effectiveDefinition,energyLimit:r=>r.battle?.artifacts?.turn.energyBudget||C.ENERGY,shopOffers,shopPrice,shopPriceCalculation,shopRemovalPrice,buyCard,buyArtifact,removeShopCard,leaveShop,getMap:G.get,availableNodes:G.available,restore,newRun,definition,card,shuffle,rng,draw,intent,startBattle,enterNode,finishNode,playCard,canPlay,filterLimit,armFocus,forecast,answer,hint,closeForecast,endTurn,chooseReward,camp,event,nextStage,retry,validate,clone};if(typeof module!=='undefined')module.exports=E;else root.DCEngine=E;
+const E={openMystery,startMystery,answerMystery,expireMystery,continueMystery,leaveMystery,selectMysteryOption,selectMysteryTarget,claimMystery,chooseArtifact,continueEducation,selectEducation:Q.select,answerEducation:Q.answer,hintEducation:Q.hint,skipArtifact,artifactChoices:r=>r.scene==='education'?[]:A.choices(r),ownedArtifacts:A.owned,effectiveDefinition,energyLimit:r=>r.battle?.artifacts?.turn.energyBudget??Math.max(0,C.ENERGY+(r.battle?.turn===1?(r.battle.mysteryModifiers?.energy||0):0)),shopOffers,shopPrice,shopPriceCalculation,shopRemovalPrice,buyCard,buyArtifact,removeShopCard,leaveShop,getMap:G.get,availableNodes:G.available,restore,newRun,definition,card,shuffle,rng,draw,intent,startBattle,enterNode,finishNode,playCard,canPlay,filterLimit,armFocus,forecast,answer,hint,closeForecast,endTurn,chooseReward,camp,event,nextStage,retry,validate,clone};if(typeof module!=='undefined')module.exports=E;else root.DCEngine=E;
 })(typeof window!=='undefined'?window:globalThis);

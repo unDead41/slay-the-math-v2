@@ -170,3 +170,8 @@ The source tracker is a presentation projection of the engine's real counters, u
 ## Map, modes, Boss motion and Shop 2.12.0
 
 Shop version 2 is owned by engine.createShop/validShop, buyCard/buyArtifact/removeShopCard; cardView, shopView, selectDeck, modal/close and toast remain UI owners. Source policy: SOR 12/13/19 and DEC-20261022-10/11/12. Selection/help previews are read-only; visible priced Buy commits once. Paid artifact purchases work in both modes without opening a free Claim trial. Removal selects a UID then confirms its price and lasting consequence; Cancel preserves all state. Sold/service-used state survives refresh; failure keeps Gold/deck/ownership unchanged. Stock/base prices/sale never reroll; newly owned discounts update quotes through the same engine price owner. Legacy visits finish with old stock. Boss animation remains presentation-only, with per-actor floor registration; existing reduced motion, dialog pause and same-source failure posters apply.
+
+
+## Mystery Events — 2.13.0
+
+Mystery is a named timed-question variant of the existing education flow. Intro states success/failure and fixed duration; Leave before Start exposes no question. A–D submits once; terms only open help. Support/dialogs/menu do not pause the deadline. Correct/wrong/timeout/abandon leads to answer review before consequences; optional target choice and explicit confirmation precede atomic cost/reward. Transitions focus the new heading, returning to the shared map on completion. Malformed imported offers are rejected by the save owner. Current-illustration loading cannot change the mathematical prompt or outcome. See docs/MYSTERY_EVENTS_2_13_0.md for the source policy.

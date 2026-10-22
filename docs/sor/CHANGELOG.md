@@ -2,6 +2,15 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.13.0 — 22 Oktober 2026 (Malaysia)
+
+- Apply all fifteen Mystery v2 scenes/mechanics to both stages/modes with the active shared bank.
+- Add fixed one-attempt timers, final review, persistent candidates/deadlines and atomic confirmed rewards/costs/failure consequences.
+- Add category-preserving card transforms, consumed Artifact history, permanent Max HP cost, stage-correct Echo encounter and temporary Oracle/Hourglass modifiers.
+- Preserve existing bank/answer IDs and Artifact unfinished-trial behavior; reject malformed reward saves and keep keyboard focus on the new heading.
+- Retain original ZIPs/artwork; validate runtime derivatives and document the supplied ME04 PNG’s incomplete bottom margin.
+
+
 ## Game 2.11.0 — 22 Oktober 2026 (Malaysia)
 
 - Apply the supplied parchment dungeon map reference with live room icons, links and HUD; preserve both stages and legacy topology.

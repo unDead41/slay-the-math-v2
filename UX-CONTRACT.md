@@ -181,3 +181,7 @@ Mystery is a named timed-question variant of the existing education flow. Intro 
 Shop tab state is presentation-only. Click, ArrowLeft/ArrowRight and Home/End select/focus one enabled tab without changing Gold, stock, RNG, card targets or saves. Purchases stay on their active tab; reload opens Cards with the engine’s frozen offers and Sold/service-used status intact. Leave Shop remains outside the tab panels. Old visits keep their original stock and disable unavailable services. Removal retains the shared native selector, explicit confirmation and cancellation.
 
 Mystery art covers the encounter rather than appearing in an inset frame. Intro/review/reward text uses the existing STM_SHARED tooltip hub. Purple previews show the authored cost/reward and current HP/Gold arithmetic, including healing/HP-loss caps and the Max HP clamp; they do not add resolved calculation entries. Only actual consequences write the existing ledger. Terms, numbers, Hint, Basics, menu and tooltips never pause/reset the saved deadline or submit an answer. Question-bank meanings stay in question context; no teaching-pool Card definition is applied to the real deck.
+
+## Boss size — 2.13.2
+
+Both bosses match Alyssa’s visible idle height across desktop and phone layouts, including static fallback. Responsive positioning preserves the shared ground line and keeps all five actions’ faint VFX inside the arena. Intent, HP, cards and native actions keep their existing layers and owners. Size changes do not commit gameplay or save mutations.

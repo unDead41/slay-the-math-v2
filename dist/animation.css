@@ -7,3 +7,8 @@
 .combat-layout .enemy:has(.actor-animation) .fighter-art{animation:none!important}
 /* Keep the supplied wide hero cells inside the phone arena. */
 @media(max-width:600px){.combat-layout .player:has(.actor-animation) .fighter-anchor{height:auto;width:min(calc(700 * var(--combat-unit)),90vw)}}
+/* Boss padding differs from ordinary enemies; match Alyssa's visible height. */
+@media(max-width:600px){.combat-layout .enemy:is([data-enemy='sentinel'],[data-enemy='dealer']) .fighter-anchor{width:min(calc(426 * var(--combat-unit) * var(--figure-scale,1)),58vw)}}
+/* The tablet enemy pivot is 21.5vw from the edge. Reserve the widest VFX's
+   39% of the canvas to its right without shrinking or lifting the boss. */
+@media(min-width:601px) and (max-width:1050px){.combat-layout .enemy:is([data-enemy='sentinel'],[data-enemy='dealer']) .fighter-anchor{translate:min(0px,calc(21.5vw - 39%)) 0}}

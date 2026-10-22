@@ -1,0 +1,27 @@
+{
+  "version": "2.13.2",
+  "date": "2026-10-22",
+  "timezone": "Asia/Kuala_Lumpur",
+  "baseline": "4233d1d2cad547a6d48cda948ce3c10ddea1b4b8",
+  "verification": {
+    "syntax": "PASS",
+    "build": "PASS",
+    "nodeDom": {
+      "passed": 185,
+      "failed": 0,
+      "skipped": 0
+    },
+    "bossSizeViewports": 10,
+    "sourceFrames": 60,
+    "bossAndShopBrowser": "PASS",
+    "portableBossSize": "PASS",
+    "portableExternalRequests": 0,
+    "broaderIntegrationOffline": "DID_NOT_COMPLETE: nondeterministic/injected-fixture runner failures; see docs/BOSS_SIZE_2_13_2.md"
+  },
+  "generatedPortable": {
+    "bytes": 227221147,
+    "sha256": "32396f39e48073468fad58e057a59fd5c663b9d07c96a8808eb73b98102f8461",
+    "committed": false
+  },
+  "scope": "Only boss host calibration and responsive placement; atlases, source projection, timings, hero/non-boss data, engine and gameplay preserved."
+}

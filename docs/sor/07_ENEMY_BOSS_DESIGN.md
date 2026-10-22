@@ -102,3 +102,7 @@ Ijamm requests motion for Normal and Elite enemies in both stages. The new Stage
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12 supersedes static Boss presentation: sentinel → Twin Sigil Guardian (Stage 1), dealer → Deck Lord (Stage 2), five clips/six frames each. Resolved intent cycles map Attack/Defend/Skill; actual hit/blocked reaction maps Damaged/Defend. HP, seals, patterns, damage, reward and phase timing remain unchanged.
+
+## Boss size correction — game 2.13.2
+
+Ijamm’s references image(20261022-063153).png and image(20261022-063228).png require both bosses to appear comparable in size to Alyssa, as in the normal encounter. Calibrate the visible padded artwork rather than source-cell dimensions; keep the original models, direction, source registration and arena floor. Implementation/evidence: [Boss size](../BOSS_SIZE_2_13_2.md).

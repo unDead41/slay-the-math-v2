@@ -16,8 +16,10 @@ def main():
   assert manifest['facing']=='left' and manifest['flipX'] is False and manifest['frame_count']==30
   # Runtime anchor 512,768 is anatomical. Register the host to a 1000px canvas
   # floor, leaving 200px below it for authored translucent VFX, without clipping.
-  actor={'id':stem,'name':manifest['character'],'stage':stage,'type':'boss','facing':'left','flipX':False,'sourcePivot':[512,768],'floorPivot':[800,1000],'drawScale':1.65,'animations':{},'intentActions':({'Stone Fist':'attack','Rune Shield':'defend','Double Strike':'skill'} if stage==0 else {'Sharp Cards':'attack','Dark Veil':'defend','Rune Storm':'skill'})}
-  entry={'id':game_id,'source_id':stem,'sourcePivot':actor['sourcePivot'],'drawScale':actor['drawScale'],'clips':[]}
+  # Project the padded boss cells at Alyssa's visible height, rather than
+  # inheriting the 0.9 host scale used by ordinary enemy atlases.
+  actor={'id':stem,'name':manifest['character'],'stage':stage,'type':'boss','figureScale':1.1,'facing':'left','flipX':False,'sourcePivot':[512,768],'floorPivot':[800,1000],'drawScale':1.65,'animations':{},'intentActions':({'Stone Fist':'attack','Rune Shield':'defend','Double Strike':'skill'} if stage==0 else {'Sharp Cards':'attack','Dark Veil':'defend','Rune Storm':'skill'})}
+  entry={'id':game_id,'source_id':stem,'sourcePivot':actor['sourcePivot'],'drawScale':actor['drawScale'],'figureScale':actor['figureScale'],'clips':[]}
   dest=ROOT/'docs/animations/boss-v1'/stem;dest.mkdir(parents=True,exist_ok=True)
   for name in ['animation_manifest.json','SOR_ANIMATION.md','README.md','validation_report.json']:
    (dest/name).write_bytes((source/name).read_bytes())

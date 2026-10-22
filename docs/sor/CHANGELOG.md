@@ -224,3 +224,8 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Persist independently of game/reward/Learning; preserve unreadable originals and surface storage failures.
 - Add an exit reminder, CSV/JSON download and explicit native file sharing/download fallback. Clarify local saving versus delivery to Ijamm.
 - Keep the active question bank, answers, Hint values, artwork and engine unchanged. See docs/QUESTION_FEEDBACK_2_15_0.md.
+
+
+## 2.16.0 — Bahasa soalan
+
+Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Perubahan kekal pada branch education.

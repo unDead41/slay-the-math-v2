@@ -90,3 +90,8 @@ After pulling, rebuild `MAIN-SEKARANG.html` with `npm.cmd run build`, restart us
 Fifteen supplied Mystery Events now run in both stages and modes, using the active shared question bank, fixed 30/45/60-second deadlines, final answer review and atomic once-only consequences. Artwork loads only for the current event; 8K masters remain in the source ZIPs. Refresh retains the same question, deadline, choices and reward candidates. New runs retain the existing question-history profile.
 
 Run `npm run build` after pulling to refresh `MAIN-SEKARANG.html`, then restart `npm start`. The large generated portable file is verified locally; source and runtime artwork are the release inputs. Integration rules, source PNG recovery and verification are in [MYSTERY_EVENTS_2_13_0.md](docs/MYSTERY_EVENTS_2_13_0.md).
+
+
+## 2.16.0 — Bahasa soalan
+
+Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Perubahan kekal pada branch education.

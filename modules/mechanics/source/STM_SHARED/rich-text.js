@@ -43,6 +43,7 @@
    model.labelParts=teaching.mathText?.label;
    model.definitionParts=teaching.mathText?.definition?.[lang];
    model.exampleParts=teaching.mathText?.example?.[lang];
+   if(lang==='ms'&&typeof teaching.title_ms==='string'){model.title=teaching.title_ms;model.labelParts=[{text:teaching.title_ms}];}
   }
   return model;
  }

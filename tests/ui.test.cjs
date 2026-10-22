@@ -102,6 +102,27 @@ test('DOM: restored map highlights the travelled branch and disables every disco
  }finally{dom.window.close();}
 });
 function fixtureRun(seed){const run=E.newRun(seed);delete run.route;return run;} // Legacy/standalone scene fixtures.
+test('DOM: actual Artifact language switch keeps the pending question, attempt state and selected choice',{skip:!JSDOM},async()=>{
+ const fixture=require('./fixtures/education-v1_4-pending.json'),{dom,w,click,state}=boot(fixture);
+ try{
+  click('continue');const before=state(),pending=before.educationState.pending,english=w.document.querySelector('#education-prompt').textContent;
+  const selector=w.document.getElementById('question-language-select');selector.value='ms';selector.dispatchEvent(new w.Event('change',{bubbles:true}));
+  const after=state();assert.deepEqual(after.educationState,before.educationState);assert.equal(after.gold,before.gold);assert.equal(after.hp,before.hp);assert.equal(after.educationState.pending.questionId,pending.questionId);
+  assert.notEqual(w.document.querySelector('#education-prompt').textContent,english);assert.match(w.document.querySelector('.education-question').textContent,/Petunjuk/);
+  const restored=w.document.getElementById('question-language-select');restored.value='en';restored.dispatchEvent(new w.Event('change',{bubbles:true}));assert.equal(w.document.querySelector('#education-prompt').textContent,english);
+  await new Promise(resolve=>setImmediate(resolve));
+ }finally{dom.window.close();}
+});
+test('DOM: Mystery language switching preserves the exact question and running deadline',{skip:!JSDOM},async()=>{
+ const {dom,w,click,state}=boot(mysteryRoom('ME01'));
+ try{
+  click('continue');click('mystery-start');const before=state();
+  const selector=w.document.getElementById('question-language-select');selector.value='ms';selector.dispatchEvent(new w.Event('change',{bubbles:true}));
+  const after=state();assert.deepEqual(after.mysteryState.pending,before.mysteryState.pending);assert.deepEqual(after.educationState,before.educationState);assert.equal(w.document.querySelector('.mystery-question').lang,'ms');
+  assert.match(w.document.querySelector('.mystery-question').textContent,/Petunjuk|Cari|Diberi/);
+  await new Promise(resolve=>setImmediate(resolve));
+ }finally{dom.window.close();}
+});
 test('DOM: Education Practice exit waits for the trusted folio confirmation and keeps the run intact',{skip:!JSDOM},()=>{
  const r=E.newRun(21,'challenge'),{dom,w,click,state}=boot(r);
  try{

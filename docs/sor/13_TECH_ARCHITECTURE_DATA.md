@@ -146,3 +146,8 @@ Run schema and engine transaction ownership remain version 1. Education accepts 
 ## Question feedback — 2.15.0
 
 `slay-the-math.question-feedback.v1` exclusively owns versioned per-question comments, independent of run, rewarded history and Learning. Merge fresh records on write, preserve corrupt originals, retain failed writes in memory and offer explicit CSV/JSON export. Never submit automatically or invent a receiver. Native Share is an explicit user action with download fallback. The host accepts exit confirmation only from the current same-origin practice frame. No run schema/bank/answer/RNG changes. Owner: [Question feedback](../QUESTION_FEEDBACK_2_15_0.md).
+
+
+## Question language — 2.16.0
+
+Whole-question English/Bahasa Melayu is implemented on education. Source review, scope and validation: [Question language](../QUESTION_LANGUAGE_2_16_0.md).

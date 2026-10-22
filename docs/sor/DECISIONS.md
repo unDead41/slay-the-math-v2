@@ -312,3 +312,9 @@ Owners: SOR 02/07/09/10/11/12/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Impleme
 | DEC-20261022-FEEDBACK-02 | DITERUSKAN | Reuse Main Menu Education Practice and all 120 questions. Save one editable comment per question/bank on the device; provide CSV/JSON download and native file sharing with fallback so players can send to Ijamm when connected. State clearly that no automatic delivery is configured. Keep comments separate from game/reward/Learning data and preserve the education branch boundary. |
 
 Owners: SOR 10/13/15; implementation and delivery limits: [Question feedback](../QUESTION_FEEDBACK_2_15_0.md).
+
+
+## Bahasa soalan — 2.16.0
+
+- DISAHKAN: Ijamm requests whole-question BM/English switching using both supplied textbooks and DSKP, beyond glossary meanings.
+- DITERUSKAN: Authored display overlay for all 120 questions and Basics; canonical mathematical data and game state remain stable. [Details](../QUESTION_LANGUAGE_2_16_0.md).

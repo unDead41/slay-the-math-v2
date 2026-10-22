@@ -10,7 +10,7 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode}
   input.type='checkbox';input.name='feedback-category';input.value=category.id;span.textContent=category.label;
   label.className='feedback-category';label.append(input,span);node('feedback-categories').append(label);
  }
- function announce(message){if(node('feedback-status').textContent!==message)node('feedback-status').textContent=message;}
+ function announce(message){message=globalThis.DCQuestionLanguage?.t(message,globalThis.DCQuestionLanguage.language())||message;if(node('feedback-status').textContent!==message)node('feedback-status').textContent=message;}
  function controls(){
   const count=store.list().length;
   node('feedback-count').textContent=count+' '+(count===1?'question has':'questions have')+' a comment';
@@ -18,6 +18,9 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode}
   for(const button of root.querySelectorAll('[data-feedback-export],[data-feedback-share]'))button.disabled=count===0;
   node('feedback-character-count').textContent=text.value.length+' / 2,000';
   if(dialog.open)renderExit();
+  const language=globalThis.DCQuestionLanguage?.language()||'en';
+  globalThis.DCQuestionLanguage?.applyInterface(node('question-feedback'),language);
+  if(dialog.open)globalThis.DCQuestionLanguage?.applyInterface(dialog,language);
  }
  function render(){
   const question=getQuestion();
@@ -34,7 +37,7 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode}
   const categories=[...node('feedback-categories').querySelectorAll('input:checked')].map(input=>input.value),record=getRecord();
   if(explicit&&!categories.length&&!text.value.trim()){announce('Choose what needs improvement or write a comment.');text.focus();return false;}
   try{
-   store.save(getQuestion(),categories,text.value,{mode:getMode(),status:record?.status,hintUsed:record?.hintState.hintUsed,moreHintViewed:record?.hintState.moreHintViewed,stepsViewed:record?.stepsViewed});
+   store.save(getQuestion(),categories,text.value,{mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status,hintUsed:record?.hintState.hintUsed,moreHintViewed:record?.hintState.moreHintViewed,stepsViewed:record?.stepsViewed});
    announce(store.error?'Comment kept for this open page. Download it before leaving.':categories.length||text.value.trim()?'Saved on this device. Share or download your comments to send them for review.':'This question has no comment.');
    controls();return true;
   }catch(e){announce(e.message);return false;}
@@ -73,6 +76,7 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode}
   node('feedback-exit-summary').textContent=count?count+' '+(count===1?'question has':'questions have')+' a comment ready to share. These comments will help improve the questions, hints, diagrams and worked steps.':'Your feedback helps improve the questions, hints, diagrams and worked steps. You can return to any question to leave a comment.';
   node('feedback-exit-delivery').textContent=store.error?store.error:'Your comments are saved on this device. Download or share them with Ijamm so they can be collected for future improvements. They have not been sent automatically.';
   node('feedback-exit-confirm').textContent=closingForGame?'Return to Main Menu':'Finish for now';
+  globalThis.DCQuestionLanguage?.applyInterface(dialog,globalThis.DCQuestionLanguage.language());
  }
  function requestExit(forGame=window.parent!==window){
   store.flush();closingForGame=forGame;exitReturnFocus=document.activeElement;controls();renderExit();node('feedback-exit-status').textContent='';

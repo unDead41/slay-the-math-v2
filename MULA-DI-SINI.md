@@ -72,3 +72,8 @@ Runtime 2.5 diperlukan untuk membuka save yang sedang berada di scene soalan. Ek
 Syntax/build, model soalan, save/restore, no-repeat 120 item, DOM, browser desktop/phone/4K, tiga topik, effects artifact, checkpoint Boss, map dan HTML offline sebenar disemak. Bukti terperinci: payload/docs/EDUCATION_UPDATE_2_5_0.md, payload/VERIFICATION-EDUCATION.json dan PACKAGE-VALIDATION.json.
 
 Installer belum dijalankan pada Windows di sini; semakan statik dan simulasi hash pemasangan/idempotence/rollback disediakan. Artwork 4K dalam ARTWORK ialah eksport upscale 3840x2160 daripada sumber 1672x941 yang sama, bukan native 4K baharu.
+
+
+## 2.16.0 — Bahasa soalan
+
+Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Petunjuk, Petunjuk Lanjut dan jalan kerja antara English dan Bahasa Melayu. Kandungan dibandingkan dengan buku teks EN/BM dan DSKP. Perubahan kekal pada branch education.

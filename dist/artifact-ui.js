@@ -25,11 +25,11 @@
    (!opening&&!boss?button('Leave Without It','skip-artifact','text-btn'):'')+'</div><p class="artifact-save-note">Your choices are saved. Returning to the menu keeps the same offers.</p></div></section>';
  }
  function education(run,{esc,button}){
-  const Q=root.DCEducation,p=run.educationState.pending,q=Q.current(run),gift=A.catalog[p.artifactId];
+  const Q=root.DCEducation,L=root.DCQuestionLanguage,p=run.educationState.pending,q=L.question(Q.current(run),L.language()),gift=A.catalog[p.artifactId];
   const destination=p.kind==='boss'?'Claim & Enter Deck Tower':p.kind==='starting'?'Claim & Choose Your Path':'Claim & Continue';
   const selected=q?.choices.find(c=>c.id===p.selectedId),correct=q?.choices.find(c=>c.id===q.correctChoiceId);
   const feedback=p.solved?'Correct. Your path is ready.':p.attempts.length?'Not quite. Try another answer or use a hint.':'Choose one answer, then check it.';
-  const view=q?Q.learningView(run):null,record=q?Q.record(run):null;
+  const record=q?Q.record(run):null,view=q?root.STMMechanics.session.selectLearningView(q,record):null;
   const answers=q?'<div class="education-answers" role="group" aria-labelledby="education-prompt">'+p.choiceOrder.map((id,i)=>{
    const choice=q.choices.find(c=>c.id===id),wrong=p.attempts.includes(id)&&id!==q.correctChoiceId;
    return '<div class="education-option">'+button('<span class="education-letter" aria-hidden="true">'+'ABCD'[i]+'</span><span class="sr-only">'+esc(choice.text)+'</span>','education-select','education-answer'+(p.selectedId===id?' selected':'')+(wrong?' incorrect':'')+(p.solved&&id===q.correctChoiceId?' correct':''),'data-id="'+id+'" aria-label="Answer '+'ABCD'[i]+': '+esc(choice.text)+'" aria-pressed="'+(p.selectedId===id)+'" '+(p.solved||wrong?'disabled':''))+'<div class="education-answer-copy"><span data-q-rich="choice:'+id+'">'+esc(choice.text)+'</span>'+(wrong?'<small>Try another answer</small>':'')+'</div></div>';

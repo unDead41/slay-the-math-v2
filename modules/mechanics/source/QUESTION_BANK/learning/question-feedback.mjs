@@ -58,7 +58,7 @@ export function createQuestionFeedbackStore({storage,bankVersion,questionIds,now
   const timestamp=now(),entry={id,questionId:question.id,bankVersion,topic:question.topic||question.topicCode,difficulty:question.difficulty,
    question:question.prompt||question.themedRichText?.prompt?.map(s=>s.text||'').join('')||'',
    categories:chosen,comment:text,createdAt:previous?.createdAt||timestamp,updatedAt:timestamp,
-   context:{mode:context.mode==='learn'?'learn':'review',status:['correct','revealed'].includes(context.status)?context.status:'pending',
+   context:{mode:context.mode==='learn'?'learn':'review',language:context.language==='ms'?'ms':'en',status:['correct','revealed'].includes(context.status)?context.status:'pending',
     hintUsed:!!context.hintUsed,moreHintViewed:!!context.moreHintViewed,stepsViewed:!!context.stepsViewed}};
   records.set(id,entry);dirty.set(id,entry);flush();return get(question.id);
  }
@@ -68,7 +68,7 @@ export function createQuestionFeedbackStore({storage,bankVersion,questionIds,now
 export function questionFeedbackCSV(report){
  const labels=new Map(QUESTION_FEEDBACK_CATEGORIES.map(c=>[c.id,c.label]));
  const cell=value=>{let text=String(value??'');if(/^[\s\uFEFF]*[=+@-]|^[\t\r]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
- const rows=[['Question ID','Bank version','Topic','Difficulty','Question','What needs improvement','Comment','Created at','Updated at','Practice mode','Question state','Hint opened','More Hint opened','Steps opened']];
- for(const c of report.comments)rows.push([c.questionId,c.bankVersion,c.topic,c.difficulty,c.question,c.categories.map(id=>labels.get(id)||id).join('; '),c.comment,c.createdAt,c.updatedAt,c.context.mode,c.context.status,c.context.hintUsed,c.context.moreHintViewed,c.context.stepsViewed]);
+ const rows=[['Question ID','Bank version','Topic','Difficulty','Question','What needs improvement','Comment','Created at','Updated at','Practice mode','Question language','Question state','Hint opened','More Hint opened','Steps opened']];
+ for(const c of report.comments)rows.push([c.questionId,c.bankVersion,c.topic,c.difficulty,c.question,c.categories.map(id=>labels.get(id)||id).join('; '),c.comment,c.createdAt,c.updatedAt,c.context.mode,c.context.language||'en',c.context.status,c.context.hintUsed,c.context.moreHintViewed,c.context.stepsViewed]);
  return '\uFEFF'+rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
 }

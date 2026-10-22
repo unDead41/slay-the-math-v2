@@ -150,3 +150,8 @@ The user requests a sixth Main Menu action for education only. **Education Pract
 ## Question feedback — 2.15.0
 
 Education Practice adds categories and plain-text comments below every question, with “Yes, we do read your comments.” Use native checkbox labels, textarea, Save, live status and 44px controls. Main Menu/Finish practice opens one native exit dialog with comment count, delivery explanation, export/share and keep-reviewing/return actions. Restore focus on cancellation and return. Clearly distinguish saved-on-device comments from comments shared with Ijamm. Owner and limits: [Question feedback](../QUESTION_FEEDBACK_2_15_0.md).
+
+
+## Question language — 2.16.0
+
+Whole-question English/Bahasa Melayu is implemented on education. Source review, scope and validation: [Question language](../QUESTION_LANGUAGE_2_16_0.md).

@@ -5,7 +5,7 @@ const SVG_TAGS=new Set(['svg','title','desc','defs','clipPath','circle','mask','
 const SVG_ATTRS=new Set(['viewBox','role','aria-labelledby','id','cx','cy','r','x','y','width','height','fill','fill-opacity','stroke','stroke-width','rx','maskUnits','mask','clip-path','text-anchor','data-role','font-size','font-weight','font-family','dy']);
 let diagramSequence=0;
 
-function safeVenn(xml,glossary,reference=false) {
+function safeVenn(xml,glossary,reference=false,language='en') {
   const parsed=new DOMParser().parseFromString(xml,'image/svg+xml');
   if(parsed.querySelector('parsererror')||parsed.documentElement.localName!=='svg')throw new Error('Invalid diagram SVG');
   function clone(source) {
@@ -33,10 +33,10 @@ function safeVenn(xml,glossary,reference=false) {
     }
   }
   if(reference){
-    for(const text of svg.querySelectorAll('tspan'))if(text.textContent==='?')text.textContent='Not given';
+    for(const text of svg.querySelectorAll('tspan'))if(text.textContent==='?')text.textContent=language==='ms'?'Tidak diberikan':'Not given';
     for(const shade of svg.querySelectorAll('rect[mask]'))shade.remove();
     const description=svg.querySelector('desc');
-    if(description)description.textContent='The diagram shows the region values. Not given means the question does not specify that value. Use the text table below for the same information.';
+    if(description)description.textContent=language==='ms'?'Rajah menunjukkan nilai dalam setiap rantau. Tidak diberikan bermaksud nilai itu tidak dinyatakan dalam soalan. Maklumat yang sama ditunjukkan dalam jadual di bawah.':'The diagram shows the region values. Not given means the question does not specify that value. Use the text table below for the same information.';
   }
   for(const label of svg.querySelectorAll('text[data-role="set-label"]')) {
     const text=label.textContent;
@@ -54,7 +54,7 @@ export function renderVisual(container,visual,options) {
   container.replaceChildren();if(!visual)return;
   const title=document.createElement('h3');title.textContent=visual.title;container.append(title);
   const rich=(parent,runs)=>renderRichText(parent,runs,options);
-  if(visual.kind==='venn')container.append(safeVenn(visual.svg,options.glossary,visual.reference));
+  if(visual.kind==='venn')container.append(safeVenn(visual.svg,options.glossary,visual.reference,visual.displayLanguage));
   if(['venn','table'].includes(visual.kind)) {
     const wrap=document.createElement('div');wrap.className='learning-table-scroll';
     wrap.setAttribute('tabindex','0');wrap.setAttribute('role','region');wrap.setAttribute('aria-label',visual.title+' table');
@@ -94,7 +94,8 @@ export function renderVisual(container,visual,options) {
       const tokens=document.createElement('div');tokens.className='learning-pool-tokens';tokens.setAttribute('aria-hidden','true');
       for(let i=0;i<group.count;i++){
         const token=document.createElement('span');token.className='learning-pool-token';token.textContent=group.label[0];
-        const color=group.label.startsWith('Red')?'red':group.label.startsWith('Blue')?'blue':group.label.startsWith('Gold')?'gold':group.label.startsWith('Silver')?'silver':'card';
+        const sourceLabel=group.sourceLabel||group.label;
+        const color=sourceLabel.startsWith('Red')?'red':sourceLabel.startsWith('Blue')?'blue':sourceLabel.startsWith('Gold')?'gold':sourceLabel.startsWith('Silver')?'silver':'card';
         token.dataset.tokenColor=color;tokens.append(token);
       }
       row.append(label,tokens);list.append(row);

@@ -111,3 +111,8 @@ For 2.11.0 verify the supplied suite independently, original question/choice/eff
 ## Question feedback — 2.15.0
 
 Verify all 120 question-to-comment bindings and reload/edit behavior; Hint/Review/Learning reset must preserve comments, run and rewarded history. Cover multi-tab writes, corrupt/quota storage, inert text, CSV formula safety, explicit file download/share, cancelled/unsupported sharing, and trusted frame/origin exit gating. Inspect the real game popup and narrow layout. Distinguish stubbed native Share from OS recipient testing. Evidence: docs/verification/question-feedback/report.json and docs/QUESTION_FEEDBACK_2_15_0.md.
+
+
+## Question language — 2.16.0
+
+Whole-question English/Bahasa Melayu is implemented on education. Source review, scope and validation: [Question language](../QUESTION_LANGUAGE_2_16_0.md).

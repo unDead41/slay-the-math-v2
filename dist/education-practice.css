@@ -17,3 +17,6 @@ body[data-scene="education-practice"] .ambient{display:none}
 @media(max-width:500px){.education-practice-bar{gap:8px;padding:8px 10px}.education-practice-bar p{font-size:11px}.education-practice-bar .btn{padding:10px;font-size:13px}}
 /* A sixth menu action retains the existing native controls and artwork fit. */
 @media(min-width:761px){.illustrated-home .main-menu-actions{gap:calc(11 * var(--menu-unit))}.illustrated-home .home-title{padding-block:calc(18 * var(--menu-unit))}}
+
+.question-language-control{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px;margin:0 0 16px;font:13px/1.4 var(--sans);color:var(--muted)}
+.question-language-control select{width:auto;min-height:44px;max-width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px}

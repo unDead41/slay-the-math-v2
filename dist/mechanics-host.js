@@ -1,5 +1,6 @@
 (function(root){'use strict';
- const M=root.STMMechanics,Q=root.DCEducation,A=root.DCArtifacts,C=root.DCConfig,R=root.DCRichText;
+ const M=root.STMMechanics,Q=root.DCEducation,A=root.DCArtifacts,C=root.DCConfig,R=root.DCRichText,L=root.DCQuestionLanguage;
+ L.installGlossary(M.data.glossary);
  const PROFILE='slay-the-math.artifact-codex.v1',clone=x=>JSON.parse(JSON.stringify(x));
  let tracker=null,artUI=null,runKey=null,questionTips=null,dialogTips=null,lastEvent=0,profileWritable=true;
  function disposeQuestion(){questionTips?.destroy();questionTips=null;}
@@ -12,7 +13,8 @@
   }
  }
  function hydrateEducation(run){
-  const q=Q.current(run);hydrateQuestion(document.querySelector('.education-question'),q,q?Q.learningView(run):null);
+  const q=L.question(Q.current(run),L.language());hydrateQuestion(document.querySelector('.education-question'),q,q?M.session.selectLearningView(q,Q.record(run)):null);
+  L.applyInterface(document.querySelector('.education-encounter'),L.language());
  }
  function teachingHTML(q,closed,{esc}){
   const h=q?.harmonization;if(!h)return '';
@@ -26,7 +28,8 @@
    }).join('')+(closed?'<p>'+esc(h.alignmentNote)+'</p>':'<p>Authoring notes appear after the question is finished.</p>')+'</details>';
  }
  function hydrateQuestion(host,q,view){
-  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');
+  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');host.lang=L.language();
+  const existing=host.querySelector('#question-language-select');if(!existing)host.insertAdjacentHTML('afterbegin',L.control());
   const index=new Map();
   for(const el of host.querySelectorAll('[data-q-rich]')){
    const key=el.dataset.qRich;let parts;
@@ -42,8 +45,9 @@
    else if(key.startsWith('step:'))parts=view.workedSteps?.find(s=>s.id===key.slice(5))?.richText;
    if(parts)renderParts(el,parts,view.allowCalculations,index);
   }
-  const visual=host.querySelector('[data-q-visual]');if(visual&&view.visual)M.renderVisual(visual,view.visual,{glossary:M.data.glossary,allowCalculations:view.allowCalculations,calculationIndex:index});
-  questionTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getTheme:()=> 'dark'});
+  const visual=host.querySelector('[data-q-visual]');if(visual&&view.visual)M.renderVisual(visual,L.visual(view.visual,L.language(),q.topicCode),{glossary:M.data.glossary,allowCalculations:view.allowCalculations,calculationIndex:index});
+  questionTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getLanguage:()=>L.language(),getTheme:()=> 'dark'});
+  L.applyInterface(host,L.language());
  }
  function createArtifacts(warn){
   if(tracker)return;
@@ -93,13 +97,13 @@
  }
  function comparison(host,id){if(host&&id){createArtifacts();artUI.mountComparison(host,id,{title:'Effect preview · current run',turn:tracker.turn||1});}}
  function basicsHTML(id,checks,{esc,button}){
-  const modules=M.data.foundations.modules,m=modules.find(m=>m.id===id)||modules[0];
+  const modules=M.data.foundations.modules.map(m=>L.foundation(m,L.language())),m=modules.find(m=>m.id===id)||modules[0];
   return '<div class="basics-layout" data-foundation="'+m.id+'"><nav class="basics-nav" aria-label="Basics topics">'+modules.map(x=>button(esc(x.title),'foundation-module','btn subtle','data-id="'+x.id+'" aria-current="'+(x.id===m.id?'page':'false')+'"')).join('')+'</nav><section class="basics-content"><p class="eyebrow">OPTIONAL BASICS · UNSCORED</p><h3>'+esc(m.title)+'</h3>'+m.cards.map((c,i)=>'<article><h4>'+esc(c.title)+'</h4><div data-basic-rich="card:'+i+'">'+esc(c.text)+'</div></article>').join('')+'<h3>Try it yourself</h3><p>These checks do not change your trial answer, rewards or learning score.</p>'+m.checks.map((c,i)=>'<section class="foundation-check"><h4 data-basic-rich="prompt:'+i+'">'+esc(c.prompt)+'</h4><div class="foundation-choices">'+c.choices.map((text,j)=>button(esc(text),'foundation-check','btn subtle','data-module="'+m.id+'" data-check="'+i+'" data-choice="'+j+'" aria-pressed="'+(checks[c.id]===j)+'"')).join('')+'</div>'+(checks[c.id]!==undefined?'<p role="status" class="foundation-feedback" data-basic-rich="feedback:'+i+'">'+esc(c.feedback[checks[c.id]])+'</p>':'')+'</section>').join('')+'</section></div>';
  }
  function hydrateBasics(host,checks){
-  disposeDialog();host.setAttribute('data-stm-richtext','');const m=M.data.foundations.modules.find(m=>m.id===host.querySelector('[data-foundation]')?.dataset.foundation);if(!m)return;const index=new Map();
+  disposeDialog();host.setAttribute('data-stm-richtext','');const source=M.data.foundations.modules.find(m=>m.id===host.querySelector('[data-foundation]')?.dataset.foundation),m=source?L.foundation(source,L.language()):null;if(!m)return;const index=new Map();
   for(const el of host.querySelectorAll('[data-basic-rich]')){const [kind,i]=el.dataset.basicRich.split(':'),c=m.checks[i];const parts=kind==='card'?m.cards[i].richText:kind==='prompt'?c.richText:c.feedbackRichText[checks[c.id]];renderParts(el,parts,true,index);}
-  dialogTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getTheme:()=> 'dark'});
+  dialogTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getLanguage:()=>L.language(),getTheme:()=> 'dark'});L.applyInterface(host,L.language());
  }
  function progressHTML(run,{esc}){const rows=Q.progress(run);return '<p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
  root.STMMechanicsHost={teachingHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};

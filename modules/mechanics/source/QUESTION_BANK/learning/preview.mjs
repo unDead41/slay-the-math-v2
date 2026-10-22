@@ -1,6 +1,6 @@
 /** Offline folio UI. Every answer and help transition belongs to session.mjs. */
 const previewData=JSON.parse(document.getElementById('preview-data').textContent);
-const bank=previewData.bank,glossary=previewData.glossary,foundations=previewData.foundations.modules;
+const QL=globalThis.DCQuestionLanguage,bank=previewData.bank,glossary=QL.installGlossary(previewData.glossary),foundations=previewData.foundations.modules;
 const root=document.getElementById('preview'),byId=id=>document.getElementById(id);
 const storageKey='slay-the-math.education-practice.v1';
 const reviewStates=new Map(),activeTabs=new Map(),basicsOpen=new Set(),messages=new Map();
@@ -10,6 +10,8 @@ const drawerMedia=globalThis.matchMedia('(max-width: 960px)');
 let session,storageError='',storagePaused=false,storageAvailable=true,savedLearningText=null;
 let question=bank.questions[0],selectedChoice=null,attemptCounter=0,mode='review',empty=false;
 let lastRenderedQuestionKey=null,atlasIsOpen=false;
+let contentLanguage=QL.language();byId('language-select').value=contentLanguage;document.documentElement.lang=contentLanguage;
+for(const option of byId('difficulty-select').options)option.value=option.value;
 const tips=attachRichTextTooltips(root,{glossary,calculationIndex,getLanguage:()=>byId('language-select').value,getTheme:()=>root.dataset.theme});
 const questionFeedback=attachQuestionFeedback({bank,root,getQuestion:()=>question,getRecord:()=>currentRecord(),getMode:()=>mode});
 
@@ -37,7 +39,7 @@ function putSession(next){if(mode==='learn'){session=next;persist();}else review
 function setMessage(text,tone=''){messages.set(questionKey(),{text,tone});}
 function topicName(code){return bank.topics?.[code]?.name||bank.questions.find(q=>q.topicCode===code)?.topic||code;}
 function rich(node,runs,allow=false){return renderRichText(typeof node==='string'?byId(node):node,runs,{glossary,calculationIndex,allowCalculations:allow});}
-function visual(node,value,allow=false){renderVisual(byId(node),value,{glossary,calculationIndex,allowCalculations:allow});}
+function visual(node,value,allow=false){renderVisual(byId(node),QL.visual(value,contentLanguage,question.topicCode),{glossary,calculationIndex,allowCalculations:allow});}
 function plainParagraph(text,className){const node=document.createElement('p');node.textContent=text;if(className)node.className=className;return node;}
 function interactiveTerm(target){return !!target?.closest?.('[data-richtext-kind],[data-stm-tip],[data-glossary-id],[data-calculation-id]');}
 function focusQuestion(){byId('question-heading').focus({preventScroll:true});byId('question-surface').scrollIntoView({block:'start',behavior:'auto'});}
@@ -49,7 +51,8 @@ function filteredQuestions(){
   if(topic&&q.topicCode!==topic)return false;
   if(difficulty&&q.difficulty!==difficulty)return false;
   if(!search)return true;
-  const text=[q.id,q.topic,q.topicCode,shortTopics[q.topicCode],q.difficulty,q.prompt||q.themedRichText.prompt.map(s=>s.text||'').join(''),q.harmonization?.contextNote||'',...(q.curriculumStandards||[])].join(' ').toLocaleLowerCase();
+  const localized=QL.question(q,contentLanguage);
+  const text=[q.id,q.topic,q.topicCode,shortTopics[q.topicCode],q.difficulty,q.prompt,localized.prompt,localized.topic,QL.t(shortTopics[q.topicCode],contentLanguage),QL.t(q.difficulty,contentLanguage),localized.harmonization?.contextNote||'',...(q.curriculumStandards||[])].join(' ').toLocaleLowerCase();
   return search.split(/\s+/).every(word=>text.includes(word));
  });
 }
@@ -182,7 +185,7 @@ function renderSources(closed=false){
  }
 }
 function renderBasics(){
- const module=foundations.find(m=>m.id===question.learning.foundationId),open=basicsOpen.has(questionKey())&&!!module;
+ const original=foundations.find(m=>m.id===question.learning.foundationId),module=original?QL.foundation(original,contentLanguage):null,open=basicsOpen.has(questionKey())&&!!module;
  byId('basics-panel').hidden=!open;byId('basics-button').disabled=!module;byId('basics-button').setAttribute('aria-expanded',String(open));
  byId('basics-cards').replaceChildren();byId('basics-checks').replaceChildren();if(!open)return;
  byId('basics-title').textContent=module.title;
@@ -202,7 +205,7 @@ function renderBasics(){
   }
   const button=document.createElement('button');button.type='button';button.textContent='Check practice';
   const feedback=document.createElement('p');feedback.className='learning-check-feedback';feedback.setAttribute('role','status');
-  button.addEventListener('click',()=>{const selected=radios.findIndex(r=>r.checked);if(selected<0){feedback.textContent='Choose an answer first.';return;}rich(feedback,check.feedbackRichText[selected],true);});
+  button.addEventListener('click',()=>{const selected=radios.findIndex(r=>r.checked);if(selected<0){feedback.textContent=QL.t('Choose an answer first.',contentLanguage);return;}rich(feedback,check.feedbackRichText[selected],true);});
   fieldset.append(button,feedback);byId('basics-checks').append(fieldset);
  }
 }
@@ -260,6 +263,7 @@ function renderSolution(view,record){
  byId('solution-visual-details').hidden=!view.closed||!view.visual;
 }
 function render(){
+ question=QL.question(bank.questions.find(q=>q.id===question.id),contentLanguage);
  tips.close();calculationIndex.clear();root.dataset.mode=mode;
  byId('bank-version').textContent=bank.bankVersion||'120-question collection';
  byId('storage-notice').hidden=!storageError;byId('storage-notice').textContent=storageError;
@@ -279,7 +283,7 @@ function render(){
   byId('empty-title').textContent=available?'Your next topic is ready.':'No unseen questions remain here.';
   byId('empty-message').textContent=available?'Select Next unseen question to continue learning.':nextTopic?'Choose another topic above, or explore the collection in Review.':'You have seen the whole collection. Review any question, or start a fresh learning record from Practice record.';
   byId('empty-state').append(byId('next-question'));byId('next-question').disabled=!available;byId('next-question').textContent=available?'Next unseen question →':'No unseen questions here';
-  return;
+  QL.applyInterface(root,contentLanguage);return;
  }
  // The same button returns to the folio after an exhausted topic changes.
  byId('question-surface').querySelector('.folio-navigation').insertBefore(byId('next-question'),byId('next-question-note'));
@@ -309,6 +313,7 @@ function render(){
  byId('next-question').disabled=mode==='learn'&&!!session.pendingQuestionId;
  byId('next-question').textContent=mode==='learn'?'Next unseen question →':'Next review →';
  byId('next-question-note').textContent=mode==='learn'&&session.pendingQuestionId?'Finish this question or view its solution to continue.':mode==='learn'?'Your next question has not been seen in this learning record.':'';
+ QL.applyInterface(root,contentLanguage);
 }
 
 function setAtlasOpen(open,{restoreFocus=false}={}){
@@ -333,7 +338,7 @@ byId('next-question').addEventListener('click',()=>{if(mode==='learn')nextLearni
 byId('previous-question').addEventListener('click',()=>nextReview(-1));
 byId('topic-select').addEventListener('change',()=>{if(empty)render();else byId('learning-selection-note').textContent='Select Next unseen question when you are ready.';});
 byId('theme-select').addEventListener('change',()=>{root.dataset.theme=byId('theme-select').value;tips.close();});
-byId('language-select').addEventListener('change',()=>tips.close());
+byId('language-select').addEventListener('change',()=>{contentLanguage=byId('language-select').value;QL.setLanguage(contentLanguage);document.documentElement.lang=contentLanguage;render();});
 byId('progress-button').addEventListener('click',()=>toggleProgress(byId('progress-panel').hidden));
 byId('basics-button').addEventListener('click',()=>{
  const key=questionKey();

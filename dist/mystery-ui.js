@@ -1,7 +1,7 @@
 (function(root){'use strict';
- const X=root.DCMystery,Q=root.DCEducation,M=root.STMMechanics,C=root.DCConfig,A=root.DCArtifacts;
+ const X=root.DCMystery,Q=root.DCEducation,M=root.STMMechanics,C=root.DCConfig,A=root.DCArtifacts,L=root.DCQuestionLanguage;
  function view(r,{esc,button,cardView,runTop}){
-  const p=r.mysteryState.pending,e=X.definition(r),q=Q.catalog[p.questionId],record=q?Q.getSession(r).records[q.id]:null;
+  const p=r.mysteryState.pending,e=X.definition(r),q=L.question(Q.catalog[p.questionId],L.language()),record=q?Q.getSession(r).records[q.id]:null;
   const final=p.phase!=='question',learning=q?M.session.selectLearningView(q,record,{finalReview:final}):null;
   const artwork=e?'mystery-'+e.id.toLowerCase()+(innerWidth<=760?'-small':'')+'.webp':null;
   const art=artwork?'<div class="mystery-art"><img src="assets/'+artwork+'" width="1920" height="1080" alt="'+esc(e.name)+'" decoding="async"><p>Stage '+(r.stage+1)+' · Floor '+(r.depth+1)+'</p></div>':'';
@@ -34,7 +34,7 @@
   }
   return runTop()+'<section class="mystery-layout" data-event-id="'+(e?.id||'empty')+'" data-phase="'+p.phase+'" aria-labelledby="mystery-title">'+art+'<div class="mystery-panel ornate-panel">'+body+'</div></section>';
  }
- function hydrate(r){const p=r.mysteryState?.pending,q=Q.catalog[p?.questionId],host=document.querySelector('.mystery-question');if(host&&q)root.STMMechanicsHost.hydrateQuestion(host,q,M.session.selectLearningView(q,Q.getSession(r).records[q.id],{finalReview:p.phase!=='question'}));}
+ function hydrate(r){const p=r.mysteryState?.pending,q=L.question(Q.catalog[p?.questionId],L.language()),host=document.querySelector('.mystery-question');if(host&&q)root.STMMechanicsHost.hydrateQuestion(host,q,M.session.selectLearningView(q,Q.getSession(r).records[q.id],{finalReview:p.phase!=='question'}));}
  let clockAnchor=null;
  function clock(r,onExpire){
   const p=r.mysteryState?.pending;if(p?.phase!=='question')return null;

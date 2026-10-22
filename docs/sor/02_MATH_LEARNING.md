@@ -114,3 +114,8 @@ MTH-14 (2.11.0) supersedes the 1.0 bank presentation/selection details with the 
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12 audit only: all original authored bank bytes/IDs/answers remain unchanged. Read-only support review found generic denominator/denominators bindings opening Common denominator in multiplication/equation contexts (confirmed PROB-008, 015, 038). Report precise locations and request a harmonized source package from the question owner; do not silently rewrite hints/examples. Projection checks cover all 120 items with zero plain/rich text mismatches. Details: docs/QUESTION_SUPPORT_AUDIT_2_12.md.
+
+
+## Mystery Events — 2.13.0
+
+Mystery v2 uses the same active 120-question bank and profile exposure service as Artifact trials, preferred compatible IDs first and unused same-topic fallback only. It never replaces question text/answers/hints with the older package snapshot or artwork counts. Each timed attempt ends after its first answer or deadline, then shows correct explanation and optional worked steps. Deadline/one-attempt rules are a Mystery variant; existing Artifact/Predict learning rules remain.

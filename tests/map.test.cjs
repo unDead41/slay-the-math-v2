@@ -11,7 +11,7 @@ function completeRoom(run, reward = null) {
     run.rewards = ['blast', 'fort', 'balance'];
     E.chooseReward(run, reward);
   } else if (run.scene === 'camp') E.camp(run, 'heal');
-  else if (run.scene === 'event') E.event(run, 'heal');
+  else if (run.scene === 'event') E.leaveMystery(run);
   else if (run.scene === 'shop') E.leaveShop(run);
   else assert.fail('unexpected room ' + run.scene);
 }
@@ -80,7 +80,7 @@ test('connected rest and event rooms have their own actions on either middle flo
           seen.add(node.depth + ':' + node.type);
           run.hp = 20;
           completeRoom(run);
-          assert.equal(run.hp, node.type === 'camp' ? 32 : 28);
+          assert.equal(run.hp, node.type === 'camp' ? 32 : 20);
         } else completeRoom(run);
         assert.ok(E.validate(run));
         next.push(run);

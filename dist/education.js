@@ -13,6 +13,33 @@
  function validHistory(history){return !!history&&history.version===1&&versions.has(history.bankVersion)&&validIds(history.usedIds)&&(!history.session||validSession(history.session,history.usedIds));}
  function history(usedIds=[],session=null){return {version:1,bankVersion:bank.version,usedIds:merge(usedIds,...(session?[session.exposureIds]:[])),...(session?{session:copy(session)}:{})};}
  function random(state){state.rng=(Math.imul(state.rng,1664525)+1013904223)>>>0;return state.rng/4294967296;}
+ function syncMystery(run,seen=[],profile=null){
+  const state=run.educationState||{version:1,bankVersion:bank.version,rng:(run.seed^0x6d617468)>>>0,usedIds:[],completed:[],pending:null};
+  if(state.pending)throw Error('Finish your artifact question first.');
+  state.usedIds=merge(state.usedIds,seen);state.bankVersion=bank.version;
+  state.session=mergeSessions(state.session||legacySession(state),profile);
+  // A reservation from a different/abandoned run remains exposed, without a
+  // second rewarded attempt. An active Mystery never calls this initializer.
+  if(state.session.pendingQuestionId)state.session=S.revealAnswer(state.session,state.session.pendingQuestionId);
+  state.session.exposureIds=merge(state.session.exposureIds,state.usedIds);
+  state.usedIds=merge(state.usedIds,state.session.exposureIds);run.educationState=state;return state;
+ }
+ function reserveMystery(run,event,seen=[],profile=null){
+  const state=syncMystery(run,seen,profile),available=bank.questions.filter(q=>q.topicCode===event.topicCode&&!state.usedIds.includes(q.id));
+  const preferred=available.filter(q=>event.education.preferredQuestionIds.includes(q.id));
+  const result=S.reserveNext(state.session,{...bank,questions:preferred.length?preferred:available},{topicCode:event.topicCode});
+  state.session=result.session;
+  // The shared service preserves archived provenance through save/merge. Mark
+  // this consumer so a later Artifact trial cannot offer its timed attempt again.
+  if(result.question)state.session.archivedRecords['mystery-source:'+result.question.id]={consumer:'mystery',questionId:result.question.id};
+  state.usedIds=merge(state.usedIds,result.session.exposureIds);return {question:result.question,preferred:preferred.length>0};
+ }
+ function resolveMystery(run,questionId,choiceId=null){
+  let session=getSession(run);if(choiceId)session=S.submitAnswer(session,bank,{questionId,choiceId,attemptId:questionId+':mystery'});
+  if(session.pendingQuestionId===questionId)session=S.revealAnswer(session,questionId);
+  run.educationState.session=session;
+ }
+ function mysterySupport(run,kind){const p=run.mysteryState?.pending;if(run.scene!=='event'||!p?.questionId||!['question','review'].includes(p.phase))throw Error('No Mystery question is waiting.');run.educationState.session=S.openSupport(getSession(run),p.questionId,kind);return run;}
  function prepare(run,artifactId,seen=[],profile=null){
   const offer=run.artifactState?.offer;
   if(run.scene==='education'||run.educationState?.pending||!offer?.ready||!offer.ids.includes(artifactId))throw new Error('Choose one of the offered artifacts.');
@@ -20,6 +47,7 @@
   state.usedIds=merge(state.usedIds,seen);
   state.bankVersion=bank.version;
   state.session=mergeSessions(state.session||legacySession(state),profile);
+  if(state.session.pendingQuestionId&&state.session.archivedRecords['mystery-source:'+state.session.pendingQuestionId])state.session=S.revealAnswer(state.session,state.session.pendingQuestionId);
   state.session.exposureIds=[...new Set([...state.session.exposureIds,...state.usedIds])];
   const reservation=S.reserveNext(state.session,bank);
   state.session=reservation.session;
@@ -52,8 +80,8 @@
  function valid(run){
   const state=run.educationState;
   if(state===undefined)return run.scene!=='education';
-  if(!state||state.version!==1||!versions.has(state.bankVersion)||run.mode!=='challenge'||!integer(state.rng)||state.rng>4294967295||!validIds(state.usedIds)||!Array.isArray(state.completed)||state.completed.length>31)return false;
-  const acquired=run.artifactState?.acquired;
+  if(!state||state.version!==1||!versions.has(state.bankVersion)||!integer(state.rng)||state.rng>4294967295||!validIds(state.usedIds)||!Array.isArray(state.completed)||state.completed.length>31)return false;
+  const acquired=[...(run.artifactState?.acquired||[]),...(run.artifactState?.consumed||[])];
   if(!Array.isArray(acquired)||new Set(state.completed.map(x=>x?.source)).size!==state.completed.length)return false;
   const completedIds=state.completed.map(x=>x?.questionId).filter(Boolean);if(new Set(completedIds).size!==completedIds.length)return false;
   for(const record of state.completed){
@@ -61,7 +89,8 @@
    if(record.questionId===null){if(record.attempts||record.hinted||record.first)return false;}
    else if(!catalog[record.questionId]||!state.usedIds.includes(record.questionId)||!record.attempts||(record.first&&(record.hinted||record.attempts!==1)))return false;
   }
-  if(state.session&&(!validSession(state.session,state.usedIds,state.pending)||(!state.pending&&state.session.pendingQuestionId)))return false;
+  const mystery=run.mysteryState?.pending;
+  if(state.session&&(!validSession(state.session,state.usedIds,state.pending)||(!state.pending&&state.session.pendingQuestionId!==(mystery?.phase==='question'?mystery.questionId:null))))return false;
   if(!state.pending)return run.scene!=='education';
   const p=state.pending,offer=run.artifactState?.offer;
   if(run.scene!=='education'||!p||!kinds.includes(p.kind)||!offer?.ready||offer.kind!==p.kind||offer.source!==p.source||!offer.ids.includes(p.artifactId)||state.completed.some(x=>x.source===p.source)||typeof p.hinted!=='boolean'||typeof p.solved!=='boolean'||!Array.isArray(p.attempts)||p.attempts.length>4||new Set(p.attempts).size!==p.attempts.length||!Array.isArray(p.choiceOrder))return false;
@@ -119,6 +148,6 @@
   }
   return S.restoreSession(result,bank);
  }
- const api={getSession,record,learningView,support,progress,mergeSessions,bank,catalog,ids,validIds,merge,history,validHistory,prepare,pending,current,select,answer,hint,ready,finish,context,valid};
+ const api={syncMystery,reserveMystery,resolveMystery,mysterySupport,getSession,record,learningView,support,progress,mergeSessions,bank,catalog,ids,validIds,merge,history,validHistory,prepare,pending,current,select,answer,hint,ready,finish,context,valid};
  if(typeof module!=='undefined')module.exports=api;else root.DCEducation=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

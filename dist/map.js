@@ -7,7 +7,7 @@
     shop: {label:'Shop',icon:'coin',detail:'Spend Gold to buy cards. You may leave without buying.'},
     elite: {label: 'Elite', icon: 'elite', detail: 'Enemy has +10 HP and +2 base damage. Reward cards are upgraded.'},
     camp: {label: 'Rest Site', icon: 'flame', detail: 'Restore 12 HP or upgrade one card.'},
-    event: {label: 'Mystery', icon: 'orb', detail: 'Restore 8 HP or remove one card from your deck.'},
+    event: {label: 'Mystery', icon: 'orb', detail: 'Discover a timed math challenge with its own rewards and risks.'},
     boss: {label: 'Boss', icon: 'crown', detail: 'Break two seals with Predict and beat the stage boss.'}
   };
 
@@ -113,6 +113,10 @@
     const active = map.nodes.find(n => n.id === route.active && n.depth === run.depth);
     if (!active || (previous && !previous.next.includes(active.id))) return false;
     if (run.scene === 'camp' || run.scene === 'event' || run.scene === 'shop') return active.type === run.scene && !run.battle;
+    if (active.type === 'event' && run.mysteryState?.pending?.phase === 'combat') {
+      const p=run.mysteryState.pending,b=run.battle;
+      return p.committed && p.nodeId===active.id && b?.mysteryEncounter?.key===p.key && b.enemyId===p.encounter?.enemyId && C.stages[run.stage].normals.includes(b.enemyId) && !b.elite && ['battle','reward','defeat'].includes(run.scene);
+    }
     if (!['battle', 'elite', 'boss'].includes(active.type) || run.battle?.enemyId !== active.enemyId ||
         run.battle.elite !== (active.type === 'elite')) return false;
     if (run.scene === 'reward') return active.type !== 'boss';

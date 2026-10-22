@@ -1,0 +1,23 @@
+/* Mystery owns only this room's composition. Dungeon tokens/buttons/rich text
+   and natural document scrolling retain their existing shared owners. */
+.mystery-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(18px,2.4vw,50px);align-items:start;max-width:1920px;margin:0 auto;padding:clamp(12px,2vw,32px)}
+.mystery-art{position:sticky;top:20px;min-width:0;padding-top:12px}
+.mystery-art img{display:block;width:100%;height:auto;object-fit:contain;border-radius:var(--r-card,9px);box-shadow:0 18px 70px #0006}
+.mystery-art p{margin:12px 0;color:var(--muted);text-align:center;font-size:.9rem}
+.mystery-panel{min-width:0;padding:clamp(20px,2.4vw,42px);overflow-wrap:anywhere}
+.mystery-panel h1{font-size:clamp(1.6rem,2.25vw,2.8rem);line-height:1.15;margin:8px 0 20px}
+.mystery-panel h2{font-size:1.15rem;margin:18px 0 10px}
+.mystery-intro{font-family:Georgia,Cambria,serif;font-size:1.15em;color:var(--gold);line-height:1.7}
+.mystery-stakes{border-block:1px solid var(--line,#e4bd7040);margin:24px 0;padding:4px 0}
+.mystery-stakes>div{padding:16px 0}.mystery-stakes dt{font-weight:bold;color:var(--gold);margin-bottom:7px}.mystery-stakes dd{margin:0;line-height:1.6}
+.mystery-question-heading{display:flex;justify-content:space-between;gap:18px;align-items:start}.mystery-question-heading h1{min-width:0}
+.mystery-countdown{display:grid;flex-shrink:0;justify-items:center;min-width:72px;color:var(--ice);font-size:.8rem;border:1px solid currentColor;border-radius:7px;padding:7px 9px;font-variant-numeric:tabular-nums}.mystery-countdown output{font-size:1.7rem;font-weight:bold;line-height:1.2}.mystery-countdown.urgent{color:var(--ember)}
+.mystery-panel .education-meta{flex-wrap:wrap;gap:8px;margin-bottom:14px}.mystery-panel .education-prompt{font-size:1.06rem;line-height:1.75}.mystery-panel .education-answers{gap:10px;margin:20px 0}.mystery-panel .education-option{min-width:0}.mystery-panel .education-answer{min-width:48px;min-height:48px}.mystery-panel .education-answer-copy{min-width:0;line-height:1.65}.mystery-panel .education-answer:disabled{opacity:1}
+.mystery-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;align-items:center}.mystery-actions .btn{white-space:normal}.mystery-options{display:grid;gap:12px;margin:24px 0}.mystery-options .btn{text-align:left;justify-content:flex-start;white-space:normal;line-height:1.5}.mystery-panel [aria-pressed=true]{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.mystery-target-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}.mystery-target-list .btn{justify-content:flex-start;white-space:normal;gap:10px;font-size:.95rem}.mystery-target-list img{object-fit:contain}
+.mystery-card-targets{display:flex;gap:14px;overflow:auto;padding:8px 5px 18px}.mystery-card-targets .playing-card{flex:0 0 180px;max-width:180px;min-width:180px;aspect-ratio:3/4.6}.mystery-artifact-preview{display:flex;align-items:center;gap:18px;margin:20px 0}.mystery-artifact-preview img{object-fit:contain;flex-shrink:0}.mystery-artifact-preview h2{margin-top:0}
+.mystery-panel .learning-visual{margin:20px 0;max-width:100%;overflow:auto}.mystery-panel .education-hint{margin-top:18px;line-height:1.7}.mystery-panel .education-feedback{line-height:1.65}.mystery-panel .rt-term{font:inherit}
+.mystery-panel .education-answer-copy{font-size:1rem}.mystery-panel .education-answer-copy math{font-size:1.15em;math-style:normal}
+@media(min-width:2200px){.mystery-layout{max-width:2400px;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}.mystery-panel{font-size:1.15rem}}
+@media(max-width:1000px){.mystery-layout{grid-template-columns:minmax(0,1fr);max-width:760px}.mystery-art{position:relative;top:auto;padding-top:0}.mystery-art img{max-height:43vh;object-fit:contain}.mystery-art p{margin-bottom:0}.mystery-panel{padding:22px}.mystery-panel h1{font-size:1.85rem}}
+@media(max-width:400px){.mystery-layout{padding:8px;gap:14px}.mystery-panel{padding:16px}.mystery-panel h1{font-size:1.5rem}.mystery-target-list{grid-template-columns:minmax(0,1fr)}.mystery-actions>.btn{flex:1 1 auto}.mystery-countdown{min-width:58px}.mystery-panel .education-option{gap:8px}.mystery-artifact-preview{flex-direction:column;align-items:flex-start}}

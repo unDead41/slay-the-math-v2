@@ -72,3 +72,8 @@ The user's implementation request supersedes the earlier no-artifact scope. New 
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12 user override: six unique Shop card offers (3×2), exactly one random seeded 60% sale, paid removal once per visit, six artifact slots (3 Starting/2 Elite-Mystery/1 Boss, 3×2). Both modes support paid purchases; Challenge free gift education remains. Config defaults: artifacts 80/140/220 Gold, removal 50 Gold, minimum deck ten. Sale reduces normal card base price by 60%, then best owned artifact discount applies with ceil/minimum-one rounding; discounts update immediately after purchase. IDs/base prices/sale slot never reroll. Sold-out artifact tiers keep empty slots. Existing visits retain their legacy three-card stock. These numbers are reversible implementation tuning. Full transactional/save policy: GAME_UPDATE_2_12_0.md.
+
+
+## Mystery Events — 2.13.0
+
+Mystery v2 rewards/costs/failures now follow [MYSTERY_EVENTS.md](MYSTERY_EVENTS.md). Correct optional trades charge only at confirmation, costs and bundles commit atomically, and wrong/timeout/abandon damages are nonlethal outside combat. Mystery removal may leave one card (nonempty deck), superseding the old generic Mystery minimum ten. Shop removal retains its own minimum ten. An event Artifact is earned through that event’s shared-bank question and is not gated by a second Artifact question.

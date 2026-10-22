@@ -281,3 +281,13 @@ Owners: SOR 02/09/10/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Source and actua
 | DEC-20261022-12 | CADANGAN | Config tuning: artifact prices 80/140/220, removal 50 once per visit, minimum ten cards. Sale then best artifact discount; visible price owner and atomic once-only mutations. |
 
 Owners: SOR 02/07/09/10/11/12/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Implementation/evidence: docs/GAME_UPDATE_2_12_0.md.
+
+
+## Mystery Events — game 2.13.0, 22 October 2026 (Malaysia)
+
+| ID | Status | Decision and evidence |
+|---|---|---|
+| DEC-20261022-MYSTERY-01 | DISAHKAN | Ijamm requests applying the supplied Mystery Events v2 package. Fifteen illustrated events, fixed per-event timers, topic mapping, costs/rewards/failures and final review replace generic new Mystery rooms. Source owner: MYSTERY_EVENTS.md. |
+| DEC-20261022-MYSTERY-02 | DITERUSKAN | Active Question Bank/STM service and profile exposure history are reused. The older bank snapshot is not imported. Event/reward/question RNG remain independent; saved choices/deadline/targets/offers persist. |
+| DEC-20261022-MYSTERY-03 | DITERUSKAN | Atomic effect dispatcher, once-only receipts, consumed-artifact ledger, Max HP sacrifice, stage-correct Echo combat and next-combat/first-turn modifiers are implemented and regression-tested. Source numeric balance remains proposed. |
+| DEC-20261022-MYSTERY-04 | DITERUSKAN | Runtime uses current-scene 1920/960 WebP derivatives; source hashes and documented four-row ME04 margin recovery are in mystery-art.json. Native dungeon UI/rich text is retained. Legacy pending Artifact gifts and checkpoints keep their existing flow. |

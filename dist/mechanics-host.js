@@ -12,8 +12,11 @@
   }
  }
  function hydrateEducation(run){
-  disposeQuestion();const host=document.querySelector('.education-question'),q=Q.current(run);if(!host||!q)return;host.setAttribute('data-stm-richtext','');
-  const view=Q.learningView(run),index=new Map();
+  const q=Q.current(run);hydrateQuestion(document.querySelector('.education-question'),q,q?Q.learningView(run):null);
+ }
+ function hydrateQuestion(host,q,view){
+  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');
+  const index=new Map();
   for(const el of host.querySelectorAll('[data-q-rich]')){
    const key=el.dataset.qRich;let parts;
    if(key==='prompt')parts=view.prompt;
@@ -85,5 +88,5 @@
   dialogTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getTheme:()=> 'dark'});
  }
  function progressHTML(run,{esc}){const rows=Q.progress(run);return '<p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
- root.STMMechanicsHost={hydrateEducation,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
+ root.STMMechanicsHost={hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
 })(window);

@@ -15,7 +15,7 @@ function finish(run) {
     }
   } else if (run.scene === 'shop') E.leaveShop(run);
   else if (run.scene === 'camp') E.camp(run, 'heal');
-  else if (run.scene === 'event') E.event(run, 'skip');
+  else if (run.scene === 'event') E.leaveMystery(run);
   else assert.fail('Unexpected room ' + run.scene);
 }
 

@@ -1,0 +1,105 @@
+{
+  "version": "2.13.0",
+  "baseCommit": "22495731dd70c271dc81c3a2c32eba40e8a9c42e",
+  "date": "2026-10-22",
+  "timezone": "Asia/Kuala_Lumpur",
+  "checks": {
+    "node_dom": {
+      "command": "DOM_QA_MODULE=<executor jsdom> npm test",
+      "passed": 180,
+      "failed": 0,
+      "skipped": 0
+    },
+    "mystery_browser": {
+      "status": "PASS",
+      "correctPaths": 30,
+      "incorrectPaths": 15,
+      "viewportWidths": [
+        320,
+        390,
+        1280,
+        1920,
+        3440,
+        3840
+      ],
+      "deadlineAndMenuExpiry": true,
+      "sharedHintBasicsAndSteps": true,
+      "rewardCardArtworkDecoded": 3
+    },
+    "mystery_offline": {
+      "checks": [
+        "Real generated portable file: embedded Mystery scene, active shared question, same deadline after file reload, final answer review, Starting artifact preview/acquisition, valid once-only settlement and return to embedded map.",
+        "Zero HTTP or dependent local-file requests."
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "status": "PASS"
+    },
+    "integration_browser": {
+      "command": "npm run test:integration-browser",
+      "status": "PASS",
+      "questions": 120,
+      "visuals": 240,
+      "wrongFeedback": 360,
+      "moreHints": 120,
+      "mapViewports": 8,
+      "stage2AndLegacy": true,
+      "offlineShopAndBosses": true
+    },
+    "syntax": {
+      "command": "npm run check",
+      "status": "PASS"
+    },
+    "maps": {
+      "command": "npm run test:maps",
+      "passed": 7,
+      "maps": 200,
+      "status": "PASS"
+    },
+    "premium": {
+      "command": "audit_project.py --mode strict",
+      "errors": 0,
+      "warnings": 0
+    },
+    "design_lint": {
+      "command": "npx --no-install -p @google/design.md designmd lint DESIGN.md",
+      "errors": 0,
+      "warnings": 0
+    },
+    "diff": {
+      "command": "git diff --check",
+      "status": "PASS"
+    }
+  },
+  "assets": {
+    "scenes": 15,
+    "runtimeDerivatives": 30,
+    "decodedAndHashVerified": 30,
+    "runtimeBytes": 10516660,
+    "recovery": {
+      "issue": "supplied PNG truncated in final IDAT",
+      "completeRowsUsed": 4316,
+      "bottomMarginRowsDiscarded": 4,
+      "sourceUnchanged": true
+    }
+  },
+  "portable": {
+    "bytes": 227209841,
+    "sha256": "0b08bd6915d4509bfa2fdf7c057dbefa00540b26504b1471014a2a09ef0ba775",
+    "committed": false,
+    "rebuildAfterPull": true
+  },
+  "authoredBankAndAnimationRegistriesChanged": false,
+  "review": {
+    "findingsAddressed": [
+      "Required offer payload validation plus damaged-save regression",
+      "Mystery heading focus and selected control restoration"
+    ],
+    "additionalRegression": "Oracle plus artifact stat calculation sums match the real combat value"
+  },
+  "limits": [
+    "Executor Chromium automation; no physical Windows/mobile or Safari/Firefox execution.",
+    "Source gameplay values still require classroom/balance playtesting.",
+    "Existing question glossary audit remains with its content owner."
+  ]
+}

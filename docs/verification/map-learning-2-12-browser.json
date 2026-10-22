@@ -1,0 +1,105 @@
+{
+  "checks": [
+    "Map: eight viewport sizes, legal native room entry, keyboard, visible panning and left legend without page overflow",
+    "Trial: shared single tooltip, no nested controls, specific wrong feedback, ordered More Hint after reload, unscored Basics, gated solution and 30-skill evidence; explicit claim once",
+    "Codex: 31 discovered/locked entries, search/clear, native tier filter, comparisons with no gameplay mutation and keyboard tabs",
+    "Chromium rendered all 120 questions, 360 wrong-choice feedback entries, 120 More Hints, hint/solution visual pairs and worked solutions without unsafe markup or reveal errors"
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 1054,
+      "scrollHeight": 2700,
+      "clientHeight": 930,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 1672,
+      "height": 941,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 921.125,
+      "scrollHeight": 2351,
+      "clientHeight": 810,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 706.78125,
+      "scrollHeight": 2160,
+      "clientHeight": 600,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 3440,
+      "height": 1440,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 1405.3125,
+      "scrollHeight": 3600,
+      "clientHeight": 1240,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 2108,
+      "scrollHeight": 5400,
+      "clientHeight": 1860,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 466.78125,
+      "scrollHeight": 2160,
+      "clientHeight": 360,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 781.1875,
+      "scrollHeight": 2700,
+      "clientHeight": 634,
+      "availableVisible": true,
+      "legendIcons": true
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "rootOverflow": false,
+      "legendLeft": true,
+      "frameBottom": 677.1875,
+      "scrollHeight": 2700,
+      "clientHeight": 530,
+      "availableVisible": true,
+      "legendIcons": true
+    }
+  ],
+  "errors": [],
+  "richAudit": {
+    "questions": 120,
+    "visuals": 240,
+    "wrongFeedback": 360,
+    "moreHints": 120
+  }
+}

@@ -183,18 +183,21 @@
  function valid(r){
   const s=r.artifactState;
   if(s===undefined)return r.scene!=='master';
-  if(!s||s.version!==1||r.mode!=='challenge'||!integer(s.rng)||s.rng>4294967295||!Array.isArray(s.owned)||s.owned.length>31||new Set(s.owned).size!==s.owned.length||s.owned.some(key=>!catalog[key])||!Array.isArray(s.acquired)||s.acquired.length!==s.owned.length)return false;
+  if(!s||s.version!==1||!['learn','challenge'].includes(r.mode)||!integer(s.rng)||s.rng>4294967295||!Array.isArray(s.owned)||s.owned.length>31||new Set(s.owned).size!==s.owned.length||s.owned.some(key=>!catalog[key])||!Array.isArray(s.acquired)||s.acquired.length!==s.owned.length)return false;
   if(new Set(s.acquired.map(x=>x?.id)).size!==s.owned.length||new Set(s.acquired.map(x=>x?.source)).size!==s.acquired.length||s.acquired.some(x=>!x||!s.owned.includes(x.id)||typeof x.source!=='string'||!x.source||x.source.length>120))return false;
+  if(s.shopOnly!==undefined&&s.shopOnly!==true)return false;
   const starters=s.owned.filter(key=>catalog[key].tier==='starting');
-  if(s.startingId===null){if(r.scene!=='master'||s.owned.length||r.stage!==0||r.depth!==0||r.battle||s.offer?.kind!=='starting')return false;}
-  else if(starters.length!==1||starters[0]!==s.startingId||r.scene==='master'||!s.acquired.some(x=>x.id===s.startingId&&x.source==='starting'))return false;
+  if(r.mode==='learn'){if(s.startingId!==null||s.offer||s.acquired.some(x=>!/^shop:[01]:/.test(x.source)))return false;}
+  else if(s.shopOnly===true){if(s.startingId!==null||r.scene==='master'||starters.some(key=>!s.acquired.some(x=>x.id===key&&/^shop:[01]:/.test(x.source)))||s.offer?.kind==='starting')return false;}
+  else if(s.startingId===null){if(r.scene!=='master'||s.owned.length||r.stage!==0||r.depth!==0||r.battle||s.offer?.kind!=='starting')return false;}
+  else if(!starters.includes(s.startingId)||starters.some(key=>key!==s.startingId&&!s.acquired.some(x=>x.id===key&&/^shop:[01]:/.test(x.source)))||r.scene==='master'||!s.acquired.some(x=>x.id===s.startingId&&x.source==='starting'))return false;
   if(s.offer){
    const o=s.offer,tier=o.kind==='starting'?'starting':o.kind==='boss'?'boss':'elite_mystery';
    if(!['starting','elite','mystery','boss'].includes(o.kind)||typeof o.ready!=='boolean'||!Array.isArray(o.ids)||!o.ids.length||o.ids.length>3||new Set(o.ids).size!==o.ids.length||o.source!==source(r,o.kind)||s.acquired.some(x=>x.source===o.source)||o.ids.some(key=>!catalog[key]||catalog[key].tier!==tier||has(r,key)||!eligible(r,catalog[key])))return false;
    if(o.kind==='starting'&&(r.scene!=='master'||!o.ready))return false;
    if(o.kind==='elite'&&(r.scene!=='reward'||!r.battle?.elite))return false;
    if(o.kind==='mystery'&&(r.scene!=='event'||!o.ready))return false;
-   if(o.kind==='boss'&&(r.scene!=='stageclear'||r.stage!==0||!o.ready||o.ids.length!==3))return false;
+   if(o.kind==='boss'&&(r.scene!=='stageclear'||r.stage!==0||!o.ready))return false;
   }
   if(r.battle){
    const b=r.battle,a=b.artifacts;

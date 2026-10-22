@@ -1,0 +1,67 @@
+{
+  "bankVersion": "form4-review-1.4.0",
+  "source_sha256": "106e15d8c5b941234b44578a4bcff8716eae35d92a0a9c719c98b11cd7b2902a",
+  "items": 120,
+  "hintSteps": 240,
+  "moreHints": 120,
+  "workedSteps": 360,
+  "text_projection_mismatches": [],
+  "glossary_harmonization": {
+    "term": "qb:common-denominator",
+    "issue": "Generic denominator(s) is linked to Common denominator even in multiplication; separate bottom-number meaning from the same-denominator method for addition/comparison.",
+    "example": "PROB-008 moreHint: multiply the numerators and denominators",
+    "locations": [
+      {
+        "id": "PROB-005",
+        "field": "learning.optionFeedback.PROB-005-choice-8f854692.richText[7]",
+        "text": "denominator"
+      },
+      {
+        "id": "PROB-008",
+        "field": "themedRichText.moreHint[9]",
+        "text": "denominators"
+      },
+      {
+        "id": "PROB-012",
+        "field": "learning.optionFeedback.PROB-012-choice-690916f7.richText[1]",
+        "text": "denominator"
+      },
+      {
+        "id": "PROB-015",
+        "field": "themedRichText.moreHint[5]",
+        "text": "denominator"
+      },
+      {
+        "id": "PROB-027",
+        "field": "themedRichText.moreHint[3]",
+        "text": "denominator"
+      },
+      {
+        "id": "PROB-028",
+        "field": "learning.workedSteps[2].richText[1]",
+        "text": "denominator"
+      },
+      {
+        "id": "PROB-028",
+        "field": "learning.visual.solution.nodeRichText[2][1]",
+        "text": "denominator"
+      },
+      {
+        "id": "PROB-038",
+        "field": "themedRichText.hint[29]",
+        "text": "denominators"
+      },
+      {
+        "id": "PROB-038",
+        "field": "themedRichText.hintSteps.nextStep[6]",
+        "text": "denominators"
+      },
+      {
+        "id": "PROB-040",
+        "field": "learning.optionFeedback.PROB-040-choice-00a49fc7.richText[1]",
+        "text": "denominator"
+      }
+    ]
+  },
+  "content_modified": false
+}

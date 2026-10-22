@@ -101,3 +101,8 @@ For new runs, modules/map/SOR/01_MAP_RNG.md is the current topology owner: ten l
 ## Parchment map and integrated mechanics — 2.11.0
 
 The 2.11.0 map presentation follows the supplied parchment dungeon reference. `journey.css` owns its viewport-aware layout, left legend and live top HUD. The generated paper architecture is decorative; existing graph snapshots, 2700/1450-unit extents, category-only labels, native legal room buttons and both-axis scroll restoration remain authoritative. Both stages and legacy paths use the same renderer.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+Map presentation 2.12: the existing plate is subdued; future/open/travelled paths have distinct weight, dash/color and text key. Explicit Floor, room category and Enter Room badges improve navigation. Narrow Floor labels sit above seals. No graph/RNG, secrecy or direct-entry rule changes.

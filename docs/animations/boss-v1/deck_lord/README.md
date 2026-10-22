@@ -1,0 +1,1 @@
+Open PREVIEW.html after extracting this ZIP. Master frames: frames_4k. Full atlases: spritesheets_4k. Lighter game textures: runtime_sheets. See animation_manifest.json and SOR_ANIMATION.md for exact slicing coordinates and timings. Stage 2 boss faces LEFT.

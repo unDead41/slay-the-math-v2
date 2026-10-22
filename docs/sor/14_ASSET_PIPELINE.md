@@ -157,3 +157,8 @@ Stage 2 v2.1 contributes 25 native 2560×1728 sheets / 135 frames, losslessly en
 ## Parchment map and integrated mechanics — 2.11.0
 
 The 2.11.0 map clean plate uses built-in imagegen with the supplied 1672×941 map reference, removing all baked interface/navigation content. Native output is 1024×1536; quality-94 WebP keeps native dimensions. This is not native 4K. Provenance and source/runtime/reference hashes: dist/assets/map-atlas-art.json. The existing six seal icons remain unchanged. INTEGRATION.zip imports selected source code/data and reuses all 31 existing verified artifact WebPs; duplicate PNGs, 4K sheets and PDF/demo previews are excluded.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12 imports all four Boss ZIP parts after CRC/unique-path/SHA checks. Use the ten native 3200×2144 runtime sheets, full 1024px padded cells, lossless WebP and same-matrix posters; do not ship huge upscaled 4K frames/atlases. Preserve source manifests/SOR by bosses/<id>. Audit and original hold durations: docs/animations/boss-v1. Learn/Challenge uses the existing illustrated book and supplied Battle crossed-sword seal; no newly generated bitmap is required.

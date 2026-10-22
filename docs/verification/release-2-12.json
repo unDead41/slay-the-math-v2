@@ -1,0 +1,83 @@
+{
+  "version": "2.12.0",
+  "baseCommit": "07d03a678da16dfa67fe401e7f92a8866956f129",
+  "date": "2026-10-22",
+  "timezone": "Asia/Kuala_Lumpur",
+  "checks": {
+    "node_dom": {
+      "command": "DOM_QA_MODULE=<executor jsdom>/lib/api.js npm test",
+      "passed": 157,
+      "failed": 0,
+      "skipped": 0
+    },
+    "syntax": {
+      "command": "npm run check",
+      "status": "PASS"
+    },
+    "map_module": {
+      "command": "npm run test:maps",
+      "tests": 7,
+      "maps": 200,
+      "uniqueLayouts": 200,
+      "status": "PASS"
+    },
+    "integration_browser": {
+      "command": "npm run test:integration-browser",
+      "status": "PASS",
+      "mapViewports": 8,
+      "questions": 120,
+      "visuals": 240,
+      "wrongFeedback": 360,
+      "moreHints": 120
+    },
+    "shop_boss_browser": {
+      "command": "npm run test:shop-boss-browser",
+      "status": "PASS",
+      "viewports": 5,
+      "bossClips": 10,
+      "fallbackModes": [
+        "no-canvas",
+        "failed-atlas"
+      ],
+      "realIntentCycles": 2
+    },
+    "premium": {
+      "command": "audit_project.py --mode strict (dist traversal enabled)",
+      "errors": 0,
+      "warnings": 0
+    },
+    "design_lint": {
+      "command": "npx -y -p @google/design.md designmd lint DESIGN.md",
+      "errors": 0,
+      "warnings": 0
+    },
+    "diff_check": {
+      "command": "git diff --check",
+      "status": "PASS"
+    }
+  },
+  "portable": {
+    "bytes": 213111202,
+    "sha256": "ad002b02a706ae2f1145fd7c09a81617c92bc75d092939afa44597fb452295c3",
+    "externalRequests": 0,
+    "errors": 0,
+    "artifactPurchase": true,
+    "bothBossesDecoded": true
+  },
+  "questionAudit": {
+    "items": 120,
+    "authoredSourceModified": false,
+    "sha256": "106e15d8c5b941234b44578a4bcff8716eae35d92a0a9c719c98b11cd7b2902a",
+    "glossaryHarmonizationRequired": true,
+    "confirmedIds": [
+      "PROB-008",
+      "PROB-015",
+      "PROB-038"
+    ]
+  },
+  "limits": [
+    "Chromium executor automation; no physical Windows/mobile, Safari or Firefox execution.",
+    "Economy prices are reversible defaults; no new balance playtest claim.",
+    "Authored question glossary correction is intentionally left to the question owner."
+  ]
+}

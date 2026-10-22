@@ -148,3 +148,8 @@ Skill uses the importer's per-frame body-scale correction at the same floor pivo
 The same player now owns all ten canonical non-boss actors: 50 clips / 263 frames. Stage 2 preserves source FPS, order and full cells using the same floor matrix. Its label-to-action table belongs to presentation: Chain Weaver uses Spark → Attack, Flame Burst → Skill, Fire Shield → Defend; the other four use Dark Pulse → Attack, Mist Shield → Defend, Dark Wave → Skill. Resolver patterns, displayed intent and damage remain unchanged. Stage 1's accepted mapping and Alyssa's entire registry remain unchanged.
 
 Stage 2 fallback posters come from these new source sheets on the same registered canvas. Disable legacy CSS pose/hover transforms for an atlas-backed enemy, including while its canvas is loading. Motion Off/reduced motion selects Idle even if Canvas is unavailable. Existing dialog/hidden-tab pause, cancellation, four-texture cache and independent hero player remain canonical. Source guides already bake normalization into pixels; do not apply their calibration transforms again. Details: [both-stage motion](../ENEMY_MOTION_2_10_0.md).
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12: both bosses now use the existing atlas player for all five actions / sixty frames, left facing and original variable holds. Original runtime pivot [512,768] maps to boss canvas floor [800,1000], with host foot percentage matched to preserve grounding and all faint VFX. Static posters use the same matrix. Damage/Block/turn/save never await source event hooks. Pause, static reduced motion, disposal and loading/failure fallback retain their owners.

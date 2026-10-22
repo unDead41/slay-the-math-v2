@@ -267,3 +267,17 @@ Owners: SOR 07/11/14/15. Source mapping and actual checks: [both-stage motion](.
 | DEC-20261022-06 | DITERUSKAN | Following the supplied session contract, retain unfinished reservations across New Run, use the supplied fixed order for new choices and adapt difficulty without repeats. Existing pending shuffled saves retain their order. Increase bounded import to 2 MB for event history/checkpoints. |
 
 Owners: SOR 02/09/10/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Source and actual checks: [Map & Integration 2.11.0](../MAP_INTEGRATION_2_11_0.md).
+
+
+## Map clarity, mode menu, question audit, Boss motion and Shop — 22 October 2026 (Malaysia)
+
+| ID | Status | Decision |
+|---|---|---|
+| DEC-20261022-07 | DISAHKAN | Ijamm requests subdued dungeon background, clear routes/Floor/room actions and an updated Learn/Challenge menu with a proper sword icon. |
+| DEC-20261022-08 | DISAHKAN | Audit Example/Hint/More Hint and report issues to Ijamm for the question-owner chat; do not silently rewrite source content. |
+| DEC-20261022-09 | DISAHKAN | Apply both bosses from four supplied consolidated ZIP parts. |
+| DEC-20261022-10 | DISAHKAN | Shop: six cards in 3×2 with exactly one random 60% discount, removal, and six artifacts in 3×2 (3 Starting/2 mid-tier/1 Boss). |
+| DEC-20261022-11 | DITERUSKAN | Both modes support paid artifact purchases; preserve Challenge free-gift education. Separate opening gift from purchased Starting ownership, retain legacy visits and giftless Challenge ledgers, exclude owned Boss gifts and exhausted tier duplicates. |
+| DEC-20261022-12 | CADANGAN | Config tuning: artifact prices 80/140/220, removal 50 once per visit, minimum ten cards. Sale then best artifact discount; visible price owner and atomic once-only mutations. |
+
+Owners: SOR 02/07/09/10/11/12/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Implementation/evidence: docs/GAME_UPDATE_2_12_0.md.

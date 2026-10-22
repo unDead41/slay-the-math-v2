@@ -74,3 +74,8 @@ Acceptance and actual checks: [Artifact Rich Text 2.6.0](../ARTIFACT_RICH_TEXT_2
 ## Parchment map and integrated mechanics — 2.11.0
 
 ART-23 (2.11.0): INTEGRATION.zip supplies Artifact 3.5 with the same 31 IDs, triggers and numeric values. Reuse existing icons and real effect owners. The supplied tracker/UI are bound manually to artifactState.owned, current turn/combat flags, Clasp contribution, actual calculation events and existing dialog/toast owners. A compact HUD inside combat resources shows counters/used states. Collection → Artifacts opens persistent discovery/collection, search/clear, native tier filter, source examples and read-only comparisons. The shared registry explicitly reconciles the nine existing engine-dependent definitions. No auto-wrapping engine adapter or duplicate reward owner is installed. Eligibility stays 29 obtainable/31 catalogued.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+ART-24 (2.12): paid Shop acquisition works in Learn and Challenge, with 3 Starting/2 mid-tier/1 Boss unowned eligible offers. Buy spends Gold and grants the unique artifact/source once; it is separate from free Claim, whose Challenge education gate is unchanged. Starting purchases do not replace startingId or invent extra opening gifts. Learn gets no new free gift paths. Legacy Challenge can use a shopOnly ledger without a startingId. Discount artifacts immediately update unsold quotes; strongest rate only, after the single card sale. Purchased Boss items are excluded from subsequent Boss gifts; that offer may contain one/two/three remaining items or be exhausted. Existing effect values/triggers/unsupported exclusions remain.

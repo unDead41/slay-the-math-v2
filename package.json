@@ -1,8 +1,8 @@
 {
   "name": "duel-cube-math",
-  "version": "2.11.0",
+  "version": "2.12.0",
   "private": true,
-  "description": "Parchment dungeon map and Artifact 3.5 / Question Bank 1.5 integration",
+  "description": "Readable dungeon routes, mode menu, both Boss animations and expanded Shop",
   "scripts": {
     "start": "node server.cjs",
     "test": "node --test tests/*.test.cjs",
@@ -23,6 +23,8 @@
     "test:hand-browser": "node tests/hand-results-browser.cjs",
     "test:enemy-browser": "node tests/enemy-motion-browser.cjs",
     "import:mechanics": "node tools/import-mechanics.cjs",
-    "test:integration-browser": "node tests/map-integration-browser.cjs && node tests/integration-route-browser.cjs && node tests/integration-offline-browser.cjs"
+    "test:integration-browser": "node tests/map-integration-browser.cjs && node tests/integration-route-browser.cjs && node tests/integration-offline-browser.cjs",
+    "test:shop-boss-browser": "node tests/shop-boss-browser.cjs",
+    "audit:questions": "python3 tools/audit-question-support.py"
   }
 }

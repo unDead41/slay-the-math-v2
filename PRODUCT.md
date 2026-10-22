@@ -57,3 +57,8 @@ The latest user instruction explicitly requests the missing question implementat
 ## Current map and learning integration — 2.11.0
 
 The supplied October 21 map reference now guides the parchment dungeon atlas with a live status header and left legend. INTEGRATION.zip adds the matched Artifact 3.5 / Question Bank 1.5 / STM_SHARED presentation and learning support. The original 120 Form 4 question IDs/answers remain: Hint, More Hint after a later wrong attempt, specific feedback, hint/solution visuals, worked steps after correct, optional unscored Basics and local skill evidence. Collection → Artifacts provides discovery, filters and read-only examples/comparisons. The engine remains the sole reward/resource owner. An unfinished trial resumes across New Run according to the supplied session contract; completed questions never re-enter the draw pool. See docs/MAP_INTEGRATION_2_11_0.md for the compatible-save details and actual verification.
+
+
+## Map, modes, Boss motion and Shop 2.12.0
+
+The latest user request adds readable routes, illustrated mode choices, both supplied Boss animation families and a six-card/six-artifact Shop with a 60% card sale and paid removal. Paid artifact purchases are available in both modes; Challenge free gifts retain questions. Existing bank content is audited and reported without rewriting. SOR 12/13/19 owns exact transactions and save policy; GAME_UPDATE_2_12_0.md records tuning, assets and tests.

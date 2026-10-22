@@ -101,3 +101,8 @@ Verify native pixels/alpha for all supplied sheets and individual cells, padding
 ## Parchment map and integrated mechanics — 2.11.0
 
 For 2.11.0 verify the supplied suite independently, original question/choice/effect alignment, both More Hint event orders, corrupt profile preservation, old pending saves, explicit exactly-once claim, no repeat/adaptive profile history, unscored Basics, reveal gating and all 120 rich-rendered items/240 visuals. Exercise Codex search/clear/tier, comparisons without mutation, keyboard tab focus, one shared tooltip across dialogs/domains and real counter projection. Check map at eight viewports, both stages/legacy paths and native entry/panning; smoke the generated portable file offline. Report actual results and physical-device/Windows limitations in docs/MAP_INTEGRATION_2_11_0.md.
+
+
+## Map, modes, Boss and Shop — 2.12.0
+
+2.12 acceptance: six-card/six-artifact 3×2 layouts, exactly one 60% sale, all purchase/removal/discount/cancel/reload paths, legacy shops and giftless Challenge, no duplicate one-shot effects or forged state; both bosses all sixty frame timings, anatomy floor and VFX bounds, live reactions/reduced motion/fallback/offline. Keep the all-120-item integration browser regression and read-only question audit. Actual results: docs/verification/release-2-12.json.

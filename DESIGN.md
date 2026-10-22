@@ -164,3 +164,9 @@ Map art receives a parchment wash so navigation ink leads. Explicit Floor labels
 ## Mystery Events — 2.13.0
 
 Mystery Events extend the established dungeon palette, Georgia/Cambria headings, Trebuchet/Segoe body, ornate-panel, cardView, button/dialog/toast and shared rich-text renderer. mystery.css owns only the two-column room composition; the full supplied artwork appears before the live panel on narrow screens. Cards own local horizontal scrolling; the document remains naturally scrollable. Native A–D controls submit one answer, while sibling underlined terms open help. A textual fixed countdown uses tabular digits and restrained urgency color; no motion changes numeric outcomes. Source/runtime contracts: docs/MYSTERY_EVENTS_2_13_0.md.
+
+## Mystery backgrounds and Shop tabs — 2.13.1
+
+The user’s 22 October references 053117/053219/053417 supersede the inset Mystery illustration and stacked Shop sections. Mystery follows the Dungeon Master composition: full-bleed supplied art, live HUD and one quiet right-side panel; phones show an art banner above natural content flow. mystery.css remains its layout owner. Intro/review/reward rules reuse the existing shared tooltip service and green game/purple preview tokens; question mathematics retain their source pink tokens and final-review calculations. Ordinary narrative prose keeps its normal color. No art is redrawn.
+
+Shop keeps the supplied merchant plate and portrait 3×2 racks inside one ornate counter. Buy Cards, Buy Artifacts and Remove Card select one native ARIA tab panel. shop.css scopes the counter/tabs and consumes dungeon.css type/color/button/focus/scrollbar owners. Inactive panels are hidden from layout and assistive navigation. Narrow stock racks scroll locally; the page retains natural scrolling. Rest uses its existing approved composition.

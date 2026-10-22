@@ -78,3 +78,5 @@ Nota implementation 2.0.1: dokumen 10/11 dan daftar keputusan merekod audio/Engl
 - [19 — Artifact system](docs/sor/19_ARTIFACT_SYSTEM.md): current Dungeon Master, offers, real effects and save rules.
 
 Mystery v2 current owner: [MYSTERY_EVENTS.md](docs/sor/MYSTERY_EVENTS.md).
+
+Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_UI_2_13_1.md).

@@ -175,3 +175,9 @@ Shop version 2 is owned by engine.createShop/validShop, buyCard/buyArtifact/remo
 ## Mystery Events — 2.13.0
 
 Mystery is a named timed-question variant of the existing education flow. Intro states success/failure and fixed duration; Leave before Start exposes no question. A–D submits once; terms only open help. Support/dialogs/menu do not pause the deadline. Correct/wrong/timeout/abandon leads to answer review before consequences; optional target choice and explicit confirmation precede atomic cost/reward. Transitions focus the new heading, returning to the shared map on completion. Malformed imported offers are rejected by the save owner. Current-illustration loading cannot change the mathematical prompt or outcome. See docs/MYSTERY_EVENTS_2_13_0.md for the source policy.
+
+## Room UI — 2.13.1
+
+Shop tab state is presentation-only. Click, ArrowLeft/ArrowRight and Home/End select/focus one enabled tab without changing Gold, stock, RNG, card targets or saves. Purchases stay on their active tab; reload opens Cards with the engine’s frozen offers and Sold/service-used status intact. Leave Shop remains outside the tab panels. Old visits keep their original stock and disable unavailable services. Removal retains the shared native selector, explicit confirmation and cancellation.
+
+Mystery art covers the encounter rather than appearing in an inset frame. Intro/review/reward text uses the existing STM_SHARED tooltip hub. Purple previews show the authored cost/reward and current HP/Gold arithmetic, including healing/HP-loss caps and the Max HP clamp; they do not add resolved calculation entries. Only actual consequences write the existing ledger. Terms, numbers, Hint, Basics, menu and tooltips never pause/reset the saved deadline or submit an answer. Question-bank meanings stay in question context; no teaching-pool Card definition is applied to the real deck.

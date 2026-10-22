@@ -207,3 +207,10 @@ Connected Claim Artifact to the exact original 120 questions, 40 per approved Fo
 - Expand Shop to two 3×2 racks, one 60%-off card, tiered artifact purchases in both modes and a paid once-per-visit removal service. Preserve legacy visits and free-gift questions.
 - Audit all 120 items and report denominator/common-denominator support harmonization to the source owner without modifying the bank.
 - Exact rules and verification: docs/GAME_UPDATE_2_12_0.md and docs/verification/release-2-12.json.
+
+## 2.13.1 — 22 October 2026 (Malaysia)
+
+- Replace the inset Mystery illustration with the full-background Dungeon Master composition and a responsive live panel.
+- Separate Shop into Buy Cards / Buy Artifacts / Remove Card native tabs; retain exact prices, frozen stock, purchase/removal confirmation and saved Sold/service status.
+- Apply shared game-term help and honest current-snapshot calculation previews to Mystery intro/review/reward rules. Preserve authored question rich text, real transaction logs and strict deadlines.
+- Retain the approved Rest composition and source artwork. Verification: docs/ROOM_UI_2_13_1.md.

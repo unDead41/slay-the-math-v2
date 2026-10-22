@@ -164,3 +164,8 @@ Map art receives a parchment wash so navigation ink leads. Explicit Floor labels
 ## Mystery Events — 2.13.0
 
 Mystery Events extend the established dungeon palette, Georgia/Cambria headings, Trebuchet/Segoe body, ornate-panel, cardView, button/dialog/toast and shared rich-text renderer. mystery.css owns only the two-column room composition; the full supplied artwork appears before the live panel on narrow screens. Cards own local horizontal scrolling; the document remains naturally scrollable. Native A–D controls submit one answer, while sibling underlined terms open help. A textual fixed countdown uses tabular digits and restrained urgency color; no motion changes numeric outcomes. Source/runtime contracts: docs/MYSTERY_EVENTS_2_13_0.md.
+
+
+## Education Practice — 2.14.0
+
+The user requests the full 120-question folio directly from Main Menu on branch `education`, using the reviewed textbook/DSKP 1.6 bank. Hint 1 immediately displays actual table/Venn values as in the latest screenshots; unspecified data says “Not given”. More Hint explains the same filled reference. Final answer/selection marks and Artifact Claim keep their existing state ownership. Practice has its own saved Learning record and no run/rewarded-exposure mutation. Source, compatibility, responsive behavior and actual verification: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).

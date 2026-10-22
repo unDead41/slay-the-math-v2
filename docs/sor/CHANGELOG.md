@@ -2,6 +2,15 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.14.0 — 22 Oktober 2026 (Malaysia)
+
+- Integrate reviewed Question Bank 1.6 with attached textbook/DSKP sources, simpler teaching definitions and explicit context/Given/Find in game.
+- Add Education Practice directly on Main Menu with the full 120-question folio, separate saved Learning and resettable Review.
+- Per the latest screenshot instruction, fill actual table/Venn values from Hint 1 immediately; More Hint explains those values. Unspecified regions remain “Not given” and solution-only selection marks stay gated.
+- Preserve stable IDs, answer bindings, prior pending trials, Claim ownership and Mystery-specific rules.
+- Generate the practice document from the active bank. Build the oversized offline HTML locally instead of committing a stale generated artifact.
+- Details and actual checks: [Education Practice 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).
+
 ## Game 2.13.0 — 22 Oktober 2026 (Malaysia)
 
 - Apply all fifteen Mystery v2 scenes/mechanics to both stages/modes with the active shared bank.

@@ -175,3 +175,8 @@ Shop version 2 is owned by engine.createShop/validShop, buyCard/buyArtifact/remo
 ## Mystery Events — 2.13.0
 
 Mystery is a named timed-question variant of the existing education flow. Intro states success/failure and fixed duration; Leave before Start exposes no question. A–D submits once; terms only open help. Support/dialogs/menu do not pause the deadline. Correct/wrong/timeout/abandon leads to answer review before consequences; optional target choice and explicit confirmation precede atomic cost/reward. Transitions focus the new heading, returning to the shared map on completion. Malformed imported offers are rejected by the save owner. Current-illustration loading cannot change the mathematical prompt or outcome. See docs/MYSTERY_EVENTS_2_13_0.md for the source policy.
+
+
+## Education Practice — 2.14.0
+
+The user requests the full 120-question folio directly from Main Menu on branch `education`, using the reviewed textbook/DSKP 1.6 bank. Hint 1 immediately displays actual table/Venn values as in the latest screenshots; unspecified data says “Not given”. More Hint explains the same filled reference. Final answer/selection marks and Artifact Claim keep their existing state ownership. Practice has its own saved Learning record and no run/rewarded-exposure mutation. Source, compatibility, responsive behavior and actual verification: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).

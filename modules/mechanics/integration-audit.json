@@ -1,9 +1,10 @@
 {
-  "sourceZip": "INTEGRATION.zip",
-  "sha256": "c9c457f6ba7af10d9bdcd7b1fbce06bc4e7adce5e9a94c4cc2b328d80287a450",
+  "sourceZip": "QUESTION_BANK_HARMONIZED_v1_6.zip",
+  "sha256": "58bdc02a9e7df6a37a30f7012a17600b0f47bd0d9886411cd5640188c08efa58",
+  "artifactSourceZip": "INTEGRATION.zip",
   "artifactPackage": "3.5",
-  "questionPackage": "1.5.0",
-  "bankVersion": "form4-review-1.4.0",
+  "questionPackage": "1.6.0",
+  "bankVersion": "form4-review-1.6.0",
   "supplierRegistryId": "881ed46c93d9444d01853bf2056a09e5216a8b5278ecb3aacdb069ca21818201",
   "hostRegistryId": "3e273eb180515c71a935f3e3e55c5ae3bc0289825c5699efdead98721c121220",
   "overrides": [
@@ -54,30 +55,43 @@
     }
   ],
   "sourceHashes": {
-    "QUESTION_BANK/integration/index.mjs": "550d3383fffd7cd709552f5997da643d0ad70fea6ed155ce56b7115795cce245",
+    "QUESTION_BANK/integration/index.mjs": "1645212cd8bfb6ebd374d098e5bf20e9276e4b9919c37415e4770e863aa233e6",
     "STM_SHARED/index.mjs": "cfe0a6ccea21b52ae3dd2de2eadd6dc121e649ec2dd053637f363d50b8d15568",
     "STM_SHARED/registry.js": "459f97f2e8ddbaffa473c77ff2670aa4e89326bfe412ae9c8ee531ca50785154",
-    "STM_SHARED/rich-text.js": "a37f6bd8ba5c45e4600522fbe5f453aaea65b8ca55d9a2897e9741fb8e48a8cf",
-    "QUESTION_BANK/learning/session.mjs": "de779746e9b6a38a7c182e56a2e33507167d7b7e6e6a64fb5b97bd06223a11ae",
+    "STM_SHARED/rich-text.js": "eb0d60374195a613082165b783657bbc25a540e4fbce20bb5e5cf6b05c8dfcef",
+    "QUESTION_BANK/learning/session.mjs": "468839a548a4f5e6423d4dedcc2c31357bb9422c1549818db0034622f16ed652",
     "QUESTION_BANK/more-hint-state.mjs": "54a96ba738b77538433ea7162f9cee2d4b7e0c0ab6862b81be035a5833ac55e1",
-    "QUESTION_BANK/rich_text/renderer.mjs": "8a4fbb33add3ed6b98815c124405b4ba8a10624306c0b9160b510b812e4e0e99",
-    "QUESTION_BANK/learning/visual-renderer.mjs": "47b56a556e757acd017491047470811bf4bcb1459a59311c87f7660fb624022d",
+    "QUESTION_BANK/rich_text/renderer.mjs": "f88195e427b391a37181908f560113302f132e2e23d014c382a6a42b404136a1",
+    "QUESTION_BANK/learning/support-visual.mjs": "1e28360fb3c005a1f12c4a279aa0c7fa0c18ac7b9604f542547631b1cdf4351f",
+    "QUESTION_BANK/learning/visual-renderer.mjs": "c5e867d782c0ace760089ffeac14b9b276ccfad399d77dadc0067d3fd9ecb654",
     "ARTIFACT/runtime/artifact-core.js": "bfa5ec749c70c189e98060c2cb3d187703a7534d3ffded0a47d813499315c1c5",
     "ARTIFACT/runtime/artifact-ui.js": "99ce876f1f9a4329d29c8d644840ac89a4e9b347503c0d87b773e6ae6eb82b8d",
     "STM_SHARED/rich-text.css": "4e700b558a6f2f8c1b18ddcdb0d70743591dfcad87ae8c2422a4def951065625",
     "QUESTION_BANK/rich_text/renderer.css": "e5575d5bc29e017dfea516e0f837bc4485157a26e96b7ab84312b9f26b80acfb",
     "ARTIFACT/runtime/artifact-ui.css": "ca3a8d5ad193975ec1eb1858975593ab110cadcd465926b70accf40fcb2971f4",
-    "QUESTION_BANK/question-bank-form4-120.json": "106e15d8c5b941234b44578a4bcff8716eae35d92a0a9c719c98b11cd7b2902a",
-    "QUESTION_BANK/rich_text/glossary.json": "c3e1b3b1cfad234e85f14694024c1d78f57f0d1dd600c2e816b9ef312445be5a",
+    "QUESTION_BANK/question-bank-form4-120.json": "417bf840382a05ccc264de1dcc4c192ebbc03facfa1ed9bc688c539d6a22dda4",
+    "QUESTION_BANK/rich_text/glossary.json": "064c5d85d8fbf16f67f4f9fcc3fb121715ac5f510b0a14e15f774c4dd63fe6b4",
     "QUESTION_BANK/learning/foundations.json": "e7c0f903c4654a3dbfe08d0ed8e8bfdd0d40fb84124e171e0c5fc71df4bbfb67",
     "ARTIFACT/artifact_catalog.json": "e87958d3ed54092be87db3c84e5584e17bc3c1063bb0927999780dc4dc008f68",
     "ARTIFACT/rich_text/artifact_richtext.json": "a91996c45e978b24a89588ff98a98328dc268078743a7effbd5f0090901a928d",
     "ARTIFACT/rich_text/glossary.json": "46ab140af835b9f056eaae67a11d11967d6ff880d05918ffdd4e62702be8b92f",
     "STM_SHARED/registry.json": "1889d009a2f8b6f0601ff4fe617944daa87d3c890c386deaee728fb7d692dcf4"
   },
+  "practice": {
+    "bytes": 350615,
+    "modules": [
+      "more-hint-state.mjs",
+      "rich_text/renderer.mjs",
+      "learning/support-visual.mjs",
+      "learning/session.mjs",
+      "learning/visual-renderer.mjs",
+      "learning/preview.mjs"
+    ]
+  },
   "output": {
-    "dist/mechanics.js": "da1b0d64c9a9d9dcbb87ebc9b52434c8deb92c9aaf43d779596d9da10444ded7",
-    "dist/mechanics-source.css": "d96af9c980364533dbfb15f8fd1b4db7377ea0a182b9b8358cf6c4fe3f85341f"
+    "dist/mechanics.js": "9da57509c2a1c1aba75a067333cec3d6a4a722f5ea416bb0374bbda0486f2791",
+    "dist/mechanics-source.css": "d96af9c980364533dbfb15f8fd1b4db7377ea0a182b9b8358cf6c4fe3f85341f",
+    "dist/education-practice.js": "373f5613eb44cb6896bfa1e9191e97e13f3415de2ed2b868bba162a4545c58c6"
   },
   "counts": {
     "artifacts": 31,
@@ -86,5 +100,5 @@
     "foundations": 7,
     "practiceChecks": 14
   },
-  "omitted": "Duplicate PNG/4K sheets, PDF previews and demo hosts. Existing 31 verified WebP icons are reused; the game engine owns effects, rewards and save commits."
+  "omitted": "Duplicate PNG/4K sheets, PDF previews and demo hosts. Existing 31 verified WebP icons are reused; the game engine owns effects, rewards and save commits. Education Practice has its own storage key and uses the same active bank."
 }

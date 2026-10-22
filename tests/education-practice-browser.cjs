@@ -1,0 +1,107 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require('playwright');
+const Q=require('../dist/education');
+const root=path.resolve(__dirname,'..'),output=process.env.QA_OUTPUT||path.join(root,'docs/verification/education-practice');
+const report={checks:[],questions:0,viewports:[],errors:[]};
+let browser,server;
+(async()=>{
+ fs.mkdirSync(output,{recursive:true});
+ server=require('node:child_process').spawn(process.execPath,[path.join(root,'server.cjs')],{env:{...process.env,PORT:'4198'},stdio:['ignore','pipe','pipe']});
+ await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);server.stderr.once('data',d=>reject(Error(String(d))));});
+ browser=await chromium.launch({headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE,args:['--no-sandbox','--disable-dev-shm-usage']});
+ const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+ page.on('pageerror',e=>report.errors.push(e.message));
+ page.on('response',r=>{if(r.status()>=400)report.errors.push(r.status()+' '+r.url());});
+ await page.goto('http://127.0.0.1:4198/');
+ assert.equal(await page.locator('[data-action=education-practice]').count(),1,'Education Practice must be reachable from Main Menu');
+ const fixture=require('./fixtures/education-v1_4-pending.json');
+ await page.evaluate(r=>{
+  localStorage.setItem('duel-cube-math.v1',JSON.stringify(r));
+  localStorage.setItem('duel-cube-question-history.v1',JSON.stringify({version:1,bankVersion:r.educationState.bankVersion,usedIds:r.educationState.usedIds,session:r.educationState.session}));
+  localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true}));
+ },fixture);
+ await page.reload();
+ const saved=()=>page.evaluate(()=>Object.fromEntries(['duel-cube-math.v1','duel-cube-question-history.v1'].map(k=>[k,localStorage.getItem(k)])));
+ const before=await saved();
+ const open=async()=>{
+  await page.locator('[data-action=education-practice]').click();
+  const frame=page.frameLocator('#education-practice-frame');
+  await frame.locator('#question-heading').waitFor();
+  return frame;
+ };
+ let frame=await open();
+ assert.equal(await frame.locator('.atlas-question').count(),120);
+ await frame.locator('#hint-tab').click();
+ assert.equal(await frame.locator('#hint-visual td').filter({hasText:'?'}).count(),0);
+ assert.equal(await frame.locator('#hint-visual td').count(),8);
+ assert.match(await frame.locator('#hint-visual').innerText(),/T\s*,\s*4/);
+ await frame.locator('#hint-visual').screenshot({path:path.join(output,'hint1-filled-grid.png')});
+ assert.equal(await frame.locator('#more-hint-tab').isDisabled(),true);
+ const q=Q.catalog['PROB-001'],wrong=q.choices.find(c=>c.id!==q.correctChoiceId);
+ await frame.locator('input[value="'+wrong.id+'"]').check();await frame.locator('#submit-answer').click();
+ await frame.locator('#more-hint-tab').click();
+ assert.match(await frame.locator('#more-hint-visual').innerText(),/H\s*,\s*1/);
+ assert.equal(await frame.locator('#answer-panel').isVisible(),false);
+ await page.screenshot({path:path.join(output,'more-hint-desktop.png'),fullPage:true});
+ report.checks.push('Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.');
+ const items=Q.bank.questions.map(({id,choices,correctChoiceId})=>({id,choices:choices.map(c=>({id:c.id})),correctChoiceId}));
+ report.questions=await frame.locator('#preview').evaluate((root,items)=>{
+  const byId=id=>document.getElementById(id),check=(condition,message)=>{if(!condition)throw Error(message);};
+  function choose(id){root.querySelector('input[value="'+id+'"]').click();byId('submit-answer').click();}
+  let count=0;
+  for(const item of items){
+   byId('question-select').value=item.id;byId('question-select').dispatchEvent(new Event('change',{bubbles:true}));
+   if(item.id==='PROB-001')byId('restart-review').click();
+   check(byId('answer-panel').hidden,item.id+' initial answer');
+   const wrong=item.choices.filter(c=>c.id!==item.correctChoiceId);
+   choose(wrong[0].id);check(byId('more-hint-tab').disabled,item.id+' wrong before hint');
+   byId('hint-tab').click();check(byId('more-hint-tab').disabled,item.id+' hint alone');
+   check([...byId('hint-visual').querySelectorAll('td')].every(c=>c.textContent.trim()!=='?'),item.id+' hint placeholder');
+   choose(wrong[1].id);byId('more-hint-tab').click();
+   check(byId('more-hint-text').textContent.length>0,item.id+' more hint');
+   check(byId('answer-panel').hidden,item.id+' more hint answer');
+   choose(item.correctChoiceId);check(!byId('answer-panel').hidden,item.id+' correct');
+   byId('show-steps').click();check(byId('worked-steps').children.length===3,item.id+' steps');
+   byId('solution-visual-details').open=true;check(byId('solution-visual').textContent.length>0,item.id+' solution visual');
+   const ids=[...root.querySelectorAll('svg [id]')].map(e=>e.id);check(new Set(ids).size===ids.length,item.id+' duplicate diagram IDs');
+   count++;
+  }
+  return count;
+ },items);
+ report.checks.push('All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.');
+ await frame.locator('#resume-learning').click();
+ const pendingId=await frame.locator('#question-select').inputValue();
+ await frame.locator('#hint-tab').click();
+ const learningKey='slay-the-math.education-practice.v1';
+ assert.ok(await page.evaluate(key=>localStorage.getItem(key),learningKey));
+ assert.deepEqual(await saved(),before,'practice must not write the run or rewarded exposure history');
+ await page.locator('[data-action=education-practice-back]').click();
+ assert.equal(await page.locator('[data-action=education-practice]').isVisible(),true);
+ await page.reload();frame=await open();await frame.locator('#resume-learning').click();
+ assert.equal(await frame.locator('#question-select').inputValue(),pendingId);
+ assert.equal(await frame.locator('#hint-tab').getAttribute('aria-selected'),'true');
+ assert.deepEqual(await saved(),before);
+ report.checks.push('Learning progress and pending Hint survive a reload. Existing pending Artifact trial and rewarded question history remain byte-identical.');
+ for(const [width,height] of [[320,740],[390,844],[844,390],[1280,720],[3440,1440]]){
+  await page.setViewportSize({width,height});
+  const outer=await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
+  const inner=await frame.locator('body').evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
+  assert.ok(outer&&inner,'practice overflow at '+width);
+  await page.locator('[data-action=education-practice-back]').click();
+  const buttons=await page.locator('.main-menu-actions>button').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {height:r.height,left:r.left,right:r.right};}));
+  assert.equal(buttons.length,6);for(const b of buttons)assert.ok(b.height>=44&&b.left>=0&&b.right<=width);
+  frame=await open();report.viewports.push({width,height,overflow:false});
+  if(width===390)await page.screenshot({path:path.join(output,'practice-mobile.png'),fullPage:true});
+ }
+ const offline=await browser.newPage({viewport:{width:1280,height:800},reducedMotion:'reduce'}),requests=[];
+ offline.on('pageerror',e=>report.errors.push(e.message));offline.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});
+ await offline.goto('file://'+path.join(root,'MAIN-SEKARANG.html'));
+ await offline.locator('[data-action=education-practice]').click();
+ const of=offline.frameLocator('#education-practice-frame');await of.locator('#question-heading').waitFor();
+ assert.equal(await of.locator('.atlas-question').count(),120);await of.locator('#hint-tab').click();
+ assert.deepEqual(requests,[]);report.checks.push('Portable MAIN-SEKARANG.html opens Education Practice with all 120 questions and zero network requests.');
+ assert.deepEqual(report.errors,[]);
+ fs.writeFileSync(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');
+ console.log(JSON.stringify(report,null,2));
+})().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();server?.kill();});

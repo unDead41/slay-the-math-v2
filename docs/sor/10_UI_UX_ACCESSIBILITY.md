@@ -141,3 +141,7 @@ All 31 artifact rules use the same segmented-description owner in choices, pendi
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12: mode choices share illustrated medallion size, native buttons and explicit difficulty descriptions. Shop has separate 3×2 card/artifact racks with visible prices/effects, Sold/not-enough-Gold states and natural document scrolling. Narrow racks alone scroll horizontally. Removal reuses the native selector plus named consequence/Gold confirmation. Shared tooltip, toast, dialog focus and English copy remain canonical.
+
+## Education Practice — 2.14.0
+
+The user requests a sixth Main Menu action for education only. **Education Practice** opens the full 120-question folio with a persistent, native Main Menu return and focus restored to its trigger. Keep the existing menu artwork and 44px minimum targets. The folio owns its responsive atlas, theme/language controls and tooltip document. Fill table/Venn values directly in Hint 1 as requested in the latest screenshots; use “Not given” only for mathematically unspecified data. More Hint explains the filled reference. Keep final selection marks and the final answer panel in the solution stage. Artifact/Mystery screens use the same clearer question context and gated source notes. Details: [Education 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).

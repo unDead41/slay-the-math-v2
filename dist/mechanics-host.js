@@ -14,6 +14,17 @@
  function hydrateEducation(run){
   const q=Q.current(run);hydrateQuestion(document.querySelector('.education-question'),q,q?Q.learningView(run):null);
  }
+ function teachingHTML(q,closed,{esc}){
+  const h=q?.harmonization;if(!h)return '';
+  const context=h.contextNote?'<h3>In this question</h3><p data-q-rich="context">'+esc(h.contextNote)+'</p>':'';
+  const given=h.given?.length?'<h3>Given</h3><ul>'+h.given.map((text,i)=>'<li data-q-rich="given:'+i+'">'+esc(text)+'</li>').join('')+'</ul>':'';
+  const asked=h.asked?'<h3>Find</h3><p data-q-rich="asked">'+esc(h.asked)+'</p>':'';
+  return '<section class="education-teaching" aria-label="Question guide">'+context+given+asked+'</section>'+
+   '<details class="education-sources"><summary>Sources &amp; curriculum fit</summary><p>'+esc(h.alignment)+' · Form 4</p>'+h.sources.map(s=>{
+    const ref=M.data.bank.sourceRegistry[s.sourceId];
+    return '<article><strong>'+esc(ref.title)+'</strong><p>'+esc(s.section)+' · PDF pages '+esc(s.pdfPages.join(', '))+' · Printed pages '+esc(s.printedPages)+'</p>'+(closed?'<p>'+esc(s.basis)+'</p>':'')+'</article>';
+   }).join('')+(closed?'<p>'+esc(h.alignmentNote)+'</p>':'<p>Authoring notes appear after the question is finished.</p>')+'</details>';
+ }
  function hydrateQuestion(host,q,view){
   disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');
   const index=new Map();
@@ -24,6 +35,9 @@
    else if(key==='feedback')parts=view.feedback?.richText;
    else if(key==='explanation')parts=view.explanation;
    else if(key==='moreHint')parts=view.moreHint;
+   else if(key==='context')parts=q.harmonization?.contextRichText;
+   else if(key==='asked')parts=q.harmonization?.askedRichText;
+   else if(key.startsWith('given:'))parts=q.harmonization?.givenRichText[Number(key.slice(6))];
    else if(key.startsWith('hint:'))parts=view.hintSteps?.[key.slice(5)];
    else if(key.startsWith('step:'))parts=view.workedSteps?.find(s=>s.id===key.slice(5))?.richText;
    if(parts)renderParts(el,parts,view.allowCalculations,index);
@@ -88,5 +102,5 @@
   dialogTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getTheme:()=> 'dark'});
  }
  function progressHTML(run,{esc}){const rows=Q.progress(run);return '<p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
- root.STMMechanicsHost={hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
+ root.STMMechanicsHost={teachingHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
 })(window);

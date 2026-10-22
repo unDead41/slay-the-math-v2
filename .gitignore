@@ -1,3 +1,6 @@
 # Transient transfer/build fragments are not release inputs.
 .MAIN-SEKARANG.html.*
 tools/__pycache__/
+
+# Reproducible offline build (currently over GitHub's 100 MiB file limit).
+/MAIN-SEKARANG.html

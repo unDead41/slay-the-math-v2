@@ -1,13 +1,13 @@
 {
   "name": "duel-cube-math",
-  "version": "2.13.0",
+  "version": "2.14.0",
   "private": true,
-  "description": "Fifteen timed Mystery Events with supplied artwork, shared questions and persistent rewards",
+  "description": "Harmonized textbook-based questions and standalone Education Practice from the main menu",
   "scripts": {
     "start": "node server.cjs",
     "test": "node --test tests/*.test.cjs",
-    "check": "node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/mystery-data.js && node --check dist/mystery.js && node --check dist/mystery-ui.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js",
-    "build": "node build-portable.cjs",
+    "check": "node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/mystery-data.js && node --check dist/mystery.js && node --check dist/mystery-ui.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js && node --check dist/education-practice.js",
+    "build": "node tools/import-mechanics.cjs && node build-portable.cjs",
     "test:browser": "node tests/browser-smoke.cjs",
     "test:maps": "npm --prefix modules/map test && npm --prefix modules/map run validate",
     "test:combat-browser": "node tests/combat-browser.cjs",
@@ -27,6 +27,8 @@
     "test:shop-boss-browser": "node tests/shop-boss-browser.cjs",
     "audit:questions": "python3 tools/audit-question-support.py",
     "test:mystery-browser": "node tests/mystery-browser.cjs",
-    "test:mystery-offline": "node tests/mystery-offline-browser.cjs"
+    "test:mystery-offline": "node tests/mystery-offline-browser.cjs",
+    "test:education-practice-browser": "node tests/education-practice-browser.cjs",
+    "pretest": "npm run build"
   }
 }

@@ -3,6 +3,7 @@
  */
 import {createHintState,reduceHintState} from '../more-hint-state.mjs';
 import {selectQuestionView} from '../rich_text/renderer.mjs';
+import {selectSupportVisual} from './support-visual.mjs';
 
 export const LEARNING_POLICY=Object.freeze({minimumEvidence:3,recentWindow:3,
   mediumThreshold:0.55,hardThreshold:0.8,assistedCredit:0.6,retryCredit:0.4});
@@ -182,6 +183,6 @@ export function selectLearningView(question,record,{finalReview=false}={}) {
   const base=selectQuestionView(question,valid?record.hintState:null,{finalReview:finalReview||closed});
   return {...base,feedback:valid&&record.lastChoiceId?question.learning.optionFeedback[record.lastChoiceId]:null,
     workedSteps:(closed||finalReview)&&record?.stepsViewed?question.learning.workedSteps:null,
-    visual:closed||finalReview?question.learning.visual.solution:valid&&record.hintState.hintUsed?question.learning.visual.hint:null,
+    visual:closed||finalReview?question.learning.visual.solution:valid&&record.hintState.hintUsed?selectSupportVisual(question):null,
     closed:closed||finalReview};
 }

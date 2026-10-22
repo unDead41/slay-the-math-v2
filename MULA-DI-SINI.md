@@ -1,3 +1,33 @@
+# Slay the Math — Education 2.14.0
+
+Branch `education` menambah **Education Practice** pada main menu dan mengaktifkan bank harmonisasi buku teks/DSKP 1.6. Hint 1 terus mengisi nilai jadual/rajah, tanpa tanda soal. Rekod latihan berasingan daripada run/ganjaran.
+
+Dalam terminal PowerShell VS Code untuk projek asal, hentikan server dengan Ctrl+C, kemudian:
+
+```powershell
+git fetch origin
+git switch education
+npm.cmd start
+```
+
+Buka http://localhost:4173 dan tekan Ctrl+F5. Pilih **Education Practice** untuk semua 120 soalan, atau Continue untuk sambung run. Tiada pakej npm diperlukan untuk bermain.
+
+Untuk fail offline terkini:
+
+```powershell
+npm.cmd run build
+```
+
+Buka `MAIN-SEKARANG.html` yang baru dijana. Fail ini kini hasil binaan tempatan, bukan fail yang disimpan di Git, kerana versi penuh artwork/animasi melebihi had satu fail GitHub. Jangan guna salinan HTML lama untuk menilai perubahan branch ini.
+
+Rujukan semasa dan bukti: [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
+
+---
+
+## Panduan ZIP 2.5.0 terdahulu
+
+Kandungan di bawah ialah rekod installer lama; cara Git di atas ialah arahan untuk branch semasa.
+
 # Slay the Math - Education Update 2.5.0
 
 Sekarang Claim & Choose Your Path membuka soalan sebenar daripada bank 120. Bukan PDF sahaja. Pilih A-D, tekan Check Answer, baca penerangan, kemudian claim artifact dan pilih laluan.

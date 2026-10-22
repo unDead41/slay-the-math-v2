@@ -1,4 +1,4 @@
-# Slay the Math — Dungeon Edition 2.13.0
+# Slay the Math — Education Edition 2.14.0
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -9,6 +9,12 @@ npm.cmd start
 Open http://localhost:4173. No npm packages are required to play or edit the source.
 Use Ctrl+C to stop. `dist/` contains the editable game; `modules/map/` contains the
 supplied 100-seed map module, original icon PNGs, exported layouts, tests and SOR.
+
+**Education Practice** is available directly on the main menu, without starting a run.
+It reuses the full 120-question folio: browse, Hint/More Hint, worked solutions,
+Basics, English/BM term meanings and a separate saved learning session.
+The same harmonized 1.6 bank is active in Artifact trials and Mystery challenges.
+See [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
 
 The MC is **Alyssa the Clairvoyance**. Combat follows the latest supplied reference:
 Alyssa left, enemy/intent right, HP underneath, hand/resources/actions below. Focus
@@ -30,13 +36,15 @@ npm run build
 ```
 
 `npm run build` rebuilds optional `MAIN-SEKARANG.html` with embedded art/music.
+This generated file is no longer tracked: the current full-animation build exceeds GitHub’s single-file limit.
+Build it locally after checkout, or use `npm start` directly.
 DOM tests need jsdom via `DOM_QA_MODULE` (otherwise explicitly skipped); optional
 browser checks use Playwright via `BROWSER_QA_MODULE` and an installed Chromium.
 The game itself has no dependency on either QA package.
 
 See [implementation and limits](docs/DUNGEON_EDITION_2_1.md), [verification](docs/VERIFICATION_2_1.md),
 [DESIGN.md](DESIGN.md), [UX-CONTRACT.md](UX-CONTRACT.md) and [SOR_README.md](SOR_README.md).
-Probability remains the implemented mathematics mode.
+Predict uses Probability. Education uses Probability, Sets and Logic.
 
 Main menu UWHD/display fit and 5s transitions: [Menu fit 2.5.1](docs/MENU_FIT_2_5_1.md). Browser QA: `npm run test:menu-browser` with Playwright supplied through `BROWSER_QA_MODULE`.
 

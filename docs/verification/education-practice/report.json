@@ -1,0 +1,37 @@
+{
+  "checks": [
+    "Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.",
+    "All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.",
+    "Learning progress and pending Hint survive a reload. Existing pending Artifact trial and rewarded question history remain byte-identical.",
+    "Portable MAIN-SEKARANG.html opens Education Practice with all 120 questions and zero network requests."
+  ],
+  "questions": 120,
+  "viewports": [
+    {
+      "width": 320,
+      "height": 740,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "width": 3440,
+      "height": 1440,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

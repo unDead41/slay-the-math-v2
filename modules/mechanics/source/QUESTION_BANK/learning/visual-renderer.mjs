@@ -3,8 +3,9 @@ import {renderRichText} from '../rich_text/renderer.mjs';
 const SVG_NS='http://www.w3.org/2000/svg';
 const SVG_TAGS=new Set(['svg','title','desc','defs','clipPath','circle','mask','g','rect','text','tspan']);
 const SVG_ATTRS=new Set(['viewBox','role','aria-labelledby','id','cx','cy','r','x','y','width','height','fill','fill-opacity','stroke','stroke-width','rx','maskUnits','mask','clip-path','text-anchor','data-role','font-size','font-weight','font-family','dy']);
+let diagramSequence=0;
 
-function safeVenn(xml,glossary) {
+function safeVenn(xml,glossary,reference=false) {
   const parsed=new DOMParser().parseFromString(xml,'image/svg+xml');
   if(parsed.querySelector('parsererror')||parsed.documentElement.localName!=='svg')throw new Error('Invalid diagram SVG');
   function clone(source) {
@@ -21,6 +22,22 @@ function safeVenn(xml,glossary) {
     return node;
   }
   const svg=clone(parsed.documentElement);svg.setAttribute('class','learning-venn');
+  // Hint, More Hint and solution can display the same valued source diagram
+  // together. Every rendered instance needs its own clip/mask/title IDs.
+  const prefix='stm-venn-'+(++diagramSequence)+'-',ids=new Map();
+  for(const node of svg.querySelectorAll('[id]')){ids.set(node.id,prefix+node.id);node.id=prefix+node.id;}
+  for(const node of [svg,...svg.querySelectorAll('*')]){
+    if(node.hasAttribute('aria-labelledby'))node.setAttribute('aria-labelledby',node.getAttribute('aria-labelledby').split(/\s+/).map(id=>ids.get(id)||id).join(' '));
+    for(const attr of ['mask','clip-path'])if(node.hasAttribute(attr)){
+      const old=node.getAttribute(attr).slice(5,-1);if(ids.has(old))node.setAttribute(attr,'url(#'+ids.get(old)+')');
+    }
+  }
+  if(reference){
+    for(const text of svg.querySelectorAll('tspan'))if(text.textContent==='?')text.textContent='Not given';
+    for(const shade of svg.querySelectorAll('rect[mask]'))shade.remove();
+    const description=svg.querySelector('desc');
+    if(description)description.textContent='The diagram shows the region values. Not given means the question does not specify that value. Use the text table below for the same information.';
+  }
   for(const label of svg.querySelectorAll('text[data-role="set-label"]')) {
     const text=label.textContent;
     const exact=Object.entries(glossary.entries).find(([,e])=>e.aliases.includes(text));
@@ -37,7 +54,7 @@ export function renderVisual(container,visual,options) {
   container.replaceChildren();if(!visual)return;
   const title=document.createElement('h3');title.textContent=visual.title;container.append(title);
   const rich=(parent,runs)=>renderRichText(parent,runs,options);
-  if(visual.kind==='venn')container.append(safeVenn(visual.svg,options.glossary));
+  if(visual.kind==='venn')container.append(safeVenn(visual.svg,options.glossary,visual.reference));
   if(['venn','table'].includes(visual.kind)) {
     const wrap=document.createElement('div');wrap.className='learning-table-scroll';
     wrap.setAttribute('tabindex','0');wrap.setAttribute('role','region');wrap.setAttribute('aria-label',visual.title+' table');

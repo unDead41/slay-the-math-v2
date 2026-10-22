@@ -68,5 +68,6 @@ export function renderRichText(container,segments,{glossary,allowCalculations=fa
 }
 
 export function attachRichTextTooltips(root,{glossary,calculationIndex=new Map(),getLanguage,getTheme}={}) {
+  if(Object.values(glossary?.entries||{}).some(e=>e.teaching)&&!sharedRichText.teachingExplanations)throw new Error('Load the STM_SHARED rich-text.js supplied with Question Bank 1.6, then reload the game.');
   return sharedRichText.attachTooltips(root,{domain:'question-bank',glossary,calculationIndex,getLanguage,getTheme,manageTheme:typeof getTheme==='function'});
 }

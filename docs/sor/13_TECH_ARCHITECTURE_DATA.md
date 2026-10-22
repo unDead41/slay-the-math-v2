@@ -137,3 +137,7 @@ Restore normalizes overfull legacy hands after validation, preserving excess UID
 ## Mystery Events — 2.13.0
 
 Optional mysteryState v2 owns independent RNG, used event IDs, frozen offers, question/choice/deadline/outcome, selected targets, settlement keys, modifier queue and Max HP sacrifice. Artifact trades add a validated consumed ledger; education accepts Mystery exposures in both modes. Required random payloads are validated before restoring/importing. Run envelope stays version 1; source and schema details: [MYSTERY_EVENTS.md](MYSTERY_EVENTS.md).
+
+## Education Practice — 2.14.0
+
+Run schema and engine transaction ownership remain version 1. Education accepts previous bank versions 1.0/1.4/1.5 and current 1.6, preserving stable question/choice bindings and ordered events. Practice exclusively owns `slay-the-math.education-practice.v1`; it never merges with active run or rewarded exposure history. A generated isolated folio document receives the active bank/glossary/foundations at open time. There is one source bank, no fetch, no additional runtime package and no combat reward path from practice. Build regenerates its template and the offline HTML; the latter is a local ignored output because current source assets exceed GitHub's per-file limit. Details and compatibility checks: [Education 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).

@@ -28,13 +28,23 @@
   for(const [id,signature] of Object.entries(expected))for(const field of ['label','definition','category'])if(entries[id]?.[field]!==signature[field])throw Error('Rich-text term drift at '+domain+':'+id+'. Reconcile the source before updating the shared registry.');
   return {domain,terms:Object.keys(expected).length,registryId:registry.registryId};
  }
- function describeTerm(domain,id,language='en'){
+ function describeTerm(domain,id,language='en',teaching=null){
   const entry=resolveTerm(domain,id),lang=language==='ms'?'ms':'en';
-  return {canonicalId:entry.id,category:entry.category,title:entry.label,
+  const model={canonicalId:entry.id,category:entry.category,title:entry.label,
    definition:lang==='ms'?(entry.definition_ms||entry.definition):entry.definition,
    example:domain==='question-bank'?entry.example?.[lang]||entry.example?.en||null:null,
    labelParts:entry.mathText?.label,definitionParts:entry.mathText?.definition?.[lang],
    exampleParts:domain==='question-bank'?entry.mathText?.example?.[lang]||entry.mathText?.example?.en:null};
+  // Teaching explanations are scoped to the question domain. The canonical
+  // registry and artifact meanings remain protected by assertDomain above.
+  if(domain==='question-bank'&&teaching&&typeof teaching.definition?.[lang]==='string'){
+   model.title=typeof teaching.title==='string'?teaching.title:entry.label;
+   model.definition=teaching.definition[lang];model.example=teaching.example?.[lang]||null;
+   model.labelParts=teaching.mathText?.label;
+   model.definitionParts=teaching.mathText?.definition?.[lang];
+   model.exampleParts=teaching.mathText?.example?.[lang];
+  }
+  return model;
  }
  function decorateTerm(node,domain,id){
   const entry=resolveTerm(domain,id);
@@ -108,7 +118,10 @@
   }
   function getModel(anchor,lease){
    const o=lease.options,kind=anchor.getAttribute('data-richtext-kind')||anchor.getAttribute('data-stm-tip');
-   if(kind==='term')return {kind:'term',...describeTerm(o.domain,anchor.getAttribute('data-glossary-id')||anchor.getAttribute('data-term'),(o.getLanguage||config.getLanguage)())};
+   if(kind==='term'){
+    const id=anchor.getAttribute('data-glossary-id')||anchor.getAttribute('data-term');
+    return {kind:'term',...describeTerm(o.domain,id,(o.getLanguage||config.getLanguage)(),o.glossary?.entries?.[id]?.teaching)};
+   }
    if(kind==='calculation'){
     if(o.domain==='question-bank'){
      const token=o.calculationIndex?.get(anchor.getAttribute('data-calculation-id'));if(!token)return null;
@@ -195,7 +208,7 @@
   for(const key of ['getLanguage','getTheme'])if(key in options){if(typeof options[key]!=='function')throw Error(key+' must read the existing settings owner.');config[key]=options[key];}
   for(const hub of liveHubs)hub.refresh();
  }
- return Object.freeze({version:'1.0.0',registryId:registry.registryId,resolveTerm,describeTerm,assertDomain,
+ return Object.freeze({version:'1.0.0',teachingExplanations:true,registryId:registry.registryId,resolveTerm,describeTerm,assertDomain,
   decorateTerm,termHTML,renderMathML,calculation,questionCalculation,attachTooltips,configure,
   refresh(){for(const hub of liveHubs)hub.refresh();},
   diagnostics(doc=globalThis.document){return hubs.get(doc)?.diagnostics()||{controllers:0,visibleTooltips:0,domain:null};}});

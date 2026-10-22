@@ -119,3 +119,9 @@ MTH-14 (2.11.0) supersedes the 1.0 bank presentation/selection details with the 
 ## Mystery Events — 2.13.0
 
 Mystery v2 uses the same active 120-question bank and profile exposure service as Artifact trials, preferred compatible IDs first and unused same-topic fallback only. It never replaces question text/answers/hints with the older package snapshot or artwork counts. Each timed attempt ends after its first answer or deadline, then shows correct explanation and optional worked steps. Deadline/one-attempt rules are a Mystery variant; existing Artifact/Predict learning rules remain.
+
+## Harmonized bank and Education Practice — 2.14.0
+
+MTH-15 supersedes the earlier read-only wording restriction under the user's explicit instruction to integrate the reviewed Question Bank 1.6. The 120 stable IDs/seeds/choice bindings/correct keys remain; active content uses the attached textbook/DSKP references, simpler teaching definitions, explicit context/Given/Find and source disclosure. The latest user instruction makes Hint 1 show actual values in all tables/Venn diagrams, with no question-mark placeholders. Unspecified values say “Not given”; final selection marks and the answer panel retain their solution stage. More Hint adds the detailed method over the filled reference. Artifact and Mystery use this same bank.
+
+MTH-16 adds Education Practice directly to Main Menu. It reuses the complete folio with Review and saved Learning, all 120 questions, Basics, worked steps and term meanings. Practice has no combat rewards/timer and uses a separate record; it never consumes rewarded question history. Existing Artifact correct-plus-final-Claim and Mystery rules remain. Source and actual checks: [Education 2.14.0](../EDUCATION_PRACTICE_2_14_0.md).

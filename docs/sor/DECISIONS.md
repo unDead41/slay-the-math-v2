@@ -256,6 +256,17 @@ Owners: SOR 03/04/05/08/11/13/14/19. Verification and migration limits: `docs/CO
 
 Owners: SOR 07/11/14/15. Source mapping and actual checks: [both-stage motion](../ENEMY_MOTION_2_10_0.md).
 
+## Harmonized education and practice branch — 22 October 2026, game 2.14.0
+
+| ID | Status | Decision |
+|---|---|---|
+| DEC-20261022-EDUCATION-01 | DISAHKAN | Ijamm requests a branch named `education`, integration of the reviewed textbook/DSKP harmonization and an education-only practice feature on Main Menu using the full 120-question HTML folio. |
+| DEC-20261022-EDUCATION-02 | DISAHKAN | Ijamm asks why the Hint/More Hint grid contains question marks. Source inspection confirms unfinished placeholder cells; improve their explanation and progressive guidance. |
+| DEC-20261022-EDUCATION-03 | DITERUSKAN | Use the same active 1.6 bank for practice, Artifact and Mystery, preserving all stable question/choice/answer bindings. Practice has a separate record and no combat/reward/exposure mutation. The subsequent explicit screenshot instruction supersedes the unfinished/one-cell proposal: show all actual table/Venn values from Hint 1, with no `?` placeholders, preserving honest “Not given” regions and normal final-answer/Claim timing. |
+| DEC-20261022-EDUCATION-04 | DITERUSKAN | Preserve old 1.4 pending trials/profile histories alongside 1.0/1.5. Keep engine Claim/timer ownership. Replace the stale tracked portable artifact with a reproducible ignored local build because the current full build exceeds GitHub's single-file limit; source/assets remain versioned. |
+
+Owners: SOR 02/10/13/15. Implementation, sources, compatibility and actual checks: [Education Practice 2.14.0](../EDUCATION_PRACTICE_2_14_0.md). Main is not merged by this task.
+
 
 ## Map and INTEGRATION.zip — 22 October 2026 (Malaysia), game 2.11.0
 

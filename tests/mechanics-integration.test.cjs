@@ -3,7 +3,7 @@ const E=require('../dist/engine'),Q=require('../dist/education'),M=require('../d
 const clone=x=>JSON.parse(JSON.stringify(x));
 function trial(){const r=E.newRun(17,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id);return r;}
 function wrong(r){const q=Q.current(r),id=q.choices.find(c=>c.id!==q.correctChoiceId&&!r.educationState.pending.attempts.includes(c.id)).id;E.selectEducation(r,id);E.answerEducation(r);}
-test('integrated bank passes the supplier preflight, retaining 120 IDs and 30 skills',()=>{assert.equal(M.validateQuestionBankBundle(M.data).skills,30);assert.equal(Q.bank.version,'form4-review-1.4.0');});
+test('integrated bank passes the supplier preflight, retaining 120 IDs and 30 skills',()=>{assert.equal(M.validateQuestionBankBundle(M.data).skills,30);assert.equal(Q.bank.version,'form4-review-1.6.0');});
 test('More Hint requires a wrong submission after Hint; both orders survive restore',()=>{
  let r=trial();wrong(r);E.hintEducation(r);r=E.restore(clone(r));assert.ok(r);assert.equal(Q.learningView(r).moreHint,null);
  wrong(r);r=E.restore(clone(r));assert.ok(Q.learningView(r).moreHint);Q.support(r,'moreHint');assert.equal(Q.record(r).hintState.moreHintViewed,true);

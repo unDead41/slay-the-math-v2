@@ -10,6 +10,10 @@
  const kinds=['starting','elite','mystery','boss'];
  function validIds(list){return Array.isArray(list)&&list.length<=bank.total&&new Set(list).size===list.length&&list.every(id=>Object.hasOwn(catalog,id));}
  function merge(...lists){for(const list of lists)if(!validIds(list))throw new Error('Question history is not valid. Your current progress has been kept.');const seen=new Set(lists.flat());return ids.filter(id=>seen.has(id));}
+ // Encounter receipts belong to this run. Profile exposures still own the
+ // lifetime no-repeat pool, and must never become the run's display counter.
+ function confirmedRunIds(run){const seen=new Set([...(run.educationState?.completed||[]).map(x=>x?.questionId),run.educationState?.pending?.questionId,...(run.mysteryState?.settled||[]).map(x=>x?.questionId),run.mysteryState?.pending?.questionId].filter(Boolean));return ids.filter(id=>seen.has(id));}
+ function coverage(run,lifetime=[]){return {run:confirmedRunIds(run).length,lifetime:merge(run.educationState?.usedIds||[],lifetime).length,total:bank.total};}
  function validHistory(history){return !!history&&history.version===1&&versions.has(history.bankVersion)&&validIds(history.usedIds)&&(!history.session||validSession(history.session,history.usedIds));}
  function history(usedIds=[],session=null){return {version:1,bankVersion:bank.version,usedIds:merge(usedIds,...(session?[session.exposureIds]:[])),...(session?{session:copy(session)}:{})};}
  function random(state){state.rng=(Math.imul(state.rng,1664525)+1013904223)>>>0;return state.rng/4294967296;}
@@ -148,6 +152,6 @@
   }
   return S.restoreSession(result,bank);
  }
- const api={syncMystery,reserveMystery,resolveMystery,mysterySupport,getSession,record,learningView,support,progress,mergeSessions,bank,catalog,ids,validIds,merge,history,validHistory,prepare,pending,current,select,answer,hint,ready,finish,context,valid};
+ const api={coverage,syncMystery,reserveMystery,resolveMystery,mysterySupport,getSession,record,learningView,support,progress,mergeSessions,bank,catalog,ids,validIds,merge,history,validHistory,prepare,pending,current,select,answer,hint,ready,finish,context,valid};
  if(typeof module!=='undefined')module.exports=api;else root.DCEducation=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

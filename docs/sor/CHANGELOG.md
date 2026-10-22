@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.17.0 — 22 October 2026
+
+- Keep question artwork fixed while Hint, More Hint and worked steps scroll inside Artifact/Mystery panels.
+- Use Ink with a compact bilingual term legend, including Ink by default in Education Practice.
+- Split current-run coverage (reset on New Run) from retained lifetime question coverage, using existing save records.
+- Build, syntax, 215 passing tests and browser geometry checks. [Evidence](../QUESTION_MENU_2_17_0.md).
+
 ## Game 2.16.1 — 22 October 2026
 
 - Fix stale HTML entry paths and missing shared learning CSS; expose question language and the 120-question Practice entry on Main Menu.

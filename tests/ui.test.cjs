@@ -4,6 +4,26 @@ const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
 const files=[...fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8').matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]);
+test('DOM: question menus use Ink and a bilingual legend, preserve panel scroll, and distinguish run from lifetime coverage',{skip:!JSDOM},()=>{
+ const Q=require('../dist/education.js'),r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,Q.ids.slice(0,35));
+ const {dom,w,click,state}=boot(r);
+ try{
+  click('continue');assert.equal(w.document.querySelector('.education-question').dataset.theme,'dark');
+  assert.equal(w.document.querySelector('[data-question-coverage="run"]').textContent,'This run: 1 / 120');
+  assert.equal(w.document.querySelector('[data-question-coverage="lifetime"]').textContent,'Lifetime: 36 / 120');
+  assert.deepEqual([...w.document.querySelectorAll('.question-term-legend span')].map(e=>e.textContent),['Math term','Game term','Calculation']);
+  w.document.querySelector('.education-panel').scrollTop=480;
+  click('education-select',Q.current(state()).correctChoiceId);
+  assert.equal(w.document.querySelector('.education-panel').scrollTop,480);
+  const language=w.document.querySelector('#question-language-select');language.value='ms';language.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert.equal(w.document.querySelector('.question-term-legend [data-key="math"]').textContent,'Istilah matematik');
+  assert.match(w.document.querySelector('[data-question-coverage="lifetime"]').textContent,/36 \/ 120/);
+  completeDomTrial(w);click('home');click('new');click('start-new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
+  assert.equal(w.document.querySelector('.education-panel').scrollTop,0);
+  assert.match(w.document.querySelector('[data-question-coverage="run"]').textContent,/1 \/ 120/);
+  assert.match(w.document.querySelector('[data-question-coverage="lifetime"]').textContent,/37 \/ 120/);
+ }finally{dom.window.close();}
+});
 test('DOM: every Alyssa pose uses the approved right-facing art even without Canvas',{skip:!JSDOM},()=>{
  for(const [key,pose] of [[null,'idle'],['strike','attack'],['guard','defend'],['draw','skill'],['hit','damaged']]){
   const r=fixtureRun(7);E.startBattle(r,'wisp');
@@ -376,7 +396,9 @@ test('DOM: Main Menu language control carries BM through the real Artifact trial
   assert.equal(w.DCQuestionLanguage.language(),'ms');assert.equal(w.localStorage.getItem('duel-cube-math.v1'),null);
   click('new');click('start-challenge');click('select-artifact',state().artifactState.offer.ids[0]);click('claim-artifact');
   const source=w.DCEducation.current(state()),expected=w.DCQuestionLanguage.question(source,'ms');
-  assert.equal(w.document.getElementById('question-language-select').value,'ms');assert.equal(w.document.getElementById('education-prompt').textContent,expected.prompt);
+  // MathML layout omits whitespace around operators and set members. Compare
+  // authored content independently of those presentation-only text boundaries.
+  assert.equal(w.document.getElementById('question-language-select').value,'ms');assert.equal(w.document.getElementById('education-prompt').textContent.replace(/\s/g,''),expected.prompt.replace(/\s/g,''));
   assert.ok(w.document.querySelector('.education-given'));assert.ok(w.document.querySelector('.education-find'));
   assert.match(w.document.querySelector('.question-hint-rule').textContent,/Petunjuk/);const before=state();
   click('home');assert.equal(w.document.getElementById('menu-question-language-select').value,'ms');assert.deepEqual(state().educationState,before.educationState);

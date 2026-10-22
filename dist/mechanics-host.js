@@ -38,8 +38,8 @@
    (view.workedSteps?'<section id="'+kind+'-steps" class="education-hint" tabindex="-1"><h2>Worked solution</h2><ol>'+view.workedSteps.map(step=>'<li><strong>'+esc(step.label)+'</strong><div data-q-rich="step:'+step.id+'">'+esc(step.text)+'</div></li>').join('')+'</ol></section>':'')+'</section>';
  }
  function hydrateQuestion(host,q,view){
-  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');host.dataset.theme='light';host.lang=L.language();
-  const existing=host.querySelector('#question-language-select');if(!existing)host.insertAdjacentHTML('afterbegin',L.control());
+  disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');host.dataset.theme='dark';host.lang=L.language();
+  const existing=host.querySelector('#question-language-select');if(!existing)host.insertAdjacentHTML('afterbegin',L.control()+'<div class="question-term-legend" role="note" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div>');
   const index=new Map();
   for(const el of host.querySelectorAll('[data-q-rich]')){
    const key=el.dataset.qRich;let parts;
@@ -118,6 +118,7 @@
   for(const el of host.querySelectorAll('[data-basic-rich]')){const [kind,i]=el.dataset.basicRich.split(':'),c=m.checks[i];const parts=kind==='card'?m.cards[i].richText:kind==='prompt'?c.richText:c.feedbackRichText[checks[c.id]];renderParts(el,parts,true,index);}
   dialogTips=M.attachRichTextTooltips(host,{glossary:M.data.glossary,calculationIndex:index,getLanguage:()=>L.language(),getTheme:()=> 'dark'});L.applyInterface(host,L.language());
  }
- function progressHTML(run,{esc}){const rows=Q.progress(run);return '<p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
- root.STMMechanicsHost={teachingHTML,supportHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
+ function coverageHTML(run,lifetime=[]){const c=Q.coverage(run,lifetime);return '<div class="question-coverage" aria-label="Questions seen"><span data-question-coverage="run"><span>This run</span>: '+c.run+' / '+c.total+'</span><span data-question-coverage="lifetime"><span>Lifetime</span>: '+c.lifetime+' / '+c.total+'</span></div>';}
+ function progressHTML(run,{esc,lifetime=[]}){const rows=Q.progress(run);return coverageHTML(run,lifetime)+'<p>Unique questions opened. This run resets with New Run. Lifetime is kept on this browser.</p><p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
+ root.STMMechanicsHost={coverageHTML,teachingHTML,supportHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
 })(window);

@@ -166,3 +166,8 @@ Whole-question English/Bahasa Melayu is implemented on education. Source review,
 ## Education entry points — 2.16.1
 
 Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). Offline generated output is now SLAY-THE-MATH-OFFLINE.html.
+
+
+## Question menu — 2.17.0
+
+Bound Artifact/Mystery scene height to the available viewport and give their focusable question panels internal vertical scrolling. Preserve scroll for the same encounter and focus new guidance. Use Ink and a small bilingual Math term / Game term / Calculation legend; Practice defaults to Ink. [Checks and screenshot](../QUESTION_MENU_2_17_0.md).

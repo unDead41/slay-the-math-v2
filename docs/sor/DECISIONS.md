@@ -346,3 +346,8 @@ Owners: SOR 10/13/15; implementation and delivery limits: [Question feedback](..
 
 - DEC-20261022-EDUCATION-ENTRY-01 — DISAHKAN: Ijamm requests fixing missing BM/English/Practice and aligning the live question display with the preview on main.
 - DITERUSKAN: Version small current-runtime entry pages, expose language on Main Menu, share learning CSS/support presentation, and separate generated offline snapshots. [Evidence and limits](../EDUCATION_ENTRYPOINTS_2_16_1.md).
+
+
+## Question menu — 2.17.0
+
+DEC-20261022-QUESTION-MENU-01 — DISAHKAN: Ijamm requests internal scroll instead of artwork zoom, Ink with a small legend, current-run coverage resetting on New Run, and retained lifetime coverage. DITERUSKAN: derive counts from existing receipts/profile; preserve question draw/assessment/reward behavior. [Implementation and verification](../QUESTION_MENU_2_17_0.md).

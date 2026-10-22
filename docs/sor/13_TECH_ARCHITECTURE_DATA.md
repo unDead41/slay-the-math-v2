@@ -156,3 +156,8 @@ Whole-question English/Bahasa Melayu is implemented on education. Source review,
 ## Education entry points — 2.16.1
 
 Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). Offline generated output is now SLAY-THE-MATH-OFFLINE.html.
+
+
+## Question menu — 2.17.0
+
+Q.coverage derives current-run IDs from Artifact completed/pending and Mystery settled/pending receipts, deduplicated against the canonical bank. The existing accumulated usedIds/profile union supplies lifetime coverage and the no-repeat pool. No additional stored counter or save version is introduced. [Details](../QUESTION_MENU_2_17_0.md).

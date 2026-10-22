@@ -15,6 +15,16 @@ function room(id='ME01',mode='challenge',seed=7){
 function start(r,now=100000){E.startMystery(r,[],null,now);assert.equal(r.mysteryState.pending.phase,'question');return Q.catalog[r.mysteryState.pending.questionId];}
 function solve(r,now=100000){const q=start(r,now);E.answerMystery(r,q.correctChoiceId,now+1);assert.equal(r.mysteryState.pending.outcome,'CORRECT');E.continueMystery(r);return q;}
 function claim(r,option,target){E.selectMysteryOption(r,option);if(target)E.selectMysteryTarget(r,target);E.claimMystery(r);}
+test('Mystery coverage counts opening once, persists through review and settlement, and migrates legacy receipts',()=>{
+ const r=room('ME01','challenge'),oldIds=Q.ids.filter(id=>id.startsWith('PROB-')).slice(0,35);
+ assert.deepEqual(Q.coverage(r,oldIds),{run:1,lifetime:36,total:120});
+ E.startMystery(r,oldIds,null,100000);const q=Q.catalog[r.mysteryState.pending.questionId];
+ assert.deepEqual(Q.coverage(r),{run:2,lifetime:37,total:120});Q.mysterySupport(r,'hint');
+ assert.deepEqual(Q.coverage(E.restore(copy(r))),{run:2,lifetime:37,total:120});
+ E.answerMystery(r,q.correctChoiceId,100001);E.continueMystery(r);
+ assert.equal(r.scene,'map');assert.deepEqual(Q.coverage(r),{run:2,lifetime:37,total:120});
+ assert.ok(E.restore(copy(r)));assert.deepEqual(Q.coverage(E.restore(copy(r))),{run:2,lifetime:37,total:120});
+});
 function battle(r){const map=E.getMap(r),node=map.nodes.find(n=>n.depth>=r.depth&&n.type==='battle')||map.nodes.find(n=>n.type==='battle');let path=[node];for(let d=node.depth-1;d>=0;d--)path.unshift(map.nodes.find(n=>n.depth===d&&n.next.includes(path[0].id)));r.depth=node.depth;r.route.path=path.slice(0,-1).map(n=>n.id);r.cleared=r.route.path.slice();E.enterNode(r,node.id);return r;}
 test('all fifteen events use the active question bank, correct topic and fixed timers in both stages',()=>{
  const X=require('node:fs').existsSync(require('node:path').join(__dirname,'../dist/mystery.js'))?require('../dist/mystery.js'):null;

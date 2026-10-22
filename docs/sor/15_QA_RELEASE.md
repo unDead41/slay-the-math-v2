@@ -121,3 +121,8 @@ Whole-question English/Bahasa Melayu is implemented on education. Source review,
 ## Education entry points — 2.16.1
 
 Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). Offline generated output is now SLAY-THE-MATH-OFFLINE.html.
+
+
+## Question menu — 2.17.0
+
+215 complete Node/jsdom tests pass, 0 skipped; build and syntax pass. Browser measurements verify fixed scene/art dimensions through Hint, More Hint, worked steps and BM, plus phone/landscape Artifact/Mystery panels. [Evidence and Windows limit](../QUESTION_MENU_2_17_0.md).

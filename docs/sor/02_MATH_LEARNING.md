@@ -130,3 +130,8 @@ MTH-16 adds Education Practice directly to Main Menu. It reuses the complete fol
 ## Question language — 2.16.0
 
 Whole-question English/Bahasa Melayu is implemented on education. Source review, scope and validation: [Question language](../QUESTION_LANGUAGE_2_16_0.md).
+
+
+## Question menu — 2.17.0
+
+MTH-17 — This run counts distinct Artifact/Mystery IDs from the current run receipts and pending encounters; New Run starts at zero. Lifetime retains profile exposure history. These are coverage counts, not answer/mastery scores. Existing no-repeat selection and Practice record separation remain. [Details](../QUESTION_MENU_2_17_0.md).

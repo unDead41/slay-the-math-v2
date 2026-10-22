@@ -4,6 +4,25 @@ const {completeTrial,claimArtifact}=require('./helpers/education.cjs');
 const clone=x=>JSON.parse(JSON.stringify(x));
 function offered(code){for(let seed=1;seed<300;seed++){const r=E.newRun(seed,'challenge');if(r.artifactState.offer.ids.includes(A.id(code)))return r;}throw new Error('No fixture offer');}
 
+test('education: New Run resets run coverage while retaining unique lifetime history',()=>{
+ const r=E.newRun(7,'challenge'),oldIds=Q.ids.slice(0,35);
+ assert.deepEqual(Q.coverage?.(r,oldIds),{run:0,lifetime:35,total:120});
+ E.chooseArtifact(r,E.artifactChoices(r)[0].id,oldIds);
+ assert.deepEqual(Q.coverage(r),{run:1,lifetime:36,total:120});
+ const q=Q.current(r);E.hintEducation(r);E.selectEducation(r,q.choices.find(c=>c.id!==q.correctChoiceId).id);E.answerEducation(r);Q.support(r,'moreHint');
+ const restored=E.restore(clone(r));assert.ok(restored);assert.deepEqual(Q.coverage(restored),{run:1,lifetime:36,total:120});
+ completeTrial(restored);const profile=Q.history(restored.educationState.usedIds,restored.educationState.session),next=E.newRun(8,'challenge');
+ assert.deepEqual(Q.coverage(next,profile.usedIds),{run:0,lifetime:36,total:120});
+ E.chooseArtifact(next,E.artifactChoices(next)[0].id,profile.usedIds,profile.session);
+ assert.deepEqual(Q.coverage(next),{run:1,lifetime:37,total:120});assert.notEqual(Q.current(next).id,q.id);
+});
+
+test('education: legacy saves infer run coverage from encounter receipts without importing profile exposures',()=>{
+ const r=E.newRun(7,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id,Q.ids.slice(0,35));
+ assert.ok(E.restore(clone(r)));assert.deepEqual(Q.coverage?.(r),{run:1,lifetime:36,total:120});
+ E.hintEducation(r);assert.deepEqual(Q.coverage(r),{run:1,lifetime:36,total:120});
+});
+
 test('education: all original 120 fixed items have unique IDs, valid keys and 40 items per topic',()=>{
  assert.equal(Q.bank.total,120);assert.equal(Q.bank.questions.length,120);assert.equal(new Set(Q.ids).size,120);
  for(const topic of ['PROB','SET','LOGIC'])assert.equal(Q.bank.questions.filter(q=>q.topicCode===topic).length,40);

@@ -7,7 +7,7 @@ body[data-scene="education-practice"] .ambient{display:none}
 .education-practice-bar h1{font:clamp(18px,2vw,26px)/1.25 var(--font-display);color:var(--gold-soft);margin:0}
 .education-practice-bar p{font:12px/1.4 var(--sans);color:var(--muted);margin:3px 0 0}
 .education-practice-bar .btn{min-height:44px;flex:none}
-#education-practice-frame{border:0;width:100%;display:block;flex:1;min-height:0;background:#f3ecd9;color-scheme:light}
+#education-practice-frame{border:0;width:100%;display:block;flex:1;min-height:0;background:#1c2937;color-scheme:dark}
 .education-teaching{margin:18px 0;padding:16px;border:1px solid var(--line);border-radius:var(--radius);font:14px/1.65 var(--sans);overflow-wrap:anywhere}
 .education-teaching h3{font:18px/1.4 var(--font-display);color:var(--gold-soft);margin:0 0 6px}
 .education-teaching p{margin:5px 0 12px}.education-teaching ul{padding-left:20px}
@@ -28,14 +28,21 @@ body[data-scene="education-practice"] .ambient{display:none}
 .menu-education small{font:11px/1.3 var(--sans);color:var(--gold-soft);letter-spacing:.02em}
 .game-release{font:11px/1.5 var(--sans);color:var(--muted);white-space:nowrap}
 
-/* Question cards share the folio's paper, hierarchy and guidance structure. */
-.education-question{--bg:#f3ecd9;--surface:#fbf7eb;--line:#d5c8ae;--text:#2d342f;--muted:#5e6861;--gold:#8a623e;--gold-soft:#714c2d;--ice:#31716b;--ember:#a04444;background:var(--bg);color:var(--text);border-radius:5px;padding:clamp(18px,2.5vw,36px)}
+/* Question cards share the folio's Ink palette and guidance structure. */
+.education-question{--bg:#1c2937;--surface:#152230;--line:#495562;--text:#f3ead5;--muted:#b8c1c7;--gold:#c7a36d;--gold-soft:#e2b98a;--ice:#a9d6b3;--ember:#f0b39c;color-scheme:dark;background:var(--bg);color:var(--text);border-radius:5px;padding:clamp(18px,2.5vw,36px)}
 .education-question .btn{color:var(--gold-soft);border-color:var(--line);background:var(--surface)}
-.education-question .btn.primary{background:#805634;color:#fff9ea;border-color:#805634}
+.education-question .btn.primary{background:#e2b98a;color:#152230;border-color:#e2b98a}
 .education-question .education-answer{background:var(--surface)}
 .education-question .education-prompt{font:clamp(18px,1.35vw,24px)/1.8 var(--sans)}
 .education-question .education-teaching{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;border:0;padding:0}
-.education-context{grid-column:1/-1;background:#e8dec5;padding:14px 16px;border-left:3px solid #b49a71}
+.education-context{grid-column:1/-1;background:#233444;padding:14px 16px;border-left:3px solid #c7a36d}
+.question-term-legend{display:flex;gap:14px;flex-wrap:wrap;font:11px/1.6 var(--sans);margin:0 0 18px}
+.question-term-legend span{padding-bottom:2px;text-decoration:underline dashed;text-underline-offset:4px}
+.question-term-legend [data-key="math"]{color:#e7a1c4}
+.question-term-legend [data-key="game"]{color:#9ed5b0}
+.question-term-legend [data-key="calculation"]{color:#b9a3e3;text-decoration-style:dotted}
+.question-coverage{display:flex;flex-wrap:wrap;gap:4px 16px;font:12px/1.6 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.education-meta .question-coverage{margin-left:auto}
 .education-question .education-teaching h3{font:600 11px/1.5 var(--sans);text-transform:uppercase;letter-spacing:.08em}
 .education-question .education-sources{font-size:12px}
 .question-guidance{border-top:1px solid var(--line);margin-top:22px;padding-top:18px}

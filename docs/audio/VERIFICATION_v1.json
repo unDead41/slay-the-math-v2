@@ -1,0 +1,322 @@
+{
+  "documentVersion": "1.0.0",
+  "date": "2026-10-22",
+  "scope": "source audit and documentation/data consistency; policy examples are not game runtime tests",
+  "passedChecks": 52,
+  "checks": [
+    {
+      "name": "archive_hash",
+      "passed": true,
+      "detail": "3eed8530a56c085281d3cfc40c2f49de308cd3b279247011f0f8311b259fb23c"
+    },
+    {
+      "name": "zip_crc",
+      "passed": true,
+      "detail": "all source entries"
+    },
+    {
+      "name": "source_coverage",
+      "passed": true,
+      "detail": "15 exact source paths"
+    },
+    {
+      "name": "hash:bgm_combat_stage_1",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_combat_stage_1",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_combat_stage_2",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_combat_stage_2",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_boss_stage_1",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_boss_stage_1",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_boss_stage_2",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_boss_stage_2",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_shop",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_shop",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_rest",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_rest",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_map",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_map",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:bgm_defeat",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:bgm_defeat",
+      "passed": true,
+      "detail": {
+        "attachedCover": true
+      }
+    },
+    {
+      "name": "hash:vo_dm_01",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_dm_01",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "hash:vo_dm_02",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_dm_02",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "hash:vo_dm_03",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_dm_03",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "hash:vo_dm_04",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_dm_04",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "hash:vo_shop_01",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_shop_01",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "hash:vo_shop_02",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_shop_02",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "hash:vo_shop_03",
+      "passed": true,
+      "detail": "exact original bytes"
+    },
+    {
+      "name": "cover:vo_shop_03",
+      "passed": true,
+      "detail": {
+        "attachedCover": false
+      }
+    },
+    {
+      "name": "unique_assets",
+      "passed": true,
+      "detail": "15 IDs"
+    },
+    {
+      "name": "unique_proposed_paths",
+      "passed": true,
+      "detail": "15 canonical target paths"
+    },
+    {
+      "name": "bus_counts",
+      "passed": true,
+      "detail": "8 BGM / 7 VO"
+    },
+    {
+      "name": "all_decode",
+      "passed": true,
+      "detail": "15 full ffmpeg decodes from source audit, no errors"
+    },
+    {
+      "name": "voice_one_shot",
+      "passed": true,
+      "detail": "7 clips"
+    },
+    {
+      "name": "candidate_loops",
+      "passed": true,
+      "detail": "8 loops explicitly require audition"
+    },
+    {
+      "name": "playback_rate",
+      "passed": true,
+      "detail": "all 1.0"
+    },
+    {
+      "name": "normal_elite_aliases",
+      "passed": true,
+      "detail": "one canonical source per stage"
+    },
+    {
+      "name": "routes_resolve",
+      "passed": true,
+      "detail": "all asset references"
+    },
+    {
+      "name": "csv_alignment",
+      "passed": true,
+      "detail": "15 matching rows"
+    },
+    {
+      "name": "sor_coverage",
+      "passed": true,
+      "detail": "all source names and IDs"
+    },
+    {
+      "name": "no_placeholders",
+      "passed": true,
+      "detail": "no unfinished markers"
+    },
+    {
+      "name": "sequence:dungeonMaster",
+      "passed": true,
+      "detail": [
+        "vo_dm_01",
+        "vo_dm_02",
+        "vo_dm_03",
+        "vo_dm_04"
+      ]
+    },
+    {
+      "name": "sequence:merchant",
+      "passed": true,
+      "detail": [
+        "vo_shop_01",
+        "vo_shop_02",
+        "vo_shop_03"
+      ]
+    },
+    {
+      "name": "policy_reopen",
+      "passed": true,
+      "detail": "same encounter returns same visit and voice"
+    },
+    {
+      "name": "policy_independent_counters",
+      "passed": true,
+      "detail": {
+        "dungeonMaster": 1,
+        "merchant": 1
+      }
+    },
+    {
+      "name": "policy_dm_after_limit",
+      "passed": true,
+      "detail": "1,2,3,4,4,4"
+    },
+    {
+      "name": "policy_shop_after_limit",
+      "passed": true,
+      "detail": "1,2,3,3,3"
+    },
+    {
+      "name": "policy_json_roundtrip",
+      "passed": true,
+      "detail": "metadata roundtrip preserves receipt"
+    }
+  ],
+  "runtimeImplemented": false,
+  "runtimeTestsRun": false,
+  "browserPlaybackTested": false,
+  "perceptualAuditionPerformed": false,
+  "transcriptionPerformed": false,
+  "loopSeamsApproved": false,
+  "sourceAudioUnchanged": true,
+  "sourceFiles": 15,
+  "bgmFiles": 8,
+  "voiceFiles": 7,
+  "allSourceDecoded": true,
+  "sourceTotalDurationSeconds": 1129.356877
+}

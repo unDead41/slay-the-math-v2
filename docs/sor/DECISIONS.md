@@ -307,3 +307,14 @@ Owners: SOR 10 and MYSTERY_EVENTS.md, DESIGN.md, UX-CONTRACT.md. Actual verifica
 | --- | --- | --- |
 | DEC-20261022-BOSS-SIZE-01 | DISAHKAN | Ijamm reports the boss looks smaller than Alyssa in image(20261022-063153).png and requests comparable size, using the normal encounter in image(20261022-063228).png as reference. |
 | DEC-20261022-BOSS-SIZE-02 | DITERUSKAN | Both bosses inherited the ordinary-enemy host scale despite different source padding. Use explicit per-boss calibration with phone/tablet containment; retain source art, timings, pivots and gameplay. Owners: SOR 07/11, DESIGN.md and UX-CONTRACT.md. Evidence: docs/BOSS_SIZE_2_13_2.md. |
+
+## Audio source SOR v1 — 22 Oktober 2026 (Malaysia)
+
+| ID | Status | Decision and evidence |
+| --- | --- | --- |
+| DEC-20261022-AUDIO-01 | DISAHKAN | Ijamm dedicates this chat's audio updates to branch `music`, supplies MUSIC(2).zip and asks for a source-grounded SOR before later game integration. No main merge or runtime installation is part of this documentation update. |
+| DEC-20261022-AUDIO-02 | DISAHKAN | Filenames define the supplied 8 BGM uses and ordered Dungeon Master 1–4 / Merchant 1–3 greetings. The supplied Normal/Elite file is shared within each stage, superseding the older separate-Elite-track requirement for this import. |
+| DEC-20261022-AUDIO-03 | CADANGAN | Count unique NPC encounters per run across stages, freeze selected voice by encounter source/node, replay the same ID on genuine reopen, and hold the final voice after the available sequence. Rerender, selection and Shop tab changes do not create visits. |
+| DEC-20261022-AUDIO-04 | DITERUSKAN | All 15 original entries pass CRC and full decode; source names, hashes, durations and format were measured. Current audio routing, artifact overlay precedence, source keys and portable builder were inspected. Audition, exact transcripts, runtime import and playback testing are not claimed completed. |
+
+Owners: SOR 11/13 and [Audio SOR v1](../audio/STM_AUDIO_SOR_v1.md). Source mapping: [manifest](../audio/audio-manifest.v1.json). Actual documentation/data verification: [52 checks](../audio/VERIFICATION_v1.json).

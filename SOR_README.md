@@ -84,3 +84,7 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 ## Boss size — game 2.13.2
 
 [Boss size correction and verification](docs/BOSS_SIZE_2_13_2.md): per-boss host calibration and responsive framing; owners SOR 07/11.
+
+## Audio source pack v1 — 22 Oktober 2026
+
+[Audio SOR v1](docs/audio/STM_AUDIO_SOR_v1.md) memetakan 15 sumber MUSIC(2).zip, BGM dan greeting Dungeon Master/Merchant mengikut pertemuan. [Manifest](docs/audio/audio-manifest.v1.json), [checklist integrasi](docs/audio/IMPLEMENTATION_CHECKLIST.md) dan [bukti semakan](docs/audio/VERIFICATION_v1.json) disediakan. Kerja di branch `music`; ini belum mengaktifkan audio baharu dalam runtime. Sumber audio asal disertakan dalam pakej muat turun Ijamm; commit dokumentasi tidak mengimport fail bunyi ke dist.

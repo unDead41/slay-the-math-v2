@@ -2,6 +2,14 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Audio SOR 1.0.0 — 22 Oktober 2026 (Malaysia)
+
+- Document Ijamm's 15-file MUSIC(2).zip: 8 BGM and 7 ordered Dungeon Master/Merchant voice clips.
+- Add a source manifest, exact-name cue table, scene/overlay routing, visit/reopen/save policy, proposed mixer settings and a later-integration checklist.
+- Record 52 source/data/policy consistency checks, including original hashes and all 15 successful decodes. Listening, loop approval, transcripts and browser runtime playback remain unverified.
+- Update the audio owner and decision register on branch `music`. This is a documentation release; game code, dist audio, portable builds and main are not changed.
+- Owner and evidence: [Audio SOR v1](../audio/STM_AUDIO_SOR_v1.md), [verification](../audio/VERIFICATION_v1.json).
+
 ## Game 2.13.2 — 22 Oktober 2026 (Malaysia)
 
 - Match both bosses’ visible height to Alyssa with explicit host calibration.

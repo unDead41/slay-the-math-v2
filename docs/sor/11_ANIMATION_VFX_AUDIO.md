@@ -1,6 +1,17 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.0.1. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.1.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+
+## Audio source pack v1 — 22 Oktober 2026
+
+Pemilik pemetaan sumber dan turutan NPC baharu: [Audio SOR v1](../audio/STM_AUDIO_SOR_v1.md). Data/metadata: [manifest](../audio/audio-manifest.v1.json). Bukti source audit dan batas: [verification](../audio/VERIFICATION_v1.json).
+
+- **DISAHKAN:** Ijamm membekalkan MUSIC(2).zip dan meminta SOR dahulu; kemas kini audio chat ini melalui branch `music`.
+- **DISAHKAN melalui nama fail:** 8 BGM meliputi Normal/Elite Stage 1, Normal/Elite Stage 2, kedua-dua Boss, Shop, Rest, Map dan Defeat. Normal dan Elite berkongsi satu sumber setiap stage untuk pakej baharu ini; requirement pemisahan Elite terdahulu digantikan bagi import ini.
+- **DISAHKAN:** 4 dialog Dungeon Master dan 3 Merchant mengikut nombor pertemuan. Panel hadiah sebenar menentukan eligibility Dungeon Master; tab paid-artifact Shop tetap Merchant.
+- **CADANGAN:** Kiraan per run merentas stage, receipt encounter yang kekal, reopen memainkan ID sama, selepas had ulang DM 4 / Merchant 3. Volume Voice, duck dan playback lifecycle diterangkan dalam dokumen pemilik.
+- **DITERUSKAN:** CRC ZIP dan decode semua 15 fail lulus; bait sumber dikekalkan. Audition/loop, transkrip dan playback browser masih memerlukan semakan.
+- **Status implementation:** Dokumentasi dan data rujukan sahaja. Runtime audio, game code, portable dan main tidak diubah oleh kemas kini SOR ini. Bahagian audio sejarah di bawah menerangkan baseline terdahulu sehingga import sebenar dilaksanakan.
 
 ## Prinsip
 

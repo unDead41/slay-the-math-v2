@@ -1,0 +1,623 @@
+{
+  "version": 1,
+  "textLocale": "en",
+  "mode": "learn",
+  "rng": 48303460,
+  "seed": 71,
+  "seq": 24,
+  "stage": 0,
+  "depth": 0,
+  "hp": 60,
+  "maxHp": 60,
+  "deck": [
+    {
+      "uid": "c13",
+      "key": "stm.passive.blazing_spirit",
+      "upgraded": false
+    },
+    {
+      "uid": "c14",
+      "key": "stm.passive.swift_step",
+      "upgraded": false
+    },
+    {
+      "uid": "c15",
+      "key": "stm.passive.rune_armor",
+      "upgraded": false
+    },
+    {
+      "uid": "c16",
+      "key": "stm.passive.lasting_shield",
+      "upgraded": false
+    },
+    {
+      "uid": "c17",
+      "key": "stm.passive.last_ember",
+      "upgraded": false
+    },
+    {
+      "uid": "c18",
+      "key": "stm.defend.rune_guard",
+      "upgraded": false
+    },
+    {
+      "uid": "c19",
+      "key": "stm.defend.tower_shield",
+      "upgraded": false
+    },
+    {
+      "uid": "c20",
+      "key": "stm.skill.quick_study",
+      "upgraded": false
+    },
+    {
+      "uid": "c21",
+      "key": "stm.attack.rune_strike",
+      "upgraded": false
+    },
+    {
+      "uid": "c22",
+      "key": "stm.attack.weak_point",
+      "upgraded": false
+    },
+    {
+      "uid": "c23",
+      "key": "stm.attack.scout_strike",
+      "upgraded": false
+    },
+    {
+      "uid": "c24",
+      "key": "stm.defend.layered_shield",
+      "upgraded": false
+    }
+  ],
+  "cleared": [],
+  "scene": "battle",
+  "battle": {
+    "enemyId": "wisp",
+    "elite": false,
+    "hp": 300,
+    "maxHp": 300,
+    "turn": 1,
+    "energy": 3,
+    "block": 0,
+    "enemyBlock": 0,
+    "focus": 0,
+    "boostArmed": false,
+    "boostUsed": false,
+    "seals": 0,
+    "draw": [
+      {
+        "uid": "c20",
+        "key": "stm.skill.quick_study",
+        "upgraded": false
+      },
+      {
+        "uid": "c19",
+        "key": "stm.defend.tower_shield",
+        "upgraded": false
+      },
+      {
+        "uid": "c21",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c24",
+        "key": "stm.defend.layered_shield",
+        "upgraded": false
+      },
+      {
+        "uid": "c23",
+        "key": "stm.attack.scout_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c22",
+        "key": "stm.attack.weak_point",
+        "upgraded": false
+      },
+      {
+        "uid": "c18",
+        "key": "stm.defend.rune_guard",
+        "upgraded": false
+      }
+    ],
+    "hand": [
+      {
+        "uid": "c17",
+        "key": "stm.passive.last_ember",
+        "upgraded": false
+      }
+    ],
+    "discard": [],
+    "exhaust": [],
+    "question": null,
+    "forecastUsed": false,
+    "log": [
+      "Lasting Shield active. Keep up to 4 remaining Block at your next turn start; no new Block is created.",
+      "Turn 1 · Enemy intent: Spark."
+    ],
+    "cardCombat": {
+      "version": 1,
+      "seq": 4,
+      "stats": {
+        "strength": 2,
+        "agility": 2,
+        "defense": 1
+      },
+      "counters": {
+        "stm.passive.blazing_spirit": {
+          "activatedTurn": 1,
+          "count": 0,
+          "triggers": 1,
+          "lastTurn": 1
+        },
+        "stm.passive.swift_step": {
+          "activatedTurn": 1,
+          "count": 0,
+          "triggers": 1,
+          "lastTurn": 1
+        },
+        "stm.passive.rune_armor": {
+          "activatedTurn": 1,
+          "count": 0,
+          "triggers": 1,
+          "lastTurn": 1
+        },
+        "stm.passive.lasting_shield": {
+          "activatedTurn": 1,
+          "count": 0,
+          "triggers": 0,
+          "lastTurn": 0
+        }
+      },
+      "carry": 0,
+      "queue": [],
+      "lostHpLastEnemyTurn": false,
+      "statuses": {
+        "self": {
+          "weak": 0,
+          "weakUntil": 0,
+          "vulnerable": 0,
+          "vulnerableUntil": 0
+        },
+        "enemy": {
+          "weak": 0,
+          "weakUntil": 0,
+          "vulnerable": 0,
+          "vulnerableUntil": 0
+        },
+        "thorns": 0,
+        "thornsUntil": 0
+      },
+      "receipts": [
+        {
+          "id": "card:1",
+          "uid": "c13",
+          "key": "stm.passive.blazing_spirit",
+          "turn": 1,
+          "energyBefore": 3,
+          "energy": 1,
+          "upgraded": false,
+          "focus": 0,
+          "focused": false,
+          "status": "resolved",
+          "rngBefore": 48303460,
+          "rngAfter": 48303460,
+          "values": {
+            "strength": 2
+          },
+          "context": {
+            "upgraded": false,
+            "upgradeField": null,
+            "upgradeAmount": 0,
+            "upgradeCostReduction": 0,
+            "energy": 3,
+            "strength": 0,
+            "agility": 0,
+            "focusStock": 0,
+            "focusUsed": false,
+            "handAfterPlay": 4,
+            "availableDrawCards": 7,
+            "discardCount": 0,
+            "hasTarget": true,
+            "lostHpLastEnemyTurn": false,
+            "hasBlock": false,
+            "enemyAttacks": true,
+            "activePassives": [],
+            "firstDamage": [],
+            "firstBlock": []
+          },
+          "selection": null,
+          "discarded": 0,
+          "exhausted": 0,
+          "randomTargets": [],
+          "damageEvents": []
+        },
+        {
+          "id": "card:2",
+          "uid": "c14",
+          "key": "stm.passive.swift_step",
+          "turn": 1,
+          "energyBefore": 3,
+          "energy": 1,
+          "upgraded": false,
+          "focus": 0,
+          "focused": false,
+          "status": "resolved",
+          "rngBefore": 48303460,
+          "rngAfter": 48303460,
+          "values": {
+            "agility": 2
+          },
+          "context": {
+            "upgraded": false,
+            "upgradeField": null,
+            "upgradeAmount": 0,
+            "upgradeCostReduction": 0,
+            "energy": 3,
+            "strength": 2,
+            "agility": 0,
+            "focusStock": 0,
+            "focusUsed": false,
+            "handAfterPlay": 3,
+            "availableDrawCards": 7,
+            "discardCount": 0,
+            "hasTarget": true,
+            "lostHpLastEnemyTurn": false,
+            "hasBlock": false,
+            "enemyAttacks": true,
+            "activePassives": [
+              "stm.passive.blazing_spirit"
+            ],
+            "firstDamage": [],
+            "firstBlock": []
+          },
+          "selection": null,
+          "discarded": 0,
+          "exhausted": 0,
+          "randomTargets": [],
+          "damageEvents": []
+        },
+        {
+          "id": "card:3",
+          "uid": "c15",
+          "key": "stm.passive.rune_armor",
+          "turn": 1,
+          "energyBefore": 3,
+          "energy": 2,
+          "upgraded": false,
+          "focus": 0,
+          "focused": false,
+          "status": "resolved",
+          "rngBefore": 48303460,
+          "rngAfter": 48303460,
+          "values": {
+            "defense": 1
+          },
+          "context": {
+            "upgraded": false,
+            "upgradeField": null,
+            "upgradeAmount": 0,
+            "upgradeCostReduction": 0,
+            "energy": 3,
+            "strength": 2,
+            "agility": 2,
+            "focusStock": 0,
+            "focusUsed": false,
+            "handAfterPlay": 2,
+            "availableDrawCards": 7,
+            "discardCount": 0,
+            "hasTarget": true,
+            "lostHpLastEnemyTurn": false,
+            "hasBlock": false,
+            "enemyAttacks": true,
+            "activePassives": [
+              "stm.passive.blazing_spirit",
+              "stm.passive.swift_step"
+            ],
+            "firstDamage": [],
+            "firstBlock": []
+          },
+          "selection": null,
+          "discarded": 0,
+          "exhausted": 0,
+          "randomTargets": [],
+          "damageEvents": []
+        },
+        {
+          "id": "card:4",
+          "uid": "c16",
+          "key": "stm.passive.lasting_shield",
+          "turn": 1,
+          "energyBefore": 3,
+          "energy": 1,
+          "upgraded": false,
+          "focus": 0,
+          "focused": false,
+          "status": "resolved",
+          "rngBefore": 48303460,
+          "rngAfter": 48303460,
+          "values": {
+            "retain": 4
+          },
+          "context": {
+            "upgraded": false,
+            "upgradeField": null,
+            "upgradeAmount": 0,
+            "upgradeCostReduction": 0,
+            "energy": 3,
+            "strength": 2,
+            "agility": 2,
+            "focusStock": 0,
+            "focusUsed": false,
+            "handAfterPlay": 1,
+            "availableDrawCards": 7,
+            "discardCount": 0,
+            "hasTarget": true,
+            "lostHpLastEnemyTurn": false,
+            "hasBlock": false,
+            "enemyAttacks": true,
+            "activePassives": [
+              "stm.passive.blazing_spirit",
+              "stm.passive.swift_step",
+              "stm.passive.rune_armor"
+            ],
+            "firstDamage": [],
+            "firstBlock": []
+          },
+          "selection": null,
+          "discarded": 0,
+          "exhausted": 0,
+          "randomTargets": [],
+          "damageEvents": []
+        }
+      ]
+    },
+    "active": [
+      {
+        "uid": "c13",
+        "key": "stm.passive.blazing_spirit",
+        "upgraded": false
+      },
+      {
+        "uid": "c14",
+        "key": "stm.passive.swift_step",
+        "upgraded": false
+      },
+      {
+        "uid": "c15",
+        "key": "stm.passive.rune_armor",
+        "upgraded": false
+      },
+      {
+        "uid": "c16",
+        "key": "stm.passive.lasting_shield",
+        "upgraded": false
+      }
+    ],
+    "resolving": [],
+    "cardChoice": null,
+    "strength": 2,
+    "agility": 2,
+    "defense": 1,
+    "enemyDefense": 0,
+    "currentIntent": {
+      "damage": 5,
+      "label": "Spark",
+      "rage": 0
+    },
+    "combatLog": {
+      "version": 1,
+      "seq": 11,
+      "entries": [
+        {
+          "id": 1,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "card",
+          "source": "stm.passive.blazing_spirit",
+          "label": "Blazing Spirit",
+          "summary": "Energy −1; Passive activated.",
+          "key": "card:1",
+          "values": {
+            "energy": 1,
+            "focus": 0,
+            "damage": 0,
+            "block": 0,
+            "cardsToHand": 0,
+            "discarded": 0,
+            "exhausted": 0,
+            "upgraded": false
+          }
+        },
+        {
+          "id": 2,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-activate",
+          "source": "stm.passive.blazing_spirit",
+          "label": "Blazing Spirit",
+          "summary": "Active for this combat.",
+          "key": "activate:stm.passive.blazing_spirit",
+          "values": {
+            "activatedTurn": 1
+          }
+        },
+        {
+          "id": 3,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-trigger",
+          "source": "stm.passive.blazing_spirit",
+          "label": "Blazing Spirit",
+          "summary": "+2 Strength for this combat.",
+          "key": "passive:stm.passive.blazing_spirit:1",
+          "values": {
+            "trigger": 1,
+            "attribute": "strength",
+            "amount": 2
+          }
+        },
+        {
+          "id": 4,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "card",
+          "source": "stm.passive.swift_step",
+          "label": "Swift Step",
+          "summary": "Energy −1; Passive activated.",
+          "key": "card:2",
+          "values": {
+            "energy": 1,
+            "focus": 0,
+            "damage": 0,
+            "block": 0,
+            "cardsToHand": 0,
+            "discarded": 0,
+            "exhausted": 0,
+            "upgraded": false
+          }
+        },
+        {
+          "id": 5,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-activate",
+          "source": "stm.passive.swift_step",
+          "label": "Swift Step",
+          "summary": "Active for this combat.",
+          "key": "activate:stm.passive.swift_step",
+          "values": {
+            "activatedTurn": 1
+          }
+        },
+        {
+          "id": 6,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-trigger",
+          "source": "stm.passive.swift_step",
+          "label": "Swift Step",
+          "summary": "+2 Agility for this combat.",
+          "key": "passive:stm.passive.swift_step:1",
+          "values": {
+            "trigger": 1,
+            "attribute": "agility",
+            "amount": 2
+          }
+        },
+        {
+          "id": 7,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "card",
+          "source": "stm.passive.rune_armor",
+          "label": "Rune Armor",
+          "summary": "Energy −2; Passive activated.",
+          "key": "card:3",
+          "values": {
+            "energy": 2,
+            "focus": 0,
+            "damage": 0,
+            "block": 0,
+            "cardsToHand": 0,
+            "discarded": 0,
+            "exhausted": 0,
+            "upgraded": false
+          }
+        },
+        {
+          "id": 8,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-activate",
+          "source": "stm.passive.rune_armor",
+          "label": "Rune Armor",
+          "summary": "Active for this combat.",
+          "key": "activate:stm.passive.rune_armor",
+          "values": {
+            "activatedTurn": 1
+          }
+        },
+        {
+          "id": 9,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-trigger",
+          "source": "stm.passive.rune_armor",
+          "label": "Rune Armor",
+          "summary": "+1 Defense for this combat.",
+          "key": "passive:stm.passive.rune_armor:1",
+          "values": {
+            "trigger": 1,
+            "attribute": "defense",
+            "amount": 1
+          }
+        },
+        {
+          "id": 10,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "card",
+          "source": "stm.passive.lasting_shield",
+          "label": "Lasting Shield",
+          "summary": "Energy −1; Passive activated.",
+          "key": "card:4",
+          "values": {
+            "energy": 1,
+            "focus": 0,
+            "damage": 0,
+            "block": 0,
+            "cardsToHand": 0,
+            "discarded": 0,
+            "exhausted": 0,
+            "upgraded": false
+          }
+        },
+        {
+          "id": 11,
+          "turn": 1,
+          "actor": "player",
+          "actorName": "Alyssa",
+          "kind": "passive-activate",
+          "source": "stm.passive.lasting_shield",
+          "label": "Lasting Shield",
+          "summary": "Active for this combat.",
+          "key": "activate:stm.passive.lasting_shield",
+          "values": {
+            "activatedTurn": 1
+          }
+        }
+      ]
+    }
+  },
+  "rewards": [],
+  "checkpoint": null,
+  "started": 1700000000000,
+  "gold": 80,
+  "shop": null,
+  "stats": {
+    "cardsPlayed": 4,
+    "hintsUsed": 0,
+    "battles": 0,
+    "turns": 0,
+    "forecasts": 0,
+    "firstCorrect": 0,
+    "assisted": 0,
+    "wrong": 0,
+    "concepts": {}
+  },
+  "notice": "Lasting Shield active. Keep up to 4 remaining Block at your next turn start; no new Block is created."
+}

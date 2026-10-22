@@ -141,3 +141,8 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Combat and Predict — 2.19.0
 
 Build/portable/syntax and all 398 Node/jsdom tests passed with zero skips. Browser measurements cover 320x568,390x844,540x390,844x390,1280x720,1363x936,2048x1033 and2560x1080, local Hint/More Hint scrolling, native math, 4-to-1 Read Ahead geometry and complete reward selection. Later small-layout/header refinements received targeted DOM and browser checks. Implementation evidence does not establish classroom comprehension or playtested balance; the user must pull/restart the local Windows checkout. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## Passive and supplied audio — 2.20.0
+
+Verify free swap cancel, exact payment/stat removal, trigger history and legacy four-to-ten migration with deferred Predict/card choices, repeated click/choice-ID safety and complete physical-card conservation. Test source hashes/all fifteen decodes, actual surface/voice routing, independent settings, late-load/autoplay/hidden races, catalog rebuild and portable embedding. Inspect native popup geometry on narrow/short/desktop/wide screens and run the full Node/jsdom suite. Final measured results and limits: [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).

@@ -1,6 +1,6 @@
-# Slay the Math — Combat & Predict Edition 2.19.0
+# Slay the Math — Passive & Music Edition 2.20.0
 
-Current update: compact combat, whole-card reward selection, fixed-size Read Ahead choices, status icons, visible Passive triggers, a turn-by-turn log and Predict using all 120 questions without repeats during a run. [Changes and validation](docs/COMBAT_AND_PREDICT_2_19_0.md).
+Current update: three active Passives with a full-card replacement popup, eight supplied background cues and seven character voices. Music, Voice and Sound FX have separate controls. [Changes and validation](docs/PASSIVE_AND_MUSIC_2_20_0.md). Compact combat and run-unique 120-question Predict remain available.
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -50,7 +50,7 @@ The game itself has no dependency on either QA package.
 
 See [implementation and limits](docs/DUNGEON_EDITION_2_1.md), [verification](docs/VERIFICATION_2_1.md),
 [DESIGN.md](DESIGN.md), [UX-CONTRACT.md](UX-CONTRACT.md) and [SOR_README.md](SOR_README.md).
-Predict uses Probability. Education uses Probability, Sets and Logic.
+Predict, Artifact trials and Mystery use the shared 120-question bank covering Probability, Sets and Logic. Practice remains an independent review.
 
 Main menu UWHD/display fit and 5s transitions: [Menu fit 2.5.1](docs/MENU_FIT_2_5_1.md). Browser QA: `npm run test:menu-browser` with Playwright supplied through `BROWSER_QA_MODULE`.
 

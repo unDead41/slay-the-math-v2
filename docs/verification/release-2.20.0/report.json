@@ -1,0 +1,121 @@
+{
+  "version": "2.20.0",
+  "baseCommit": "aa2de2b1414aa88c008538e1372328501d0d33c2",
+  "node": "v24.19.0",
+  "checks": {
+    "fullSuite": {
+      "command": "DOM_QA_MODULE=<installed jsdom> npm test",
+      "tests": 434,
+      "passed": 434,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 84629.452976,
+      "includesAutomaticBuild": true
+    },
+    "syntax": {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    "build": {
+      "version": "2.20.0",
+      "releaseBuild": "7b4c054aca7d0a53",
+      "buildIdempotent": true,
+      "resourceHashesVerified": 58,
+      "embeddedMusic": [
+        "bgm_combat_stage_1",
+        "bgm_combat_stage_2",
+        "bgm_boss_stage_1",
+        "bgm_boss_stage_2",
+        "bgm_shop",
+        "bgm_rest",
+        "bgm_map",
+        "bgm_defeat",
+        "menu",
+        "mystery"
+      ],
+      "embeddedVoice": [
+        "vo_dm_01",
+        "vo_dm_02",
+        "vo_dm_03",
+        "vo_dm_04",
+        "vo_shop_01",
+        "vo_shop_02",
+        "vo_shop_03"
+      ],
+      "embeddedAudioBytesVerified": true,
+      "portableBytes": 263905675,
+      "portableSha256": "5c4b1c504decb4cd018109cb7e57d7419294d4164890791c1775136b4a024369"
+    },
+    "authoredDiffWhitespace": {
+      "command": "git diff --cached --check -- . ':!docs/audio/source-pack-3'",
+      "exitCode": 0,
+      "exception": "Unmodified vendor documents preserve original Markdown hard breaks and trailing blank lines, verified byte-for-byte from the supplied archive."
+    }
+  },
+  "sourceArchive": {
+    "name": "MUSIC(3).zip",
+    "sha256": "90cb3b1195548678c68becaad06f68b7e2c1750d85803391fe6ea540a6d00161",
+    "audioStreams": 15,
+    "bytePreserved": true,
+    "allFullDecodesVerified": true,
+    "audit": "../../audio/source-pack-3/import-audit.json",
+    "originalDocuments": [
+      {
+        "name": "audio-cues.v1.csv",
+        "sha256": "d12e7d1c2c252be7ead21393dc8a48d19c8526b7ea66914c1579a952cba63db8"
+      },
+      {
+        "name": "audio-manifest.v1.json",
+        "sha256": "75fd77f97adc45b1acfd4c6c242c966673b2799dcbfefaabf3dfc40ac8ac2364"
+      },
+      {
+        "name": "IMPLEMENTATION_CHECKLIST.md",
+        "sha256": "8dfbbab1d581d3dcc569f13252373eee173b35b79af298eec24b11c132cb2947"
+      },
+      {
+        "name": "source-audit.v1.json",
+        "sha256": "77380bd83d0df7159982556c4b785eb0996d21bc62abd4e1040e01a902a8d425"
+      },
+      {
+        "name": "STM_AUDIO_SOR_v1.md",
+        "sha256": "da949b76c5d2341e3badac98db13206c46f7e45c149d5cb7e2fa50c3e2cb5bba"
+      },
+      {
+        "name": "VERIFICATION_v1.json",
+        "sha256": "b3d970f0ce496e958cc93c68a327b50b2c8f09c5615f40bca3a0e288a83f18d7"
+      },
+      {
+        "name": "README.md",
+        "sha256": "2ef9a8926e9ef9fc9987be1fbba6bc4238dc55624ff952226b00f88c96fb0cd6"
+      }
+    ]
+  },
+  "browser": {
+    "surface": "Chrome cloud; managed static preview; real native game UI",
+    "viewportGeometry": "passive-geometry.json",
+    "checks": [
+      "Fourth Passive shows three full-frame outgoing candidates and actual incoming cost.",
+      "Cancel retains Energy, Focus, armed Focus and active Passives; paid selection leaves three, Discards outgoing and removes Strength while retaining unrelated Agility/Defense.",
+      "Legacy four-active save opens BM free selection, explicit close keeps it pending, reopen/select returns to three without Energy payment.",
+      "Merchant Shop and Dungeon Master gift surface show native Playing track and Character speaking status after gesture.",
+      "Voice slider changed 85% to84%; mute survived dialog close/reopen independently of Music/SFX.",
+      "All four measured viewports keep document size within viewport; only local menu scroll/pan is used."
+    ],
+    "captures": [
+      "passive-swap.jpg",
+      "audio-settings.jpg"
+    ]
+  },
+  "scope": {
+    "passiveCap": "Three active Passives per combat; deck may own more. Stated implementation assumption after optional clarification had no answer.",
+    "sourceCardDefinitionsChanged": false,
+    "questionBankChanged": false,
+    "modelZipApplied": false
+  },
+  "limits": [
+    "Browser playback status and independent full stream decoding are verified; human listening, seamless loop approval and final-greeting repeat suitability are unverified.",
+    "No transcript supplied or invented.",
+    "Windows installation and classroom/balance playtesting were not run here.",
+    "Generated 263MB offline HTML is built and verified locally, not committed."
+  ]
+}

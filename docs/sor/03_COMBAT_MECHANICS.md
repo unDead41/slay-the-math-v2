@@ -98,3 +98,8 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Combat and Predict — 2.19.0
 
 DISAHKAN: the compact combat HUD has live status badges, active/triggered Passive cards and chronological actor/turn logs. Preserve all supplied card amounts and conditions: only Last Ember grants Focus in the 40-card package, alive at HP <=30%, once/combat, cap 3. Show actual capped gains. Passive cards never spend armed Focus. Ember Core stops its trigger bookkeeping when the focused card already killed the sole enemy. Predict now uses the shared 120-question run ledger; legacy saved predictions remain supported. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## Passive and supplied audio — 2.20.0
+
+The cap and swap request is DISAHKAN. DITERUSKAN: three active Passives per combat (not a deck ownership cap), with an unpaid fourth-card choice and atomic paid replacement. Remove outgoing ongoing/stat contributions, retain resolved results and bounded combat trigger history, and avoid hand-discard artifact hooks. Legacy over-cap saves trim free after existing pending sessions. `DCConfig.PASSIVE_LIMIT` and card-combat own the rule. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).

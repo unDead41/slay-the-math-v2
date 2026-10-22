@@ -186,3 +186,8 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Combat and Predict — 2.19.0
 
 DISAHKAN: combat occupies one viewport. Consolidate room/Gold/turn/deck in the header; move Menu into Settings; place Hand count over resources; move used piles above Predict and artifacts along the arena upper edge. The former piles area shows a small actor/turn log with a full native dialog. Passive icons/trigger counts sit beside Alyssa. Keep 44px actions and keyboard access. Narrow/short layouts preserve local hand/status/Passive panning and dialog scroll without a combat document scrollbar. Predict uses the same Ink BM/English math/support renderer as Artifact/Mystery. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## Passive and supplied audio — 2.20.0
+
+Show the active `/3` counter and an incoming-card/cost summary with full-frame outgoing candidates. Cancel is free before swap commit; an explicitly closed legacy trim remains reopenable. Bind to rendered choice IDs and ignore native double-click repeats. Keep fixed card sizing and native local dialog scrolling/panning. Sound settings expose independent Voice volume/mute alongside existing Music and Sound FX; do not invent spoken subtitles. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).

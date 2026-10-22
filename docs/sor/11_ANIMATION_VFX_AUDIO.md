@@ -157,3 +157,8 @@ Stage 2 fallback posters come from these new source sheets on the same registere
 ## Boss framing — game 2.13.2
 
 The boss host uses explicit figureScale 1.1, independent of the ordinary-enemy default 0.9. All five clips and their posters share this host; drawScale, source frame cells, holds, pivots, floor and motion policies remain canonical. A phone width cap and tablet-only horizontal containment preserve equal visible size without trimming source VFX. See [Boss size](../BOSS_SIZE_2_13_2.md).
+
+
+## Passive and supplied audio — 2.20.0
+
+DISAHKAN: apply the supplied MUSIC(3).zip now; this supersedes the archive's earlier planning-only music-branch handoff. The committed audio registry owns eight supplied BGM and seven one-shot voices; Menu/Mystery remain. Actual visible encounters own per-run greeting order, separate Voice controls, stale-load cancellation, gesture unlock and minimum-factor Voice/Predict ducking. Audio never owns gameplay RNG or resolution. Source hashes, routes and audition limits: [audio integration notes](../audio/source-pack-3/INTEGRATION_NOTES.md). Full app/build evidence: [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).

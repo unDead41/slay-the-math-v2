@@ -162,3 +162,8 @@ The 2.11.0 map clean plate uses built-in imagegen with the supplied 1672×941 ma
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12 imports all four Boss ZIP parts after CRC/unique-path/SHA checks. Use the ten native 3200×2144 runtime sheets, full 1024px padded cells, lossless WebP and same-matrix posters; do not ship huge upscaled 4K frames/atlases. Preserve source manifests/SOR by bosses/<id>. Audit and original hold durations: docs/animations/boss-v1. Learn/Challenge uses the existing illustrated book and supplied Battle crossed-sword seal; no newly generated bitmap is required.
+
+
+## Passive and supplied audio — 2.20.0
+
+MUSIC(3).zip's fifteen MP3 streams are imported byte-for-byte with deterministic runtime aliases; `.mpeg` names are MP3 containers and are not needlessly re-encoded. Preserve the supplied source documents and exact source/runtime/decode hashes. The runtime registry and catalog generator own explicit registered paths; retained unregistered legacy OGG files cannot shadow new audio. Portable builds embed only registered canonical assets. No MODEL.zip was applied. See [audio provenance](../audio/source-pack-3/INTEGRATION_NOTES.md).

@@ -1,0 +1,278 @@
+{
+  "sourceArchive": {
+    "name": "MUSIC(3).zip",
+    "sha256": "90cb3b1195548678c68becaad06f68b7e2c1750d85803391fe6ea540a6d00161",
+    "sizeBytes": 25975180
+  },
+  "sourceDocuments": "Unmodified supplied planning documents; current user authorization supersedes planned-only/branch instructions.",
+  "runtimeImport": "Byte-preserved MP3 aliases, no trim, tempo/pitch change, stream stripping or re-encoding.",
+  "assets": [
+    {
+      "id": "bgm_combat_stage_1",
+      "sourcePath": "MUSIC/combat_normal_elite_stage_1_bg.mpeg",
+      "runtimePath": "assets/music/stage1_combat.mp3",
+      "sha256": "39d2798b7b4a3bb79151deec2b3f4915d41853dbef2efd49262141bdfbf8c742",
+      "sizeBytes": 3700448,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 154.8,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "fd88a63a67fd37bc9b123197e4b22d171601ac36bc393348d4ce9c7e103576d2"
+      }
+    },
+    {
+      "id": "bgm_combat_stage_2",
+      "sourcePath": "MUSIC/combat_normal_elite_stage_2_bg.mpeg",
+      "runtimePath": "assets/music/stage2_combat.mp3",
+      "sha256": "244d6ea3bbb695489ede4ecedf643ee6bfcabaf589ca01a71b669043c54cc888",
+      "sizeBytes": 3542508,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 150.0,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "989cf868b59bf3e138ebbbd57773825801b2c45f06bb36ccbec1eafa2b5a61a4"
+      }
+    },
+    {
+      "id": "bgm_boss_stage_1",
+      "sourcePath": "MUSIC/combat_boss_stage_1_bg.mpeg",
+      "runtimePath": "assets/music/stage1_boss.mp3",
+      "sha256": "5e107c84d4450a93be183bc872b9eee36e23e3c5cf101ec10299495dbc6d7987",
+      "sizeBytes": 3268227,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 139.2,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "d22f676fccf646c0bfa61539021fae89a2bcbed763dcaee831a092c442cc7e1d"
+      }
+    },
+    {
+      "id": "bgm_boss_stage_2",
+      "sourcePath": "MUSIC/combat_boss_stage_2_bg.mpeg",
+      "runtimePath": "assets/music/stage2_boss.mp3",
+      "sha256": "ff972eb0cdce2dc743ce9054ef3bae48e4b51aeb42cac4cb474f7f35dc8c789e",
+      "sizeBytes": 4061774,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 174.936,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "aa0964d3faf9e5791eef21e216b0b09c2d90765a792746d19debbe79a3b3fedf"
+      }
+    },
+    {
+      "id": "bgm_shop",
+      "sourcePath": "MUSIC/merchant_or_shop_bg.mpeg",
+      "runtimePath": "assets/music/shop.mp3",
+      "sha256": "ff21a7aa740e33312c696738791de27a5a05f91b0692d19af81cdcc147dd833b",
+      "sizeBytes": 1538832,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 64.44,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "16f4e6a1d9cba7fda75301439db316ff0d553087a8e6e3f13c5307bd93a25b0b"
+      }
+    },
+    {
+      "id": "bgm_rest",
+      "sourcePath": "MUSIC/rest_site_bg.mpeg",
+      "runtimePath": "assets/music/rest.mp3",
+      "sha256": "a672a9418c6f568d52d28b57acc196144e02e6396f74ad60fa4b232b893e67be",
+      "sizeBytes": 4323258,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 180.048,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "0060b39cfe41c1f1ea1212359d71b9bf1ea25506eb85e917d6188d1d974e5630"
+      }
+    },
+    {
+      "id": "bgm_map",
+      "sourcePath": "MUSIC/when_open_map_bg.mpeg",
+      "runtimePath": "assets/music/map.mp3",
+      "sha256": "f8664c52dc80302b09e7d1f04e8b99214b24d2607d580bbe4ba0b9fb83e1c91c",
+      "sizeBytes": 3923950,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 167.16,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "6b487ddbc8ffa96f805ae33d362cb8a7de30d4cac41fe61870eb3f9cd366e104"
+      }
+    },
+    {
+      "id": "bgm_defeat",
+      "sourcePath": "MUSIC/when_lose_current_run.mpeg",
+      "runtimePath": "assets/music/defeat.mp3",
+      "sha256": "3177d108a8767e5a37b3616e0ff09e34aa9f9d32bc40e2f79b838a248ec51f22",
+      "sizeBytes": 205212,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 48000,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 8.52,
+        "attachedCover": true,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "c77e8d234dce5d9ac4aaa732b53135f78c22cefdcca70bb911c1def497d1a8fa"
+      }
+    },
+    {
+      "id": "vo_dm_01",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_1.mp3",
+      "runtimePath": "assets/voice/dungeon_master/meet_01.mp3",
+      "sha256": "1a094eb469ea0dbfc5094a968880fc6c66f2f994c9c0658a09f701f227e6eeb2",
+      "sizeBytes": 208362,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 11.964063,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "9bcb1e37d7cabc5707e70d75058f57d08ad282a071d7c8d4c9846450861656d6"
+      }
+    },
+    {
+      "id": "vo_dm_02",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_2.mp3",
+      "runtimePath": "assets/voice/dungeon_master/meet_02.mp3",
+      "sha256": "edab46421f92fa657a952d4632f3ccd7516b2f3baaad73f80e9f9079cc2c68d8",
+      "sizeBytes": 220901,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 12.74775,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "6b0f98a32aa611950c9b5304dc262eedd5baa04070e0b74521fb79378ddb80da"
+      }
+    },
+    {
+      "id": "vo_dm_03",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_3.mp3",
+      "runtimePath": "assets/voice/dungeon_master/meet_03.mp3",
+      "sha256": "476d847e8bca0e93af24ae2f13fdc15d1b3c4a9fe1b9d62d0c0712a0efe1f885",
+      "sizeBytes": 207108,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 11.885688,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "0e5895c5246a491fc679032821863179ccb67e2bbf45d2dfcd87058f12b6f21b"
+      }
+    },
+    {
+      "id": "vo_dm_04",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_4.mp3",
+      "runtimePath": "assets/voice/dungeon_master/meet_04.mp3",
+      "sha256": "f4e14039417c3247e415011e84af3bc033db48cc4767a368ef7fed5fa241920c",
+      "sizeBytes": 223826,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 12.930563,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "6d0783dd5cbc8b5fc5cfbf871f1c5609c2106f37ca9b79237689008ac539c4cd"
+      }
+    },
+    {
+      "id": "vo_shop_01",
+      "sourcePath": "MUSIC/merchant_when_open_shop_talking_1.mp3",
+      "runtimePath": "assets/voice/merchant/meet_01.mp3",
+      "sha256": "fdbda526fc3ed6d924e65433c78a4fa6fc1057ee60f3941f953803086f320dc9",
+      "sizeBytes": 215885,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 12.43425,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "1ebcde67b7de520c5cc4826c392220a0eb67d97ef794e1b0c9cb46189817b8c7"
+      }
+    },
+    {
+      "id": "vo_shop_02",
+      "sourcePath": "MUSIC/merchant_when_open_shop_talking_2.mp3",
+      "runtimePath": "assets/voice/merchant/meet_02.mp3",
+      "sha256": "8a2c292cab15b2add800b64e9d73c9a3dd108727e82c97094143f5a40f0a4dea",
+      "sizeBytes": 192897,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 10.9975,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "32ce4f71952505366e5f48a8a911eda328d7b3ec3bcc74d8b7e7e764b9eb3d86"
+      }
+    },
+    {
+      "id": "vo_shop_03",
+      "sourcePath": "MUSIC/merchant_when_open_shop_talking_3.mp3",
+      "runtimePath": "assets/voice/merchant/meet_03.mp3",
+      "sha256": "61e1e34fc39176960253ed014ce4a9b740784ba71b123338e050cb2dd5bccf6b",
+      "sizeBytes": 293626,
+      "verification": {
+        "codec": "mp3",
+        "sampleRateHz": 44100,
+        "channels": 2,
+        "container": "mp3",
+        "durationSeconds": 17.293063,
+        "attachedCover": false,
+        "fullDecode": "PASS",
+        "decodedPcmS16leSha256": "0efd9365365dca26a3e8d344469c44ec8369c30bcaac4122119151f20b2a4832"
+      }
+    }
+  ],
+  "auditionVerified": false,
+  "loopSeamVerified": false,
+  "transcriptsSupplied": false,
+  "verification": {
+    "tooling": "ffprobe format/streams; ffmpeg full audio decode to PCM S16LE SHA-256",
+    "filesDecoded": 15,
+    "byteHashMatchesSuppliedManifest": true,
+    "perceptualAudition": "NOT_RUN",
+    "loopSeamAudition": "NOT_RUN",
+    "transcript": "NOT_SUPPLIED",
+    "webAndPortablePlayback": "owned_by_integration_verification"
+  }
+}

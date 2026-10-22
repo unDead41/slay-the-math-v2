@@ -8,7 +8,7 @@ const Log=typeof module!=='undefined'?require('./combat-log.js'):root.DCCombatLo
 const artifactContext={draw,deal,notify};
 const mysteryContext={card,draw,startBattle,finishNode};
 const cardContext={C,A,R,draw,deal,rng,shuffle,notify,win,artifactContext};
-function cardAction(r,fn){if(!validate(r))throw Error('This card action cannot start from an invalid save. Your progress is unchanged.');const next=clone(r);fn(next);if(!validate(next))throw Error('This card action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);return r;}
+function cardAction(r,fn){if(!validate(r))throw Error('This card action cannot start from an invalid save. Your progress is unchanged.');const next=clone(r);fn(next);CC.reconcile(next,cardContext);if(!validate(next))throw Error('This card action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);return r;}
 function cardPlan(r,c){if(typeof c==='string')c=r?.battle?.hand.find(x=>x.uid===c)||r?.deck.find(x=>x.uid===c)||{key:c,upgraded:false};return CC.get(c)?(r?.battle?CC.plan(r,c,cardContext):CC.displayPlan(c,cardContext)):null;}
 function cardDisplayPlan(c){if(typeof c==='string')c={key:c,upgraded:false};return CC.get(c)?CC.displayPlan(c,cardContext):null;}
 function cardChoice(r){return r.battle?.cardChoice||null;}
@@ -90,7 +90,7 @@ function deal(r,n,pierce=false,detail=null){
  return n;
 }
 function filterLimit(r,c){const b=r.battle,total=b.draw.length+b.hand.length+b.discard.length;return Math.max(0,Math.min(definition(c).filter||0,b.draw.length-2,total-6));}
-function canPlay(r,c){if(r.scene!=='battle'||!r.battle)return 'This battle is over.';if(CC.get(c))return CC.error(cardPlan(r,c));if(r.scene!=='battle')return 'This battle is over.';const b=r.battle,d=definition(c);if(b.cardChoice)return 'Finish the card choice first.';if(b.question&&!b.question.solved)return 'Finish or close Predict first.';if(b.energy<d.cost)return 'Not enough Energy.';if(d.filter&&filterLimit(r,c)<1)return 'Filter must leave 2 cards in the Draw Pile and 6 active cards.';if(d.heal&&r.hp===r.maxHp)return 'HP is full.';return '';}
+function canPlay(r,c){if(r.scene!=='battle'||!r.battle)return 'This battle is over.';if(CC.get(c))return CC.error(cardPlan(r,c));if(r.scene!=='battle')return 'This battle is over.';const b=r.battle,d=definition(c);if(b.cardChoice)return 'Finish the card choice first.';if((b.active||[]).length>C.PASSIVE_LIMIT)return 'Choose which Passives to keep before continuing.';if(b.question&&!b.question.solved)return 'Finish or close Predict first.';if(b.energy<d.cost)return 'Not enough Energy.';if(d.filter&&filterLimit(r,c)<1)return 'Filter must leave 2 cards in the Draw Pile and 6 active cards.';if(d.heal&&r.hp===r.maxHp)return 'HP is full.';return '';}
 function effectiveDefinition(r,c){if(CC.get(c)){const p=cardPlan(r,c);return {...definition(c),plan:p};}const d=definition(c),bonus=A.cardBonuses(r,d);return {...d,...(d.damage?{damage:d.damage+bonus.damage}:{}),...(d.block?{block:d.block+bonus.block}:{})};}
 function playCard(r,uid,targets=[]){
  const b=r.battle;if(!b)throw new Error('No active battle.');
@@ -115,8 +115,8 @@ function playCard(r,uid,targets=[]){
  if(b.cardCombat)CC.afterResolved(r,d,bonus>0,cardContext);A.exhausted(r,exhaustCount,artifactContext);A.cardResolved(r,d,artifactContext);
  if(b.hp<=0)win(r);return r;
 }
-function armFocus(r){const b=r.battle;if(r.scene!=='battle'||!b||b.cardChoice||b.focus<1||b.boostUsed)throw new Error('Focus is not ready this turn.');b.boostArmed=!b.boostArmed;return r;}
-function forecast(r,seen=[],profile=null){return P.forecast(r,seen,profile);}
+function armFocus(r){const b=r.battle;if(r.scene!=='battle'||!b||b.cardChoice||(b.active||[]).length>C.PASSIVE_LIMIT||b.focus<1||b.boostUsed)throw new Error('Focus is not ready this turn.');b.boostArmed=!b.boostArmed;return r;}
+function forecast(r,seen=[],profile=null){if((r.battle?.active||[]).length>C.PASSIVE_LIMIT&&!r.battle.question)throw Error('Choose which Passives to keep before continuing.');return P.forecast(r,seen,profile);}
 function selectForecast(r,id){return P.select(r,id);}
 function answerBankForecast(r){return P.answer(r,{notify});}
 function supportForecast(r,kind){return P.support(r,kind);}
@@ -125,10 +125,10 @@ function answer(r,value){const b=r.battle,q=b?.question;if(!q||q.solved)throw ne
  const first=q.attempts===1&&!q.hinted,focusBefore=b.focus;q.solved=true;q.first=first;b.forecastUsed=true;r.stats.forecasts++;const st=r.stats.concepts[q.kind]||(r.stats.concepts[q.kind]={total:0,first:0,assisted:0});st.total++;if(first){b.focus=Math.min(C.FOCUS_CAP,b.focus+1);r.stats.firstCorrect++;st.first++;}else{r.stats.assisted++;st.assisted++;}const opened=q.seal!==null&&q.seal===b.seals;if(opened)b.seals++;
  const message=first?'Correct! +'+(b.focus-focusBefore)+' Focus (cap '+C.FOCUS_CAP+').':'Correct. Saved as a guided answer.';notify(r,message);Log.record(r,{actor:'player',kind:'predict',source:'legacy:'+q.kind,label:'Predict',summary:message+(opened?' Boss seal opened.':''),key:'predict:'+b.turn,values:{first,focusGained:b.focus-focusBefore,sealOpened:opened,scored:true,legacy:true}});return {valid:true,correct:true,first,message};}
 function hint(r){if(r.battle?.question?.source==='bank')return supportForecast(r,'hint');if(r.battle?.question&&!r.battle.question.solved){if(!r.battle.question.hinted)r.stats.hintsUsed=(r.stats.hintsUsed||0)+1;r.battle.question.hinted=true;}return r;}
-function closeForecast(r){const b=r.battle;if(b?.question?.source==='bank')return P.close(r);if(b?.question){if(!b.question.solved&&(b.question.attempts||b.question.hinted))b.forecastUsed=true;b.question=null;}return r;}
+function closeForecast(r){const b=r.battle;if(b?.question?.source==='bank')P.close(r);else if(b?.question){if(!b.question.solved&&(b.question.attempts||b.question.hinted))b.forecastUsed=true;b.question=null;}CC.reconcile(r,cardContext);return r;}
 function endTurn(r){
  if(r.scene!=='battle')throw new Error('No active battle.');const b=r.battle;
- if(b.cardChoice)throw new Error('Finish the card choice first.');if(b.question&&!b.question.solved)throw new Error('Close Predict before ending your turn.');b.question=null;b.boostArmed=false;
+ if(b.cardChoice)throw new Error('Finish the card choice first.');if((b.active||[]).length>C.PASSIVE_LIMIT)throw Error('Choose which Passives to keep before continuing.');if(b.question&&!b.question.solved)throw new Error('Close Predict before ending your turn.');b.question=null;b.boostArmed=false;
  if(b.cardCombat)CC.beforeEnemy(r);A.beforeEnemy(r,artifactContext);const it=intent(r),hpBefore=r.hp,enemyHpBefore=b.hp,hits=it.hits||1;let hit=0,absorbed=0,executed=0;const lines=['Enemy damage per hit: '+it.damage,'Attack hits: '+hits];
  for(let n=0;n<hits&&r.hp>0&&b.hp>0;n++){
   executed++;
@@ -247,6 +247,7 @@ function restore(saved){
   const b=r.battle;
   if(b){
    if(b.cardCombat===undefined)CC.setup(r);
+   CC.reconcile(r,cardContext);
    // Old uncapped hands remain loadable; preserve each excess card on top of Draw.
    if(b.hand.length>C.HAND_LIMIT)b.draw.push(...b.hand.splice(C.HAND_LIMIT).reverse());
    if(b.question&&b.question.source!=='bank'){const q=b.question,display=M.makeQuestion(q.source,q.kind);for(const key of ['text','why','label','steps'])q[key]=display[key];}

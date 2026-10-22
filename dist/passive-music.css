@@ -1,0 +1,12 @@
+/* Passive selection reuses the fixed native card frame. */
+.passive-rail-label{display:flex;align-items:center;justify-content:space-between;gap:4px;margin-bottom:5px}
+.combat-passives .passive-rail-label h2{margin:0}
+.passive-cap{font:11px/1.4 var(--sans);color:var(--gold-soft);white-space:nowrap}
+.passive-choice-summary{max-width:76ch;margin-bottom:16px}
+.passive-choice-summary>strong{color:var(--gold-soft)}
+.passive-choice-summary p{margin:8px 0;line-height:1.5}
+.passive-swap-option{min-width:0;width:100%}
+.passive-swap-status{font:12px/1.4 var(--sans);text-align:center;color:var(--muted);margin:3px 0 0}
+.voice-setting{display:grid;gap:14px;padding-top:18px;border-top:1px solid var(--border,#403944)}
+.voice-setting p{font-size:14px;margin:0;line-height:1.5}
+@media(max-width:620px),(max-height:620px){.passive-rail-label{justify-content:center}.passive-cap{font-size:10px}}

@@ -176,3 +176,8 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Combat and Predict — 2.19.0
 
 DITERUSKAN: combat-log.js owns optional v1 bounded structured battle history (80 entries, actor snapshots, dedupe keys); card-combat owns pure passiveView; combat-status projects signed stats, statuses and queues. combat-predict owns new bank sessions; educationState selectionVersion 2 adds runUsedIds while usedIds and archived reducer records preserve lifetime/mastery. The question RNG remains separate from combat RNG. Save restore supports missing legacy fields, frozen live-deck predictions and exact pending choices; checkpoint retries carry all current-run exposures. Version 2.19.0 entrypoints include all new modules before app.js. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## Passive and supplied audio — 2.20.0
+
+`cardCombat.passiveRule`, bounded `passiveHistory`, `passive_swap` and legacy `passive_trim` extend existing atomic card/save validation; the cap is configured once. Optional `run.audioPresentation` stores a bounded encounter ledger outside gameplay and checkpoint copies retain its own snapshot. The app recovers only audio metadata, observes visible surfaces before save and dispatches frozen encounters to audio. Registry-generated catalog, canonical `DC_MUSIC`/`DC_VOICE` portable keys and independent settings retain offline behavior. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).

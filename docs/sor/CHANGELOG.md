@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.20.0
+
+- Limit combat to three active Passives with a free-to-cancel replacement popup, correct stat removal and preserved trigger history.
+- Recover older over-cap saves with a free saved selection, including deferred choices and double-click protection.
+- Apply eight supplied BGM and seven character voices with separate Voice controls, stable encounter order, cancellation and automatic ducking.
+- Preserve source audio bytes, generate catalog/portable assets deterministically and update launchers/version metadata. [Changes and actual validation](../PASSIVE_AND_MUSIC_2_20_0.md).
+
 ## Game 2.17.0 delivery fix — 22 October 2026
 
 - Move the main-menu question-language selector into Settings and retain its saved preference.

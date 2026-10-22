@@ -1,11 +1,14 @@
-# Slay the Math — 2.19.0
+# Slay the Math — 2.20.0
 
 ## Buka game terkini
 
 Dalam folder projek yang sama, hentikan server lama dengan Ctrl+C dan jalankan:
 
 ```powershell
+git stash push -m "backup-before-v2.20.0"
+if ($LASTEXITCODE -ne 0) { throw "Backup perubahan tempatan gagal. Semak Git dahulu." }
 git switch main
+if ($LASTEXITCODE -ne 0) { throw "Tidak dapat beralih ke main. Semak Git dahulu." }
 git pull --ff-only origin main
 if ($LASTEXITCODE -ne 0) { throw "Git pull gagal. Jangan mulakan salinan lama; semak mesej Git dahulu." }
 npm.cmd start
@@ -13,7 +16,11 @@ npm.cmd start
 
 Buka **http://localhost:4173**. `npm start` menyediakan semula modul pendidikan secara automatik. Main menu mempunyai **Education Practice — 120 questions**. Pilihan **Question language / Bahasa soalan** (English atau Bahasa Melayu) kini berada di **Settings**, dan turut tersedia dalam setiap trial Artifact dan Mystery.
 
-Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.19.0**, sama seperti versi dalam Settings dan package.json. Selepas pull berjaya, hentikan server lama dan mulakan semula dari folder projek yang betul sebelum refresh browser. Launcher dan semua skrip/CSS menggunakan penanda kandungan build untuk mengelakkan campuran cache lama.
+Untuk membuka dari folder, klik **MAIN-SEKARANG.html** atau **index.html**. Kedua-duanya memuatkan runtime `dist/` terkini pada alamat fail asal; semua fail projek mesti kekal bersama. Paparan versi main menu ialah **v2.20.0**, sama seperti versi dalam Settings dan package.json. Selepas pull berjaya, hentikan server lama dan mulakan semula dari folder projek yang betul sebelum refresh browser. Launcher dan semua skrip/CSS menggunakan penanda kandungan build untuk mengelakkan campuran cache lama.
+
+Kemas kini ini menghadkan **3 Passive aktif dalam combat**. Main Passive keempat untuk memilih kad aktif yang hendak diganti; Cancel tidak menggunakan Energy. Kad lama masuk ke Discard dan kesan berterusannya terhenti. Simpanan lama yang melebihi had meminta anda memilih tanpa bayaran.
+
+Muzik daripada MUSIC(3).zip kini mengikut bilik/stage, dengan suara Dungeon Master dan Merchant. Buka **Sound / ikon speaker** untuk Music Volume, Sound FX Volume, Voice Volume dan mute berasingan. Klik mana-mana butang game untuk membenarkan audio browser bermula. Backup Git di atas kekal sebagai stash; jangan apply semula fail binaan lama secara automatik.
 
 **Education Practice** menggunakan dokumen folio yang sama seperti preview 120 soalan. Ia merangkumi Hint, More Hint, jalan kerja, Asas dan komen. Komen kekal pada peranti sehingga dikongsi atau dimuat turun.
 

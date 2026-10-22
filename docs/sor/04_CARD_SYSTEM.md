@@ -78,3 +78,8 @@ Old overfull saves remain loadable: restore keeps the first 10 cards in Hand and
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+
+## Passive and supplied audio — 2.20.0
+
+The deck may own more than three Passives; only three may be active in combat. Fourth play requires choosing an outgoing active UID before payment. The outgoing physical card goes to Discard; inactive history preserves original timing/progress/trigger caps on reactivation. Source card definitions and upgrades remain authoritative. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).

@@ -387,3 +387,8 @@ Scope and evidence: [Combat and Predict](../COMBAT_AND_PREDICT_2_19_0.md).
 ## DEC-20261023-DEV — Developer sandbox (2.21.0)
 
 DISAHKAN: Ijamm requested implementation from main v2.20.0 using the Developer Tools SOR. Development/production use separate npm scripts; dev-only response adapters reuse the real game engine/renderers with memory storage. Developer files stay outside dist and portable output. Source artwork, player saves and card balance remain unchanged. Scope, limits and verification contract: [Developer Tools](20_DEVELOPER_TOOLS.md). MODEL.zip was unavailable; existing Slay the Math motion data is used, without claiming a Mathmon editor import.
+
+
+## DEC-20261023-DEV-WINDOWS — Compatible dev loader (2.21.1)
+
+DISAHKAN: Ijamm reports an empty background with DEV SANDBOX badge and missing main menu. Reproduced by converting app.js to CRLF: the dev loader rejects its literal LF-only closing marker. Normalize newline characters only in the server response copy before injection. Preserve source files, gameplay and save storage; regression-test Windows line endings.

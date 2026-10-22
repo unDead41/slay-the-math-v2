@@ -64,3 +64,8 @@ Required regression coverage: all enemy fixtures, all Mystery events with eligib
 ## Deferred extensions from the broader SOR
 
 Custom shop stock selection, arbitrary status injection, selecting an entire initial hand, forced education answers, player Collection unlock policy and a full motion authoring editor remain extensions. This release delivers direct content access and the listed troubleshooting controls without introducing duplicate gameplay rules.
+
+
+## Windows startup fix — 2.21.1
+
+The response-only adapter normalizes CRLF/CR line endings before matching the app closure. Windows Git checkouts can use CRLF while Linux uses LF. The previous literal LF marker rejected CRLF and returned HTTP 500 for /__dev/app.js, leaving background and DEV SANDBOX badge without the main menu. Source bytes are not rewritten. Unknown closure structures still fail explicitly. Regression coverage includes LF, CRLF, CR and a real browser session with a temporarily converted CRLF app file.

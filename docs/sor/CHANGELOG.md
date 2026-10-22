@@ -290,3 +290,9 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 - Added Developer Hub for direct scene access, real card-state comparison/combat tests, temporary motion inspection, scene presets and diagnostics.
 - Added start:dev/start:prod/build:prod; development previews isolate storage and production excludes developer files/routes.
 - Added fixture, isolation and browser regression coverage. Owner and limitations: [20](20_DEVELOPER_TOOLS.md).
+
+
+## 2.21.1 — Windows developer startup fix
+
+- Normalize line endings in the development response adapter so CRLF checkouts load the main menu and Developer Hub previews.
+- Add newline regression tests; preserve original source bytes and production behavior.

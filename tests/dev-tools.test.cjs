@@ -33,3 +33,9 @@ test('player server denies direct developer routes',async t=>{
  for(const route of ['/__dev/','/__dev/app.js','/__dev/sandbox/','/tools/dev/hub.js'])assert.equal((await fetch('http://127.0.0.1:'+port+route)).status,404);
  const html=await (await fetch('http://127.0.0.1:'+port)).text();assert.doesNotMatch(html,/__dev/);
 });
+
+test('developer app injection accepts Windows CRLF without changing source bytes',()=>{
+ const fs=require('node:fs'),path=require('node:path'),original=fs.readFileSync(path.join(__dirname,'../dist/app.js'),'utf8');
+ for(const newline of ['\n','\r\n','\r']){const source=original.replace(/\r?\n/g,newline),before=Buffer.from(source),result=devResponse.instrumentApp(source,'window.devInjected=true;');assert.match(result,/window.devInjected=true;\nrender\(\);\n\}\)\(\);/);assert.doesNotThrow(()=>new Function(result));assert.deepEqual(Buffer.from(source),before);}
+ assert.throws(()=>devResponse.instrumentApp('different app closure','adapter'),/integration marker/);
+});

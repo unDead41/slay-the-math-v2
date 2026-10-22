@@ -1,0 +1,14 @@
+{
+  "version": "2.21.1",
+  "issue": "Developer main menu empty on CRLF checkouts",
+  "reproduction": "Converted dist/app.js to CRLF; old dev response rejected the integration marker",
+  "fix": "Normalize LF/CRLF/CR in the response copy only",
+  "checks": {
+    "developerNodeTests": {
+      "passed": 8,
+      "failed": 0
+    },
+    "browserWithCRLFApp": "PASS: scenes, actual card play, card states, motion, restart, presets, storage isolation and responsive layout"
+  },
+  "limits": "Simulated CRLF file checkout under Chromium on this host; no claim of executing Windows itself. MODEL.zip remains unavailable and is unrelated to this startup fix."
+}

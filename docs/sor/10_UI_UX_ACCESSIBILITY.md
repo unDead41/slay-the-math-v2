@@ -141,3 +141,9 @@ All 31 artifact rules use the same segmented-description owner in choices, pendi
 ## Map, modes, Boss and Shop — 2.12.0
 
 2.12: mode choices share illustrated medallion size, native buttons and explicit difficulty descriptions. Shop has separate 3×2 card/artifact racks with visible prices/effects, Sold/not-enough-Gold states and natural document scrolling. Narrow racks alone scroll horizontally. Removal reuses the native selector plus named consequence/Gold confirmation. Shared tooltip, toast, dialog focus and English copy remain canonical.
+
+## Mystery scene and Shop tabs — 2.13.1
+
+**DISAHKAN:** Ijamm requests a full-background Mystery scene matching the Dungeon Master, separate Buy Cards / Buy Artifacts / Remove Card tabs, and the existing rich-text style in Mystery. Rest in reference 053417 is approved.
+
+The existing supplied Mystery artwork fills the scene behind the live HUD and right panel; phones retain an art banner and natural scrolling. Only one Shop tab panel is exposed. Native tabs support pointer, keyboard and 44px targets; hidden stocks cannot crowd the current service. Green terms and purple snapshot previews use the existing STM_SHARED tooltip owner, while questions retain pink mathematical terms. Previews are read-only and do not become resolved rewards. Source and verification: [room UI 2.13.1](../ROOM_UI_2_13_1.md).

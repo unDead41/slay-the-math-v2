@@ -1,8 +1,8 @@
 {
   "name": "duel-cube-math",
-  "version": "2.13.0",
+  "version": "2.13.1",
   "private": true,
-  "description": "Fifteen timed Mystery Events with supplied artwork, shared questions and persistent rewards",
+  "description": "Full-background Mystery encounters with shared rich text and a tabbed Shop",
   "scripts": {
     "start": "node server.cjs",
     "test": "node --test tests/*.test.cjs",
@@ -27,6 +27,7 @@
     "test:shop-boss-browser": "node tests/shop-boss-browser.cjs",
     "audit:questions": "python3 tools/audit-question-support.py",
     "test:mystery-browser": "node tests/mystery-browser.cjs",
-    "test:mystery-offline": "node tests/mystery-offline-browser.cjs"
+    "test:mystery-offline": "node tests/mystery-offline-browser.cjs",
+    "test:room-ui-browser": "node tests/room-ui-browser.cjs"
   }
 }

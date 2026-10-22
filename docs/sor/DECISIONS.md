@@ -291,3 +291,12 @@ Owners: SOR 02/07/09/10/11/12/13/14/15/19, DESIGN.md and UX-CONTRACT.md. Impleme
 | DEC-20261022-MYSTERY-02 | DITERUSKAN | Active Question Bank/STM service and profile exposure history are reused. The older bank snapshot is not imported. Event/reward/question RNG remain independent; saved choices/deadline/targets/offers persist. |
 | DEC-20261022-MYSTERY-03 | DITERUSKAN | Atomic effect dispatcher, once-only receipts, consumed-artifact ledger, Max HP sacrifice, stage-correct Echo combat and next-combat/first-turn modifiers are implemented and regression-tested. Source numeric balance remains proposed. |
 | DEC-20261022-MYSTERY-04 | DITERUSKAN | Runtime uses current-scene 1920/960 WebP derivatives; source hashes and documented four-row ME04 margin recovery are in mystery-art.json. Native dungeon UI/rich text is retained. Legacy pending Artifact gifts and checkpoints keep their existing flow. |
+
+## Room UI corrections — 22 October 2026 (Malaysia), game 2.13.1
+
+| ID | Status | Decision and evidence |
+| --- | --- | --- |
+| DEC-20261022-ROOM-UI-01 | DISAHKAN | Ijamm requests full-background Mystery artwork like the Dungeon Master, Shop tabs for cards/artifacts/removal, and existing game rich text in Mystery. References: image(20261022-053117).png and image(20261022-053219).png. Rest in image(20261022-053417).png is approved. |
+| DEC-20261022-ROOM-UI-02 | DITERUSKAN | Retain the source artwork, dungeon tokens, shared tooltip hub, question content and engine transaction/save owners. Use read-only cost/reward previews and native roving Shop tabs; current tabs persist during the visit, while reload opens Cards with existing purchases/services preserved. |
+
+Owners: SOR 10 and MYSTERY_EVENTS.md, DESIGN.md, UX-CONTRACT.md. Actual verification: docs/ROOM_UI_2_13_1.md.

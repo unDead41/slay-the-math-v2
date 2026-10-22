@@ -1,0 +1,545 @@
+{
+  "version": "2.13.1",
+  "checks": [
+    "All six situations decode the correct clean artwork at eleven viewport sizes through UWHD and 4K; contained images, native 44px actions, no horizontal page overflow, exact saves preserved.",
+    "Reward and Shop cards stay portrait with square illustrations; adding ultrawide width does not enlarge cards at a fixed display height.",
+    "Both stage shops retain actual stock and names; keyboard selection, exact price/deck update, once-only purchase, sold-state refresh and Leave work.",
+    "Rest heals the live HP value once; Upgrade uses the original native card-selection dialog, Escape and actual upgrade/progression.",
+    "Reward keyboard preview is presentation only; Add grants the selected real card once, while Skip preserves the deck.",
+    "Defeat, Stage Clear and Victory retain their live summaries, learning record, confirmed Retry and actual Stage 2 checkpoint.",
+    "The generated offline build embeds all four new artworks and completes Rest to map without HTTP requests."
+  ],
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 720,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 2048,
+      "height": 1038,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "height": 1080,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 3440,
+      "height": 1440,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 5120,
+      "height": 1440,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 1001,
+      "height": 720,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scenes": 6,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scenes": 6,
+      "overflow": false
+    }
+  ],
+  "cards": [
+    {
+      "scene": "shop",
+      "width": 1280,
+      "height": 720,
+      "card": {
+        "x": 508.984375,
+        "y": 459.453125,
+        "width": 210,
+        "height": 308,
+        "right": 718.984375,
+        "bottom": 767.453125
+      },
+      "illustration": {
+        "x": 544.984375,
+        "y": 501.453125,
+        "width": 138,
+        "height": 138,
+        "right": 682.984375,
+        "bottom": 639.453125
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 1920,
+      "height": 1080,
+      "card": {
+        "x": 925.25,
+        "y": 484.78125,
+        "width": 210,
+        "height": 308,
+        "right": 1135.25,
+        "bottom": 792.78125
+      },
+      "illustration": {
+        "x": 961.25,
+        "y": 526.78125,
+        "width": 138,
+        "height": 138,
+        "right": 1099.25,
+        "bottom": 664.78125
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 2048,
+      "height": 1038,
+      "card": {
+        "x": 1008.5,
+        "y": 484,
+        "width": 210,
+        "height": 308,
+        "right": 1218.5,
+        "bottom": 792
+      },
+      "illustration": {
+        "x": 1044.5,
+        "y": 526,
+        "width": 138,
+        "height": 138,
+        "right": 1182.5,
+        "bottom": 664
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 2560,
+      "height": 1080,
+      "card": {
+        "x": 1341.5,
+        "y": 484.78125,
+        "width": 210,
+        "height": 308,
+        "right": 1551.5,
+        "bottom": 792.78125
+      },
+      "illustration": {
+        "x": 1377.5,
+        "y": 526.78125,
+        "width": 138,
+        "height": 138,
+        "right": 1515.5,
+        "bottom": 664.78125
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 3440,
+      "height": 1440,
+      "card": {
+        "x": 1913.859375,
+        "y": 496.9375,
+        "width": 210,
+        "height": 308,
+        "right": 2123.859375,
+        "bottom": 804.9375
+      },
+      "illustration": {
+        "x": 1949.859375,
+        "y": 538.9375,
+        "width": 138,
+        "height": 138,
+        "right": 2087.859375,
+        "bottom": 676.9375
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 5120,
+      "height": 1440,
+      "card": {
+        "x": 3020.46875,
+        "y": 496.9375,
+        "width": 210,
+        "height": 308,
+        "right": 3230.46875,
+        "bottom": 804.9375
+      },
+      "illustration": {
+        "x": 3056.46875,
+        "y": 538.9375,
+        "width": 138,
+        "height": 138,
+        "right": 3194.46875,
+        "bottom": 676.9375
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 3840,
+      "height": 2160,
+      "card": {
+        "x": 2175.671875,
+        "y": 521.28125,
+        "width": 210,
+        "height": 308,
+        "right": 2385.671875,
+        "bottom": 829.28125
+      },
+      "illustration": {
+        "x": 2211.671875,
+        "y": 563.28125,
+        "width": 138,
+        "height": 138,
+        "right": 2349.671875,
+        "bottom": 701.28125
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 1001,
+      "height": 720,
+      "card": {
+        "x": 169.5,
+        "y": 719.671875,
+        "width": 210,
+        "height": 308,
+        "right": 379.5,
+        "bottom": 1027.671875
+      },
+      "illustration": {
+        "x": 205.5,
+        "y": 761.671875,
+        "width": 138,
+        "height": 138,
+        "right": 343.5,
+        "bottom": 899.671875
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 844,
+      "height": 390,
+      "card": {
+        "x": 91,
+        "y": 693.859375,
+        "width": 210,
+        "height": 308,
+        "right": 301,
+        "bottom": 1001.859375
+      },
+      "illustration": {
+        "x": 127,
+        "y": 735.859375,
+        "width": 138,
+        "height": 138,
+        "right": 265,
+        "bottom": 873.859375
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 390,
+      "height": 844,
+      "card": {
+        "x": 35,
+        "y": 764.625,
+        "width": 150,
+        "height": 259,
+        "right": 185,
+        "bottom": 1023.625
+      },
+      "illustration": {
+        "x": 58.5,
+        "y": 802.625,
+        "width": 103,
+        "height": 103,
+        "right": 161.5,
+        "bottom": 905.625
+      }
+    },
+    {
+      "scene": "shop",
+      "width": 320,
+      "height": 740,
+      "card": {
+        "x": 35,
+        "y": 781,
+        "width": 150,
+        "height": 259,
+        "right": 185,
+        "bottom": 1040
+      },
+      "illustration": {
+        "x": 58.5,
+        "y": 819,
+        "width": 103,
+        "height": 103,
+        "right": 161.5,
+        "bottom": 922
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 1280,
+      "height": 720,
+      "card": {
+        "x": 637.453125,
+        "y": 361.96875,
+        "width": 178.5,
+        "height": 274.9375,
+        "right": 815.953125,
+        "bottom": 636.90625
+      },
+      "illustration": {
+        "x": 663.953125,
+        "y": 399.71875,
+        "width": 125.5,
+        "height": 125.5,
+        "right": 789.453125,
+        "bottom": 525.21875
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 1920,
+      "height": 1080,
+      "card": {
+        "x": 1044.578125,
+        "y": 468.25,
+        "width": 210,
+        "height": 321,
+        "right": 1254.578125,
+        "bottom": 789.25
+      },
+      "illustration": {
+        "x": 1075.578125,
+        "y": 511.25,
+        "width": 148,
+        "height": 148,
+        "right": 1223.578125,
+        "bottom": 659.25
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 2048,
+      "height": 1038,
+      "card": {
+        "x": 1148.15625,
+        "y": 453.578125,
+        "width": 201.828125,
+        "height": 309.015625,
+        "right": 1349.984375,
+        "bottom": 762.59375
+      },
+      "illustration": {
+        "x": 1177.984375,
+        "y": 495.203125,
+        "width": 142.15625,
+        "height": 142.15625,
+        "right": 1320.140625,
+        "bottom": 637.359375
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 2560,
+      "height": 1080,
+      "card": {
+        "x": 1499.9375,
+        "y": 468.25,
+        "width": 210,
+        "height": 321,
+        "right": 1709.9375,
+        "bottom": 789.25
+      },
+      "illustration": {
+        "x": 1530.9375,
+        "y": 511.25,
+        "width": 148,
+        "height": 148,
+        "right": 1678.9375,
+        "bottom": 659.25
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 3440,
+      "height": 1440,
+      "card": {
+        "x": 2018.875,
+        "y": 598,
+        "width": 280,
+        "height": 423.3125,
+        "right": 2298.875,
+        "bottom": 1021.3125
+      },
+      "illustration": {
+        "x": 2059.875,
+        "y": 652.65625,
+        "width": 198,
+        "height": 198,
+        "right": 2257.875,
+        "bottom": 850.65625
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 5120,
+      "height": 1440,
+      "card": {
+        "x": 3233.8125,
+        "y": 598,
+        "width": 280,
+        "height": 423.3125,
+        "right": 3513.8125,
+        "bottom": 1021.3125
+      },
+      "illustration": {
+        "x": 3274.8125,
+        "y": 652.65625,
+        "width": 198,
+        "height": 198,
+        "right": 3472.8125,
+        "bottom": 850.65625
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 3840,
+      "height": 2160,
+      "card": {
+        "x": 2091.5,
+        "y": 863.5,
+        "width": 420,
+        "height": 628,
+        "right": 2511.5,
+        "bottom": 1491.5
+      },
+      "illustration": {
+        "x": 2152.5,
+        "y": 941.5,
+        "width": 298,
+        "height": 298,
+        "right": 2450.5,
+        "bottom": 1239.5
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 1001,
+      "height": 720,
+      "card": {
+        "x": 485.046875,
+        "y": 361.96875,
+        "width": 147.765625,
+        "height": 274.9375,
+        "right": 632.8125,
+        "bottom": 636.90625
+      },
+      "illustration": {
+        "x": 496.171875,
+        "y": 399.71875,
+        "width": 125.5,
+        "height": 125.5,
+        "right": 621.671875,
+        "bottom": 525.21875
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 844,
+      "height": 390,
+      "card": {
+        "x": 121.25,
+        "y": 724.15625,
+        "width": 178.5,
+        "height": 274.9375,
+        "right": 299.75,
+        "bottom": 999.09375
+      },
+      "illustration": {
+        "x": 147.75,
+        "y": 761.90625,
+        "width": 125.5,
+        "height": 125.5,
+        "right": 273.25,
+        "bottom": 887.40625
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 390,
+      "height": 844,
+      "card": {
+        "x": 33,
+        "y": 675.5625,
+        "width": 178.5,
+        "height": 274.9375,
+        "right": 211.5,
+        "bottom": 950.5
+      },
+      "illustration": {
+        "x": 59.5,
+        "y": 713.3125,
+        "width": 125.5,
+        "height": 125.5,
+        "right": 185,
+        "bottom": 838.8125
+      }
+    },
+    {
+      "scene": "reward",
+      "width": 320,
+      "height": 740,
+      "card": {
+        "x": 33,
+        "y": 675.5625,
+        "width": 178.5,
+        "height": 274.9375,
+        "right": 211.5,
+        "bottom": 950.5
+      },
+      "illustration": {
+        "x": 59.5,
+        "y": 713.3125,
+        "width": 125.5,
+        "height": 125.5,
+        "right": 185,
+        "bottom": 838.8125
+      }
+    }
+  ],
+  "errors": []
+}

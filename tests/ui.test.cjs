@@ -1,4 +1,5 @@
 const {mysteryRoom}=require('./helpers/mystery.cjs');
+const {shopRoom}=require('./helpers/shop.cjs');
 const {completeDomTrial}=require('./helpers/education.cjs');
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const E=require('../dist/engine.js');
 let JSDOM;try{({JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'));}catch{}
@@ -253,5 +254,76 @@ test('DOM: Mystery Hint, one answer, final review, card removal and profile expo
  click('mystery-answer',q.correctChoiceId);assert.equal(state().mysteryState.pending.phase,'review');assert.equal(w.document.querySelector('.mystery-review strong').textContent,q.choices.find(c=>c.id===q.correctChoiceId).text);assert.ok(w.document.querySelector('[data-q-rich=explanation]').textContent.trim().length>20);assert.equal(w.document.querySelectorAll('[data-action=mystery-answer]:not(:disabled)').length,0);
  click('mystery-continue');click('mystery-option','remove');assert.equal(w.document.activeElement.dataset.action,'mystery-option');click('mystery-target',r.deck[0].uid);assert.equal(w.document.activeElement.dataset.action,'mystery-target');click('mystery-claim');saved=state();assert.equal(saved.scene,'map');assert.equal(saved.deck.length,r.deck.length-1);assert.ok(E.restore(saved));
  const history=JSON.parse(w.localStorage.getItem('duel-cube-question-history.v1'));assert.ok(history.usedIds.includes(q.id));assert.ok(w.DCEducation.validHistory(history));
+ }finally{dom.window.close();}
+});
+
+test('DOM: Shop tabs reveal one inventory and support arrow, Home and End navigation without spending',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot(shopRoom());
+ try{
+  click('continue');const d=w.document,before=state(),tabs=[...d.querySelectorAll('[role=tab][data-action=shop-tab]')];
+  assert.deepEqual(tabs.map(t=>t.textContent.trim()),['Buy Cards','Buy Artifacts','Remove Card']);
+  const active=()=>d.querySelector('[role=tab][aria-selected=true]');
+  const panel=()=>d.querySelector('[role=tabpanel]:not([hidden])');
+  assert.equal(active().id,'shop-tab-cards');assert.equal(panel().querySelectorAll('[data-action=buy-card]').length,6);
+  assert.equal(d.querySelectorAll('[role=tabpanel]:not([hidden])').length,1);
+  click('shop-tab','artifacts');assert.equal(active().id,'shop-tab-artifacts');assert.equal(d.activeElement.id,active().id);
+  assert.equal(panel().querySelectorAll('[data-action=buy-artifact]').length,6);assert.equal(d.querySelector('#shop-panel-cards').hidden,true);
+  active().dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true,cancelable:true}));
+  assert.equal(active().id,'shop-tab-remove');assert.ok(panel().querySelector('[data-action=shop-remove]'));
+  active().dispatchEvent(new w.KeyboardEvent('keydown',{key:'Home',bubbles:true,cancelable:true}));assert.equal(active().id,'shop-tab-cards');
+  active().dispatchEvent(new w.KeyboardEvent('keydown',{key:'End',bubbles:true,cancelable:true}));assert.equal(active().id,'shop-tab-remove');
+  assert.equal(tabs.length,3);assert.deepEqual(state(),before);assert.equal(d.querySelector('button button'),null);
+ }finally{dom.window.close();}
+});
+
+test('DOM: Shop tab purchases and removal retain sold state, confirmation and valid return to map',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot(shopRoom('challenge'));
+ try{
+  click('continue');click('shop-tab','artifacts');let r=state(),cost=E.shopPrice(r,r.shop.artifacts[0]);
+  w.document.querySelector('[data-action=buy-artifact][data-index="0"]').click();
+  assert.equal(state().gold,r.gold-cost);assert.equal(state().scene,'shop');assert.ok(state().shop.artifactBought.includes(0));
+  assert.equal(w.document.querySelector('[role=tab][aria-selected=true]').id,'shop-tab-artifacts');
+  click('shop-tab','cards');click('shop-tab','artifacts');assert.ok(w.document.querySelector('[data-action=buy-artifact][data-index="0"]').disabled);
+  click('shop-tab','remove');const before=state();click('shop-remove');click('choose-shop-remove',before.deck[0].uid);click('close');assert.deepEqual(state(),before);
+  click('shop-remove');click('choose-shop-remove',before.deck[0].uid);click('confirm-shop-remove');r=state();
+  assert.equal(r.deck.length,before.deck.length-1);assert.ok(r.shop.removed);assert.ok(E.restore(r));assert.ok(w.document.querySelector('[data-action=shop-remove]').disabled);
+  click('leave-shop');assert.equal(state().scene,'map');
+ }finally{dom.window.close();}
+});
+
+test('DOM: Mystery room text uses shared game terms and honest preview calculations before Start and in rewards',{skip:!JSDOM},()=>{
+ const r=mysteryRoom('ME02'),{dom,w,click,state}=boot(r);
+ try{
+  click('continue');const d=w.document,before=state(),hp=d.querySelector('.mystery-stakes [data-glossary-id=hp]');
+  assert.ok(hp,'The intro must explain game terms before starting a question');hp.focus();assert.ok(d.querySelector('[role=tooltip]'));
+  assert.match(d.querySelector('[role=tooltip]').textContent,/HP|Health/);hp.click();assert.deepEqual(state(),before);
+  const number=d.querySelector('.mystery-stakes [data-category=calculation]');assert.ok(number);number.focus();number.click();
+  assert.match(d.querySelector('[role=tooltip]').textContent,/Preview/);assert.match(d.querySelector('[role=tooltip]').textContent,/40 − 5 = 35/);assert.deepEqual(state(),before);
+  assert.equal(d.querySelector('button button'),null);assert.equal(state().mysteryState.pending.questionId,null);
+  click('mystery-start');const pending=state().mysteryState.pending,q=w.DCEducation.catalog[pending.questionId];
+  assert.ok(d.querySelector('.mystery-question [data-category=math]'));click('mystery-answer',q.correctChoiceId);click('mystery-continue');
+  assert.ok(d.querySelector('.mystery-panel [data-glossary-id=hp]'));assert.ok(d.querySelector('.mystery-panel [data-category=calculation]'));
+  assert.equal(state().hp,before.hp);assert.equal(d.querySelector('button button'),null);
+ }finally{dom.window.close();}
+});
+
+test('DOM: Mystery extra-draw preview explains the hand cap without starting a challenge',{skip:!JSDOM},()=>{
+ const {dom,w,click,state}=boot(mysteryRoom('ME14'));
+ try{
+  click('continue');const before=state(),number=w.document.querySelector('.mystery-stakes dd [data-category=calculation]');
+  assert.ok(number,'The authored 2 extra cards must expose its preview');assert.equal(number.textContent,'2');number.focus();
+  assert.match(w.document.querySelector('[role=tooltip]').textContent,/hand limit is 10 cards/);
+  assert.match(w.document.querySelector('[role=tooltip]').textContent,/Actual extra draws depend/);assert.deepEqual(state(),before);
+ }finally{dom.window.close();}
+});
+
+test('DOM: Mystery failed review distinguishes maximum HP loss from the capped current loss',{skip:!JSDOM},()=>{
+ const r=mysteryRoom('ME01');r.hp=2;const {dom,w,click,state}=boot(r);
+ try{
+  click('continue');click('mystery-start');const q=w.DCEducation.catalog[state().mysteryState.pending.questionId];
+  click('mystery-answer',q.choices.find(c=>c.id!==q.correctChoiceId).id);const before=state(),number=w.document.querySelector('.mystery-review>p[data-stm-richtext] [data-category=calculation]');
+  assert.ok(number,'The authored maximum loss must retain its preview in review');assert.equal(number.textContent,'4');number.focus();
+  const popup=w.document.querySelector('[role=tooltip]').textContent;assert.match(popup,/Maximum HP loss/);assert.match(popup,/Actual loss: min\(4, max\(0, 2 − 1\)\) = 1 HP/);
+  assert.deepEqual(state(),before);assert.equal(state().hp,2);
  }finally{dom.window.close();}
 });

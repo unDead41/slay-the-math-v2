@@ -24,6 +24,7 @@ function ending(scene){
  await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);server.stderr.once('data',d=>reject(Error(String(d))));});
  const opts={headless:true,args:['--no-sandbox']};
  if(process.env.QA_CHROMIUM_MODULE){const chrome=require(process.env.QA_CHROMIUM_MODULE);opts.executablePath=await chrome.executablePath();opts.args=[...chrome.args,...opts.args];}
+ if(process.env.QA_CHROMIUM_EXECUTABLE)opts.executablePath=process.env.QA_CHROMIUM_EXECUTABLE;
  if(process.env.QA_DISABLE_GPU)opts.args.push('--disable-gpu');
  browser=await chromium.launch(opts);
  const context=await browser.newContext({viewport:{width:1920,height:1080},reducedMotion:'reduce'}),page=await context.newPage();
@@ -50,13 +51,13 @@ function ending(scene){
     assert.match(await page.locator('.situation-art img').getAttribute('src'),new RegExp('situation-'+expected[scene]+'\\.webp$'));
     const g=await page.evaluate(()=>{
      const im=document.querySelector('.situation-art img'),rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
-     return {overflow:document.documentElement.scrollWidth>innerWidth,fit:getComputedStyle(im).objectFit,natural:[im.naturalWidth,im.naturalHeight],art:rect(im),buttons:[...document.querySelectorAll('.situation-layout .btn,.situation-layout .choice-panel')].map(rect),cards:[...document.querySelectorAll('.situation-layout .playing-card')].map(e=>({card:rect(e),illustration:rect(e.querySelector('.math-art'))}))};
+     return {overflow:document.documentElement.scrollWidth>innerWidth,fit:getComputedStyle(im).objectFit,natural:[im.naturalWidth,im.naturalHeight],art:rect(im),buttons:[...document.querySelectorAll('.situation-layout .btn,.situation-layout .choice-panel')].filter(e=>e.getClientRects().length&&!e.closest('.shop-cards,.shop-artifact-grid')).map(rect),cards:[...document.querySelectorAll('.situation-layout .playing-card')].filter(e=>e.getClientRects().length).map(e=>({card:rect(e),illustration:rect(e.querySelector('.math-art'))}))};
     });
     assert.equal(g.overflow,false,JSON.stringify({scene,width,g}));assert.equal(g.fit,'contain');assert.ok(g.natural[0]>1600&&g.natural[1]>900);
     assert.ok(g.art.x>=-1&&g.art.right<=width+1,'Artwork overflows the viewport');
     for(const b of g.buttons)assert.ok(b.x>=-1&&b.right<=width+1&&b.height>=44,JSON.stringify({scene,width,b}));
     for(const item of g.cards){
-     assert.ok(Math.abs(item.card.y-g.cards[0].card.y)<1,'All three choices must stay in one horizontal row: '+JSON.stringify({scene,width,cards:g.cards}));
+     if(scene!=='shop')assert.ok(Math.abs(item.card.y-g.cards[0].card.y)<1,'All three reward choices must stay in one horizontal row: '+JSON.stringify({scene,width,cards:g.cards}));
      const aspect=item.card.width/item.card.height;
      assert.ok(aspect>=.5&&aspect<=.75,'Card must remain portrait: '+JSON.stringify({scene,width,height,...item}));
      assert.ok(Math.abs(item.illustration.width/item.illustration.height-1)<.02,'Illustration must keep its square source ratio: '+JSON.stringify({scene,width,...item}));
@@ -77,11 +78,11 @@ function ending(scene){
   await page.setViewportSize({width:1920,height:1080});
   const shop=room('shop');await restore(shop);await page.locator('[data-action=select-shop]').nth(1).focus();await page.keyboard.press('Space');
   assert.equal(await page.locator('[data-action=select-shop]').nth(1).getAttribute('aria-pressed'),'true');
-  await page.locator('[data-action=buy-card]').evaluate(el=>{el.click();el.click();});
-  const bought=await state();assert.equal(bought.gold,shop.gold-shop.shop.offers[1].price);assert.equal(bought.deck.length,shop.deck.length+1);assert.deepEqual(bought.shop.bought,[1]);
-  await page.reload();await click('continue');assert.deepEqual((await state()).shop,bought.shop);assert.equal(await page.locator('[data-action=select-shop]').nth(1).isDisabled(),true);assert.equal(await page.locator('.shop-price').nth(1).innerText(),'Sold');
+  await page.locator('[data-action=buy-card][data-index="1"]').evaluate(el=>{el.click();el.click();});
+  const bought=await state();assert.equal(bought.gold,shop.gold-E.shopPrice(shop,shop.shop.offers[1]));assert.equal(bought.deck.length,shop.deck.length+1);assert.deepEqual(bought.shop.bought,[1]);
+  await page.reload();await click('continue');assert.deepEqual((await state()).shop,bought.shop);assert.equal(await page.locator('[data-action=buy-card]').nth(1).isDisabled(),true);assert.equal(await page.locator('.shop-price').nth(1).innerText(),'Sold');
   await click('leave-shop');assert.equal((await state()).scene,'map');assert.equal(await page.locator('body').evaluate(el=>el.classList.contains('situation-active')),false);
-  await restore(room('shop',1));assert.match(await page.locator('.shop-stock').innerText(),/VEIL/);await click('leave-shop');
+  await restore(room('shop',1));assert.match(await page.locator('.shop-heading').innerText(),/VEIL/);await click('leave-shop');
   report.checks.push('Both stage shops retain actual stock and names; keyboard selection, exact price/deck update, once-only purchase, sold-state refresh and Leave work.');
   const camp=room('camp');await restore(camp);await click('rest');assert.equal((await state()).hp,Math.min(camp.maxHp,camp.hp+12));assert.equal((await state()).scene,'map');
   await restore(camp);await page.locator('[data-action=select-rest][data-value=upgrade]').click();await click('upgrade');assert.equal(await page.locator('#dialog').evaluate(e=>e.open),true);

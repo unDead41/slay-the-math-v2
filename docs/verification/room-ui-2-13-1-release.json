@@ -1,0 +1,58 @@
+{
+  "version": "2.13.1",
+  "date": "2026-10-22",
+  "timezone": "Asia/Kuala_Lumpur",
+  "status": "PASS",
+  "baseline": "bf7263cbb4597830a406e6571f81c3c212517eb1",
+  "verification": {
+    "syntax": "PASS",
+    "build": "PASS",
+    "nodeDom": {
+      "passed": 185,
+      "failed": 0,
+      "skipped": 0
+    },
+    "roomUiViewports": 7,
+    "mystery": {
+      "correctPaths": 30,
+      "wrongPaths": 15,
+      "viewports": 6
+    },
+    "shopBoss": "PASS",
+    "situationViewports": 11,
+    "portableMysteryShop": "PASS",
+    "portableArtifactBoss": "PASS",
+    "externalPortableRequests": 0,
+    "premiumAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "review": "No outstanding substantive findings; extra-draw and capped HP review regressions reproduced and fixed."
+  },
+  "generatedPortable": {
+    "bytes": 227220516,
+    "sha256": "3edf6b39d071917c5de3ed77b5799a81bd640ea219b2db23780ed9c38b8b1aca",
+    "committed": false
+  },
+  "notes": [
+    "No question-bank, shared mechanics bundle, engine, balance, artwork or Rest renderer changes.",
+    "Existing browser fixtures now exercise the visible tab, six-slot stock and actual per-item purchase actions. Boss Motion Off verification waits for the asynchronous idle atlas paint before checking a stable frame.",
+    "GitHub Actions status is checked separately on publication; this report records executed local checks."
+  ],
+  "reports": [
+    "mystery-2-13-1-browser.json",
+    "mystery-2-13-1-offline.json",
+    "shop-boss-2-13-1-browser.json",
+    "room-ui-2-13-1-browser.json",
+    "room-ui-2-13-1-integration-offline.json",
+    "room-ui-2-13-1-situations.json",
+    "room-ui-2-13-1-premium.json"
+  ]
+}

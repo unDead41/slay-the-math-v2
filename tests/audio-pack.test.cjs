@@ -9,6 +9,19 @@ const packPath=path.join(root,'dist/assets/music/audio-pack-3.json');
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 function pack(){assert.ok(fs.existsSync(packPath),'imported source-pack registry exists');return JSON.parse(fs.readFileSync(packPath,'utf8'));}
 
+test('active pack selects all 49 normalized voices and exactly the eight unchanged supplied BGM',()=>{
+ const p=require('../dist/music-data.js').assets;
+ assert.equal(p.sourcePack,4);assert.equal(Object.values(p.assets).filter(a=>a.bus==='voice').length,49);
+ assert.equal(p.voicePools.card_reward.length,8);assert.equal(Object.keys(p.voiceEvents).length,15);
+ const source=JSON.parse(fs.readFileSync(path.join(root,'docs/audio/source-pack-4/audio-manifest.v2.json'),'utf8'));
+ for(const item of source.assets){
+  const a=p.assets[item.id];assert.deepEqual(a.srcs,[item.proposedRuntimePath]);assert.equal(sha(fs.readFileSync(path.join(root,'dist',a.srcs[0]))),item.packageSha256);
+  assert.equal(a.playbackRate,1);assert.equal(a.clipGain,1);
+  if(a.bus==='voice'){assert.ok(Math.abs(a.integratedLufs+18)<=.5);assert.ok(a.truePeakDbTP<=-1);assert.equal(a.loop,false);}
+ }
+ assert.equal(p.assets.menu.retainedFallback,true);assert.equal(p.assets.mystery.retainedFallback,true);
+});
+
 test('supplied audio has byte-preserved explicit paths and canonical Normal/Elite sharing',()=>{
  const p=pack();
  assert.equal(p.aliases.stage1_dungeon,'bgm_combat_stage_1');

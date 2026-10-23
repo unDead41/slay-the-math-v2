@@ -6,7 +6,7 @@ function catalogSource(raw,pack){
  let library,registry;
  if(pack){
   if(pack.version!==1||!pack.assets||!pack.aliases)throw new Error('Invalid imported audio registry');
-  for(const [id,a]of Object.entries(pack.assets))if(a.id!==id||!['bgm','voice'].includes(a.bus)||!a.srcs?.length||a.srcs.some(src=>!/^assets\/(music|voice)\/[a-z0-9_/]+\.(mp3|ogg)$/.test(src)))throw new Error('Invalid registered audio: '+id);
+  for(const [id,a]of Object.entries(pack.assets))if(a.id!==id||!['bgm','voice'].includes(a.bus)||!a.srcs?.length||a.srcs.some(src=>!/^assets\/(music|voice|audio\/voice)\/[a-z0-9_/]+\.(mp3|ogg)$/.test(src)))throw new Error('Invalid registered audio: '+id);
   for(const id of Object.values(pack.aliases))if(!pack.assets[id])throw new Error('Missing aliased asset '+id);
   registry=pack;
   library=Object.values(pack.assets).filter(a=>a.bus==='bgm').map(({id,title,label,duration,retainedFallback})=>({id,title,label,duration,...(retainedFallback?{retainedFallback:true}:{})}));
@@ -18,7 +18,8 @@ function catalogSource(raw,pack){
 }
 function buildCatalog(root=path.join(__dirname,'..')){
  const raw=JSON.parse(fs.readFileSync(path.join(root,'dist/assets/music/scores.json'),'utf8'));
- const packFile=path.join(root,'dist/assets/music/audio-pack-3.json');
+ const current=path.join(root,'dist/assets/music/audio-pack-4.json');
+ const packFile=fs.existsSync(current)?current:path.join(root,'dist/assets/music/audio-pack-3.json');
  const pack=fs.existsSync(packFile)?JSON.parse(fs.readFileSync(packFile,'utf8')):null;
  const source=catalogSource(raw,pack);fs.writeFileSync(path.join(root,'dist/music-data.js'),source);
  return pack?Object.values(pack.assets).filter(a=>a.bus==='bgm').length:(Array.isArray(raw)?raw:raw.tracks).length;

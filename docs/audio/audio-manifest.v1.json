@@ -1,0 +1,655 @@
+{
+  "schemaVersion": 1,
+  "documentVersion": "1.0.0",
+  "date": "2026-10-22",
+  "timezone": "Asia/Kuala_Lumpur",
+  "project": "Slay the Math",
+  "branch": "music",
+  "status": "documentation_and_proposed_integration_data_only",
+  "runtimeInstalled": false,
+  "sourceArchive": {
+    "name": "MUSIC(2).zip",
+    "sha256": "3eed8530a56c085281d3cfc40c2f49de308cd3b279247011f0f8311b259fb23c",
+    "sizeBytes": 25952324,
+    "entries": 15,
+    "userSupplied": true,
+    "authorAndLicense": "not_asserted"
+  },
+  "auditBaseline": {
+    "repository": "unDead41/slay-the-math-v2",
+    "branch": "music",
+    "commit": "085ae6e4aed070c2b58e600f2ee8993a6b6e30e0",
+    "mainObservedAtAudit": "d9a731bad152b5b2508f8afa6c1a306ef372a53b",
+    "integrationMustRecheckLatestMain": true
+  },
+  "assets": [
+    {
+      "id": "bgm_combat_stage_1",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/combat_normal_elite_stage_1_bg.mpeg",
+      "sourceFileName": "combat_normal_elite_stage_1_bg.mpeg",
+      "sourceSha256": "39d2798b7b4a3bb79151deec2b3f4915d41853dbef2efd49262141bdfbf8c742",
+      "sourceSizeBytes": 3700448,
+      "sourceDurationSeconds": 154.8,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/stage1_combat.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "stage1_dungeon",
+        "stage1_elite"
+      ],
+      "usage": "Normal dan Elite Stage 1",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_combat_stage_2",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/combat_normal_elite_stage_2_bg.mpeg",
+      "sourceFileName": "combat_normal_elite_stage_2_bg.mpeg",
+      "sourceSha256": "244d6ea3bbb695489ede4ecedf643ee6bfcabaf589ca01a71b669043c54cc888",
+      "sourceSizeBytes": 3542508,
+      "sourceDurationSeconds": 150,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/stage2_combat.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "stage2_dungeon",
+        "stage2_elite"
+      ],
+      "usage": "Normal dan Elite Stage 2",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_boss_stage_1",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/combat_boss_stage_1_bg.mpeg",
+      "sourceFileName": "combat_boss_stage_1_bg.mpeg",
+      "sourceSha256": "5e107c84d4450a93be183bc872b9eee36e23e3c5cf101ec10299495dbc6d7987",
+      "sourceSizeBytes": 3268227,
+      "sourceDurationSeconds": 139.2,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/stage1_boss.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "stage1_boss"
+      ],
+      "usage": "Boss Stage 1",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_boss_stage_2",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/combat_boss_stage_2_bg.mpeg",
+      "sourceFileName": "combat_boss_stage_2_bg.mpeg",
+      "sourceSha256": "ff972eb0cdce2dc743ce9054ef3bae48e4b51aeb42cac4cb474f7f35dc8c789e",
+      "sourceSizeBytes": 4061774,
+      "sourceDurationSeconds": 174.936,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/stage2_boss.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "stage2_boss"
+      ],
+      "usage": "Boss Stage 2",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_shop",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/merchant_or_shop_bg.mpeg",
+      "sourceFileName": "merchant_or_shop_bg.mpeg",
+      "sourceSha256": "ff21a7aa740e33312c696738791de27a5a05f91b0692d19af81cdcc147dd833b",
+      "sourceSizeBytes": 1538832,
+      "sourceDurationSeconds": 64.44,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/shop.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "shop"
+      ],
+      "usage": "Shop, semua tab",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_rest",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/rest_site_bg.mpeg",
+      "sourceFileName": "rest_site_bg.mpeg",
+      "sourceSha256": "a672a9418c6f568d52d28b57acc196144e02e6396f74ad60fa4b232b893e67be",
+      "sourceSizeBytes": 4323258,
+      "sourceDurationSeconds": 180.048,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/rest.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "rest"
+      ],
+      "usage": "Rest Site kedua-dua stage",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_map",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/when_open_map_bg.mpeg",
+      "sourceFileName": "when_open_map_bg.mpeg",
+      "sourceSha256": "f8664c52dc80302b09e7d1f04e8b99214b24d2607d580bbe4ba0b9fb83e1c91c",
+      "sourceSizeBytes": 3923950,
+      "sourceDurationSeconds": 167.16,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/map.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "map"
+      ],
+      "usage": "Peta kedua-dua stage",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "bgm_defeat",
+      "bus": "bgm",
+      "sourcePath": "MUSIC/when_lose_current_run.mpeg",
+      "sourceFileName": "when_lose_current_run.mpeg",
+      "sourceSha256": "3177d108a8767e5a37b3616e0ff09e34aa9f9d32bc40e2f79b838a248ec51f22",
+      "sourceSizeBytes": 205212,
+      "sourceDurationSeconds": 8.52,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 48000,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": true,
+      "proposedRuntimePath": "assets/music/defeat.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [
+        "defeat"
+      ],
+      "usage": "Kalah run",
+      "mappingEvidence": "Pemetaan nama fail",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": true,
+        "status": "CADANGAN_candidate_requires_audition",
+        "startSeconds": 0,
+        "endSeconds": null,
+        "endFallback": "decodedBuffer.duration",
+        "auditionVerified": false
+      },
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_dm_01",
+      "bus": "voice",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_1.mp3",
+      "sourceFileName": "dungeon_master_when_selecting_artifact_talking_1.mp3",
+      "sourceSha256": "1a094eb469ea0dbfc5094a968880fc6c66f2f994c9c0658a09f701f227e6eeb2",
+      "sourceSizeBytes": 208362,
+      "sourceDurationSeconds": 11.964063,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/dungeon_master/meet_01.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Dungeon Master: pertemuan 1",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_dm_02",
+      "bus": "voice",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_2.mp3",
+      "sourceFileName": "dungeon_master_when_selecting_artifact_talking_2.mp3",
+      "sourceSha256": "edab46421f92fa657a952d4632f3ccd7516b2f3baaad73f80e9f9079cc2c68d8",
+      "sourceSizeBytes": 220901,
+      "sourceDurationSeconds": 12.74775,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/dungeon_master/meet_02.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Dungeon Master: pertemuan 2",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_dm_03",
+      "bus": "voice",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_3.mp3",
+      "sourceFileName": "dungeon_master_when_selecting_artifact_talking_3.mp3",
+      "sourceSha256": "476d847e8bca0e93af24ae2f13fdc15d1b3c4a9fe1b9d62d0c0712a0efe1f885",
+      "sourceSizeBytes": 207108,
+      "sourceDurationSeconds": 11.885688,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/dungeon_master/meet_03.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Dungeon Master: pertemuan 3",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_dm_04",
+      "bus": "voice",
+      "sourcePath": "MUSIC/dungeon_master_when_selecting_artifact_talking_4.mp3",
+      "sourceFileName": "dungeon_master_when_selecting_artifact_talking_4.mp3",
+      "sourceSha256": "f4e14039417c3247e415011e84af3bc033db48cc4767a368ef7fed5fa241920c",
+      "sourceSizeBytes": 223826,
+      "sourceDurationSeconds": 12.930563,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/dungeon_master/meet_04.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Dungeon Master: pertemuan 4",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_shop_01",
+      "bus": "voice",
+      "sourcePath": "MUSIC/merchant_when_open_shop_talking_1.mp3",
+      "sourceFileName": "merchant_when_open_shop_talking_1.mp3",
+      "sourceSha256": "fdbda526fc3ed6d924e65433c78a4fa6fc1057ee60f3941f953803086f320dc9",
+      "sourceSizeBytes": 215885,
+      "sourceDurationSeconds": 12.43425,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/merchant/meet_01.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Shop: pertemuan 1",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_shop_02",
+      "bus": "voice",
+      "sourcePath": "MUSIC/merchant_when_open_shop_talking_2.mp3",
+      "sourceFileName": "merchant_when_open_shop_talking_2.mp3",
+      "sourceSha256": "8a2c292cab15b2add800b64e9d73c9a3dd108727e82c97094143f5a40f0a4dea",
+      "sourceSizeBytes": 192897,
+      "sourceDurationSeconds": 10.9975,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/merchant/meet_02.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Shop: pertemuan 2",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    },
+    {
+      "id": "vo_shop_03",
+      "bus": "voice",
+      "sourcePath": "MUSIC/merchant_when_open_shop_talking_3.mp3",
+      "sourceFileName": "merchant_when_open_shop_talking_3.mp3",
+      "sourceSha256": "61e1e34fc39176960253ed014ce4a9b740784ba71b123338e050cb2dd5bccf6b",
+      "sourceSizeBytes": 293626,
+      "sourceDurationSeconds": 17.293063,
+      "sourceContainer": "mp3",
+      "sourceAudioCodec": "mp3",
+      "sourceSampleRateHz": 44100,
+      "sourceChannels": 2,
+      "sourceHasAttachedCover": false,
+      "proposedRuntimePath": "assets/voice/merchant/meet_03.mp3",
+      "runtimePathStatus": "proposed_not_created",
+      "runtimeAliases": [],
+      "usage": "Shop: pertemuan 3",
+      "mappingEvidence": "Urutan pengguna",
+      "playbackRate": 1,
+      "loop": {
+        "enabled": false,
+        "status": "CADANGAN_one_shot"
+      },
+      "transcript": null,
+      "transcriptStatus": "not_transcribed_do_not_invent",
+      "decodeVerified": true,
+      "perceptualAuditionVerified": false
+    }
+  ],
+  "voiceSequences": {
+    "dungeonMaster": {
+      "orderedVoiceIds": [
+        "vo_dm_01",
+        "vo_dm_02",
+        "vo_dm_03",
+        "vo_dm_04"
+      ],
+      "orderStatus": "DISAHKAN",
+      "counterScope": "per_run",
+      "counterScopeStatus": "CADANGAN",
+      "resetOnNewRun": true,
+      "retainAcrossStages": true,
+      "overflowPolicy": "hold_last",
+      "overflowPolicyStatus": "CADANGAN",
+      "selectionFormula": "orderedVoiceIds[Math.min(visitNumber, 4) - 1]",
+      "reopenSameEncounter": "replay_same_voice_once_per_surface_activation_without_increment",
+      "reopenStatus": "CADANGAN",
+      "countWhenMuted": true,
+      "countWhenMutedStatus": "CADANGAN",
+      "trigger": "artifact_choice_surface_enter",
+      "encounterKey": "artifact:${offer.source}",
+      "eligibility": "actual gift-choice panel visible, offer.ready true and choices nonempty; exclude paid Shop stock and education"
+    },
+    "merchant": {
+      "orderedVoiceIds": [
+        "vo_shop_01",
+        "vo_shop_02",
+        "vo_shop_03"
+      ],
+      "orderStatus": "DISAHKAN",
+      "counterScope": "per_run",
+      "counterScopeStatus": "CADANGAN",
+      "resetOnNewRun": true,
+      "retainAcrossStages": true,
+      "overflowPolicy": "hold_last",
+      "overflowPolicyStatus": "CADANGAN",
+      "selectionFormula": "orderedVoiceIds[Math.min(visitNumber, 3) - 1]",
+      "reopenSameEncounter": "replay_same_voice_once_per_surface_activation_without_increment",
+      "reopenStatus": "CADANGAN",
+      "countWhenMuted": true,
+      "countWhenMutedStatus": "CADANGAN",
+      "trigger": "shop_surface_enter",
+      "encounterKey": "shop:${run.stage}:${run.route.active ?? run.depth}",
+      "eligibility": "actual Shop visit; tabs and purchases are not new visits"
+    }
+  },
+  "routePriority": [
+    {
+      "when": "ui.home || !run",
+      "existingCue": "menu",
+      "behavior": "retain_existing"
+    },
+    {
+      "when": "visibleSurface === artifact_choice",
+      "existingCue": "mystery",
+      "behavior": "temporary_existing_fallback_no_new_artifact_bgm_supplied"
+    },
+    {
+      "when": "visibleSurface === education",
+      "existingCue": "mystery",
+      "behavior": "retain_existing_without_voice"
+    },
+    {
+      "when": "run.scene === defeat",
+      "assetId": "bgm_defeat"
+    },
+    {
+      "when": "run.scene === battle && enemy.boss && run.stage === 0",
+      "assetId": "bgm_boss_stage_1"
+    },
+    {
+      "when": "run.scene === battle && enemy.boss && run.stage === 1",
+      "assetId": "bgm_boss_stage_2"
+    },
+    {
+      "when": "run.scene === battle && !enemy.boss && run.stage === 0",
+      "assetId": "bgm_combat_stage_1"
+    },
+    {
+      "when": "run.scene === battle && !enemy.boss && run.stage === 1",
+      "assetId": "bgm_combat_stage_2"
+    },
+    {
+      "when": "run.scene === shop",
+      "assetId": "bgm_shop"
+    },
+    {
+      "when": "run.scene === camp",
+      "assetId": "bgm_rest"
+    },
+    {
+      "when": "run.scene === map",
+      "assetId": "bgm_map"
+    },
+    {
+      "when": "other scenes",
+      "behavior": "retain_existing_route_without_inventing_new_cues"
+    }
+  ],
+  "proposedMix": {
+    "status": "CADANGAN_tuning",
+    "musicDefault": 0.45,
+    "sfxDefault": 0.65,
+    "voiceDefault": 0.85,
+    "maximumActiveVoices": 1,
+    "musicCrossfadeMilliseconds": 850,
+    "voiceFadeOutMilliseconds": 80,
+    "voiceDuckingFactor": 0.3,
+    "duckAttackMilliseconds": 150,
+    "duckReleaseMilliseconds": 350,
+    "duckCombination": "minimum_factor_not_multiplication",
+    "globalMuteAffects": [
+      "music",
+      "voice",
+      "sfx"
+    ],
+    "separateVoiceVolume": true
+  },
+  "encounterState": {
+    "status": "CADANGAN_not_implemented",
+    "field": "run.audioPresentation",
+    "schemaVersion": 1,
+    "versioning": "optional_additive_metadata_keep_gameplay_state_authoritative",
+    "countersIndependent": [
+      "dungeonMaster",
+      "merchant"
+    ],
+    "incrementRule": "once_per_new_visible_encounter_key_before_playback_even_if_muted_or_decode_fails",
+    "persist": [
+      "encounter key",
+      "speaker",
+      "visit number",
+      "selected voice id"
+    ],
+    "neverPersist": [
+      "AudioContext",
+      "AudioNode",
+      "buffer",
+      "timer",
+      "surface activation token",
+      "playback offset"
+    ],
+    "checkpointPolicy": "restore_metadata_snapshot_with_its_owning_checkpoint",
+    "legacyPolicy": "no_backfill_for_unobservable_past_visits_start_current_observed_encounter_at_1",
+    "invalidAudioMetadataPolicy": "recover_audio_metadata_only_preserve_valid_gameplay_run"
+  },
+  "cancellation": {
+    "sameSurfaceRerender": "no_restart",
+    "sameEncounterReenter": "replay_same_id_once",
+    "leaveSurface": "fade_stop_voice_and_cancel_pending",
+    "hiddenPage": "stop_voice_without_visit_increment_no_automatic_voice_replay_on_show",
+    "lateDecode": "discard_if_surface_token_or_encounter_mismatch",
+    "blockedAutoplay": "defer_only_current_surface_greeting_until_user_gesture",
+    "unmuteMidEncounter": "do_not_restart_voice_automatically"
+  },
+  "notSupplied": {
+    "dedicatedSfx": [],
+    "newMainMenuBgm": false,
+    "newDungeonMasterBgm": false,
+    "newMysteryBgm": false,
+    "transcripts": false,
+    "retainExistingMusicAndSfxWhereUnmapped": true
+  },
+  "validationLimits": {
+    "status": "CADANGAN",
+    "maximumEncounterEntries": 128,
+    "allowedSpeakerIds": [
+      "dungeonMaster",
+      "merchant"
+    ],
+    "visitNumbers": "positive_safe_integer",
+    "voiceIds": "must_belong_to_speaker_sequence"
+  }
+}

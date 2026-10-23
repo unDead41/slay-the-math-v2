@@ -92,8 +92,30 @@ test('blocked autoplay retains only current greeting until a successful gesture'
  const r=rig({blocked:true}),owner={};assert.equal(typeof r.music.syncVoice,'function');
  r.music.syncVoice(greeting(),owner);await r.music.unlock();
  r.music.syncVoice(greeting('artifact:elite:0:a','vo_dm_02',2),owner);r.allowResume();r.music.unlock();await r.tick();
- assert.deepEqual([...r.pending.keys()],['assets/voice/dungeon_master/meet_02.mp3']);
+ assert.deepEqual([...r.pending.keys()],['assets/audio/voice/dungeon_master/meet_02.mp3']);
  r.release('dungeon_master/meet_02');await r.tick();assert.equal(r.music.state.voice,'vo_dm_02');
+});
+
+function clock(){
+ let now=0;const timers=new Map();return {host:{Date:{now:()=>now},setTimeout(fn,ms){const id={unref(){}};timers.set(id,{fn,at:now+ms});return id;},clearTimeout(id){timers.delete(id);}},advance(ms){now+=ms;for(let due;(due=[...timers].find(([,v])=>v.at<=now));){timers.delete(due[0]);due[1].fn();}}};
+}
+const alyssa=(key='question:q1',group='question',priority=40)=>({key,speaker:'alyssa',voiceId:group==='hint'?'vo_alyssa_hint_01':'vo_alyssa_question_01',group,scope:'q1',priority});
+test('Mystery entry waits 200 ms, expires at two seconds and cannot play after a slow decode',async()=>{
+ const c=clock(),r=rig({slowDecode:true,host:c.host}),owner={};
+ r.music.syncVoice({...alyssa('mystery:m1'),voiceId:'voice_alyssa_mystery_me01_entry',scope:'m1',delayMs:200,startDeadlineMs:2000},owner);
+ r.music.unlock();await r.tick();assert.equal(r.pending.size,0,'intro remains readable before automatic voice');
+ c.advance(199);await r.tick();assert.equal(r.pending.size,0);
+ c.advance(1);await r.tick();r.release('me01_');await r.tick();
+ c.advance(1800);r.decoded('me01_');await r.tick();assert.equal(voiceSources(r).length,0);assert.equal(r.music.state.duckFactor,1);
+});
+test('new question scope cancels a higher-priority old Hint and an old ended callback cannot unduck it',async()=>{
+ const r=rig(),owner={};r.music.syncVoice(alyssa('hint:q1','hint',80),owner);r.music.unlock();await r.tick();r.release('hint_01');await r.tick();const old=voiceSources(r)[0];
+ r.music.syncVoice({...alyssa('question:q2'),scope:'q2'},owner);await r.tick();r.release('question_01');await r.tick();
+ assert.equal(r.music.state.voice,'vo_alyssa_question_01');assert.ok(old.stopped);old.onended();assert.equal(r.music.state.duckFactor,.3);
+});
+test('voice watchdog restores music when a device omits onended',async()=>{
+ const c=clock(),r=rig({host:c.host});r.music.syncVoice(alyssa(),{});r.music.unlock();await r.tick();r.release('question_01');await r.tick();
+ assert.equal(r.music.state.duckFactor,.3);c.advance(62001);assert.equal(r.music.state.voice,null);assert.equal(r.music.state.duckFactor,1);assert.ok(voiceSources(r)[0].stopped);
 });
 
 test('Voice mute and zero volume consume greeting without replay on unmute or slider changes',async()=>{

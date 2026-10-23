@@ -1,0 +1,266 @@
+{
+  "version": "2.22.0",
+  "checks": [
+    "Production registry and all 49 MP3 voices decode in native Web Audio",
+    "Predict/Hint/More Hint use actual controls; rerender does not restart; close cancels",
+    "Dungeon Master normalized greeting yields to the Artifact question",
+    "Rest commits healing before speaking; card reward and defeat have distinct lines",
+    "Mystery intro starts independently; Start Challenge cancels it and leaves the real timer active",
+    "Practice frame sends thinking/help to the one Voice bus and leaves saved run untouched",
+    "Portable file embeds all 49 normalized voices and plays without network"
+  ],
+  "decodedVoices": [
+    {
+      "id": "vo_alyssa_question_01",
+      "duration": 11.128163265306123,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_question_02",
+      "duration": 10.501224489795918,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_question_03",
+      "duration": 9.926530612244898,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_dm_01",
+      "duration": 11.96408163265306,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_dm_02",
+      "duration": 12.747755102040816,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_dm_03",
+      "duration": 11.885714285714286,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_dm_04",
+      "duration": 12.93061224489796,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me08_entry",
+      "duration": 10.736326530612246,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me06_entry",
+      "duration": 10.971428571428572,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me09_entry",
+      "duration": 10.893061224489795,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me10_entry",
+      "duration": 11.781224489795918,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me11_entry",
+      "duration": 11.859591836734694,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me04_entry",
+      "duration": 11.781224489795918,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me15_entry",
+      "duration": 12.408163265306122,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me13_entry",
+      "duration": 10.501224489795918,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me02_entry",
+      "duration": 12.173061224489796,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me12_entry",
+      "duration": 12.329795918367347,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me05_entry",
+      "duration": 11.206530612244897,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me07_entry",
+      "duration": 10.65795918367347,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me14_entry",
+      "duration": 12.09469387755102,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me01_entry",
+      "duration": 12.66938775510204,
+      "sampleRate": 44100
+    },
+    {
+      "id": "voice_alyssa_mystery_me03_entry",
+      "duration": 11.128163265306123,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_hint_01",
+      "duration": 10.187755102040816,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_hint_02",
+      "duration": 10.579591836734695,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_hint_03",
+      "duration": 11.128163265306123,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_hint_04",
+      "duration": 10.344489795918367,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_more_hint_01",
+      "duration": 10.344489795918367,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_more_hint_02",
+      "duration": 11.781224489795918,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_more_hint_03",
+      "duration": 11.546122448979592,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_more_hint_04",
+      "duration": 10.81469387755102,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_run_defeat_01",
+      "duration": 9.299591836734693,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_run_defeat_02",
+      "duration": 9.142857142857142,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_run_defeat_03",
+      "duration": 10.187755102040816,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_run_defeat_04",
+      "duration": 9.142857142857142,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_shop_01",
+      "duration": 12.434285714285714,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_shop_02",
+      "duration": 10.997551020408164,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_shop_03",
+      "duration": 17.293061224489797,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_rest_01",
+      "duration": 11.206530612244897,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_rest_02",
+      "duration": 9.37795918367347,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_rest_03",
+      "duration": 9.221224489795919,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_rest_04",
+      "duration": 10.893061224489795,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_01",
+      "duration": 9.221224489795919,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_02",
+      "duration": 8.333061224489796,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_03",
+      "duration": 9.613061224489796,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_04",
+      "duration": 9.691428571428572,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_05",
+      "duration": 9.37795918367347,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_06",
+      "duration": 8.568163265306122,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_07",
+      "duration": 11.284897959183674,
+      "sampleRate": 44100
+    },
+    {
+      "id": "vo_alyssa_reward_card_08",
+      "duration": 9.37795918367347,
+      "sampleRate": 44100
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Automated Chromium playback/decode, not human audition or physical Windows/device testing.",
+    "Source pack has eight card reward recordings. No new correct/wrong-answer recordings or SFX were supplied."
+  ],
+  "browser": "153.0.8010.0",
+  "status": "PASS"
+}

@@ -27,3 +27,7 @@ Friends do not install Node.js and the owner's PC need not stay on. Saves and le
 - A 404 before the first successful deployment is expected; check Pages Source and the workflow result.
 - If Actions reports account billing/disabled-workflow restrictions, the account owner must resolve those in GitHub. No payment or billing changes are made by this setup.
 - Use the Pages URL ending with `/`; do not share the repository code URL or localhost.
+
+## First hosted attempt
+
+Run https://github.com/unDead41/slay-the-math-v2/actions/runs/39954703122 failed before any build step. GitHub check annotation: "The job was not started because your account is locked due to a billing issue." The local production/subpath browser checks passed, but this is not a live deployment. Resolve the account restriction, enable the Pages source, then rerun the workflow. No billing changes were made.

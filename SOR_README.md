@@ -91,3 +91,5 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 
 
 - [20 — Developer Tools](docs/sor/20_DEVELOPER_TOOLS.md): development/production commands, sandbox scenes, card states, motion, presets and diagnostics.
+
+- [22 — Economy, loot and rewards candidate](docs/sor/22_ECONOMY_REWARDS.md): exact-base audit, opt-in tuning, source rules, saved receipts, all-event tables, seed histograms/Gold-recovery projections and Master handoff. Student 90/70/50 targets remain unmeasured.

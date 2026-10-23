@@ -431,3 +431,9 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 - DITERUSKAN: source inventory contains 26 additions: 4 answering, 4 Hint, 4 More Hint, 5 correct and 9 wrong. Use every available recording; retain all 57 preceding supplied files without re-encoding. The stale embedded v2 manifest does not describe the new additions.
 - DITERUSKAN: master new talking to the existing -18 LUFS ±0.5 / encoded TP ≤ -1 dBTP standard; retain rate/gain 1 and the original ZIP. Use actual ordered reducer events for answer/support reactions, with per-attempt receipts and no outcome for timeout/reveal/exhaustion.
 - IMPLEMENTED contract and audit: [Audio 2.24.0](../AUDIO_2_24_0.md). Human audition, verified transcripts and physical Windows/device testing remain unverified.
+
+## DEC-20261023-ECON-01 — isolated economy work
+
+**DISAHKAN:** Ijamm requests Economy/Loot/Rewards audit and tested proposals on base 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7, branch balance/economy, no merge/push main; source rules and random nonrepeat questions preserved; CP unmeasured stays null; Combat/Map gaps NEEDS_INPUT.
+
+**CADANGAN / implemented experiment:** economy-1.2-candidate.1 opts in through New Run. Default/legacy remains current. Single config, immutable source-derived loot receipts, bounded support, six/one-sale Shop, price/removal/recovery/event adapters. Actual artifact values and HP 60 retained because final Combat input is unavailable. n counts paid Shop removals. Evidence and limitations: docs/economy/SOR_ECONOMY_REWARDS.md and HANDOFF_MASTER.md. No student/CP claim. Reversible via omission of the explicit economy option; unknown snapshot versions reject rather than silently migrate.

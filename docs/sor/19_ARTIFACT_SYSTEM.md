@@ -79,3 +79,7 @@ ART-23 (2.11.0): INTEGRATION.zip supplies Artifact 3.5 with the same 31 IDs, tri
 ## Map, modes, Boss and Shop — 2.12.0
 
 ART-24 (2.12): paid Shop acquisition works in Learn and Challenge, with 3 Starting/2 mid-tier/1 Boss unowned eligible offers. Buy spends Gold and grants the unique artifact/source once; it is separate from free Claim, whose Challenge education gate is unchanged. Starting purchases do not replace startingId or invent extra opening gifts. Learn gets no new free gift paths. Legacy Challenge can use a shopOnly ledger without a startingId. Discount artifacts immediately update unsold quotes; strongest rate only, after the single card sale. Purchased Boss items are excluded from subsequent Boss gifts; that offer may contain one/two/three remaining items or be exhausted. Existing effect values/triggers/unsupported exclusions remain.
+
+## Economy candidate — 23 October 2026
+
+Only runs explicitly created with economy=true use [SOR 22](22_ECONOMY_REWARDS.md). Their artifact offers use saved source-derived uniform tier loot, ownership/capability eligibility, and 3/2/1 Shop slots with Boss locked in Stage 1. Card support/rarity/duplicate factors never apply to artifacts. Passive eligibility is real; End Turn or Draw-candidate discard is not Hand discard. All effect values, HP base and discount 5%/15% remain the exact 2.24.0 Combat input. Existing acquisition, education and effect owners remain. Default and pending legacy offers keep their contract.

@@ -9,3 +9,7 @@ Costs/rewards are explicit atomic transactions, failure damage is nonlethal outs
 ## Presentation correction — 2.13.1
 
 The supplied scene is now a full encounter background, matching the established Dungeon Master composition, with a right-side live panel and a mobile art banner. Intro, review and reward rules use the existing game-term glossary and preview calculation popup. Source question rich text and mathematics remain unchanged. Previews read the current snapshot only: costs, HP floors, healing caps and Max HP clamping are shown before any transaction. They do not expose a question early, alter a deadline, record a resolved event or grant/pay anything. See [room UI 2.13.1](../ROOM_UI_2_13_1.md).
+
+## Economy candidate — 23 October 2026
+
+For opt-in economyState only, [SOR 22](22_ECONOMY_REWARDS.md) adapts all fifteen events to saved economy profiles: times, Gold/heal/cost/failure and ME15/ME14 specifics. Live stakes/eligibility/resolver/validation share the frozen adapted definition. ME03 remains Skill-only; ME04 same-category/reset upgrade; ME10 keeps at least ten; ME13 creates one Normal encounter with only Normal rewards. Legacy pending deadlines/prices/questions remain untouched. Topic/question data and random nonrepeat selection are unchanged. Values remain candidate, not student win-rate evidence.

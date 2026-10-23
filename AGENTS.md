@@ -60,3 +60,7 @@ Nama MC belum diputuskan. Gunakan `mc_01` sebagai ID sementara. Jangan mengimpor
 ## Rich text — current rule (22 October 2026)
 
 Use color only to distinguish annotated rich-text categories: soft pink for math terms, soft green for game terms and soft purple for calculations. Do not add decorative underlines (solid, dashed or dotted) or bottom borders to tokens, including hover states, cards, questions, answers, hints, tooltips and Practice legends. Preserve real mathematical fraction bars, keyboard focus outlines and tooltip interactions. This supersedes older rich-text underline instructions.
+
+## Economy & Rewards candidate (23 October 2026)
+
+For economy/loot work read docs/sor/22_ECONOMY_REWARDS.md and docs/economy/HANDOFF_MASTER.md. economy-1.2-candidate.1 is opt-in and preserves default/legacy. CP remains null/UNMEASURED; fixed requirement tags are not measured power. New numerical profiles are CADANGAN, Combat/Map gaps NEEDS_INPUT. Never reroll opened offers or change question/combat RNG through card-offer weighting. Do not activate full difficulty or overwrite other balance branches from this candidate alone.

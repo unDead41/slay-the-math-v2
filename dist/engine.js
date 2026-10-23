@@ -2,6 +2,7 @@
 const C=typeof module!=='undefined'?require('./config.js'):root.DCConfig,M=typeof module!=='undefined'?require('./math.js'):root.DCMath,G=typeof module!=='undefined'?require('./map.js'):root.DCMap,A=typeof module!=='undefined'?require('./artifacts.js'):root.DCArtifacts,Q=typeof module!=='undefined'?require('./education.js'):root.DCEducation,R=typeof module!=='undefined'?require('./rich-text.js'):root.DCRichText;
 const clone=x=>JSON.parse(JSON.stringify(x));
 const X=typeof module!=='undefined'?require('./mystery.js'):root.DCMystery;
+const Eco=typeof module!=='undefined'?require('./economy.js'):root.STMEconomy;
 const CC=typeof module!=='undefined'?require('./card-combat.js'):root.DCCardCombat;
 const P=typeof module!=='undefined'?require('./combat-predict.js'):root.DCCombatPredict;
 const Log=typeof module!=='undefined'?require('./combat-log.js'):root.DCCombatLog;
@@ -30,7 +31,7 @@ function shuffle(r,a){for(let i=a.length-1;i>0;i--){const j=Math.floor(rng(r)*(i
 function card(r,key,upgraded=false){return {uid:'c'+(++r.seq),key,upgraded};}
 function definition(c){const d=C.cards[c.key];if(!d)throw new Error('Unknown card.');const v={...d};if(c.upgraded&&CC.get(c)?.category==='passive')v.cost=Math.max(0,v.cost-C.CARD_UPGRADES.passive);if(c.upgraded&&!CC.get(c)){for(const k of ['damage','block','filter','draw','heal','focus'])if(v[k])v[k]+=d.up;}return v;}
 function notify(r,s){r.notice=s;if(r.battle){r.battle.log.unshift(s);r.battle.log=r.battle.log.slice(0,8);}return r;}
-function newRun(seed=Date.now(),mode='learn',routeVersion=3){const r={version:1,textLocale:'en',mode,rng:seed>>>0,seed:seed>>>0,seq:0,stage:0,depth:0,hp:C.MAX_HP,maxHp:C.MAX_HP,deck:[],cleared:[],route:G.begin(0,seed,routeVersion),scene:'map',battle:null,rewards:[],checkpoint:null,started:Date.now(),gold:C.ECONOMY.start,shop:null,stats:{cardsPlayed:0,hintsUsed:0,battles:0,turns:0,forecasts:0,firstCorrect:0,assisted:0,wrong:0,concepts:{}},notice:''};for(const [key,n] of (C.STARTER||[['strike',3],['ember',3],['guard',2],['flameguard',2],['filter',1],['draw',1]]))for(let i=0;i<n;i++)r.deck.push(card(r,key));if(mode==='challenge')A.enable(r);return r;}
+function newRun(seed=Date.now(),mode='learn',routeVersion=3,options=null){const r={version:1,textLocale:'en',mode,rng:seed>>>0,seed:seed>>>0,seq:0,stage:0,depth:0,hp:C.MAX_HP,maxHp:C.MAX_HP,deck:[],cleared:[],route:G.begin(0,seed,routeVersion),scene:'map',battle:null,rewards:[],checkpoint:null,started:Date.now(),gold:C.ECONOMY.start,shop:null,stats:{cardsPlayed:0,hintsUsed:0,battles:0,turns:0,forecasts:0,firstCorrect:0,assisted:0,wrong:0,concepts:{}},notice:''};for(const [key,n] of (C.STARTER||[['strike',3],['ember',3],['guard',2],['flameguard',2],['filter',1],['draw',1]]))for(let i=0;i<n;i++)r.deck.push(card(r,key));if(options?.economy)Eco.init(r,options);if(mode==='challenge')A.enable(r);return r;}
 function draw(r,n){
  const b=r.battle;let drawn=0;
  // Check capacity before touching either pile or the shuffle RNG.
@@ -69,14 +70,15 @@ function finishNode(r){
  if(r.mysteryState?.pending?.phase==='combat')r.mysteryState.pending=null;
  r.cleared.push(id);r.depth++;r.battle=null;r.shop=null;r.rewards=[];r.scene='map';return r;
 }
+function rewardGold(r){const b=r.battle,p=Eco.profile(r);return p?(C.enemies[b.enemyId].boss?(r.stage===0?p.boss1_gold:0):b.elite?p.elite_gold:p.battle_gold):(C.enemies[b.enemyId].boss?C.ECONOMY.boss:b.elite?C.ECONOMY.elite:C.ECONOMY.battle);}
 function win(r){
- const b=r.battle;A.won(r,artifactContext);r.stats.battles++;
- r.gold=(r.gold||0)+(C.enemies[b.enemyId].boss?C.ECONOMY.boss:b.elite?C.ECONOMY.elite:C.ECONOMY.battle);
+ if(r.scene!=='battle')return r;const b=r.battle;A.won(r,artifactContext);r.stats.battles++;
+ r.gold=(r.gold||0)+rewardGold(r);
  if(C.enemies[b.enemyId].boss){
   if(r.stage===1){r.scene='victory';if(r.mysteryState)r.mysteryState.nextCombat=[];r.finished=Math.max(r.started,Date.now());return notify(r,'You cleared both dungeons!');}
   r.scene='stageclear';r.finished=Math.max(r.started,Date.now());if(r.mode==='challenge'&&r.artifactState)A.offer(r,'boss');return notify(r,'Sigil Keep cleared.');
  }
- r.scene='reward';r.rewards=shuffle(r,(C.CARD_POOL||Object.keys(C.cards)).slice()).slice(0,3);
+ r.scene='reward';r.rewards=Eco.active(r)?Eco.cards(r,b.elite?'elite':'normal').ids.slice():shuffle(r,(C.CARD_POOL||Object.keys(C.cards)).slice()).slice(0,3);
  if(b.elite&&r.mode==='challenge'&&r.artifactState)A.offer(r,'elite',false);
  return notify(r,'Battle won. Choose one reward.');
 }
@@ -148,6 +150,7 @@ function endTurn(r){
 function chooseReward(r,key){
  if(r.scene!=='reward'||r.artifactState?.offer?.ready)throw new Error('No card reward is available.');
  if(key&&!r.rewards.includes(key))throw new Error('Choose one of the offered cards.');
+ if(key&&r.deck.length>=60)throw Error('Your deck is full. Skip this reward.');
  if(key){const reward=card(r,key,!!r.battle?.elite);r.deck.push(reward);if(r.artifactState?.offer?.kind==='elite')r.battle.discard.push(clone(reward));}
  if(r.artifactState?.offer?.kind==='elite'){r.artifactState.offer.ready=true;return r;}
  return finishNode(r);
@@ -169,15 +172,16 @@ function skipArtifact(r){
  if(!o?.ready||!['elite','mystery'].includes(o.kind))throw new Error('Choose an artifact to continue.');
  r.artifactState.offer=null;return finishNode(r);
 }
-function camp(r,action,uid){if(r.scene!=='camp')throw new Error('No Rest site is active.');if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+12);R.record(r,'Rest',[],[R.healing(12,before,r.hp,r.maxHp)]);}else if(action==='upgrade'){const c=r.deck.find(x=>x.uid===uid&&canUpgrade(x));if(!c)throw new Error('Choose a card that is not upgraded.');c.upgraded=true;}else throw new Error('Choose Rest or Upgrade.');return finishNode(r);}
+function restHeal(r){return Eco.profile(r)?.rest_heal??12;}
+function camp(r,action,uid){if(r.scene!=='camp')throw new Error('No Rest site is active.');if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+restHeal(r));R.record(r,'Rest',[],[R.healing(restHeal(r),before,r.hp,r.maxHp)]);}else if(action==='upgrade'){const c=r.deck.find(x=>x.uid===uid&&canUpgrade(x));if(!c)throw new Error('Choose a card that is not upgraded.');c.upgraded=true;}else throw new Error('Choose Rest or Upgrade.');return finishNode(r);}
 function event(r,action,uid){if(r.scene!=='event'||r.artifactState?.offer||r.mysteryState?.pending)throw new Error('No Mystery event is active.');if(action==='artifact'){if(r.mode!=='challenge'||!r.artifactState||!A.offer(r,'mystery'))throw new Error('No new artifacts are available.');return r;}if(action==='heal'){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+8);R.record(r,'Mystery healing',[],[R.healing(8,before,r.hp,r.maxHp)]);}else if(action==='remove'){if(r.deck.length<=10)throw new Error('Keep at least 10 cards in your deck.');const i=r.deck.findIndex(c=>c.uid===uid);if(i<0)throw new Error('Card not found.');r.deck.splice(i,1);}else if(action!=='skip')throw new Error('Choose a valid option.');return finishNode(r);}
 
 // Shop uses a private deterministic stream. Combat and artifact RNG never reroll stock.
 function shopRandom(r,nodeId){let value=(r.seed^Math.imul(r.stage+1,2246822519))>>>0;for(const ch of nodeId)value=(Math.imul(value,31)+ch.charCodeAt(0))>>>0;return ()=>{value=(Math.imul(value,1664525)+1013904223)>>>0;return value;};}
-function shopOffers(r,nodeId,legacy=false,oldCatalog=false){const next=shopRandom(r,nodeId),pool=(legacy||oldCatalog?Object.keys(C.cards).filter(k=>!CC.get({key:k})):(C.CARD_POOL||Object.keys(C.cards))).slice(),offers=[];for(let i=0;i<(legacy?3:6);i++){const key=pool.splice(next()%pool.length,1)[0],basePrice=C.ECONOMY.prices[C.cards[key].cost==='X'?2:C.cards[key].cost];offers.push(legacy?{key,price:A.price(r,basePrice)}:{key,basePrice,price:basePrice,sale:false});}if(!legacy){const sale=next()%offers.length;offers[sale].sale=true;offers[sale].price=Math.ceil(offers[sale].basePrice*(100-C.ECONOMY.shop.salePercent)/100);}return offers;}
-function shopArtifacts(r,nodeId,ownedBefore){const next=shopRandom(r,nodeId+':artifacts'),offers=[];for(const [tier,count] of [['starting',3],['elite_mystery',2],['boss',1]]){const pool=Object.values(A.catalog).filter(a=>a.tier===tier&&!ownedBefore.includes(a.id)&&!a.requires).map(a=>a.id);for(let i=0;i<count;i++)offers.push({id:pool.length?pool.splice(next()%pool.length,1)[0]:null,tier,price:C.ECONOMY.shop.artifactPrices[tier]});}return offers;}
+function shopOffers(r,nodeId,legacy=false,oldCatalog=false){if(Eco.active(r)&&!legacy&&!oldCatalog){const receipt=Eco.cards(r,'shop',{nodeId});return receipt.ids.map((key,i)=>{const basePrice=Eco.data.economy.card_prices_by_rarity[C.cards[key].rarity];return {key,basePrice,price:basePrice,sale:i===receipt.saleIndex,upgraded:false};});}const next=shopRandom(r,nodeId),pool=(legacy||oldCatalog?Object.keys(C.cards).filter(k=>!CC.get({key:k})):(C.CARD_POOL||Object.keys(C.cards))).slice(),offers=[];for(let i=0;i<(legacy?3:6);i++){const key=pool.splice(next()%pool.length,1)[0],basePrice=C.ECONOMY.prices[C.cards[key].cost==='X'?2:C.cards[key].cost];offers.push(legacy?{key,price:A.price(r,basePrice)}:{key,basePrice,price:basePrice,sale:false});}if(!legacy){const sale=next()%offers.length;offers[sale].sale=true;offers[sale].price=Math.ceil(offers[sale].basePrice*(100-C.ECONOMY.shop.salePercent)/100);}return offers;}
+function shopArtifacts(r,nodeId,ownedBefore){if(Eco.active(r)){const offers=[];for(const [tier,count]of [['starting',3],['elite_mystery',2],['boss',1]]){const locked=tier==='boss'&&r.stage===0,receipt=locked?null:Eco.artifacts(r,'shop_'+tier,tier,count,{nodeId});for(let i=0;i<count;i++)offers.push({id:receipt?.ids[i]||null,tier,price:Eco.data.economy.artifact_prices[tier],locked});}return offers;}const next=shopRandom(r,nodeId+':artifacts'),offers=[];for(const [tier,count] of [['starting',3],['elite_mystery',2],['boss',1]]){const pool=Object.values(A.catalog).filter(a=>a.tier===tier&&!ownedBefore.includes(a.id)&&!a.requires).map(a=>a.id);for(let i=0;i<count;i++)offers.push({id:pool.length?pool.splice(next()%pool.length,1)[0]:null,tier,price:C.ECONOMY.shop.artifactPrices[tier]});}return offers;}
 function createShop(r,nodeId){const ownedBefore=A.owned(r).map(a=>a.id);return {version:2,offers:shopOffers(r,nodeId),bought:[],ownedBefore,artifacts:shopArtifacts(r,nodeId,ownedBefore),artifactBought:[],removed:null};}
-function shopPriceCalculation(r,offer){if(r.shop?.version!==2)return {...A.priceCalculation(r,C.ECONOMY.prices[C.cards[offer.key].cost==='X'?2:C.cards[offer.key].cost]),value:offer.price,after:offer.price};const result=A.priceCalculation(r,offer.price);if(offer.sale){result.before=offer.basePrice;result.lines.unshift('Card sale: '+C.ECONOMY.shop.salePercent+'% off '+offer.basePrice+' Gold → '+offer.price+' Gold before artifact discount.');}return result;}
+function shopPriceCalculation(r,offer){if(Eco.active(r))return Eco.quote(r,offer.basePrice??offer.price,{sale:!!offer.sale,upgraded:!!offer.upgraded});if(r.shop?.version!==2)return {...A.priceCalculation(r,C.ECONOMY.prices[C.cards[offer.key].cost==='X'?2:C.cards[offer.key].cost]),value:offer.price,after:offer.price};const result=A.priceCalculation(r,offer.price);if(offer.sale){result.before=offer.basePrice;result.lines.unshift('Card sale: '+C.ECONOMY.shop.salePercent+'% off '+offer.basePrice+' Gold → '+offer.price+' Gold before artifact discount.');}return result;}
 function shopPrice(r,offer){return shopPriceCalculation(r,offer).value;}
 function buyCard(r,index){
  if(r.scene!=='shop'||!Number.isInteger(index)||index<0||index>=r.shop.offers.length||r.shop.bought.includes(index))throw new Error('This card is no longer for sale.');
@@ -195,12 +199,12 @@ function buyArtifact(r,index){
  const calculation=shopPriceCalculation(r,offer),before=r.gold;r.gold-=price;A.acquire(r,item.id,source);r.shop.artifactBought.push(index);
  R.record(r,item.name+' purchased',[item.id],[calculation,R.delta('Gold spent','Gold',before,before-price,['Purchase price: '+price+' Gold','Gold after payment: '+before+' − '+price+' = '+(before-price)])]);return notify(r,item.name+' purchased.');
 }
-function shopRemovalPrice(r){return A.price(r,C.ECONOMY.shop.removePrice);}
+function shopRemovalPrice(r){return Eco.active(r)?Eco.quote(r,Eco.data.economy.removal_base+Eco.data.economy.removal_growth*r.economyState.removalCount).value:A.price(r,C.ECONOMY.shop.removePrice);}
 function removeShopCard(r,uid){
  if(r.scene!=='shop'||r.shop?.version!==2||r.shop.removed)throw new Error('Card removal is no longer available here.');
  if(r.deck.length<=C.ECONOMY.shop.minimumDeck)throw new Error('Keep at least '+C.ECONOMY.shop.minimumDeck+' cards in your deck.');
  const index=r.deck.findIndex(c=>c.uid===uid),price=shopRemovalPrice(r);if(index<0)throw new Error('Card not found.');if(r.gold<price)throw new Error('Not enough Gold.');
- const before=r.gold;r.gold-=price;r.shop.removed=r.deck.splice(index,1)[0];
+ const before=r.gold;r.gold-=price;r.shop.removed=r.deck.splice(index,1)[0];if(Eco.active(r))r.economyState.removalCount++;
  R.record(r,'Card removed',[],[R.delta('Gold spent','Gold',before,r.gold,['Remove '+definition(r.shop.removed).name+': '+price+' Gold'])]);return notify(r,definition(r.shop.removed).name+' removed from your deck.');
 }
 function validShop(r){
@@ -208,6 +212,7 @@ function validShop(r){
  if(!s||!indices(s.bought,s.version===2?6:3))return false;
  if(s.version===undefined)return JSON.stringify(shopOffers(r,r.route.active,true))===JSON.stringify(s.offers);
  if(s.version!==2||!Array.isArray(s.ownedBefore)||new Set(s.ownedBefore).size!==s.ownedBefore.length||s.ownedBefore.some(id=>!A.has(r,id))||!indices(s.artifactBought,6))return false;
+ if(Eco.active(r)&&(!Eco.lookup(r,'card','shop',{nodeId:r.route.active})||['starting','elite_mystery',...(r.stage===1?['boss']:[])].some(t=>!Eco.lookup(r,'artifact','shop_'+t,{nodeId:r.route.active}))))return false;
  if((JSON.stringify(s.offers)!==JSON.stringify(shopOffers(r,r.route.active))&&JSON.stringify(s.offers)!==JSON.stringify(shopOffers(r,r.route.active,false,true)))||JSON.stringify(s.artifacts)!==JSON.stringify(shopArtifacts(r,r.route.active,s.ownedBefore)))return false;
  const purchased=s.artifactBought.map(i=>s.artifacts[i].id);if(purchased.some((id,i)=>!id||!r.artifactState?.acquired.some(x=>x.id===id&&x.source==='shop:'+r.stage+':'+r.route.active+':'+s.artifactBought[i])))return false;
  if(A.owned(r).some(a=>!s.ownedBefore.includes(a.id)&&!purchased.includes(a.id)))return false;
@@ -217,26 +222,27 @@ function validShop(r){
 }
 function leaveShop(r){if(r.scene!=='shop')throw new Error('No Shop is active.');return finishNode(r);}
 
-function nextStage(r){if(r.scene!=='stageclear'||r.artifactState?.offer)throw new Error('Choose your Boss artifact before entering Stage 2.');const routeVersion=r.route?.version===3?3:2;r.cleared.push(r.route?.active||'0:4');r.stage=1;r.depth=0;r.route=G.begin(1,r.seed,routeVersion);r.hp=Math.min(r.maxHp,r.hp+12);r.battle=null;r.scene='map';delete r.finished;r.checkpoint=null;r.checkpoint=clone(r);return r;}
-function retry(r){if(!r.checkpoint){const out=newRun(r.seed,r.mode,r.route?.version||2);if(r.route===undefined)delete out.route;if(!r.artifactState){delete out.artifactState;out.scene='map';}return Q.carryRunQuestions(out,r);}const out=clone(r.checkpoint);out.checkpoint=clone({...r.checkpoint,checkpoint:null});return Q.carryRunQuestions(out,r);}
+function nextStage(r){if(r.scene!=='stageclear'||r.artifactState?.offer)throw new Error('Choose your Boss artifact before entering Stage 2.');const routeVersion=r.route?.version===3?3:2;r.cleared.push(r.route?.active||'0:4');r.stage=1;r.depth=0;r.route=G.begin(1,r.seed,routeVersion);r.hp=Math.min(r.maxHp,r.hp+(Eco.profile(r)?.stage_clear_heal??12));r.battle=null;r.scene='map';delete r.finished;r.checkpoint=null;r.checkpoint=clone(r);return r;}
+function retry(r){if(!r.checkpoint){const out=newRun(r.seed,r.mode,r.route?.version||2,Eco.active(r)?{economy:true,difficulty:r.economyState.difficulty,support:r.economyState.support}:null);if(r.route===undefined)delete out.route;if(!r.artifactState){delete out.artifactState;out.scene='map';}return Q.carryRunQuestions(out,r);}const out=clone(r.checkpoint);out.checkpoint=clone({...r.checkpoint,checkpoint:null});return Q.carryRunQuestions(out,r);}
 function validate(s){try{return validateState(s);}catch(_){return false;}}
 function validateState(s){const nonnegative=n=>Number.isSafeInteger(n)&&n>=0;const cardOK=c=>c&&typeof c.uid==='string'&&/^c\d+$/.test(c.uid)&&Object.hasOwn(C.cards,c.key)&&typeof c.upgraded==='boolean';
  const phase=Q.context(s)?.scene;
  if(!s||typeof s!=='object'||s.version!==1||!['learn','challenge'].includes(s.mode)||!Array.isArray(s.deck)||s.deck.length<1||s.deck.length>60||!s.deck.every(cardOK)||new Set(s.deck.map(c=>c.uid)).size!==s.deck.length||![0,1].includes(s.stage)||!Number.isInteger(s.depth)||s.depth<0||s.depth>(s.route?.version===3?9:4)||!nonnegative(s.hp)||s.hp>s.maxHp||s.maxHp!==A.maxHp(s)||!nonnegative(s.rng)||s.rng>4294967295||!nonnegative(s.seed)||!nonnegative(s.seq)||s.deck.some(c=>Number(c.uid.slice(1))>s.seq)||!Array.isArray(s.cleared)||!s.cleared.every(v=>typeof v==='string')||!Number.isFinite(s.started)||!s.stats||typeof s.stats.concepts!=='object'||!['battles','turns','forecasts','firstCorrect','assisted','wrong'].every(k=>nonnegative(s.stats[k]))||s.stats.forecasts!==s.stats.firstCorrect+s.stats.assisted||!['master','education','map','battle','reward','camp','event','shop','stageclear','defeat','victory'].includes(s.scene))return false;
  if(s.finished!==undefined&&(!Number.isFinite(s.finished)||s.finished<s.started||!['stageclear','defeat','victory'].includes(phase)))return false;
- if(!CC.valid(s,cardOK,cardContext)||!R.valid(s)||!Q.valid(s)||!P.valid(s)||!Log.valid(s)||!X.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
+ if(!Eco.valid(s)||!CC.valid(s,cardOK,cardContext)||!R.valid(s)||!Q.valid(s)||!P.valid(s)||!Log.valid(s)||!X.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
  if(['cardsPlayed','hintsUsed'].some(k=>s.stats[k]!==undefined&&!nonnegative(s.stats[k])))return false;
  if(s.gold!==undefined&&(!nonnegative(s.gold)||s.gold>100000))return false;
  if(s.scene==='shop'&&!validShop(s))return false;
 
  for(const st of Object.values(s.stats.concepts))if(!st||!['total','first','assisted'].every(k=>nonnegative(st[k]))||st.total!==st.first+st.assisted)return false;
  if((!s.route&&phase==='camp'&&s.depth!==2)||(!s.route&&phase==='event'&&s.depth!==3)||(phase==='stageclear'&&(s.stage!==0||s.depth!==(s.route?.version===3?9:4)))||(phase==='victory'&&(s.stage!==1||s.depth!==(s.route?.version===3?9:4)))||(phase==='defeat'&&s.hp!==0)||(['battle','reward','stageclear','victory','defeat'].includes(phase)&&!s.battle))return false;
+ if(Eco.active(s)&&phase==='reward'){const receipt=Eco.lookup(s,'card',s.battle?.elite?'elite':'normal');if(!receipt||JSON.stringify(s.rewards)!==JSON.stringify(receipt.ids))return false;}
  if(phase==='reward'&&(!Array.isArray(s.rewards)||s.rewards.length!==3||new Set(s.rewards).size!==3||!s.rewards.every(k=>Object.hasOwn(C.cards,k))))return false;
  if(s.battle){const b=s.battle,e=C.enemies[b.enemyId];if(!e||!['draw','hand','discard','exhaust'].every(k=>Array.isArray(b[k])&&b[k].every(cardOK))||!nonnegative(b.hp)||b.hp>b.maxHp||!nonnegative(b.maxHp)||b.maxHp<1||!nonnegative(b.energy)||b.energy>A.maxEnergy(s)||!nonnegative(b.focus)||b.focus>3||!nonnegative(b.turn)||b.turn<1||!Array.isArray(b.log)||!b.log.every(v=>typeof v==='string')||!nonnegative(b.block)||!nonnegative(b.enemyBlock)||!nonnegative(b.seals)||b.seals>(e.seals?.length||0)||!['forecastUsed','boostArmed','boostUsed','elite'].every(k=>typeof b[k]==='boolean')||!b.currentIntent||!nonnegative(b.currentIntent.damage)||typeof b.currentIntent.label!=='string'||!nonnegative(b.currentIntent.rage)||(b.currentIntent.block!==undefined&&!nonnegative(b.currentIntent.block))||(b.currentIntent.hits!==undefined&&(!Number.isSafeInteger(b.currentIntent.hits)||b.currentIntent.hits<1||b.currentIntent.hits>10)))return false;
  const all=[...b.draw,...b.hand,...b.discard,...b.exhaust,...(b.active||[]),...(b.resolving||[]),...(b.cardChoice?.committed?b.cardChoice.candidates:[])];if(all.length!==s.deck.length||new Set(all.map(c=>c.uid)).size!==all.length||all.some(c=>!s.deck.some(x=>x.uid===c.uid&&x.key===c.key&&x.upgraded===c.upgraded)))return false;
  if(b.question&&b.question.source!=='bank'){const q=b.question;if(!Array.isArray(q.source)||!q.source.length||q.source.length>60||!q.source.every(c=>cardOK(c)&&['attack','guard','tactic','passive'].includes(c.role)&&['fire','ice','neutral'].includes(c.element))||!['single','exclusive','overlap','pairWithout','pairWith','atLeast'].includes(q.kind)||!nonnegative(q.attempts)||typeof q.hinted!=='boolean'||typeof q.solved!=='boolean'||(q.seal!==null&&(!nonnegative(q.seal)||q.seal>1))||(q.trial!==undefined&&(!Array.isArray(q.trial)||q.trial.length>2||q.trial.some(x=>!x||!['attack','guard','tactic','passive'].includes(x.role)||!['fire','ice','neutral'].includes(x.element)))))return false;const expected=M.makeQuestion(q.source,q.kind);if(!expected||q.n!==expected.n||q.d!==expected.d||q.value!==expected.value||q.total!==expected.total||JSON.stringify(q.counts)!==JSON.stringify(expected.counts)||typeof q.text!=='string'||q.formula!==expected.formula||typeof q.why!=='string'||!Array.isArray(q.steps)||!q.steps.every(x=>typeof x==='string'))return false;}
  }
- if(s.checkpoint){if(s.stage!==1||s.checkpoint.stage!==1||s.checkpoint.depth!==0||s.checkpoint.scene!=='map'||s.checkpoint.checkpoint)return false;const cp={...s.checkpoint,checkpoint:null};if(!validate(cp))return false;}return true;}
+ if(s.checkpoint){const live=s.economyState,saved=s.checkpoint.economyState;if((live===undefined)!==(saved===undefined)||live&&['version','combatVersion','difficulty','support'].some(k=>live[k]!==saved?.[k]))return false;if(s.stage!==1||s.checkpoint.stage!==1||s.checkpoint.depth!==0||s.checkpoint.scene!=='map'||s.checkpoint.checkpoint)return false;const cp={...s.checkpoint,checkpoint:null};if(!validate(cp))return false;}return true;}
 // Save version 1 stores some display text. Rebuild that text only after all
 // mathematical values, card identities and counters have passed validation.
 function restore(saved){
@@ -259,5 +265,5 @@ function restore(saved){
  }
  refresh(out);return out;
 }
-const E={cardDisplayPlan,cardPlan,cardChoice,chooseCardOption,cancelCardChoice,canUpgrade,openMystery,startMystery,answerMystery,expireMystery,continueMystery,leaveMystery,selectMysteryOption,selectMysteryTarget,claimMystery,chooseArtifact,continueEducation,selectEducation:Q.select,answerEducation:Q.answer,hintEducation:Q.hint,skipArtifact,artifactChoices:r=>r.scene==='education'?[]:A.choices(r),ownedArtifacts:A.owned,effectiveDefinition,energyLimit:r=>r.battle?.artifacts?.turn.energyBudget??Math.max(0,C.ENERGY+(r.battle?.turn===1?(r.battle.mysteryModifiers?.energy||0):0)),shopOffers,shopPrice,shopPriceCalculation,shopRemovalPrice,buyCard,buyArtifact,removeShopCard,leaveShop,getMap:G.get,availableNodes:G.available,restore,newRun,definition,card,shuffle,rng,draw,intent,startBattle,enterNode,finishNode,playCard,canPlay,filterLimit,armFocus,forecast,selectForecast,answerBankForecast,supportForecast,completeExhaustedForecast,answer,hint,closeForecast,endTurn,chooseReward,camp,event,nextStage,retry,validate,clone};if(typeof module!=='undefined')module.exports=E;else root.DCEngine=E;
+const E={rewardGold,restHeal,economyProfile:Eco.profile,cardDisplayPlan,cardPlan,cardChoice,chooseCardOption,cancelCardChoice,canUpgrade,openMystery,startMystery,answerMystery,expireMystery,continueMystery,leaveMystery,selectMysteryOption,selectMysteryTarget,claimMystery,chooseArtifact,continueEducation,selectEducation:Q.select,answerEducation:Q.answer,hintEducation:Q.hint,skipArtifact,artifactChoices:r=>r.scene==='education'?[]:A.choices(r),ownedArtifacts:A.owned,effectiveDefinition,energyLimit:r=>r.battle?.artifacts?.turn.energyBudget??Math.max(0,C.ENERGY+(r.battle?.turn===1?(r.battle.mysteryModifiers?.energy||0):0)),shopOffers,shopPrice,shopPriceCalculation,shopRemovalPrice,buyCard,buyArtifact,removeShopCard,leaveShop,getMap:G.get,availableNodes:G.available,restore,newRun,definition,card,shuffle,rng,draw,intent,startBattle,enterNode,finishNode,playCard,canPlay,filterLimit,armFocus,forecast,selectForecast,answerBankForecast,supportForecast,completeExhaustedForecast,answer,hint,closeForecast,endTurn,chooseReward,camp,event,nextStage,retry,validate,clone};if(typeof module!=='undefined')module.exports=E;else root.DCEngine=E;
 })(typeof window!=='undefined'?window:globalThis);

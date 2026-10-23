@@ -82,3 +82,7 @@ Mystery v2 rewards/costs/failures now follow [MYSTERY_EVENTS.md](MYSTERY_EVENTS.
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+## Economy branch candidate — 23 October 2026
+
+Ijamm explicitly requests audit, source-aware loot, Gold/recovery tests and Master handoff on base 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7. [SOR 22](22_ECONOMY_REWARDS.md) / [Economy SOR](../economy/SOR_ECONOMY_REWARDS.md) owns the **opt-in candidate** with current-vs-candidate tables and recorded evidence. It does not replace default/legacy numerical behavior. Six unique Shop cards, one sale 60%; candidate rarity pricing, paid removal growth and ME10 floor ten; Boss Shop slot only Stage 2; profile recovery and fifteen event adapters. CP null and student win rates unmeasured. Master integrates external Combat/Map profiles.

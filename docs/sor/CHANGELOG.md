@@ -338,3 +338,10 @@ Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retain
 - Apply 26 new normalized recordings on music from latest main 2.23.1: answering +4, Hint +4, More Hint +4, correct +5, wrong +9. Active voices total 75; preserve all previous audio, icons, developer toggle and color-only rich text.
 - React to actual checked correct/wrong answers in Predict, Artifact, Mystery review and isolated Practice; later answer/help events cancel older speech. Preserve once-per-attempt receipts through save/reload; historical results, Reveal, exhaustion, timeout and abandonment stay silent.
 - Add reproducible FFmpeg importer with post-encoding measurements, source/output hashes and registry audit; embed every registered voice in portable builds. [Contract and verification](../AUDIO_2_24_0.md).
+
+## 23 October 2026 — Economy candidate on 2.24.0 base
+
+- Add SOR 22 / Economy & Rewards owner, exact runtime audit, current-vs-candidate prices/income/rarity/events and Master handoff.
+- Add opt-in versioned economy profiles/loot receipts, source-aware bounded weighting, candidate Shop/removal/recovery and all fifteen event adapters; retain default/legacy contracts.
+- Record 30,720 card offers, 16,384 artifact offers, 432 conditional Gold/recovery cases and read-only Map input flags, with raw seeds/assumptions.
+- Combat/artifact stats, topology, question data/shuffle stay unchanged; human win rates and CP remain unmeasured.

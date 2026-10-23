@@ -20,7 +20,7 @@ Version metadata and resource hashes come from the existing build. Changes becom
 
 ## Saves and reports
 
-Friends do not install Node.js and the owner's PC need not stay on. Saves and learning reports remain on each player's browser/device; localhost saves do not automatically transfer to the website (use Export/Import). GitHub Pages is static hosting: the optional `/api/education` receiver and central database are not hosted here. Local reports and file exports continue to work; central collection needs a separate deployment.
+Friends do not install Node.js and the owner's PC need not stay on. Saves and learning reports remain on each player's browser/device; localhost saves do not automatically transfer to the website (use Export/Import). GitHub Pages is static hosting: the optional `/api/education` receiver and central database are not hosted here. Local reports and file exports continue to work; Google Sheets collection is now available through an owner-deployed Apps Script receiver; configure its /exec URL and allowed game origin using [Google Sheets setup](GOOGLE_SHEETS_SETUP.md). The optional SQLite receiver still needs a separate server.
 
 ## Troubleshooting
 

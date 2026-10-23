@@ -21,7 +21,7 @@ if(!/^https?:\/\//.test(analyticsPageURL))analyticsPageURL=document.baseURI;
 const analyticsStore=globalThis.DCAnalytics.createStore({storage:analyticsDisk,bank,curriculum:globalThis.DCLearningCurriculum});
 let practiceAnalyticsId=analyticsStore.getSessionId('practice'),reviewAnalyticsId=null,analyticsScope='all',analyticsReturnFocus=null,analyticsClient=null,questionFeedback=null,localAnalyticsError='';
 const reviewAnalyticsIds=new Map(),collectionAvailable=!devPractice&&/^https?:\/\//.test(analyticsPageURL);
-analyticsClient=globalThis.DCLearningSync.createClient({storage:analyticsDisk,endpoint:analyticsEndpoint,host:globalThis,
+analyticsClient=(globalThis.DCLearningDelivery||globalThis.DCLearningSync).createClient({storage:analyticsDisk,endpoint:analyticsEndpoint,host:globalThis,
  fetch:devPractice?async()=>{throw Error('Collection is disabled in developer practice.');}:typeof globalThis.fetch==='function'?globalThis.fetch.bind(globalThis):async()=>{throw Error('The collector is unavailable here.');},
  onchange:()=>refreshAnalyticsSurfaces(true)});
 for(const option of byId('difficulty-select').options)option.value=option.value;
@@ -83,8 +83,9 @@ function refreshAnalyticsSurfaces(statusOnly=false){
  if(byId('practice-analytics-dialog')?.open)renderAnalyticsReport(statusOnly);
  questionFeedback?.refreshDelivery();
 }
-function renderAnalyticsReport(statusOnly=false){
+function renderAnalyticsReport(statusOnly=false,preserveDraft=true){
  const status=analyticsStatus(),content=byId('practice-analytics-content');
+ const draft=content.querySelector('[data-analytics-google-url]'),draftValue=draft?.value,draftFocused=!!draft&&document.activeElement===draft;
  const syncArea=statusOnly&&globalThis.DCAnalyticsUI.syncHTML?content.querySelector('[data-analytics-sync]'):null,area=syncArea||content;
  const focused=area.contains(document.activeElement)?document.activeElement.closest('[data-analytics-action]'):null;
  const focusKey=focused?['analyticsAction','scope','exportformat','id'].map(key=>focused.dataset[key]||''):null;
@@ -93,9 +94,10 @@ function renderAnalyticsReport(statusOnly=false){
  byId('close-practice-analytics').textContent=analyticsText('Close report','Tutup laporan');
  if(syncArea)syncArea.innerHTML=globalThis.DCAnalyticsUI.syncHTML(status,contentLanguage);
  else content.innerHTML=globalThis.DCAnalyticsUI.html({report:analyticsStore.report({scope:analyticsScope,language:contentLanguage}),status,language:contentLanguage});
+ if(!syncArea&&preserveDraft&&draft){const input=content.querySelector('[data-analytics-google-url]');if(input){input.value=draftValue;if(draftFocused)input.focus({preventScroll:true});}}
  if(!collectionAvailable){
   const notice=document.createElement('p');notice.className='analytics-practice-note';notice.textContent=devPractice?analyticsText('Developer practice stays in this temporary session. Collection is disabled.','Latihan pembangun kekal dalam sesi sementara ini. Pengumpulan dinyahaktifkan.'):analyticsText('This offline file keeps records on this device. Open the game through its HTTP server to enable collection.','Fail luar talian ini menyimpan rekod pada peranti ini. Buka permainan melalui pelayan HTTP untuk mengaktifkan pengumpulan.');content.prepend(notice);
-  for(const control of content.querySelectorAll('[data-analytics-action="share"],[data-analytics-action="sync"]'))control.disabled=true;
+  for(const control of content.querySelectorAll('[data-analytics-action="share"],[data-analytics-action="sync"],[data-analytics-action="destination-save"],[data-analytics-action="destination-local"],[data-analytics-google-url]'))control.disabled=true;
  }
  for(const [index,detail] of [...area.querySelectorAll('details')].entries())if(index<disclosureState.length)detail.open=disclosureState[index];
  if(focusKey){const replacement=[...area.querySelectorAll('[data-analytics-action]')].find(control=>['analyticsAction','scope','exportformat','id'].every((key,index)=>(control.dataset[key]||'')===focusKey[index]));(replacement&&!replacement.disabled?replacement:byId('close-practice-analytics')).focus({preventScroll:true});}
@@ -443,6 +445,10 @@ byId('practice-analytics-content').addEventListener('click',event=>{
  }else if(action==='export')downloadAnalytics(control.dataset.exportformat==='json'?'json':'csv');
  else if(action==='share'&&collectionAvailable){analyticsClient.setEnabled(!analyticsClient.status().enabled);refreshAnalyticsSurfaces();}
  else if(action==='sync'&&collectionAvailable)analyticsClient.flush();
+ else if((action==='destination-save'||action==='destination-local')&&collectionAvailable){
+  try{analyticsClient.setDestination(action==='destination-local'?'':byId('practice-analytics-content').querySelector('[data-analytics-google-url]').value);renderAnalyticsReport(false,false);byId('practice-analytics-status').textContent='';byId('practice-analytics-content').querySelector('[data-analytics-action=share]')?.focus({preventScroll:true});}
+  catch(error){byId('practice-analytics-status').textContent=error.message;}
+ }
  else if(action==='review'){
   const id=control.dataset.id,target=bank.questions.find(q=>q.id===id);if(!target)return;
   closeAnalyticsReport();navigateReview(target.id,{focus:true});

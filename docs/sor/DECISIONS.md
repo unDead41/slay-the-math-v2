@@ -527,3 +527,16 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - CADANGAN / IMPLEMENTED: keep existing Master 12-damage Rune Sweep and 5+5+5 Fate Storm at 2 Energy; apply those two definitions to ordinary modes. Allocate Strength, +4 Focus and +3 upgrade once on the primary hit. Other 38 card values, enemy/difficulty/economy/map values and question rules stay as before.
 - DITERUSKAN: use a single build adapter, preserve canonical supplier input and historical receipt values/HP/RNG, isolate candidate.3 saves, retain previous measured cohorts under their original sources, and publish this verified correction through the authorized main workflow.
 - PERLU_VERIFIKASI: human playtests, pupil 90/70/50 rates and exhaustive combinations. [Current evidence and validation](../balance/master/SINGLE_TARGET_2_29_0.md).
+## DEC-20261023-EDAN-GOOGLE — Google Sheets collection branch
+
+- DISAHKAN: Ijamm accepts the proposed Google option because a self-hosted server/database is difficult, and requests implementation in the appropriate branch before pushing main. Target is `education-google-sheets`; no main publication is authorized by this request.
+- DITERUSKAN: extend the existing offline analytics/comments system with Google Apps Script + private Sheets; sharing stays opt-in per destination and receipt follows durable canonical/projection confirmation. Retain local SQLite and all existing game/balance/source art owners.
+- DITERUSKAN: ship one generated Code.gs and shared BM/English Learning Report setup controls. User/operator authorizes/deploys the Google receiver once; optional site default removes repeated URL entry for players.
+- PERLU_VERIFIKASI: live Google deployment/account policy, classroom quotas/network compatibility and pupil use. No real Google collection, Google credentials, teacher accounts or automated main merge are created. [Owner guide](../GOOGLE_SHEETS_SETUP.md).
+
+## DEC-20261023-EDAN-GOOGLE-MAIN — Google collection on main (2.30.0)
+
+- DISAHKAN: Ijamm now requests pushing the completed Google update to main. This supersedes DEC-20261023-EDAN-GOOGLE's earlier feature-branch-only publication boundary.
+- DITERUSKAN: merge Google head `a535a04` with current main `8b6a3c6` / 2.29.0; preserve its single-enemy mechanics, candidate.3 identity/receipt compatibility, status-VFX hooks, original artwork/audio, all 120 canonical questions and Pages workflow. Identify the combined release as 2.30.0.
+- DITERUSKAN: player consent, local/offline records, exact ACK after canonical/projection flush and destination isolation remain required. No database server is needed for the Google option; owner authorizes/deploys Apps Script once.
+- PERLU_VERIFIKASI: live Google deployment/account/quotas/classroom access, hosted Pages outcome and physical devices remain separate from verified code integration. MODEL.zip failed to arrive and is not used. [Integration evidence and setup](../GOOGLE_SHEETS_MAIN_2_30_0.md).

@@ -1,0 +1,217 @@
+{
+  "main": "8b6a3c688dc83db31685cdc7ec653ee25554e62d",
+  "feature": "a535a04d169837aa1402ae30b8d23ed1b3276cf9",
+  "mainProtectedFilesUnchanged": 648,
+  "featureOwnersUnchanged": [
+    "dist/learning-google.js",
+    "dist/learning-delivery.js",
+    "dist/learning-collection-config.js",
+    "dist/analytics-ui.js",
+    "dist/analytics.css",
+    "tools/build-education-practice.cjs",
+    "tools/build-google-sheets.cjs",
+    "tools/google-sheets/receiver.gs",
+    "tools/google-sheets/bridge.js",
+    "integrations/google-sheets/Code.gs",
+    "modules/mechanics/source/QUESTION_BANK/learning/preview.mjs"
+  ],
+  "version": "2.30.0",
+  "productionFilesIdentical": 685,
+  "runtimeResourcesVerified": 78,
+  "resourceSHA256": {
+    "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
+    "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
+    "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
+    "music.css": "969fed6d068de80695aab6866031fed020adcdc3e0ff4f0df54d1337e500d92c",
+    "dungeon.css": "e303c1a5a6be561ef78c5962d56f2b25db612032cfce4c5ab14d19bbf9abd543",
+    "scene.css": "1e865966d0bc0601d47767a7b7cdda79729dc9b93b6e306a37da9b389bbdb8f7",
+    "combat.css": "860b7e946ecc4f2d7a686671ff319d6a290d0ef6b4b6479f6bf94a66ab05862f",
+    "dungeon-2-3.css": "ce7aed65f6d0a5f9f16063b3d0b6b76440da2f152b84258016db41fb0cdb10cc",
+    "artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
+    "mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
+    "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
+    "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
+    "education.css": "cbc64b5d1d70a78bb472f300c4ada4648d13689caf4bb7a99d3e5ba400d2dd65",
+    "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
+    "animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
+    "hand.css": "cd52cf1c7c42978b56ae978bdec07aa04c1dce2243ee47503ae80ca8f310d476",
+    "mechanics-host.css": "138a24eaffb062b7c82eac66457c72ffdadbc817be26c88e58b001e52c84c2a7",
+    "shop.css": "bb7f039dfff9fa10ff1270ea1bf8f8822134ea49dac91c1aedc1acb7e6119ee2",
+    "mystery.css": "ac1fe38ebd6ac50cc7c1cbdf08602a7f383ba7c90354dfeae66e6418ee213c61",
+    "cards.css": "983579dd64d3737e62291c882f187a42f563ec483ed24f568b53da13d4b9cb68",
+    "combat-compact.css": "1a3b4cb712415ab5dd7fb7147f27d7dabaf6ab3f2b482af2064262bb5489f758",
+    "passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+    "icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
+    "card-motion.css": "927ecf6affc053a8a384e1b760552d91bf4e175c76c66df8bf845496ee5a273f",
+    "analytics.css": "6ff097338cd1f3de80bb6a8d373d25417b18d8d2119f2ae1e4ed7ba5dc0238bc",
+    "status-vfx.css": "a741eef9646981611447d6bf5c2cf3c17d01f5423bc076f1b6396f922831e935",
+    "release.js": "caa3287630887d5eb8c33284e907326d3d45b9f18f1ed996b7b1a24020abd87c",
+    "card-data.js": "b519e9cba7387656f86eca65642080a938d1253666995b91d294858758bd1c81",
+    "balance-data.js": "5f4391410240cf770c5060cfd00d3d08dc93684fae6d89d3f203634f02711bf9",
+    "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "icon-assets.js": "82f3bf36b255a5723f67ccaf82bd4aefc47cfcd41f9f1881287d3efa20f13074",
+    "card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
+    "card-kit.js": "6470cd7445aee863ad6eab19b2cd1ff6959ddede78ccc64d91ea40ef32e246a8",
+    "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "mechanics.js": "91384cf36eae881ac47246c656c5221511b8a66a1b0832098e6a6acbd6dd7883",
+    "question-language.js": "1aece777440e6f924a1e7b4087478af58f334a3c2bf0f80148e1988a644208f6",
+    "rich-text-data.js": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
+    "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "balance-config.js": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
+    "rich-text.js": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+    "economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "artifacts.js": "e85e15e40e39276d47e0958a86c825010ed2347c1385c03c76216448e3c87790",
+    "question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "education.js": "9a8d31059ec0aa70effcc07a54dadbc02763f76628aa891d40852142589e5ae5",
+    "mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "mystery.js": "b192bb133d996e62a40c77ff3681cf501bd97839f1056b29bb4c345d26d6ed9a",
+    "combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "combat-predict.js": "3a3056225b3411aabf22a0f045ad8f4abf3e609e7e8a53fe21a624c24d79abb7",
+    "card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "card-combat.js": "55e7490e328b62fc590614a7d3061085d71b674a4fc42bfc95f7655401f4e0da",
+    "engine.js": "232f66ab9607a4f442329cdefb20b34e34c27e019dbca38d0ed4b732b11457a5",
+    "music-data.js": "dc2442ded9e366567b65ca247f55e7d9984d685dcc93fd5ae9e2f04750cd9ca7",
+    "audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
+    "audio.js": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17",
+    "visuals.js": "5466d2bbaf6016a6b1cbcaf9e3a8c7e6c11eed9c890446a846214f7a0ea2c4c5",
+    "animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
+    "animation.js": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52",
+    "artifact-ui.js": "aca0675a0e08e7fd1c6359cfd544270b6aa5c37ed6769c41338a3aaffa3165bb",
+    "mechanics-host.js": "a4d1c9e17cff43f5b5cf94103f9833a6231768788716a3760cfb55d90050bd1a",
+    "hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
+    "mystery-ui.js": "cb9a259cf95a84be636e1d1d3a9d584b0d2242acaf8e0692b2a427246935b731",
+    "education-practice.js": "14ffa4e4e0df9c88cbc518085f923d1127fea5f20c66b26f7d926cb66e830986",
+    "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
+    "combat-status.js": "c3b93d38e6593517af089eaee0d76af752251c264165a1e066e164482acf7f96",
+    "status-vfx.js": "b08065599bfca0c2b17fe5298095e7e2411dfdaebf3941179dcfa978725e2543",
+    "card-motion.js": "1771f5914f0121cecdc00eeb4a7ef5a0ee919a64313ca33eec0a2fbd0382c49a",
+    "learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
+    "learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
+    "learning-sync.js": "a45da8f82dd33088ca707687e9856db88ca4a2d449b28752b15bb2d0c6087125",
+    "learning-collection-config.js": "60e2a6dc04571634c0324e1943d06e9628337e6fcfeff1c6ce23a50ee09c96d6",
+    "learning-google.js": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf",
+    "learning-delivery.js": "15636497c2191eab4b3cc2f4f0bf69f67a2e758e966ab387e1faa18051fb9168",
+    "analytics-ui.js": "76402bafb79481e61c23781ec44a6ce7e2ae0fab047008948335560975423c39",
+    "app.js": "5a4b91d3eeda4800cd252520e737b8c7f4fa9dd8709ea01142a49c2faede1e28"
+  },
+  "portableBytes": 295673249,
+  "privateReceiverOutsidePublicRoot": true,
+  "receiverBytes": 104645,
+  "receiverSHA256": "f974f78feabc5850aa35a22c7bf1c72ddd414a836a502eb90f4e376a9fec2ca8",
+  "syntax": "npm run check passed",
+  "production": "npm run build:prod passed",
+  "baseline": {
+    "tests": 42,
+    "pass": 42,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 8204.873646
+  },
+  "fullSuite": {
+    "tests": 758,
+    "pass": 758,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "durationMs": 510267.575191,
+    "state": "passed on frozen merged code",
+    "command": "DOM_QA_MODULE=<jsdom> npm test"
+  },
+  "nativeGoogle": {
+    "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+    "checks": [
+      "Main Menu report configures Google without eager network or inherited consent.",
+      "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+      "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+      "No capability in frame URLs; compact desktop/mobile report has internal scroll and preserved input."
+    ],
+    "errors": []
+  },
+  "nativeSingleTarget": {
+    "checks": [
+      "ordinary: production UI, focused Rune Sweep 16, Fate Storm 5+5+5, no target RNG, save/reload",
+      "medium: production UI, focused Rune Sweep 16, Fate Storm 5+5+5, no target RNG, save/reload"
+    ],
+    "errors": []
+  },
+  "nativeStatusVfx": {
+    "checks": [
+      "A native Rune Guard commits the exact engine/save result before a noninteractive shield and actual Block-gain cue appear.",
+      "Strength, Agility, Defense and Thorns use distinct actual hero conditions and their source models/card icons stay intact.",
+      "The unpaid Passive swap dialog stays static; only its committed replacement lowers Strength and produces a real downward cue.",
+      "A real enemy receipt shows four Block absorbed even when the authored Layered Shield refill returns Block to its previous value; no fabricated +Block label.",
+      "Valid player Weak/Vulnerable saves have distinct auras without historical bursts; actual stack consumption clears a mark while enemy-only Weak never affects Alyssa.",
+      "Settings/native dialogs cancel effects and restore only current auras; Motion Off and OS reduced motion leave no decorative overlay and preserve exact gameplay.",
+      "Desktop, portrait phone and landscape effects fit the arena above HP/actions, stay bounded and cancel bursts on resize while keeping active auras.",
+      "Rapid next actions, keyboard play, status inspection and Main Menu cleanup leave no late particles or input blockers.",
+      "Easy, Medium and Hard Master profiles use their actual bound Block values, preserve legacy saves and reload current auras without replaying bursts.",
+      "The actual standalone file shows the same shield and saved paid result with no HTTP or dependent local assets."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      }
+    ],
+    "profiles": [
+      {
+        "difficulty": "easy",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "medium",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "hard",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      }
+    ],
+    "errors": [],
+    "offlineRequests": []
+  },
+  "review": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0,
+    "scope": "Fresh read-only pre-main integration review; preserves both parents"
+  },
+  "liveGoogleDeploymentTested": false,
+  "hostedPagesDeploymentTested": false,
+  "excludedAttempt": "Initial Google browser harness redundantly clicked Sync after automatic online flush began; timed out on disabled/replaced button. Accepted rerun awaits exact pending zero automatically; no runtime changes.",
+  "postFullSuiteProductionBytesRechecked": true,
+  "publication": {
+    "target": "main",
+    "expectedParent": "8b6a3c688dc83db31685cdc7ec653ee25554e62d",
+    "additionalParent": "a535a04d169837aa1402ae30b8d23ed1b3276cf9",
+    "method": "Native Git data commit and non-force expected-SHA ref update",
+    "liveGoogleConfigured": false
+  }
+}

@@ -166,3 +166,10 @@ Production preflight must reject private SQLite/DB files under dist, remove stal
 ## GitHub Pages publication — 23 October 2026
 
 DISAHKAN: publish the current main production game through GitHub Pages for friends. The Pages workflow owns automatic deployment from main and must upload only `release-prod`, preserving developer isolation and database exclusion. Verify the production entrypoint and assets under `/slay-the-math-v2/` before publication; report first-run owner activation and hosted status separately from local build success. GitHub Pages does not provide the optional education receiver. [Owner setup and limits](../GITHUB_PAGES.md).
+## Google collection preview — 2.28.0-sheets.1
+
+Verify lazy nested-origin handshake, nonce/port/source checks, abort/cleanup, destination-specific identity/consent/ACKs, invalid storage preservation, latest edits across switches, all 120 canonical owner records, BM feedback, revision conflict prevalidation, projection/flush interruption repair, Unicode chunks/formula-safe cells, host/Practice focus/configuration, Dev/file isolation and offline/reopen. Native Google tests simulate external services and must not be reported as live deployment validation. Full serial suite, syntax, current resource hashes and production build precede branch publication; preserve main balance/art/audio/question owners. [Setup/limits](../GOOGLE_SHEETS_SETUP.md).
+
+## Google collection main integration — 2.30.0
+
+Ijamm now authorizes main publication. Integrate a535a04 with 8b6a3c6 rather than copying the older preview over current main. Verify the actual Main Menu/Settings/Practice setup, BM/English, consent/offline/exact-ACK/reopen, preserved single-enemy/candidate.3 saves and status-VFX hooks, complete regression/syntax/production, private receiver exclusion and version/cache hashes. Keep live Google account/deployment/quota and hosted Pages results distinct from local evidence. [Combined verification](../GOOGLE_SHEETS_MAIN_2_30_0.md).

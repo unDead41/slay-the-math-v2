@@ -422,3 +422,14 @@ Expanded offline deck/offer, six spending policies, answer/deadline/recovery, cu
 ## GitHub Pages setup — 23 October 2026
 
 Add a main-push/manual Pages workflow that builds and checks the current production game and uploads only release-prod. Document the one-time owner setting, share URL, browser save behavior and static-hosting limits. No gameplay/version changes.
+## 2.28.0-sheets.1 — 23 October 2026 — branch preview
+
+- Optional Google Apps Script/Sheets collection through shared Learning Report setup in host and Education Practice; lazy authenticated nested iframe/port bridge, current-destination consent/identity/ACK isolation and offline replay.
+- Generated one-file receiver reuses actual canonical validators, locks and prevalidates batches, upserts raw/readable Sheet rows, repairs partial writes before ACK and preserves inert formula-like comments/Unicode payloads.
+- BM operator guide, local/site-default configuration and native/simulated-Google regression coverage. Main 2.27.0 balancing, art, audio, question bank and saves are preserved. Live Google setup remains required; branch-only publication.
+
+## 2.30.0 — 23 October 2026 — Google collection main integration
+
+- Merge the reviewed Google Sheets education collection feature with main 2.29.0, preserving single-enemy cards/candidate.3, legacy receipts, Alyssa status effects, original artwork/audio and Pages setup.
+- Main Menu/Settings/Practice Learning Report includes Google /exec configuration and opt-in delivery with offline pending records, current-destination consent/receipts and exact confirmed upserts. Ship one copyable Apps Script receiver and BM owner setup.
+- Regenerate package/version/cache entrypoints; retain all main QA commands and add Google build/QA. Live Google authorization/deployment remains an explicit owner step. [Main integration](../GOOGLE_SHEETS_MAIN_2_30_0.md).

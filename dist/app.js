@@ -12,7 +12,7 @@ const statusVfx=window.DCStatusVFX.create({motion:motionAllowed});
 try{const raw=localStorage.getItem(SAVE);if(raw){const saved=E.restore(JSON.parse(raw));if(saved){AP.normalizeRunAudio(saved);run=saved;}else storageWarning('This save cannot be loaded. Start a New Run or import a valid save file.');}const s=JSON.parse(localStorage.getItem(SETTINGS)||'{}');settings.sound=s.sound!==false;settings.motion=s.motion!==false;settings.musicMuted=s.musicMuted===undefined?s.sound===false:!!s.musicMuted;settings.musicVolume=Number.isFinite(s.musicVolume)?Math.max(0,Math.min(1,s.musicVolume)):.45;settings.sfxVolume=Number.isFinite(s.sfxVolume)?Math.max(0,Math.min(1,s.sfxVolume)):.65;settings.voiceVolume=Number.isFinite(s.voiceVolume)?Math.max(0,Math.min(1,s.voiceVolume)):.85;settings.voiceMuted=s.voiceMuted===true;}catch(_){storageWarning('Browser storage is not available. You can still play. Use Export to save your progress.');}
 function storageWarning(message){$('#storage-warning').hidden=false;$('#storage-warning').textContent=message;}
 let seenQuestions=[],learningProfile=null;
-const LA=window.DCAnalytics,LS=window.DCLearningSync,LUI=window.DCAnalyticsUI;
+const LA=window.DCAnalytics,LS=window.DCLearningDelivery||window.DCLearningSync,LUI=window.DCAnalyticsUI;
 let analyticsStore=null,analyticsSync=null,analyticsScope='all';
 try{
  let storage;try{storage=localStorage;}catch(_){}
@@ -33,6 +33,7 @@ function captureLearning(){
 }
 function learningDeliveryStatus(){
  const status=analyticsSync?.status()||{enabled:false,pending:0,state:'on-device'},localError=analyticsStore?.error;
+ status.collectionDisabled=!!window.STMDevMode||!/^https?:$/.test(location.protocol);
  return localError?{...status,state:'save-error',error:[localError,status.error].filter(Boolean).join(' ')}:status;
 }
 function updateAnalyticsStatus(){
@@ -489,6 +490,9 @@ document.addEventListener('click',event=>{
   else if(action==='export')exportAnalytics(el.dataset.exportformat);
   else if(action==='share'){analyticsSync?.setEnabled(!analyticsSync.status().enabled);updateAnalyticsStatus();}
   else if(action==='sync'){analyticsSync?.flush();}
+  else if(action==='destination-save'||action==='destination-local'){
+   analyticsSync.setDestination(action==='destination-local'?'':$('#dialog [data-analytics-google-url]').value);showAnalytics();$('#dialog [data-analytics-action=share]')?.focus({preventScroll:true});
+  }
   else if(action==='foundation'&&window.STMMechanics.data.foundations.modules.some(m=>m.id===el.dataset.id)){showBasics(el.dataset.id);}
   else if(action==='review'&&Object.hasOwn(Q.catalog,el.dataset.id)){ui.analyticsReviewId=el.dataset.id;close();ui.educationPractice=true;ui.home=true;render();$('#education-practice-frame').focus();}
  }catch(error){toast(error.message||'Learning report could not be opened.',true);}
@@ -508,7 +512,8 @@ function unlockAudio(){if(!settings.musicMuted||!settings.voiceMuted||settings.s
 document.addEventListener('pointerdown',unlockAudio,{capture:true,passive:true});
 document.addEventListener('keydown',unlockAudio,{capture:true});
 document.addEventListener('visibilitychange',()=>{music.setHidden(document.hidden);if(document.hidden)handController?.clear();syncActorMotion();scheduleMenu();});
-window.addEventListener('pagehide',()=>{music.setHidden(true);actorAnimation?.configure({paused:true});heroAnimation?.configure({paused:true});});
+window.addEventListener('pageshow',event=>{if(event.persisted)analyticsSync?.start();});
+window.addEventListener('pagehide',()=>{analyticsSync?.stop();music.setHidden(true);actorAnimation?.configure({paused:true});heroAnimation?.configure({paused:true});});
 window.addEventListener('pageshow',()=>{music.setHidden(document.hidden);syncActorMotion();});
 document.addEventListener('input',event=>{
  const el=event.target;if(el.id==='card-search'){if(event.isComposing)return;const start=el.selectionStart;ui.libraryQuery=el.value;ui.libraryPage=0;showLibrary();const input=$('#card-search');input.focus();try{input.setSelectionRange(start,start);}catch(_){}return;}if(!['music-volume','sfx-volume','voice-volume'].includes(el.id))return;

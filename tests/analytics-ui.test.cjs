@@ -125,3 +125,15 @@ test('Main Menu report warns about unreadable learning storage even with no acti
   assert.equal(b.w.localStorage.getItem(key),original);
  }finally{b.dom.window.close();}
 });
+
+test('Google collection setup is shared, escaped and outside asynchronous delivery status',()=>{
+ const UI=require('../dist/analytics-ui.js'),d=new JSDOM(UI.html({status:{destination:{kind:'google-sheets',url:'https://script.google.com/macros/s/DEPLOYMENT1234567890/exec'}},language:'ms'})).window.document;
+ const input=d.querySelector('[data-analytics-google-url]');assert.ok(input);assert.equal(input.closest('[data-analytics-sync]'),null);assert.equal(input.value,'https://script.google.com/macros/s/DEPLOYMENT1234567890/exec');assert.match(d.querySelector('label[for="analytics-google-url"]').textContent,/Pautan/);assert.ok(d.querySelector('[data-analytics-action=destination-save]'));
+});
+test('host saves a Google destination paused, preserves typed input during async status and rejects Drive links',()=>{
+ const b=boot();try{
+  b.click('[data-action=analytics]');const input=b.d.querySelector('[data-analytics-google-url]');assert.ok(input);input.focus();input.value='typing stays here';b.w.dispatchEvent(new b.w.StorageEvent('storage',{key:'slay-the-math.learning-sync.v1'}));assert.equal(b.d.activeElement,input);assert.equal(input.value,'typing stays here');
+  input.value='https://drive.google.com/file/d/example/view';b.click('[data-analytics-action=destination-save]');assert.match(b.d.querySelector('#toast').textContent,/Apps Script|deployed Google/i);assert.equal(b.w.localStorage.getItem('slay-the-math.learning-destination.v1'),null);
+  input.value='https://script.google.com/macros/s/DEPLOYMENT1234567890/exec';b.click('[data-analytics-action=destination-save]');assert.match(b.d.querySelector('[data-analytics-sync]').textContent,/Google Sheets/);assert.equal(b.d.querySelector('[data-analytics-action=share]').getAttribute('aria-pressed'),'false');assert.equal(b.d.activeElement.dataset.analyticsAction,'share');assert.equal(b.d.querySelector('iframe[title="Education collection"]'),null);assert.equal(b.requests.length,0);
+ }finally{b.dom.window.close();}
+});

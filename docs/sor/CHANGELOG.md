@@ -345,3 +345,7 @@ Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retain
 - Add opt-in versioned economy profiles/loot receipts, source-aware bounded weighting, candidate Shop/removal/recovery and all fifteen event adapters; retain default/legacy contracts.
 - Record 30,720 card offers, 16,384 artifact offers, 432 conditional Gold/recovery cases and read-only Map input flags, with raw seeds/assumptions.
 - Combat/artifact stats, topology, question data/shuffle stay unchanged; human win rates and CP remain unmeasured.
+
+## 23 October 2026 — Economy deep validation
+
+Expanded offline deck/offer, six spending policies, answer/deadline/recovery, cumulative costs and route-risk experiments, plus stateful reload/transaction regressions. No runtime candidate numbers changed. Report: ../economy/deep/REPORT.md. Inputs from Combat/Map remain NEEDS_INPUT.

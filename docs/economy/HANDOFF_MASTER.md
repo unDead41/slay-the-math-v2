@@ -33,3 +33,8 @@ Rarity first-slot dalam tolerance eksploratori; pasangan support ON/OFF mengekal
 6. Upgrade quote ×1.20 disokong; Shop kini menjual unupgraded. n removal mengira servis Shop berbayar, bukan free ME10. Ini pilihan implementer yang direkod dan boleh ditukar melalui versi jika Master menentukan sebaliknya.
 
 Sasaran murid Easy/Medium/Hard 90/70/50 kekal **UNMEASURED**. Pilih cohort playtest dan semak Wilson CI mengikut SOR Balance; jangan menukar hasil model ekonomi kepada dakwaan kemenangan murid.
+
+
+## Deep validation extension — 23 October 2026
+
+Read [Deep Validation Report](deep/REPORT.md) with raw paired results and recorded seeds. Extension covers diverse decks, six adaptive spending policies, answer/deadline sensitivity, cumulative HP/MaxHP costs, recovery choices, exact min/max-Elite route surveys and stateful transactions. No numerical runtime tuning or combat/map topology changes. CP stays UNMEASURED. Same 100 paired seeds per policy/difficulty; answer/budget sensitivity cells have 12/13 unique seeds. Model HP budget exhaustion is not combat defeat. Explore remains NEEDS_INPUT_DEFINITION. Master must combine measured Combat/Map inputs before changing profiles or asserting pupil win targets.

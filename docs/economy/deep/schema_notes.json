@@ -1,0 +1,4 @@
+{
+  "change": "answerTimeMs renamed to scriptedAttemptTimeMs; no numerical values changed",
+  "reason": "Fixed scripted attempted response times may exceed strict Mystery deadline; this is not actual elapsed play time."
+}

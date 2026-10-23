@@ -16,3 +16,6 @@ Final review: one available fresh reviewer (the first selected model was at capa
 Review scope retained: full Combat/CP/student targets NEEDS_INPUT; forced-Elite topology belongs to Map. Author reran actual desktop/mobile browser QA and regenerates all cashflow evidence; reviewer remained read-only.
 
 Final verification: npm test → 501 passed / 0 failed / 0 skipped; npm run check and diff check pass; Chromium 10/10. Full bounded simulation regenerated after review fixes, 432 flows; offers and cashflow raw outputs unchanged, manifest updated with runtime hashes. External Combat/Map inputs stay NEEDS_INPUT.
+
+
+Deep extension complete: 518/518 full underlying tests, 0 failures/skips; candidate runtime unchanged. See deep/REPORT.md, deep/VERIFICATION.md and deep/DECISIONS.md. 100 paired seeds/policy/difficulty, sensitivity cells12/13; numerical calibration and Explore remain input-gated.

@@ -123,3 +123,8 @@ Cadangan langkah seterusnya: integrasi Combat inputs dahulu; jalankan cohort see
 | NI-TELEMETRY-01 | Pick/skip/decline manusia, sebab kalah, n dan CI murid | Tiada data murid; model kewangan/recovery bersyarat |
 
 `MODEL.zip` tidak tersedia dan tidak digunakan. Tiga PDF kurikulum tersedia, tetapi kandungan matematik tidak diubah oleh tugasan ekonomi ini.
+
+
+## Deep validation extension — 23 October 2026
+
+Read [Deep Validation Report](deep/REPORT.md) with raw paired results and recorded seeds. Extension covers diverse decks, six adaptive spending policies, answer/deadline sensitivity, cumulative HP/MaxHP costs, recovery choices, exact min/max-Elite route surveys and stateful transactions. No numerical runtime tuning or combat/map topology changes. CP stays UNMEASURED. Same 100 paired seeds per policy/difficulty; answer/budget sensitivity cells have 12/13 unique seeds. Model HP budget exhaustion is not combat defeat. Explore remains NEEDS_INPUT_DEFINITION. Master must combine measured Combat/Map inputs before changing profiles or asserting pupil win targets.

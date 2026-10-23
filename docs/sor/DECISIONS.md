@@ -437,3 +437,7 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 **DISAHKAN:** Ijamm requests Economy/Loot/Rewards audit and tested proposals on base 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7, branch balance/economy, no merge/push main; source rules and random nonrepeat questions preserved; CP unmeasured stays null; Combat/Map gaps NEEDS_INPUT.
 
 **CADANGAN / implemented experiment:** economy-1.2-candidate.1 opts in through New Run. Default/legacy remains current. Single config, immutable source-derived loot receipts, bounded support, six/one-sale Shop, price/removal/recovery/event adapters. Actual artifact values and HP 60 retained because final Combat input is unavailable. n counts paid Shop removals. Evidence and limitations: docs/economy/SOR_ECONOMY_REWARDS.md and HANDOFF_MASTER.md. No student/CP claim. Reversible via omission of the explicit economy option; unknown snapshot versions reject rather than silently migrate.
+
+
+### 2026-10-23 — Economy deep validation (CADANGAN evidence)
+User authorised all six economy follow-up areas. Expand deterministic experiments and transaction regression coverage on balance/economy; retain current candidate numbers without measured Combat evidence. Use 100 paired seeds per policy/difficulty with balanced 12/13-seed answer/budget strata; report coverage limits, stop/end vs completed-only cash and conditional HP budgets. No main merge. Explore absent at base, NEEDS_INPUT_DEFINITION. See docs/economy/deep/REPORT.md.

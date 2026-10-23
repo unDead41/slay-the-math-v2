@@ -9,7 +9,7 @@ function boot(run,embedded=false){
  w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};
  w.localStorage.setItem('duel-cube-settings.v1',JSON.stringify({sound:false,motion:false,musicMuted:true,voiceMuted:true}));
  if(run)w.localStorage.setItem('duel-cube-math.v1',JSON.stringify(run));
- if(embedded)w.DC_ASSETS=Object.fromEntries(Object.values(I.entries).map(file=>[file,'data:image/webp;base64,'+fs.readFileSync(path.join(dir,'assets',file)).toString('base64')]));
+ if(embedded){const original=require('../dist/assets/card-assets.json').runtimePaths,files=new Set([...Object.values(I.entries),...Object.values(I.artifacts),...Object.values(original).map(file=>file.replace(/^assets\//,''))]);w.DC_ASSETS=Object.fromEntries([...files].map(file=>[file,'data:image/webp;base64,'+fs.readFileSync(path.join(dir,'assets',file)).toString('base64')]));}
  for(const file of scripts)w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
  const click=selector=>{const el=d.querySelector(selector);assert.ok(el,selector);assert.equal(el.disabled,false,selector);el.click();};
  return{dom,w,d,click,state:()=>JSON.parse(w.localStorage.getItem('duel-cube-math.v1'))};
@@ -28,23 +28,55 @@ test('all reviewed runtime derivatives decode with checked hashes, alpha padding
 });
 
 test('one resolver serves host aliases, source artifact UI and portable embeds without confusing icon meanings',()=>{
- const A=require('../dist/artifact-data.js').artifacts,cards=require('../dist/card-data.js').cards;
+ const A=require('../dist/artifact-data.js').artifacts,cards=require('../dist/card-data.js').cards,original=require('../dist/assets/card-assets.json').runtimePaths;
  assert.equal(Object.keys(I.artifacts).length,31);assert.equal(Object.keys(I.cards).length,40);assert.equal(Object.keys(I.status).length,10);assert.equal(Object.keys(I.map).length,6);
  assert.notEqual(I.ui.focus,I.ui.predict);assert.notEqual(I.status.defense,I.status.block);assert.notEqual(I.status.weak,I.status.vulnerable);assert.notEqual(I.ui.bossSealOpen,I.ui.bossSealClosed);
  assert.equal(I.entries['ui.sound_asset'],I.ui.volume);assert.equal(I.ui.rest,I.map.camp);
- for(const a of A){assert.equal(I.resolve(a.icon),'assets/'+I.artifacts[a.id]);assert.equal(I.resolve(a.icon,{[I.artifacts[a.id]]:'data:verified'}),'data:verified');}
- for(const c of cards){assert.ok(I.cards[c.icon]);assert.equal(I.cards[c.icon],'assets/'+I.entries[c.id]);}
+ for(const a of A){assert.equal(I.artifacts[a.id],a.icon);assert.equal(I.resolve(a.icon),'assets/'+a.icon);assert.equal(I.resolve(a.icon,{[a.icon]:'data:verified'}),'data:verified');assert.equal(I.resolve(I.entries['artifact.'+a.id]),'assets/'+a.icon);}
+ for(const c of cards){assert.equal(I.cards[c.icon],original[c.icon]);assert.equal(I.resolve(I.entries[c.id]),original[c.icon]);}
  assert.equal(I.resolve('alyssa-right-idle.webp'),'assets/alyssa-right-idle.webp','non-icon artwork retains its existing path');
 });
 
-test('regenerating the supplier card adapter preserves reviewed illustration overrides and original portrait frames',()=>{
+test('regenerating the supplier card adapter restores all selected originals and portrait frames',()=>{
  require('../tools/import-cards.cjs')(path.resolve(__dirname,'..'));
  const sandbox={};vm.runInNewContext(fs.readFileSync(path.join(dir,'card-assets.js'),'utf8'),sandbox);
  const original=require('../dist/assets/card-assets.json').runtimePaths;
- for(const [logical,runtime]of Object.entries(I.cards))assert.equal(sandbox.STM_CARD_ASSETS[logical],runtime);
- for(const [logical,runtime]of Object.entries(original))if(!I.cards[logical])assert.equal(sandbox.STM_CARD_ASSETS[logical],runtime);
+ assert.deepEqual(JSON.parse(JSON.stringify(sandbox.STM_CARD_ASSETS)),original);
  assert.deepEqual(require('../dist/card-data.js'),require('../modules/cards/source/data/card-data.js'),'visual integration leaves authored card values intact');
  assert.ok(scripts.indexOf('icon-assets.js')<scripts.indexOf('card-assets.js'));
+});
+
+test('all published UI, map, buff/debuff and topic mappings remain identical to main v2.24.0',()=>{
+ const unchanged=JSON.stringify({ui:I.ui,map:I.map,status:I.status,topics:I.topics});
+ assert.equal(crypto.createHash('sha256').update(unchanged).digest('hex'),'1bf09671147cad741b62447aff83195a96533c39e3cfb99be00c64b5f173dd65');
+});
+
+test('restored card, frame and artifact bytes match the original source conversion manifests',()=>{
+ for(const [manifest,hashKey]of [[require('../dist/assets/card-assets.json').assets,'runtimeSha256'],[require('../dist/assets/artifact-assets.json').records,'runtime_sha256']]){
+  for(const record of manifest)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(dir,'assets',record.runtime))).digest('hex'),record[hashKey],record.runtime);
+ }
+});
+
+test('reimport scope cannot replace approved cards or artifacts and preserves unrelated aliases',()=>{
+ const clone=JSON.parse(JSON.stringify(I)),original=require('../dist/assets/card-assets.json'),cards=require('../dist/card-data.js').cards,artifacts=require('../dist/artifact-data.js').artifacts;
+ const before=JSON.stringify({ui:clone.ui,map:clone.map,status:clone.status,topics:clone.topics,entries:clone.entries}),uiAliases=Object.fromEntries(Object.values(clone.ui).map(file=>[file,clone.aliases[file]]));
+ for(const c of cards){clone.cards[c.icon]='assets/'+clone.entries[c.id];clone.aliases[original.runtimePaths[c.icon].replace(/^assets\//,'')]=clone.entries[c.id];}
+ for(const a of artifacts){clone.artifacts[a.id]=clone.entries['artifact.'+a.id];clone.aliases[a.icon]=clone.entries['artifact.'+a.id];}
+ require('../tools/import-icon-package.cjs').restoreOriginalArtwork(clone,cards,artifacts,original);
+ for(const c of cards)assert.equal(clone.cards[c.icon],original.runtimePaths[c.icon]);
+ for(const a of artifacts){assert.equal(clone.artifacts[a.id],a.icon);assert.equal(clone.aliases[a.icon],a.icon);}
+ assert.equal(JSON.stringify({ui:clone.ui,map:clone.map,status:clone.status,topics:clone.topics,entries:clone.entries}),before);
+ for(const [file,value]of Object.entries(uiAliases))assert.equal(clone.aliases[file],value);
+});
+
+test('the original owned artifact appears in the live HUD and source Codex online and offline',()=>{
+ const {claimArtifact}=require('./helpers/education.cjs'),A=require('../dist/artifact-data.js').artifacts;
+ for(const embedded of [false,true]){
+  const r=E.newRun(27,'challenge'),id=r.artifactState.offer.ids[0];claimArtifact(r,id);delete r.route;E.startBattle(r,'sentinel');const original=A.find(a=>a.id===id).icon,expected=embedded?'data:image/webp;base64,'+fs.readFileSync(path.join(dir,'assets',original)).toString('base64'):'assets/'+original;
+  const {dom,d,click}=boot(r,embedded);
+  try{click('[data-action=continue]');assert.equal(d.querySelector('.artifacts-trigger img').getAttribute('src'),expected);click('[data-action=library]');click('[data-action=collection-tab][data-kind=artifacts]');assert.equal(d.querySelector('.art-codex-card:not(.art-locked) img').getAttribute('src'),expected);}
+  finally{dom.window.close();}
+ }
 });
 
 test('live boss seals, enemy intent, status details and card art keep the same save and numeric meaning online and offline',()=>{
@@ -55,7 +87,7 @@ test('live boss seals, enemy intent, status details and card art keep the same s
    click('[data-action=continue]');const src=file=>embedded?'data:image/webp;base64,':'assets/'+file;
    for(const [selector,file]of [['.seal.open img',I.ui.bossSealOpen],['.seal:not(.open) img',I.ui.bossSealClosed],['.enemy .intent img',I.ui.intentAttackBlock],['[data-id=block][data-action=status-details] img',I.status.block.replace('assets/','')]])assert.ok(d.querySelector(selector).getAttribute('src').startsWith(src(file)),selector);
    const before=state();click('[data-action=status-details][data-id=block]');assert.match(d.querySelector('#dialog').textContent,/Block: 8.*Absorb up to 8/);assert.deepEqual(state(),before);click('#dialog [data-action=close]');
-   const c=require('../dist/card-data.js').cards.find(c=>c.id===r.battle.hand[0].key);assert.ok(d.querySelector('.package-card-art img').getAttribute('src').startsWith(src(I.entries[c.id])));
+   const c=require('../dist/card-data.js').cards.find(c=>c.id===r.battle.hand[0].key),original=require('../dist/assets/card-assets.json').runtimePaths[c.icon].replace(/^assets\//,'');assert.ok(d.querySelector('.package-card-art img').getAttribute('src').startsWith(src(original)));
   }finally{dom.window.close();}
  }
 });

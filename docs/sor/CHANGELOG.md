@@ -2,12 +2,19 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.25.1 — Restore original card and artifact artwork
+
+- Restore the 40 selected original card illustrations and 31 original artifact illustrations across live UI, source Codex, motion cues and portable output.
+- Keep all current buff/debuff, UI/menu, map and topic icons. Source artwork bytes, portrait frames, gameplay IDs and saves stay intact.
+- Make ordinary card generation and explicit icon-package reimport preserve the approved artwork boundary.
+- Publish the 2.25.0 combat motion to main together with this correction, under Ijamm's explicit request. [Cause, scope and actual verification](../ICON_ART_RESTORE_2_25_1.md).
+
 ## Game 2.25.0 — Combat card motion
 
 - Add actual Draw/Discard/Exhaust flights, face-down reshuffle and confirmed Recall/Passive movement using the existing source portraits.
 - Show named, effect-specific cues for all ten current Passive triggers with actual capped/zero results.
 - Keep animation independent of synchronous resolution/save/RNG and cancel all transient clones/hidden-card state across UI lifecycle and motion preferences.
-- Publish on the `combat-animation` feature branch for review. [Implementation and actual verification](../CARD_MOTION_2_25_0.md).
+- Develop and review on `combat-animation`; publish to main with the 2.25.1 artwork correction under Ijamm's explicit follow-up authorization. [Implementation and actual verification](../CARD_MOTION_2_25_0.md).
 
 ## Game 2.20.0
 

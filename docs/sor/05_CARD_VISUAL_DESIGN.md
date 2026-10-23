@@ -80,6 +80,10 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 DISAHKAN: reward selection/focus outlines surround the entire visible native frame (10% inset, 80% width/height), preserving token/scroll interactions above the action. Read Ahead tracks use a fixed viewport-bounded width, so 4/3/2/1 remaining choices never grow; only their row pans on narrow screens. Keep original source frame/art anchors. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
 
 
-## Reviewed card icon family — game 2.23.0
+## Reviewed card icon family — game 2.23.0 (historical)
 
 Ijamm's request to apply the reviewed all-icon package replaces the 40 runtime illustration mappings with the matching painted icon variants. Stable card IDs, supplier data, original source images and normal/Focus portrait frames stay intact. `tools/import-cards.cjs` overlays `DCIconAssets.cards` on the original verified derivative manifest every build, so regeneration cannot silently restore the former pictures. The shared Card UI uses the same mapping in Hand, Collection, Shop, rewards, piles and Passive details. Owner for meanings, provenance and export limits: [06](06_ICON_SYSTEM.md), ICO-10–13.
+
+## Original selected card artwork restored — game 2.25.1
+
+Ijamm explicitly restores the previous card illustrations while keeping current buff/debuff and UI/menu icons. This supersedes the 2.23 illustration overlay above. `dist/assets/card-assets.json.runtimePaths` owns all 40 selected original illustrations and seven unchanged portrait/auxiliary frames. `tools/import-cards.cjs` uses only that mapping; `tools/import-icon-package.cjs` preserves the same originals during explicit reimport. Hand, Collection, Shop, rewards, piles, Passive details and motion use those originals. Do not substitute category/status/UI symbols for card illustrations. [06](06_ICON_SYSTEM.md), ICO-14 and [restoration evidence](../ICON_ART_RESTORE_2_25_1.md).

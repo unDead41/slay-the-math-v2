@@ -1,0 +1,82 @@
+{
+  "version": "2.25.1",
+  "dateMalaysia": "2026-10-23",
+  "targetBranch": "main",
+  "mainBaseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "combatFeatureCommit": "7e0e6d7804e78a837c2e572471c11d99331d0d9a",
+  "authorization": "Ijamm explicitly requested main publication, then restoration of previous card/artifact icons while retaining buff/debuff and UI/menu icons.",
+  "artwork": {
+    "cardsRestored": 40,
+    "artifactsRestored": 31,
+    "originalFramesRetained": 7,
+    "preIconPackageCardAdapterCommit": "83a1aeee80ff0488758f94451f7afd1c27500988",
+    "restoredCardAdapterGitBlob": "3c26bd3bc5ad8b0c08b30bcaa9c3f18ab83913fc",
+    "unchangedUiMapStatusTopicsSha256": "1bf09671147cad741b62447aff83195a96533c39e3cfb99be00c64b5f173dd65",
+    "imageFilesModified": 0
+  },
+  "checks": {
+    "syntax": {
+      "command": "npm run check",
+      "passed": true
+    },
+    "restorationRegression": {
+      "command": "DOM_QA_MODULE=<existing-jsdom-26.1.0> node --test tests/icon-package.test.cjs",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fullSuite": {
+      "command": "DOM_QA_MODULE=<existing-jsdom-26.1.0> npm test",
+      "tests": 487,
+      "passed": 487,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 113290.239543
+    },
+    "productionBuild": {
+      "command": "npm run build:prod",
+      "passed": true,
+      "isolatedCopy": true,
+      "standaloneBytes": 295296716,
+      "runtimeFilesByteIdenticalToTestedSource": 670,
+      "sortedRuntimeHashMapSha256": "f6fee18de1496fcb1d6a8e4f6a7232a0656ceea10afbc25128fb4b0ae1f6428e"
+    },
+    "artworkProductionAndOfflineBrowser": {
+      "command": "node tests/icon-package-browser.cjs",
+      "passed": true,
+      "report": "icon-art-browser-2-25-1.json",
+      "restoredCardAndArtifactBytesCheckedInStandalone": true
+    },
+    "motionProductionBrowser": {
+      "command": "QA_PRODUCTION=1 npm run test:card-motion-browser",
+      "passed": true,
+      "report": "card-motion-browser-2-25-1.json",
+      "actualPassiveTriggerPaths": 10
+    },
+    "motionOfflineBrowser": {
+      "command": "node tests/card-motion-offline-browser.cjs",
+      "passed": true,
+      "report": "card-motion-offline-2-25-1.json",
+      "httpRequests": 0,
+      "pageErrors": 0
+    },
+    "diffWhitespace": {
+      "command": "git diff --check",
+      "passed": true
+    }
+  },
+  "preserved": [
+    "Published UI/menu, buff/debuff/status, map and topic icons",
+    "All original artwork bytes and card frames",
+    "Card/artifact data, stable IDs and gameplay values",
+    "Save schema and RNG",
+    "Audio and actor clips",
+    "Math questions and rewards"
+  ],
+  "limits": [
+    "Human approval of animation feel and physical-device playback remain unverified.",
+    "MODEL.zip was unavailable and was not imported.",
+    "Hosted CI is not claimed by this local verification record."
+  ]
+}

@@ -1,6 +1,6 @@
 # Combat card motion — 2.25.0
 
-Requested by Ijamm, 23 October 2026 (Malaysia). Work starts at main `2800f9a` / 2.24.0 and stays on `combat-animation` for review.
+Requested by Ijamm, 23 October 2026 (Malaysia). Developed and reviewed as 2.25.0 on `combat-animation` from main `2800f9a` / 2.24.0. Ijamm's subsequent explicit instruction authorizes publishing this work to main; it supersedes the initial branch-only delivery boundary. The follow-up card/artifact artwork restoration ships with this motion in 2.25.1; see [artwork restoration](ICON_ART_RESTORE_2_25_1.md).
 
 ## Piles
 
@@ -39,10 +39,10 @@ Ongoing attributes do not pulse on every subsequent turn. Waiting Passive activa
 
 The controller clones entire source portraits, strips action targets/IDs and uses an inert, aria-hidden, pointer-transparent overlay. Drawn real cards keep their layout space and are restored when their flight ends or is canceled. The existing live combat log and all keyboard/native modal controls stay authoritative. Motion Off, OS reduced motion, hidden/pagehide, dialog opening, navigation, resize and the next action remove transient visuals and restore hidden cards. Missing Web Animations support falls back to the static UI.
 
-The existing supplied illustrations, frames and painted icons are reused. MODEL.zip was unavailable and is not imported. There are no changes to card values, upgrades, Focus, RNG, combat timing, actor sprite clips, audio, math questions, save format or rewards.
+The existing supplied illustrations and frames are reused. In 2.25.1, all 40 selected original card illustrations and 31 original artifacts replace the 2.23 reviewed variants, while the current painted UI/status/map/topic icons remain. MODEL.zip was unavailable and is not imported. There are no changes to card values, upgrades, Focus, RNG, combat timing, actor sprite clips, audio, math questions, save format or rewards.
 
 ## Verification
 
 Recorded after the final implementation in `docs/verification/card-motion-2-25-0.json`. Commands are `npm run check`, the full `npm test` suite with the existing optional jsdom harness, `npm run test:card-motion-browser`, and `npm run build:prod`. Browser QA uses actual saved engine fixtures, the normal UI, and real Web Animations paused only by the test harness for deterministic inspection of short flights. It exercises all ten trigger paths, full-portrait clones, capped gains, Recall, reshuffle, rapid input, motion settings, desktop/phone/landscape and resize cleanup.
 
-Automated browser/visual checks do not claim Ijamm has approved the feel or that physical-device playback has been tested. Main integration is separate from this feature-branch delivery.
+Automated browser/visual checks do not claim physical-device playback has been tested. Main publication is authorized by Ijamm's follow-up request. The original feature verification remains a historical record; fresh combined integration checks are recorded in `docs/verification/combat-main-2-25-1.json`.

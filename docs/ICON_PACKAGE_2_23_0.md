@@ -1,5 +1,7 @@
 # Reviewed icon package — Slay the Math 2.23.0
 
+Historical release record. In 2.25.1, Ijamm explicitly restores the original 40 card and 31 artifact illustrations while retaining this release's UI/menu, buff/debuff, map and topic symbols. The card overlay/build behavior below is superseded by [original artwork restoration](ICON_ART_RESTORE_2_25_1.md) and SOR ICO-14.
+
 The v2.22.0 player mixed atlas bitmaps, inline utility SVGs and line-art status badges. Ijamm requests applying the reviewed package using the painted MathMon buff/debuff reference across the game's icons. This release uses one gold/navy/jewel family for UI, map, statuses, artifacts and card illustrations, keeping their real labels, counts and existing actions.
 
 Integration base: `83a1aeee80ff0488758f94451f7afd1c27500988` (main v2.22.0). The earlier icon inventory audited main v2.21.3; the current card/artifact IDs and consumers were checked against v2.22.0 before integration.

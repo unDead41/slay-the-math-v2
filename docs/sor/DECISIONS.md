@@ -1,11 +1,19 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261023-ART-RESTORE — Restore selected card and artifact illustrations
+
+**DISAHKAN:** Ijamm explicitly requests the previous card/artifact icons and says to retain buff, debuff and UI/menu icons. This overrides the card/artifact portion of the 2.23 all-icon integration only. Restore all 40 selected card mappings from `dist/assets/card-assets.json` and all 31 artifact filenames from `dist/artifact-data.js`, using their existing verified source derivatives. Keep current UI, map, status and topic mappings and image bytes. Normal card builds and explicit reviewed-package reimports must preserve this boundary. Publish together with the authorized combat motion as 2.25.1. [Scope and verification](../ICON_ART_RESTORE_2_25_1.md).
+
+## DEC-20261023-CARD-MOTION-MAIN — Publish combat animation to main
+
+**DISAHKAN:** Ijamm explicitly requests "okay push ke main branch please" after the 2.25.0 feature-branch delivery. This supersedes the earlier `combat-animation`-only release boundary. Integrate the reviewed feature from `7e0e6d7` into main `2800f9a`. Following DEC-20261023-ART-RESTORE, the combined release is 2.25.1. Record fresh combined-tree verification in `docs/verification/combat-main-2-25-1.json`; prior branch reports remain historical evidence.
+
 ## DEC-20261023-CARD-MOTION — Combat card motion (2.25.0)
 
 - **DISAHKAN:** Ijamm requests styled Draw, Discard and Exhaust card animation, plus trigger feedback for the ten current Passive cards.
 - **DITERUSKAN:** implement on `combat-animation` from main `2800f9a` / 2.24.0. An ordered, unsaved observational journal preserves same-action Discard/reshuffle/redraw and merges only validated atomic clone results. The renderer saves before motion; no effect waits for an animation.
 - **DITERUSKAN:** reuse source full portraits and original icons, keep hidden transfers face down, show actual Passive results from new combat-log entries, and dispose transient presentation on input/navigation/dialogs/visibility/resize/motion changes. Keep all gameplay values, stable IDs, RNG and saves unchanged.
-- **PERLU_VERIFIKASI:** Ijamm's feel/physical-device review. MODEL.zip remained unavailable and is not applied. Main integration is outside this feature-branch delivery. [Scope and verification](../CARD_MOTION_2_25_0.md).
+- **PERLU_VERIFIKASI:** Ijamm's feel/physical-device review. MODEL.zip remained unavailable and is not applied. This initial feature-branch boundary is superseded by DEC-20261023-CARD-MOTION-MAIN above. [Scope and verification](../CARD_MOTION_2_25_0.md).
 
 Versi: 2.0.1 · 18 Oktober 2026
 

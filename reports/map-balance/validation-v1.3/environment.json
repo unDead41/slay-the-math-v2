@@ -1,0 +1,13 @@
+{
+  "node": "v24.19.0",
+  "platform": "linux",
+  "arch": "x64",
+  "rootTestDependencies": {
+    "jsdom": "26.1.0",
+    "sharp": "0.35.5"
+  },
+  "dependencyManifestChanged": false,
+  "auditRuntimeDependencies": "Node built-ins plus repository engine; Python verifier uses stdlib",
+  "rootTestCommand": "node --test --test-concurrency=2 tests/*.test.cjs",
+  "browserManualOrPupilTests": false
+}

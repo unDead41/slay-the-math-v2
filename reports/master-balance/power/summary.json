@@ -1,0 +1,1507 @@
+{
+  "sourceHash": "6d58da7659c7519e3130621647f9ad44b932f3aae37a44488fc90b22b9dd4252",
+  "cases": 624,
+  "encounters": 1632,
+  "invalid": 0,
+  "censored": 0,
+  "allCards": [
+    "stm.attack.rune_strike",
+    "stm.attack.weak_point",
+    "stm.attack.scout_strike",
+    "stm.attack.return_strike",
+    "stm.attack.sure_hit",
+    "stm.attack.twin_shot",
+    "stm.attack.shield_shot",
+    "stm.attack.crack_shot",
+    "stm.attack.rune_sweep",
+    "stm.attack.fate_storm",
+    "stm.defend.rune_guard",
+    "stm.defend.flash_ward",
+    "stm.defend.tower_shield",
+    "stm.defend.ember_wall",
+    "stm.defend.foreseen_guard",
+    "stm.defend.layered_shield",
+    "stm.defend.burning_pages",
+    "stm.defend.cinder_guard",
+    "stm.defend.hold_the_line",
+    "stm.defend.mana_barrier",
+    "stm.skill.quick_study",
+    "stm.skill.deep_study",
+    "stm.skill.mana_reading",
+    "stm.skill.read_ahead",
+    "stm.skill.burning_page",
+    "stm.skill.clear_choice",
+    "stm.skill.card_search",
+    "stm.skill.recall",
+    "stm.skill.next_chapter",
+    "stm.skill.last_page",
+    "stm.passive.blazing_spirit",
+    "stm.passive.growing_flame",
+    "stm.passive.swift_step",
+    "stm.passive.battle_rhythm",
+    "stm.passive.rune_armor",
+    "stm.passive.lasting_shield",
+    "stm.passive.grimoire_ward",
+    "stm.passive.ember_core",
+    "stm.passive.clear_mind",
+    "stm.passive.last_ember"
+  ],
+  "groups": [
+    {
+      "key": "CCP|stm.passive.battle_rhythm+stm.defend.flash_ward|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -34.57692307692307,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.battle_rhythm+stm.defend.flash_ward|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 104.8846153846154,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.battle_rhythm+stm.defend.flash_ward|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.battle_rhythm+stm.defend.flash_ward|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.8333333333333334,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.blazing_spirit+stm.attack.fate_storm|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -31.641025641025646,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.blazing_spirit+stm.attack.fate_storm|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -34.12820512820513,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.blazing_spirit+stm.attack.fate_storm|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.blazing_spirit+stm.attack.fate_storm|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.clear_mind+stm.skill.quick_study|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -2.1666666666666665,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.clear_mind+stm.skill.quick_study|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.666666666666664,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.clear_mind+stm.skill.quick_study|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.clear_mind+stm.skill.quick_study|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.ember_core+stm.defend.flash_ward|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.6025641025641,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.ember_core+stm.defend.flash_ward|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 35.743589743589745,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.ember_core+stm.defend.flash_ward|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.ember_core+stm.defend.flash_ward|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.grimoire_ward+stm.skill.burning_page|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -1.6025641025641022,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.grimoire_ward+stm.skill.burning_page|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 35.28205128205128,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.grimoire_ward+stm.skill.burning_page|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.grimoire_ward+stm.skill.burning_page|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.growing_flame+stm.attack.twin_shot|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.growing_flame+stm.attack.twin_shot|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -1.6153846153846132,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.growing_flame+stm.attack.twin_shot|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.growing_flame+stm.attack.twin_shot|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.lasting_shield+stm.defend.tower_shield|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 68.85897435897436,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.lasting_shield+stm.defend.tower_shield|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 73.03846153846153,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.lasting_shield+stm.defend.tower_shield|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.lasting_shield+stm.defend.tower_shield|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.swift_step+stm.defend.layered_shield|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -66.07692307692308,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.swift_step+stm.defend.layered_shield|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -36.397435897435905,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.swift_step+stm.defend.layered_shield|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.4358974358974355,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.passive.swift_step+stm.defend.layered_shield|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3974358974358978,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.mana_reading+stm.skill.last_page|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.mana_reading+stm.skill.last_page|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 35.320512820512825,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.mana_reading+stm.skill.last_page|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.mana_reading+stm.skill.last_page|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -1.0512820512820535,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.recall+stm.skill.deep_study|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -1.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.recall+stm.skill.deep_study|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 34.47435897435897,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.recall+stm.skill.deep_study|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "CCP|stm.skill.recall+stm.skill.deep_study|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.8333333333333334,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.crack_shot|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.crack_shot|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -32.1025641025641,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.crack_shot|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.crack_shot|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.fate_storm|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 102.71794871794872,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.fate_storm|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 73.2948717948718,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.fate_storm|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.5512820512820535,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.fate_storm|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.0512820512820535,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.return_strike|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.return_strike|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.987179487179489,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.return_strike|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.return_strike|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_strike|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_strike|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_strike|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_strike|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_sweep|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_sweep|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 4.666666666666667,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_sweep|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.3846153846153868,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.rune_sweep|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.0512820512820535,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.scout_strike|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.scout_strike|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.6025641025641,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.scout_strike|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.scout_strike|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.shield_shot|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.shield_shot|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.987179487179489,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.shield_shot|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.shield_shot|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.sure_hit|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.sure_hit|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 34.756410256410255,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.sure_hit|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.sure_hit|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.twin_shot|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.twin_shot|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.43589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.twin_shot|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.twin_shot|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.weak_point|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.weak_point|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.26923076923077,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.weak_point|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.attack.weak_point|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.burning_pages|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.burning_pages|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.burning_pages|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.615384615384618,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.burning_pages|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.cinder_guard|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.cinder_guard|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.cinder_guard|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.cinder_guard|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.ember_wall|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.14102564102564,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.ember_wall|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.0897435897435912,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.ember_wall|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.ember_wall|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.flash_ward|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.flash_ward|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.flash_ward|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.flash_ward|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.foreseen_guard|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.foreseen_guard|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.foreseen_guard|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.foreseen_guard|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.hold_the_line|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.hold_the_line|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.hold_the_line|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.5128205128205158,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.hold_the_line|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.012820512820515736,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.layered_shield|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.layered_shield|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.layered_shield|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.474358974358978,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.layered_shield|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.mana_barrier|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.mana_barrier|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.mana_barrier|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.20512820512820915,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.mana_barrier|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.2948717948717909,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.rune_guard|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.rune_guard|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.rune_guard|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.rune_guard|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.tower_shield|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.tower_shield|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.tower_shield|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.defend.tower_shield|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.battle_rhythm|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.96153846153846,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.battle_rhythm|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 34.06410256410256,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.battle_rhythm|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.battle_rhythm|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.blazing_spirit|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 103.26923076923076,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.blazing_spirit|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 39.28205128205128,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.blazing_spirit|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.blazing_spirit|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.clear_mind|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.clear_mind|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.clear_mind|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.clear_mind|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.21794871794872014,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.ember_core|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 101.06410256410258,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.ember_core|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 70.11538461538461,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.ember_core|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.ember_core|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.grimoire_ward|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.grimoire_ward|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.grimoire_ward|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.3076923076923113,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.grimoire_ward|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.08974358974358647,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.growing_flame|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 105.96153846153845,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.growing_flame|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 72.08974358974359,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.growing_flame|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.growing_flame|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.last_ember|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.last_ember|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.last_ember|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.last_ember|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.lasting_shield|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.85897435897436,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.lasting_shield|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 68.11538461538461,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.lasting_shield|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.4102564102564135,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.lasting_shield|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.012820512820515736,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.rune_armor|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 66.98717948717949,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.rune_armor|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3974358974358978,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.rune_armor|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.10256410256410693,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.rune_armor|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3974358974358931,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.swift_step|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.44871794871795,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.swift_step|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 36.217948717948715,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.swift_step|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.passive.swift_step|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.burning_page|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.burning_page|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.6025641025641,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.burning_page|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.7820512820512846,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.burning_page|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.2820512820512846,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.card_search|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.card_search|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.card_search|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.474358974358978,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.card_search|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.025641025641021997,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.clear_choice|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.clear_choice|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.6025641025641,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.clear_choice|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.clear_choice|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.11538461538461793,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.deep_study|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.deep_study|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.43589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.deep_study|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.deep_study|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.last_page|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.last_page|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.last_page|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.3076923076923113,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.last_page|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.025641025641021997,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.mana_reading|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.mana_reading|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.mana_reading|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.474358974358978,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.mana_reading|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.14102564102564466,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.next_chapter|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.next_chapter|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.next_chapter|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.next_chapter|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.quick_study|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.quick_study|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.quick_study|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.474358974358978,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.quick_study|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.read_ahead|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.read_ahead|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.26923076923077,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.read_ahead|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.051282051282053466,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.read_ahead|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.21794871794872014,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.recall|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.5,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.recall|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.93589743589744,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.recall|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "ICP|stm.skill.recall|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "meanTotalSynergy": null
+    },
+    {
+      "key": "TRIPLE|stm.passive.blazing_spirit+stm.passive.growing_flame+stm.attack.fate_storm|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -71.06410256410255,
+      "meanTotalSynergy": -99.74358974358974
+    },
+    {
+      "key": "TRIPLE|stm.passive.blazing_spirit+stm.passive.growing_flame+stm.attack.fate_storm|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": 0.16666666666666666
+    },
+    {
+      "key": "TRIPLE|stm.passive.ember_core+stm.passive.clear_mind+stm.skill.mana_reading|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.4358974358974355,
+      "meanTotalSynergy": -1.2051282051282044
+    },
+    {
+      "key": "TRIPLE|stm.passive.ember_core+stm.passive.clear_mind+stm.skill.mana_reading|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "meanTotalSynergy": -0.602564102564107
+    },
+    {
+      "key": "TRIPLE|stm.passive.grimoire_ward+stm.skill.burning_page+stm.skill.recall|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.6666666666666666,
+      "meanTotalSynergy": -1
+    },
+    {
+      "key": "TRIPLE|stm.passive.grimoire_ward+stm.skill.burning_page+stm.skill.recall|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.6025641025641022,
+      "meanTotalSynergy": -0.10256410256410693
+    },
+    {
+      "key": "TRIPLE|stm.passive.swift_step+stm.passive.battle_rhythm+stm.defend.layered_shield|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -136.1153846153846,
+      "meanTotalSynergy": 80.96153846153847
+    },
+    {
+      "key": "TRIPLE|stm.passive.swift_step+stm.passive.battle_rhythm+stm.defend.layered_shield|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "meanTotalSynergy": 0.24358974358974214
+    }
+  ]
+}

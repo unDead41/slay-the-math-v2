@@ -1,0 +1,47 @@
+{
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "coverage": [
+    {
+      "build": "baseline",
+      "unique": 4730,
+      "outcomes": {
+        "WIN": 3662,
+        "LOSS": 1068
+      },
+      "factorial": 2800,
+      "batches": {
+        "lite_primary": 1200,
+        "lite_triples": 640,
+        "duplicate_uid_screen": 160,
+        "risk_expansion_50": 800
+      },
+      "individual": 320,
+      "focus": 60,
+      "orders": 396,
+      "artifacts": 225,
+      "withheld": 0
+    },
+    {
+      "build": "candidate",
+      "unique": 5210,
+      "outcomes": {
+        "WIN": 3573,
+        "LOSS": 1637
+      },
+      "factorial": 3760,
+      "batches": {
+        "lite_primary": 1200,
+        "lite_followup": 960,
+        "lite_triples": 640,
+        "duplicate_uid_screen": 160,
+        "risk_expansion_50": 800
+      },
+      "individual": 320,
+      "focus": 60,
+      "orders": 396,
+      "artifacts": 225,
+      "withheld": 0
+    }
+  ],
+  "enemyEncounters": 216
+}

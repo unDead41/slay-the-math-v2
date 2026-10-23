@@ -1,0 +1,56 @@
+[
+  {
+    "difficulty": "easy",
+    "status": "NEEDS_COMBAT_MASTER_ADAPTER",
+    "engineTrials": 0,
+    "required": [
+      "versioned full Combat/Master engine adapter",
+      "implemented HP, enemy/stat/Focus definitions",
+      "cross-domain integration and source hashes"
+    ],
+    "economyInput": {
+      "branch": "balance/economy",
+      "commit": "04e1b7b18648a857a12680370269a9933a5f23ab",
+      "version": "economy-1.2-candidate.1",
+      "applied": false
+    },
+    "targetPupilWinRate": 0.9,
+    "pupilWinRateMeasured": false
+  },
+  {
+    "difficulty": "medium",
+    "status": "NEEDS_COMBAT_MASTER_ADAPTER",
+    "engineTrials": 0,
+    "required": [
+      "versioned full Combat/Master engine adapter",
+      "implemented HP, enemy/stat/Focus definitions",
+      "cross-domain integration and source hashes"
+    ],
+    "economyInput": {
+      "branch": "balance/economy",
+      "commit": "04e1b7b18648a857a12680370269a9933a5f23ab",
+      "version": "economy-1.2-candidate.1",
+      "applied": false
+    },
+    "targetPupilWinRate": 0.7,
+    "pupilWinRateMeasured": false
+  },
+  {
+    "difficulty": "hard",
+    "status": "NEEDS_COMBAT_MASTER_ADAPTER",
+    "engineTrials": 0,
+    "required": [
+      "versioned full Combat/Master engine adapter",
+      "implemented HP, enemy/stat/Focus definitions",
+      "cross-domain integration and source hashes"
+    ],
+    "economyInput": {
+      "branch": "balance/economy",
+      "commit": "04e1b7b18648a857a12680370269a9933a5f23ab",
+      "version": "economy-1.2-candidate.1",
+      "applied": false
+    },
+    "targetPupilWinRate": 0.5,
+    "pupilWinRateMeasured": false
+  }
+]

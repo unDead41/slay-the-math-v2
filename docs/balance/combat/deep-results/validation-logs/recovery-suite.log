@@ -1,0 +1,646 @@
+✔ only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames (2.145786ms)
+✔ idle advances at source FPS; non-looping Attack completes once and returns to idle (2.236249ms)
+✔ every frame uses the same floor registration and source rectangles, without per-pose recentering (0.90061ms)
+✔ pause freezes the exact frame and resumes without counting hidden time (0.931253ms)
+✔ Motion Off uses the supplied idle frame, schedules no animation, and never replays an action (0.688594ms)
+✔ a late action load cannot replace a newer reaction or revive a destroyed actor (0.509904ms)
+✔ missing action textures recover to idle and a missing idle leaves the original image fallback (1.196724ms)
+✔ variable frame durations keep windup and recovery timing and finish exactly at the source total (1.770113ms)
+✔ actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor (0.698066ms)
+✔ Alyssa animation spans both stages while enemy IDs remain stage scoped (0.449373ms)
+✔ all six Skill body silhouettes keep the same crown-to-floor size, independently of fire effects (0.766358ms)
+✔ new Challenge freezes three unique working Starting choices before any map entry (40.905036ms)
+✔ Learn and existing Challenge saves retain their original flow (6.803244ms)
+✔ Ration and Purse apply once on acquisition and never on restore (17.356494ms)
+✔ first-turn Lens, Bookmark and Guard Pin reset each combat, not each render/turn (19.640192ms)
+✔ Bookmark and Satchel stack opening draws and do not add cards on later turns (2.42266ms)
+✔ first Attack bonus is per resolved card, stacks with Tongs, and refreshes per turn (8.834115ms)
+✔ Buckler, Sentinel Crest and Agility apply only to Defense cards (2.525018ms)
+✔ Strength and first-Attack bonuses are applied before enemy Block and boss seals (4.127172ms)
+✔ Quill is once per combat and Bell once per turn; Skill resolution draws actual cards (7.169814ms)
+✔ Exhaust triggers once at the correct combat/turn scope, after the full batch is moved (4.831264ms)
+✔ Abacus awards once after the third resolved card; Pair works in either order (8.192762ms)
+✔ Chance Die uses one persisted independent roll and grants the documented face outcome (121.992522ms)
+✔ Ember Balance blocks before damage; fully blocked attacks retaliate through normal mitigation (7.285707ms)
+✔ retaliation victory resolves once, grants healing once and does not start a phantom turn (4.740876ms)
+✔ Pendant and Feather cap healing; Lantern triggers once while alive and never revives (8.936201ms)
+✔ shop discounts use the best rate only, with ceil rounding and exact saved stock (17.245543ms)
+✔ Boss artifacts add Energy/draw every turn and Clasp caps only its own stat contribution (11.277246ms)
+✔ Elite card choice precedes its frozen artifact offer and double claims are rejected (7.156647ms)
+✔ Mystery offers exclude owned items and cannot reroll through another event action (4.65625ms)
+✔ Boss choice is required before Stage 2 and the exact artifact checkpoint survives retry (5.61331ms)
+✔ unsupported Passive/discard items stay out of offers; their event hooks remain precise (5.413842ms)
+✔ invalid ownership, offer tiers, acquisition records, counters and extra Max HP are rejected (5.016238ms)
+node:internal/modules/cjs/loader:1520
+  throw err;
+  ^
+
+Error: Cannot find module 'jsdom'
+Require stack:
+- /workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/audio-alyssa-ui.test.cjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/audio-alyssa-ui.test.cjs:2:15)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/audio-alyssa-ui.test.cjs'
+  ]
+}
+
+Node.js v24.19.0
+✖ tests/audio-alyssa-ui.test.cjs (103.322586ms)
+✔ Alyssa reacts to each visible question/help reveal once, including across save reload (7.14444ms)
+✔ Alyssa shuffle bags cover every variant, avoid boundary repeats and never consume gameplay RNG (10.508931ms)
+✔ checked answers follow ordered learning events, with one receipt per actual attempt (1.118377ms)
+✔ reveal, timeout, historical answers and invalid reactions never claim a new checked answer (0.317375ms)
+✔ legacy live-deck questions react to actual attempts and a later Hint without touching question state (0.908432ms)
+✔ Mystery intro mapping is fixed, consumed before scheduling, and ends at Start Challenge (0.961467ms)
+✔ Rest requires a committed action; reward/defeat trigger only in their actual surfaces (1.513649ms)
+✔ hidden observation consumes no new line and malformed optional audio recovers safely (0.56463ms)
+✔ active pack selects all 75 normalized voices and exactly the eight unchanged supplied BGM (111.210275ms)
+✔ MUSIC(5) adds 26 mastered recordings while retaining every prior registry asset byte for byte (19.72438ms)
+✔ supplied audio has byte-preserved explicit paths and canonical Normal/Elite sharing (53.607829ms)
+✔ catalog generation retains supplied mapping rather than old score metadata (23.62479ms)
+✔ distinct visible gifts use per-run Dungeon Master order and same gift stays frozen (2.19479ms)
+✔ merchant visit order is independent across stages and tabs do not add visits (0.461976ms)
+✔ hidden or ineligible surfaces do not reserve greetings (0.385549ms)
+✔ metadata round-trip and checkpoint snapshot preserve frozen voice without sharing objects (0.522137ms)
+✔ malformed optional metadata is recovered without rejecting or changing valid gameplay (0.350939ms)
+✔ metadata storage has a hard bound and invalid voice/visit pairs cannot be restored (4.860242ms)
+✔ visible surface routing uses supplied map/defeat and canonical shared combat with explicit Boss flags (2.29199ms)
+✔ music waits for a player gesture and does not restart identical source aliases (10.45775ms)
+✔ supplied explicit MP3 wins over stale embedded alias and stale OGG (2.625979ms)
+✔ slow music cannot replace a newer scene or bypass Music mute (1.791585ms)
+✔ route changes crossfade native music sources at original playback rate (1.154065ms)
+✔ one-shot greeting does not restart on rerender and supersedes the previous voice (3.018589ms)
+✔ late voice decode after leaving a surface cannot play or retain ducking (1.481416ms)
+✔ blocked autoplay retains only current greeting until a successful gesture (1.203327ms)
+✔ Mystery entry waits 200 ms, expires at two seconds and cannot play after a slow decode (3.031879ms)
+✔ new question scope cancels a higher-priority old Hint and an old ended callback cannot unduck it (1.644054ms)
+✔ voice watchdog restores music when a device omits onended (1.296644ms)
+✔ Voice mute and zero volume consume greeting without replay on unmute or slider changes (0.991605ms)
+✔ Music mute leaves Voice audible, and Voice/Predict duck takes minimum factor with current Music setting (1.049994ms)
+✔ hidden page stops voice and show resumes BGM without replaying greeting (1.826855ms)
+✔ showing the page while suspension is pending resumes after that suspension finishes (3.094688ms)
+✔ leaving and rapidly reopening a surface does not overlap the old voice fade (2.407584ms)
+✔ rapid scene changes retire older music fades before starting a third loop (1.202862ms)
+✔ a missing audio catalog cannot block game scene rendering (6.574087ms)
+✔ balance loader isolates data and keeps player defaults unchanged (715.387343ms)
+✔ explicit upgrades and Focus resolve once through the execution plan (328.22521ms)
+✔ Strength and Agility use one card budget and delayed Block remains fixed (205.669368ms)
+✔ upgraded Passive activation gifts do not repeat through swap and restore (113.400553ms)
+✔ bounded simulator retains censored and invalid factorial variants (127.415983ms)
+✔ benchmark is deterministic and never spends unavailable Energy (182.484169ms)
+✔ Spool does not mistake rejected Draw Pile candidates for hand discard (215.613402ms)
+✔ duplicate Passive with a different upgrade preserves its first activation cadence (60.648589ms)
+✔ choice budget exhaustion is censored rather than invalid policy (148.882071ms)
+✔ upgraded Passive preview shows resolved retain limit (70.74108ms)
+✔ explicit decks preserve size and upgrades (270.451574ms)
+✔ wrong abandoned Predict gives no Focus or seal (158.234089ms)
+✔ wrong then correct opens a seal without Focus (58.564468ms)
+✔ serialization at Predict and choices preserves mechanical outcome (921.259592ms)
+✔ explicit deck consumes one opening Chance Die roll (50.898576ms)
+✔ free Exhaust Recall cluster remains bounded with no exhausted UID re-entry (248.512887ms)
+✔ actual campaign reaches both stages using actual frozen offers (865.672281ms)
+✔ route policies rank actual battle type and reject unknown types (0.523051ms)
+✔ exhausted question bank counts seal opening but no Focus (173.928915ms)
+✔ all 31 artifacts have actual evidence or explicit scope classification (171.393254ms)
+✔ long Passive swap stress counts live gifts beyond bounded history (845.098549ms)
+✔ three Weak stacks consume per hit and expire after enemy phase (40.409489ms)
+✔ Thorns caps at six and ignores Strength on each hit (34.723248ms)
+✔ carry uses highest cap then adds fixed queued Block after reset (60.150653ms)
+✔ upgraded Focus Mana Reading queue survives exact restore (31.660568ms)
+✔ death cannot trigger Last Ember Flask or Thorns retaliation (35.663416ms)
+✔ boss phase transition preserves current locked intent (56.941611ms)
+✔ full Hand preserves armed Focus and moves only actual fitting draw (66.516572ms)
+✔ Recall rejects exhausted targets before payment and cancel is free (43.264105ms)
+✔ both bosses use all sixty left-facing source cells, original variable holds, and a floor registration that preserves translucent VFX (11.21982ms)
+✔ ten-level maps can complete both stages through real combat, events, rests and rewards (58565.377981ms)
+ℹ {"map":"10 levels","seed":7,"result":"victory","hp":40,"trace":[{"enemy":"bat","turns":3,"hp":58,"result":"reward"},{"enemy":"wisp","turns":3,"hp":58,"result":"reward"},{"enemy":"wisp","turns":2,"hp":58,"result":"reward"},{"enemy":"beetle","turns":3,"hp":57,"result":"reward"},{"enemy":"wisp","turns":2,"hp":55,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":46,"result":"stageclear"},{"enemy":"mimic","turns":4,"hp":52,"result":"reward"},{"enemy":"weaver","turns":3,"hp":52,"result":"reward"},{"enemy":"shade","turns":4,"hp":45,"result":"reward"},{"enemy":"shade","turns":3,"hp":43,"result":"reward"},{"enemy":"mimic","turns":4,"hp":40,"result":"reward"},{"enemy":"weaver","turns":2,"hp":35,"result":"reward"},{"enemy":"dealer","turns":9,"hp":40,"result":"victory"}]}
+ℹ {"map":"10 levels","seed":42,"result":"victory","hp":18,"trace":[{"enemy":"beetle","turns":3,"hp":55,"result":"reward"},{"enemy":"bat","turns":2,"hp":55,"result":"reward"},{"enemy":"beetle","turns":3,"hp":55,"result":"reward"},{"enemy":"beetle","turns":2,"hp":50,"result":"reward"},{"enemy":"sentinel","turns":5,"hp":54,"result":"stageclear"},{"enemy":"shade","turns":4,"hp":52,"result":"reward"},{"enemy":"weaver","turns":2,"hp":52,"result":"reward"},{"enemy":"weaver","turns":2,"hp":52,"result":"reward"},{"enemy":"shade","turns":4,"hp":44,"result":"reward"},{"enemy":"mimic","turns":4,"hp":33,"result":"reward"},{"enemy":"dealer","turns":8,"hp":18,"result":"victory"}]}
+ℹ {"map":"10 levels","seed":81,"result":"victory","hp":35,"trace":[{"enemy":"beetle","turns":3,"hp":59,"result":"reward"},{"enemy":"wisp","turns":2,"hp":59,"result":"reward"},{"enemy":"bat","turns":2,"hp":57,"result":"reward"},{"enemy":"wisp","turns":2,"hp":57,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":57,"result":"stageclear"},{"enemy":"mimic","turns":4,"hp":52,"result":"reward"},{"enemy":"golem","turns":5,"hp":42,"result":"reward"},{"enemy":"mimic","turns":4,"hp":39,"result":"reward"},{"enemy":"weaver","turns":2,"hp":39,"result":"reward"},{"enemy":"weaver","turns":2,"hp":51,"result":"reward"},{"enemy":"dealer","turns":7,"hp":35,"result":"victory"}]}
+✔ challenge mode has a complete winnable two-stage route through real actions (81093.473963ms)
+ℹ {"seed":1,"result":"victory","hp":32,"trace":[{"enemy":"wisp","turns":2,"hp":60,"result":"reward"},{"enemy":"beetle","turns":3,"hp":58,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":51,"result":"stageclear"},{"enemy":"weaver","turns":2,"hp":60,"result":"reward"},{"enemy":"shade","turns":3,"hp":54,"result":"reward"},{"enemy":"dealer","turns":7,"hp":32,"result":"victory"}]}
+ℹ {"seed":7,"result":"victory","hp":7,"trace":[{"enemy":"wisp","turns":3,"hp":57,"result":"reward"},{"enemy":"beetle","turns":3,"hp":49,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":31,"result":"stageclear"},{"enemy":"shade","turns":3,"hp":34,"result":"reward"},{"enemy":"mimic","turns":3,"hp":25,"result":"reward"},{"enemy":"dealer","turns":7,"hp":7,"result":"victory"}]}
+ℹ {"seed":42,"result":"victory","hp":26,"trace":[{"enemy":"wisp","turns":2,"hp":54,"result":"reward"},{"enemy":"beetle","turns":3,"hp":46,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":43,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":55,"result":"reward"},{"enemy":"shade","turns":4,"hp":50,"result":"reward"},{"enemy":"dealer","turns":6,"hp":26,"result":"victory"}]}
+ℹ {"seed":112,"result":"victory","hp":24,"trace":[{"enemy":"wisp","turns":2,"hp":60,"result":"reward"},{"enemy":"beetle","turns":3,"hp":55,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":41,"result":"stageclear"},{"enemy":"weaver","turns":2,"hp":53,"result":"reward"},{"enemy":"shade","turns":3,"hp":53,"result":"reward"},{"enemy":"dealer","turns":6,"hp":24,"result":"victory"}]}
+ℹ {"seed":2026,"result":"victory","hp":30,"trace":[{"enemy":"beetle","turns":3,"hp":56,"result":"reward"},{"enemy":"bat","turns":3,"hp":54,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":40,"result":"stageclear"},{"enemy":"shade","turns":3,"hp":43,"result":"reward"},{"enemy":"weaver","turns":2,"hp":43,"result":"reward"},{"enemy":"dealer","turns":8,"hp":30,"result":"victory"}]}
+✔ guided learning mode remains accessible across representative full campaigns (25470.062848ms)
+ℹ {"mode":"learn","seed":1,"result":"victory","hp":23,"trace":[{"enemy":"wisp","turns":3,"hp":57,"result":"reward"},{"enemy":"beetle","turns":4,"hp":52,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":40,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":52,"result":"reward"},{"enemy":"shade","turns":4,"hp":47,"result":"reward"},{"enemy":"dealer","turns":9,"hp":23,"result":"victory"}]}
+ℹ {"mode":"learn","seed":7,"result":"defeat","hp":0,"trace":[{"enemy":"wisp","turns":3,"hp":55,"result":"reward"},{"enemy":"beetle","turns":4,"hp":54,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":39,"result":"stageclear"},{"enemy":"shade","turns":5,"hp":44,"result":"reward"},{"enemy":"mimic","turns":5,"hp":35,"result":"reward"},{"enemy":"dealer","turns":7,"hp":0,"result":"defeat"}]}
+ℹ {"mode":"learn","seed":42,"result":"victory","hp":27,"trace":[{"enemy":"wisp","turns":4,"hp":55,"result":"reward"},{"enemy":"beetle","turns":5,"hp":54,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":42,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":51,"result":"reward"},{"enemy":"shade","turns":5,"hp":40,"result":"reward"},{"enemy":"dealer","turns":8,"hp":27,"result":"victory"}]}
+ℹ {"mode":"learn","seed":112,"result":"victory","hp":15,"trace":[{"enemy":"wisp","turns":4,"hp":54,"result":"reward"},{"enemy":"beetle","turns":3,"hp":48,"result":"reward"},{"enemy":"sentinel","turns":6,"hp":42,"result":"stageclear"},{"enemy":"weaver","turns":3,"hp":54,"result":"reward"},{"enemy":"shade","turns":4,"hp":44,"result":"reward"},{"enemy":"dealer","turns":9,"hp":15,"result":"victory"}]}
+ℹ {"mode":"learn","seed":2026,"result":"victory","hp":23,"trace":[{"enemy":"beetle","turns":4,"hp":54,"result":"reward"},{"enemy":"bat","turns":3,"hp":54,"result":"reward"},{"enemy":"sentinel","turns":7,"hp":45,"result":"stageclear"},{"enemy":"shade","turns":5,"hp":53,"result":"reward"},{"enemy":"weaver","turns":3,"hp":50,"result":"reward"},{"enemy":"dealer","turns":8,"hp":23,"result":"victory"}]}
+✔ stage checkpoint remains exact and reusable after repeated defeats and save/reload (1.73986ms)
+✔ starting-run retry restores the same seed and full starter deck (0.329871ms)
+✔ canonical card executes and conserves instances: Rune Strike (18.848503ms)
+✔ canonical card executes and conserves instances: Weak Point (9.023867ms)
+✔ canonical card executes and conserves instances: Scout Strike (7.536379ms)
+✔ canonical card executes and conserves instances: Return Strike (3.440686ms)
+✔ canonical card executes and conserves instances: Sure Hit (2.445708ms)
+✔ canonical card executes and conserves instances: Twin Shot (2.518857ms)
+✔ canonical card executes and conserves instances: Shield Shot (2.364034ms)
+✔ canonical card executes and conserves instances: Crack Shot (2.034834ms)
+✔ canonical card executes and conserves instances: Rune Sweep (3.343451ms)
+✔ canonical card executes and conserves instances: Fate Storm (3.219299ms)
+✔ canonical card executes and conserves instances: Rune Guard (2.329494ms)
+✔ canonical card executes and conserves instances: Flash Ward (1.74182ms)
+✔ canonical card executes and conserves instances: Tower Shield (1.844888ms)
+✔ canonical card executes and conserves instances: Ember Wall (2.925564ms)
+✔ canonical card executes and conserves instances: Foreseen Guard (1.882195ms)
+✔ canonical card executes and conserves instances: Layered Shield (2.480914ms)
+✔ canonical card executes and conserves instances: Burning Pages (2.160513ms)
+✔ canonical card executes and conserves instances: Cinder Guard (1.505331ms)
+✔ canonical card executes and conserves instances: Hold the Line (1.688342ms)
+✔ canonical card executes and conserves instances: Mana Barrier (1.564851ms)
+✔ canonical card executes and conserves instances: Quick Study (1.920607ms)
+✔ canonical card executes and conserves instances: Deep Study (1.69545ms)
+✔ canonical card executes and conserves instances: Mana Reading (1.774838ms)
+✔ canonical card executes and conserves instances: Read Ahead (2.326964ms)
+✔ canonical card executes and conserves instances: Burning Page (1.654556ms)
+✔ canonical card executes and conserves instances: Clear Choice (1.75298ms)
+✔ canonical card executes and conserves instances: Card Search (2.683354ms)
+✔ canonical card executes and conserves instances: Recall (5.983001ms)
+✔ canonical card executes and conserves instances: Next Chapter (1.99075ms)
+✔ canonical card executes and conserves instances: Last Page (1.795395ms)
+✔ canonical card executes and conserves instances: Blazing Spirit (2.001225ms)
+✔ canonical card executes and conserves instances: Growing Flame (2.443763ms)
+✔ canonical card executes and conserves instances: Swift Step (1.230522ms)
+✔ canonical card executes and conserves instances: Battle Rhythm (1.360121ms)
+✔ canonical card executes and conserves instances: Rune Armor (1.574624ms)
+✔ canonical card executes and conserves instances: Lasting Shield (2.003474ms)
+✔ canonical card executes and conserves instances: Grimoire Ward (1.308241ms)
+✔ canonical card executes and conserves instances: Ember Core (1.425767ms)
+✔ canonical card executes and conserves instances: Clear Mind (2.00497ms)
+✔ canonical card executes and conserves instances: Last Ember (1.330145ms)
+✔ new starter, reward/shop pool, upgrades and old IDs coexist (43.268671ms)
+✔ Focus snapshots Strength per hit, first artifact bonuses per card and +3 once (4.076247ms)
+✔ Fate Storm saves exactly three seeded target choices and does not replay (2.682754ms)
+✔ Attack/Defend conditionals use commit state and Sure Hit bypasses only Block (4.461235ms)
+✔ 0-Energy Flash Ward exhausts and both X cards reject zero without payment (2.535137ms)
+✔ Focus is preserved when the extra draw, option or replacement provably cannot help (13.234747ms)
+✔ Recall and category search choose before commit and cancellation is free across reload (5.291302ms)
+✔ Recall selects an exact discard instance, cannot draw itself and spends Focus only for an extra card (1.210502ms)
+✔ committed choices persist, lock commands, reject cancellation and finish once (10.601971ms)
+✔ Read Ahead takes one and reorders remaining cards top-first atomically (1.950603ms)
+✔ Burning Page replacements are bounded, optional and never reshuffle during the session (1.093612ms)
+✔ a bounded search can fail after paying, and skipped cards trigger discard artifacts once (1.377112ms)
+✔ bounded sessions refill once, auto-finish a sole candidate and exclude the resolving card (2.740608ms)
+✔ Last Page uses the empty-hand snapshot before all printed draws and passive triggers (2.634805ms)
+✔ Layered Shield stores Agility once; Next Chapter and Clear Mind draw only on later turns (4.60595ms)
+✔ Lasting Shield and Hold the Line keep the maximum cap from unspent Block (4.02251ms)
+✔ Growing Flame counts resolved cards after activation, caps at three and resets next combat (27.881278ms)
+✔ Battle Rhythm counts resolved cards after activation, caps at three and resets next combat (16.252608ms)
+✔ unique Passives preserve armed Focus and artifact stats survive passive combat reset (2.995949ms)
+✔ Grimoire Ward and Ember Core fire at most once per turn without Attack loops (3.546223ms)
+✔ Last Ember activates once below 30%, reacts to nonlethal loss and cannot revive (3.583038ms)
+✔ Vulnerable/Weak consume per Attack hit, clamp at three and expire on affected turns (3.380243ms)
+✔ Defense mitigates each enemy hit before Block and Thorns hits even fully blocked attacks (2.187169ms)
+✔ tampered active stats, counters, queues, candidates and pending transactions fail safely (4.119726ms)
+✔ legacy battles migrate additively and new Predict uses the shared bank (5.928502ms)
+✔ upgrade extension preserves base card and executes once: Rune Strike (2.500274ms)
+✔ upgrade extension preserves base card and executes once: Weak Point (1.527181ms)
+✔ upgrade extension preserves base card and executes once: Scout Strike (1.990502ms)
+✔ upgrade extension preserves base card and executes once: Return Strike (1.339228ms)
+✔ upgrade extension preserves base card and executes once: Sure Hit (1.488637ms)
+✔ upgrade extension preserves base card and executes once: Twin Shot (1.323635ms)
+✔ upgrade extension preserves base card and executes once: Shield Shot (1.089217ms)
+✔ upgrade extension preserves base card and executes once: Crack Shot (1.360036ms)
+✔ upgrade extension preserves base card and executes once: Rune Sweep (1.273297ms)
+✔ upgrade extension preserves base card and executes once: Fate Storm (1.129937ms)
+✔ upgrade extension preserves base card and executes once: Rune Guard (1.242019ms)
+✔ upgrade extension preserves base card and executes once: Flash Ward (1.20969ms)
+✔ upgrade extension preserves base card and executes once: Tower Shield (1.129339ms)
+✔ upgrade extension preserves base card and executes once: Ember Wall (1.763833ms)
+✔ upgrade extension preserves base card and executes once: Foreseen Guard (1.472818ms)
+✔ upgrade extension preserves base card and executes once: Layered Shield (0.970299ms)
+✔ upgrade extension preserves base card and executes once: Burning Pages (1.977606ms)
+✔ upgrade extension preserves base card and executes once: Cinder Guard (1.278904ms)
+✔ upgrade extension preserves base card and executes once: Hold the Line (2.608635ms)
+✔ upgrade extension preserves base card and executes once: Mana Barrier (1.892173ms)
+✔ upgrade extension preserves base card and executes once: Quick Study (1.998061ms)
+✔ upgrade extension preserves base card and executes once: Deep Study (1.73597ms)
+✔ upgrade extension preserves base card and executes once: Mana Reading (1.71013ms)
+✔ upgrade extension preserves base card and executes once: Read Ahead (1.314398ms)
+✔ upgrade extension preserves base card and executes once: Burning Page (1.046171ms)
+✔ upgrade extension preserves base card and executes once: Clear Choice (1.254681ms)
+✔ upgrade extension preserves base card and executes once: Card Search (1.253306ms)
+✔ upgrade extension preserves base card and executes once: Recall (1.246879ms)
+✔ upgrade extension preserves base card and executes once: Next Chapter (1.453922ms)
+✔ upgrade extension preserves base card and executes once: Last Page (1.444508ms)
+✔ upgrade extension preserves base card and executes once: Blazing Spirit (1.551437ms)
+✔ upgrade extension preserves base card and executes once: Growing Flame (1.883903ms)
+✔ upgrade extension preserves base card and executes once: Swift Step (1.074418ms)
+✔ upgrade extension preserves base card and executes once: Battle Rhythm (1.162076ms)
+✔ upgrade extension preserves base card and executes once: Rune Armor (1.210264ms)
+✔ upgrade extension preserves base card and executes once: Lasting Shield (1.165027ms)
+✔ upgrade extension preserves base card and executes once: Grimoire Ward (3.108036ms)
+✔ upgrade extension preserves base card and executes once: Ember Core (1.468516ms)
+✔ upgrade extension preserves base card and executes once: Clear Mind (1.035511ms)
+✔ upgrade extension preserves base card and executes once: Last Ember (1.84899ms)
+✔ upgraded Focus stacks only on the primary event and leaves delayed Block untouched (3.728877ms)
+✔ upgraded Recall checks its normal extra draw before spending Focus (1.103735ms)
+✔ upgraded Next Chapter persists its 4-card focused queue and display previews remain pure (2.024982ms)
+✔ per-hit preview events exactly match status, Defense and Block resolution (1.362715ms)
+✔ bounded receipt history remains reloadable when the 65th play opens a choice (108.998642ms)
+✔ ten-hit intent and fully modified sealed-boss damage keep bounded, accurate calculation history (3.418879ms)
+✔ both saved legacy Shop formats retain their exact original offers (3.813453ms)
+node:internal/modules/cjs/loader:1520
+  throw err;
+  ^
+
+Error: Cannot find module 'jsdom'
+Require stack:
+- /workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/card-game-ui.test.cjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/card-game-ui.test.cjs:3:15)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/card-game-ui.test.cjs'
+  ]
+}
+
+Node.js v24.19.0
+✖ tests/card-game-ui.test.cjs (269.614216ms)
+﹣ selected and keyboard-focused actions span the entire native visible card frame (3.169072ms) # SKIP
+﹣ choice-card tracks keep one bounded width for 4, 3, 2 and 1 candidates and preserve other library grids (2.716245ms) # SKIP
+﹣ reward terms and description scrolling preserve the native pressed choice and only its action changes selection (1.214484ms) # SKIP
+﹣ Read Ahead uses the same tracks through take, reorder, reset and confirm without paying twice (0.114256ms) # SKIP
+✔ card source: all forty canonical identities, rules and bilingual tokens survive the import; legacy IDs stay separate (17.948814ms)
+✔ card source: every selected icon and full Normal/Focus frame is a nonempty, verified runtime image (246.653957ms)
+﹣ card UI renders a native article and isolates actions from rich text (0.849906ms) # SKIP
+﹣ all 40 cards preserve supplied frames, localized text and snapshot values in every focus state (0.116906ms) # SKIP
+﹣ preview numbers and calculation tooltips use the supplied snapshot and reject false Focus (0.079728ms) # SKIP
+﹣ metadata and extra attributes cannot create markup or event handlers (0.106864ms) # SKIP
+﹣ asset aliases resolve without changing the common padded canvas (0.099627ms) # SKIP
+﹣ repeated card instances describe their own copy even when callers reuse an ID (0.066439ms) # SKIP
+﹣ collection comparison tokens outside the card still open the shared card tooltip (0.132491ms) # SKIP
+﹣ tooltip hover, focus, keyboard and taps never dispatch a card action (0.195773ms) # SKIP
+﹣ tooltip stays inside the viewport, uses text content and closes on scroll and focusout (0.104056ms) # SKIP
+node:internal/modules/cjs/loader:1520
+  throw err;
+  ^
+
+Error: Cannot find module 'jsdom'
+Require stack:
+- /workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/combat-compact-ui.test.cjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/combat-compact-ui.test.cjs:2:15)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/combat-compact-ui.test.cjs'
+  ]
+}
+
+Node.js v24.19.0
+✖ tests/combat-compact-ui.test.cjs (88.914881ms)
+✔ badges read canonical resolved card values and never re-add Agility or Focus (51.180151ms)
+✔ once-only delayed grants and temporary statuses disappear after their real resolution (10.221387ms)
+✔ Weak and Vulnerable badges track per-hit stack consumption for the correct side (3.044884ms)
+✔ saved focused and upgraded queues are added once without showing unrelated or stale grants (5.018081ms)
+✔ retention stays a cap separate from queued Block and is consumed at turn start (6.188481ms)
+✔ enemy Block and Defense stay separate from player effects; signed combat modifiers remain debuffs (1.912127ms)
+✔ empty, legacy and malformed presentation input cannot invent statuses or expose nonnumeric counters (3.484164ms)
+✔ browser UMD export needs no document, listeners, clock or RNG (4.331015ms)
+✔ each badge resolves to its distinct reviewed runtime image with uniform canvas metadata (10.029939ms)
+✔ all registered enemies launch valid, independent combat sessions (102.158924ms)
+✔ scene fixtures support actual purchases, rest upgrades and each eligible mystery (142.348477ms)
+✔ all supplied cards have valid state fixtures without leaking Focus to Passive (204.66455ms)
+✔ reject invalid numeric values, unknown content and unusable presets (8.130269ms)
+✔ dev response injects adapter/storage only in development documents (24.229349ms)
+✔ result previews and voice visits are valid diagnostic states (17.082684ms)
+✔ player server denies direct developer routes (166.10351ms)
+✔ developer app injection accepts Windows CRLF without changing source bytes (47.413824ms)
+✔ harmonized bank provides teaching definitions and curriculum references for every active question (67.557518ms)
+✔ Hint 1 contains every ordered pair immediately, without placeholder cells or answer marks (7.883513ms)
+✔ every table and Venn Hint contains values while unspecified regions stay honest (215.799342ms)
+✔ a real pre-harmonization pending trial and profile resume without losing attempts or unlocking a claim (30.085546ms)
+✔ education: New Run resets run coverage while retaining unique lifetime history (31.413566ms)
+✔ education: legacy saves infer run coverage from encounter receipts without importing profile exposures (9.877433ms)
+✔ education: all original 120 fixed items have unique IDs, valid keys and 40 items per topic (1.489828ms)
+✔ education: Claim opens a frozen question before ownership, Gold, map entry or combat (18.031958ms)
+✔ education: incorrect choices, hint and selection resume without HP loss or another draw (11.872814ms)
+✔ education: a correct answer unlocks one explicit claim; Purse applies +25 Gold exactly once (9.274367ms)
+✔ education: each of the 120 items can render an answer transaction and pass strict save validation (450.799522ms)
+✔ education: 120 new runs reset exclusion while lifetime history remains unique (96.074484ms)
+✔ education: an exhausted bank is explicit and never resets or repeats old questions (2.99369ms)
+✔ education: forged pending IDs, answer flags, history and owner fields are rejected (5.651854ms)
+✔ education: old saves continue at their saved scene, while an unclaimed old offer uses the new gate (6.017589ms)
+✔ education: Elite card reward and its question can be saved before the artifact is committed (30.289897ms)
+✔ education: Mystery trial resumes its own room, then completes it once (3.79953ms)
+✔ education: Boss trial precedes its effect and checkpoint; retry restores the committed question record (9.949873ms)
+✔ every canonical Normal and Elite encounter in both stages has all five source motions (5.313267ms)
+✔ Stage 2 loading and failure posters use the same left-facing source for every reaction (14.246769ms)
+✔ Stage 2 resolved intents choose Attack, Defend and Skill independently of damage/RNG (3.256587ms)
+✔ the accepted Stage 1 registry and all Alyssa frames/pivots/scales remain unchanged (1.917174ms)
+✔ all forecast formulas match physical-card enumeration across varied sources (57.723532ms)
+✔ starter state, draw/discard recycling and serialization conserve every physical card (37.844611ms)
+✔ filter moves selected physical cards once, enforces draw floor and restores next battle (6.530723ms)
+✔ filter also enforces six active cards after prior exhaustion (1.393005ms)
+✔ saved legacy prediction: invalid probability input is not an attempt; equivalent exact first answer earns Focus once (2.516827ms)
+✔ hint survives reload and disqualifies first-answer Focus (2.754851ms)
+✔ cancelling after hint consumes the chance across save/reload (1.057888ms)
+✔ wrong survives reload and disqualifies first-answer Focus (7.428664ms)
+✔ cancelling after wrong consumes the chance across save/reload (0.789052ms)
+✔ saved legacy prediction: untouched forecast cancellation is reversible, and pending source is frozen over reload (1.129479ms)
+✔ unanswered forecasts lock card mutations and turn changes (3.843756ms)
+✔ Focus caps at three, boosts only one eligible card once per turn, then resets eligibility (23.058806ms)
+✔ both bosses enforce seal floor; guided solutions open seals without awarding Focus (12.310851ms)
+✔ event removal floor rejects a permanent deck smaller than ten (1.342185ms)
+✔ Dealer crossing half HP preserves the announced intent until the next turn, including reload (19.716631ms)
+✔ save validation safely rejects corrupt gameplay fields and malformed forecast sources (3.39375ms)
+✔ all game entry pages load the same current education and language modules in order (5.386643ms)
+✔ versioned file entry pages preserve the original address and keep generated portable output separate (1.231383ms)
+✔ the entire 40-card authority distinguishes Focus spending from the sole Focus grant (111.124148ms)
+✔ every eligible card spends one Focus once; every Passive preserves stock and armed state (79.916326ms)
+✔ Last Ember checks living HP at activation, including the exact 30% boundary (3.663084ms)
+✔ Last Ember reports requested and actual capped Focus separately while granting all six Block (4.70125ms)
+✔ Last Ember responds to later nonlethal loss once and never revives a defeated player (2.054641ms)
+✔ legacy Clarity and Clarity+ retain their original grants and the Focus stock cap (5.98026ms)
+✔ committed choices defer the card and Passive trigger history until one final resolution (4.263027ms)
+✔ Growing Flame exposes source-based progress and exactly three real triggers (26.57581ms)
+✔ Battle Rhythm exposes source-based progress and exactly three real triggers (29.80743ms)
+✔ activation stat effects, carry caps and next-turn work have distinct actual history (17.345531ms)
+✔ Clear Mind starts next turn and reports actual zero when queued draws fill Hand (2.749512ms)
+✔ Ember Core requires a real focused card and stops when that card already killed the enemy (3.572939ms)
+✔ status application records actual capped stacks and Thorns records each real retaliation (4.49097ms)
+✔ structured history snapshots actors, remains bounded and returns independent read views (5.214126ms)
+✔ history rejects malformed shape and imported future, duplicate or unbounded entries (2.034517ms)
+✔ the browser module publishes DCCombatLog without Node or a renderer (2.641339ms)
+node:internal/modules/cjs/loader:1520
+  throw err;
+  ^
+
+Error: Cannot find module 'jsdom'
+Require stack:
+- /workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/icon-package.test.cjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/icon-package.test.cjs:3:15)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/icon-package.test.cjs'
+  ]
+}
+
+Node.js v24.19.0
+✖ tests/icon-package.test.cjs (89.341788ms)
+✔ an existing Malay save resumes in English without changing the battle or answer credit (15.007253ms)
+✔ presentation migration still rejects corrupt probability answers and duplicate physical cards (4.177547ms)
+✔ new runs use the supplied 100-seed ten-level maps with the exact global quotas (235.457565ms)
+✔ all ten rooms, both bosses, save restore and the stage-two checkpoint follow the frozen graph (135.782277ms)
+✔ restoring a map rejects invalid snapshots and disconnected route progress (1.832248ms)
+✔ every generated route branches, merges and reaches exactly one boss without changing combat RNG (25.014644ms)
+✔ travel rejects skipped floors, disconnected rooms and already completed nodes without mutation (12.184409ms)
+✔ connected rest and event rooms have their own actions on either middle floor (62.018239ms)
+✔ elite risk awards an upgraded card while ordinary rewards remain unupgraded (0.831471ms)
+✔ save/reload preserves the exact chosen branch and rejects a forged path or active room (0.734202ms)
+✔ stage-two checkpoint restarts its saved map and legacy saves can still complete their route (4.457297ms)
+﹣ math display: annotated sets and fractions retain native layout through host and Artifact CSS (3.400722ms) # SKIP
+﹣ math display: all 120 game questions render English/BM prompts, choices, support and working as native MathML (0.134533ms) # SKIP
+﹣ math display: all 120 practice questions render English/BM prompts, choices, support and working as native MathML (0.096721ms) # SKIP
+✔ overlapping union counts each physical card once (1.085845ms)
+✔ replacement and without-replacement are different experiments (0.237142ms)
+✔ at least one is checked through complementary event (0.116124ms)
+✔ equivalent fractions, decimals and rounded percentages (0.50773ms)
+✔ pair questions reject insufficient source (0.189289ms)
+✔ integrated bank passes the supplier preflight, retaining 120 IDs and 30 skills (7.105463ms)
+✔ More Hint requires a wrong submission after Hint; both orders survive restore (13.319764ms)
+✔ learning support cannot grant or reveal a claim, and worked steps open only after correct (4.536828ms)
+✔ legacy pending saves retain item, shuffled choices and attempts with conservative Hint ordering (2.492054ms)
+✔ profile learning records and reservations persist between runs without combat RNG use (5.692129ms)
+✔ a completed profile record cannot be downgraded by an older imported pending fork (1.751908ms)
+✔ a hidden pending learning record cannot be imported outside its owning trial (3.208109ms)
+✔ Mystery coverage counts opening once, persists through review and settlement, and migrates legacy receipts (28.246684ms)
+✔ all fifteen events use the active question bank, correct topic and fixed timers in both stages (60.870519ms)
+✔ intro/Leave exposes no question and gives nothing; fixed event and offers survive refresh (7.010652ms)
+✔ legacy pending Mystery preserves question, support, offers and exact deadline without a run ledger (4.078321ms)
+✔ first wrong answer ends the challenge, nonlethal damage applies once after review (4.154539ms)
+✔ strict deadline accepts only earlier answers; timeout and abandon share one settlement (15.751781ms)
+✔ automatic gold commits once, question exposure is shared with artifacts and profile history (6.064615ms)
+✔ exhausted question pools skip without cost/reward/penalty and never recycle or switch topics (4.926479ms)
+✔ HP and Gold upgrades require full cost, target selection and explicit atomic confirmation (15.332339ms)
+✔ Scholar gold and upgrade are one bundle and declining does not grant partial Gold (8.075099ms)
+✔ Fountain, Archive, Garden and Adventurer grant exactly one selected reward (16.564744ms)
+✔ Skill offers are unique, persistent and category restricted; choose one card only (4.635676ms)
+✔ transform keeps category and physical instance, resets upgrade, and reopening cannot reroll (5.545434ms)
+✔ Archive removes exactly one chosen instance while respecting the existing save minimum (3.664868ms)
+✔ artifact trade recalculates Max HP and retains the opening gift/question ledger (3.893731ms)
+✔ Garden grants an unowned Starting artifact; Bargain pays Max HP without extra current HP loss (10.847792ms)
+✔ Echo failure starts one stage-correct Normal combat after review, with normal rewards and one node completion (14.229234ms)
+✔ Oracle Strength/Agility affect the next combat only, including saved combat reload (11.670476ms)
+✔ Hourglass extra draw and Energy penalty apply on first turn only and obey Hand capacity (10.10826ms)
+✔ Learn mode Mystery shares profile history and artifact grants remain valid (2.96689ms)
+✔ starting a new Artifact trial never resumes a different run's exposed Mystery question (3.292282ms)
+✔ Archive protects the final card and protected instances; legitimate small decks remain loadable (9.515197ms)
+✔ damaged reward payloads are rejected on import before the renderer can use them (14.533433ms)
+✔ Oracle and artifact stat calculations show the same exact sum used in combat (3.758639ms)
+✔ fourth Passive waits for a free persisted replacement choice and cancel preserves armed Focus (29.393327ms)
+✔ replacement pays the incoming card once, removes outgoing stats, and records the actual change (9.20194ms)
+✔ Last Ember retains its spent combat trigger when replayed and resets only in a new combat (11.153819ms)
+✔ Growing Flame progress pauses while inactive and its earned Strength is removed then restored once (34.78329ms)
+✔ swapped ongoing effects stop without undoing resolved Block, draws, Focus or damage (10.943344ms)
+✔ legacy overcap saves offer free repeatable trim choices until three and retain every owned card (12.283947ms)
+✔ current save validation rejects a forged cap, inactive history or pending replacement (4.508117ms)
+✔ legacy overcap migration finishes saved precommit and committed card choices before trimming (23.06797ms)
+✔ legacy overcap migration preserves bank and frozen legacy Predict until closed then requires trimming (22.964382ms)
+✔ replacement rechecks affordability and zero-cost upgraded Passives preserve Focus and RNG (5.509118ms)
+✔ swapping static attributes preserves artifact contributions and removes Defense before the next attack (6.797418ms)
+node:internal/modules/cjs/loader:1520
+  throw err;
+  ^
+
+Error: Cannot find module 'jsdom'
+Require stack:
+- /workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/passive-music-ui.test.cjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/passive-music-ui.test.cjs:2:15)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/passive-music-ui.test.cjs'
+  ]
+}
+
+Node.js v24.19.0
+✖ tests/passive-music-ui.test.cjs (80.808625ms)
+✔ Predict reserves one real bank item independently of combat RNG and resumes it on repeated taps/reload (15.557206ms)
+✔ Predict first unaided answer grants capped Focus and a seal exactly once; guided answers grant no Focus (26.189249ms)
+✔ abandoning an untouched Predict counts as exposed and consumes that turn without Focus or seal (3.84228ms)
+✔ all 120 reservations are unique across interleaved bank consumers and exhaustion does not repeat (228.503762ms)
+✔ all 120 bank items can complete Predict and survive strict restore with one Focus and one seal (206.155801ms)
+✔ Artifact and Mystery reserve from the same current-run ledger as Predict (6.998137ms)
+✔ a new run can reuse all lifetime IDs and never inherits an old pending reservation or question RNG (2.656739ms)
+✔ reusing a stable ID in a new run preserves prior mastery and starts a fresh independently rewarded attempt (2.920688ms)
+✔ retrying a Stage 2 checkpoint keeps every question exposed in the current run (1.726296ms)
+✔ an older profile pending owner cannot displace a different current-run question during save merging (1.717395ms)
+✔ exhausted Predict has explicit unscored completion that can open boss seals without Focus or mastery (2.622008ms)
+✔ bank support order survives language projection/reload and assisted mastery uses the shared reducer (52.353508ms)
+✔ damaged bank pending state, run ledger and RNG are rejected before a reward can be committed (1.939649ms)
+✔ a saved live-deck prediction keeps its frozen evaluator, attempts and reward path (5.808074ms)
+﹣ DOM: all 120 questions switch between authored BM and English, with translated guidance and unchanged answer identities (1.101169ms) # SKIP
+﹣ DOM: language changes keep selection, learning reservation, open guidance and comments, and restore the preference (0.217268ms) # SKIP
+﹣ DOM: every question has its own editable persistent comment, unaffected by Hint, review reset or learning reset (0.089385ms) # SKIP
+﹣ DOM: comment text stays inert, Save works, exit offers all comments and cancellation keeps the form (0.093683ms) # SKIP
+﹣ DOM: native sharing uses an explicit file action; cancelling never deletes comments (0.186634ms) # SKIP
+✔ comments keep their question/version and survive reopening without touching game or learning saves (3.462747ms)
+✔ separate tabs merge different questions and keep in-memory comments through a failed write (10.215017ms)
+✔ unreadable stored comments are preserved while new comments remain exportable (0.33491ms)
+✔ empty comments clear only that question; invalid categories and overlong text cannot enter the report (0.598314ms)
+✔ CSV export quotes multiline comments and neutralizes spreadsheet formulas without changing stored text (0.663601ms)
+✔ all 120 BM questions preserve canonical identity, choice bindings, verified answers and numerical data (1669.816976ms)
+✔ all reviewed editorial strings, flow nodes and SVG prose have authored coverage (29.938433ms)
+✔ school terminology follows source review and exposes honest local notation (12.591504ms)
+✔ all 7 foundations and 14 checks localize without changing check indices or counts (37.979606ms)
+✔ language preference uses an independent key and still works if persistence is unavailable (0.442155ms)
+✔ release build replaces cached script and stylesheet URLs when their content changes, including within the same version (8.464733ms)
+✔ release build derives menu metadata from package.json and updates every launcher together (4.761856ms)
+✔ ZIP rich text covers all 31 artifacts and 55 terms without demo snapshots (1.214374ms)
+✔ Ration snapshots separate Max HP from actual healing and survive refresh without replay (25.737646ms)
+✔ first Attack snapshot separates combined bonuses, enemy mitigation and capped HP loss (8.511575ms)
+✔ draw and Focus snapshots show resolved counts rather than requested gains (2.473442ms)
+✔ Chance Die snapshots preserve the actual branch and never roll during inspection (98.007339ms)
+✔ Clasp snapshots cap its own contribution and add other owned stat sources (3.622742ms)
+✔ discount snapshots use the best discount, round up the price, and keep Gold spending separate (4.176649ms)
+✔ actual HP loss is capped at zero and is separate from remaining HP (0.683916ms)
+✔ calculation history is bounded, optional for old saves, validated and safely escaped (3.11815ms)
+✔ draw stops at ten without consuming the next card or shuffling a full hand (42.533877ms)
+✔ a Draw card reports only cards actually drawn at the hand limit (5.221296ms)
+✔ legacy overfull saves keep every card and RNG when normalized on restore (9.044392ms)
+✔ defeat freezes the run clock at resolution and survives serialization (2.5597ms)
+✔ old result saves acquire one frozen timestamp and keep it on later restores (1.587433ms)
+✔ stage-clear freezes its result and continuing clears the end timestamp (2.194133ms)
+✔ artifact draws obey the same hand limit and report actual movement (7.838345ms)
+✔ the opening gameplay question can reach every bank item and every difficulty (354.152499ms)
+✔ standalone Practice keeps its adaptive default while gameplay requests random (8.589116ms)
+✔ all gameplay consumers share a nonrepeating random pool through restore and exhaustion (284.524786ms)
+✔ lifetime mastery does not bias a new run or make it inherit exclusions (304.754951ms)
+✔ Mystery samples the entire unused event topic rather than its preferred subset (58.818475ms)
+✔ Shop and Rest do not reset the run ledger before the next Predict (5.952913ms)
+✔ Retry Stage 1 retains exposures; only New Run resets exclusion (3.417881ms)
+✔ reopening or reloading one pending question preserves its ID and answer state (1.171814ms)
+✔ new stock is six unique cards, exactly one 60% sale, and a 3/2/1 unowned artifact mix, without consuming gameplay RNG (223.45457ms)
+✔ all six artifact and card purchases in either mode persist once; Starting purchases preserve the opening gift ledger (92.118543ms)
+✔ artifact discount bought during a visit updates quotes through the same price owner without invalidating saved stock (11.195673ms)
+✔ paid card removal is atomic, per visit, respects physical IDs and deck floor, and cannot be replayed after refresh (3.427848ms)
+✔ unaffordable/full/invalid purchases leave saves untouched; forged stock, sale, tier, price and removal state are rejected (9.541032ms)
+✔ legacy three-card visits retain stock and purchases until departure; next shops use the new inventory (9.847489ms)
+✔ purchased Boss artifacts leave only unowned Boss gifts available and preserve the education gate (5.245143ms)
+✔ legacy Challenge without an opening artifact can buy, save, and later receive normal non-starting gifts (4.582962ms)
+﹣ Shop contains scrolling in its menu and fills the scene with an independent background (4.197969ms) # SKIP
+﹣ Shop keeps its background and HUD outside one named, keyboard-focusable menu scroll region (0.374883ms) # SKIP
+﹣ Shop scroll survives a selection and paid purchase, while changing service starts at its top (1.71175ms) # SKIP
+✔ shop prices, inventory, purchases and Gold survive reload without restocking or duplicate claims (22.963799ms)
+✔ legacy routes remain unchanged and old saves migrate Gold without altering HP, deck or RNG (5.479457ms)
+✔ save rejects forged stock, negative Gold and nonnumeric added counters (17.654559ms)
+﹣ DOM: question menus use Ink and a bilingual legend, preserve panel scroll, and distinguish run from lifetime coverage (5.102185ms) # SKIP
+﹣ DOM: every Alyssa pose uses the approved right-facing art even without Canvas (0.181347ms) # SKIP
+﹣ DOM: Motion Off keeps the right-facing idle poster when Canvas is unavailable (0.085107ms) # SKIP
+﹣ DOM: Alyssa reacts to resolved HP loss after automatic artifact Block, rather than a pre-turn estimate (0.1125ms) # SKIP
+﹣ DOM: artifact terms support focus, tap and Escape without selecting or claiming a gift (0.097678ms) # SKIP
+﹣ DOM: resolved artifact calculations and glossary use the shared dialog and never replay effects (0.153592ms) # SKIP
+﹣ DOM: mixed math/game descriptions keep separate tokens and never color ordinary text (0.1529ms) # SKIP
+﹣ DOM: branching map exposes connected choices and commits the exact selected entry (0.067744ms) # SKIP
+﹣ DOM: restored map highlights the travelled branch and disables every disconnected location (2.621335ms) # SKIP
+﹣ DOM: actual Artifact language switch keeps the pending question, attempt state and selected choice (0.206558ms) # SKIP
+﹣ DOM: Mystery language switching preserves the exact question and running deadline (3.402086ms) # SKIP
+﹣ DOM: Education Practice exit waits for the trusted folio confirmation and keeps the run intact (0.130613ms) # SKIP
+﹣ DOM: new game, mode, tutorial, battle and bank prediction guidance are wired (0.066779ms) # SKIP
+﹣ DOM: filter selection cancels freely and commits exact selected cards (0.046066ms) # SKIP
+﹣ DOM: camp upgrade, Mystery intro/leave, library and save controls work (0.027963ms) # SKIP
+﹣ DOM: corrupted storage and unavailable storage leave a usable new-game screen (0.02874ms) # SKIP
+﹣ DOM: every terminal, reward, map and event scene renders without runtime errors (0.02868ms) # SKIP
+﹣ DOM: importing a pending prediction clears unrelated success and restores exact question (0.024143ms) # SKIP
+﹣ DOM: retry asks before replacing the terminal run (0.024969ms) # SKIP
+﹣ DOM: closing an untouched prediction consumes exposure and focuses End Turn (0.132771ms) # SKIP
+﹣ DOM: Music controls preserve volume, preview every track and return to game music (0.034524ms) # SKIP
+﹣ DOM: Unmute Music enables audio on that click when both channels were saved off (0.027892ms) # SKIP
+﹣ DOM: portable HTML boots without external scripts/styles and embeds all images (0.02498ms) # SKIP
+﹣ DOM: artifact preview grants nothing, Challenge confirmation commits once and inventory uses the shared dialog (0.036001ms) # SKIP
+﹣ DOM: reward preview does not claim a card until Add is pressed (0.024131ms) # SKIP
+﹣ DOM: collection search, category, empty result, clear and pagination retain working details (0.025399ms) # SKIP
+﹣ DOM: tutorial practice gives feedback without changing the run or awarding Focus (0.025286ms) # SKIP
+﹣ DOM: Claim opens the actual bank question, saves incorrect/hint state and resumes it before the map (0.025842ms) # SKIP
+﹣ DOM: continue preserves an unfinished trial; New Run resets exclusion and keeps lifetime history (0.026044ms) # SKIP
+﹣ DOM: import preserves the pending question and unions local and imported exposure history (0.023345ms) # SKIP
+﹣ DOM: storage failure keeps the trial playable and warns that progress needs Export (0.022137ms) # SKIP
+﹣ DOM: corrupt question history is preserved and cannot silently reset the draw pool (0.057558ms) # SKIP
+﹣ DOM: a full hand exposes its cap, disabled-card inspection and the tenth-card shortcut (0.025396ms) # SKIP
+﹣ DOM: artifact counters project real card resolution and opening effects without replay (0.025202ms) # SKIP
+﹣ DOM: Collection tab keyboard focus survives the modal render frame (0.102819ms) # SKIP
+﹣ DOM: a corrupt Artifact Codex profile is preserved while the core run stays playable (0.398209ms) # SKIP
+﹣ DOM: Mystery Hint, one answer, final review, card removal and profile exposure survive restore (1.485219ms) # SKIP
+﹣ DOM: Shop tabs reveal one inventory and support arrow, Home and End navigation without spending (0.057613ms) # SKIP
+﹣ DOM: Shop tab purchases and removal retain sold state, confirmation and valid return to map (0.028931ms) # SKIP
+﹣ DOM: Mystery room text uses shared game terms and honest preview calculations before Start and in rewards (0.024136ms) # SKIP
+﹣ DOM: Mystery extra-draw preview explains the hand cap without starting a challenge (0.025268ms) # SKIP
+﹣ DOM: Mystery failed review distinguishes maximum HP loss from the capped current loss (0.026887ms) # SKIP
+﹣ DOM: Settings owns the menu language preference and carries BM into the real Artifact trial (0.02378ms) # SKIP
+﹣ DOM: in-game Hint retains the folio reference grid after solution, in both languages (0.059636ms) # SKIP
+ℹ tests 483
+ℹ suites 0
+ℹ pass 410
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 68
+ℹ todo 0
+ℹ duration_ms 168905.182758
+
+✖ failing tests:
+
+test at tests/audio-alyssa-ui.test.cjs:1:1
+✖ tests/audio-alyssa-ui.test.cjs (103.322586ms)
+  'test failed'
+
+test at tests/card-game-ui.test.cjs:1:1
+✖ tests/card-game-ui.test.cjs (269.614216ms)
+  'test failed'
+
+test at tests/combat-compact-ui.test.cjs:1:1
+✖ tests/combat-compact-ui.test.cjs (88.914881ms)
+  'test failed'
+
+test at tests/icon-package.test.cjs:1:1
+✖ tests/icon-package.test.cjs (89.341788ms)
+  'test failed'
+
+test at tests/passive-music-ui.test.cjs:1:1
+✖ tests/passive-music-ui.test.cjs (80.808625ms)
+  'test failed'

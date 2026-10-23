@@ -1,8 +1,12 @@
 # Slay the Math — Set of Rules
 
+Current Master balance integration, game 2.27.0: [Master SOR](docs/sor/23_MASTER_BALANCE.md), [handoff and actual validation](docs/balance/master/HANDOFF.md). Explicit Easy/Medium/Hard playtest profiles now bind Combat, Map and Economy. Pupil 90/70/50 goals remain unmeasured. The specialist handoffs below remain historical evidence at their recorded sources.
+
 Current icon integration: [Reviewed icon package, game 2.23.0](docs/ICON_PACKAGE_2_23_0.md).
 
 Current audio integration: [Expanded talking and checked answers, game 2.24.0](docs/AUDIO_2_24_0.md). Pack 5 owns 75 voices, including the 26 new recordings; this supersedes earlier asset counts and package-only handoffs. The historical baseline below remains context.
+
+Current map balance audit: [Map SOR v1.3](modules/map/SOR/04_MAP_COMBAT_POWER.md) and [Master handoff](docs/MAP_BALANCE_V1_3_HANDOFF.md), based on game 2.24.0 / 2800f9a. Adaptive routing, matched-entry route replay, recovery/reward telemetry, Predict sensitivity and regression checks; no gameplay tuning or player-facing Combat Power. [V1.2 evidence](docs/MAP_BALANCE_HANDOFF.md) remains historical.
 
 Versi dokumen: **2.0.1** · Tarikh: **18 Oktober 2026 (Malaysia)** · Pemilik: **Ijamm**
 
@@ -91,3 +95,5 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 
 
 - [20 — Developer Tools](docs/sor/20_DEVELOPER_TOOLS.md): development/production commands, sandbox scenes, card states, motion, presets and diagnostics.
+
+- [22 — Economy, loot and rewards candidate](docs/sor/22_ECONOMY_REWARDS.md): exact-base audit, opt-in tuning, source rules, saved receipts, all-event tables, seed histograms/Gold-recovery projections and Master handoff. Student 90/70/50 targets remain unmeasured.

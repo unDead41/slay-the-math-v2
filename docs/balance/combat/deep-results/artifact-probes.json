@@ -1,0 +1,4552 @@
+[
+  {
+    "id": "s01_emberheart_pendant",
+    "name": "Emberheart Pendant",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 6,
+        "label": "Emberheart Pendant",
+        "artifactIds": [
+          "s01_emberheart_pendant"
+        ],
+        "stage": 0,
+        "depth": 0,
+        "turn": 2,
+        "results": [
+          {
+            "label": "HP restored",
+            "unit": "HP",
+            "kind": "delta",
+            "value": 2,
+            "before": 30,
+            "after": 32,
+            "lines": [
+              "Requested healing: +2 HP",
+              "Room below Max HP: 60 − 30 = 30 HP",
+              "Actual healing: min(2, 30) = 2 HP",
+              "HP after: 30 + 2 = 32 HP"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s02_cinder_whetstone",
+    "name": "Cinder Whetstone",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Rune Strike",
+        "artifactIds": [
+          "s02_cinder_whetstone"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Damage before defenses",
+            "unit": "damage",
+            "kind": "total",
+            "value": 7,
+            "before": 7,
+            "after": 7,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Cinder Whetstone: +1",
+              "Damage before Defense: 7",
+              "Enemy Defense: 0"
+            ]
+          },
+          {
+            "label": "Enemy HP lost",
+            "unit": "HP",
+            "kind": "delta",
+            "value": -4,
+            "before": 70,
+            "after": 66,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Cinder Whetstone: +1",
+              "Damage before Defense: 7",
+              "Enemy Defense: 0",
+              "Sealed boss: round up(7 ÷ 2) = 4",
+              "Enemy Block: 4 − 0 = 4",
+              "Enemy HP after: max(1, 70 − 4) = 66"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s03_prism_buckler",
+    "name": "Prism Buckler",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 13,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 8
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "s03_prism_buckler",
+                  "name": "Prism Buckler",
+                  "value": 2
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 13,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 8
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "s03_prism_buckler",
+                  "name": "Prism Buckler",
+                  "value": 2
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s04_clairvoyance_lens",
+    "name": "Clairvoyance Lens",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Clairvoyance Lens",
+        "artifactIds": [
+          "s04_clairvoyance_lens"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Focus gained",
+            "unit": "Focus",
+            "kind": "delta",
+            "value": 1,
+            "before": 0,
+            "after": 1,
+            "lines": [
+              "Clairvoyance Lens: +1 Focus",
+              "Focus cap: 3",
+              "Focus after: min(3, 0 + 1) = 1"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s05_scholars_bookmark",
+    "name": "Scholar's Bookmark",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Scholar's Bookmark",
+        "artifactIds": [
+          "s05_scholars_bookmark"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 4,
+            "after": 5,
+            "lines": [
+              "Scholar's Bookmark: draw 1",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 4 + 1 = 5",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s06_merchants_seal",
+    "name": "Merchant's Seal",
+    "build": "baseline",
+    "classification": "noncombat_quote",
+    "status": "PASS",
+    "notes": [
+      {
+        "base": 101,
+        "actual": 96
+      }
+    ],
+    "evidence": [],
+    "validFinal": true
+  },
+  {
+    "id": "s07_bronze_guard_pin",
+    "name": "Bronze Guard Pin",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Bronze Guard Pin",
+        "artifactIds": [
+          "s07_bronze_guard_pin"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 3,
+            "before": 0,
+            "after": 3,
+            "lines": [
+              "Bronze Guard Pin: +3 Block",
+              "Block after: 0 + 3 = 3"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s08_travelers_ration",
+    "name": "Traveler's Ration",
+    "build": "baseline",
+    "classification": "acquisition",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Traveler's Ration",
+        "artifactIds": [
+          "s08_travelers_ration"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 0,
+        "results": [
+          {
+            "label": "Max HP gained",
+            "unit": "Max HP",
+            "kind": "delta",
+            "value": 5,
+            "before": 60,
+            "after": 65,
+            "lines": [
+              "Traveler's Ration: +5",
+              "Max HP after: 60 + 5 = 65"
+            ]
+          },
+          {
+            "label": "HP restored",
+            "unit": "HP",
+            "kind": "delta",
+            "value": 5,
+            "before": 60,
+            "after": 65,
+            "lines": [
+              "Requested healing: +5 HP",
+              "Room below Max HP: 65 − 60 = 5 HP",
+              "Actual healing: min(5, 5) = 5 HP",
+              "HP after: 60 + 5 = 65 HP"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s09_copper_purse",
+    "name": "Copper Purse",
+    "build": "baseline",
+    "classification": "acquisition",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Copper Purse",
+        "artifactIds": [
+          "s09_copper_purse"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 0,
+        "results": [
+          {
+            "label": "Gold gained",
+            "unit": "Gold",
+            "kind": "delta",
+            "value": 25,
+            "before": 80,
+            "after": 105,
+            "lines": [
+              "Copper Purse: +25 Gold",
+              "Gold after: 80 + 25 = 105"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s10_ember_quill",
+    "name": "Ember Quill",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 2,
+        "label": "Ember Quill",
+        "artifactIds": [
+          "s10_ember_quill"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Ember Quill: draw 1",
+              "Hand before: 3 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 3 + 1 = 4",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s11_scribes_pebble",
+    "name": "Scribe's Pebble",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 3,
+        "label": "Scribe's Pebble",
+        "artifactIds": [
+          "s11_scribes_pebble"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 4,
+            "before": 3,
+            "after": 7,
+            "lines": [
+              "Scribe's Pebble: +4 Block",
+              "Block after: 3 + 4 = 7"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s12_initiates_ring",
+    "name": "Initiate's Ring",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Initiate's Ring",
+        "artifactIds": [
+          "s12_initiates_ring"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 3,
+            "before": 0,
+            "after": 3,
+            "lines": [
+              "Initiate's Ring: +3 Block",
+              "Block after: 0 + 3 = 3"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e01_copper_abacus",
+    "name": "Copper Abacus",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 4,
+        "label": "Copper Abacus",
+        "artifactIds": [
+          "e01_copper_abacus"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 0,
+            "after": 1,
+            "lines": [
+              "Copper Abacus: +1 Energy",
+              "Energy after: 0 + 1 = 1"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e02_twin_sigil_medallion",
+    "name": "Twin Sigil Medallion",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 3,
+        "label": "Twin Sigil Medallion",
+        "artifactIds": [
+          "e02_twin_sigil_medallion"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 6,
+            "before": 6,
+            "after": 12,
+            "lines": [
+              "Twin Sigil Medallion: +6 Block",
+              "Block after: 6 + 6 = 12"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e03_chance_die",
+    "name": "Chance Die",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [
+      {
+        "faces": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards",
+              "Chance Die: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 5,
+            "before": 5,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy"
+            ]
+          },
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy",
+              "Chance Die: +2 Energy",
+              "Energy after: 3 + 2 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 6",
+              "Resolved branch: 5–6 → 2 Energy"
+            ]
+          },
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 6",
+              "Resolved branch: 5–6 → 2 Energy",
+              "Chance Die: +2 Energy",
+              "Energy after: 3 + 2 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 5,
+            "before": 5,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy"
+            ]
+          },
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy",
+              "Chance Die: +2 Energy",
+              "Energy after: 3 + 2 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards",
+              "Chance Die: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Saved d6 result: 4",
+              "Resolved branch: 3–4 → draw 2 cards"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 4",
+              "Resolved branch: 3–4 → draw 2 cards",
+              "Chance Die: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e04_ember_balance",
+    "name": "Ember Balance",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Ember Balance",
+        "artifactIds": [
+          "e04_ember_balance"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 6,
+            "before": 0,
+            "after": 6,
+            "lines": [
+              "Ember Balance: +6 Block",
+              "Block after: 0 + 6 = 6"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e05_chainbreaker_clasp",
+    "name": "Chainbreaker Clasp",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 3,
+        "label": "Chainbreaker Clasp",
+        "artifactIds": [
+          "e05_chainbreaker_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 4,
+            "before": 3,
+            "after": 7,
+            "lines": [
+              "Chainbreaker Clasp: +4 Block",
+              "Block after: 3 + 4 = 7"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 1,
+            "after": 2,
+            "lines": [
+              "Chainbreaker Clasp: draw 1",
+              "Hand before: 1 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 1 + 1 = 2",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e06_ashen_phoenix_feather",
+    "name": "Ashen Phoenix Feather",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 6,
+        "label": "Ashen Phoenix Feather",
+        "artifactIds": [
+          "e06_ashen_phoenix_feather"
+        ],
+        "stage": 0,
+        "depth": 0,
+        "turn": 2,
+        "results": [
+          {
+            "label": "HP restored",
+            "unit": "HP",
+            "kind": "delta",
+            "value": 5,
+            "before": 30,
+            "after": 35,
+            "lines": [
+              "Requested healing: +5 HP",
+              "Room below Max HP: 60 − 30 = 30 HP",
+              "Actual healing: min(5, 30) = 5 HP",
+              "HP after: 30 + 5 = 35 HP"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e07_runesmith_tongs",
+    "name": "Rune-smith Tongs",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Rune Strike",
+        "artifactIds": [
+          "e07_runesmith_tongs"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Damage before defenses",
+            "unit": "damage",
+            "kind": "total",
+            "value": 9,
+            "before": 9,
+            "after": 9,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Rune-smith Tongs: +3",
+              "Damage before Defense: 9",
+              "Enemy Defense: 0"
+            ]
+          },
+          {
+            "label": "Enemy HP lost",
+            "unit": "HP",
+            "kind": "delta",
+            "value": -5,
+            "before": 70,
+            "after": 65,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Rune-smith Tongs: +3",
+              "Damage before Defense: 9",
+              "Enemy Defense: 0",
+              "Sealed boss: round up(9 ÷ 2) = 5",
+              "Enemy Block: 5 − 0 = 5",
+              "Enemy HP after: max(1, 70 − 5) = 65"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e08_sentinel_crest",
+    "name": "Sentinel Crest",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 17,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 12
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "e08_sentinel_crest",
+                  "name": "Sentinel Crest",
+                  "value": 6
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 17,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 12
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "e08_sentinel_crest",
+                  "name": "Sentinel Crest",
+                  "value": 6
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e09_mirror_knights_brooch",
+    "name": "Mirror Knight's Brooch",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 2,
+        "label": "Mirror Knight's Brooch retaliation",
+        "artifactIds": [
+          "e09_mirror_knights_brooch"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Damage before defenses",
+            "unit": "damage",
+            "kind": "total",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Fully blocked enemy hit: 8 damage",
+              "Mirror Knight's Brooch: 6 retaliation damage"
+            ]
+          },
+          {
+            "label": "Enemy HP lost",
+            "unit": "HP",
+            "kind": "delta",
+            "value": -3,
+            "before": 70,
+            "after": 67,
+            "lines": [
+              "Fully blocked enemy hit: 8 damage",
+              "Mirror Knight's Brooch: 6 retaliation damage",
+              "Sealed boss: round up(6 ÷ 2) = 3",
+              "Enemy Block: 3 − 0 = 3",
+              "Enemy HP after: max(1, 70 − 3) = 67"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e10_rune_bats_bell",
+    "name": "Rune Bat's Bell",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 2,
+        "label": "Rune Bat's Bell",
+        "artifactIds": [
+          "e10_rune_bats_bell"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Rune Bat's Bell: draw 1",
+              "Hand before: 3 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 3 + 1 = 4",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Rune Bat's Bell",
+        "artifactIds": [
+          "e10_rune_bats_bell"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 1,
+            "after": 2,
+            "lines": [
+              "Rune Bat's Bell: draw 1",
+              "Hand before: 1 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 1 + 1 = 2",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e11_scholars_satchel",
+    "name": "Scholar's Satchel",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Scholar's Satchel",
+        "artifactIds": [
+          "e11_scholars_satchel"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Scholar's Satchel: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e12_lantern_keepers_flask",
+    "name": "Lantern Keeper's Flask",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Lantern Keeper's Flask",
+        "artifactIds": [
+          "e12_lantern_keepers_flask"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 12,
+            "before": 0,
+            "after": 12,
+            "lines": [
+              "Alive: 24 > 0",
+              "HP threshold: 2 × 24 = 48 ≤ 60 Max HP",
+              "Lantern Keeper's Flask: +12 Block",
+              "Block after: 0 + 12 = 12"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e13_chain_weavers_spool",
+    "name": "Chain Weaver's Spool",
+    "build": "baseline",
+    "classification": "unsupported_hand_discard",
+    "status": "FAIL",
+    "error": "pile selection is not hand discard\n\n1 !== 0\n",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Chain Weaver's Spool",
+        "artifactIds": [
+          "e13_chain_weavers_spool"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 3,
+            "before": 0,
+            "after": 3,
+            "lines": [
+              "Chain Weaver's Spool: +3 Block",
+              "Block after: 0 + 3 = 3"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 1,
+            "after": 2,
+            "lines": [
+              "Chain Weaver's Spool: draw 1",
+              "Hand before: 1 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 1 + 1 = 2",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e14_brams_contract",
+    "name": "Bram's Contract",
+    "build": "baseline",
+    "classification": "noncombat_quote",
+    "status": "PASS",
+    "notes": [
+      {
+        "base": 101,
+        "actual": 86
+      }
+    ],
+    "evidence": [],
+    "validFinal": true
+  },
+  {
+    "id": "e15_crimson_sword_charm",
+    "name": "Crimson Sword Charm",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "e15_crimson_sword_charm"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Crimson Sword Charm: +2 Strength",
+              "Total Strength: 0 + 2 = 2"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 0,
+            "before": 0,
+            "after": 0,
+            "lines": [
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 0 + 0 = 0"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e16_guardians_armlet",
+    "name": "Guardian's Armlet",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "e16_guardians_armlet"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 0,
+            "before": 0,
+            "after": 0,
+            "lines": [
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 0 + 0 = 0"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Guardian's Armlet: +2 Agility",
+              "Total Agility: 0 + 2 = 2"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "b01_gatekeeper_core",
+    "name": "Gatekeeper Core",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 3,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 4,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "b02_sovereign_grimoire_clasp",
+    "name": "Sovereign Grimoire Clasp",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 1 − 1) = 3",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 3 + 0 = 3"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 1 − 1) = 3",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 3 + 0 = 3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 2 − 1) = 4",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 4 + 0 = 4"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 2 − 1) = 4",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 4 + 0 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 3,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 5,
+            "before": 5,
+            "after": 5,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 3 − 1) = 5",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 5 + 0 = 5"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 5,
+            "before": 5,
+            "after": 5,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 3 − 1) = 5",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 5 + 0 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 4,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 4 − 1) = 6",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 6 + 0 = 6"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 4 − 1) = 6",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 6 + 0 = 6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 5,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 5 − 1) = 6",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 6 + 0 = 6"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Clasp contribution: min(6, 3 + 5 − 1) = 6",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 6 + 0 = 6"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "b03_decklords_hourglass",
+    "name": "Decklord's Hourglass",
+    "build": "baseline",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 3,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 4,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s01_emberheart_pendant",
+    "name": "Emberheart Pendant",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 6,
+        "label": "Emberheart Pendant",
+        "artifactIds": [
+          "s01_emberheart_pendant"
+        ],
+        "stage": 0,
+        "depth": 0,
+        "turn": 2,
+        "results": [
+          {
+            "label": "HP restored",
+            "unit": "HP",
+            "kind": "delta",
+            "value": 2,
+            "before": 30,
+            "after": 32,
+            "lines": [
+              "Requested healing: +2 HP",
+              "Room below Max HP: 60 − 30 = 30 HP",
+              "Actual healing: min(2, 30) = 2 HP",
+              "HP after: 30 + 2 = 32 HP"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s02_cinder_whetstone",
+    "name": "Cinder Whetstone",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Rune Strike",
+        "artifactIds": [
+          "s02_cinder_whetstone"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Damage before defenses",
+            "unit": "damage",
+            "kind": "total",
+            "value": 7,
+            "before": 7,
+            "after": 7,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Cinder Whetstone: +2",
+              "Damage before Defense: 8",
+              "Enemy Defense: 1"
+            ]
+          },
+          {
+            "label": "Enemy HP lost",
+            "unit": "HP",
+            "kind": "delta",
+            "value": -4,
+            "before": 90,
+            "after": 86,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Cinder Whetstone: +2",
+              "Damage before Defense: 8",
+              "Enemy Defense: 1",
+              "Sealed boss: round up(7 ÷ 2) = 4",
+              "Enemy Block: 4 − 0 = 4",
+              "Enemy HP after: max(1, 90 − 4) = 86"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s03_prism_buckler",
+    "name": "Prism Buckler",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 13,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 8
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "s03_prism_buckler",
+                  "name": "Prism Buckler",
+                  "value": 2
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 13,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 8
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "s03_prism_buckler",
+                  "name": "Prism Buckler",
+                  "value": 2
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s04_clairvoyance_lens",
+    "name": "Clairvoyance Lens",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Clairvoyance Lens",
+        "artifactIds": [
+          "s04_clairvoyance_lens"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Focus gained",
+            "unit": "Focus",
+            "kind": "delta",
+            "value": 1,
+            "before": 0,
+            "after": 1,
+            "lines": [
+              "Clairvoyance Lens: +1 Focus",
+              "Focus cap: 3",
+              "Focus after: min(3, 0 + 1) = 1"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s05_scholars_bookmark",
+    "name": "Scholar's Bookmark",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Scholar's Bookmark",
+        "artifactIds": [
+          "s05_scholars_bookmark"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 4,
+            "after": 5,
+            "lines": [
+              "Scholar's Bookmark: draw 1",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 4 + 1 = 5",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s06_merchants_seal",
+    "name": "Merchant's Seal",
+    "build": "candidate",
+    "classification": "noncombat_quote",
+    "status": "PASS",
+    "notes": [
+      {
+        "base": 101,
+        "actual": 96
+      }
+    ],
+    "evidence": [],
+    "validFinal": true
+  },
+  {
+    "id": "s07_bronze_guard_pin",
+    "name": "Bronze Guard Pin",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Bronze Guard Pin",
+        "artifactIds": [
+          "s07_bronze_guard_pin"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 5,
+            "before": 0,
+            "after": 5,
+            "lines": [
+              "Bronze Guard Pin: +5 Block",
+              "Block after: 0 + 5 = 5"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s08_travelers_ration",
+    "name": "Traveler's Ration",
+    "build": "candidate",
+    "classification": "acquisition",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Traveler's Ration",
+        "artifactIds": [
+          "s08_travelers_ration"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 0,
+        "results": [
+          {
+            "label": "Max HP gained",
+            "unit": "Max HP",
+            "kind": "delta",
+            "value": 5,
+            "before": 60,
+            "after": 65,
+            "lines": [
+              "Traveler's Ration: +5",
+              "Max HP after: 60 + 5 = 65"
+            ]
+          },
+          {
+            "label": "HP restored",
+            "unit": "HP",
+            "kind": "delta",
+            "value": 5,
+            "before": 60,
+            "after": 65,
+            "lines": [
+              "Requested healing: +5 HP",
+              "Room below Max HP: 65 − 60 = 5 HP",
+              "Actual healing: min(5, 5) = 5 HP",
+              "HP after: 60 + 5 = 65 HP"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s09_copper_purse",
+    "name": "Copper Purse",
+    "build": "candidate",
+    "classification": "acquisition",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Copper Purse",
+        "artifactIds": [
+          "s09_copper_purse"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 0,
+        "results": [
+          {
+            "label": "Gold gained",
+            "unit": "Gold",
+            "kind": "delta",
+            "value": 25,
+            "before": 80,
+            "after": 105,
+            "lines": [
+              "Copper Purse: +25 Gold",
+              "Gold after: 80 + 25 = 105"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s10_ember_quill",
+    "name": "Ember Quill",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 2,
+        "label": "Ember Quill",
+        "artifactIds": [
+          "s10_ember_quill"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Ember Quill: draw 2",
+              "Hand before: 3 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 3 + 2 = 5",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s11_scribes_pebble",
+    "name": "Scribe's Pebble",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 3,
+        "label": "Scribe's Pebble",
+        "artifactIds": [
+          "s11_scribes_pebble"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 4,
+            "before": 3,
+            "after": 7,
+            "lines": [
+              "Scribe's Pebble: +4 Block",
+              "Block after: 3 + 4 = 7"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "s12_initiates_ring",
+    "name": "Initiate's Ring",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Initiate's Ring",
+        "artifactIds": [
+          "s12_initiates_ring"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 5,
+            "before": 0,
+            "after": 5,
+            "lines": [
+              "Initiate's Ring: +5 Block",
+              "Block after: 0 + 5 = 5"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e01_copper_abacus",
+    "name": "Copper Abacus",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 4,
+        "label": "Copper Abacus",
+        "artifactIds": [
+          "e01_copper_abacus"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 0,
+            "after": 1,
+            "lines": [
+              "Copper Abacus: +1 Energy",
+              "Energy after: 0 + 1 = 1"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e02_twin_sigil_medallion",
+    "name": "Twin Sigil Medallion",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 3,
+        "label": "Twin Sigil Medallion",
+        "artifactIds": [
+          "e02_twin_sigil_medallion"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 4,
+            "before": 6,
+            "after": 10,
+            "lines": [
+              "Twin Sigil Medallion: +4 Block",
+              "Block after: 6 + 4 = 10"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e03_chance_die",
+    "name": "Chance Die",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [
+      {
+        "faces": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards",
+              "Chance Die: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 5,
+            "before": 5,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy"
+            ]
+          },
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy",
+              "Chance Die: +2 Energy",
+              "Energy after: 3 + 2 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 6,
+            "before": 6,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 6",
+              "Resolved branch: 5–6 → 2 Energy"
+            ]
+          },
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 6",
+              "Resolved branch: 5–6 → 2 Energy",
+              "Chance Die: +2 Energy",
+              "Energy after: 3 + 2 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 2",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 5,
+            "before": 5,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy"
+            ]
+          },
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 2,
+            "before": 3,
+            "after": 5,
+            "lines": [
+              "Saved d6 result: 5",
+              "Resolved branch: 5–6 → 2 Energy",
+              "Chance Die: +2 Energy",
+              "Energy after: 3 + 2 = 5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 3",
+              "Resolved branch: 3–4 → draw 2 cards",
+              "Chance Die: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block"
+            ]
+          },
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Saved d6 result: 1",
+              "Resolved branch: 1–2 → 10 Block",
+              "Chance Die: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "label": "Chance Die",
+        "artifactIds": [
+          "e03_chance_die"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Die result",
+            "unit": "d6",
+            "kind": "roll",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Saved d6 result: 4",
+              "Resolved branch: 3–4 → draw 2 cards"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Saved d6 result: 4",
+              "Resolved branch: 3–4 → draw 2 cards",
+              "Chance Die: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e04_ember_balance",
+    "name": "Ember Balance",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Ember Balance",
+        "artifactIds": [
+          "e04_ember_balance"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 6,
+            "before": 0,
+            "after": 6,
+            "lines": [
+              "Ember Balance: +6 Block",
+              "Block after: 0 + 6 = 6"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e05_chainbreaker_clasp",
+    "name": "Chainbreaker Clasp",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 3,
+        "label": "Chainbreaker Clasp",
+        "artifactIds": [
+          "e05_chainbreaker_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 4,
+            "before": 3,
+            "after": 7,
+            "lines": [
+              "Chainbreaker Clasp: +4 Block",
+              "Block after: 3 + 4 = 7"
+            ]
+          },
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 1,
+            "after": 2,
+            "lines": [
+              "Chainbreaker Clasp: draw 1",
+              "Hand before: 1 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 1 + 1 = 2",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e06_ashen_phoenix_feather",
+    "name": "Ashen Phoenix Feather",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 6,
+        "label": "Ashen Phoenix Feather",
+        "artifactIds": [
+          "e06_ashen_phoenix_feather"
+        ],
+        "stage": 0,
+        "depth": 0,
+        "turn": 2,
+        "results": [
+          {
+            "label": "HP restored",
+            "unit": "HP",
+            "kind": "delta",
+            "value": 4,
+            "before": 30,
+            "after": 34,
+            "lines": [
+              "Requested healing: +4 HP",
+              "Room below Max HP: 60 − 30 = 30 HP",
+              "Actual healing: min(4, 30) = 4 HP",
+              "HP after: 30 + 4 = 34 HP"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e07_runesmith_tongs",
+    "name": "Rune-smith Tongs",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Rune Strike",
+        "artifactIds": [
+          "e07_runesmith_tongs"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Damage before defenses",
+            "unit": "damage",
+            "kind": "total",
+            "value": 8,
+            "before": 8,
+            "after": 8,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Rune-smith Tongs: +3",
+              "Damage before Defense: 9",
+              "Enemy Defense: 1"
+            ]
+          },
+          {
+            "label": "Enemy HP lost",
+            "unit": "HP",
+            "kind": "delta",
+            "value": -4,
+            "before": 90,
+            "after": 86,
+            "lines": [
+              "Card calculation: base: 6; strength: +0; Focus: +0; Rune-smith Tongs: +3",
+              "Damage before Defense: 9",
+              "Enemy Defense: 1",
+              "Sealed boss: round up(8 ÷ 2) = 4",
+              "Enemy Block: 4 − 0 = 4",
+              "Enemy HP after: max(1, 90 − 4) = 86"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e08_sentinel_crest",
+    "name": "Sentinel Crest",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 15,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 10
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "e08_sentinel_crest",
+                  "name": "Sentinel Crest",
+                  "value": 4
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "type": "engine-plan-and-resolved-block",
+        "actualTotal": 15,
+        "receipts": [
+          {
+            "id": "card:1",
+            "uid": "c11",
+            "key": "stm.defend.rune_guard",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 10
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 38,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": [
+                {
+                  "id": "e08_sentinel_crest",
+                  "name": "Sentinel Crest",
+                  "value": 4
+                }
+              ]
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          },
+          {
+            "id": "card:2",
+            "uid": "c18",
+            "key": "stm.defend.cinder_guard",
+            "turn": 1,
+            "energyBefore": 2,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 3055291103,
+            "rngAfter": 3055291103,
+            "values": {
+              "block": 5,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "block",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 2,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 39,
+              "discardCount": 1,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": true,
+              "enemyAttacks": true,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e09_mirror_knights_brooch",
+    "name": "Mirror Knight's Brooch",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 2,
+        "label": "Mirror Knight's Brooch retaliation",
+        "artifactIds": [
+          "e09_mirror_knights_brooch"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Damage before defenses",
+            "unit": "damage",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Fully blocked enemy hit: 9 damage",
+              "Mirror Knight's Brooch: 4 retaliation damage"
+            ]
+          },
+          {
+            "label": "Enemy HP lost",
+            "unit": "HP",
+            "kind": "delta",
+            "value": -2,
+            "before": 90,
+            "after": 88,
+            "lines": [
+              "Fully blocked enemy hit: 9 damage",
+              "Mirror Knight's Brooch: 4 retaliation damage",
+              "Sealed boss: round up(4 ÷ 2) = 2",
+              "Enemy Block: 2 − 0 = 2",
+              "Enemy HP after: max(1, 90 − 2) = 88"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e10_rune_bats_bell",
+    "name": "Rune Bat's Bell",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 2,
+        "label": "Rune Bat's Bell",
+        "artifactIds": [
+          "e10_rune_bats_bell"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Rune Bat's Bell: draw 1",
+              "Hand before: 3 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 3 + 1 = 4",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Rune Bat's Bell",
+        "artifactIds": [
+          "e10_rune_bats_bell"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 1,
+            "before": 1,
+            "after": 2,
+            "lines": [
+              "Rune Bat's Bell: draw 1",
+              "Hand before: 1 cards",
+              "Actual moved into Hand: 1",
+              "Hand after: 1 + 1 = 2",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e11_scholars_satchel",
+    "name": "Scholar's Satchel",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Scholar's Satchel",
+        "artifactIds": [
+          "e11_scholars_satchel"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Scholar's Satchel: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e12_lantern_keepers_flask",
+    "name": "Lantern Keeper's Flask",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Lantern Keeper's Flask",
+        "artifactIds": [
+          "e12_lantern_keepers_flask"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Block gained",
+            "unit": "Block",
+            "kind": "delta",
+            "value": 10,
+            "before": 0,
+            "after": 10,
+            "lines": [
+              "Alive: 24 > 0",
+              "HP threshold: 2 × 24 = 48 ≤ 60 Max HP",
+              "Lantern Keeper's Flask: +10 Block",
+              "Block after: 0 + 10 = 10"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e13_chain_weavers_spool",
+    "name": "Chain Weaver's Spool",
+    "build": "candidate",
+    "classification": "unsupported_hand_discard",
+    "status": "PASS",
+    "notes": [
+      "No current card exposes hand discard; negative exclusion only."
+    ],
+    "evidence": [],
+    "validFinal": true
+  },
+  {
+    "id": "e14_brams_contract",
+    "name": "Bram's Contract",
+    "build": "candidate",
+    "classification": "noncombat_quote",
+    "status": "PASS",
+    "notes": [
+      {
+        "base": 101,
+        "actual": 86
+      }
+    ],
+    "evidence": [],
+    "validFinal": true
+  },
+  {
+    "id": "e15_crimson_sword_charm",
+    "name": "Crimson Sword Charm",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "e15_crimson_sword_charm"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Crimson Sword Charm: +1 Strength",
+              "Total Strength: 0 + 1 = 1"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 0,
+            "before": 0,
+            "after": 0,
+            "lines": [
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 0 + 0 = 0"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "e16_guardians_armlet",
+    "name": "Guardian's Armlet",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "e16_guardians_armlet"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 0,
+            "before": 0,
+            "after": 0,
+            "lines": [
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 0 + 0 = 0"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 1,
+            "before": 1,
+            "after": 1,
+            "lines": [
+              "Guardian's Armlet: +1 Agility",
+              "Total Agility: 0 + 1 = 1"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "b01_gatekeeper_core",
+    "name": "Gatekeeper Core",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 3,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Gatekeeper Core",
+        "artifactIds": [
+          "b01_gatekeeper_core"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 4,
+        "results": [
+          {
+            "label": "Energy gained",
+            "unit": "Energy",
+            "kind": "delta",
+            "value": 1,
+            "before": 3,
+            "after": 4,
+            "lines": [
+              "Gatekeeper Core: +1 Energy",
+              "Energy after: 3 + 1 = 4"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "b02_sovereign_grimoire_clasp",
+    "name": "Sovereign Grimoire Clasp",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 1 − 1) = 2",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 2 + 0 = 2"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 2,
+            "before": 2,
+            "after": 2,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 1 − 1) = 2",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 2 + 0 = 2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 2 − 1) = 3",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 3 + 0 = 3"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 3,
+            "before": 3,
+            "after": 3,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 2 − 1) = 3",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 3 + 0 = 3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 3,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 3 − 1) = 4",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 4 + 0 = 4"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 3 − 1) = 4",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 4 + 0 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 4,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 4 − 1) = 4",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 4 + 0 = 4"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 4 − 1) = 4",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 4 + 0 = 4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "label": "Combat stat totals",
+        "artifactIds": [
+          "b02_sovereign_grimoire_clasp"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 5,
+        "results": [
+          {
+            "label": "Total Strength",
+            "unit": "Strength",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 5 − 1) = 4",
+              "Crimson Sword Charm: +0 Strength",
+              "Total Strength: 4 + 0 = 4"
+            ]
+          },
+          {
+            "label": "Total Agility",
+            "unit": "Agility",
+            "kind": "total",
+            "value": 4,
+            "before": 4,
+            "after": 4,
+            "lines": [
+              "Clasp contribution: min(4, 2 + 5 − 1) = 4",
+              "Guardian's Armlet: +0 Agility",
+              "Total Agility: 4 + 0 = 4"
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  },
+  {
+    "id": "b03_decklords_hourglass",
+    "name": "Decklord's Hourglass",
+    "build": "candidate",
+    "classification": "combat",
+    "status": "PASS",
+    "notes": [],
+    "evidence": [
+      {
+        "id": 1,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 1,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 2,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 3,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Decklord's Hourglass",
+        "artifactIds": [
+          "b03_decklords_hourglass"
+        ],
+        "stage": 0,
+        "depth": 4,
+        "turn": 4,
+        "results": [
+          {
+            "label": "Cards drawn",
+            "unit": "cards",
+            "kind": "delta",
+            "value": 2,
+            "before": 4,
+            "after": 6,
+            "lines": [
+              "Decklord's Hourglass: draw 2",
+              "Hand before: 4 cards",
+              "Actual moved into Hand: 2",
+              "Hand after: 4 + 2 = 6",
+              "Hand limit: 10. A full Hand stops drawing without moving extra cards. Empty Draw Pile reshuffles Discard."
+            ]
+          }
+        ]
+      }
+    ],
+    "validFinal": true
+  }
+]

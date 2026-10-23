@@ -83,3 +83,18 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Passive and supplied audio — 2.20.0
 
 The deck may own more than three Passives; only three may be active in combat. Fourth play requires choosing an outgoing active UID before payment. The outgoing physical card goes to Discard; inactive history preserves original timing/progress/trigger caps on reactivation. Source card definitions and upgrades remain authoritative. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+
+## Combat balance experiment — 23 October 2026
+
+CADANGAN: branch `balance/combat`, base `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7`, evaluates SOR Balance v1.2 through the real engine in an isolated Node loader. Candidate values are development-only; no player numeric data, loot/prices, IDs, artwork or questions are activated/changed. See [Combat/Card Synergy handoff](../balance/combat/SOR_COMBAT_CARD_SYNERGY.md), raw results and CSVs for measured context and limitations. Optional explicit-upgrade execution fields preserve existing definition fallbacks. Human full-run win targets remain unverified.
+
+
+## Deep Combat/Synergy follow-up — 23 October 2026
+
+DISAHKAN: Ijamm requests deep evolved-deck/Predict/setup/exploit/artifact-trigger testing. The development-only harness and measured handoff are in [Deep Combat report](../balance/combat/deep-results/DEEP_COMBAT_REPORT.md). Candidate Hard/growth risk requires Master review with Economy/Map; bot results are not student win rates. Production numbers, ID/assets/questions and Economy policy are unchanged by this follow-up.
+
+
+## Master integration — game 2.27.0
+
+The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.

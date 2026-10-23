@@ -1,0 +1,51 @@
+✔ deep fixtures preserve actual deck size and instance upgrades (1143.564108ms)
+✔ wrong and abandoned Predict do not award Focus or open a boss seal (622.324443ms)
+✔ wrong then correct Predict opens a seal with no independent Focus (276.881093ms)
+✔ serialized continuation at choices and Predict has the same mechanical outcome (3609.587426ms)
+✔ explicit deck consumes only one opening artifact roll (235.677673ms)
+✔ unbounded-requesting free-card cluster remains bounded and conserves exhausted UIDs (1031.981554ms)
+✔ actual growth campaign uses only offered rewards and preserves validity through both stages (3304.341263ms)
+✖ route policies respect actual battle node types (1.245703ms)
+✖ exhausted-bank completion counts actual seal opening without Focus (677.754002ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11614.953626
+
+✖ failing tests:
+
+test at tests/balance-deep.test.cjs:40:1
+✖ route policies respect actual battle node types (1.245703ms)
+  TypeError: pickNode is not a function
+      at TestContext.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/balance-deep.test.cjs:42:15)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/balance-deep.test.cjs:44:1
+✖ exhausted-bank completion counts actual seal opening without Focus (677.754002ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (/workspace/scratch/2997f5f3cebe/slay-the-math-combat/tests/balance-deep.test.cjs:48:40)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

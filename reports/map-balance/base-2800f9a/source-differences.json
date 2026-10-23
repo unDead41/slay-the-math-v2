@@ -1,0 +1,2586 @@
+{
+  "requestedBaseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "sourceCheckoutHead": "8f44451fd3a9e90a0cdbf76bd188aa04c682ae71",
+  "gameVersion": "2.24.0",
+  "inputPackage": {
+    "archive": "STM_Balance_SOR_v1_2_20261023.zip",
+    "archiveSha256": "f35d4a5b7714182b7e020a95f4a022ec5269db6cc20e22de784953909a51ce47",
+    "member": "data/balance-spec.v1.2.json",
+    "memberSha256": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f",
+    "allArchiveManifestEntriesVerified": true,
+    "sourceBaseline": "af12035acdb73e2345adc0e8e5c8a60fa4346dcb",
+    "status": "CANDIDATE_SPECIFICATION_NOT_RUNTIME_CONFIGURATION"
+  },
+  "status": "RUNTIME_AUDITED_V1_2_CANDIDATES_NOT_APPLIED",
+  "sourceHashes": {
+    "dist/artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "dist/artifacts.js": "3fbefbed05cf05608a958d58886fe2d95c6d311fce859a681f8bb1e015261c34",
+    "dist/card-combat.js": "02b1ead7e9e77f1d06c770e6b432a103a03a7fbf2f38178b18ea5a92281adaa0",
+    "dist/card-data.js": "d36fb417b62c2538004583c53f619d43b88f86825d19665b2a4ae58da6affe59",
+    "dist/card-kit.js": "6ad96115bbcd5f11d5e7024d3ec6dfbf10c6fc42f9ed43fd3f057401e7e7dc6d",
+    "dist/combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "dist/combat-predict.js": "3a3056225b3411aabf22a0f045ad8f4abf3e609e7e8a53fe21a624c24d79abb7",
+    "dist/config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "dist/education.js": "9a8d31059ec0aa70effcc07a54dadbc02763f76628aa891d40852142589e5ae5",
+    "dist/engine.js": "fb47d9ac0719547868f7b643ed15d7319ae9f462ec35e5704ddb9b3084c1a382",
+    "dist/map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "dist/map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "dist/math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "dist/mechanics.js": "aa222fe2eecd337cfca77345db17f8ecb0a1e85caeec8acf4b6dd65b4c4ab5ca",
+    "dist/mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "dist/mystery.js": "faece2ea3e7dc3cd4c0daf170bdce3e87496bd82c3db2f4a7d44f36303bdfc21",
+    "dist/question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "dist/rich-text-data.js": "eea73d749a211667d33fcaea54297fc5db51893aca843fa609bac276c8afa77d",
+    "dist/rich-text.js": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+    "modules/map/data/seed-registry.json": "5d0a3abc9832e6d092a53ba043236d54bd0dbc16ed9aaacd3c22c7a516848aa1",
+    "modules/map/src/map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "package.json": "79830d6f3e4cec00115274e1c7f6a292d6e68add05a6cfa77becac046a9b1d49"
+  },
+  "toolHashes": {
+    "tools/balance/map/audit.cjs": "4187aa9a3d6d50e768f6456402fa52305befbcfaef02685517b0089276c70f5f",
+    "tools/balance/map/config.json": "9677b7ca5aa64f620220303e6734b47d7a5f83d5ae50c08187dba412cb1aa9fa",
+    "tools/balance/map/export.cjs": "e125ba4fbef6a6d7b033cdfd6b15888fd7e8d422b3c6797b7b57de228f01a541",
+    "tools/balance/map/inputs/balance-v1.2-reference.json": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f",
+    "tools/balance/map/inputs/provenance.json": "afcf03e9ecb3427642c32be4cf59d9e833143248e683c19436a23317899b2ad0",
+    "tools/balance/map/policy.cjs": "9f98eb17a7d253c520122b9833d1beeecadcd147de8b97e303e74e8c93076051",
+    "tools/balance/map/replay.cjs": "773bc915a49bcb0bace92a32b531d163b46140ba4c3e4c07ffa2fd07cd9ad7ae",
+    "tools/balance/map/score.cjs": "0c3cbfc58000d11750134a288d4a4f365122ecb0dd2c9c0f581af411be36b512",
+    "tools/balance/map/source-audit.cjs": "13e6d3b52a00822b427cd0085b560b4df6f88a21d55fbe9adfed850429d5cd34",
+    "tools/balance/map/structure.cjs": "89ae7f11cf3c7369b0a7bb349bea73d84532b42d7c945c2291d2172175327ca4"
+  },
+  "runtime": {
+    "modes": [
+      "learn",
+      "challenge"
+    ],
+    "difficultyProfilesImplemented": false,
+    "startingHp": 60,
+    "startingGold": 80,
+    "focusCap": 3,
+    "starter": [
+      [
+        "stm.attack.rune_strike",
+        3
+      ],
+      [
+        "stm.attack.weak_point",
+        3
+      ],
+      [
+        "stm.defend.rune_guard",
+        2
+      ],
+      [
+        "stm.defend.flash_ward",
+        2
+      ],
+      [
+        "stm.skill.quick_study",
+        1
+      ],
+      [
+        "stm.skill.read_ahead",
+        1
+      ]
+    ],
+    "upgradeRules": {
+      "attack": 3,
+      "defend": 3,
+      "skill": 1,
+      "passive": 1
+    },
+    "economy": {
+      "shop": {
+        "salePercent": 60,
+        "artifactPrices": {
+          "starting": 80,
+          "elite_mystery": 140,
+          "boss": 220
+        },
+        "removePrice": 50,
+        "minimumDeck": 10
+      },
+      "start": 80,
+      "battle": 25,
+      "elite": 40,
+      "boss": 60,
+      "prices": {
+        "0": 60,
+        "1": 45,
+        "2": 65
+      }
+    },
+    "restHeal": 12,
+    "stage1ClearHeal": 12,
+    "learnDamageMultiplier": 0.7,
+    "eliteHpBonus": 10,
+    "eliteDamageBonus": 2,
+    "loot": "uniform distinct pool; Shop seeded; no v1.2 rarity/support overlay",
+    "bossArtifactSoldInStage1": true
+  },
+  "candidateProfiles": {
+    "easy": {
+      "target_win_rate": 0.9,
+      "starting_max_hp": 75,
+      "starting_gold": 100,
+      "starting_focus": 1,
+      "enemy_hp_mult": 0.8,
+      "enemy_attack_mult": 0.7,
+      "enemy_block_mult": 0.75,
+      "enemy_defense_adjust": -1,
+      "phase_attack_bonus": 1,
+      "rage_every_turns": 6,
+      "rage_damage_step": 0,
+      "rest_heal": 20,
+      "stage_clear_heal": 20,
+      "battle_gold": 30,
+      "elite_gold": 50,
+      "boss1_gold": 75,
+      "shop_price_mult": 0.9,
+      "event_gold_reward_mult": 1.2,
+      "event_gold_cost_mult": 0.8,
+      "event_heal_mult": 1.25,
+      "event_hp_cost_mult": 0.6,
+      "event_failure_hp_mult": 0,
+      "event_max_hp_cost": 3,
+      "event_time_mult": 2,
+      "event_next_energy_loss": 0
+    },
+    "medium": {
+      "target_win_rate": 0.7,
+      "starting_max_hp": 60,
+      "starting_gold": 80,
+      "starting_focus": 0,
+      "enemy_hp_mult": 1,
+      "enemy_attack_mult": 1,
+      "enemy_block_mult": 1,
+      "enemy_defense_adjust": 0,
+      "phase_attack_bonus": 2,
+      "rage_every_turns": 6,
+      "rage_damage_step": 1,
+      "rest_heal": 15,
+      "stage_clear_heal": 12,
+      "battle_gold": 25,
+      "elite_gold": 40,
+      "boss1_gold": 60,
+      "shop_price_mult": 1,
+      "event_gold_reward_mult": 1,
+      "event_gold_cost_mult": 1,
+      "event_heal_mult": 1,
+      "event_hp_cost_mult": 1,
+      "event_failure_hp_mult": 1,
+      "event_max_hp_cost": 5,
+      "event_time_mult": 1.5,
+      "event_next_energy_loss": -1
+    },
+    "hard": {
+      "target_win_rate": 0.5,
+      "starting_max_hp": 55,
+      "starting_gold": 70,
+      "starting_focus": 0,
+      "enemy_hp_mult": 1.15,
+      "enemy_attack_mult": 1.15,
+      "enemy_block_mult": 1.1,
+      "enemy_defense_adjust": 0,
+      "phase_attack_bonus": 3,
+      "rage_every_turns": 5,
+      "rage_damage_step": 2,
+      "rest_heal": 12,
+      "stage_clear_heal": 8,
+      "battle_gold": 22,
+      "elite_gold": 36,
+      "boss1_gold": 54,
+      "shop_price_mult": 1.1,
+      "event_gold_reward_mult": 0.9,
+      "event_gold_cost_mult": 1.1,
+      "event_heal_mult": 0.8,
+      "event_hp_cost_mult": 1.2,
+      "event_failure_hp_mult": 1.25,
+      "event_max_hp_cost": 6,
+      "event_time_mult": 1,
+      "event_next_energy_loss": -1
+    }
+  },
+  "candidateEconomy": {
+    "card_prices_by_rarity": {
+      "common": 50,
+      "uncommon": 75,
+      "rare": 110
+    },
+    "upgraded_card_price_mult": 1.2,
+    "artifact_prices": {
+      "starting": 80,
+      "elite_mystery": 140,
+      "boss": 220
+    },
+    "removal_base": 50,
+    "removal_growth": 15,
+    "shop_card_count": 6,
+    "shop_sale_count": 1,
+    "sale_percent": 60,
+    "shop_artifact_tier_slots": {
+      "starting": 3,
+      "elite_mystery": 2,
+      "boss": 1
+    },
+    "boss_shop_unlock_stage": 2,
+    "rarity_weights": {
+      "normal_s1": {
+        "common": 70,
+        "uncommon": 25,
+        "rare": 5
+      },
+      "normal_s2": {
+        "common": 55,
+        "uncommon": 35,
+        "rare": 10
+      },
+      "elite_s1": {
+        "common": 35,
+        "uncommon": 50,
+        "rare": 15
+      },
+      "elite_s2": {
+        "common": 20,
+        "uncommon": 55,
+        "rare": 25
+      },
+      "shop_s1": {
+        "common": 55,
+        "uncommon": 35,
+        "rare": 10
+      },
+      "shop_s2": {
+        "common": 40,
+        "uncommon": 40,
+        "rare": 20
+      }
+    }
+  },
+  "enemies": [
+    {
+      "id": "bat",
+      "name": "Rune Bat",
+      "stage": 1,
+      "tier": "normal",
+      "runtime": {
+        "baseHp": 30,
+        "effectiveHp": 30,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 6,
+            "label": "Spark"
+          },
+          {
+            "damage": 8,
+            "label": "Flame Burst"
+          },
+          {
+            "damage": 5,
+            "block": 3,
+            "label": "Fire Shield"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 28,
+        "defense": 0,
+        "patterns": [
+          {
+            "damage_per_hit": 5,
+            "block": 0,
+            "hits": 2
+          },
+          {
+            "damage_per_hit": 7,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 5,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "wisp",
+        "weaver"
+      ]
+    },
+    {
+      "id": "wisp",
+      "name": "Ember Mirror",
+      "stage": 1,
+      "tier": "normal",
+      "runtime": {
+        "baseHp": 30,
+        "effectiveHp": 30,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 6,
+            "label": "Spark"
+          },
+          {
+            "damage": 8,
+            "label": "Flame Burst"
+          },
+          {
+            "damage": 5,
+            "block": 3,
+            "label": "Fire Shield"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 30,
+        "defense": 0,
+        "patterns": [
+          {
+            "damage_per_hit": 6,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 8,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 7,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "bat",
+        "weaver"
+      ]
+    },
+    {
+      "id": "beetle",
+      "name": "Prism Guard",
+      "stage": 1,
+      "tier": "normal",
+      "runtime": {
+        "baseHp": 36,
+        "effectiveHp": 36,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 7,
+            "block": 3,
+            "label": "Shell Guard"
+          },
+          {
+            "damage": 10,
+            "label": "Charge"
+          },
+          {
+            "damage": 5,
+            "label": "Stalk"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 34,
+        "defense": 1,
+        "patterns": [
+          {
+            "damage_per_hit": 6,
+            "block": 3,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 9,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 9,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": []
+    },
+    {
+      "id": "knight",
+      "name": "Mirror Knight",
+      "stage": 1,
+      "tier": "elite",
+      "runtime": {
+        "baseHp": 44,
+        "effectiveHp": 54,
+        "defense": 0,
+        "eliteDamageBonus": 2,
+        "patterns": [
+          {
+            "damage": 8,
+            "label": "Slash"
+          },
+          {
+            "damage": 6,
+            "block": 5,
+            "label": "Guard Up"
+          },
+          {
+            "damage": 13,
+            "label": "Heavy Strike"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 54,
+        "defense": 1,
+        "patterns": [
+          {
+            "damage_per_hit": 9,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 5,
+            "block": 6,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 13,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "shard"
+      ]
+    },
+    {
+      "id": "shard",
+      "name": "Shard Beast",
+      "stage": 1,
+      "tier": "elite",
+      "runtime": {
+        "baseHp": 44,
+        "effectiveHp": 54,
+        "defense": 0,
+        "eliteDamageBonus": 2,
+        "patterns": [
+          {
+            "damage": 8,
+            "label": "Slash"
+          },
+          {
+            "damage": 6,
+            "block": 5,
+            "label": "Guard Up"
+          },
+          {
+            "damage": 13,
+            "label": "Heavy Strike"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 56,
+        "defense": 0,
+        "patterns": [
+          {
+            "damage_per_hit": 5,
+            "block": 0,
+            "hits": 2
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 10,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 14,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "knight"
+      ]
+    },
+    {
+      "id": "weaver",
+      "name": "Chain Weaver",
+      "stage": 2,
+      "tier": "normal",
+      "runtime": {
+        "baseHp": 30,
+        "effectiveHp": 30,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 6,
+            "label": "Spark"
+          },
+          {
+            "damage": 8,
+            "label": "Flame Burst"
+          },
+          {
+            "damage": 5,
+            "block": 3,
+            "label": "Fire Shield"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 44,
+        "defense": 0,
+        "patterns": [
+          {
+            "damage_per_hit": 8,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 9,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 11,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "wisp",
+        "bat"
+      ]
+    },
+    {
+      "id": "shade",
+      "name": "Deck Guard",
+      "stage": 2,
+      "tier": "normal",
+      "runtime": {
+        "baseHp": 48,
+        "effectiveHp": 48,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 9,
+            "label": "Dark Pulse"
+          },
+          {
+            "damage": 7,
+            "block": 4,
+            "label": "Mist Shield"
+          },
+          {
+            "damage": 14,
+            "label": "Dark Wave"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 48,
+        "defense": 1,
+        "patterns": [
+          {
+            "damage_per_hit": 8,
+            "block": 4,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 12,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 12,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "mimic",
+        "golem",
+        "reaper"
+      ]
+    },
+    {
+      "id": "mimic",
+      "name": "Card Mimic",
+      "stage": 2,
+      "tier": "normal",
+      "runtime": {
+        "baseHp": 48,
+        "effectiveHp": 48,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 9,
+            "label": "Dark Pulse"
+          },
+          {
+            "damage": 7,
+            "block": 4,
+            "label": "Mist Shield"
+          },
+          {
+            "damage": 14,
+            "label": "Dark Wave"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 46,
+        "defense": 0,
+        "patterns": [
+          {
+            "damage_per_hit": 4,
+            "block": 0,
+            "hits": 3
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 8,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 10,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "shade",
+        "golem",
+        "reaper"
+      ]
+    },
+    {
+      "id": "golem",
+      "name": "Chain Golem",
+      "stage": 2,
+      "tier": "elite",
+      "runtime": {
+        "baseHp": 48,
+        "effectiveHp": 58,
+        "defense": 0,
+        "eliteDamageBonus": 2,
+        "patterns": [
+          {
+            "damage": 9,
+            "label": "Dark Pulse"
+          },
+          {
+            "damage": 7,
+            "block": 4,
+            "label": "Mist Shield"
+          },
+          {
+            "damage": 14,
+            "label": "Dark Wave"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 70,
+        "defense": 2,
+        "patterns": [
+          {
+            "damage_per_hit": 11,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 6,
+            "block": 10,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 15,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "shade",
+        "mimic",
+        "reaper"
+      ]
+    },
+    {
+      "id": "reaper",
+      "name": "Rune Reaper",
+      "stage": 2,
+      "tier": "elite",
+      "runtime": {
+        "baseHp": 48,
+        "effectiveHp": 58,
+        "defense": 0,
+        "eliteDamageBonus": 2,
+        "patterns": [
+          {
+            "damage": 9,
+            "label": "Dark Pulse"
+          },
+          {
+            "damage": 7,
+            "block": 4,
+            "label": "Mist Shield"
+          },
+          {
+            "damage": 14,
+            "label": "Dark Wave"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 72,
+        "defense": 0,
+        "patterns": [
+          {
+            "damage_per_hit": 6,
+            "block": 0,
+            "hits": 2
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 12,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 17,
+            "block": 0,
+            "hits": 1
+          }
+        ]
+      },
+      "sameMechanicalAlias": [
+        "shade",
+        "mimic",
+        "golem"
+      ]
+    },
+    {
+      "id": "sentinel",
+      "name": "Twin Sigil Guardian",
+      "stage": 1,
+      "tier": "boss",
+      "runtime": {
+        "baseHp": 70,
+        "effectiveHp": 70,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 8,
+            "label": "Stone Fist"
+          },
+          {
+            "damage": 8,
+            "block": 4,
+            "label": "Rune Shield"
+          },
+          {
+            "damage": 12,
+            "label": "Double Strike"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 90,
+        "defense": 1,
+        "patterns": [
+          {
+            "damage_per_hit": 9,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 0,
+            "block": 12,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 6,
+            "block": 0,
+            "hits": 2
+          }
+        ]
+      },
+      "sameMechanicalAlias": []
+    },
+    {
+      "id": "dealer",
+      "name": "Deck Lord",
+      "stage": 2,
+      "tier": "boss",
+      "runtime": {
+        "baseHp": 95,
+        "effectiveHp": 95,
+        "defense": 0,
+        "eliteDamageBonus": 0,
+        "patterns": [
+          {
+            "damage": 9,
+            "label": "Sharp Cards"
+          },
+          {
+            "damage": 12,
+            "block": 4,
+            "label": "Dark Veil"
+          },
+          {
+            "damage": 16,
+            "label": "Rune Storm"
+          }
+        ]
+      },
+      "candidateMedium": {
+        "hp": 125,
+        "defense": 1,
+        "patterns": [
+          {
+            "damage_per_hit": 11,
+            "block": 0,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 7,
+            "block": 10,
+            "hits": 1
+          },
+          {
+            "damage_per_hit": 5,
+            "block": 0,
+            "hits": 3
+          }
+        ]
+      },
+      "sameMechanicalAlias": []
+    }
+  ],
+  "cards": [
+    {
+      "id": "stm.attack.rune_strike",
+      "name": "Rune Strike",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "strength"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "6 damage",
+      "candidateFocus": "9 damage",
+      "candidateUpgrade": "Damage +3; Focus kekal +3.",
+      "numericPatch": {
+        "damage": 6,
+        "focus_damage": 3,
+        "upgrade_damage": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.weak_point",
+      "name": "Weak Point",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "stacks": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "4 damage; kemudian Vulnerable 1",
+      "candidateFocus": "6 damage; kemudian Vulnerable 1",
+      "candidateUpgrade": "Damage +2; bonus Focus kekal +2.",
+      "numericPatch": {
+        "damage": 4,
+        "vulnerable": 1,
+        "focus_damage": 2,
+        "upgrade_damage": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.scout_strike",
+      "name": "Scout Strike",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "4 damage; draw 1",
+      "candidateFocus": "6 damage; draw 1",
+      "candidateUpgrade": "Damage +2; draw kekal 1.",
+      "numericPatch": {
+        "damage": 4,
+        "draw": 1,
+        "focus_damage": 2,
+        "upgrade_damage": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.return_strike",
+      "name": "Return Strike",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength",
+          "condition": {
+            "key": "lost_hp_last_enemy_turn",
+            "bonus": 3
+          }
+        },
+        "constant_3": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "5 damage; +3 jika hilang HP pada enemy turn terakhir",
+      "candidateFocus": "8 damage; +3 jika syarat benar",
+      "candidateUpgrade": "Damage asas +3; bonus syarat kekal.",
+      "numericPatch": {
+        "damage": 5,
+        "conditional_damage": 3,
+        "focus_damage": 3,
+        "upgrade_damage": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.sure_hit",
+      "name": "Sure Hit",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "5 damage; abaikan Block",
+      "candidateFocus": "8 damage; abaikan Block",
+      "candidateUpgrade": "Damage +2.",
+      "numericPatch": {
+        "damage": 5,
+        "focus_damage": 3,
+        "upgrade_damage": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.twin_shot",
+      "name": "Twin Shot",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "first": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "second": {
+          "base": 3,
+          "focus_bonus": 0,
+          "stat": "strength"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "3 + 3 damage",
+      "candidateFocus": "6 + 3 damage",
+      "candidateUpgrade": "Hit pertama +2.",
+      "numericPatch": {
+        "hits": [
+          3,
+          3
+        ],
+        "focus_first_hit": 3,
+        "upgrade_first_hit": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.shield_shot",
+      "name": "Shield Shot",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength",
+          "condition": {
+            "key": "has_block",
+            "bonus": 3
+          }
+        },
+        "constant_3": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "5 damage; +3 jika mempunyai Block sebelum bermain",
+      "candidateFocus": "8 damage; +3 jika syarat benar",
+      "candidateUpgrade": "Damage asas +2.",
+      "numericPatch": {
+        "damage": 5,
+        "conditional_damage": 3,
+        "focus_damage": 3,
+        "upgrade_damage": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.crack_shot",
+      "name": "Crack Shot",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "remove": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Buang sehingga 4 Block musuh; kemudian 5 damage",
+      "candidateFocus": "Buang sehingga 4 Block; kemudian 8 damage",
+      "candidateUpgrade": "Damage +2; buang Block kekal 4.",
+      "numericPatch": {
+        "damage": 5,
+        "remove_block": 4,
+        "focus_damage": 3,
+        "upgrade_damage": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.rune_sweep",
+      "name": "Rune Sweep",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "other": {
+          "base": 6,
+          "focus_bonus": 0,
+          "stat": "strength"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 2,
+      "candidateNormal": "12 damage kepada setiap musuh hidup",
+      "candidateFocus": "16 kepada sasaran utama; 12 kepada yang lain",
+      "candidateUpgrade": "Damage utama +3; musuh lain kekal 12.",
+      "numericPatch": {
+        "damage_main": 12,
+        "damage_other": 12,
+        "focus_damage_main": 4,
+        "upgrade_damage_main": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.attack.fate_storm",
+      "name": "Fate Storm",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "first": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "other": {
+          "base": 3,
+          "focus_bonus": 0,
+          "stat": "strength"
+        },
+        "hits": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 2,
+      "candidateNormal": "3 hit rawak, setiap hit 5 damage",
+      "candidateFocus": "9 + 5 + 5 damage",
+      "candidateUpgrade": "Hit pertama +3.",
+      "numericPatch": {
+        "hits": [
+          5,
+          5,
+          5
+        ],
+        "focus_first_hit": 4,
+        "upgrade_first_hit": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.rune_guard",
+      "name": "Rune Guard",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "6 Block",
+      "candidateFocus": "9 Block",
+      "candidateUpgrade": "Block +3.",
+      "numericPatch": {
+        "block": 6,
+        "focus_block": 3,
+        "upgrade_block": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.flash_ward",
+      "name": "Flash Ward",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 0
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 0,
+      "candidateNormal": "3 Block; Exhaust",
+      "candidateFocus": "5 Block; Exhaust",
+      "candidateUpgrade": "Block +1; kos kekal 0; Exhaust kekal.",
+      "numericPatch": {
+        "block": 3,
+        "focus_block": 2,
+        "upgrade_block": 1,
+        "exhaust": true
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.tower_shield",
+      "name": "Tower Shield",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 14,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 2,
+      "candidateNormal": "14 Block",
+      "candidateFocus": "19 Block",
+      "candidateUpgrade": "Block +3.",
+      "numericPatch": {
+        "block": 14,
+        "focus_block": 5,
+        "upgrade_block": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.ember_wall",
+      "name": "Ember Wall",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "thorns": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "5 Block; Thorns 2 hingga enemy phase seterusnya tamat",
+      "candidateFocus": "8 Block; Thorns 2",
+      "candidateUpgrade": "Block +2; Thorns kekal.",
+      "numericPatch": {
+        "block": 5,
+        "thorns": 2,
+        "focus_block": 3,
+        "upgrade_block": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.foreseen_guard",
+      "name": "Foreseen Guard",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "agility",
+          "condition": {
+            "key": "enemy_attacks",
+            "bonus": 4
+          }
+        },
+        "constant_4": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "4 Block; +4 jika intent mengandungi Attack",
+      "candidateFocus": "7 Block; +4 jika syarat benar",
+      "candidateUpgrade": "Block asas +2.",
+      "numericPatch": {
+        "block": 4,
+        "conditional_block": 4,
+        "focus_block": 3,
+        "upgrade_block": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.layered_shield",
+      "name": "Layered Shield",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "later": {
+          "base": 4,
+          "focus_bonus": 0,
+          "stat": "agility"
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "4 Block sekarang; 3 Block pada awal giliran sendiri berikutnya",
+      "candidateFocus": "7 sekarang; 3 kemudian",
+      "candidateUpgrade": "Block segera +2; pemberian tertunda kekal.",
+      "numericPatch": {
+        "block_now": 4,
+        "block_later": 3,
+        "focus_block_now": 3,
+        "upgrade_block_now": 2,
+        "agility_on_later": false
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.burning_pages",
+      "name": "Burning Pages",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "4 Block; draw 1",
+      "candidateFocus": "6 Block; draw 1",
+      "candidateUpgrade": "Block +2; draw kekal.",
+      "numericPatch": {
+        "block": 4,
+        "draw": 1,
+        "focus_block": 2,
+        "upgrade_block": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.cinder_guard",
+      "name": "Cinder Guard",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "stacks": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "5 Block; Weak 1 pada musuh",
+      "candidateFocus": "8 Block; Weak 1",
+      "candidateUpgrade": "Block +2; Weak kekal 1.",
+      "numericPatch": {
+        "block": 5,
+        "weak": 1,
+        "focus_block": 3,
+        "upgrade_block": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.hold_the_line",
+      "name": "Hold the Line",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 10,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "retain": {
+          "base": 5,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 2,
+      "candidateNormal": "12 Block; simpan sehingga 5 baki Block sekali",
+      "candidateFocus": "16 Block; had simpanan 5",
+      "candidateUpgrade": "Block +3; had simpanan kekal.",
+      "numericPatch": {
+        "block": 12,
+        "retain": 5,
+        "focus_block": 4,
+        "upgrade_block": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.defend.mana_barrier",
+      "name": "Mana Barrier",
+      "runtimeEnergy": {
+        "kind": "all_remaining",
+        "minimum": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 0,
+          "focus_bonus": 3,
+          "stat": "agility",
+          "energy_multiplier": 5
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": "X",
+      "candidateNormal": "7X Block; gunakan semua baki Energy positif",
+      "candidateFocus": "7X + min(6, X+2) Block",
+      "candidateUpgrade": "Tambah 2 Block flat selepas 7X; tidak mengubah gandaan.",
+      "numericPatch": {
+        "block_per_energy": 7,
+        "focus_formula": "min(6,X+2)",
+        "upgrade_block": 2,
+        "minimum_energy": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.quick_study",
+      "name": "Quick Study",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "draw": {
+          "base": 2,
+          "focus_bonus": 1
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Draw 2",
+      "candidateFocus": "Draw 3",
+      "candidateUpgrade": "Draw asas +1; bonus Focus kekal +1.",
+      "numericPatch": {
+        "draw": 2,
+        "focus_draw": 1,
+        "upgrade_draw": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.deep_study",
+      "name": "Deep Study",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "draw": {
+          "base": 4,
+          "focus_bonus": 1
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Draw 3; Exhaust",
+      "candidateFocus": "Draw 4; Exhaust",
+      "candidateUpgrade": "Draw asas +1.",
+      "numericPatch": {
+        "draw": 3,
+        "focus_draw": 1,
+        "upgrade_draw": 1,
+        "exhaust": true
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.mana_reading",
+      "name": "Mana Reading",
+      "runtimeEnergy": {
+        "kind": "all_remaining",
+        "minimum": 1
+      },
+      "runtimeValues": {
+        "draw": {
+          "base": 0,
+          "focus_bonus": 1,
+          "energy_multiplier": 2
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Draw 2 sekarang; +1 draw giliran berikutnya; Exhaust",
+      "candidateFocus": "Draw 3 sekarang; +1 kemudian; Exhaust",
+      "candidateUpgrade": "Draw tertunda +1; Focus hanya draw segera.",
+      "numericPatch": {
+        "draw_now": 2,
+        "draw_later": 1,
+        "focus_draw_now": 1,
+        "upgrade_draw_later": 1,
+        "exhaust": true,
+        "changes_energy_kind": true
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.read_ahead",
+      "name": "Read Ahead",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "look": {
+          "base": 3,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Lihat sehingga 3; ambil 1; susun baki di atas Draw",
+      "candidateFocus": "Lihat sehingga 5; ambil 1; susun baki",
+      "candidateUpgrade": "Had lihat asas +1; bonus Focus kekal +2.",
+      "numericPatch": {
+        "look": 3,
+        "take": 1,
+        "focus_look": 2,
+        "upgrade_look": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.burning_page",
+      "name": "Burning Page",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "replace": {
+          "base": 1,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 0,
+      "candidateNormal": "Lihat calon; boleh ganti 1 kali; ambil 1; Exhaust",
+      "candidateFocus": "Boleh ganti sehingga 3 kali; ambil 1; Exhaust",
+      "candidateUpgrade": "Had ganti asas +1.",
+      "numericPatch": {
+        "replacements": 1,
+        "take": 1,
+        "focus_replacements": 2,
+        "upgrade_replacements": 1,
+        "exhaust": true
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.clear_choice",
+      "name": "Clear Choice",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "look": {
+          "base": 3,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Lihat sehingga 4; ambil 1; buang baki ke Discard",
+      "candidateFocus": "Lihat sehingga 6; ambil 1; buang baki",
+      "candidateUpgrade": "Had lihat asas +1.",
+      "numericPatch": {
+        "look": 4,
+        "take": 1,
+        "focus_look": 2,
+        "upgrade_look": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.card_search",
+      "name": "Card Search",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "search": {
+          "base": 4,
+          "focus_bonus": 1
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Pilih kategori; cari padanan pertama dalam sehingga 5 kad",
+      "candidateFocus": "Cari sehingga 7 kad",
+      "candidateUpgrade": "Had cari asas +1.",
+      "numericPatch": {
+        "search": 5,
+        "focus_search": 2,
+        "upgrade_search": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.recall",
+      "name": "Recall",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "return": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "extra": {
+          "base": 0,
+          "focus_bonus": 1
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Ambil semula 1 kad Discard pilihan; Exhaust",
+      "candidateFocus": "Ambil semula 1; kemudian draw 1; Exhaust",
+      "candidateUpgrade": "Tambah draw 1 kepada versi biasa; Focus tambah 1 lagi.",
+      "numericPatch": {
+        "return": 1,
+        "draw_extra": 0,
+        "focus_draw_extra": 1,
+        "upgrade_draw_extra": 1,
+        "exhaust": true
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.next_chapter",
+      "name": "Next Chapter",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "laterDraw": {
+          "base": 2,
+          "focus_bonus": 1
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "+2 draw pada giliran sendiri berikutnya",
+      "candidateFocus": "+4 draw pada giliran sendiri berikutnya",
+      "candidateUpgrade": "Draw asas tertunda +1.",
+      "numericPatch": {
+        "draw_later": 2,
+        "focus_draw_later": 2,
+        "upgrade_draw_later": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.skill.last_page",
+      "name": "Last Page",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "draw": {
+          "base": 1,
+          "focus_bonus": 1
+        },
+        "emptyBonus": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Draw 1; draw tambahan 2 jika tangan kosong selepas kad keluar",
+      "candidateFocus": "Draw 2; tambahan 2 jika syarat benar",
+      "candidateUpgrade": "Draw asas +1; bonus empty-hand kekal 2.",
+      "numericPatch": {
+        "draw": 1,
+        "empty_bonus": 2,
+        "focus_draw": 1,
+        "upgrade_draw": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.blazing_spirit",
+      "name": "Blazing Spirit",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "strength": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "+2 Strength selama aktif dalam combat",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Sumbangan Strength +1; kos kekal 1.",
+      "numericPatch": {
+        "strength": 2,
+        "upgrade_strength": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.growing_flame",
+      "name": "Growing Flame",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "every": {
+          "base": 3,
+          "focus_bonus": 0
+        },
+        "strength": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "cap": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Selepas setiap 3 Attack selepas aktif: +1 Strength, maksimum +3",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Kira setiap 2 Attack; maksimum sumbangan +3 kekal.",
+      "numericPatch": {
+        "every_attacks": 3,
+        "gain_strength": 1,
+        "max_strength": 3,
+        "upgrade_every_attacks": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.swift_step",
+      "name": "Swift Step",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "agility": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "+2 Agility selama aktif dalam combat",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Sumbangan Agility +1; kos kekal.",
+      "numericPatch": {
+        "agility": 2,
+        "upgrade_agility": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.battle_rhythm",
+      "name": "Battle Rhythm",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "every": {
+          "base": 3,
+          "focus_bonus": 0
+        },
+        "agility": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "cap": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Selepas setiap 3 Defend selepas aktif: +1 Agility, maksimum +3",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Kira setiap 2 Defend; had sumbangan +3 kekal.",
+      "numericPatch": {
+        "every_defends": 3,
+        "gain_agility": 1,
+        "max_agility": 3,
+        "upgrade_every_defends": 2
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.rune_armor",
+      "name": "Rune Armor",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "defense": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "+1 Defense selama aktif dalam combat",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Tambahan 3 Block sekali pada pengaktifan pertama combat.",
+      "numericPatch": {
+        "defense": 1,
+        "upgrade_first_activation_block": 3
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.lasting_shield",
+      "name": "Lasting Shield",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "retain": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Simpan sehingga 4 baki Block setiap awal giliran",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Had simpanan 5.",
+      "numericPatch": {
+        "retain": 4,
+        "upgrade_retain": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.grimoire_ward",
+      "name": "Grimoire Ward",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "block": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Skill pertama selepas aktif setiap giliran: +3 Block fixed",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Pencetus memberi 4 Block.",
+      "numericPatch": {
+        "block": 3,
+        "upgrade_block": 1,
+        "max_triggers_per_turn": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.ember_core",
+      "name": "Ember Core",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "damage": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Selepas kad benar-benar guna Focus: 3 fixed HP damage",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Damage pencetus +1.",
+      "numericPatch": {
+        "damage": 3,
+        "upgrade_damage": 1,
+        "max_triggers_per_turn": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.clear_mind",
+      "name": "Clear Mind",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "runtimeValues": {
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "+1 draw setiap awal giliran bermula giliran berikutnya",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Draw 1 sekali pada pengaktifan pertama combat.",
+      "numericPatch": {
+        "draw_per_later_turn": 1,
+        "upgrade_first_activation_draw": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "id": "stm.passive.last_ember",
+      "name": "Last Ember",
+      "runtimeEnergy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "runtimeValues": {
+        "threshold": {
+          "base": 30,
+          "focus_bonus": 0
+        },
+        "block": {
+          "base": 6,
+          "focus_bonus": 0
+        },
+        "focus": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "packageSnapshotMatchesRuntime": true,
+      "candidateEnergy": 1,
+      "candidateNormal": "Ketika hidup dan HP <=30%: +6 Block, +1 Focus, sekali/combat",
+      "candidateFocus": "Tiada Focus",
+      "candidateUpgrade": "Block pencetus +2; threshold dan Focus kekal.",
+      "numericPatch": {
+        "hp_threshold_percent": 30,
+        "block": 6,
+        "focus": 1,
+        "upgrade_block": 2,
+        "max_triggers_per_combat": 1
+      },
+      "status": "CANDIDATE_NOT_APPLIED"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "s01_emberheart_pendant",
+      "name": "Emberheart Pendant",
+      "runtimeValues": {
+        "heal": 2
+      },
+      "candidateValues": {
+        "heal": 2
+      },
+      "changed": false
+    },
+    {
+      "id": "s02_cinder_whetstone",
+      "name": "Cinder Whetstone",
+      "runtimeValues": {
+        "damage_bonus_per_card": 1
+      },
+      "candidateValues": {
+        "damage_bonus_per_card": 2
+      },
+      "changed": true
+    },
+    {
+      "id": "s03_prism_buckler",
+      "name": "Prism Buckler",
+      "runtimeValues": {
+        "block_bonus": 2
+      },
+      "candidateValues": {
+        "block_bonus": 2
+      },
+      "changed": false
+    },
+    {
+      "id": "s04_clairvoyance_lens",
+      "name": "Clairvoyance Lens",
+      "runtimeValues": {
+        "focus": 1
+      },
+      "candidateValues": {
+        "focus": 1
+      },
+      "changed": false
+    },
+    {
+      "id": "s05_scholars_bookmark",
+      "name": "Scholar's Bookmark",
+      "runtimeValues": {
+        "draw": 1
+      },
+      "candidateValues": {
+        "draw": 1
+      },
+      "changed": false
+    },
+    {
+      "id": "s06_merchants_seal",
+      "name": "Merchant's Seal",
+      "runtimeValues": {
+        "discount_percent": 5
+      },
+      "candidateValues": {
+        "discount_percent": 10
+      },
+      "changed": true
+    },
+    {
+      "id": "s07_bronze_guard_pin",
+      "name": "Bronze Guard Pin",
+      "runtimeValues": {
+        "block": 3
+      },
+      "candidateValues": {
+        "block": 5
+      },
+      "changed": true
+    },
+    {
+      "id": "s08_travelers_ration",
+      "name": "Traveler's Ration",
+      "runtimeValues": {
+        "max_hp": 5,
+        "heal": 5
+      },
+      "candidateValues": {
+        "max_hp": 5,
+        "heal": 5
+      },
+      "changed": false
+    },
+    {
+      "id": "s09_copper_purse",
+      "name": "Copper Purse",
+      "runtimeValues": {
+        "gold": 25
+      },
+      "candidateValues": {
+        "gold": 40
+      },
+      "changed": true
+    },
+    {
+      "id": "s10_ember_quill",
+      "name": "Ember Quill",
+      "runtimeValues": {
+        "draw": 1
+      },
+      "candidateValues": {
+        "draw": 2
+      },
+      "changed": true
+    },
+    {
+      "id": "s11_scribes_pebble",
+      "name": "Scribe's Pebble",
+      "runtimeValues": {
+        "block": 4
+      },
+      "candidateValues": {
+        "block": 4
+      },
+      "changed": false
+    },
+    {
+      "id": "s12_initiates_ring",
+      "name": "Initiate's Ring",
+      "runtimeValues": {
+        "block": 3
+      },
+      "candidateValues": {
+        "block": 5
+      },
+      "changed": true
+    },
+    {
+      "id": "e01_copper_abacus",
+      "name": "Copper Abacus",
+      "runtimeValues": {
+        "cards_required": 3,
+        "energy": 1
+      },
+      "candidateValues": {
+        "cards_required": 3,
+        "energy": 1
+      },
+      "changed": false
+    },
+    {
+      "id": "e02_twin_sigil_medallion",
+      "name": "Twin Sigil Medallion",
+      "runtimeValues": {
+        "block": 6
+      },
+      "candidateValues": {
+        "block": 4
+      },
+      "changed": true
+    },
+    {
+      "id": "e03_chance_die",
+      "name": "Chance Die",
+      "runtimeValues": {
+        "sides": 6,
+        "faces_1_2": {
+          "block": 10
+        },
+        "faces_3_4": {
+          "draw": 2
+        },
+        "faces_5_6": {
+          "energy": 2
+        }
+      },
+      "candidateValues": {
+        "sides": 6,
+        "faces_1_2": {
+          "block": 10
+        },
+        "faces_3_4": {
+          "draw": 2
+        },
+        "faces_5_6": {
+          "energy": 2
+        }
+      },
+      "changed": false
+    },
+    {
+      "id": "e04_ember_balance",
+      "name": "Ember Balance",
+      "runtimeValues": {
+        "min_unspent_energy": 1,
+        "block": 6
+      },
+      "candidateValues": {
+        "min_unspent_energy": 1,
+        "block": 6
+      },
+      "changed": false
+    },
+    {
+      "id": "e05_chainbreaker_clasp",
+      "name": "Chainbreaker Clasp",
+      "runtimeValues": {
+        "draw": 1,
+        "block": 4
+      },
+      "candidateValues": {
+        "draw": 1,
+        "block": 4
+      },
+      "changed": false
+    },
+    {
+      "id": "e06_ashen_phoenix_feather",
+      "name": "Ashen Phoenix Feather",
+      "runtimeValues": {
+        "heal": 5
+      },
+      "candidateValues": {
+        "heal": 4
+      },
+      "changed": true
+    },
+    {
+      "id": "e07_runesmith_tongs",
+      "name": "Rune-smith Tongs",
+      "runtimeValues": {
+        "damage_bonus_per_card": 3
+      },
+      "candidateValues": {
+        "damage_bonus_per_card": 3
+      },
+      "changed": false
+    },
+    {
+      "id": "e08_sentinel_crest",
+      "name": "Sentinel Crest",
+      "runtimeValues": {
+        "block_bonus": 6
+      },
+      "candidateValues": {
+        "block_bonus": 4
+      },
+      "changed": true
+    },
+    {
+      "id": "e09_mirror_knights_brooch",
+      "name": "Mirror Knight's Brooch",
+      "runtimeValues": {
+        "retaliation_damage": 6
+      },
+      "candidateValues": {
+        "retaliation_damage": 4
+      },
+      "changed": true
+    },
+    {
+      "id": "e10_rune_bats_bell",
+      "name": "Rune Bat's Bell",
+      "runtimeValues": {
+        "draw": 1
+      },
+      "candidateValues": {
+        "draw": 1
+      },
+      "changed": false
+    },
+    {
+      "id": "e11_scholars_satchel",
+      "name": "Scholar's Satchel",
+      "runtimeValues": {
+        "draw": 2
+      },
+      "candidateValues": {
+        "draw": 2
+      },
+      "changed": false
+    },
+    {
+      "id": "e12_lantern_keepers_flask",
+      "name": "Lantern Keeper's Flask",
+      "runtimeValues": {
+        "hp_threshold_percent": 50,
+        "block": 12
+      },
+      "candidateValues": {
+        "hp_threshold_percent": 50,
+        "block": 10
+      },
+      "changed": true
+    },
+    {
+      "id": "e13_chain_weavers_spool",
+      "name": "Chain Weaver's Spool",
+      "runtimeValues": {
+        "draw": 1,
+        "block": 3
+      },
+      "candidateValues": {
+        "draw": 1,
+        "block": 3
+      },
+      "changed": false
+    },
+    {
+      "id": "e14_brams_contract",
+      "name": "Bram's Contract",
+      "runtimeValues": {
+        "discount_percent": 15
+      },
+      "candidateValues": {
+        "discount_percent": 20
+      },
+      "changed": true
+    },
+    {
+      "id": "e15_crimson_sword_charm",
+      "name": "Crimson Sword Charm",
+      "runtimeValues": {
+        "strength": 2
+      },
+      "candidateValues": {
+        "strength": 1
+      },
+      "changed": true
+    },
+    {
+      "id": "e16_guardians_armlet",
+      "name": "Guardian's Armlet",
+      "runtimeValues": {
+        "agility": 2
+      },
+      "candidateValues": {
+        "agility": 1
+      },
+      "changed": true
+    },
+    {
+      "id": "b01_gatekeeper_core",
+      "name": "Gatekeeper Core",
+      "runtimeValues": {
+        "energy": 1
+      },
+      "candidateValues": {
+        "energy": 1
+      },
+      "changed": false
+    },
+    {
+      "id": "b02_sovereign_grimoire_clasp",
+      "name": "Sovereign Grimoire Clasp",
+      "runtimeValues": {
+        "initial_strength": 3,
+        "initial_agility": 3,
+        "strength_per_later_turn": 1,
+        "agility_per_later_turn": 1,
+        "max_artifact_contribution_each_stat": 6
+      },
+      "candidateValues": {
+        "initial_strength": 2,
+        "initial_agility": 2,
+        "strength_per_later_turn": 1,
+        "agility_per_later_turn": 1,
+        "max_artifact_contribution_each_stat": 4
+      },
+      "changed": true
+    },
+    {
+      "id": "b03_decklords_hourglass",
+      "name": "Decklord's Hourglass",
+      "runtimeValues": {
+        "draw": 2
+      },
+      "candidateValues": {
+        "draw": 2
+      },
+      "changed": false
+    }
+  ],
+  "events": [
+    {
+      "id": "ME01",
+      "runtimeSeconds": 30,
+      "candidateBaseSeconds": 30,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME02",
+      "runtimeSeconds": 30,
+      "candidateBaseSeconds": 30,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME03",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME04",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME05",
+      "runtimeSeconds": 30,
+      "candidateBaseSeconds": 30,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME06",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME07",
+      "runtimeSeconds": 60,
+      "candidateBaseSeconds": 60,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME08",
+      "runtimeSeconds": 30,
+      "candidateBaseSeconds": 30,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME09",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME10",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {
+        "minimum_run_deck_after_removal": 10
+      },
+      "runtimeRemovalMinimum": 1,
+      "candidateRemovalMinimum": 10
+    },
+    {
+      "id": "ME11",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME12",
+      "runtimeSeconds": 60,
+      "candidateBaseSeconds": 60,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME13",
+      "runtimeSeconds": 45,
+      "candidateBaseSeconds": 45,
+      "candidateOverrides": {},
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME14",
+      "runtimeSeconds": 60,
+      "candidateBaseSeconds": 60,
+      "candidateOverrides": {
+        "first_turn_energy_loss_by_difficulty": {
+          "easy": 0,
+          "medium": -1,
+          "hard": -1
+        }
+      },
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    },
+    {
+      "id": "ME15",
+      "runtimeSeconds": 60,
+      "candidateBaseSeconds": 60,
+      "candidateOverrides": {
+        "max_hp_cost_by_difficulty": {
+          "easy": 3,
+          "medium": 5,
+          "hard": 6
+        }
+      },
+      "runtimeRemovalMinimum": null,
+      "candidateRemovalMinimum": null
+    }
+  ],
+  "ownerRequests": [
+    {
+      "domain": "combat",
+      "request": "Supply an implemented/versioned Easy/Medium/Hard adapter and calibrated agent profiles before map-tier validation."
+    },
+    {
+      "domain": "economy",
+      "request": "Evaluate Stage 1 Boss artifact availability, meaningful recovery and rarity/support weighting; current map replay preserves runtime offers."
+    },
+    {
+      "domain": "master",
+      "request": "Decide whether forced Elite paths are acceptable per difficulty; 1.2 BAL-25 and existing global quotas must be reconciled explicitly, without silently regenerating maps."
+    }
+  ]
+}

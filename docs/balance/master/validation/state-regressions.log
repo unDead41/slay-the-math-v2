@@ -1,0 +1,39 @@
+✔ explicit decks preserve size and upgrades (210.4625ms)
+✔ wrong abandoned Predict gives no Focus or seal (160.271129ms)
+✔ wrong then correct opens a seal without Focus (57.587698ms)
+✔ serialization at Predict and choices preserves mechanical outcome (916.369599ms)
+✔ explicit deck consumes one opening Chance Die roll (49.843138ms)
+✔ free Exhaust Recall cluster remains bounded with no exhausted UID re-entry (283.773159ms)
+✔ actual campaign reaches both stages using actual frozen offers (1024.596298ms)
+✔ route policies rank actual battle type and reject unknown types (0.320822ms)
+✔ exhausted question bank counts seal opening but no Focus (258.206728ms)
+✔ all 31 artifacts have actual evidence or explicit scope classification (195.950669ms)
+✔ long Passive swap stress counts live gifts beyond bounded history (1204.441893ms)
+✔ three Weak stacks consume per hit and expire after enemy phase (93.774346ms)
+✔ Thorns caps at six and ignores Strength on each hit (94.594595ms)
+✔ carry uses highest cap then adds fixed queued Block after reset (80.747204ms)
+✔ upgraded Focus Mana Reading queue survives exact restore (46.819831ms)
+✔ death cannot trigger Last Ember Flask or Thorns retaliation (51.494048ms)
+✔ boss phase transition preserves current locked intent (76.625441ms)
+✔ full Hand preserves armed Focus and moves only actual fitting draw (50.3865ms)
+✔ Recall rejects exhausted targets before payment and cancel is free (47.247114ms)
+✔ Master binds all three difficulties to one versioned combat/economy run (566.320365ms)
+✔ Master saves cannot silently load under another difficulty, version or legacy engine (353.338515ms)
+✔ Master restores only the configured Thorns stack bound (99.713301ms)
+✔ Master uses one enemy profile multiplier and the explicit Elite HP definition (102.21139ms)
+✔ Master reconciles all three economy-owned artifacts with canonical quotes (142.954269ms)
+✔ Master loot stays frozen, validates after reload, and Elite has one upgrade only (104.684532ms)
+✔ Master campaign carries real rewards and HP into an exactly replayable Stage 2 (6147.310058ms)
+✔ Master factorial score separates pair and third-order interaction (2.076536ms)
+✔ long purchase reload discount removal transform sequence keeps receipts and once-only settlement (1298.963266ms)
+✔ minimum deck and legacy saves survive reload without migration (4.306472ms)
+✔ all event options and tight HP/Gold budgets settle and restore (443.78817ms)
+✔ full deck refuses purchase atomically and free removal does not inflate paid removal count (10.485633ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7674.136907

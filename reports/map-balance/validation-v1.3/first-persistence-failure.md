@@ -1,0 +1,3 @@
+# First persistence check — resolved
+
+The first independent verifier rejected shard/index disagreement at verify-map-advanced.py:61. trial-0043.jsonl had 3,344,274 bytes in the index versus 3,285,253 persisted bytes. Across all shards, 6,511 records were persisted versus 6,525 in memory/index. Missing task IDs comprised nine campaigns and five matched replays. The same fixed task IDs/runSeeds were recovered with hash/context-checked resume; no outcomes were substituted or trial budget increased. Final raw count, shard/index hashes, unique task IDs and all 800 legacy traces pass both checkers. The regression durable-count-red.log demonstrates the automatic file gate now rejects missing records even with an otherwise hashed outer manifest.

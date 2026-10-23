@@ -1,0 +1,5999 @@
+[
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "normal",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1055,
+      "uncommon": 401,
+      "rare": 80
+    },
+    "firstRarity": {
+      "common": 345,
+      "uncommon": 135,
+      "rare": 32
+    },
+    "byCategory": {
+      "attack": 492,
+      "defend": 444,
+      "skill": 478,
+      "passive": 122
+    },
+    "byCard": {
+      "stm.attack.rune_sweep": 17,
+      "stm.skill.read_ahead": 97,
+      "stm.defend.burning_pages": 131,
+      "stm.defend.tower_shield": 155,
+      "stm.defend.ember_wall": 21,
+      "stm.skill.deep_study": 16,
+      "stm.skill.last_page": 26,
+      "stm.attack.twin_shot": 146,
+      "stm.skill.card_search": 19,
+      "stm.attack.weak_point": 46,
+      "stm.skill.recall": 27,
+      "stm.defend.rune_guard": 46,
+      "stm.skill.burning_page": 141,
+      "stm.skill.clear_choice": 21,
+      "stm.attack.scout_strike": 141,
+      "stm.defend.hold_the_line": 23,
+      "stm.attack.crack_shot": 19,
+      "stm.attack.rune_strike": 52,
+      "stm.attack.sure_hit": 27,
+      "stm.skill.quick_study": 100,
+      "stm.passive.clear_mind": 7,
+      "stm.defend.layered_shield": 19,
+      "stm.passive.ember_core": 23,
+      "stm.passive.swift_step": 16,
+      "stm.passive.last_ember": 8,
+      "stm.passive.battle_rhythm": 9,
+      "stm.defend.cinder_guard": 22,
+      "stm.attack.fate_storm": 11,
+      "stm.passive.blazing_spirit": 19,
+      "stm.passive.growing_flame": 13,
+      "stm.passive.lasting_shield": 17,
+      "stm.defend.mana_barrier": 8,
+      "stm.defend.foreseen_guard": 17,
+      "stm.passive.rune_armor": 10,
+      "stm.skill.next_chapter": 17,
+      "stm.attack.return_strike": 21,
+      "stm.attack.shield_shot": 12,
+      "stm.skill.mana_reading": 14,
+      "stm.defend.flash_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1193,
+      "one": 197,
+      "twoPlus": 146
+    },
+    "supported": 204,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.673828125,
+        "wilson95": [
+          0.632056474525915,
+          0.7130107878204268
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.263671875,
+        "wilson95": [
+          0.22736711813482297,
+          0.3034964914841956
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0625,
+        "wilson95": [
+          0.04461659649349166,
+          0.08689950726403038
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "normal",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1055,
+      "uncommon": 401,
+      "rare": 80
+    },
+    "firstRarity": {
+      "common": 345,
+      "uncommon": 135,
+      "rare": 32
+    },
+    "byCategory": {
+      "attack": 488,
+      "defend": 437,
+      "skill": 476,
+      "passive": 135
+    },
+    "byCard": {
+      "stm.attack.rune_sweep": 19,
+      "stm.skill.read_ahead": 97,
+      "stm.defend.burning_pages": 131,
+      "stm.defend.tower_shield": 155,
+      "stm.defend.ember_wall": 18,
+      "stm.skill.clear_choice": 12,
+      "stm.passive.blazing_spirit": 21,
+      "stm.attack.twin_shot": 146,
+      "stm.skill.recall": 27,
+      "stm.attack.weak_point": 46,
+      "stm.defend.rune_guard": 46,
+      "stm.skill.burning_page": 141,
+      "stm.skill.card_search": 26,
+      "stm.attack.scout_strike": 141,
+      "stm.defend.hold_the_line": 30,
+      "stm.attack.rune_strike": 52,
+      "stm.attack.sure_hit": 21,
+      "stm.skill.quick_study": 100,
+      "stm.passive.clear_mind": 6,
+      "stm.defend.layered_shield": 14,
+      "stm.passive.ember_core": 23,
+      "stm.passive.swift_step": 25,
+      "stm.defend.flash_ward": 3,
+      "stm.passive.last_ember": 8,
+      "stm.passive.battle_rhythm": 10,
+      "stm.skill.deep_study": 17,
+      "stm.skill.next_chapter": 23,
+      "stm.attack.fate_storm": 10,
+      "stm.skill.last_page": 20,
+      "stm.passive.growing_flame": 14,
+      "stm.passive.lasting_shield": 16,
+      "stm.defend.cinder_guard": 16,
+      "stm.attack.crack_shot": 15,
+      "stm.defend.mana_barrier": 9,
+      "stm.defend.foreseen_guard": 15,
+      "stm.passive.rune_armor": 10,
+      "stm.attack.shield_shot": 18,
+      "stm.attack.return_strike": 20,
+      "stm.skill.mana_reading": 13,
+      "stm.passive.grimoire_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1190,
+      "one": 199,
+      "twoPlus": 147
+    },
+    "supported": 232,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.673828125,
+        "wilson95": [
+          0.632056474525915,
+          0.7130107878204268
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.263671875,
+        "wilson95": [
+          0.22736711813482297,
+          0.3034964914841956
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0625,
+        "wilson95": [
+          0.04461659649349166,
+          0.08689950726403038
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "elite",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 516,
+      "uncommon": 800,
+      "rare": 220
+    },
+    "firstRarity": {
+      "common": 172,
+      "uncommon": 265,
+      "rare": 75
+    },
+    "byCategory": {
+      "attack": 403,
+      "defend": 407,
+      "skill": 424,
+      "passive": 302
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 71,
+      "stm.attack.return_strike": 41,
+      "stm.defend.cinder_guard": 40,
+      "stm.defend.flash_ward": 13,
+      "stm.defend.tower_shield": 66,
+      "stm.attack.shield_shot": 50,
+      "stm.passive.grimoire_ward": 7,
+      "stm.skill.deep_study": 39,
+      "stm.skill.card_search": 36,
+      "stm.attack.crack_shot": 37,
+      "stm.skill.next_chapter": 41,
+      "stm.defend.hold_the_line": 43,
+      "stm.defend.burning_pages": 75,
+      "stm.passive.clear_mind": 27,
+      "stm.skill.recall": 40,
+      "stm.defend.rune_guard": 24,
+      "stm.skill.read_ahead": 47,
+      "stm.attack.sure_hit": 34,
+      "stm.defend.ember_wall": 50,
+      "stm.attack.rune_sweep": 33,
+      "stm.defend.layered_shield": 43,
+      "stm.passive.ember_core": 38,
+      "stm.skill.clear_choice": 35,
+      "stm.attack.twin_shot": 67,
+      "stm.defend.mana_barrier": 28,
+      "stm.skill.mana_reading": 28,
+      "stm.passive.rune_armor": 26,
+      "stm.defend.foreseen_guard": 25,
+      "stm.skill.burning_page": 84,
+      "stm.skill.quick_study": 38,
+      "stm.passive.last_ember": 26,
+      "stm.passive.lasting_shield": 36,
+      "stm.attack.rune_strike": 23,
+      "stm.passive.swift_step": 50,
+      "stm.skill.last_page": 36,
+      "stm.attack.fate_storm": 26,
+      "stm.passive.battle_rhythm": 27,
+      "stm.passive.blazing_spirit": 33,
+      "stm.passive.growing_flame": 32,
+      "stm.attack.weak_point": 21
+    },
+    "ownedCopies": {
+      "unowned": 1363,
+      "one": 92,
+      "twoPlus": 81
+    },
+    "supported": 428,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.35,
+        "observed": 0.3359375,
+        "wilson95": [
+          0.2963819460972341,
+          0.37793659281183667
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.5,
+        "observed": 0.517578125,
+        "wilson95": [
+          0.47432576449919034,
+          0.5605686777605521
+        ],
+        "tolerance": 0.09838834764831844
+      },
+      {
+        "rarity": "rare",
+        "target": 0.15,
+        "observed": 0.146484375,
+        "wilson95": [
+          0.11849018678166431,
+          0.1797438077724048
+        ],
+        "tolerance": 0.07312190586476298
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "elite",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 516,
+      "uncommon": 800,
+      "rare": 220
+    },
+    "firstRarity": {
+      "common": 172,
+      "uncommon": 265,
+      "rare": 75
+    },
+    "byCategory": {
+      "attack": 394,
+      "defend": 388,
+      "skill": 433,
+      "passive": 321
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 71,
+      "stm.attack.return_strike": 36,
+      "stm.defend.cinder_guard": 35,
+      "stm.defend.ember_wall": 39,
+      "stm.defend.tower_shield": 66,
+      "stm.attack.shield_shot": 55,
+      "stm.passive.ember_core": 44,
+      "stm.skill.deep_study": 37,
+      "stm.skill.card_search": 40,
+      "stm.attack.crack_shot": 27,
+      "stm.skill.next_chapter": 30,
+      "stm.skill.clear_choice": 37,
+      "stm.defend.burning_pages": 75,
+      "stm.attack.rune_sweep": 38,
+      "stm.passive.clear_mind": 25,
+      "stm.defend.rune_guard": 24,
+      "stm.skill.read_ahead": 47,
+      "stm.attack.sure_hit": 32,
+      "stm.defend.layered_shield": 32,
+      "stm.attack.twin_shot": 67,
+      "stm.defend.mana_barrier": 26,
+      "stm.skill.recall": 44,
+      "stm.skill.mana_reading": 28,
+      "stm.passive.rune_armor": 24,
+      "stm.defend.hold_the_line": 47,
+      "stm.skill.burning_page": 84,
+      "stm.skill.quick_study": 38,
+      "stm.passive.last_ember": 26,
+      "stm.passive.grimoire_ward": 4,
+      "stm.attack.rune_strike": 23,
+      "stm.passive.swift_step": 54,
+      "stm.defend.foreseen_guard": 33,
+      "stm.passive.blazing_spirit": 33,
+      "stm.passive.battle_rhythm": 31,
+      "stm.passive.lasting_shield": 44,
+      "stm.attack.fate_storm": 24,
+      "stm.skill.last_page": 48,
+      "stm.defend.flash_ward": 11,
+      "stm.passive.growing_flame": 36,
+      "stm.attack.weak_point": 21
+    },
+    "ownedCopies": {
+      "unowned": 1368,
+      "one": 89,
+      "twoPlus": 79
+    },
+    "supported": 480,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.35,
+        "observed": 0.3359375,
+        "wilson95": [
+          0.2963819460972341,
+          0.37793659281183667
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.5,
+        "observed": 0.517578125,
+        "wilson95": [
+          0.47432576449919034,
+          0.5605686777605521
+        ],
+        "tolerance": 0.09838834764831844
+      },
+      {
+        "rarity": "rare",
+        "target": 0.15,
+        "observed": 0.146484375,
+        "wilson95": [
+          0.11849018678166431,
+          0.1797438077724048
+        ],
+        "tolerance": 0.07312190586476298
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "shop",
+    "support": false,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1700,
+      "uncommon": 1056,
+      "rare": 316
+    },
+    "firstRarity": {
+      "common": 271,
+      "uncommon": 177,
+      "rare": 64
+    },
+    "byCategory": {
+      "attack": 948,
+      "defend": 879,
+      "skill": 867,
+      "passive": 378
+    },
+    "byCard": {
+      "stm.skill.burning_page": 201,
+      "stm.attack.twin_shot": 216,
+      "stm.defend.hold_the_line": 48,
+      "stm.attack.weak_point": 104,
+      "stm.defend.burning_pages": 233,
+      "stm.defend.rune_guard": 87,
+      "stm.defend.layered_shield": 48,
+      "stm.attack.scout_strike": 211,
+      "stm.defend.tower_shield": 221,
+      "stm.passive.clear_mind": 40,
+      "stm.skill.last_page": 44,
+      "stm.passive.blazing_spirit": 41,
+      "stm.passive.lasting_shield": 46,
+      "stm.defend.flash_ward": 16,
+      "stm.attack.rune_sweep": 51,
+      "stm.passive.rune_armor": 35,
+      "stm.defend.mana_barrier": 56,
+      "stm.skill.read_ahead": 168,
+      "stm.passive.last_ember": 42,
+      "stm.passive.ember_core": 46,
+      "stm.skill.next_chapter": 55,
+      "stm.defend.ember_wall": 57,
+      "stm.attack.return_strike": 50,
+      "stm.skill.quick_study": 162,
+      "stm.passive.growing_flame": 27,
+      "stm.attack.crack_shot": 66,
+      "stm.defend.foreseen_guard": 58,
+      "stm.skill.deep_study": 48,
+      "stm.defend.cinder_guard": 55,
+      "stm.attack.sure_hit": 56,
+      "stm.attack.rune_strike": 97,
+      "stm.passive.battle_rhythm": 36,
+      "stm.attack.shield_shot": 54,
+      "stm.skill.clear_choice": 49,
+      "stm.skill.mana_reading": 37,
+      "stm.attack.fate_storm": 43,
+      "stm.skill.card_search": 45,
+      "stm.skill.recall": 58,
+      "stm.passive.swift_step": 56,
+      "stm.passive.grimoire_ward": 9
+    },
+    "ownedCopies": {
+      "unowned": 2429,
+      "one": 339,
+      "twoPlus": 304
+    },
+    "supported": 510,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.529296875,
+        "wilson95": [
+          0.4860043505856716,
+          0.5721530531805658
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.345703125,
+        "wilson95": [
+          0.3057940384893694,
+          0.3879103016751138
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.125,
+        "wilson95": [
+          0.09911663861136921,
+          0.15646859318079254
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "shop",
+    "support": true,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1700,
+      "uncommon": 1056,
+      "rare": 316
+    },
+    "firstRarity": {
+      "common": 271,
+      "uncommon": 177,
+      "rare": 64
+    },
+    "byCategory": {
+      "attack": 928,
+      "defend": 869,
+      "skill": 863,
+      "passive": 412
+    },
+    "byCard": {
+      "stm.skill.burning_page": 201,
+      "stm.attack.twin_shot": 216,
+      "stm.skill.deep_study": 44,
+      "stm.attack.weak_point": 104,
+      "stm.defend.burning_pages": 233,
+      "stm.defend.rune_guard": 87,
+      "stm.defend.cinder_guard": 45,
+      "stm.attack.scout_strike": 211,
+      "stm.defend.tower_shield": 221,
+      "stm.passive.clear_mind": 36,
+      "stm.skill.last_page": 47,
+      "stm.passive.swift_step": 61,
+      "stm.passive.lasting_shield": 49,
+      "stm.defend.ember_wall": 48,
+      "stm.defend.flash_ward": 21,
+      "stm.passive.rune_armor": 33,
+      "stm.defend.mana_barrier": 52,
+      "stm.skill.read_ahead": 168,
+      "stm.passive.last_ember": 40,
+      "stm.passive.ember_core": 52,
+      "stm.defend.foreseen_guard": 54,
+      "stm.passive.blazing_spirit": 54,
+      "stm.attack.return_strike": 46,
+      "stm.skill.mana_reading": 37,
+      "stm.skill.quick_study": 162,
+      "stm.passive.growing_flame": 33,
+      "stm.attack.crack_shot": 61,
+      "stm.skill.clear_choice": 37,
+      "stm.defend.layered_shield": 45,
+      "stm.passive.grimoire_ward": 9,
+      "stm.defend.hold_the_line": 63,
+      "stm.attack.sure_hit": 48,
+      "stm.attack.rune_strike": 97,
+      "stm.passive.battle_rhythm": 45,
+      "stm.attack.shield_shot": 60,
+      "stm.skill.card_search": 47,
+      "stm.attack.fate_storm": 40,
+      "stm.attack.rune_sweep": 45,
+      "stm.skill.next_chapter": 55,
+      "stm.skill.recall": 65
+    },
+    "ownedCopies": {
+      "unowned": 2424,
+      "one": 339,
+      "twoPlus": 309
+    },
+    "supported": 585,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.529296875,
+        "wilson95": [
+          0.4860043505856716,
+          0.5721530531805658
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.345703125,
+        "wilson95": [
+          0.3057940384893694,
+          0.3879103016751138
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.125,
+        "wilson95": [
+          0.09911663861136921,
+          0.15646859318079254
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "ME03",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1086,
+      "uncommon": 374,
+      "rare": 76
+    },
+    "firstRarity": {
+      "common": 369,
+      "uncommon": 114,
+      "rare": 29
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 343,
+      "stm.skill.burning_page": 397,
+      "stm.skill.quick_study": 346,
+      "stm.skill.mana_reading": 76,
+      "stm.skill.deep_study": 68,
+      "stm.skill.recall": 75,
+      "stm.skill.clear_choice": 68,
+      "stm.skill.last_page": 54,
+      "stm.skill.next_chapter": 57,
+      "stm.skill.card_search": 52
+    },
+    "ownedCopies": {
+      "unowned": 847,
+      "one": 689,
+      "twoPlus": 0
+    },
+    "supported": 181,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.720703125,
+        "wilson95": [
+          0.6803077278941321,
+          0.7578113804781894
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.22265625,
+        "wilson95": [
+          0.18876064847541066,
+          0.2606825958708756
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.056640625,
+        "wilson95": [
+          0.039723226447529694,
+          0.08016139655674488
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "ME03",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1086,
+      "uncommon": 374,
+      "rare": 76
+    },
+    "firstRarity": {
+      "common": 369,
+      "uncommon": 114,
+      "rare": 29
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 343,
+      "stm.skill.burning_page": 397,
+      "stm.skill.quick_study": 346,
+      "stm.skill.mana_reading": 76,
+      "stm.skill.deep_study": 60,
+      "stm.skill.recall": 78,
+      "stm.skill.clear_choice": 67,
+      "stm.skill.last_page": 60,
+      "stm.skill.card_search": 57,
+      "stm.skill.next_chapter": 52
+    },
+    "ownedCopies": {
+      "unowned": 847,
+      "one": 689,
+      "twoPlus": 0
+    },
+    "supported": 195,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.720703125,
+        "wilson95": [
+          0.6803077278941321,
+          0.7578113804781894
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.22265625,
+        "wilson95": [
+          0.18876064847541066,
+          0.2606825958708756
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.056640625,
+        "wilson95": [
+          0.039723226447529694,
+          0.08016139655674488
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "ME12",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1114,
+      "uncommon": 356,
+      "rare": 66
+    },
+    "firstRarity": {
+      "common": 382,
+      "uncommon": 110,
+      "rare": 20
+    },
+    "byCategory": {
+      "attack": 516,
+      "defend": 446,
+      "skill": 460,
+      "passive": 114
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 97,
+      "stm.attack.return_strike": 14,
+      "stm.attack.twin_shot": 149,
+      "stm.attack.weak_point": 61,
+      "stm.attack.scout_strike": 147,
+      "stm.skill.quick_study": 112,
+      "stm.attack.rune_strike": 55,
+      "stm.defend.rune_guard": 52,
+      "stm.defend.burning_pages": 139,
+      "stm.passive.blazing_spirit": 11,
+      "stm.attack.sure_hit": 24,
+      "stm.defend.mana_barrier": 9,
+      "stm.attack.shield_shot": 19,
+      "stm.skill.burning_page": 138,
+      "stm.defend.layered_shield": 19,
+      "stm.skill.card_search": 11,
+      "stm.passive.swift_step": 18,
+      "stm.passive.battle_rhythm": 11,
+      "stm.defend.flash_ward": 6,
+      "stm.defend.hold_the_line": 14,
+      "stm.defend.tower_shield": 164,
+      "stm.attack.crack_shot": 18,
+      "stm.skill.deep_study": 13,
+      "stm.passive.grimoire_ward": 2,
+      "stm.attack.rune_sweep": 22,
+      "stm.skill.recall": 15,
+      "stm.passive.lasting_shield": 20,
+      "stm.skill.next_chapter": 28,
+      "stm.skill.clear_choice": 20,
+      "stm.passive.ember_core": 21,
+      "stm.defend.cinder_guard": 14,
+      "stm.passive.growing_flame": 5,
+      "stm.passive.rune_armor": 8,
+      "stm.skill.mana_reading": 8,
+      "stm.defend.ember_wall": 21,
+      "stm.passive.clear_mind": 13,
+      "stm.defend.foreseen_guard": 8,
+      "stm.skill.last_page": 18,
+      "stm.attack.fate_storm": 7,
+      "stm.passive.last_ember": 5
+    },
+    "ownedCopies": {
+      "unowned": 1151,
+      "one": 211,
+      "twoPlus": 174
+    },
+    "supported": 165,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.74609375,
+        "wilson95": [
+          0.7066566039054272,
+          0.7818655877309666
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.21484375,
+        "wilson95": [
+          0.18146083224296364,
+          0.25247377109899266
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0390625,
+        "wilson95": [
+          0.025427079865239698,
+          0.05956310087929246
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 1,
+    "source": "ME12",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1114,
+      "uncommon": 356,
+      "rare": 66
+    },
+    "firstRarity": {
+      "common": 382,
+      "uncommon": 110,
+      "rare": 20
+    },
+    "byCategory": {
+      "attack": 510,
+      "defend": 443,
+      "skill": 458,
+      "passive": 125
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 97,
+      "stm.attack.return_strike": 14,
+      "stm.attack.twin_shot": 149,
+      "stm.attack.weak_point": 61,
+      "stm.attack.scout_strike": 147,
+      "stm.skill.quick_study": 112,
+      "stm.attack.rune_strike": 55,
+      "stm.defend.rune_guard": 52,
+      "stm.defend.burning_pages": 139,
+      "stm.passive.blazing_spirit": 14,
+      "stm.attack.sure_hit": 15,
+      "stm.skill.mana_reading": 7,
+      "stm.passive.swift_step": 21,
+      "stm.attack.shield_shot": 26,
+      "stm.skill.burning_page": 138,
+      "stm.defend.cinder_guard": 19,
+      "stm.skill.recall": 17,
+      "stm.passive.battle_rhythm": 12,
+      "stm.defend.ember_wall": 19,
+      "stm.defend.hold_the_line": 16,
+      "stm.defend.tower_shield": 164,
+      "stm.attack.crack_shot": 17,
+      "stm.skill.clear_choice": 10,
+      "stm.passive.ember_core": 22,
+      "stm.attack.rune_sweep": 19,
+      "stm.skill.deep_study": 13,
+      "stm.passive.lasting_shield": 20,
+      "stm.skill.last_page": 25,
+      "stm.skill.next_chapter": 18,
+      "stm.skill.card_search": 21,
+      "stm.defend.mana_barrier": 7,
+      "stm.passive.growing_flame": 8,
+      "stm.defend.flash_ward": 6,
+      "stm.passive.clear_mind": 13,
+      "stm.defend.layered_shield": 9,
+      "stm.defend.foreseen_guard": 12,
+      "stm.attack.fate_storm": 7,
+      "stm.passive.grimoire_ward": 3,
+      "stm.passive.rune_armor": 7,
+      "stm.passive.last_ember": 5
+    },
+    "ownedCopies": {
+      "unowned": 1150,
+      "one": 212,
+      "twoPlus": 174
+    },
+    "supported": 205,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.74609375,
+        "wilson95": [
+          0.7066566039054272,
+          0.7818655877309666
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.21484375,
+        "wilson95": [
+          0.18146083224296364,
+          0.25247377109899266
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0390625,
+        "wilson95": [
+          0.025427079865239698,
+          0.05956310087929246
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "normal",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 833,
+      "uncommon": 546,
+      "rare": 157
+    },
+    "firstRarity": {
+      "common": 267,
+      "uncommon": 192,
+      "rare": 53
+    },
+    "byCategory": {
+      "attack": 470,
+      "defend": 383,
+      "skill": 468,
+      "passive": 215
+    },
+    "byCard": {
+      "stm.passive.blazing_spirit": 22,
+      "stm.skill.read_ahead": 71,
+      "stm.defend.tower_shield": 100,
+      "stm.attack.weak_point": 51,
+      "stm.defend.burning_pages": 106,
+      "stm.attack.scout_strike": 116,
+      "stm.passive.lasting_shield": 24,
+      "stm.attack.rune_sweep": 25,
+      "stm.attack.twin_shot": 111,
+      "stm.skill.next_chapter": 34,
+      "stm.attack.crack_shot": 23,
+      "stm.skill.burning_page": 119,
+      "stm.skill.recall": 38,
+      "stm.skill.quick_study": 75,
+      "stm.defend.foreseen_guard": 21,
+      "stm.passive.clear_mind": 24,
+      "stm.attack.return_strike": 23,
+      "stm.defend.hold_the_line": 21,
+      "stm.skill.last_page": 25,
+      "stm.defend.cinder_guard": 22,
+      "stm.defend.layered_shield": 36,
+      "stm.defend.mana_barrier": 13,
+      "stm.skill.clear_choice": 30,
+      "stm.passive.rune_armor": 18,
+      "stm.defend.rune_guard": 34,
+      "stm.attack.shield_shot": 30,
+      "stm.skill.card_search": 26,
+      "stm.skill.deep_study": 32,
+      "stm.passive.last_ember": 29,
+      "stm.attack.sure_hit": 27,
+      "stm.attack.rune_strike": 50,
+      "stm.passive.growing_flame": 25,
+      "stm.skill.mana_reading": 18,
+      "stm.passive.swift_step": 19,
+      "stm.passive.battle_rhythm": 16,
+      "stm.passive.ember_core": 36,
+      "stm.defend.ember_wall": 22,
+      "stm.attack.fate_storm": 14,
+      "stm.passive.grimoire_ward": 2,
+      "stm.defend.flash_ward": 8
+    },
+    "ownedCopies": {
+      "unowned": 1245,
+      "one": 148,
+      "twoPlus": 143
+    },
+    "supported": 284,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.521484375,
+        "wilson95": [
+          0.4782160044018848,
+          0.5644327583600226
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.375,
+        "wilson95": [
+          0.33414269830741683,
+          0.41771904562330375
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.103515625,
+        "wilson95": [
+          0.0800145335369058,
+          0.13292193549334858
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "normal",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 833,
+      "uncommon": 546,
+      "rare": 157
+    },
+    "firstRarity": {
+      "common": 267,
+      "uncommon": 192,
+      "rare": 53
+    },
+    "byCategory": {
+      "attack": 463,
+      "defend": 382,
+      "skill": 456,
+      "passive": 235
+    },
+    "byCard": {
+      "stm.passive.swift_step": 16,
+      "stm.skill.read_ahead": 71,
+      "stm.defend.tower_shield": 100,
+      "stm.attack.weak_point": 51,
+      "stm.defend.burning_pages": 106,
+      "stm.attack.scout_strike": 116,
+      "stm.passive.lasting_shield": 29,
+      "stm.attack.rune_sweep": 21,
+      "stm.attack.twin_shot": 111,
+      "stm.skill.last_page": 36,
+      "stm.attack.crack_shot": 22,
+      "stm.skill.burning_page": 119,
+      "stm.skill.recall": 38,
+      "stm.skill.quick_study": 75,
+      "stm.defend.foreseen_guard": 14,
+      "stm.passive.clear_mind": 21,
+      "stm.attack.return_strike": 20,
+      "stm.defend.hold_the_line": 30,
+      "stm.passive.blazing_spirit": 35,
+      "stm.skill.deep_study": 26,
+      "stm.defend.cinder_guard": 24,
+      "stm.defend.mana_barrier": 14,
+      "stm.skill.card_search": 27,
+      "stm.passive.rune_armor": 19,
+      "stm.defend.rune_guard": 34,
+      "stm.attack.shield_shot": 37,
+      "stm.skill.next_chapter": 28,
+      "stm.skill.clear_choice": 22,
+      "stm.passive.last_ember": 29,
+      "stm.attack.rune_strike": 50,
+      "stm.passive.growing_flame": 29,
+      "stm.skill.mana_reading": 14,
+      "stm.passive.battle_rhythm": 18,
+      "stm.passive.ember_core": 36,
+      "stm.defend.flash_ward": 7,
+      "stm.attack.sure_hit": 22,
+      "stm.defend.layered_shield": 27,
+      "stm.defend.ember_wall": 26,
+      "stm.attack.fate_storm": 13,
+      "stm.passive.grimoire_ward": 3
+    },
+    "ownedCopies": {
+      "unowned": 1245,
+      "one": 149,
+      "twoPlus": 142
+    },
+    "supported": 334,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.521484375,
+        "wilson95": [
+          0.4782160044018848,
+          0.5644327583600226
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.375,
+        "wilson95": [
+          0.33414269830741683,
+          0.41771904562330375
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.103515625,
+        "wilson95": [
+          0.0800145335369058,
+          0.13292193549334858
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "elite",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 308,
+      "uncommon": 841,
+      "rare": 387
+    },
+    "firstRarity": {
+      "common": 99,
+      "uncommon": 270,
+      "rare": 143
+    },
+    "byCategory": {
+      "attack": 387,
+      "defend": 335,
+      "skill": 395,
+      "passive": 419
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 32,
+      "stm.passive.rune_armor": 39,
+      "stm.defend.layered_shield": 53,
+      "stm.passive.ember_core": 38,
+      "stm.attack.fate_storm": 54,
+      "stm.passive.swift_step": 37,
+      "stm.attack.shield_shot": 29,
+      "stm.defend.burning_pages": 38,
+      "stm.skill.read_ahead": 27,
+      "stm.passive.battle_rhythm": 51,
+      "stm.defend.tower_shield": 38,
+      "stm.skill.clear_choice": 48,
+      "stm.passive.growing_flame": 61,
+      "stm.passive.lasting_shield": 41,
+      "stm.attack.return_strike": 46,
+      "stm.attack.twin_shot": 56,
+      "stm.attack.scout_strike": 43,
+      "stm.defend.cinder_guard": 41,
+      "stm.passive.last_ember": 53,
+      "stm.passive.clear_mind": 51,
+      "stm.defend.flash_ward": 14,
+      "stm.defend.mana_barrier": 33,
+      "stm.defend.ember_wall": 32,
+      "stm.defend.foreseen_guard": 37,
+      "stm.defend.rune_guard": 17,
+      "stm.skill.recall": 48,
+      "stm.skill.quick_study": 27,
+      "stm.attack.crack_shot": 42,
+      "stm.skill.mana_reading": 45,
+      "stm.passive.grimoire_ward": 6,
+      "stm.skill.deep_study": 42,
+      "stm.attack.rune_sweep": 56,
+      "stm.passive.blazing_spirit": 42,
+      "stm.attack.sure_hit": 39,
+      "stm.skill.last_page": 38,
+      "stm.skill.next_chapter": 33,
+      "stm.skill.burning_page": 40,
+      "stm.attack.rune_strike": 8,
+      "stm.skill.card_search": 47,
+      "stm.attack.weak_point": 14
+    },
+    "ownedCopies": {
+      "unowned": 1423,
+      "one": 60,
+      "twoPlus": 53
+    },
+    "supported": 470,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.2,
+        "observed": 0.193359375,
+        "wilson95": [
+          0.1614854795945732,
+          0.22980036098547568
+        ],
+        "tolerance": 0.08071067811865476
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.55,
+        "observed": 0.52734375,
+        "wilson95": [
+          0.4840562798278243,
+          0.5702239636873305
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "rare",
+        "target": 0.25,
+        "observed": 0.279296875,
+        "wilson95": [
+          0.24218861952181053,
+          0.319692272105868
+        ],
+        "tolerance": 0.0865465544619743
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "elite",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 308,
+      "uncommon": 841,
+      "rare": 387
+    },
+    "firstRarity": {
+      "common": 99,
+      "uncommon": 270,
+      "rare": 143
+    },
+    "byCategory": {
+      "attack": 364,
+      "defend": 333,
+      "skill": 393,
+      "passive": 446
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 41,
+      "stm.passive.rune_armor": 41,
+      "stm.defend.layered_shield": 39,
+      "stm.passive.ember_core": 41,
+      "stm.attack.fate_storm": 52,
+      "stm.passive.swift_step": 45,
+      "stm.attack.shield_shot": 39,
+      "stm.defend.burning_pages": 38,
+      "stm.skill.read_ahead": 27,
+      "stm.passive.battle_rhythm": 56,
+      "stm.defend.tower_shield": 38,
+      "stm.skill.card_search": 54,
+      "stm.passive.growing_flame": 69,
+      "stm.passive.lasting_shield": 50,
+      "stm.attack.return_strike": 44,
+      "stm.attack.twin_shot": 56,
+      "stm.attack.scout_strike": 43,
+      "stm.passive.clear_mind": 46,
+      "stm.passive.last_ember": 50,
+      "stm.defend.ember_wall": 29,
+      "stm.defend.mana_barrier": 32,
+      "stm.defend.foreseen_guard": 32,
+      "stm.defend.rune_guard": 17,
+      "stm.skill.next_chapter": 38,
+      "stm.skill.quick_study": 27,
+      "stm.attack.rune_sweep": 44,
+      "stm.skill.mana_reading": 41,
+      "stm.passive.grimoire_ward": 5,
+      "stm.defend.cinder_guard": 44,
+      "stm.skill.clear_choice": 32,
+      "stm.skill.recall": 53,
+      "stm.passive.blazing_spirit": 43,
+      "stm.attack.sure_hit": 30,
+      "stm.attack.crack_shot": 34,
+      "stm.skill.deep_study": 40,
+      "stm.skill.last_page": 41,
+      "stm.skill.burning_page": 40,
+      "stm.defend.flash_ward": 23,
+      "stm.attack.rune_strike": 8,
+      "stm.attack.weak_point": 14
+    },
+    "ownedCopies": {
+      "unowned": 1415,
+      "one": 59,
+      "twoPlus": 62
+    },
+    "supported": 537,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.2,
+        "observed": 0.193359375,
+        "wilson95": [
+          0.1614854795945732,
+          0.22980036098547568
+        ],
+        "tolerance": 0.08071067811865476
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.55,
+        "observed": 0.52734375,
+        "wilson95": [
+          0.4840562798278243,
+          0.5702239636873305
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "rare",
+        "target": 0.25,
+        "observed": 0.279296875,
+        "wilson95": [
+          0.24218861952181053,
+          0.319692272105868
+        ],
+        "tolerance": 0.0865465544619743
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "shop",
+    "support": false,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1238,
+      "uncommon": 1239,
+      "rare": 595
+    },
+    "firstRarity": {
+      "common": 200,
+      "uncommon": 197,
+      "rare": 115
+    },
+    "byCategory": {
+      "attack": 800,
+      "defend": 804,
+      "skill": 831,
+      "passive": 637
+    },
+    "byCard": {
+      "stm.defend.cinder_guard": 58,
+      "stm.skill.deep_study": 56,
+      "stm.skill.clear_choice": 60,
+      "stm.passive.battle_rhythm": 76,
+      "stm.skill.next_chapter": 50,
+      "stm.attack.twin_shot": 152,
+      "stm.passive.lasting_shield": 59,
+      "stm.attack.crack_shot": 46,
+      "stm.defend.foreseen_guard": 81,
+      "stm.attack.weak_point": 72,
+      "stm.attack.scout_strike": 170,
+      "stm.passive.last_ember": 75,
+      "stm.attack.fate_storm": 70,
+      "stm.passive.growing_flame": 79,
+      "stm.skill.read_ahead": 117,
+      "stm.attack.rune_strike": 57,
+      "stm.attack.shield_shot": 60,
+      "stm.defend.hold_the_line": 63,
+      "stm.passive.swift_step": 56,
+      "stm.defend.burning_pages": 174,
+      "stm.skill.quick_study": 117,
+      "stm.attack.sure_hit": 57,
+      "stm.defend.tower_shield": 161,
+      "stm.skill.burning_page": 153,
+      "stm.skill.card_search": 79,
+      "stm.passive.rune_armor": 63,
+      "stm.passive.ember_core": 70,
+      "stm.passive.grimoire_ward": 12,
+      "stm.defend.layered_shield": 63,
+      "stm.passive.clear_mind": 88,
+      "stm.defend.mana_barrier": 68,
+      "stm.attack.return_strike": 55,
+      "stm.skill.last_page": 66,
+      "stm.defend.ember_wall": 51,
+      "stm.skill.mana_reading": 76,
+      "stm.defend.rune_guard": 65,
+      "stm.skill.recall": 57,
+      "stm.passive.blazing_spirit": 59,
+      "stm.defend.flash_ward": 20,
+      "stm.attack.rune_sweep": 61
+    },
+    "ownedCopies": {
+      "unowned": 2612,
+      "one": 246,
+      "twoPlus": 214
+    },
+    "supported": 736,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.4,
+        "observed": 0.390625,
+        "wilson95": [
+          0.3493287066839101,
+          0.43355031925547044
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.4,
+        "observed": 0.384765625,
+        "wilson95": [
+          0.3436286270823376,
+          0.42761891810379543
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "rare",
+        "target": 0.2,
+        "observed": 0.224609375,
+        "wilson95": [
+          0.19058845141550912,
+          0.26273195318185966
+        ],
+        "tolerance": 0.08071067811865476
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "shop",
+    "support": true,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1238,
+      "uncommon": 1239,
+      "rare": 595
+    },
+    "firstRarity": {
+      "common": 200,
+      "uncommon": 197,
+      "rare": 115
+    },
+    "byCategory": {
+      "attack": 773,
+      "defend": 784,
+      "skill": 837,
+      "passive": 678
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 63,
+      "stm.skill.deep_study": 64,
+      "stm.skill.clear_choice": 45,
+      "stm.passive.battle_rhythm": 91,
+      "stm.skill.last_page": 70,
+      "stm.attack.twin_shot": 152,
+      "stm.passive.lasting_shield": 66,
+      "stm.attack.crack_shot": 46,
+      "stm.defend.foreseen_guard": 64,
+      "stm.attack.weak_point": 72,
+      "stm.attack.scout_strike": 170,
+      "stm.passive.last_ember": 72,
+      "stm.attack.fate_storm": 63,
+      "stm.passive.growing_flame": 91,
+      "stm.skill.read_ahead": 117,
+      "stm.attack.rune_strike": 57,
+      "stm.attack.shield_shot": 63,
+      "stm.passive.swift_step": 58,
+      "stm.defend.burning_pages": 174,
+      "stm.attack.rune_sweep": 49,
+      "stm.skill.quick_study": 117,
+      "stm.defend.tower_shield": 161,
+      "stm.skill.burning_page": 153,
+      "stm.skill.recall": 84,
+      "stm.passive.ember_core": 78,
+      "stm.skill.card_search": 75,
+      "stm.defend.cinder_guard": 53,
+      "stm.passive.grimoire_ward": 16,
+      "stm.passive.clear_mind": 84,
+      "stm.defend.mana_barrier": 66,
+      "stm.defend.layered_shield": 71,
+      "stm.attack.return_strike": 51,
+      "stm.passive.rune_armor": 54,
+      "stm.passive.blazing_spirit": 68,
+      "stm.skill.mana_reading": 74,
+      "stm.attack.sure_hit": 50,
+      "stm.defend.rune_guard": 65,
+      "stm.defend.ember_wall": 43,
+      "stm.skill.next_chapter": 38,
+      "stm.defend.flash_ward": 24
+    },
+    "ownedCopies": {
+      "unowned": 2604,
+      "one": 250,
+      "twoPlus": 218
+    },
+    "supported": 823,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.4,
+        "observed": 0.390625,
+        "wilson95": [
+          0.3493287066839101,
+          0.43355031925547044
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.4,
+        "observed": 0.384765625,
+        "wilson95": [
+          0.3436286270823376,
+          0.42761891810379543
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "rare",
+        "target": 0.2,
+        "observed": 0.224609375,
+        "wilson95": [
+          0.19058845141550912,
+          0.26273195318185966
+        ],
+        "tolerance": 0.08071067811865476
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "ME03",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 854,
+      "uncommon": 551,
+      "rare": 131
+    },
+    "firstRarity": {
+      "common": 280,
+      "uncommon": 182,
+      "rare": 50
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 264,
+      "stm.skill.mana_reading": 131,
+      "stm.skill.last_page": 87,
+      "stm.skill.quick_study": 261,
+      "stm.skill.next_chapter": 86,
+      "stm.skill.burning_page": 329,
+      "stm.skill.clear_choice": 96,
+      "stm.skill.card_search": 101,
+      "stm.skill.recall": 93,
+      "stm.skill.deep_study": 88
+    },
+    "ownedCopies": {
+      "unowned": 1011,
+      "one": 525,
+      "twoPlus": 0
+    },
+    "supported": 281,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.546875,
+        "wilson95": [
+          0.5035666073562275,
+          0.5894852386697522
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.35546875,
+        "wilson95": [
+          0.3152250946767796,
+          0.39786504674311607
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.09765625,
+        "wilson95": [
+          0.07486099734097137,
+          0.1264439909360355
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "ME03",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 854,
+      "uncommon": 551,
+      "rare": 131
+    },
+    "firstRarity": {
+      "common": 280,
+      "uncommon": 182,
+      "rare": 50
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 264,
+      "stm.skill.mana_reading": 131,
+      "stm.skill.last_page": 92,
+      "stm.skill.quick_study": 261,
+      "stm.skill.next_chapter": 80,
+      "stm.skill.burning_page": 329,
+      "stm.skill.clear_choice": 85,
+      "stm.skill.recall": 104,
+      "stm.skill.card_search": 110,
+      "stm.skill.deep_study": 80
+    },
+    "ownedCopies": {
+      "unowned": 1011,
+      "one": 525,
+      "twoPlus": 0
+    },
+    "supported": 306,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.546875,
+        "wilson95": [
+          0.5035666073562275,
+          0.5894852386697522
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.35546875,
+        "wilson95": [
+          0.3152250946767796,
+          0.39786504674311607
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.09765625,
+        "wilson95": [
+          0.07486099734097137,
+          0.1264439909360355
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "ME12",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 878,
+      "uncommon": 529,
+      "rare": 129
+    },
+    "firstRarity": {
+      "common": 297,
+      "uncommon": 174,
+      "rare": 41
+    },
+    "byCategory": {
+      "attack": 484,
+      "defend": 427,
+      "skill": 438,
+      "passive": 187
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 126,
+      "stm.skill.last_page": 24,
+      "stm.skill.burning_page": 109,
+      "stm.attack.rune_strike": 45,
+      "stm.defend.burning_pages": 126,
+      "stm.attack.crack_shot": 30,
+      "stm.skill.read_ahead": 81,
+      "stm.defend.cinder_guard": 23,
+      "stm.defend.ember_wall": 31,
+      "stm.attack.weak_point": 48,
+      "stm.defend.tower_shield": 107,
+      "stm.skill.next_chapter": 25,
+      "stm.defend.foreseen_guard": 21,
+      "stm.skill.quick_study": 73,
+      "stm.skill.card_search": 36,
+      "stm.passive.ember_core": 31,
+      "stm.passive.battle_rhythm": 21,
+      "stm.passive.blazing_spirit": 22,
+      "stm.attack.rune_sweep": 18,
+      "stm.passive.rune_armor": 13,
+      "stm.passive.last_ember": 16,
+      "stm.skill.deep_study": 23,
+      "stm.skill.clear_choice": 28,
+      "stm.passive.swift_step": 20,
+      "stm.attack.twin_shot": 125,
+      "stm.attack.sure_hit": 29,
+      "stm.defend.layered_shield": 27,
+      "stm.defend.rune_guard": 38,
+      "stm.attack.return_strike": 29,
+      "stm.skill.recall": 26,
+      "stm.passive.lasting_shield": 23,
+      "stm.defend.flash_ward": 13,
+      "stm.passive.clear_mind": 26,
+      "stm.attack.fate_storm": 8,
+      "stm.attack.shield_shot": 26,
+      "stm.defend.hold_the_line": 22,
+      "stm.defend.mana_barrier": 19,
+      "stm.passive.growing_flame": 13,
+      "stm.skill.mana_reading": 13,
+      "stm.passive.grimoire_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1236,
+      "one": 156,
+      "twoPlus": 144
+    },
+    "supported": 266,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.580078125,
+        "wilson95": [
+          0.536886647224361,
+          0.6220769230700212
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.33984375,
+        "wilson95": [
+          0.3001444829862709,
+          0.38192837642496485
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.080078125,
+        "wilson95": [
+          0.05957552205350971,
+          0.10683502396375474
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "easy",
+    "stage": 2,
+    "source": "ME12",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 878,
+      "uncommon": 529,
+      "rare": 129
+    },
+    "firstRarity": {
+      "common": 297,
+      "uncommon": 174,
+      "rare": 41
+    },
+    "byCategory": {
+      "attack": 480,
+      "defend": 413,
+      "skill": 442,
+      "passive": 201
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 126,
+      "stm.skill.last_page": 27,
+      "stm.skill.burning_page": 109,
+      "stm.attack.rune_strike": 45,
+      "stm.defend.burning_pages": 126,
+      "stm.attack.crack_shot": 27,
+      "stm.skill.read_ahead": 81,
+      "stm.defend.hold_the_line": 22,
+      "stm.defend.ember_wall": 27,
+      "stm.attack.weak_point": 48,
+      "stm.defend.tower_shield": 107,
+      "stm.defend.foreseen_guard": 28,
+      "stm.skill.quick_study": 73,
+      "stm.skill.card_search": 32,
+      "stm.skill.next_chapter": 28,
+      "stm.passive.ember_core": 33,
+      "stm.passive.battle_rhythm": 23,
+      "stm.passive.blazing_spirit": 18,
+      "stm.attack.rune_sweep": 19,
+      "stm.passive.rune_armor": 16,
+      "stm.passive.last_ember": 14,
+      "stm.skill.clear_choice": 22,
+      "stm.passive.swift_step": 28,
+      "stm.attack.twin_shot": 125,
+      "stm.attack.sure_hit": 25,
+      "stm.defend.layered_shield": 20,
+      "stm.defend.rune_guard": 38,
+      "stm.attack.return_strike": 27,
+      "stm.passive.lasting_shield": 26,
+      "stm.defend.flash_ward": 5,
+      "stm.passive.clear_mind": 23,
+      "stm.skill.deep_study": 23,
+      "stm.attack.fate_storm": 8,
+      "stm.defend.cinder_guard": 23,
+      "stm.attack.shield_shot": 30,
+      "stm.skill.recall": 37,
+      "stm.skill.mana_reading": 10,
+      "stm.passive.growing_flame": 18,
+      "stm.defend.mana_barrier": 17,
+      "stm.passive.grimoire_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1244,
+      "one": 156,
+      "twoPlus": 136
+    },
+    "supported": 296,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.580078125,
+        "wilson95": [
+          0.536886647224361,
+          0.6220769230700212
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.33984375,
+        "wilson95": [
+          0.3001444829862709,
+          0.38192837642496485
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.080078125,
+        "wilson95": [
+          0.05957552205350971,
+          0.10683502396375474
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "normal",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1055,
+      "uncommon": 401,
+      "rare": 80
+    },
+    "firstRarity": {
+      "common": 345,
+      "uncommon": 135,
+      "rare": 32
+    },
+    "byCategory": {
+      "attack": 492,
+      "defend": 444,
+      "skill": 478,
+      "passive": 122
+    },
+    "byCard": {
+      "stm.attack.rune_sweep": 17,
+      "stm.skill.read_ahead": 97,
+      "stm.defend.burning_pages": 131,
+      "stm.defend.tower_shield": 155,
+      "stm.defend.ember_wall": 21,
+      "stm.skill.deep_study": 16,
+      "stm.skill.last_page": 26,
+      "stm.attack.twin_shot": 146,
+      "stm.skill.card_search": 19,
+      "stm.attack.weak_point": 46,
+      "stm.skill.recall": 27,
+      "stm.defend.rune_guard": 46,
+      "stm.skill.burning_page": 141,
+      "stm.skill.clear_choice": 21,
+      "stm.attack.scout_strike": 141,
+      "stm.defend.hold_the_line": 23,
+      "stm.attack.crack_shot": 19,
+      "stm.attack.rune_strike": 52,
+      "stm.attack.sure_hit": 27,
+      "stm.skill.quick_study": 100,
+      "stm.passive.clear_mind": 7,
+      "stm.defend.layered_shield": 19,
+      "stm.passive.ember_core": 23,
+      "stm.passive.swift_step": 16,
+      "stm.passive.last_ember": 8,
+      "stm.passive.battle_rhythm": 9,
+      "stm.defend.cinder_guard": 22,
+      "stm.attack.fate_storm": 11,
+      "stm.passive.blazing_spirit": 19,
+      "stm.passive.growing_flame": 13,
+      "stm.passive.lasting_shield": 17,
+      "stm.defend.mana_barrier": 8,
+      "stm.defend.foreseen_guard": 17,
+      "stm.passive.rune_armor": 10,
+      "stm.skill.next_chapter": 17,
+      "stm.attack.return_strike": 21,
+      "stm.attack.shield_shot": 12,
+      "stm.skill.mana_reading": 14,
+      "stm.defend.flash_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1193,
+      "one": 197,
+      "twoPlus": 146
+    },
+    "supported": 204,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.673828125,
+        "wilson95": [
+          0.632056474525915,
+          0.7130107878204268
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.263671875,
+        "wilson95": [
+          0.22736711813482297,
+          0.3034964914841956
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0625,
+        "wilson95": [
+          0.04461659649349166,
+          0.08689950726403038
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "normal",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1055,
+      "uncommon": 401,
+      "rare": 80
+    },
+    "firstRarity": {
+      "common": 345,
+      "uncommon": 135,
+      "rare": 32
+    },
+    "byCategory": {
+      "attack": 491,
+      "defend": 439,
+      "skill": 477,
+      "passive": 129
+    },
+    "byCard": {
+      "stm.attack.rune_sweep": 19,
+      "stm.skill.read_ahead": 97,
+      "stm.defend.burning_pages": 131,
+      "stm.defend.tower_shield": 155,
+      "stm.defend.ember_wall": 18,
+      "stm.skill.clear_choice": 13,
+      "stm.skill.last_page": 23,
+      "stm.attack.twin_shot": 146,
+      "stm.skill.recall": 26,
+      "stm.attack.weak_point": 46,
+      "stm.defend.rune_guard": 46,
+      "stm.skill.burning_page": 141,
+      "stm.skill.card_search": 25,
+      "stm.attack.scout_strike": 141,
+      "stm.defend.hold_the_line": 31,
+      "stm.attack.crack_shot": 17,
+      "stm.attack.rune_strike": 52,
+      "stm.attack.sure_hit": 25,
+      "stm.skill.quick_study": 100,
+      "stm.passive.clear_mind": 6,
+      "stm.passive.blazing_spirit": 19,
+      "stm.defend.layered_shield": 16,
+      "stm.passive.ember_core": 23,
+      "stm.passive.swift_step": 21,
+      "stm.passive.last_ember": 8,
+      "stm.passive.battle_rhythm": 9,
+      "stm.skill.deep_study": 17,
+      "stm.attack.fate_storm": 11,
+      "stm.defend.cinder_guard": 16,
+      "stm.passive.growing_flame": 14,
+      "stm.passive.lasting_shield": 16,
+      "stm.defend.mana_barrier": 8,
+      "stm.defend.foreseen_guard": 16,
+      "stm.passive.rune_armor": 11,
+      "stm.attack.shield_shot": 13,
+      "stm.skill.next_chapter": 22,
+      "stm.attack.return_strike": 21,
+      "stm.skill.mana_reading": 13,
+      "stm.passive.grimoire_ward": 2,
+      "stm.defend.flash_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1191,
+      "one": 199,
+      "twoPlus": 146
+    },
+    "supported": 222,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.673828125,
+        "wilson95": [
+          0.632056474525915,
+          0.7130107878204268
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.263671875,
+        "wilson95": [
+          0.22736711813482297,
+          0.3034964914841956
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0625,
+        "wilson95": [
+          0.04461659649349166,
+          0.08689950726403038
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "elite",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 516,
+      "uncommon": 800,
+      "rare": 220
+    },
+    "firstRarity": {
+      "common": 172,
+      "uncommon": 265,
+      "rare": 75
+    },
+    "byCategory": {
+      "attack": 403,
+      "defend": 407,
+      "skill": 424,
+      "passive": 302
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 71,
+      "stm.attack.return_strike": 41,
+      "stm.defend.cinder_guard": 40,
+      "stm.defend.flash_ward": 13,
+      "stm.defend.tower_shield": 66,
+      "stm.attack.shield_shot": 50,
+      "stm.passive.grimoire_ward": 7,
+      "stm.skill.deep_study": 39,
+      "stm.skill.card_search": 36,
+      "stm.attack.crack_shot": 37,
+      "stm.skill.next_chapter": 41,
+      "stm.defend.hold_the_line": 43,
+      "stm.defend.burning_pages": 75,
+      "stm.passive.clear_mind": 27,
+      "stm.skill.recall": 40,
+      "stm.defend.rune_guard": 24,
+      "stm.skill.read_ahead": 47,
+      "stm.attack.sure_hit": 34,
+      "stm.defend.ember_wall": 50,
+      "stm.attack.rune_sweep": 33,
+      "stm.defend.layered_shield": 43,
+      "stm.passive.ember_core": 38,
+      "stm.skill.clear_choice": 35,
+      "stm.attack.twin_shot": 67,
+      "stm.defend.mana_barrier": 28,
+      "stm.skill.mana_reading": 28,
+      "stm.passive.rune_armor": 26,
+      "stm.defend.foreseen_guard": 25,
+      "stm.skill.burning_page": 84,
+      "stm.skill.quick_study": 38,
+      "stm.passive.last_ember": 26,
+      "stm.passive.lasting_shield": 36,
+      "stm.attack.rune_strike": 23,
+      "stm.passive.swift_step": 50,
+      "stm.skill.last_page": 36,
+      "stm.attack.fate_storm": 26,
+      "stm.passive.battle_rhythm": 27,
+      "stm.passive.blazing_spirit": 33,
+      "stm.passive.growing_flame": 32,
+      "stm.attack.weak_point": 21
+    },
+    "ownedCopies": {
+      "unowned": 1363,
+      "one": 92,
+      "twoPlus": 81
+    },
+    "supported": 428,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.35,
+        "observed": 0.3359375,
+        "wilson95": [
+          0.2963819460972341,
+          0.37793659281183667
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.5,
+        "observed": 0.517578125,
+        "wilson95": [
+          0.47432576449919034,
+          0.5605686777605521
+        ],
+        "tolerance": 0.09838834764831844
+      },
+      {
+        "rarity": "rare",
+        "target": 0.15,
+        "observed": 0.146484375,
+        "wilson95": [
+          0.11849018678166431,
+          0.1797438077724048
+        ],
+        "tolerance": 0.07312190586476298
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "elite",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 516,
+      "uncommon": 800,
+      "rare": 220
+    },
+    "firstRarity": {
+      "common": 172,
+      "uncommon": 265,
+      "rare": 75
+    },
+    "byCategory": {
+      "attack": 396,
+      "defend": 400,
+      "skill": 425,
+      "passive": 315
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 71,
+      "stm.attack.return_strike": 38,
+      "stm.defend.cinder_guard": 35,
+      "stm.defend.ember_wall": 45,
+      "stm.defend.tower_shield": 66,
+      "stm.attack.shield_shot": 53,
+      "stm.passive.grimoire_ward": 7,
+      "stm.skill.deep_study": 38,
+      "stm.skill.card_search": 42,
+      "stm.attack.crack_shot": 33,
+      "stm.skill.next_chapter": 34,
+      "stm.skill.clear_choice": 28,
+      "stm.defend.burning_pages": 75,
+      "stm.passive.clear_mind": 25,
+      "stm.defend.rune_guard": 24,
+      "stm.skill.read_ahead": 47,
+      "stm.attack.sure_hit": 32,
+      "stm.attack.rune_sweep": 34,
+      "stm.defend.layered_shield": 38,
+      "stm.passive.ember_core": 41,
+      "stm.attack.twin_shot": 67,
+      "stm.defend.mana_barrier": 28,
+      "stm.skill.recall": 42,
+      "stm.skill.mana_reading": 27,
+      "stm.passive.rune_armor": 25,
+      "stm.defend.hold_the_line": 48,
+      "stm.skill.burning_page": 84,
+      "stm.skill.quick_study": 38,
+      "stm.passive.last_ember": 26,
+      "stm.attack.rune_strike": 23,
+      "stm.passive.swift_step": 49,
+      "stm.skill.last_page": 45,
+      "stm.passive.lasting_shield": 41,
+      "stm.attack.fate_storm": 24,
+      "stm.passive.battle_rhythm": 30,
+      "stm.passive.blazing_spirit": 36,
+      "stm.defend.flash_ward": 13,
+      "stm.passive.growing_flame": 35,
+      "stm.defend.foreseen_guard": 28,
+      "stm.attack.weak_point": 21
+    },
+    "ownedCopies": {
+      "unowned": 1363,
+      "one": 92,
+      "twoPlus": 81
+    },
+    "supported": 469,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.35,
+        "observed": 0.3359375,
+        "wilson95": [
+          0.2963819460972341,
+          0.37793659281183667
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.5,
+        "observed": 0.517578125,
+        "wilson95": [
+          0.47432576449919034,
+          0.5605686777605521
+        ],
+        "tolerance": 0.09838834764831844
+      },
+      {
+        "rarity": "rare",
+        "target": 0.15,
+        "observed": 0.146484375,
+        "wilson95": [
+          0.11849018678166431,
+          0.1797438077724048
+        ],
+        "tolerance": 0.07312190586476298
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "shop",
+    "support": false,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1700,
+      "uncommon": 1056,
+      "rare": 316
+    },
+    "firstRarity": {
+      "common": 271,
+      "uncommon": 177,
+      "rare": 64
+    },
+    "byCategory": {
+      "attack": 948,
+      "defend": 879,
+      "skill": 867,
+      "passive": 378
+    },
+    "byCard": {
+      "stm.skill.burning_page": 201,
+      "stm.attack.twin_shot": 216,
+      "stm.defend.hold_the_line": 48,
+      "stm.attack.weak_point": 104,
+      "stm.defend.burning_pages": 233,
+      "stm.defend.rune_guard": 87,
+      "stm.defend.layered_shield": 48,
+      "stm.attack.scout_strike": 211,
+      "stm.defend.tower_shield": 221,
+      "stm.passive.clear_mind": 40,
+      "stm.skill.last_page": 44,
+      "stm.passive.blazing_spirit": 41,
+      "stm.passive.lasting_shield": 46,
+      "stm.defend.flash_ward": 16,
+      "stm.attack.rune_sweep": 51,
+      "stm.passive.rune_armor": 35,
+      "stm.defend.mana_barrier": 56,
+      "stm.skill.read_ahead": 168,
+      "stm.passive.last_ember": 42,
+      "stm.passive.ember_core": 46,
+      "stm.skill.next_chapter": 55,
+      "stm.defend.ember_wall": 57,
+      "stm.attack.return_strike": 50,
+      "stm.skill.quick_study": 162,
+      "stm.passive.growing_flame": 27,
+      "stm.attack.crack_shot": 66,
+      "stm.defend.foreseen_guard": 58,
+      "stm.skill.deep_study": 48,
+      "stm.defend.cinder_guard": 55,
+      "stm.attack.sure_hit": 56,
+      "stm.attack.rune_strike": 97,
+      "stm.passive.battle_rhythm": 36,
+      "stm.attack.shield_shot": 54,
+      "stm.skill.clear_choice": 49,
+      "stm.skill.mana_reading": 37,
+      "stm.attack.fate_storm": 43,
+      "stm.skill.card_search": 45,
+      "stm.skill.recall": 58,
+      "stm.passive.swift_step": 56,
+      "stm.passive.grimoire_ward": 9
+    },
+    "ownedCopies": {
+      "unowned": 2429,
+      "one": 339,
+      "twoPlus": 304
+    },
+    "supported": 510,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.529296875,
+        "wilson95": [
+          0.4860043505856716,
+          0.5721530531805658
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.345703125,
+        "wilson95": [
+          0.3057940384893694,
+          0.3879103016751138
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.125,
+        "wilson95": [
+          0.09911663861136921,
+          0.15646859318079254
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "shop",
+    "support": true,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1700,
+      "uncommon": 1056,
+      "rare": 316
+    },
+    "firstRarity": {
+      "common": 271,
+      "uncommon": 177,
+      "rare": 64
+    },
+    "byCategory": {
+      "attack": 936,
+      "defend": 876,
+      "skill": 860,
+      "passive": 400
+    },
+    "byCard": {
+      "stm.skill.burning_page": 201,
+      "stm.attack.twin_shot": 216,
+      "stm.defend.hold_the_line": 67,
+      "stm.attack.weak_point": 104,
+      "stm.defend.burning_pages": 233,
+      "stm.defend.rune_guard": 87,
+      "stm.defend.cinder_guard": 42,
+      "stm.attack.scout_strike": 211,
+      "stm.defend.tower_shield": 221,
+      "stm.passive.clear_mind": 37,
+      "stm.skill.last_page": 43,
+      "stm.passive.swift_step": 57,
+      "stm.passive.lasting_shield": 49,
+      "stm.defend.ember_wall": 48,
+      "stm.attack.rune_sweep": 47,
+      "stm.passive.rune_armor": 36,
+      "stm.defend.mana_barrier": 53,
+      "stm.skill.read_ahead": 168,
+      "stm.passive.last_ember": 40,
+      "stm.passive.ember_core": 49,
+      "stm.skill.next_chapter": 57,
+      "stm.passive.blazing_spirit": 53,
+      "stm.attack.return_strike": 47,
+      "stm.skill.mana_reading": 39,
+      "stm.skill.quick_study": 162,
+      "stm.passive.growing_flame": 29,
+      "stm.attack.crack_shot": 65,
+      "stm.defend.foreseen_guard": 61,
+      "stm.skill.deep_study": 38,
+      "stm.defend.layered_shield": 45,
+      "stm.passive.grimoire_ward": 9,
+      "stm.attack.sure_hit": 51,
+      "stm.attack.rune_strike": 97,
+      "stm.passive.battle_rhythm": 41,
+      "stm.skill.clear_choice": 51,
+      "stm.attack.shield_shot": 57,
+      "stm.attack.fate_storm": 41,
+      "stm.skill.card_search": 41,
+      "stm.skill.recall": 60,
+      "stm.defend.flash_ward": 19
+    },
+    "ownedCopies": {
+      "unowned": 2426,
+      "one": 339,
+      "twoPlus": 307
+    },
+    "supported": 555,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.529296875,
+        "wilson95": [
+          0.4860043505856716,
+          0.5721530531805658
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.345703125,
+        "wilson95": [
+          0.3057940384893694,
+          0.3879103016751138
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.125,
+        "wilson95": [
+          0.09911663861136921,
+          0.15646859318079254
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "ME03",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1086,
+      "uncommon": 374,
+      "rare": 76
+    },
+    "firstRarity": {
+      "common": 369,
+      "uncommon": 114,
+      "rare": 29
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 343,
+      "stm.skill.burning_page": 397,
+      "stm.skill.quick_study": 346,
+      "stm.skill.mana_reading": 76,
+      "stm.skill.deep_study": 68,
+      "stm.skill.recall": 75,
+      "stm.skill.clear_choice": 68,
+      "stm.skill.last_page": 54,
+      "stm.skill.next_chapter": 57,
+      "stm.skill.card_search": 52
+    },
+    "ownedCopies": {
+      "unowned": 847,
+      "one": 689,
+      "twoPlus": 0
+    },
+    "supported": 181,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.720703125,
+        "wilson95": [
+          0.6803077278941321,
+          0.7578113804781894
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.22265625,
+        "wilson95": [
+          0.18876064847541066,
+          0.2606825958708756
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.056640625,
+        "wilson95": [
+          0.039723226447529694,
+          0.08016139655674488
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "ME03",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1086,
+      "uncommon": 374,
+      "rare": 76
+    },
+    "firstRarity": {
+      "common": 369,
+      "uncommon": 114,
+      "rare": 29
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 343,
+      "stm.skill.burning_page": 397,
+      "stm.skill.quick_study": 346,
+      "stm.skill.mana_reading": 76,
+      "stm.skill.deep_study": 62,
+      "stm.skill.recall": 76,
+      "stm.skill.clear_choice": 69,
+      "stm.skill.last_page": 59,
+      "stm.skill.card_search": 55,
+      "stm.skill.next_chapter": 53
+    },
+    "ownedCopies": {
+      "unowned": 847,
+      "one": 689,
+      "twoPlus": 0
+    },
+    "supported": 190,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.720703125,
+        "wilson95": [
+          0.6803077278941321,
+          0.7578113804781894
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.22265625,
+        "wilson95": [
+          0.18876064847541066,
+          0.2606825958708756
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.056640625,
+        "wilson95": [
+          0.039723226447529694,
+          0.08016139655674488
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "ME12",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1114,
+      "uncommon": 356,
+      "rare": 66
+    },
+    "firstRarity": {
+      "common": 382,
+      "uncommon": 110,
+      "rare": 20
+    },
+    "byCategory": {
+      "attack": 516,
+      "defend": 446,
+      "skill": 460,
+      "passive": 114
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 97,
+      "stm.attack.return_strike": 14,
+      "stm.attack.twin_shot": 149,
+      "stm.attack.weak_point": 61,
+      "stm.attack.scout_strike": 147,
+      "stm.skill.quick_study": 112,
+      "stm.attack.rune_strike": 55,
+      "stm.defend.rune_guard": 52,
+      "stm.defend.burning_pages": 139,
+      "stm.passive.blazing_spirit": 11,
+      "stm.attack.sure_hit": 24,
+      "stm.defend.mana_barrier": 9,
+      "stm.attack.shield_shot": 19,
+      "stm.skill.burning_page": 138,
+      "stm.defend.layered_shield": 19,
+      "stm.skill.card_search": 11,
+      "stm.passive.swift_step": 18,
+      "stm.passive.battle_rhythm": 11,
+      "stm.defend.flash_ward": 6,
+      "stm.defend.hold_the_line": 14,
+      "stm.defend.tower_shield": 164,
+      "stm.attack.crack_shot": 18,
+      "stm.skill.deep_study": 13,
+      "stm.passive.grimoire_ward": 2,
+      "stm.attack.rune_sweep": 22,
+      "stm.skill.recall": 15,
+      "stm.passive.lasting_shield": 20,
+      "stm.skill.next_chapter": 28,
+      "stm.skill.clear_choice": 20,
+      "stm.passive.ember_core": 21,
+      "stm.defend.cinder_guard": 14,
+      "stm.passive.growing_flame": 5,
+      "stm.passive.rune_armor": 8,
+      "stm.skill.mana_reading": 8,
+      "stm.defend.ember_wall": 21,
+      "stm.passive.clear_mind": 13,
+      "stm.defend.foreseen_guard": 8,
+      "stm.skill.last_page": 18,
+      "stm.attack.fate_storm": 7,
+      "stm.passive.last_ember": 5
+    },
+    "ownedCopies": {
+      "unowned": 1151,
+      "one": 211,
+      "twoPlus": 174
+    },
+    "supported": 165,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.74609375,
+        "wilson95": [
+          0.7066566039054272,
+          0.7818655877309666
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.21484375,
+        "wilson95": [
+          0.18146083224296364,
+          0.25247377109899266
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0390625,
+        "wilson95": [
+          0.025427079865239698,
+          0.05956310087929246
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 1,
+    "source": "ME12",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1114,
+      "uncommon": 356,
+      "rare": 66
+    },
+    "firstRarity": {
+      "common": 382,
+      "uncommon": 110,
+      "rare": 20
+    },
+    "byCategory": {
+      "attack": 513,
+      "defend": 444,
+      "skill": 457,
+      "passive": 122
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 97,
+      "stm.attack.return_strike": 14,
+      "stm.attack.twin_shot": 149,
+      "stm.attack.weak_point": 61,
+      "stm.attack.scout_strike": 147,
+      "stm.skill.quick_study": 112,
+      "stm.attack.rune_strike": 55,
+      "stm.defend.rune_guard": 52,
+      "stm.defend.burning_pages": 139,
+      "stm.passive.blazing_spirit": 14,
+      "stm.attack.sure_hit": 19,
+      "stm.skill.mana_reading": 9,
+      "stm.passive.swift_step": 20,
+      "stm.attack.shield_shot": 22,
+      "stm.skill.burning_page": 138,
+      "stm.defend.layered_shield": 11,
+      "stm.skill.recall": 16,
+      "stm.passive.battle_rhythm": 11,
+      "stm.defend.ember_wall": 21,
+      "stm.defend.hold_the_line": 15,
+      "stm.defend.tower_shield": 164,
+      "stm.attack.crack_shot": 18,
+      "stm.skill.deep_study": 14,
+      "stm.passive.ember_core": 22,
+      "stm.attack.rune_sweep": 21,
+      "stm.defend.flash_ward": 5,
+      "stm.passive.lasting_shield": 22,
+      "stm.skill.last_page": 22,
+      "stm.skill.clear_choice": 11,
+      "stm.skill.next_chapter": 21,
+      "stm.defend.mana_barrier": 7,
+      "stm.skill.card_search": 17,
+      "stm.passive.growing_flame": 6,
+      "stm.passive.rune_armor": 8,
+      "stm.defend.cinder_guard": 19,
+      "stm.passive.clear_mind": 13,
+      "stm.defend.foreseen_guard": 11,
+      "stm.attack.fate_storm": 7,
+      "stm.passive.grimoire_ward": 1,
+      "stm.passive.last_ember": 5
+    },
+    "ownedCopies": {
+      "unowned": 1153,
+      "one": 210,
+      "twoPlus": 173
+    },
+    "supported": 188,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.74609375,
+        "wilson95": [
+          0.7066566039054272,
+          0.7818655877309666
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.21484375,
+        "wilson95": [
+          0.18146083224296364,
+          0.25247377109899266
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0390625,
+        "wilson95": [
+          0.025427079865239698,
+          0.05956310087929246
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "normal",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 833,
+      "uncommon": 546,
+      "rare": 157
+    },
+    "firstRarity": {
+      "common": 267,
+      "uncommon": 192,
+      "rare": 53
+    },
+    "byCategory": {
+      "attack": 470,
+      "defend": 383,
+      "skill": 468,
+      "passive": 215
+    },
+    "byCard": {
+      "stm.passive.blazing_spirit": 22,
+      "stm.skill.read_ahead": 71,
+      "stm.defend.tower_shield": 100,
+      "stm.attack.weak_point": 51,
+      "stm.defend.burning_pages": 106,
+      "stm.attack.scout_strike": 116,
+      "stm.passive.lasting_shield": 24,
+      "stm.attack.rune_sweep": 25,
+      "stm.attack.twin_shot": 111,
+      "stm.skill.next_chapter": 34,
+      "stm.attack.crack_shot": 23,
+      "stm.skill.burning_page": 119,
+      "stm.skill.recall": 38,
+      "stm.skill.quick_study": 75,
+      "stm.defend.foreseen_guard": 21,
+      "stm.passive.clear_mind": 24,
+      "stm.attack.return_strike": 23,
+      "stm.defend.hold_the_line": 21,
+      "stm.skill.last_page": 25,
+      "stm.defend.cinder_guard": 22,
+      "stm.defend.layered_shield": 36,
+      "stm.defend.mana_barrier": 13,
+      "stm.skill.clear_choice": 30,
+      "stm.passive.rune_armor": 18,
+      "stm.defend.rune_guard": 34,
+      "stm.attack.shield_shot": 30,
+      "stm.skill.card_search": 26,
+      "stm.skill.deep_study": 32,
+      "stm.passive.last_ember": 29,
+      "stm.attack.sure_hit": 27,
+      "stm.attack.rune_strike": 50,
+      "stm.passive.growing_flame": 25,
+      "stm.skill.mana_reading": 18,
+      "stm.passive.swift_step": 19,
+      "stm.passive.battle_rhythm": 16,
+      "stm.passive.ember_core": 36,
+      "stm.defend.ember_wall": 22,
+      "stm.attack.fate_storm": 14,
+      "stm.passive.grimoire_ward": 2,
+      "stm.defend.flash_ward": 8
+    },
+    "ownedCopies": {
+      "unowned": 1245,
+      "one": 148,
+      "twoPlus": 143
+    },
+    "supported": 284,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.521484375,
+        "wilson95": [
+          0.4782160044018848,
+          0.5644327583600226
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.375,
+        "wilson95": [
+          0.33414269830741683,
+          0.41771904562330375
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.103515625,
+        "wilson95": [
+          0.0800145335369058,
+          0.13292193549334858
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "normal",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 833,
+      "uncommon": 546,
+      "rare": 157
+    },
+    "firstRarity": {
+      "common": 267,
+      "uncommon": 192,
+      "rare": 53
+    },
+    "byCategory": {
+      "attack": 466,
+      "defend": 382,
+      "skill": 463,
+      "passive": 225
+    },
+    "byCard": {
+      "stm.passive.blazing_spirit": 29,
+      "stm.skill.read_ahead": 71,
+      "stm.defend.tower_shield": 100,
+      "stm.attack.weak_point": 51,
+      "stm.defend.burning_pages": 106,
+      "stm.attack.scout_strike": 116,
+      "stm.passive.lasting_shield": 27,
+      "stm.attack.rune_sweep": 24,
+      "stm.attack.twin_shot": 111,
+      "stm.skill.last_page": 34,
+      "stm.attack.crack_shot": 21,
+      "stm.skill.burning_page": 119,
+      "stm.skill.recall": 41,
+      "stm.skill.quick_study": 75,
+      "stm.defend.foreseen_guard": 14,
+      "stm.passive.clear_mind": 21,
+      "stm.attack.return_strike": 21,
+      "stm.defend.hold_the_line": 26,
+      "stm.defend.cinder_guard": 27,
+      "stm.defend.mana_barrier": 14,
+      "stm.skill.card_search": 28,
+      "stm.passive.rune_armor": 19,
+      "stm.defend.rune_guard": 34,
+      "stm.attack.shield_shot": 37,
+      "stm.skill.deep_study": 29,
+      "stm.passive.last_ember": 29,
+      "stm.skill.clear_choice": 20,
+      "stm.attack.sure_hit": 22,
+      "stm.attack.rune_strike": 50,
+      "stm.passive.growing_flame": 28,
+      "stm.skill.mana_reading": 15,
+      "stm.passive.swift_step": 15,
+      "stm.skill.next_chapter": 31,
+      "stm.passive.battle_rhythm": 18,
+      "stm.passive.ember_core": 36,
+      "stm.defend.layered_shield": 29,
+      "stm.defend.ember_wall": 28,
+      "stm.attack.fate_storm": 13,
+      "stm.passive.grimoire_ward": 3,
+      "stm.defend.flash_ward": 4
+    },
+    "ownedCopies": {
+      "unowned": 1248,
+      "one": 149,
+      "twoPlus": 139
+    },
+    "supported": 322,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.521484375,
+        "wilson95": [
+          0.4782160044018848,
+          0.5644327583600226
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.375,
+        "wilson95": [
+          0.33414269830741683,
+          0.41771904562330375
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.103515625,
+        "wilson95": [
+          0.0800145335369058,
+          0.13292193549334858
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "elite",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 308,
+      "uncommon": 841,
+      "rare": 387
+    },
+    "firstRarity": {
+      "common": 99,
+      "uncommon": 270,
+      "rare": 143
+    },
+    "byCategory": {
+      "attack": 387,
+      "defend": 335,
+      "skill": 395,
+      "passive": 419
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 32,
+      "stm.passive.rune_armor": 39,
+      "stm.defend.layered_shield": 53,
+      "stm.passive.ember_core": 38,
+      "stm.attack.fate_storm": 54,
+      "stm.passive.swift_step": 37,
+      "stm.attack.shield_shot": 29,
+      "stm.defend.burning_pages": 38,
+      "stm.skill.read_ahead": 27,
+      "stm.passive.battle_rhythm": 51,
+      "stm.defend.tower_shield": 38,
+      "stm.skill.clear_choice": 48,
+      "stm.passive.growing_flame": 61,
+      "stm.passive.lasting_shield": 41,
+      "stm.attack.return_strike": 46,
+      "stm.attack.twin_shot": 56,
+      "stm.attack.scout_strike": 43,
+      "stm.defend.cinder_guard": 41,
+      "stm.passive.last_ember": 53,
+      "stm.passive.clear_mind": 51,
+      "stm.defend.flash_ward": 14,
+      "stm.defend.mana_barrier": 33,
+      "stm.defend.ember_wall": 32,
+      "stm.defend.foreseen_guard": 37,
+      "stm.defend.rune_guard": 17,
+      "stm.skill.recall": 48,
+      "stm.skill.quick_study": 27,
+      "stm.attack.crack_shot": 42,
+      "stm.skill.mana_reading": 45,
+      "stm.passive.grimoire_ward": 6,
+      "stm.skill.deep_study": 42,
+      "stm.attack.rune_sweep": 56,
+      "stm.passive.blazing_spirit": 42,
+      "stm.attack.sure_hit": 39,
+      "stm.skill.last_page": 38,
+      "stm.skill.next_chapter": 33,
+      "stm.skill.burning_page": 40,
+      "stm.attack.rune_strike": 8,
+      "stm.skill.card_search": 47,
+      "stm.attack.weak_point": 14
+    },
+    "ownedCopies": {
+      "unowned": 1423,
+      "one": 60,
+      "twoPlus": 53
+    },
+    "supported": 470,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.2,
+        "observed": 0.193359375,
+        "wilson95": [
+          0.1614854795945732,
+          0.22980036098547568
+        ],
+        "tolerance": 0.08071067811865476
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.55,
+        "observed": 0.52734375,
+        "wilson95": [
+          0.4840562798278243,
+          0.5702239636873305
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "rare",
+        "target": 0.25,
+        "observed": 0.279296875,
+        "wilson95": [
+          0.24218861952181053,
+          0.319692272105868
+        ],
+        "tolerance": 0.0865465544619743
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "elite",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 308,
+      "uncommon": 841,
+      "rare": 387
+    },
+    "firstRarity": {
+      "common": 99,
+      "uncommon": 270,
+      "rare": 143
+    },
+    "byCategory": {
+      "attack": 371,
+      "defend": 332,
+      "skill": 394,
+      "passive": 439
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 35,
+      "stm.passive.rune_armor": 39,
+      "stm.defend.layered_shield": 41,
+      "stm.passive.ember_core": 39,
+      "stm.attack.fate_storm": 52,
+      "stm.passive.swift_step": 45,
+      "stm.attack.shield_shot": 36,
+      "stm.defend.burning_pages": 38,
+      "stm.skill.read_ahead": 27,
+      "stm.passive.battle_rhythm": 55,
+      "stm.defend.tower_shield": 38,
+      "stm.skill.clear_choice": 41,
+      "stm.passive.growing_flame": 66,
+      "stm.passive.lasting_shield": 47,
+      "stm.attack.return_strike": 44,
+      "stm.attack.twin_shot": 56,
+      "stm.attack.scout_strike": 43,
+      "stm.skill.card_search": 53,
+      "stm.passive.clear_mind": 49,
+      "stm.passive.last_ember": 51,
+      "stm.defend.ember_wall": 32,
+      "stm.defend.mana_barrier": 32,
+      "stm.defend.flash_ward": 21,
+      "stm.defend.foreseen_guard": 31,
+      "stm.defend.rune_guard": 17,
+      "stm.skill.recall": 47,
+      "stm.skill.quick_study": 27,
+      "stm.attack.rune_sweep": 48,
+      "stm.skill.mana_reading": 43,
+      "stm.defend.cinder_guard": 47,
+      "stm.passive.grimoire_ward": 7,
+      "stm.passive.blazing_spirit": 41,
+      "stm.attack.sure_hit": 33,
+      "stm.attack.crack_shot": 37,
+      "stm.skill.deep_study": 42,
+      "stm.skill.next_chapter": 35,
+      "stm.skill.burning_page": 40,
+      "stm.skill.last_page": 39,
+      "stm.attack.rune_strike": 8,
+      "stm.attack.weak_point": 14
+    },
+    "ownedCopies": {
+      "unowned": 1415,
+      "one": 61,
+      "twoPlus": 60
+    },
+    "supported": 510,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.2,
+        "observed": 0.193359375,
+        "wilson95": [
+          0.1614854795945732,
+          0.22980036098547568
+        ],
+        "tolerance": 0.08071067811865476
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.55,
+        "observed": 0.52734375,
+        "wilson95": [
+          0.4840562798278243,
+          0.5702239636873305
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "rare",
+        "target": 0.25,
+        "observed": 0.279296875,
+        "wilson95": [
+          0.24218861952181053,
+          0.319692272105868
+        ],
+        "tolerance": 0.0865465544619743
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "shop",
+    "support": false,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1238,
+      "uncommon": 1239,
+      "rare": 595
+    },
+    "firstRarity": {
+      "common": 200,
+      "uncommon": 197,
+      "rare": 115
+    },
+    "byCategory": {
+      "attack": 800,
+      "defend": 804,
+      "skill": 831,
+      "passive": 637
+    },
+    "byCard": {
+      "stm.defend.cinder_guard": 58,
+      "stm.skill.deep_study": 56,
+      "stm.skill.clear_choice": 60,
+      "stm.passive.battle_rhythm": 76,
+      "stm.skill.next_chapter": 50,
+      "stm.attack.twin_shot": 152,
+      "stm.passive.lasting_shield": 59,
+      "stm.attack.crack_shot": 46,
+      "stm.defend.foreseen_guard": 81,
+      "stm.attack.weak_point": 72,
+      "stm.attack.scout_strike": 170,
+      "stm.passive.last_ember": 75,
+      "stm.attack.fate_storm": 70,
+      "stm.passive.growing_flame": 79,
+      "stm.skill.read_ahead": 117,
+      "stm.attack.rune_strike": 57,
+      "stm.attack.shield_shot": 60,
+      "stm.defend.hold_the_line": 63,
+      "stm.passive.swift_step": 56,
+      "stm.defend.burning_pages": 174,
+      "stm.skill.quick_study": 117,
+      "stm.attack.sure_hit": 57,
+      "stm.defend.tower_shield": 161,
+      "stm.skill.burning_page": 153,
+      "stm.skill.card_search": 79,
+      "stm.passive.rune_armor": 63,
+      "stm.passive.ember_core": 70,
+      "stm.passive.grimoire_ward": 12,
+      "stm.defend.layered_shield": 63,
+      "stm.passive.clear_mind": 88,
+      "stm.defend.mana_barrier": 68,
+      "stm.attack.return_strike": 55,
+      "stm.skill.last_page": 66,
+      "stm.defend.ember_wall": 51,
+      "stm.skill.mana_reading": 76,
+      "stm.defend.rune_guard": 65,
+      "stm.skill.recall": 57,
+      "stm.passive.blazing_spirit": 59,
+      "stm.defend.flash_ward": 20,
+      "stm.attack.rune_sweep": 61
+    },
+    "ownedCopies": {
+      "unowned": 2612,
+      "one": 246,
+      "twoPlus": 214
+    },
+    "supported": 736,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.4,
+        "observed": 0.390625,
+        "wilson95": [
+          0.3493287066839101,
+          0.43355031925547044
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.4,
+        "observed": 0.384765625,
+        "wilson95": [
+          0.3436286270823376,
+          0.42761891810379543
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "rare",
+        "target": 0.2,
+        "observed": 0.224609375,
+        "wilson95": [
+          0.19058845141550912,
+          0.26273195318185966
+        ],
+        "tolerance": 0.08071067811865476
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "shop",
+    "support": true,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1238,
+      "uncommon": 1239,
+      "rare": 595
+    },
+    "firstRarity": {
+      "common": 200,
+      "uncommon": 197,
+      "rare": 115
+    },
+    "byCategory": {
+      "attack": 776,
+      "defend": 796,
+      "skill": 832,
+      "passive": 668
+    },
+    "byCard": {
+      "stm.defend.cinder_guard": 55,
+      "stm.skill.deep_study": 66,
+      "stm.skill.clear_choice": 46,
+      "stm.passive.battle_rhythm": 87,
+      "stm.skill.last_page": 70,
+      "stm.attack.twin_shot": 152,
+      "stm.passive.lasting_shield": 64,
+      "stm.attack.crack_shot": 48,
+      "stm.defend.foreseen_guard": 71,
+      "stm.attack.weak_point": 72,
+      "stm.attack.scout_strike": 170,
+      "stm.passive.last_ember": 72,
+      "stm.attack.fate_storm": 64,
+      "stm.passive.growing_flame": 89,
+      "stm.skill.read_ahead": 117,
+      "stm.attack.rune_strike": 57,
+      "stm.attack.shield_shot": 61,
+      "stm.defend.hold_the_line": 59,
+      "stm.passive.swift_step": 54,
+      "stm.defend.burning_pages": 174,
+      "stm.skill.quick_study": 117,
+      "stm.attack.sure_hit": 52,
+      "stm.defend.tower_shield": 161,
+      "stm.skill.burning_page": 153,
+      "stm.skill.recall": 71,
+      "stm.passive.ember_core": 77,
+      "stm.skill.card_search": 80,
+      "stm.defend.layered_shield": 68,
+      "stm.passive.grimoire_ward": 12,
+      "stm.passive.clear_mind": 85,
+      "stm.defend.mana_barrier": 69,
+      "stm.attack.return_strike": 53,
+      "stm.passive.rune_armor": 58,
+      "stm.defend.ember_wall": 44,
+      "stm.skill.mana_reading": 71,
+      "stm.defend.rune_guard": 65,
+      "stm.passive.blazing_spirit": 70,
+      "stm.defend.flash_ward": 30,
+      "stm.attack.rune_sweep": 47,
+      "stm.skill.next_chapter": 41
+    },
+    "ownedCopies": {
+      "unowned": 2602,
+      "one": 246,
+      "twoPlus": 224
+    },
+    "supported": 794,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.4,
+        "observed": 0.390625,
+        "wilson95": [
+          0.3493287066839101,
+          0.43355031925547044
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.4,
+        "observed": 0.384765625,
+        "wilson95": [
+          0.3436286270823376,
+          0.42761891810379543
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "rare",
+        "target": 0.2,
+        "observed": 0.224609375,
+        "wilson95": [
+          0.19058845141550912,
+          0.26273195318185966
+        ],
+        "tolerance": 0.08071067811865476
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "ME03",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 854,
+      "uncommon": 551,
+      "rare": 131
+    },
+    "firstRarity": {
+      "common": 280,
+      "uncommon": 182,
+      "rare": 50
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 264,
+      "stm.skill.mana_reading": 131,
+      "stm.skill.last_page": 87,
+      "stm.skill.quick_study": 261,
+      "stm.skill.next_chapter": 86,
+      "stm.skill.burning_page": 329,
+      "stm.skill.clear_choice": 96,
+      "stm.skill.card_search": 101,
+      "stm.skill.recall": 93,
+      "stm.skill.deep_study": 88
+    },
+    "ownedCopies": {
+      "unowned": 1011,
+      "one": 525,
+      "twoPlus": 0
+    },
+    "supported": 281,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.546875,
+        "wilson95": [
+          0.5035666073562275,
+          0.5894852386697522
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.35546875,
+        "wilson95": [
+          0.3152250946767796,
+          0.39786504674311607
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.09765625,
+        "wilson95": [
+          0.07486099734097137,
+          0.1264439909360355
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "ME03",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 854,
+      "uncommon": 551,
+      "rare": 131
+    },
+    "firstRarity": {
+      "common": 280,
+      "uncommon": 182,
+      "rare": 50
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 264,
+      "stm.skill.mana_reading": 131,
+      "stm.skill.last_page": 92,
+      "stm.skill.quick_study": 261,
+      "stm.skill.next_chapter": 82,
+      "stm.skill.burning_page": 329,
+      "stm.skill.clear_choice": 90,
+      "stm.skill.recall": 100,
+      "stm.skill.card_search": 105,
+      "stm.skill.deep_study": 82
+    },
+    "ownedCopies": {
+      "unowned": 1011,
+      "one": 525,
+      "twoPlus": 0
+    },
+    "supported": 297,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.546875,
+        "wilson95": [
+          0.5035666073562275,
+          0.5894852386697522
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.35546875,
+        "wilson95": [
+          0.3152250946767796,
+          0.39786504674311607
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.09765625,
+        "wilson95": [
+          0.07486099734097137,
+          0.1264439909360355
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "ME12",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 878,
+      "uncommon": 529,
+      "rare": 129
+    },
+    "firstRarity": {
+      "common": 297,
+      "uncommon": 174,
+      "rare": 41
+    },
+    "byCategory": {
+      "attack": 484,
+      "defend": 427,
+      "skill": 438,
+      "passive": 187
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 126,
+      "stm.skill.last_page": 24,
+      "stm.skill.burning_page": 109,
+      "stm.attack.rune_strike": 45,
+      "stm.defend.burning_pages": 126,
+      "stm.attack.crack_shot": 30,
+      "stm.skill.read_ahead": 81,
+      "stm.defend.cinder_guard": 23,
+      "stm.defend.ember_wall": 31,
+      "stm.attack.weak_point": 48,
+      "stm.defend.tower_shield": 107,
+      "stm.skill.next_chapter": 25,
+      "stm.defend.foreseen_guard": 21,
+      "stm.skill.quick_study": 73,
+      "stm.skill.card_search": 36,
+      "stm.passive.ember_core": 31,
+      "stm.passive.battle_rhythm": 21,
+      "stm.passive.blazing_spirit": 22,
+      "stm.attack.rune_sweep": 18,
+      "stm.passive.rune_armor": 13,
+      "stm.passive.last_ember": 16,
+      "stm.skill.deep_study": 23,
+      "stm.skill.clear_choice": 28,
+      "stm.passive.swift_step": 20,
+      "stm.attack.twin_shot": 125,
+      "stm.attack.sure_hit": 29,
+      "stm.defend.layered_shield": 27,
+      "stm.defend.rune_guard": 38,
+      "stm.attack.return_strike": 29,
+      "stm.skill.recall": 26,
+      "stm.passive.lasting_shield": 23,
+      "stm.defend.flash_ward": 13,
+      "stm.passive.clear_mind": 26,
+      "stm.attack.fate_storm": 8,
+      "stm.attack.shield_shot": 26,
+      "stm.defend.hold_the_line": 22,
+      "stm.defend.mana_barrier": 19,
+      "stm.passive.growing_flame": 13,
+      "stm.skill.mana_reading": 13,
+      "stm.passive.grimoire_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1236,
+      "one": 156,
+      "twoPlus": 144
+    },
+    "supported": 266,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.580078125,
+        "wilson95": [
+          0.536886647224361,
+          0.6220769230700212
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.33984375,
+        "wilson95": [
+          0.3001444829862709,
+          0.38192837642496485
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.080078125,
+        "wilson95": [
+          0.05957552205350971,
+          0.10683502396375474
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "medium",
+    "stage": 2,
+    "source": "ME12",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 878,
+      "uncommon": 529,
+      "rare": 129
+    },
+    "firstRarity": {
+      "common": 297,
+      "uncommon": 174,
+      "rare": 41
+    },
+    "byCategory": {
+      "attack": 481,
+      "defend": 417,
+      "skill": 442,
+      "passive": 196
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 126,
+      "stm.skill.last_page": 25,
+      "stm.skill.burning_page": 109,
+      "stm.attack.rune_strike": 45,
+      "stm.defend.burning_pages": 126,
+      "stm.attack.crack_shot": 29,
+      "stm.skill.read_ahead": 81,
+      "stm.defend.cinder_guard": 22,
+      "stm.defend.ember_wall": 32,
+      "stm.attack.weak_point": 48,
+      "stm.defend.tower_shield": 107,
+      "stm.skill.next_chapter": 25,
+      "stm.defend.foreseen_guard": 22,
+      "stm.skill.quick_study": 73,
+      "stm.skill.card_search": 31,
+      "stm.passive.ember_core": 32,
+      "stm.passive.battle_rhythm": 23,
+      "stm.passive.blazing_spirit": 21,
+      "stm.attack.rune_sweep": 17,
+      "stm.passive.rune_armor": 15,
+      "stm.passive.last_ember": 14,
+      "stm.skill.clear_choice": 25,
+      "stm.passive.swift_step": 25,
+      "stm.attack.twin_shot": 125,
+      "stm.attack.sure_hit": 28,
+      "stm.defend.layered_shield": 22,
+      "stm.defend.rune_guard": 38,
+      "stm.skill.deep_study": 24,
+      "stm.attack.return_strike": 28,
+      "stm.passive.lasting_shield": 23,
+      "stm.defend.flash_ward": 8,
+      "stm.defend.hold_the_line": 23,
+      "stm.passive.clear_mind": 24,
+      "stm.attack.fate_storm": 8,
+      "stm.attack.shield_shot": 27,
+      "stm.skill.recall": 37,
+      "stm.skill.mana_reading": 12,
+      "stm.passive.growing_flame": 16,
+      "stm.defend.mana_barrier": 17,
+      "stm.passive.grimoire_ward": 3
+    },
+    "ownedCopies": {
+      "unowned": 1240,
+      "one": 157,
+      "twoPlus": 139
+    },
+    "supported": 286,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.580078125,
+        "wilson95": [
+          0.536886647224361,
+          0.6220769230700212
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.33984375,
+        "wilson95": [
+          0.3001444829862709,
+          0.38192837642496485
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.080078125,
+        "wilson95": [
+          0.05957552205350971,
+          0.10683502396375474
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "normal",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1055,
+      "uncommon": 401,
+      "rare": 80
+    },
+    "firstRarity": {
+      "common": 345,
+      "uncommon": 135,
+      "rare": 32
+    },
+    "byCategory": {
+      "attack": 492,
+      "defend": 444,
+      "skill": 478,
+      "passive": 122
+    },
+    "byCard": {
+      "stm.attack.rune_sweep": 17,
+      "stm.skill.read_ahead": 97,
+      "stm.defend.burning_pages": 131,
+      "stm.defend.tower_shield": 155,
+      "stm.defend.ember_wall": 21,
+      "stm.skill.deep_study": 16,
+      "stm.skill.last_page": 26,
+      "stm.attack.twin_shot": 146,
+      "stm.skill.card_search": 19,
+      "stm.attack.weak_point": 46,
+      "stm.skill.recall": 27,
+      "stm.defend.rune_guard": 46,
+      "stm.skill.burning_page": 141,
+      "stm.skill.clear_choice": 21,
+      "stm.attack.scout_strike": 141,
+      "stm.defend.hold_the_line": 23,
+      "stm.attack.crack_shot": 19,
+      "stm.attack.rune_strike": 52,
+      "stm.attack.sure_hit": 27,
+      "stm.skill.quick_study": 100,
+      "stm.passive.clear_mind": 7,
+      "stm.defend.layered_shield": 19,
+      "stm.passive.ember_core": 23,
+      "stm.passive.swift_step": 16,
+      "stm.passive.last_ember": 8,
+      "stm.passive.battle_rhythm": 9,
+      "stm.defend.cinder_guard": 22,
+      "stm.attack.fate_storm": 11,
+      "stm.passive.blazing_spirit": 19,
+      "stm.passive.growing_flame": 13,
+      "stm.passive.lasting_shield": 17,
+      "stm.defend.mana_barrier": 8,
+      "stm.defend.foreseen_guard": 17,
+      "stm.passive.rune_armor": 10,
+      "stm.skill.next_chapter": 17,
+      "stm.attack.return_strike": 21,
+      "stm.attack.shield_shot": 12,
+      "stm.skill.mana_reading": 14,
+      "stm.defend.flash_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1193,
+      "one": 197,
+      "twoPlus": 146
+    },
+    "supported": 204,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.673828125,
+        "wilson95": [
+          0.632056474525915,
+          0.7130107878204268
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.263671875,
+        "wilson95": [
+          0.22736711813482297,
+          0.3034964914841956
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0625,
+        "wilson95": [
+          0.04461659649349166,
+          0.08689950726403038
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "normal",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1055,
+      "uncommon": 401,
+      "rare": 80
+    },
+    "firstRarity": {
+      "common": 345,
+      "uncommon": 135,
+      "rare": 32
+    },
+    "byCategory": {
+      "attack": 491,
+      "defend": 442,
+      "skill": 476,
+      "passive": 127
+    },
+    "byCard": {
+      "stm.attack.rune_sweep": 18,
+      "stm.skill.read_ahead": 97,
+      "stm.defend.burning_pages": 131,
+      "stm.defend.tower_shield": 155,
+      "stm.defend.ember_wall": 18,
+      "stm.skill.clear_choice": 15,
+      "stm.skill.last_page": 25,
+      "stm.attack.twin_shot": 146,
+      "stm.skill.recall": 27,
+      "stm.attack.weak_point": 46,
+      "stm.defend.rune_guard": 46,
+      "stm.skill.burning_page": 141,
+      "stm.skill.card_search": 24,
+      "stm.attack.scout_strike": 141,
+      "stm.defend.hold_the_line": 28,
+      "stm.attack.crack_shot": 17,
+      "stm.attack.rune_strike": 52,
+      "stm.attack.sure_hit": 26,
+      "stm.skill.quick_study": 100,
+      "stm.passive.clear_mind": 6,
+      "stm.skill.deep_study": 15,
+      "stm.passive.blazing_spirit": 20,
+      "stm.defend.layered_shield": 15,
+      "stm.passive.ember_core": 23,
+      "stm.passive.swift_step": 18,
+      "stm.passive.last_ember": 8,
+      "stm.passive.battle_rhythm": 9,
+      "stm.attack.fate_storm": 11,
+      "stm.defend.cinder_guard": 22,
+      "stm.passive.growing_flame": 14,
+      "stm.passive.lasting_shield": 17,
+      "stm.defend.mana_barrier": 8,
+      "stm.defend.foreseen_guard": 16,
+      "stm.passive.rune_armor": 11,
+      "stm.attack.shield_shot": 13,
+      "stm.skill.next_chapter": 19,
+      "stm.attack.return_strike": 21,
+      "stm.skill.mana_reading": 13,
+      "stm.passive.grimoire_ward": 1,
+      "stm.defend.flash_ward": 3
+    },
+    "ownedCopies": {
+      "unowned": 1191,
+      "one": 198,
+      "twoPlus": 147
+    },
+    "supported": 219,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.673828125,
+        "wilson95": [
+          0.632056474525915,
+          0.7130107878204268
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.263671875,
+        "wilson95": [
+          0.22736711813482297,
+          0.3034964914841956
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0625,
+        "wilson95": [
+          0.04461659649349166,
+          0.08689950726403038
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "elite",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 516,
+      "uncommon": 800,
+      "rare": 220
+    },
+    "firstRarity": {
+      "common": 172,
+      "uncommon": 265,
+      "rare": 75
+    },
+    "byCategory": {
+      "attack": 403,
+      "defend": 407,
+      "skill": 424,
+      "passive": 302
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 71,
+      "stm.attack.return_strike": 41,
+      "stm.defend.cinder_guard": 40,
+      "stm.defend.flash_ward": 13,
+      "stm.defend.tower_shield": 66,
+      "stm.attack.shield_shot": 50,
+      "stm.passive.grimoire_ward": 7,
+      "stm.skill.deep_study": 39,
+      "stm.skill.card_search": 36,
+      "stm.attack.crack_shot": 37,
+      "stm.skill.next_chapter": 41,
+      "stm.defend.hold_the_line": 43,
+      "stm.defend.burning_pages": 75,
+      "stm.passive.clear_mind": 27,
+      "stm.skill.recall": 40,
+      "stm.defend.rune_guard": 24,
+      "stm.skill.read_ahead": 47,
+      "stm.attack.sure_hit": 34,
+      "stm.defend.ember_wall": 50,
+      "stm.attack.rune_sweep": 33,
+      "stm.defend.layered_shield": 43,
+      "stm.passive.ember_core": 38,
+      "stm.skill.clear_choice": 35,
+      "stm.attack.twin_shot": 67,
+      "stm.defend.mana_barrier": 28,
+      "stm.skill.mana_reading": 28,
+      "stm.passive.rune_armor": 26,
+      "stm.defend.foreseen_guard": 25,
+      "stm.skill.burning_page": 84,
+      "stm.skill.quick_study": 38,
+      "stm.passive.last_ember": 26,
+      "stm.passive.lasting_shield": 36,
+      "stm.attack.rune_strike": 23,
+      "stm.passive.swift_step": 50,
+      "stm.skill.last_page": 36,
+      "stm.attack.fate_storm": 26,
+      "stm.passive.battle_rhythm": 27,
+      "stm.passive.blazing_spirit": 33,
+      "stm.passive.growing_flame": 32,
+      "stm.attack.weak_point": 21
+    },
+    "ownedCopies": {
+      "unowned": 1363,
+      "one": 92,
+      "twoPlus": 81
+    },
+    "supported": 428,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.35,
+        "observed": 0.3359375,
+        "wilson95": [
+          0.2963819460972341,
+          0.37793659281183667
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.5,
+        "observed": 0.517578125,
+        "wilson95": [
+          0.47432576449919034,
+          0.5605686777605521
+        ],
+        "tolerance": 0.09838834764831844
+      },
+      {
+        "rarity": "rare",
+        "target": 0.15,
+        "observed": 0.146484375,
+        "wilson95": [
+          0.11849018678166431,
+          0.1797438077724048
+        ],
+        "tolerance": 0.07312190586476298
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "elite",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 516,
+      "uncommon": 800,
+      "rare": 220
+    },
+    "firstRarity": {
+      "common": 172,
+      "uncommon": 265,
+      "rare": 75
+    },
+    "byCategory": {
+      "attack": 399,
+      "defend": 401,
+      "skill": 426,
+      "passive": 310
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 71,
+      "stm.attack.return_strike": 38,
+      "stm.defend.cinder_guard": 36,
+      "stm.defend.flash_ward": 14,
+      "stm.defend.tower_shield": 66,
+      "stm.attack.shield_shot": 50,
+      "stm.passive.grimoire_ward": 9,
+      "stm.skill.deep_study": 41,
+      "stm.skill.card_search": 45,
+      "stm.attack.crack_shot": 36,
+      "stm.skill.next_chapter": 35,
+      "stm.defend.hold_the_line": 48,
+      "stm.defend.burning_pages": 75,
+      "stm.passive.clear_mind": 26,
+      "stm.defend.rune_guard": 24,
+      "stm.skill.read_ahead": 47,
+      "stm.attack.sure_hit": 35,
+      "stm.defend.ember_wall": 48,
+      "stm.attack.rune_sweep": 32,
+      "stm.defend.layered_shield": 39,
+      "stm.passive.ember_core": 39,
+      "stm.skill.clear_choice": 27,
+      "stm.attack.twin_shot": 67,
+      "stm.defend.mana_barrier": 27,
+      "stm.skill.recall": 36,
+      "stm.skill.mana_reading": 27,
+      "stm.passive.rune_armor": 26,
+      "stm.skill.burning_page": 84,
+      "stm.skill.quick_study": 38,
+      "stm.passive.last_ember": 26,
+      "stm.attack.rune_strike": 23,
+      "stm.passive.swift_step": 47,
+      "stm.skill.last_page": 46,
+      "stm.passive.lasting_shield": 39,
+      "stm.attack.fate_storm": 26,
+      "stm.passive.battle_rhythm": 28,
+      "stm.passive.blazing_spirit": 36,
+      "stm.passive.growing_flame": 34,
+      "stm.defend.foreseen_guard": 24,
+      "stm.attack.weak_point": 21
+    },
+    "ownedCopies": {
+      "unowned": 1360,
+      "one": 94,
+      "twoPlus": 82
+    },
+    "supported": 457,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.35,
+        "observed": 0.3359375,
+        "wilson95": [
+          0.2963819460972341,
+          0.37793659281183667
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.5,
+        "observed": 0.517578125,
+        "wilson95": [
+          0.47432576449919034,
+          0.5605686777605521
+        ],
+        "tolerance": 0.09838834764831844
+      },
+      {
+        "rarity": "rare",
+        "target": 0.15,
+        "observed": 0.146484375,
+        "wilson95": [
+          0.11849018678166431,
+          0.1797438077724048
+        ],
+        "tolerance": 0.07312190586476298
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "shop",
+    "support": false,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1700,
+      "uncommon": 1056,
+      "rare": 316
+    },
+    "firstRarity": {
+      "common": 271,
+      "uncommon": 177,
+      "rare": 64
+    },
+    "byCategory": {
+      "attack": 948,
+      "defend": 879,
+      "skill": 867,
+      "passive": 378
+    },
+    "byCard": {
+      "stm.skill.burning_page": 201,
+      "stm.attack.twin_shot": 216,
+      "stm.defend.hold_the_line": 48,
+      "stm.attack.weak_point": 104,
+      "stm.defend.burning_pages": 233,
+      "stm.defend.rune_guard": 87,
+      "stm.defend.layered_shield": 48,
+      "stm.attack.scout_strike": 211,
+      "stm.defend.tower_shield": 221,
+      "stm.passive.clear_mind": 40,
+      "stm.skill.last_page": 44,
+      "stm.passive.blazing_spirit": 41,
+      "stm.passive.lasting_shield": 46,
+      "stm.defend.flash_ward": 16,
+      "stm.attack.rune_sweep": 51,
+      "stm.passive.rune_armor": 35,
+      "stm.defend.mana_barrier": 56,
+      "stm.skill.read_ahead": 168,
+      "stm.passive.last_ember": 42,
+      "stm.passive.ember_core": 46,
+      "stm.skill.next_chapter": 55,
+      "stm.defend.ember_wall": 57,
+      "stm.attack.return_strike": 50,
+      "stm.skill.quick_study": 162,
+      "stm.passive.growing_flame": 27,
+      "stm.attack.crack_shot": 66,
+      "stm.defend.foreseen_guard": 58,
+      "stm.skill.deep_study": 48,
+      "stm.defend.cinder_guard": 55,
+      "stm.attack.sure_hit": 56,
+      "stm.attack.rune_strike": 97,
+      "stm.passive.battle_rhythm": 36,
+      "stm.attack.shield_shot": 54,
+      "stm.skill.clear_choice": 49,
+      "stm.skill.mana_reading": 37,
+      "stm.attack.fate_storm": 43,
+      "stm.skill.card_search": 45,
+      "stm.skill.recall": 58,
+      "stm.passive.swift_step": 56,
+      "stm.passive.grimoire_ward": 9
+    },
+    "ownedCopies": {
+      "unowned": 2429,
+      "one": 339,
+      "twoPlus": 304
+    },
+    "supported": 510,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.529296875,
+        "wilson95": [
+          0.4860043505856716,
+          0.5721530531805658
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.345703125,
+        "wilson95": [
+          0.3057940384893694,
+          0.3879103016751138
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.125,
+        "wilson95": [
+          0.09911663861136921,
+          0.15646859318079254
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "shop",
+    "support": true,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1700,
+      "uncommon": 1056,
+      "rare": 316
+    },
+    "firstRarity": {
+      "common": 271,
+      "uncommon": 177,
+      "rare": 64
+    },
+    "byCategory": {
+      "attack": 939,
+      "defend": 876,
+      "skill": 864,
+      "passive": 393
+    },
+    "byCard": {
+      "stm.skill.burning_page": 201,
+      "stm.attack.twin_shot": 216,
+      "stm.defend.hold_the_line": 57,
+      "stm.attack.weak_point": 104,
+      "stm.defend.burning_pages": 233,
+      "stm.defend.rune_guard": 87,
+      "stm.defend.cinder_guard": 51,
+      "stm.attack.scout_strike": 211,
+      "stm.defend.tower_shield": 221,
+      "stm.passive.clear_mind": 37,
+      "stm.skill.last_page": 44,
+      "stm.passive.swift_step": 57,
+      "stm.passive.lasting_shield": 48,
+      "stm.defend.ember_wall": 51,
+      "stm.attack.rune_sweep": 48,
+      "stm.passive.rune_armor": 37,
+      "stm.defend.mana_barrier": 54,
+      "stm.skill.read_ahead": 168,
+      "stm.passive.last_ember": 41,
+      "stm.passive.ember_core": 49,
+      "stm.skill.next_chapter": 55,
+      "stm.passive.blazing_spirit": 50,
+      "stm.attack.return_strike": 49,
+      "stm.skill.quick_study": 162,
+      "stm.passive.growing_flame": 28,
+      "stm.attack.crack_shot": 64,
+      "stm.defend.foreseen_guard": 56,
+      "stm.skill.deep_study": 44,
+      "stm.defend.layered_shield": 44,
+      "stm.passive.grimoire_ward": 7,
+      "stm.attack.sure_hit": 50,
+      "stm.attack.rune_strike": 97,
+      "stm.passive.battle_rhythm": 39,
+      "stm.skill.clear_choice": 51,
+      "stm.attack.shield_shot": 58,
+      "stm.skill.mana_reading": 38,
+      "stm.attack.fate_storm": 42,
+      "stm.skill.card_search": 42,
+      "stm.skill.recall": 59,
+      "stm.defend.flash_ward": 22
+    },
+    "ownedCopies": {
+      "unowned": 2425,
+      "one": 337,
+      "twoPlus": 310
+    },
+    "supported": 538,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.529296875,
+        "wilson95": [
+          0.4860043505856716,
+          0.5721530531805658
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.345703125,
+        "wilson95": [
+          0.3057940384893694,
+          0.3879103016751138
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.125,
+        "wilson95": [
+          0.09911663861136921,
+          0.15646859318079254
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "ME03",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1086,
+      "uncommon": 374,
+      "rare": 76
+    },
+    "firstRarity": {
+      "common": 369,
+      "uncommon": 114,
+      "rare": 29
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 343,
+      "stm.skill.burning_page": 397,
+      "stm.skill.quick_study": 346,
+      "stm.skill.mana_reading": 76,
+      "stm.skill.deep_study": 68,
+      "stm.skill.recall": 75,
+      "stm.skill.clear_choice": 68,
+      "stm.skill.last_page": 54,
+      "stm.skill.next_chapter": 57,
+      "stm.skill.card_search": 52
+    },
+    "ownedCopies": {
+      "unowned": 847,
+      "one": 689,
+      "twoPlus": 0
+    },
+    "supported": 181,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.720703125,
+        "wilson95": [
+          0.6803077278941321,
+          0.7578113804781894
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.22265625,
+        "wilson95": [
+          0.18876064847541066,
+          0.2606825958708756
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.056640625,
+        "wilson95": [
+          0.039723226447529694,
+          0.08016139655674488
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "ME03",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1086,
+      "uncommon": 374,
+      "rare": 76
+    },
+    "firstRarity": {
+      "common": 369,
+      "uncommon": 114,
+      "rare": 29
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 343,
+      "stm.skill.burning_page": 397,
+      "stm.skill.quick_study": 346,
+      "stm.skill.mana_reading": 76,
+      "stm.skill.deep_study": 65,
+      "stm.skill.recall": 76,
+      "stm.skill.clear_choice": 66,
+      "stm.skill.last_page": 57,
+      "stm.skill.next_chapter": 55,
+      "stm.skill.card_search": 55
+    },
+    "ownedCopies": {
+      "unowned": 847,
+      "one": 689,
+      "twoPlus": 0
+    },
+    "supported": 188,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.720703125,
+        "wilson95": [
+          0.6803077278941321,
+          0.7578113804781894
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.22265625,
+        "wilson95": [
+          0.18876064847541066,
+          0.2606825958708756
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.056640625,
+        "wilson95": [
+          0.039723226447529694,
+          0.08016139655674488
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "ME12",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1114,
+      "uncommon": 356,
+      "rare": 66
+    },
+    "firstRarity": {
+      "common": 382,
+      "uncommon": 110,
+      "rare": 20
+    },
+    "byCategory": {
+      "attack": 516,
+      "defend": 446,
+      "skill": 460,
+      "passive": 114
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 97,
+      "stm.attack.return_strike": 14,
+      "stm.attack.twin_shot": 149,
+      "stm.attack.weak_point": 61,
+      "stm.attack.scout_strike": 147,
+      "stm.skill.quick_study": 112,
+      "stm.attack.rune_strike": 55,
+      "stm.defend.rune_guard": 52,
+      "stm.defend.burning_pages": 139,
+      "stm.passive.blazing_spirit": 11,
+      "stm.attack.sure_hit": 24,
+      "stm.defend.mana_barrier": 9,
+      "stm.attack.shield_shot": 19,
+      "stm.skill.burning_page": 138,
+      "stm.defend.layered_shield": 19,
+      "stm.skill.card_search": 11,
+      "stm.passive.swift_step": 18,
+      "stm.passive.battle_rhythm": 11,
+      "stm.defend.flash_ward": 6,
+      "stm.defend.hold_the_line": 14,
+      "stm.defend.tower_shield": 164,
+      "stm.attack.crack_shot": 18,
+      "stm.skill.deep_study": 13,
+      "stm.passive.grimoire_ward": 2,
+      "stm.attack.rune_sweep": 22,
+      "stm.skill.recall": 15,
+      "stm.passive.lasting_shield": 20,
+      "stm.skill.next_chapter": 28,
+      "stm.skill.clear_choice": 20,
+      "stm.passive.ember_core": 21,
+      "stm.defend.cinder_guard": 14,
+      "stm.passive.growing_flame": 5,
+      "stm.passive.rune_armor": 8,
+      "stm.skill.mana_reading": 8,
+      "stm.defend.ember_wall": 21,
+      "stm.passive.clear_mind": 13,
+      "stm.defend.foreseen_guard": 8,
+      "stm.skill.last_page": 18,
+      "stm.attack.fate_storm": 7,
+      "stm.passive.last_ember": 5
+    },
+    "ownedCopies": {
+      "unowned": 1151,
+      "one": 211,
+      "twoPlus": 174
+    },
+    "supported": 165,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.74609375,
+        "wilson95": [
+          0.7066566039054272,
+          0.7818655877309666
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.21484375,
+        "wilson95": [
+          0.18146083224296364,
+          0.25247377109899266
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0390625,
+        "wilson95": [
+          0.025427079865239698,
+          0.05956310087929246
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 1,
+    "source": "ME12",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 1114,
+      "uncommon": 356,
+      "rare": 66
+    },
+    "firstRarity": {
+      "common": 382,
+      "uncommon": 110,
+      "rare": 20
+    },
+    "byCategory": {
+      "attack": 514,
+      "defend": 444,
+      "skill": 459,
+      "passive": 119
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 97,
+      "stm.attack.return_strike": 14,
+      "stm.attack.twin_shot": 149,
+      "stm.attack.weak_point": 61,
+      "stm.attack.scout_strike": 147,
+      "stm.skill.quick_study": 112,
+      "stm.attack.rune_strike": 55,
+      "stm.defend.rune_guard": 52,
+      "stm.defend.burning_pages": 139,
+      "stm.passive.blazing_spirit": 12,
+      "stm.attack.sure_hit": 22,
+      "stm.skill.mana_reading": 9,
+      "stm.passive.swift_step": 19,
+      "stm.attack.shield_shot": 19,
+      "stm.skill.burning_page": 138,
+      "stm.defend.layered_shield": 12,
+      "stm.skill.card_search": 14,
+      "stm.passive.battle_rhythm": 11,
+      "stm.defend.ember_wall": 20,
+      "stm.defend.hold_the_line": 15,
+      "stm.defend.tower_shield": 164,
+      "stm.attack.crack_shot": 20,
+      "stm.skill.deep_study": 14,
+      "stm.passive.grimoire_ward": 2,
+      "stm.attack.rune_sweep": 20,
+      "stm.defend.flash_ward": 6,
+      "stm.skill.recall": 14,
+      "stm.passive.lasting_shield": 22,
+      "stm.skill.last_page": 22,
+      "stm.skill.clear_choice": 15,
+      "stm.skill.next_chapter": 24,
+      "stm.passive.ember_core": 21,
+      "stm.defend.mana_barrier": 7,
+      "stm.passive.growing_flame": 6,
+      "stm.passive.rune_armor": 8,
+      "stm.defend.cinder_guard": 18,
+      "stm.passive.clear_mind": 13,
+      "stm.defend.foreseen_guard": 11,
+      "stm.attack.fate_storm": 7,
+      "stm.passive.last_ember": 5
+    },
+    "ownedCopies": {
+      "unowned": 1151,
+      "one": 211,
+      "twoPlus": 174
+    },
+    "supported": 177,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.7,
+        "observed": 0.74609375,
+        "wilson95": [
+          0.7066566039054272,
+          0.7818655877309666
+        ],
+        "tolerance": 0.09100925873009826
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.25,
+        "observed": 0.21484375,
+        "wilson95": [
+          0.18146083224296364,
+          0.25247377109899266
+        ],
+        "tolerance": 0.0865465544619743
+      },
+      {
+        "rarity": "rare",
+        "target": 0.05,
+        "observed": 0.0390625,
+        "wilson95": [
+          0.025427079865239698,
+          0.05956310087929246
+        ],
+        "tolerance": 0.048527587518556105
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "normal",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 833,
+      "uncommon": 546,
+      "rare": 157
+    },
+    "firstRarity": {
+      "common": 267,
+      "uncommon": 192,
+      "rare": 53
+    },
+    "byCategory": {
+      "attack": 470,
+      "defend": 383,
+      "skill": 468,
+      "passive": 215
+    },
+    "byCard": {
+      "stm.passive.blazing_spirit": 22,
+      "stm.skill.read_ahead": 71,
+      "stm.defend.tower_shield": 100,
+      "stm.attack.weak_point": 51,
+      "stm.defend.burning_pages": 106,
+      "stm.attack.scout_strike": 116,
+      "stm.passive.lasting_shield": 24,
+      "stm.attack.rune_sweep": 25,
+      "stm.attack.twin_shot": 111,
+      "stm.skill.next_chapter": 34,
+      "stm.attack.crack_shot": 23,
+      "stm.skill.burning_page": 119,
+      "stm.skill.recall": 38,
+      "stm.skill.quick_study": 75,
+      "stm.defend.foreseen_guard": 21,
+      "stm.passive.clear_mind": 24,
+      "stm.attack.return_strike": 23,
+      "stm.defend.hold_the_line": 21,
+      "stm.skill.last_page": 25,
+      "stm.defend.cinder_guard": 22,
+      "stm.defend.layered_shield": 36,
+      "stm.defend.mana_barrier": 13,
+      "stm.skill.clear_choice": 30,
+      "stm.passive.rune_armor": 18,
+      "stm.defend.rune_guard": 34,
+      "stm.attack.shield_shot": 30,
+      "stm.skill.card_search": 26,
+      "stm.skill.deep_study": 32,
+      "stm.passive.last_ember": 29,
+      "stm.attack.sure_hit": 27,
+      "stm.attack.rune_strike": 50,
+      "stm.passive.growing_flame": 25,
+      "stm.skill.mana_reading": 18,
+      "stm.passive.swift_step": 19,
+      "stm.passive.battle_rhythm": 16,
+      "stm.passive.ember_core": 36,
+      "stm.defend.ember_wall": 22,
+      "stm.attack.fate_storm": 14,
+      "stm.passive.grimoire_ward": 2,
+      "stm.defend.flash_ward": 8
+    },
+    "ownedCopies": {
+      "unowned": 1245,
+      "one": 148,
+      "twoPlus": 143
+    },
+    "supported": 284,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.521484375,
+        "wilson95": [
+          0.4782160044018848,
+          0.5644327583600226
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.375,
+        "wilson95": [
+          0.33414269830741683,
+          0.41771904562330375
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.103515625,
+        "wilson95": [
+          0.0800145335369058,
+          0.13292193549334858
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "normal",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 833,
+      "uncommon": 546,
+      "rare": 157
+    },
+    "firstRarity": {
+      "common": 267,
+      "uncommon": 192,
+      "rare": 53
+    },
+    "byCategory": {
+      "attack": 468,
+      "defend": 383,
+      "skill": 464,
+      "passive": 221
+    },
+    "byCard": {
+      "stm.passive.blazing_spirit": 26,
+      "stm.skill.read_ahead": 71,
+      "stm.defend.tower_shield": 100,
+      "stm.attack.weak_point": 51,
+      "stm.defend.burning_pages": 106,
+      "stm.attack.scout_strike": 116,
+      "stm.passive.lasting_shield": 27,
+      "stm.attack.rune_sweep": 26,
+      "stm.attack.twin_shot": 111,
+      "stm.skill.next_chapter": 33,
+      "stm.attack.crack_shot": 21,
+      "stm.skill.burning_page": 119,
+      "stm.skill.recall": 38,
+      "stm.skill.quick_study": 75,
+      "stm.defend.foreseen_guard": 14,
+      "stm.passive.clear_mind": 21,
+      "stm.attack.return_strike": 21,
+      "stm.defend.hold_the_line": 27,
+      "stm.skill.last_page": 32,
+      "stm.defend.cinder_guard": 22,
+      "stm.defend.layered_shield": 35,
+      "stm.defend.mana_barrier": 14,
+      "stm.skill.clear_choice": 25,
+      "stm.passive.rune_armor": 19,
+      "stm.defend.rune_guard": 34,
+      "stm.attack.shield_shot": 35,
+      "stm.skill.deep_study": 28,
+      "stm.passive.last_ember": 29,
+      "stm.attack.sure_hit": 24,
+      "stm.skill.card_search": 27,
+      "stm.attack.rune_strike": 50,
+      "stm.passive.growing_flame": 27,
+      "stm.skill.mana_reading": 16,
+      "stm.passive.swift_step": 16,
+      "stm.passive.battle_rhythm": 18,
+      "stm.passive.ember_core": 36,
+      "stm.defend.ember_wall": 25,
+      "stm.attack.fate_storm": 13,
+      "stm.passive.grimoire_ward": 2,
+      "stm.defend.flash_ward": 6
+    },
+    "ownedCopies": {
+      "unowned": 1247,
+      "one": 148,
+      "twoPlus": 141
+    },
+    "supported": 311,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.521484375,
+        "wilson95": [
+          0.4782160044018848,
+          0.5644327583600226
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.375,
+        "wilson95": [
+          0.33414269830741683,
+          0.41771904562330375
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.103515625,
+        "wilson95": [
+          0.0800145335369058,
+          0.13292193549334858
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "elite",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 308,
+      "uncommon": 841,
+      "rare": 387
+    },
+    "firstRarity": {
+      "common": 99,
+      "uncommon": 270,
+      "rare": 143
+    },
+    "byCategory": {
+      "attack": 387,
+      "defend": 335,
+      "skill": 395,
+      "passive": 419
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 32,
+      "stm.passive.rune_armor": 39,
+      "stm.defend.layered_shield": 53,
+      "stm.passive.ember_core": 38,
+      "stm.attack.fate_storm": 54,
+      "stm.passive.swift_step": 37,
+      "stm.attack.shield_shot": 29,
+      "stm.defend.burning_pages": 38,
+      "stm.skill.read_ahead": 27,
+      "stm.passive.battle_rhythm": 51,
+      "stm.defend.tower_shield": 38,
+      "stm.skill.clear_choice": 48,
+      "stm.passive.growing_flame": 61,
+      "stm.passive.lasting_shield": 41,
+      "stm.attack.return_strike": 46,
+      "stm.attack.twin_shot": 56,
+      "stm.attack.scout_strike": 43,
+      "stm.defend.cinder_guard": 41,
+      "stm.passive.last_ember": 53,
+      "stm.passive.clear_mind": 51,
+      "stm.defend.flash_ward": 14,
+      "stm.defend.mana_barrier": 33,
+      "stm.defend.ember_wall": 32,
+      "stm.defend.foreseen_guard": 37,
+      "stm.defend.rune_guard": 17,
+      "stm.skill.recall": 48,
+      "stm.skill.quick_study": 27,
+      "stm.attack.crack_shot": 42,
+      "stm.skill.mana_reading": 45,
+      "stm.passive.grimoire_ward": 6,
+      "stm.skill.deep_study": 42,
+      "stm.attack.rune_sweep": 56,
+      "stm.passive.blazing_spirit": 42,
+      "stm.attack.sure_hit": 39,
+      "stm.skill.last_page": 38,
+      "stm.skill.next_chapter": 33,
+      "stm.skill.burning_page": 40,
+      "stm.attack.rune_strike": 8,
+      "stm.skill.card_search": 47,
+      "stm.attack.weak_point": 14
+    },
+    "ownedCopies": {
+      "unowned": 1423,
+      "one": 60,
+      "twoPlus": 53
+    },
+    "supported": 470,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.2,
+        "observed": 0.193359375,
+        "wilson95": [
+          0.1614854795945732,
+          0.22980036098547568
+        ],
+        "tolerance": 0.08071067811865476
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.55,
+        "observed": 0.52734375,
+        "wilson95": [
+          0.4840562798278243,
+          0.5702239636873305
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "rare",
+        "target": 0.25,
+        "observed": 0.279296875,
+        "wilson95": [
+          0.24218861952181053,
+          0.319692272105868
+        ],
+        "tolerance": 0.0865465544619743
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "elite",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 308,
+      "uncommon": 841,
+      "rare": 387
+    },
+    "firstRarity": {
+      "common": 99,
+      "uncommon": 270,
+      "rare": 143
+    },
+    "byCategory": {
+      "attack": 378,
+      "defend": 332,
+      "skill": 397,
+      "passive": 429
+    },
+    "byCard": {
+      "stm.defend.hold_the_line": 36,
+      "stm.passive.rune_armor": 37,
+      "stm.defend.layered_shield": 46,
+      "stm.passive.ember_core": 38,
+      "stm.attack.fate_storm": 53,
+      "stm.passive.swift_step": 42,
+      "stm.attack.shield_shot": 34,
+      "stm.defend.burning_pages": 38,
+      "stm.skill.read_ahead": 27,
+      "stm.passive.battle_rhythm": 55,
+      "stm.defend.tower_shield": 38,
+      "stm.skill.clear_choice": 43,
+      "stm.passive.growing_flame": 64,
+      "stm.passive.lasting_shield": 48,
+      "stm.attack.return_strike": 45,
+      "stm.attack.twin_shot": 56,
+      "stm.attack.scout_strike": 43,
+      "stm.skill.card_search": 52,
+      "stm.defend.cinder_guard": 46,
+      "stm.passive.clear_mind": 50,
+      "stm.passive.last_ember": 52,
+      "stm.defend.ember_wall": 31,
+      "stm.defend.mana_barrier": 31,
+      "stm.defend.flash_ward": 19,
+      "stm.defend.foreseen_guard": 30,
+      "stm.defend.rune_guard": 17,
+      "stm.skill.recall": 48,
+      "stm.skill.quick_study": 27,
+      "stm.attack.rune_sweep": 53,
+      "stm.skill.mana_reading": 45,
+      "stm.passive.grimoire_ward": 6,
+      "stm.passive.blazing_spirit": 37,
+      "stm.attack.sure_hit": 34,
+      "stm.attack.crack_shot": 38,
+      "stm.skill.deep_study": 40,
+      "stm.skill.next_chapter": 33,
+      "stm.skill.burning_page": 40,
+      "stm.attack.rune_strike": 8,
+      "stm.skill.last_page": 42,
+      "stm.attack.weak_point": 14
+    },
+    "ownedCopies": {
+      "unowned": 1418,
+      "one": 60,
+      "twoPlus": 58
+    },
+    "supported": 502,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.2,
+        "observed": 0.193359375,
+        "wilson95": [
+          0.1614854795945732,
+          0.22980036098547568
+        ],
+        "tolerance": 0.08071067811865476
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.55,
+        "observed": 0.52734375,
+        "wilson95": [
+          0.4840562798278243,
+          0.5702239636873305
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "rare",
+        "target": 0.25,
+        "observed": 0.279296875,
+        "wilson95": [
+          0.24218861952181053,
+          0.319692272105868
+        ],
+        "tolerance": 0.0865465544619743
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "shop",
+    "support": false,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1238,
+      "uncommon": 1239,
+      "rare": 595
+    },
+    "firstRarity": {
+      "common": 200,
+      "uncommon": 197,
+      "rare": 115
+    },
+    "byCategory": {
+      "attack": 800,
+      "defend": 804,
+      "skill": 831,
+      "passive": 637
+    },
+    "byCard": {
+      "stm.defend.cinder_guard": 58,
+      "stm.skill.deep_study": 56,
+      "stm.skill.clear_choice": 60,
+      "stm.passive.battle_rhythm": 76,
+      "stm.skill.next_chapter": 50,
+      "stm.attack.twin_shot": 152,
+      "stm.passive.lasting_shield": 59,
+      "stm.attack.crack_shot": 46,
+      "stm.defend.foreseen_guard": 81,
+      "stm.attack.weak_point": 72,
+      "stm.attack.scout_strike": 170,
+      "stm.passive.last_ember": 75,
+      "stm.attack.fate_storm": 70,
+      "stm.passive.growing_flame": 79,
+      "stm.skill.read_ahead": 117,
+      "stm.attack.rune_strike": 57,
+      "stm.attack.shield_shot": 60,
+      "stm.defend.hold_the_line": 63,
+      "stm.passive.swift_step": 56,
+      "stm.defend.burning_pages": 174,
+      "stm.skill.quick_study": 117,
+      "stm.attack.sure_hit": 57,
+      "stm.defend.tower_shield": 161,
+      "stm.skill.burning_page": 153,
+      "stm.skill.card_search": 79,
+      "stm.passive.rune_armor": 63,
+      "stm.passive.ember_core": 70,
+      "stm.passive.grimoire_ward": 12,
+      "stm.defend.layered_shield": 63,
+      "stm.passive.clear_mind": 88,
+      "stm.defend.mana_barrier": 68,
+      "stm.attack.return_strike": 55,
+      "stm.skill.last_page": 66,
+      "stm.defend.ember_wall": 51,
+      "stm.skill.mana_reading": 76,
+      "stm.defend.rune_guard": 65,
+      "stm.skill.recall": 57,
+      "stm.passive.blazing_spirit": 59,
+      "stm.defend.flash_ward": 20,
+      "stm.attack.rune_sweep": 61
+    },
+    "ownedCopies": {
+      "unowned": 2612,
+      "one": 246,
+      "twoPlus": 214
+    },
+    "supported": 736,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.4,
+        "observed": 0.390625,
+        "wilson95": [
+          0.3493287066839101,
+          0.43355031925547044
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.4,
+        "observed": 0.384765625,
+        "wilson95": [
+          0.3436286270823376,
+          0.42761891810379543
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "rare",
+        "target": 0.2,
+        "observed": 0.224609375,
+        "wilson95": [
+          0.19058845141550912,
+          0.26273195318185966
+        ],
+        "tolerance": 0.08071067811865476
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "shop",
+    "support": true,
+    "seeds": 512,
+    "slots": 3072,
+    "byRarity": {
+      "common": 1238,
+      "uncommon": 1239,
+      "rare": 595
+    },
+    "firstRarity": {
+      "common": 200,
+      "uncommon": 197,
+      "rare": 115
+    },
+    "byCategory": {
+      "attack": 783,
+      "defend": 799,
+      "skill": 833,
+      "passive": 657
+    },
+    "byCard": {
+      "stm.defend.cinder_guard": 59,
+      "stm.skill.deep_study": 64,
+      "stm.skill.clear_choice": 50,
+      "stm.passive.battle_rhythm": 82,
+      "stm.skill.last_page": 72,
+      "stm.attack.twin_shot": 152,
+      "stm.passive.lasting_shield": 64,
+      "stm.attack.crack_shot": 47,
+      "stm.defend.foreseen_guard": 76,
+      "stm.attack.weak_point": 72,
+      "stm.attack.scout_strike": 170,
+      "stm.passive.last_ember": 74,
+      "stm.attack.fate_storm": 66,
+      "stm.passive.growing_flame": 86,
+      "stm.skill.read_ahead": 117,
+      "stm.attack.rune_strike": 57,
+      "stm.attack.shield_shot": 58,
+      "stm.defend.hold_the_line": 56,
+      "stm.passive.swift_step": 51,
+      "stm.defend.burning_pages": 174,
+      "stm.skill.quick_study": 117,
+      "stm.attack.sure_hit": 56,
+      "stm.defend.tower_shield": 161,
+      "stm.skill.burning_page": 153,
+      "stm.skill.recall": 64,
+      "stm.passive.ember_core": 76,
+      "stm.skill.card_search": 79,
+      "stm.defend.layered_shield": 68,
+      "stm.passive.clear_mind": 83,
+      "stm.defend.mana_barrier": 68,
+      "stm.attack.return_strike": 53,
+      "stm.passive.rune_armor": 63,
+      "stm.defend.ember_wall": 44,
+      "stm.skill.mana_reading": 73,
+      "stm.defend.rune_guard": 65,
+      "stm.passive.blazing_spirit": 66,
+      "stm.defend.flash_ward": 28,
+      "stm.attack.rune_sweep": 52,
+      "stm.skill.next_chapter": 44,
+      "stm.passive.grimoire_ward": 12
+    },
+    "ownedCopies": {
+      "unowned": 2604,
+      "one": 246,
+      "twoPlus": 222
+    },
+    "supported": 766,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.4,
+        "observed": 0.390625,
+        "wilson95": [
+          0.3493287066839101,
+          0.43355031925547044
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.4,
+        "observed": 0.384765625,
+        "wilson95": [
+          0.3436286270823376,
+          0.42761891810379543
+        ],
+        "tolerance": 0.09660254037844386
+      },
+      {
+        "rarity": "rare",
+        "target": 0.2,
+        "observed": 0.224609375,
+        "wilson95": [
+          0.19058845141550912,
+          0.26273195318185966
+        ],
+        "tolerance": 0.08071067811865476
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "ME03",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 854,
+      "uncommon": 551,
+      "rare": 131
+    },
+    "firstRarity": {
+      "common": 280,
+      "uncommon": 182,
+      "rare": 50
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 264,
+      "stm.skill.mana_reading": 131,
+      "stm.skill.last_page": 87,
+      "stm.skill.quick_study": 261,
+      "stm.skill.next_chapter": 86,
+      "stm.skill.burning_page": 329,
+      "stm.skill.clear_choice": 96,
+      "stm.skill.card_search": 101,
+      "stm.skill.recall": 93,
+      "stm.skill.deep_study": 88
+    },
+    "ownedCopies": {
+      "unowned": 1011,
+      "one": 525,
+      "twoPlus": 0
+    },
+    "supported": 281,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.546875,
+        "wilson95": [
+          0.5035666073562275,
+          0.5894852386697522
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.35546875,
+        "wilson95": [
+          0.3152250946767796,
+          0.39786504674311607
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.09765625,
+        "wilson95": [
+          0.07486099734097137,
+          0.1264439909360355
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "ME03",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 854,
+      "uncommon": 551,
+      "rare": 131
+    },
+    "firstRarity": {
+      "common": 280,
+      "uncommon": 182,
+      "rare": 50
+    },
+    "byCategory": {
+      "attack": 0,
+      "defend": 0,
+      "skill": 1536,
+      "passive": 0
+    },
+    "byCard": {
+      "stm.skill.read_ahead": 264,
+      "stm.skill.mana_reading": 131,
+      "stm.skill.last_page": 90,
+      "stm.skill.quick_study": 261,
+      "stm.skill.next_chapter": 85,
+      "stm.skill.burning_page": 329,
+      "stm.skill.clear_choice": 87,
+      "stm.skill.recall": 96,
+      "stm.skill.card_search": 108,
+      "stm.skill.deep_study": 85
+    },
+    "ownedCopies": {
+      "unowned": 1011,
+      "one": 525,
+      "twoPlus": 0
+    },
+    "supported": 294,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.546875,
+        "wilson95": [
+          0.5035666073562275,
+          0.5894852386697522
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.35546875,
+        "wilson95": [
+          0.3152250946767796,
+          0.39786504674311607
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.09765625,
+        "wilson95": [
+          0.07486099734097137,
+          0.1264439909360355
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "ME12",
+    "support": false,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 878,
+      "uncommon": 529,
+      "rare": 129
+    },
+    "firstRarity": {
+      "common": 297,
+      "uncommon": 174,
+      "rare": 41
+    },
+    "byCategory": {
+      "attack": 484,
+      "defend": 427,
+      "skill": 438,
+      "passive": 187
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 126,
+      "stm.skill.last_page": 24,
+      "stm.skill.burning_page": 109,
+      "stm.attack.rune_strike": 45,
+      "stm.defend.burning_pages": 126,
+      "stm.attack.crack_shot": 30,
+      "stm.skill.read_ahead": 81,
+      "stm.defend.cinder_guard": 23,
+      "stm.defend.ember_wall": 31,
+      "stm.attack.weak_point": 48,
+      "stm.defend.tower_shield": 107,
+      "stm.skill.next_chapter": 25,
+      "stm.defend.foreseen_guard": 21,
+      "stm.skill.quick_study": 73,
+      "stm.skill.card_search": 36,
+      "stm.passive.ember_core": 31,
+      "stm.passive.battle_rhythm": 21,
+      "stm.passive.blazing_spirit": 22,
+      "stm.attack.rune_sweep": 18,
+      "stm.passive.rune_armor": 13,
+      "stm.passive.last_ember": 16,
+      "stm.skill.deep_study": 23,
+      "stm.skill.clear_choice": 28,
+      "stm.passive.swift_step": 20,
+      "stm.attack.twin_shot": 125,
+      "stm.attack.sure_hit": 29,
+      "stm.defend.layered_shield": 27,
+      "stm.defend.rune_guard": 38,
+      "stm.attack.return_strike": 29,
+      "stm.skill.recall": 26,
+      "stm.passive.lasting_shield": 23,
+      "stm.defend.flash_ward": 13,
+      "stm.passive.clear_mind": 26,
+      "stm.attack.fate_storm": 8,
+      "stm.attack.shield_shot": 26,
+      "stm.defend.hold_the_line": 22,
+      "stm.defend.mana_barrier": 19,
+      "stm.passive.growing_flame": 13,
+      "stm.skill.mana_reading": 13,
+      "stm.passive.grimoire_ward": 2
+    },
+    "ownedCopies": {
+      "unowned": 1236,
+      "one": 156,
+      "twoPlus": 144
+    },
+    "supported": 266,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.580078125,
+        "wilson95": [
+          0.536886647224361,
+          0.6220769230700212
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.33984375,
+        "wilson95": [
+          0.3001444829862709,
+          0.38192837642496485
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.080078125,
+        "wilson95": [
+          0.05957552205350971,
+          0.10683502396375474
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  },
+  {
+    "difficulty": "hard",
+    "stage": 2,
+    "source": "ME12",
+    "support": true,
+    "seeds": 512,
+    "slots": 1536,
+    "byRarity": {
+      "common": 878,
+      "uncommon": 529,
+      "rare": 129
+    },
+    "firstRarity": {
+      "common": 297,
+      "uncommon": 174,
+      "rare": 41
+    },
+    "byCategory": {
+      "attack": 484,
+      "defend": 417,
+      "skill": 440,
+      "passive": 195
+    },
+    "byCard": {
+      "stm.attack.scout_strike": 126,
+      "stm.skill.last_page": 24,
+      "stm.skill.burning_page": 109,
+      "stm.attack.rune_strike": 45,
+      "stm.defend.burning_pages": 126,
+      "stm.attack.crack_shot": 29,
+      "stm.skill.read_ahead": 81,
+      "stm.defend.cinder_guard": 24,
+      "stm.defend.ember_wall": 32,
+      "stm.attack.weak_point": 48,
+      "stm.defend.tower_shield": 107,
+      "stm.skill.next_chapter": 24,
+      "stm.defend.foreseen_guard": 20,
+      "stm.skill.quick_study": 73,
+      "stm.skill.card_search": 29,
+      "stm.passive.ember_core": 31,
+      "stm.passive.battle_rhythm": 23,
+      "stm.passive.blazing_spirit": 24,
+      "stm.attack.rune_sweep": 19,
+      "stm.passive.rune_armor": 13,
+      "stm.passive.last_ember": 15,
+      "stm.skill.clear_choice": 26,
+      "stm.passive.swift_step": 22,
+      "stm.attack.twin_shot": 125,
+      "stm.attack.sure_hit": 29,
+      "stm.defend.layered_shield": 26,
+      "stm.defend.rune_guard": 38,
+      "stm.skill.deep_study": 24,
+      "stm.attack.return_strike": 28,
+      "stm.passive.lasting_shield": 22,
+      "stm.passive.clear_mind": 25,
+      "stm.attack.fate_storm": 8,
+      "stm.attack.shield_shot": 27,
+      "stm.skill.recall": 38,
+      "stm.defend.hold_the_line": 20,
+      "stm.skill.mana_reading": 12,
+      "stm.passive.growing_flame": 16,
+      "stm.defend.flash_ward": 7,
+      "stm.defend.mana_barrier": 17,
+      "stm.passive.grimoire_ward": 4
+    },
+    "ownedCopies": {
+      "unowned": 1240,
+      "one": 158,
+      "twoPlus": 138
+    },
+    "supported": 280,
+    "duplicateOfferViolations": 0,
+    "saleViolations": 0,
+    "firstRarityChecks": [
+      {
+        "rarity": "common",
+        "target": 0.55,
+        "observed": 0.580078125,
+        "wilson95": [
+          0.536886647224361,
+          0.6220769230700212
+        ],
+        "tolerance": 0.0979452954966893
+      },
+      {
+        "rarity": "uncommon",
+        "target": 0.35,
+        "observed": 0.33984375,
+        "wilson95": [
+          0.3001444829862709,
+          0.38192837642496485
+        ],
+        "tolerance": 0.09431710977020025
+      },
+      {
+        "rarity": "rare",
+        "target": 0.1,
+        "observed": 0.080078125,
+        "wilson95": [
+          0.05957552205350971,
+          0.10683502396375474
+        ],
+        "tolerance": 0.06303300858899107
+      }
+    ]
+  }
+]

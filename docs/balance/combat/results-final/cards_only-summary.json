@@ -1,0 +1,8383 @@
+{
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "build": "cards_only",
+  "node": "v24.19.0",
+  "seeds": [
+    610230,
+    610231,
+    610232,
+    610233,
+    610234,
+    610235,
+    610236,
+    610237,
+    610238,
+    610239
+  ],
+  "provenance": [
+    {
+      "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+      "build": "cards_only",
+      "difficulty": "medium",
+      "cardHash": "1a6f515527ab10697e9f9e4c1ebb54e22e4826c22545520ae509735852808c61",
+      "engineHash": "8fbf7901677ad5a00e5fa7e4e2ba315f3cac0b33cb0b7f66146030c8d9e8b077",
+      "artifactHash": "05d53123dc2a67f211ab90d8805801def0375bad78df0b888a99896b6f21c42c",
+      "engineSource": "working branch with optional definition contracts"
+    }
+  ],
+  "screenCount": 820,
+  "distinctPairs": 780,
+  "duplicatePairs": 40,
+  "logicalFactorialEncounters": 1200,
+  "uniqueEngineEncounters": 570,
+  "outcomes": {
+    "WIN": 570
+  },
+  "invalid": [],
+  "summaries": [
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.fate_storm",
+        "stm.passive.blazing_spirit"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 1.1333333333333315,
+            "low": 0.10963196411800591,
+            "high": 2.157034702548657,
+            "n": 10
+          },
+          {
+            "mean": 0.28333333333333854,
+            "low": -1.084125578907416,
+            "high": 1.650792245574093,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.5833333333333371,
+          "low": -0.6898752927588504,
+          "high": 1.8565419594255248,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.8333333333333328,
+          "low": -1.9891934459767289,
+          "high": 0.32252677931006324,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.5833333333333371,
+            "low": -0.6898752927588504,
+            "high": 1.8565419594255248,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.8333333333333328,
+            "low": -1.9891934459767289,
+            "high": 0.32252677931006324,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "f59ce884669fb95f7b6f"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "3191967eeb8032449855"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "415554df4174714b1cc5"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "1c25c52e242d88026a2b"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "7ccd8bb655ffdb822e87"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "f81a88ad0a9226bbfa36"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "5c5bd8188ee030cc17e0"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "7edd2d074a2b95045136"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "dab2af3490ca48066a7a"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "b2d8484139729412758a"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "0cd6a4d3be177cab995c"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "d90596c56a795a92173f"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "76faa7eaada120b9f175"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "25843bf81ec6e77efa2b"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "3f68c9801a0ee6e8555c"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "8561c3793363afe08afb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "6bfaf8c3b657211894ba"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "b0c78391e9bbaa2b41ae"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "af137501a7ddaabbcd53"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "e5ded5fd2c756b81003b"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "31d23b4af5434bafefe7"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "d8b884a6fa8d60d2ec51"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "c2047458758315ba9427"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "aadda7d27642702be76a"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "aa99bdcd709a26f3b65f"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "9fea7dbf8117efe7efea"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "e3f6977ba008bfc87935"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "1d42a433b2863548043a"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "e8858ba00331f2b0f12f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "033846d397ae3e1e6d49"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.fate_storm",
+        "stm.passive.growing_flame"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 1.1333333333333315,
+            "low": 0.10963196411800591,
+            "high": 2.157034702548657,
+            "n": 10
+          },
+          {
+            "mean": -1.2166666666666657,
+            "low": -2.4871436151654027,
+            "high": 0.05381028183207137,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.14999999999999858,
+          "low": -1.0123517334720304,
+          "high": 0.7123517334720333,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.06666666666666429,
+          "low": -1.067592002987456,
+          "high": 0.9342586696541274,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.14999999999999858,
+            "low": -1.0123517334720304,
+            "high": 0.7123517334720333,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.06666666666666429,
+            "low": -1.067592002987456,
+            "high": 0.9342586696541274,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "f59ce884669fb95f7b6f"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "d9c4bda95959b868443c"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "1256c7323964fbeffc7e"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "1c25c52e242d88026a2b"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "12d1ae90f1503222a5f8"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "a68c677da3543d65b850"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "5c5bd8188ee030cc17e0"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "5e72372488ee673376a0"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "3e31686acdbbdbf4a073"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "b2d8484139729412758a"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "2f3aa229a5964759be4b"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "da9cfa7fac87ffdcc49e"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "76faa7eaada120b9f175"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "10ab41876aba8157fa08"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "1253965ec4ad5fc10035"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "8561c3793363afe08afb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "6431cab4ea93a05a7c41"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "c1f0b8b7b2562e5ff876"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "af137501a7ddaabbcd53"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "5e20cd8eb61007e1840d"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "7465d886ee6dd4b1a287"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "d8b884a6fa8d60d2ec51"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "83c7d0536fd7f2d2b547"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "758fdd4c7aa6cdd7a251"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "aa99bdcd709a26f3b65f"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "786f9a660818dab4242e"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "5b773b3778bbdae049b2"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "1d42a433b2863548043a"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "1df58f7fd6c47d51b9e3"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "f14910b9dbe1bc566234"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.twin_shot",
+        "stm.passive.blazing_spirit"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": 0.28333333333333854,
+            "low": -1.084125578907416,
+            "high": 1.650792245574093,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.28333333333333854,
+          "low": -1.084125578907416,
+          "high": 1.650792245574093,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.28333333333333854,
+            "low": -1.084125578907416,
+            "high": 1.650792245574093,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "c3977a7b310684cccad1"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "3191967eeb8032449855"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "2346c7ecded3a1489ad0"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "5c06cdd90f6a2e6fbb45"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "7ccd8bb655ffdb822e87"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "1ac7715d9dd19ec58fa9"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "28178c8b98e2075a705e"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "7edd2d074a2b95045136"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "cd1e413e4891694db88b"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "5d6530f1a55d965b7313"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "0cd6a4d3be177cab995c"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "a43c340d29fff89b4769"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "54be9dcad89846ef6211"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "25843bf81ec6e77efa2b"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "286b1e57d530a8cb81e1"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "65bd17dd6789cd2d509e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "6bfaf8c3b657211894ba"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "7e16577f03a9c1b795a0"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "fb03313c0261778dcac7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "e5ded5fd2c756b81003b"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "0ed26d827813411be9da"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "a72f2b85977e63facf44"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "c2047458758315ba9427"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "ca3f479beb0505af40f9"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5c08aa7c4575c4dbcce5"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "9fea7dbf8117efe7efea"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "fbb55dc37fa51d174fe6"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "2345d4d1dc31c8e3d102"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "e8858ba00331f2b0f12f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "400aabd15f758a383b03"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.twin_shot",
+        "stm.passive.growing_flame"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": -1.2166666666666657,
+            "low": -2.4871436151654027,
+            "high": 0.05381028183207137,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -1.2166666666666657,
+          "low": -2.4871436151654027,
+          "high": 0.05381028183207137,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -1.2166666666666657,
+            "low": -2.4871436151654027,
+            "high": 0.05381028183207137,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "c3977a7b310684cccad1"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "d9c4bda95959b868443c"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "e07d4f3ce6f61d1864aa"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "5c06cdd90f6a2e6fbb45"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "12d1ae90f1503222a5f8"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "91590baa2f11a30d80ab"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "28178c8b98e2075a705e"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "5e72372488ee673376a0"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "399ac9ab4fe996e268c3"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "5d6530f1a55d965b7313"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "2f3aa229a5964759be4b"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "cbdaad34242ee76cb991"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "54be9dcad89846ef6211"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "10ab41876aba8157fa08"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "2f6c71de3a8224f176bb"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "65bd17dd6789cd2d509e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "6431cab4ea93a05a7c41"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "43924945e268b5bda680"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "fb03313c0261778dcac7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "5e20cd8eb61007e1840d"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "f6f51d6f36b409e63b24"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "a72f2b85977e63facf44"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "83c7d0536fd7f2d2b547"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "75b2f80c642fc441f83a"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5c08aa7c4575c4dbcce5"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "786f9a660818dab4242e"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "c141f54723192ef2511f"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "2345d4d1dc31c8e3d102"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "1df58f7fd6c47d51b9e3"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "13fb7fc994e00b3b17e2"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.layered_shield",
+        "stm.passive.battle_rhythm"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.45,
+            "low": -0.06828931109950603,
+            "high": 0.9682893110995061,
+            "n": 10
+          },
+          {
+            "mean": -1.45,
+            "low": -2.6501660112019674,
+            "high": -0.24983398879803254,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.5666666666666671,
+          "low": -1.8643841740190494,
+          "high": 0.7310508406857152,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.43333333333333285,
+          "low": -0.7943470340442826,
+          "high": 1.6610137007109484,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.5666666666666671,
+            "low": -1.8643841740190494,
+            "high": 0.7310508406857152,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.43333333333333285,
+            "low": -0.7943470340442826,
+            "high": 1.6610137007109484,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "242aca335bd212281bbf"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "960f5b34ce5856b56323"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "a713ad9d5b20fba95e08"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "c3e3eab293928ee08179"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "8bc324047b41af791098"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "acdd7ef7d4b88852bd28"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "ad88294c48ecef973123"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "ae8cced3cf32ea1d6848"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "b1a4cc9398e41de28916"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "fb18d4673df79fa2a4de"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "1a44508c8c862f7764d2"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "e65171d3c70cefc4b85c"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "ec5f0061deb62861a590"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "a277cc214fcf0360e84e"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "fd81dacca6dd76122853"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "03c718518345ed8c0965"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "c640b8f27d045be44e68"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "cd485bfd7bbe21f18c95"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "894c81e02be1d3ec9e11"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "7308680a181dc0548780"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "12e476a81d0a8be526bd"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "e7a6743791327557cb30"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "e4ce06c9887bcd61a1df"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "566de12c99509860caf4"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "3931c61df0ea557cd06c"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "44687bd0a4932c7f97e8"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "dec79f57ce38cdaa61a5"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "4eda56c480096fd395de"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "4e98b8ee2c0f78924023"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "e7ae33dba0ad0a6a4f57"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.layered_shield",
+        "stm.passive.swift_step"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.45,
+            "low": -0.06828931109950603,
+            "high": 0.9682893110995061,
+            "n": 10
+          },
+          {
+            "mean": -0.7333333333333314,
+            "low": -2.333006326305471,
+            "high": 0.866339659638808,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.20000000000000143,
+          "low": -0.9362935379753093,
+          "high": 1.3362935379753123,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.48333333333333284,
+          "low": -0.8706630399590355,
+          "high": 1.837329706625701,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.20000000000000143,
+            "low": -0.9362935379753093,
+            "high": 1.3362935379753123,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.48333333333333284,
+            "low": -0.8706630399590355,
+            "high": 1.837329706625701,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "242aca335bd212281bbf"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "257300987fb8cfd2143f"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "b837e9c42b116c4d165d"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "c3e3eab293928ee08179"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "4f35b5acd9d14220782d"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "42c50048f1a9e566fd82"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "ad88294c48ecef973123"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "3780689a4c26c133a0e9"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "62ad5e4bb7f4b2cc479b"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "fb18d4673df79fa2a4de"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "bc7d0d9e33b7679f01ef"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "aff067fb34e53eebc279"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "ec5f0061deb62861a590"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "196c9209d16165237ab7"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "f30068a7e77bd9b48da5"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "03c718518345ed8c0965"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "c750f86c2361351374cb"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "2f732dc191cc7b7b440c"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "894c81e02be1d3ec9e11"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "4b530d9e35864c1de520"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "309c9c2f4ba7e7ab6d92"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "e7a6743791327557cb30"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "cbbf56f11d0907c4955c"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "624e88994ce0f6c8a4ac"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "3931c61df0ea557cd06c"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "a77573b162aa2fe66ac2"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "0205442dae53d7b84dfb"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "4eda56c480096fd395de"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "0d8dcd2a5b4b70122a7d"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "bf2ca701cf89f7164752"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.crack_shot",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.24999999999999858,
+            "low": -0.3070592278504456,
+            "high": 0.8070592278504427,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.28333333333333427,
+          "low": -1.0395135331717122,
+          "high": 1.606180199838381,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.1,
+          "low": -0.6585937838454063,
+          "high": 0.8585937838454063,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.28333333333333427,
+            "low": -1.0395135331717122,
+            "high": 1.606180199838381,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.1,
+            "low": -0.6585937838454063,
+            "high": 0.8585937838454063,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "190df9f2c1b09c5e509f"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "98262f4d4638412eb24d"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "1bd6bef8a59c37b51766"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "94d240fa8003c2c3be88"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "e1eb09e68a9cc48e2f79"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "42ab8b4054172bddd00d"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "d1083ed1de447709d9db"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "cd33d00d22e9c1d2c372"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "16ad0d7c2e03ebc6197b"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "288de5da04a455e204e8"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "760ccd9c27693acf0380"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "8afb2933c8fe522414a4"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "6bc1ddde21d9276f894c"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "308d081dffc3eeaa26ad"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "fd828ec8c6ae79cee407"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "16eb8c1698e4ebd894da"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "cffaed900176f191304c"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "9afaf4df7f077a123a22"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "9df558e17bb30b715155"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "74e81af6ba5fd9dcefd5"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.fate_storm",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 1.1333333333333315,
+            "low": 0.10963196411800591,
+            "high": 2.157034702548657,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.31666666666666854,
+          "low": -0.7187687119704206,
+          "high": 1.3521020453037575,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.7499999999999986,
+          "low": -2.411701124684515,
+          "high": 0.911701124684518,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.31666666666666854,
+            "low": -0.7187687119704206,
+            "high": 1.3521020453037575,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.7499999999999986,
+            "low": -2.411701124684515,
+            "high": 0.911701124684518,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "f59ce884669fb95f7b6f"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "20372ba6821d5f2d1c84"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "1c25c52e242d88026a2b"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "29c0d92acb8f9c04c849"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "5c5bd8188ee030cc17e0"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "e156921edb07160658f1"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "b2d8484139729412758a"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "2668887ad802dc3ea0e8"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "76faa7eaada120b9f175"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "955c9fad01668535c5f6"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "8561c3793363afe08afb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "8c5c1dfaeec8221295fc"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "af137501a7ddaabbcd53"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "4411da829fe0260dac29"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "d8b884a6fa8d60d2ec51"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "7d2c3f943ee340294af9"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "aa99bdcd709a26f3b65f"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "0649941c237c38b7dca4"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "1d42a433b2863548043a"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "ae5c6ad661be0a8f61d5"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.return_strike",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": -0.7987498287254206,
+            "high": 0.7987498287254206,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.15000000000000285,
+          "low": -1.4946977571037836,
+          "high": 1.7946977571037892,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.21666666666666715,
+          "low": -0.766509371035185,
+          "high": 1.1998427043685194,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.15000000000000285,
+            "low": -1.4946977571037836,
+            "high": 1.7946977571037892,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.21666666666666715,
+            "low": -0.766509371035185,
+            "high": 1.1998427043685194,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "b1a8b55239a5f3ed4535"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "aed0920c3e6e4cb61ab7"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "ef52827ab92b35517362"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "16abaddab4102b3e6740"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "dae78c815f770cc3f2a9"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "392a871f49ca14d23503"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "05a8728652af369d64cb"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "899237a60f7c1bf1f4ab"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "ddd052748d7473916f68"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "34ca9539f6f55b4a2cca"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "15c99a030fa3254fb16b"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "110282037173428744bb"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "146dc541e3589677dcb8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "605d4088e58935684c19"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "50af6ed370f7e2b19f4c"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "ebe23454bf05f977beeb"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "56cbb5d5d3044ef121ca"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "bdb045bcdd05be74958d"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "52b652ac276b895ff107"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "8b4a631a55b19f0ce8ae"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.rune_strike",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.06666666666666429,
+          "low": -1.4662571289884898,
+          "high": 1.3329237956551614,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "d39b96f6ac32cc22698f"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.rune_sweep",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.1166666666666643,
+            "low": -0.8000111569018026,
+            "high": 1.0333444902351312,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.18333333333333143,
+          "low": -1.097250592534987,
+          "high": 0.730583925868324,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.23333333333333145,
+          "low": -1.9418454982820585,
+          "high": 1.4751788316153958,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.18333333333333143,
+            "low": -1.097250592534987,
+            "high": 0.730583925868324,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.23333333333333145,
+            "low": -1.9418454982820585,
+            "high": 1.4751788316153958,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "f921728ea5ebe33cf53c"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "8e242fc8a3df517f17fb"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "fe3448a2e0e4f7d193c4"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "839e8b377939e56e93ee"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "fbc26c9b207f2fac9229"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "bc9534397e9206f00a24"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "277f77521a5b42b9153b"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "a026d87e222dd0cd320d"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "7627bf5c35412cb0cb75"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "e3d6848a7198a04a99c4"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "2ba05a39d316ead02074"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "9148ff0138d439ec4858"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "72d814ae02babc515a44"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "fa044ca06ed6da5e435f"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "5ef6575fb23fb97dd504"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "92a8680ea6fca5d7a8d8"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "757faa71201afcd45006"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "67739674d8d776ce7cb2"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "6b4f30b243f2bd1142a3"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "a677aaf358d8843bffb0"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.scout_strike",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.4333333333333357,
+            "low": -1.3529024094757949,
+            "high": 2.2195690761424665,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.3666666666666686,
+          "low": -1.3580368002773997,
+          "high": 2.091370133610737,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -2.842170943040401e-15,
+          "low": -1.3441047247558953,
+          "high": 1.3441047247558895,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.3666666666666686,
+            "low": -1.3580368002773997,
+            "high": 2.091370133610737,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -2.842170943040401e-15,
+            "low": -1.3441047247558953,
+            "high": 1.3441047247558895,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "182ff5b9a57401e54b69"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "9b5caa12e4fb0bb445ba"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "748471ecc7c6222e7d52"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "7bcd8d06476a48bcb73a"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "a59694f2e49059c07e74"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "b6bbef0d6d0b61b092fd"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "0909d6b96713ff648fb8"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "5ec588266bdb8b00c53e"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "44e289238031ec914bb6"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "80c471ba1230c0771861"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "a905344e216be137998a"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "815e1c86a9f71d0b28d0"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "540b0ab081fb301fcdd2"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "6cd2abf44e6d9511cfa3"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "4f95555220f62665dd8c"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "908c91a272969ce7bd94"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "35272a232ada41e0c3ab"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "438c5b9c18049f7e3a9a"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "a3e4353268f9111f9fc4"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "ad269915e299933bd9a0"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.shield_shot",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666713,
+            "low": -0.5375153331663933,
+            "high": 0.8708486664997275,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.23333333333333145,
+          "low": -1.7787778921721284,
+          "high": 1.3121112255054657,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.33333333333333426,
+          "low": -1.124135204853629,
+          "high": 0.45746853818696054,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.23333333333333145,
+            "low": -1.7787778921721284,
+            "high": 1.3121112255054657,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.33333333333333426,
+            "low": -1.124135204853629,
+            "high": 0.45746853818696054,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "f701d2770ff0d0453227"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "b6b1c44e9fca4a51551a"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "67a7ff891d594b7f917d"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "3fea14ce6aee46467cf5"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "88282c768d91733c338c"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "d99d5c5d9f7148a3a32c"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "6466027a00d3965a7732"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "fc102306ff8373aa8dc7"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "94af59ecab0b34dd5a1a"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "10de571862aa23add9a7"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "a6f9595873395ac5f60d"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "e24bb521fd7430a4bff0"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "207de06e2a3a34c9a94b"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "55788473136864cb4c33"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "51776e62e66a77660554"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "32b35f2679e76fafba50"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "cb03143ead79b419dfc8"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "0a550b332de9bb26e6cf"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "8330034496acbd429d1a"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "0e299c9a35ef9c4780d5"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.sure_hit",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.04999999999999858,
+            "low": -0.6871611379700742,
+            "high": 0.7871611379700714,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.1666666666666657,
+          "low": -1.5558376344664457,
+          "high": 1.2225043011331145,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.15,
+          "low": -1.1654146613302596,
+          "high": 0.8654146613302597,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.1666666666666657,
+            "low": -1.5558376344664457,
+            "high": 1.2225043011331145,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.15,
+            "low": -1.1654146613302596,
+            "high": 0.8654146613302597,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "fef8fc1056213512dded"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "a50b69c7d161da6af859"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "2e08f6d7b86193bcf0f1"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "c21c187d5a794df1df60"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "06310b93a204bd65aff4"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "e755113e7e0ee3d1c3e1"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "10866c6265360dbdea59"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "04bcfcbcab4bbda67900"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "9d348b8356a614dbdc4f"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "c39aa712388a11410be3"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "80c7ffd6e0ff80b74651"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "2689b97e34015a47ad84"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "2962fbdd83443c2aae07"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "06fe7482acb215ccbcfa"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "6b4fd30086e3726510d6"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "e48acaeae6b7670b2243"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "85328a556b8fd5820b8e"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "11ecc3edac104b01a08c"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "21bd4ec3ed1759e7630a"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "06f65567f6fd3b79f70d"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.twin_shot",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.06666666666666429,
+          "low": -1.4662571289884898,
+          "high": 1.3329237956551614,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "c3977a7b310684cccad1"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "b9dfccd1c10a0eee1275"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "5c06cdd90f6a2e6fbb45"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "0307d5e8b3903d1787b4"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "28178c8b98e2075a705e"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "2c24829971e263b9e1a2"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "5d6530f1a55d965b7313"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "ac2aea4e450d7b0cd1cd"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "54be9dcad89846ef6211"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "976f80f7083f8c26f50c"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "65bd17dd6789cd2d509e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "2602929ab354ab3aaa41"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "fb03313c0261778dcac7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "4257840267e5ef5b612d"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "a72f2b85977e63facf44"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "b7e21ae556596e1f54ea"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5c08aa7c4575c4dbcce5"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "3a49f2c2120d6aec49d7"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "2345d4d1dc31c8e3d102"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "5732807419afa69f9f09"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.weak_point",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": -0.4000000000000014,
+            "low": -1.3721110681855724,
+            "high": 0.5721110681855694,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.7666666666666643,
+          "low": -2.3454721701336925,
+          "high": 0.8121388368003638,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.2999999999999986,
+          "low": -1.4542194303222136,
+          "high": 0.8542194303222163,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.7666666666666643,
+            "low": -2.3454721701336925,
+            "high": 0.8121388368003638,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.2999999999999986,
+            "low": -1.4542194303222136,
+            "high": 0.8542194303222163,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "0e84451fac94080e5363"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "35746f2e871e295832f8"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "0a48d2fdd24ffa33c9f5"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "eafeb2a6ab5e745641cd"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "7da03dbc6f35f6b33a89"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "94bede1a30ef1d3b5f5b"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "7ac19a603504869175b6"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "de6b2525182cf5934164"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "f35fee97245cd711d662"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "7a62e6435e7064d3ce7a"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "071a685c054942152e93"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "a235124b4bf54445d8ac"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "c686298d6fbdcd83a8b8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "5ccae731a6e2f1f77503"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "604c8256f61628005140"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "266ae7177279de7ab4cf"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "b6dc88cb6778565bfaa1"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "38a2fbd6ddc387b966de"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "71baafbfd684713981b6"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "2335bf206362b98e6f59"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.burning_pages",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.11666666666666714,
+            "low": -1.3359117186728453,
+            "high": 1.5692450520061796,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.4166666666666643,
+          "low": -1.038301544135361,
+          "high": 1.8716348774686895,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.3666666666666615,
+          "low": -0.920788180006502,
+          "high": 1.6541215133398248,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.4166666666666643,
+            "low": -1.038301544135361,
+            "high": 1.8716348774686895,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.3666666666666615,
+            "low": -0.920788180006502,
+            "high": 1.6541215133398248,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "8d6d4c8e9827bcd4634e"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "eca4077e5facb041bf98"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "debfa7274503f0e00895"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "044a1a78ec0f36c48ee9"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "889ec62b666b8faec32c"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "6e837c7055254e6e079a"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "589a26cb6c978b6690ad"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "9f82b32b1cc8cb9fa5ba"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "ad6aabb04bc2ec554204"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "3aefc8d8eaedd25f8eb8"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "b73d8cb0324908eb8e47"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "4da8be7fe279ee604562"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "baf8ef5c6d1525b9ddf7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "1e638766511ecc9a5581"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "3fb8ea1e7f6a78649e60"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "bd2def2991fc63a8ac81"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5a72abc1f2bee4cb9305"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "a7d7dec75af29639874a"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "eda76c00c29a664ab254"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "e56e8329b46bdb6ae0b5"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.burning_pages",
+        "stm.skill.burning_page"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.11666666666666714,
+            "low": -1.3359117186728453,
+            "high": 1.5692450520061796,
+            "n": 10
+          },
+          {
+            "mean": -0.6666666666666657,
+            "low": -2.543270188398887,
+            "high": 1.2099368550655552,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -1.2499999999999958,
+          "low": -3.010454999582647,
+          "high": 0.5104549995826553,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.6999999999999972,
+          "low": -2.472568313681211,
+          "high": 1.072568313681217,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -1.2499999999999958,
+            "low": -3.010454999582647,
+            "high": 0.5104549995826553,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.6999999999999972,
+            "low": -2.472568313681211,
+            "high": 1.072568313681217,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "8d6d4c8e9827bcd4634e"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "36fd9f8f14afadb942a1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "52871ee14fde640f079e"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "debfa7274503f0e00895"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "d950a51a5429a0c33e76"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "240c98525069aced12e3"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "889ec62b666b8faec32c"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "d5294580107bebadc306"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "b0e9324b6c4812212c96"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "589a26cb6c978b6690ad"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "aa37f6d69194f0a737af"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "3464c5d48eb3cc7f06a3"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "ad6aabb04bc2ec554204"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "32eff77f84aa0f967ee8"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "b291e74b61753c908bcc"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "b73d8cb0324908eb8e47"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "d8bd3a2a0483c84aeff3"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "be436d43d58aa77ac6f3"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "baf8ef5c6d1525b9ddf7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "1db019c98cacb713eb72"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "6d9f6ec8daa268fde54e"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "3fb8ea1e7f6a78649e60"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "cb7992104abb3cecdf5d"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "1473cf470ef518a2fc4c"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5a72abc1f2bee4cb9305"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "f0f7f30202996f47884b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "5405f6adc43fbe35c2c7"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "eda76c00c29a664ab254"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "493d7f3e244bbad4855b"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "cea1484ca99345b093d9"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.cinder_guard",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": -0.68333333333333,
+            "low": -2.2280113152369294,
+            "high": 0.8613446485702692,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.71666666666667,
+          "low": -0.526163324835697,
+          "high": 1.9594966581690372,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 1.4666666666666643,
+          "low": -0.2580368002774045,
+          "high": 3.191370133610733,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.71666666666667,
+            "low": -0.526163324835697,
+            "high": 1.9594966581690372,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 1.4666666666666643,
+            "low": -0.2580368002774045,
+            "high": 3.191370133610733,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "42aa69fcd6c455a8babe"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "ff86c8fe105abf8c1406"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "060eb648fa57e1cc34ce"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "8352c03853582842d194"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "45e89ee3f6bd30df3f64"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "d01336be491aecab632c"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "2185225e46f61201143d"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "a03c3fbae74b33b1bf30"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "445eca7eee9f685405d7"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "3d9edfd6556d21fc64a2"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "4c878cfe50972dc928cc"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "d101e1ac962c04c7bca6"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "73b1ecdc5db896d0f56d"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "46d9b78b7bc259434a86"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "158c46e0aa937907474c"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "97c49d590c180d373fd5"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "7cd3c19848eccfb09bda"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "95244282f0b90268544e"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "145bb5b7194b312a320d"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "409fee84bf214d780efc"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.ember_wall",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.43333333333333285,
+            "low": -0.37758189445972384,
+            "high": 1.2442485611263896,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.9833333333333357,
+          "low": -0.32438518080578127,
+          "high": 2.2910518474724526,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.6166666666666671,
+          "low": -0.6017816767420947,
+          "high": 1.835115010075429,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.9833333333333357,
+            "low": -0.32438518080578127,
+            "high": 2.2910518474724526,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.6166666666666671,
+            "low": -0.6017816767420947,
+            "high": 1.835115010075429,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "dfc935eb7caeae39375c"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "0aa865a912514e1f46ca"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "bd1a7019f023c47a0d6b"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "e102dc6f743e6560d41c"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "536a4cf6a198c1eae7ad"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "e6dfbeb0f562fdf6d5db"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "f1b1b7f1c0a72383ffa0"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "aeb517239acfcb590954"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "b152b75124aa378c6671"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "ecfd0055bb52e46a456f"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "cbcc2eb6cca0da2b331e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "0d9e58f7c14aa7ac21d3"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "ede4da92ed633c63de52"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "189c967502e2261a2395"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "2177dfac7d50affea756"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "0215dbd39299d8918af0"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "43d937d5353f55d97b6c"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "33943c52ff806089b8e9"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "9f4d10b13609fd1a94df"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "dcc7756c90eb7f129265"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.flash_ward",
+        "stm.defend.burning_pages"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666857,
+            "low": -1.0175374823999799,
+            "high": 1.350870815733317,
+            "n": 10
+          },
+          {
+            "mean": -0.48333333333333284,
+            "low": -2.426458611218304,
+            "high": 1.4597919445516383,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.8,
+          "low": -2.499801355714509,
+          "high": 0.8998013557145093,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.4833333333333357,
+          "low": -1.638441755853823,
+          "high": 0.6717750891871516,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.8,
+            "low": -2.499801355714509,
+            "high": 0.8998013557145093,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.4833333333333357,
+            "low": -1.638441755853823,
+            "high": 0.6717750891871516,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "9b81b764bed6255292f7"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "e1a22b463ca925971841"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "4d132c54e77ffeb44785"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "8cedf1eabc60ab2d0d64"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "311306eb66e989871efb"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "9da61aed23c18426813f"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "052aa08e948dcbd58dad"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "9e4d0d63ba4f73244a12"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "f3eb644dda843ca34d33"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "c734a2218dd007f557d8"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "9aa37133fafffef922d8"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "a9e0c606d23010de5cea"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "3b9c3300291ba7fe3ece"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "643055409a8f9511bd45"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "a0c23c1d470beee3e2f8"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "7435a5b9cee47f5ad6fb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "d5440ca7f2ee0e15f95c"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "561d84a9d296a2c92c3d"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "dfdd30f4713d44f9f3a8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "5320831f34ce0b867d19"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "7967eeeeb79167940a62"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "7eb60c7557f30c155744"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "8a1f55d7a15bc866c8d6"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "4d0b852a2a28f59f4e25"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "b11591c21336aec32b55"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "78c756f8ab9f7955b964"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "66c94cef2043f347a857"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "86db13127636ae6e9eb4"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "93a428d57891709440ed"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "f3b0bd75b6291d919900"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666857,
+            "low": -1.0175374823999799,
+            "high": 1.350870815733317,
+            "n": 10
+          },
+          {
+            "mean": -0.5999999999999972,
+            "low": -2.088181999025056,
+            "high": 0.8881819990250617,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -1.0999999999999956,
+          "low": -2.7425359241801104,
+          "high": 0.5425359241801193,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.6666666666666672,
+          "low": -2.315727470073666,
+          "high": 0.9823941367403319,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -1.0999999999999956,
+            "low": -2.7425359241801104,
+            "high": 0.5425359241801193,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.6666666666666672,
+            "low": -2.315727470073666,
+            "high": 0.9823941367403319,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "9b81b764bed6255292f7"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "a44e757e6d4e6bcf259b"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "4ecfdf00a3b15397e997"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "8cedf1eabc60ab2d0d64"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "14e55a0b72e6005913b7"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "0bbfe4031a26e88853ce"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "052aa08e948dcbd58dad"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "68637a4fa515d90c4062"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "1ed60d122f7088b94d43"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "c734a2218dd007f557d8"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "bbf47562376deb0d7797"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "3a8a3d7cc37be05c41b8"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "3b9c3300291ba7fe3ece"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "b206a63fc7b1e2043df5"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "0371799a3d3ea7928749"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "7435a5b9cee47f5ad6fb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "f08dcca979dbe224f78c"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "f1893b345fcbb2ea2c4e"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "dfdd30f4713d44f9f3a8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "e2b685a84c492d65605c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "1800cc1b6e5a20efdd62"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "7eb60c7557f30c155744"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "904f1281d53ea09f2b26"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "c9aa566fb6b6dccd88e8"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "b11591c21336aec32b55"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "9a25c7a8ee8f6ce7ff5a"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "abd342b08d7bd42014c5"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "86db13127636ae6e9eb4"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "24dc8cca68e4d81d3b41"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "95a34cd457c755dbd3d9"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.flash_ward",
+        "stm.passive.ember_core"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666857,
+            "low": -1.0175374823999799,
+            "high": 1.350870815733317,
+            "n": 10
+          },
+          {
+            "mean": -0.06666666666666429,
+            "low": -1.4662571289884898,
+            "high": 1.3329237956551614,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.5166666666666686,
+          "low": -1.1106560156008103,
+          "high": 2.1439893489341477,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.4166666666666643,
+          "low": -0.644082086180432,
+          "high": 1.4774154195137605,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.5166666666666686,
+            "low": -1.1106560156008103,
+            "high": 2.1439893489341477,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.4166666666666643,
+            "low": -0.644082086180432,
+            "high": 1.4774154195137605,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "9b81b764bed6255292f7"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "6d3ebeac1bfd8c9f99b1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "97251038f89fca532f8e"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "8cedf1eabc60ab2d0d64"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "b889fbd7b337d27eea4c"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "849583957c2f7ce65982"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "052aa08e948dcbd58dad"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "2ecf8c5a05e15361306b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "142ba28dd4f96bfb9d62"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "c734a2218dd007f557d8"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "e14fa23b1c3d1dacb4ae"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "f66f52cdcc5a1f283321"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "3b9c3300291ba7fe3ece"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "90daa289cef373d7ba77"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "5ff5bacb98314b97e133"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "7435a5b9cee47f5ad6fb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "0b51218f32312c75c6dd"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "8b8186a858b15d267cbd"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "dfdd30f4713d44f9f3a8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "a639d289fdb9651d3f3c"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "3bd781857f3d3bfc2823"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "7eb60c7557f30c155744"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "d178cfe8c93278e1ca11"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "ded180ecfce2b0ec9e70"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "b11591c21336aec32b55"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "c2eb82d5467b7460129b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "1de7e9725aa65e289c82"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "86db13127636ae6e9eb4"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d39b96f6ac32cc22698f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "0bf5660d4d46b989947c"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666857,
+            "low": -1.0175374823999799,
+            "high": 1.350870815733317,
+            "n": 10
+          },
+          {
+            "mean": -0.6666666666666657,
+            "low": -2.543270188398887,
+            "high": 1.2099368550655552,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -1.4833333333333285,
+          "low": -2.5708402073856775,
+          "high": -0.3958264592809795,
+          "n": 10
+        },
+        "interaction": {
+          "mean": -0.9833333333333314,
+          "low": -3.3353151787375683,
+          "high": 1.3686485120709058,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -1.4833333333333285,
+            "low": -2.5708402073856775,
+            "high": -0.3958264592809795,
+            "n": 10
+          },
+          "interaction": {
+            "mean": -0.9833333333333314,
+            "low": -3.3353151787375683,
+            "high": 1.3686485120709058,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "9b81b764bed6255292f7"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "36fd9f8f14afadb942a1"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "61214ebc9ba79ea0e18d"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "8cedf1eabc60ab2d0d64"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "d950a51a5429a0c33e76"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "d59e7c752d5d8642ea8d"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "052aa08e948dcbd58dad"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "d5294580107bebadc306"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "eabea5da09cc03da9093"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "c734a2218dd007f557d8"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "aa37f6d69194f0a737af"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "55b02e33588a799389e0"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "3b9c3300291ba7fe3ece"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "32eff77f84aa0f967ee8"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "4a62b6a7f71f44920a22"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "7435a5b9cee47f5ad6fb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "d8bd3a2a0483c84aeff3"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "e10a871b36cc8906920a"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "dfdd30f4713d44f9f3a8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "1db019c98cacb713eb72"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "3b70a38e2236327beef5"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "7eb60c7557f30c155744"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "cb7992104abb3cecdf5d"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "7b98b34f9c5f6c302a7e"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "b11591c21336aec32b55"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "f0f7f30202996f47884b"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "2c7098e345156b4349ab"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "86db13127636ae6e9eb4"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "493d7f3e244bbad4855b"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "b61bca0974828fb3d2ab"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.twin_shot",
+        "stm.passive.rune_armor"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": -0.8166666666666671,
+            "low": -1.996127165275152,
+            "high": 0.3627938319418178,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.8166666666666671,
+          "low": -1.996127165275152,
+          "high": 0.3627938319418178,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.8166666666666671,
+            "low": -1.996127165275152,
+            "high": 0.3627938319418178,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "c3977a7b310684cccad1"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "fa1bbbc734a06f2dcc83"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "26fe6264f2855447f62c"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "5c06cdd90f6a2e6fbb45"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "2e91c3e60dadb44791ac"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "24cf52673a48f952cd45"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "28178c8b98e2075a705e"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "936cf22586e82f06be6e"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "e14848381fe4ffad8f29"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "5d6530f1a55d965b7313"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "1cb3634baa3858117334"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "73f5bfcfc7e5c7a20133"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "54be9dcad89846ef6211"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "467c42d98391595927f1"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "2b771dc87608e46c50b0"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "65bd17dd6789cd2d509e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "682cde4411d4fb683502"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "75b3a7b64a03264fc650"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "fb03313c0261778dcac7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "e4eee88a765d951b7e57"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "0e082eab6bf670f18466"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "a72f2b85977e63facf44"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "b81f4268a3dac90ef2db"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "b90695ae5000d79d2aee"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5c08aa7c4575c4dbcce5"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "6478041ef1373d66b63e"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "4c4a656ca49b86d58843"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "2345d4d1dc31c8e3d102"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "bda3bb076bd430661e2b"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "f016e88f2fbdb807ba79"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.twin_shot",
+        "stm.skill.recall"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": -1.9166666666666656,
+            "low": -3.981771895354916,
+            "high": 0.1484385620215849,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -1.9166666666666656,
+          "low": -3.981771895354916,
+          "high": 0.1484385620215849,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -1.9166666666666656,
+            "low": -3.981771895354916,
+            "high": 0.1484385620215849,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "c3977a7b310684cccad1"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "0f950a5862db9a968d65"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "5bfc4843fcb3fb4f5568"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "5c06cdd90f6a2e6fbb45"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "22b699716682360d5db2"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "e65b622ab676fb7cd44a"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "28178c8b98e2075a705e"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "5fac36d6725344e6af1b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "d7318befa337344d4892"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "5d6530f1a55d965b7313"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "88102963aaa0655a7381"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "d8ee06a39ea47d250f80"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "54be9dcad89846ef6211"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "bb7aa7e0bc8d1768b6c5"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "0d1459734a2224a15d2b"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "65bd17dd6789cd2d509e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "8e654e0de094d637fd0d"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "3cde896075dff5fd0299"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "fb03313c0261778dcac7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "99a5ef00e2e7eb8a4abd"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "a65bba3cf74b3dca71c0"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "a72f2b85977e63facf44"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "27884fd32f349bb22c7e"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "87bd023cf151754ccf7b"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5c08aa7c4575c4dbcce5"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "a4ca8a2671462918c3f1"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "7081df349786868cce4f"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "2345d4d1dc31c8e3d102"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d8304cbdc975a3ba0464"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "510861b6015c6075ed6d"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.shield_shot",
+        "stm.skill.recall"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666713,
+            "low": -0.5375153331663933,
+            "high": 0.8708486664997275,
+            "n": 10
+          },
+          {
+            "mean": -1.9166666666666656,
+            "low": -3.981771895354916,
+            "high": 0.1484385620215849,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -1.2166666666666643,
+          "low": -3.075556612903993,
+          "high": 0.6422232795706646,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.5333333333333343,
+          "low": -0.2610549596317624,
+          "high": 1.327721626298431,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -1.2166666666666643,
+            "low": -3.075556612903993,
+            "high": 0.6422232795706646,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.5333333333333343,
+            "low": -0.2610549596317624,
+            "high": 1.327721626298431,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "f701d2770ff0d0453227"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "0f950a5862db9a968d65"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "ba6a2da1b043b35d38e1"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "67a7ff891d594b7f917d"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "22b699716682360d5db2"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "42af606af8585dbe7cba"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "88282c768d91733c338c"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "5fac36d6725344e6af1b"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "14c13754ff66ebf22268"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "6466027a00d3965a7732"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "88102963aaa0655a7381"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "f0db010ab6577641c99b"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "94af59ecab0b34dd5a1a"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "bb7aa7e0bc8d1768b6c5"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "a03a6d6e5d73e5b4f745"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "a6f9595873395ac5f60d"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "8e654e0de094d637fd0d"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "d4a2fb2a9653bec175f8"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "207de06e2a3a34c9a94b"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "99a5ef00e2e7eb8a4abd"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "c992a27a953161a025d8"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "51776e62e66a77660554"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "27884fd32f349bb22c7e"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "61c9e4ce3519aad2f45c"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "cb03143ead79b419dfc8"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "a4ca8a2671462918c3f1"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "a1b14a621fe30f42c6da"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "8330034496acbd429d1a"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "d8304cbdc975a3ba0464"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "718ba3c7e6242d0b564f"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": -2.766666666666667,
+            "low": -4.188644833400131,
+            "high": -1.344688499933203,
+            "n": 10
+          },
+          {
+            "mean": 0.28333333333333854,
+            "low": -1.084125578907416,
+            "high": 1.650792245574093,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": -0.19999999999999574,
+          "low": -1.4601804209450822,
+          "high": 1.0601804209450907,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 2.2833333333333328,
+          "low": 0.10451105487390944,
+          "high": 4.462155611792756,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": -0.19999999999999574,
+            "low": -1.4601804209450822,
+            "high": 1.0601804209450907,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 2.2833333333333328,
+            "low": 0.10451105487390944,
+            "high": 4.462155611792756,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "17679943a4259dc7a914"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "3191967eeb8032449855"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "4718de59160f28bdd6ae"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "776dcc460b762482f3d6"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "7ccd8bb655ffdb822e87"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "ba3b89b01812cc730be1"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "9abdeb9f1c2662eb9a49"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "7edd2d074a2b95045136"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "a36b115d889f3707f97c"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "191247cb664f0eda5efc"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "0cd6a4d3be177cab995c"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "fd53d9cf9be4386ed225"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "ae43a96b7b5a0c12df81"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "25843bf81ec6e77efa2b"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "c640100e21f2f7316302"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "bf6c52701bc163b67427"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "6bfaf8c3b657211894ba"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "1fd44569f14aef8ec914"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "51f8c7ff36dfa270e40a"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "e5ded5fd2c756b81003b"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "4a96243761009bd2ebb2"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "3347116a37b51c285a5f"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "c2047458758315ba9427"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "1150902da0df7837e452"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5985cd665b3340674383"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "9fea7dbf8117efe7efea"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "9d5164a5123c5c1d0f61"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "c5848db442981f630126"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "e8858ba00331f2b0f12f"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "11586820b018d46ff4bf"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.defend.flash_ward",
+        "stm.defend.tower_shield"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0.16666666666666857,
+            "low": -1.0175374823999799,
+            "high": 1.350870815733317,
+            "n": 10
+          },
+          {
+            "mean": -0.14999999999999858,
+            "low": -0.848439913107935,
+            "high": 0.5484399131079378,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.5333333333333343,
+          "low": -0.7626793740803601,
+          "high": 1.8293460407470288,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0.5166666666666643,
+          "low": -1.1280310904371222,
+          "high": 2.161364423770451,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.5333333333333343,
+            "low": -0.7626793740803601,
+            "high": 1.8293460407470288,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0.5166666666666643,
+            "low": -1.1280310904371222,
+            "high": 2.161364423770451,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "9b81b764bed6255292f7"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "af38c97b4cb4f6dc6080"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "2233d78f9d5b81f91f20"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "8cedf1eabc60ab2d0d64"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "49ad7967a4e99cf9da38"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "0ada2927cbf529b54331"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "052aa08e948dcbd58dad"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "48df949891776bb1da69"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "006f1a63f7976f717e48"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "c734a2218dd007f557d8"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "ce04d6f4174d2aa7c015"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "a3b94a8ed90ddf42cff0"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "3b9c3300291ba7fe3ece"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "a03044de3dc081d0e058"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "2405717322aa50f5c4e0"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "7435a5b9cee47f5ad6fb"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "4aae692761105ad595a1"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "9ea0a2f34548e43ee9dc"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "dfdd30f4713d44f9f3a8"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "5f41c25a1761eb885f1a"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "5a3af6e1b3822200d4bd"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "7eb60c7557f30c155744"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "cbbbcee1050b07a2482d"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "0fa121020623ec833bcb"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "b11591c21336aec32b55"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "26174ccd497a0c2b447f"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "b1bb11fa47be4fa1beb5"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "86db13127636ae6e9eb4"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "b2e622c61e6a1a986e26"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "97df8564aab409036bc5"
+        }
+      ]
+    },
+    {
+      "build": "cards_only",
+      "batch": "lite_primary",
+      "ids": [
+        "stm.attack.twin_shot",
+        "stm.defend.ember_wall"
+      ],
+      "context": {
+        "difficulty": "medium",
+        "enemy": "knight",
+        "archetype": "mixed"
+      },
+      "seedList": [
+        610230,
+        610231,
+        610232,
+        610233,
+        610234,
+        610235,
+        610236,
+        610237,
+        610238,
+        610239
+      ],
+      "summary": {
+        "n": 10,
+        "status": "MEASURED_EXPLORATORY",
+        "icp": [
+          {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          },
+          {
+            "mean": 0.3000000000000028,
+            "low": -0.05006682536655843,
+            "high": 0.650066825366564,
+            "n": 10
+          }
+        ],
+        "ccp": {
+          "mean": 0.3000000000000028,
+          "low": -0.05006682536655843,
+          "high": 0.650066825366564,
+          "n": 10
+        },
+        "interaction": {
+          "mean": 0,
+          "low": 0,
+          "high": 0,
+          "n": 10
+        },
+        "boundedEstimate": {
+          "ccp": {
+            "mean": 0.3000000000000028,
+            "low": -0.05006682536655843,
+            "high": 0.650066825366564,
+            "n": 10
+          },
+          "interaction": {
+            "mean": 0,
+            "low": 0,
+            "high": 0,
+            "n": 10
+          }
+        },
+        "censoredVariants": 0,
+        "winsByMask": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "records": [
+        {
+          "seed": 610230,
+          "mask": 0,
+          "record": "d694dba95846439b4636"
+        },
+        {
+          "seed": 610230,
+          "mask": 1,
+          "record": "c3977a7b310684cccad1"
+        },
+        {
+          "seed": 610230,
+          "mask": 2,
+          "record": "28b7aa69756700428588"
+        },
+        {
+          "seed": 610230,
+          "mask": 3,
+          "record": "b3c0434c9590191e08ff"
+        },
+        {
+          "seed": 610231,
+          "mask": 0,
+          "record": "37909e2bba11fdaa66f7"
+        },
+        {
+          "seed": 610231,
+          "mask": 1,
+          "record": "5c06cdd90f6a2e6fbb45"
+        },
+        {
+          "seed": 610231,
+          "mask": 2,
+          "record": "494c59bfe1eb39a105f6"
+        },
+        {
+          "seed": 610231,
+          "mask": 3,
+          "record": "d3d3899a49c2a68c8fe1"
+        },
+        {
+          "seed": 610232,
+          "mask": 0,
+          "record": "0180f15cbf2d4704cc56"
+        },
+        {
+          "seed": 610232,
+          "mask": 1,
+          "record": "28178c8b98e2075a705e"
+        },
+        {
+          "seed": 610232,
+          "mask": 2,
+          "record": "7766b0f6b74a1e567a52"
+        },
+        {
+          "seed": 610232,
+          "mask": 3,
+          "record": "8891a314a59197bd04f7"
+        },
+        {
+          "seed": 610233,
+          "mask": 0,
+          "record": "12b263e8494f2e89e393"
+        },
+        {
+          "seed": 610233,
+          "mask": 1,
+          "record": "5d6530f1a55d965b7313"
+        },
+        {
+          "seed": 610233,
+          "mask": 2,
+          "record": "c9b2c4d3c0fa42537f2d"
+        },
+        {
+          "seed": 610233,
+          "mask": 3,
+          "record": "c4d7d72dd025bd8a6e82"
+        },
+        {
+          "seed": 610234,
+          "mask": 0,
+          "record": "2530d0dd81bd6ae946db"
+        },
+        {
+          "seed": 610234,
+          "mask": 1,
+          "record": "54be9dcad89846ef6211"
+        },
+        {
+          "seed": 610234,
+          "mask": 2,
+          "record": "6bbec05b19c015ca990b"
+        },
+        {
+          "seed": 610234,
+          "mask": 3,
+          "record": "bbdd85e9432871f65a7b"
+        },
+        {
+          "seed": 610235,
+          "mask": 0,
+          "record": "f2a200470eaf6d7f6996"
+        },
+        {
+          "seed": 610235,
+          "mask": 1,
+          "record": "65bd17dd6789cd2d509e"
+        },
+        {
+          "seed": 610235,
+          "mask": 2,
+          "record": "970f888cc7024d38ca77"
+        },
+        {
+          "seed": 610235,
+          "mask": 3,
+          "record": "6a65eeada754b04a16e1"
+        },
+        {
+          "seed": 610236,
+          "mask": 0,
+          "record": "040b291ca63ccb1591d4"
+        },
+        {
+          "seed": 610236,
+          "mask": 1,
+          "record": "fb03313c0261778dcac7"
+        },
+        {
+          "seed": 610236,
+          "mask": 2,
+          "record": "0b276d6cde581b1c2a04"
+        },
+        {
+          "seed": 610236,
+          "mask": 3,
+          "record": "5dd1149aeb7847fb7a38"
+        },
+        {
+          "seed": 610237,
+          "mask": 0,
+          "record": "fef9d89e4912ad2b74d1"
+        },
+        {
+          "seed": 610237,
+          "mask": 1,
+          "record": "a72f2b85977e63facf44"
+        },
+        {
+          "seed": 610237,
+          "mask": 2,
+          "record": "c0694e8dff08b505bd04"
+        },
+        {
+          "seed": 610237,
+          "mask": 3,
+          "record": "f12ced0a56098fbaab4e"
+        },
+        {
+          "seed": 610238,
+          "mask": 0,
+          "record": "1f50f42ba29b9bbccfa2"
+        },
+        {
+          "seed": 610238,
+          "mask": 1,
+          "record": "5c08aa7c4575c4dbcce5"
+        },
+        {
+          "seed": 610238,
+          "mask": 2,
+          "record": "11e3cb7952a09dfc8dcf"
+        },
+        {
+          "seed": 610238,
+          "mask": 3,
+          "record": "885e8f8cfcd2979d0dfc"
+        },
+        {
+          "seed": 610239,
+          "mask": 0,
+          "record": "b31689e3adf71a5c9eae"
+        },
+        {
+          "seed": 610239,
+          "mask": 1,
+          "record": "2345d4d1dc31c8e3d102"
+        },
+        {
+          "seed": 610239,
+          "mask": 2,
+          "record": "f41d60244caf7d097e56"
+        },
+        {
+          "seed": 610239,
+          "mask": 3,
+          "record": "a0a159bc6b0ff386ee1f"
+        }
+      ]
+    }
+  ],
+  "individual": [],
+  "focus": [],
+  "orders": [],
+  "artifacts": []
+}

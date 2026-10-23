@@ -120,7 +120,10 @@
       const end = tokens.findIndex((t,i) => i>0 && t.type==='game' && t.ref==='draw');
       return [...tokens.slice(0,end), {type:'game',ref:'exhaust'}, {type:'text',text:'.'}];
     }
-    return plan.card.text[lang] || plan.card.text.en;
+    const tokens=plan.card.text[lang] || plan.card.text.en,gift=plan.upgraded&&plan.card.upgrade?.activation;
+    if(!gift)return tokens;
+    const effects=[gift.block?(lang==='bm'?'dapat '+gift.block+' Blok':'gain '+gift.block+' Block'):'',gift.draw?(lang==='bm'?'ambil '+gift.draw+' kad':'draw '+gift.draw+' card'):''].filter(Boolean).join(lang==='bm'?' dan ':' and ');
+    return [...tokens,{type:'text',text:(lang==='bm'?' Pada pengaktifan pertama combat ini, ':' On first activation this combat, ')+effects+'.'}];
   }
   function renderHTML(plan, lang = 'en') {
     lang = normalizeLanguage(lang);

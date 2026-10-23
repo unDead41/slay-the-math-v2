@@ -1,0 +1,43 @@
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (4.175864ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.974105ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (0.687584ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (0.997798ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.740563ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.30975ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.306504ms)
+✖ automatic comparisons detect changes in the legacy replay and report analysis too (1.56579ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.255024ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.816297ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 179.80748
+
+✖ failing tests:
+
+test at tests/map-balance-advanced-report.test.cjs:42:1
+✖ automatic comparisons detect changes in the legacy replay and report analysis too (1.56579ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'SAME_RUNTIME_COMPARISON'
+  - 'INCOMPATIBLE_METHOD'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:45:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'SAME_RUNTIME_COMPARISON',
+    expected: 'INCOMPATIBLE_METHOD',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

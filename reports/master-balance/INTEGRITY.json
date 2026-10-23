@@ -1,0 +1,48 @@
+{
+  "cohorts": [
+    {
+      "label": "initial",
+      "cases": 180,
+      "sourceHash": "f7c2d9ddf6e94add9cc12e2da2c75f1dcfaaa80382ca8d2835250b684391ff99",
+      "definitionHash": "64eafaf762bac866b27206601b71362ebcc53e725c68da6e9ad09a66c6794a2d",
+      "engineHash": "bd7617a9e83b760659cbd2f42a40db287169fffb8a94f004169c4474220873b3"
+    },
+    {
+      "label": "calibration",
+      "cases": 180,
+      "sourceHash": "28601583971104ad94b390dd5605a49a3c63ba05f4fa857f64cd17c31ef136ed",
+      "definitionHash": "85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d",
+      "engineHash": "bd7617a9e83b760659cbd2f42a40db287169fffb8a94f004169c4474220873b3"
+    },
+    {
+      "label": "holdout",
+      "cases": 360,
+      "sourceHash": "cb5716e6a1a743d345f1d4cbe2259a9552c4c0b4b8dab5642947b01e997672f7",
+      "definitionHash": "85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d",
+      "engineHash": "5942491c3377a266d3b71c1a3742d0428402a44157bd82b508c0eb49baac6b77"
+    },
+    {
+      "label": "power",
+      "cases": 624,
+      "sourceHash": "6d58da7659c7519e3130621647f9ad44b932f3aae37a44488fc90b22b9dd4252",
+      "definitionHash": "85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d",
+      "engineHash": "5942491c3377a266d3b71c1a3742d0428402a44157bd82b508c0eb49baac6b77"
+    },
+    {
+      "label": "validation-replay",
+      "cases": 18,
+      "sourceHash": "bb5c0f3b19c17dfd4e9f6cf294f267d9b5d95fb688c6cf140272bb7d5b7a27c1",
+      "definitionHash": "85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d",
+      "engineHash": "02c6d061f1486c12a6d89c5eaf64aebe7ebfb8fd7e86ed6728e523833004f783"
+    }
+  ],
+  "currentDefinitionHash": "85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d",
+  "changedEngineDependenciesSinceHoldout": [
+    "dist/economy.js",
+    "dist/card-combat.js"
+  ],
+  "validatorReplay": {
+    "cases": 18,
+    "matched": 18
+  }
+}

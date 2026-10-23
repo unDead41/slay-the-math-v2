@@ -82,3 +82,35 @@ Mystery v2 rewards/costs/failures now follow [MYSTERY_EVENTS.md](MYSTERY_EVENTS.
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+## Map-domain balance v1.2 — 23 October 2026
+
+- DISAHKAN: overall goals are Easy 90%, Medium 70%, Hard 50% of pupils winning a full two-stage run. These replace the historical 40–70% hypothesis for final calibration; Master owns verification.
+- Current runtime at 2800f9a has Learn/Challenge, not implemented Easy/Medium/Hard profiles. Balance v1.2 values are candidates. The map audit preserves card/enemy/economy values and records their differences from the package.
+- Map pressure estimates and contextual, provisional win-risk CP are separate from individual/combination card utility. No CP is shown to players. Sparse route observations do not constitute calibrated route CP or pupil results.
+- Recovery, Shop affordability, rewards and boss-entry HP/deck/artifacts must be interpreted with actual carry state. Stage 2 pilot rates are conditional on surviving Stage 1; forced-route diagnostics are excluded from pilot scores.
+
+Owners: [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md), [results, cross-domain requests and handoff](../MAP_BALANCE_HANDOFF.md). No candidate stat, price, difficulty or generator change is activated by this branch.
+
+## Map-domain balance v1.3 — accepted six-item extension
+
+DISAHKAN: Ijamm approves adaptive routing, matched entry/replication, recovery pressure, actual risk/reward, Predict/difficulty sensitivity and automated difficulty explanations/regression checks. [Map SOR v1.3](../../modules/map/SOR/04_MAP_COMBAT_POWER.md) owns the contextual scoring; [Master handoff](../MAP_BALANCE_V1_3_HANDOFF.md) owns the actual experiment results and input gaps.
+
+CP is a contextual win-risk scale, not card ICP/CCP. Stage 2 entries are real uniform-policy survivors and remain conditional. High/low Predict are explicitly synthetic oracle knowledge scenarios, not measured pupil skill. Missing full Combat/Master Easy/Medium/Hard adapters prevent difficulty claims; the economy-only candidate is recorded but not applied. Actual Shop purchases/spend, owned artifacts, upgrade foregone, HP recovery and usable Gold are measured through canonical APIs. No card/enemy/price changes are activated. Pupil full-run 90/70/50 verification stays with Master.
+
+## Combat balance experiment — 23 October 2026
+
+CADANGAN: branch `balance/combat`, base `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7`, evaluates SOR Balance v1.2 through the real engine in an isolated Node loader. Candidate values are development-only; no player numeric data, loot/prices, IDs, artwork or questions are activated/changed. See [Combat/Card Synergy handoff](../balance/combat/SOR_COMBAT_CARD_SYNERGY.md), raw results and CSVs for measured context and limitations. Optional explicit-upgrade execution fields preserve existing definition fallbacks. Human full-run win targets remain unverified.
+
+
+## Deep Combat/Synergy follow-up — 23 October 2026
+
+DISAHKAN: Ijamm requests deep evolved-deck/Predict/setup/exploit/artifact-trigger testing. The development-only harness and measured handoff are in [Deep Combat report](../balance/combat/deep-results/DEEP_COMBAT_REPORT.md). Candidate Hard/growth risk requires Master review with Economy/Map; bot results are not student win rates. Production numbers, ID/assets/questions and Economy policy are unchanged by this follow-up.
+## Economy branch candidate — 23 October 2026
+
+Ijamm explicitly requests audit, source-aware loot, Gold/recovery tests and Master handoff on base 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7. [SOR 22](22_ECONOMY_REWARDS.md) / [Economy SOR](../economy/SOR_ECONOMY_REWARDS.md) owns the **opt-in candidate** with current-vs-candidate tables and recorded evidence. It does not replace default/legacy numerical behavior. Six unique Shop cards, one sale 60%; candidate rarity pricing, paid removal growth and ME10 floor ten; Boss Shop slot only Stage 2; profile recovery and fifteen event adapters. CP null and student win rates unmeasured. Master integrates external Combat/Map profiles.
+
+
+## Master integration — game 2.27.0
+
+The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.

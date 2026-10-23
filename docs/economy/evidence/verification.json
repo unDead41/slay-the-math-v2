@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-23",
+  "timezone": "Asia/Kuala_Lumpur",
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "economyVersion": "economy-1.2-candidate.1",
+  "release": {
+    "version": "2.24.0",
+    "build": "78aeafe0e2be79fc"
+  },
+  "node": "v24.19.0",
+  "suite": {
+    "command": "npm test",
+    "qaEnvironment": "External QA modules supply jsdom/sharp; no runtime dependency added",
+    "tests": 501,
+    "pass": 501,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "syntaxCheck": "npm run check PASS; economy scripts node --check PASS",
+  "browser": {
+    "status": "PASS",
+    "checks": 10,
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "errors": []
+  },
+  "simulations": {
+    "cardOffers": 30720,
+    "cardSlots": 110592,
+    "artifactOffers": 16384,
+    "routeModelCases": 432,
+    "histogramSeedsPerCohort": 512,
+    "routeSeeds": 12,
+    "pupilWinRateMeasured": false,
+    "combatPolicyCampaign": false
+  },
+  "review": {
+    "independent": true,
+    "base": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+    "reviewedHead": "8251ed2",
+    "importantCheckpointIssue": "fixed; four RED-to-GREEN save tests",
+    "capabilityIssue": "fixed; real passive draw RED-to-GREEN",
+    "answerTimeMetadata": "corrected to actual scripted 1 ms",
+    "remainingMaterialFindings": []
+  },
+  "externalInputsUnchanged": 10,
+  "status": "VERIFIED_ECONOMY_CANDIDATE_NOT_CALIBRATED"
+}

@@ -60,3 +60,10 @@ Nama MC belum diputuskan. Gunakan `mc_01` sebagai ID sementara. Jangan mengimpor
 ## Rich text — current rule (22 October 2026)
 
 Use color only to distinguish annotated rich-text categories: soft pink for math terms, soft green for game terms and soft purple for calculations. Do not add decorative underlines (solid, dashed or dotted) or bottom borders to tokens, including hover states, cards, questions, answers, hints, tooltips and Practice legends. Preserve real mathematical fraction bars, keyboard focus outlines and tooltip interactions. This supersedes older rich-text underline instructions.
+
+## Economy & Rewards candidate (23 October 2026)
+
+For economy/loot work read docs/sor/22_ECONOMY_REWARDS.md and docs/economy/HANDOFF_MASTER.md. economy-1.2-candidate.1 is opt-in and preserves default/legacy. CP remains null/UNMEASURED; fixed requirement tags are not measured power. New numerical profiles are CADANGAN, Combat/Map gaps NEEDS_INPUT. Never reroll opened offers or change question/combat RNG through card-offer weighting. Do not activate full difficulty or overwrite other balance branches from this candidate alone.
+# Master integration owner — balance/master, 2.27.0
+
+For the integrated candidate, read `docs/sor/23_MASTER_BALANCE.md` and `docs/balance/master/HANDOFF.md`. `tools/balance/master/config.json` owns Master overrides; `tools/build-master-balance.cjs` generates the explicit opt-in browser/Node cartridge. Earlier specialist statements that full integration is absent describe their original branches. Preserve legacy entry/saves, profile identity, original artwork/motion and question sampling. Bot success and economic proxy completion are not pupil win rates. On 23 October 2026 Ijamm explicitly authorized publishing this completed update to `main`, superseding the earlier Master-branch-only boundary. This publishes the existing 2.27.0 playtest; it does not change the default entry or validate pupil targets. See `docs/balance/master/MAIN_RELEASE_2_27_0.md`.

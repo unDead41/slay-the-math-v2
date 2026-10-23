@@ -1,0 +1,31 @@
+{
+  "kind": "STRUCTURAL_CAMPAIGN_PAIR_ESTIMATE",
+  "estimateVersion": "pressure-debt-campaign-1.0.0",
+  "parentContextId": "5ad57aec8aa32642bb80014119c8085c1e501b5f35e8d212cb5a543a34aec9d9",
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "mode": "challenge",
+  "difficulty": "runtime-baseline-no-tier",
+  "referenceDamagePerTurn": 12,
+  "referenceBlockPerTurn": 6,
+  "referenceRestHeal": 12,
+  "nominalStageClearHeal": 12,
+  "rosterRule": "same reachable runSeed class across both stages, never Cartesian roster offsets",
+  "score": "mean of three peak cumulative nominal debts across Stage1, -12 stage heal, Stage2; never a played deck or CP",
+  "sourceReportHashes": {
+    "context.json": "41ae90066195546a008e9aff28d0b45be14f68f5fc001cb8fe7191f52b9e5c3b",
+    "summary.json": "77ec453c4862a927bca5722f5586a8db0b116cc87b36f7934c572e95a329db78",
+    "routes.json": "c228aba0c8206c973d004fae1b37db36163edd267257824781ab1d37503ef7fc",
+    "maps.json": "dd60c000749117d198ef4bf6aa336b59ed7ddddcfd944e6cd558d41e32de1af7",
+    "trials.json": "994f242007f5a51743aca6642984c4509335850f2aafe315946e504d9d7e347c"
+  },
+  "toolSha256": "12bf566d53110507b94c0f7e7e861ab6292cbd28cda588aa5eaa093e6ad92ff8",
+  "exclusions": [
+    "deck growth and upgrade effects",
+    "artifact effects",
+    "Mystery costs/rewards/extra combat",
+    "actual purchases",
+    "boss seal timing",
+    "boss phase bonus",
+    "player stats/statuses and draw variance"
+  ]
+}

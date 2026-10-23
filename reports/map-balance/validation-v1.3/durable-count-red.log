@@ -1,0 +1,41 @@
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (1.991393ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.88601ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (0.672635ms)
+✔ matched route coverage excludes the random preplan for the stage outside replay scope (0.247979ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (1.08101ms)
+✔ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.604239ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.384969ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.265027ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.355444ms)
+✔ automatic comparisons detect changes in the legacy replay and report analysis too (0.460307ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.323893ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.321906ms)
+✖ file gate rejects missing raw records even when the outer manifest is internally hashed (3.948103ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 146.182649
+
+✖ failing tests:
+
+test at tests/map-balance-advanced-report.test.cjs:74:1
+✖ file gate rejects missing raw records even when the outer manifest is internally hashed (3.948103ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:83:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /record count/i,
+    operator: 'throws',
+    diff: 'simple'
+  }

@@ -1,0 +1,3098 @@
+{
+  "schema": "STM_BALANCE_DESIGN_SPEC_1_2",
+  "version": "1.2.0",
+  "date": "2026-10-23",
+  "timezone": "Asia/Kuala_Lumpur",
+  "status": "DOCUMENTATION_ONLY_CANDIDATE_NOT_RUNTIME_DATA",
+  "source_commit": "af12035acdb73e2345adc0e8e5c8a60fa4346dcb",
+  "confirmed_user_requirements": {
+    "energy_effect_and_focus_value_audit": true,
+    "whole_game_scope": true,
+    "difficulties": {
+      "easy": 0.9,
+      "medium": 0.7,
+      "hard": 0.5
+    },
+    "individual_and_combination_combat_power": true,
+    "source_aware_card_offers": true,
+    "bounded_sampling_instead_of_exhaustive_outcomes": true
+  },
+  "common": {
+    "energy_per_turn": 3,
+    "normal_draw": 4,
+    "hand_cap": 10,
+    "focus_cap": 3,
+    "focus_cost": 1,
+    "focused_cards_per_turn": 1,
+    "active_passives": 3,
+    "minimum_run_deck": 10,
+    "strength_application": "once per Attack card; first resolved hit against main target",
+    "agility_application": "once per Defend card; first immediate Block grant",
+    "upgrades": "one per instance, explicit row; never blanket Passive energy discount",
+    "starter": [
+      {
+        "id": "stm.attack.rune_strike",
+        "count": 3
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "count": 3
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "count": 2
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "count": 2
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "count": 1
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "count": 1
+      }
+    ]
+  },
+  "profiles": {
+    "easy": {
+      "target_win_rate": 0.9,
+      "starting_max_hp": 75,
+      "starting_gold": 100,
+      "starting_focus": 1,
+      "enemy_hp_mult": 0.8,
+      "enemy_attack_mult": 0.7,
+      "enemy_block_mult": 0.75,
+      "enemy_defense_adjust": -1,
+      "phase_attack_bonus": 1,
+      "rage_every_turns": 6,
+      "rage_damage_step": 0,
+      "rest_heal": 20,
+      "stage_clear_heal": 20,
+      "battle_gold": 30,
+      "elite_gold": 50,
+      "boss1_gold": 75,
+      "shop_price_mult": 0.9,
+      "event_gold_reward_mult": 1.2,
+      "event_gold_cost_mult": 0.8,
+      "event_heal_mult": 1.25,
+      "event_hp_cost_mult": 0.6,
+      "event_failure_hp_mult": 0,
+      "event_max_hp_cost": 3,
+      "event_time_mult": 2,
+      "event_next_energy_loss": 0
+    },
+    "medium": {
+      "target_win_rate": 0.7,
+      "starting_max_hp": 60,
+      "starting_gold": 80,
+      "starting_focus": 0,
+      "enemy_hp_mult": 1,
+      "enemy_attack_mult": 1,
+      "enemy_block_mult": 1,
+      "enemy_defense_adjust": 0,
+      "phase_attack_bonus": 2,
+      "rage_every_turns": 6,
+      "rage_damage_step": 1,
+      "rest_heal": 15,
+      "stage_clear_heal": 12,
+      "battle_gold": 25,
+      "elite_gold": 40,
+      "boss1_gold": 60,
+      "shop_price_mult": 1,
+      "event_gold_reward_mult": 1,
+      "event_gold_cost_mult": 1,
+      "event_heal_mult": 1,
+      "event_hp_cost_mult": 1,
+      "event_failure_hp_mult": 1,
+      "event_max_hp_cost": 5,
+      "event_time_mult": 1.5,
+      "event_next_energy_loss": -1
+    },
+    "hard": {
+      "target_win_rate": 0.5,
+      "starting_max_hp": 55,
+      "starting_gold": 70,
+      "starting_focus": 0,
+      "enemy_hp_mult": 1.15,
+      "enemy_attack_mult": 1.15,
+      "enemy_block_mult": 1.1,
+      "enemy_defense_adjust": 0,
+      "phase_attack_bonus": 3,
+      "rage_every_turns": 5,
+      "rage_damage_step": 2,
+      "rest_heal": 12,
+      "stage_clear_heal": 8,
+      "battle_gold": 22,
+      "elite_gold": 36,
+      "boss1_gold": 54,
+      "shop_price_mult": 1.1,
+      "event_gold_reward_mult": 0.9,
+      "event_gold_cost_mult": 1.1,
+      "event_heal_mult": 0.8,
+      "event_hp_cost_mult": 1.2,
+      "event_failure_hp_mult": 1.25,
+      "event_max_hp_cost": 6,
+      "event_time_mult": 1,
+      "event_next_energy_loss": -1
+    }
+  },
+  "cards": [
+    {
+      "id": "stm.attack.rune_strike",
+      "name": "Rune Strike",
+      "category": "attack",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "strength"
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "6 damage",
+      "focused": "9 damage",
+      "upgrade": "Damage +3; Focus kekal +3.",
+      "reason": "Anchor Attack 1 Energy.",
+      "numeric_patch": {
+        "damage": 6,
+        "focus_damage": 3,
+        "upgrade_damage": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.weak_point",
+      "name": "Weak Point",
+      "category": "attack",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "stacks": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "4 damage; kemudian Vulnerable 1",
+      "focused": "6 damage; kemudian Vulnerable 1",
+      "upgrade": "Damage +2; bonus Focus kekal +2.",
+      "reason": "Focus lebih kecil kerana status memberi nilai tambahan.",
+      "numeric_patch": {
+        "damage": 4,
+        "vulnerable": 1,
+        "focus_damage": 2,
+        "upgrade_damage": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.scout_strike",
+      "name": "Scout Strike",
+      "category": "attack",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "4 damage; draw 1",
+      "focused": "6 damage; draw 1",
+      "upgrade": "Damage +2; draw kekal 1.",
+      "reason": "Draw menampung pengurangan damage asas/Focus.",
+      "numeric_patch": {
+        "damage": 4,
+        "draw": 1,
+        "focus_damage": 2,
+        "upgrade_damage": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.return_strike",
+      "name": "Return Strike",
+      "category": "attack",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength",
+          "condition": {
+            "key": "lost_hp_last_enemy_turn",
+            "bonus": 3
+          }
+        },
+        "constant_3": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "5 damage; +3 jika hilang HP pada enemy turn terakhir",
+      "focused": "8 damage; +3 jika syarat benar",
+      "upgrade": "Damage asas +3; bonus syarat kekal.",
+      "reason": "Bonus bersyarat diperiksa sekali sebelum kesan.",
+      "numeric_patch": {
+        "damage": 5,
+        "conditional_damage": 3,
+        "focus_damage": 3,
+        "upgrade_damage": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.sure_hit",
+      "name": "Sure Hit",
+      "category": "attack",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength"
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "5 damage; abaikan Block",
+      "focused": "8 damage; abaikan Block",
+      "upgrade": "Damage +2.",
+      "reason": "Defense dan Boss Seal masih berkuat kuasa.",
+      "numeric_patch": {
+        "damage": 5,
+        "focus_damage": 3,
+        "upgrade_damage": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.twin_shot",
+      "name": "Twin Shot",
+      "category": "attack",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "first": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "second": {
+          "base": 3,
+          "focus_bonus": 0,
+          "stat": "strength"
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "3 + 3 damage",
+      "focused": "6 + 3 damage",
+      "upgrade": "Hit pertama +2.",
+      "reason": "Strength sekali bagi kad; setiap hit masih melalui Defense.",
+      "numeric_patch": {
+        "hits": [
+          3,
+          3
+        ],
+        "focus_first_hit": 3,
+        "upgrade_first_hit": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.shield_shot",
+      "name": "Shield Shot",
+      "category": "attack",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength",
+          "condition": {
+            "key": "has_block",
+            "bonus": 3
+          }
+        },
+        "constant_3": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "5 damage; +3 jika mempunyai Block sebelum bermain",
+      "focused": "8 damage; +3 jika syarat benar",
+      "upgrade": "Damage asas +2.",
+      "reason": "Block tidak digunakan; manfaat perlu setup.",
+      "numeric_patch": {
+        "damage": 5,
+        "conditional_damage": 3,
+        "focus_damage": 3,
+        "upgrade_damage": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.crack_shot",
+      "name": "Crack Shot",
+      "category": "attack",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "remove": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Buang sehingga 4 Block musuh; kemudian 5 damage",
+      "focused": "Buang sehingga 4 Block; kemudian 8 damage",
+      "upgrade": "Damage +2; buang Block kekal 4.",
+      "reason": "Nilai bergantung pada armor Block musuh.",
+      "numeric_patch": {
+        "damage": 5,
+        "remove_block": 4,
+        "focus_damage": 3,
+        "upgrade_damage": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.rune_sweep",
+      "name": "Rune Sweep",
+      "category": "attack",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "damage": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "other": {
+          "base": 6,
+          "focus_bonus": 0,
+          "stat": "strength"
+        }
+      },
+      "proposed_energy": 2,
+      "normal": "12 damage kepada setiap musuh hidup",
+      "focused": "16 kepada sasaran utama; 12 kepada yang lain",
+      "upgrade": "Damage utama +3; musuh lain kekal 12.",
+      "reason": "Naik daripada 6: encounter semasa satu musuh. Multi-enemy memerlukan retune sebelum diaktifkan.",
+      "numeric_patch": {
+        "damage_main": 12,
+        "damage_other": 12,
+        "focus_damage_main": 4,
+        "upgrade_damage_main": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.attack.fate_storm",
+      "name": "Fate Storm",
+      "category": "attack",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "first": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "strength"
+        },
+        "other": {
+          "base": 3,
+          "focus_bonus": 0,
+          "stat": "strength"
+        },
+        "hits": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 2,
+      "normal": "3 hit rawak, setiap hit 5 damage",
+      "focused": "9 + 5 + 5 damage",
+      "upgrade": "Hit pertama +3.",
+      "reason": "Naik jumlah 9 ke 15; Strength/Focus hanya pada hit pertama.",
+      "numeric_patch": {
+        "hits": [
+          5,
+          5,
+          5
+        ],
+        "focus_first_hit": 4,
+        "upgrade_first_hit": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.rune_guard",
+      "name": "Rune Guard",
+      "category": "defend",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "6 Block",
+      "focused": "9 Block",
+      "upgrade": "Block +3.",
+      "reason": "Anchor Defend 1 Energy.",
+      "numeric_patch": {
+        "block": 6,
+        "focus_block": 3,
+        "upgrade_block": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.flash_ward",
+      "name": "Flash Ward",
+      "category": "defend",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 0
+      },
+      "current_values": {
+        "block": {
+          "base": 3,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "proposed_energy": 0,
+      "normal": "3 Block; Exhaust",
+      "focused": "5 Block; Exhaust",
+      "upgrade": "Block +1; kos kekal 0; Exhaust kekal.",
+      "reason": "Hadkan Focus dan upgrade pada kad percuma.",
+      "numeric_patch": {
+        "block": 3,
+        "focus_block": 2,
+        "upgrade_block": 1,
+        "exhaust": true
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.tower_shield",
+      "name": "Tower Shield",
+      "category": "defend",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "block": {
+          "base": 14,
+          "focus_bonus": 3,
+          "stat": "agility"
+        }
+      },
+      "proposed_energy": 2,
+      "normal": "14 Block",
+      "focused": "19 Block",
+      "upgrade": "Block +3.",
+      "reason": "Focus +5 memberi nilai kepada komitmen 2 Energy.",
+      "numeric_patch": {
+        "block": 14,
+        "focus_block": 5,
+        "upgrade_block": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.ember_wall",
+      "name": "Ember Wall",
+      "category": "defend",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 6,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "thorns": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "5 Block; Thorns 2 hingga enemy phase seterusnya tamat",
+      "focused": "8 Block; Thorns 2",
+      "upgrade": "Block +2; Thorns kekal.",
+      "reason": "Turun Block 6 ke 5 untuk membayar nilai damage balasan.",
+      "numeric_patch": {
+        "block": 5,
+        "thorns": 2,
+        "focus_block": 3,
+        "upgrade_block": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.foreseen_guard",
+      "name": "Foreseen Guard",
+      "category": "defend",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "agility",
+          "condition": {
+            "key": "enemy_attacks",
+            "bonus": 4
+          }
+        },
+        "constant_4": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "4 Block; +4 jika intent mengandungi Attack",
+      "focused": "7 Block; +4 jika syarat benar",
+      "upgrade": "Block asas +2.",
+      "reason": "Musuh mempunyai guard-only turn supaya syarat bukan sentiasa benar.",
+      "numeric_patch": {
+        "block": 4,
+        "conditional_block": 4,
+        "focus_block": 3,
+        "upgrade_block": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.layered_shield",
+      "name": "Layered Shield",
+      "category": "defend",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "later": {
+          "base": 4,
+          "focus_bonus": 0,
+          "stat": "agility"
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "4 Block sekarang; 3 Block pada awal giliran sendiri berikutnya",
+      "focused": "7 sekarang; 3 kemudian",
+      "upgrade": "Block segera +2; pemberian tertunda kekal.",
+      "reason": "Agility hanya pada pemberian pertama; nilai tertunda fixed.",
+      "numeric_patch": {
+        "block_now": 4,
+        "block_later": 3,
+        "focus_block_now": 3,
+        "upgrade_block_now": 2,
+        "agility_on_later": false
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.burning_pages",
+      "name": "Burning Pages",
+      "category": "defend",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 4,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "4 Block; draw 1",
+      "focused": "6 Block; draw 1",
+      "upgrade": "Block +2; draw kekal.",
+      "reason": "Focus +2 kerana draw sudah menambah nilai.",
+      "numeric_patch": {
+        "block": 4,
+        "draw": 1,
+        "focus_block": 2,
+        "upgrade_block": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.cinder_guard",
+      "name": "Cinder Guard",
+      "category": "defend",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 5,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "stacks": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "5 Block; Weak 1 pada musuh",
+      "focused": "8 Block; Weak 1",
+      "upgrade": "Block +2; Weak kekal 1.",
+      "reason": "Weak bernilai sehingga 2 damage yang dielakkan pada satu hit.",
+      "numeric_patch": {
+        "block": 5,
+        "weak": 1,
+        "focus_block": 3,
+        "upgrade_block": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.hold_the_line",
+      "name": "Hold the Line",
+      "category": "defend",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "block": {
+          "base": 10,
+          "focus_bonus": 3,
+          "stat": "agility"
+        },
+        "retain": {
+          "base": 5,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 2,
+      "normal": "12 Block; simpan sehingga 5 baki Block sekali",
+      "focused": "16 Block; had simpanan 5",
+      "upgrade": "Block +3; had simpanan kekal.",
+      "reason": "Naik segera 10 ke 12; simpanan bukan Block baharu.",
+      "numeric_patch": {
+        "block": 12,
+        "retain": 5,
+        "focus_block": 4,
+        "upgrade_block": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.defend.mana_barrier",
+      "name": "Mana Barrier",
+      "category": "defend",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "all_remaining",
+        "minimum": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 0,
+          "focus_bonus": 3,
+          "stat": "agility",
+          "energy_multiplier": 5
+        }
+      },
+      "proposed_energy": "X",
+      "normal": "7X Block; gunakan semua baki Energy positif",
+      "focused": "7X + min(6, X+2) Block",
+      "upgrade": "Tambah 2 Block flat selepas 7X; tidak mengubah gandaan.",
+      "reason": "Fleksibel dan berguna pada X=1/2/3; X dikunci ketika commit.",
+      "numeric_patch": {
+        "block_per_energy": 7,
+        "focus_formula": "min(6,X+2)",
+        "upgrade_block": 2,
+        "minimum_energy": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.quick_study",
+      "name": "Quick Study",
+      "category": "skill",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "draw": {
+          "base": 2,
+          "focus_bonus": 1
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Draw 2",
+      "focused": "Draw 3",
+      "upgrade": "Draw asas +1; bonus Focus kekal +1.",
+      "reason": "Draw biasa yang boleh diulang.",
+      "numeric_patch": {
+        "draw": 2,
+        "focus_draw": 1,
+        "upgrade_draw": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.deep_study",
+      "name": "Deep Study",
+      "category": "skill",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "draw": {
+          "base": 4,
+          "focus_bonus": 1
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Draw 3; Exhaust",
+      "focused": "Draw 4; Exhaust",
+      "upgrade": "Draw asas +1.",
+      "reason": "Ubah 2 Energy/draw 4 kepada pilihan 1 Energy sekali setiap combat.",
+      "numeric_patch": {
+        "draw": 3,
+        "focus_draw": 1,
+        "upgrade_draw": 1,
+        "exhaust": true
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.mana_reading",
+      "name": "Mana Reading",
+      "category": "skill",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "all_remaining",
+        "minimum": 1
+      },
+      "current_values": {
+        "draw": {
+          "base": 0,
+          "focus_bonus": 1,
+          "energy_multiplier": 2
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Draw 2 sekarang; +1 draw giliran berikutnya; Exhaust",
+      "focused": "Draw 3 sekarang; +1 kemudian; Exhaust",
+      "upgrade": "Draw tertunda +1; Focus hanya draw segera.",
+      "reason": "Ganti X/all-Energy yang meninggalkan tiada Energy untuk menggunakan hasil draw.",
+      "numeric_patch": {
+        "draw_now": 2,
+        "draw_later": 1,
+        "focus_draw_now": 1,
+        "upgrade_draw_later": 1,
+        "exhaust": true,
+        "changes_energy_kind": true
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.read_ahead",
+      "name": "Read Ahead",
+      "category": "skill",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "look": {
+          "base": 3,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Lihat sehingga 3; ambil 1; susun baki di atas Draw",
+      "focused": "Lihat sehingga 5; ambil 1; susun baki",
+      "upgrade": "Had lihat asas +1; bonus Focus kekal +2.",
+      "reason": "Focus menambah dua pilihan, tanpa draw tambahan.",
+      "numeric_patch": {
+        "look": 3,
+        "take": 1,
+        "focus_look": 2,
+        "upgrade_look": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.burning_page",
+      "name": "Burning Page",
+      "category": "skill",
+      "rarity": "common",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "replace": {
+          "base": 1,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 0,
+      "normal": "Lihat calon; boleh ganti 1 kali; ambil 1; Exhaust",
+      "focused": "Boleh ganti sehingga 3 kali; ambil 1; Exhaust",
+      "upgrade": "Had ganti asas +1.",
+      "reason": "Kurangkan kos 1 ke 0; Exhaust mencegah kitaran percuma.",
+      "numeric_patch": {
+        "replacements": 1,
+        "take": 1,
+        "focus_replacements": 2,
+        "upgrade_replacements": 1,
+        "exhaust": true
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.clear_choice",
+      "name": "Clear Choice",
+      "category": "skill",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "look": {
+          "base": 3,
+          "focus_bonus": 1
+        },
+        "take": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Lihat sehingga 4; ambil 1; buang baki ke Discard",
+      "focused": "Lihat sehingga 6; ambil 1; buang baki",
+      "upgrade": "Had lihat asas +1.",
+      "reason": "Nilai berbeza daripada Read Ahead melalui discard calon.",
+      "numeric_patch": {
+        "look": 4,
+        "take": 1,
+        "focus_look": 2,
+        "upgrade_look": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.card_search",
+      "name": "Card Search",
+      "category": "skill",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "search": {
+          "base": 4,
+          "focus_bonus": 1
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Pilih kategori; cari padanan pertama dalam sehingga 5 kad",
+      "focused": "Cari sehingga 7 kad",
+      "upgrade": "Had cari asas +1.",
+      "reason": "Carian sah boleh gagal; tidak menukar kepada jaminan.",
+      "numeric_patch": {
+        "search": 5,
+        "focus_search": 2,
+        "upgrade_search": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.recall",
+      "name": "Recall",
+      "category": "skill",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "return": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "extra": {
+          "base": 0,
+          "focus_bonus": 1
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Ambil semula 1 kad Discard pilihan; Exhaust",
+      "focused": "Ambil semula 1; kemudian draw 1; Exhaust",
+      "upgrade": "Tambah draw 1 kepada versi biasa; Focus tambah 1 lagi.",
+      "reason": "Tidak boleh memilih dirinya; tidak mengulang had trigger Passive.",
+      "numeric_patch": {
+        "return": 1,
+        "draw_extra": 0,
+        "focus_draw_extra": 1,
+        "upgrade_draw_extra": 1,
+        "exhaust": true
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.next_chapter",
+      "name": "Next Chapter",
+      "category": "skill",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "laterDraw": {
+          "base": 2,
+          "focus_bonus": 1
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "+2 draw pada giliran sendiri berikutnya",
+      "focused": "+4 draw pada giliran sendiri berikutnya",
+      "upgrade": "Draw asas tertunda +1.",
+      "reason": "Focus +2 membayar kelewatan; grant sekali sahaja.",
+      "numeric_patch": {
+        "draw_later": 2,
+        "focus_draw_later": 2,
+        "upgrade_draw_later": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.skill.last_page",
+      "name": "Last Page",
+      "category": "skill",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "draw": {
+          "base": 1,
+          "focus_bonus": 1
+        },
+        "emptyBonus": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Draw 1; draw tambahan 2 jika tangan kosong selepas kad keluar",
+      "focused": "Draw 2; tambahan 2 jika syarat benar",
+      "upgrade": "Draw asas +1; bonus empty-hand kekal 2.",
+      "reason": "Snapshot tangan sekali sebelum semua draw dan pencetus.",
+      "numeric_patch": {
+        "draw": 1,
+        "empty_bonus": 2,
+        "focus_draw": 1,
+        "upgrade_draw": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.blazing_spirit",
+      "name": "Blazing Spirit",
+      "category": "passive",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "strength": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "+2 Strength selama aktif dalam combat",
+      "focused": "Tiada Focus",
+      "upgrade": "Sumbangan Strength +1; kos kekal 1.",
+      "reason": "Strength kini sekali per kad; kos tidak dikurangkan menjadi percuma.",
+      "numeric_patch": {
+        "strength": 2,
+        "upgrade_strength": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.growing_flame",
+      "name": "Growing Flame",
+      "category": "passive",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "every": {
+          "base": 3,
+          "focus_bonus": 0
+        },
+        "strength": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "cap": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Selepas setiap 3 Attack selepas aktif: +1 Strength, maksimum +3",
+      "focused": "Tiada Focus",
+      "upgrade": "Kira setiap 2 Attack; maksimum sumbangan +3 kekal.",
+      "reason": "Kurangkan setup 2 ke 1 Energy; kira kad, bukan hit.",
+      "numeric_patch": {
+        "every_attacks": 3,
+        "gain_strength": 1,
+        "max_strength": 3,
+        "upgrade_every_attacks": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.swift_step",
+      "name": "Swift Step",
+      "category": "passive",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "agility": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "+2 Agility selama aktif dalam combat",
+      "focused": "Tiada Focus",
+      "upgrade": "Sumbangan Agility +1; kos kekal.",
+      "reason": "Agility sekali pada pemberian segera pertama setiap kad Defend.",
+      "numeric_patch": {
+        "agility": 2,
+        "upgrade_agility": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.battle_rhythm",
+      "name": "Battle Rhythm",
+      "category": "passive",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "every": {
+          "base": 3,
+          "focus_bonus": 0
+        },
+        "agility": {
+          "base": 1,
+          "focus_bonus": 0
+        },
+        "cap": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Selepas setiap 3 Defend selepas aktif: +1 Agility, maksimum +3",
+      "focused": "Tiada Focus",
+      "upgrade": "Kira setiap 2 Defend; had sumbangan +3 kekal.",
+      "reason": "Kurangkan setup 2 ke 1 Energy.",
+      "numeric_patch": {
+        "every_defends": 3,
+        "gain_agility": 1,
+        "max_agility": 3,
+        "upgrade_every_defends": 2
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.rune_armor",
+      "name": "Rune Armor",
+      "category": "passive",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "defense": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "+1 Defense selama aktif dalam combat",
+      "focused": "Tiada Focus",
+      "upgrade": "Tambahan 3 Block sekali pada pengaktifan pertama combat.",
+      "reason": "Kurangkan kos 2 ke 1; upgrade tidak menggandakan Defense.",
+      "numeric_patch": {
+        "defense": 1,
+        "upgrade_first_activation_block": 3
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.lasting_shield",
+      "name": "Lasting Shield",
+      "category": "passive",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "retain": {
+          "base": 4,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Simpan sehingga 4 baki Block setiap awal giliran",
+      "focused": "Tiada Focus",
+      "upgrade": "Had simpanan 5.",
+      "reason": "Dengan Hold the Line gunakan maksimum, bukan jumlah.",
+      "numeric_patch": {
+        "retain": 4,
+        "upgrade_retain": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.grimoire_ward",
+      "name": "Grimoire Ward",
+      "category": "passive",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "block": {
+          "base": 3,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Skill pertama selepas aktif setiap giliran: +3 Block fixed",
+      "focused": "Tiada Focus",
+      "upgrade": "Pencetus memberi 4 Block.",
+      "reason": "Maksimum sekali/giliran; tiada Agility.",
+      "numeric_patch": {
+        "block": 3,
+        "upgrade_block": 1,
+        "max_triggers_per_turn": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.ember_core",
+      "name": "Ember Core",
+      "category": "passive",
+      "rarity": "uncommon",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "damage": {
+          "base": 2,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Selepas kad benar-benar guna Focus: 3 fixed HP damage",
+      "focused": "Tiada Focus",
+      "upgrade": "Damage pencetus +1.",
+      "reason": "Naik 2 ke 3; maksimum sekali/giliran, tiada recursion.",
+      "numeric_patch": {
+        "damage": 3,
+        "upgrade_damage": 1,
+        "max_triggers_per_turn": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.clear_mind",
+      "name": "Clear Mind",
+      "category": "passive",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 2
+      },
+      "current_values": {
+        "draw": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "+1 draw setiap awal giliran bermula giliran berikutnya",
+      "focused": "Tiada Focus",
+      "upgrade": "Draw 1 sekali pada pengaktifan pertama combat.",
+      "reason": "Kurangkan setup 2 ke 1 Energy; tiada pencetus segera berulang ketika swap.",
+      "numeric_patch": {
+        "draw_per_later_turn": 1,
+        "upgrade_first_activation_draw": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    },
+    {
+      "id": "stm.passive.last_ember",
+      "name": "Last Ember",
+      "category": "passive",
+      "rarity": "rare",
+      "current_energy": {
+        "kind": "fixed",
+        "amount": 1
+      },
+      "current_values": {
+        "threshold": {
+          "base": 30,
+          "focus_bonus": 0
+        },
+        "block": {
+          "base": 6,
+          "focus_bonus": 0
+        },
+        "focus": {
+          "base": 1,
+          "focus_bonus": 0
+        }
+      },
+      "proposed_energy": 1,
+      "normal": "Ketika hidup dan HP <=30%: +6 Block, +1 Focus, sekali/combat",
+      "focused": "Tiada Focus",
+      "upgrade": "Block pencetus +2; threshold dan Focus kekal.",
+      "reason": "Trigger tidak reset selepas swap/Recall; tidak revive.",
+      "numeric_patch": {
+        "hp_threshold_percent": 30,
+        "block": 6,
+        "focus": 1,
+        "upgrade_block": 2,
+        "max_triggers_per_combat": 1
+      },
+      "status": "CADANGAN_BELUM_DIIMPLEMENTASI"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "bat",
+      "name": "Rune Bat",
+      "stage": 1,
+      "tier": "normal",
+      "hp": 28,
+      "defense": 0,
+      "patterns": [
+        {
+          "damage_per_hit": 5,
+          "block": 0,
+          "hits": 2
+        },
+        {
+          "damage_per_hit": 7,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 5,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "wisp",
+      "name": "Ember Mirror",
+      "stage": 1,
+      "tier": "normal",
+      "hp": 30,
+      "defense": 0,
+      "patterns": [
+        {
+          "damage_per_hit": 6,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 8,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 7,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "beetle",
+      "name": "Prism Guard",
+      "stage": 1,
+      "tier": "normal",
+      "hp": 34,
+      "defense": 1,
+      "patterns": [
+        {
+          "damage_per_hit": 6,
+          "block": 3,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 9,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 9,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "knight",
+      "name": "Mirror Knight",
+      "stage": 1,
+      "tier": "elite",
+      "hp": 54,
+      "defense": 1,
+      "patterns": [
+        {
+          "damage_per_hit": 9,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 5,
+          "block": 6,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 13,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "shard",
+      "name": "Shard Beast",
+      "stage": 1,
+      "tier": "elite",
+      "hp": 56,
+      "defense": 0,
+      "patterns": [
+        {
+          "damage_per_hit": 5,
+          "block": 0,
+          "hits": 2
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 10,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 14,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "weaver",
+      "name": "Chain Weaver",
+      "stage": 2,
+      "tier": "normal",
+      "hp": 44,
+      "defense": 0,
+      "patterns": [
+        {
+          "damage_per_hit": 8,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 9,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 11,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "shade",
+      "name": "Deck Guard",
+      "stage": 2,
+      "tier": "normal",
+      "hp": 48,
+      "defense": 1,
+      "patterns": [
+        {
+          "damage_per_hit": 8,
+          "block": 4,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 12,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 12,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "mimic",
+      "name": "Card Mimic",
+      "stage": 2,
+      "tier": "normal",
+      "hp": 46,
+      "defense": 0,
+      "patterns": [
+        {
+          "damage_per_hit": 4,
+          "block": 0,
+          "hits": 3
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 8,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 10,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "golem",
+      "name": "Chain Golem",
+      "stage": 2,
+      "tier": "elite",
+      "hp": 70,
+      "defense": 2,
+      "patterns": [
+        {
+          "damage_per_hit": 11,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 6,
+          "block": 10,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 15,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "reaper",
+      "name": "Rune Reaper",
+      "stage": 2,
+      "tier": "elite",
+      "hp": 72,
+      "defense": 0,
+      "patterns": [
+        {
+          "damage_per_hit": 6,
+          "block": 0,
+          "hits": 2
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 12,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 17,
+          "block": 0,
+          "hits": 1
+        }
+      ]
+    },
+    {
+      "id": "sentinel",
+      "name": "Twin Sigil Guardian",
+      "stage": 1,
+      "tier": "boss",
+      "hp": 90,
+      "defense": 1,
+      "patterns": [
+        {
+          "damage_per_hit": 9,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 0,
+          "block": 12,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 6,
+          "block": 0,
+          "hits": 2
+        }
+      ],
+      "seals": 2
+    },
+    {
+      "id": "dealer",
+      "name": "Deck Lord",
+      "stage": 2,
+      "tier": "boss",
+      "hp": 125,
+      "defense": 1,
+      "patterns": [
+        {
+          "damage_per_hit": 11,
+          "block": 0,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 7,
+          "block": 10,
+          "hits": 1
+        },
+        {
+          "damage_per_hit": 5,
+          "block": 0,
+          "hits": 3
+        }
+      ],
+      "seals": 2
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "s01_emberheart_pendant",
+      "name": "Emberheart Pendant",
+      "tier": "starting",
+      "current_values": {
+        "heal": 2
+      },
+      "proposed_values": {
+        "heal": 2
+      },
+      "trigger_limit": "once_per_combat_won",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Win-heal stacks with other owned win-heal once per victory, capped at missing HP."
+    },
+    {
+      "id": "s02_cinder_whetstone",
+      "name": "Cinder Whetstone",
+      "tier": "starting",
+      "current_values": {
+        "damage_bonus_per_card": 1
+      },
+      "proposed_values": {
+        "damage_bonus_per_card": 2
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s03_prism_buckler",
+      "name": "Prism Buckler",
+      "tier": "starting",
+      "current_values": {
+        "block_bonus": 2
+      },
+      "proposed_values": {
+        "block_bonus": 2
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s04_clairvoyance_lens",
+      "name": "Clairvoyance Lens",
+      "tier": "starting",
+      "current_values": {
+        "focus": 1
+      },
+      "proposed_values": {
+        "focus": 1
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s05_scholars_bookmark",
+      "name": "Scholar's Bookmark",
+      "tier": "starting",
+      "current_values": {
+        "draw": 1
+      },
+      "proposed_values": {
+        "draw": 1
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s06_merchants_seal",
+      "name": "Merchant's Seal",
+      "tier": "starting",
+      "current_values": {
+        "discount_percent": 5
+      },
+      "proposed_values": {
+        "discount_percent": 10
+      },
+      "trigger_limit": "persistent_while_owned",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s07_bronze_guard_pin",
+      "name": "Bronze Guard Pin",
+      "tier": "starting",
+      "current_values": {
+        "block": 3
+      },
+      "proposed_values": {
+        "block": 5
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s08_travelers_ration",
+      "name": "Traveler's Ration",
+      "tier": "starting",
+      "current_values": {
+        "max_hp": 5,
+        "heal": 5
+      },
+      "proposed_values": {
+        "max_hp": 5,
+        "heal": 5
+      },
+      "trigger_limit": "once_per_run_acquisition_persisted",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s09_copper_purse",
+      "name": "Copper Purse",
+      "tier": "starting",
+      "current_values": {
+        "gold": 25
+      },
+      "proposed_values": {
+        "gold": 40
+      },
+      "trigger_limit": "once_per_run_acquisition_persisted",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s10_ember_quill",
+      "name": "Ember Quill",
+      "tier": "starting",
+      "current_values": {
+        "draw": 1
+      },
+      "proposed_values": {
+        "draw": 2
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s11_scribes_pebble",
+      "name": "Scribe's Pebble",
+      "tier": "starting",
+      "current_values": {
+        "block": 4
+      },
+      "proposed_values": {
+        "block": 4
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "s12_initiates_ring",
+      "name": "Initiate's Ring",
+      "tier": "starting",
+      "current_values": {
+        "block": 3
+      },
+      "proposed_values": {
+        "block": 5
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": "passive",
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e01_copper_abacus",
+      "name": "Copper Abacus",
+      "tier": "elite_mystery",
+      "current_values": {
+        "cards_required": 3,
+        "energy": 1
+      },
+      "proposed_values": {
+        "cards_required": 3,
+        "energy": 1
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e02_twin_sigil_medallion",
+      "name": "Twin Sigil Medallion",
+      "tier": "elite_mystery",
+      "current_values": {
+        "block": 6
+      },
+      "proposed_values": {
+        "block": 4
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e03_chance_die",
+      "name": "Chance Die",
+      "tier": "elite_mystery",
+      "current_values": {
+        "sides": 6,
+        "faces_1_2": {
+          "block": 10
+        },
+        "faces_3_4": {
+          "draw": 2
+        },
+        "faces_5_6": {
+          "energy": 2
+        }
+      },
+      "proposed_values": {
+        "sides": 6,
+        "faces_1_2": {
+          "block": 10
+        },
+        "faces_3_4": {
+          "draw": 2
+        },
+        "faces_5_6": {
+          "energy": 2
+        }
+      },
+      "trigger_limit": "once_per_combat_no_reroll",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e04_ember_balance",
+      "name": "Ember Balance",
+      "tier": "elite_mystery",
+      "current_values": {
+        "min_unspent_energy": 1,
+        "block": 6
+      },
+      "proposed_values": {
+        "min_unspent_energy": 1,
+        "block": 6
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e05_chainbreaker_clasp",
+      "name": "Chainbreaker Clasp",
+      "tier": "elite_mystery",
+      "current_values": {
+        "draw": 1,
+        "block": 4
+      },
+      "proposed_values": {
+        "draw": 1,
+        "block": 4
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e06_ashen_phoenix_feather",
+      "name": "Ashen Phoenix Feather",
+      "tier": "elite_mystery",
+      "current_values": {
+        "heal": 5
+      },
+      "proposed_values": {
+        "heal": 4
+      },
+      "trigger_limit": "once_per_combat_won",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Win-heal stacks with other owned win-heal once per victory, capped at missing HP."
+    },
+    {
+      "id": "e07_runesmith_tongs",
+      "name": "Rune-smith Tongs",
+      "tier": "elite_mystery",
+      "current_values": {
+        "damage_bonus_per_card": 3
+      },
+      "proposed_values": {
+        "damage_bonus_per_card": 3
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e08_sentinel_crest",
+      "name": "Sentinel Crest",
+      "tier": "elite_mystery",
+      "current_values": {
+        "block_bonus": 6
+      },
+      "proposed_values": {
+        "block_bonus": 4
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e09_mirror_knights_brooch",
+      "name": "Mirror Knight's Brooch",
+      "tier": "elite_mystery",
+      "current_values": {
+        "retaliation_damage": 6
+      },
+      "proposed_values": {
+        "retaliation_damage": 4
+      },
+      "trigger_limit": "once_per_player_enemy_turn_cycle",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Brooch requires positive post-Defense attack damage absorbed entirely by Block; zero solely from Defense does not qualify."
+    },
+    {
+      "id": "e10_rune_bats_bell",
+      "name": "Rune Bat's Bell",
+      "tier": "elite_mystery",
+      "current_values": {
+        "draw": 1
+      },
+      "proposed_values": {
+        "draw": 1
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e11_scholars_satchel",
+      "name": "Scholar's Satchel",
+      "tier": "elite_mystery",
+      "current_values": {
+        "draw": 2
+      },
+      "proposed_values": {
+        "draw": 2
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e12_lantern_keepers_flask",
+      "name": "Lantern Keeper's Flask",
+      "tier": "elite_mystery",
+      "current_values": {
+        "hp_threshold_percent": 50,
+        "block": 12
+      },
+      "proposed_values": {
+        "hp_threshold_percent": 50,
+        "block": 10
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e13_chain_weavers_spool",
+      "name": "Chain Weaver's Spool",
+      "tier": "elite_mystery",
+      "current_values": {
+        "draw": 1,
+        "block": 3
+      },
+      "proposed_values": {
+        "draw": 1,
+        "block": 3
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": "hand_discard",
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e14_brams_contract",
+      "name": "Bram's Contract",
+      "tier": "elite_mystery",
+      "current_values": {
+        "discount_percent": 15
+      },
+      "proposed_values": {
+        "discount_percent": 20
+      },
+      "trigger_limit": "persistent_while_owned_best_discount_only",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e15_crimson_sword_charm",
+      "name": "Crimson Sword Charm",
+      "tier": "elite_mystery",
+      "current_values": {
+        "strength": 2
+      },
+      "proposed_values": {
+        "strength": 1
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "e16_guardians_armlet",
+      "name": "Guardian's Armlet",
+      "tier": "elite_mystery",
+      "current_values": {
+        "agility": 2
+      },
+      "proposed_values": {
+        "agility": 1
+      },
+      "trigger_limit": "once_per_combat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "b01_gatekeeper_core",
+      "name": "Gatekeeper Core",
+      "tier": "boss",
+      "current_values": {
+        "energy": 1
+      },
+      "proposed_values": {
+        "energy": 1
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "b02_sovereign_grimoire_clasp",
+      "name": "Sovereign Grimoire Clasp",
+      "tier": "boss",
+      "current_values": {
+        "initial_strength": 3,
+        "initial_agility": 3,
+        "strength_per_later_turn": 1,
+        "agility_per_later_turn": 1,
+        "max_artifact_contribution_each_stat": 6
+      },
+      "proposed_values": {
+        "initial_strength": 2,
+        "initial_agility": 2,
+        "strength_per_later_turn": 1,
+        "agility_per_later_turn": 1,
+        "max_artifact_contribution_each_stat": 4
+      },
+      "trigger_limit": "once_per_player_turn_contribution_cap_6_each_stat",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    },
+    {
+      "id": "b03_decklords_hourglass",
+      "name": "Decklord's Hourglass",
+      "tier": "boss",
+      "current_values": {
+        "draw": 2
+      },
+      "proposed_values": {
+        "draw": 2
+      },
+      "trigger_limit": "once_per_player_turn",
+      "requires": null,
+      "enabled_policy": "Only when its exact trigger is supported by the run deck; no fake hand-discard hook.",
+      "special_rule": "Unique ownership. Trigger receipt persists across render/reload/Passive swap."
+    }
+  ],
+  "events": [
+    {
+      "id": "ME01",
+      "name": "The Suspicious Chest",
+      "topic": "PROB",
+      "base_seconds": 30,
+      "success": {
+        "mode": "AUTOMATIC",
+        "summary": "+40 Gold.",
+        "options": [
+          {
+            "id": "claim_gold",
+            "label": "Take 40 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 40
+              }
+            ]
+          }
+        ],
+        "mayDecline": false
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 4 HP. No reward.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 4,
+            "nonLethal": true
+          }
+        ]
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME02",
+      "name": "The Ember Shrine",
+      "topic": "LOGIC",
+      "base_seconds": 30,
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May pay 5 HP to upgrade one card.",
+        "options": [
+          {
+            "id": "upgrade",
+            "label": "Pay 5 HP: Upgrade a card",
+            "costs": [
+              {
+                "resource": "hp",
+                "amount": 5,
+                "minimumAfter": 1
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_UPGRADABLE_CARD"
+              }
+            ],
+            "effects": [
+              {
+                "type": "UPGRADE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "categories": [
+                  "Attack",
+                  "Defend",
+                  "Skill",
+                  "Passive"
+                ],
+                "excludeAtUpgradeCap": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 2 HP. No upgrade.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 2,
+            "nonLethal": true
+          }
+        ]
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME03",
+      "name": "The Whispering Grimoire",
+      "topic": "SET",
+      "base_seconds": 45,
+      "success": {
+        "mode": "CHOOSE_REWARD",
+        "summary": "Choose one of up to three Skill cards for free.",
+        "options": [
+          {
+            "id": "learn_skill",
+            "label": "Learn a Skill",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_CARD_REWARD_CANDIDATE",
+                "category": "Skill"
+              }
+            ],
+            "effects": [
+              {
+                "type": "CHOOSE_CARD_REWARD",
+                "offerCount": 3,
+                "uniqueOffers": true,
+                "category": "Skill",
+                "pool": "EXISTING_GAME_CARD_REWARD_POOL",
+                "addCount": 1
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The book closes. No card.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME04",
+      "name": "The Cracked Mirror",
+      "topic": "LOGIC",
+      "base_seconds": 45,
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May transform one card into a random card of the same category.",
+        "options": [
+          {
+            "id": "transform",
+            "label": "Transform a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_TRANSFORMABLE_CARD"
+              }
+            ],
+            "effects": [
+              {
+                "type": "TRANSFORM_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "sameCategory": true,
+                "excludeOriginalCardId": true,
+                "resultUpgradeLevel": 0,
+                "randomResult": "PERSIST_BEFORE_CONFIRM"
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The mirror breaks. No change to your deck.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME05",
+      "name": "The Forgotten Fountain",
+      "topic": "SET",
+      "base_seconds": 30,
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: heal 15 HP OR gain 25 Gold.",
+        "options": [
+          {
+            "id": "heal",
+            "label": "Heal 15 HP",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_MISSING_HP"
+              }
+            ],
+            "effects": [
+              {
+                "type": "HEAL_HP",
+                "amount": 15
+              }
+            ]
+          },
+          {
+            "id": "gold",
+            "label": "Take 25 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 25
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The fountain dries up. No reward.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME06",
+      "name": "The Bound Collector",
+      "topic": "PROB",
+      "base_seconds": 45,
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May trade one Starting artifact + 30 Gold for one random Elite/Mystery artifact.",
+        "options": [
+          {
+            "id": "trade",
+            "label": "Trade an artifact and 30 Gold",
+            "costs": [
+              {
+                "resource": "gold",
+                "amount": 30,
+                "minimumAfter": 0
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_OWNED_ARTIFACT",
+                "tier": "STARTING"
+              },
+              {
+                "type": "HAS_UNOWNED_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "CONSUME_ARTIFACT",
+                "tier": "STARTING",
+                "selection": "PLAYER_CHOSEN_INSTANCE"
+              },
+              {
+                "type": "GRANT_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ],
+                "excludeOwned": true,
+                "selection": "SEEDED_RANDOM_PERSISTED",
+                "excludeBoss": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The offer ends. No payment is taken.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME07",
+      "name": "The Lost Scholar",
+      "topic": "LOGIC",
+      "base_seconds": 60,
+      "success": {
+        "mode": "SELECT_TARGET_THEN_COMMIT",
+        "summary": "Gain 30 Gold AND upgrade one chosen card.",
+        "options": [
+          {
+            "id": "scholar_reward",
+            "label": "Take 30 Gold and upgrade a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_UPGRADABLE_CARD"
+              }
+            ],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 30
+              },
+              {
+                "type": "UPGRADE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "categories": [
+                  "Attack",
+                  "Defend",
+                  "Skill",
+                  "Passive"
+                ],
+                "excludeAtUpgradeCap": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "No reward. Read the scholar's explanation.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME08",
+      "name": "The Blind Oracle",
+      "topic": "PROB",
+      "base_seconds": 30,
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose +2 Strength OR +2 Agility for the next combat.",
+        "options": [
+          {
+            "id": "strength",
+            "label": "Next combat: +2 Strength",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "QUEUE_COMBAT_MODIFIER",
+                "stat": "STRENGTH",
+                "amount": 2,
+                "duration": "NEXT_COMBAT",
+                "trigger": "COMBAT_START",
+                "consumesOnCombatId": true
+              }
+            ]
+          },
+          {
+            "id": "agility",
+            "label": "Next combat: +2 Agility",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "QUEUE_COMBAT_MODIFIER",
+                "stat": "AGILITY",
+                "amount": 2,
+                "duration": "NEXT_COMBAT",
+                "trigger": "COMBAT_START",
+                "consumesOnCombatId": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The vision fades. No buff.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME09",
+      "name": "The Broken Forge",
+      "topic": "SET",
+      "base_seconds": 45,
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May pay 35 Gold to upgrade an Attack or Defend card.",
+        "options": [
+          {
+            "id": "forge_upgrade",
+            "label": "Pay 35 Gold: Upgrade Attack or Defend",
+            "costs": [
+              {
+                "resource": "gold",
+                "amount": 35,
+                "minimumAfter": 0
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_UPGRADABLE_CARD",
+                "categories": [
+                  "Attack",
+                  "Defend"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "UPGRADE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "categories": [
+                  "Attack",
+                  "Defend"
+                ],
+                "excludeAtUpgradeCap": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The forge goes cold. No payment is taken.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME10",
+      "name": "The Burning Archive",
+      "topic": "SET",
+      "base_seconds": 45,
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: remove one card OR gain 25 Gold.",
+        "options": [
+          {
+            "id": "remove",
+            "label": "Remove a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_REMOVABLE_CARD",
+                "minimumDeckAfter": 1
+              }
+            ],
+            "effects": [
+              {
+                "type": "REMOVE_CARD",
+                "selection": "PLAYER_CHOSEN_INSTANCE",
+                "minimumDeckAfter": 1
+              }
+            ]
+          },
+          {
+            "id": "gold",
+            "label": "Take 25 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 25
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 3 HP. No reward.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 3,
+            "nonLethal": true
+          }
+        ]
+      },
+      "overrides": {
+        "minimum_run_deck_after_removal": 10
+      }
+    },
+    {
+      "id": "ME11",
+      "name": "The Cinder Garden",
+      "topic": "PROB",
+      "base_seconds": 45,
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: heal 10 HP OR gain one random Starting artifact.",
+        "options": [
+          {
+            "id": "heal",
+            "label": "Heal 10 HP",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_MISSING_HP"
+              }
+            ],
+            "effects": [
+              {
+                "type": "HEAL_HP",
+                "amount": 10
+              }
+            ]
+          },
+          {
+            "id": "artifact",
+            "label": "Take a Starting artifact",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_UNOWNED_ARTIFACT",
+                "tiers": [
+                  "STARTING"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "GRANT_ARTIFACT",
+                "tiers": [
+                  "STARTING"
+                ],
+                "excludeOwned": true,
+                "selection": "SEEDED_RANDOM_PERSISTED",
+                "excludeBoss": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose up to 3 HP. No reward.",
+        "effects": [
+          {
+            "type": "DAMAGE_HP",
+            "amount": 3,
+            "nonLethal": true
+          }
+        ]
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME12",
+      "name": "The Fallen Adventurer",
+      "topic": "SET",
+      "base_seconds": 60,
+      "success": {
+        "mode": "CHOOSE_ONE",
+        "summary": "Choose: 40 Gold OR one card from up to three offers.",
+        "options": [
+          {
+            "id": "gold",
+            "label": "Take 40 Gold",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 40
+              }
+            ]
+          },
+          {
+            "id": "card",
+            "label": "Choose a card",
+            "costs": [],
+            "requires": [
+              {
+                "type": "HAS_CARD_REWARD_CANDIDATE"
+              }
+            ],
+            "effects": [
+              {
+                "type": "CHOOSE_CARD_REWARD",
+                "offerCount": 3,
+                "uniqueOffers": true,
+                "category": null,
+                "pool": "EXISTING_GAME_CARD_REWARD_POOL",
+                "addCount": 1
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The supplies turn to dust. No reward.",
+        "effects": []
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME13",
+      "name": "The Echo Chamber",
+      "topic": "LOGIC",
+      "base_seconds": 45,
+      "success": {
+        "mode": "AUTOMATIC",
+        "summary": "Banish the echoes without combat. Gain 40 Gold.",
+        "options": [
+          {
+            "id": "banish",
+            "label": "Banish the echoes",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "ADD_GOLD",
+                "amount": 40
+              }
+            ]
+          }
+        ],
+        "mayDecline": false
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "A Normal Enemy combat begins after the explanation.",
+        "effects": [
+          {
+            "type": "START_COMBAT",
+            "enemyTier": "NORMAL",
+            "stage": "CURRENT_STAGE",
+            "seededEncounter": true,
+            "rewardPolicy": "NORMAL_COMBAT_ONLY",
+            "startAfterReviewContinue": true
+          }
+        ]
+      },
+      "overrides": {}
+    },
+    {
+      "id": "ME14",
+      "name": "The Shattered Hourglass",
+      "topic": "PROB",
+      "base_seconds": 60,
+      "success": {
+        "mode": "AUTOMATIC",
+        "summary": "Draw 2 extra cards on the first turn of the next combat.",
+        "options": [
+          {
+            "id": "time_gift",
+            "label": "Accept the time gift",
+            "costs": [],
+            "requires": [],
+            "effects": [
+              {
+                "type": "QUEUE_COMBAT_MODIFIER",
+                "stat": "DRAW",
+                "amount": 2,
+                "duration": "NEXT_COMBAT_FIRST_TURN",
+                "trigger": "FIRST_TURN_DRAW",
+                "consumesOnCombatId": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": false
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "Lose 1 Energy on the first turn of the next combat.",
+        "effects": [
+          {
+            "type": "QUEUE_COMBAT_MODIFIER",
+            "stat": "ENERGY",
+            "amount": -1,
+            "duration": "NEXT_COMBAT_FIRST_TURN",
+            "trigger": "FIRST_TURN_ENERGY",
+            "consumesOnCombatId": true
+          }
+        ]
+      },
+      "overrides": {
+        "first_turn_energy_loss_by_difficulty": {
+          "easy": 0,
+          "medium": -1,
+          "hard": -1
+        }
+      }
+    },
+    {
+      "id": "ME15",
+      "name": "The Dungeon Master's Bargain",
+      "topic": "LOGIC",
+      "base_seconds": 60,
+      "success": {
+        "mode": "OPTIONAL_TRADE",
+        "summary": "May pay 5 Max HP for one random Elite/Mystery artifact.",
+        "options": [
+          {
+            "id": "bargain",
+            "label": "Pay 5 Max HP: Take an artifact",
+            "costs": [
+              {
+                "resource": "maxHp",
+                "amount": 5,
+                "minimumAfter": 1,
+                "clampCurrentHpAfter": true
+              }
+            ],
+            "requires": [
+              {
+                "type": "HAS_UNOWNED_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "GRANT_ARTIFACT",
+                "tiers": [
+                  "ELITE_MYSTERY"
+                ],
+                "excludeOwned": true,
+                "selection": "SEEDED_RANDOM_PERSISTED",
+                "excludeBoss": true
+              }
+            ]
+          }
+        ],
+        "mayDecline": true
+      },
+      "failure": {
+        "appliesTo": [
+          "INCORRECT",
+          "TIMEOUT",
+          "ABANDONED_AFTER_START"
+        ],
+        "summary": "The offer is withdrawn. No Max HP is lost.",
+        "effects": []
+      },
+      "overrides": {
+        "max_hp_cost_by_difficulty": {
+          "easy": 3,
+          "medium": 5,
+          "hard": 6
+        }
+      }
+    }
+  ],
+  "economy": {
+    "card_prices_by_rarity": {
+      "common": 50,
+      "uncommon": 75,
+      "rare": 110
+    },
+    "upgraded_card_price_mult": 1.2,
+    "artifact_prices": {
+      "starting": 80,
+      "elite_mystery": 140,
+      "boss": 220
+    },
+    "removal_base": 50,
+    "removal_growth": 15,
+    "shop_card_count": 6,
+    "shop_sale_count": 1,
+    "sale_percent": 60,
+    "shop_artifact_tier_slots": {
+      "starting": 3,
+      "elite_mystery": 2,
+      "boss": 1
+    },
+    "boss_shop_unlock_stage": 2,
+    "rarity_weights": {
+      "normal_s1": {
+        "common": 70,
+        "uncommon": 25,
+        "rare": 5
+      },
+      "normal_s2": {
+        "common": 55,
+        "uncommon": 35,
+        "rare": 10
+      },
+      "elite_s1": {
+        "common": 35,
+        "uncommon": 50,
+        "rare": 15
+      },
+      "elite_s2": {
+        "common": 20,
+        "uncommon": 55,
+        "rare": 25
+      },
+      "shop_s1": {
+        "common": 55,
+        "uncommon": 35,
+        "rare": 10
+      },
+      "shop_s2": {
+        "common": 40,
+        "uncommon": 40,
+        "rare": 20
+      }
+    }
+  },
+  "validation": {
+    "real_student_playtest_done": false,
+    "actual_engine_simulation_done": false,
+    "target_unit": "one student, one first scored complete two-stage Challenge run after standard tutorial",
+    "target_denominator": "all eligible started runs; defeat/voluntary abandon count as losses; verified technical failures reported separately",
+    "pilot_students_per_difficulty": 30,
+    "initial_validation_students_per_difficulty": 100,
+    "paired_seed_campaigns_per_build": null,
+    "confidence_interval": "Wilson 95%",
+    "final_status": "UNMEASURED_TARGETS_90_70_50_NOT_GUARANTEED",
+    "expanded_optional_campaign_seeds_per_difficulty": 1000
+  },
+  "power_and_offer_model": "combat-power-model.v1.2.json",
+  "status_rules": {
+    "weak": {
+      "amount_per_hit": 2,
+      "cap": 3,
+      "consume_one_per_outgoing_hit": true
+    },
+    "vulnerable": {
+      "amount_per_hit": 2,
+      "cap": 3,
+      "consume_one_per_incoming_hit": true
+    },
+    "thorns": {
+      "maximum_total": 6,
+      "kind": "fixed_hp_damage",
+      "ends": "next_enemy_phase_end",
+      "recursive_triggers": false
+    },
+    "stat_application": "Strength and Agility once per eligible played card; no stat on fixed/delayed grants unless explicitly specified"
+  }
+}

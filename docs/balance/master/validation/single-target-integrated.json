@@ -1,0 +1,82 @@
+{
+  "baseMain": "544ef4365f713147038139e90bab001346947a71",
+  "version": "2.29.0",
+  "tests": {
+    "passed": 727,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "syntax": true,
+  "productionBuild": true,
+  "offlineBytes": 295637186,
+  "masterDefinitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+  "engineHashUnchangedFromMeasurement": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+  "statusVfx": {
+    "checks": [
+      "A native Rune Guard commits the exact engine/save result before a noninteractive shield and actual Block-gain cue appear.",
+      "Strength, Agility, Defense and Thorns use distinct actual hero conditions and their source models/card icons stay intact.",
+      "The unpaid Passive swap dialog stays static; only its committed replacement lowers Strength and produces a real downward cue.",
+      "A real enemy receipt shows four Block absorbed even when the authored Layered Shield refill returns Block to its previous value; no fabricated +Block label.",
+      "Valid player Weak/Vulnerable saves have distinct auras without historical bursts; actual stack consumption clears a mark while enemy-only Weak never affects Alyssa.",
+      "Settings/native dialogs cancel effects and restore only current auras; Motion Off and OS reduced motion leave no decorative overlay and preserve exact gameplay.",
+      "Desktop, portrait phone and landscape effects fit the arena above HP/actions, stay bounded and cancel bursts on resize while keeping active auras.",
+      "Rapid next actions, keyboard play, status inspection and Main Menu cleanup leave no late particles or input blockers.",
+      "Easy, Medium and Hard Master profiles use their actual bound Block values, preserve legacy saves and reload current auras without replaying bursts.",
+      "The actual standalone file shows the same shield and saved paid result with no HTTP or dependent local assets."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      }
+    ],
+    "profiles": [
+      {
+        "difficulty": "easy",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "medium",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "hard",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      }
+    ],
+    "errors": [],
+    "offlineRequests": []
+  },
+  "cardUi": {
+    "ordinary": true,
+    "medium": true,
+    "targetRngUnchanged": true,
+    "reload": true
+  },
+  "allProfileBrowser": true,
+  "hostedDeploymentClaimed": false
+}

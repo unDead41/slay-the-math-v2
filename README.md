@@ -1,6 +1,8 @@
-# Slay the Math — 2.28.0
+# Slay the Math — 2.29.0
 
-Alyssa now has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide for later audio selection](docs/ALYSSA_STATUS_SFX_GUIDE.md).
+Alyssa has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md).
+
+Battles have one enemy. Rune Sweep now delivers one 12-damage hit; Fate Storm delivers three 5-damage hits to that enemy without random target rolls. Both cost 2 Energy and receive their printed Focus/upgrade bonus once. Ordinary modes and Master playtests use the corrected effects. [Changes, save compatibility and measured checks](docs/balance/master/SINGLE_TARGET_2_29_0.md).
 
 Master balance playtest: New Run → Easy / Medium / Hard, or open `?balance=medium`. The three profiles share versioned combat/economy/loot definitions and separate saves. [Balance handoff and unmeasured pupil targets](docs/balance/master/HANDOFF.md).
 

@@ -1,0 +1,166 @@
+Single-enemy 2.28.0 verification — 23 October 2026
+
+Targeted card/Master/UI — exit 0
+✔ a receipt with an unknown definition cannot be restored (77.035463ms)
+ℹ tests 134
+ℹ suites 0
+ℹ pass 134
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6844.150766
+
+Source/art/Focus authority — exit 0
+✔ Sound, Save and topic icon states survive rerendering without changing settings semantics or adding game actions (288.688093ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10459.359727
+
+Complete npm test — exit 0
+✔ DOM: in-game Hint retains the folio reference grid after solution, in both languages (457.763663ms)
+ℹ tests 719
+ℹ suites 0
+ℹ pass 719
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 200530.530703
+
+After final Focus wording: Master/card/UI — exit 0
+✔ a receipt with an unknown definition cannot be restored (181.492138ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11321.345897
+
+Final npm run check — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.28.0 check
+> node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/mystery-data.js && node --check dist/mystery.js && node --check dist/mystery-ui.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js && node --check dist/education-practice.js && node --check dist/question-language.js && node --check dist/card-data.js && node --check dist/card-assets.js && node --check dist/card-kit.js && node --check dist/card-combat.js && node --check dist/card-ui.js && node --check dist/combat-log.js && node --check dist/combat-predict.js && node --check dist/combat-status.js && node --check dist/audio-presentation.js && node --check server.cjs && node --check tools/build-production.cjs && node --check tools/dev/server.cjs && node --check tools/dev/fixtures.js && node --check tools/dev/storage.js && node --check tools/dev/adapter.js && node --check tools/dev/controls.js && node --check tools/dev/hub.js && node --check dist/icon-assets.js && node --check tools/import-icon-package.cjs && node --check dist/card-flow.js && node --check dist/card-motion.js && node --check dist/economy-data.js && node --check dist/economy.js && node --check dist/balance.js && node --check dist/balance-config.js && node --check dist/balance-data.js && node --check dist/learning-curriculum.js && node --check dist/learning-analytics.js && node --check dist/learning-sync.js && node --check dist/analytics-ui.js && node --check tools/analytics/collector.cjs && node --check tools/analytics/server.cjs && node --check tools/analytics/export.cjs
+
+
+Production build — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.28.0 build:prod
+> node tools/build-production.cjs
+
+{"modules":11,"bytes":4760473,"registryId":"093f5f3890bdbb614470d7da192726c665597ed111a907d5cea0d6b2f7ce71cd","overrides":["damage","block","strength","agility","focus","defend","passive","draw","d6"]}
+Portable game generated: 295623573 bytes
+Production player build: /workspace/scratch/50182eb5cf4b/slay-the-math-master/release-prod
+
+Three profiles in Chromium — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.28.0 test:balance-master-browser
+> node tests/balance-master-browser.cjs
+
+{
+  "checks": [
+    "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+    "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+    "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+  ],
+  "errors": []
+}
+
+Actual single-enemy cards in production Chromium — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.28.0 test:single-target-browser
+> node tests/single-target-browser.cjs
+
+{
+  "checks": [
+    "ordinary: production UI, focused Rune Sweep 16, Fate Storm 5+5+5, no target RNG, save/reload",
+    "medium: production UI, focused Rune Sweep 16, Fate Storm 5+5+5, no target RNG, save/reload"
+  ],
+  "errors": []
+}
+
+Valid before cohort — exit 0
+{"phase":"before","cases":171,"encounters":504,"invalid":0,"censored":0}
+
+Valid after cohort — exit 0
+{"phase":"after","cases":171,"encounters":504,"invalid":0,"censored":0}
+
+Final 2.29.0 integration with main 544ef43
+
+Complete combined npm test — exit 0
+✔ DOM: in-game Hint retains the folio reference grid after solution, in both languages (461.344746ms)
+ℹ tests 727
+ℹ suites 0
+ℹ pass 727
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 233084.254401
+
+Combined syntax — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.29.0 check
+> node --check dist/mechanics.js && node --check dist/mechanics-host.js && node --check dist/config.js && node --check dist/math.js && node --check dist/map-rng.js && node --check dist/map.js && node --check dist/artifact-data.js && node --check dist/rich-text-data.js && node --check dist/rich-text.js && node --check dist/artifacts.js && node --check dist/artifact-ui.js && node --check dist/question-data.js && node --check dist/education.js && node --check dist/mystery-data.js && node --check dist/mystery.js && node --check dist/mystery-ui.js && node --check dist/engine.js && node --check dist/visuals.js && node --check dist/audio.js && node --check dist/animation-data.js && node --check dist/animation.js && node --check dist/hand.js && node --check dist/app.js && node --check dist/education-practice.js && node --check dist/question-language.js && node --check dist/card-data.js && node --check dist/card-assets.js && node --check dist/card-kit.js && node --check dist/card-combat.js && node --check dist/card-ui.js && node --check dist/combat-log.js && node --check dist/combat-predict.js && node --check dist/combat-status.js && node --check dist/audio-presentation.js && node --check server.cjs && node --check tools/build-production.cjs && node --check tools/dev/server.cjs && node --check tools/dev/fixtures.js && node --check tools/dev/storage.js && node --check tools/dev/adapter.js && node --check tools/dev/controls.js && node --check tools/dev/hub.js && node --check dist/icon-assets.js && node --check tools/import-icon-package.cjs && node --check dist/card-flow.js && node --check dist/card-motion.js && node --check dist/economy-data.js && node --check dist/economy.js && node --check dist/balance.js && node --check dist/balance-config.js && node --check dist/balance-data.js && node --check dist/learning-curriculum.js && node --check dist/learning-analytics.js && node --check dist/learning-sync.js && node --check dist/analytics-ui.js && node --check tools/analytics/collector.cjs && node --check tools/analytics/server.cjs && node --check tools/analytics/export.cjs && node --check dist/status-vfx.js
+
+
+Combined production card UI — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.29.0 test:single-target-browser
+> node tests/single-target-browser.cjs
+
+{
+  "checks": [
+    "ordinary: production UI, focused Rune Sweep 16, Fate Storm 5+5+5, no target RNG, save/reload",
+    "medium: production UI, focused Rune Sweep 16, Fate Storm 5+5+5, no target RNG, save/reload"
+  ],
+  "errors": []
+}
+
+Combined profile browser — exit 0
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.29.0 test:balance-master-browser
+> node tests/balance-master-browser.cjs
+
+{
+  "checks": [
+    "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+    "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+    "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+  ],
+  "errors": []
+}
+
+Upstream status VFX/browser/offline — exit 0
+      "block": 6
+    },
+    {
+      "difficulty": "medium",
+      "exactGameplay": true,
+      "isolatedSave": true,
+      "block": 6
+    },
+    {
+      "difficulty": "hard",
+      "exactGameplay": true,
+      "isolatedSave": true,
+      "block": 6
+    }
+  ],
+  "errors": [],
+  "offlineRequests": []
+}

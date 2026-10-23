@@ -2,7 +2,7 @@
 
 Current Alyssa status presentation, game 2.28.0: [RPG status effects](docs/ALYSSA_STATUS_VFX_2_28_0.md), [motion owner](docs/sor/11_ANIMATION_VFX_AUDIO.md) and [SFX search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md). Actual status/Block-absorption values drive decorative effects; Master balancing and analytics remain integrated.
 
-Current Master balance integration, game 2.27.0: [Master SOR](docs/sor/23_MASTER_BALANCE.md), [handoff and actual validation](docs/balance/master/HANDOFF.md). Explicit Easy/Medium/Hard playtest profiles now bind Combat, Map and Economy. Pupil 90/70/50 goals remain unmeasured. The specialist handoffs below remain historical evidence at their recorded sources.
+Current Master balance integration, game 2.29.0: [Master SOR](docs/sor/23_MASTER_BALANCE.md), [single-enemy correction and validation](docs/balance/master/SINGLE_TARGET_2_29_0.md), [preceding integration evidence](docs/balance/master/HANDOFF.md). Explicit Easy/Medium/Hard playtest profiles bind Combat, Map and Economy. Pupil 90/70/50 goals remain unmeasured. Historical handoffs retain their recorded sources.
 
 Current icon integration: retain the [reviewed UI/status package, game 2.23.0](docs/ICON_PACKAGE_2_23_0.md), with the [selected original card/artifact illustrations restored in 2.25.1](docs/ICON_ART_RESTORE_2_25_1.md).
 

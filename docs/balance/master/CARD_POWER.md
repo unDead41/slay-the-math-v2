@@ -1,5 +1,7 @@
 # Measured card power — integrated Master candidate
 
+Historical candidate.2 measurement. See [2.29.0 single-enemy measurements](SINGLE_TARGET_2_29_0.md) for the affected-card correction and matched before/after cohort. Keep the values below attached to their original source.
+
 Medium only; same-size 12-card replacement decks; developing synthetic Predict; no artifacts; 3 paired seeds per cell. Values are delta U against Rune Strike, separately for short Wisp and sealed Dealer fights. Normal and upgraded replacement/reference slots use matching upgrade status. These are contextual measurements, not universal ratings.
 
 | Card | Energy | Wisp | Dealer | Wisp upgraded | Dealer upgraded |

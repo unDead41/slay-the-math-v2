@@ -1,12 +1,5 @@
 # Daftar keputusan — Slay the Math
 
-## DEC-20261023-ALYSSA-STATUS-VFX — RPG status effects around Alyssa
-
-- **DISAHKAN:** Ijamm requests visible buff, shield and stat-up/down effects surrounding Alyssa, plus appropriate sound-effect descriptions/search terms for clips he will source online.
-- **DITERUSKAN:** integrate on main `e2c323a` / 2.27.0 as 2.28.0, preserving Master balancing and analytics. Use moderate auras plus short bursts as a reversible implementation choice; no intensity preference response was supplied. Project actual player status values and newly committed enemy Block-absorption receipts without changing combat, saves, RNG, analytics or source artwork.
-- **DITERUSKAN:** preserve the current icons, original card/artifact illustrations, source hero clips, right-facing pivot and all previous card motion. Honor the shared motion/modal/visibility lifecycle, queued-versus-active distinction and exact commit before presentation.
-- **PERLU_VERIFIKASI:** physical-device playback and Ijamm's assessment of motion feel. New SFX are only described, not imported. MODEL.zip remains unavailable and is not used. [Visual contract](../ALYSSA_STATUS_VFX_2_28_0.md), [SFX search guide](../ALYSSA_STATUS_SFX_GUIDE.md).
-
 ## DEC-20261023-ART-RESTORE — Restore selected card and artifact illustrations
 
 **DISAHKAN:** Ijamm explicitly requests the previous card/artifact icons and says to retain buff, debuff and UI/menu icons. This overrides the card/artifact portion of the 2.23 all-icon integration only. Restore all 40 selected card mappings from `dist/assets/card-assets.json` and all 31 artifact filenames from `dist/artifact-data.js`, using their existing verified source derivatives. Keep current UI, map, status and topic mappings and image bytes. Normal card builds and explicit reviewed-package reimports must preserve this boundary. Publish together with the authorized combat motion as 2.25.1. [Scope and verification](../ICON_ART_RESTORE_2_25_1.md).
@@ -519,3 +512,18 @@ User authorised all six economy follow-up areas. Expand deterministic experiment
 ## DEC-20261023-PAGES — Public playable link
 
 DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily. Add automatic production-only publication on main pushes, retaining the existing game version, mechanics and local saves. The owner must activate Pages Source = GitHub Actions once; connected repository tools cannot edit this setting. Static hosting does not deploy the optional analytics receiver. See docs/GITHUB_PAGES.md.
+
+## DEC-20261023-ALYSSA-STATUS-VFX — RPG status effects around Alyssa
+
+- **DISAHKAN:** Ijamm requests visible buff, shield and stat-up/down effects surrounding Alyssa, plus appropriate sound-effect descriptions/search terms for clips he will source online.
+- **DITERUSKAN:** integrate on main `e2c323a` / 2.27.0 as 2.28.0, preserving Master balancing and analytics. Use moderate auras plus short bursts as a reversible implementation choice; no intensity preference response was supplied. Project actual player status values and newly committed enemy Block-absorption receipts without changing combat, saves, RNG, analytics or source artwork.
+- **DITERUSKAN:** preserve the current icons, original card/artifact illustrations, source hero clips, right-facing pivot and all previous card motion. Honor the shared motion/modal/visibility lifecycle, queued-versus-active distinction and exact commit before presentation.
+- **PERLU_VERIFIKASI:** physical-device playback and Ijamm's assessment of motion feel. New SFX are only described, not imported. MODEL.zip remains unavailable and is not used. [Visual contract](../ALYSSA_STATUS_VFX_2_28_0.md), [SFX search guide](../ALYSSA_STATUS_SFX_GUIDE.md).
+
+## DEC-20261023-SINGLE-ENEMY — Target correction and bounded rebalance (2.29.0)
+
+- DISAHKAN: Ijamm notes the game always has one enemy and requests converting AoE/random-enemy effects to single target, then rebalancing only the affected scope rather than restarting balance work.
+- DITERUSKAN: audit all 40 current cards; only Rune Sweep and Fate Storm use inappropriate enemy targets. Keep Fate Storm multi-hit on the same enemy, with independent ordinary mitigation per hit and no target RNG. Preserve stable IDs and original artwork.
+- CADANGAN / IMPLEMENTED: keep existing Master 12-damage Rune Sweep and 5+5+5 Fate Storm at 2 Energy; apply those two definitions to ordinary modes. Allocate Strength, +4 Focus and +3 upgrade once on the primary hit. Other 38 card values, enemy/difficulty/economy/map values and question rules stay as before.
+- DITERUSKAN: use a single build adapter, preserve canonical supplier input and historical receipt values/HP/RNG, isolate candidate.3 saves, retain previous measured cohorts under their original sources, and publish this verified correction through the authorized main workflow.
+- PERLU_VERIFIKASI: human playtests, pupil 90/70/50 rates and exhaustive combinations. [Current evidence and validation](../balance/master/SINGLE_TARGET_2_29_0.md).

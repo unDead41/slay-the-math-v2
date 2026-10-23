@@ -1,8 +1,14 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),source=require('../modules/cards/source/data/cards.master.json'),runtime=require('../dist/card-data.js'),C=require('../dist/config.js');
 const digest=b=>crypto.createHash('sha256').update(b).digest('hex');
-test('card source: all forty canonical identities, rules and bilingual tokens survive the import; legacy IDs stay separate',()=>{
- assert.deepEqual(runtime,source);assert.equal(runtime.cards.length,40);assert.equal(new Set(C.CARD_POOL).size,40);
+test('card source: forty identities/assets and 38 unchanged definitions survive the explicit two-card correction',()=>{
+ const changed=new Set(['stm.attack.rune_sweep','stm.attack.fate_storm']);
+ assert.deepEqual(runtime.rules,source.rules);assert.deepEqual(runtime.frames,source.frames);
+ for(const c of runtime.cards){const old=source.cards.find(s=>s.id===c.id);assert.ok(old);
+  if(!changed.has(c.id))assert.deepEqual(c,old);
+  else{for(const key of ['id','name','category','selection_code','icon','display_name'])assert.deepEqual(c[key],old[key]);assert.deepEqual(runtime.previousCardDefinitions[c.id],old);}
+ }
+ assert.equal(runtime.cards.length,40);assert.equal(new Set(C.CARD_POOL).size,40);
  const map=require('../modules/cards/runtime-id-map.json');
  assert.deepEqual(C.CARD_POOL,runtime.cards.map(c=>c.id));
  for(const c of runtime.cards){assert.equal(C.cards[c.id].packageId,c.id);assert.equal(map.cards.find(x=>x.package_id===c.id).runtime_id,c.id);}

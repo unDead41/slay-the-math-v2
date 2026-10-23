@@ -1,5 +1,7 @@
 # Master balancing handoff — game 2.27.0
 
+Current correction: [game 2.29.0, single-enemy cards](SINGLE_TARGET_2_29_0.md). The integration and measurements below retain their original candidate.2 source; they are not relabeled as candidate.3 results.
+
 Implemented on balance/master; Ijamm's subsequent instruction authorizes publishing this completed 2.27.0 update to main. See [main release](MAIN_RELEASE_2_27_0.md) for publication scope and checks. Start New Run and select an Easy/Medium/Hard playtest link, or open the game with ?balance=easy / medium / hard. Current common definition binding: master-1.3.0-candidate.2; definition hash 85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d.
 
 ## What is integrated

@@ -1,6 +1,6 @@
 {
   "name": "duel-cube-math",
-  "version": "2.28.0",
+  "version": "2.29.0",
   "private": true,
   "description": "Developer sandbox for scenes, card states and actor motion",
   "scripts": {
@@ -45,11 +45,12 @@
     "diagnose:economy": "node tools/economy/diagnostics.cjs",
     "test:economy-browser": "node tests/economy-browser.cjs",
     "balance:master": "node tools/balance/master/run.cjs",
-    "test:balance-master": "node --test tests/balance-master.test.cjs tests/balance-master-ui.test.cjs",
+    "test:balance-master": "node --test tests/balance-master.test.cjs tests/balance-master-ui.test.cjs tests/single-target.test.cjs",
     "start:analytics": "node tools/import-mechanics.cjs && node tools/analytics/server.cjs",
     "start:analytics:prod": "node tools/build-production.cjs && node tools/analytics/server.cjs --prod",
     "analytics:export": "node tools/analytics/export.cjs",
     "test:balance-master-browser": "node tests/balance-master-browser.cjs",
+    "test:single-target-browser": "node tests/single-target-browser.cjs",
     "balance:power": "node tools/balance/master/power.cjs",
     "test:status-vfx-browser": "node tests/status-vfx-browser.cjs"
   }

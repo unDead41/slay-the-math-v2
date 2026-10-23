@@ -38,11 +38,12 @@ test('one resolver serves host aliases, source artifact UI and portable embeds w
 });
 
 test('regenerating the supplier card adapter restores all selected originals and portrait frames',()=>{
+ const current=fs.readFileSync(path.join(dir,'card-data.js'),'utf8');
  require('../tools/import-cards.cjs')(path.resolve(__dirname,'..'));
  const sandbox={};vm.runInNewContext(fs.readFileSync(path.join(dir,'card-assets.js'),'utf8'),sandbox);
  const original=require('../dist/assets/card-assets.json').runtimePaths;
  assert.deepEqual(JSON.parse(JSON.stringify(sandbox.STM_CARD_ASSETS)),original);
- assert.deepEqual(require('../dist/card-data.js'),require('../modules/cards/source/data/card-data.js'),'visual integration leaves authored card values intact');
+ assert.equal(fs.readFileSync(path.join(dir,'card-data.js'),'utf8'),current,'regeneration preserves the current single-enemy correction');
  assert.ok(scripts.indexOf('icon-assets.js')<scripts.indexOf('card-assets.js'));
 });
 

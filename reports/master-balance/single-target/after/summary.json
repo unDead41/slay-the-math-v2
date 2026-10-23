@@ -1,0 +1,635 @@
+{
+  "phase": "after",
+  "sourceHash": "f40f7116dd5926c1869e32fca9f1fd27ddc2e7b10258c78ece879c3501498882",
+  "rawHash": "9ea709a5a1910fb5d83f13b341ccc798ad0d108b0e855e635c2be5e1aa94e79e",
+  "cases": 171,
+  "encounters": 504,
+  "invalid": 0,
+  "censored": 0,
+  "groups": [
+    {
+      "key": "legacy|ICP|stm.attack.fate_storm|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 34.94444444444444,
+      "winsByMask": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.fate_storm|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 34.833333333333336,
+      "winsByMask": [
+        1,
+        2
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.fate_storm|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 2.166666666666662,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.fate_storm|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.4444444444444429,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.fate_storm|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.fate_storm|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.4444444444444429,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_strike|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_strike|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        1,
+        1
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_strike|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_strike|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_strike|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_strike|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_sweep|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.8333333333333334,
+      "winsByMask": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_sweep|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.11111111111110954,
+      "winsByMask": [
+        1,
+        1
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_sweep|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.9444444444444429,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_sweep|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.2777777777777761,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_sweep|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0.16666666666666666,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "legacy|ICP|stm.attack.rune_sweep|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.fate_storm|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "winsByMask": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.fate_storm|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 103.01282051282051,
+      "winsByMask": [
+        0,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.fate_storm|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 2.846153846153849,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.fate_storm|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.3076923076923113,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.fate_storm|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.487179487179489,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.fate_storm|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.487179487179489,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_strike|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_strike|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_strike|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_strike|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_strike|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_strike|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_sweep|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.3333333333333333,
+      "winsByMask": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_sweep|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.205128205128204,
+      "winsByMask": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_sweep|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 4.294871794871796,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_sweep|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 2.3205128205128225,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_sweep|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.21794871794872,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|ICP|stm.attack.rune_sweep|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.487179487179489,
+      "winsByMask": [
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.attack.weak_point|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "winsByMask": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.attack.weak_point|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.43589743589744,
+      "winsByMask": [
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.attack.weak_point|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 34.807692307692314,
+      "winsByMask": [
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.attack.weak_point|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 2.128205128205124,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.attack.weak_point|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.attack.weak_point|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.passive.blazing_spirit|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -69.43589743589745,
+      "winsByMask": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.passive.blazing_spirit|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 32.205128205128204,
+      "winsByMask": [
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.passive.blazing_spirit|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -5.705128205128204,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.passive.blazing_spirit|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.051282051282058205,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.passive.blazing_spirit|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.fate_storm+stm.passive.blazing_spirit|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.rune_sweep+stm.attack.weak_point|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -33.97435897435897,
+      "winsByMask": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.rune_sweep+stm.attack.weak_point|dealer|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 1.9358974358974355,
+      "winsByMask": [
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.rune_sweep+stm.attack.weak_point|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 33.410256410256416,
+      "winsByMask": [
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.rune_sweep+stm.attack.weak_point|golem|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 2.128205128205124,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.rune_sweep+stm.attack.weak_point|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.16666666666666666,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|PAIR|stm.attack.rune_sweep+stm.attack.weak_point|wisp|true",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 0,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|TRIPLE|stm.attack.fate_storm+stm.passive.blazing_spirit+stm.passive.growing_flame|dealer|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -34.34615384615385,
+      "winsByMask": [
+        0,
+        0,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|TRIPLE|stm.attack.fate_storm+stm.passive.blazing_spirit+stm.passive.growing_flame|golem|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": 6.974358974358968,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "master|TRIPLE|stm.attack.fate_storm+stm.passive.blazing_spirit+stm.passive.growing_flame|wisp|false",
+      "n": 3,
+      "status": "MEASURED",
+      "meanEffect": -0.987179487179489,
+      "winsByMask": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  ]
+}

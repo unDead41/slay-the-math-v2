@@ -98,3 +98,7 @@ DISAHKAN: Ijamm requests deep evolved-deck/Predict/setup/exploit/artifact-trigge
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+## Single-enemy cards — game 2.29.0
+
+**CRD-12 / DISAHKAN:** The current game always has one enemy. Ijamm requests converting AoE/random-enemy card effects and rebalancing the affected cards. Rune Sweep resolves one hit; Fate Storm resolves three hits on that same enemy. Neither selects another enemy or consumes target-selection RNG. Preserve all IDs, artwork, self effects and genuine card-draw randomness. Current two-card values, Focus/upgrade allocation, historical-save compatibility and bounded measurements: [Master MB-06](23_MASTER_BALANCE.md#mb-06--satu-musuh-game-2290) and [2.29.0](../balance/master/SINGLE_TARGET_2_29_0.md). The supplier's earlier AoE descriptions are historical input, not current runtime rules.

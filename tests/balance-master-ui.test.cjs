@@ -34,3 +34,18 @@ test('candidate card and artifact descriptions use the actual resolver values an
   const upgraded=E.cardDisplayPlan({key:'stm.passive.clear_mind',upgraded:true});assert.match(K.renderPlain(upgraded),/activation.*draw 1/i);
  }finally{b.dom.window.close();}
 });
+test('ordinary and Master card descriptions explain the single enemy in English and BM',()=>{
+ for(const difficulty of [null,'medium']){
+  const b=boot(difficulty);try{
+   const E=b.w.DCEngine,K=b.w.STMCardKit;
+   for(const key of ['stm.attack.rune_sweep','stm.attack.fate_storm'])for(const upgraded of [false,true]){
+    const plan=E.cardDisplayPlan({key,upgraded});
+    assert.ok(plan.actions.filter(a=>a.op==='damage').every(a=>a.target==='selected_enemy'));
+    for(const lang of ['en','bm']){
+     const printed=K.renderPlain(plan,lang);assert.doesNotMatch(printed,/other enem|all enem|random|musuh lain|semua musuh|rawak/i);
+     assert.match(printed,lang==='en'?/enemy/:/musuh/);
+    }
+   }
+  }finally{b.dom.window.close();}
+ }
+});

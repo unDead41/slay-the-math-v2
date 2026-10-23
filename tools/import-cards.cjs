@@ -1,9 +1,10 @@
-/* Canonical supplier data stays unchanged; runtime uses the same values and a
- * flat lossless-asset manifest compatible with the offline packager. */
+/* Canonical supplier files stay unchanged; the current single-enemy correction
+ * is applied before generating the runtime and portable player data. */
 const fs=require('node:fs'),path=require('node:path');
 module.exports=function importCards(root=path.resolve(__dirname,'..')){
  const source=path.join(root,'modules/cards/source');
- fs.copyFileSync(path.join(source,'data/card-data.js'),path.join(root,'dist/card-data.js'));
+ const current=require('./cards/single-target.cjs')(require(path.join(source,'data/card-data.js')));
+ fs.writeFileSync(path.join(root,'dist/card-data.js'),'/* Generated current cards; supplier input preserved in modules/cards/source. */\n(function(root){const data='+JSON.stringify(current)+';if(typeof module!==\'undefined\')module.exports=data;else root.STMCardData=data;})(globalThis);\n');
  fs.writeFileSync(path.join(root,'dist/card-kit.js'),fs.readFileSync(path.join(source,'src/card-kit.js'),'utf8')
   .replace("require('../data/card-data.js')","require('./card-data.js')")
   // Host upgrade extension can give Normal Recall a positive extra draw.

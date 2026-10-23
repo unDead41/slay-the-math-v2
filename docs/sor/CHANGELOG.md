@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.29.0 — Single-enemy card correction
+
+- Convert Rune Sweep to one hit and Fate Storm to three hits on the same enemy; remove phantom AoE and target-selection RNG.
+- Reuse the existing Master two-card values in ordinary modes; preserve all other card/profile/economy/map values and original assets.
+- Version new receipts while retaining actual old ordinary-mode receipts and HP/RNG; advance Master to candidate.3 with an isolated save key.
+- Add bounded before/after power and selected synergy measurements, actual campaign regression and current English/BM descriptions. [Scope, evidence and checks](../balance/master/SINGLE_TARGET_2_29_0.md).
+
 ## Game 2.28.0 — Alyssa RPG status effects
 
 - Show moderate, floor-registered Block, Strength, Agility, Defense, Thorns, Weak and Vulnerable effects around Alyssa, with actual stat-change bursts and signed labels.

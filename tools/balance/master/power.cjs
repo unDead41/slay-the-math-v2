@@ -16,7 +16,7 @@ function measure(x,t){
  const valid=variants.every(v=>['WIN','LOSS'].includes(v.status)),u=variants.map(v=>v.utility);
  return {...t,status:valid?'MEASURED':'UNRANKED',effect:valid?contrast(u,k):null,totalSynergy:valid&&k===3?u[7]-u[1]-u[2]-u[4]+2*u[0]:null,variants};
 }
-if(!isMainThread){const x=loadMaster({difficulty:'medium'});parentPort.on('message',t=>{try{parentPort.postMessage(measure(x,t));}catch(e){parentPort.postMessage({...t,status:'UNRANKED',error:e.stack,variants:[]});}});}
+if(!isMainThread&&require.main===module){const x=loadMaster({difficulty:'medium'});parentPort.on('message',t=>{try{parentPort.postMessage(measure(x,t));}catch(e){parentPort.postMessage({...t,status:'UNRANKED',error:e.stack,variants:[]});}});}
 else if(require.main===module){
  (async()=>{
   const dir=path.join(ROOT,'reports/master-balance/power');if(fs.existsSync(path.join(dir,'summary.json')))throw Error('Refusing to overwrite a measured power cohort.');fs.mkdirSync(dir,{recursive:true});

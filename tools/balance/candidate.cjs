@@ -10,8 +10,8 @@ function cards(data){
   const set=(field,base,focus,upgrade=0)=>{v[field]={...v[field],base,focus_bonus:focus};if(upgrade)c.upgrade.values[field]=upgrade;};
   if(c.category==='attack'){
    if(c.name==='Twin Shot'){set('first',3,p.focus_first_hit,p.upgrade_first_hit);set('second',3,0);}
-   else if(c.name==='Fate Storm'){set('first',5,p.focus_first_hit,p.upgrade_first_hit);set('other',5,0);}
-   else if(c.name==='Rune Sweep'){set('damage',12,p.focus_damage_main,p.upgrade_damage_main);set('other',12,0);}
+   else if(c.name==='Fate Storm'){set('first',p.hits[0],p.focus_first_hit,p.upgrade_first_hit);set('other',p.hits[1],0);}
+   else if(c.name==='Rune Sweep'){set('damage',p.damage_main,p.focus_damage_main,p.upgrade_damage_main);}
    else set('damage',p.damage,p.focus_damage,p.upgrade_damage);
    const primary=c.actions.find(a=>a.op==='damage')?.value;
    for(const [field,value]of Object.entries(v))if(value.stat==='strength'&&field!==primary)delete value.stat;

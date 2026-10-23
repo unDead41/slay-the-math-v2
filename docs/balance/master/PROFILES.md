@@ -1,6 +1,6 @@
 # Candidate profiles
 
-Source: `tools/balance/master/config.json` overlays the v1.2 spec. Generated binding: master-1.3.0-candidate.2. Pupil targets are unmeasured. All three difficulties share the same cards/artifacts.
+Source: `tools/balance/master/config.json` overlays the v1.2 spec. Current binding: master-1.3.0-candidate.3. The numeric profile table is unchanged from candidate.2; [2.29.0](SINGLE_TARGET_2_29_0.md) corrects the two card targets. Pupil targets are unmeasured. All three difficulties share the same cards/artifacts.
 
 | Variable | Easy | Medium | Hard |
 | --- | ---: | ---: | ---: |

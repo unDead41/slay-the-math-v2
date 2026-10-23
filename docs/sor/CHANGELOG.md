@@ -404,3 +404,7 @@ Added explicit-deck true-engine harness, actual campaign progression, accuracy p
 ## 23 October 2026 — Economy deep validation
 
 Expanded offline deck/offer, six spending policies, answer/deadline/recovery, cumulative costs and route-risk experiments, plus stateful reload/transaction regressions. No runtime candidate numbers changed. Report: ../economy/deep/REPORT.md. Inputs from Combat/Map remain NEEDS_INPUT.
+
+## GitHub Pages setup — 23 October 2026
+
+Add a main-push/manual Pages workflow that builds and checks the current production game and uploads only release-prod. Document the one-time owner setting, share URL, browser save behavior and static-hosting limits. No gameplay/version changes.

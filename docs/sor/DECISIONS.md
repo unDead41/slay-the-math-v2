@@ -508,3 +508,7 @@ User authorised all six economy follow-up areas. Expand deterministic experiment
 - DISAHKAN: Ijamm's follow-up, “okay mybe kita boleh push update ni ke main kot!!”, authorizes publishing the completed Master update to `main`. This supersedes the earlier Master-branch-only publication boundary.
 - DITERUSKAN: integrate remote Master `bd0c11d3580b56fd61fa6f26965d7c28c5a89803` with main `b67298bf14c530a30f03dbc8a2cb3362b0913a5d`. Retain game 2.27.0, explicit New Run Easy/Medium/Hard playtest, candidate.2 values, legacy saves, original art/audio/motion and analytics consent.
 - PERLU_VERIFIKASI: pupil full-run goals 90%/70%/50% remain unmeasured; publication does not turn bot evidence into pupil validation. [Release scope and actual checks](../balance/master/MAIN_RELEASE_2_27_0.md).
+
+## DEC-20261023-PAGES — Public playable link
+
+DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily. Add automatic production-only publication on main pushes, retaining the existing game version, mechanics and local saves. The owner must activate Pages Source = GitHub Actions once; connected repository tools cannot edit this setting. Static hosting does not deploy the optional analytics receiver. See docs/GITHUB_PAGES.md.

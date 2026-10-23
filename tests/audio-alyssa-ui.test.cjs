@@ -19,8 +19,10 @@ test('real Predict controls trigger thinking, Hint and More Hint only on success
   const before=state().audioPresentation;click('[data-action=forecast-select][data-id="'+wrong+'"]');assert.deepEqual(state().audioPresentation,before);
   click('[data-action=forecast-support][data-kind=hint]');assert.equal(w.DCAudio.voiceSurface?.group,'hint');
   assert.equal(d.querySelector('[data-action=forecast-support][data-kind=hint]').disabled,true);
-  click('[data-action=forecast-check]');assert.equal(w.DCAudio.voiceSurface?.group,'hint','wrong answer does not claim More Hint');
+  click('[data-action=forecast-check]');assert.equal(w.DCAudio.voiceSurface?.group,'wrong','actual wrong submission has its own voice');
   click('[data-action=forecast-support][data-kind=moreHint]');assert.equal(w.DCAudio.voiceSurface?.group,'more_hint');
+  click('[data-action=forecast-select][data-id="'+q.correctChoiceId+'"]');assert.equal(w.DCAudio.voiceSurface?.group,'more_hint','selection is silent');
+  click('[data-action=forecast-check]');assert.equal(w.DCAudio.voiceSurface?.group,'correct');
   const restored=boot(state());try{assert.equal(restored.w.DCAudio.voiceSurface,null,'handled talking stays consumed after reload');}finally{restored.dom.window.close();}
   click('#dialog [data-action=close]');assert.equal(w.DCAudio.voiceSurface,null);
  }finally{dom.window.close();}
@@ -35,6 +37,28 @@ test('Rest selection, card reward and run defeat use their own actual UI outcome
   }finally{dom.window.close();}
  }
 });
+test('Artifact and Mystery review speak checked outcomes; Mystery expiry stays silent',()=>{
+ for(const kind of ['artifact','mystery-correct','mystery-wrong','mystery-timeout']){
+  const {dom,w,click,state}=boot(F.create(kind==='artifact'?{kind:'master'}:{kind:'event',event:'ME01',hp:40}));
+  try{
+   if(kind==='artifact'){click('[data-action=select-artifact]');click('[data-action=claim-artifact]');}
+   else click('[data-action=mystery-start]');
+   assert.equal(w.DCAudio.voiceSurface?.group,'question');
+   const r=state(),qid=kind==='artifact'?r.educationState.pending.questionId:r.mysteryState.pending.questionId,q=Q.questions.find(q=>q.id===qid);
+   if(kind==='mystery-timeout'){
+    const deadline=r.mysteryState.pending.deadline;w.Date.now=()=>deadline+1;
+    click('[data-action=mystery-answer][data-id="'+q.correctChoiceId+'"]');
+    assert.equal(state().mysteryState.pending.outcome,'TIMEOUT');assert.equal(w.DCAudio.voiceSurface,null);
+   }else if(kind==='artifact'){
+    click('[data-action=education-select][data-id="'+q.choices.find(c=>c.id!==q.correctChoiceId).id+'"]');click('[data-action=education-check]');assert.equal(w.DCAudio.voiceSurface?.group,'wrong');
+    click('[data-action=education-select][data-id="'+q.correctChoiceId+'"]');click('[data-action=education-check]');assert.equal(w.DCAudio.voiceSurface?.group,'correct');
+   }else{
+    const correct=kind==='mystery-correct',id=correct?q.correctChoiceId:q.choices.find(c=>c.id!==q.correctChoiceId).id;
+    click('[data-action=mystery-answer][data-id="'+id+'"]');assert.equal(w.DCAudio.voiceSurface?.group,correct?'correct':'wrong');
+   }
+  }finally{dom.window.close();}
+ }
+});
 test('Practice accepts only its current frame and origin and never writes the active run',()=>{
  const {dom,w,d,click}=boot(F.create({kind:'combat'}));
  try{
@@ -43,6 +67,11 @@ test('Practice accepts only its current frame and origin and never writes the ac
   w.dispatchEvent(new w.MessageEvent('message',{origin:'https://forged.example',source:frame,data}));assert.equal(w.DCAudio.voiceSurface,null);
   w.dispatchEvent(new w.MessageEvent('message',{origin:w.location.origin,source:frame,data}));assert.equal(w.DCAudio.voiceSurface?.group,'question');
   w.dispatchEvent(new w.MessageEvent('message',{origin:w.location.origin,source:frame,data:{...data,hintUsed:true}}));assert.equal(w.DCAudio.voiceSurface?.group,'hint');
+  const record={status:'pending',hintState:{hintUsed:true,moreHintViewed:false},events:[{type:'HINT_REVEALED'},{type:'ANSWER_SUBMITTED',attemptId:'attempt:1'}],attempts:[{id:'attempt:1',correct:false}]};
+  w.dispatchEvent(new w.MessageEvent('message',{origin:w.location.origin,source:frame,data:{...data,record:{...record,events:[{type:'FAKE_RESULT'}]}}}));assert.equal(w.DCAudio.voiceSurface?.group,'hint','invalid event payload is ignored');
+  w.dispatchEvent(new w.MessageEvent('message',{origin:w.location.origin,source:frame,data:{...data,record}}));assert.equal(w.DCAudio.voiceSurface?.group,'wrong');
+  const key=w.DCAudio.voiceSurface.key;
+  w.dispatchEvent(new w.MessageEvent('message',{origin:w.location.origin,source:frame,data:{...data,record}}));assert.equal(w.DCAudio.voiceSurface.key,key,'same submitted attempt is not replayed');
   assert.equal(w.localStorage.getItem('duel-cube-math.v1'),before);
  }finally{dom.window.close();}
 });

@@ -177,3 +177,8 @@ DISAHKAN: apply the supplied MUSIC(3).zip now; this supersedes the archive's ear
 ## Normalized talking — 2.22.0
 
 DISAHKAN: Ijamm authorizes applying the prepared MUSIC(4) package to main v2.21.3, developing audio changes on `music`. The current registry owns 49 voices at -18 LUFS ±0.5 and true peak ≤ -1 dBTP, rate/gain 1, plus eight unchanged supplied BGM. Existing Menu/Mystery music and generated SFX remain. Actual visible questions, successful Hint/More Hint reveal, committed Rest, card reward choices, final defeat, fixed Mystery intros and ordered NPC encounters own playback. This supersedes the former package-only status. There are eight supplied card-reward clips, not ten. Persistence, isolated variation RNG, single Voice bus, deadlines/cancellation, mixer behavior and actual verification: [Audio 2.22.0](../AUDIO_2_22_0.md). No verified transcript, human audition or new dedicated correct/wrong-answer voice is claimed.
+
+
+## Expanded talking and checked answers — 2.24.0
+
+DISAHKAN: check latest main (2.23.1), apply MUSIC(5) on music first, then integrate into main. Registry pack 5 adds 26 mastered recordings: answering +4, Hint +4, More Hint +4, correct +5 and wrong +9, for 75 voices total. All 57 preceding supplied assets retain their exact bytes and records. New encoded MP3s measure -18.03 to -17.93 LUFS, peak at most -1.85 dBTP. Checked answer/support event order owns reactions; selection, timeout, abandonment, Reveal and exhaustion do not fabricate answer outcomes. This supersedes 2.22.0's absence of answer voices. Triggers, importer, volume audit and limits: [Audio 2.24.0](../AUDIO_2_24_0.md).

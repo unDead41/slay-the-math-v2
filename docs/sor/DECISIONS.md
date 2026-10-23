@@ -423,3 +423,11 @@ DISAHKAN: npm start dev launches main menu with synchronized Dev ON/OFF in menu 
 ## Main integration — 2.23.1
 
 DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle to main over v2.23.0. This supersedes the earlier branch-only restriction. Keep production free of developer controls; use npm start dev to see the main-menu and Settings toggle.
+
+
+## DEC-20261023-AUDIO5 — New talking on latest main (2.24.0)
+
+- DISAHKAN: Ijamm supplies new audio and asks to check latest git main, apply on music first, then push/integrate into main. Starting main is af12035 / 2.23.1; its icon and developer-toggle work stays current.
+- DITERUSKAN: source inventory contains 26 additions: 4 answering, 4 Hint, 4 More Hint, 5 correct and 9 wrong. Use every available recording; retain all 57 preceding supplied files without re-encoding. The stale embedded v2 manifest does not describe the new additions.
+- DITERUSKAN: master new talking to the existing -18 LUFS ±0.5 / encoded TP ≤ -1 dBTP standard; retain rate/gain 1 and the original ZIP. Use actual ordered reducer events for answer/support reactions, with per-attempt receipts and no outcome for timeout/reveal/exhaustion.
+- IMPLEMENTED contract and audit: [Audio 2.24.0](../AUDIO_2_24_0.md). Human audition, verified transcripts and physical Windows/device testing remain unverified.

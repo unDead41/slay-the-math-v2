@@ -3,7 +3,7 @@ const previewData=JSON.parse(document.getElementById('preview-data').textContent
 const QL=globalThis.DCQuestionLanguage,bank=previewData.bank,glossary=QL.installGlossary(previewData.glossary),foundations=previewData.foundations.modules;
 const root=document.getElementById('preview'),byId=id=>document.getElementById(id);
 const storageKey='slay-the-math.education-practice.v1';
-const reviewStates=new Map(),activeTabs=new Map(),basicsOpen=new Set(),messages=new Map();
+const reviewStates=new Map(),activeTabs=new Map(),basicsOpen=new Set(),messages=new Map(),audioReviewGenerations=new Map();
 const calculationIndex=new Map(),topicCodes=[...new Set(bank.questions.map(q=>q.topicCode))];
 const shortTopics={PROB:'Probability',SET:'Sets',LOGIC:'Logic'};
 const drawerMedia=globalThis.matchMedia('(max-width: 960px)');
@@ -320,7 +320,7 @@ function render(){
 // The host owns the one global Voice bus. Practice never reads or changes a run.
 function notifyAudio(record,closed=false){
  if(parent===window)return;
- parent.postMessage(record?{type:'stm-education-practice-audio',questionId:question.id,key:questionKey(),closed:!!closed,hintUsed:!!record.hintState.hintUsed,moreHintViewed:!!record.hintState.moreHintViewed}:{type:'stm-education-practice-audio-clear'},location.origin==='null'?'*':location.origin);
+ parent.postMessage(record?{type:'stm-education-practice-audio',questionId:question.id,key:questionKey()+':'+(mode==='review'?(audioReviewGenerations.get(question.id)||0):currentSession().runIndex),closed:!!closed,hintUsed:!!record.hintState.hintUsed,moreHintViewed:!!record.hintState.moreHintViewed,record:{status:record.status,hintState:{hintUsed:!!record.hintState.hintUsed,moreHintViewed:!!record.hintState.moreHintViewed},events:record.events.map(e=>({type:e.type,...(e.attemptId?{attemptId:e.attemptId}:{})})),attempts:record.attempts.map(a=>({id:a.id,correct:a.correct}))}}:{type:'stm-education-practice-audio-clear'},location.origin==='null'?'*':location.origin);
 }
 
 function setAtlasOpen(open,{restoreFocus=false}={}){
@@ -369,6 +369,7 @@ byId('submit-answer').addEventListener('click',()=>{
 byId('reveal-answer').addEventListener('click',()=>{putSession(revealAnswer(currentSession(),question.id));setMessage('The solution is open and this question is finished. It is recorded separately from a correct answer.');render();});
 byId('show-steps').addEventListener('click',()=>{putSession(openSupport(currentSession(),question.id,'steps'));render();});
 byId('restart-review').addEventListener('click',()=>{
+ audioReviewGenerations.set(question.id,(audioReviewGenerations.get(question.id)||0)+1);
  reviewStates.delete(question.id);basicsOpen.delete(questionKey());activeTabs.delete(questionKey());messages.delete(questionKey());selectedChoice=null;byId('solution-visual-details').open=false;render();
 });
 for(const id of ['question-search','atlas-topic-select','difficulty-select'])byId(id).addEventListener(id==='question-search'?'input':'change',renderAtlas);

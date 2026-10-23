@@ -18,7 +18,8 @@ function catalogSource(raw,pack){
 }
 function buildCatalog(root=path.join(__dirname,'..')){
  const raw=JSON.parse(fs.readFileSync(path.join(root,'dist/assets/music/scores.json'),'utf8'));
- const current=path.join(root,'dist/assets/music/audio-pack-4.json');
+ const newest=path.join(root,'dist/assets/music/audio-pack-5.json');
+ const current=fs.existsSync(newest)?newest:path.join(root,'dist/assets/music/audio-pack-4.json');
  const packFile=fs.existsSync(current)?current:path.join(root,'dist/assets/music/audio-pack-3.json');
  const pack=fs.existsSync(packFile)?JSON.parse(fs.readFileSync(packFile,'utf8')):null;
  const source=catalogSource(raw,pack);fs.writeFileSync(path.join(root,'dist/music-data.js'),source);

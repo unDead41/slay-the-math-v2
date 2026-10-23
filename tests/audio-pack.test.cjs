@@ -9,9 +9,9 @@ const packPath=path.join(root,'dist/assets/music/audio-pack-3.json');
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 function pack(){assert.ok(fs.existsSync(packPath),'imported source-pack registry exists');return JSON.parse(fs.readFileSync(packPath,'utf8'));}
 
-test('active pack selects all 49 normalized voices and exactly the eight unchanged supplied BGM',()=>{
+test('active pack selects all 75 normalized voices and exactly the eight unchanged supplied BGM',()=>{
  const p=require('../dist/music-data.js').assets;
- assert.equal(p.sourcePack,4);assert.equal(Object.values(p.assets).filter(a=>a.bus==='voice').length,49);
+ assert.equal(p.sourcePack,5);assert.equal(Object.values(p.assets).filter(a=>a.bus==='voice').length,75);
  assert.equal(p.voicePools.card_reward.length,8);assert.equal(Object.keys(p.voiceEvents).length,15);
  const source=JSON.parse(fs.readFileSync(path.join(root,'docs/audio/source-pack-4/audio-manifest.v2.json'),'utf8'));
  for(const item of source.assets){
@@ -20,6 +20,21 @@ test('active pack selects all 49 normalized voices and exactly the eight unchang
   if(a.bus==='voice'){assert.ok(Math.abs(a.integratedLufs+18)<=.5);assert.ok(a.truePeakDbTP<=-1);assert.equal(a.loop,false);}
  }
  assert.equal(p.assets.menu.retainedFallback,true);assert.equal(p.assets.mystery.retainedFallback,true);
+});
+
+test('MUSIC(5) adds 26 mastered recordings while retaining every prior registry asset byte for byte',()=>{
+ const p=require('../dist/music-data.js').assets,old=JSON.parse(fs.readFileSync(path.join(root,'dist/assets/music/audio-pack-4.json'),'utf8'));
+ const audit=JSON.parse(fs.readFileSync(path.join(root,'docs/audio/source-pack-5/audio-manifest.v3.json'),'utf8'));
+ assert.equal(audit.newAssets.length,26);assert.equal(audit.sourceZip.sha256,'bfdb64a198b9b1d6c15d65c2a62f98f1b12c1a1e52dd76e016601947d62378e6');
+ for(const [id,a]of Object.entries(old.assets))assert.deepEqual(p.assets[id],a,'unchanged prior asset '+id);
+ assert.deepEqual(Object.fromEntries(['question','hint','more_hint','correct','wrong'].map(g=>[g,p.voicePools[g].length])),{question:7,hint:8,more_hint:8,correct:5,wrong:9});
+ for(const a of audit.newAssets){
+  const asset=p.assets[a.id],bytes=fs.readFileSync(path.join(root,'dist',asset.srcs[0]));
+  assert.equal(sha(bytes),a.packageSha256);assert.equal(asset.packageSha256,a.packageSha256);assert.equal(asset.playbackRate,1);assert.equal(asset.clipGain,1);assert.equal(asset.loop,false);
+  assert.ok(Math.abs(a.output.integratedLufs+18)<=.5,a.id+' LUFS');assert.ok(a.output.truePeakDbTP<=-1,a.id+' peak');assert.ok(Math.abs(a.output.duration-a.input.duration)<.1,a.id+' duration');
+  assert.equal(a.output.sampleRate,44100);assert.equal(a.output.channels,2);assert.ok(p.voiceSequences.alyssa.includes(a.id));
+ }
+ assert.equal(new Set(Object.values(p.assets).filter(a=>a.bus==='voice').map(a=>a.packageSha256)).size,75);
 });
 
 test('supplied audio has byte-preserved explicit paths and canonical Normal/Elite sharing',()=>{

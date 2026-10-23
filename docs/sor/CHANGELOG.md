@@ -338,3 +338,8 @@ Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retain
 - Apply 26 new normalized recordings on music from latest main 2.23.1: answering +4, Hint +4, More Hint +4, correct +5, wrong +9. Active voices total 75; preserve all previous audio, icons, developer toggle and color-only rich text.
 - React to actual checked correct/wrong answers in Predict, Artifact, Mystery review and isolated Practice; later answer/help events cancel older speech. Preserve once-per-attempt receipts through save/reload; historical results, Reveal, exhaustion, timeout and abandonment stay silent.
 - Add reproducible FFmpeg importer with post-encoding measurements, source/output hashes and registry audit; embed every registered voice in portable builds. [Contract and verification](../AUDIO_2_24_0.md).
+
+
+## 23 October 2026 — experimental combat balance
+
+Added isolated pinned-baseline/candidate engine harness, explicit optional upgrade contracts, bounded Passive activation gifts, selection-discard distinction, candidate enemy/profile adapter, seed-matched ICP/CCP/Focus records and handoff. Candidate numbers remain development-only; no main integration. Concrete boundary and legacy regression evidence is recorded in docs/balance/combat/VALIDATION.md.

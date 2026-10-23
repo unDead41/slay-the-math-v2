@@ -431,3 +431,8 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 - DITERUSKAN: source inventory contains 26 additions: 4 answering, 4 Hint, 4 More Hint, 5 correct and 9 wrong. Use every available recording; retain all 57 preceding supplied files without re-encoding. The stale embedded v2 manifest does not describe the new additions.
 - DITERUSKAN: master new talking to the existing -18 LUFS ±0.5 / encoded TP ≤ -1 dBTP standard; retain rate/gain 1 and the original ZIP. Use actual ordered reducer events for answer/support reactions, with per-attempt receipts and no outcome for timeout/reveal/exhaustion.
 - IMPLEMENTED contract and audit: [Audio 2.24.0](../AUDIO_2_24_0.md). Human audition, verified transcripts and physical Windows/device testing remain unverified.
+
+
+## 23 October 2026 — Combat/Card Synergy branch
+
+DISAHKAN (direct Ijamm instruction): isolated `balance/combat` at base 2800f9a; audit 40 cards/four states, real-engine ICP/CCP, 820 static pair specifications then Lite; retain three Passive/swap history; internal CP only; no main push/merge. CADANGAN: SOR v1.2 numeric overlays and difficulty profiles remain Node-only experiments pending Master integration and campaign/student evidence. See docs/balance/combat/SOR_COMBAT_CARD_SYNERGY.md.

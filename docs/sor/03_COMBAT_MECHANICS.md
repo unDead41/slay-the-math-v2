@@ -103,3 +103,8 @@ DISAHKAN: the compact combat HUD has live status badges, active/triggered Passiv
 ## Passive and supplied audio — 2.20.0
 
 The cap and swap request is DISAHKAN. DITERUSKAN: three active Passives per combat (not a deck ownership cap), with an unpaid fourth-card choice and atomic paid replacement. Remove outgoing ongoing/stat contributions, retain resolved results and bounded combat trigger history, and avoid hand-discard artifact hooks. Legacy over-cap saves trim free after existing pending sessions. `DCConfig.PASSIVE_LIMIT` and card-combat own the rule. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+
+## Combat balance experiment — 23 October 2026
+
+CADANGAN: branch `balance/combat`, base `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7`, evaluates SOR Balance v1.2 through the real engine in an isolated Node loader. Candidate values are development-only; no player numeric data, loot/prices, IDs, artwork or questions are activated/changed. See [Combat/Card Synergy handoff](../balance/combat/SOR_COMBAT_CARD_SYNERGY.md), raw results and CSVs for measured context and limitations. Optional explicit-upgrade execution fields preserve existing definition fallbacks. Human full-run win targets remain unverified.

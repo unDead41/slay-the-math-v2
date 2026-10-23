@@ -83,3 +83,8 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Passive and supplied audio — 2.20.0
 
 The deck may own more than three Passives; only three may be active in combat. Fourth play requires choosing an outgoing active UID before payment. The outgoing physical card goes to Discard; inactive history preserves original timing/progress/trigger caps on reactivation. Source card definitions and upgrades remain authoritative. See [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+
+## Combat balance experiment — 23 October 2026
+
+CADANGAN: branch `balance/combat`, base `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7`, evaluates SOR Balance v1.2 through the real engine in an isolated Node loader. Candidate values are development-only; no player numeric data, loot/prices, IDs, artwork or questions are activated/changed. See [Combat/Card Synergy handoff](../balance/combat/SOR_COMBAT_CARD_SYNERGY.md), raw results and CSVs for measured context and limitations. Optional explicit-upgrade execution fields preserve existing definition fallbacks. Human full-run win targets remain unverified.

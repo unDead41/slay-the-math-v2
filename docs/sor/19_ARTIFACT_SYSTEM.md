@@ -79,3 +79,8 @@ ART-23 (2.11.0): INTEGRATION.zip supplies Artifact 3.5 with the same 31 IDs, tri
 ## Map, modes, Boss and Shop — 2.12.0
 
 ART-24 (2.12): paid Shop acquisition works in Learn and Challenge, with 3 Starting/2 mid-tier/1 Boss unowned eligible offers. Buy spends Gold and grants the unique artifact/source once; it is separate from free Claim, whose Challenge education gate is unchanged. Starting purchases do not replace startingId or invent extra opening gifts. Learn gets no new free gift paths. Legacy Challenge can use a shopOnly ledger without a startingId. Discount artifacts immediately update unsold quotes; strongest rate only, after the single card sale. Purchased Boss items are excluded from subsequent Boss gifts; that offer may contain one/two/three remaining items or be exhausted. Existing effect values/triggers/unsupported exclusions remain.
+
+
+## Combat balance experiment — 23 October 2026
+
+CADANGAN: branch `balance/combat`, base `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7`, evaluates SOR Balance v1.2 through the real engine in an isolated Node loader. Candidate values are development-only; no player numeric data, loot/prices, IDs, artwork or questions are activated/changed. See [Combat/Card Synergy handoff](../balance/combat/SOR_COMBAT_CARD_SYNERGY.md), raw results and CSVs for measured context and limitations. Optional explicit-upgrade execution fields preserve existing definition fallbacks. Human full-run win targets remain unverified.

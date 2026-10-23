@@ -142,4 +142,4 @@ function simulate(x,input={}){
  }catch(error){if(error.benchmarkLimit)return {status:r?.scene!=='battle'?(r.scene==='defeat'?'LOSS':'WIN'):'BENCHMARK_LIMIT_CENSORED',utility:r?.scene!=='battle'?100*(r.scene!=='defeat')+20*(r.scene==='defeat'?0:r.hp/r.maxHp)-Math.min(10,r.battle.turn/2):-10,finalHp:r.hp,maxHp:r.maxHp,playerTurns:r.battle.turn,...m,targetSeen,validFinal:x.E.validate(r),limitReason:error.message};return {status:'INVALID_POLICY_OR_ENGINE',utility:null,error:error.message,lastAction,seed:o.seed,enemy:o.enemy,...m,validFinal:r?x.E.validate(r):null};}
  finally{x.meter=null;}
 }
-module.exports={simulate,create,screen,factorialSummary,interval,REF,baseDeck};
+module.exports={simulate,create,screen,factorialSummary,interval,REF,baseDeck,priority,choose};

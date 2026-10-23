@@ -436,3 +436,8 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 ## 23 October 2026 — Combat/Card Synergy branch
 
 DISAHKAN (direct Ijamm instruction): isolated `balance/combat` at base 2800f9a; audit 40 cards/four states, real-engine ICP/CCP, 820 static pair specifications then Lite; retain three Passive/swap history; internal CP only; no main push/merge. CADANGAN: SOR v1.2 numeric overlays and difficulty profiles remain Node-only experiments pending Master integration and campaign/student evidence. See docs/balance/combat/SOR_COMBAT_CARD_SYNERGY.md.
+
+
+## 23 October 2026 — Deep Combat/Synergy evidence
+
+DISAHKAN (direct follow-up): deeply test five domains: evolved decks, varied Predict accuracy, setup horizon, exploit/restore and actual artifact triggers. CADANGAN: report Hard/growth coupling as a Master integration risk; do not infer student 90/70/50 rates or automatically nerf from one utility delta. Experimental data remains internal; no main merge/push. See docs/balance/combat/deep-results/DEEP_COMBAT_REPORT.md.

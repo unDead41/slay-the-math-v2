@@ -343,3 +343,8 @@ Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retain
 ## 23 October 2026 — experimental combat balance
 
 Added isolated pinned-baseline/candidate engine harness, explicit optional upgrade contracts, bounded Passive activation gifts, selection-discard distinction, candidate enemy/profile adapter, seed-matched ICP/CCP/Focus records and handoff. Candidate numbers remain development-only; no main integration. Concrete boundary and legacy regression evidence is recorded in docs/balance/combat/VALIDATION.md.
+
+
+## 23 October 2026 — Deep combat tests
+
+Added explicit-deck true-engine harness, actual campaign progression, accuracy profiles, setup/50-seed follow-up, artifact clusters, streaming raw records, differential reload and long transaction stress. Corrected harness route ranking/telemetry/provenance/gift ledger. Workspace recovery reruns retain source snapshots and prior aggregate comparison. No new production numeric tuning.

@@ -23,7 +23,7 @@ function loadEngine({build='baseline',difficulty='medium'}={}){
   return module.exports;
  }
  const E=load(path.join(ROOT,'dist/engine.js'));
- const out={E,C:load(path.join(ROOT,'dist/config.js')),A:load(path.join(ROOT,'dist/artifacts.js')),CC:load(path.join(ROOT,'dist/card-combat.js')),Q:load(path.join(ROOT,'dist/education.js')),data:load(path.join(ROOT,'dist/card-data.js')),build,difficulty};
+ const out={E,R:load(path.join(ROOT,'dist/rich-text.js')),L:load(path.join(ROOT,'dist/combat-log.js')),C:load(path.join(ROOT,'dist/config.js')),A:load(path.join(ROOT,'dist/artifacts.js')),CC:load(path.join(ROOT,'dist/card-combat.js')),Q:load(path.join(ROOT,'dist/education.js')),data:load(path.join(ROOT,'dist/card-data.js')),build,difficulty};
  out.provenance={baseCommit:BASE,build,difficulty,cardHash:crypto.createHash('sha256').update(JSON.stringify(out.data)).digest('hex'),engineHash:crypto.createHash('sha256').update([...cache.keys()].sort().map(file=>path.relative(ROOT,file)+'\n'+source(file,pinned)).join('\n')).digest('hex'),artifactHash:crypto.createHash('sha256').update(JSON.stringify(out.A.catalog)).digest('hex'),engineSource:build==='baseline'?'pinned git object':'working branch with optional definition contracts'};
  return out;
 }

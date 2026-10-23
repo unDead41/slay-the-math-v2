@@ -205,3 +205,7 @@ Existing buff/debuff buttons retain 44px targets, real counts and accessible det
 ## Learning Report preview — 2.25.0-analytics.1
 
 Learning Report is available from actual Main Menu, Settings and Education Practice, following the saved question language in English/BM. Use a shared escaped Ink/gold renderer, sample-count chapter bars, SK/SP detail tables, recent-session bars, linked revision and CSV/JSON downloads. Empty evidence is Not assessed; sparse evidence is Not enough evidence. A native bounded dialog owns scrolling; report controls keep keyboard focus through async delivery updates. Sharing starts off and distinguishes local, offline, pending, sending and exact receiver-confirmed states. Explain that sending resumes while the game is open/reopened, and that a receiver is needed. Existing question comments/native Share/exit cancellation remain. [Contract](../EDUCATION_ANALYTICS_2_25_0.md).
+
+## Google collection preview — 2.28.0-sheets.1
+
+Shared Learning Report adds a collapsed Collection link / Pautan pengumpulan field outside the asynchronously updated sending status. Both host and Practice use the same destination label, paused-on-switch consent and current-destination pending count. Validate /exec URLs before saving; preserve typed text/focus during delivery updates and focus Enable sharing after a destination change. Disable setup and sending in Dev/file Practice. Retain Ink/gold, native bounded dialog scrolling, color-only rich text and visible privacy/reopen guidance. [Owner setup](../GOOGLE_SHEETS_SETUP.md).

@@ -404,3 +404,9 @@ Added explicit-deck true-engine harness, actual campaign progression, accuracy p
 ## 23 October 2026 — Economy deep validation
 
 Expanded offline deck/offer, six spending policies, answer/deadline/recovery, cumulative costs and route-risk experiments, plus stateful reload/transaction regressions. No runtime candidate numbers changed. Report: ../economy/deep/REPORT.md. Inputs from Combat/Map remain NEEDS_INPUT.
+
+## 2.28.0-sheets.1 — 23 October 2026 — branch preview
+
+- Optional Google Apps Script/Sheets collection through shared Learning Report setup in host and Education Practice; lazy authenticated nested iframe/port bridge, current-destination consent/identity/ACK isolation and offline replay.
+- Generated one-file receiver reuses actual canonical validators, locks and prevalidates batches, upserts raw/readable Sheet rows, repairs partial writes before ACK and preserves inert formula-like comments/Unicode payloads.
+- BM operator guide, local/site-default configuration and native/simulated-Google regression coverage. Main 2.27.0 balancing, art, audio, question bank and saves are preserved. Live Google setup remains required; branch-only publication.

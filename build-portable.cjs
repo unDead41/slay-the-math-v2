@@ -14,7 +14,8 @@ for(const [id,asset]of Object.entries(registry.assets)){
  if(!target)throw new Error('Unknown audio bus: '+id);
  target[id]='data:audio/mpeg;base64,'+fs.readFileSync(path.join(root,'dist',src)).toString('base64');
 }
-if(Object.keys(music).length!==10||Object.keys(voice).length!==49)throw new Error('Build requires 10 music cues and 49 normalized character voices');
+const expectedVoiceCount=Object.values(registry.assets).filter(a=>a.bus==='voice').length;
+if(Object.keys(music).length!==10||Object.keys(voice).length!==expectedVoiceCount)throw new Error('Portable audio does not match the registered music and voice assets');
 html=html.replace('<body>','<body><script>window.DC_ASSETS='+JSON.stringify(images)+';window.DC_MUSIC='+JSON.stringify(music)+';window.DC_VOICE='+JSON.stringify(voice)+';</script>');
 // Dynamic src attributes are produced by app.js. Resolve local asset names to embedded bytes.
 const out=path.join(root,'SLAY-THE-MATH-OFFLINE.html');fs.writeFileSync(out,html);console.log('Portable game generated: '+fs.statSync(out).size+' bytes');

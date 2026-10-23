@@ -26,13 +26,14 @@ function audioSurface(){
  if(!visible||!run)return {visible:false};
  if(E.artifactChoices(run).length)return {surface:'artifact',visible};
  const consumer=Q.currentConsumer(run),p=consumer?.pending,q=consumer?.question;
- const questionVisible=run.scene==='education'||(run.scene==='event'&&p?.phase==='question')||(run.scene==='battle'&&ui.modal==='forecast'&&$('#dialog').open);
+ const questionVisible=run.scene==='education'||(run.scene==='event'&&['question','review'].includes(p?.phase))||(run.scene==='battle'&&ui.modal==='forecast'&&$('#dialog').open);
  if(questionVisible&&q){
   const rec=run.educationState?.session?.records[q.id];
-  return {surface:'question',visible,question:{key:[consumer.consumer,run.stage,run.route?.active??run.depth,run.battle?.turn||0,q.id].join(':'),closed:!!p.solved||rec?.status==='correct'||rec?.status==='revealed',hintUsed:!!rec?.hintState.hintUsed,moreHintViewed:!!rec?.hintState.moreHintViewed}};
+  const key=[consumer.consumer,run.stage,run.route?.active??run.depth,run.battle?.turn||0,q.id].join(':');
+  return {surface:'question',visible,question:AP.questionState(key,rec,{closed:!!p.solved||rec?.status==='correct'||rec?.status==='revealed',allowRevealedOutcome:consumer.consumer==='mystery'&&p.outcome==='INCORRECT'})};
  }
  const legacy=run.battle?.question;
- if(run.scene==='battle'&&ui.modal==='forecast'&&$('#dialog').open&&legacy?.source!=='bank'&&legacy)return {surface:'question',visible,question:{key:['legacy',run.stage,run.route?.active??run.depth,run.battle.turn,legacy.kind].join(':'),closed:!!legacy.solved,hintUsed:!!legacy.hinted}};
+ if(run.scene==='battle'&&ui.modal==='forecast'&&$('#dialog').open&&legacy?.source!=='bank'&&legacy)return {surface:'question',visible,question:AP.legacyQuestionState(run,['legacy',run.stage,run.route?.active??run.depth,run.battle.turn,legacy.kind].join(':'),legacy)};
  return {surface:run.scene,visible};
 }
 function syncMusic(){
@@ -110,10 +111,16 @@ window.addEventListener('message',event=>{
  const data=event.data;
  if(data?.type==='stm-education-practice-close')finishEducationPractice();
  else if(data?.type==='stm-education-practice-audio'&&Object.hasOwn(Q.catalog,data.questionId)&&typeof data.key==='string'&&data.key.length<=160&&['closed','hintUsed','moreHintViewed'].every(key=>typeof data[key]==='boolean')){
-  practiceAudioState={key:data.key,closed:data.closed,hintUsed:data.hintUsed,moreHintViewed:data.moreHintViewed};syncMusic();
+  if(data.record!==undefined&&!validPracticeAudioRecord(data.record))return;
+  practiceAudioState=data.record?AP.questionState(data.key,data.record,{closed:data.closed}):{key:data.key,closed:data.closed,hintUsed:data.hintUsed,moreHintViewed:data.moreHintViewed};syncMusic();
  }
  else if(data?.type==='stm-education-practice-audio-clear'){practiceAudioState=null;syncMusic();}
 });
+function validPracticeAudioRecord(record){
+ const types=['HINT_REVEALED','MORE_HINT_OPENED','ANSWER_SUBMITTED','FINAL_REVEALED','STEPS_TOGGLED','FOUNDATION_OPENED'];
+ const id=value=>typeof value==='string'&&value.length>0&&value.length<=200&&!/[\x00-\x1f\x7f]/.test(value);
+ return record&&['pending','correct','revealed'].includes(record.status)&&Array.isArray(record.events)&&record.events.length<=10000&&Array.isArray(record.attempts)&&record.attempts.length<=10000&&record.events.every(e=>e&&types.includes(e.type)&&(e.type!=='ANSWER_SUBMITTED'||id(e.attemptId)))&&record.attempts.every(a=>a&&id(a.id)&&typeof a.correct==='boolean')&&typeof record.hintState?.hintUsed==='boolean'&&typeof record.hintState?.moreHintViewed==='boolean';
+}
 function scheduleMenu(){
  clearTimeout(menuTimer);
  if(!ui.home||document.hidden||!motionAllowed()||!$('.illustrated-home'))return;

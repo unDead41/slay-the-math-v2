@@ -3,8 +3,8 @@
 const sequences={dungeonMaster:['vo_dm_01','vo_dm_02','vo_dm_03','vo_dm_04'],merchant:['vo_shop_01','vo_shop_02','vo_shop_03']};
 const registry=root.DCAudioAssets||(typeof module!=='undefined'?require('./music-data.js').assets:{});
 const pools=registry.voicePools||{},events=registry.voiceEvents||{};
-const priorities={question:40,hint:80,more_hint:80,rest:50,card_reward:50,defeat:100,mystery:60};
-const live=new WeakMap(),restActions=new WeakMap(),MAX_ALYSSA=512;
+const priorities={question:40,hint:80,more_hint:80,correct:90,wrong:90,rest:50,card_reward:50,defeat:100,mystery:60};
+const live=new WeakMap(),restActions=new WeakMap(),observedQuestions=new WeakMap(),legacyQuestions=new WeakMap(),MAX_ALYSSA=512;
 const MAX_RECORDS=128;
 const object=value=>value&&typeof value==='object'&&!Array.isArray(value);
 const count=value=>Number.isSafeInteger(value)&&value>=0?value:0;
@@ -57,6 +57,32 @@ function normalizeRunAudio(run){
  return changed;
 }
 function restCommitted(run,key){if(object(run)&&run.scene==='map'&&safeKey(key))restActions.set(run,key);}
+// The learning reducer's ordered events own precedence: a later Hint can yield
+// from a wrong-answer reaction, and a later checked answer can yield from Hint.
+function questionState(key,record,{closed,allowRevealedOutcome=false}={}){
+ const state={key,closed:closed??(record?.status==='correct'||record?.status==='revealed'),hintUsed:!!record?.hintState?.hintUsed,moreHintViewed:!!record?.hintState?.moreHintViewed};
+ const history=Array.isArray(record?.events)?record.events:[];
+ for(let i=history.length-1;i>=0;i--){
+  const event=history[i];
+  if(event.type==='FINAL_REVEALED'){if(!allowRevealedOutcome)return {...state,closed:true};continue;}
+  let group=event.type==='HINT_REVEALED'?'hint':event.type==='MORE_HINT_OPENED'?'more_hint':null;
+  if(event.type==='ANSWER_SUBMITTED'){
+   const attempt=record.attempts?.find(a=>a.id===event.attemptId);
+   if(typeof attempt?.correct!=='boolean')return state;
+   group=attempt.correct?'correct':'wrong';
+  }
+  if(group){state.reaction={group,sequence:i+1};break;}
+ }
+ return state;
+}
+function legacyQuestionState(owner,key,question){
+ const previous=legacyQuestions.get(owner),attempts=count(question.attempts),hinted=!!question.hinted;
+ let state=previous?.key===key?previous:{key,attempts:0,hinted:false,sequence:0,group:'question'};
+ if(attempts!==state.attempts)state={...state,attempts,group:question.solved?'correct':'wrong',sequence:state.sequence+1};
+ else if(hinted&&!state.hinted)state={...state,group:'hint',sequence:state.sequence+1};
+ state={...state,hinted};legacyQuestions.set(owner,state);
+ return {key,closed:!!question.solved,hintUsed:hinted,reaction:state.sequence?{group:state.group,sequence:state.sequence}:undefined};
+}
 function nextVoice(state,group){
  const ids=pools[group];if(!ids?.length)return null;
  const bag=state.bags[group]??={remaining:[],last:null};
@@ -68,9 +94,12 @@ function nextVoice(state,group){
  bag.last=bag.remaining.shift();return bag.last;
 }
 function alyssaCue(run,{surface,question}){
- if(surface==='question'&&question&&safeKey(question.key)&&question.closed!==true){
-  const group=question.moreHintViewed?'more_hint':question.hintUsed?'hint':'question';
-  return {group,key:'alyssa:'+group+':'+question.key,scope:'question:'+question.key};
+ if(surface==='question'&&question&&safeKey(question.key)){
+  const reaction=question.reaction,valid=object(reaction)&&['correct','wrong','hint','more_hint'].includes(reaction.group)&&Number.isSafeInteger(reaction.sequence)&&reaction.sequence>0&&reaction.sequence<=10000;
+  const outcome=valid&&['correct','wrong'].includes(reaction.group);
+  if(question.closed===true&&!outcome)return null;
+  const group=valid?reaction.group:question.moreHintViewed?'more_hint':question.hintUsed?'hint':'question';
+  return {group,key:'alyssa:'+group+':'+question.key+(outcome?':'+reaction.sequence:''),scope:'question:'+question.key+(valid?':'+reaction.sequence:''),...(outcome?{outcome:true}:{})};
  }
  const p=run.mysteryState?.pending;
  if(surface==='event'&&run.scene==='event'&&p?.phase==='intro'&&events[p.eventId]&&safeKey(p.key))return {group:'mystery',voiceId:events[p.eventId],key:'alyssa:mystery:'+p.key,scope:'mystery:'+p.key,delayMs:200,startDeadlineMs:2000};
@@ -82,6 +111,8 @@ function alyssaCue(run,{surface,question}){
 function observeAlyssa(run,options,changed){
  if(options.surface!=='map')restActions.delete(run);
  const cue=alyssaCue(run,options),previous=live.get(run);
+ const seen=observedQuestions.get(run)===options.question?.key;
+ if(options.surface==='question'&&safeKey(options.question?.key))observedQuestions.set(run,options.question.key);
  if(!cue||!safeKey(cue.key)){live.delete(run);return {changed,encounter:null};}
  if(previous?.key===cue.key)return {changed,encounter:previous};
  live.delete(run);
@@ -92,6 +123,9 @@ function observeAlyssa(run,options,changed){
  const voiceId=cue.voiceId||nextVoice(state.alyssa,cue.group);if(!voiceId)return {changed,encounter:null};
  // Persist consumption before scheduling: muted, failed or late audio is never retried on reload.
  state.alyssa.handled[cue.key]={group:cue.group,voiceId};
+ // Loading an older saved answer consumes its receipt without speaking it.
+ // Only a question already observed in this session can produce a new result.
+ if(cue.outcome&&!seen)return {changed:true,encounter:null};
  const encounter=Object.freeze({...cue,voiceId,speaker:'alyssa',priority:priorities[cue.group]});live.set(run,encounter);
  return {changed:true,encounter};
 }
@@ -122,6 +156,6 @@ function observe(run,{surface,visible=true,question}={}){
  }
  return {changed,encounter:Object.freeze({key,...state.encounters[key]})};
 }
-const api={observe,restCommitted,normalizeAudioMetadata,normalizeRunAudio};
+const api={observe,restCommitted,questionState,legacyQuestionState,normalizeAudioMetadata,normalizeRunAudio};
 if(typeof module!=='undefined')module.exports=api;else root.DCAudioPresentation=api;
 })(typeof window!=='undefined'?window:globalThis);

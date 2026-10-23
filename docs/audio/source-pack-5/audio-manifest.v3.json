@@ -1,0 +1,736 @@
+{
+  "version": 3,
+  "sourcePack": 5,
+  "sourceZip": {
+    "name": "MUSIC(5).zip",
+    "sha256": "bfdb64a198b9b1d6c15d65c2a62f98f1b12c1a1e52dd76e016601947d62378e6",
+    "sizeBytes": 43774255
+  },
+  "target": {
+    "integratedLufs": -18,
+    "toleranceLu": 0.5,
+    "processingTruePeakDbTP": -2,
+    "maximumEncodedTruePeakDbTP": -1,
+    "lra": 7,
+    "sampleRate": 44100,
+    "channels": 2,
+    "codec": "libmp3lame",
+    "bitrate": "128k"
+  },
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "previousAssetsVerified": [
+    "vo_alyssa_question_01",
+    "vo_alyssa_question_02",
+    "vo_alyssa_question_03",
+    "bgm_boss_stage_1",
+    "bgm_boss_stage_2",
+    "bgm_combat_stage_1",
+    "bgm_combat_stage_2",
+    "vo_dm_01",
+    "vo_dm_02",
+    "vo_dm_03",
+    "vo_dm_04",
+    "voice_alyssa_mystery_me08_entry",
+    "voice_alyssa_mystery_me06_entry",
+    "voice_alyssa_mystery_me09_entry",
+    "voice_alyssa_mystery_me10_entry",
+    "voice_alyssa_mystery_me11_entry",
+    "voice_alyssa_mystery_me04_entry",
+    "voice_alyssa_mystery_me15_entry",
+    "voice_alyssa_mystery_me13_entry",
+    "voice_alyssa_mystery_me02_entry",
+    "voice_alyssa_mystery_me12_entry",
+    "voice_alyssa_mystery_me05_entry",
+    "voice_alyssa_mystery_me07_entry",
+    "voice_alyssa_mystery_me14_entry",
+    "voice_alyssa_mystery_me01_entry",
+    "voice_alyssa_mystery_me03_entry",
+    "vo_alyssa_hint_01",
+    "vo_alyssa_hint_02",
+    "vo_alyssa_hint_03",
+    "vo_alyssa_hint_04",
+    "vo_alyssa_more_hint_01",
+    "vo_alyssa_more_hint_02",
+    "vo_alyssa_more_hint_03",
+    "vo_alyssa_more_hint_04",
+    "vo_alyssa_run_defeat_01",
+    "vo_alyssa_run_defeat_02",
+    "vo_alyssa_run_defeat_03",
+    "vo_alyssa_run_defeat_04",
+    "bgm_shop",
+    "vo_shop_01",
+    "vo_shop_02",
+    "vo_shop_03",
+    "vo_alyssa_rest_01",
+    "vo_alyssa_rest_02",
+    "vo_alyssa_rest_03",
+    "vo_alyssa_rest_04",
+    "bgm_rest",
+    "vo_alyssa_reward_card_01",
+    "vo_alyssa_reward_card_02",
+    "vo_alyssa_reward_card_03",
+    "vo_alyssa_reward_card_04",
+    "vo_alyssa_reward_card_05",
+    "vo_alyssa_reward_card_06",
+    "vo_alyssa_reward_card_07",
+    "vo_alyssa_reward_card_08",
+    "bgm_defeat",
+    "bgm_map"
+  ],
+  "newAssets": [
+    {
+      "id": "vo_alyssa_question_04",
+      "group": "question",
+      "variantIndex": 4,
+      "zipMember": "MUSIC/MUSIC/answering question/question_talking_4.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/question_04.mp3",
+      "sourceSha256": "dcd65cdee81c9c71c7fc6c3bd254eeb38482bd93ef4053f970ef1535ef53b487",
+      "packageSha256": "dccc1e4f22a945091adba4a9b4f13663eee271f266627238708e5e19735e4ba7",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.63,
+      "input": {
+        "duration": 8.724875,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -20.98,
+        "truePeakDbTP": -6.05
+      },
+      "output": {
+        "duration": 8.751,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -2.17
+      }
+    },
+    {
+      "id": "vo_alyssa_question_05",
+      "group": "question",
+      "variantIndex": 5,
+      "zipMember": "MUSIC/MUSIC/answering question/question_talking_5.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/question_05.mp3",
+      "sourceSha256": "f844baa3a0b6db7d5ec120a6582210d3eff02e4446f6575fda9ce9913656985d",
+      "packageSha256": "36ad5c1aff2c3c66a3d0c85b3dbcfcd59d8d8eefc1641958f5e5fff205c1b9b1",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.42,
+      "input": {
+        "duration": 9.9265,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -14.12,
+        "truePeakDbTP": -1.07
+      },
+      "output": {
+        "duration": 9.952625,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.02,
+        "truePeakDbTP": -5.02
+      }
+    },
+    {
+      "id": "vo_alyssa_question_06",
+      "group": "question",
+      "variantIndex": 6,
+      "zipMember": "MUSIC/MUSIC/answering question/question_talking_6.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/question_06.mp3",
+      "sourceSha256": "fb8b6539ee84f27fba736b6d342860738e567f60f77c072f44115d83293e24b3",
+      "packageSha256": "2fdfee608051fd2817a40ce52384030ff425988260c3b698286c06c0b4754151",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.23,
+      "input": {
+        "duration": 9.691375,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -19.79,
+        "truePeakDbTP": -5.84
+      },
+      "output": {
+        "duration": 9.7175,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.02,
+        "truePeakDbTP": -3.07
+      }
+    },
+    {
+      "id": "vo_alyssa_question_07",
+      "group": "question",
+      "variantIndex": 7,
+      "zipMember": "MUSIC/MUSIC/answering question/question_talking_7.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/question_07.mp3",
+      "sourceSha256": "054c95bc8a11697408e5fe712ff15b6c62e7fb9d4b9b53c8b553cba2f89ccd33",
+      "packageSha256": "41faedf32fec776efe616cf55d7adeabcef9882534c6610c4266cbada597a0bd",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.43,
+      "input": {
+        "duration": 9.848125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -19.36,
+        "truePeakDbTP": -6.5
+      },
+      "output": {
+        "duration": 9.87425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.95,
+        "truePeakDbTP": -1.85
+      }
+    },
+    {
+      "id": "vo_alyssa_hint_05",
+      "group": "hint",
+      "variantIndex": 5,
+      "zipMember": "MUSIC/MUSIC/getting hint/hint_talking_5.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/hint_05.mp3",
+      "sourceSha256": "6fd8a5ad9c3cadb186ee9a492687105ddc8784ddbc654dc64794ad5f6a3278f2",
+      "packageSha256": "c08ae68f19aed136629fd0cc3423ab469d41050c997d06705840f0c49c187b3b",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.4,
+      "input": {
+        "duration": 8.568125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -14.34,
+        "truePeakDbTP": -0.94
+      },
+      "output": {
+        "duration": 8.59425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.93,
+        "truePeakDbTP": -4.71
+      }
+    },
+    {
+      "id": "vo_alyssa_hint_06",
+      "group": "hint",
+      "variantIndex": 6,
+      "zipMember": "MUSIC/MUSIC/getting hint/hint_talking_6.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/hint_06.mp3",
+      "sourceSha256": "c3c03c6b01d219aa3e77371241d76046efa3acdfa3035615c2523243e5af96fb",
+      "packageSha256": "e5de89db09cc332abb0ed57f261128d3a1c526e0834196495f2cbbead45b42ec",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.42,
+      "input": {
+        "duration": 9.456313,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.31,
+        "truePeakDbTP": -3.89
+      },
+      "output": {
+        "duration": 9.482438,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -3.41
+      }
+    },
+    {
+      "id": "vo_alyssa_hint_07",
+      "group": "hint",
+      "variantIndex": 7,
+      "zipMember": "MUSIC/MUSIC/getting hint/hint_talking_7.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/hint_07.mp3",
+      "sourceSha256": "50afe33d9caa5b5929b5c73b424af7051666938e573d05acc06c033f5c3bfbf8",
+      "packageSha256": "6bfaac771bea0da0da3d2eeb970b8d328c17185e3f5414224f850b3d940bfab7",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.59,
+      "input": {
+        "duration": 8.90775,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -13.76,
+        "truePeakDbTP": -2.27
+      },
+      "output": {
+        "duration": 8.933875,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.0,
+        "truePeakDbTP": -6.48
+      }
+    },
+    {
+      "id": "vo_alyssa_hint_08",
+      "group": "hint",
+      "variantIndex": 8,
+      "zipMember": "MUSIC/MUSIC/getting hint/hint_talking_8.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/hint_08.mp3",
+      "sourceSha256": "2caec96d957be7d9afac10cd6e915587c5cf7363d7688e171278adfa415c0eea",
+      "packageSha256": "b1d6902bce5c36a0f42cbed0279863959425572697b5bbc47e81a83badc8ef02",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.39,
+      "input": {
+        "duration": 8.568125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -14.83,
+        "truePeakDbTP": -2.53
+      },
+      "output": {
+        "duration": 8.59425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -5.91
+      }
+    },
+    {
+      "id": "vo_alyssa_more_hint_05",
+      "group": "more_hint",
+      "variantIndex": 5,
+      "zipMember": "MUSIC/MUSIC/getting more hint/more_hint_talking_5.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/more_hint_05.mp3",
+      "sourceSha256": "393bd9e3c44af5d4b6630062be27c1ae246c68a04037e7cd0b9993f91e9b78d4",
+      "packageSha256": "3e0624b6e54d1b4d38cecee2391604dd7fe7568088b1892c58a86f90f4a4c172",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.34,
+      "input": {
+        "duration": 8.568125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -13.05,
+        "truePeakDbTP": -0.81
+      },
+      "output": {
+        "duration": 8.59425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.03,
+        "truePeakDbTP": -5.87
+      }
+    },
+    {
+      "id": "vo_alyssa_more_hint_06",
+      "group": "more_hint",
+      "variantIndex": 6,
+      "zipMember": "MUSIC/MUSIC/getting more hint/more_hint_talking_6.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/more_hint_06.mp3",
+      "sourceSha256": "bc75fc739014a60799eebaf312d9ccecfa37c7f16d5168c772adf1f4399ee9f3",
+      "packageSha256": "0c4bbe9607a1d0cf8082ed19830bf2309566c65f8c6626e7cb8f0224490f36ea",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.43,
+      "input": {
+        "duration": 11.128125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.2,
+        "truePeakDbTP": -3.92
+      },
+      "output": {
+        "duration": 11.15425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -3.07
+      }
+    },
+    {
+      "id": "vo_alyssa_more_hint_07",
+      "group": "more_hint",
+      "variantIndex": 7,
+      "zipMember": "MUSIC/MUSIC/getting more hint/more_hint_talking_7.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/more_hint_07.mp3",
+      "sourceSha256": "a4c555b3ed3633c748bb5c802c64e83b9baefa3cac5b4d8085537791cffe6e08",
+      "packageSha256": "8e8f6e0b78cf8e5eee0d62ba87122094291433021259b95306419e2081785e89",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.4,
+      "input": {
+        "duration": 9.613063,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -16.1,
+        "truePeakDbTP": -2.42
+      },
+      "output": {
+        "duration": 9.639125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.02,
+        "truePeakDbTP": -4.4
+      }
+    },
+    {
+      "id": "vo_alyssa_more_hint_08",
+      "group": "more_hint",
+      "variantIndex": 8,
+      "zipMember": "MUSIC/MUSIC/getting more hint/more_hint_talking_8.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/more_hint_08.mp3",
+      "sourceSha256": "660ae35d4c2043e40f54e2dc78f6dc9181e3a8f2218e0f50d190c6a235d3e788",
+      "packageSha256": "d044e65e2e6b925e2ef05722f311f98aa7bcce4f3e20d44ab9cb0ca38e437d30",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.41,
+      "input": {
+        "duration": 9.9265,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -13.64,
+        "truePeakDbTP": -1.13
+      },
+      "output": {
+        "duration": 9.952625,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.02,
+        "truePeakDbTP": -5.3
+      }
+    },
+    {
+      "id": "vo_alyssa_correct_01",
+      "group": "correct",
+      "variantIndex": 1,
+      "zipMember": "MUSIC/MUSIC/correct answer/corret_answer_talking_1.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/correct_01.mp3",
+      "sourceSha256": "5ccac40fbe3046db63da9119f98a945ebf9d052a03ccf9725f0596926c7b1d76",
+      "packageSha256": "06538b7b51d0499b806fdc5c3f9b1219e7ea74f36f9f8de9a3e9e4332e25f8c5",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.44,
+      "input": {
+        "duration": 8.019563,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -11.07,
+        "truePeakDbTP": -0.3
+      },
+      "output": {
+        "duration": 8.045688,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.02,
+        "truePeakDbTP": -7.16
+      }
+    },
+    {
+      "id": "vo_alyssa_correct_02",
+      "group": "correct",
+      "variantIndex": 2,
+      "zipMember": "MUSIC/MUSIC/correct answer/corret_answer_talking_2.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/correct_02.mp3",
+      "sourceSha256": "179c38ab6ee8f3889819564e7b690cf73fece46156ad16f4a16ebe8295bbfb09",
+      "packageSha256": "7eaba0ad1be75ca2c93b53dd244d40b12963ed343f5b40e1a2b98bca7b8468f0",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.44,
+      "input": {
+        "duration": 8.90775,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -14.3,
+        "truePeakDbTP": -1.9
+      },
+      "output": {
+        "duration": 8.933875,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.96,
+        "truePeakDbTP": -5.51
+      }
+    },
+    {
+      "id": "vo_alyssa_correct_03",
+      "group": "correct",
+      "variantIndex": 3,
+      "zipMember": "MUSIC/MUSIC/correct answer/corret_answer_talking_3.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/correct_03.mp3",
+      "sourceSha256": "ea612ac5b2af75027dc19bbb43a100fd937be9f1fa420dee65b587d21176f299",
+      "packageSha256": "0c44a02c59f5a3e089c1a7db796caa3fe7e455b4b48c64cd6fa125277d3f9721",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.34,
+      "input": {
+        "duration": 8.176313,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -14.54,
+        "truePeakDbTP": -1.76
+      },
+      "output": {
+        "duration": 8.202438,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -5.07
+      }
+    },
+    {
+      "id": "vo_alyssa_correct_04",
+      "group": "correct",
+      "variantIndex": 4,
+      "zipMember": "MUSIC/MUSIC/correct answer/corret_answer_talking_4.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/correct_04.mp3",
+      "sourceSha256": "ed434140db0664bca142793570adedc6beb4d2fa1c409b3b80ebed54b2331108",
+      "packageSha256": "a7e8ec32742250f36e1570b41e45065e86c2d39f3581364167cb8e1844ed5d3f",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.39,
+      "input": {
+        "duration": 8.829375,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -15.53,
+        "truePeakDbTP": -1.59
+      },
+      "output": {
+        "duration": 8.8555,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -4.05
+      }
+    },
+    {
+      "id": "vo_alyssa_correct_05",
+      "group": "correct",
+      "variantIndex": 5,
+      "zipMember": "MUSIC/MUSIC/correct answer/corret_answer_talking_5.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/correct_05.mp3",
+      "sourceSha256": "447412df9295ff1e38602b6014103d041726264d427ddb483b3473ecb5930dd8",
+      "packageSha256": "bdcc9cced78af65184b45564e71b0175b7072ea89f842a23baa529d1cdfc6f71",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.4,
+      "input": {
+        "duration": 9.221188,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -12.72,
+        "truePeakDbTP": -1.01
+      },
+      "output": {
+        "duration": 9.247313,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -6.17
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_01",
+      "group": "wrong",
+      "variantIndex": 1,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_1.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_01.mp3",
+      "sourceSha256": "c74c2342fb5963935acdac4d9d2b9bb9c1989bc59055808f4808e0026c7b5efb",
+      "packageSha256": "81d9e815fce4596513f0e3f4be73124b9d71b9bff33ab60ac542f21f792a459b",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.34,
+      "input": {
+        "duration": 9.142813,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.28,
+        "truePeakDbTP": -2.39
+      },
+      "output": {
+        "duration": 9.168938,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.0,
+        "truePeakDbTP": -2.97
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_02",
+      "group": "wrong",
+      "variantIndex": 2,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_2.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_02.mp3",
+      "sourceSha256": "62b4d05db76683bcd3bc90d1b2c4d3377e967b8e18fc50647b963fa4c39064d0",
+      "packageSha256": "06e691c3e5cf5a9bcb2300fbcfc87f74ff6bce146fef65ab8f4c931e21e114b6",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.37,
+      "input": {
+        "duration": 10.422813,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -16.43,
+        "truePeakDbTP": -1.29
+      },
+      "output": {
+        "duration": 10.448938,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -2.92
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_03",
+      "group": "wrong",
+      "variantIndex": 3,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_3.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_03.mp3",
+      "sourceSha256": "a00d5f47994f8a79ed4e2ada7525d167a1f6a2c678145c9d472b2a2f67371822",
+      "packageSha256": "dfb30f1733949b7830ee57085c4a6fd663b327632a7cbe36a32c3fd6d0db4138",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.39,
+      "input": {
+        "duration": 9.848125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -16.07,
+        "truePeakDbTP": -1.22
+      },
+      "output": {
+        "duration": 9.87425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -3.14
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_04",
+      "group": "wrong",
+      "variantIndex": 4,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_4.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_04.mp3",
+      "sourceSha256": "bba5752f78de4adf54345198e7a84a7851fc58c8baf37af3ecaa2dbe5ec15ccf",
+      "packageSha256": "6391a1b446f183ed109cf469fe74c7e068011600f950ab1bfd9358439811c90f",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.41,
+      "input": {
+        "duration": 9.848125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -19.69,
+        "truePeakDbTP": -5.47
+      },
+      "output": {
+        "duration": 9.87425,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.97,
+        "truePeakDbTP": -3.77
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_05",
+      "group": "wrong",
+      "variantIndex": 5,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_5.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_05.mp3",
+      "sourceSha256": "0ca75ec21c80c004c6d5fa533a130719bd502b0ac45785755cd9e133a4b2817a",
+      "packageSha256": "718b376415e3dd5bfa46250ab43d254ad39ae8b18d1f6deae338e88e06bebbb9",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.4,
+      "input": {
+        "duration": 9.377938,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -15.6,
+        "truePeakDbTP": -3.19
+      },
+      "output": {
+        "duration": 9.404063,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.03,
+        "truePeakDbTP": -5.5
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_06",
+      "group": "wrong",
+      "variantIndex": 6,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_6.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_06.mp3",
+      "sourceSha256": "d485e9a95597bae9bf1f4cac42c2590e3d53e29157c7eed76c3f02c7226e0fa9",
+      "packageSha256": "4a0f6dbd5a45604fa42fe0d78d0a72e68a9ea92751be1bf8761d66e686d56e46",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.59,
+      "input": {
+        "duration": 9.76975,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -14.83,
+        "truePeakDbTP": -2.98
+      },
+      "output": {
+        "duration": 9.795875,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -5.89
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_07",
+      "group": "wrong",
+      "variantIndex": 7,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_7.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_07.mp3",
+      "sourceSha256": "b4479744d50f74047de104d3ef678319e1fb80d881e310718b4abe8646de9d38",
+      "packageSha256": "a1efca50b0ade07f28fa9cde171cf69ac054661f6606ec431fe68f17f12a5e71",
+      "normalizationType": "dynamic",
+      "postEncodeGainCorrectionDb": 0.55,
+      "input": {
+        "duration": 10.736313,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -22.49,
+        "truePeakDbTP": -7.06
+      },
+      "output": {
+        "duration": 10.762438,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.0,
+        "truePeakDbTP": -2.22
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_08",
+      "group": "wrong",
+      "variantIndex": 8,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_8.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_08.mp3",
+      "sourceSha256": "a0c5ca24aea69a2fc996ae936f15766aadbb31f312135eb1ba7387f746f8af3c",
+      "packageSha256": "a7dd9cb061bd77bf9e507734df430d32bedc997fcf9efe43b2c61e82e0accf46",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.36,
+      "input": {
+        "duration": 9.76975,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -20.09,
+        "truePeakDbTP": -5.37
+      },
+      "output": {
+        "duration": 9.795875,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -18.02,
+        "truePeakDbTP": -3.34
+      }
+    },
+    {
+      "id": "vo_alyssa_wrong_09",
+      "group": "wrong",
+      "variantIndex": 9,
+      "zipMember": "MUSIC/MUSIC/wrong answer/wrong_answer_talking_9.mp3",
+      "runtimePath": "assets/audio/voice/alyssa/wrong_09.mp3",
+      "sourceSha256": "7bcb7a17382feda495fc2418a25b0cfadccd586acf390a611d025e17699eb800",
+      "packageSha256": "f7c66c7630a09de3ceabc3503d847c1740b8d2afdebb7072761112f5f8c3bb43",
+      "normalizationType": "linear",
+      "postEncodeGainCorrectionDb": 0.43,
+      "input": {
+        "duration": 8.333063,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -15.88,
+        "truePeakDbTP": -3.53
+      },
+      "output": {
+        "duration": 8.359125,
+        "sampleRate": 44100,
+        "channels": 2,
+        "integratedLufs": -17.93,
+        "truePeakDbTP": -5.45
+      }
+    }
+  ],
+  "limits": [
+    "Post-encoding measurement and decode; human audition/transcripts not verified.",
+    "Source v2 manifest is historical and omits these 26 new recordings."
+  ]
+}

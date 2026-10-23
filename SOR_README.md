@@ -2,7 +2,7 @@
 
 Current icon integration: [Reviewed icon package, game 2.23.0](docs/ICON_PACKAGE_2_23_0.md).
 
-Current audio integration: [Normalized talking, game 2.22.0](docs/AUDIO_2_22_0.md). This supersedes earlier package-only audio handoffs; the historical baseline below remains context.
+Current audio integration: [Expanded talking and checked answers, game 2.24.0](docs/AUDIO_2_24_0.md). Pack 5 owns 75 voices, including the 26 new recordings; this supersedes earlier asset counts and package-only handoffs. The historical baseline below remains context.
 
 Versi dokumen: **2.0.1** · Tarikh: **18 Oktober 2026 (Malaysia)** · Pemilik: **Ijamm**
 

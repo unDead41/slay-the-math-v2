@@ -331,3 +331,10 @@ Add npm start dev alias, main-menu-first development startup and synchronized me
 ## Game 2.23.1 — Developer toggle on main
 
 Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retaining the reviewed icon and audio packages. Production remains free of developer tools.
+
+
+## 2.24.0 — MUSIC(5) and checked answer talking
+
+- Apply 26 new normalized recordings on music from latest main 2.23.1: answering +4, Hint +4, More Hint +4, correct +5, wrong +9. Active voices total 75; preserve all previous audio, icons, developer toggle and color-only rich text.
+- React to actual checked correct/wrong answers in Predict, Artifact, Mystery review and isolated Practice; later answer/help events cancel older speech. Preserve once-per-attempt receipts through save/reload; historical results, Reveal, exhaustion, timeout and abandonment stay silent.
+- Add reproducible FFmpeg importer with post-encoding measurements, source/output hashes and registry audit; embed every registered voice in portable builds. [Contract and verification](../AUDIO_2_24_0.md).

@@ -150,3 +150,8 @@ Verify free swap cancel, exact payment/stat removal, trigger history and legacy 
 ## Normalized talking — 2.22.0
 
 Verify all 49 installed voice hashes against the normalized package; retain eight BGM hashes and Menu/Mystery fallback. Cover actual question/Hint/More Hint controls, successful Rest commit, card reward choices, defeat, all 15 fixed Mystery mappings and independent NPC order. Check reload consumption, shuffle bags/no immediate repeat, gameplay RNG invariance, legacy metadata recovery, mute/zero/hidden cancellation, stale decode/ended callbacks, start deadline, watchdog and restored Music duck. Exercise native Chromium MP3 decode/playback, trusted Practice-frame messages and portable offline embedding. Keep automated playback distinct from human audition/Windows-device checks. [Evidence and limits](../AUDIO_2_22_0.md).
+
+
+## MUSIC(5) release checks — 2.24.0
+
+Check the 26 new output hashes, post-MP3 LUFS/TP/decode and duration; assert all preceding registry assets remain identical. Exercise 7/8/8/5/9 answering/Hint/More Hint/correct/wrong shuffle bags, real answer versus selection, distinct wrong attempts, Hint after wrong, solved reviews, historical/reloaded receipts, legacy predictions and Mystery timeout. Verify actual Practice frame isolation, Restart Review/Reveal, all 75 native browser decodes and portable offline playback. Run full Node/jsdom tests, syntax, production build and current developer toggle/isolation browser checks. Report remote CI separately from local verification. [Evidence](../verification/audio-2.24.0/release-evidence.md).

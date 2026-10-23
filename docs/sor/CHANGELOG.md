@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.28.0 — Alyssa RPG status effects
+
+- Show moderate, floor-registered Block, Strength, Agility, Defense, Thorns, Weak and Vulnerable effects around Alyssa, with actual stat-change bursts and signed labels.
+- Project shield impacts from real enemy absorption receipts, distinguishing normal expiry and queued grants. Restore current auras without replaying saved triggers; dispose effects across actions, dialogs, navigation, visibility and motion changes.
+- Preserve source art/icons, card motion, analytics, gameplay/save/RNG/audio owners. Replace the old defend floating-number shortcut with actual status/absorption feedback.
+- Add an online SFX search guide for Ijamm's later audio selection; no new sound files imported. [Scope and actual verification](../ALYSSA_STATUS_VFX_2_28_0.md).
+
 ## Game 2.27.0 — Integrated Master balance playtest
 
 - Publish the completed Master update to `main` under Ijamm's explicit follow-up instruction. Keep the existing opt-in playtest and candidate values. [Main release and checks](../balance/master/MAIN_RELEASE_2_27_0.md).

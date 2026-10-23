@@ -8,6 +8,7 @@ const cardName=c=>{const key=typeof c==='string'?c:c.key,d=C.cards[key];return d
 let menuTimer,menuGeneration=0,modalGeneration=0,actorAnimation=null,heroAnimation=null,handController=null;
 let run=null,settings={sound:true,motion:true,musicMuted:false,musicVolume:.45,sfxVolume:.65,voiceVolume:.85,voiceMuted:false},ui={home:true,educationPractice:false,menuScene:0,modal:null,rewardChoice:null,restChoice:'heal',shopChoice:0,libraryRole:'all',libraryQuery:'',libraryCard:'strike',libraryPage:0,practiceAnswer:'',practiceChecked:false,artifactChoice:null,collectionKind:'cards',basicsId:null,basicsChecks:{},selected:[],filterCard:null,answer:'',feedback:null},toastTimer,previousFocus,audio;
 const cardMotion=window.DCCardMotion.create({motion:motionAllowed});
+const statusVfx=window.DCStatusVFX.create({motion:motionAllowed});
 try{const raw=localStorage.getItem(SAVE);if(raw){const saved=E.restore(JSON.parse(raw));if(saved){AP.normalizeRunAudio(saved);run=saved;}else storageWarning('This save cannot be loaded. Start a New Run or import a valid save file.');}const s=JSON.parse(localStorage.getItem(SETTINGS)||'{}');settings.sound=s.sound!==false;settings.motion=s.motion!==false;settings.musicMuted=s.musicMuted===undefined?s.sound===false:!!s.musicMuted;settings.musicVolume=Number.isFinite(s.musicVolume)?Math.max(0,Math.min(1,s.musicVolume)):.45;settings.sfxVolume=Number.isFinite(s.sfxVolume)?Math.max(0,Math.min(1,s.sfxVolume)):.65;settings.voiceVolume=Number.isFinite(s.voiceVolume)?Math.max(0,Math.min(1,s.voiceVolume)):.85;settings.voiceMuted=s.voiceMuted===true;}catch(_){storageWarning('Browser storage is not available. You can still play. Use Export to save your progress.');}
 function storageWarning(message){$('#storage-warning').hidden=false;$('#storage-warning').textContent=message;}
 let seenQuestions=[],learningProfile=null;
@@ -293,7 +294,7 @@ function selectShopTab(id){
 function summaryView(){const win=run.scene==='victory',stage=run.scene==='stageclear',st=run.stats,secs=Math.max(0,Math.floor(((run.finished??Date.now())-run.started)/1000)),time=Math.floor(secs/60)+':'+String(secs%60).padStart(2,'0');return '<section class="results-layout situation-layout situation-results">'+situationArt()+'<div class="results-panel ornate-panel"><div class="title-sigil">'+icon('chance')+'</div><h1>'+(stage?'Stage Clear':win?'Victory':'Run Ended')+'</h1><p class="results-lead">'+(stage?'The second dungeon awaits.':win?'Both bosses defeated.':'A new strategy starts with what you learned.')+'</p><div class="result-grid"><div>'+icon('map')+'<strong>'+(win?'2 / 2':stage?'1 / 2':run.stage+' / 2')+'</strong><span>Stages Cleared</span></div><div>'+icon('clock')+'<strong>'+time+'</strong><span>Time</span></div><div>'+icon('cards')+'<strong>'+(st.cardsPlayed||0)+'</strong><span>Cards Played</span></div></div><div class="stage-results"><span>'+icon(stage||win||run.stage?'check':'map')+' Sigil Keep</span><span>'+icon(win?'check':'map')+' Deck Tower</span></div><div class="prediction-results"><h3>Your Predictions</h3><strong>'+st.firstCorrect+' of '+st.forecasts+' correct · '+percent(st.firstCorrect,st.forecasts)+'</strong>'+bar(st.firstCorrect,Math.max(1,st.forecasts),'knowledge')+Object.entries(st.concepts).map(([kind,v])=>'<div class="concept-result"><span>'+esc({single:'Single Events',exclusive:'Exclusive Events',overlap:'Combined Events',pairWithout:'Dependent Events',pairWith:'Independent Events',atLeast:'At Least One',PROB:'Probability',SET:'Sets',LOGIC:'Logical Reasoning'}[kind]||kind)+'</span><b>'+v.first+' / '+v.total+'</b>'+bar(v.first,Math.max(1,v.total),'knowledge')+'</div>').join('')+'<p class="muted">Hints used: '+(st.hintsUsed||0)+' · Guided answers: '+st.assisted+'</p></div><div class="ending-actions">'+(stage?button('Enter Deck Tower '+icon('arrow'),'next-stage','btn primary'):win?button('New Run','new','btn primary'):button(run.checkpoint?'Retry Stage 2':'Retry Stage 1','retry','btn primary'))+button('Main Menu','home','btn')+'</div>'+button('View Learning Record','stats','text-btn')+'</div></section>';}
 function resolveAssets(html){return html.replace(/src="assets\/([^"<>]+)"/g,(_,name)=>'src="'+(window.DCIconAssets?window.DCIconAssets.resolve(name,window.DC_ASSETS):window.DC_ASSETS?.[name]||'assets/'+name)+'"');}
 function render(){
- cardMotion.cancel();
+ cardMotion.cancel();statusVfx.reset();
  mysteryClock?.destroy();mysteryClock=null;
  H.disposeQuestion();
  handController?.destroy();handController=null;
@@ -326,6 +327,7 @@ function render(){
   const options={motion:motionAllowed(),paused:document.hidden||$('#dialog').open};
   actorAnimation=S.mount($('.enemy .actor-animation'),run.stage,run.battle.enemyId,options);
   heroAnimation=S.mount($('.player .actor-animation'),run.stage,'mc_01',options);
+  statusVfx.mount(run);
  }
  H.syncArtifacts(run,{warn:storageWarning,visible:!ui.home,announce:message=>toast(message)});
  if(!ui.home&&run?.scene==='education')H.hydrateEducation(run);
@@ -333,8 +335,8 @@ function render(){
  const questionPanel=$('[data-question-scroll]');if(questionPanel&&questionPanel.dataset.questionScroll===oldQuestionKey)questionPanel.scrollTop=oldQuestionTop;
  const preview=$('[data-artifact-preview]');if(preview?.dataset.artifactPreview)H.comparison(preview,preview.dataset.artifactPreview);
  save();syncMusic();scheduleMenu();}
-function syncActorMotion(){const options={motion:motionAllowed(),paused:document.hidden||$('#dialog').open};actorAnimation?.configure(options);heroAnimation?.configure(options);}
-function modal(title,body,wide=false){cardMotion.cancel();const generation=++modalGeneration,opening=!$('#dialog').open;H.disposeDialog();handController?.clear();R.hide();CU.hide();$('#dialog').dataset.kind=ui.modal||'';music.duck(ui.modal==='forecast');const d=$('#dialog');if(!d.open)previousFocus=document.activeElement;$('#dialog-body').innerHTML=resolveAssets('<div class="dialog-head"><div><p class="eyebrow">DUNGEON OF CHANCE</p><h2 id="dialog-title">'+title+'</h2></div>'+button(icon('close'),'close','icon-btn','aria-label="Close Dialog"')+'</div>'+body);d.classList.toggle('wide',wide);if(!d.open)d.showModal();syncActorMotion();syncMusic();save();requestAnimationFrame(()=>{if(generation!==modalGeneration||!d.open||(!opening&&d.contains(document.activeElement)))return;const el=d.querySelector('[autofocus]')||d.querySelector('input:not([type=file])')||d.querySelector('button');el?.focus();});}
+function syncActorMotion(){const options={motion:motionAllowed(),paused:document.hidden||$('#dialog').open};actorAnimation?.configure(options);heroAnimation?.configure(options);statusVfx.sync();}
+function modal(title,body,wide=false){cardMotion.cancel();statusVfx.cancel();const generation=++modalGeneration,opening=!$('#dialog').open;H.disposeDialog();handController?.clear();R.hide();CU.hide();$('#dialog').dataset.kind=ui.modal||'';music.duck(ui.modal==='forecast');const d=$('#dialog');if(!d.open)previousFocus=document.activeElement;$('#dialog-body').innerHTML=resolveAssets('<div class="dialog-head"><div><p class="eyebrow">DUNGEON OF CHANCE</p><h2 id="dialog-title">'+title+'</h2></div>'+button(icon('close'),'close','icon-btn','aria-label="Close Dialog"')+'</div>'+body);d.classList.toggle('wide',wide);if(!d.open)d.showModal();syncActorMotion();syncMusic();save();requestAnimationFrame(()=>{if(generation!==modalGeneration||!d.open||(!opening&&d.contains(document.activeElement)))return;const el=d.querySelector('[autofocus]')||d.querySelector('input:not([type=file])')||d.querySelector('button');el?.focus();});}
 function close(){
  modalGeneration++;H.disposeDialog();R.hide();CU.hide();
  const cancelledCardChoice=ui.modal==='card-choice'&&E.cardChoice(run)&&!E.cardChoice(run).committed&&E.cardChoice(run).kind!=='passive_trim';
@@ -447,9 +449,12 @@ function battleFeedback(pose,value,enemyPose){
  heroAnimation?.play(pose);
  if(enemyPose){const imagePose=S.supports(run.stage,enemyId)&&!motionAllowed()?'standing':enemyPose;set(enemy,V.enemy(enemyId,imagePose,run.stage),imagePose);actorAnimation?.play(enemyPose);}
  if(theatre){theatre.dataset.effect=pose;
+  // Block gains/absorption now use actual status deltas and enemy receipts.
+  if(pose!=='defend'){
   const badge=document.createElement('span');badge.className='combat-number '+pose;
-  badge.textContent=pose==='defend'?'+'+value+' Block':pose==='skill'?'':value>0?'−'+value:'Blocked';
+  badge.textContent=pose==='skill'?'':value>0?'−'+value:'Blocked';
   badge.setAttribute('aria-hidden','true');theatre.appendChild(badge);
+  }
  }
  feedbackTimers.push(setTimeout(()=>{
   set(player,V.hero('standing'),'standing');
@@ -475,7 +480,7 @@ function handleMystery(action,el){
  else if(['mystery-option','mystery-target'].includes(keep))document.querySelector('[data-action="'+keep+'"][data-id="'+el.dataset.id+'"]')?.focus({preventScroll:true});
  else if(['mystery-start','mystery-answer','mystery-continue','mystery-claim','mystery-leave','mystery-confirm-leave'].includes(keep))(document.querySelector('#mystery-title')||document.querySelector('#game'))?.focus();
 }
-function act(fn){const before=cardMotion.capture(run),flow=window.DCCardFlow.begin(run);try{const oldScene=run?.scene;fn();const transfers=window.DCCardFlow.end(flow);render();cardMotion.play(before,run,transfers,QL.language());if(run?.scene==='reward'||run?.scene==='victory'||run?.scene==='stageclear'){if(oldScene!==run.scene)sound('win');}else sound();return true;}catch(err){window.DCCardFlow.end(flow,false);cardMotion.cancel();toast(err.message,true);return false;}}
+function act(fn){const before=cardMotion.capture(run),statusBefore=statusVfx.capture(run),flow=window.DCCardFlow.begin(run);try{const oldScene=run?.scene;fn();const transfers=window.DCCardFlow.end(flow);render();cardMotion.play(before,run,transfers,QL.language());statusVfx.play(statusBefore,run,QL.language());if(run?.scene==='reward'||run?.scene==='victory'||run?.scene==='stageclear'){if(oldScene!==run.scene)sound('win');}else sound();return true;}catch(err){window.DCCardFlow.end(flow,false);cardMotion.cancel();statusVfx.cancel();statusVfx.sync();toast(err.message,true);return false;}}
 document.addEventListener('click',event=>{
  const el=event.target.closest('[data-analytics-action]');if(!el||el.disabled||!$('#dialog[data-kind=analytics]')?.contains(el))return;
  const action=el.dataset.analyticsAction;

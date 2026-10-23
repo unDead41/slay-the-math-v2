@@ -1,0 +1,28 @@
+/* Decorative RPG effects stay registered to the original hero floor/canvas. */
+.combat-layout .player .status-vfx{position:absolute;z-index:3;left:50%;top:var(--figure-foot,91.6666667%);width:38%;height:46%;transform:translate(-50%,-100%);pointer-events:none;isolation:isolate}
+.status-vfx *{pointer-events:none!important;box-sizing:border-box}
+.status-vfx-aura,.status-vfx-burst{--vfx:#f0bc75;position:absolute;inset:0;color:var(--vfx);transform-origin:50% 85%;pointer-events:none}
+.status-vfx svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--vfx) 40%,transparent))}
+.status-vfx .vfx-surface{fill:color-mix(in srgb,var(--vfx) 7%,transparent);stroke-width:2.2}
+.status-vfx .vfx-detail{stroke-width:1;opacity:.55}
+.status-vfx-aura{opacity:.43;animation:status-aura-breathe 3.8s ease-in-out infinite}
+.vfx-shield{--vfx:#8fdcf2}.status-vfx-aura.vfx-shield{opacity:.34;animation-duration:4.4s}
+.vfx-ember,.vfx-thorns{--vfx:#ffad60}.status-vfx-aura.vfx-ember{opacity:.62}.vfx-agility,.vfx-armor{--vfx:#eaca82}
+.vfx-weak,.vfx-harmful,.status-vfx-burst.vfx-down{--vfx:#b5a2d3}.vfx-vulnerable{--vfx:#e9969a}.vfx-cleanse{--vfx:#d8e9ba}
+.status-vfx-aura.vfx-weak,.status-vfx-aura.vfx-vulnerable{opacity:.5}
+.status-vfx-ember{position:absolute;left:calc(17% + var(--ember-i) * 31%);top:84%;width:4px;height:7px;border-radius:65% 20% 65% 40%;background:#ffd398;box-shadow:0 0 7px #f58241;opacity:0;animation:status-ember-rise 2.8s ease-out infinite;animation-delay:calc(var(--ember-i) * -.85s)}
+.status-vfx-burst{opacity:0;will-change:transform,opacity}
+.status-vfx-burst.vfx-impact svg{stroke-width:3.5;filter:drop-shadow(0 0 8px #a6e8fa88)}
+.status-vfx-burst.vfx-broken svg{stroke-dasharray:25 9 15 7}
+.status-vfx-label{position:absolute;left:50%;width:max-content;max-width:200px;transform:translateX(-50%);padding:3px 7px;border-radius:4px;background:linear-gradient(90deg,#05121c00,#05121ccc 16%,#05121ccc 84%,#05121c00);color:var(--vfx);font:700 clamp(11px,1vw,16px)/1.3 var(--sans);text-align:center;white-space:nowrap;text-shadow:0 2px 3px #000,0 0 8px #000}
+.status-vfx-particle{position:absolute;width:4px;height:8px;border-radius:2px;background:var(--vfx);box-shadow:0 0 6px currentColor;opacity:0}
+.vfx-impact .status-vfx-particle{width:5px;height:10px;clip-path:polygon(50% 0,100% 35%,65% 100%,0 70%)}
+.vfx-down .status-vfx-particle{width:8px;height:7px;clip-path:polygon(0 0,50% 45%,100% 0,100% 40%,50% 100%,0 40%)}
+.vfx-up .status-vfx-particle{clip-path:polygon(50% 0,100% 60%,70% 60%,70% 100%,30% 100%,30% 60%,0 60%)}
+@keyframes status-aura-breathe{0%,100%{filter:brightness(.85)}50%{filter:brightness(1.12)}}
+@keyframes status-ember-rise{0%{opacity:0;transform:translate(0,0) scale(.4)}20%{opacity:.85}100%{opacity:0;transform:translate(calc((var(--ember-i) - 1) * 12px),-85px) scale(.25)}}
+.reduce-motion .status-vfx{display:none}
+@media(prefers-reduced-motion:reduce){.status-vfx{display:none}.status-vfx-aura,.status-vfx-ember{animation:none}}
+@media(forced-colors:active){.status-vfx{display:none}}
+@media(max-width:600px){.status-vfx-label{font-size:11px;max-width:140px;white-space:normal}.status-vfx-ember{width:3px;height:5px}.status-vfx-aura{opacity:.35}.status-vfx svg{filter:drop-shadow(0 0 3px color-mix(in srgb,var(--vfx) 35%,transparent))}}
+@media(max-height:560px){.status-vfx-label{font-size:10px;padding:2px 5px}.status-vfx-aura{opacity:.32}.status-vfx-ember{animation-duration:3.5s}}

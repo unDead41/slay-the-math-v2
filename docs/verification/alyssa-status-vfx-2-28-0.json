@@ -1,0 +1,135 @@
+{
+  "version": "2.28.0",
+  "dateMalaysia": "2026-10-23",
+  "targetBranch": "main",
+  "baseCommit": "b848f55ed3b449df0a2f3206ff9dbd944a4e0352",
+  "integration": "Initial development from analytics main b67298b / 2.26.0; integrated onto newly published Master balancing main e2c323a / 2.27.0. The earlier interrupted full-suite candidate is superseded and not claimed as passing.",
+  "scope": [
+    "Alyssa read-only RPG status auras and actual gain/loss/absorption bursts",
+    "Preserved current Master balance, analytics, source artwork/icons and all prior card motion",
+    "SFX search guide only; no new audio assets installed"
+  ],
+  "checks": {
+    "syntax": {
+      "command": "npm run check",
+      "passed": true
+    },
+    "focusedRegression": {
+      "command": "DOM_QA_MODULE=<jsdom-26.1.0> node --test tests/status-vfx.test.cjs tests/icon-package.test.cjs tests/combat-compact-ui.test.cjs",
+      "tests": 21,
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fullSuite": {
+      "command": "DOM_QA_MODULE=<jsdom-26.1.0> npm test",
+      "tests": 715,
+      "passed": 715,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 206251.420835
+    },
+    "productionBuild": {
+      "command": "npm run build:prod",
+      "passed": true,
+      "standaloneBytes": 295628270,
+      "runtimeFilesByteIdenticalToTestedSource": 682,
+      "sortedRuntimeHashMapSha256": "a95c2023a7b8541b47f99c475dad4d3067fb3ddfea70d91c9a67b91928275c89"
+    },
+    "statusProductionAndOfflineBrowser": {
+      "command": "QA_PRODUCTION=1 node tests/status-vfx-browser.cjs",
+      "passed": true,
+      "report": "alyssa-status-vfx-browser-2-28-0.json",
+      "checks": 10,
+      "viewports": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "noDocumentOverflow": true,
+          "insideArena": true,
+          "nodes": 33
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "noDocumentOverflow": true,
+          "insideArena": true,
+          "nodes": 33
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "noDocumentOverflow": true,
+          "insideArena": true,
+          "nodes": 33
+        }
+      ],
+      "profiles": [
+        {
+          "difficulty": "easy",
+          "exactGameplay": true,
+          "isolatedSave": true,
+          "block": 6
+        },
+        {
+          "difficulty": "medium",
+          "exactGameplay": true,
+          "isolatedSave": true,
+          "block": 6
+        },
+        {
+          "difficulty": "hard",
+          "exactGameplay": true,
+          "isolatedSave": true,
+          "block": 6
+        }
+      ],
+      "offlineRequests": 0,
+      "pageErrors": 0
+    },
+    "cardMotionProductionBrowser": {
+      "command": "QA_PRODUCTION=1 npm run test:card-motion-browser",
+      "passed": true,
+      "report": "card-motion-browser-2-28-0.json",
+      "actualPassiveTriggerPaths": 10,
+      "pageErrors": 0
+    },
+    "diffWhitespace": {
+      "command": "git diff HEAD --check",
+      "passed": true
+    },
+    "scopeAudit": {
+      "imageFilesModified": 0,
+      "audioFilesModified": 0,
+      "gameplayAndBalanceOwnersModified": false,
+      "analyticsOwnersModified": false
+    }
+  },
+  "runtime": {
+    "node": "24.19.0",
+    "jsdom": "26.1.0",
+    "playwright": "1.62.1",
+    "statusBrowserSingleProcessDisabledForIsolatedContexts": true
+  },
+  "limits": [
+    "Physical-device playback and human approval of motion feel remain unverified.",
+    "No new SFX have been sourced, auditioned or imported; the guide contains proposed search terms.",
+    "MODEL.zip was unavailable and was not used.",
+    "Hosted CI is not claimed by this local verification record."
+  ],
+  "postVerificationMainUpdate": {
+    "from": "e2c323abde649ed3421e7d2f65ff540770079386",
+    "to": "b848f55ed3b449df0a2f3206ff9dbd944a4e0352",
+    "files": [
+      ".github/workflows/pages.yml",
+      "docs/GITHUB_PAGES.md",
+      "docs/sor/15_QA_RELEASE.md",
+      "docs/sor/CHANGELOG.md",
+      "docs/sor/DECISIONS.md",
+      "docs/verification/github-pages-2026-10-23.json"
+    ],
+    "scope": "GitHub Pages workflow and documentation only",
+    "allTestedRuntimeBytesUnchanged": true,
+    "runtimeHashMapSha256": "a95c2023a7b8541b47f99c475dad4d3067fb3ddfea70d91c9a67b91928275c89"
+  }
+}

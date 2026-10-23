@@ -1,4 +1,6 @@
-# Slay the Math — 2.27.0
+# Slay the Math — 2.28.0
+
+Alyssa now has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide for later audio selection](docs/ALYSSA_STATUS_SFX_GUIDE.md).
 
 Master balance playtest: New Run → Easy / Medium / Hard, or open `?balance=medium`. The three profiles share versioned combat/economy/loot definitions and separate saves. [Balance handoff and unmeasured pupil targets](docs/balance/master/HANDOFF.md).
 

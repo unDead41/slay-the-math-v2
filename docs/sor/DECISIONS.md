@@ -431,3 +431,12 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 - DITERUSKAN: source inventory contains 26 additions: 4 answering, 4 Hint, 4 More Hint, 5 correct and 9 wrong. Use every available recording; retain all 57 preceding supplied files without re-encoding. The stale embedded v2 manifest does not describe the new additions.
 - DITERUSKAN: master new talking to the existing -18 LUFS ±0.5 / encoded TP ≤ -1 dBTP standard; retain rate/gain 1 and the original ZIP. Use actual ordered reducer events for answer/support reactions, with per-attempt receipts and no outcome for timeout/reveal/exhaustion.
 - IMPLEMENTED contract and audit: [Audio 2.24.0](../AUDIO_2_24_0.md). Human audition, verified transcripts and physical Windows/device testing remain unverified.
+
+
+## DEC-20261023-EDAN — Offline education analytics preview
+
+- DISAHKAN: Ijamm asks to implement the discussed comment collection, learning analytics and offline/reconnection system in a branch before main. Work belongs to education-analytics; main integration is not authorized in this turn.
+- DITERUSKAN: player-first reports without login, local durable recording, explicit opt-in collection, optional same-origin SQLite receiver and operator exports. No connected cloud project is configured, so no cloud resources, teacher accounts or central deployment are created.
+- DITERUSKAN: existing120 bank IDs and reducer events own correctness, help and exposure. Report chapter/SK/SP/skills with sample counts, distinguish independent/support/retry/reveal, exclude Review by default, and require three different answered IDs before revision recommendations. Retry must not duplicate carried evidence. No official TP labels.
+- DITERUSKAN: sharing starts off; records stay pending until exact revision acknowledgement after durable commit. Offline/reopen retry, concurrent-instance persistence, comment edits/deletions, corrupt/quota handling and credential-free exports are required. Developer sandbox never sends.
+- PERLU_VERIFIKASI: Ijamm's physical Windows/browser/classroom experience and any future central hosting/account/retention arrangement. MODEL.zip was unavailable and is not applied by this analytics change. [Implementation](../EDUCATION_ANALYTICS_2_25_0.md).

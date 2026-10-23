@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Feature preview 2.25.0-analytics.1 — education-analytics only
+
+- Add Main Menu/Settings/Practice Learning Report with BM/English chapter graphs, selected SK/SP breakdown, honest sample counts and targeted Basics/review.
+- Observe existing gameplay/Practice evidence without changing questions, rewards or RNG; retain Review separation and Retry continuity.
+- Add offline durable pending collection, explicit consent, exact revision acknowledgements and optional authenticated SQLite receiver with operator CSV/JSON extraction.
+- Preserve existing comments, exports, audio and Dev isolation. Main is not updated. [Guide](../EDUCATION_ANALYTICS_2_25_0.md); [actual validation](../EDUCATION_ANALYTICS_VERIFICATION.md).
+
 ## Game 2.20.0
 
 - Limit combat to three active Passives with a free-to-cancel replacement popup, correct stat removal and preserved trigger history.

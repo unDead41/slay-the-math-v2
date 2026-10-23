@@ -1,0 +1,9 @@
+/* The shared renderer owns its contents; the folio owns the native dialog. */
+#preview #practice-analytics-dialog{box-sizing:border-box;width:min(1100px,calc(100vw - 24px));max-width:1100px;max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;background:#101c29;color:#f3f1e9;color-scheme:dark;}
+#practice-analytics-dialog>.panel-title-line{gap:16px;align-items:center;}
+#practice-analytics-dialog h2{margin:0;}
+#close-practice-analytics{color:#e2c27c;}
+#practice-analytics-content{min-width:0;}
+#practice-analytics-content button{white-space:normal;}
+.analytics-practice-note{font-size:.9rem;line-height:1.5;}
+@media(max-width:600px){.page-toolbar{flex-wrap:wrap;}#practice-analytics-dialog{padding:16px;}#practice-analytics-dialog>.panel-title-line{flex-wrap:wrap;}}

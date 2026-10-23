@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'">
 <meta name="color-scheme" content="dark light">
 <title>Slay the Math — The Question Folio</title>
 <style>__STYLE__</style>
@@ -41,6 +41,7 @@
  <div class="page-toolbar">
   <button id="atlas-toggle" class="atlas-toggle" aria-expanded="false" aria-controls="atlas-panel"><span aria-hidden="true">▦</span> Question atlas <span id="atlas-mobile-count">120</span></button>
   <span class="mode-badge" id="mode-badge">Review</span>
+  <button id="learning-report" class="progress-button" aria-haspopup="dialog">Learning Report</button>
   <button id="progress-button" class="progress-button" aria-expanded="false" aria-controls="progress-panel">Practice record <span id="progress-mini">0 / 120</span></button>
  </div>
  <p class="storage-notice" id="storage-notice" role="status" hidden></p>
@@ -62,7 +63,7 @@
   <div class="question-data" id="question-data" hidden><section id="given-panel" hidden><h3>Given</h3><ul id="given-facts"></ul></section><section id="asked-panel" hidden><h3>Find</h3><p id="asked-text"></p></section></div>
   <div class="answer-heading"><h3>Choose your answer</h3><span id="attempt-caption">One answer</span></div>
   <div id="choices" role="group" aria-label="Answer choices" aria-describedby="choice-help"></div>
-  <p class="choice-help" id="choice-help">Tap an underlined term for its meaning. Select a choice, then check it.</p>
+  <p class="choice-help" id="choice-help">Tap a highlighted term for its meaning. Select a choice, then check it.</p>
   <div class="answer-actions"><button id="submit-answer" class="primary-button">Check answer <span aria-hidden="true">→</span></button><button id="reveal-answer" class="text-button">View solution &amp; finish</button></div>
   <p class="status" id="status" role="status" aria-live="polite"></p>
   <section class="choice-feedback-panel" id="choice-feedback-panel" hidden aria-labelledby="choice-feedback-title"><h3 id="choice-feedback-title">Try this idea</h3><p id="choice-feedback"></p></section>
@@ -85,17 +86,18 @@
     <div class="feedback-input-note"><span id="feedback-input-help">Saved automatically on this device. Please leave out personal details.</span><span id="feedback-character-count">0 / 2,000</span></div>
     <button type="submit" id="feedback-save">Save comment</button><p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
    </form>
-   <div class="feedback-tools"><strong id="feedback-count">0 questions have a comment</strong><p>Download or share your comments with Ijamm for future improvements. Nothing is sent automatically.</p><p class="feedback-warning" id="feedback-storage-warning" role="status" hidden></p><div class="feedback-buttons"><button data-feedback-export="csv">Download comments (.csv)</button><button data-feedback-export="json">Download JSON</button><button data-feedback-share>Share comments</button></div></div>
+   <div class="feedback-tools"><strong id="feedback-count">0 questions have a comment</strong><p id="feedback-delivery-note">Download or share your comments with Ijamm for future improvements. Nothing is sent automatically.</p><p class="feedback-warning" id="feedback-storage-warning" role="status" hidden></p><div class="feedback-buttons"><button data-feedback-export="csv">Download comments (.csv)</button><button data-feedback-export="json">Download JSON</button><button data-feedback-share>Share comments</button></div></div>
   </section>
   <details class="source-details" id="source-details"><summary><span>Sources &amp; curriculum fit</span><span class="alignment-badge" id="alignment-badge"></span></summary><div id="source-alignment"></div><div id="question-sources"></div><p class="source-explainer">PDF pages count from the first page of each file. Printed pages are the page labels inside the book. These references support the mathematics; the game scenario is local to this question.</p></details>
   <footer class="folio-navigation"><div><button id="previous-question" class="text-button">← Previous</button><button id="restart-review" class="text-button">Reset this review</button></div><button id="next-question">Next review <span aria-hidden="true">→</span></button><p id="next-question-note" class="small-note"></p></footer>
  </article>
- <div class="term-guide"><div class="legend" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div><p>Hover, focus or tap an underlined term. Press Escape or tap outside to close it.</p></div>
+ <div class="term-guide"><div class="legend" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div><p id="term-interaction-help">Hover, focus or tap a highlighted term. Press Escape or tap outside to close it.</p></div>
  <div class="feedback-session-footer"><p>Finished testing? Your comments can help improve the next version.</p><button id="feedback-finish">Finish practice</button></div>
  <p class="page-footnote">An offline question bank for Slay the Math. Your learning record and comments stay in this browser until you share them.</p>
 </div>
 </div>
-<dialog id="reset-learning-dialog" aria-labelledby="reset-title" aria-describedby="reset-description"><p class="section-kicker">A fresh page</p><h2 id="reset-title">Start a fresh learning record?</h2><p id="reset-description">This clears the learning progress saved in this browser. Every question will be unseen again. Your open Review questions stay available.</p><div class="dialog-actions"><button id="cancel-reset-learning" autofocus>Keep my progress</button><button id="confirm-reset-learning" class="primary-button">Start fresh</button></div></dialog>
+<dialog id="reset-learning-dialog" aria-labelledby="reset-title" aria-describedby="reset-description"><p class="section-kicker">A fresh page</p><h2 id="reset-title">Start a fresh learning record?</h2><p id="reset-description">This clears the current Practice record. Every question will be unseen again. Earlier Learning Reports and your open Review questions stay available.</p><div class="dialog-actions"><button id="cancel-reset-learning" autofocus>Keep my progress</button><button id="confirm-reset-learning" class="primary-button">Start fresh</button></div></dialog>
+<dialog id="practice-analytics-dialog" aria-labelledby="practice-analytics-title"><div class="panel-title-line"><h2 id="practice-analytics-title">Learning Report</h2><button id="close-practice-analytics" class="text-button" autofocus>Close report</button></div><div id="practice-analytics-content"></div><p id="practice-analytics-status" role="status" aria-live="polite"></p></dialog>
 <dialog id="feedback-exit-dialog" aria-labelledby="feedback-exit-title" aria-describedby="feedback-exit-summary feedback-exit-delivery"><p class="section-kicker">Help shape future improvements</p><h2 id="feedback-exit-title">Thank you for trying the questions.</h2><p class="feedback-reassurance">Yes, we do read your comments.</p><p id="feedback-exit-summary"></p><p id="feedback-exit-delivery"></p><div class="feedback-buttons"><button data-feedback-export="csv">Download comments (.csv)</button><button data-feedback-export="json">Download JSON</button><button data-feedback-share>Share comments</button></div><p id="feedback-exit-status" class="feedback-status" role="status" aria-live="polite"></p><div class="dialog-actions"><button id="feedback-exit-cancel" autofocus>Keep reviewing</button><button id="feedback-exit-confirm" class="primary-button">Return to Main Menu</button></div></dialog>
 </main>
 <script type="application/json" id="preview-data">__DATA__</script>

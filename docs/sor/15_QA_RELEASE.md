@@ -155,3 +155,10 @@ Verify all 49 installed voice hashes against the normalized package; retain eigh
 ## MUSIC(5) release checks — 2.24.0
 
 Check the 26 new output hashes, post-MP3 LUFS/TP/decode and duration; assert all preceding registry assets remain identical. Exercise 7/8/8/5/9 answering/Hint/More Hint/correct/wrong shuffle bags, real answer versus selection, distinct wrong attempts, Hint after wrong, solved reviews, historical/reloaded receipts, legacy predictions and Mystery timeout. Verify actual Practice frame isolation, Restart Review/Reveal, all 75 native browser decodes and portable offline playback. Run full Node/jsdom tests, syntax, production build and current developer toggle/isolation browser checks. Report remote CI separately from local verification. [Evidence](../verification/audio-2.24.0/release-evidence.md).
+
+
+## Education analytics branch — 2.25.0-analytics.1
+
+Release only to education-analytics for review; do not merge or update main without Ijamm's next instruction. Verify hand-counted evidence, all120 curriculum mappings, help order, sparse denominators, Review separation, current-run filters, Retry/reload idempotence and genuine New Run/reset separation. Exercise corrupt/quota/capacity recovery, concurrent storage writes, exactACK/newer edits/conflicts, offline/reopen/backoff and real SQLite response-loss replay. Test actual Main Menu/Settings/Practice BM/English report, keyboard focus/selection/disclosures, local scroll, exports and Dev isolation. Run full regression/build/production/portable checks; record actual results and limits in the verification document. [Feature guide](../EDUCATION_ANALYTICS_2_25_0.md).
+
+Production preflight must reject private SQLite/DB files under dist, remove stale output on failure, and preserve the source data. The final full regression passed 555 tests; final display/build guards were verified with 10 host and 3 release tests, a clean production build and 65 resource hashes. See the verification document for scope and actual limits.

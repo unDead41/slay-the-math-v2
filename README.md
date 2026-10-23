@@ -1,6 +1,6 @@
-# Slay the Math — Passive & Music Edition 2.20.0
+# Slay the Math — Education Analytics Preview 2.25.0-analytics.1
 
-Current update: three active Passives with a full-card replacement popup, eight supplied background cues and seven character voices. Music, Voice and Sound FX have separate controls. [Changes and validation](docs/PASSIVE_AND_MUSIC_2_20_0.md). Compact combat and run-unique 120-question Predict remain available.
+This feature branch adds Learning Report to Main Menu, Settings and Education Practice, with BM/English chapter/SK/SP evidence, offline recording, comments collection and CSV/JSON exports. It is based on main 2.24.0 and is not merged into main. [Try the branch and optional SQLite receiver](docs/EDUCATION_ANALYTICS_2_25_0.md). Existing cards, questions, artwork and Pack5 audio remain.
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -58,7 +58,7 @@ Special-situation artwork update: [2.5.2 notes](docs/SITUATION_ART_2_5_2.md). Ru
 
 Reward and Shop portrait-card correction: [2.5.3 notes](docs/FIX_CARD_PROPORTIONS_2_5_3.md).
 
-Artifact Pack V3.2 rich text and resolved calculations: [2.6.0 notes](docs/ARTIFACT_RICH_TEXT_2_6_0.md). Open **Artifacts → View Calculations**, **Calculations** on the map/rooms, or **Log** in combat. Underlined terms and numbers support hover, keyboard focus and tap.
+Artifact Pack V3.2 rich text and resolved calculations: [2.6.0 notes](docs/ARTIFACT_RICH_TEXT_2_6_0.md). Open **Artifacts → View Calculations**, **Calculations** on the map/rooms, or **Log** in combat. Highlighted terms and numbers support hover, keyboard focus and tap.
 
 Stage 1 normal/Elite frame animations: [2.7.0 notes](docs/STAGE1_ANIMATION_2_7_0.md). Five supplied enemies use 25 clips / 128 frames, with unchanged combat rules and a stable arena floor.
 

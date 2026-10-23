@@ -431,3 +431,11 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 - DITERUSKAN: source inventory contains 26 additions: 4 answering, 4 Hint, 4 More Hint, 5 correct and 9 wrong. Use every available recording; retain all 57 preceding supplied files without re-encoding. The stale embedded v2 manifest does not describe the new additions.
 - DITERUSKAN: master new talking to the existing -18 LUFS ±0.5 / encoded TP ≤ -1 dBTP standard; retain rate/gain 1 and the original ZIP. Use actual ordered reducer events for answer/support reactions, with per-attempt receipts and no outcome for timeout/reveal/exhaustion.
 - IMPLEMENTED contract and audit: [Audio 2.24.0](../AUDIO_2_24_0.md). Human audition, verified transcripts and physical Windows/device testing remain unverified.
+
+## DEC-20261023-MAP-BALANCE — Seed/route audit for Master
+
+- DISAHKAN: Ijamm assigns `balance/map` at base 2800f9a; audit all 100 registered seeds and legal paths, preserve two stages/ten levels and mandatory Mystery 5/Rest 9/Boss 10. No merge or push to main; preserve other branches.
+- DISAHKAN: map/laluan difficulty and Combat Power are developer references only. Full-run pupil victory goals Easy 90%, Medium 70%, Hard 50% belong to Master calibration.
+- IMPLEMENTED: read-only structural enumeration and contextual pressure estimates, fixed canonical-engine pilot, CSV/JSON, source comparison and [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md). No production imports, save schema or gameplay stat/price/topology changes.
+- CADANGAN: pressure-debt estimate, visible greedy/feedback policy and log-risk CP scale are testable analysis choices, not calibrated game rules. Eight pilot trials per seed remain provisional; route CP stays null pending comparable entry-bank evaluation.
+- PERLU_VERIFIKASI: implement candidate difficulties in the owning domains, reconcile candidate BAL-25 with existing quotas/forced Elite paths, broaden deck/policy tests and conduct pupil validation. [Master handoff](../MAP_BALANCE_HANDOFF.md).

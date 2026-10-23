@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Map balance audit v1.2 — 23 October 2026
+
+- Add developer-only analysis for all 100 seeds, 200 maps, 5,500 complete stage paths and 77,384 legal two-stage pairs; preserve all topology and gameplay values.
+- Add contextual pressure estimates, bounded real-engine campaign replay, explicit sampling/traversal coverage, uncertainty and error/censor handling, CSV/JSON and candidate-vs-runtime provenance.
+- Add [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md) and [Master handoff](../MAP_BALANCE_HANDOFF.md). Candidate Easy/Medium/Hard tuning and pupil targets remain unvalidated; no game-version bump or player-facing CP.
+
 ## Game 2.20.0
 
 - Limit combat to three active Passives with a free-to-cancel replacement popup, correct stat removal and preserved trigger history.

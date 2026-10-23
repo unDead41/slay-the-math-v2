@@ -1,0 +1,136 @@
+✔ CSV quotes embedded separators/newlines and distinguishes null from zero in JSON inputs (1.818115ms)
+✔ sampler is repeatable and stays in the complete legal uint32 catalogue class (2.308895ms)
+✔ engine errors or censored cases block a final-looking pilot score (0.852495ms)
+✔ stage 2 uses a reached-stage denominator and reports missing coverage explicitly (0.240665ms)
+✖ a resolved stage survives downstream campaign censoring and errors (1.290371ms)
+✖ aggregation honours the configured score reference probability (15.103774ms)
+✔ visible combat policy has no access to hidden draw order and does not mutate its view (16.406228ms)
+✔ canonical campaign replay is reproducible and validates every entered route (1016.057329ms)
+✔ invalid forced route is rejected before it can teleport the player (1.998096ms)
+✔ benchmark action limit is censored, never counted as player defeat (5.489436ms)
+✖ budget boundaries preserve completed Rest and Boss outcomes (117.823113ms)
+✖ context fingerprints the engine dependency closure and actual input bytes (98.109215ms)
+✔ merged branches preserve distinct routes and uniform-exit probabilities (7.948596ms)
+✔ cycle and dead-end graphs fail rather than silently truncate coverage (0.638897ms)
+✔ all registered stage routes preserve mandatory levels and total 5500 (326.391606ms)
+✔ recovery preserves an earlier peak deficit instead of hiding it at the finish (0.459339ms)
+✔ catalogue seed has exactly three reachable roster offset combinations (16.211315ms)
+✔ win-risk scores have fixed scale, honest zero-trial null and uncertainty (0.560226ms)
+✖ Wilson endpoints preserve exact zero/all-win boundary meaning (1.626373ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 14
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1862.607191
+
+✖ failing tests:
+
+test at tests/map-balance-export.test.cjs:27:1
+✖ a resolved stage survives downstream campaign censoring and errors (1.290371ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  0 !== 2
+
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-audit/tests/map-balance-export.test.cjs:30:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-export.test.cjs:34:1
+✖ aggregation honours the configured score reference probability (15.103774ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(b.combatPower>a.combatPower)
+
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-audit/tests/map-balance-export.test.cjs:37:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-replay.test.cjs:34:1
+✖ budget boundaries preserve completed Rest and Boss outcomes (117.823113ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'BENCHMARK_LIMIT_CENSORED'
+  - 'CLEARED'
+
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-audit/tests/map-balance-replay.test.cjs:37:59)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'BENCHMARK_LIMIT_CENSORED',
+    expected: 'CLEARED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-source.test.cjs:5:1
+✖ context fingerprints the engine dependency closure and actual input bytes (98.109215ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(a.sourceHashes[f])
+
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-audit/tests/map-balance-source.test.cjs:7:107)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-structure.test.cjs:50:1
+✖ Wilson endpoints preserve exact zero/all-win boundary meaning (1.626373ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 5.551115123125783e-17
+  - 0
+
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-audit/tests/map-balance-structure.test.cjs:52:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 5.551115123125783e-17,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

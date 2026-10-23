@@ -82,3 +82,12 @@ Mystery v2 rewards/costs/failures now follow [MYSTERY_EVENTS.md](MYSTERY_EVENTS.
 ## Supplied 40-card mechanics and display — 2.18.0
 
 The explicit request to apply the supplied 40-card package supersedes the earlier Passive exclusion and eight/twelve-card pool baseline. Current scope, stable-ID compatibility, base values/upgrade extension, transaction and rendering owners: [Cards and display 2.18.0](../CARDS_AND_DISPLAY_2_18_0.md). Source-authoritative mechanics remain playtest tuning.
+
+## Map-domain balance v1.2 — 23 October 2026
+
+- DISAHKAN: overall goals are Easy 90%, Medium 70%, Hard 50% of pupils winning a full two-stage run. These replace the historical 40–70% hypothesis for final calibration; Master owns verification.
+- Current runtime at 2800f9a has Learn/Challenge, not implemented Easy/Medium/Hard profiles. Balance v1.2 values are candidates. The map audit preserves card/enemy/economy values and records their differences from the package.
+- Map pressure estimates and contextual, provisional win-risk CP are separate from individual/combination card utility. No CP is shown to players. Sparse route observations do not constitute calibrated route CP or pupil results.
+- Recovery, Shop affordability, rewards and boss-entry HP/deck/artifacts must be interpreted with actual carry state. Stage 2 pilot rates are conditional on surviving Stage 1; forced-route diagnostics are excluded from pilot scores.
+
+Owners: [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md), [results, cross-domain requests and handoff](../MAP_BALANCE_HANDOFF.md). No candidate stat, price, difficulty or generator change is activated by this branch.

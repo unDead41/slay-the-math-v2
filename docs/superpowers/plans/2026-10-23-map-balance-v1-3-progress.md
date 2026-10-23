@@ -32,3 +32,6 @@
 - Final: fixed missing Mystery combat load — recovery combat load includes an observed Mystery battle but not an ordinary event RED→GREEN; final suite522/522.
 - Final verification: full root522/522, zero skipped/failures; targeted50/50; map7/7 plus200layout/12PNG validation; syntax/build/prod exclusion PASS. Explicit git diff against requested2800f9a fordist, map source/data andpackage is empty. No production/gameplay numbers or UI changes.
 - Task4 implementation and verification complete; publication pending expected-head lease to balance/map only. Final raw Git blobs uploaded/verified43/43; no branch ref moved yet.
+
+- Task4: complete. Feature publication8d557787b02cbd223da5cacbb492acd0fae0a615 passed expected-head lease fromd70b409; remote tree695d4efd807c4a90e43a745c83ecfb89bbd68bfa exactly matches verified checkout.134 changed blobs verified,43raw shards. No force, main merge or main ref update. Publication receipt and this completion record follow in a feature-only documentation commit.
+- Native pre-dataset source/review history preserved in MAP_V1_3_SOURCE_HISTORY.bundle; bundle verified with prerequisite d70b409. Both review scope and exact final source/report fingerprints remain inspectable despite API commit metadata differences. No deferred code minors.

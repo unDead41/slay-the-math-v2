@@ -64,7 +64,7 @@
 
 - [x] Document each accepted item, actual counts/coverage, repeated route estimates vs engine results, source controls, pending difficulty and risks.
 - [x] Run targeted tests, map validation, root suite with concurrency 2, syntax and production exclusion checks; preserve prior reports as historical inputs.
-- [ ] Obtain one fresh code review, address material findings RED→GREEN and run the appropriate suite. Commit and publish only balance/map with an expected-head lease; verify remote file tree and no gameplay diff.
+- [x] Obtain one fresh code review, address material findings RED→GREEN and run the appropriate suite. Commit and publish only balance/map with an expected-head lease; verify remote file tree and no gameplay diff.
 
 ## Progress
 

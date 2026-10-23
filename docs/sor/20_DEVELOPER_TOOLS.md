@@ -12,7 +12,7 @@ npm run start:prod
 npm run build:prod
 ```
 
-Development defaults to http://localhost:4174 and opens Developer Hub at `/`. Production defaults to http://localhost:4173. Set `PORT` to change either. `npm start` retains its previous player-mode behavior for compatibility. The syntax is `npm run start:dev`, not `npm start dev`.
+Development defaults to http://localhost:4174 and opens the game main menu at `/`; Developer Hub is at `/__dev/`. Production defaults to http://localhost:4173. Set `PORT` to change either. `npm start` retains its previous player-mode behavior for compatibility. `npm start dev` and `npm start -- dev` are supported aliases for development; `npm start prod` selects the existing production folder (build it first).
 
 `start:prod` removes the previous release directory, generates current mechanics/entrypoints/portable output, copies only `dist` into ignored `release-prod`, and starts the production preview only after success. Local preview does not deploy the game. `build:prod` produces the folder and offline artifact without starting a server.
 
@@ -69,3 +69,7 @@ Custom shop stock selection, arbitrary status injection, selecting an entire ini
 ## Windows startup fix — 2.21.1
 
 The response-only adapter normalizes CRLF/CR line endings before matching the app closure. Windows Git checkouts can use CRLF while Linux uses LF. The previous literal LF marker rejected CRLF and returned HTTP 500 for /__dev/app.js, leaving background and DEV SANDBOX badge without the main menu. Source bytes are not rewritten. Unknown closure structures still fail explicitly. Regression coverage includes LF, CRLF, CR and a real browser session with a temporarily converted CRLF app file.
+
+## Main-menu and Settings toggle — 23 October 2026
+
+DISAHKAN: developer-only branch work, no merge/push to main. Start at the game main menu with Dev OFF. Main menu and Save and Settings expose synchronized ON/OFF switches. ON reveals Open Developer Hub; OFF hides access and rejects developer API mutation calls. The explicit Hub route remains available for diagnostic workflows. The toggle uses only `slay-the-math.dev-enabled.v1` in native session storage; player save/history/settings remain isolated in memory. Refresh keeps the toggle for the current tab, while sandbox progress is discarded. Hub preview frames enable tools explicitly. Player/production responses contain neither toggle nor adapter. This is an access convenience, not an authorization boundary.

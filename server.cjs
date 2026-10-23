@@ -1,5 +1,5 @@
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
-const dev=process.argv.includes('--dev'),prod=process.argv.includes('--prod');
+const dev=(process.argv.includes('--dev')||process.argv.includes('dev')),prod=(process.argv.includes('--prod')||process.argv.includes('prod'));
 if(dev&&prod)throw Error('Choose development or production mode.');
 const root=path.resolve(__dirname,prod?'release-prod':'dist');
 if(prod&&!fs.existsSync(path.join(root,'index.html')))throw Error('Build production first with npm run build:prod.');

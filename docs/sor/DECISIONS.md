@@ -408,3 +408,7 @@ DISAHKAN: Ijamm removes decorative underlines from rich text because they compet
 - DISAHKAN: Standardize all talking volume and bind the supplied filenames to question/help, Rest, happy card selection, defeat, Mystery intro and ordered Shop/Dungeon Master encounters.
 - DITERUSKAN: Use the verified -18 LUFS package, 49 actual voice files and eight unchanged BGM, preserving Menu/Mystery and existing SFX. The card-reward source contains eight recordings; do not invent the requested-but-unsupplied ninth/tenth. Use independent audio variation, saved consumption receipts, existing separate mixer settings and scope-safe cancellation. Practice audio remains isolated from game saves.
 - PERLU_VERIFIKASI: human audition, transcripts/captions, loop seams and Ijamm's physical Windows/device playback. [Implementation and actual checks](../AUDIO_2_22_0.md).
+
+## Developer toggle — 23 October 2026
+
+DISAHKAN: npm start dev launches main menu with synchronized Dev ON/OFF in menu and Settings; enable reveals Developer Hub, disable blocks developer mutations. Implement on dev-tools only; no main publication.

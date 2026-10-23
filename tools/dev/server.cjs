@@ -7,8 +7,8 @@ function instrumentApp(source,adapter){
  return app.replace(marker,adapter+'\n'+marker);
 }
 module.exports=function devResponse(pathname){
- if(pathname==='/'||pathname==='/__dev/'||pathname==='/__dev/index.html')return {type:'text/html',data:fs.readFileSync(path.join(base,'index.html'))};
- if(pathname==='/__dev/sandbox/'||pathname==='/__dev/game/'||pathname==='/index.html'){
+ if(pathname==='/__dev/'||pathname==='/__dev/index.html')return {type:'text/html',data:fs.readFileSync(path.join(base,'index.html'))};
+ if(pathname==='/'||pathname==='/__dev/sandbox/'||pathname==='/__dev/game/'||pathname==='/index.html'){
   let html=fs.readFileSync(path.join(dist,'index.html'),'utf8');
   html=html.replace('<head>','<head><base href="/"><script src="/__dev/storage.js"></script><script src="/__dev/fixtures.js"></script>');
   // Fixtures are loaded after the engine, before the app; no production file is changed.
@@ -16,7 +16,7 @@ module.exports=function devResponse(pathname){
   return {type:'text/html',data:html};
  }
  if(pathname==='/__dev/app.js'){
-  return {type:'text/javascript',data:instrumentApp(fs.readFileSync(path.join(dist,'app.js'),'utf8'),fs.readFileSync(path.join(base,'adapter.js'),'utf8'))};
+  return {type:'text/javascript',data:instrumentApp(fs.readFileSync(path.join(dist,'app.js'),'utf8'),fs.readFileSync(path.join(base,'adapter.js'),'utf8')+'\n'+fs.readFileSync(path.join(base,'controls.js'),'utf8'))};
  }
  const allowed={'/__dev/hub.js':'hub.js','/__dev/style.css':'style.css','/__dev/storage.js':'storage.js','/__dev/fixtures.js':'fixtures.js'};
  if(allowed[pathname])return {type:pathname.endsWith('.css')?'text/css':'text/javascript',data:fs.readFileSync(path.join(base,allowed[pathname]))};

@@ -316,3 +316,7 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 - Bind Alyssa thinking, Hint, More Hint, committed Rest, eight available reward-card variants, defeat and 15 matching Mystery intros to actual game/Practice presentation. Retain normalized ordered Dungeon Master/Merchant encounters.
 - Add independent audio shuffle bags, saved consumption receipts, scope cancellation, automatic start deadlines and watchdog cleanup; preserve game RNG, save compatibility, timed Mystery resolution and v2.21.3 rich text.
 - Extend production/portable registry generation and meaningful controller, save and actual-UI regressions. [Scope, evidence and audition limits](../AUDIO_2_22_0.md).
+
+## Developer toggle — 23 October 2026
+
+Add npm start dev alias, main-menu-first development startup and synchronized menu/Settings developer toggle with session preference and player-storage isolation.

@@ -300,5 +300,14 @@
     "status": "PASS",
     "command": "npm run test:dev-browser",
     "checks": "Real scenes, card comparison/combat, motion teardown, exact restart, presets, Practice/player storage isolation and small viewport"
+  },
+  "githubActions": {
+    "status": "BLOCKED",
+    "runId": 39895217914,
+    "jobId": 120223968967,
+    "url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/39895217914",
+    "stepsStarted": 0,
+    "annotation": "The job was not started because your account is locked due to a billing issue.",
+    "interpretation": "Infrastructure/account block; no Actions test step executed. Local Node, syntax, production, Chromium/offline and Developer Hub results are recorded separately."
   }
 }

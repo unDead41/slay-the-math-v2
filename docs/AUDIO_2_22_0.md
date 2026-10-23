@@ -42,6 +42,7 @@ Practice's current same-origin iframe sends question/help presentation state to 
 
 The normal, production, development and portable builds use the same registry and controller. The portable file embeds 10 music cues and all 49 normalized voices under canonical IDs. It is generated locally with `npm run build`, remains ignored because it exceeds GitHub's per-file limit, and is not a source input.
 
+- GitHub Actions: BLOCKED before any job step. Run 39895217914 reports that the account is locked due to a billing issue. This is not a CI test pass; the checks below were executed locally.
 - `npm test`: 462 Node/jsdom tests passed, zero failed/skipped, including real UI controls, restored receipts, shuffle boundaries, unchanged game RNG, native controller boundaries, stale-load cancellation, deadlines and watchdog cleanup.
 - `npm run check`: passed.
 - `npm run build:prod`: passed; portable size 271,203,990 bytes at this revision.

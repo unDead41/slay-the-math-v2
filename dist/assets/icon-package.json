@@ -1,0 +1,2346 @@
+{
+  "version": 1,
+  "importedFor": "2.23.0",
+  "sourceAuditCommit": "3806f9c347bb9be590eb7251717a1998b7bb6ac5",
+  "integrationBaseCommit": "83a1aeee80ff0488758f94451f7afd1c27500988",
+  "sourceArchives": [
+    {
+      "name": "STM_Icons_Review_Sheets_SOR.zip",
+      "sha256": "8da230ae42595f7cd9e5ed7b84e8a14cc78c44bf14f05275f5b704541e9103ed"
+    },
+    {
+      "name": "STM_Icons_Individual_FHD_1080.zip",
+      "sha256": "126abd5bb223f56694d5f8d218cb8660ddf168dd0bca88803d3a99d6a4b8a41a"
+    }
+  ],
+  "method": "512-square lossless WebP from reviewed 1080 RGBA exports. Exact visible RGB and alpha verified after encoding. Existing source art is retained at its original paths.",
+  "nativeDetail": "Review 4K/FHD/1080 files were resampled exports from generated source sheets around 1403x1121; no new native detail is claimed.",
+  "catalogueEntries": 130,
+  "uniqueRuntimeFiles": 129,
+  "soundAlias": "ui.sound_asset -> ui.volume",
+  "totalBytes": 14103522,
+  "assets": [
+    {
+      "id": "status.strength",
+      "name": "Strength",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "d71b1db146063f4838005d2ee0a5690aef4ae265299846b03a271c930d12c2b2",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_strength_v1.webp",
+      "runtimeSha256": "a7ec1f6432d21b26ddeaf234fe22a6f025c7cb0a28815f1a4e86145c8f818875",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 86542,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.agility",
+      "name": "Agility",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "e750d3610a9ecfc3d5d429b46f9358946ed48358f4c3b2cda485bfe887734030",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_agility_v1.webp",
+      "runtimeSha256": "de8ab706659eadaf0ff71f4741f878d92535518394a4dcc59a8b59c38322340b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 92268,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.defense",
+      "name": "Defense",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "11b7781f74d0067cf559cf1df7b178f1499ecee4171089d8719d624e323d8830",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_defense_v1.webp",
+      "runtimeSha256": "df333eea2d8dbcd49d120f432c566f4751a0e5fa516749542ea5d63998819166",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 115446,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.block",
+      "name": "Block",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "7cf0b128c98089befa74e3288b9bad2fc9adb2ad84e9044e8ac95c06ab503e33",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_block_v1.webp",
+      "runtimeSha256": "530445e693f08288ce19616d241cad35ae196e4e5ae5f295cdca9c1a22c5d553",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 117382,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.weak",
+      "name": "Weak",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "34a2e7826e88fd12b46b8b03f33061c41017795034002582e766bd986a0182a2",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_weak_v1.webp",
+      "runtimeSha256": "3cef6e3e6571c6e52b17017ca9c62e24bb9a82827ec4989b578680cc9c932de5",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 87558,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.vulnerable",
+      "name": "Vulnerable",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "fd1163af752131cb7f8482a4e0d9c180a7c76aae1679c63150583fb946f5f454",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_vulnerable_v1.webp",
+      "runtimeSha256": "f28f9639af7a590ecb5c21297259f1f21cee7c9858e738db64629c1ca464f74a",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 118230,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.thorns",
+      "name": "Thorns",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "4a1a05de4413508c5c19e1986207c54d98e94f7c229c670b8e576e814e87054f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_thorns_v1.webp",
+      "runtimeSha256": "44dc9d5d5e6d6b1bf3f3ece61b3a33f47c6c05de28c3ad16fd95be120d214916",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 87802,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.next-draw",
+      "name": "Next Draw",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "ab6eb4f02da3d4c40ae6fc1e69e9c1cd70c55f318a956db92ba93dd0a2c044e8",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_next_draw_v1.webp",
+      "runtimeSha256": "51204f9a46ccd371d9ef6a4310dd84df37ea32f0472726a44941d8bd995f5961",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104598,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.next-block",
+      "name": "Next Block",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "d3fdd4fbc286deb061f48fd1fd524b38b08bcc94fcd00b177bf7005fbe7a1331",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_next_block_v1.webp",
+      "runtimeSha256": "dbee288a0266973ef9812a77310f8b8425a401ecf55178614d0646dcf5de1ece",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 107278,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "status.retain-block",
+      "name": "Retain Block",
+      "sourceState": "CURRENT_SVG_RESTYLE",
+      "sourceSha256": "08222bd742d4c4e1619eb71f3ff87674f072d214efb51b2f089902afeb8458b1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_status_retain_block_v1.webp",
+      "runtimeSha256": "0074c24060c2de129ef957f1da50bc8a958ade05308d10f72cb43c05754a50b6",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 115000,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.heart",
+      "name": "HP",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "afcae5c84453ba099c8bf8dd6265ebe3681b31b825de29faa38422ce34be064e",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_heart_v1.webp",
+      "runtimeSha256": "701db82c939c7bc076b8bc178190d02c69a8cd78644b2e0341f483ea007a884a",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 109526,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.bolt",
+      "name": "Energy",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "76f19ddd74478059d0cfa096f4d7e196d7d747446115c9331a198562e1768e77",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_bolt_v1.webp",
+      "runtimeSha256": "1a1ebc9fab300e3b3ac9ebb399f95c23c4b05f8301fc7af1505501710aea14f7",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 83246,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.focus",
+      "name": "Focus",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "157a8244c8da6d23aee19b79b680d3418753993a56feee1e68742dbaecb68c9a",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_focus_v1.webp",
+      "runtimeSha256": "65020af2398f2ca82297634ecb4a6b7d53ef2efc6dcbc2852b129cd956c6d6aa",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 103836,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.predict",
+      "name": "Predict",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "5afb3753b6cc01fda31e93f7a0133911f3920b8288d22b28911b3ca76e9eeda7",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_predict_v1.webp",
+      "runtimeSha256": "9ac9e0e881f83eedf9dbc08dec3d1b3ad5a44806dc16ef2d280383282c9fbdfb",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 113724,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.hand",
+      "name": "Hand",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "df86a8349d6ad60e2bb756fdb6723c4b8087d3c126f6018ad8eb45bc462dd746",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_hand_v1.webp",
+      "runtimeSha256": "3b35d461197c437557627bbbb369cd05094722ad6d8fb1fd2a17625fcd4beff9",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 109486,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.drawPile",
+      "name": "Draw Pile",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "7e120012fa890e746dcf7822d842b9bdb887892c9ee080827313537937040e6b",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_drawpile_v1.webp",
+      "runtimeSha256": "dcb26249af000957a96f61102e88e3b22597f2031133f432251dbc6bc612192e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 114878,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.discard",
+      "name": "Discard",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "7f633f53ecd4311bbca30dbda1f16bd221e1233dc542a99468598cccae8dfec7",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_discard_v1.webp",
+      "runtimeSha256": "a59c7f4a4a8db0c82dcbd117b4aaf095b5b269e279007d6bdae6d4d1d7edbeef",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 106730,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.exhaust",
+      "name": "Exhaust",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "3d6c2071f606568b423385dae1ce0c8cafa44e6d33a4c5143862be202b67b669",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_exhaust_v1.webp",
+      "runtimeSha256": "3c01455ed5ed347218a6b3c066bf65438f424ae617e3b70cb8777e0cb9e67040",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111782,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.sword",
+      "name": "Attack",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "6c2dc28b2a6ac2759fc2f67796b5ba5a3ebc7eddab24f55ecabc6951d40f64d1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_sword_v1.webp",
+      "runtimeSha256": "9143f9c5776e694e8841a39dd402ee6d4cc0b80ac441a472c45b95dada8d0947",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 86210,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.shield",
+      "name": "Defend / Next Move",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "993eb14028749e504c5495cdfafe2bfd6ffbcd6af007cee3e11aed58c4b38632",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_shield_v1.webp",
+      "runtimeSha256": "54ff61b538f22d1726413dec8b0d3fc996f7852f6f88e4b57f5966749a7bcb86",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 114496,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.book",
+      "name": "Tutorial / Skill",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "f530a6344153dba1d7273d35abeeaab5556774d984f48483eb5fba8a97a8a601",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_book_v1.webp",
+      "runtimeSha256": "3ef8614b6b30fa12f36181807f0b7342ba661c90a58faa6a9d3ac8c6d3e2ebaa",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104338,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.cards",
+      "name": "Card Collection",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "7a3970a1c5cd829bbd428ff6e1c83739fa65576a396d5bfc8da0c62c3692d4a6",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_cards_v1.webp",
+      "runtimeSha256": "7dd03eb6804536a61b9e309bbb3bc43bd5447597b23c9e9cfaf97d1d7e565bf1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 123332,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.settings",
+      "name": "Settings",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "4cfd867bcbf07d1dd63654044ceffb60d62c8cdd367d62f0c941a054cc650a10",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_settings_v1.webp",
+      "runtimeSha256": "e59644502991d7afe357a43e8957ba10865a6aebd1a42ced8eb1cc7cb3e3cb86",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 123468,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.volume",
+      "name": "Sound",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "ab8364f9a77632c500fdb4a1327c6e72627d045846a9d6f89a1cb6d0a8c3afb8",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_volume_v1.webp",
+      "runtimeSha256": "358f7ba41288c7fcbbe102abeec61bd53064b4d6a3644118b14841c188745f35",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104456,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.filter",
+      "name": "Filter",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "af09f62c1c7deff735ba43c740d36d92ab0c62f3e5a41e0fa1555d187b84e8a1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_filter_v1.webp",
+      "runtimeSha256": "0da13e908bc0b6d66e438d50bf888c10a717f8e8d2701786af1367b82ce9cad0",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 101242,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.star",
+      "name": "Passive",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "5818de27319f7d0f7559abcea0e121753804c7a4e61897f6faa0827bd3571910",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_star_v1.webp",
+      "runtimeSha256": "f527f6166c1349dd90a061e847239ab58ab2cdb9d5e011943a762818151243f8",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 106388,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.map",
+      "name": "Dungeon Journey",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "90b6335bbcdec450972799fcaa0ad0cf04a4efdeb9a712e387e9ad28315dd6b2",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_map_v1.webp",
+      "runtimeSha256": "ba8915c7b2f494ad19de95c98b7393638584a0d6c4dd7879c20850b32b8e2fcb",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 103788,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.chance",
+      "name": "Chance Emblem",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "29af92f28006c6fee229650b7d6801cb4802c5db2719a622600cf6b2327bd386",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_chance_v1.webp",
+      "runtimeSha256": "6806e318656d33f2dce14493c1cc8dcd7e0c5199a5f1bc698ac0147d4dddb71c",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 106520,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.search",
+      "name": "Search",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "0ed84823cb715eecc39236abd8a2e6c3b4dccb465dffd2e651567c2ddb73e94a",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_search_v1.webp",
+      "runtimeSha256": "76a7d15651500bc9155fc36f5f9cf2ea648ca739799c15fade337e385d8892ab",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 90782,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.clock",
+      "name": "Time",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "0fee30cdc184b6eed5f24fdf035867b2f3342f99394b99ebbfe6fbd4f8341471",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_clock_v1.webp",
+      "runtimeSha256": "231da5922805c3b20358ba22c6825ceff619c3c580a483104a0dd60605a4d731",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 112942,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.flame",
+      "name": "Fire",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "3986739ac710193b210640f8005b120b9a155aac2f983a2cfa241c810b75eb50",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_flame_v1.webp",
+      "runtimeSha256": "249f0e903d76060ac29ba6b1ce90d2c985b53681e72d7ea16435e0f9399febe4",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 102744,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.arrow",
+      "name": "Next / End Turn",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "25aa4be9908ec73aba31bc48db76fcbb62f2ad11d173717897a415f024e4410f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_arrow_v1.webp",
+      "runtimeSha256": "f0bbeb4dd130a880863caa8456b004be968ed31daedc92d9656440d33a0f6717",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 87610,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.check",
+      "name": "Confirm / Complete",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "002a72cb057bfdea4fdb7d5e19813853b8626699bc18589821ce05563fb46e25",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_check_v1.webp",
+      "runtimeSha256": "fb740723ddfdeeed7c264ce78290f935bdc5b8907e7530546af81a3ed2a65857",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 82702,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.close",
+      "name": "Close",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "8f8cbd79236814717533582c92747e253ec450e007fb21ff37de0b9555c4627f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_close_v1.webp",
+      "runtimeSha256": "720d89b9e611e13ec0d0fc0a89372164e0387d38868ffc0e80306efdaece1f3d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 99488,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.moon",
+      "name": "Motion",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "ec5a8adbedb235bc06290ff91ade55759dd32aa435e2b0e4812cf85be19d02a7",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_moon_v1.webp",
+      "runtimeSha256": "2bb1262750595186cf72adf7b5530d733832822fd49a06c24a94964d818b580c",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 101348,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.orb",
+      "name": "Arcane Crystal",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "dff99bc8e9fa7a20395b03f73fea10044966f9704125a042bd1d61b767e37a87",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_orb_v1.webp",
+      "runtimeSha256": "270c6e094b447aba582b4427a46be69863476bd5d79b94a26afd604740d207bd",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111518,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.leaf",
+      "name": "Heal (legacy)",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "5aeda488c3a4a63bfb6bed5d276d3104cda853f5329cc4be9b9010b927e659da",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_leaf_v1.webp",
+      "runtimeSha256": "6095936e3baa66b43e8802029b7285ad006e273bae45aeac82ba78b263cfd038",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 103886,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.balance",
+      "name": "Balance (legacy)",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "c1cde720e0afd452fdbae4e246c1b3810022466f566cdca02c89fbc27bb65c8e",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_balance_v1.webp",
+      "runtimeSha256": "19e9d378a531742eba35dbe0afeefba0a680b0415f9a423c9dca8ceaef43e536",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 106206,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.elite",
+      "name": "Elite Crest (legacy)",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "2ed2d67a539771beeb982d85cbd3cf259b747a05220af6234fb5cfd5b11b9026",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_elite_v1.webp",
+      "runtimeSha256": "e688ff7bf4d5052d0fce5e0ef51c113affd9e2932b007e6b0a7e7f4c3d189d4a",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111998,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.crown",
+      "name": "Boss Crown (legacy)",
+      "sourceState": "CURRENT_INLINE_SVG_RESTYLE",
+      "sourceSha256": "66dab3fbf0f60044fc09745e554116d6687cacf6854aa022c740979c0155aac9",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_crown_v1.webp",
+      "runtimeSha256": "9ad08686a88b7210a5a21b44cff767501f25114920562d2214e7d386bfdc7ec2",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 110652,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "ui.coin",
+      "name": "Gold",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "00ee9ac356f23ed39fb4ecdd3c32996b712a7076e0ef2cf608eaf1daefd72dec",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_ui_coin_v1.webp",
+      "runtimeSha256": "64501d8e5aa0ae63606ebaab8880eed2ee1715b16dfef252bbebc7c81b6d0c17",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 113046,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "map.battle",
+      "name": "Battle",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "1f697d27d8f9f22517c6ab23325eb33ffa85b8c9da91676e859c3e36cd55ad87",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_map_battle_v1.webp",
+      "runtimeSha256": "dce12c9f09355668d35f103364287bb557c517e54fa7bad21b7e31fb5e059796",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 95488,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "map.elite",
+      "name": "Elite",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "93ca580b277e78bbba5735c262eba7c95921ac27fc00d1333bad7b69f1588f56",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_map_elite_v1.webp",
+      "runtimeSha256": "0b8dbc89b41a9a2629fba439668e3c1a6f6a2ca4b889e5438224f8abb3267321",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111138,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "map.boss",
+      "name": "Boss",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "5760dde68bd5a891f178cc23b38b291def0370228b2395f5e05dada37396b88a",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_map_boss_v1.webp",
+      "runtimeSha256": "a00f1ab5710b8c41c7acf531795f454f8e68bbaf27ba07aebb4cbf3ce38802df",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 120168,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "map.shop",
+      "name": "Shop",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "fc762885cb91736afe994362c11fa97a819b0cbbdfb0bb6e8ee6d305f9b4698d",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_map_shop_v1.webp",
+      "runtimeSha256": "dce2a912094066aeef416c347c52b78fb025c9e863110ebf07a57d336c97e1a4",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 120206,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "map.camp",
+      "name": "Rest",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "06ba3b6c9896c082bcb9cc568ce28530364577ed818f85dad16e150cf3ea6e9e",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_map_camp_v1.webp",
+      "runtimeSha256": "cb60783cdac5e90910322eff84b41f3e6acf5d0c4adff88c3392c443f307f999",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 101760,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "map.event",
+      "name": "Mystery",
+      "sourceState": "CURRENT_BITMAP_RESTYLE",
+      "sourceSha256": "694e1b669acc0ee4c96e46c44654ec690e4281ca35c521352dd95fdee02c2a17",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_map_event_v1.webp",
+      "runtimeSha256": "8714828fcd8ac8f8f5f47094e9684837c8bd46dea163d8426bc52ad096ffe57b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 101808,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.boss_seal_locked",
+      "name": "Boss Seal — Closed",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "5745e09c13e0120efdb2b96d1aee733f21f7bb414250383406c7dea9dcd73bf6",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_boss_seal_locked_v1.webp",
+      "runtimeSha256": "2a8c4fc07566217d2689af358e891792964a798448074daf02c34220b7abd7a8",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 117428,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.boss_seal_open",
+      "name": "Boss Seal — Open",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "382077ec32dc209e973056550add4d43e1907213316b04885023a528c5e431fd",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_boss_seal_open_v1.webp",
+      "runtimeSha256": "6ba62cfa649e57df1584c855f1f6b3aa849283a115dba8289f93a54e144b4949",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 118306,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.sound_muted",
+      "name": "Sound Muted",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "f1286853d85530baf63c0cf4d88d6cf5482267a34a00e3ebadcb7f90a59d0532",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_sound_muted_v1.webp",
+      "runtimeSha256": "1ffd2e55d649e406a7f1b1fbac95da280de40f93dbb12a5e1f0db3f991f2d2f8",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 91844,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.intent_attack_block",
+      "name": "Attack + Block Intent",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "879e1aa270c11f89a1e9b1c73c97e564c5bbf6c7cb4eb9595b3433d0c4ce89bb",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_intent_attack_block_v1.webp",
+      "runtimeSha256": "5dc1675a7287614bde7e1df9f36b5fe9e2c15f1447a06c8045da36169f9e2176",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 99148,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.category_skill",
+      "name": "Skill Category",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "f32121f18783f2c373c7e7cbe0c57ddc0ad1eb4f678668739a6a7cab87f2cfe1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_category_skill_v1.webp",
+      "runtimeSha256": "d9803f1bd25a44edc77248dfdc80ef99e38050daec03e86f0bf48374fa5f16f5",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 112332,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.save",
+      "name": "Save",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "f00a85ab493eee562f35198f8aea61b3e0aef679fbcbc6b2ea7d342051e8e7d1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_save_v1.webp",
+      "runtimeSha256": "ffb6fede6cfda0f54405e7173b08ea0e017285d0bc75f3a83cfa4de43a7829e1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 98368,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.export",
+      "name": "Export Save",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "59ce4161c27d40957ac478d54c27bb14917a9da8b9fb15a7ef461809c0398f20",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_export_v1.webp",
+      "runtimeSha256": "aa9175ce100272ea584a0ae9b149700d8209a2574a17a8cd7e3cd5da462c0860",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 96342,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.import",
+      "name": "Import Save",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "d33f55a757a498861403ba9fc6d8247cb5c344664354ce8ad17d20702b475f96",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_import_v1.webp",
+      "runtimeSha256": "b4858ae9e8a4a56ed973f2b9986a9cddca430aec14b3fdf11c1300c22fbb496b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 98700,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.topic_probability",
+      "name": "Probability",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "48abd21bc71130699465a9ccf70eae8631e8a586f572c1bd49801c103b23eef1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_topic_probability_v1.webp",
+      "runtimeSha256": "a682d0afc22bb57656efd8d7dd76f81f4bf908117788f2ce2c74bacd351b57a1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 105904,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.topic_sets",
+      "name": "Sets",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "927cc66ca97bf459ef4b6181cafd824db72de2f88ded5f9cb2a923b7186e9cbb",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_topic_sets_v1.webp",
+      "runtimeSha256": "f1d43fce9177950e43a0490019fd0843fc0b1e4233b961f91e7e2200446a4045",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104224,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "proposed.topic_logic",
+      "name": "Logical Reasoning",
+      "sourceState": "PROPOSED_ART_ONLY_NOT_IN_MAIN",
+      "sourceSha256": "f5aae1fe054c162c4335526e26e953778ada8715d5f52e39e5c8c929364fcd22",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_proposed_topic_logic_v1.webp",
+      "runtimeSha256": "979810abbb442c349074ca90b0d60cfb8caf2d11f65ec38e8f8719496a96d0c9",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 101054,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s01_emberheart_pendant",
+      "name": "Emberheart Pendant",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "2cecf69b09ef41f2d860b8b097a9819880acc7007baa2edc5822967baeeab2ff",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s01_emberheart_pendant_v1.webp",
+      "runtimeSha256": "86374025de4f5ebd9a7a72062883a89ba7493331fa6b0a8c56e3cf58c06266da",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 95616,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s02_cinder_whetstone",
+      "name": "Cinder Whetstone",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "7a0e7b855cfc896ae2607afb671cfd40a9dc2389d40299fad260128ce06489c4",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s02_cinder_whetstone_v1.webp",
+      "runtimeSha256": "0d602c59b8c913857115f0607e501e9a66385eda037053a21ddfc86133cb33f3",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 101232,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s03_prism_buckler",
+      "name": "Prism Buckler",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "0b093cd2f93b54f46fb51006d814c541206b450a9d7c8f37064abf7c90b78319",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s03_prism_buckler_v1.webp",
+      "runtimeSha256": "8d0630a7ee5af0213f6bf9761da33681c34e0702c21bf2d807fddadbdfbc9f39",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 117662,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s04_clairvoyance_lens",
+      "name": "Clairvoyance Lens",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "7da427748c007b16293ab9b54e8003aa8f6b09fd7be43413cdb777dcc5ca9c69",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s04_clairvoyance_lens_v1.webp",
+      "runtimeSha256": "5b3fd2b27002bf4ea6252492f14c8fac0cde593ae3eb465283412a4c19ff6128",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 90894,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s05_scholars_bookmark",
+      "name": "Scholar's Bookmark",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "a7aee25cecfab02ad0778ab96f9384203b37d3a5e817df7a74e132d195c1c974",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s05_scholars_bookmark_v1.webp",
+      "runtimeSha256": "06c12d8193f86136a6e0a4b71e1ed12532a26a43d843b57a785eeb93cf5505a1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 97226,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s06_merchants_seal",
+      "name": "Merchant's Seal",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "daba5cf1a8af3d615f533de0f3aea7f0230efa2c4340f5aea8f64ae5aa569c93",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s06_merchants_seal_v1.webp",
+      "runtimeSha256": "5265664e41037a9845bc74272c9800f565ecc82f987e1e2ea4d6e01511936f07",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 108954,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s07_bronze_guard_pin",
+      "name": "Bronze Guard Pin",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "9c67b495bc6cb9d2633e9e6452ba5064d1c7106ff63f1a978d23fda02c9a1e3f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s07_bronze_guard_pin_v1.webp",
+      "runtimeSha256": "8a119dc05e09001235a840b733847a76cfaef4db365f601ee1b87a9d990b2f58",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104360,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s08_travelers_ration",
+      "name": "Traveler's Ration",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "b39673f69b20cf6aad38587a6cfc4b69564f8e95f85788ec56ccf17c06d45d9e",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s08_travelers_ration_v1.webp",
+      "runtimeSha256": "d4f32a82c4238ac5008d4cfbf593b3460995f85420c0c2ce99668ed2f5afc074",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 112858,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s09_copper_purse",
+      "name": "Copper Purse",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "76b5f54b2231992cdc2f6b47d89e789b8e58971fa8fb0c47d01c64e80eaa5e71",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s09_copper_purse_v1.webp",
+      "runtimeSha256": "10fc5052583ea0a32ab4ce9f76c122e5ed99c588cd5d7f197c4b2135d5e61398",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 107006,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s10_ember_quill",
+      "name": "Ember Quill",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "9af724d2878a3a40c7758d028c286668f55d194a24caf10c446b6cc5df1d06f4",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s10_ember_quill_v1.webp",
+      "runtimeSha256": "56a675c2cf34d6987326f3fec719d929a7d48ba40b61fa7186d2fb85610e9f8d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 81652,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s11_scribes_pebble",
+      "name": "Scribe's Pebble",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "da8ac19dba28232c4851946b96bf35e5155c72c9cec84a8ff56a89eb4f984595",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s11_scribes_pebble_v1.webp",
+      "runtimeSha256": "b7911d765bd8cfddce25c54fae8fcb72b644a2360614d9ceb4491b5503975da4",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 112070,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.s12_initiates_ring",
+      "name": "Initiate's Ring",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "2f7c070087e9b2e8abab51c9303eed6ccf750bde0a16315ac83cd84d1f1b95d0",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_s12_initiates_ring_v1.webp",
+      "runtimeSha256": "bc1449348f1665a805be33b46ef68cf111cdd5b3484da5efca0f7d44af0a8a2f",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 107362,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e01_copper_abacus",
+      "name": "Copper Abacus",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "0a9a534f2a8f641b67679c9c8df1349b17d59e129bd573e3d92820fd46091ca2",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e01_copper_abacus_v1.webp",
+      "runtimeSha256": "78c2eb14451506ff8865358d5a5a19c9a6a2ff4aafba270d99fd8077352d082b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111952,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e02_twin_sigil_medallion",
+      "name": "Twin Sigil Medallion",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "b780b41f27612fd4ab37f81e4a9d5e4e2cd9e8e5d191a5fead2ef061b223d369",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e02_twin_sigil_medallion_v1.webp",
+      "runtimeSha256": "9e5dc98598e1e5cf5e408934a685a09f94e6918362be4893cdccf6082478285c",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 113092,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e03_chance_die",
+      "name": "Chance Die",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "fa9b8652af141d7b406c3be37a16a791b4b592c48e522a39eba0caf0105b6936",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e03_chance_die_v1.webp",
+      "runtimeSha256": "de87446c7e9aafd29136aedfd01c621113bdf4f508d948568a95994c7e6fe450",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 114780,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e04_ember_balance",
+      "name": "Ember Balance",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "63d1f82cfdfa08382b7b35ee8956395cce62bda2831ccd30e65f75c3d54360db",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e04_ember_balance_v1.webp",
+      "runtimeSha256": "0e3c80432bc23d43b57393d8aa87751be6eed744924ab326f10f1ad056c39eba",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 113068,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e05_chainbreaker_clasp",
+      "name": "Chainbreaker Clasp",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "dc717ebaf0f9aff23ce9da65a7d65c8bf392f7e7090dbb8732d92964dce8dac1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e05_chainbreaker_clasp_v1.webp",
+      "runtimeSha256": "57d6b736ee8cbfcbb03cc783052c9b5894f5a18e38c2821d5dc82f5eac221906",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111046,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e06_ashen_phoenix_feather",
+      "name": "Ashen Phoenix Feather",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "449d7274be502686eb488fc0bcab65b8c1a7a23b933e926c44ee1fcf946f77f7",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e06_ashen_phoenix_feather_v1.webp",
+      "runtimeSha256": "7a470e78b881f1d98445173d8f8440e34135aebd8cc24894dd87dcdc9291a5d9",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 91586,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e07_runesmith_tongs",
+      "name": "Rune-smith Tongs",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "de0dc72eb91941dc71a992ba96f6b54740ad5322669911c57a966810d493b323",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e07_runesmith_tongs_v1.webp",
+      "runtimeSha256": "7236b6a5b0ff7c189069db1f2e62622347188a2b161fb87106387abfbe02eeae",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 86672,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e08_sentinel_crest",
+      "name": "Sentinel Crest",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "7a54331ff092fe2db67f59bb6f453dc06bd61935dd3048d37187cd09a0d44342",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e08_sentinel_crest_v1.webp",
+      "runtimeSha256": "7ef1a6cec5dc0466c89deb290b04b3e6294476ad1497d9790b2460db0961a7a3",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 100676,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e09_mirror_knights_brooch",
+      "name": "Mirror Knight's Brooch",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "595336a9d5aa0cf172d25da7d2ab6d3fcabb2c44aab9b897f34cef9dee151a79",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e09_mirror_knights_brooch_v1.webp",
+      "runtimeSha256": "ba52283562df6af8927f68ba6ef9765c177530fd4346da6f288ac53deaa2f605",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 109682,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e10_rune_bats_bell",
+      "name": "Rune Bat's Bell",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "25de68030352f8a82efc1847b358a3a92743a7925c4845957eab31abdc25b34d",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e10_rune_bats_bell_v1.webp",
+      "runtimeSha256": "ce5e44bacb7077ebc7bb9ccd0654d81cd7d4f988be611e58480b04e956b9df64",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 113446,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e11_scholars_satchel",
+      "name": "Scholar's Satchel",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "258a5849bb1a53c64704cc88265028dddecab754d6852bfb1d76259b7125ccab",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e11_scholars_satchel_v1.webp",
+      "runtimeSha256": "d5aae22b026cbce4f53d188fd945aac56f92f4982efad120f57d29e3f805a70d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 110626,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e12_lantern_keepers_flask",
+      "name": "Lantern Keeper's Flask",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "17d3d45eb8d407ad437133ebb64a45035a77a94a33233ed343045b1eb9fd4c81",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e12_lantern_keepers_flask_v1.webp",
+      "runtimeSha256": "81579fa444b81430d8c2727d67a51dbc7ad54010e5ed3ea19b14a703794e7abd",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111892,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e13_chain_weavers_spool",
+      "name": "Chain Weaver's Spool",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "e7d132e5fcdc84a7d9478cafc8038852c8d3a76e293281fed4e9ccd90913e314",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e13_chain_weavers_spool_v1.webp",
+      "runtimeSha256": "f089cc13658aa4b404f66f95ece7896ecd40fbaff97ee5ec2769e0aebe920179",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111342,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e14_brams_contract",
+      "name": "Bram's Contract",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "6543b94eacfb5341a04cff35a17a3511b40bc96a45180de3070c9dd7c32de4c4",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e14_brams_contract_v1.webp",
+      "runtimeSha256": "c81651c1d9cff3ecf05d417c09e55af186e2535cb562d83b2afd9cfd5b909440",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104918,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e15_crimson_sword_charm",
+      "name": "Crimson Sword Charm",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "d5b934239b867375cb70a413e155cef00102b87ff3941aba8383786cfe5da7ad",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e15_crimson_sword_charm_v1.webp",
+      "runtimeSha256": "e3cf2267ba13846f5bcf574bff15d5bdfc661f92050e2aa32ffb73fb7ca022bb",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 83508,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.e16_guardians_armlet",
+      "name": "Guardian's Armlet",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "91a211455b931c642ef214c0eb63ddc8be44015925a9668380b7dd8406f3f5fe",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_e16_guardians_armlet_v1.webp",
+      "runtimeSha256": "c8217cd9a6d5c03bc6c65fc8df351b2ea4b1a591d4dc22e2241103708314cac4",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 123268,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.b01_gatekeeper_core",
+      "name": "Gatekeeper Core",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "6bc8c1d1b3f76dbe5a41877393c36e111cfe66b3706f019e09fe21b0f083eb53",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_b01_gatekeeper_core_v1.webp",
+      "runtimeSha256": "daddf3c45462be6d6b2705ee625a54fe50f3bd0098b493e1f420e27bca10b7a1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 116786,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.b02_sovereign_grimoire_clasp",
+      "name": "Sovereign Grimoire Clasp",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "401541212a3da0fb5ddf030db699c863b2efa2ddf029bb8b9f1840440b612d5e",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_b02_sovereign_grimoire_clasp_v1.webp",
+      "runtimeSha256": "c1ba2fc640ed36e5035021a2c24b2433fe82d67c1dabd44437f6d8bc269f6b22",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 127570,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "artifact.b03_decklords_hourglass",
+      "name": "Decklord's Hourglass",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "27645b053db9d68ae9a89b167e3decc58587e66c0b1fc97aa75b54b65b47c77c",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_artifact_b03_decklords_hourglass_v1.webp",
+      "runtimeSha256": "ae7ee3605da699ac67e3136ea87bc5e1442f98f6cea0d5e9d160298a9e373b9d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 106030,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.rune_strike",
+      "name": "Rune Strike",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "fe98a9b2b40790573ed2da0dfe6724934030fcc4986349a99dc6d60716600b3c",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_rune_strike_v1.webp",
+      "runtimeSha256": "ff123fd67bad4a36a5e4165283ce8e0bc5a1fc4e13f1c820ab6b11d81d47bc3d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111034,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.weak_point",
+      "name": "Weak Point",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "658637b7976c260cd9d576c372893416ac51ff7990738262a286d500140ea588",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_weak_point_v1.webp",
+      "runtimeSha256": "55d63b49a91a310c728952580bc2b8cd19515526c576c1fe79aa86297e59553d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 119004,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.scout_strike",
+      "name": "Scout Strike",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "20189e15ec481354123d87fa8c6839ce9d71400325b3269015c0761975f9a070",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_scout_strike_v1.webp",
+      "runtimeSha256": "1d44a8b35c2f9e7658c1a70034c5fa24424f80cb79c01babdf85fc5ab576307e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104416,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.return_strike",
+      "name": "Return Strike",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "071d484a176e3bd62a9733dafd7bfa11e30d4c334c86fc51b4c36607997b28cc",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_return_strike_v1.webp",
+      "runtimeSha256": "86fcf3573db9fc706b471a4a061c363fec4aa4250b3872ad92aa064a0a55d986",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 122260,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.sure_hit",
+      "name": "Sure Hit",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "521aa2fcbf18e35a52b70171fec80a10fbe24011c8d31b5f129399787fac8599",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_sure_hit_v1.webp",
+      "runtimeSha256": "24def97bad5eb878df1318ca274e172e2810c255dc762da55c2526b3692d36ca",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 97920,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.twin_shot",
+      "name": "Twin Shot",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "4d1c7e74623275d4cec2358849b183fb570248e929e06dfb0b32873402bd02b3",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_twin_shot_v1.webp",
+      "runtimeSha256": "9d24748620184ad8038063a2fd3ad887e3eda4f2f867e17f4b333d0a1e1fdf3e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 106286,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.shield_shot",
+      "name": "Shield Shot",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "df3c2ac3c9da5c8ea5b02e263f65a5462f27c76c6e77d75cd80cf1988a1238be",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_shield_shot_v1.webp",
+      "runtimeSha256": "04e267c28a1143c2fb307b48cbd7a5b3780b79cb1547060c4f0a39182b9eb69b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 119632,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.crack_shot",
+      "name": "Crack Shot",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "cb48ef1b0060e008bc42119d45b6d4bbd8558c7143d52836fe4850506bf5db60",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_crack_shot_v1.webp",
+      "runtimeSha256": "018f943d5ffd7e50e8dc7c5dbfc07ba54dc2e8d244775bed8bc487d81f209ac2",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 126358,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.rune_sweep",
+      "name": "Rune Sweep",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "e7ecd43e23f7bca4cf3ad1e8dcd7b677fa74fe3fee1edab099c4d3164d67d59f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_rune_sweep_v1.webp",
+      "runtimeSha256": "5f768b34bb505bb41e56bbd40a9aaa7dd72b935337ee41b7dca74335b555bc0b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 107234,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.attack.fate_storm",
+      "name": "Fate Storm",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "e9d2912d8b7031d937c7b838fdc043fa3db8473841d01e860cbae1440c920ef9",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_attack_fate_storm_v1.webp",
+      "runtimeSha256": "8488cf796b4f15203ed5a82241c4cea7a74c5d818792ac48f6ffe395e711d198",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 126614,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.rune_guard",
+      "name": "Rune Guard",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "8028a0548acd941e32de89d3866fd50b1c7a15765e4bbcf2ab4541ef9ece02bf",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_rune_guard_v1.webp",
+      "runtimeSha256": "406739a3517fa988f4b18cd103e40f278b91f21c479eac457f9e2c26576694ba",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 132252,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.flash_ward",
+      "name": "Flash Ward",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "8593b509aabf938a10a71454cda417fc0e926f00806c2bb55a6acd2fbdffd344",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_flash_ward_v1.webp",
+      "runtimeSha256": "e4dc9931f75ed401def22e044cd1fb960713897fccadc6344cb1eedf063c4370",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 104018,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.tower_shield",
+      "name": "Tower Shield",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "1624b6d9c509eb5abfd0e31e782940be8803ceff7838684d59c0c038a49527e9",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_tower_shield_v1.webp",
+      "runtimeSha256": "b4965125ffac3e76ea4d6e228f8862aacdf2baa03ab350c0e113eda49b07db9f",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 114100,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.ember_wall",
+      "name": "Ember Wall",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "451299d3166494a7982e63028de8871341679a3b0f25d4756a4c9f9c24a246d3",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_ember_wall_v1.webp",
+      "runtimeSha256": "a594cb02934699118dd37edafff9b56af3aa86fe8e434ef3c33e9781dd81177c",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111932,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.foreseen_guard",
+      "name": "Foreseen Guard",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "a1706ebcea2c4b4774513a232bdb7e84e7dc07e72765e7da805692de89fc92f8",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_foreseen_guard_v1.webp",
+      "runtimeSha256": "13e64b009b9e65629f5c77f1bca94ed8607d8aaf9e30deaef1c47cf3409ec51d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 119876,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.layered_shield",
+      "name": "Layered Shield",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "2884dc6534b9d7392c69d5606c9f0fe587256ee9aa5080daebd701dc4241a4bc",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_layered_shield_v1.webp",
+      "runtimeSha256": "e662d5db1eb6690783dfb8f3ee85d23e53115f1efeeb0545d7376a981cda0d38",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 128340,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.burning_pages",
+      "name": "Burning Pages",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "576487bd72957a0bc6cfa083303f7c886ad0360e9685f0432d6847407b94efd3",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_burning_pages_v1.webp",
+      "runtimeSha256": "2ba983d20089fb98686c84ca258ffe27cfa87f5cdf89a5c207829ebfab8ee751",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 124148,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.cinder_guard",
+      "name": "Cinder Guard",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "7a78ea2b64c0c46efc82ce70cb0aaecece2121d6d001b68592f59389a0c84485",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_cinder_guard_v1.webp",
+      "runtimeSha256": "510b13bd8b5b30d3c32afd4f01d3ce686b8cbb40fe46137168bcf99b460ae91e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 116262,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.hold_the_line",
+      "name": "Hold the Line",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "39aec9a380b5ce1eecb22acd12b5db5fa95b774ebec3e72ab03a87e78adfd9d9",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_hold_the_line_v1.webp",
+      "runtimeSha256": "54aebea1707762466f1715c3dc04e2a8e944ca5762cc531e9d0fe260a0e00ffd",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 109384,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.defend.mana_barrier",
+      "name": "Mana Barrier",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "69ff10f37f0dc3b7eee0d793996bbcce7b37d5d0a9c03934ca31c4ea2e9ff003",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_defend_mana_barrier_v1.webp",
+      "runtimeSha256": "302fdca6e90faa144e4f1dd9c33ba73fc70f155e7999ff3c506870c56569b6a1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 123962,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.quick_study",
+      "name": "Quick Study",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "249a92bb583f962ab66a7c5948e8df91ffdcaa5c9f3e9c1b8e2196d61dec222f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_quick_study_v1.webp",
+      "runtimeSha256": "077a5bdb0c9b67940a8ef0b5fbbe1b188fd76b138a76a6e775df2fc9ad2b04b6",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 125076,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.deep_study",
+      "name": "Deep Study",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "23181205758c73b6e134e84b77a50e15031aafc670007b76aef1734875d0fb28",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_deep_study_v1.webp",
+      "runtimeSha256": "86cd015dd0013232a98202bb6525fc8a587be76434ffff14ac4bc0f16bafea02",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 131532,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.mana_reading",
+      "name": "Mana Reading",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "7f8131755a432ce071443853baec0935b2ad4e0f411dd753c895432d441e5abb",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_mana_reading_v1.webp",
+      "runtimeSha256": "945379bda2e04070950eca7b1dcb527910aa3829e0363bdd2a59ea3a5c2191d3",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 125628,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.read_ahead",
+      "name": "Read Ahead",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "90ee3bd52de034560d7787a20c1054798c805479fa58bba7354441bd43f00955",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_read_ahead_v1.webp",
+      "runtimeSha256": "47a91f13f729bb6708966283bdb8185de2ee86fb4bfb220a4cea8fc67a86ddac",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 123276,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.burning_page",
+      "name": "Burning Page",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "00d9aefa5473230a4b6d0bb0a7391470a80645bad1b035e370d073965fb4fef0",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_burning_page_v1.webp",
+      "runtimeSha256": "4cf8ef71656ae5ec8fd065d6fc9411cf0e2d4048e436023a15d6c88563e59860",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 115048,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.clear_choice",
+      "name": "Clear Choice",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "fc0dfe7a02e21b9d0ebb4f82eba152c8cf05a7060fc45eeb6f6ea5cdfb61a8c1",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_clear_choice_v1.webp",
+      "runtimeSha256": "16be62d44af6c31b3e2bb4c9dd90c87365a1b9f5295adb9f71be46cc8efd9fea",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 110502,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.card_search",
+      "name": "Card Search",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "61ab302d70e23c76c23ac99c5b9d6683f29c8cecee30c65360e13c4639fb337b",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_card_search_v1.webp",
+      "runtimeSha256": "40b185e94409628d7da6ed01d4148979b12817de95b5d72bf40975927e65e640",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 116232,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.recall",
+      "name": "Recall",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "e1bec02637fc07723c743aaaf863ee68a38b998eaa6126525f740fe082f7ca90",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_recall_v1.webp",
+      "runtimeSha256": "3afa269a44f6e58e401e3a16f3f0c6b632b31b77a9760b1b0c660fd77b6bb17e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 119440,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.next_chapter",
+      "name": "Next Chapter",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "894407b577cbbc37bcbff35f8593a5f5a71c4c6ebd72a9cb31d46e76f2e58ece",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_next_chapter_v1.webp",
+      "runtimeSha256": "6f9f9823d0a8cd8aca3261d84669857d0c2c0b243d8a174f04514dcc69b5fd19",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 112416,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.skill.last_page",
+      "name": "Last Page",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "639e3cc75d2d3f7539b4c1b8be194117edf90f81f7c2b9dde75eccd8afee1f55",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_skill_last_page_v1.webp",
+      "runtimeSha256": "e27a8f5024934b0a4f7a428046733ce755bc62d4a73c6ae83669b1418e7981d1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 110390,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.blazing_spirit",
+      "name": "Blazing Spirit",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "f5f71e3032a53a713c26c1338c040e199e918b52f60c51470c845a4a9834c66f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_blazing_spirit_v1.webp",
+      "runtimeSha256": "00b2ddea1bceaff52839d4cb30eb1587c8d8f9f562d6a2abb0aa9bdd6dd33657",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 122270,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.growing_flame",
+      "name": "Growing Flame",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "71953faba0c182c958473d3a2cb261ac71a4dbd92fe2158b1cbb1b0eb03a7bda",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_growing_flame_v1.webp",
+      "runtimeSha256": "b16fcf509a3014885aefa0d6c48b10c01b866aba330d509ac2afe57fecceaa65",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 119552,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.swift_step",
+      "name": "Swift Step",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "41e443db06f42edb04fd8d4ca52c88db4318a5ef7a8775f1230b124f3d11694f",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_swift_step_v1.webp",
+      "runtimeSha256": "ad9b04ab114ecf8e1008b340c6d666cbff841f8fe81dfe06f43bc94784d2af34",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 108668,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.battle_rhythm",
+      "name": "Battle Rhythm",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "e3903f0572c39da0d3d35400765a562fb4d5fc0b6c34bf1fcfd082b8820ecc44",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_battle_rhythm_v1.webp",
+      "runtimeSha256": "62d0cf629d5cfec0d5b0f33e177f52ca1dad9ac57e29ea6a529394926a54dcd1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 124562,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.rune_armor",
+      "name": "Rune Armor",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "559a263542184c0924051689e76da23fa84f8a6c74066252039cccbd17ee2a2e",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_rune_armor_v1.webp",
+      "runtimeSha256": "e20c40a050af1caaf57abc9114134ca22b680d27d25d61b9208c2c9d5b925ace",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 127452,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.lasting_shield",
+      "name": "Lasting Shield",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "e8c02bffec67eef6e4ef7bdc1db61d7fdb0bd97dff5f40eb686376502919f4be",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_lasting_shield_v1.webp",
+      "runtimeSha256": "3a94e27c474fe4685551709bc2bfba1678bedcfb33707a767f234c99369ea572",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 125080,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.grimoire_ward",
+      "name": "Grimoire Ward",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "30b4f1f5d640f6f88159469f1a5a2d5b14effdf0fef614f21b9201efdca01d65",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_grimoire_ward_v1.webp",
+      "runtimeSha256": "10f73e28d9dc67cd44c645662934bc96a144500fd8c68edc56067a520ce6c6f1",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 125908,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.ember_core",
+      "name": "Ember Core",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "5fba302c74134d6723d89b24b0c7d046b7283f9a9c7c75ecf59a3225c1c00548",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_ember_core_v1.webp",
+      "runtimeSha256": "260dde0355d5969c8407d91e7f01072028920cc1704cda8e30bff9669563e978",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 119280,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.clear_mind",
+      "name": "Clear Mind",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "5a9bd34128ceb6831009278d626c5373fe40b9739baa7c9a5d4835faa1248f47",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_clear_mind_v1.webp",
+      "runtimeSha256": "581b7b4a91c535f1fc59a8d207424bf36ea7a557f5a75fdd519cac90ecd1ada9",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 111830,
+      "visibleRgbAndAlphaIdentical": true
+    },
+    {
+      "id": "stm.passive.last_ember",
+      "name": "Last Ember",
+      "sourceState": "CURRENT_ART_RESTYLE",
+      "sourceSha256": "3268860096ca617d1b2744b5f612cb5e76476c15726cd5e288d176c6d1eb4956",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "runtime": "stm_icon_stm_passive_last_ember_v1.webp",
+      "runtimeSha256": "e2d776568789b5f908591ffbb1c5efdaaf53dcf9e62dec422f5a92490ffa642e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 116826,
+      "visibleRgbAndAlphaIdentical": true
+    }
+  ]
+}

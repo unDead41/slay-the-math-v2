@@ -78,9 +78,9 @@ test('browser UMD export needs no document, listeners, clock or RNG',()=>{
  assert.equal(typeof sandbox.DCCombatStatus.view,'function');assert.equal(sandbox.DCCombatStatus.view(freeze(r),'enemy')[0].id,'weak');assert.equal(JSON.stringify(r),before);
 });
 
-test('each badge has its own self-contained vector glyph with uniform small-icon geometry',()=>{
+test('each badge resolves to its distinct reviewed runtime image with uniform canvas metadata',()=>{
  const metadata=require('../dist/assets/status-icons.json'),r=fixture(),b=r.battle;
  Object.assign(b,{strength:1,agility:1,defense:1,block:1});Object.assign(b.cardCombat.statuses.self,{weak:1,weakUntil:2,vulnerable:1,vulnerableUntil:2});Object.assign(b.cardCombat.statuses,{thorns:1,thornsUntil:1});b.cardCombat.carry=1;b.cardCombat.queue=[{kind:'draw',value:1,turn:2},{kind:'block',value:1,turn:2}];
  const badges=Status.view(r,'player');assert.equal(badges.length,10);assert.equal(new Set(badges.map(s=>s.icon)).size,10);assert.equal(metadata.icons.length,10);
- for(const badge of badges){const meta=metadata.icons.find(icon=>icon.id===badge.id);assert.ok(meta);assert.equal(badge.icon,'assets/'+meta.file);const svg=fs.readFileSync(path.join(__dirname,'../dist',badge.icon),'utf8');assert.match(svg,/viewBox="0 0 32 32"/);assert.match(svg,/stroke-width="2"/);assert.doesNotMatch(svg,/<(?:script|foreignObject|image|text)\b|(?:https?:)?\/\/[^w]|\bon\w+=|href=/i);assert.ok(meta.glyph.length>10);}
+ for(const badge of badges){const meta=metadata.icons.find(icon=>icon.id===badge.id);assert.ok(meta);assert.equal(badge.icon,'assets/'+meta.file);const bytes=fs.readFileSync(path.join(__dirname,'../dist',badge.icon));assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');assert.deepEqual(metadata.canvas,[512,512]);assert.ok(meta.glyph.length>10);}
 });

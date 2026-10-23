@@ -1,5 +1,7 @@
 # Slay the Math — Set of Rules
 
+Current icon integration: [Reviewed icon package, game 2.23.0](docs/ICON_PACKAGE_2_23_0.md).
+
 Current audio integration: [Normalized talking, game 2.22.0](docs/AUDIO_2_22_0.md). This supersedes earlier package-only audio handoffs; the historical baseline below remains context.
 
 Versi dokumen: **2.0.1** · Tarikh: **18 Oktober 2026 (Malaysia)** · Pemilik: **Ijamm**

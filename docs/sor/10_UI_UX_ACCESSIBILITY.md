@@ -195,3 +195,8 @@ Show the active `/3` counter and an incoming-card/cost summary with full-frame o
 ## Rich text: color only — 2.21.3
 
 DISAHKAN oleh Ijamm (22 October 2026): remove all decorative rich-text underlines and token bottom borders, including hover states and legends. Apply across questions, answers, hints, cards, artifacts, tooltips and Education Practice. Keep real fraction bars, mathematical notation, keyboard focus outlines and existing tooltip interactions. This rule supersedes all previous dashed/dotted rich-text rules.
+
+
+## Painted icon controls — game 2.23.0
+
+Existing buff/debuff buttons retain 44px targets, real counts and accessible detail labels; use the full artwork box within each button for the new painted glyph. Closed/open boss seals and mixed Attack+Block intent reflect existing engine values only. Music, Voice and Sound FX show their own muted/unmuted icon without conflating the three mixer buses. Save information, Export/Import and question topic labels keep visible text beside decorative art. Color-only rich text and genuine fraction bars remain canonical. Scope and actual visual checks: [Icon package 2.23.0](../ICON_PACKAGE_2_23_0.md).

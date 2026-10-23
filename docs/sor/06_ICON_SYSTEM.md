@@ -1,6 +1,6 @@
 # 06 — Ikon, emblem dan simbol matematik
 
-Versi: 2.2.0. Rujukan visual ialah [konsep kad](../../references/card_concepts_v001.jpeg), [sheet MC](../../references/mc_dungeon_concept_v001.jpeg) dan arahan Focus terkini Ijamm.
+Versi: 2.3.0. Rujukan visual ialah [konsep kad](../../references/card_concepts_v001.jpeg), [sheet MC](../../references/mc_dungeon_concept_v001.jpeg) dan arahan Focus terkini Ijamm.
 
 ## Peranan
 
@@ -94,3 +94,14 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 ## Combat and Predict — 2.19.0
 
 DISAHKAN: add ten original native SVG utility badges for Strength, Agility, Defense, Block, Weak, Vulnerable, Thorns, Next Draw, Next Block and Retain Block. Keep the navy/gold family, distinct glyphs, actual numeric counts and named 44px detail buttons below the correct fighter HP. Icons project engine state and never invent effects. Provenance and all paths: dist/assets/status-icons.json. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+
+
+## Reviewed painted icon package — game 2.23.0, 23 October 2026
+
+**ICO-10 (DISAHKAN):** Ijamm asks to apply the reviewed all-icon package to current main v2.22.0. The MathMon buff/debuff reference owns the painted jewel/ivory/gold treatment, navy backing and celestial gold frame for this icon family only. It does not import MathMon mechanics or character art. This current section supersedes earlier SVG-only or original-atlas path requirements. `dist/icon-assets.js` is the canonical runtime registry; the existing semantic keys remain stable.
+
+**ICO-11:** The review contains 130 catalogue entries and 129 unique runtime images: ten status, 32 UI entries (31 unique; the unused Sound asset aliases the primary Sound icon), six map nodes, 31 artifacts, 40 card illustrations and eleven additional symbols. The eleven symbols now decorate existing features: closed/open boss seal, muted Sound, mixed Attack+Block intent, Skill category, autosave information, Export/Import Save and PROB/SET/LOGIC topic labels. No new game effect or save action is introduced. Legacy-only glyphs are available for compatible saved content, not new pool entries.
+
+**ICO-12:** Preserve separate meanings: Focus is a cyan eye; Predict is a cyan sphere above three cards. Defense status is armor, Block is a solid shield, Defend is a shield with a plus, Weak is a broken sword and Vulnerable is a cracked shield. Skill uses a closed teal grimoire; Tutorial keeps its open book. Passive uses its violet star. Challenge reuses the Battle node; Rest reuses Camp. Live status labels, counts, expiry tooltips and accessible native buttons remain authoritative. Source IDs `proposed.*` are retained as package provenance, not an indication of inactive features in this release.
+
+**ICO-13:** Runtime images are 512 × 512 lossless WebP, with at least 40 fully transparent pixels on each outer edge. Source review PNGs remain 1080 × 1080 with 100px outer padding; labeled review sheets allow 20 icons and 100px gaps. Do not copy review sheets into gameplay or call their resampled 4K exports native 4K. Counts and text are HTML; portrait card frames and all authored effects/IDs stay unchanged. Source aliases must resolve consistently in the main app, Artifact Codex/HUD and generated offline output. Asset hashes, original archive identity and import proof: `dist/assets/icon-package.json`. [Release scope and checks](../ICON_PACKAGE_2_23_0.md).

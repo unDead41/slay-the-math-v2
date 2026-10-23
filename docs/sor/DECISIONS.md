@@ -408,3 +408,11 @@ DISAHKAN: Ijamm removes decorative underlines from rich text because they compet
 - DISAHKAN: Standardize all talking volume and bind the supplied filenames to question/help, Rest, happy card selection, defeat, Mystery intro and ordered Shop/Dungeon Master encounters.
 - DITERUSKAN: Use the verified -18 LUFS package, 49 actual voice files and eight unchanged BGM, preserving Menu/Mystery and existing SFX. The card-reward source contains eight recordings; do not invent the requested-but-unsupplied ninth/tenth. Use independent audio variation, saved consumption receipts, existing separate mixer settings and scope-safe cancellation. Practice audio remains isolated from game saves.
 - PERLU_VERIFIKASI: human audition, transcripts/captions, loop seams and Ijamm's physical Windows/device playback. [Implementation and actual checks](../AUDIO_2_22_0.md).
+
+
+## DEC-20261023-ICONS — Apply reviewed icon package (2.23.0)
+
+- DISAHKAN: Ijamm identifies the running production build as v2.22.0 and asks to update main, continuing the all-icon package request based on MathMon's buff/debuff art style. Apply the reviewed package to current main commit `83a1aeee80ff0488758f94451f7afd1c27500988`.
+- DITERUSKAN: use 129 lossless 512px runtime derivatives for 130 catalogue entries; canonical Sound is shared. Connect existing UI/map/status/artifact/card consumers and add the eleven reviewed symbols only to existing states/actions/topic labels. Preserve source art, stable IDs, save format, card/artifact values, question selection and v2.22.0 audio.
+- DITERUSKAN: retain resampled 4K/FHD/1080 review exports separately; commit a compact runtime registry, hash manifest and build-safe card overrides. Version game 2.23.0 to make the production change visible.
+- PERLU_VERIFIKASI: classroom comprehension and Ijamm's physical Windows/device display remain outside automated checks. MODEL.zip was unavailable and is not applied. [Implementation and validation](../ICON_PACKAGE_2_23_0.md).

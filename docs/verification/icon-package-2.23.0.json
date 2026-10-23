@@ -1,0 +1,37 @@
+{
+  "version": "2.23.0",
+  "integrationBase": "83a1aeee80ff0488758f94451f7afd1c27500988",
+  "syntax": "passed",
+  "unitTests": {
+    "passed": 467,
+    "failed": 0,
+    "skipped": 0
+  },
+  "productionBuild": "passed",
+  "portableBytes": 290044102,
+  "browser": {
+    "checks": [
+      "Production v2.23.0 loads; Sound mute/unmute and Save/Import render the reviewed symbols with native actions.",
+      "All six route-legend icons load from the reviewed map registry in the real production map.",
+      "Real boss seals, mixed intent, unchanged status inspection, card/Passive art and source Artifact Codex use the canonical registry; desktop/phone combat stays within the viewport with 44px status targets.",
+      "The generated portable file decodes the same boss/status/card/artifact icons including the source Codex, with zero network or dependent local asset requests."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "horizontal": true,
+        "vertical": true,
+        "target": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "horizontal": true,
+        "vertical": true,
+        "target": true
+      }
+    ],
+    "errors": []
+  }
+}

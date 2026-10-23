@@ -167,3 +167,10 @@ The 2.11.0 map clean plate uses built-in imagegen with the supplied 1672×941 ma
 ## Passive and supplied audio — 2.20.0
 
 MUSIC(3).zip's fifteen MP3 streams are imported byte-for-byte with deterministic runtime aliases; `.mpeg` names are MP3 containers and are not needlessly re-encoded. Preserve the supplied source documents and exact source/runtime/decode hashes. The runtime registry and catalog generator own explicit registered paths; retained unregistered legacy OGG files cannot shadow new audio. Portable builds embed only registered canonical assets. No MODEL.zip was applied. See [audio provenance](../audio/source-pack-3/INTEGRATION_NOTES.md).
+
+
+## Reviewed icon package — game 2.23.0
+
+Import the verified `STM_Icons_Individual_FHD_1080.zip` review PNGs using `tools/import-icon-package.cjs /path/to/Slay_the_Math_Icon_Audit`. The explicit importer needs Sharp and the original package; normal game builds use committed assets/registry and do not require those inputs. All 129 derivatives use versioned flat `dist/assets/stm_icon_*_v1.webp` names for the existing portable packager. Resize to 512 square, retain alpha, encode losslessly and compare every alpha/visible RGB value against the resized image; require transparent outer strips on all four edges. Preserve original artwork at its existing paths.
+
+`dist/assets/icon-package.json` records both archive hashes, each source/runtime hash and the audit/integration base commits. Original input exports were resampled from generated review boards around 1403 × 1121, so exported 4K dimensions are not native detail. Keep the labeled review sheets and FHD/1080 masters outside the runtime; the added runtime artwork totals 13.45 MiB. `dist/icon-assets.js` owns UI/map/status/artifact/card/topic mappings and aliases. Main UI and source Artifact UI share the online/embedded resolver; every build reapplies card illustration overrides without replacing source card data or frames. See [06](06_ICON_SYSTEM.md), ICO-10–13.

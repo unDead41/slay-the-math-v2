@@ -1,0 +1,17 @@
+/* Reviewed Mathmon-inspired icon family. Native controls, text and numbers
+ * carry meaning; bitmap labels are never part of the runtime artwork. */
+img.icon,.topic-icon{object-fit:contain;flex-shrink:0}
+.combat-status-badge{padding:0}
+.combat-status-badge img{width:44px;height:44px;max-width:none}
+.combat-layout .seal{border:0;background:transparent;box-shadow:none}
+.combat-layout .seal>.icon{width:100%;height:100%;object-fit:contain}
+.combat-layout .intent>strong .icon{width:32px;height:32px;flex:none}
+.topic-label,.save-status-heading{display:flex;align-items:center;gap:8px}
+.topic-label .icon,.topic-icon,.save-status-heading>.icon{width:32px;height:32px;flex:0 0 32px}
+.topic-label>span{min-width:0}
+.save-panel .button-row .icon,.music-panel .button-row .icon{width:32px;height:32px}
+.music-panel .button-row>.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+@media(max-width:600px){
+ .combat-layout .intent>strong .icon{width:24px;height:24px}
+ .topic-label .icon,.topic-icon{width:28px;height:28px;flex-basis:28px}
+}

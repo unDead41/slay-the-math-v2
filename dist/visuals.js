@@ -3,7 +3,7 @@
   'use strict';
   const C = root.DCConfig;
   const mapIcons = {battle:'map-battle.webp',elite:'map-elite.webp',boss:'map-boss.webp',
-    shop:'map-shop.webp',camp:'map-camp.webp',event:'map-event.webp'};
+    shop:'map-shop.webp',camp:'map-camp.webp',event:'map-event.webp',...root.DCIconAssets?.map};
   const enemies = {};
   for(const [id,stem] of Object.entries({wisp:'ember_mirror',beetle:'prism_guard',
     bat:'rune_bat',knight:'mirror_knight',shard:'polished_shard_beast'})) {
@@ -24,7 +24,7 @@
     icons:{focus:'ui-focus.webp',predict:'ui-predict.png',rest:mapIcons.camp,settings:'ui-settings.webp',book:'ui-tutorial.webp',
       cards:'ui-card_collection.webp',bolt:'ui-energy.webp',heart:'ui-health.webp',
       coin:'ui-money.webp',close:'ui-close.webp',hand:'ui-on_hand.webp',
-      drawPile:'ui-draw_pile.webp',discard:'ui-discard.webp',exhaust:'ui-exhaust.webp'},
+      drawPile:'ui-draw_pile.webp',discard:'ui-discard.webp',exhaust:'ui-exhaust.webp',...root.DCIconAssets?.ui},
     floatingEnemies:['wisp','bat','weaver'],
     scale:{hero:1,wisp:.64,beetle:.76,knight:.91,shard:.70,bat:.61,
       sentinel:1.04,dealer:1.02,weaver:.82,shade:.82,mimic:.61,golem:.86,reaper:.95},

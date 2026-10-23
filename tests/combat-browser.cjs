@@ -5,6 +5,7 @@ const path = require('node:path');
 const {chromium} = require(process.env.BROWSER_QA_MODULE || 'playwright');
 const E = require('../dist/engine.js');
 const C = require('../dist/config.js');
+const I = require('../dist/icon-assets.js');
 const report = {checks: [], errors: [], viewports: []};
 let server;
 
@@ -40,8 +41,8 @@ let server;
   const r=fixture();r.battle.focus=2;
   await restore(r);
   assert.match(await page.locator('.player').innerText(),/Alyssa.*the Clairvoyance/s);
-  assert.match(await page.locator('[data-action=focus] .icon').getAttribute('src'),/ui-focus\.webp$/);
-  assert.match(await page.locator('[data-action=forecast] img.icon').getAttribute('src'),/ui-predict\.png$/);
+  assert.equal(await page.locator('[data-action=focus] .icon').getAttribute('src'),'assets/'+I.ui.focus);
+  assert.equal(await page.locator('[data-action=forecast] img.icon').getAttribute('src'),'assets/'+I.ui.predict);
   assert.notEqual(await page.locator('[data-action=focus] .icon').getAttribute('src'),await page.locator('[data-action=forecast] .icon').getAttribute('src'));
   assert.equal(await page.locator('.combatant').count(),2);
   assert.equal(await page.locator('[data-action=end-turn]').count(),1);
@@ -137,7 +138,7 @@ let server;
   for(const [width,height]of [[1920,1080],[390,844]]){
    await page.setViewportSize({width,height});await restore(rest);
    const heal=page.locator('[data-action=select-rest][data-value=heal]');
-   assert.match(await heal.locator('img.icon').getAttribute('src'),/map-camp\.webp$/);
+   assert.equal(await heal.locator('img.icon').getAttribute('src'),'assets/'+I.map.camp);
    assert.ok(await heal.locator('img.icon').evaluate(im=>im.complete&&im.naturalWidth>0&&im.getBoundingClientRect().width>=60));
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    await heal.click();assert.equal((await state()).hp,38);

@@ -2,7 +2,7 @@
 (function(root){'use strict';
  const data=typeof module!=='undefined'&&module.exports?require('./card-data.js'):root.STMCardData;
  const C=typeof module!=='undefined'&&module.exports?require('./config.js'):root.DCConfig;
- const icons=Object.freeze({strength:'assets/status-strength.svg',agility:'assets/status-agility.svg',defense:'assets/status-defense.svg',block:'assets/status-block.svg',weak:'assets/status-weak.svg',vulnerable:'assets/status-vulnerable.svg',thorns:'assets/status-thorns.svg','next-draw':'assets/status-next-draw.svg','next-block':'assets/status-next-block.svg','retain-block':'assets/status-retain-block.svg'});
+ const icons=(typeof module!=='undefined'&&module.exports?require('./icon-assets.js'):root.DCIconAssets)?.status||Object.freeze({strength:'assets/status-strength.svg',agility:'assets/status-agility.svg',defense:'assets/status-defense.svg',block:'assets/status-block.svg',weak:'assets/status-weak.svg',vulnerable:'assets/status-vulnerable.svg',thorns:'assets/status-thorns.svg','next-draw':'assets/status-next-draw.svg','next-block':'assets/status-next-block.svg','retain-block':'assets/status-retain-block.svg'});
  const number=n=>Number.isSafeInteger(n),positive=n=>number(n)&&n>0;
  const plural=(n,one,many)=>n===1?one:many;
  function expiry(status,id,who){

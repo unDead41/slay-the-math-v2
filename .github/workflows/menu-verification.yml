@@ -22,10 +22,11 @@ jobs:
           node-version: "24"
       - name: Install isolated QA dependencies
         run: |
-          npm install --no-save --no-package-lock --prefix "$RUNNER_TEMP/stm-menu-qa" playwright jsdom@26.1.0 @google/design.md
+          npm install --no-save --no-package-lock --prefix "$RUNNER_TEMP/stm-menu-qa" playwright jsdom@26.1.0 sharp @google/design.md
           node "$RUNNER_TEMP/stm-menu-qa/node_modules/playwright/cli.js" install --with-deps chromium
           echo "BROWSER_QA_MODULE=$RUNNER_TEMP/stm-menu-qa/node_modules/playwright" >> "$GITHUB_ENV"
           echo "DOM_QA_MODULE=$RUNNER_TEMP/stm-menu-qa/node_modules/jsdom" >> "$GITHUB_ENV"
+          echo "IMAGE_QA_MODULE=$RUNNER_TEMP/stm-menu-qa/node_modules/sharp" >> "$GITHUB_ENV"
       - name: Check game scripts and build optional portable output
         run: |
           npm run check
@@ -34,6 +35,12 @@ jobs:
         run: npm test
       - name: Map catalogue and invariants
         run: npm run test:maps
+      - name: Production and portable icon rendering
+        env:
+          QA_OUTPUT: qa-menu/icons
+        run: |
+          npm run build:prod
+          npm run test:icons-browser
       - name: Design context lint
         run: node "$RUNNER_TEMP/stm-menu-qa/node_modules/@google/design.md/dist/index.js" lint DESIGN.md
       - name: Audit the actual runtime source in strict mode

@@ -24,6 +24,7 @@
    '<div class="artifact-offer-comparison" data-artifact-preview="'+(chosen?.id||'')+'"></div><p class="artifact-selection" role="status">'+(chosen?esc(chosen.name)+' selected.':'Select a gift to continue.')+'</p><div class="artifact-choice-actions">'+button(boss?'Claim & Enter Deck Tower':opening?'Claim & Choose Your Path':'Claim Artifact','claim-artifact','btn primary',valid?'':'disabled')+
    (!opening&&!boss?button('Leave Without It','skip-artifact','text-btn'):'')+'</div><p class="artifact-save-note">Your choices are saved. Returning to the menu keeps the same offers.</p></div></section>';
  }
+ function topicIcon(code){const file=root.DCIconAssets?.topics[code];return file?'<img class="topic-icon" src="assets/'+file+'" width="32" height="32" alt="" aria-hidden="true">':'';}
  function education(run,{esc,button}){
   const Q=root.DCEducation,L=root.DCQuestionLanguage,p=run.educationState.pending,q=L.question(Q.current(run),L.language()),gift=A.catalog[p.artifactId];
   const destination=p.kind==='boss'?'Claim & Enter Deck Tower':p.kind==='starting'?'Claim & Choose Your Path':'Claim & Continue';
@@ -37,7 +38,7 @@
   const supports=q?root.STMMechanicsHost.supportHTML(q,record,view,{esc}):'';
   return '<section class="artifact-encounter education-encounter" data-question-id="'+(q?.id||'exhausted')+'" data-topic="'+(q?.topicCode||'')+'" aria-labelledby="education-title">'+sceneArt()+
    '<aside class="master-dialogue"><p class="eyebrow">THE DUNGEON MASTER</p><blockquote>“Knowledge opens the way. Show me what you know.”</blockquote>'+button('‹ Main Menu','home','text-btn')+'</aside>'+
-   '<div class="education-panel" data-question-scroll="'+esc(run.seed+':'+run.started+':'+p.source+':'+(q?.id||'exhausted'))+'" tabindex="0" role="region" aria-labelledby="education-title"><p class="eyebrow">'+(q?'CHAPTER '+q.chapter+' · '+esc(q.topic):'ALL QUESTIONS SEEN')+'</p><h1 id="education-title" tabindex="-1">The Master’s trial</h1>'+
+   '<div class="education-panel" data-question-scroll="'+esc(run.seed+':'+run.started+':'+p.source+':'+(q?.id||'exhausted'))+'" tabindex="0" role="region" aria-labelledby="education-title"><p class="eyebrow topic-label">'+(q?topicIcon(q.topicCode)+'CHAPTER '+q.chapter+' · '+esc(q.topic):'ALL QUESTIONS SEEN')+'</p><h1 id="education-title" tabindex="-1">The Master’s trial</h1>'+
    '<div class="education-gift"><img src="assets/'+gift.icon+'" width="52" height="52" alt=""><p><span>Your chosen artifact</span><strong>'+esc(gift.name)+'</strong><small data-stm-richtext>'+R.description(gift.id)+'</small></p></div>'+
    (q?'<div class="education-question"><div class="education-meta"><span>'+esc(q.id)+' · '+esc(q.difficulty)+'</span>'+root.STMMechanicsHost.coverageHTML(run)+'</div><p class="education-answer-help">Choose A–D to answer. Underlined terms explain their meaning.</p><p id="education-prompt" class="education-prompt" data-q-rich="prompt">'+esc(q.prompt)+'</p>'+root.STMMechanicsHost.teachingHTML(q,p.solved,{esc})+answers+
     '<div id="education-feedback" class="education-feedback'+(p.solved?' solved':'')+'" role="status" aria-live="polite"><strong>'+feedback+'</strong>'+(view.feedback?'<p data-q-rich="feedback">'+esc(view.feedback.text)+'</p>':'')+(p.solved?'<p>Answer: '+esc(correct.text)+'</p><p data-q-rich="explanation">'+esc(q.explanation)+'</p>':'')+'</div>'+

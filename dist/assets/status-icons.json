@@ -1,25 +1,79 @@
 {
-  "version": 1,
-  "role": "combat_status_utility_glyphs",
-  "provenance": "Original native SVG utility glyphs authored for Slay the Math, extending its existing SVG icon system. No supplied artwork was modified or regenerated.",
-  "canvas": [32, 32],
-  "safe_area": 3,
-  "glyph_stroke": 2,
-  "frame": "Shared double gold octagon, navy inset and four diamond studs; the central glyph carries the meaning.",
-  "palette": {"navy": "#101e2a", "gold": "#e4bd70", "gold_light": "#ffe6ab", "ice": "#8ad7e8", "danger": "#f19b91", "text": "#f7efdc"},
-  "rules": ["docs/sor/06_ICON_SYSTEM.md: ICO-01 through ICO-06", "docs/sor/10_UI_UX_ACCESSIBILITY.md: UX-01, UX-05 and UX-06", "docs/sor/14_ASSET_PIPELINE.md: native vector export", "DESIGN.md: navy and gold theme, labels accompany color"],
+  "version": 2,
+  "role": "painted_combat_status_badges",
+  "provenance": "Reviewed Slay the Math icon package in the supplied MathMon buff/debuff painted style. Existing SVG masters remain unchanged.",
+  "canvas": [
+    512,
+    512
+  ],
+  "safe_area": 40,
+  "frame": "Shared gold celestial frame and neutral navy backing. Live type, count and tooltip stay in the existing HTML controls.",
+  "palette": {
+    "navy": "#101e2a",
+    "gold": "#e4bd70",
+    "gold_light": "#ffe6ab",
+    "ice": "#8ad7e8",
+    "danger": "#f19b91",
+    "text": "#f7efdc"
+  },
+  "rules": [
+    "docs/sor/06_ICON_SYSTEM.md: ICO-01 through ICO-06",
+    "docs/sor/10_UI_UX_ACCESSIBILITY.md: UX-01, UX-05 and UX-06",
+    "DESIGN.md: navy and gold theme, labels accompany color",
+    "docs/sor/06_ICON_SYSTEM.md: ICO-10 through ICO-13, reviewed painted icon package"
+  ],
   "presentation": "Use beside a live label and numeric value. Tooltip text comes from DCCombatStatus.view. Buff, debuff and queued states remain labeled; glyphs differ independently of color. No text, counts, animation, scripts or external resources are baked into these files.",
   "mechanics_owner": "dist/engine.js and dist/card-combat.js; this package only projects their current values.",
   "icons": [
-    {"id": "strength", "file": "status-strength.svg", "glyph": "Upright sword with a solid blade and hilt"},
-    {"id": "agility", "file": "status-agility.svg", "glyph": "Moving boot with three trailing speed marks"},
-    {"id": "defense", "file": "status-defense.svg", "glyph": "Armour breastplate with reinforced centre"},
-    {"id": "block", "file": "status-block.svg", "glyph": "Full shield with a protective check mark"},
-    {"id": "weak", "file": "status-weak.svg", "glyph": "Broken diagonal sword with a visible gap in the blade"},
-    {"id": "vulnerable", "file": "status-vulnerable.svg", "glyph": "Shield split by a large jagged crack"},
-    {"id": "thorns", "file": "status-thorns.svg", "glyph": "Curving vine bearing three angular thorns"},
-    {"id": "next-draw", "file": "status-next-draw.svg", "glyph": "Two offset cards beneath a forward turn arrow"},
-    {"id": "next-block", "file": "status-next-block.svg", "glyph": "Shield with a plus beneath a forward turn arrow"},
-    {"id": "retain-block", "file": "status-retain-block.svg", "glyph": "Shield encircled by a returning retention arrow"}
+    {
+      "id": "strength",
+      "file": "stm_icon_status_strength_v1.webp",
+      "glyph": "Upright sword with a solid blade and hilt"
+    },
+    {
+      "id": "agility",
+      "file": "stm_icon_status_agility_v1.webp",
+      "glyph": "Moving boot with three trailing speed marks"
+    },
+    {
+      "id": "defense",
+      "file": "stm_icon_status_defense_v1.webp",
+      "glyph": "Armour breastplate with reinforced centre"
+    },
+    {
+      "id": "block",
+      "file": "stm_icon_status_block_v1.webp",
+      "glyph": "Full shield with a protective check mark"
+    },
+    {
+      "id": "weak",
+      "file": "stm_icon_status_weak_v1.webp",
+      "glyph": "Broken diagonal sword with a visible gap in the blade"
+    },
+    {
+      "id": "vulnerable",
+      "file": "stm_icon_status_vulnerable_v1.webp",
+      "glyph": "Shield split by a large jagged crack"
+    },
+    {
+      "id": "thorns",
+      "file": "stm_icon_status_thorns_v1.webp",
+      "glyph": "Curving vine bearing three angular thorns"
+    },
+    {
+      "id": "next-draw",
+      "file": "stm_icon_status_next_draw_v1.webp",
+      "glyph": "Two offset cards beneath a forward turn arrow"
+    },
+    {
+      "id": "next-block",
+      "file": "stm_icon_status_next_block_v1.webp",
+      "glyph": "Shield with a plus beneath a forward turn arrow"
+    },
+    {
+      "id": "retain-block",
+      "file": "stm_icon_status_retain_block_v1.webp",
+      "glyph": "Shield encircled by a returning retention arrow"
+    }
   ]
 }

@@ -231,7 +231,12 @@ test('DOM: collection search, category, empty result, clear and pagination retai
  const {dom,w,click}=boot();try{click('library');assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);w.document.querySelector('[data-action=library-page][data-page="1"]').click();assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);let input=w.document.querySelector('#card-search');input.value='nonexistent';input.dispatchEvent(new w.Event('input',{bubbles:true}));assert.match(w.document.querySelector('.collection-cards').textContent,/No cards found/);click('clear-search');assert.equal(w.document.querySelector('#card-search').value,'');w.document.querySelector('[data-action=library-role][data-value=guard]').click();assert.equal(w.document.querySelectorAll('.collection-cards .playing-card').length,6);assert.ok(w.document.querySelector('.collection-count').textContent.includes('10 / 40'));assert.ok([...w.document.querySelectorAll('.collection-cards .playing-card')].every(el=>el.classList.contains('guard')));}finally{dom.window.close();}
 });
 test('DOM: tutorial practice gives feedback without changing the run or awarding Focus',{skip:!JSDOM},()=>{
- const r=E.newRun(7);const {dom,w,click,state}=boot(r);try{click('help');w.document.querySelector('[data-action=help-page][data-page="1"]').click();w.document.querySelector('[data-action=practice-answer][data-value="1/2"]').click();click('check-practice');assert.match(w.document.querySelector('.practice-feedback').textContent,/Correct/);assert.deepEqual(state(),r);}finally{dom.window.close();}
+ const r=E.newRun(7);const {dom,w,click,state}=boot(r);try{
+  const before=state();click('help');w.document.querySelector('[data-tutorial-action=chapter][data-value=predict]').click();
+  const id=w.document.querySelector('.tutorial-question').dataset.questionId,answer=w.DCEducation.catalog[id].correctChoiceId;
+  w.document.querySelector('[data-tutorial-action=choose][data-value="'+answer+'"]').click();w.document.querySelector('[data-tutorial-action=check]').click();
+  assert.match(w.document.querySelector('[data-tutorial-complete]').textContent,/Practice complete/);assert.deepEqual(state(),before);
+ }finally{dom.window.close();}
 });
 
 test('DOM: Claim opens the actual bank question, saves incorrect/hint state and resumes it before the map',{skip:!JSDOM},()=>{

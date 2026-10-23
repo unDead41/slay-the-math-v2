@@ -540,3 +540,11 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - DITERUSKAN: merge Google head `a535a04` with current main `8b6a3c6` / 2.29.0; preserve its single-enemy mechanics, candidate.3 identity/receipt compatibility, status-VFX hooks, original artwork/audio, all 120 canonical questions and Pages workflow. Identify the combined release as 2.30.0.
 - DITERUSKAN: player consent, local/offline records, exact ACK after canonical/projection flush and destination isolation remain required. No database server is needed for the Google option; owner authorizes/deploys Apps Script once.
 - PERLU_VERIFIKASI: live Google deployment/account/quotas/classroom access, hosted Pages outcome and physical devices remain separate from verified code integration. MODEL.zip failed to arrive and is not used. [Integration evidence and setup](../GOOGLE_SHEETS_MAIN_2_30_0.md).
+
+
+## DEC-20261023-TUTORIAL — Complete illustrated player guide
+
+- **DISAHKAN:** Ijamm accepts the proposed how-to-play scope and requests the complete tutorial system, pictures and self-captured game screenshots; complete the update end to end.
+- **DITERUSKAN:** implement on `tutorial` from main `d76ad6e` / 2.30.0 as 2.31.0. Use 17 English/BM chapters, 16 real screenshots and 11 replayable actual-engine practice chapters. Independent memory-only training and a tutorial-only progress key preserve the player run, question ledger, report, artifact history and collection.
+- **DITERUSKAN:** retain current artwork/card/question/rules, existing native Tutorial controls and Learn entry. Enlarge example screenshots, preserve focus, support natural scrolling and storage failure. Timed Mystery keeps its deadline and warns before prolonged guide use. Publishing the feature branch is delivery; main integration remains separate.
+- **PERLU_VERIFIKASI:** physical devices, classroom comprehension and future screenshots after UI changes. MODEL.zip failed to arrive and is not used; the three uploaded PDFs are not modified. [Scope and verification](../TUTORIAL_2_31_0.md).

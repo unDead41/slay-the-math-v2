@@ -1,0 +1,178 @@
+{
+  "version": "2.31.0",
+  "base": "d76ad6e26ada3b3aea98db0b4d0462f3f6f026a4",
+  "tests": {
+    "command": "npm test (external jsdom configured)",
+    "tests": 772,
+    "pass": 772,
+    "fail": 0,
+    "skipped": 0
+  },
+  "syntax": "pass",
+  "productionBuild": "pass",
+  "portableBuild": "pass",
+  "tutorialBrowser": {
+    "checks": [
+      "17 chapters, all 11 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records",
+      "portrait: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "small-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "compact-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "narrow-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "Master Medium resolves a focused practice card with loaded definitions",
+      "storage denial leaves chapters and practice usable with a visible notice",
+      "in-run help warns for a live timed Mystery without extending its deadline",
+      "standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests"
+    ],
+    "errors": []
+  },
+  "cardMotion": {
+    "checks": [
+      "Draw flies from the pile; the actual paid result is saved before motion; inert clones disappear and real cards return.",
+      "Normal Discard and fiery Exhaust are visually distinct and use the real destination.",
+      "End Turn discards and redraws the same four UIDs through a face-down reshuffle.",
+      "All ten actual Passive trigger paths pulse their own badge and show the actual named result, including capped Focus.",
+      "Waiting Passives do not trigger; unpaid modal choices stay static and Recall animates after confirmation.",
+      "Motion Off and OS reduced motion create no overlay and preserve actual gameplay.",
+      "A rapid second play and Settings cancel old motion without duplicate costs, hidden cards or late ghosts.",
+      "Desktop, phone and landscape have no page overflow; resizing immediately cleans up."
+    ],
+    "errors": [],
+    "passives": [
+      {
+        "name": "Blazing Spirit",
+        "detail": "+2 Strength"
+      },
+      {
+        "name": "Growing Flame",
+        "detail": "+1 Strength"
+      },
+      {
+        "name": "Swift Step",
+        "detail": "+2 Agility"
+      },
+      {
+        "name": "Battle Rhythm",
+        "detail": "+1 Agility"
+      },
+      {
+        "name": "Rune Armor",
+        "detail": "+1 Defense"
+      },
+      {
+        "name": "Lasting Shield",
+        "detail": "4 Block kept"
+      },
+      {
+        "name": "Grimoire Ward",
+        "detail": "+3 Block"
+      },
+      {
+        "name": "Ember Core",
+        "detail": "\u22122 HP"
+      },
+      {
+        "name": "Clear Mind",
+        "detail": "1 card drawn"
+      },
+      {
+        "name": "Last Ember",
+        "detail": "+6 Block \u00b7 +0 Focus"
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "noOverflow": true,
+        "resizeCleanup": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "noOverflow": true,
+        "resizeCleanup": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "noOverflow": true,
+        "resizeCleanup": true
+      }
+    ]
+  },
+  "statusVFX": {
+    "checks": [
+      "A native Rune Guard commits the exact engine/save result before a noninteractive shield and actual Block-gain cue appear.",
+      "Strength, Agility, Defense and Thorns use distinct actual hero conditions and their source models/card icons stay intact.",
+      "The unpaid Passive swap dialog stays static; only its committed replacement lowers Strength and produces a real downward cue.",
+      "A real enemy receipt shows four Block absorbed even when the authored Layered Shield refill returns Block to its previous value; no fabricated +Block label.",
+      "Valid player Weak/Vulnerable saves have distinct auras without historical bursts; actual stack consumption clears a mark while enemy-only Weak never affects Alyssa.",
+      "Settings/native dialogs cancel effects and restore only current auras; Motion Off and OS reduced motion leave no decorative overlay and preserve exact gameplay.",
+      "Desktop, portrait phone and landscape effects fit the arena above HP/actions, stay bounded and cancel bursts on resize while keeping active auras.",
+      "Rapid next actions, keyboard play, status inspection and Main Menu cleanup leave no late particles or input blockers.",
+      "Easy, Medium and Hard Master profiles use their actual bound Block values, preserve legacy saves and reload current auras without replaying bursts.",
+      "The actual standalone file shows the same shield and saved paid result with no HTTP or dependent local assets."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 33
+      }
+    ],
+    "profiles": [
+      {
+        "difficulty": "easy",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "medium",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "hard",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      }
+    ],
+    "errors": [],
+    "offlineRequests": []
+  },
+  "existingAssetFilesUnchanged": 606,
+  "screenshots": {
+    "count": 16,
+    "bytes": 2098366,
+    "manifest": "screenshots.json"
+  },
+  "review": {
+    "range": "d76ad6e..1303680",
+    "critical": 0,
+    "important": 1,
+    "minor": 0,
+    "importantFixed": "Short landscape article collapse; browser RED then GREEN at three additional viewports",
+    "openFindings": 0,
+    "declined": []
+  }
+}

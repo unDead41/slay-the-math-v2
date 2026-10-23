@@ -1,0 +1,67 @@
+{
+  "version": "2.25.0",
+  "dateMalaysia": "2026-10-23",
+  "branch": "combat-animation",
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "checks": {
+    "syntax": {
+      "command": "npm run check",
+      "passed": true
+    },
+    "fullSuite": {
+      "command": "DOM_QA_MODULE=<existing-jsdom-26.1.0> npm test",
+      "tests": 482,
+      "passed": 482,
+      "failed": 0,
+      "skipped": 0
+    },
+    "additionalRegressionSuite": {
+      "command": "node --test tests/card-flow.test.cjs tests/card-motion.test.cjs",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "productionBuild": {
+      "command": "npm run build:prod",
+      "passed": true,
+      "standaloneBytes": 295293032
+    },
+    "productionBrowser": {
+      "command": "QA_PRODUCTION=1 npm run test:card-motion-browser",
+      "report": "card-motion-browser-2-25-0.json",
+      "passed": true
+    },
+    "offlineBrowser": {
+      "command": "node tests/card-motion-offline-browser.cjs",
+      "report": "card-motion-offline-2-25-0.json",
+      "passed": true,
+      "httpRequests": 0,
+      "pageErrors": 0
+    },
+    "diffWhitespace": {
+      "command": "git diff --check",
+      "passed": true
+    }
+  },
+  "review": {
+    "freshReadOnlyReviewer": true,
+    "runtimeBlockers": 0,
+    "addressedFinding": "P2: assert computed visibility on a nonempty collection of whole card articles after cleanup; corrected production browser run passed.",
+    "deferredMinors": []
+  },
+  "limits": [
+    "Human approval of motion feel and physical-device playback remain unverified.",
+    "MODEL.zip was unavailable and not imported.",
+    "Feature branch delivery; no main integration."
+  ],
+  "preserved": [
+    "source artwork",
+    "card effects and costs",
+    "RNG",
+    "save schema",
+    "actor clips",
+    "audio",
+    "question content and selection",
+    "rewards"
+  ]
+}

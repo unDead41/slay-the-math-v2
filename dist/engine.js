@@ -5,17 +5,18 @@ const X=typeof module!=='undefined'?require('./mystery.js'):root.DCMystery;
 const CC=typeof module!=='undefined'?require('./card-combat.js'):root.DCCardCombat;
 const P=typeof module!=='undefined'?require('./combat-predict.js'):root.DCCombatPredict;
 const Log=typeof module!=='undefined'?require('./combat-log.js'):root.DCCombatLog;
+const Flow=typeof module!=='undefined'?require('./card-flow.js'):root.DCCardFlow;
 const artifactContext={draw,deal,notify};
 const mysteryContext={card,draw,startBattle,finishNode};
 const cardContext={C,A,R,draw,deal,rng,shuffle,notify,win,artifactContext};
-function cardAction(r,fn){if(!validate(r))throw Error('This card action cannot start from an invalid save. Your progress is unchanged.');const next=clone(r);fn(next);CC.reconcile(next,cardContext);if(!validate(next))throw Error('This card action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);return r;}
+function cardAction(r,fn){if(!validate(r))throw Error('This card action cannot start from an invalid save. Your progress is unchanged.');const next=clone(r),flow=Flow.fork(r,next);try{fn(next);CC.reconcile(next,cardContext);if(!validate(next))throw Error('This card action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);Flow.end(flow);return r;}catch(err){Flow.end(flow,false);throw err;}}
 function cardPlan(r,c){if(typeof c==='string')c=r?.battle?.hand.find(x=>x.uid===c)||r?.deck.find(x=>x.uid===c)||{key:c,upgraded:false};return CC.get(c)?(r?.battle?CC.plan(r,c,cardContext):CC.displayPlan(c,cardContext)):null;}
 function cardDisplayPlan(c){if(typeof c==='string')c={key:c,upgraded:false};return CC.get(c)?CC.displayPlan(c,cardContext):null;}
 function cardChoice(r){return r.battle?.cardChoice||null;}
 function chooseCardOption(r,value){return cardAction(r,x=>CC.choose(x,value,cardContext));}
 function cancelCardChoice(r){return cardAction(r,x=>CC.cancel(x));}
 function canUpgrade(c){return !!c&&!c.upgraded;}
-function mysteryAction(r,fn){const next=clone(r);fn(next);if(!validate(next))throw Error('This Mystery action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);return r;}
+function mysteryAction(r,fn){const next=clone(r),flow=Flow.fork(r,next);try{fn(next);if(!validate(next))throw Error('This Mystery action could not be saved. Your progress is unchanged.');for(const key of Object.keys(r))delete r[key];Object.assign(r,next);Flow.end(flow);return r;}catch(err){Flow.end(flow,false);throw err;}}
 function openMystery(r,seen=[],profile=null){return mysteryAction(r,x=>X.enter(x,seen,profile));}
 function startMystery(r,seen=[],profile=null,now=Date.now()){return mysteryAction(r,x=>X.start(x,seen,profile,now));}
 function answerMystery(r,id,now=Date.now()){return mysteryAction(r,x=>X.resolve(x,id,now));}
@@ -35,8 +36,8 @@ function draw(r,n){
  const b=r.battle;let drawn=0;
  // Check capacity before touching either pile or the shuffle RNG.
  while(drawn<n&&b.hand.length<C.HAND_LIMIT){
-  if(!b.draw.length&&b.discard.length){b.draw=shuffle(r,b.discard.splice(0));notify(r,'Discard Pile shuffled into the Draw Pile.');}
-  if(!b.draw.length)break;b.hand.push(b.draw.pop());drawn++;
+  if(!b.draw.length&&b.discard.length){b.draw=shuffle(r,b.discard.splice(0));for(const c of b.draw)Flow.move(r,c,'discard','draw');notify(r,'Discard Pile shuffled into the Draw Pile.');}
+  if(!b.draw.length)break;const c=b.draw.pop();b.hand.push(c);Flow.move(r,c,'draw','hand',true);drawn++;
  }
  if(drawn<n&&b.hand.length>=C.HAND_LIMIT)notify(r,'Hand full ('+C.HAND_LIMIT+'/'+C.HAND_LIMIT+'). Play a card before drawing more.');
  return drawn;
@@ -98,15 +99,15 @@ function playCard(r,uid,targets=[]){
  const c=b.hand[i];if(CC.get(c))return cardAction(r,x=>CC.commit(x,uid,undefined,cardContext));const d=definition(c),error=canPlay(r,c);if(error)throw new Error(error);
  if(d.filter){const limit=filterLimit(r,c);if(!targets.length||targets.length>limit||new Set(targets).size!==targets.length||targets.some(id=>!b.draw.some(x=>x.uid===id)))throw new Error('Choose 1 to '+limit+' cards from the Draw Pile.');}
  const artifactBonus=A.cardBonuses(r,d),contributions=A.cardContributions(r,d),beforeAction={energy:b.energy,enemyHp:b.hp,block:b.block,hp:r.hp,focus:b.focus,hand:b.hand.length,exhaust:b.exhaust.length};
- b.hand.splice(i,1);b.energy-=d.cost;r.stats.cardsPlayed=(r.stats.cardsPlayed||0)+1;
+ b.hand.splice(i,1);Flow.move(r,c,'hand','resolving',true);b.energy-=d.cost;r.stats.cardsPlayed=(r.stats.cardsPlayed||0)+1;
  let bonus=0;if((d.damage||d.block)&&b.boostArmed&&!b.boostUsed&&b.focus>0){b.focus--;b.boostUsed=true;b.boostArmed=false;bonus=C.BOOST;}
  if(d.damage){const hit=deal(r,d.damage+bonus+artifactBonus.damage,!!d.pierce,{label:d.name,artifactIds:contributions.damage.map(x=>x.id).filter(Boolean),lines:['Card damage after upgrade: '+d.damage,...contributions.damage.map(x=>x.name+': +'+x.value),'Focus boost: +'+bonus,'Damage before defenses: '+d.damage+' + '+artifactBonus.damage+' + '+bonus+' = '+(d.damage+bonus+artifactBonus.damage)]});notify(r,d.name+' gives '+hit+' damage.');}
  if(d.block){const before=b.block,focus=!d.damage?bonus:0,amount=d.block+focus+artifactBonus.block;b.block+=amount;R.record(r,d.name,contributions.block.map(x=>x.id).filter(Boolean),[R.delta('Block gained','Block',before,b.block,['Card Block after upgrade: '+d.block,...contributions.block.map(x=>x.name+': +'+x.value),'Focus boost: +'+focus,'Block gained: '+d.block+' + '+artifactBonus.block+' + '+focus+' = '+amount,'Block after: '+before+' + '+amount+' = '+b.block])]);notify(r,d.name+' gives '+amount+' Block.');}
  if(d.heal){const before=r.hp;r.hp=Math.min(r.maxHp,r.hp+d.heal);R.record(r,d.name,[],[R.healing(d.heal,before,r.hp,r.maxHp)]);notify(r,'Restore '+d.heal+' HP.');A.checkHp(r,artifactContext);}
  if(d.focus){const before=b.focus;b.focus=Math.min(C.FOCUS_CAP,b.focus+d.focus);R.record(r,d.name,[],[R.delta('Focus gained','Focus',before,b.focus,['Requested Focus: +'+d.focus,'Focus cap: '+C.FOCUS_CAP,'Focus after: min('+C.FOCUS_CAP+', '+before+' + '+d.focus+') = '+b.focus])]);notify(r,'Focus gained: +'+(b.focus-before)+' (requested '+d.focus+', cap '+C.FOCUS_CAP+').');}
  let exhaustCount=0;
- if(d.filter){for(const id of targets){const k=b.draw.findIndex(x=>x.uid===id);b.exhaust.push(b.draw.splice(k,1)[0]);exhaustCount++;}notify(r,targets.length+' cards exhausted for this battle.');}
- if(d.exhaust){b.exhaust.push(c);exhaustCount++;}else b.discard.push(c);
+ if(d.filter){for(const id of targets){const k=b.draw.findIndex(x=>x.uid===id),filtered=b.draw.splice(k,1)[0];b.exhaust.push(filtered);Flow.move(r,filtered,'draw','exhaust',true);exhaustCount++;}notify(r,targets.length+' cards exhausted for this battle.');}
+ if(d.exhaust){b.exhaust.push(c);exhaustCount++;}else b.discard.push(c);Flow.move(r,c,'resolving',d.exhaust?'exhaust':'discard',true);
  if(d.draw){const before=b.hand.length,drawn=draw(r,d.draw);R.record(r,d.name,[],[R.delta('Cards drawn','cards',before,b.hand.length,['Requested draw: '+d.draw,'Hand limit: '+C.HAND_LIMIT,'Hand after: '+before+' + '+drawn+' = '+b.hand.length,'Only cards actually moved to Hand count.'])]);notify(r,'Draw '+drawn+' card'+(drawn===1?'':'s')+'.'+(drawn<d.draw&&b.hand.length>=C.HAND_LIMIT?' Hand full ('+C.HAND_LIMIT+'/'+C.HAND_LIMIT+').':''));}
  const actual={energySpent:beforeAction.energy-b.energy,enemyHpLost:beforeAction.enemyHp-b.hp,blockGained:Math.max(0,b.block-beforeAction.block),hpHealed:Math.max(0,r.hp-beforeAction.hp),focusGained:Math.max(0,b.focus-beforeAction.focus),focusSpent:Math.max(0,beforeAction.focus-b.focus),focusRequested:d.focus||0,focusCap:C.FOCUS_CAP,cardsDrawn:Math.max(0,b.hand.length-beforeAction.hand+1),cardsExhausted:Math.max(0,b.exhaust.length-beforeAction.exhaust)};
  const summary=[d.name,'Energy spent '+actual.energySpent,...(d.damage?['enemy HP lost '+actual.enemyHpLost]:[]),...(d.block?['Block gained '+actual.blockGained]:[]),...(d.heal?['HP restored '+actual.hpHealed]:[]),...(d.focus?['Focus gained +'+actual.focusGained+' (requested '+actual.focusRequested+', cap '+C.FOCUS_CAP+')']:[]),...(actual.focusSpent?['Focus spent '+actual.focusSpent]:[]),...(actual.cardsDrawn?['cards drawn '+actual.cardsDrawn]:[]),...(actual.cardsExhausted?['cards exhausted '+actual.cardsExhausted]:[])].join(' · ')+'.';
@@ -137,7 +138,7 @@ function endTurn(r){
   if(b.cardCombat)CC.afterEnemyHit(r,before,it.damage>0,cardContext);
   if(r.hp>0&&lost===0&&b.hp>0)A.fullyBlocked(r,it.damage,artifactContext);
  }
- lines.push('Total Block absorbed: '+absorbed,'Actual HP lost: '+hit+'; remaining HP: '+r.hp);R.record(r,it.label,[],[R.delta('HP lost','HP',hpBefore,r.hp,lines),R.total('Remaining HP','HP',r.hp,['Remaining HP: '+hpBefore+' − '+(hpBefore-r.hp)+' = '+r.hp])]);r.stats.turns++;b.discard.push(...b.hand.splice(0));
+ lines.push('Total Block absorbed: '+absorbed,'Actual HP lost: '+hit+'; remaining HP: '+r.hp);R.record(r,it.label,[],[R.delta('HP lost','HP',hpBefore,r.hp,lines),R.total('Remaining HP','HP',r.hp,['Remaining HP: '+hpBefore+' − '+(hpBefore-r.hp)+' = '+r.hp])]);r.stats.turns++;for(const c of b.hand.splice(0)){b.discard.push(c);Flow.move(r,c,'hand','discard',true);}
  notify(r,it.label+': '+hit+' damage taken.');if(b.cardCombat)CC.afterEnemy(r,hpBefore);
  Log.record(r,{actor:'enemy',kind:'enemy-turn',source:b.enemyId,label:it.label,summary:it.label+' · '+executed+' hit'+(executed===1?'':'s')+' · Block absorbed '+absorbed+' · HP lost '+hit+' · HP remaining '+r.hp+'.',key:'enemy:'+b.turn,values:{hits:executed,damagePerHit:it.damage,blockAbsorbed:absorbed,hpLost:hit,remainingHp:r.hp,enemyHpLost:Math.max(0,enemyHpBefore-b.hp)}});
  if(r.hp<=0){r.scene='defeat';if(r.mysteryState)r.mysteryState.nextCombat=[];r.finished=Math.max(r.started,Date.now());return r;}

@@ -59,7 +59,7 @@
    const forwarded=[...extra].map(([key,value])=>key==='disabled'?' disabled':' '+key+'="'+esc(value)+'"').join('');
    action='<button type="button" class="package-card-action" data-action="'+esc(options.action)+'"'+forwarded+'></button>';
   }
-  return '<article class="'+[...new Set(classes.filter(Boolean))].map(esc).join(' ')+'" data-card-id="'+esc(card.id)+'" data-focus="'+String(!!plan.focused)+'" data-focus-reason="'+esc(plan.focusReason||'not_requested')+'" data-rarity="'+esc(card.rarity)+'" lang="'+(lang==='bm'?'ms':'en')+'" aria-label="'+esc(name)+'">'+
+  return '<article class="'+[...new Set(classes.filter(Boolean))].map(esc).join(' ')+'"'+(options.uid?' data-motion-uid="'+esc(options.uid)+'"':'')+' data-card-id="'+esc(card.id)+'" data-focus="'+String(!!plan.focused)+'" data-focus-reason="'+esc(plan.focusReason||'not_requested')+'" data-rarity="'+esc(card.rarity)+'" lang="'+(lang==='bm'?'ms':'en')+'" aria-label="'+esc(name)+'">'+
    face+action+'<div class="card-description package-card-description"'+(id?' id="'+esc(id)+'"':'')+' tabindex="0" aria-label="'+esc(plain)+'"><div>'+K.renderHTML(plan,lang)+'</div></div></article>';
  }
 

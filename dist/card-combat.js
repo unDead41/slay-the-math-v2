@@ -1,6 +1,7 @@
 (function(root){'use strict';
  const data=typeof module!=='undefined'?require('./card-data.js'):root.STMCardData;
  const Log=typeof module!=='undefined'?require('./combat-log.js'):root.DCCombatLog;
+ const Flow=typeof module!=='undefined'?require('./card-flow.js'):root.DCCardFlow;
  const catalog=Object.fromEntries(data.cards.map(c=>[c.id,c]));
  const categoryRole={attack:'attack',defend:'guard',skill:'tactic',passive:'passive'};
  const clone=x=>JSON.parse(JSON.stringify(x));
@@ -87,7 +88,7 @@
   if(b.active.length>deps.C.PASSIVE_LIMIT){s.passiveTrimPending=true;if(r.scene==='battle'&&!b.cardChoice&&!b.question)b.cardChoice={id:trimId(b),kind:'passive_trim',sourceUid:null,committed:false,candidates:clone(b.active),options:b.active.map(c=>c.uid)};}
   else delete s.passiveTrimPending;return r;
  }
- function deactivate(r,uid,incoming,deps){const b=r.battle,s=state(r),index=b.active.findIndex(c=>c.uid===uid);if(index<0)throw Error('Choose one of the active Passives.');const outgoing=b.active[index],counter=s.counters[outgoing.key],removed=contributions(outgoing.key,counter);s.passiveHistory=s.passiveHistory||{};s.passiveHistory[outgoing.key]=counter;delete s.counters[outgoing.key];for(const attribute of ['strength','agility','defense'])if(removed[attribute])addStat(r,attribute,-removed[attribute]);b.active.splice(index,1);b.discard.push(outgoing);
+ function deactivate(r,uid,incoming,deps){const b=r.battle,s=state(r),index=b.active.findIndex(c=>c.uid===uid);if(index<0)throw Error('Choose one of the active Passives.');const outgoing=b.active[index],counter=s.counters[outgoing.key],removed=contributions(outgoing.key,counter);s.passiveHistory=s.passiveHistory||{};s.passiveHistory[outgoing.key]=counter;delete s.counters[outgoing.key];for(const attribute of ['strength','agility','defense'])if(removed[attribute])addStat(r,attribute,-removed[attribute]);b.active.splice(index,1);b.discard.push(outgoing);Flow.move(r,outgoing,'active','discard',true);
   const stats=Object.entries(removed).filter(([,n])=>n).map(([attribute,n])=>'−'+n+' '+attribute[0].toUpperCase()+attribute.slice(1)),summary=(incoming?catalog[incoming.key].name+' replaces ': 'Deactivated ')+catalog[outgoing.key].name+'. '+(stats.length?'Removed '+stats.join(', ')+'. ':'')+'Its ongoing effects stop; resolved effects remain.';
   event(r,incoming?'passive-replace':'passive-trim',incoming?.key||outgoing.key,summary,{outgoingUid:outgoing.uid,outgoingKey:outgoing.key,incomingUid:incoming?.uid||null,incomingKey:incoming?.key||null,removedStrength:removed.strength,removedAgility:removed.agility,removedDefense:removed.defense,activeCount:b.active.length+(incoming?1:0),limit:deps.C.PASSIVE_LIMIT});deps.notify(r,summary);return r;
  }
@@ -103,10 +104,11 @@
   const core=s.counters[names['Ember Core']];if(focused&&core&&core.lastTurn!==b.turn&&b.hp>0){core.lastTurn=b.turn;core.triggers++;const requested=base('Ember Core','damage'),actual=fixed(r,requested,'Ember Core',deps);event(r,'passive-trigger',names['Ember Core'],actual+' direct HP damage after a card spent Focus.'+(actual<requested?' Target HP or boss seal limited damage.':''),{trigger:core.triggers,damage:actual,requestedDamage:requested},'passive:'+names['Ember Core']+':'+core.triggers);}
  }
  function cardHistory(r,tx,d){const b=r.battle,damage=tx.damageEvents.reduce((n,x)=>n+x.hpLost,0),block=d.actions.filter(a=>a.op==='grant_block'&&!a.timing).reduce((n,a)=>n+tx.values[a.value],0),taken=Math.max(0,b.hand.length-tx.context.handAfterPlay),parts=['Energy −'+tx.energy];if(tx.focus)parts.push('Focus −'+tx.focus);if(damage||tx.damageEvents.length)parts.push(damage+' enemy HP damage');if(block)parts.push('+'+block+' Block');if(d.actions.some(a=>['draw','return_discard_card','search_category','look_choose_reorder','look_choose_discard','look_replace_take'].includes(a.op)&&!a.timing))parts.push(taken+' card'+(taken===1?'':'s')+' to Hand');if(tx.discarded)parts.push(tx.discarded+' discarded');if(tx.exhausted)parts.push('Exhaust');if(d.category==='passive')parts.push('Passive activated');if(tx.context.focusStock&&tx.context.focusUsed)parts.push('Focus already used this turn');event(r,'card',d.id,parts.join('; ')+'.',{energy:tx.energy,focus:tx.focus,damage,block,cardsToHand:taken,discarded:tx.discarded,exhausted:tx.exhausted,upgraded:tx.upgraded},tx.id);}
- function prepareWindow(r,deps){const b=r.battle;if(b.hand.length>=deps.C.HAND_LIMIT)return 0;if(!b.draw.length&&b.discard.length){b.draw=deps.shuffle(r,b.discard.splice(0));deps.notify(r,'Discard Pile shuffled into the Draw Pile.');}return b.draw.length;}
+ function prepareWindow(r,deps){const b=r.battle;if(b.hand.length>=deps.C.HAND_LIMIT)return 0;if(!b.draw.length&&b.discard.length){b.draw=deps.shuffle(r,b.discard.splice(0));for(const c of b.draw)Flow.move(r,c,'discard','draw');deps.notify(r,'Discard Pile shuffled into the Draw Pile.');}return b.draw.length;}
  function receipt(r){return state(r).receipts.at(-1);}
  function finish(r,deps){const b=r.battle,s=state(r),tx=receipt(r),c=b.resolving.pop();if(!c||!tx||tx.uid!==c.uid)throw Error('This card transaction is no longer active.');const d=get(c),def=deps.C.cards[c.key];b.cardChoice=null;
   if(d.category==='passive')b.active.push(c);else if(d.lifecycle==='exhaust'){b.exhaust.push(c);tx.exhausted++;}else b.discard.push(c);
+  Flow.move(r,c,'resolving',d.category==='passive'?'active':d.lifecycle==='exhaust'?'exhaust':'discard',true);
   cardHistory(r,tx,d);if(d.category==='passive')activate(r,c,deps);
   afterResolved(r,def,tx.focused,deps);
   // The complete printed discard/exhaust batch is in its destination before artifacts draw.
@@ -122,7 +124,7 @@
   if(p.card.name==='Recall'&&!b.discard.some(c=>c.uid===selection))throw Error('Choose a card from the Discard Pile.');
   if(p.card.name==='Card Search'&&!categories.includes(selection))throw Error('Choose a card category.');
   const s=state(r),tx={id:'card:'+(++s.seq),uid:c.uid,key:c.key,turn:b.turn,energyBefore:b.energy,energy:p.payEnergy,upgraded:!!c.upgraded,focus:p.payFocus,focused:p.focused,status:'resolving',rngBefore:r.rng,rngAfter:r.rng,values:clone(p.values),context:clone(p.context),selection:selection===undefined?null:selection,discarded:0,exhausted:0,randomTargets:[],damageEvents:clone(p.damageEvents)};s.receipts.push(tx);if(s.receipts.length>64)s.receipts.splice(0,s.receipts.length-64);
-  b.hand.splice(index,1);b.resolving.push(c);b.energy-=p.payEnergy;r.stats.cardsPlayed=(r.stats.cardsPlayed||0)+1;
+  b.hand.splice(index,1);b.resolving.push(c);Flow.move(r,c,'hand','resolving',true);b.energy-=p.payEnergy;r.stats.cardsPlayed=(r.stats.cardsPlayed||0)+1;
   if(p.card.category==='passive'&&b.active.length===deps.C.PASSIVE_LIMIT)deactivate(r,selection,c,deps);
   if(p.focused){b.focus--;b.boostUsed=true;b.boostArmed=false;}
   let damageIndex=0,actionIndex=0;for(const a of p.actions){const effectIndex=actionIndex++;
@@ -148,13 +150,13 @@
     else{target[a.status]=Math.min(3,target[a.status]+a.value);target[a.status+'Until']=b.turn+(a.target==='self'?1:0);}
     event(r,'status',c.key,'Applied '+(target[a.status]-before)+' '+a.status+' to '+who+' ('+target[a.status]+' active).',{status:a.status,target:who,requested:a.value,before,after:target[a.status],amount:target[a.status]-before,untilTurn:target[a.status+'Until']},tx.id+':status:'+effectIndex);
    }else if(a.op==='retain_block'){s.carry=Math.max(s.carry,a.value);event(r,'queued',c.key,'Keep up to '+s.carry+' remaining Block at the next turn start.',{effect:'retain-block',cap:s.carry,dueTurn:b.turn+1},tx.id+':carry');}
-   else if(a.op==='return_discard_card'){const i=b.discard.findIndex(c=>c.uid===selection);if(i<0||b.hand.length>=deps.C.HAND_LIMIT)throw Error('This Recall choice is no longer available.');b.hand.push(b.discard.splice(i,1)[0]);}
+   else if(a.op==='return_discard_card'){const i=b.discard.findIndex(c=>c.uid===selection);if(i<0||b.hand.length>=deps.C.HAND_LIMIT)throw Error('This Recall choice is no longer available.');const returned=b.discard.splice(i,1)[0];b.hand.push(returned);Flow.move(r,returned,'discard','hand',true);}
    else if(a.op==='search_category'){
-    prepareWindow(r,deps);for(let n=0;n<a.limit&&b.draw.length&&b.hand.length<deps.C.HAND_LIMIT;n++){const candidate=b.draw.pop();if(get(candidate)?.category===selection||(!get(candidate)&&deps.C.cards[candidate.key].role===categoryRole[selection])){b.hand.push(candidate);break;}b.discard.push(candidate);tx.discarded++;}
+    prepareWindow(r,deps);for(let n=0;n<a.limit&&b.draw.length&&b.hand.length<deps.C.HAND_LIMIT;n++){const candidate=b.draw.pop();if(get(candidate)?.category===selection||(!get(candidate)&&deps.C.cards[candidate.key].role===categoryRole[selection])){b.hand.push(candidate);Flow.move(r,candidate,'draw','hand',true);break;}b.discard.push(candidate);Flow.move(r,candidate,'draw','discard');tx.discarded++;}
    }else if(['look_choose_reorder','look_choose_discard','look_replace_take'].includes(a.op)){
-    const available=prepareWindow(r,deps),kind=a.op==='look_choose_reorder'?'read_ahead':a.op==='look_choose_discard'?'clear_choice':'burning_page',count=kind==='burning_page'?Math.min(1,available):Math.min(a.look,available),candidates=[];for(let n=0;n<count;n++)candidates.push(b.draw.pop());
+    const available=prepareWindow(r,deps),kind=a.op==='look_choose_reorder'?'read_ahead':a.op==='look_choose_discard'?'clear_choice':'burning_page',count=kind==='burning_page'?Math.min(1,available):Math.min(a.look,available),candidates=[];for(let n=0;n<count;n++){const candidate=b.draw.pop();candidates.push(candidate);Flow.move(r,candidate,'draw','choice',true);}
     if(!candidates.length)continue;
-    if(candidates.length===1&&(kind!=='burning_page'||!b.draw.length)){b.hand.push(candidates[0]);continue;}
+    if(candidates.length===1&&(kind!=='burning_page'||!b.draw.length)){b.hand.push(candidates[0]);Flow.move(r,candidates[0],'choice','hand',true);continue;}
     b.cardChoice={id:tx.id,kind,sourceUid:c.uid,committed:true,candidates,options:kind==='burning_page'?['take','replace']:candidates.map(c=>c.uid)};
     if(kind==='burning_page')Object.assign(b.cardChoice,{replacementsRemaining:a.replacement_limit,replacementsUsed:0,windowRemaining:b.draw.length});
     tx.status='choice';tx.rngAfter=r.rng;return r;
@@ -168,17 +170,17 @@
   if(ch.kind==='burning_page'){
    const selected=value&&typeof value==='object'?value.value:value;if(!['take','replace'].includes(selected))throw Error('Take the card or replace it.');
    if(selected==='replace'){
-    if(ch.replacementsRemaining<1||ch.windowRemaining<1||!b.draw.length)throw Error('No replacements remain.');b.discard.push(ch.candidates.pop());tx.discarded++;ch.candidates.push(b.draw.pop());ch.replacementsRemaining--;ch.replacementsUsed++;ch.windowRemaining--;
+    if(ch.replacementsRemaining<1||ch.windowRemaining<1||!b.draw.length)throw Error('No replacements remain.');const discarded=ch.candidates.pop(),replacement=b.draw.pop();b.discard.push(discarded);Flow.move(r,discarded,'choice','discard',true);tx.discarded++;ch.candidates.push(replacement);Flow.move(r,replacement,'draw','choice',true);ch.replacementsRemaining--;ch.replacementsUsed++;ch.windowRemaining--;
     if(ch.replacementsRemaining>0&&ch.windowRemaining>0)return r;
    }
-   b.hand.push(ch.candidates.pop());return finish(r,deps);
+   const taken=ch.candidates.pop();b.hand.push(taken);Flow.move(r,taken,'choice','hand',true);return finish(r,deps);
   }
   const selected=value&&typeof value==='object'?(value.take??value.value??value.uid):value,index=ch.candidates.findIndex(c=>c.uid===selected);if(index<0)throw Error('Choose one of the revealed cards.');
   const remaining=ch.candidates.filter(c=>c.uid!==selected);let order=remaining.map(c=>c.uid);
   if(ch.kind==='read_ahead'&&value&&typeof value==='object'&&value.order!==undefined){order=value.order;if(!Array.isArray(order)||order.length!==remaining.length||new Set(order).size!==order.length||order.some(uid=>!remaining.some(c=>c.uid===uid)))throw Error('Order every remaining card once, with the next draw first.');}
-  b.hand.push(ch.candidates[index]);
-  if(ch.kind==='read_ahead')for(const uid of order.slice().reverse())b.draw.push(remaining.find(c=>c.uid===uid));
-  else if(ch.kind==='clear_choice'){b.discard.push(...remaining);tx.discarded+=remaining.length;}
+  b.hand.push(ch.candidates[index]);Flow.move(r,ch.candidates[index],'choice','hand',true);
+  if(ch.kind==='read_ahead')for(const uid of order.slice().reverse()){const returned=remaining.find(c=>c.uid===uid);b.draw.push(returned);Flow.move(r,returned,'choice','draw',true);}
+  else if(ch.kind==='clear_choice'){b.discard.push(...remaining);for(const c of remaining)Flow.move(r,c,'choice','discard',true);tx.discarded+=remaining.length;}
   else throw Error('This choice is not supported.');
   return finish(r,deps);
  }

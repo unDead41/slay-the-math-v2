@@ -1,5 +1,12 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261023-CARD-MOTION — Combat card motion (2.25.0)
+
+- **DISAHKAN:** Ijamm requests styled Draw, Discard and Exhaust card animation, plus trigger feedback for the ten current Passive cards.
+- **DITERUSKAN:** implement on `combat-animation` from main `2800f9a` / 2.24.0. An ordered, unsaved observational journal preserves same-action Discard/reshuffle/redraw and merges only validated atomic clone results. The renderer saves before motion; no effect waits for an animation.
+- **DITERUSKAN:** reuse source full portraits and original icons, keep hidden transfers face down, show actual Passive results from new combat-log entries, and dispose transient presentation on input/navigation/dialogs/visibility/resize/motion changes. Keep all gameplay values, stable IDs, RNG and saves unchanged.
+- **PERLU_VERIFIKASI:** Ijamm's feel/physical-device review. MODEL.zip remained unavailable and is not applied. Main integration is outside this feature-branch delivery. [Scope and verification](../CARD_MOTION_2_25_0.md).
+
 Versi: 2.0.1 · 18 Oktober 2026
 
 ## Sumber

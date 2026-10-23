@@ -20,6 +20,10 @@ Nota sejarah; status audio semasa ialah implementasi game 2.22.0 di bawah dan [A
 - **MOT-03:** Input yang boleh menimbulkan transaksi kedua dikunci sehingga state stabil. Butang Batal hanya berfungsi sebelum commit.
 - **MOT-04:** Reduced motion/skip animation tidak mengubah damage, RNG, soalan atau ganjaran.
 
+### Card transfers and ten Passive cues — 2.25.0
+
+**DISAHKAN:** Ijamm requests Draw, Discard and Exhaust animations and appropriate trigger animation for all ten existing Passive cards. **DITERUSKAN implementation:** observe ordered physical transfers in an ephemeral per-action WeakMap journal; merge cloned-run observations only after validation/commit. The normal synchronous engine/render/save remains authoritative. Draw flips a back into the full source portrait, Discard arcs into its pile, Exhaust contracts into fire embers, and hidden shuffle/search transfers keep their backs. New canonical Passive log entries pulse their own badge and show actual resolved amounts, including zero/capped Focus or draw and actual retained Block. Ongoing/waiting effects never fabricate triggers; Continue does not replay history. All transient presentation is cancelable by the next action, render/navigation, native dialog, hidden/pagehide, resize and both motion preferences. Source assets and gameplay values are unchanged. The chosen 220/280/400ms Draw/Discard/Exhaust durations are reversible presentation defaults. Scope, all-ten mapping and actual verification: [Combat card motion](../CARD_MOTION_2_25_0.md).
+
 ### Alyssa motion 2.8.0
 
 MODEL.zip owns Alyssa's five clip timings. Use its per-frame durations rather than uniform FPS. Idle loops; actions return to Idle after their final hold. Hero and enemy pause together behind dialogs and on hidden pages. Motion Off and OS Reduced Motion show Idle frame 0. Outcomes remain owned by the resolver. Source mapping, pivots and actual validation: [Alyssa 2.8.0](../ALYSSA_ANIMATION_2_8_0.md).

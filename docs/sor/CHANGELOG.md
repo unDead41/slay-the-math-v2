@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.25.0 — Combat card motion
+
+- Add actual Draw/Discard/Exhaust flights, face-down reshuffle and confirmed Recall/Passive movement using the existing source portraits.
+- Show named, effect-specific cues for all ten current Passive triggers with actual capped/zero results.
+- Keep animation independent of synchronous resolution/save/RNG and cancel all transient clones/hidden-card state across UI lifecycle and motion preferences.
+- Publish on the `combat-animation` feature branch for review. [Implementation and actual verification](../CARD_MOTION_2_25_0.md).
+
 ## Game 2.20.0
 
 - Limit combat to three active Passives with a free-to-cancel replacement popup, correct stat removal and preserved trigger history.

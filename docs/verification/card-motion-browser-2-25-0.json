@@ -1,0 +1,75 @@
+{
+  "checks": [
+    "Draw flies from the pile; the actual paid result is saved before motion; inert clones disappear and real cards return.",
+    "Normal Discard and fiery Exhaust are visually distinct and use the real destination.",
+    "End Turn discards and redraws the same four UIDs through a face-down reshuffle.",
+    "All ten actual Passive trigger paths pulse their own badge and show the actual named result, including capped Focus.",
+    "Waiting Passives do not trigger; unpaid modal choices stay static and Recall animates after confirmation.",
+    "Motion Off and OS reduced motion create no overlay and preserve actual gameplay.",
+    "A rapid second play and Settings cancel old motion without duplicate costs, hidden cards or late ghosts.",
+    "Desktop, phone and landscape have no page overflow; resizing immediately cleans up."
+  ],
+  "errors": [],
+  "passives": [
+    {
+      "name": "Blazing Spirit",
+      "detail": "+2 Strength"
+    },
+    {
+      "name": "Growing Flame",
+      "detail": "+1 Strength"
+    },
+    {
+      "name": "Swift Step",
+      "detail": "+2 Agility"
+    },
+    {
+      "name": "Battle Rhythm",
+      "detail": "+1 Agility"
+    },
+    {
+      "name": "Rune Armor",
+      "detail": "+1 Defense"
+    },
+    {
+      "name": "Lasting Shield",
+      "detail": "4 Block kept"
+    },
+    {
+      "name": "Grimoire Ward",
+      "detail": "+3 Block"
+    },
+    {
+      "name": "Ember Core",
+      "detail": "−2 HP"
+    },
+    {
+      "name": "Clear Mind",
+      "detail": "1 card drawn"
+    },
+    {
+      "name": "Last Ember",
+      "detail": "+6 Block · +0 Focus"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "noOverflow": true,
+      "resizeCleanup": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "noOverflow": true,
+      "resizeCleanup": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "noOverflow": true,
+      "resizeCleanup": true
+    }
+  ]
+}

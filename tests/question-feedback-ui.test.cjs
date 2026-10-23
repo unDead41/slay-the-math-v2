@@ -6,7 +6,7 @@ const L=require('../dist/question-language.js');
 const feedbackKey='slay-the-math.question-feedback.v1';
 function boot(values=new Map(),options={}){
  const errors=[],downloads=[],shares=[];
- const storage={getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v)};
+ const storage={getItem:k=>values.get(k)||null,setItem:(k,v)=>{if(options.failComments&&k===feedbackKey)throw Error('Quota exceeded');values.set(k,v);}};
  const dom=new JSDOM(P.createDocument(M.data),{url:'https://practice.example/',runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){
   Object.defineProperty(w,'localStorage',{value:storage});
   w.matchMedia=()=>({matches:false,addEventListener(){},removeEventListener(){}});
@@ -77,26 +77,31 @@ test('DOM: every question has its own editable persistent comment, unaffected by
  }finally{dom.window.close();}
  const reopened=boot(values);try{reopened.select('PROB-003');assert.equal(reopened.d.getElementById('feedback-comment').value,'Improve PROB-003');assert.equal(reopened.d.querySelector('input[value="hint-unclear"]').checked,true);assert.deepEqual(reopened.errors,[]);}finally{reopened.dom.window.close();}
 });
-test('DOM: comment text stays inert, Save works, exit offers all comments and cancellation keeps the form',{skip:!JSDOM},()=>{
- const {dom,d,write,downloads,errors}=boot();
- try{
+test('DOM: comments stay inert and their shared settings keep cancellation and saved text',{skip:!JSDOM},()=>{
+ const {dom,d,write,downloads,errors}=boot();try{
   d.getElementById('feedback-save').click();assert.match(d.getElementById('feedback-status').textContent,/Choose/);
-  write('<img src=x onerror="alert(1)">Please number the steps.');d.getElementById('feedback-save').click();
-  assert.equal(d.querySelector('#question-feedback img'),null);assert.match(d.getElementById('feedback-status').textContent,/Saved on this device/);
-  d.getElementById('feedback-finish').click();assert.equal(d.getElementById('feedback-exit-dialog').open,true);
-  assert.match(d.getElementById('feedback-exit-summary').textContent,/1 question/);assert.match(d.getElementById('feedback-exit-delivery').textContent,/not been sent automatically/);
-  d.querySelector('#feedback-exit-dialog [data-feedback-export="csv"]').click();assert.equal(downloads.length,1);assert.match(downloads[0].name,/comments.*\.csv$/);
-  d.getElementById('feedback-exit-cancel').click();assert.equal(d.getElementById('feedback-exit-dialog').open,false);assert.match(d.getElementById('feedback-comment').value,/Please number/);
-  d.querySelector('#question-feedback [data-feedback-share]').click();assert.equal(downloads.length,2);assert.match(d.getElementById('feedback-status').textContent,/File sharing is unavailable/);
-  assert.deepEqual(errors,[]);
+  write('<img src=x onerror="alert(1)">Please number the steps.');d.getElementById('feedback-save').click();assert.equal(d.querySelector('#question-feedback img'),null);assert.match(d.getElementById('feedback-status').textContent,/Saved on this device/);
+  d.getElementById('feedback-finish').click();assert.equal(d.getElementById('feedback-exit-dialog').open,true);assert.match(d.getElementById('feedback-exit-summary').textContent,/1 question/);assert.match(d.getElementById('feedback-exit-delivery').textContent,/Sharing is off|on this device/i);
+  assert.equal(d.querySelector('[data-feedback-export],[data-feedback-share]'),null);d.querySelector('#feedback-exit-dialog [data-feedback-sharing]').click();assert.equal(d.getElementById('feedback-exit-dialog').open,false);assert.equal(d.getElementById('practice-analytics-dialog').open,true);assert.equal(d.querySelector('[data-analytics-panel=sharing]').hidden,false);assert.equal(downloads.length,0);
+  d.getElementById('close-practice-analytics').click();assert.match(d.getElementById('feedback-comment').value,/Please number/);assert.deepEqual(errors,[]);
  }finally{dom.window.close();}
 });
-test('DOM: native sharing uses an explicit file action; cancelling never deletes comments',{skip:!JSDOM},async()=>{
- const {dom,d,write,shares,values,errors}=boot(new Map(),{share:true,abort:true});
- try{
-  write('The diagram labels need more space.');d.querySelector('#question-feedback [data-feedback-share]').click();
-  await new Promise(resolve=>setImmediate(resolve));
-  assert.equal(shares.length,1);assert.equal(shares[0].files.length,1);assert.match(shares[0].files[0].name,/\.csv$/);
-  assert.match(d.getElementById('feedback-status').textContent,/Sharing cancelled/);assert.equal(JSON.parse(values.get(feedbackKey)).comments.length,1);assert.deepEqual(errors,[]);
+test('DOM: leaving sharing settings preserves comments without invoking native file sharing',{skip:!JSDOM},()=>{
+ const {dom,d,write,shares,values,errors}=boot(new Map(),{share:true});try{
+  write('The diagram labels need more space.');d.querySelector('#question-feedback [data-feedback-sharing]').click();assert.equal(shares.length,0);d.getElementById('practice-analytics-dialog').dispatchEvent(new dom.window.Event('cancel',{cancelable:true}));assert.equal(JSON.parse(values.get(feedbackKey)).comments.length,1);assert.equal(d.getElementById('feedback-comment').value,'The diagram labels need more space.');assert.deepEqual(errors,[]);
  }finally{dom.window.close();}
+});
+test('DOM: comment-only storage failure stays truthful at exit and offers the in-memory comment in shared JSON recovery',{skip:!JSDOM},async()=>{
+ for(const language of ['en','ms']){
+  const {dom,w,d,write,values,downloads,errors}=boot(new Map(),{failComments:true});try{
+   const select=d.getElementById('language-select');select.value=language;select.dispatchEvent(new w.Event('change',{bubbles:true}));
+   write('Keep this unsaved comment.');assert.equal(values.has(feedbackKey),false);d.getElementById('feedback-finish').click();
+   assert.doesNotMatch(d.getElementById('feedback-exit-summary').textContent,/comment saved on this device|komen yang disimpan pada peranti/i);
+   assert.match(d.getElementById('feedback-exit-summary').textContent,language==='ms'?/halaman terbuka/:/open page/);
+   d.querySelector('#feedback-exit-dialog [data-feedback-sharing]').click();assert.equal(d.querySelector('[data-analytics-delivery-state]').dataset.analyticsDeliveryState,'save-error');
+   const backup=d.querySelector('.analytics-backup');backup.open=true;backup.querySelector('[data-analytics-action=export]').click();assert.equal(downloads.length,1);
+   const contents=await new Promise((resolve,reject)=>{const reader=new w.FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsText(downloads[0]);});assert.equal(JSON.parse(contents).questionFeedback.comments[0].comment,'Keep this unsaved comment.');assert.deepEqual(errors,[]);
+   d.getElementById('close-practice-analytics').click();d.getElementById('feedback-finish').click();d.getElementById('feedback-exit-confirm').click();assert.match(d.getElementById('feedback-status').textContent,language==='ms'?/halaman terbuka/:/open page/);
+  }finally{dom.window.close();}
+ }
 });

@@ -7,3 +7,13 @@
 #practice-analytics-content button{white-space:normal;}
 .analytics-practice-note{font-size:.9rem;line-height:1.5;}
 @media(max-width:600px){.page-toolbar{flex-wrap:wrap;}#practice-analytics-dialog{padding:16px;}#practice-analytics-dialog>.panel-title-line{flex-wrap:wrap;}}
+
+/* Match the host journal without resizing the folio or its artwork. */
+#preview #practice-analytics-dialog{width:min(920px,calc(100vw - 24px));max-width:920px;padding:20px;background:#101923;}
+#practice-analytics-dialog>.panel-title-line{position:sticky;top:0;z-index:3;background:#101923;padding-block:6px 12px;}
+#practice-analytics-dialog>.panel-title-line h2{font-size:clamp(1.3rem,3vw,1.8rem);}
+#preview .learning-report .analytics-btn{min-height:44px;}
+#preview .learning-report .analytics-metric strong{font-size:2rem;}
+#preview .learning-report .analytics-outcomes .analytics-metric strong{font-size:1.5rem;}
+#preview .learning-report [hidden]{display:none!important;}
+@media(max-width:600px){#preview #practice-analytics-dialog{width:calc(100vw - 16px);padding:14px;}#preview .learning-report .analytics-metric strong{font-size:1.65rem;}}

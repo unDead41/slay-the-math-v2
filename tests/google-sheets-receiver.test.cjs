@@ -1,6 +1,13 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),{services}=require('./helpers/google-services.cjs'),M=require('../dist/mechanics.js'),bank=M.data.bank;
 const CLIENT='a'.repeat(48),SECRET='b'.repeat(64),at='2026-10-23T10:00:00.000Z';
+test('selectable owner setup checks the account and logs rather than returning the private Sheet URL',()=>{
+ const s=services(),c=s.load();c.Session={getActiveUser:()=>({getEmail:()=>'owner@example.com'}),getEffectiveUser:()=>({getEmail:()=>'owner@example.com'})};
+ assert.equal(typeof c.setupCollector,'function');assert.equal(c.setupCollector(),undefined);c.setupCollector();assert.equal(s.books.size,1);assert.match(s.logs[0],/^Open your private collection Sheet:/);
+});
+test('anonymous and other-account callers cannot invoke the public owner setup',()=>{
+ for(const email of ['', 'player@example.com']){const s=services(),c=s.load();c.Session={getActiveUser:()=>({getEmail:()=>email}),getEffectiveUser:()=>({getEmail:()=>'owner@example.com'})};assert.equal(typeof c.setupCollector,'function');assert.throws(()=>c.setupCollector(),/Owner setup/);assert.equal(s.books.size,0);assert.equal(s.logs.length,0);}
+});
 function feedback(comment='Hint kurang jelas'){return {id:bank.bankVersion+':PROB-003',questionId:'PROB-003',bankVersion:bank.bankVersion,topic:bank.topics.PROB.malay,difficulty:'Easy',question:'Soalan kebarangkalian',categories:['hint-unclear'],comment,createdAt:at,updatedAt:at,context:{mode:'learn',language:'ms',status:'pending',hintUsed:true,moreHintViewed:false,stepsViewed:false}};}
 function entry(payload=feedback(),revision=1,kind='question-feedback'){return {id:payload.id,revision,kind,payload};}
 function request(action,body=null,secret=SECRET){return {protocolVersion:1,action,body,clientId:action==='batch'?CLIENT:null,secret:action==='batch'?secret:null};}

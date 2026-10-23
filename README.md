@@ -1,4 +1,4 @@
-# Slay the Math — 2.30.0
+# Slay the Math — 2.31.0-report.1 preview
 
 Alyssa has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md).
 
@@ -6,7 +6,7 @@ Battles have one enemy. Rune Sweep now delivers one 12-damage hit; Fate Storm de
 
 Master balance playtest: New Run → Easy / Medium / Hard, or open `?balance=medium`. The three profiles share versioned combat/economy/loot definitions and separate saves. [Balance handoff and unmeasured pupil targets](docs/balance/master/HANDOFF.md).
 
-Learning Report is available from Main Menu, Settings and Education Practice, with BM/English chapter/SK/SP evidence, offline recording, optional comments collection and CSV/JSON exports. This release integrates `education-analytics` with main 2.25.1, retaining combat card motion, the original card/artifact artwork and Pack5 audio. [Windows update, database setup and central collection](docs/EDUCATION_ANALYTICS_2_26_0.md).
+This branch **education-report** previews a simpler BM/English Learning Report: Overview, Details and Sharing. Google link setup lives in **Developer Hub → Education collection**. Player CSV/file-sharing controls are removed; one disclosed JSON recovery backup remains. Main is not updated by this preview. [Try the branch and configure collection](docs/LEARNING_REPORT_PREVIEW.md).
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -23,7 +23,7 @@ supplied 100-seed map module, original icon PNGs, exported layouts, tests and SO
 It reuses the full 120-question folio: browse, Hint/More Hint, worked solutions,
 Basics, full English/Bahasa Melayu question switching and a separate saved learning session.
 Each question now has improvement categories and a comment box. Comments save on
-this device; the exit reminder offers CSV/JSON download and file sharing for Ijamm.
+this device; the exit reminder opens the shared Sharing settings, with one JSON recovery backup.
 Collection is off until a player enables sharing in Learning Report. For a receiver that creates its own SQLite database, use `npm.cmd run start:analytics:prod` (Node 22.13+); ordinary `npm start` needs no database. See [current feedback and delivery limits](docs/EDUCATION_ANALYTICS_2_26_0.md).
 The same harmonized 1.6 bank is active in Predict, Artifact trials and Mystery challenges. Its shared run ledger prevents repeat questions; New Run resets exclusion while lifetime history remains.
 See [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
@@ -132,4 +132,4 @@ Open http://localhost:4173. `npm run build:prod` only builds, and `npm start` ke
 
 Main now includes an optional Google destination to Main Menu / Settings / Education Practice → Learning Report. No database server is needed for this option. Records stay on-device until the player opts in and the Google receiver confirms the exact revision. The existing local SQLite option remains available.
 
-Copy **integrations/google-sheets/Code.gs** into an owner-controlled Apps Script project, run its private setup once, deploy the web app, and paste its `/exec` URL into **Collection link**. Full BM instructions, site defaults, Wi-Fi recovery, export and limits: [Google Sheets setup](docs/GOOGLE_SHEETS_SETUP.md). Live Google authorization/deployment is still an owner setup step; game code publication does not deploy or authorize the Google receiver.
+Copy **integrations/google-sheets/Code.gs** into an owner-controlled Apps Script project, run the selectable **setupCollector** once, and deploy the web app. In this preview, configure its `/exec` URL through **Developer Hub → Education collection**; existing deployments from the setup correction can be reused. Full BM instructions, project defaults, Wi-Fi recovery, backup and limits: [Google Sheets setup](docs/GOOGLE_SHEETS_SETUP.md). Live Google authorization/deployment is still an owner setup step; game code publication does not deploy or authorize the Google receiver.

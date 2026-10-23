@@ -40,7 +40,8 @@
    current=Sync.createClient({...options,...area,fetch,onchange:changed});
    if(pause||configError)current.setEnabled(false);
   }
-  function status(){const value=current.status();return {...value,...(configError?{enabled:false,state:'save-error',error:configError}:{}),destination:{kind:url?'google-sheets':'local',url}};}
+  function destination(){let supplied='';try{supplied=Google.normalizeURL(defaultURL);}catch{}return {kind:url?'google-sheets':'local',url,canUseDefault:!!supplied&&(!!configError||supplied!==url)};}
+  function status(){const value=current.status();return {...value,...(configError?{enabled:false,state:'save-error',error:configError}:{}),destination:destination()};}
   function apply(value,persist){
    value=Google.normalizeURL(value);collect();changing=true;
    try{
@@ -55,12 +56,13 @@
   }
   function storageChanged(event){if(event?.key!==DESTINATION_KEY&&event?.key!==null)return;const previous=configError;configError='';const value=configuration();if(configError){current.setEnabled(false);current.stop();closeTransport();changed();return;}if(value!==url||previous)apply(value,false);}
   function enqueue(input){const result=current.enqueue(input);if(result.entry)remember(result.entry);return result;}
-  function setEnabled(value){if(value&&configError)throw Error(configError);const result=current.setEnabled(value);if(!value)closeTransport();return {...result,destination:{kind:url?'google-sheets':'local',url}};}
+  function setEnabled(value){if(value&&configError)throw Error(configError);const result=current.setEnabled(value);if(!value)closeTransport();return {...result,destination:destination()};}
   function flush(){return configError?Promise.resolve(status()):current.flush().then(status);}
   function start(){if(!started){started=true;host.addEventListener?.('storage',storageChanged);storageChanged({key:DESTINATION_KEY});if(!configError)current.start();}return status();}
   function stop(){started=false;host.removeEventListener?.('storage',storageChanged);current.stop();closeTransport();return status();}
   url=configuration();make(url,false);
-  return {enqueue,setEnabled,status,flush,start,stop,setDestination:value=>apply(value,true)};
+  function useDefaultDestination(){const value=Google.normalizeURL(defaultURL);if(!value)throw Error('The organiser has not configured a Google collection link for this game.');return apply(value,true);}
+  return {enqueue,setEnabled,status,flush,start,stop,setDestination:value=>apply(value,true),useDefaultDestination};
  }
  return {DESTINATION_KEY,createClient};
 });

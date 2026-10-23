@@ -77,3 +77,9 @@ DISAHKAN: developer-only branch work, no merge/push to main. Start at the game m
 ## Main integration — 2.23.1
 
 DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle to main over v2.23.0. This supersedes the earlier branch-only restriction. Keep production free of developer controls; use npm start dev to see the main-menu and Settings toggle.
+
+## Education collection configuration preview — 2.31.0-report.1
+
+Branch education-report adds **Developer Hub → Education collection**. The development server alone exposes GET/POST `/__dev/education-collection`; production/player servers deny it. Access requires a loopback peer and a localhost/127.0.0.1/[::1] Host matching the listening port; writes also require the exact same Origin and JSON. Exact `{googleScriptUrl,revision}` writes are capped at 2 KB, validated with the existing strict Apps Script `/exec` URL owner, and rejected when the source revision changed. Atomic replacement writes only `dist/learning-collection-config.js`; it never reads player saves, private Google Sheets or collection credentials.
+
+This is deliberate project configuration outside sandbox progress. The sandbox still uses memory and cannot send. The public receiver URL is included in future player builds, where consent remains off unless explicitly enabled. Existing browser destinations are preserved; adopting a changed Google project default is an explicit action that pauses sharing. The input is absent from player/production Learning Report, not treated as a secret hidden from browser inspection. Rebuild the player release to distribute a saved setting.

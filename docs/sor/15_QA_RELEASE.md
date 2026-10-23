@@ -173,3 +173,7 @@ Verify lazy nested-origin handshake, nonce/port/source checks, abort/cleanup, de
 ## Google collection main integration — 2.30.0
 
 Ijamm now authorizes main publication. Integrate a535a04 with 8b6a3c6 rather than copying the older preview over current main. Verify the actual Main Menu/Settings/Practice setup, BM/English, consent/offline/exact-ACK/reopen, preserved single-enemy/candidate.3 saves and status-VFX hooks, complete regression/syntax/production, private receiver exclusion and version/cache hashes. Keep live Google account/deployment/quota and hosted Pages results distinct from local evidence. [Combined verification](../GOOGLE_SHEETS_MAIN_2_30_0.md).
+
+## Learning Report preview — 2.31.0-report.1
+
+Publish only education-report. Verify all three shared report views, BM/English, real source filtering, sparse evidence, all-120-ID search/filter, async view/focus/selection/scroll retention, comments and exit navigation, absent CSV/URL controls and credential-free JSON recovery. Test explicit adoption of the project default without inherited consent/ACKs or lost old journals. Exercise local developer configuration shape/URL/body/Host/Origin/peer/stale-write guards, unchanged unrelated files and production denial, plus guarded owner setup. Run full serial Node/jsdom, syntax, production/cache/preservation and native desktop/phone/short-landscape/report/Google-retry/developer isolation checks. Distinguish simulated service boundaries from live Google account/deployment success. See docs/LEARNING_REPORT_PREVIEW.md and the branch verification evidence.

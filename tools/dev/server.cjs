@@ -18,10 +18,11 @@ module.exports=function devResponse(pathname){
  if(pathname==='/__dev/app.js'){
   return {type:'text/javascript',data:instrumentApp(fs.readFileSync(path.join(dist,'app.js'),'utf8'),fs.readFileSync(path.join(base,'adapter.js'),'utf8')+'\n'+fs.readFileSync(path.join(base,'controls.js'),'utf8'))};
  }
- const allowed={'/__dev/hub.js':'hub.js','/__dev/style.css':'style.css','/__dev/storage.js':'storage.js','/__dev/fixtures.js':'fixtures.js'};
+ const allowed={'/__dev/hub.js':'hub.js','/__dev/collection.js':'collection.js','/__dev/style.css':'style.css','/__dev/storage.js':'storage.js','/__dev/fixtures.js':'fixtures.js'};
  if(allowed[pathname])return {type:pathname.endsWith('.css')?'text/css':'text/javascript',data:fs.readFileSync(path.join(base,allowed[pathname]))};
  if(pathname.startsWith('/__dev'))return {status:404,type:'text/plain',data:'Unknown developer resource.'};
  return null;
 };
 
 module.exports.instrumentApp=instrumentApp;
+module.exports.collectionRequest=require('./collection.cjs').createCollectionHandler();

@@ -19,7 +19,7 @@ try{
 }catch{}
 if(!/^https?:\/\//.test(analyticsPageURL))analyticsPageURL=document.baseURI;
 const analyticsStore=globalThis.DCAnalytics.createStore({storage:analyticsDisk,bank,curriculum:globalThis.DCLearningCurriculum});
-let practiceAnalyticsId=analyticsStore.getSessionId('practice'),reviewAnalyticsId=null,analyticsScope='all',analyticsReturnFocus=null,analyticsClient=null,questionFeedback=null,localAnalyticsError='';
+let practiceAnalyticsId=analyticsStore.getSessionId('practice'),reviewAnalyticsId=null,analyticsScope='all',analyticsView='overview',analyticsReturnFocus=null,analyticsClient=null,questionFeedback=null,localAnalyticsError='';
 const reviewAnalyticsIds=new Map(),collectionAvailable=!devPractice&&/^https?:\/\//.test(analyticsPageURL);
 analyticsClient=(globalThis.DCLearningDelivery||globalThis.DCLearningSync).createClient({storage:analyticsDisk,endpoint:analyticsEndpoint,host:globalThis,
  fetch:devPractice?async()=>{throw Error('Collection is disabled in developer practice.');}:typeof globalThis.fetch==='function'?globalThis.fetch.bind(globalThis):async()=>{throw Error('The collector is unavailable here.');},
@@ -27,7 +27,7 @@ analyticsClient=(globalThis.DCLearningDelivery||globalThis.DCLearningSync).creat
 for(const option of byId('difficulty-select').options)option.value=option.value;
 const tips=attachRichTextTooltips(root,{glossary,calculationIndex,getLanguage:()=>byId('language-select').value,getTheme:()=>root.dataset.theme});
 questionFeedback=attachQuestionFeedback({bank,root,getQuestion:()=>question,getRecord:()=>currentRecord(),getMode:()=>mode,
- onChange:payload=>enqueueAnalytics(payload,'question-feedback'),getDelivery:analyticsStatus});
+ onChange:payload=>enqueueAnalytics(payload,'question-feedback'),getDelivery:analyticsStatus,onOpenSharing:()=>openAnalyticsReport('sharing')});
 
 try{savedLearningText=localStorage.getItem(storageKey);}
 catch{storageAvailable=false;storageError='Saving between visits is unavailable. Your progress will stay available while this page is open.';}
@@ -63,8 +63,8 @@ function putSession(next){
 function analyticsText(english,malay){return contentLanguage==='ms'?malay:english;}
 function analyticsStatus(){
  const status=analyticsClient?.status()||{enabled:false,pending:0,state:'on-device',error:''};
- const localError=[analyticsStore.error,localAnalyticsError].filter(Boolean).join(' '),error=[localError,status.error].filter(Boolean).join(' ');
- return {...status,...(!collectionAvailable?{enabled:false,state:'on-device'}:{}),...(error?{error}:{}),...(localError?{state:'save-error'}:{}),dev:devPractice};
+ const localError=[analyticsStore.error,localAnalyticsError,questionFeedback?.error].filter(Boolean).join(' '),error=[localError,status.error].filter(Boolean).join(' ');
+ return {...status,collectionDisabled:!collectionAvailable,...(!collectionAvailable?{enabled:false,state:'on-device'}:{}),...(error?{error}:{}),...(localError?{state:'save-error'}:{}),dev:devPractice};
 }
 function noteAnalyticsFailure(){localAnalyticsError=analyticsText('Learning reporting could not update. Keep this page open and export a copy before leaving.','Rekod laporan pembelajaran tidak dapat dikemas kini. Biarkan halaman ini terbuka dan eksport salinan sebelum keluar.');}
 function enqueueAnalytics(payload,kind='learning-record'){
@@ -83,40 +83,36 @@ function refreshAnalyticsSurfaces(statusOnly=false){
  if(byId('practice-analytics-dialog')?.open)renderAnalyticsReport(statusOnly);
  questionFeedback?.refreshDelivery();
 }
-function renderAnalyticsReport(statusOnly=false,preserveDraft=true){
- const status=analyticsStatus(),content=byId('practice-analytics-content');
- const draft=content.querySelector('[data-analytics-google-url]'),draftValue=draft?.value,draftFocused=!!draft&&document.activeElement===draft;
- const syncArea=statusOnly&&globalThis.DCAnalyticsUI.syncHTML?content.querySelector('[data-analytics-sync]'):null,area=syncArea||content;
- const focused=area.contains(document.activeElement)?document.activeElement.closest('[data-analytics-action]'):null;
- const focusKey=focused?['analyticsAction','scope','exportformat','id'].map(key=>focused.dataset[key]||''):null;
- const disclosureState=[...area.querySelectorAll('details')].map(detail=>detail.open),scrollTop=byId('practice-analytics-dialog').scrollTop;
+function renderAnalyticsReport(statusOnly=false){
+ const status=analyticsStatus(),content=byId('practice-analytics-content'),UI=globalThis.DCAnalyticsUI;
+ const saved=UI.captureState(content.querySelector('.learning-report'));
+ const syncArea=statusOnly?content.querySelector('[data-analytics-sync]'):null;
+ const scrollTop=byId('practice-analytics-dialog').scrollTop;
  byId('practice-analytics-title').textContent=analyticsText('Learning Report','Laporan Pembelajaran');
  byId('close-practice-analytics').textContent=analyticsText('Close report','Tutup laporan');
- if(syncArea)syncArea.innerHTML=globalThis.DCAnalyticsUI.syncHTML(status,contentLanguage);
- else content.innerHTML=globalThis.DCAnalyticsUI.html({report:analyticsStore.report({scope:analyticsScope,language:contentLanguage}),status,language:contentLanguage});
- if(!syncArea&&preserveDraft&&draft){const input=content.querySelector('[data-analytics-google-url]');if(input){input.value=draftValue;if(draftFocused)input.focus({preventScroll:true});}}
- if(!collectionAvailable){
+ if(syncArea)syncArea.innerHTML=UI.syncHTML(status,contentLanguage);
+ else content.innerHTML=UI.html({report:analyticsStore.report({scope:analyticsScope,language:contentLanguage}),status,language:contentLanguage,view:analyticsView});
+ const report=content.querySelector('.learning-report');UI.restoreState(report,saved,{focus:true});analyticsView=report.dataset.view;
+ if(!syncArea&&!collectionAvailable){
   const notice=document.createElement('p');notice.className='analytics-practice-note';notice.textContent=devPractice?analyticsText('Developer practice stays in this temporary session. Collection is disabled.','Latihan pembangun kekal dalam sesi sementara ini. Pengumpulan dinyahaktifkan.'):analyticsText('This offline file keeps records on this device. Open the game through its HTTP server to enable collection.','Fail luar talian ini menyimpan rekod pada peranti ini. Buka permainan melalui pelayan HTTP untuk mengaktifkan pengumpulan.');content.prepend(notice);
-  for(const control of content.querySelectorAll('[data-analytics-action="share"],[data-analytics-action="sync"],[data-analytics-action="destination-save"],[data-analytics-action="destination-local"],[data-analytics-google-url]'))control.disabled=true;
  }
- for(const [index,detail] of [...area.querySelectorAll('details')].entries())if(index<disclosureState.length)detail.open=disclosureState[index];
- if(focusKey){const replacement=[...area.querySelectorAll('[data-analytics-action]')].find(control=>['analyticsAction','scope','exportformat','id'].every((key,index)=>(control.dataset[key]||'')===focusKey[index]));(replacement&&!replacement.disabled?replacement:byId('close-practice-analytics')).focus({preventScroll:true});}
  byId('practice-analytics-dialog').scrollTop=scrollTop;
 }
-function openAnalyticsReport(){
+function openAnalyticsReport(view){
  analyticsReturnFocus=document.activeElement;byId('practice-analytics-status').textContent='';renderAnalyticsReport();
+ if(view){analyticsView=view;globalThis.DCAnalyticsUI.selectView(byId('practice-analytics-content').querySelector('.learning-report'),view);}
  if(!byId('practice-analytics-dialog').open)byId('practice-analytics-dialog').showModal();byId('close-practice-analytics').focus();
 }
 function closeAnalyticsReport(){byId('practice-analytics-dialog').close();analyticsReturnFocus?.focus();}
-function analyticsFile(format='csv'){
- const json=format==='json',data=analyticsStore.exportData(),status=analyticsStatus();
- const content=json?JSON.stringify({...data,questionFeedback:questionFeedback.exportData(),collection:{enabled:status.enabled,pendingEntries:status.pendingEntries||[]},ownerRecovery:{schemaVersion:1,scope:'practice',sessionId:practiceAnalyticsId,session:JSON.parse(JSON.stringify(session))}},null,2)+'\n':analyticsStore.csv();
- return new File([content],'slay-the-math-learning-'+new Date().toISOString().slice(0,10)+'.'+(json?'json':'csv'),{type:json?'application/json':'text/csv;charset=utf-8'});
+function analyticsFile(){
+ const data=analyticsStore.exportData(),status=analyticsStatus();
+ const content=JSON.stringify({...data,questionFeedback:questionFeedback.exportData(),collection:{enabled:status.enabled,pendingEntries:status.pendingEntries||[]},ownerRecovery:{schemaVersion:1,scope:'practice',sessionId:practiceAnalyticsId,session:JSON.parse(JSON.stringify(session))}},null,2)+'\n';
+ return new File([content],'slay-the-math-learning-backup-'+new Date().toISOString().slice(0,10)+'.json',{type:'application/json'});
 }
-function downloadAnalytics(format='csv'){
+function downloadAnalytics(){
  try{
-  const file=analyticsFile(format),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=file.name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
-  byId('practice-analytics-status').textContent=analyticsText('Learning report download prepared.','Muat turun laporan pembelajaran disediakan.');
+  const file=analyticsFile(),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=file.name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  byId('practice-analytics-status').textContent=analyticsText('Learning backup download prepared.','Muat turun sandaran pembelajaran disediakan.');
  }catch{byId('practice-analytics-status').textContent=analyticsText('The download could not start. Keep this page open and try again.','Muat turun tidak dapat dimulakan. Biarkan halaman ini terbuka dan cuba lagi.');}
 }
 function setMessage(text,tone=''){messages.set(questionKey(),{text,tone});}
@@ -433,7 +429,7 @@ byId('topic-select').addEventListener('change',()=>{if(empty)render();else byId(
 byId('theme-select').addEventListener('change',()=>{root.dataset.theme=byId('theme-select').value;tips.close();});
 byId('language-select').addEventListener('change',()=>{contentLanguage=byId('language-select').value;QL.setLanguage(contentLanguage);document.documentElement.lang=contentLanguage;render();});
 byId('progress-button').addEventListener('click',()=>toggleProgress(byId('progress-panel').hidden));
-byId('learning-report').addEventListener('click',openAnalyticsReport);
+byId('learning-report').addEventListener('click',()=>openAnalyticsReport());
 byId('close-practice-analytics').addEventListener('click',closeAnalyticsReport);
 byId('practice-analytics-dialog').addEventListener('cancel',event=>{event.preventDefault();closeAnalyticsReport();});
 byId('practice-analytics-content').addEventListener('click',event=>{
@@ -442,11 +438,13 @@ byId('practice-analytics-content').addEventListener('click',event=>{
  if(action==='scope'){
   if(!['all','gameplay','practice','review'].includes(control.dataset.scope))return;
   analyticsScope=control.dataset.scope;renderAnalyticsReport();byId('practice-analytics-content').querySelector('[data-analytics-action="scope"][data-scope="'+analyticsScope+'"]')?.focus();
- }else if(action==='export')downloadAnalytics(control.dataset.exportformat==='json'?'json':'csv');
+ }else if(action==='view'){analyticsView=control.dataset.view;globalThis.DCAnalyticsUI.selectView(byId('practice-analytics-content').querySelector('.learning-report'),analyticsView);byId('practice-analytics-dialog').scrollTop=0;}
+ else if(action==='export'&&control.dataset.exportformat==='json')downloadAnalytics();
+ else if(action==='practice'){closeAnalyticsReport();byId('resume-learning').click();}
  else if(action==='share'&&collectionAvailable){analyticsClient.setEnabled(!analyticsClient.status().enabled);refreshAnalyticsSurfaces();}
  else if(action==='sync'&&collectionAvailable)analyticsClient.flush();
- else if((action==='destination-save'||action==='destination-local')&&collectionAvailable){
-  try{analyticsClient.setDestination(action==='destination-local'?'':byId('practice-analytics-content').querySelector('[data-analytics-google-url]').value);renderAnalyticsReport(false,false);byId('practice-analytics-status').textContent='';byId('practice-analytics-content').querySelector('[data-analytics-action=share]')?.focus({preventScroll:true});}
+ else if(action==='use-default-destination'&&collectionAvailable){
+  try{analyticsClient.useDefaultDestination();renderAnalyticsReport();byId('practice-analytics-status').textContent='';byId('practice-analytics-content').querySelector('[data-analytics-action=share]')?.focus({preventScroll:true});}
   catch(error){byId('practice-analytics-status').textContent=error.message;}
  }
  else if(action==='review'){
@@ -458,6 +456,12 @@ byId('practice-analytics-content').addEventListener('click',event=>{
   basicsOpen.add(questionKey());putSession(openSupport(currentSession(),question.id,'foundation'));render();byId('basics-title').scrollIntoView({block:'start'});byId('basics-button').focus();
  }
 });
+byId('practice-analytics-content').addEventListener('change',event=>{
+ const report=byId('practice-analytics-content').querySelector('.learning-report');
+ if(event.target.matches('[data-analytics-scope]')){if(!['all','gameplay','practice','review'].includes(event.target.value))return;analyticsScope=event.target.value;renderAnalyticsReport();byId('practice-analytics-content').querySelector('[data-analytics-scope]')?.focus({preventScroll:true});}
+ else if(event.target.matches('[data-analytics-question-filter]'))globalThis.DCAnalyticsUI.filterQuestions(report);
+});
+byId('practice-analytics-content').addEventListener('input',event=>{if(event.target.matches('[data-analytics-search]'))globalThis.DCAnalyticsUI.filterQuestions(byId('practice-analytics-content').querySelector('.learning-report'));});
 byId('basics-button').addEventListener('click',()=>{
  const key=questionKey();
  if(basicsOpen.has(key))basicsOpen.delete(key);else{basicsOpen.add(key);putSession(openSupport(currentSession(),question.id,'foundation'));}

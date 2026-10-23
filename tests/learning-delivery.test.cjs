@@ -44,3 +44,12 @@ test('resuming a stopped client re-reads a destination changed elsewhere and req
 test('resuming after stored configuration is corrupted blocks sending and preserves the original bytes',()=>{
  const storage=disk(),service=fake(),c=client(storage,service);c.enqueue(input('Suspended'));c.setEnabled(true);c.stop();storage.setItem(api().DESTINATION_KEY,'{damaged');c.start();assert.equal(c.status().state,'save-error');assert.equal(c.status().enabled,false);assert.equal(storage.getItem(api().DESTINATION_KEY),'{damaged');assert.equal(service.rows.size,0);c.stop();
 });
+
+test('explicitly adopting the organiser default preserves old journals and requires fresh consent',async()=>{
+ const storage=disk(),service=fake(),other=URL_.replace('1234567890','9999999999');
+ storage.setItem(api().DESTINATION_KEY,JSON.stringify({schemaVersion:1,googleScriptUrl:other}));
+ const c=client(storage,service,{googleScriptUrl:URL_});c.enqueue(input('Retain this comment'));c.setEnabled(true);await c.flush();
+ const oldKeys=[...storage.m.keys()],created=service.created;assert.equal(c.status().destination.canUseDefault,true);
+ assert.equal(typeof c.useDefaultDestination,'function');c.useDefaultDestination();assert.equal(c.status().destination.url,URL_);assert.equal(c.status().enabled,false);assert.equal(c.status().pending,1);assert.equal(c.status().pendingEntries[0].payload.comment,'Retain this comment');assert.equal(service.created,created);
+ for(const key of oldKeys)assert.ok(storage.m.has(key));assert.equal(JSON.parse(storage.getItem(api().DESTINATION_KEY)).googleScriptUrl,URL_);assert.equal(c.status().destination.canUseDefault,false);c.stop();
+});

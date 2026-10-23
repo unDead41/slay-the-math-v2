@@ -2,6 +2,15 @@
 
 Versi dokumen berasingan daripada versi game.
 
+
+## Feature preview 2.31.0-report.1 — education-report only
+
+- Harmonise Main Menu, Settings and Practice Learning Report into Overview, Details and Sharing, with matching BM/English wording, honest evidence counts and bounded local scrolling.
+- Remove player CSV/native CSV-sharing controls and Google URL inputs; keep one disclosed JSON recovery action, ordinary game-save controls and existing local records.
+- Move project Google connection setup to Developer Hub with strict local-origin validation, atomic writes and stale-edit protection. Explicit adoption of a changed default pauses sharing and preserves old delivery journals.
+- Preserve search selection, focus, disclosures and inner table scroll across asynchronous refreshes; report comment-only storage failures truthfully and retain in-memory JSON recovery.
+- Carry the selectable, owner-guarded Apps Script setup entry into source and generated receiver. Main is not updated. [Preview and run instructions](../LEARNING_REPORT_PREVIEW.md); [verification](../LEARNING_REPORT_VERIFICATION.md).
+
 ## Game 2.29.0 — Single-enemy card correction
 
 - Convert Rune Sweep to one hit and Fate Storm to three hits on the same enemy; remove phantom AoE and target-selection RNG.

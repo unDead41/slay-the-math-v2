@@ -200,3 +200,8 @@ DISAHKAN oleh Ijamm (22 October 2026): remove all decorative rich-text underline
 ## Painted icon controls — game 2.23.0
 
 Existing buff/debuff buttons retain 44px targets, real counts and accessible detail labels; use the full artwork box within each button for the new painted glyph. Closed/open boss seals and mixed Attack+Block intent reflect existing engine values only. Music, Voice and Sound FX show their own muted/unmuted icon without conflating the three mixer buses. Save information, Export/Import and question topic labels keep visible text beside decorative art. Color-only rich text and genuine fraction bars remain canonical. Scope and actual visual checks: [Icon package 2.23.0](../ICON_PACKAGE_2_23_0.md).
+
+
+## Learning Report preview — 2.25.0-analytics.1
+
+Learning Report is available from actual Main Menu, Settings and Education Practice, following the saved question language in English/BM. Use a shared escaped Ink/gold renderer, sample-count chapter bars, SK/SP detail tables, recent-session bars, linked revision and CSV/JSON downloads. Empty evidence is Not assessed; sparse evidence is Not enough evidence. A native bounded dialog owns scrolling; report controls keep keyboard focus through async delivery updates. Sharing starts off and distinguishes local, offline, pending, sending and exact receiver-confirmed states. Explain that sending resumes while the game is open/reopened, and that a receiver is needed. Existing question comments/native Share/exit cancellation remain. [Contract](../EDUCATION_ANALYTICS_2_25_0.md).

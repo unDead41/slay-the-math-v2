@@ -145,3 +145,8 @@ DISAHKAN: Ijamm replaces newly generated live-deck Predict with the authored 120
 ## Random gameplay questions — 2.21.2
 
 DISAHKAN: every newly opened gameplay question must be random and unique in the current run, including the first Artifact trial and Predict. Rewarded consumers use uniform selection from unused eligible IDs, without difficulty/mastery weighting. Mystery draws from every unused item in its event topic; preferred IDs no longer restrict the draw. Shop and Rest currently have no quiz trigger and must not reset the ledger. New Run resets exclusion while lifetime evidence remains; Stage 1/2 Retry retains run exposures. Frozen pending questions survive reload and cannot be rerolled by reopening. Exhaustion never recycles a used ID. Owner and evidence: [Random questions 2.21.2](../QUESTION_RANDOM_2_21_2.md).
+
+
+## Learning analytics preview — 2.25.0-analytics.1
+
+DISAHKAN: Ijamm requests the feedback/learning analytics system in a feature branch before main. DITERUSKAN: observe existing canonical owner events for gameplay, Practice and separate Review; show chapter/SK/SP/skill evidence with distinct sample counts, independent/support/retry/reveal separation and linked Basics/review suggestions. Require three distinct answered IDs before a group guides revision. Never label a single error as a weakness or assign an official TP. Current run filtering excludes inherited lifetime-only records; Retry keeps the same analytics session. Selected BM SK/SP names come from the supplied DSKP printed pages42–45,48–49,68–70; English labels are working translations. Existing120 question content and selection remain authoritative. [Feature contract](../EDUCATION_ANALYTICS_2_25_0.md).

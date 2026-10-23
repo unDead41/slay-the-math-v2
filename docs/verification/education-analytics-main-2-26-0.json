@@ -1,0 +1,166 @@
+{
+  "version": "2.26.0",
+  "dateMalaysia": "2026-10-23",
+  "mainBase": "7afb0aa18c2f3f4fb95a1fc7da67abbe5f0eeeaf",
+  "featureHead": "1acefda06bfd7694772fbfee60c9e6fa58d0e59b",
+  "node": "24.19.0",
+  "fullSuite": {
+    "command": "DOM_QA_MODULE=/path/to/jsdom npm test",
+    "tests": 572,
+    "passed": 572,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 394208.13028
+  },
+  "syntax": {
+    "command": "npm run check",
+    "exitCode": 0
+  },
+  "analyticsNativeBrowser": {
+    "version": "2.26.0",
+    "checks": [
+      "Main Menu report loads in the actual merged game with card flow/motion globals present and sharing off.",
+      "Actual Learning Hint, wrong answer, More Hint and correct retry produce one supported/retried answer; a real srcdoc comment and learning record commit to SQLite.",
+      "Native JSON download contains canonical evidence/owner recovery and excludes the collection credential.",
+      "Stopping the real receiver retains an edited comment pending; closing/reopening on the same origin after receiver restart delivers its latest revision with no duplicate logical rows.",
+      "Settings selects BM without losing metrics; desktop, phone and landscape use internal report scrolling with no document overflow.",
+      "Operator CLI exports both received logical rows from the real database without capability secrets."
+    ],
+    "metrics": {
+      "answered": 1,
+      "wrongAttempts": 1,
+      "independentFirstTry": 0,
+      "correctWithSupport": 1,
+      "correctAfterRetry": 1,
+      "revealOnly": 0
+    },
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "overflow": false,
+        "dialogScroll": true,
+        "dialogHeight": 870,
+        "viewportHeight": 900
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "overflow": false,
+        "dialogScroll": true,
+        "dialogHeight": 828,
+        "viewportHeight": 844
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "dialogScroll": true,
+        "dialogHeight": 360,
+        "viewportHeight": 390
+      }
+    ],
+    "errors": [],
+    "pendingWhileReceiverStopped": 1,
+    "result": "PASS"
+  },
+  "cardMotionNativeBrowser": {
+    "checks": [
+      "Draw flies from the pile; the actual paid result is saved before motion; inert clones disappear and real cards return.",
+      "Normal Discard and fiery Exhaust are visually distinct and use the real destination.",
+      "End Turn discards and redraws the same four UIDs through a face-down reshuffle.",
+      "All ten actual Passive trigger paths pulse their own badge and show the actual named result, including capped Focus.",
+      "Waiting Passives do not trigger; unpaid modal choices stay static and Recall animates after confirmation.",
+      "Motion Off and OS reduced motion create no overlay and preserve actual gameplay.",
+      "A rapid second play and Settings cancel old motion without duplicate costs, hidden cards or late ghosts.",
+      "Desktop, phone and landscape have no page overflow; resizing immediately cleans up."
+    ],
+    "errors": [],
+    "passives": [
+      {
+        "name": "Blazing Spirit",
+        "detail": "+2 Strength"
+      },
+      {
+        "name": "Growing Flame",
+        "detail": "+1 Strength"
+      },
+      {
+        "name": "Swift Step",
+        "detail": "+2 Agility"
+      },
+      {
+        "name": "Battle Rhythm",
+        "detail": "+1 Agility"
+      },
+      {
+        "name": "Rune Armor",
+        "detail": "+1 Defense"
+      },
+      {
+        "name": "Lasting Shield",
+        "detail": "4 Block kept"
+      },
+      {
+        "name": "Grimoire Ward",
+        "detail": "+3 Block"
+      },
+      {
+        "name": "Ember Core",
+        "detail": "−2 HP"
+      },
+      {
+        "name": "Clear Mind",
+        "detail": "1 card drawn"
+      },
+      {
+        "name": "Last Ember",
+        "detail": "+6 Block · +0 Focus"
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "noOverflow": true,
+        "resizeCleanup": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "noOverflow": true,
+        "resizeCleanup": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "noOverflow": true,
+        "resizeCleanup": true
+      }
+    ]
+  },
+  "production": {
+    "version": "2.26.0",
+    "resourceCount": 68,
+    "allContentHashesMatch": true,
+    "productionRuntimeEqualsDist": true,
+    "entrypointsMatch": true,
+    "newerMainAssetsEngineMotionAudioAndQuestionOwnersUnchanged": true,
+    "noPrivateDatabaseOrDeveloperFilesInProduction": true,
+    "productionCollectorHealth": {
+      "protocolVersion": 1,
+      "enabled": true
+    },
+    "allProductionHTTPResourcesMatch": true,
+    "privateDatabaseHTTPStatus": 404,
+    "portableBytes": 295465155
+  },
+  "limits": [
+    "No physical Windows/device or classroom test",
+    "No real Wi-Fi adapter event; receiver interruption/reopen and HTTP online retry tested",
+    "No cloud deployment, teacher accounts or roster",
+    "No new remote cold-start offline/PWA or cross-origin migration",
+    "MODEL.zip unavailable; current artwork preserved"
+  ]
+}

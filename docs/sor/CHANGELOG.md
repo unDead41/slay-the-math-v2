@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.26.0 — Education analytics integrated with main
+
+- Integrate `education-analytics` with main 2.25.1 under Ijamm's explicit authorization; preserve combat card motion, original card/artifact artwork and MUSIC(5).
+- Publish Learning Report in Main Menu, Settings and Practice, local evidence/comments, optional durable SQLite collection and CSV/JSON export.
+- Resolve source and generated release conflicts without replacing the newer engine, artwork registries or question content. Add a production collector startup command and Windows/backend handoff.
+- Sources, collection limits and setup: [current guide](../EDUCATION_ANALYTICS_2_26_0.md). [Integration verification](../EDUCATION_ANALYTICS_MAIN_VERIFICATION.md).
+
 ## Game 2.25.1 — Restore original card and artifact artwork
 
 - Restore the 40 selected original card illustrations and 31 original artifact illustrations across live UI, source Codex, motion cues and portable output.
@@ -15,6 +22,13 @@ Versi dokumen berasingan daripada versi game.
 - Show named, effect-specific cues for all ten current Passive triggers with actual capped/zero results.
 - Keep animation independent of synchronous resolution/save/RNG and cancel all transient clones/hidden-card state across UI lifecycle and motion preferences.
 - Develop and review on `combat-animation`; publish to main with the 2.25.1 artwork correction under Ijamm's explicit follow-up authorization. [Implementation and actual verification](../CARD_MOTION_2_25_0.md).
+
+## Feature preview 2.25.0-analytics.1 — education-analytics only
+
+- Add Main Menu/Settings/Practice Learning Report with BM/English chapter graphs, selected SK/SP breakdown, honest sample counts and targeted Basics/review.
+- Observe existing gameplay/Practice evidence without changing questions, rewards or RNG; retain Review separation and Retry continuity.
+- Add offline durable pending collection, explicit consent, exact revision acknowledgements and optional authenticated SQLite receiver with operator CSV/JSON extraction.
+- Preserve existing comments, exports, audio and Dev isolation. Main is not updated. [Guide](../EDUCATION_ANALYTICS_2_25_0.md); [actual validation](../EDUCATION_ANALYTICS_VERIFICATION.md).
 
 ## Game 2.20.0
 

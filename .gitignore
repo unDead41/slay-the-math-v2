@@ -7,3 +7,11 @@ tools/__pycache__/
 .SLAY-THE-MATH-OFFLINE.html.*
 
 /release-prod/
+
+# Private optional collector data; never serve or publish player records.
+/tools/analytics/data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+/education-data.json
+/education-data.csv

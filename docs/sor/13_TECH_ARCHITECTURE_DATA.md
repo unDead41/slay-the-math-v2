@@ -1,5 +1,7 @@
 # 13 — Seni bina, kontrak data, RNG dan simpanan
 
+Current release integration: 2.26.0 combines the analytics preview with main 2.25.1. Existing run/save schema, question owners and newer card-motion hooks remain. `npm run start:analytics:prod` builds `release-prod` and serves it with the same-origin collector; the SQLite database stays outside public files. [Backend/setup contract](../EDUCATION_ANALYTICS_2_26_0.md).
+
 Versi: 2.0.0. Kontrak baharu ialah cadangan. Source code prototaip belum diaudit dalam penyediaan SOR ini. Gunakan teknologi projek sedia ada sebelum mempertimbangkan migrasi.
 
 ## Pembahagian tanggungjawab
@@ -200,3 +202,10 @@ Optional audioPresentation version 1 gains a bounded Alyssa receipt ledger, inde
 ## Ordered answer audio — 2.24.0
 
 Pack 5 owns 75 voices and the existing ten music cues. DCAudioPresentation.questionState projects ordered authoritative learning events plus attempt correctness; result receipts include their event index. Later answer/help transitions change voice scope so stale higher-priority audio yields. Historical saved results are consumed silently, while new observed questions can react to actual submissions. Mystery review permits incorrect speech only for authoritative INCORRECT, excluding timeout/abandonment. Practice sends bounded event/attempt data through the validated current same-origin frame, retains an isolated owner and adds a fresh audio generation on Restart Review. Legacy prediction projection remains ephemeral. Existing save envelope/reducers/RNG are unchanged. [Contract](../AUDIO_2_24_0.md).
+
+
+## Offline learning analytics — 2.25.0-analytics.1
+
+DITERUSKAN: independent v1 keys slay-the-math.learning-analytics.v1 and slay-the-math.learning-sync.v1 own immutable learning observations and opt-in revisioned delivery. They preserve corrupt originals/quota-failed observations for export, merge same-origin evidence and never mutate bank/reducer/gameplay saves/RNG. Scoped session aliases preserve Retry identity despite a changed engine start time. Default report excludes Review. The shared registry names only the bank's selected SK/SPs, with explicit DSKP source references.
+
+The optional Node22.13+ wrapper serves dist and authenticated same-origin SQLite collection; ordinary server compatibility is unchanged. Durable commit precedes exactrevisionACK; conflicting content must not be silently acknowledged. Browser exports include pending diagnostics but no capability secrets. SQLite/operator exports are outside public roots and Git; there is no unauthenticated bulk-read route. Development memory sessions never transmit. This selectively supersedes2.15's no-receiver rule only when the player explicitly enables the configured receiver. No cloud deployment/accounts are created. [Owner and limits](../EDUCATION_ANALYTICS_2_25_0.md).

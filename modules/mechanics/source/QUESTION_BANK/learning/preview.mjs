@@ -11,16 +11,32 @@ let session,storageError='',storagePaused=false,storageAvailable=true,savedLearn
 let question=bank.questions[0],selectedChoice=null,attemptCounter=0,mode='review',empty=false;
 let lastRenderedQuestionKey=null,atlasIsOpen=false;
 let contentLanguage=QL.language();byId('language-select').value=contentLanguage;document.documentElement.lang=contentLanguage;
+let analyticsDisk=null,devPractice=false,analyticsEndpoint=globalThis.DC_EDUCATION_ENDPOINT||'/api/education',analyticsPageURL=location.href;
+try{analyticsDisk=globalThis.localStorage;}catch{}
+try{
+ devPractice=!!globalThis.STMDevMode;
+ if(parent!==window&&parent.location.origin===(globalThis.origin||location.origin)){devPractice=devPractice||!!parent.STMDevMode;analyticsEndpoint=parent.DC_EDUCATION_ENDPOINT||analyticsEndpoint;analyticsPageURL=parent.location.href;}
+}catch{}
+if(!/^https?:\/\//.test(analyticsPageURL))analyticsPageURL=document.baseURI;
+const analyticsStore=globalThis.DCAnalytics.createStore({storage:analyticsDisk,bank,curriculum:globalThis.DCLearningCurriculum});
+let practiceAnalyticsId=analyticsStore.getSessionId('practice'),reviewAnalyticsId=null,analyticsScope='all',analyticsReturnFocus=null,analyticsClient=null,questionFeedback=null,localAnalyticsError='';
+const reviewAnalyticsIds=new Map(),collectionAvailable=!devPractice&&/^https?:\/\//.test(analyticsPageURL);
+analyticsClient=globalThis.DCLearningSync.createClient({storage:analyticsDisk,endpoint:analyticsEndpoint,host:globalThis,
+ fetch:devPractice?async()=>{throw Error('Collection is disabled in developer practice.');}:typeof globalThis.fetch==='function'?globalThis.fetch.bind(globalThis):async()=>{throw Error('The collector is unavailable here.');},
+ onchange:()=>refreshAnalyticsSurfaces(true)});
 for(const option of byId('difficulty-select').options)option.value=option.value;
 const tips=attachRichTextTooltips(root,{glossary,calculationIndex,getLanguage:()=>byId('language-select').value,getTheme:()=>root.dataset.theme});
-const questionFeedback=attachQuestionFeedback({bank,root,getQuestion:()=>question,getRecord:()=>currentRecord(),getMode:()=>mode});
+questionFeedback=attachQuestionFeedback({bank,root,getQuestion:()=>question,getRecord:()=>currentRecord(),getMode:()=>mode,
+ onChange:payload=>enqueueAnalytics(payload,'question-feedback'),getDelivery:analyticsStatus});
 
 try{savedLearningText=localStorage.getItem(storageKey);}
 catch{storageAvailable=false;storageError='Saving between visits is unavailable. Your progress will stay available while this page is open.';}
 try{session=savedLearningText?restoreSession(JSON.parse(savedLearningText),bank):createSession({seed:127031});}
-catch{session=createSession({seed:127031});storagePaused=true;storageError='The saved learning record could not be read and has been kept. You can practise for this visit, or start a fresh learning record from Practice record to replace it.';}
+catch{session=createSession({seed:127031});practiceAnalyticsId=analyticsStore.startSession('practice');storagePaused=true;storageError='The saved learning record could not be read and has been kept. You can practise for this visit, or start a fresh learning record from Practice record to replace it.';}
+captureAnalytics(session,'practice',practiceAnalyticsId);
 
 function persist(){
+ captureAnalytics(session,'practice',practiceAnalyticsId);
  if(storagePaused||!storageAvailable)return;
  try{localStorage.setItem(storageKey,JSON.stringify(session));}
  catch{storageAvailable=false;storageError='Saving between visits is unavailable. Your progress will stay available while this page is open.';}
@@ -35,7 +51,72 @@ function reviewSession(q){
 }
 function currentSession(){return mode==='learn'?session:reviewSession(question);}
 function currentRecord(){return currentSession().records[question.id];}
-function putSession(next){if(mode==='learn'){session=next;persist();}else reviewStates.set(question.id,next);}
+function putSession(next){
+ if(mode==='learn'){session=next;persist();}
+ else{
+  reviewStates.set(question.id,next);
+  if(!reviewAnalyticsIds.has(question.id))reviewAnalyticsIds.set(question.id,reviewAnalyticsId||(reviewAnalyticsId=analyticsStore.startSession('review')));
+  captureAnalytics(next,'review',reviewAnalyticsIds.get(question.id),[question.id]);
+ }
+}
+
+function analyticsText(english,malay){return contentLanguage==='ms'?malay:english;}
+function analyticsStatus(){
+ const status=analyticsClient?.status()||{enabled:false,pending:0,state:'on-device',error:''};
+ const localError=[analyticsStore.error,localAnalyticsError].filter(Boolean).join(' '),error=[localError,status.error].filter(Boolean).join(' ');
+ return {...status,...(!collectionAvailable?{enabled:false,state:'on-device'}:{}),...(error?{error}:{}),...(localError?{state:'save-error'}:{}),dev:devPractice};
+}
+function noteAnalyticsFailure(){localAnalyticsError=analyticsText('Learning reporting could not update. Keep this page open and export a copy before leaving.','Rekod laporan pembelajaran tidak dapat dikemas kini. Biarkan halaman ini terbuka dan eksport salinan sebelum keluar.');}
+function enqueueAnalytics(payload,kind='learning-record'){
+ try{return analyticsClient.enqueue({id:payload.id,kind,payload});}
+ catch{noteAnalyticsFailure();return null;}
+}
+function captureAnalytics(ownerSession,scope,sessionId,questionIds){
+ try{
+  const result=analyticsStore.capture(ownerSession,{scope,sessionId,source:scope==='practice'?'practice':'review',language:contentLanguage,...(questionIds?{questionIds}:{})});
+  for(const payload of result.changedRecords)enqueueAnalytics(payload);
+ }catch{noteAnalyticsFailure();}
+ refreshAnalyticsSurfaces();
+}
+function refreshAnalyticsSurfaces(statusOnly=false){
+ if(!analyticsClient)return;
+ if(byId('practice-analytics-dialog')?.open)renderAnalyticsReport(statusOnly);
+ questionFeedback?.refreshDelivery();
+}
+function renderAnalyticsReport(statusOnly=false){
+ const status=analyticsStatus(),content=byId('practice-analytics-content');
+ const syncArea=statusOnly&&globalThis.DCAnalyticsUI.syncHTML?content.querySelector('[data-analytics-sync]'):null,area=syncArea||content;
+ const focused=area.contains(document.activeElement)?document.activeElement.closest('[data-analytics-action]'):null;
+ const focusKey=focused?['analyticsAction','scope','exportformat','id'].map(key=>focused.dataset[key]||''):null;
+ const disclosureState=[...area.querySelectorAll('details')].map(detail=>detail.open),scrollTop=byId('practice-analytics-dialog').scrollTop;
+ byId('practice-analytics-title').textContent=analyticsText('Learning Report','Laporan Pembelajaran');
+ byId('close-practice-analytics').textContent=analyticsText('Close report','Tutup laporan');
+ if(syncArea)syncArea.innerHTML=globalThis.DCAnalyticsUI.syncHTML(status,contentLanguage);
+ else content.innerHTML=globalThis.DCAnalyticsUI.html({report:analyticsStore.report({scope:analyticsScope,language:contentLanguage}),status,language:contentLanguage});
+ if(!collectionAvailable){
+  const notice=document.createElement('p');notice.className='analytics-practice-note';notice.textContent=devPractice?analyticsText('Developer practice stays in this temporary session. Collection is disabled.','Latihan pembangun kekal dalam sesi sementara ini. Pengumpulan dinyahaktifkan.'):analyticsText('This offline file keeps records on this device. Open the game through its HTTP server to enable collection.','Fail luar talian ini menyimpan rekod pada peranti ini. Buka permainan melalui pelayan HTTP untuk mengaktifkan pengumpulan.');content.prepend(notice);
+  for(const control of content.querySelectorAll('[data-analytics-action="share"],[data-analytics-action="sync"]'))control.disabled=true;
+ }
+ for(const [index,detail] of [...area.querySelectorAll('details')].entries())if(index<disclosureState.length)detail.open=disclosureState[index];
+ if(focusKey){const replacement=[...area.querySelectorAll('[data-analytics-action]')].find(control=>['analyticsAction','scope','exportformat','id'].every((key,index)=>(control.dataset[key]||'')===focusKey[index]));(replacement&&!replacement.disabled?replacement:byId('close-practice-analytics')).focus({preventScroll:true});}
+ byId('practice-analytics-dialog').scrollTop=scrollTop;
+}
+function openAnalyticsReport(){
+ analyticsReturnFocus=document.activeElement;byId('practice-analytics-status').textContent='';renderAnalyticsReport();
+ if(!byId('practice-analytics-dialog').open)byId('practice-analytics-dialog').showModal();byId('close-practice-analytics').focus();
+}
+function closeAnalyticsReport(){byId('practice-analytics-dialog').close();analyticsReturnFocus?.focus();}
+function analyticsFile(format='csv'){
+ const json=format==='json',data=analyticsStore.exportData(),status=analyticsStatus();
+ const content=json?JSON.stringify({...data,questionFeedback:questionFeedback.exportData(),collection:{enabled:status.enabled,pendingEntries:status.pendingEntries||[]},ownerRecovery:{schemaVersion:1,scope:'practice',sessionId:practiceAnalyticsId,session:JSON.parse(JSON.stringify(session))}},null,2)+'\n':analyticsStore.csv();
+ return new File([content],'slay-the-math-learning-'+new Date().toISOString().slice(0,10)+'.'+(json?'json':'csv'),{type:json?'application/json':'text/csv;charset=utf-8'});
+}
+function downloadAnalytics(format='csv'){
+ try{
+  const file=analyticsFile(format),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=file.name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  byId('practice-analytics-status').textContent=analyticsText('Learning report download prepared.','Muat turun laporan pembelajaran disediakan.');
+ }catch{byId('practice-analytics-status').textContent=analyticsText('The download could not start. Keep this page open and try again.','Muat turun tidak dapat dimulakan. Biarkan halaman ini terbuka dan cuba lagi.');}
+}
 function setMessage(text,tone=''){messages.set(questionKey(),{text,tone});}
 function topicName(code){return bank.topics?.[code]?.name||bank.questions.find(q=>q.topicCode===code)?.topic||code;}
 function rich(node,runs,allow=false){return renderRichText(typeof node==='string'?byId(node):node,runs,{glossary,calculationIndex,allowCalculations:allow});}
@@ -272,6 +353,9 @@ function render(){
  byId('topic-picker').hidden=mode!=='learn';byId('restart-review').hidden=mode!=='review';byId('previous-question').hidden=mode!=='review';
  byId('question-surface').hidden=empty;byId('empty-state').hidden=!empty;
  byId('question-select').value=question.id;
+ byId('learning-report').textContent=analyticsText('Learning Report','Laporan Pembelajaran');
+ byId('term-interaction-help').textContent=analyticsText('Hover, focus or tap a highlighted term. Press Escape or tap outside to close it.','Letakkan penuding, fokus atau tekan istilah yang disorot. Tekan Escape atau di luar petua untuk menutupnya.');
+ if(byId('practice-analytics-dialog').open)renderAnalyticsReport();
  if(!empty)currentSession();
  renderProgress();renderAtlas();
  const pending=!!session.pendingQuestionId;
@@ -301,7 +385,7 @@ function render(){
  byId('attempt-caption').textContent=record.attempts.length?`${record.attempts.length} ${record.attempts.length===1?'answer':'answers'} checked`:'One answer';
  byId('submit-answer').disabled=view.closed;byId('reveal-answer').disabled=view.closed;
  byId('submit-answer').textContent=view.closed?(record.status==='correct'?'Answered correctly':'Question finished'):'Check answer →';
- byId('choice-help').textContent=view.closed?'Explore the explanation and worked steps below.':'Tap an underlined term for its meaning. Select a choice, then check it.';
+ byId('choice-help').textContent=view.closed?'Explore the explanation and worked steps below.':analyticsText('Tap a highlighted term for its meaning. Select a choice, then check it.','Tekan istilah yang disorot untuk membaca maksudnya. Pilih jawapan, kemudian semak.');
  const message=messages.get(key);
  byId('status').textContent=message?.text||(record.status==='correct'?'Correct. Read the explanation or open Show Steps.':record.status==='revealed'?'You viewed the solution. This is recorded separately from a correct answer.':'');
  byId('status').dataset.tone=message?.tone||(record.status==='correct'?'correct':'');
@@ -332,7 +416,7 @@ function setAtlasOpen(open,{restoreFocus=false}={}){
  else{byId('atlas-panel').removeAttribute('role');byId('atlas-panel').removeAttribute('aria-modal');if(restoreFocus&&mobile)byId('atlas-toggle').focus();}
 }
 function toggleProgress(open=byId('progress-panel').hidden){byId('progress-panel').hidden=!open;byId('progress-button').setAttribute('aria-expanded',String(open));renderProgress();}
-function openResetDialog(){byId('reset-learning-dialog').showModal();}
+function openResetDialog(){byId('reset-description').textContent=analyticsText('This clears the current Practice record. Every question will be unseen again. Earlier Learning Reports and your open Review questions stay available.','Ini mengosongkan rekod Latihan semasa. Semua soalan akan menjadi belum dilihat semula. Laporan Pembelajaran terdahulu dan soalan Semakan yang terbuka masih tersedia.');byId('reset-learning-dialog').showModal();}
 
 for(const code of topicCodes){
  for(const id of ['atlas-topic-select','topic-select']){const option=document.createElement('option');option.value=code;option.textContent=shortTopics[code]||topicName(code);byId(id).append(option);}
@@ -347,6 +431,27 @@ byId('topic-select').addEventListener('change',()=>{if(empty)render();else byId(
 byId('theme-select').addEventListener('change',()=>{root.dataset.theme=byId('theme-select').value;tips.close();});
 byId('language-select').addEventListener('change',()=>{contentLanguage=byId('language-select').value;QL.setLanguage(contentLanguage);document.documentElement.lang=contentLanguage;render();});
 byId('progress-button').addEventListener('click',()=>toggleProgress(byId('progress-panel').hidden));
+byId('learning-report').addEventListener('click',openAnalyticsReport);
+byId('close-practice-analytics').addEventListener('click',closeAnalyticsReport);
+byId('practice-analytics-dialog').addEventListener('cancel',event=>{event.preventDefault();closeAnalyticsReport();});
+byId('practice-analytics-content').addEventListener('click',event=>{
+ const control=event.target.closest('[data-analytics-action]');if(!control||control.disabled)return;
+ const action=control.dataset.analyticsAction;
+ if(action==='scope'){
+  if(!['all','gameplay','practice','review'].includes(control.dataset.scope))return;
+  analyticsScope=control.dataset.scope;renderAnalyticsReport();byId('practice-analytics-content').querySelector('[data-analytics-action="scope"][data-scope="'+analyticsScope+'"]')?.focus();
+ }else if(action==='export')downloadAnalytics(control.dataset.exportformat==='json'?'json':'csv');
+ else if(action==='share'&&collectionAvailable){analyticsClient.setEnabled(!analyticsClient.status().enabled);refreshAnalyticsSurfaces();}
+ else if(action==='sync'&&collectionAvailable)analyticsClient.flush();
+ else if(action==='review'){
+  const id=control.dataset.id,target=bank.questions.find(q=>q.id===id);if(!target)return;
+  closeAnalyticsReport();navigateReview(target.id,{focus:true});
+ }else if(action==='foundation'){
+  const target=bank.questions.find(q=>q.id===question.id&&q.learning.foundationId===control.dataset.id)||bank.questions.find(q=>q.learning.foundationId===control.dataset.id);if(!target)return;
+  closeAnalyticsReport();if(target.id!==question.id)navigateReview(target.id);
+  basicsOpen.add(questionKey());putSession(openSupport(currentSession(),question.id,'foundation'));render();byId('basics-title').scrollIntoView({block:'start'});byId('basics-button').focus();
+ }
+});
 byId('basics-button').addEventListener('click',()=>{
  const key=questionKey();
  if(basicsOpen.has(key))basicsOpen.delete(key);else{basicsOpen.add(key);putSession(openSupport(currentSession(),question.id,'foundation'));}
@@ -370,6 +475,7 @@ byId('reveal-answer').addEventListener('click',()=>{putSession(revealAnswer(curr
 byId('show-steps').addEventListener('click',()=>{putSession(openSupport(currentSession(),question.id,'steps'));render();});
 byId('restart-review').addEventListener('click',()=>{
  audioReviewGenerations.set(question.id,(audioReviewGenerations.get(question.id)||0)+1);
+ reviewAnalyticsIds.set(question.id,analyticsStore.startSession('review'));
  reviewStates.delete(question.id);basicsOpen.delete(questionKey());activeTabs.delete(questionKey());messages.delete(questionKey());selectedChoice=null;byId('solution-visual-details').open=false;render();
 });
 for(const id of ['question-search','atlas-topic-select','difficulty-select'])byId(id).addEventListener(id==='question-search'?'input':'change',renderAtlas);
@@ -397,6 +503,7 @@ byId('empty-review-button').addEventListener('click',()=>navigateReview(question
 byId('reset-learning').addEventListener('click',openResetDialog);
 byId('cancel-reset-learning').addEventListener('click',()=>byId('reset-learning-dialog').close());
 byId('confirm-reset-learning').addEventListener('click',()=>{
+ practiceAnalyticsId=analyticsStore.startSession('practice');
  session=createSession({seed:127031});storagePaused=false;storageError=storageAvailable?'':storageError;
  for(const key of [...activeTabs.keys()])if(key.startsWith('learn:'))activeTabs.delete(key);
  for(const key of [...basicsOpen])if(key.startsWith('learn:'))basicsOpen.delete(key);
@@ -406,3 +513,8 @@ byId('confirm-reset-learning').addEventListener('click',()=>{
 });
 for(const button of root.querySelectorAll('button'))if(button.id!=='feedback-save')button.type='button';
 render();setAtlasOpen(false);
+if(typeof globalThis.DC_PRACTICE_INITIAL_REVIEW==='string'&&bank.questions.some(q=>q.id===globalThis.DC_PRACTICE_INITIAL_REVIEW))navigateReview(globalThis.DC_PRACTICE_INITIAL_REVIEW,{focus:true});
+if(collectionAvailable)analyticsClient.start();
+window.addEventListener('pagehide',()=>analyticsClient.stop());
+window.addEventListener('pageshow',event=>{if(event.persisted&&collectionAvailable)analyticsClient.start();});
+window.addEventListener('storage',()=>refreshAnalyticsSurfaces());

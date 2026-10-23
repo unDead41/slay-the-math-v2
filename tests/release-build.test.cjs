@@ -20,3 +20,10 @@ test('release build derives menu metadata from package.json and updates every la
  assert.equal(readMeta()?.version,'2.17.0');fs.writeFileSync(path.join(root,'package.json'),JSON.stringify({version:'2.18.0'}));sync(root);assert.equal(readMeta().version,'2.18.0');
  for(const name of ['dist/index.html','MAIN-SEKARANG.html','index.html'])assert.match(fs.readFileSync(path.join(root,name),'utf8'),/name="stm-version" content="2\.18\.0"/);
 });
+test('production refuses a private database in the public tree and removes stale output before failing',t=>{
+ const root=fixture(t),privateDir=path.join(root,'dist','nested'),out=path.join(root,'release-prod');fs.mkdirSync(privateDir);fs.mkdirSync(out);
+ fs.writeFileSync(path.join(privateDir,'education.sqlite'),'private test fixture');fs.writeFileSync(path.join(out,'index.html'),'stale build');
+ const script=fs.readFileSync(path.join(__dirname,'../tools/build-production.cjs'),'utf8');
+ const context={__dirname:path.join(root,'tools'),require:id=>id==='node:child_process'?{spawnSync(){assert.fail('No build child may run before private-data validation');}}:require(id),process:{execPath:process.execPath},console};
+ assert.throws(()=>vm.runInNewContext(script,context),/Private database found in public game files/);assert.equal(fs.existsSync(out),false);assert.equal(fs.readFileSync(path.join(privateDir,'education.sqlite'),'utf8'),'private test fixture');
+});

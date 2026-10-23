@@ -1,6 +1,6 @@
-# Slay the Math — Passive & Music Edition 2.20.0
+# Slay the Math — 2.26.0
 
-Current update: three active Passives with a full-card replacement popup, eight supplied background cues and seven character voices. Music, Voice and Sound FX have separate controls. [Changes and validation](docs/PASSIVE_AND_MUSIC_2_20_0.md). Compact combat and run-unique 120-question Predict remain available.
+Learning Report is available from Main Menu, Settings and Education Practice, with BM/English chapter/SK/SP evidence, offline recording, optional comments collection and CSV/JSON exports. This release integrates `education-analytics` with main 2.25.1, retaining combat card motion, the original card/artifact artwork and Pack5 audio. [Windows update, database setup and central collection](docs/EDUCATION_ANALYTICS_2_26_0.md).
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -18,7 +18,7 @@ It reuses the full 120-question folio: browse, Hint/More Hint, worked solutions,
 Basics, full English/Bahasa Melayu question switching and a separate saved learning session.
 Each question now has improvement categories and a comment box. Comments save on
 this device; the exit reminder offers CSV/JSON download and file sharing for Ijamm.
-See [question feedback and delivery limits](docs/QUESTION_FEEDBACK_2_15_0.md).
+Collection is off until a player enables sharing in Learning Report. For a receiver that creates its own SQLite database, use `npm.cmd run start:analytics:prod` (Node 22.13+); ordinary `npm start` needs no database. See [current feedback and delivery limits](docs/EDUCATION_ANALYTICS_2_26_0.md).
 The same harmonized 1.6 bank is active in Predict, Artifact trials and Mystery challenges. Its shared run ledger prevents repeat questions; New Run resets exclusion while lifetime history remains.
 See [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
 
@@ -58,7 +58,7 @@ Special-situation artwork update: [2.5.2 notes](docs/SITUATION_ART_2_5_2.md). Ru
 
 Reward and Shop portrait-card correction: [2.5.3 notes](docs/FIX_CARD_PROPORTIONS_2_5_3.md).
 
-Artifact Pack V3.2 rich text and resolved calculations: [2.6.0 notes](docs/ARTIFACT_RICH_TEXT_2_6_0.md). Open **Artifacts → View Calculations**, **Calculations** on the map/rooms, or **Log** in combat. Underlined terms and numbers support hover, keyboard focus and tap.
+Artifact Pack V3.2 rich text and resolved calculations: [2.6.0 notes](docs/ARTIFACT_RICH_TEXT_2_6_0.md). Open **Artifacts → View Calculations**, **Calculations** on the map/rooms, or **Log** in combat. Highlighted terms and numbers support hover, keyboard focus and tap.
 
 Stage 1 normal/Elite frame animations: [2.7.0 notes](docs/STAGE1_ANIMATION_2_7_0.md). Five supplied enemies use 25 clips / 128 frames, with unchanged combat rules and a stable arena floor.
 

@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Map balance v1.3 — 23 October 2026
+
+- Implement all six accepted map-analysis improvements: adaptive visible routing, replicated matched-entry paths, recovery/penalty windows, actual risk/reward, Predict sensitivity and difficulty explanations/regression gates.
+- Add a fixed 3,000-campaign experiment schedule, real survivor entry banks, three-rank replays, sharded raw results and CSV/JSON with separate planned/started/ten-node coverage. Preserve v1.2 evidence.
+- Update [Map SOR v1.3](../../modules/map/SOR/04_MAP_COMBAT_POWER.md), [tool instructions](../../tools/balance/map-advanced/README.md) and [Master handoff](../MAP_BALANCE_V1_3_HANDOFF.md). Easy/Medium/Hard full adapters and pupil targets remain pending; no gameplay/version/UI change.
+
 ## Map balance audit v1.2 — 23 October 2026
 
 - Add developer-only analysis for all 100 seeds, 200 maps, 5,500 complete stage paths and 77,384 legal two-stage pairs; preserve all topology and gameplay values.

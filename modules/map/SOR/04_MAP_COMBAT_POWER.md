@@ -1,4 +1,4 @@
-# SOR Map Balance & Combat Power — v1.2
+# SOR Map Balance & Combat Power — v1.3
 
 Tarikh: 23 Oktober 2026. Pemilik domain: Map. Penyatuan dan keputusan balance akhir: Master.
 Kod rujukan: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (game 2.24.0), branch `balance/map`.
@@ -7,11 +7,12 @@ Kod rujukan: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (game 2.24.0), branch `b
 
 - **DISAHKAN:** menilai setiap seed/laluan, mengekalkan kontrak map, menyimpan nilai kesukaran untuk pembangunan sahaja dan menyerahkan hasil kepada Master.
 - **DISAHKAN:** sasaran keseluruhan Easy 90%, Medium 70%, Hard 50% murid menang satu run penuh. Pengesahan ini milik Master; hasil bot bukan hasil murid.
+- **DISAHKAN:** enam penambahbaikan v1.3: polisi laluan realistik, perbandingan entry setara dengan ulangan, tekanan sebelum recovery, risiko–ganjaran sebenar, sensitiviti Predict/difficulty dan laporan punca serta regression gate.
 - **DITERUSKAN:** generator 1.0.0, katalog 1.1.0, `STM-001` hingga `STM-100`, route save versi 3 untuk run baharu. Save route 1/2 kekal dengan graph asalnya.
 - **CADANGAN UNTUK DIUJI:** model anggaran, polisi bot, skala CP, saiz pilot dan semua angka baharu daripada Balance v1.2. Tiada calon stat/harga diaktifkan oleh audit ini.
 - **PERLU_VERIFIKASI:** difficulty adapter Easy/Medium/Hard, CP route yang dikalibrasi, fairness untuk murid, build domain combat/ekonomi yang disatukan.
 
-Dokumen ini menambah pemilik penilaian kepada [01_MAP_RNG.md](01_MAP_RNG.md), bukan menggantikan peraturan penjanaannya. Hasil dan had sebenar ada dalam [handoff](../../../docs/MAP_BALANCE_HANDOFF.md); arahan ulangan ada dalam [README alat](../../../tools/balance/map/README.md).
+Dokumen ini menambah pemilik penilaian kepada [01_MAP_RNG.md](01_MAP_RNG.md), bukan menggantikan peraturan penjanaannya. Hasil semasa ada dalam [handoff v1.3](../../../docs/MAP_BALANCE_V1_3_HANDOFF.md) dan [README eksperimen](../../../tools/balance/map-advanced/README.md). [Handoff v1.2](../../../docs/MAP_BALANCE_HANDOFF.md) dan dataset asal kekal bukti sejarah pada kod asal; perubahan harness v1.3 tidak menulis semula fingerprint sejarah itu.
 
 ## MAP-BAL-01 — Kontrak map dikekalkan
 
@@ -91,7 +92,7 @@ Laporkan W/N mentah bersama Wilson 95% dan transformasi interval CP secara terba
 
 Keputusan Stage 1 yang sudah menang kekal sah jika run kemudian error/censor di Stage 2. Error/censor campaign masih dilaporkan berasingan. Stage 2 menggunakan hanya run yang benar-benar sampai ke stage itu; kalah Stage 1 bukan kalah Stage 2. Skor Stage 2 dilabel `stage_campaign_conditional` dan tidak boleh dibanding terus dengan entry deck/HP Stage 1. CP campaign mengukur kemenangan kedua-dua stage dalam run yang sama.
 
-Pilot lapan trial setiap seed terlalu kecil untuk ranking muktamad. Skor seed/campaign yang mempunyai trial sah berstatus `PROVISIONAL` dan `PENDING_MASTER`; tiada arrival memberi `NOT_SIMULATED`. Semua `routes.combatPower` dan CP pasangan kekal `null`; setiap route/pair sudah mempunyai anggaran tekanan, tetapi belum mempunyai bank entry state dan replikasi mencukupi untuk CP yang setara. Jangan mengisi CP route menggunakan CP seed atau satu perlawanan diagnostik.
+Pilot lapan trial setiap seed terlalu kecil untuk ranking muktamad. Skor seed/campaign yang mempunyai trial sah berstatus `PROVISIONAL` dan `PENDING_MASTER`; tiada arrival memberi `NOT_SIMULATED`. Dalam dataset sejarah v1.2, semua `routes.combatPower` dan CP pasangan kekal `null`. V1.3 menambah CP provisional hanya untuk tiga rank route pada entry berpadanan; lihat MAP-BAL-12. Jangan mengisi CP route lain menggunakan CP seed, satu diagnostik atau jumlah kuasa kad.
 
 ## MAP-BAL-07 — Deck, polisi dan engine rujukan
 
@@ -115,7 +116,7 @@ Semua combat, seal, damage, Gold, loot, event, Shop dan peralihan stage diselesa
 
 ## MAP-BAL-08 — Had, diagnostik dan coverage
 
-Had tetap: 100 giliran combat, 500 card plays per combat, 10,000 panggilan API per campaign; wall-clock batch 1,800 saat, diperiksa antara campaign. Had memberi `BENCHMARK_LIMIT_CENSORED`, bukan kalah. Tiada optional stopping apabila hasil sudah kelihatan baik. Checkpoint/resume memerlukan contextId sama, termasuk hash input dan dependency engine sebenar.
+Had v1.2: 100 giliran combat, 500 card plays per combat, 10,000 panggilan API per campaign; wall-clock batch 1,800 saat, diperiksa antara campaign. Had memberi `BENCHMARK_LIMIT_CENSORED`, bukan kalah. Tiada optional stopping apabila hasil sudah kelihatan baik. Checkpoint/resume memerlukan contextId sama, termasuk hash input dan dependency engine sebenar. Had v1.3 ada dalam MAP-BAL-16.
 
 Selain 800 pilot, 300 campaign diagnostik merancang laluan mudah/median/sukar bagi kedua-dua stage. RunSeed diagnostik ialah tiga wakil roster berbeza. Oleh sebab roster/RNG serta carry state berubah, hasil diagnostik bukan eksperimen sebab-akibat kesan laluan. Diagnostik dikecualikan daripada CP/W/N pilot. Laluan Stage 2 yang dirancang tetapi tidak dicapai tidak dikira diuji.
 
@@ -142,3 +143,61 @@ Isu rentas domain termasuk boss HP 70/95 berbanding calon Medium 90/125, Rest 12
 Master perlu menentukan polisi forced Elite/akses Rest mengikut difficulty sebelum sebarang generator versi baharu. BAL-25 calon dan kuota map semasa tidak boleh dianggap sudah serasi. Cadangan memindah satu Rest, menjamin pilihan mengelak Elite, atau mengubah akses Shop mesti diuji pada salinan/snapshot baharu dengan kuota dan semua laluan divalidasi. Run/save lama tidak dijana semula.
 
 Penerimaan audit domain ini: 100 seed direkod, semua 200 map/5,500 route valid, konteks dan formula tersedia, trial sah/error/censor berasingan, output boleh diulang, dan tiada CP pada UI/build pemain. Penerimaan balance akhir memerlukan domain combat/ekonomi yang sama versinya, ujian polisi/deck berbeza serta playtest murid yang Master kendalikan. Dataset ini tidak menetapkan ambang senang/sukar muktamad.
+
+## MAP-BAL-11 — Polisi laluan adaptif
+
+Keempat-empat polisi baharu hanya membaca kategori/edge yang terlihat, HP, Max HP dan Gold. Pada setiap pilihan sah, guna utiliti kategori ditambah `0.75 × nilai maksimum sambungan seterusnya`. Keadaan HP/Gold semasa digunakan untuk penilaian lookahead; ia tidak meramalkan hasil encounter atau inventori Shop tersembunyi. Seri dipecahkan oleh RNG polisi berseed.
+
+| Polisi | Tujuan dan parameter calon |
+| --- | --- |
+| `uniform-visible-v1` | Kawalan sejarah: pintu masuk dan setiap edge dipilih seragam |
+| `avoid-elite` | Utiliti Elite −5; sedikit keutamaan Shop/Rest apabila seri |
+| `seek-reward` | Elite +4, Battle +1; mengejar peluang reward tanpa melihat drop tersembunyi |
+| `seek-shop` | Gold ≥60 memberi Shop +5; jika kurang, Battle +1 untuk mencari Gold |
+| `health-recovery` | HP ≤50% memberi Rest +10, Elite −6; apabila sihat, utamakan akses Shop dan risiko lebih rendah |
+
+Pemberat lengkap dimiliki `route-policy.cjs`, dihash dalam context. Ini model keputusan calon, bukan model murid yang sudah divalidasi. Ambang 60 Gold ialah heuristik polisi; affordability sebenar menggunakan harga runtime ketika memasuki Shop.
+
+Jadual tetap bagi 100 seed: lapan uniform dan empat bagi setiap polisi lain (2,400 campaign feedback); tambahan dua bagi setiap profil Predict high/low/skip pada health-recovery (600 campaign). Jumlah 3,000 campaign penuh. Repetition sama menggunakan runSeed yang sama. Kawalan feedback Predict menggunakan dua repetition pertama daripada health-recovery, bukan lapan trial tambahan atau denominator 400 lawan 200.
+
+## MAP-BAL-12 — Entry setara dan replay laluan
+
+Ambil sehingga lapan entry unik setiap `(seed, stage)` daripada lapan campaign uniform: Stage 1 selepas Starting artifact, Stage 2 daripada survivor sebenar selepas aliran peralihan stage. Simpan seluruh state sah, jam benchmark dan tiga stream RNG polisi; jangan menetapkan HP/deck/artifact untuk mencipta survivor.
+
+Setiap entry dimainkan semula pada route anggaran mudah, lower median dan sukar dengan state awal yang sama. Stage 1 berakhir selepas boss dikalahkan, sebelum pilihan artifact peralihan; Stage 2 berakhir pada kalah/menang sebenar. State sumber tidak dimutasi. Rank dipilih sebelum hasil simulasi dan tidak diubah untuk menyesuaikan keputusan.
+
+`matched-route-summary` memberikan W/N/CP dan Wilson95 untuk setiap seed/stage/rank; `matched-contrasts` menyimpan beza berpasangan bagi setiap entry. N=8 bagi Stage 1; N Stage 2 bergantung pada survivor unik. Tiada entry memberi CP `null/NEEDS_STAGE_ENTRY`. Antara rank, engine RNG dan RNG polisi sama ketika entry; urutan room, reward dan penggunaan RNG kemudian boleh berbeza. Tafsir sebagai kesan gabungan laluan pada bank itu, bukan sebab-akibat satu Elite atau satu reward. Bank Stage 2 masih conditional pada polisi uniform; ia bukan populasi Stage 2 bebas survivor bias.
+
+Coverage simulasi membezakan route dirancang, sekurang-kurangnya satu node dimasuki dan semua sepuluh node dimasuki. `route-coverage` meliputi semua 5,500 route struktur; prefix polisi adaptif yang mati awal kekal prefix dalam trial mentah dan tidak diberikan route penuh rekaan. CP tiga rank tidak mengisi CP route lain.
+
+## MAP-BAL-13 — Tekanan sebelum recovery dan penalti Mystery
+
+Triage semua 46 map forced Elite dan 62 map tanpa Rest sebelum level 9, termasuk chain Elite 2–3. Setiap lawatan Elite dan setiap transaksi penalti HP Mystery merekod HP sebelum/selepas, Rest terdahulu, combat sejak Rest, jarak minimum sah ke Rest seterusnya, Rest yang benar-benar dicapai, kematian sebelum Rest dan HP yang benar-benar dipulihkan.
+
+Jarak graph bukan jaminan pemain sempat sampai. Lawatan Rest bukan jaminan heal: polisi boleh upgrade, atau heal berlebihan boleh terhad Max HP. Bezakan opportunity, tindakan heal, jumlah pemulihan sebenar dan peluang upgrade yang dilepaskan. Error/censor sebelum recovery kekal unresolved. Extra combat dalam Mystery diselesaikan oleh engine, bukan ditambah sebagai damage anggaran.
+
+## MAP-BAL-14 — Risiko berbanding ganjaran sebenar
+
+Ukur delta HP/Gold setiap tindakan dan room, deck/fingerprint, upgrade, artifact yang masih dimiliki, pembelian serta perbelanjaan sebenar. Bandingkan keadaan ketika masuk boss pada route berpadanan; jika satu route gagal sampai, boss delta kekal `null`, bukan HP sifar rekaan. Gold selepas boss akhir direkod mentah dan turut dilapor tanpa grant yang tidak lagi boleh dibelanjakan.
+
+Deck merit ialah proksi heuristik polisi `cardMerit`, berlabel `HEURISTIC_POLICY_PROXY_NOT_CARD_CP`; bukan ICP/CCP atau bukti deck intrinsik lebih kuat. Keuntungan room ialah conditional pada lawatan dan boleh dipengaruhi survival, artifact dan keputusan sebelumnya. Jangan menjumlahkannya sebagai kesan sebab-akibat Elite. Perubahan harga/stat/loot tetap input domain Economy/Combat untuk Master.
+
+## MAP-BAL-15 — Predict dan readiness difficulty
+
+Feedback asal tidak membaca key; pilih jawapan terlihat yang belum dicuba dan gunakan feedback. High/low ialah model pengetahuan sintetik dengan sasaran cubaan pertama 85%/25%, menggunakan key kanonik secara eksplisit (`syntheticOracleUsed=true`), satu cubaan sebelum tutup jika salah. Skip tidak membuka Predict. Profil ini hanya mengubah Predict; Mystery/artifact meneruskan polisi asal. Laporkan accuracy cubaan pertama sebenar, attempts, exhausted, skipped dan Focus, bukan menjadikan probability sasaran sebagai hasil murid.
+
+Predict juga membuka seal boss. Owner damage runtime mengekalkan boss sealed sekurang-kurangnya 1 HP selepas damage biasa. Oleh itu skip menguji keperluan Predict/seal bersama Focus; ia bukan ukuran sebab-akibat Focus sahaja. High/low turut boleh mengubah seal timing, exposure soalan, RNG dan reward kemudian. Master/Combat perlu kontras polisi Focus berasingan jika mahu mengasingkan sumbangan Focus tanpa mengubah keperluan seal.
+
+Ketiga-tiga difficulty dalam harness map ini berstatus `NEEDS_COMBAT_MASTER_ADAPTER`, engineTrials 0. Ketika preflight, input Economy ialah `04e1b7b18648a857a12680370269a9933a5f23ab` dan branch Combat belum tersedia. Semakan penghantaran mendapati calon Node Easy/Medium/Hard Combat kini tersedia pada `1bf66320ed275755d25734ad907395443f71176f`; Economy telah maju ke `df53579593937c2d71fcb6bb96409036ad575070`. Loader/overlay dan handoff kedua-duanya disemak. Combat menyatakan overlay Node bukan drop-in player data, dan campaignnya menggunakan ekonomi semasa serta decline Mystery; Economy masih memerlukan integrasi HP/Combat penuh.
+
+Calon tersebut tidak diimport atau dilabel sebagai hasil batch baseline. [Readiness penghantaran](../../../reports/map-balance/integration-readiness-v1.3.json) membezakan input tersedia daripada adapter campaign gabungan yang belum diikat ke worker map. Master perlu pin loader/definisi, selaraskan HP/Gold/Rest/Focus/bonus Elite serta mode, kemudian menjalankan context/output baharu. Angka dalam SOR sahaja tidak mencukupi. Sasaran murid 90/70/50 belum diukur.
+
+## MAP-BAL-16 — Punca skor, provenance dan regression gate
+
+Laporan punca setiap seed/stage memisahkan forced Elite, tiada recovery awal, chain, route tanpa Shop, kematian sebelum Rest, penalti Mystery dan affordability sifar. Jika rank kemenangan terbalik daripada rank anggaran, flag sebagai point inversion sampel kecil; jangan terus menukar label kesukaran akhir.
+
+V1.3 menggunakan dua worker, budget tetap 3,600 saat setiap invocation, timeout 120 saat setiap worker task dan had combat/API asal. Timeout direkod unknown/censored; task seterusnya diteruskan oleh worker gantian. Resume hanya pada context sama; jangan menggantikan trial gagal dengan sampel yang lebih baik. JSONL dibahagi ≤4 MiB, setiap rekod/shard/context dihash. Error/censor yang belum menyelesaikan scope tidak masuk denominator kalah dan menggagalkan integrity gate.
+
+Gate pada runtime sama mesti mengekalkan status/hash tindakan semua 800 kawalan sejarah. Analisis report mempunyai fingerprint berasingan supaya pembetulan analisis boleh menggunakan semula trial engine yang tidak berubah. Manifest mengikat semua eksport. Comparator menolak perubahan kaedah/config/seed; perubahan runtime kaedah sama dilabel jelas dan memerlukan baseline baharu yang disemak. Gate PASS bermaksud integriti eksperimen sahaja, bukan balance diluluskan.
+
+Arahan CLI dan verifier bebas ada dalam README eksperimen. Master perlu run semula selepas versi combat/ekonomi digabungkan, menilai interval/rank/missing input, kemudian menjalankan playtest murid. Tiada parameter pengeluaran atau UI CP diaktifkan oleh alat ini.

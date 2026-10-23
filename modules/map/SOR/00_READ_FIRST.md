@@ -18,4 +18,4 @@ ia hanya pilihan pelaksanaan yang ditandakan dalam `01_MAP_RNG.md`.
 Pakej ini merangkumi modul peta dan aset nod peta. Ia tidak menetapkan statistik
 combat, kos kad, kadar event, harga Shop atau mekanik keseluruhan game.
 
-Audit balance v1.2 menilai input runtime tanpa menukar nilai domain tersebut. CP hanya rujukan pembangunan; jangan paparkan pada menu, map, HUD atau UI pemain. [Hasil audit dan had](../../../docs/MAP_BALANCE_HANDOFF.md).
+Audit balance v1.3 menambah polisi adaptif, replay entry setara, recovery/risiko–ganjaran, sensitiviti Predict dan semakan regresi. CP hanya rujukan pembangunan; jangan paparkan pada menu, map, HUD atau UI pemain. [Hasil semasa dan had](../../../docs/MAP_BALANCE_V1_3_HANDOFF.md); [audit v1.2](../../../docs/MAP_BALANCE_HANDOFF.md) kekal sejarah.

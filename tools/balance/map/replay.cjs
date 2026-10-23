@@ -9,7 +9,11 @@ const G=require('../../../dist/map.js');
 const defaults=require('./config.json');
 const {chooseCombatAction,passiveWeights}=require('./policy.cjs');
 const {enumerateRoutes,hash}=require('./structure.cjs');
-function stream(seed,label){let s=Number.parseInt(createHash('sha256').update(String(seed)+':'+label).digest('hex').slice(0,8),16)>>>0;return ()=>{s=(s+0x6D2B79F5)>>>0;let t=Math.imul(s^(s>>>15),s|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;};}
+const {POLICIES,chooseRoute}=require('../map-advanced/route-policy.cjs');
+const {PROFILES,predictDecision}=require('../map-advanced/question-policy.cjs');
+const {assertDifficulty}=require('../map-advanced/scenarios.cjs');
+const {createTelemetry}=require('../map-advanced/telemetry.cjs');
+function stream(seed,label){let s=Number.parseInt(createHash('sha256').update(String(seed)+':'+label).digest('hex').slice(0,8),16)>>>0;const random=()=>{s=(s+0x6D2B79F5)>>>0;let t=Math.imul(s^(s>>>15),s|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;};random.getState=()=>s;random.restore=value=>{if(!Number.isSafeInteger(value)||value<0||value>4294967295)throw Error('Invalid policy RNG state.');s=value;};return random;}
 const copy=x=>JSON.parse(JSON.stringify(x));
 const publicCard=c=>({uid:c.uid,key:c.key,name:C.cards[c.key]?.name||c.key,upgraded:c.upgraded});
 function briefPlan(p){
@@ -46,6 +50,10 @@ function artifactMerit(a){
  return 6+(v.energy||0)*16+(v.draw||0)*7+(v.initial_strength||0)*3+(v.initial_agility||0)*3+(v.strength||0)*3+(v.agility||0)*3+(v.heal||0)*2+(v.max_hp||0)+(v.block||v.block_bonus||0)+(v.discount_percent||0)/2;
 }
 function snapshot(r){return {stage:r.stage+1,hp:r.hp,maxHp:r.maxHp,gold:r.gold,deckSize:r.deck.length,upgrades:r.deck.filter(c=>c.upgraded).length,deckFingerprint:hash(r.deck.map(c=>[c.key,c.upgraded]).sort()),artifacts:E.ownedArtifacts(r).map(a=>a.id),rng:r.rng};}
+function publicRouteView(r){
+ const map=r.route?.snapshot;if(!map)throw Error('Adaptive policy requires a version 3 map snapshot.');
+ return {hp:r.hp,maxHp:r.maxHp,gold:r.gold,available:E.availableNodes(r).map(n=>n.id),nodes:map.nodes.map(n=>({id:n.id,level:n.level,type:n.type})),edges:map.edges.map(e=>({from:e.from,to:e.to}))};
+}
 function plannedRoute(runSeed,stage,routeRandom,forced){
  const snap=G.begin(stage-1,runSeed).snapshot,routes=enumerateRoutes(snap);
  if(forced){const match=routes.find(x=>JSON.stringify(x.nodeIds)===JSON.stringify(forced));if(!match)throw Error('Invalid forced route for stage '+stage);return match;}
@@ -54,18 +62,27 @@ function plannedRoute(runSeed,stage,routeRandom,forced){
  return routes.find(x=>JSON.stringify(x.nodeIds)===JSON.stringify(ids));
 }
 function runCampaign(options={}){
- const {runSeed,mode=defaults.mode,forcedRoutes=null,trace=false}=options;
+ const {runSeed,mode=options.initialState?.mode||defaults.mode,forcedRoutes=null,trace=false,predictProfile='feedback',routePolicy=defaults.routePolicyVersion}=options;
+ const difficulty=assertDifficulty(options.difficulty);
  if(!Number.isSafeInteger(runSeed)||runSeed<0||runSeed>4294967295||!['learn','challenge'].includes(mode))throw Error('A uint32 runSeed and supported mode are required.');
+ if(!PROFILES[predictProfile])throw Error('Unknown Predict profile '+predictProfile);
+ const adaptive=POLICIES.includes(routePolicy);if(!adaptive&&routePolicy!==defaults.routePolicyVersion)throw Error('Unknown route policy '+routePolicy);
+ if(adaptive&&forcedRoutes)throw Error('Forced route and adaptive policy cannot be combined.');
+ for(const k of ['stopAtEntry','stopAfterStage'])if(options[k]!==undefined&&![1,2].includes(options[k]))throw Error('Invalid stage scope.');
+ if(options.initialState){const s=options.initialState;if(s.seed!==runSeed||s.mode!==mode||s.scene!=='map'||s.depth!==0||s.route?.version!==3||!E.validate(s))throw Error('Invalid captured stage-entry state or seed.');if(options.stopAfterStage&&options.stopAfterStage<s.stage+1)throw Error('Stop scope precedes captured entry.');if(!options.initialRngStates||!Number.isSafeInteger(options.initialClock)||options.initialClock<s.started)throw Error('Captured entry requires clock and policy RNG states.');}
  const limits={...defaults.limits,...options.limits};for(const n of Object.values(limits))if(!Number.isSafeInteger(n)||n<1)throw Error('Positive replay limits required.');
- const routeRandom=stream(runSeed,'routes-v1'),answerRandom=stream(runSeed,'visible-answer-feedback-v1');
- const plans={1:plannedRoute(runSeed,1,routeRandom,forcedRoutes?.[1]),2:plannedRoute(runSeed,2,routeRandom,forcedRoutes?.[2])};
- const actions=[],rooms=[],stages=[{stage:1,reached:false,cleared:false},{stage:2,reached:false,cleared:false}];
- let clock=defaults.clockEpoch,run,active=null,invalidStates=0,apiCalls=0,combatPlays=0,combatKey=null,answerAttempts=0,firstCorrect=0;
+ const routeRandom=stream(runSeed,'routes-v1'),answerRandom=stream(runSeed,'visible-answer-feedback-v1'),abilityRandom=stream(runSeed,'predict-ability-v1');
+ const plans=adaptive?{1:{id:null,nodeIds:[],probability:null},2:{id:null,nodeIds:[],probability:null}}:{1:plannedRoute(runSeed,1,routeRandom,forcedRoutes?.[1]),2:plannedRoute(runSeed,2,routeRandom,forcedRoutes?.[2])};
+ if(options.initialRngStates){for(const [key,random] of Object.entries({routes:routeRandom,answers:answerRandom,ability:abilityRandom}))random.restore(options.initialRngStates[key]);}
+ const actions=[],rooms=[],routeDecisions=[],checkpoints=[],entryStages=new Set(),stages=[{stage:1,reached:false,cleared:false},{stage:2,reached:false,cleared:false}];
+ const entryStage=options.initialState?options.initialState.stage+1:1;
+ let clock=options.initialClock??defaults.clockEpoch,run,observer,entryStateHash=null,startingPlays=options.initialState?.stats.cardsPlayed||0,active=null,invalidStates=0,apiCalls=0,combatPlays=0,combatKey=null,answerAttempts=0,firstCorrect=0;
  const realNow=Date.now;Date.now=()=>clock;
  class ReplayLimit extends Error{}
- function act(kind,fn,detail={}){if(apiCalls>=limits.maxActions)throw new ReplayLimit();apiCalls++;actions.push({n:apiCalls,kind,stage:run?.stage,depth:run?.depth,...detail});return fn();}
+ function act(kind,fn,detail={}){if(apiCalls>=limits.maxActions)throw new ReplayLimit();const before=observer?.mark(run);apiCalls++;actions.push({n:apiCalls,kind,stage:run?.stage,depth:run?.depth,...detail});const result=fn();if(observer)observer.observe(kind,before,run,result);return result;}
+ const takeSnapshot=r=>observer?observer.snapshot(r):snapshot(r);
  function validate(where){if(!E.validate(run)){invalidStates++;throw Error('Invalid engine state at '+where);}}
- function finishRoom(){if(active){active.exit=snapshot(run);active.result=run.scene==='defeat'?'DEFEAT':run.scene==='victory'?'VICTORY':'CLEARED';active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;}}
+ function finishRoom(){if(active){active.exit=takeSnapshot(run);active.result=run.scene==='defeat'?'DEFEAT':run.scene==='victory'?'VICTORY':'CLEARED';active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;observer?.detachRoom();}}
  function reconcile(){
   if(!run)return;
   if(run.scene==='stageclear'||run.stage===1)stages[0].cleared=true;
@@ -98,15 +115,26 @@ function runCampaign(options={}){
   act('mysteryClaim',()=>E.claimMystery(run));
  }
  try{
-  run=E.newRun(runSeed,mode);validate('new run');
+  run=options.initialState?copy(options.initialState):E.newRun(runSeed,mode);validate('new run');
+  if(options.telemetry)observer=createTelemetry({E,A,cardMerit,hash},run);
+  if(options.initialState)entryStateHash=hash(run);
   while(!['victory','defeat'].includes(run.scene)){
    reconcile();
+   if(options.stopAfterStage&&stages[options.stopAfterStage-1].cleared)return result('STAGE_CLEARED');
+   if(run.scene==='map'&&run.depth===0&&!entryStages.has(run.stage+1)){
+    entryStages.add(run.stage+1);if(!entryStateHash)entryStateHash=hash(run);
+    if(options.captureCheckpoints||options.stopAtEntry)checkpoints.push({stage:run.stage+1,runSeed,state:copy(run),stateHash:hash(run),clock,policyRngStates:{routes:routeRandom.getState(),answers:answerRandom.getState(),ability:abilityRandom.getState()}});
+    if(options.stopAtEntry===run.stage+1)return result('ENTRY_CAPTURED');
+   }
    if(apiCalls>=limits.maxActions)return result('BENCHMARK_LIMIT_CENSORED');
    if(run.scene==='map'){
-    const plan=plans[run.stage+1],id=plan.nodeIds[run.depth],node=E.availableNodes(run).find(n=>n.id===id);
+    const plan=plans[run.stage+1];let id=plan.nodeIds[run.depth];
+    if(adaptive){const view=publicRouteView(run),choice=chooseRoute(view,routePolicy,routeRandom);id=choice.nodeId;routeDecisions.push({...choice,stage:run.stage+1,level:run.depth+1,hp:run.hp,maxHp:run.maxHp,gold:run.gold,available:view.available});plan.nodeIds.push(id);if(plan.nodeIds.length===10)plan.id='route-'+hash(plan.nodeIds).slice(0,16);}
+    const node=E.availableNodes(run).find(n=>n.id===id);
     if(!node)throw Error('Planned route is not connected at '+id);
     validate('before entry');stages[run.stage].reached=true;
-    active={stage:run.stage+1,nodeId:id,roomType:node.type,enter:snapshot(run),turnsBefore:run.stats.turns,enemyId:node.enemyId||null};
+    active={stage:run.stage+1,nodeId:id,roomType:node.type,enter:takeSnapshot(run),turnsBefore:run.stats.turns,enemyId:node.enemyId||null};
+    if(observer)observer.attachRoom(active);
     act('enterNode',()=>E.enterNode(run,id),{nodeId:id});validate('after entry');combatKey=null;
    }else if(run.scene==='master'){
     const offer=E.artifactChoices(run).slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id))[0];
@@ -118,12 +146,17 @@ function runCampaign(options={}){
    }else if(run.scene==='battle'){
     const b=run.battle,key=run.stage+':'+(run.route?.active||'mystery')+':'+b.enemyId;
     if(key!==combatKey){combatKey=key;combatPlays=0;}
+    if(observer)observer.opportunity(run,predictProfile==='skip');
     if(b.turn>limits.maxCombatTurns||combatPlays>=limits.maxCombatPlays)return result('BENCHMARK_LIMIT_CENSORED');
     if(b.cardChoice){resolveCardChoice();continue;}
-    if(!b.forecastUsed){
+    if(!b.forecastUsed&&predictProfile!=='skip'){
      const p=b.question||act('forecast',()=>E.forecast(run));
      if(p.exhausted)act('forecastExhausted',()=>E.completeExhaustedForecast(run));
-     else if(!p.solved){clock+=1000;const id=pickFeedback(p.choiceOrder,p.attempts);act('forecastSelect',()=>E.selectForecast(run,id));const a=act('forecastAnswer',()=>E.answerBankForecast(run));answerAttempts++;if(a.first)firstCorrect++;continue;}
+     else if(!p.solved){
+      if(predictProfile!=='feedback'&&p.attempts.length){act('forecastClose',()=>E.closeForecast(run));continue;}
+      clock+=1000;const id=predictProfile==='feedback'?pickFeedback(p.choiceOrder,p.attempts):predictDecision({...p,correctChoiceId:Q.catalog[p.questionId].correctChoiceId},predictProfile,abilityRandom).choiceId;
+      act('forecastSelect',()=>E.selectForecast(run,id));const a=act('forecastAnswer',()=>E.answerBankForecast(run));answerAttempts++;if(a.first)firstCorrect++;continue;
+     }
     }
     if(run.battle.question){act('forecastClose',()=>E.closeForecast(run));continue;}
     const chosen=chooseCombatAction(publicCombatView(run));
@@ -160,10 +193,11 @@ function runCampaign(options={}){
  finally{Date.now=realNow;}
  function result(status,error=null){
   if(status==='BENCHMARK_LIMIT_CENSORED')reconcile();
-  if(active){active.exit=snapshot(run);active.result=status;active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;}
-  return {runSeed,seed:'STM-'+String(runSeed%100+1).padStart(3,'0'),mode,difficulty:defaults.difficulty,policyVersion:defaults.playerPolicyVersion,routePolicy:forcedRoutes?'forced-route-diagnostic':defaults.routePolicyVersion,
-   status,error,campaignWon:status==='VICTORY'?true:status==='DEFEAT'?false:null,stages,plannedRoutes:plans,rooms,apiCalls,committedCardPlays:run?.stats.cardsPlayed||0,answerAttempts,firstCorrect,invalidStates,
-   final:run?snapshot(run):null,traceHash:hash(actions),...(trace?{actions}:{}),learningModel:'uniform untried visible choice; use feedback for Predict/artifact, one attempt for Mystery; no answer key access',entrySet:'actual-new-run-and-campaign-carry'};
+  if(active){active.exit=takeSnapshot(run);active.result=status;active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;}
+  return {runSeed,seed:'STM-'+String(runSeed%100+1).padStart(3,'0'),mode,difficulty,policyVersion:defaults.playerPolicyVersion,routePolicy:forcedRoutes?'forced-route-diagnostic':routePolicy,
+   status,error,campaignWon:options.stopAfterStage||options.stopAtEntry||entryStage!==1?null:status==='VICTORY'?true:status==='DEFEAT'?false:null,entryStage,entryStateHash,stages,plannedRoutes:plans,rooms,routeDecisions,checkpoints,apiCalls,committedCardPlays:(run?.stats.cardsPlayed||0)-startingPlays,answerAttempts,firstCorrect,invalidStates,
+   final:run?takeSnapshot(run):null,traceHash:hash(actions),...(trace?{actions}:{}),...(observer?{metrics:observer.metrics}:{}),predictProfile,syntheticOracleUsed:PROFILES[predictProfile].oracle,
+   learningModel:predictProfile==='feedback'?'uniform untried visible choice; use feedback for Predict/artifact, one attempt for Mystery; no answer key access':'Predict '+predictProfile+' sensitivity; artifact/Mystery retain feedback policy; canonical key used only for declared high/low knowledge model',entrySet:options.initialState?'captured-valid-stage-entry':'actual-new-run-and-campaign-carry'};
  }
 }
-module.exports={stream,briefPlan,publicCombatView,cardMerit,rewardMerit,artifactMerit,plannedRoute,runCampaign};
+module.exports={stream,briefPlan,publicCombatView,publicRouteView,cardMerit,rewardMerit,artifactMerit,plannedRoute,runCampaign};

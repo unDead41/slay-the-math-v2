@@ -4,7 +4,7 @@ Current icon integration: [Reviewed icon package, game 2.23.0](docs/ICON_PACKAGE
 
 Current audio integration: [Expanded talking and checked answers, game 2.24.0](docs/AUDIO_2_24_0.md). Pack 5 owns 75 voices, including the 26 new recordings; this supersedes earlier asset counts and package-only handoffs. The historical baseline below remains context.
 
-Current map balance audit: [Map SOR v1.2](modules/map/SOR/04_MAP_COMBAT_POWER.md) and [Master handoff](docs/MAP_BALANCE_HANDOFF.md), based on game 2.24.0 / 2800f9a. Developer-only estimates and bounded engine pilot; no gameplay tuning or player-facing Combat Power.
+Current map balance audit: [Map SOR v1.3](modules/map/SOR/04_MAP_COMBAT_POWER.md) and [Master handoff](docs/MAP_BALANCE_V1_3_HANDOFF.md), based on game 2.24.0 / 2800f9a. Adaptive routing, matched-entry route replay, recovery/reward telemetry, Predict sensitivity and regression checks; no gameplay tuning or player-facing Combat Power. [V1.2 evidence](docs/MAP_BALANCE_HANDOFF.md) remains historical.
 
 Versi dokumen: **2.0.1** · Tarikh: **18 Oktober 2026 (Malaysia)** · Pemilik: **Ijamm**
 

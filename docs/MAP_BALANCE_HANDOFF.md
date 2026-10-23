@@ -1,4 +1,6 @@
-# Map balance — handoff kepada Master
+# Map balance v1.2 — handoff sejarah kepada Master
+
+Hasil terkini: [handoff v1.3](MAP_BALANCE_V1_3_HANDOFF.md). Dokumen ini mengekalkan keputusan dan had audit v1.2 pada kod asal.
 
 23 Oktober 2026 · branch `balance/map` · base `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` · game 2.24.0.
 

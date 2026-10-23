@@ -1,0 +1,43 @@
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (2.78162ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.7412ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (0.532723ms)
+✖ matched route coverage excludes the random preplan for the stage outside replay scope (1.021016ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (0.673804ms)
+✔ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.359597ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.336499ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.305147ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.345212ms)
+✔ automatic comparisons detect changes in the legacy replay and report analysis too (0.356604ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.20885ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.653748ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.254642
+
+✖ failing tests:
+
+test at tests/map-balance-advanced-report.test.cjs:24:1
+✖ matched route coverage excludes the random preplan for the stage outside replay scope (1.021016ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:27:85)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

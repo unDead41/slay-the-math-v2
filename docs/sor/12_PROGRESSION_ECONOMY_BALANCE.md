@@ -91,3 +91,9 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 - Recovery, Shop affordability, rewards and boss-entry HP/deck/artifacts must be interpreted with actual carry state. Stage 2 pilot rates are conditional on surviving Stage 1; forced-route diagnostics are excluded from pilot scores.
 
 Owners: [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md), [results, cross-domain requests and handoff](../MAP_BALANCE_HANDOFF.md). No candidate stat, price, difficulty or generator change is activated by this branch.
+
+## Map-domain balance v1.3 — accepted six-item extension
+
+DISAHKAN: Ijamm approves adaptive routing, matched entry/replication, recovery pressure, actual risk/reward, Predict/difficulty sensitivity and automated difficulty explanations/regression checks. [Map SOR v1.3](../../modules/map/SOR/04_MAP_COMBAT_POWER.md) owns the contextual scoring; [Master handoff](../MAP_BALANCE_V1_3_HANDOFF.md) owns the actual experiment results and input gaps.
+
+CP is a contextual win-risk scale, not card ICP/CCP. Stage 2 entries are real uniform-policy survivors and remain conditional. High/low Predict are explicitly synthetic oracle knowledge scenarios, not measured pupil skill. Missing full Combat/Master Easy/Medium/Hard adapters prevent difficulty claims; the economy-only candidate is recorded but not applied. Actual Shop purchases/spend, owned artifacts, upgrade foregone, HP recovery and usable Gold are measured through canonical APIs. No card/enemy/price changes are activated. Pupil full-run 90/70/50 verification stays with Master.

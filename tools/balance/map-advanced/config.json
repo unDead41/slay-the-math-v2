@@ -1,0 +1,20 @@
+{
+  "reportVersion":"map-audit-1.3.0",
+  "protocolVersion":"map-experiments-1.0.0",
+  "runtimeBaseCommit":"2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "previousAuditCommit":"d70b409b4da2ecf52ec60a0356df52bc1bab632b",
+  "mode":"challenge",
+  "difficulty":"runtime-baseline-no-tier",
+  "samplerSeed":42,
+  "routePolicies":{"uniform-visible-v1":8,"avoid-elite":4,"seek-reward":4,"seek-shop":4,"health-recovery":4},
+  "predictProfiles":{"high":2,"low":2,"skip":2},
+  "predictRoutePolicy":"health-recovery",
+  "matchedEntriesPerStage":8,
+  "ranks":["easiest","median","hardest"],
+  "referenceWinProbability":0.7,
+  "limits":{"maxCombatTurns":100,"maxCombatPlays":500,"maxActions":10000},
+  "workers":2,
+  "workerTimeoutMs":120000,
+  "maxSeconds":3600,
+  "shardBytes":4194304
+}

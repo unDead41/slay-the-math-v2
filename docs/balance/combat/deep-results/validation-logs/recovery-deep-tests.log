@@ -1,0 +1,27 @@
+✔ explicit decks preserve size and upgrades (1356.717016ms)
+✔ wrong abandoned Predict gives no Focus or seal (956.682945ms)
+✔ wrong then correct opens a seal without Focus (365.764181ms)
+✔ serialization at Predict and choices preserves mechanical outcome (4722.788181ms)
+✔ explicit deck consumes one opening Chance Die roll (288.190256ms)
+✔ free Exhaust Recall cluster remains bounded with no exhausted UID re-entry (1392.36536ms)
+✔ actual campaign reaches both stages using actual frozen offers (4580.056077ms)
+✔ route policies rank actual battle type and reject unknown types (0.66903ms)
+✔ exhausted question bank counts seal opening but no Focus (1079.575547ms)
+✔ all 31 artifacts have actual evidence or explicit scope classification (675.418533ms)
+✔ long Passive swap stress counts live gifts beyond bounded history (4887.024113ms)
+✔ three Weak stacks consume per hit and expire after enemy phase (264.263537ms)
+✔ Thorns caps at six and ignores Strength on each hit (175.150432ms)
+✔ carry uses highest cap then adds fixed queued Block after reset (264.566508ms)
+✔ upgraded Focus Mana Reading queue survives exact restore (212.120458ms)
+✔ death cannot trigger Last Ember Flask or Thorns retaliation (179.176139ms)
+✔ boss phase transition preserves current locked intent (170.694508ms)
+✔ full Hand preserves armed Focus and moves only actual fitting draw (331.948741ms)
+✔ Recall rejects exhausted targets before payment and cancel is free (168.771234ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23311.631716

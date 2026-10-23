@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.27.0 — Integrated Master balance playtest
+
+- Integrate Map, Combat and Economy branches on main 2.26.0, including Learning Report/analytics from b67298b, retaining original artwork, audio, card motion and questions.
+- Add one versioned browser/Node Easy/Medium/Hard binding, profile-specific saves, source-aware frozen loot, full economy/event effects and accurate candidate descriptions.
+- Run actual full campaigns, same-entry Stage 2 regression, all-card ICP and selected pair/triple synergy screens. Preserve raw source snapshots and historic specialist evidence.
+- [Master SOR](23_MASTER_BALANCE.md) and [validation/handoff](../balance/master/HANDOFF.md) distinguish implemented candidate tuning from unmeasured pupil goals.
 ## Game 2.26.0 — Education analytics integrated with main
 
 - Integrate `education-analytics` with main 2.25.1 under Ijamm's explicit authorization; preserve combat card motion, original card/artifact artwork and MUSIC(5).
@@ -22,6 +28,17 @@ Versi dokumen berasingan daripada versi game.
 - Show named, effect-specific cues for all ten current Passive triggers with actual capped/zero results.
 - Keep animation independent of synchronous resolution/save/RNG and cancel all transient clones/hidden-card state across UI lifecycle and motion preferences.
 - Develop and review on `combat-animation`; publish to main with the 2.25.1 artwork correction under Ijamm's explicit follow-up authorization. [Implementation and actual verification](../CARD_MOTION_2_25_0.md).
+## Map balance v1.3 — 23 October 2026
+
+- Implement all six accepted map-analysis improvements: adaptive visible routing, replicated matched-entry paths, recovery/penalty windows, actual risk/reward, Predict sensitivity and difficulty explanations/regression gates.
+- Add a fixed 3,000-campaign experiment schedule, real survivor entry banks, three-rank replays, sharded raw results and CSV/JSON with separate planned/started/ten-node coverage. Preserve v1.2 evidence.
+- Update [Map SOR v1.3](../../modules/map/SOR/04_MAP_COMBAT_POWER.md), [tool instructions](../../tools/balance/map-advanced/README.md) and [Master handoff](../MAP_BALANCE_V1_3_HANDOFF.md). Easy/Medium/Hard full adapters and pupil targets remain pending; no gameplay/version/UI change.
+
+## Map balance audit v1.2 — 23 October 2026
+
+- Add developer-only analysis for all 100 seeds, 200 maps, 5,500 complete stage paths and 77,384 legal two-stage pairs; preserve all topology and gameplay values.
+- Add contextual pressure estimates, bounded real-engine campaign replay, explicit sampling/traversal coverage, uncertainty and error/censor handling, CSV/JSON and candidate-vs-runtime provenance.
+- Add [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md) and [Master handoff](../MAP_BALANCE_HANDOFF.md). Candidate Easy/Medium/Hard tuning and pupil targets remain unvalidated; no game-version bump or player-facing CP.
 
 ## Feature preview 2.25.0-analytics.1 — education-analytics only
 
@@ -366,3 +383,23 @@ Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retain
 - Apply 26 new normalized recordings on music from latest main 2.23.1: answering +4, Hint +4, More Hint +4, correct +5, wrong +9. Active voices total 75; preserve all previous audio, icons, developer toggle and color-only rich text.
 - React to actual checked correct/wrong answers in Predict, Artifact, Mystery review and isolated Practice; later answer/help events cancel older speech. Preserve once-per-attempt receipts through save/reload; historical results, Reveal, exhaustion, timeout and abandonment stay silent.
 - Add reproducible FFmpeg importer with post-encoding measurements, source/output hashes and registry audit; embed every registered voice in portable builds. [Contract and verification](../AUDIO_2_24_0.md).
+
+
+## 23 October 2026 — experimental combat balance
+
+Added isolated pinned-baseline/candidate engine harness, explicit optional upgrade contracts, bounded Passive activation gifts, selection-discard distinction, candidate enemy/profile adapter, seed-matched ICP/CCP/Focus records and handoff. Candidate numbers remain development-only; no main integration. Concrete boundary and legacy regression evidence is recorded in docs/balance/combat/VALIDATION.md.
+
+
+## 23 October 2026 — Deep combat tests
+
+Added explicit-deck true-engine harness, actual campaign progression, accuracy profiles, setup/50-seed follow-up, artifact clusters, streaming raw records, differential reload and long transaction stress. Corrected harness route ranking/telemetry/provenance/gift ledger. Workspace recovery reruns retain source snapshots and prior aggregate comparison. No new production numeric tuning.
+## 23 October 2026 — Economy candidate on 2.24.0 base
+
+- Add SOR 22 / Economy & Rewards owner, exact runtime audit, current-vs-candidate prices/income/rarity/events and Master handoff.
+- Add opt-in versioned economy profiles/loot receipts, source-aware bounded weighting, candidate Shop/removal/recovery and all fifteen event adapters; retain default/legacy contracts.
+- Record 30,720 card offers, 16,384 artifact offers, 432 conditional Gold/recovery cases and read-only Map input flags, with raw seeds/assumptions.
+- Combat/artifact stats, topology, question data/shuffle stay unchanged; human win rates and CP remain unmeasured.
+
+## 23 October 2026 — Economy deep validation
+
+Expanded offline deck/offer, six spending policies, answer/deadline/recovery, cumulative costs and route-risk experiments, plus stateful reload/transaction regressions. No runtime candidate numbers changed. Report: ../economy/deep/REPORT.md. Inputs from Combat/Map remain NEEDS_INPUT.

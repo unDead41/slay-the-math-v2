@@ -1,0 +1,2889 @@
+{
+  "label": "holdout",
+  "sourceHash": "cb5716e6a1a743d345f1d4cbe2259a9552c4c0b4b8dab5642947b01e997672f7",
+  "definitionHash": "85f441c951fe36e94129c4a4201fdd94fcdcecb15ef3002099ab9197faa1782d",
+  "version": "master-1.3.0-candidate.2",
+  "tasks": [
+    {
+      "runSeed": 2000000020,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000020,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000021,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000022,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000023,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000024,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000025,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000026,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000027,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000028,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000029,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000030,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000031,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000032,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000033,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000034,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000035,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000036,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000037,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000038,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "easy",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "easy",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "easy",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "medium",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "medium",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "medium",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "hard",
+      "predictProfile": "feedback",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "hard",
+      "predictProfile": "high",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "health-recovery",
+      "mode": "challenge",
+      "telemetry": true
+    },
+    {
+      "runSeed": 2000000039,
+      "difficulty": "hard",
+      "predictProfile": "low",
+      "routePolicy": "seek-reward",
+      "mode": "challenge",
+      "telemetry": true
+    }
+  ],
+  "policy": "visible-greedy-feedback-v1; actual Mystery, purchases, carry and connected routing; no pre-awarded victories"
+}

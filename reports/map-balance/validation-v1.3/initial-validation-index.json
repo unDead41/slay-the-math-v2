@@ -1,0 +1,57 @@
+{
+  "phase": "before final fresh review",
+  "checks": {
+    "targeted": {
+      "passed": 48,
+      "failed": 0,
+      "skipped": 0
+    },
+    "rootInitial": {
+      "passed": 516,
+      "failed": 0,
+      "skipped": 0
+    },
+    "maps": {
+      "passed": 7,
+      "failed": 0,
+      "layouts": 200,
+      "pngHashes": 12
+    },
+    "independent": {
+      "status": "PASS",
+      "contextId": "50111071981eee02c9f82455533f432fa95e6227920bde8c58503afdd6cd398b",
+      "manifestFiles": 73,
+      "sourceAndInputHashes": 47,
+      "trialRecords": 6525,
+      "campaigns": 3000,
+      "matchedReplays": 3525,
+      "entryStates": 1175,
+      "matchedScoreRows": 600,
+      "csvCells": 326852,
+      "routeRows": 5500,
+      "uniformLegacyTraceMatches": 800,
+      "legacyReferenceStatus": "PASS",
+      "studentCalibration": false
+    }
+  },
+  "filesSha256": {
+    "build.log": "5839b87469afc2f1c7a60d70dd670c18c4b7b900f6f50126ea1b9a6893496caa",
+    "comparator-red.log": "68b387c401629eca53b86cf2838c75358d5716827e7c19d8b9d2748ad63fe25b",
+    "durable-count-red.log": "a8ffc79ec9937233361cd38c4c342d028b0cc9df48434f6da8894a84c0fce9e2",
+    "extra-red.log": "d2b271091a3828e53df4821a208189b78254065591d820ff73c66fa6f29cee55",
+    "final-quality-gate.log": "2bf1a38ee2c2109b62d213380804675e9622c7e5d28db0df792eb85922398182",
+    "final-resume.log": "c9f1fec6ffcf565ccb9bd6203084e190d696a7a175d900de446c41db263bdb29",
+    "final-targeted.log": "ff47907a1287a1c23437df24193ed8145ae551388979a7263e481586573764c8",
+    "first-persistence-failure.md": "9b3e87063af67b242b5186de3d01c002e091e06f916eb357d26dc70424cff058",
+    "full-experiments.log": "c2a7f7ed66a05c363d67227a258dff4ff469f61430f59483b0f9644613476b6a",
+    "independent-export-check.json": "0ef33c2b9b96d84bd57e79c361e501c5e020b620da34acf1cd961a1559933517",
+    "independent-export-check.log": "0ef33c2b9b96d84bd57e79c361e501c5e020b620da34acf1cd961a1559933517",
+    "map-tests.log": "23a49cd827e92fe1e746ed340db5197bf8b2f760fb4e7867e6ee11866e6ccd5c",
+    "production-build.log": "a199b24f91366e77b7610963b7e195be577d62df1ed5df0d0475ef90513f192d",
+    "resume-durable-records.log": "1a81a14d15f79412857281bddc1f021486f75586a7523a1219d0fd22584a47d1",
+    "root-tests-initial.log": "afe9bb928d77c4341bcb0650a2f7653df20318e5ae5ad590ee00da4c9a21ebc8",
+    "scope-coverage-red.log": "feac7b2672707f67d24da4e2adaef1aa23e903620818715d3943ce2e60e58d13",
+    "syntax.log": "60fd59ea22b03e9c55ce4a4756469a34086502ad683cf49bc18b32d192576bc0",
+    "unobserved-red.log": "531e3872eb1efee08065d084a43b07c593e5079ca7fd1f5b64b19683f7a0d5f0"
+  }
+}

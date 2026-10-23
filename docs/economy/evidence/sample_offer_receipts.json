@@ -1,0 +1,5436 @@
+[
+  {
+    "kind": "card",
+    "key": "card|normal|0|histogram|0",
+    "source": "normal",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 0,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 3410391756,
+    "finalRng": 2598302706,
+    "pool": "normal_s1",
+    "ids": [
+      "stm.attack.rune_sweep",
+      "stm.skill.read_ahead",
+      "stm.defend.burning_pages"
+    ],
+    "upgraded": false,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.15,
+        "weight": 0.1725,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|elite|0|histogram|0",
+    "source": "elite",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 0,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 1780447830,
+    "finalRng": 1689004716,
+    "pool": "elite_s1",
+    "ids": [
+      "stm.attack.scout_strike",
+      "stm.attack.return_strike",
+      "stm.defend.cinder_guard"
+    ],
+    "upgraded": true,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.15,
+        "weight": 0.1725,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|shop|0|histogram|0",
+    "source": "shop",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 0,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 3715590451,
+    "finalRng": 2857903474,
+    "pool": "shop_s1",
+    "ids": [
+      "stm.skill.burning_page",
+      "stm.attack.twin_shot",
+      "stm.defend.hold_the_line",
+      "stm.attack.weak_point",
+      "stm.defend.burning_pages",
+      "stm.defend.rune_guard"
+    ],
+    "upgraded": false,
+    "saleIndex": 3,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.15,
+        "weight": 0.1725,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|ME03|0|histogram|0",
+    "source": "ME03",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 0,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 1936082012,
+    "finalRng": 2425619714,
+    "pool": "normal_s1",
+    "ids": [
+      "stm.skill.read_ahead",
+      "stm.skill.burning_page",
+      "stm.skill.quick_study"
+    ],
+    "upgraded": false,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|ME12|0|histogram|0",
+    "source": "ME12",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 0,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 635208962,
+    "finalRng": 1631639800,
+    "pool": "normal_s1",
+    "ids": [
+      "stm.skill.read_ahead",
+      "stm.attack.return_strike",
+      "stm.attack.twin_shot"
+    ],
+    "upgraded": false,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.15,
+        "weight": 0.1725,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|normal|1|histogram|0",
+    "source": "normal",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 1,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 1473213855,
+    "finalRng": 2351893613,
+    "pool": "normal_s2",
+    "ids": [
+      "stm.passive.blazing_spirit",
+      "stm.skill.read_ahead",
+      "stm.defend.tower_shield"
+    ],
+    "upgraded": false,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 0.15,
+        "weight": 0.18974999999999997,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|elite|1|histogram|0",
+    "source": "elite",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 1,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 1057389889,
+    "finalRng": 1608107135,
+    "pool": "elite_s2",
+    "ids": [
+      "stm.defend.hold_the_line",
+      "stm.passive.rune_armor",
+      "stm.defend.layered_shield"
+    ],
+    "upgraded": true,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 0.15,
+        "weight": 0.18974999999999997,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|shop|1|histogram|0",
+    "source": "shop",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 1,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 2825517504,
+    "finalRng": 4052285387,
+    "pool": "shop_s2",
+    "ids": [
+      "stm.defend.cinder_guard",
+      "stm.skill.deep_study",
+      "stm.skill.clear_choice",
+      "stm.passive.battle_rhythm",
+      "stm.skill.last_page",
+      "stm.attack.twin_shot"
+    ],
+    "upgraded": false,
+    "saleIndex": 5,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 0.15,
+        "weight": 0.18974999999999997,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|ME03|1|histogram|0",
+    "source": "ME03",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 1,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 2616484143,
+    "finalRng": 3875006333,
+    "pool": "normal_s2",
+    "ids": [
+      "stm.skill.read_ahead",
+      "stm.skill.mana_reading",
+      "stm.skill.last_page"
+    ],
+    "upgraded": false,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon"
+      }
+    ]
+  },
+  {
+    "kind": "card",
+    "key": "card|ME12|1|histogram|0",
+    "source": "ME12",
+    "options": {
+      "category": null,
+      "exclude": [],
+      "nodeId": "histogram",
+      "ordinal": 0
+    },
+    "context": {
+      "seed": 3959422977,
+      "stage": 1,
+      "depth": 6,
+      "deck": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c11",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c12",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c13",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        },
+        {
+          "uid": "c21",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c22",
+          "key": "stm.defend.rune_guard",
+          "upgraded": false
+        },
+        {
+          "uid": "c31",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c32",
+          "key": "stm.defend.flash_ward",
+          "upgraded": false
+        },
+        {
+          "uid": "c41",
+          "key": "stm.skill.quick_study",
+          "upgraded": false
+        },
+        {
+          "uid": "c51",
+          "key": "stm.skill.read_ahead",
+          "upgraded": false
+        },
+        {
+          "uid": "c99",
+          "key": "stm.passive.grimoire_ward",
+          "upgraded": false
+        }
+      ],
+      "artifacts": []
+    },
+    "difficulty": "medium",
+    "support": true,
+    "seed": 2496495261,
+    "finalRng": 3870922747,
+    "pool": "normal_s2",
+    "ids": [
+      "stm.attack.scout_strike",
+      "stm.skill.last_page",
+      "stm.skill.burning_page"
+    ],
+    "upgraded": false,
+    "saleIndex": null,
+    "factors": [
+      {
+        "id": "stm.attack.rune_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.weak_point",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.return_strike",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.sure_hit",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.twin_shot",
+        "rarity": "common",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.shield_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.crack_shot",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.rune_sweep",
+        "rarity": "uncommon",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.attack.fate_storm",
+        "rarity": "rare",
+        "category": "attack",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.rune_guard",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.flash_ward",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.35,
+        "weight": 0.35,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.tower_shield",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.ember_wall",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.foreseen_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.layered_shield",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.burning_pages",
+        "rarity": "common",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.cinder_guard",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.hold_the_line",
+        "rarity": "uncommon",
+        "category": "defend",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.defend.mana_barrier",
+        "rarity": "rare",
+        "category": "defend",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.quick_study",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.deep_study",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.mana_reading",
+        "rarity": "rare",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.read_ahead",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 0.65,
+        "weight": 0.65,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.clear_choice",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.card_search",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "searchable_category"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.recall",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "discardable_other"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.next_chapter",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon",
+        "category": "skill",
+        "requirements": [
+          "zero_or_draw_selection"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.blazing_spirit",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.growing_flame",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "attack"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.swift_step",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1.15,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.battle_rhythm",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [
+          "defend"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.rune_armor",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.lasting_shield",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "block"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.grimoire_ward",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "skill"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 0.15,
+        "weight": 0.18974999999999997,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.ember_core",
+        "rarity": "uncommon",
+        "category": "passive",
+        "requirements": [
+          "focus"
+        ],
+        "supportScore": 1,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.265,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.clear_mind",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1.1,
+        "duplicateFactor": 1,
+        "weight": 1.1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      },
+      {
+        "id": "stm.passive.last_ember",
+        "rarity": "rare",
+        "category": "passive",
+        "requirements": [],
+        "supportScore": 0,
+        "stageSuitability": 1,
+        "duplicateFactor": 1,
+        "weight": 1,
+        "combatPower": null,
+        "powerStatus": "UNMEASURED"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "stm.attack.scout_strike",
+        "rarity": "common"
+      },
+      {
+        "id": "stm.skill.last_page",
+        "rarity": "uncommon"
+      },
+      {
+        "id": "stm.skill.burning_page",
+        "rarity": "common"
+      }
+    ]
+  }
+]

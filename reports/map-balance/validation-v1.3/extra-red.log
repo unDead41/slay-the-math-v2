@@ -1,0 +1,62 @@
+✔ fixed campaign matrix pairs common seeds without duplicating feedback controls (2.294013ms)
+✔ matched route triplets preserve captured state/clock/RNG and never invent Stage 2 entries (64.067102ms)
+✔ journal round trips immutable results and rejects changed context or corrupted records (7.239233ms)
+✔ worker returns real engine censoring as an unknown outcome, not defeat (8.148548ms)
+✔ worker pool returns bounded canonical outcomes and closes its workers (385.279102ms)
+✖ a timed-out worker is replaced so remaining scheduled tasks are not silently omitted (5.028817ms)
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (3.029703ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.556671ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (0.713788ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.466727ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.262315ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.244592ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.270389ms)
+✖ stage resource endpoints stop at that stage instead of using the later campaign result (1.083528ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 12
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 787.641277
+
+✖ failing tests:
+
+test at tests/map-balance-advanced-experiments.test.cjs:48:1
+✖ a timed-out worker is replaced so remaining scheduled tasks are not silently omitted (5.028817ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-experiments.test.cjs:51:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-advanced-report.test.cjs:41:1
+✖ stage resource endpoints stop at that stage instead of using the later campaign result (1.083528ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 30
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:44:45)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 30,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

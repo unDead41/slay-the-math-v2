@@ -1,4 +1,6 @@
-# Slay the Math — 2.26.0
+# Slay the Math — 2.27.0
+
+Master balance playtest: New Run → Easy / Medium / Hard, or open `?balance=medium`. The three profiles share versioned combat/economy/loot definitions and separate saves. [Balance handoff and unmeasured pupil targets](docs/balance/master/HANDOFF.md).
 
 Learning Report is available from Main Menu, Settings and Education Practice, with BM/English chapter/SK/SP evidence, offline recording, optional comments collection and CSV/JSON exports. This release integrates `education-analytics` with main 2.25.1, retaining combat card motion, the original card/artifact artwork and Pack5 audio. [Windows update, database setup and central collection](docs/EDUCATION_ANALYTICS_2_26_0.md).
 

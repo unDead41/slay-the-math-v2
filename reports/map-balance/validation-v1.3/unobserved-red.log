@@ -1,0 +1,33 @@
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (3.275627ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.775876ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (0.615706ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (0.867178ms)
+✖ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.390107ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.507254ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.400274ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.260704ms)
+✔ automatic comparisons detect changes in the legacy replay and report analysis too (0.604021ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.494493ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.49997ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 10
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 182.843661
+
+✖ failing tests:
+
+test at tests/map-balance-advanced-report.test.cjs:30:1
+✖ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.390107ms)
+  Error: Matched entry state differs.
+      at pairedDifference (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tools/balance/map-advanced/report.cjs:41:185)
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:33:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

@@ -6,7 +6,7 @@
   "questionPackage": "1.6.0",
   "bankVersion": "form4-review-1.6.0",
   "supplierRegistryId": "881ed46c93d9444d01853bf2056a09e5216a8b5278ecb3aacdb069ca21818201",
-  "hostRegistryId": "3e273eb180515c71a935f3e3e55c5ae3bc0289825c5699efdead98721c121220",
+  "hostRegistryId": "093f5f3890bdbb614470d7da192726c665597ed111a907d5cea0d6b2f7ce71cd",
   "overrides": [
     {
       "id": "damage",
@@ -21,17 +21,17 @@
     {
       "id": "strength",
       "supplied": "Increases damage from Attack cards. The exact card calculation follows the core combat rules.",
-      "host": "Adds its value to the damage of each Attack card before enemy defenses. It resets each combat."
+      "host": "Adds its value to Attack damage before enemy defenses. The card preview shows which hit receives it. It resets each combat."
     },
     {
       "id": "agility",
       "supplied": "Increases the Block gained from Defend cards. The exact card calculation follows the core combat rules.",
-      "host": "Adds its value to Block gained from each Defense card. It resets each combat. Block from Attack cards does not get Agility."
+      "host": "Adds its value to Block from Defend cards. The card preview shows which grant receives it. It resets each combat. Attack cards do not get Agility."
     },
     {
       "id": "focus",
       "supplied": "Definition pending: this pack gives +1 Focus and refers to an existing cap, but does not define the ability or cap value.",
-      "host": "A resource capped at 3. Spend 1 Focus to add 3 damage or Block to one card, once per turn. A first-try correct Predict grants 1 Focus."
+      "host": "A resource capped at 3. Spend 1 Focus on one eligible card each turn. Its preview shows the card-specific bonus. An unaided first-try correct Predict grants 1 Focus."
     },
     {
       "id": "defend",
@@ -79,7 +79,7 @@
     "STM_SHARED/registry.json": "1889d009a2f8b6f0601ff4fe617944daa87d3c890c386deaee728fb7d692dcf4"
   },
   "practice": {
-    "bytes": 1104852,
+    "bytes": 1105101,
     "modules": [
       "more-hint-state.mjs",
       "rich_text/renderer.mjs",
@@ -92,9 +92,9 @@
     ]
   },
   "output": {
-    "dist/mechanics.js": "aa222fe2eecd337cfca77345db17f8ecb0a1e85caeec8acf4b6dd65b4c4ab5ca",
+    "dist/mechanics.js": "91384cf36eae881ac47246c656c5221511b8a66a1b0832098e6a6acbd6dd7883",
     "dist/mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
-    "dist/education-practice.js": "39ed382e7cb1b5be491c023f869f9dc36d8508d27e70f1f5c151fb74b7a62676"
+    "dist/education-practice.js": "7725e1e39c7f4d3f51678db2570f243a8399a07d9e43eba2c76193d03b6bb8ff"
   },
   "counts": {
     "artifacts": 31,

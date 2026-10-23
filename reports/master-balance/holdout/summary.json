@@ -1,0 +1,424 @@
+{
+  "label": "holdout",
+  "sourceHash": "cb5716e6a1a743d345f1d4cbe2259a9552c4c0b4b8dab5642947b01e997672f7",
+  "attempts": 360,
+  "errors": [],
+  "groups": {
+    "easy/feedback/health-recovery": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 15635,
+      "finalHp": 1275,
+      "finalGold": 3029,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 63.75,
+      "meanFinalGold": 151.45
+    },
+    "easy/feedback/seek-reward": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 19072,
+      "finalHp": 1348,
+      "finalGold": 9858,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 67.4,
+      "meanFinalGold": 492.9
+    },
+    "easy/high/health-recovery": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 11521,
+      "finalHp": 1269,
+      "finalGold": 3238,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 63.45,
+      "meanFinalGold": 161.9
+    },
+    "easy/high/seek-reward": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 14495,
+      "finalHp": 1399,
+      "finalGold": 10022,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 69.95,
+      "meanFinalGold": 501.1
+    },
+    "easy/low/health-recovery": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 13343,
+      "finalHp": 1236,
+      "finalGold": 3002,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 61.8,
+      "meanFinalGold": 150.1
+    },
+    "easy/low/seek-reward": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 16191,
+      "finalHp": 1315,
+      "finalGold": 9974,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 65.75,
+      "meanFinalGold": 498.7
+    },
+    "hard/feedback/health-recovery": {
+      "n": 20,
+      "wins": 4,
+      "losses": 16,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 11,
+      "rooms": 293,
+      "apiCalls": 15737,
+      "finalHp": 79,
+      "finalGold": 2473,
+      "winRate": 0.2,
+      "descriptiveWilson95": [
+        0.0806563532712,
+        0.41602172202575993
+      ],
+      "allCaseWinBounds": [
+        0.2,
+        0.2
+      ],
+      "meanFinalHp": 3.95,
+      "meanFinalGold": 123.65
+    },
+    "hard/feedback/seek-reward": {
+      "n": 20,
+      "wins": 7,
+      "losses": 13,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 9,
+      "rooms": 246,
+      "apiCalls": 15777,
+      "finalHp": 233,
+      "finalGold": 4750,
+      "winRate": 0.35,
+      "descriptiveWilson95": [
+        0.18118954786794464,
+        0.5671494897805354
+      ],
+      "allCaseWinBounds": [
+        0.35,
+        0.35
+      ],
+      "meanFinalHp": 11.65,
+      "meanFinalGold": 237.5
+    },
+    "hard/high/health-recovery": {
+      "n": 20,
+      "wins": 7,
+      "losses": 13,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 374,
+      "apiCalls": 15278,
+      "finalHp": 193,
+      "finalGold": 2493,
+      "winRate": 0.35,
+      "descriptiveWilson95": [
+        0.18118954786794464,
+        0.5671494897805354
+      ],
+      "allCaseWinBounds": [
+        0.35,
+        0.35
+      ],
+      "meanFinalHp": 9.65,
+      "meanFinalGold": 124.65
+    },
+    "hard/high/seek-reward": {
+      "n": 20,
+      "wins": 16,
+      "losses": 4,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 17,
+      "rooms": 358,
+      "apiCalls": 17285,
+      "finalHp": 647,
+      "finalGold": 6476,
+      "winRate": 0.8,
+      "descriptiveWilson95": [
+        0.5839782779742401,
+        0.9193436467288
+      ],
+      "allCaseWinBounds": [
+        0.8,
+        0.8
+      ],
+      "meanFinalHp": 32.35,
+      "meanFinalGold": 323.8
+    },
+    "hard/low/health-recovery": {
+      "n": 20,
+      "wins": 1,
+      "losses": 19,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 8,
+      "rooms": 250,
+      "apiCalls": 10519,
+      "finalHp": 23,
+      "finalGold": 2709,
+      "winRate": 0.05,
+      "descriptiveWilson95": [
+        0.008881219432873136,
+        0.23613589351256675
+      ],
+      "allCaseWinBounds": [
+        0.05,
+        0.05
+      ],
+      "meanFinalHp": 1.15,
+      "meanFinalGold": 135.45
+    },
+    "hard/low/seek-reward": {
+      "n": 20,
+      "wins": 6,
+      "losses": 14,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 7,
+      "rooms": 235,
+      "apiCalls": 12121,
+      "finalHp": 161,
+      "finalGold": 4653,
+      "winRate": 0.3,
+      "descriptiveWilson95": [
+        0.14547527396899385,
+        0.5189767762289793
+      ],
+      "allCaseWinBounds": [
+        0.3,
+        0.3
+      ],
+      "meanFinalHp": 8.05,
+      "meanFinalGold": 232.65
+    },
+    "medium/feedback/health-recovery": {
+      "n": 20,
+      "wins": 16,
+      "losses": 4,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 386,
+      "apiCalls": 20050,
+      "finalHp": 675,
+      "finalGold": 2367,
+      "winRate": 0.8,
+      "descriptiveWilson95": [
+        0.5839782779742401,
+        0.9193436467288
+      ],
+      "allCaseWinBounds": [
+        0.8,
+        0.8
+      ],
+      "meanFinalHp": 33.75,
+      "meanFinalGold": 118.35
+    },
+    "medium/feedback/seek-reward": {
+      "n": 20,
+      "wins": 17,
+      "losses": 3,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 19,
+      "rooms": 371,
+      "apiCalls": 22756,
+      "finalHp": 966,
+      "finalGold": 7579,
+      "winRate": 0.85,
+      "descriptiveWilson95": [
+        0.6395767041130426,
+        0.9476322080405041
+      ],
+      "allCaseWinBounds": [
+        0.85,
+        0.85
+      ],
+      "meanFinalHp": 48.3,
+      "meanFinalGold": 378.95
+    },
+    "medium/high/health-recovery": {
+      "n": 20,
+      "wins": 20,
+      "losses": 0,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 400,
+      "apiCalls": 15443,
+      "finalHp": 910,
+      "finalGold": 2484,
+      "winRate": 1,
+      "descriptiveWilson95": [
+        0.8388698745050667,
+        1
+      ],
+      "allCaseWinBounds": [
+        1,
+        1
+      ],
+      "meanFinalHp": 45.5,
+      "meanFinalGold": 124.2
+    },
+    "medium/high/seek-reward": {
+      "n": 20,
+      "wins": 19,
+      "losses": 1,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 20,
+      "rooms": 398,
+      "apiCalls": 17856,
+      "finalHp": 1120,
+      "finalGold": 7900,
+      "winRate": 0.95,
+      "descriptiveWilson95": [
+        0.7638641064874331,
+        0.9911187805671268
+      ],
+      "allCaseWinBounds": [
+        0.95,
+        0.95
+      ],
+      "meanFinalHp": 56,
+      "meanFinalGold": 395
+    },
+    "medium/low/health-recovery": {
+      "n": 20,
+      "wins": 13,
+      "losses": 7,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 18,
+      "rooms": 380,
+      "apiCalls": 15681,
+      "finalHp": 456,
+      "finalGold": 2272,
+      "winRate": 0.65,
+      "descriptiveWilson95": [
+        0.43285051021946463,
+        0.8188104521320554
+      ],
+      "allCaseWinBounds": [
+        0.65,
+        0.65
+      ],
+      "meanFinalHp": 22.8,
+      "meanFinalGold": 113.6
+    },
+    "medium/low/seek-reward": {
+      "n": 20,
+      "wins": 17,
+      "losses": 3,
+      "censored": 0,
+      "invalid": 0,
+      "stage2": 19,
+      "rooms": 382,
+      "apiCalls": 18954,
+      "finalHp": 790,
+      "finalGold": 7810,
+      "winRate": 0.85,
+      "descriptiveWilson95": [
+        0.6395767041130426,
+        0.9476322080405041
+      ],
+      "allCaseWinBounds": [
+        0.85,
+        0.85
+      ],
+      "meanFinalHp": 39.5,
+      "meanFinalGold": 390.5
+    }
+  },
+  "pupilWinRatesMeasured": false,
+  "interpretation": "Synthetic policy scenarios; paired seeds and different choices are not independent pupil observations. Wilson intervals describe each bot-policy cohort only."
+}

@@ -1,0 +1,19 @@
+{
+  "reportVersion": "map-audit-1.2.0",
+  "estimateVersion": "pressure-debt-1.0.0",
+  "scoringVersion": "map-log-risk-1.0.0",
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "mode": "challenge",
+  "difficulty": "runtime-baseline-no-tier",
+  "referenceDamagePerTurn": 12,
+  "referenceBlockPerTurn": 6,
+  "referenceRestHeal": 12,
+  "referenceWinProbability": 0.7,
+  "pilotTrialsPerSeed": 8,
+  "samplerVersion": "uniform-valid-u32-v1",
+  "routePolicyVersion": "uniform-visible-v1",
+  "playerPolicyVersion": "visible-greedy-feedback-v1",
+  "clockEpoch": 1792713600000,
+  "limits": {"maxCombatTurns":100,"maxCombatPlays":500,"maxActions":10000},
+  "estimateExclusions": ["deck growth and upgrade effects", "artifact effects", "Mystery costs/rewards/extra combat", "actual purchases", "boss seal timing", "boss phase bonus", "player stats/statuses and draw variance"]
+}

@@ -7,7 +7,11 @@ module.exports=function importCards(root=path.resolve(__dirname,'..')){
  fs.writeFileSync(path.join(root,'dist/card-kit.js'),fs.readFileSync(path.join(source,'src/card-kit.js'),'utf8')
   .replace("require('../data/card-data.js')","require('./card-data.js')")
   // Host upgrade extension can give Normal Recall a positive extra draw.
-  .replace("plan.card.name === 'Recall' && !plan.focused", "plan.card.name === 'Recall' && !plan.focused && !(plan.values.extra > 0)"));
+  .replace("plan.card.name === 'Recall' && !plan.focused", "plan.card.name === 'Recall' && !plan.focused && !(plan.values.extra > 0)")
+  .replace('return plan.card.text[lang] || plan.card.text.en;',`const tokens=plan.card.text[lang] || plan.card.text.en,gift=plan.upgraded&&plan.card.upgrade?.activation;
+    if(!gift)return tokens;
+    const effects=[gift.block?(lang==='bm'?'dapat '+gift.block+' Blok':'gain '+gift.block+' Block'):'',gift.draw?(lang==='bm'?'ambil '+gift.draw+' kad':'draw '+gift.draw+' card'):''].filter(Boolean).join(lang==='bm'?' dan ':' and ');
+    return [...tokens,{type:'text',text:(lang==='bm'?' Pada pengaktifan pertama combat ini, ':' On first activation this combat, ')+effects+'.'}];`));
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'dist/assets/card-assets.json'),'utf8'));
  // The selected source artwork and native frames are authoritative. UI/status
  // icon imports must never replace card illustrations during a normal build.

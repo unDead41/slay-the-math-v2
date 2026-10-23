@@ -447,6 +447,46 @@ DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle 
 - DITERUSKAN: master new talking to the existing -18 LUFS ±0.5 / encoded TP ≤ -1 dBTP standard; retain rate/gain 1 and the original ZIP. Use actual ordered reducer events for answer/support reactions, with per-attempt receipts and no outcome for timeout/reveal/exhaustion.
 - IMPLEMENTED contract and audit: [Audio 2.24.0](../AUDIO_2_24_0.md). Human audition, verified transcripts and physical Windows/device testing remain unverified.
 
+## DEC-20261023-MAP-BALANCE — Seed/route audit for Master
+
+- DISAHKAN: Ijamm assigns `balance/map` at base 2800f9a; audit all 100 registered seeds and legal paths, preserve two stages/ten levels and mandatory Mystery 5/Rest 9/Boss 10. No merge or push to main; preserve other branches.
+- DISAHKAN: map/laluan difficulty and Combat Power are developer references only. Full-run pupil victory goals Easy 90%, Medium 70%, Hard 50% belong to Master calibration.
+- IMPLEMENTED: read-only structural enumeration and contextual pressure estimates, fixed canonical-engine pilot, CSV/JSON, source comparison and [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md). No production imports, save schema or gameplay stat/price/topology changes.
+- CADANGAN: pressure-debt estimate, visible greedy/feedback policy and log-risk CP scale are testable analysis choices, not calibrated game rules. Eight pilot trials per seed remain provisional; route CP stays null pending comparable entry-bank evaluation.
+- PERLU_VERIFIKASI: implement candidate difficulties in the owning domains, reconcile candidate BAL-25 with existing quotas/forced Elite paths, broaden deck/policy tests and conduct pupil validation. [Master handoff](../MAP_BALANCE_HANDOFF.md).
+
+## DEC-20261023-MAP-BALANCE-V13 — Six accepted map improvements
+
+- DISAHKAN: Ijamm requests implementation of all six proposed improvements: avoid-Elite/reward/Shop/low-HP recovery routing, identical-entry repeated rank comparisons, pressure before recovery/Mystery penalties, actual risk/reward, Predict/difficulty sensitivity and difficulty explanations with regression checks. Branch remains balance/map; no main integration.
+- IMPLEMENTED: developer-only canonical-engine policies/replays/telemetry, fixed 3,000-campaign schedule and captured-state rank triplets, sharded/hash-protected records, CSV/JSON, report gates and independent verifier. [Current SOR](../../modules/map/SOR/04_MAP_COMBAT_POWER.md), [results and validation](../MAP_BALANCE_V1_3_HANDOFF.md).
+- CADANGAN: route utility weights, 50% HP/60 Gold decision thresholds, eight/four/two repetition budgets and synthetic 85%/25% Predict targets are reference analysis settings, not pupil calibration or gameplay tuning. Matched CP remains provisional with Wilson95; rank names remain structural estimates.
+- PERLU_VERIFIKASI: full Combat/Master difficulty adapters, integrated economy candidate, alternative deck/combat policies and pupil full-run 90/70/50 playtests. Stage 2 survivor selection, divergent later RNG and heuristic deck merit limit causal interpretation. No stat/price/generator/save/player-UI changes.
+
+## 23 October 2026 — Combat/Card Synergy branch
+
+DISAHKAN (direct Ijamm instruction): isolated `balance/combat` at base 2800f9a; audit 40 cards/four states, real-engine ICP/CCP, 820 static pair specifications then Lite; retain three Passive/swap history; internal CP only; no main push/merge. CADANGAN: SOR v1.2 numeric overlays and difficulty profiles remain Node-only experiments pending Master integration and campaign/student evidence. See docs/balance/combat/SOR_COMBAT_CARD_SYNERGY.md.
+
+
+## 23 October 2026 — Deep Combat/Synergy evidence
+
+DISAHKAN (direct follow-up): deeply test five domains: evolved decks, varied Predict accuracy, setup horizon, exploit/restore and actual artifact triggers. CADANGAN: report Hard/growth coupling as a Master integration risk; do not infer student 90/70/50 rates or automatically nerf from one utility delta. Experimental data remains internal; no main merge/push. See docs/balance/combat/deep-results/DEEP_COMBAT_REPORT.md.
+## DEC-20261023-ECON-01 — isolated economy work
+
+**DISAHKAN:** Ijamm requests Economy/Loot/Rewards audit and tested proposals on base 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7, branch balance/economy, no merge/push main; source rules and random nonrepeat questions preserved; CP unmeasured stays null; Combat/Map gaps NEEDS_INPUT.
+
+**CADANGAN / implemented experiment:** economy-1.2-candidate.1 opts in through New Run. Default/legacy remains current. Single config, immutable source-derived loot receipts, bounded support, six/one-sale Shop, price/removal/recovery/event adapters. Actual artifact values and HP 60 retained because final Combat input is unavailable. n counts paid Shop removals. Evidence and limitations: docs/economy/SOR_ECONOMY_REWARDS.md and HANDOFF_MASTER.md. No student/CP claim. Reversible via omission of the explicit economy option; unknown snapshot versions reject rather than silently migrate.
+
+
+### 2026-10-23 — Economy deep validation (CADANGAN evidence)
+User authorised all six economy follow-up areas. Expand deterministic experiments and transaction regression coverage on balance/economy; retain current candidate numbers without measured Combat evidence. Use 100 paired seeds per policy/difficulty with balanced 12/13-seed answer/budget strata; report coverage limits, stop/end vs completed-only cash and conditional HP budgets. No main merge. Explore absent at base, NEEDS_INPUT_DEFINITION. See docs/economy/deep/REPORT.md.
+
+
+## DEC-20261023-MASTER-BALANCE — Three-domain integration
+
+- DISAHKAN: Ijamm requests reading the three completed balance branches, completing Master work and pushing the Master branch. No main publish/merge is requested.
+- IMPLEMENTED: versioned browser/Node binding, explicit Easy/Medium/Hard playtest entry, isolated profile saves, strict restore/retry, canonical campaign replay with actual combat/economy/Mystery, and fresh bounded ICP/CCP measurements. Current owner: [23](23_MASTER_BALANCE.md).
+- CADANGAN: `master-1.3.0-candidate.2` profile adjustments address the initial combined Hard cliff. Common card definitions retain the specialist v1.2 overlay. Seal 10%, Purse 40 and Contract 20% complete the economic artifact contract.
+- PERLU_VERIFIKASI: real pupil full-run targets 90/70/50, wider player/deck policies and selected high-synergy cases. The bot cohorts, uncertainty, source snapshots and actual checks belong in [Master handoff](../balance/master/HANDOFF.md); no human outcome is fabricated.
 
 ## DEC-20261023-EDAN — Offline education analytics preview
 

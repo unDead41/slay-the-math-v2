@@ -1,0 +1,47 @@
+{
+  "status": "INTEGRATION_REQUIRED",
+  "appliedToMapTrials": false,
+  "baselineRuntimeCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "preflight": {
+    "combatBranchPresent": false,
+    "economyCommit": "04e1b7b18648a857a12680370269a9933a5f23ab"
+  },
+  "deliveryRecheck": {
+    "combat": {
+      "branch": "balance/combat",
+      "commit": "1bf66320ed275755d25734ad907395443f71176f",
+      "candidateNodeProfiles": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "reviewedPaths": [
+        "docs/balance/combat/SOR_COMBAT_CARD_SYNERGY.md",
+        "docs/balance/combat/DEEP_VALIDATION.md",
+        "docs/balance/combat/VALIDATION.md",
+        "tools/balance/loader.cjs",
+        "tools/balance/candidate.cjs",
+        "tools/balance/DEEP_README.md"
+      ],
+      "available": "actual private Node engine/resolver with candidate card/artifact/config overlays and experimental combat profiles",
+      "notIntegrated": "map worker dependency graph and full Economy/Combat campaign profile; owner says Node overlays are not drop-in player data and requires versioned campaign/save integration"
+    },
+    "economy": {
+      "branch": "balance/economy",
+      "commit": "df53579593937c2d71fcb6bb96409036ad575070",
+      "reviewedPaths": [
+        "docs/economy/HANDOFF_MASTER.md"
+      ],
+      "available": "opt-in economy-1.2-candidate.1 plus deep economic sensitivity validation",
+      "notIntegrated": "full Combat HP/enemy/artifact profiles and measured pupil cohort"
+    },
+    "mainObservedHead": "7afb0aa18c2f3f4fb95a1fc7da67abbe5f0eeeaf"
+  },
+  "nextStep": "Master pins and combines the candidate engine/definition/economy loaders, resolves mode/HP/Gold/Rest/Focus/Elite rules and exposes a full campaign adapter; rerun fixed map experiments with a new context/output. Do not relabel these baseline trials as Easy/Medium/Hard.",
+  "fullTierMapEngineTrials": {
+    "easy": 0,
+    "medium": 0,
+    "hard": 0
+  },
+  "pupilTargetsMeasured": false
+}

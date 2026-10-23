@@ -1,0 +1,501 @@
+{
+  "pairs": [
+    {
+      "a": "stm.attack.fate_storm",
+      "b": "stm.passive.blazing_spirit",
+      "name_a": "Fate Storm",
+      "name_b": "Blazing Spirit",
+      "same_card": false,
+      "screen_priority": 5,
+      "screen_reason": "Compare legacy per-hit vs candidate once/card Strength; inspect actual scaling.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.fate_storm",
+      "b": "stm.passive.growing_flame",
+      "name_a": "Fate Storm",
+      "name_b": "Growing Flame",
+      "same_card": false,
+      "screen_priority": 5,
+      "screen_reason": "Compare legacy per-hit vs candidate once/card Strength; inspect actual scaling. Count cards, not hits/grants; contribution cap and setup payoff.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.twin_shot",
+      "b": "stm.passive.blazing_spirit",
+      "name_a": "Twin Shot",
+      "name_b": "Blazing Spirit",
+      "same_card": false,
+      "screen_priority": 5,
+      "screen_reason": "Compare legacy per-hit vs candidate once/card Strength; inspect actual scaling.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.twin_shot",
+      "b": "stm.passive.growing_flame",
+      "name_a": "Twin Shot",
+      "name_b": "Growing Flame",
+      "same_card": false,
+      "screen_priority": 5,
+      "screen_reason": "Compare legacy per-hit vs candidate once/card Strength; inspect actual scaling. Count cards, not hits/grants; contribution cap and setup payoff.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.layered_shield",
+      "b": "stm.passive.battle_rhythm",
+      "name_a": "Layered Shield",
+      "name_b": "Battle Rhythm",
+      "same_card": false,
+      "screen_priority": 5,
+      "screen_reason": "Compare legacy double Agility grant vs fixed delayed Block candidate. Count cards, not hits/grants; contribution cap and setup payoff.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.layered_shield",
+      "b": "stm.passive.swift_step",
+      "name_a": "Layered Shield",
+      "name_b": "Swift Step",
+      "same_card": false,
+      "screen_priority": 5,
+      "screen_reason": "Compare legacy double Agility grant vs fixed delayed Block candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.crack_shot",
+      "b": "stm.passive.ember_core",
+      "name_a": "Crack Shot",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.fate_storm",
+      "b": "stm.passive.ember_core",
+      "name_a": "Fate Storm",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.return_strike",
+      "b": "stm.passive.ember_core",
+      "name_a": "Return Strike",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.rune_strike",
+      "b": "stm.passive.ember_core",
+      "name_a": "Rune Strike",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.rune_sweep",
+      "b": "stm.passive.ember_core",
+      "name_a": "Rune Sweep",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.scout_strike",
+      "b": "stm.passive.ember_core",
+      "name_a": "Scout Strike",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.shield_shot",
+      "b": "stm.passive.ember_core",
+      "name_a": "Shield Shot",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.sure_hit",
+      "b": "stm.passive.ember_core",
+      "name_a": "Sure Hit",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.twin_shot",
+      "b": "stm.passive.ember_core",
+      "name_a": "Twin Shot",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.weak_point",
+      "b": "stm.passive.ember_core",
+      "name_a": "Weak Point",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.burning_pages",
+      "b": "stm.passive.ember_core",
+      "name_a": "Burning Pages",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.burning_pages",
+      "b": "stm.skill.burning_page",
+      "name_a": "Burning Pages",
+      "name_b": "Burning Page",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Draw/free-play tempo and Exhaust/Abacus boundaries.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.cinder_guard",
+      "b": "stm.passive.ember_core",
+      "name_a": "Cinder Guard",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.ember_wall",
+      "b": "stm.passive.ember_core",
+      "name_a": "Ember Wall",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.flash_ward",
+      "b": "stm.defend.burning_pages",
+      "name_a": "Flash Ward",
+      "name_b": "Burning Pages",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Draw/free-play tempo and Exhaust/Abacus boundaries.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.flash_ward",
+      "b": "stm.passive.clear_mind",
+      "name_a": "Flash Ward",
+      "name_b": "Clear Mind",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Draw/free-play tempo and Exhaust/Abacus boundaries.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.flash_ward",
+      "b": "stm.passive.ember_core",
+      "name_a": "Flash Ward",
+      "name_b": "Ember Core",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Focus spend receipt, caps, opportunity cost and per-turn trigger.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.flash_ward",
+      "b": "stm.skill.burning_page",
+      "name_a": "Flash Ward",
+      "name_b": "Burning Page",
+      "same_card": false,
+      "screen_priority": 4,
+      "screen_reason": "Draw/free-play tempo and Exhaust/Abacus boundaries.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.twin_shot",
+      "b": "stm.passive.rune_armor",
+      "name_a": "Twin Shot",
+      "name_b": "Rune Armor",
+      "same_card": false,
+      "screen_priority": 1,
+      "screen_reason": "No special tag interaction identified; retain as control candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.twin_shot",
+      "b": "stm.skill.recall",
+      "name_a": "Twin Shot",
+      "name_b": "Recall",
+      "same_card": false,
+      "screen_priority": 1,
+      "screen_reason": "No special tag interaction identified; retain as control candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.shield_shot",
+      "b": "stm.skill.recall",
+      "name_a": "Shield Shot",
+      "name_b": "Recall",
+      "same_card": false,
+      "screen_priority": 1,
+      "screen_reason": "No special tag interaction identified; retain as control candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.skill.clear_choice",
+      "b": "stm.passive.blazing_spirit",
+      "name_a": "Clear Choice",
+      "name_b": "Blazing Spirit",
+      "same_card": false,
+      "screen_priority": 1,
+      "screen_reason": "No special tag interaction identified; retain as control candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.defend.flash_ward",
+      "b": "stm.defend.tower_shield",
+      "name_a": "Flash Ward",
+      "name_b": "Tower Shield",
+      "same_card": false,
+      "screen_priority": 1,
+      "screen_reason": "No special tag interaction identified; retain as control candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    },
+    {
+      "a": "stm.attack.twin_shot",
+      "b": "stm.defend.ember_wall",
+      "name_a": "Twin Shot",
+      "name_b": "Ember Wall",
+      "same_card": false,
+      "screen_priority": 1,
+      "screen_reason": "No special tag interaction identified; retain as control candidate.",
+      "combination_combat_power": null,
+      "interaction_surplus": null,
+      "engine_status": "NOT_SIMULATED",
+      "orders": "A→B and B→A if legal"
+    }
+  ],
+  "triads": [
+    {
+      "ids": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "names": [
+        "Blazing Spirit",
+        "Growing Flame",
+        "Fate Storm"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "names": [
+        "Swift Step",
+        "Battle Rhythm",
+        "Layered Shield"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "names": [
+        "Quick Study",
+        "Flash Ward",
+        "Burning Page"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "names": [
+        "Read Ahead",
+        "Rune Sweep",
+        "Fate Storm"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "names": [
+        "Recall",
+        "Flash Ward",
+        "Deep Study"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "names": [
+        "Grimoire Ward",
+        "Clear Mind",
+        "Next Chapter"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "names": [
+        "Ember Core",
+        "Last Ember",
+        "Tower Shield"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    },
+    {
+      "ids": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "names": [
+        "Lasting Shield",
+        "Hold the Line",
+        "Layered Shield"
+      ],
+      "status": "SELECTED_NOT_SIMULATED"
+    }
+  ],
+  "actual_simulations": 0
+}

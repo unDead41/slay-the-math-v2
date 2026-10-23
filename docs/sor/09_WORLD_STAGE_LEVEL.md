@@ -111,3 +111,11 @@ Map presentation 2.12: the existing plate is subdued; future/open/travelled path
 ## Mystery Events — 2.13.0
 
 New Mystery rooms use the fifteen-event v2 owner [MYSTERY_EVENTS.md](MYSTERY_EVENTS.md): intro, optional timed question, final review and one settlement on the same legal node. Echo failure can host one Normal battle there. Map still conceals the specific event until entry.
+
+## Map balance audit — 23 October 2026
+
+Current assessment owner: [Map SOR v1.2](../../modules/map/SOR/04_MAP_COMBAT_POWER.md). The audit enumerates 100 registered seeds / 200 maps / all 5,500 complete stage routes and 77,384 legal two-stage pairs, keeping the existing ten-level topology, quotas, snapshots and saves. It records forced Elite, recovery, Shop and route pressure; these flags do not silently change map validity. CP stays in developer reports, outside player UI. [Results and Master handoff](../MAP_BALANCE_HANDOFF.md).
+
+## Map balance v1.3 — adaptive and matched routing
+
+[Map SOR v1.3](../../modules/map/SOR/04_MAP_COMBAT_POWER.md) adds visible-category routing, actual captured-entry rank replays, recovery-before-danger windows and per-route coverage without changing graph generation. The 46 forced-Elite and 62 no-early-Rest maps are triage populations, not automatically invalid maps. [Current Master handoff](../MAP_BALANCE_V1_3_HANDOFF.md). Existing topology, quotas, snapshots and category-only player information remain authoritative.

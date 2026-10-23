@@ -3,6 +3,7 @@
  const A=typeof module!=='undefined'?require('./artifacts.js'):root.DCArtifacts;
  const Q=typeof module!=='undefined'?require('./education.js'):root.DCEducation;
  const R=typeof module!=='undefined'?require('./rich-text.js'):root.DCRichText;
+ const Eco=typeof module!=='undefined'?require('./economy.js'):root.STMEconomy;
  const data=typeof module!=='undefined'?require('./mystery-data.js'):root.DCMysteryData;
  const catalog=Object.fromEntries(data.events.map(e=>[e.id,e]));
  const category={Attack:'attack',Defend:'guard',Skill:'tactic',Passive:'passive'};
@@ -12,7 +13,7 @@
  function ensure(r){return r.mysteryState||(r.mysteryState={version:2,configVersion:data.packageVersion,eventRng:(r.seed^0x4d595354)>>>0,rewardRng:(r.seed^0x52455744)>>>0,usedEventIds:[],settled:[],pending:null,nextCombat:[],combatSeq:0,hpSacrificed:0});}
  function random(s,key){s[key]=(Math.imul(s[key],1664525)+1013904223)>>>0;return s[key]/4294967296;}
  function choose(s,values){return values[Math.floor(random(s,'rewardRng')*values.length)];}
- function definition(r){return catalog[r.mysteryState?.pending?.eventId]||null;}
+ function definition(r){return r.mysteryState?.pending?.economyDefinition||Eco.eventDefinition(r,catalog[r.mysteryState?.pending?.eventId]||null);}
  function pending(r){const p=r.mysteryState?.pending;if(r.scene!=='event'||!p||p.committed)throw Error('No Mystery challenge is waiting.');return p;}
  function cardPool(effect,legacy=false){return (legacy?Object.keys(C.cards):C.CARD_POOL||Object.keys(C.cards)).filter(k=>!effect.category||C.cards[k].role===category[effect.category]);}
  function artifactPool(r,effect){return Object.values(A.catalog).filter(a=>effect.tiers.map(t=>tiers[t]).includes(a.tier)&&!A.has(r,a.id)&&A.eligible(r,a));}
@@ -22,7 +23,7 @@
   if(e.type==='CONSUME_ARTIFACT')return A.owned(r).filter(a=>a.tier===tiers[e.tier]).map(a=>a.id);
   if(e.type==='CHOOSE_CARD_REWARD')return cardPool(e);
   return r.deck.filter(c=>!c.protected&&(!e.categories||e.categories.map(x=>category[x]).includes(C.cards[c.key].role))&&
-   (e.type!=='UPGRADE_CARD'||!c.upgraded)&&(e.type!=='REMOVE_CARD'||r.deck.length>1)&&
+   (e.type!=='UPGRADE_CARD'||!c.upgraded)&&(e.type!=='REMOVE_CARD'||r.deck.length>(Eco.active(r)?10:1))&&
    (e.type!=='TRANSFORM_CARD'||Object.keys(C.cards).some(k=>k!==c.key&&C.cards[k].role===C.cards[c.key].role))).map(c=>c.uid);
  }
  function actionable(r,option){
@@ -45,9 +46,10 @@
   const s=ensure(r),offers={};
   for(const option of event.success.options){const offer=offers[option.id]={};
    for(const e of option.effects){
-    if(e.type==='GRANT_ARTIFACT')offer.artifactId=choose(s,artifactPool(r,e).map(a=>a.id))||null;
-    if(e.type==='CHOOSE_CARD_REWARD'){const pool=cardPool(e);offer.cards=[];while(pool.length&&offer.cards.length<e.offerCount){const key=choose(s,pool);offer.cards.push(key);pool.splice(pool.indexOf(key),1);}}
-    if(e.type==='TRANSFORM_CARD'){offer.transforms={};for(const uid of targets(r,option)){const c=r.deck.find(c=>c.uid===uid);offer.transforms[uid]=choose(s,(C.CARD_POOL||Object.keys(C.cards)).filter(k=>k!==c.key&&C.cards[k].role===C.cards[c.key].role));}}
+    if(e.type==='GRANT_ARTIFACT')offer.artifactId=Eco.active(r)?Eco.artifacts(r,event.id,tiers[e.tiers[0]],1).ids[0]||null:choose(s,artifactPool(r,e).map(a=>a.id))||null;
+    if(e.type==='CHOOSE_CARD_REWARD'&&Eco.active(r))offer.cards=Eco.cards(r,event.id).ids.slice();
+    else if(e.type==='CHOOSE_CARD_REWARD'){const pool=cardPool(e);offer.cards=[];while(pool.length&&offer.cards.length<e.offerCount){const key=choose(s,pool);offer.cards.push(key);pool.splice(pool.indexOf(key),1);}}
+    if(e.type==='TRANSFORM_CARD'){offer.transforms={};for(const uid of targets(r,option)){const c=r.deck.find(c=>c.uid===uid);offer.transforms[uid]=Eco.active(r)?Eco.cards(r,'ME04',{ordinal:Number(uid.slice(1)),category:({attack:'attack',guard:'defend',tactic:'skill',passive:'passive'})[C.cards[c.key].role],exclude:[c.key]}).ids[0]:choose(s,(C.CARD_POOL||Object.keys(C.cards)).filter(k=>k!==c.key&&C.cards[k].role===C.cards[c.key].role));}}
    }
   }
   return offers;
@@ -55,9 +57,10 @@
  function enter(r,seen=[],profile=null){
   if(r.scene!=='event'||r.artifactState?.offer)throw Error('Enter a Mystery room first.');
   const s=ensure(r);if(s.pending)return r;Q.syncMystery(r,seen,profile);
-  const candidates=data.events.filter(e=>e.stages.includes(r.stage+1)&&!s.usedEventIds.includes(e.id)&&e.success.options.some(o=>actionable(r,o))&&Q.bank.questions.some(q=>q.topicCode===e.topicCode&&!r.educationState.runUsedIds.includes(q.id)));
+  const candidates=data.events.map(e=>Eco.eventDefinition(r,e)).filter(e=>e.stages.includes(r.stage+1)&&!s.usedEventIds.includes(e.id)&&e.success.options.some(o=>actionable(r,o))&&Q.bank.questions.some(q=>q.topicCode===e.topicCode&&!r.educationState.runUsedIds.includes(q.id)));
   const event=candidates[Math.floor(random(s,'eventRng')*candidates.length)];
   s.pending={key:r.seed+':'+r.started+':'+r.stage+':'+nodeId(r)+':'+(event?.id||'empty'),stage:r.stage,nodeId:nodeId(r),eventId:event?.id||null,bankVersion:Q.bank.version,phase:event?'intro':'empty',questionId:null,choiceOrder:[],selectedId:null,startedAt:null,deadline:null,outcome:null,offers:event?makeOffers(r,event):{},selectedOption:null,targetId:null,committed:false};
+  if(Eco.active(r)&&event)s.pending.economyDefinition=copy(event);
   if(event)s.usedEventIds.push(event.id);return r;
  }
  function start(r,seen=[],profile=null,now=Date.now()){
@@ -137,23 +140,25 @@
  }
  function valid(r){
   const s=r.mysteryState;if(s===undefined)return true;
-  if(!s||s.version!==2||s.configVersion!==data.packageVersion||!['eventRng','rewardRng'].every(k=>integer(s[k])&&s[k]<=4294967295)||!integer(s.combatSeq)||!integer(s.hpSacrificed)||s.hpSacrificed>5||!Array.isArray(s.usedEventIds)||new Set(s.usedEventIds).size!==s.usedEventIds.length||s.usedEventIds.some(id=>!catalog[id])||!Array.isArray(s.settled)||s.settled.length>25||new Set(s.settled.map(x=>x.key)).size!==s.settled.length||!Array.isArray(s.nextCombat)||s.nextCombat.some(x=>!['STRENGTH','AGILITY','DRAW','ENERGY'].includes(x.stat)||!Number.isInteger(x.amount)||Math.abs(x.amount)>2||!['NEXT_COMBAT','NEXT_COMBAT_FIRST_TURN'].includes(x.duration)))return false;
+  if(!s||s.version!==2||s.configVersion!==data.packageVersion||!['eventRng','rewardRng'].every(k=>integer(s[k])&&s[k]<=4294967295)||!integer(s.combatSeq)||!integer(s.hpSacrificed)||s.hpSacrificed>(Eco.profile(r)?.event_max_hp_cost??5)||!Array.isArray(s.usedEventIds)||new Set(s.usedEventIds).size!==s.usedEventIds.length||s.usedEventIds.some(id=>!catalog[id])||!Array.isArray(s.settled)||s.settled.length>25||new Set(s.settled.map(x=>x.key)).size!==s.settled.length||!Array.isArray(s.nextCombat)||s.nextCombat.some(x=>!['STRENGTH','AGILITY','DRAW','ENERGY'].includes(x.stat)||!Number.isInteger(x.amount)||Math.abs(x.amount)>2||!['NEXT_COMBAT','NEXT_COMBAT_FIRST_TURN'].includes(x.duration)))return false;
   const b=r.battle,m=b?.mysteryModifiers;if(m&&(!integer(m.combatId)||m.combatId>s.combatSeq||!['strength','agility','draw','energy'].every(k=>Number.isInteger(m[k])&&Math.abs(m[k])<=30)))return false;
   const p=s.pending;if(!p)return r.scene!=='event'||!!r.artifactState?.offer;
   if(!p||p.stage!==r.stage||p.nodeId!==nodeId(r)||typeof p.key!=='string'||p.key.length>150||p.bankVersion!==Q.bank.version||!['intro','empty','question','review','reward','combat'].includes(p.phase)||typeof p.committed!=='boolean'||!Array.isArray(p.choiceOrder))return false;
   if(p.phase==='combat')return p.committed&&s.settled.some(x=>x.key===p.key)&&!!p.encounter&&b?.mysteryEncounter?.key===p.key&&b.enemyId===p.encounter.enemyId&&C.stages[r.stage].normals.includes(b.enemyId)&&!b.elite&&['battle','reward','defeat'].includes(r.scene);
   if(r.scene!=='event'||p.committed||s.settled.some(x=>x.key===p.key))return false;
   if(p.phase==='empty')return p.questionId===null&&p.choiceOrder.length===0;
-  const event=catalog[p.eventId];if(!event||!s.usedEventIds.includes(p.eventId)||!event.stages.includes(r.stage+1)||!p.offers||Object.keys(p.offers).length!==event.success.options.length)return false;
+  const baseEvent=catalog[p.eventId],event=definition(r);if(Eco.active(r)&&JSON.stringify(p.economyDefinition)!==JSON.stringify(Eco.eventDefinition(r,baseEvent)))return false;if(!event||!s.usedEventIds.includes(p.eventId)||!event.stages.includes(r.stage+1)||!p.offers||Object.keys(p.offers).length!==event.success.options.length)return false;
   if(p.selectedOption!==null&&!event.success.options.some(o=>o.id===p.selectedOption))return false;
   if(p.targetId!==null){const option=event.success.options.find(o=>o.id===p.selectedOption);if(!option||!targets(r,option).includes(p.targetId)||(p.offers[option.id].cards&&!p.offers[option.id].cards.includes(p.targetId)))return false;}
   for(const o of event.success.options){const offer=p.offers[o.id];if(!offer||typeof offer!=='object'||Array.isArray(offer))return false;
    const cardEffect=o.effects.find(e=>e.type==='CHOOSE_CARD_REWARD'),artifactEffect=o.effects.find(e=>e.type==='GRANT_ARTIFACT'),transform=o.effects.some(e=>e.type==='TRANSFORM_CARD');
    if(cardEffect){const pool=cardPool(cardEffect,true);if(!Array.isArray(offer.cards)||offer.cards.length!==Math.min(cardEffect.offerCount,pool.length)||new Set(offer.cards).size!==offer.cards.length||offer.cards.some(k=>!pool.includes(k)))return false;}
    else if(offer.cards!==undefined)return false;
+   if(Eco.active(r)&&cardEffect&&JSON.stringify(offer.cards)!==JSON.stringify(Eco.lookup(r,'card',event.id)?.ids))return false;
    if(artifactEffect){if(!Object.hasOwn(offer,'artifactId'))return false;const pool=artifactPool(r,artifactEffect);if(offer.artifactId===null?pool.length>0:!pool.some(a=>a.id===offer.artifactId))return false;}
    else if(offer.artifactId!==undefined)return false;
-   if(transform){if(!offer.transforms||typeof offer.transforms!=='object'||Array.isArray(offer.transforms)||Object.keys(offer.transforms).length!==targets(r,o).length)return false;for(const uid of targets(r,o)){const key=offer.transforms[uid],c=r.deck.find(c=>c.uid===uid);if(!c||!C.cards[key]||key===c.key||C.cards[key].role!==C.cards[c.key].role)return false;}}
+   if(Eco.active(r)&&artifactEffect&&offer.artifactId!==(Eco.lookup(r,'artifact',event.id)?.ids[0]||null))return false;
+   if(transform){if(!offer.transforms||typeof offer.transforms!=='object'||Array.isArray(offer.transforms)||Object.keys(offer.transforms).length!==targets(r,o).length)return false;for(const uid of targets(r,o)){const key=offer.transforms[uid],c=r.deck.find(c=>c.uid===uid);if(!c||!C.cards[key]||key===c.key||C.cards[key].role!==C.cards[c.key].role)return false;if(Eco.active(r)&&key!==Eco.lookup(r,'card','ME04',{ordinal:Number(uid.slice(1))})?.ids[0])return false;}}
    else if(offer.transforms!==undefined)return false;
   }
   if(p.phase==='intro')return p.questionId===null&&p.deadline===null;

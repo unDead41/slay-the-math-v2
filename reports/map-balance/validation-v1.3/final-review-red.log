@@ -1,0 +1,67 @@
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (4.964686ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.68474ms)
+✖ recovery combat load includes an observed Mystery battle but not an ordinary event (1.365691ms)
+✖ difficulty driver numerators use the same feedback trial population as stage entries (0.792004ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (1.050925ms)
+✔ matched route coverage excludes the random preplan for the stage outside replay scope (0.268586ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (0.634704ms)
+✔ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.684203ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.763737ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.489205ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.33301ms)
+✔ automatic comparisons detect changes in the legacy replay and report analysis too (0.149081ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.135288ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.402045ms)
+✔ file gate rejects missing raw records even when the outer manifest is internally hashed (4.270145ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 13
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 237.31113
+
+✖ failing tests:
+
+test at tests/map-balance-advanced-report.test.cjs:22:1
+✖ recovery combat load includes an observed Mystery battle but not an ordinary event (1.365691ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:25:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-advanced-report.test.cjs:29:1
+✖ difficulty driver numerators use the same feedback trial population as stage entries (0.792004ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-v13/tests/map-balance-advanced-report.test.cjs:35:53)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "date": "2026-10-23",
+  "baseCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7",
+  "pilotCodeCommit": "8f44451fd3a9e90a0cdbf76bd188aa04c682ae71",
+  "node": "v24.19.0",
+  "checks": {
+    "targetedTests": {
+      "passed": 19,
+      "failed": 0
+    },
+    "fullRootTests": {
+      "passed": 491,
+      "failed": 0,
+      "skipped": 0,
+      "command": "node --test --test-concurrency=2 tests/*.test.cjs"
+    },
+    "mapTests": {
+      "passed": 7,
+      "failed": 0,
+      "seeds": 100,
+      "uniqueMaps": 200,
+      "pngHashes": 12
+    },
+    "syntax": "PASS",
+    "productionBuild": "PASS",
+    "productionAuditReferences": 0,
+    "gameplayFilesChanged": 0,
+    "independentExport": {
+      "status": "PASS",
+      "contextId": "5ad57aec8aa32642bb80014119c8085c1e501b5f35e8d212cb5a543a34aec9d9",
+      "seeds": 100,
+      "maps": 200,
+      "routes": 5500,
+      "pilotTrials": 800,
+      "diagnosticTrials": 300,
+      "manifestFiles": 12,
+      "sourceFiles": 22,
+      "toolAndInputFiles": 10,
+      "csvCellsChecked": 185500,
+      "routeExposureCount": 1309,
+      "fullTenNodeTraversalCount": 966,
+      "campaignPairs": {
+        "status": "PASS",
+        "seeds": 100,
+        "pairs": 77384,
+        "independentPeakRecalculations": 232152
+      }
+    },
+    "resume": "PASS: completed trial IDs reused; no additional trials; context unchanged",
+    "derivedPairSyntax": "PASS",
+    "independentVerifierSyntax": "PASS"
+  },
+  "notes": [
+    "Root test dependencies were supplied through NODE_PATH; no package manifest changed.",
+    "Initial default parallel root suite lost a UI process; the final complete suite passed with concurrency 2.",
+    "Derived pair tool ran after the full suite and is covered by syntax plus exhaustive independent numerical verification.",
+    "No new interactive browser/student playtest; no implemented candidate difficulty or final CP calibration.",
+    "Persisted terminal logs normalize trailing whitespace only.",
+    "Pair JSON delivery is four indexed chunks to fit the connector 16 MiB request limit; estimates and row counts are unchanged."
+  ],
+  "evidence": {
+    "audit-tests.log": {
+      "sha256": "cbde7ae27a5a02fe7ed7949d73a4bd76efe2cae7fc3b364a32bd4c65e1831a04",
+      "bytes": 1817
+    },
+    "code-review.md": {
+      "sha256": "00fffe95904fd6fe742ef1ced67d854389d818304bc2b175756700c279f5de20",
+      "bytes": 2030
+    },
+    "independent-export-check.json": {
+      "sha256": "785c91ee6277d61a896bc37cf600ff1ca0d29b6977e22bfd35e536cadb4a76d2",
+      "bytes": 500
+    },
+    "map-tests.log": {
+      "sha256": "f1a9e1dfd5cf3fef1a93a15199c8796f1ef8045abeaa9c251bbaa01d91b52451",
+      "bytes": 1368
+    },
+    "production-build.log": {
+      "sha256": "81d0582354330aac044f7f7aa782667b6568f553e827074a6b99a6aec902f17c",
+      "bytes": 507
+    },
+    "regressions-before-fix.log": {
+      "sha256": "3c958635786f6abc52080166ccca37e7c706c8cf93ba3598d08ba827a9fbc147",
+      "bytes": 6334
+    },
+    "resume.log": {
+      "sha256": "05e389cc800ba6564cd8b73cf346b89ae4ff83610ece7f04da036a5717d44a11",
+      "bytes": 3188
+    },
+    "root-tests.log": {
+      "sha256": "9b54f3e4616d4ae65784a13e8a5e5370438fde3d190b3a4a0608b4b3e3e36a19",
+      "bytes": 55484
+    },
+    "syntax.log": {
+      "sha256": "6b956891be8192720c96102359921348fc38202cf2ce446ab84ab57ed1c93506",
+      "bytes": 134
+    }
+  }
+}

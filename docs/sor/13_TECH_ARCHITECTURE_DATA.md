@@ -204,6 +204,9 @@ Optional audioPresentation version 1 gains a bounded Alyssa receipt ledger, inde
 Pack 5 owns 75 voices and the existing ten music cues. DCAudioPresentation.questionState projects ordered authoritative learning events plus attempt correctness; result receipts include their event index. Later answer/help transitions change voice scope so stale higher-priority audio yields. Historical saved results are consumed silently, while new observed questions can react to actual submissions. Mystery review permits incorrect speech only for authoritative INCORRECT, excluding timeout/abandonment. Practice sends bounded event/attempt data through the validated current same-origin frame, retains an isolated owner and adds a fresh audio generation on Restart Review. Legacy prediction projection remains ephemeral. Existing save envelope/reducers/RNG are unchanged. [Contract](../AUDIO_2_24_0.md).
 
 
+## Master integration — game 2.27.0
+
+The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
 ## Offline learning analytics — 2.25.0-analytics.1
 
 DITERUSKAN: independent v1 keys slay-the-math.learning-analytics.v1 and slay-the-math.learning-sync.v1 own immutable learning observations and opt-in revisioned delivery. They preserve corrupt originals/quota-failed observations for export, merge same-origin evidence and never mutate bank/reducer/gameplay saves/RNG. Scoped session aliases preserve Retry identity despite a changed engine start time. Default report excludes Review. The shared registry names only the bank's selected SK/SPs, with explicit DSKP source references.

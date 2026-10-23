@@ -3,6 +3,7 @@
  const C=typeof module!=='undefined'?require('./config.js'):root.DCConfig;
  const data=typeof module!=='undefined'?require('./artifact-data.js'):root.DCArtifactData;
  const R=typeof module!=='undefined'?require('./rich-text.js'):root.DCRichText;
+ const Eco=typeof module!=='undefined'?require('./economy.js'):root.STMEconomy;
  const catalog=Object.fromEntries(data.artifacts.map(a=>[a.id,a]));
  const codes=Object.fromEntries(data.artifacts.map(a=>[a.id.slice(0,3),a.id]));
  const id=code=>codes[code]||code;
@@ -24,7 +25,8 @@
   const s=r.artifactState;if(!s||s.offer)throw new Error('An artifact choice is already waiting.');
   const tier=kind==='starting'?'starting':kind==='boss'?'boss':'elite_mystery';
   const candidates=pool(r,tier).map(a=>a.id),ids=[];
-  if(kind==='boss')ids.push(...candidates);
+  if(Eco.active(r))ids.push(...Eco.artifacts(r,kind,tier,3).ids);
+  else if(kind==='boss')ids.push(...candidates);
   else while(ids.length<3&&candidates.length)ids.push(candidates.splice(Math.floor(random(r)*candidates.length),1)[0]);
   if(!ids.length)return false;
   s.offer={kind,source:source(r,kind),ids,ready};return true;
@@ -203,6 +205,7 @@
   if(s.offer){
    const o=s.offer,tier=o.kind==='starting'?'starting':o.kind==='boss'?'boss':'elite_mystery';
    if(!['starting','elite','mystery','boss'].includes(o.kind)||typeof o.ready!=='boolean'||!Array.isArray(o.ids)||!o.ids.length||o.ids.length>3||new Set(o.ids).size!==o.ids.length||o.source!==source(r,o.kind)||s.acquired.some(x=>x.source===o.source)||o.ids.some(key=>!catalog[key]||catalog[key].tier!==tier||has(r,key)||!eligible(r,catalog[key])))return false;
+   if(Eco.active(r)&&JSON.stringify(o.ids)!==JSON.stringify(Eco.lookup(r,'artifact',o.kind)?.ids))return false;
    if(o.kind==='starting'&&(r.scene!=='master'||!o.ready))return false;
    if(o.kind==='elite'&&(r.scene!=='reward'||!r.battle?.elite))return false;
    if(o.kind==='mystery'&&(r.scene!=='event'||!o.ready))return false;

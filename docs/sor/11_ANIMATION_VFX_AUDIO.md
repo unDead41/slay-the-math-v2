@@ -1,6 +1,17 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.0.1. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.1.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+
+## Audio source pack v1 — sejarah 22 Oktober 2026
+
+Nota sejarah; status audio semasa ialah implementasi game 2.22.0 di bawah dan [Audio 2.22.0](../AUDIO_2_22_0.md). Pemilik pemetaan asal: [Audio SOR v1](../audio/STM_AUDIO_SOR_v1.md). Data/metadata: [manifest](../audio/audio-manifest.v1.json). Bukti source audit dan batas: [verification](../audio/VERIFICATION_v1.json).
+
+- **DISAHKAN:** Ijamm membekalkan MUSIC(2).zip dan meminta SOR dahulu; kemas kini audio chat ini melalui branch `music`.
+- **DISAHKAN melalui nama fail:** 8 BGM meliputi Normal/Elite Stage 1, Normal/Elite Stage 2, kedua-dua Boss, Shop, Rest, Map dan Defeat. Normal dan Elite berkongsi satu sumber setiap stage untuk pakej baharu ini; requirement pemisahan Elite terdahulu digantikan bagi import ini.
+- **DISAHKAN:** 4 dialog Dungeon Master dan 3 Merchant mengikut nombor pertemuan. Panel hadiah sebenar menentukan eligibility Dungeon Master; tab paid-artifact Shop tetap Merchant.
+- **CADANGAN:** Kiraan per run merentas stage, receipt encounter yang kekal, reopen memainkan ID sama, selepas had ulang DM 4 / Merchant 3. Volume Voice, duck dan playback lifecycle diterangkan dalam dokumen pemilik.
+- **DITERUSKAN:** CRC ZIP dan decode semua 15 fail lulus; bait sumber dikekalkan. Audition/loop, transkrip dan playback browser masih memerlukan semakan.
+- **Status ketika SOR v1 disediakan:** Dokumentasi sahaja. Status tersebut telah digantikan oleh import 2.20.0 dan integrasi normalized 2.22.0; ia bukan status runtime semasa.
 
 ## Prinsip
 
@@ -162,3 +173,7 @@ The boss host uses explicit figureScale 1.1, independent of the ordinary-enemy d
 ## Passive and supplied audio — 2.20.0
 
 DISAHKAN: apply the supplied MUSIC(3).zip now; this supersedes the archive's earlier planning-only music-branch handoff. The committed audio registry owns eight supplied BGM and seven one-shot voices; Menu/Mystery remain. Actual visible encounters own per-run greeting order, separate Voice controls, stale-load cancellation, gesture unlock and minimum-factor Voice/Predict ducking. Audio never owns gameplay RNG or resolution. Source hashes, routes and audition limits: [audio integration notes](../audio/source-pack-3/INTEGRATION_NOTES.md). Full app/build evidence: [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+## Normalized talking — 2.22.0
+
+DISAHKAN: Ijamm authorizes applying the prepared MUSIC(4) package to main v2.21.3, developing audio changes on `music`. The current registry owns 49 voices at -18 LUFS ±0.5 and true peak ≤ -1 dBTP, rate/gain 1, plus eight unchanged supplied BGM. Existing Menu/Mystery music and generated SFX remain. Actual visible questions, successful Hint/More Hint reveal, committed Rest, card reward choices, final defeat, fixed Mystery intros and ordered NPC encounters own playback. This supersedes the former package-only status. There are eight supplied card-reward clips, not ten. Persistence, isolated variation RNG, single Voice bus, deadlines/cancellation, mixer behavior and actual verification: [Audio 2.22.0](../AUDIO_2_22_0.md). No verified transcript, human audition or new dedicated correct/wrong-answer voice is claimed.

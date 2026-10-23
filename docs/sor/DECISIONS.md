@@ -401,3 +401,10 @@ DISAHKAN: Ijamm requests random, nonrepeating questions throughout each current 
 ## 22 October 2026 — Rich text color only (2.21.3)
 
 DISAHKAN: Ijamm removes decorative underlines from rich text because they compete with fraction bars. Category colors remain pink/math, green/game and purple/calculation. Preserve true fraction bars and focus/tooltip behavior. Supersedes previous underline styling. Owner: 10_UI_UX_ACCESSIBILITY.md.
+
+## DEC-20261023-AUDIO4 — Apply normalized talking (2.22.0)
+
+- DISAHKAN: Ijamm asks to apply the prepared audio package directly to main v2.21.3. This supersedes the earlier no-push/package-only instruction. Audio implementation continues on `music` before integration to main.
+- DISAHKAN: Standardize all talking volume and bind the supplied filenames to question/help, Rest, happy card selection, defeat, Mystery intro and ordered Shop/Dungeon Master encounters.
+- DITERUSKAN: Use the verified -18 LUFS package, 49 actual voice files and eight unchanged BGM, preserving Menu/Mystery and existing SFX. The card-reward source contains eight recordings; do not invent the requested-but-unsupplied ninth/tenth. Use independent audio variation, saved consumption receipts, existing separate mixer settings and scope-safe cancellation. Practice audio remains isolated from game saves.
+- PERLU_VERIFIKASI: human audition, transcripts/captions, loop seams and Ijamm's physical Windows/device playback. [Implementation and actual checks](../AUDIO_2_22_0.md).

@@ -146,3 +146,7 @@ Build/portable/syntax and all 398 Node/jsdom tests passed with zero skips. Brows
 ## Passive and supplied audio — 2.20.0
 
 Verify free swap cancel, exact payment/stat removal, trigger history and legacy four-to-ten migration with deferred Predict/card choices, repeated click/choice-ID safety and complete physical-card conservation. Test source hashes/all fifteen decodes, actual surface/voice routing, independent settings, late-load/autoplay/hidden races, catalog rebuild and portable embedding. Inspect native popup geometry on narrow/short/desktop/wide screens and run the full Node/jsdom suite. Final measured results and limits: [Passive and Music 2.20.0](../PASSIVE_AND_MUSIC_2_20_0.md).
+
+## Normalized talking — 2.22.0
+
+Verify all 49 installed voice hashes against the normalized package; retain eight BGM hashes and Menu/Mystery fallback. Cover actual question/Hint/More Hint controls, successful Rest commit, card reward choices, defeat, all 15 fixed Mystery mappings and independent NPC order. Check reload consumption, shuffle bags/no immediate repeat, gameplay RNG invariance, legacy metadata recovery, mute/zero/hidden cancellation, stale decode/ended callbacks, start deadline, watchdog and restored Music duck. Exercise native Chromium MP3 decode/playback, trusted Practice-frame messages and portable offline embedding. Keep automated playback distinct from human audition/Windows-device checks. [Evidence and limits](../AUDIO_2_22_0.md).

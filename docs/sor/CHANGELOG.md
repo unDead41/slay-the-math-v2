@@ -309,3 +309,10 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 - Remove decorative rich-text underlines and token bottom borders from runtime and source styles, including cards, artifact runtime and Practice legends.
 - Preserve category colors, true mathematical fraction bars and keyboard focus/tooltip behavior.
 - Record the new color-only rule in AGENTS.md and the UI/UX SOR.
+
+## Game 2.22.0 — Normalized talking, 23 October 2026
+
+- Apply 49 normalized MUSIC(4) voices with explicit canonical assets; retain eight unchanged supplied BGM, Menu/Mystery fallback and existing SFX.
+- Bind Alyssa thinking, Hint, More Hint, committed Rest, eight available reward-card variants, defeat and 15 matching Mystery intros to actual game/Practice presentation. Retain normalized ordered Dungeon Master/Merchant encounters.
+- Add independent audio shuffle bags, saved consumption receipts, scope cancellation, automatic start deadlines and watchdog cleanup; preserve game RNG, save compatibility, timed Mystery resolution and v2.21.3 rich text.
+- Extend production/portable registry generation and meaningful controller, save and actual-UI regressions. [Scope, evidence and audition limits](../AUDIO_2_22_0.md).

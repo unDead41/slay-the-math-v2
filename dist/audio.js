@@ -30,6 +30,7 @@ class Music{
   this.ducked=false;this.ducks=new Map();this.generation=0;this.voiceGeneration=0;
   this.loading=null;this.loadingGeneration=-1;this.cache=new Map();this.requests=new Map();
   this.voiceSurface=null;this.voiceOwner=null;this.pendingVoice=null;
+  this.voiceDelayTimer=null;this.voiceDeadlineTimer=null;this.voiceWatchdog=null;
   this.status='Press any button to start music.';this.voiceStatus='';this.error=null;this.onchange=null;
  }
  get duckFactor(){return Math.min(1,...this.ducks.values());}
@@ -88,7 +89,7 @@ class Music{
  }
  setRoute(run,home=false,presentation={}){
   this.routeTrack=trackFor(run,home,presentation);if(!this.previewId)this.setTrack(this.routeTrack);
-  this.syncVoice(home?null:presentation.encounter,run);
+  this.syncVoice(home&&!presentation.voiceOwner?null:presentation.encounter,presentation.voiceOwner||run);
  }
  preview(id){const key=this.resolve(id);if(!key||this.assets.assets[key].bus!=='bgm')return;this.previewId=key;this.setTrack(key);}
  endPreview(){this.previewId=null;this.setTrack(this.routeTrack);}
@@ -174,37 +175,50 @@ class Music{
   if(!encounter||typeof encounter.key!=='string'||!id||this.assets.assets[id].bus!=='voice'||!sequence?.includes(id))encounter=null;
   const same=encounter&&this.voiceSurface&&this.voiceOwner===owner&&this.voiceSurface.key===encounter.key&&this.voiceSurface.voiceId===id;
   if(same)return;
+  // An obsolete scope always yields, even to lower-priority thinking in a new question.
+  if(encounter?.scope&&this.voiceOwner===owner&&encounter.scope===this.voiceSurface?.scope&&(this.voiceActive||this.pendingVoice)&&encounter.priority<this.voiceSurface.priority)return;
   if(!encounter&&!this.voiceSurface&&!this.pendingVoice&&!this.voiceActive)return;
   this.voiceGeneration++;this.cancelLoads('voice');this.pendingVoice=null;
   this.stopVoice(encounter?0:.08);
   this.voiceOwner=encounter?owner:null;this.voiceSurface=encounter?{...encounter,voiceId:id}:null;
   if(!encounter||this.voiceMuted||this.voiceVolume===0||this.hidden)return;
-  this.pendingVoice={...this.voiceSurface,token:this.voiceGeneration};
+  const now=this.voiceNow(),deadline=encounter.startDeadlineMs??(encounter.speaker==='alyssa'?2000:0);
+  this.pendingVoice={...this.voiceSurface,token:this.voiceGeneration,notBefore:now+(encounter.delayMs||0),expiresAt:deadline?now+deadline:Infinity};
+  if(deadline){const token=this.voiceGeneration;this.voiceDeadlineTimer=this.voiceTimer(()=>{if(token!==this.voiceGeneration||this.voiceActive)return;this.voiceGeneration++;this.pendingVoice=null;this.cancelLoads('voice');this.stopVoice(0);},deadline);}
   this.playPendingVoice();
  }
+ voiceNow(){return (this.host.Date||Date).now();}
+ voiceTimer(fn,ms){const timer=this.host.setTimeout(fn,ms);timer?.unref?.();return timer;}
+ clearVoiceTimers(){for(const key of ['voiceDelayTimer','voiceDeadlineTimer','voiceWatchdog']){if(this[key]!==null)this.host.clearTimeout(this[key]);this[key]=null;}}
  async playPendingVoice(){
   const pending=this.pendingVoice;
   if(!pending||!this.unlocked||this.hidden||this.voiceMuted||this.voiceVolume===0||this.ctx?.state!=='running')return;
+  if(this.voiceNow()>=pending.expiresAt){this.pendingVoice=null;this.clearVoiceTimers();return;}
+  if(this.voiceNow()<pending.notBefore){if(this.voiceDelayTimer===null)this.voiceDelayTimer=this.voiceTimer(()=>{this.voiceDelayTimer=null;if(pending.token===this.voiceGeneration)this.playPendingVoice();},pending.notBefore-this.voiceNow());return;}
   this.pendingVoice=null;const token=pending.token;
   try{
    const buffer=await this.readAudio(pending.voiceId);
-   if(token!==this.voiceGeneration||this.hidden||this.voiceMuted||this.voiceVolume===0||this.voiceSurface?.key!==pending.key)return;
+   if(token!==this.voiceGeneration||this.hidden||this.voiceMuted||this.voiceVolume===0||this.voiceSurface?.key!==pending.key||this.voiceNow()>=pending.expiresAt)return;
    if(this.ctx.state!=='running'){this.unlocked=false;this.pendingVoice=pending;return;}
    const ctx=this.ctx,source=ctx.createBufferSource(),gain=ctx.createGain();
    source.buffer=buffer;source.loop=false;source.playbackRate.value=1;source.connect(gain);gain.connect(this.voiceMaster);
    gain.gain.setValueAtTime(1,ctx.currentTime);
    const active={id:pending.voiceId,source,gain,token};this.voiceActive=active;
+   this.clearVoiceTimers();
    source.onended=()=>{
     this.voiceTails.delete(active);source.disconnect();gain.disconnect();
     if(this.voiceActive!==active)return;
+    this.clearVoiceTimers();
     this.voiceActive=null;this.voiceStatus='';this.setDuck('voice',1);this.emit();
    };
    source.start(ctx.currentTime);this.voiceStatus='Speaking';this.setDuck('voice',.3);this.emit();
+   this.voiceWatchdog=this.voiceTimer(()=>{if(this.voiceActive===active){this.stopVoice(0);this.emit();}},(buffer.duration+2)*1000);
   }catch(_){
    if(token===this.voiceGeneration){this.stopVoice(0);this.voiceStatus='Voice could not load. You can keep playing.';this.emit();}
   }
  }
  stopVoice(fade=.08){
+  this.clearVoiceTimers();
   if(this.ctx){for(const tail of this.voiceTails)try{tail.source.stop(this.ctx.currentTime);}catch(_){}this.voiceTails.clear();}
   const old=this.voiceActive;this.voiceActive=null;
   if(old){this.ramp(old.gain,0,fade);if(fade>0)this.voiceTails.add(old);try{old.source.stop(this.ctx.currentTime+fade);}catch(_){}}

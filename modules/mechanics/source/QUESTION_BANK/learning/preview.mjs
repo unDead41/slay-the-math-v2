@@ -283,7 +283,7 @@ function render(){
   byId('empty-title').textContent=available?'Your next topic is ready.':'No unseen questions remain here.';
   byId('empty-message').textContent=available?'Select Next unseen question to continue learning.':nextTopic?'Choose another topic above, or explore the collection in Review.':'You have seen the whole collection. Review any question, or start a fresh learning record from Practice record.';
   byId('empty-state').append(byId('next-question'));byId('next-question').disabled=!available;byId('next-question').textContent=available?'Next unseen question →':'No unseen questions here';
-  QL.applyInterface(root,contentLanguage);return;
+  QL.applyInterface(root,contentLanguage);notifyAudio(null);return;
  }
  // The same button returns to the folio after an exhausted topic changes.
  byId('question-surface').querySelector('.folio-navigation').insertBefore(byId('next-question'),byId('next-question-note'));
@@ -314,6 +314,13 @@ function render(){
  byId('next-question').textContent=mode==='learn'?'Next unseen question →':'Next review →';
  byId('next-question-note').textContent=mode==='learn'&&session.pendingQuestionId?'Finish this question or view its solution to continue.':mode==='learn'?'Your next question has not been seen in this learning record.':'';
  QL.applyInterface(root,contentLanguage);
+ notifyAudio(record,view.closed);
+}
+
+// The host owns the one global Voice bus. Practice never reads or changes a run.
+function notifyAudio(record,closed=false){
+ if(parent===window)return;
+ parent.postMessage(record?{type:'stm-education-practice-audio',questionId:question.id,key:questionKey(),closed:!!closed,hintUsed:!!record.hintState.hintUsed,moreHintViewed:!!record.hintState.moreHintViewed}:{type:'stm-education-practice-audio-clear'},location.origin==='null'?'*':location.origin);
 }
 
 function setAtlasOpen(open,{restoreFocus=false}={}){

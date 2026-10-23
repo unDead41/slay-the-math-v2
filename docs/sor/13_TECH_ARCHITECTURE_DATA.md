@@ -191,3 +191,7 @@ Development-only server response adapters and memory storage isolate previews fr
 ## Run question sampling — 2.21.2
 
 Rewarded consumers explicitly request the shared reducer selectionPolicy random; independent Practice retains its adaptive default. All sampling consumes only question RNG and filters the shared runUsedIds ledger. Stage 1 Retry now uses carryRunQuestions like checkpoint Retry. No save schema or bank content changes; existing pending IDs and ordered attempts remain frozen. [Contract](../QUESTION_RANDOM_2_21_2.md).
+
+## Normalized talking — 2.22.0
+
+Optional audioPresentation version 1 gains a bounded Alyssa receipt ledger, independent audio RNG and validated per-group shuffle bags; NPC metadata remains compatible. Reserve before scheduling/save, freeze variant IDs, suppress replay of consumed lines across restore, and recover malformed presentation data independently of game validation. The app projects authoritative question/help state and records Rest after successful engine commit. Practice messages require the current frame, same origin and a valid bank ID, with an isolated in-memory audio owner. Async generation/owner checks, two-second automatic start deadlines and voice watchdogs keep playback independent of resolution/timers. Active registry and portable build own all 49 normalized voices; save envelope, gameplay RNG and current rich-text rules are unchanged. [Owner and evidence](../AUDIO_2_22_0.md).

@@ -1,0 +1,1439 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-23",
+  "scope": "archive/source integrity, audio normalization and post-encode measurement, asset/document consistency",
+  "passedChecks": 251,
+  "checks": [
+    {
+      "name": "asset_counts",
+      "passed": true,
+      "detail": "57 active assets: 49 voice / 8 music"
+    },
+    {
+      "name": "unique_ids",
+      "passed": true,
+      "detail": "no collisions"
+    },
+    {
+      "name": "unique_package_paths",
+      "passed": true,
+      "detail": "57 canonical active paths"
+    },
+    {
+      "name": "unique_proposed_paths",
+      "passed": true,
+      "detail": "57 proposed import paths"
+    },
+    {
+      "name": "source_crc_and_decode",
+      "passed": true,
+      "detail": "original archive CRC and 57 full audio decodes"
+    },
+    {
+      "name": "active_hash:vo_alyssa_question_01",
+      "passed": true,
+      "detail": "MUSIC/answering question/question_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_question_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/answering question/question_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_question_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18,
+        "truePeakDbTP": -3.44
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_question_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_question_02",
+      "passed": true,
+      "detail": "MUSIC/answering question/question_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_question_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/answering question/question_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_question_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -3.7
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_question_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_question_03",
+      "passed": true,
+      "detail": "MUSIC/answering question/question_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_question_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/answering question/question_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_question_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.03,
+        "truePeakDbTP": -2.4
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_question_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:bgm_boss_stage_1",
+      "passed": true,
+      "detail": "MUSIC/combat_boss_stage_1_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_boss_stage_1",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:bgm_boss_stage_2",
+      "passed": true,
+      "detail": "MUSIC/combat_boss_stage_2_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_boss_stage_2",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:bgm_combat_stage_1",
+      "passed": true,
+      "detail": "MUSIC/combat_normal_elite_stage_1_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_combat_stage_1",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:bgm_combat_stage_2",
+      "passed": true,
+      "detail": "MUSIC/combat_normal_elite_stage_2_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_combat_stage_2",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:vo_dm_01",
+      "passed": true,
+      "detail": "MUSIC/dungeon_master_when_selecting_artifact_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_dm_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/dungeon_master_when_selecting_artifact_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_dm_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.94,
+        "truePeakDbTP": -4.21
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_dm_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_dm_02",
+      "passed": true,
+      "detail": "MUSIC/dungeon_master_when_selecting_artifact_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_dm_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/dungeon_master_when_selecting_artifact_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_dm_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -8.36
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_dm_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_dm_03",
+      "passed": true,
+      "detail": "MUSIC/dungeon_master_when_selecting_artifact_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_dm_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/dungeon_master_when_selecting_artifact_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_dm_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.92,
+        "truePeakDbTP": -8.25
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_dm_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_dm_04",
+      "passed": true,
+      "detail": "MUSIC/dungeon_master_when_selecting_artifact_talking_4.mp3"
+    },
+    {
+      "name": "original_preserved:vo_dm_04",
+      "passed": true,
+      "detail": "ORIGINALS/talking/dungeon_master_when_selecting_artifact_talking_4.mp3"
+    },
+    {
+      "name": "loudness:vo_dm_04",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18,
+        "truePeakDbTP": -6.27
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_dm_04",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me08_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Blind Oracle.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me08_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Blind Oracle.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me08_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -4.94
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me08_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me06_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Bound Collector.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me06_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Bound Collector.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me06_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -2.14
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me06_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me09_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Broken Forge.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me09_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Broken Forge.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me09_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.95,
+        "truePeakDbTP": -3.22
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me09_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me10_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Burning Archive.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me10_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Burning Archive.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me10_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -5.58
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me10_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me11_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Cinder Garden.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me11_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Cinder Garden.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me11_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -3.28
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me11_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me04_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Cracked Mirror.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me04_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Cracked Mirror.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me04_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -4.78
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me04_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me15_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Dungeon Master’s Bargain.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me15_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Dungeon Master’s Bargain.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me15_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -2.71
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me15_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me13_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Echo Chamber.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me13_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Echo Chamber.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me13_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -3.91
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me13_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me02_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Ember Shrine.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me02_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Ember Shrine.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me02_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -3.27
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me02_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me12_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Fallen Adventurer.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me12_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Fallen Adventurer.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me12_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18,
+        "truePeakDbTP": -4.01
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me12_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me05_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Forgotten Fountain.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me05_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Forgotten Fountain.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me05_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.94,
+        "truePeakDbTP": -1.89
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me05_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me07_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Lost Scholar.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me07_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Lost Scholar.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me07_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -4.79
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me07_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me14_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Shattered Hourglass.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me14_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Shattered Hourglass.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me14_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18,
+        "truePeakDbTP": -5.17
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me14_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me01_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Suspicious Chest.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me01_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Suspicious Chest.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me01_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -2.8
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me01_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:voice_alyssa_mystery_me03_entry",
+      "passed": true,
+      "detail": "MUSIC/event_talking/The Whispering Grimoire.mp3"
+    },
+    {
+      "name": "original_preserved:voice_alyssa_mystery_me03_entry",
+      "passed": true,
+      "detail": "ORIGINALS/talking/event_talking/The Whispering Grimoire.mp3"
+    },
+    {
+      "name": "loudness:voice_alyssa_mystery_me03_entry",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -5.86
+      }
+    },
+    {
+      "name": "voice_playback_policy:voice_alyssa_mystery_me03_entry",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_hint_01",
+      "passed": true,
+      "detail": "MUSIC/getting hint/hint_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_hint_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting hint/hint_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_hint_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -2.57
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_hint_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_hint_02",
+      "passed": true,
+      "detail": "MUSIC/getting hint/hint_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_hint_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting hint/hint_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_hint_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -5.75
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_hint_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_hint_03",
+      "passed": true,
+      "detail": "MUSIC/getting hint/hint_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_hint_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting hint/hint_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_hint_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -2.38
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_hint_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_hint_04",
+      "passed": true,
+      "detail": "MUSIC/getting hint/hint_talking_4.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_hint_04",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting hint/hint_talking_4.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_hint_04",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.97,
+        "truePeakDbTP": -5.29
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_hint_04",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_more_hint_01",
+      "passed": true,
+      "detail": "MUSIC/getting more hint/more_hint_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_more_hint_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting more hint/more_hint_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_more_hint_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -3.32
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_more_hint_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_more_hint_02",
+      "passed": true,
+      "detail": "MUSIC/getting more hint/more_hint_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_more_hint_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting more hint/more_hint_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_more_hint_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.1,
+        "truePeakDbTP": -1.99
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_more_hint_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_more_hint_03",
+      "passed": true,
+      "detail": "MUSIC/getting more hint/more_hint_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_more_hint_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting more hint/more_hint_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_more_hint_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.32,
+        "truePeakDbTP": -2.05
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_more_hint_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_more_hint_04",
+      "passed": true,
+      "detail": "MUSIC/getting more hint/more_hint_talking_4.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_more_hint_04",
+      "passed": true,
+      "detail": "ORIGINALS/talking/getting more hint/more_hint_talking_4.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_more_hint_04",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -3.64
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_more_hint_04",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_run_defeat_01",
+      "passed": true,
+      "detail": "MUSIC/lose a run/if_lose_a_run_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_run_defeat_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/lose a run/if_lose_a_run_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_run_defeat_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18,
+        "truePeakDbTP": -3.94
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_run_defeat_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_run_defeat_02",
+      "passed": true,
+      "detail": "MUSIC/lose a run/if_lose_a_run_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_run_defeat_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/lose a run/if_lose_a_run_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_run_defeat_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -4.64
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_run_defeat_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_run_defeat_03",
+      "passed": true,
+      "detail": "MUSIC/lose a run/if_lose_a_run_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_run_defeat_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/lose a run/if_lose_a_run_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_run_defeat_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.95,
+        "truePeakDbTP": -1.98
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_run_defeat_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_run_defeat_04",
+      "passed": true,
+      "detail": "MUSIC/lose a run/if_lose_a_run_talking_4.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_run_defeat_04",
+      "passed": true,
+      "detail": "ORIGINALS/talking/lose a run/if_lose_a_run_talking_4.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_run_defeat_04",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -4.84
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_run_defeat_04",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:bgm_shop",
+      "passed": true,
+      "detail": "MUSIC/merchant_or_shop_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_shop",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:vo_shop_01",
+      "passed": true,
+      "detail": "MUSIC/merchant_when_open_shop_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_shop_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/merchant_when_open_shop_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_shop_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -2.1
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_shop_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_shop_02",
+      "passed": true,
+      "detail": "MUSIC/merchant_when_open_shop_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_shop_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/merchant_when_open_shop_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_shop_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.1,
+        "truePeakDbTP": -1.9
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_shop_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_shop_03",
+      "passed": true,
+      "detail": "MUSIC/merchant_when_open_shop_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_shop_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/merchant_when_open_shop_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_shop_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.21,
+        "truePeakDbTP": -1.98
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_shop_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_rest_01",
+      "passed": true,
+      "detail": "MUSIC/resting/resting_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_rest_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/resting/resting_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_rest_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -3.69
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_rest_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_rest_02",
+      "passed": true,
+      "detail": "MUSIC/resting/resting_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_rest_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/resting/resting_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_rest_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.88,
+        "truePeakDbTP": -2
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_rest_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_rest_03",
+      "passed": true,
+      "detail": "MUSIC/resting/resting_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_rest_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/resting/resting_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_rest_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -6.23
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_rest_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_rest_04",
+      "passed": true,
+      "detail": "MUSIC/resting/resting_talking_4.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_rest_04",
+      "passed": true,
+      "detail": "ORIGINALS/talking/resting/resting_talking_4.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_rest_04",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.35,
+        "truePeakDbTP": -1.77
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_rest_04",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:bgm_rest",
+      "passed": true,
+      "detail": "MUSIC/rest_site_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_rest",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_01",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_1.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_01",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_1.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_01",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.97,
+        "truePeakDbTP": -4.31
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_01",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_02",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_2.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_02",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_2.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_02",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -7.09
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_02",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_03",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_3.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_03",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_3.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_03",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.11,
+        "truePeakDbTP": -3.24
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_03",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_04",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_4.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_04",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_4.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_04",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -18.01,
+        "truePeakDbTP": -2.21
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_04",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_05",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_5.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_05",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_5.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_05",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -4.68
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_05",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_06",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_6.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_06",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_6.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_06",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.99,
+        "truePeakDbTP": -6.28
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_06",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_07",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_7.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_07",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_7.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_07",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -1.95
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_07",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:vo_alyssa_reward_card_08",
+      "passed": true,
+      "detail": "MUSIC/select card reward/select_card_reward_talking_8.mp3"
+    },
+    {
+      "name": "original_preserved:vo_alyssa_reward_card_08",
+      "passed": true,
+      "detail": "ORIGINALS/talking/select card reward/select_card_reward_talking_8.mp3"
+    },
+    {
+      "name": "loudness:vo_alyssa_reward_card_08",
+      "passed": true,
+      "detail": {
+        "integratedLufs": -17.98,
+        "truePeakDbTP": -4.55
+      }
+    },
+    {
+      "name": "voice_playback_policy:vo_alyssa_reward_card_08",
+      "passed": true,
+      "detail": "one-shot, rate 1.0, unity clip gain"
+    },
+    {
+      "name": "active_hash:bgm_defeat",
+      "passed": true,
+      "detail": "MUSIC/when_lose_current_run.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_defeat",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "active_hash:bgm_map",
+      "passed": true,
+      "detail": "MUSIC/when_open_map_bg.mpeg"
+    },
+    {
+      "name": "bgm_unchanged:bgm_map",
+      "passed": true,
+      "detail": "unchanged source bytes"
+    },
+    {
+      "name": "normalization_coverage",
+      "passed": true,
+      "detail": "49 normalized outputs match manifest"
+    },
+    {
+      "name": "post_normalization_decode",
+      "passed": true,
+      "detail": "49 successful full output decodes"
+    },
+    {
+      "name": "duration_tolerance",
+      "passed": true,
+      "detail": "all 49 within 0.1 second container tolerance; no intentional trim"
+    },
+    {
+      "name": "normalized_hash_alignment",
+      "passed": true,
+      "detail": "manifest equals normalization results"
+    },
+    {
+      "name": "volume_flags",
+      "passed": true,
+      "detail": "all normalized clips passed"
+    },
+    {
+      "name": "group_counts",
+      "passed": true,
+      "detail": {
+        "question": 3,
+        "dungeon_master": 4,
+        "mystery": 15,
+        "hint": 4,
+        "more_hint": 4,
+        "defeat": 4,
+        "merchant": 3,
+        "rest": 4,
+        "card_reward": 8
+      }
+    },
+    {
+      "name": "group_assets:question",
+      "passed": true,
+      "detail": "3 clips"
+    },
+    {
+      "name": "group_assets:hint",
+      "passed": true,
+      "detail": "4 clips"
+    },
+    {
+      "name": "group_assets:more_hint",
+      "passed": true,
+      "detail": "4 clips"
+    },
+    {
+      "name": "group_assets:rest",
+      "passed": true,
+      "detail": "4 clips"
+    },
+    {
+      "name": "group_assets:card_reward",
+      "passed": true,
+      "detail": "8 clips"
+    },
+    {
+      "name": "group_assets:defeat",
+      "passed": true,
+      "detail": "4 clips"
+    },
+    {
+      "name": "group_assets:mystery",
+      "passed": true,
+      "detail": "15 clips"
+    },
+    {
+      "name": "group_assets:dungeon_master",
+      "passed": true,
+      "detail": "4 clips"
+    },
+    {
+      "name": "group_assets:merchant",
+      "passed": true,
+      "detail": "3 clips"
+    },
+    {
+      "name": "reward_count_honest",
+      "passed": true,
+      "detail": "8 supplied; no invented 9/10 files"
+    },
+    {
+      "name": "mystery_ids",
+      "passed": true,
+      "detail": "ME01–ME15 one-to-one"
+    },
+    {
+      "name": "mystery_source_binding",
+      "passed": true,
+      "detail": "exact supplied filenames, IDs and source hashes"
+    },
+    {
+      "name": "mystery_speaker",
+      "passed": true,
+      "detail": "ME15 remains Alyssa, distinct from Dungeon Master artifact voice"
+    },
+    {
+      "name": "history_preserved:MUSIC/docs/audio/audio-cues.v1.csv",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/docs/audio/audio-manifest.v1.json",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/docs/audio/IMPLEMENTATION_CHECKLIST.md",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/docs/audio/source-audit.v1.json",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/docs/audio/STM_AUDIO_SOR_v1.md",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/docs/audio/VERIFICATION_v1.json",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/MUSIC/event_talking/MYSTERY_VOICE_DOCS_v1.zip",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/MUSIC/event_talking/SOR_MYSTERY_EVENT_ENTRY_VOICE_v1.md",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "history_preserved:MUSIC/README.md",
+      "passed": true,
+      "detail": "exact original document/archive bytes"
+    },
+    {
+      "name": "csv_alignment",
+      "passed": true,
+      "detail": "57 exact mappings and resolvable files"
+    },
+    {
+      "name": "normalized_files_count",
+      "passed": true,
+      "detail": "49 active normalized voices only"
+    },
+    {
+      "name": "backup_files_count",
+      "passed": true,
+      "detail": "49 original backups only"
+    },
+    {
+      "name": "no_incomplete_placeholders",
+      "passed": true,
+      "detail": "primary SOR has no unfinished markers"
+    },
+    {
+      "name": "all_assets_in_usage_table",
+      "passed": true,
+      "detail": "all 57 IDs documented"
+    },
+    {
+      "name": "runtime_status_honest",
+      "passed": true,
+      "detail": "asset preparation only; no game installation claimed"
+    }
+  ],
+  "voiceCount": 49,
+  "musicCount": 8,
+  "allSourcesDecoded": true,
+  "allNormalizedOutputsDecoded": true,
+  "allVoiceLoudnessWithinTolerance": true,
+  "allVoiceTruePeakWithinCeiling": true,
+  "normalizedIntegratedRangeLufs": [
+    -18.35,
+    -17.88
+  ],
+  "maxNormalizedTruePeakDbTP": -1.77,
+  "originalVoicesPreserved": true,
+  "bgmPreserved": true,
+  "sourceDocumentsPreserved": true,
+  "perceptualAuditionPerformed": false,
+  "browserPlaybackTested": false,
+  "gameRuntimeChanged": false,
+  "githubPushPerformed": false,
+  "mainMerged": false
+}

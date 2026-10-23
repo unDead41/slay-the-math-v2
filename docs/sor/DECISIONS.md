@@ -409,6 +409,9 @@ DISAHKAN: Ijamm removes decorative underlines from rich text because they compet
 - DITERUSKAN: Use the verified -18 LUFS package, 49 actual voice files and eight unchanged BGM, preserving Menu/Mystery and existing SFX. The card-reward source contains eight recordings; do not invent the requested-but-unsupplied ninth/tenth. Use independent audio variation, saved consumption receipts, existing separate mixer settings and scope-safe cancellation. Practice audio remains isolated from game saves.
 - PERLU_VERIFIKASI: human audition, transcripts/captions, loop seams and Ijamm's physical Windows/device playback. [Implementation and actual checks](../AUDIO_2_22_0.md).
 
+## Developer toggle — 23 October 2026
+
+DISAHKAN: npm start dev launches main menu with synchronized Dev ON/OFF in menu and Settings; enable reveals Developer Hub, disable blocks developer mutations. Implement on dev-tools only; no main publication.
 
 ## DEC-20261023-ICONS — Apply reviewed icon package (2.23.0)
 
@@ -416,3 +419,7 @@ DISAHKAN: Ijamm removes decorative underlines from rich text because they compet
 - DITERUSKAN: use 129 lossless 512px runtime derivatives for 130 catalogue entries; canonical Sound is shared. Connect existing UI/map/status/artifact/card consumers and add the eleven reviewed symbols only to existing states/actions/topic labels. Preserve source art, stable IDs, save format, card/artifact values, question selection and v2.22.0 audio.
 - DITERUSKAN: retain resampled 4K/FHD/1080 review exports separately; commit a compact runtime registry, hash manifest and build-safe card overrides. Version game 2.23.0 to make the production change visible.
 - PERLU_VERIFIKASI: classroom comprehension and Ijamm's physical Windows/device display remain outside automated checks. MODEL.zip was unavailable and is not applied. [Implementation and validation](../ICON_PACKAGE_2_23_0.md).
+
+## Main integration — 2.23.1
+
+DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle to main over v2.23.0. This supersedes the earlier branch-only restriction. Keep production free of developer controls; use npm start dev to see the main-menu and Settings toggle.

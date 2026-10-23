@@ -1,0 +1,14 @@
+{
+  "branch": "dev-tools",
+  "base": "e0244be1f2bc18f847b5b6177a668b93e1b0bae4",
+  "mainUpdated": true,
+  "checks": {
+    "nodeDeveloperTests": "8 passed",
+    "browserDeveloperHub": "passed scenes, cards, motion, restart, presets, player-storage isolation",
+    "browserToggle": "passed npm start dev, default OFF, synchronized settings/menu, disabled mutations, reload persistence, mobile width, Hub combat",
+    "syntax": "npm run check passed; controls.js separately checked",
+    "production": "v2.23.1 npm run build:prod passed"
+  },
+  "behavior": "Native session preference only; sandbox gameplay storage remains temporary.",
+  "release": "2.23.1"
+}

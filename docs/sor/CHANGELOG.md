@@ -317,6 +317,9 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 - Add independent audio shuffle bags, saved consumption receipts, scope cancellation, automatic start deadlines and watchdog cleanup; preserve game RNG, save compatibility, timed Mystery resolution and v2.21.3 rich text.
 - Extend production/portable registry generation and meaningful controller, save and actual-UI regressions. [Scope, evidence and audition limits](../AUDIO_2_22_0.md).
 
+## Developer toggle — 23 October 2026
+
+Add npm start dev alias, main-menu-first development startup and synchronized menu/Settings developer toggle with session preference and player-storage isolation.
 
 ## Game 2.23.0 — Reviewed icon package, 23 October 2026
 
@@ -324,3 +327,7 @@ Whole-frame reward selection; fixed-size Read Ahead; compact one-viewport combat
 - Add dedicated visuals to existing boss-seal states, mixed enemy intent, Skill category, separate mixer mute controls, Save/Export/Import and the three topic labels. Keep all text/counts/44px status buttons.
 - Add one canonical registry/resolver for the app, source Artifact HUD/Codex and offline embeds; make card illustration overrides survive rebuilds. Record input/runtime hashes and honest source resolution in the import manifest.
 - Bump main's production metadata from 2.22.0 to 2.23.0 and retain normalized talking/audio integration. [Scope and actual checks](../ICON_PACKAGE_2_23_0.md).
+
+## Game 2.23.1 — Developer toggle on main
+
+Merge main-menu/Settings Dev ON/OFF and npm start dev alias into v2.23.0, retaining the reviewed icon and audio packages. Production remains free of developer tools.

@@ -5,7 +5,7 @@ let browser,server,debugPage;const port=process.env.QA_DEV_PORT||'4261',url='htt
  server=spawn(process.execPath,['server.cjs','--dev'],{cwd:require('node:path').resolve(__dirname,'..'),env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe']});await new Promise((ok,no)=>{server.stdout.once('data',ok);server.once('error',no);server.stderr.once('data',x=>no(Error(String(x))))});
  browser=await chromium.launch({headless:true,args:['--no-sandbox'],...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{})});
  const page=debugPage=await browser.newPage({viewport:{width:1600,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto(url);await page.waitForFunction(()=>document.getElementById('preview').contentWindow.STMDevApi);
+ await page.goto(url+'/__dev/');await page.waitForFunction(()=>document.getElementById('preview').contentWindow.STMDevApi);
  const frame=page.frames().find(f=>f.url().includes('/__dev/sandbox/'));
  await page.evaluate(()=>{localStorage.setItem('duel-cube-math.v1','PLAYER SENTINEL');localStorage.setItem('duel-cube-question-history.v1','HISTORY SENTINEL');localStorage.setItem('duel-cube-settings.v1','SETTINGS SENTINEL');});
  await page.locator('#launch').click();await frame.waitForSelector('.combat-layout');

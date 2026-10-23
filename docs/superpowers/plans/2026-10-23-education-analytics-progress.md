@@ -31,3 +31,8 @@ Interface preflight: analytics emits immutable changed record snapshots -> root/
 - Clean production build passed. Regeneration is idempotent; all 65 hashed runtime resources and release-prod copies match. No Dev controls or private database remain in production. Engine/bank/audio bytes match main 2.24.0. Portable output295,440,182 bytes remains ignored.
 - The final production inspection found an untracked database from an earlier rejection experiment under dist/new-data; it was never staged/uploaded. Removed that test artifact and added/verified a production refusal guard before rebuilding.
 - Final Git publication is feature-branch only, with exact local/native tree equality and a leased ref update. Main must remain at2800f9a.
+
+
+## Published feature branch
+
+Implementation commit 374abb14c2008272e1ec9da98c4e86b94aec8fd4 was published to education-analytics with a leased fast-forward, and fetched back with exact tree 645c747b7d3854ca96dbf2c026a5f4b2ecc15eeb equality. Remote main remains 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7. Windows instructions now fetch the feature ref explicitly and create from FETCH_HEAD without requiring an upstream mapping, supporting repositories configured to fetch main only. No main merge/update occurred.

@@ -9,13 +9,12 @@ Stop the old server with Ctrl+C. Keep any local edits before changing branches:
 ```powershell
 git status -sb
 git stash push -m "backup-before-education-analytics"
-git fetch origin
-git switch education-analytics
-git pull --ff-only origin education-analytics
+git fetch origin education-analytics
+git switch -c education-analytics --no-track FETCH_HEAD
 npm.cmd start
 ```
 
-If the local branch does not yet exist, use `git switch --track origin/education-analytics` in place of `git switch education-analytics`. Do not restore an old stash over generated files just to start the game. The stash remains available for a separate review.
+Fetching this branch explicitly and creating it from FETCH_HEAD also works for a checkout configured to fetch only main. If your local education-analytics branch already exists, use `git switch education-analytics` followed by `git pull --ff-only origin education-analytics` instead of the creation command. Do not restore an old stash over generated files just to start the game. The stash remains available for a separate review.
 
 Open `http://localhost:4173` and choose **Learning Report** from Main Menu, Settings or Education Practice. The version on the menu must read **v2.25.0-analytics.1**. Close older game tabs before testing this branch.
 

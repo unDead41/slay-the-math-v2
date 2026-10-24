@@ -1,5 +1,15 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-MASTER-SOR — Shared project and branch compatibility guidance
+
+**DISAHKAN:** Ijamm defines this chat as Master Audit — Branch Compatibility: verify actual GitHub main/branch SHAs, distinguish merge/remaining changes from current module compatibility, prioritize main for merged modules, test relevant scope and report VALID, PERLU UPDATE, CONFLICT or BELUM DISAHKAN with evidence and limits. Audit alone does not authorize code changes, merge or push. Ijamm then requests a reusable project SOR, asks for it to be installed, and asks to push it to GitHub.
+
+**DITERUSKAN:** publish [MASTER_SOR_PROJECT.md](../../MASTER_SOR_PROJECT.md), version 1.1.0, on the repository default branch main, and add it to the minimum reading in [AGENTS.md](../../AGENTS.md) and [SOR_README.md](../../SOR_README.md). Preserve all existing instructions and domain ownership. SOR means Set of Rules in this repository; the Master file provides cross-module working guidance. Its audit statuses do not replace governance decision statuses.
+
+**CADANGAN:** Mathematics Slayer remains the name example discussed by Ijamm. No instruction to rename the game, repository, URL, package IDs or saves is inferred from publishing this SOR.
+
+**Scope and risk:** documentation only; preserve game/release versions, runtime, assets, saved data and other branch history. Repository guidance requires sessions to read the files; GitHub publication does not configure ChatGPT Project Instructions or Project Sources. Review the documentation diff and new relative links, and verify the published commit/ref; runtime and browser testing are outside this documentation-only change.
+
 ## DEC-20261024-COMBAT-POLISH-MAIN — Publish completed combat polish as 2.32.0
 
 **DISAHKAN:** Ijamm now says “Okay push ke main please”. This supersedes the previous branch-only publication boundary for this completed combat update. Fast-forward tested main `6dc3ce3` through feature `b422a18`, then publish version/cache metadata and actual combined verification as 2.32.0. Preserve original art/icon mappings, source animations, gameplay/RNG and saves. The feature’s poster-based browser coverage and incomplete production/offline-build coverage remain explicit limits. [Main verification](../COMBAT_MOTION_MAIN_2_32_0.md).

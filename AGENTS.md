@@ -8,10 +8,11 @@ Bantu Ijamm membina permainan kad strategi matematik berasaskan web. Kekalkan Sl
 
 ## Bacaan minimum
 
-1. [Governance](docs/sor/00_GOVERNANCE.md).
-2. [Visi dan skop](docs/sor/01_GAME_VISION_SCOPE.md).
-3. [Daftar keputusan](docs/sor/DECISIONS.md).
-4. [Dua design semasa](docs/sor/18_DESIGN_REFERENCES.md), kemudian SOR modul terlibat.
+1. [Master SOR projek](MASTER_SOR_PROJECT.md) untuk audit merentas branch, semakan kesan dan perubahan identiti.
+2. [Governance](docs/sor/00_GOVERNANCE.md).
+3. [Visi dan skop](docs/sor/01_GAME_VISION_SCOPE.md).
+4. [Daftar keputusan](docs/sor/DECISIONS.md).
+5. [Dua design semasa](docs/sor/18_DESIGN_REFERENCES.md), kemudian SOR modul terlibat.
 
 | Tugasan | SOR tambahan |
 | --- | --- |
@@ -44,6 +45,7 @@ Nombor dalam jadual merujuk kepada fail bernombor dalam `docs/sor/`.
 - **AGT-15:** Sheet dungeon terkini mengatasi kostum mage lama. Lindung/Benteng ialah Guard pada ID sama; jangan menggandakan kad kerana alias.
 - **AGT-16:** Design awal tidak mengaktifkan Passive. Resource Focus kekal; Ward ialah nama kerja konsep ungu.
 - **AGT-17:** Tiga fokus Probability ialah subfokus T1. Jangan menghilangkan T2/T3 atau mendakwa semua topik pada satu tingkatan tanpa pemetaan.
+- **AGT-18:** Ikuti [Master SOR](MASTER_SOR_PROJECT.md) bagi audit keserasian: semak main/branch sebenar dan SHA, bezakan keadaan Git daripada keserasian modul, utamakan modul pada main jika sudah merged, serta laporkan status, bukti, fail, ujian dan batasan. Audit sahaja tidak membenarkan perubahan, merge atau push. Dokumen pemilik domain dan arahan terkini Ijamm kekal berkuat kuasa.
 
 ## Peringatan konteks
 

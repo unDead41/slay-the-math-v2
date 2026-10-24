@@ -1,5 +1,7 @@
 # Slay the Math — Set of Rules
 
+Current cross-branch audit and project-wide guidance: [Master SOR](MASTER_SOR_PROJECT.md), version 1.1.0, 24 October 2026. Read through [AGENTS.md](AGENTS.md); preserve the existing governance/domain owners. GitHub publication provides repository guidance, not automatic ChatGPT Project setup. Mathematics Slayer remains a proposed name; this documentation update does not rename the game.
+
 Current card rules, game 2.34.0: [approved card effects](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md). Percentage statuses apply throughout their attack phase; prior ordinary saves and historical reports retain their original definitions. Current Master identity is candidate.4. AI incoming-damage estimates and support attribution use the active rules.
 
 Current combat presentation, game 2.32.0: [main polish and actual verification](docs/COMBAT_MOTION_MAIN_2_32_0.md), [RPG status baseline](docs/ALYSSA_STATUS_VFX_2_28_0.md), [motion owner](docs/sor/11_ANIMATION_VFX_AUDIO.md) and [SFX search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md). Prioritized actual status/Block receipts, combined Passive labels, ten motifs and Low/Full intensity preserve existing artwork, gameplay, Master balancing and analytics.

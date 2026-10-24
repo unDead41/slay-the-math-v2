@@ -1,5 +1,11 @@
 # Changelog SOR — Slay the Math
 
+## Master SOR 1.1.0 — 24 October 2026
+
+- Add [project-wide Master SOR](../../MASTER_SOR_PROJECT.md) for actual GitHub branch/SHA checks, merge-versus-module compatibility, cross-module impacts, scoped evidence and four audit statuses.
+- Link through AGENTS.md and SOR_README.md without replacing current governance, domain owners or earlier decisions. [Decision](DECISIONS.md#dec-20261024-master-sor--shared-project-and-branch-compatibility-guidance).
+- Record Mathematics Slayer as a proposal, retain explicit change/push boundaries and distinguish repository guidance from ChatGPT Project setup. Documentation only; no game version, runtime, asset or save change.
+
 ## Game 2.34.0 — 24 October 2026, card-effects main integration
 
 - Ijamm authorizes main publication of the completed card audit. Combine feature `a9c49f0` with main `c54ce92`, retaining the current menu recording, AI Playtester and existing presentation/assets/save contracts.

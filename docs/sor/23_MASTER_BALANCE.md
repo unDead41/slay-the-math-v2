@@ -1,4 +1,4 @@
-# 23 — Master balancing, game 2.34.0
+# 23 — Master balancing, branch 2.38.0-card-tuning.1
 
 Pemilik: Ijamm. Tarikh: 23 Oktober 2026. Branch pembangunan: `balance/master`; destinasi penerbitan yang disahkan: `main`.
 
@@ -72,3 +72,8 @@ DISAHKAN: approved card audit, feature-branch publication only. Current binding 
 ## MB-11 — Card effects main integration, 2.34.0
 
 DISAHKAN: Ijamm's follow-up “okay push ke main” supersedes MB-10's feature-only publication boundary. Merge card-effects `a9c49f0` with main `c54ce92` / 2.33.0 and identify the combined release as 2.34.0. Preserve both AI and audio histories. The AI consumes candidate.4 and uses actual engine incoming-damage calculations; phase-based status ownership and emergency retention telemetry follow the new rules. Older numeric AI reports remain evidence of their original candidate.3 source, not measurements of this revision. [Integration evidence](../CARD_EFFECTS_MAIN_2_34_0.md).
+
+
+## MB-12 — Card tuning follow-up, assistant branch only
+
+DISAHKAN: Ijamm's latest instruction authorizes this follow-up on `balance/card-effects-20261024` only; MB-11's earlier main approval applies to 2.34.0. Current branch identity is `master-1.5.0-candidate.5`. Last Page draws 2 +1 when Hand is empty; Recall costs 0 with Exhaust. Master Mana Barrier remains 7X with its existing Focus and upgrade allocation. Profiles, enemies, artifacts, economics, map and questions are unchanged. Candidate.4 saves and numeric cohorts remain historical and separate. [Current owner](../CARD_TUNING_2_38_0.md), [audit](../audits/card-effects/LATEST.md).

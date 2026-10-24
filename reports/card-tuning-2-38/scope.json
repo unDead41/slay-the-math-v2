@@ -1,0 +1,41 @@
+{
+  "base": "6376a222169815af582cf55aa4794f3c809a3515",
+  "modes": {
+    "ordinary": {
+      "stableIds": 40,
+      "stableArtwork": 40,
+      "unchangedDefinitions": 37
+    },
+    "master": {
+      "stableIds": 40,
+      "stableArtwork": 40,
+      "unchangedDefinitions": 37
+    }
+  },
+  "unchangedMasterDomains": [
+    "profiles",
+    "enemies",
+    "artifacts",
+    "economicArtifacts",
+    "profileOverrides"
+  ],
+  "archivedV1CardsSHA256": "a2900a4d2a532539bb911d2b310739b27ac9439f5de089302568e95c916462fa",
+  "masterManaNumbersUnchanged": true,
+  "concurrentMain": {
+    "sha": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+    "exactRetainedPaths": [
+      "docs/DEV_FEATURES.md",
+      "docs/audits/dev-tools/LATEST.md",
+      "docs/sor/20_DEVELOPER_TOOLS.md",
+      "tests/dev-toggle-browser.cjs",
+      "tests/production-dev-browser.cjs",
+      "tools/dev/access.js",
+      "tools/dev/controls.js"
+    ],
+    "appendHistoriesRetained": [
+      "docs/sor/CHANGELOG.md",
+      "docs/sor/DECISIONS.md"
+    ],
+    "metadataFollowUp": "2.37.1 changes package/release metadata and three audit histories only; feature remains 2.38.0-card-tuning.1, generated from its own verified runtime."
+  }
+}

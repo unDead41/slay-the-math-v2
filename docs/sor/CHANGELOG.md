@@ -1,5 +1,12 @@
 # Changelog SOR — Slay the Math
 
+## 2.38.0-card-tuning.1 — 24 October 2026 — Assistant branch candidate
+
+- Tune Last Page to Draw 2 +1 empty at 1 Energy, Recall to 0 Energy with Exhaust, and ordinary Mana Barrier to 7X. Preserve Master Mana Barrier and growth bonuses.
+- Keep ordinary v0/v1 definitions, pending paid/unpaid choices and Shop metadata under their original rules; introduce marker2 and separate Master candidate.5 storage.
+- Exclude hypothetical AI card-choice ranking from actual Block/effect telemetry. Preserve existing main question, icon and developer-tool updates.
+- Branch-only authorization and evidence: [owner](../CARD_TUNING_2_38_0.md), [audit](../audits/card-effects/LATEST.md).
+
 ## Master SOR 1.2.0 — 24 October 2026
 
 - Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.

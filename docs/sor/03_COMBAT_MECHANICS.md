@@ -138,3 +138,8 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+
+## Card tuning follow-up — 2.38.0-card-tuning.1
+
+DISAHKAN: Ijamm authorizes updating the assistant branch only after the 40-card audit. Last Page becomes Draw 2 +1 empty-Hand at 1 Energy; Recall costs 0 and retains Exhaust; ordinary Mana Barrier becomes 7X. Master Mana Barrier and both growth Passives retain their numbers. New ordinary marker `card-effects-2` preserves unmarked and `card-effects-1` runs, pending payments and opened offers. Master candidate.5 uses separate save keys. Actual AI choice commits are observed after policy ranking. [Current owner and verification](../CARD_TUNING_2_38_0.md). Numerical tuning is a playtest candidate, not verified pupil balance.

@@ -1,4 +1,6 @@
-# Slay the Math — 2.36.0
+# Slay the Math — 2.38.0-card-tuning.1
+
+Assistant-branch card tuning: Last Page draws 2 +1 empty-Hand; Recall costs 0 and Exhausts; ordinary Mana Barrier gives 7 Block per Energy. AI card-choice telemetry counts actual actions. Existing ordinary saves retain their own rules; start a New Run for the candidate. [Changes, save compatibility and verification](docs/CARD_TUNING_2_38_0.md). Publication is limited to `balance/card-effects-20261024`.
 
 Version **2.36.0** integrates clearer in-game Question / Help / Result tabs, two
 answers per game question, the simpler Learning Report and all120 review ticks/

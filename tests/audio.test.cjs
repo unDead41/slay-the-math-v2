@@ -146,7 +146,7 @@ test('hidden page stops voice and show resumes BGM without replaying greeting',a
 });
 
 test('showing the page while suspension is pending resumes after that suspension finishes',async()=>{
- const r=rig();r.music.setTrack('menu');r.music.unlock();await r.tick();r.release('menu.ogg');await r.tick();
+ const r=rig();r.music.setTrack('menu');r.music.unlock();await r.tick();r.release(registry.assets.menu.srcs[0]);await r.tick();
  const ctx=r.music.ctx;let release;
  ctx.suspend=()=>new Promise(resolve=>{release=()=>{ctx.state='suspended';resolve();};});
  const hiding=r.music.setHidden(true);await r.tick();await r.music.setHidden(false);release();await hiding;await r.tick();

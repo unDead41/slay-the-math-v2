@@ -1073,15 +1073,19 @@
       "id": "menu",
       "bus": "bgm",
       "srcs": [
-        "assets/music/menu.ogg",
-        "assets/music/menu.mp3"
+        "assets/music/menu_ancient_stone_keep.mp3"
       ],
-      "title": "The Door Below",
+      "title": "Ancient Stone Keep",
       "label": "Main Menu",
-      "duration": 72,
+      "duration": 199.608,
       "loop": true,
       "playbackRate": 1,
-      "retainedFallback": true
+      "clipGain": 1,
+      "sourceFile": "Menu.mp3.mpeg",
+      "sourceSha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681",
+      "packageSha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681",
+      "artist": "zaimshahbudin",
+      "loopAuditionVerified": false
     },
     "mystery": {
       "id": "mystery",

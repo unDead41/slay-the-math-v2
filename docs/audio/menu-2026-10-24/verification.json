@@ -1,0 +1,36 @@
+{
+  "version": "2.32.1",
+  "branch": "music",
+  "checks": [
+    "Opening menu selects the supplied track and waits for the first player gesture",
+    "Menu artwork changes retain the same playing source; returning from combat restores the new menu cue",
+    "Music controls preview the new title and saved mute remains effective",
+    "Portable offline build embeds the exact new MP3 and plays it without network"
+  ],
+  "browser": "153.0.8010.0",
+  "menu": {
+    "title": "Ancient Stone Keep",
+    "duration": 199.57349206349207,
+    "sampleRate": 44100,
+    "loop": true,
+    "rate": 1,
+    "volume": 0.37
+  },
+  "errors": [],
+  "limits": [
+    "Automated native Web Audio playback/decode; human listening, loop-seam and physical-device checks not performed."
+  ],
+  "status": "PASS",
+  "focusedTests": {
+    "status": "PASS",
+    "tests": 45,
+    "failures": 0,
+    "skipped": 0,
+    "scope": "Audio controller/presentation/registry, real UI, entrypoints and release build"
+  },
+  "syntax": "PASS",
+  "productionBuild": "PASS",
+  "portableBytes": 302886092,
+  "otherRegistryAssetsPreserved": 84,
+  "sourceAndRuntimeSha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681"
+}

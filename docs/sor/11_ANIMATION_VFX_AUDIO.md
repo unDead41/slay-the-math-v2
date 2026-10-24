@@ -194,3 +194,8 @@ DISAHKAN: Ijamm authorizes applying the prepared MUSIC(4) package to main v2.21.
 ## Expanded talking and checked answers — 2.24.0
 
 DISAHKAN: check latest main (2.23.1), apply MUSIC(5) on music first, then integrate into main. Registry pack 5 adds 26 mastered recordings: answering +4, Hint +4, More Hint +4, correct +5 and wrong +9, for 75 voices total. All 57 preceding supplied assets retain their exact bytes and records. New encoded MP3s measure -18.03 to -17.93 LUFS, peak at most -1.85 dBTP. Checked answer/support event order owns reactions; selection, timeout, abandonment, Reveal and exhaustion do not fabricate answer outcomes. This supersedes 2.22.0's absence of answer voices. Triggers, importer, volume audit and limits: [Audio 2.24.0](../AUDIO_2_24_0.md).
+
+
+## Supplied Main Menu recording — game 2.32.1
+
+DISAHKAN: Ijamm supplies Menu.mp3.mpeg for the opening/Main Menu, first requests publication to music only, then explicitly authorizes main publication. Replace the canonical menu cue with Ancient Stone Keep at assets/music/menu_ancient_stone_keep.mp3. The active registry chooses only this MP3; historical menu OGG files cannot shadow it. Retain full-track loop, first-gesture browser unlock, saved mute/volume and ordinary scene routing/crossfades. The input is preserved byte-for-byte; other music and all 75 voices retain their existing owners. [Source, authorization and actual checks](../audio/menu-2026-10-24/README.md).

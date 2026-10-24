@@ -448,3 +448,10 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 - Merge the reviewed Google Sheets education collection feature with main 2.29.0, preserving single-enemy cards/candidate.3, legacy receipts, Alyssa status effects, original artwork/audio and Pages setup.
 - Main Menu/Settings/Practice Learning Report includes Google /exec configuration and opt-in delivery with offline pending records, current-destination consent/receipts and exact confirmed upserts. Ship one copyable Apps Script receiver and BM owner setup.
 - Regenerate package/version/cache entrypoints; retain all main QA commands and add Google build/QA. Live Google authorization/deployment remains an explicit owner step. [Main integration](../GOOGLE_SHEETS_MAIN_2_30_0.md).
+
+
+## 2.32.1 — New Main Menu music
+
+- Use the supplied Menu.mp3.mpeg / Ancient Stone Keep recording for Home, preserving its exact MP3 bytes and replacing the canonical menu source so old OGG files cannot override it.
+- Preserve existing Music settings, first-gesture unlock, full-track looping, scene crossfades and all talking. Generate normal/production/offline builds from the shared registry.
+- Publish the completed music-branch update to main following Ijamm's explicit follow-up authorization. [Source and actual verification](../audio/menu-2026-10-24/README.md).

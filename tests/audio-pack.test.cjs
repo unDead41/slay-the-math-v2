@@ -19,14 +19,17 @@ test('active pack selects all 75 normalized voices and exactly the eight unchang
   assert.equal(a.playbackRate,1);assert.equal(a.clipGain,1);
   if(a.bus==='voice'){assert.ok(Math.abs(a.integratedLufs+18)<=.5);assert.ok(a.truePeakDbTP<=-1);assert.equal(a.loop,false);}
  }
- assert.equal(p.assets.menu.retainedFallback,true);assert.equal(p.assets.mystery.retainedFallback,true);
+ assert.equal(p.assets.menu.retainedFallback,undefined);assert.equal(p.assets.mystery.retainedFallback,true);
+ assert.deepEqual(p.assets.menu.srcs,['assets/music/menu_ancient_stone_keep.mp3']);
+ assert.equal(sha(fs.readFileSync(path.join(root,'dist',p.assets.menu.srcs[0]))),'9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681','Main Menu uses the newly supplied recording');
+ assert.equal(p.assets.menu.loop,true);assert.equal(p.assets.menu.playbackRate,1);
 });
 
-test('MUSIC(5) adds 26 mastered recordings while retaining every prior registry asset byte for byte',()=>{
+test('MUSIC(5) retains the previous assets except the explicitly replaced Main Menu cue',()=>{
  const p=require('../dist/music-data.js').assets,old=JSON.parse(fs.readFileSync(path.join(root,'dist/assets/music/audio-pack-4.json'),'utf8'));
  const audit=JSON.parse(fs.readFileSync(path.join(root,'docs/audio/source-pack-5/audio-manifest.v3.json'),'utf8'));
  assert.equal(audit.newAssets.length,26);assert.equal(audit.sourceZip.sha256,'bfdb64a198b9b1d6c15d65c2a62f98f1b12c1a1e52dd76e016601947d62378e6');
- for(const [id,a]of Object.entries(old.assets))assert.deepEqual(p.assets[id],a,'unchanged prior asset '+id);
+ for(const [id,a]of Object.entries(old.assets))if(id!=='menu')assert.deepEqual(p.assets[id],a,'unchanged prior asset '+id);
  assert.deepEqual(Object.fromEntries(['question','hint','more_hint','correct','wrong'].map(g=>[g,p.voicePools[g].length])),{question:7,hint:8,more_hint:8,correct:5,wrong:9});
  for(const a of audit.newAssets){
   const asset=p.assets[a.id],bytes=fs.readFileSync(path.join(root,'dist',asset.srcs[0]));

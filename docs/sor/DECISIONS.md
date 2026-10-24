@@ -567,3 +567,10 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - DISAHKAN: Ijamm supplies Menu.mp3.mpeg for the game's opening menu and asks to update the music branch without pushing/merging main. This branch-only boundary applies to this new recording and supersedes earlier audio-release authorization for main.
 - DITERUSKAN: base this patch on current main 264a60e / 2.32.0; identify the branch build as 2.32.1. Replace only the stable menu cue with the supplied Ancient Stone Keep MP3. Retain its exact bytes at a canonical .mp3 path, full-track loop and normal controller unlock/mute/scene behavior.
 - IMPLEMENTED source/audit owner: [Main Menu music](../audio/menu-2026-10-24/README.md). Automated decode/playback does not claim human listening, seamless-loop approval or physical-device validation.
+
+
+## DEC-20261024-MENU-MUSIC-MAIN — Publish the supplied menu recording
+
+- DISAHKAN: Ijamm's follow-up “push ke main please” authorizes publishing the completed music update to main. This supersedes DEC-20261024-MENU-MUSIC's earlier branch-only boundary.
+- DITERUSKAN: integrate music 0f6e426 with current main 264a60e / 2.32.0, retaining game 2.32.1 and the already verified runtime. Preserve the current combat-motion polish, tutorial, balance, analytics, original artwork and save rules.
+- VERIFIED: 84 production/runtime resources match, including the exact new menu MP3; native browser/offline results are recorded in the source audit folder. The 45 focused audio/UI/entrypoint/release checks are repeated for publication. Hosted CI remains separate from local verification. [Source and evidence](../audio/menu-2026-10-24/README.md).

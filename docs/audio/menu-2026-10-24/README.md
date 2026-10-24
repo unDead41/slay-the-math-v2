@@ -1,6 +1,6 @@
-# New Main Menu music — music branch, 2.32.1
+# New Main Menu music — game 2.32.1
 
-Ijamm supplied `Menu.mp3.mpeg` on 24 October 2026 and requested using it when opening the game's Main Menu. This update is authorized for branch `music` only. Do not merge or push it to `main` without a new instruction.
+Ijamm supplied `Menu.mp3.mpeg` on 24 October 2026 and requested using it when opening the game's Main Menu. The update was first published to `music` as requested. His subsequent instruction, “push ke main please”, authorizes publishing this completed update to `main` as game 2.32.1 and supersedes the original branch-only boundary.
 
 The branch starts from current main `264a60ecec7e64251304cdbc58b587a8867502ab` / 2.32.0. The existing audio registry `dist/assets/music/audio-pack-5.json` remains the one runtime source. Only its stable `menu` cue is replaced, with the explicit source `assets/music/menu_ancient_stone_keep.mp3`; the former OGG cannot take precedence. The generated music catalog displays **Ancient Stone Keep — Main Menu**. The package remains source pack 5 for its existing voice/BGM collection; the individually supplied menu replacement has its own audit here.
 

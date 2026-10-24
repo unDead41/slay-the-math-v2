@@ -176,6 +176,6 @@ Import the verified `STM_Icons_Individual_FHD_1080.zip` review PNGs using `tools
 `dist/assets/icon-package.json` records both archive hashes, each source/runtime hash and the audit/integration base commits. Original input exports were resampled from generated review boards around 1403 × 1121, so exported 4K dimensions are not native detail. Keep the labeled review sheets and FHD/1080 masters outside the runtime; the added runtime artwork totals 13.45 MiB. `dist/icon-assets.js` owns UI/map/status/artifact/card/topic mappings and aliases. Main UI and source Artifact UI share the online/embedded resolver; every build reapplies card illustration overrides without replacing source card data or frames. See [06](06_ICON_SYSTEM.md), ICO-10–13.
 
 
-## Supplied Main Menu MP3 — music branch 2.32.1
+## Supplied Main Menu MP3 — game 2.32.1
 
 Menu.mp3.mpeg is an MP3 container with audio at 48 kHz stereo, 199.608 s. Copy its exact 4,701,741 bytes to assets/music/menu_ancient_stone_keep.mp3 without re-encoding or editing the original. SHA-256 is 9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681. The canonical menu record in audio-pack-5.json owns the runtime source; the generated catalog and portable DC_MUSIC.menu consume that record. Preserve the prior menu files as historical provenance. Detailed source metadata and earlier menu record: [audit](../audio/menu-2026-10-24/source-audit.json). Human loop audition remains unverified.

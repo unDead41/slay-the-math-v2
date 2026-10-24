@@ -13,3 +13,8 @@ The supplied scene is now a full encounter background, matching the established 
 ## Economy candidate — 23 October 2026
 
 For opt-in economyState only, [SOR 22](22_ECONOMY_REWARDS.md) adapts all fifteen events to saved economy profiles: times, Gold/heal/cost/failure and ME15/ME14 specifics. Live stakes/eligibility/resolver/validation share the frozen adapted definition. ME03 remains Skill-only; ME04 same-category/reset upgrade; ME10 keeps at least ten; ME13 creates one Normal encounter with only Normal rewards. Legacy pending deadlines/prices/questions remain untouched. Topic/question data and random nonrepeat selection are unchanged. Values remain candidate, not student win-rate evidence.
+
+
+## In-game question workspace — 24 October 2026
+
+DISAHKAN: Ijamm changes bank events from one answer to at most two. First wrong retains question phase, deadline, offers and RNG, unlocks both hints and applies no failure transaction. Correct retry succeeds; second wrong ends in incorrect review. Timeout/abandon retain their established terminal paths; Continue settles once. Do not reset the timer during retry, Help, menu or reload. [Current policy](../education/GAME_QUESTIONS.md).

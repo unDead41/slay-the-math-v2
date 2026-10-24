@@ -1,6 +1,16 @@
 # Google Sheets — Slay the Math
 
-Pratonton **2.31.0-report.2**, branch **education-report**, berasaskan main 2.30.0. Perubahan laporan dan tetapan developer belum diterbitkan ke main. Akaun Google, Sheet dan deployment Apps Script masih disediakan pemilik sekali sahaja. Laporan latihan terus berfungsi tanpa sambungan Google. [Panduan pratonton](LEARNING_REPORT_PREVIEW.md).
+Pratonton **2.31.0-report.3**, branch **education-report**, berasaskan main 2.30.0. Perubahan laporan dan tetapan developer belum diterbitkan ke main. Akaun Google, Sheet dan deployment Apps Script masih disediakan pemilik sekali sahaja. Laporan latihan terus berfungsi tanpa sambungan Google. [Panduan pratonton](LEARNING_REPORT_PREVIEW.md).
+
+## Kemas kini penerima sedia ada untuk report.3
+
+Perubahan soalan **dalam game** kini mempunyai event polisi dua cubaan. Gantikan
+Code.gs dalam projek Apps Script yang sama dengan fail repo terkini, kekalkan
+STM_ALLOWED_GAME_ORIGINS sebenar, kemudian **Deploy → Manage deployments → Edit →
+New version → Deploy**. Kekalkan deployment dan URL /exec yang sama; Sheet dan
+Script Properties sedia ada tidak perlu dibina semula. Penerima lama boleh menolak
+rekod polisi baharu; rekod belum disahkan kekal dalam giliran. [Panduan perubahan
+soalan dan langkah terperinci](education/GAME_QUESTIONS.md).
 
 ## Apa yang anda dapat
 
@@ -29,7 +39,7 @@ Hentikan server game lama dengan **Ctrl+C**. Dalam PowerShell di folder projek:
 }
 ```
 
-Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` tanpa menyemak perubahan itu terlebih dahulu. Buka **http://localhost:4173**. Terminal dan menu perlu memaparkan **v2.31.0-report.2**. Jika port digunakan, hentikan proses server lama dahulu. Google collection menggunakan `npm start` biasa; `start:analytics` hanya diperlukan bagi pilihan SQLite yang lama.
+Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` tanpa menyemak perubahan itu terlebih dahulu. Buka **http://localhost:4173**. Terminal dan menu perlu memaparkan **v2.31.0-report.3**. Jika port digunakan, hentikan proses server lama dahulu. Google collection menggunakan `npm start` biasa; `start:analytics` hanya diperlukan bagi pilihan SQLite yang lama.
 
 ## 2. Cipta penerima Google sekali sahaja
 
@@ -77,7 +87,7 @@ Jangan clear site data sebelum penerimaan disahkan atau sebelum mengeksport sali
 
 Dalam branch ini, tick bermaksud **Sudah disemak**, berasingan daripada betul/salah. Komen boleh ditulis tanpa tick. Pilih tab **Maklum balas** pada soalan; semua perubahan disimpan secara automatik pada peranti. Tapisan **Belum disemak / Sudah disemak / Ada maklum balas** membantu menyambung semakan.
 
-Apabila perkongsian diaktifkan, tick dan komen menggunakan penerima Google yang sama. Dalam tab **Comments**, medan **Question** bermula dengan `[REVIEWED] ` jika soalan ditick; medan **Comment** mengekalkan teks asal, termasuk had 2000 aksara. Untick mengekalkan komen/kategori dan mengemas kini baris sama. Jika tiada tick, komen atau kategori lagi, penanda pemadaman sedia ada digunakan. Tiada lajur atau field protokol baharu; pautan `/exec` sedia ada boleh digunakan tanpa redeploy kerana perubahan Practice ini.
+Apabila perkongsian diaktifkan, tick dan komen menggunakan penerima Google yang sama. Dalam tab **Comments**, medan **Question** bermula dengan `[REVIEWED] ` jika soalan ditick; medan **Comment** mengekalkan teks asal, termasuk had 2000 aksara. Untick mengekalkan komen/kategori dan mengemas kini baris sama. Jika tiada tick, komen atau kategori lagi, penanda pemadaman sedia ada digunakan. Perubahan tick/komen Practice sendiri tidak memerlukan lajur atau protokol baharu. Untuk pakej report.3 keseluruhan, kemas kini deployment seperti di atas kerana polisi soalan dalam game turut berubah; URL `/exec` yang sama boleh dikekalkan.
 
 ## Cara membaca Sheet
 

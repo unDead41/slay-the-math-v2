@@ -1,0 +1,860 @@
+{
+  "base": "ceaaaf5e00d2d8c9960f4736771e9b4ba0ac0216",
+  "branch": "education-report",
+  "version": "2.31.0-report.3",
+  "protectedFiles": 706,
+  "originalAssets": 606,
+  "changedProtectedFiles": [],
+  "protectedManifestSHA256": "31a6dfc4f5ea89ab92abf8c5a3839e6f42e09360b7ae70ea046ed3907767adaa",
+  "productionFilesIdentical": 685,
+  "runtimeResourcesVerified": 78,
+  "resourceSHA256": {
+    "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
+    "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
+    "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
+    "music.css": "969fed6d068de80695aab6866031fed020adcdc3e0ff4f0df54d1337e500d92c",
+    "dungeon.css": "e303c1a5a6be561ef78c5962d56f2b25db612032cfce4c5ab14d19bbf9abd543",
+    "scene.css": "1e865966d0bc0601d47767a7b7cdda79729dc9b93b6e306a37da9b389bbdb8f7",
+    "combat.css": "860b7e946ecc4f2d7a686671ff319d6a290d0ef6b4b6479f6bf94a66ab05862f",
+    "dungeon-2-3.css": "ce7aed65f6d0a5f9f16063b3d0b6b76440da2f152b84258016db41fb0cdb10cc",
+    "artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
+    "mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
+    "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
+    "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
+    "education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
+    "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
+    "animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
+    "hand.css": "cd52cf1c7c42978b56ae978bdec07aa04c1dce2243ee47503ae80ca8f310d476",
+    "mechanics-host.css": "138a24eaffb062b7c82eac66457c72ffdadbc817be26c88e58b001e52c84c2a7",
+    "shop.css": "bb7f039dfff9fa10ff1270ea1bf8f8822134ea49dac91c1aedc1acb7e6119ee2",
+    "mystery.css": "ac1fe38ebd6ac50cc7c1cbdf08602a7f383ba7c90354dfeae66e6418ee213c61",
+    "cards.css": "983579dd64d3737e62291c882f187a42f563ec483ed24f568b53da13d4b9cb68",
+    "combat-compact.css": "1a3b4cb712415ab5dd7fb7147f27d7dabaf6ab3f2b482af2064262bb5489f758",
+    "passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+    "icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
+    "card-motion.css": "927ecf6affc053a8a384e1b760552d91bf4e175c76c66df8bf845496ee5a273f",
+    "analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
+    "status-vfx.css": "a741eef9646981611447d6bf5c2cf3c17d01f5423bc076f1b6396f922831e935",
+    "release.js": "33ba10f3f443aae3489fb59a520b7ed9e627d4ec83e60a233fcc260bf0c2d286",
+    "card-data.js": "b519e9cba7387656f86eca65642080a938d1253666995b91d294858758bd1c81",
+    "balance-data.js": "5f4391410240cf770c5060cfd00d3d08dc93684fae6d89d3f203634f02711bf9",
+    "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "icon-assets.js": "82f3bf36b255a5723f67ccaf82bd4aefc47cfcd41f9f1881287d3efa20f13074",
+    "card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
+    "card-kit.js": "6470cd7445aee863ad6eab19b2cd1ff6959ddede78ccc64d91ea40ef32e246a8",
+    "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "mechanics.js": "861a33ae7f167c2984b7dfbb3c80b4c1994378dd5cfbdefba3801957eeedb697",
+    "question-language.js": "88d085fd08f83db1953df3bcdf636b36079eaab6487330b19e03100c28667ca1",
+    "rich-text-data.js": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
+    "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "balance-config.js": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
+    "rich-text.js": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+    "economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "artifacts.js": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d",
+    "question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
+    "mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "mystery.js": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
+    "combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "combat-predict.js": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a",
+    "card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "card-combat.js": "55e7490e328b62fc590614a7d3061085d71b674a4fc42bfc95f7655401f4e0da",
+    "engine.js": "7057221a75e7b9cac1fe0965f05fb5903a62097496b4834d61aa4247d1947444",
+    "music-data.js": "dc2442ded9e366567b65ca247f55e7d9984d685dcc93fd5ae9e2f04750cd9ca7",
+    "audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
+    "audio.js": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17",
+    "visuals.js": "5466d2bbaf6016a6b1cbcaf9e3a8c7e6c11eed9c890446a846214f7a0ea2c4c5",
+    "animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
+    "animation.js": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52",
+    "artifact-ui.js": "b5a9d93f313af4d5cdaf2ff121d4bba59b3840cc66e8b8a750d2c5f42fe352e1",
+    "mechanics-host.js": "ba1377c8588008f30b1d3153ee9411de1968b6e85672cfdb85d84c06b89dbfc4",
+    "hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
+    "mystery-ui.js": "086cfe739d0ae9bcbc5043a684bcc77bfdb545af45b8240cf4db3ac4d60958ee",
+    "education-practice.js": "1cf58d2ac207da20d707c6d781be6634e3fc19586032d65a305e691dc362b2f9",
+    "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
+    "combat-status.js": "c3b93d38e6593517af089eaee0d76af752251c264165a1e066e164482acf7f96",
+    "status-vfx.js": "b08065599bfca0c2b17fe5298095e7e2411dfdaebf3941179dcfa978725e2543",
+    "card-motion.js": "1771f5914f0121cecdc00eeb4a7ef5a0ee919a64313ca33eec0a2fbd0382c49a",
+    "learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
+    "learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
+    "learning-sync.js": "a45da8f82dd33088ca707687e9856db88ca4a2d449b28752b15bb2d0c6087125",
+    "learning-collection-config.js": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2",
+    "learning-google.js": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf",
+    "learning-delivery.js": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275",
+    "analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
+    "app.js": "b4e6677b55b3c594fbd6e9ca7bc57121c494c350273a4b8bccc6e6e9555a7eb7"
+  },
+  "receiverSHA256": "27d365febeb32e4435753eab13d04c111ac254c1a3111f7c4e17a83badc47172",
+  "receiverBytes": 106721,
+  "receiverChangedForVersionedPolicy": true,
+  "portableBytes": 295734751,
+  "liveGoogleAccountTested": false,
+  "physicalDevicesTested": false,
+  "serialFullSuite": {
+    "status": "passed",
+    "tests": 793,
+    "pass": 793,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 395806.805252,
+    "concurrency": 1,
+    "node": "24.19.0",
+    "jsdom": "26"
+  },
+  "native": {
+    "fullApp": {
+      "flows": [
+        {
+          "kind": "predict",
+          "language": "en",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        }
+      ],
+      "geometry": [
+        {
+          "kind": "predict",
+          "language": "en",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            856,
+            856
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            60,
+            1366,
+            534
+          ],
+          "targets": [
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.25,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "en",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            282,
+            282
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            74,
+            390,
+            407.09375
+          ],
+          "targets": [
+            [
+              90,
+              59.578125
+            ],
+            [
+              90,
+              59.578125
+            ],
+            [
+              90,
+              59.578125
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "en",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            702,
+            702
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            45,
+            844,
+            165
+          ],
+          "targets": [
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            638,
+            638
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              208.578125,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            298,
+            298
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            245
+          ],
+          "targets": [
+            [
+              95.328125,
+              58.1875
+            ],
+            [
+              95.328125,
+              58.1875
+            ],
+            [
+              95.34375,
+              58.1875
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            698,
+            698
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            156
+          ],
+          "targets": [
+            [
+              228.59375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            553,
+            553
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              180.28125,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            280,
+            280
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            422
+          ],
+          "targets": [
+            [
+              89.328125,
+              59.578125
+            ],
+            [
+              89.328125,
+              59.578125
+            ],
+            [
+              89.34375,
+              59.578125
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            660,
+            660
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            195
+          ],
+          "targets": [
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            856,
+            856
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            60,
+            1366,
+            534
+          ],
+          "targets": [
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.25,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            282,
+            282
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            74,
+            390,
+            407.09375
+          ],
+          "targets": [
+            [
+              90,
+              77.765625
+            ],
+            [
+              90,
+              77.765625
+            ],
+            [
+              90,
+              77.765625
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            702,
+            702
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            45,
+            844,
+            165
+          ],
+          "targets": [
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            638,
+            638
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              208.578125,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            298,
+            298
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            245
+          ],
+          "targets": [
+            [
+              95.328125,
+              59.578125
+            ],
+            [
+              95.328125,
+              59.578125
+            ],
+            [
+              95.34375,
+              59.578125
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            698,
+            698
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            156
+          ],
+          "targets": [
+            [
+              228.59375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            553,
+            553
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              180.28125,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            280,
+            280
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            422
+          ],
+          "targets": [
+            [
+              89.328125,
+              77.765625
+            ],
+            [
+              89.328125,
+              77.765625
+            ],
+            [
+              89.34375,
+              77.765625
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            660,
+            660
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            195
+          ],
+          "targets": [
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ]
+          ]
+        }
+      ],
+      "errors": [],
+      "webSecurityEnabled": true
+    },
+    "all120GameComponent": {
+      "questions": 120,
+      "states": 360,
+      "language": "ms",
+      "viewport": [
+        390,
+        844
+      ],
+      "component": "real DCArtifactUI + STMMechanicsHost; app controller omitted",
+      "checks": [
+        "All120 question choices and rich text",
+        "First-wrong Hint and More Hint with filled values",
+        "Two-wrong lock and canonical worked steps",
+        "No workspace/document horizontal overflow; strict saves"
+      ],
+      "webSecurityEnabled": true,
+      "errors": []
+    },
+    "googleServiceBoundary": {
+      "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+      "checks": [
+        "The project default reaches the player report without URL controls, eager network or inherited consent.",
+        "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+        "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+        "Actual host reload replays local review flags through the same delivery projection with no invalid payload or duplicate row.",
+        "Reviewed tick and full comment reach the current generated Google receiver together; offline untick/edit updates one row and preserves the comment.",
+        "No capability in frame URLs; desktop/mobile journal has internal scroll, no URL controls and preserved question search."
+      ],
+      "errors": [],
+      "webSecurityEnabled": true
+    },
+    "practiceAndOffline": {
+      "checks": [
+        "Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.",
+        "All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.",
+        "Learning progress and pending Hint survive a reload. Existing pending Artifact trial and rewarded question history remain byte-identical.",
+        "Portable SLAY-THE-MATH-OFFLINE.html opens Education Practice with all 120 questions and zero network requests."
+      ],
+      "questions": 120,
+      "viewports": [
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "overflow": false
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    }
+  },
+  "publication": {
+    "branchOnly": true,
+    "expectedParent": "ceaaaf5e00d2d8c9960f4736771e9b4ba0ac0216",
+    "mainRefObserved": "264a60ecec7e64251304cdbc58b587a8867502ab",
+    "mainMutationPerformed": false
+  },
+  "postFullSuiteProductionRechecked": true,
+  "syntaxCheck": "passed",
+  "productionBuild": "passed",
+  "review": {
+    "outstandingP0P1": 0,
+    "shipCall": "Ready for branch preview; live Google and pupil/physical-device validation are separate."
+  }
+}

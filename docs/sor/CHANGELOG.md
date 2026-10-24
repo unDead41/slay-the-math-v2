@@ -1,5 +1,13 @@
 # Changelog SOR — Slay the Math
 
+## 2.31.0-report.3 — 24 October 2026 — education-report only
+
+- Shared in-game Question / Help / Result navigation, attempt/next-action copy and first-wrong Help prompt in English/BM; stable artwork with local question/visual scrolling.
+- Versioned two-answer game policy: first wrong unlocks both hints honestly; second wrong reveals/locks. Correct retry succeeds. Preserve Practice and old ordered evidence.
+- Predict failure has no Focus/seal; failed Artifact continues without gift; Mystery retains its timer and settles its original terminal consequence once. Save/reward validation and pending upgrades follow the same owners.
+- Regenerated Google canonical receiver; existing deployments require code/version updating. No new database/Sheet/protocol, card/enemy/economy tuning or main push.
+
+
 Versi dokumen berasingan daripada versi game.
 
 ## Feature preview 2.31.0-report.2 — Education Practice

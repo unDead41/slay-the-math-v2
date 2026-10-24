@@ -97,3 +97,8 @@ Only runs explicitly created with economy=true use [SOR 22](22_ECONOMY_REWARDS.m
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+
+## In-game question workspace — 24 October 2026
+
+DISAHKAN: Artifact bank trials now permit two answers. A correct answer still precedes the explicit final Claim and all artifact effects. Two wrong answers reveal the solution and enable Continue without artifact, including Starting and Boss, so progression cannot soft-lock. Keep a declined receipt paired with the failed trial; no acquired receipt/one-shot effect, reroll or later duplicate source claim. Existing purchases and direct Mystery rewards keep their original owners. [Policy](../education/GAME_QUESTIONS.md).

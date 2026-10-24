@@ -101,7 +101,7 @@ globalThis.STMMechanics=(()=>{
 function createHintState(questionId) {
   return { version: 1, questionId, hintUsed: false, attempts: 0, wrongAfterHint: 0, moreHintUnlocked: false, moreHintViewed: false, completed: false };
 }
-function reduceHintState(state, event) {
+function reduceHintState(state, event, {unlockAfterWrong=false}={}) {
   if (!event || event.questionId !== state.questionId) return state;
   if (event.type === 'MORE_HINT_OPENED') {
     return state.moreHintUnlocked ? { ...state, moreHintViewed: true } : state;
@@ -111,7 +111,7 @@ function reduceHintState(state, event) {
   if (event.type !== 'ANSWER_SUBMITTED' || typeof event.correct !== 'boolean') return state;
   const wrongAfterHint = state.wrongAfterHint + Number(!event.correct && state.hintUsed);
   return { ...state, attempts: state.attempts + 1, wrongAfterHint,
-    moreHintUnlocked: wrongAfterHint > 0, completed: event.correct };
+    moreHintUnlocked: wrongAfterHint > 0 || (unlockAfterWrong && (state.moreHintUnlocked || !event.correct)), completed: event.correct };
 }
 function restoreHintState(saved, questionId) {
   if (!saved || saved.questionId !== questionId || saved.version !== 1) return createHintState(questionId);
@@ -134,6 +134,10 @@ const LEARNING_POLICY=Object.freeze({minimumEvidence:3,recentWindow:3,
 const levels={Easy:1,Medium:2,Hard:3};
 const getQuestion=(bank,id)=>bank.questions.find(q=>q.id===id);
 const unique=values=>[...new Set(values)];
+// Versioned opt-in: historical records and Education Practice keep their rules.
+const GAME_QUESTION_POLICY='two-attempts-v1';
+const GAME_MAX_ATTEMPTS=2;
+function attemptsExhausted(record){return record?.gamePolicy===GAME_QUESTION_POLICY&&record.status==='revealed'&&record.attempts.length>=GAME_MAX_ATTEMPTS;}
 
 function createSession({seed=1}={}) {
   if(!Number.isSafeInteger(seed))throw new Error('A numeric question seed is required');
@@ -146,6 +150,7 @@ function projectRecord(question,events) {
     events:[],attempts:[],hintState:createHintState(question.id),foundationViewed:false,
     stepsViewed:false,status:'pending',completion:null,lastChoiceId:null};
   const attemptIds=new Set();
+  const reveal=()=>{r.status='revealed';r.completion={category:'revealed',correct:false};r.events.push({type:'FINAL_REVEALED'});};
   for(const event of events) {
     if(!event || typeof event.type!=='string')throw new Error('Invalid learning event');
     if(event.type==='STEPS_TOGGLED') {
@@ -153,29 +158,37 @@ function projectRecord(question,events) {
       continue;
     }
     if(r.status!=='pending')continue;
-    if(event.type==='HINT_REVEALED') {
+    if(event.type==='GAME_POLICY_APPLIED') {
+      if(event.policy!==GAME_QUESTION_POLICY||r.gamePolicy)throw new Error('Invalid game question policy');
+      r.gamePolicy=event.policy;r.events.push({type:event.type,policy:event.policy});
+      // Upgrade a pending legacy question without inventing past support usage.
+      if(r.attempts.some(a=>!a.correct))r.hintState.moreHintUnlocked=true;
+      if(r.attempts.length>=GAME_MAX_ATTEMPTS)reveal();
+    } else if(event.type==='HINT_REVEALED') {
       if(!r.hintState.hintUsed){r.hintState=reduceHintState(r.hintState,{type:event.type,questionId:question.id});r.events.push({type:event.type});}
     } else if(event.type==='MORE_HINT_OPENED') {
       if(r.hintState.moreHintUnlocked&&!r.hintState.moreHintViewed){r.hintState=reduceHintState(r.hintState,{type:event.type,questionId:question.id});r.events.push({type:event.type});}
     } else if(event.type==='FOUNDATION_OPENED') {
       if(!r.foundationViewed){r.foundationViewed=true;r.events.push({type:event.type});}
     } else if(event.type==='FINAL_REVEALED') {
-      r.status='revealed';r.completion={category:'revealed',correct:false};r.events.push({type:event.type});
+      reveal();
     } else if(event.type==='ANSWER_SUBMITTED') {
       if(typeof event.attemptId!=='string'||!event.attemptId.trim())throw new Error('A unique attempt ID is required');
       if(attemptIds.has(event.attemptId))continue;
       if(!question.choices.some(c=>c.id===event.choiceId))throw new Error('Unknown choice ID');
+      if(r.gamePolicy&&r.attempts.some(a=>a.choiceId===event.choiceId))throw new Error('This answer has already been tried');
       attemptIds.add(event.attemptId);
       const correct=event.choiceId===question.correctChoiceId;
       const supported=r.foundationViewed||r.hintState.hintUsed||r.hintState.moreHintViewed;
       r.attempts.push({id:event.attemptId,choiceId:event.choiceId,correct,
         hintUsed:r.hintState.hintUsed,moreHintViewed:r.hintState.moreHintViewed,foundationViewed:r.foundationViewed});
       r.lastChoiceId=event.choiceId;
-      r.hintState=reduceHintState(r.hintState,{type:event.type,questionId:question.id,correct});
+      r.hintState=reduceHintState(r.hintState,{type:event.type,questionId:question.id,correct},{unlockAfterWrong:!!r.gamePolicy});
       r.events.push({type:event.type,attemptId:event.attemptId,choiceId:event.choiceId});
       if(correct){r.status='correct';r.completion={correct:true,
         category:supported?'supported':r.attempts.length===1?'independent':'retry',
         firstAttemptCorrect:r.attempts.length===1};}
+      else if(r.gamePolicy&&r.attempts.length>=GAME_MAX_ATTEMPTS)reveal();
     } else throw new Error('Unknown learning event: '+event.type);
   }
   return r;
@@ -260,6 +273,14 @@ function submitAnswer(session,bank,{questionId,choiceId,attemptId}) {
   if(r?.attempts.some(a=>a.id===attemptId))return session;
   if(session.pendingQuestionId!==questionId)throw new Error('Only the pending question accepts an answer');
   return commit(session,q,{type:'ANSWER_SUBMITTED',choiceId,attemptId});
+}
+
+function applyGamePolicy(session,bank,questionId){
+  const record=session.records[questionId],q=getQuestion(bank,questionId);
+  if(!q||!record)throw new Error('Unknown reserved question');
+  if(record.gamePolicy||record.status!=='pending')return session;
+  if(session.pendingQuestionId!==questionId)throw new Error('Only the pending question can change its policy');
+  return commit(session,q,{type:'GAME_POLICY_APPLIED',policy:GAME_QUESTION_POLICY});
 }
 
 function openSupport(session,questionId,kind) {

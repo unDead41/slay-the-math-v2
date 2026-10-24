@@ -181,3 +181,8 @@ Publish only education-report. Verify all three shared report views, BM/English,
 ## Practice workspace preview — 2.31.0-report.2
 
 Publish only education-report. Verify all120 question-to-mark/comment bindings, independent mark/comment/answer semantics, stale-tab mark merge, reload/edit/untick/delete, corrupt/quota recovery and maximum comments against the unchanged strict Google validator. Exercise real Question/Feedback navigation, BM/English, local list scroll and drawer keyboard/focus at desktop/phone/short landscape, actual all120 Hint/wrong/More Hint/solution flows and portable zero-network boot. Native Google services are simulated; verify offline mark/comment delivery and untick/edit updating one existing row with exact ACKs. Run the full serial suite, syntax, production/resource/preservation and current developer isolation checks. Preserve the original bank, assets, combat and live receiver bytes. Actual evidence: docs/education/PRACTICE_WORKSPACE_VERIFICATION.md.
+
+
+## In-game question workspace — 24 October 2026
+
+For 2.31.0-report.3 verify all120 policy replays, honest help snapshots, second-correct acceptance, two-wrong/third-answer lock, legacy pending upgrades, all relevant continuation/reward gates, timed retry/expiry and strict sender/receiver validation. Inspect actual desktop/portrait/landscape English/BM tabs, keyboard/focus, local scrolling, art geometry and reload before/after failure. Run the complete serial Node/jsdom suite, production/syntax/resource/preservation checks and native game/offline/collection regressions. Record actual results and service/device limitations in [verification](../education/GAME_QUESTIONS_VERIFICATION.md); publish education-report only.

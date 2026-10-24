@@ -1,6 +1,6 @@
 {
   "name": "duel-cube-math",
-  "version": "2.31.0-report.2",
+  "version": "2.31.0-report.3",
   "private": true,
   "description": "Developer sandbox for scenes, card states and actor motion",
   "scripts": {
@@ -56,6 +56,8 @@
     "build:google-sheets": "node tools/build-google-sheets.cjs",
     "test:google-sheets-browser": "node tests/google-sheets-browser.cjs",
     "test:report-browser": "node tests/learning-report-browser.cjs",
-    "test:practice-workspace-browser": "node tests/education-workspace-browser.cjs"
+    "test:practice-workspace-browser": "node tests/education-workspace-browser.cjs",
+    "test:game-questions-browser": "node tests/game-questions-browser.cjs",
+    "test:game-question-render-browser": "node tests/game-question-render-browser.cjs"
   }
 }

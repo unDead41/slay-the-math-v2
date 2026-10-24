@@ -1,5 +1,14 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-GAME-QUESTIONS — Clear steps and two answers in game
+
+**DISAHKAN:** Ijamm requests clearer question layout/tabs/next actions and at most two answers for Predict, events and Artifact trials. First wrong allows retry and unlocks both hints, even without earlier Hint use; second wrong locks input. Publish to a feature branch, never main for this task.
+
+**DITERUSKAN (implementation):** continue education-report as 2.31.0-report.3. Question / Help / Result, a first-wrong Help call to action, truthful support snapshots and versioned canonical replay preserve historical/Practice evidence. Correct retry remains valid. Preserve reward gates: no Focus/seal on Predict failure; Continue without the chosen Artifact on failed trial; original Mystery consequence only after terminal result/Continue. Timer, offers, stable IDs and RNG remain frozen. Regenerate the Google receiver and document same-deployment updating. [Scope, compatibility and owner guide](../education/GAME_QUESTIONS.md).
+
+**PERLU_VERIFIKASI:** pupil/physical-device usability and the owner's live Google deployment. Automated checks do not establish these. Existing balance reports remain historical; no numeric tuning or main integration is authorized.
+
+
 ## DEC-20261023-ART-RESTORE — Restore selected card and artifact illustrations
 
 **DISAHKAN:** Ijamm explicitly requests the previous card/artifact icons and says to retain buff, debuff and UI/menu icons. This overrides the card/artifact portion of the 2.23 all-icon integration only. Restore all 40 selected card mappings from `dist/assets/card-assets.json` and all 31 artifact filenames from `dist/artifact-data.js`, using their existing verified source derivatives. Keep current UI, map, status and topic mappings and image bytes. Normal card builds and explicit reviewed-package reimports must preserve this boundary. Publish together with the authorized combat motion as 2.25.1. [Scope and verification](../ICON_ART_RESTORE_2_25_1.md).

@@ -160,9 +160,9 @@ function chooseArtifact(r,key,seen=[],profile=null){
  r.educationState=Q.prepare(r,key,seen,profile);r.scene='education';return notify(r,'Answer the Dungeon Master’s question to claim your artifact.');
 }
 function continueEducation(r){
- const pending=Q.pending(r);if(!Q.ready(r))throw new Error('Answer the question correctly before continuing.');
+ const pending=Q.pending(r);if(!Q.ready(r))throw new Error('Finish the question before continuing.');
  if(!Q.valid(r)||!A.valid(Q.context(r))||!G.valid(Q.context(r)))throw new Error('This artifact question cannot be completed. Your progress has been kept.');
- const destination=Q.context(r).scene,result=A.claim(r,pending.artifactId);Q.finish(r);r.scene=destination;notify(r,result.artifact.name+' acquired.');
+ const destination=Q.context(r).scene,failed=Q.failed(r),result=failed?A.decline(r,pending.artifactId):A.claim(r,pending.artifactId);Q.finish(r);r.scene=destination;notify(r,failed?'Trial finished. Continue without the artifact.':result.artifact.name+' acquired.');
  if(result.kind==='starting'){r.scene='map';return r;}
  if(result.kind==='boss')return nextStage(r);
  return finishNode(r);
@@ -229,14 +229,14 @@ function validate(s){try{return validateState(s);}catch(_){return false;}}
 function validateState(s){const nonnegative=n=>Number.isSafeInteger(n)&&n>=0;const cardOK=c=>c&&typeof c.uid==='string'&&/^c\d+$/.test(c.uid)&&Object.hasOwn(C.cards,c.key)&&typeof c.upgraded==='boolean';
  const phase=Q.context(s)?.scene;
  if(C.MASTER_BALANCE?JSON.stringify(s?.balanceState)!==JSON.stringify(C.MASTER_BALANCE):s?.balanceState!==undefined)return false;
- if(!s||typeof s!=='object'||s.version!==1||!['learn','challenge'].includes(s.mode)||!Array.isArray(s.deck)||s.deck.length<1||s.deck.length>60||!s.deck.every(cardOK)||new Set(s.deck.map(c=>c.uid)).size!==s.deck.length||![0,1].includes(s.stage)||!Number.isInteger(s.depth)||s.depth<0||s.depth>(s.route?.version===3?9:4)||!nonnegative(s.hp)||s.hp>s.maxHp||s.maxHp!==A.maxHp(s)||!nonnegative(s.rng)||s.rng>4294967295||!nonnegative(s.seed)||!nonnegative(s.seq)||s.deck.some(c=>Number(c.uid.slice(1))>s.seq)||!Array.isArray(s.cleared)||!s.cleared.every(v=>typeof v==='string')||!Number.isFinite(s.started)||!s.stats||typeof s.stats.concepts!=='object'||!['battles','turns','forecasts','firstCorrect','assisted','wrong'].every(k=>nonnegative(s.stats[k]))||s.stats.forecasts!==s.stats.firstCorrect+s.stats.assisted||!['master','education','map','battle','reward','camp','event','shop','stageclear','defeat','victory'].includes(s.scene))return false;
+ if(!s||typeof s!=='object'||s.version!==1||!['learn','challenge'].includes(s.mode)||!Array.isArray(s.deck)||s.deck.length<1||s.deck.length>60||!s.deck.every(cardOK)||new Set(s.deck.map(c=>c.uid)).size!==s.deck.length||![0,1].includes(s.stage)||!Number.isInteger(s.depth)||s.depth<0||s.depth>(s.route?.version===3?9:4)||!nonnegative(s.hp)||s.hp>s.maxHp||s.maxHp!==A.maxHp(s)||!nonnegative(s.rng)||s.rng>4294967295||!nonnegative(s.seed)||!nonnegative(s.seq)||s.deck.some(c=>Number(c.uid.slice(1))>s.seq)||!Array.isArray(s.cleared)||!s.cleared.every(v=>typeof v==='string')||!Number.isFinite(s.started)||!s.stats||typeof s.stats.concepts!=='object'||!['battles','turns','forecasts','firstCorrect','assisted','wrong'].every(k=>nonnegative(s.stats[k]))||s.stats.forecasts!==s.stats.firstCorrect+s.stats.assisted+(s.stats.failedPredictions||0)||!['master','education','map','battle','reward','camp','event','shop','stageclear','defeat','victory'].includes(s.scene))return false;
  if(s.finished!==undefined&&(!Number.isFinite(s.finished)||s.finished<s.started||!['stageclear','defeat','victory'].includes(phase)))return false;
  if(!Eco.valid(s)||!CC.valid(s,cardOK,cardContext)||!R.valid(s)||!Q.valid(s)||!P.valid(s)||!Log.valid(s)||!X.valid(s)||!A.valid(Q.context(s))||!G.valid(Q.context(s)))return false;
- if(['cardsPlayed','hintsUsed'].some(k=>s.stats[k]!==undefined&&!nonnegative(s.stats[k])))return false;
+ if(['cardsPlayed','hintsUsed','failedPredictions'].some(k=>s.stats[k]!==undefined&&!nonnegative(s.stats[k])))return false;
  if(s.gold!==undefined&&(!nonnegative(s.gold)||s.gold>100000))return false;
  if(s.scene==='shop'&&!validShop(s))return false;
 
- for(const st of Object.values(s.stats.concepts))if(!st||!['total','first','assisted'].every(k=>nonnegative(st[k]))||st.total!==st.first+st.assisted)return false;
+ for(const st of Object.values(s.stats.concepts))if(!st||!['total','first','assisted'].every(k=>nonnegative(st[k]))||(st.failed!==undefined&&!nonnegative(st.failed))||st.total!==st.first+st.assisted+(st.failed||0))return false;
  if((!s.route&&phase==='camp'&&s.depth!==2)||(!s.route&&phase==='event'&&s.depth!==3)||(phase==='stageclear'&&(s.stage!==0||s.depth!==(s.route?.version===3?9:4)))||(phase==='victory'&&(s.stage!==1||s.depth!==(s.route?.version===3?9:4)))||(phase==='defeat'&&s.hp!==0)||(['battle','reward','stageclear','victory','defeat'].includes(phase)&&!s.battle))return false;
  if(Eco.active(s)&&phase==='reward'){const receipt=Eco.lookup(s,'card',s.battle?.elite?'elite':'normal');if(!receipt||JSON.stringify(s.rewards)!==JSON.stringify(receipt.ids))return false;}
  if(phase==='reward'&&(!Array.isArray(s.rewards)||s.rewards.length!==3||new Set(s.rewards).size!==3||!s.rewards.every(k=>Object.hasOwn(C.cards,k))))return false;
@@ -263,6 +263,7 @@ function restore(saved){
    if(r.textLocale!=='en'){b.log=['Game resumed. Your progress is safe.'];r.notice='Game resumed.';}
   }
   if(r.scene==='event'&&!r.mysteryState?.pending&&!r.artifactState?.offer)X.enter(r);
+  Q.upgradeActiveQuestion(r);if(r.scene==='battle'&&r.battle?.question?.source==='bank')P.settleFailure(r,{notify});
   r.gold=r.gold??C.ECONOMY.start;r.stats.cardsPlayed=r.stats.cardsPlayed??0;r.stats.hintsUsed=r.stats.hintsUsed??0;r.textLocale='en';if(r.checkpoint)refresh(r.checkpoint);
  }
  refresh(out);return out;

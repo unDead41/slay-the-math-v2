@@ -118,3 +118,8 @@ DISAHKAN: Ijamm requests deep evolved-deck/Predict/setup/exploit/artifact-trigge
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+
+## In-game question workspace — 24 October 2026
+
+Bank Predict consumes the turn on its second wrong answer, with zero Focus and no boss seal. Keep independent first-try Focus and any-correct seal gates; retry/help never grants first-try credit. Failure counters are separate from correct/assisted counters. Close/reload cannot add a reward or duplicate log. Snapshot live-deck predictions remain historical compatibility. [Current contract](../education/GAME_QUESTIONS.md).

@@ -181,7 +181,7 @@ function runCampaign(options={}){
    }else if(run.scene==='event'){
     const p=X.pending(run);
     if(p.phase==='intro')act('mysteryStart',()=>E.startMystery(run,[],null,clock));
-    else if(p.phase==='question'){clock+=1000;const id=pickFeedback(p.choiceOrder);act('mysteryAnswer',()=>E.answerMystery(run,id,clock),{id});answerAttempts++;if(run.mysteryState.pending.outcome==='CORRECT')firstCorrect++;}
+    else if(p.phase==='question'){clock+=1000;const id=pickFeedback(p.choiceOrder,Q.getSession(run).records[p.questionId].attempts.map(a=>a.choiceId));act('mysteryAnswer',()=>E.answerMystery(run,id,clock),{id});answerAttempts++;if(run.mysteryState.pending.outcome==='CORRECT')firstCorrect++;}
     else if(['review','empty'].includes(p.phase))act('mysteryContinue',()=>E.continueMystery(run));
     else if(p.phase==='reward')mysteryReward();else throw Error('Unexpected Mystery phase '+p.phase);
    }else if(run.scene==='stageclear'){

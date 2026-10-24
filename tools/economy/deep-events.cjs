@@ -24,6 +24,7 @@ function eventScenario({id,difficulty,seed,mode='correct_fast',option=null,hp=40
   const q=Q.catalog[p.questionId];let responseMs=mode==='deadline_minus1'?p.deadline-now-1:mode==='deadline_exact'?p.deadline-now:mode==='correct_35s'?35000:mode==='correct_55s'?55000:mode==='correct_75s'?75000:15000;
   result.responseMs=responseMs;
   if(mode==='abandon')E.leaveMystery(r,now+responseMs);else E.answerMystery(r,mode==='wrong_fast'?q.choices.find(c=>c.id!==q.correctChoiceId).id:q.correctChoiceId,now+responseMs);
+  if(mode==='wrong_fast'&&r.mysteryState.pending.phase==='question')E.answerMystery(r,q.choices.filter(c=>c.id!==q.correctChoiceId)[1].id,now+responseMs+1);
   result.outcome=r.mysteryState.pending.outcome;E.continueMystery(r);
   if(r.scene==='event'&&r.mysteryState.pending.phase==='reward'){
    const options=X.definition(r).success.options.filter(o=>X.actionable(r,o)),o=option?options.find(o=>o.id===option):options[0];

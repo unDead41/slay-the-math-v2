@@ -217,3 +217,8 @@ On education-report only, the real host and generated Practice use the same Over
 ## Practice workspace preview — 2.31.0-report.2
 
 Continue education-report only. The oversized folio hero and parchment switch are replaced by a compact ink header, readable 44px question rows with separate checkboxes, All/Not reviewed/Reviewed/With feedback filters and Question/Feedback views. Reviewed is an annotation, not a correct answer. Comments are optional and independent of ticks. Language and saved Learning-session controls live under Practice options; the shared report owns Sharing and one disclosed JSON recovery action. Keep native drawer focus/Escape, current question ID, rich-text colors, canonical support gates and math rendering. Source/preservation and native desktop/phone/landscape evidence: docs/education/PRACTICE_WORKSPACE.md.
+
+
+## In-game question workspace — 24 October 2026
+
+DISAHKAN: simplify in-game question navigation and next actions. Predict/Artifact/Mystery share Question, Help and Result tabs, attempt status, first-wrong Open Help call to action and automatic terminal Result. Help availability differs from actual use. Native 44px controls, keyboard tab navigation, BM/English, colored-term legend, Settings language preference and local scrolling preserve viewport artwork. [Workspace](../education/GAME_QUESTIONS.md).

@@ -19,6 +19,13 @@ test('owner setup is idempotent, keeps raw/client tabs hidden and stores only ha
 test('real owner records and BM feedback project diagnostic metrics only after flush',()=>{
  const {s,batch}=setup(),p=learning();assert.equal(batch([entry(p,1,'learning-record'),entry()]).status,200);assert.equal(s.rows('Learning').length,2);assert.equal(s.rows('Comments')[1].includes('Hint kurang jelas'),true);const row=Object.fromEntries(s.rows('Learning')[0].map((h,i)=>[h,s.rows('Learning')[1][i]]));assert.equal(row['Wrong attempts'],1);assert.equal(row['Answered'],1);assert.equal(row['Independent first try'],0);assert.equal(row['Hint used'],true);assert.equal(row.Language,'ms');assert.ok(s.flushes>0);
 });
+test('versioned two-attempt game records reach Sheets with honest wrong/help/reveal counts',()=>{
+ const {s,batch}=setup(),payload=learning(),q=bank.questions.find(q=>q.id===payload.questionId);let session=M.session.reserveNext(M.session.createSession({seed:8}),{...bank,questions:[q]}).session;session=M.session.applyGamePolicy(session,bank,q.id);
+ const wrong=q.choices.filter(c=>c.id!==q.correctChoiceId);session=M.session.submitAnswer(session,bank,{questionId:q.id,choiceId:wrong[0].id,attemptId:'game:first'});session=M.session.openSupport(session,q.id,'moreHint');session=M.session.submitAnswer(session,bank,{questionId:q.id,choiceId:wrong[1].id,attemptId:'game:last'});
+ payload.record=session.records[q.id];payload.scope='gameplay';payload.source='predict';assert.equal(batch([entry(payload,1,'learning-record')]).status,200);
+ const row=Object.fromEntries(s.rows('Learning')[0].map((h,i)=>[h,s.rows('Learning')[1][i]]));assert.equal(row['Wrong attempts'],2);assert.equal(row['Answered'],1);assert.equal(row['Independent first try'],0);assert.equal(row['Hint used'],false);assert.equal(row['More Hint viewed'],true);assert.equal(row['Revealed'],true);assert.equal(row.Status,'revealed');assert.equal(payload.record.attempts.length,2);
+ const forged=JSON.parse(JSON.stringify(payload));forged.record.status='correct';assert.equal(batch([entry(forged,2,'learning-record')]).status,400);
+});
 test('invalid canonical metadata/events and unauthenticated writes cannot partially persist a batch',()=>{
  const {s,batch,dispatch}=setup(),p=learning();assert.equal(dispatch(request('batch',{entries:[entry()]},'0'.repeat(64))).status,401);
  for(const altered of [{...p,chapter:3},{...p,record:{...p.record,status:'pending'}},{...p,unexpected:'field'}])assert.equal(batch([entry(),entry(altered,1,'learning-record')]).status,400);

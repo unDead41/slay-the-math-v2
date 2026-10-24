@@ -11,7 +11,7 @@ test('all fifteen events use profile duration, persist exact deadlines, and lega
 test('scaled Gold success, nonlethal failure and once-only settlement use actual engine deltas',()=>{
  for(const [d,gold,loss]of [['easy',48,0],['medium',40,4],['hard',36,5]]){
   const r=event('ME01',d),before=r.gold;solve(r);assert.equal(r.gold,before+gold);assert.ok(E.restore(r));const once=copy(r);assert.throws(()=>E.continueMystery(r));assert.deepEqual(r,once);
-  const x=event('ME01',d);x.hp=2;E.startMystery(x,[],null,100000);const q=Q.catalog[x.mysteryState.pending.questionId];E.answerMystery(x,q.choices.find(c=>c.id!==q.correctChoiceId).id,100001);E.continueMystery(x);assert.equal(x.hp,Math.max(1,2-loss));assert.ok(E.restore(x));
+  const x=event('ME01',d);x.hp=2;E.startMystery(x,[],null,100000);const q=Q.catalog[x.mysteryState.pending.questionId];for(const c of q.choices.filter(c=>c.id!==q.correctChoiceId).slice(0,2))E.answerMystery(x,c.id,100001);E.continueMystery(x);assert.equal(x.hp,Math.max(1,2-loss));assert.ok(E.restore(x));
  }
 });
 test('profiled voluntary HP, Gold and Max HP costs enforce affordability and apply once at confirmation',()=>{
@@ -58,7 +58,7 @@ test('weighted loot never changes the paired question stream or combat shuffle',
 });
 test('failure settlement for every event and difficulty charges exactly its listed penalty once',()=>{
  const hpLoss={easy:{ME01:0,ME02:0,ME10:0,ME11:0},medium:{ME01:4,ME02:2,ME10:3,ME11:3},hard:{ME01:5,ME02:3,ME10:4,ME11:4}};
- for(const difficulty of ['easy','medium','hard'])for(const e of X.data.events){const r=event(e.id,difficulty,99),before={gold:r.gold,hp:r.hp,maxHp:r.maxHp,deck:r.deck.length,artifacts:A.owned(r).length};E.startMystery(r,[],null,100000);const q=Q.catalog[r.mysteryState.pending.questionId];E.answerMystery(r,q.choices.find(c=>c.id!==q.correctChoiceId).id,100001);assert.equal(r.hp,before.hp,'review precedes consequences');E.continueMystery(r);
+ for(const difficulty of ['easy','medium','hard'])for(const e of X.data.events){const r=event(e.id,difficulty,99),before={gold:r.gold,hp:r.hp,maxHp:r.maxHp,deck:r.deck.length,artifacts:A.owned(r).length};E.startMystery(r,[],null,100000);const q=Q.catalog[r.mysteryState.pending.questionId];for(const c of q.choices.filter(c=>c.id!==q.correctChoiceId).slice(0,2))E.answerMystery(r,c.id,100001);assert.equal(r.hp,before.hp,'review precedes consequences');E.continueMystery(r);
  assert.equal(r.hp,before.hp-(hpLoss[difficulty][e.id]||0),difficulty+' '+e.id);assert.equal(r.gold,before.gold);assert.equal(r.maxHp,before.maxHp);assert.equal(r.deck.length,before.deck);assert.equal(A.owned(r).length,before.artifacts);
  if(e.id==='ME13'){assert.equal(r.scene,'battle');assert.equal(r.battle.elite,false);}else assert.equal(r.scene,'map');
  if(e.id==='ME14')assert.equal(r.mysteryState.nextCombat[0].amount,difficulty==='easy'?0:-1);

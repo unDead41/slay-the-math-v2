@@ -45,9 +45,9 @@ test('canonical stage entry is captured, replayed immutably and finishes only th
  assert.equal(JSON.stringify(entry),before);assert.ok(!a.rooms.some(r=>r.stage===2));
  assert.throws(()=>runCampaign({runSeed:1,initialState:entry.state}),/seed|entry/i);
 });
-test('default controls preserve historical canonical action hashes',()=>{
+test('two-attempt game controls reproduce the current canonical action hash',()=>{
  const r=runCampaign({runSeed:1075022600});
- assert.equal(r.status,'DEFEAT');assert.equal(r.traceHash,'9399f47e3184ad3de13e07d7493681a2e00ebe239c63d4a8887714e2eee739a9');
+ assert.equal(r.status,'DEFEAT');assert.equal(r.traceHash,'d0c0ea2f0f47a80b55ac0e6e780b5b6743f1e691af58a91c305b284043a3c0f7');
 });
 test('adaptive recovery and Predict skip run through valid engine actions without forecasts',()=>{
  const r=runCampaign({runSeed:2822299500,routePolicy:'health-recovery',predictProfile:'skip',telemetry:true,trace:true});

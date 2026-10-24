@@ -8,6 +8,14 @@
 
 **BOUNDARY:** publish this documentation-policy update through the established main workflow. It does not authorize unrelated fixes, merge other branches, audit every current game module, change game version/mechanics or create a background monitor/CI enforcement. [Audit, evidence and follow-up](../audits/main/LATEST.md).
 
+## DEC-20261024-EDUCATION-REPORTS-CLARITY — Finished-result reports and private issue triage
+
+**DISAHKAN:** Ijamm selects Report a problem after in-game results and grouping comments in the existing private Google Sheet by question/category with developer statuses Baharu → Sedang disemak → Selesai. He also requests reviewing all120 English/BM prompts, Hint and More Hint for clear meaning and progressively more concrete help without stating the final answer. Publish to education-report only; earlier main authorization does not authorize this new preview on main.
+
+**DITERUSKAN:** shared comment owner/consent/outbox, actual closed-record context, local scroll/focus return, private retry-safe issue board and honest device counts. Preserve existing player Reviewed ticks, identities, questions/choices/answers/full solutions, game policy/RNG/resources and original assets. Apply source-reviewed scaffolding and remove target-bearing reference columns/accessible names. Keep stable bankVersion1.6 plus explicit compatible contentRevision.
+
+**PERLU_VERIFIKASI:** physical-device/classroom understanding, live Google deployment/account/quota and the unavailable MODEL.zip reference. Source inconsistencies are recorded explicitly. [Implementation, source audit, checks and owner update](../education/FEEDBACK_CLARITY.md).
+
 ## DEC-20261024-MASTER-SOR — Shared project and branch compatibility guidance
 
 **DISAHKAN:** Ijamm defines this chat as Master Audit — Branch Compatibility: verify actual GitHub main/branch SHAs, distinguish merge/remaining changes from current module compatibility, prioritize main for merged modules, test relevant scope and report VALID, PERLU UPDATE, CONFLICT or BELUM DISAHKAN with evidence and limits. Audit alone does not authorize code changes, merge or push. Ijamm then requests a reusable project SOR, asks for it to be installed, and asks to push it to GitHub.
@@ -705,3 +713,10 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 ## Release metadata correction — 2.37.1
 
 24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.
+
+
+## DEC-20261024-EDUCATION-REPORT4-MAIN — Publish reviewed reports and guidance
+
+**DISAHKAN:** Ijamm explicitly requests pushing the completed education-report update to main. Merge feature6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0 with main37558d5a53d62e457c076b2444a1b71e8b42e50b as game2.38.0. This supersedes the previous branch-only boundary for these two report features and the120-item clarity pass. Keep Master SOR1.2.0, current Dev Settings placement, original assets and game/save/answer identities.
+
+**IMPLEMENTED:** Resolve generated release/launcher conflicts by rebuilding from package.json; retain both append-only SOR histories. Follow existing consent/local queue and preserve original report context on player ticks. Copy/deploy the same Code.gs remains an owner action. Fresh main checks and limits: [release](../education/MAIN_2_38_0.md).

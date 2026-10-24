@@ -240,3 +240,12 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. The shared question-feedback source generates the game adapter and the Practice owner. Add context.mode gameplay with source predict/artifact/mystery and closed correct/revealed status; legacy six-field learn/review contexts remain valid. Reuse stable comment IDs and existing opt-in revisioned outbox/ACK. Regenerate the strict local/Google validators; same receiver deployment needs a new version. Google adds private Issues/_IssueReports and append-only Comments diagnostic columns, not player read/edit endpoints. Keep bankVersion form4-review-1.6.0 and an explicit contentRevision to retain existing records. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).
+
+
+## Education reports main publication — 2.38.0
+
+DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.

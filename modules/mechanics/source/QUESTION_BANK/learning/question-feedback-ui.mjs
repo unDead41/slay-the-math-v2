@@ -52,8 +52,8 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
   if(explicit&&!categories.length&&!text.value.trim()&&!node('feedback-reviewed').checked){announce('Choose what needs improvement or write a comment.');text.focus();return false;}
   try{
    store.flush();
-   const question=getQuestion(),previous=store.get(question.id),context={mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',hintUsed:!!record?.hintState.hintUsed,moreHintViewed:!!record?.hintState.moreHintViewed,stepsViewed:!!record?.stepsViewed};
-   const reviewed=node('feedback-reviewed').checked,unchanged=previous&&previous.reviewed===reviewed&&previous.comment===text.value.trim()&&JSON.stringify(previous.categories)===JSON.stringify(categories)&&JSON.stringify(previous.context)===JSON.stringify(context);
+   const question=getQuestion(),previous=store.get(question.id),context={mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',...questionFeedbackSupport(record)};
+   const reviewed=node('feedback-reviewed').checked,unchanged=previous&&previous.reviewed===reviewed&&previous.comment===text.value.trim()&&JSON.stringify(previous.categories)===JSON.stringify(categories)&&(!explicit||JSON.stringify(previous.context)===JSON.stringify(context));
    if(!unchanged){
     const saved=store.save(question,categories,text.value,context,{reviewed});
     if(saved)onChange(saved);
@@ -100,7 +100,7 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
  function setReviewed(id,value){
   const current=id===getQuestion().id,question=current?getQuestion():bank.questions.find(q=>q.id===id);if(!question)return;
   store.flush();const previous=store.get(id),record=current?getRecord():null;
-  const context=current?{mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',hintUsed:!!record?.hintState.hintUsed,moreHintViewed:!!record?.hintState.moreHintViewed,stepsViewed:!!record?.stepsViewed}:undefined;
+  const context=current?{mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',...questionFeedbackSupport(record)}:undefined;
   const saved=store.setReviewed(question,value,context);
   if(saved)onChange(saved);else if(previous)onChange({id:previous.id,questionId:id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
   if(current){renderedId=null;render();}else controls();onUpdate();

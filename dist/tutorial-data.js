@@ -162,12 +162,14 @@
   ['Practise maths and read your report','Education Practice is available from the Main Menu without starting a run.',[
    'Explore Probability, Sets and Logical Reasoning. Learning selects unseen questions; Review lets you revisit a chosen question.',
    'Use Hint, More Hint, Basics, diagrams and worked solutions. Settings changes the language of questions, hints and solutions between BM and English.',
-   'Learning Report has Overview, Details and Sharing. Tick Reviewed and add a comment to help improve any question. Sharing starts off and needs the organiser’s connection and your consent.'
+   'Learning Report has Overview, Details and Sharing. Tick Reviewed and add a comment to help improve any question. Sharing starts off and needs the organiser’s connection and your consent.',
+   'After a game question finishes, use Report a problem in Result to comment on that question, Hint or More Hint. The game fills its ID, language and opened help automatically. Save the report; sharing follows your existing consent.'
   ],'Tutorial exercises are practice examples and never count towards your real Learning Report or question history.'],
   ['Latih matematik dan baca laporan','Education Practice boleh dibuka dari Main Menu tanpa memulakan run.',[
    'Terokai Kebarangkalian, Set dan Penaakulan Logik. Learning memilih soalan belum dilihat; Review membolehkan anda mengulang soalan pilihan.',
    'Gunakan Hint, More Hint, Basics, rajah dan jalan kerja. Settings menukar bahasa soalan, petunjuk dan jalan kerja antara BM dengan English.',
-   'Learning Report mempunyai Gambaran keseluruhan, Butiran dan Perkongsian. Tick Sudah disemak dan tambah komen untuk menambah baik soalan. Perkongsian bermula dalam keadaan tutup dan memerlukan sambungan pengendali serta persetujuan anda.'
+   'Laporan Pembelajaran mempunyai Ringkasan, Perincian dan Perkongsian. Tandakan Sudah disemak dan tambah komen untuk menambah baik soalan. Perkongsian bermula dalam keadaan tutup dan memerlukan sambungan pengendali serta persetujuan anda.',
+   'Selepas soalan dalam game selesai, gunakan Laporkan masalah dalam Keputusan untuk memberi komen tentang soalan, Petunjuk atau Petunjuk Lanjut. ID, bahasa dan bantuan yang dibuka diisi secara automatik. Simpan laporan; perkongsian mengikut persetujuan sedia ada anda.'
   ],'Latihan tutorial ialah contoh dan tidak dikira dalam Learning Report atau sejarah soalan sebenar.']),
  lesson('settings','settings',null,
   ['Save, sound and controls','Your current run saves automatically in this browser and profile.',[

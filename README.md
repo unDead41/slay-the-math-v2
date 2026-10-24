@@ -1,4 +1,6 @@
-# Slay the Math — 2.36.0
+# Slay the Math — 2.38.0
+
+Version **2.38.0** integrates in-game question reports, private Google issue triage and source-reviewed English/BM hints for all120 items. Settings-only Developer access is retained. [Main release, actual checks and Google receiver update](docs/education/MAIN_2_38_0.md).
 
 Version **2.36.0** integrates clearer in-game Question / Help / Result tabs, two
 answers per game question, the simpler Learning Report and all120 review ticks/

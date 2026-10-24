@@ -1,0 +1,2574 @@
+{
+  "topicCode": "LOGIC",
+  "sourceReview": [
+    {
+      "file": "02-Mathematics-Form-4-KSSM.pdf",
+      "pdfPages": [
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        73,
+        75,
+        77,
+        78,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        90,
+        92,
+        93
+      ],
+      "notes": [
+        "Read the relevant Chapter 3 pages from this actual supplied PDF using page-scoped text extraction; visually inspected PDF page 84 (printed 75). This is a selected-page review, not a whole-book claim.",
+        "Reviewed statement/truth value, negation, inclusive OR, implication and both-direction biconditional, converse/inverse/contrapositive, counterexamples and deductive/inductive argument sections.",
+        "Example 3(b), PDF page 67, treats some as excluding all; that interpretation is not followed. The bank explicitly uses at least one, possibly all.",
+        "PDF page 84 contains a contradictory sentence defining validity through actual truth before correctly distinguishing form and soundness later on the same page; PDF page 85 Example 17(f) says invalid but sound. These inconsistencies are not copied into hints. Use validity as truth preservation by form, and soundness as validity with true premises, consistent with the bank and DSKP false-premise example.",
+        "The inductive hints use likelihood and scope of observations; a finite pattern or sample does not become a deductive guarantee."
+      ]
+    },
+    {
+      "file": "04-Matematik-Tingkatan-4-KSSM.pdf",
+      "pdfPages": [
+        57,
+        58,
+        60,
+        62,
+        63,
+        64,
+        65,
+        67,
+        69,
+        70,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        82,
+        84,
+        85
+      ],
+      "notes": [
+        "Read the corresponding selected Chapter 3 pages from this actual supplied BM PDF; visually inspected PDF page 76 (printed 75).",
+        "Checked pernyataan, nilai kebenaran, penafian, implikasi, antejadian, akibat, akas, songsangan, kontrapositif, contoh penyangkal, premis, kesimpulan, sah, munasabah, deduktif, induktif and pengitlakan.",
+        "PDF page 76 correctly separates valid form from false premises. PDF page 77 Example 17(f) labels an invalid argument munasabah; do not copy that inconsistent example into the bank’s explicit soundness definition.",
+        "Some/sebilangan retains the explicit at-least-one meaning in the bank, including the possibility of all; it is never paraphrased as exactly some but not all."
+      ]
+    },
+    {
+      "file": "03-DSKP-KSSM-MATEMATIK-TG-4-dan-5.pdf",
+      "pdfPages": [
+        56,
+        57,
+        58,
+        59
+      ],
+      "notes": [
+        "Read actual supplied DSKP PDF pages 56–59, printed pages 42–45, covering 3.1.1–3.1.6 and 3.2.1–3.2.6; visually inspected PDF page 58 (printed 44).",
+        "Verified the converse, inverse and contrapositive forms and the three valid deductive forms. The valid-but-unsound example with a false universal premise supports preserving the form/truth distinction.",
+        "Inductive strength concerns how likely the conclusion is assuming true premises; observing several cases or selecting a broad sample is not a universal deductive proof.",
+        "No claim is made that these MCQs assess the whole DSKP or establish official TP mastery."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "LOGIC-001",
+      "findings": [
+        "Prompt is clear and its four options remain unchanged. Emphasise definite truth value rather than requiring a claim to be true.",
+        "More Hint uses two substitutions to test the open equation without naming the selected sentence."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A statement makes a definite claim, whether that claim is true or false."
+          },
+          {
+            "id": "nextStep",
+            "text": "Separate questions and commands from claims; check whether a variable still needs a value."
+          }
+        ],
+        "hint": "A statement makes a definite claim, whether that claim is true or false. Separate questions and commands from claims; check whether a variable still needs a value.",
+        "moreHint": "For x + 2 = 5, substitute x = 3 and x = 4 separately. For each remaining claim, ask whether its truth value can be fixed without extra information."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Pernyataan menyatakan sesuatu yang pasti, sama ada perkara itu benar atau palsu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bezakan ayat tanya dan ayat perintah daripada ayat yang menyatakan sesuatu; semak sama ada pemboleh ubah masih memerlukan nilai."
+          }
+        ],
+        "hint": "Pernyataan menyatakan sesuatu yang pasti, sama ada perkara itu benar atau palsu. Bezakan ayat tanya dan ayat perintah daripada ayat yang menyatakan sesuatu; semak sama ada pemboleh ubah masih memerlukan nilai.",
+        "moreHint": "Bagi x + 2 = 5, gantikan x = 3 dan x = 4 secara berasingan. Bagi setiap ayat penyata yang lain, tentukan sama ada nilai kebenarannya dapat ditetapkan tanpa maklumat tambahan."
+      },
+      "rationale": "The statement criterion, the open variable equation and sentence functions are checked separately; the final classification remains the learner’s task.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-002",
+      "findings": [
+        "Prompt is sufficiently clear; no rewrite is needed.",
+        "Replace the repeated instruction to find the question with an operational check applied to every option."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A false claim can still be a statement because its truth value is definite."
+          },
+          {
+            "id": "nextStep",
+            "text": "Classify what each sentence does: does it state a claim or ask for information?"
+          }
+        ],
+        "hint": "A false claim can still be a statement because its truth value is definite. Classify what each sentence does: does it state a claim or ask for information?",
+        "moreHint": "For each option, try deciding whether the sentence itself can be called true or false. Keep this separate from answering a question that the sentence asks."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Ayat penyata yang palsu masih boleh menjadi pernyataan kerana nilai kebenarannya pasti."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kelaskan fungsi setiap ayat: adakah ayat itu menyatakan sesuatu atau meminta maklumat?"
+          }
+        ],
+        "hint": "Ayat penyata yang palsu masih boleh menjadi pernyataan kerana nilai kebenarannya pasti. Kelaskan fungsi setiap ayat: adakah ayat itu menyatakan sesuatu atau meminta maklumat?",
+        "moreHint": "Bagi setiap pilihan, cuba tentukan sama ada ayat itu sendiri boleh dinilai benar atau palsu. Bezakan tugas ini daripada menjawab soalan yang dikemukakan oleh ayat itu."
+      },
+      "rationale": "This prevents the common error of excluding a false mathematical claim and avoids quoting the correct question as the answer.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-003",
+      "findings": [
+        "The existing arithmetic setup in More Hint is useful and retained.",
+        "Make the requested order explicit in Hint without stating either truth value."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Calculate the square for p. For q, remember that a prime number has exactly two positive factors: 1 and itself."
+          },
+          {
+            "id": "nextStep",
+            "text": "Judge the two claims separately and keep the order p, then q."
+          }
+        ],
+        "hint": "Calculate the square for p. For q, remember that a prime number has exactly two positive factors: 1 and itself. Judge the two claims separately and keep the order p, then q.",
+        "moreHint": "Write 6² as 6 × 6. Then test whether 15 is divisible by 3 or 5. Record p before q."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Hitung kuasa dua bagi p. Bagi q, ingat bahawa nombor perdana mempunyai tepat dua faktor positif, iaitu 1 dan nombor itu sendiri."
+          },
+          {
+            "id": "nextStep",
+            "text": "Nilai kedua-dua pernyataan secara berasingan dan kekalkan urutan p, kemudian q."
+          }
+        ],
+        "hint": "Hitung kuasa dua bagi p. Bagi q, ingat bahawa nombor perdana mempunyai tepat dua faktor positif, iaitu 1 dan nombor itu sendiri. Nilai kedua-dua pernyataan secara berasingan dan kekalkan urutan p, kemudian q.",
+        "moreHint": "Tulis 6² sebagai 6 × 6. Kemudian uji sama ada 15 boleh dibahagi tepat dengan 3 atau 5. Catat nilai p dahulu, diikuti q."
+      },
+      "rationale": "The support gives the required computations while leaving both truth judgements to the learner.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-004",
+      "findings": [
+        "The finite domain and inclusive meaning of some are explicit; preserve the prompt.",
+        "More Hint now gives the actual remainder test without filling the final ordered truth pair."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "All requires every listed element to pass the test. Some requires at least one example."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use only the four numbers in D and check each number for divisibility by 2."
+          }
+        ],
+        "hint": "All requires every listed element to pass the test. Some requires at least one example. Use only the four numbers in D and check each number for divisibility by 2.",
+        "moreHint": "Divide 2, 4, 6 and 8 by 2. For p, check every remainder; for q, look for any number that leaves remainder 1."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Semua memerlukan setiap unsur yang disenaraikan memenuhi syarat. Sebilangan memerlukan sekurang-kurangnya satu contoh."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan empat nombor dalam D sahaja dan semak sama ada setiap nombor boleh dibahagi tepat dengan 2."
+          }
+        ],
+        "hint": "Semua memerlukan setiap unsur yang disenaraikan memenuhi syarat. Sebilangan memerlukan sekurang-kurangnya satu contoh. Gunakan empat nombor dalam D sahaja dan semak sama ada setiap nombor boleh dibahagi tepat dengan 2.",
+        "moreHint": "Bahagikan 2, 4, 6 dan 8 dengan 2. Bagi p, semak setiap baki; bagi q, cari mana-mana nombor yang meninggalkan baki 1."
+      },
+      "rationale": "The finite all test and existential some test stay distinct; no claim is made about numbers outside D.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-005",
+      "findings": [
+        "Retain the explicit at-least-one interpretation of some, including the possibility of all.",
+        "The current More Hint fully states both properties of a single decisive number; use several candidates and require the learner to perform both checks."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "One exception can disprove an all claim, while one example can establish a some claim."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use the definitions of prime and even to check small prime numbers."
+          }
+        ],
+        "hint": "One exception can disprove an all claim, while one example can establish a some claim. Use the definitions of prime and even to check small prime numbers.",
+        "moreHint": "List the positive factors of 2, 3 and 5, then check divisibility by 2. Decide separately what the results show about the all-odd claim and the some-even claim."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Satu pengecualian boleh menyangkal pernyataan semua, manakala satu contoh boleh membuktikan pernyataan sebilangan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan takrif nombor perdana dan nombor genap untuk menyemak nombor perdana kecil."
+          }
+        ],
+        "hint": "Satu pengecualian boleh menyangkal pernyataan semua, manakala satu contoh boleh membuktikan pernyataan sebilangan. Gunakan takrif nombor perdana dan nombor genap untuk menyemak nombor perdana kecil.",
+        "moreHint": "Senaraikan faktor positif bagi 2, 3 dan 5, kemudian semak kebolehbahagian dengan 2. Tentukan secara berasingan perkara yang ditunjukkan oleh hasil itu bagi pernyataan semua ganjil dan sebilangan genap."
+      },
+      "rationale": "The revised support teaches how one number can serve different roles in universal and existential claims without stating the truth-value pair.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-006",
+      "findings": [
+        "The complete three-card reference table is safe given data and should remain filled.",
+        "Expand the method to test the all, some and no claims instead of focusing on the true option alone."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Treat the three card records as the complete collection for this question."
+          },
+          {
+            "id": "nextStep",
+            "text": "For each option, check whether it requires every relevant card, at least one card or no matching card."
+          }
+        ],
+        "hint": "Treat the three card records as the complete collection for this question. For each option, check whether it requires every relevant card, at least one card or no matching card.",
+        "moreHint": "Use c1, c2 and c3 to test the all-blue claim. Then restrict the cost checks to c1 and c3; ask whether each option needs one matching blue card or every blue card."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Anggap rekod tiga kad itu sebagai keseluruhan koleksi bagi soalan ini."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bagi setiap pilihan, semak sama ada pilihan itu memerlukan setiap kad yang berkaitan, sekurang-kurangnya satu kad atau tiada kad yang memenuhi syarat."
+          }
+        ],
+        "hint": "Anggap rekod tiga kad itu sebagai keseluruhan koleksi bagi soalan ini. Bagi setiap pilihan, semak sama ada pilihan itu memerlukan setiap kad yang berkaitan, sekurang-kurangnya satu kad atau tiada kad yang memenuhi syarat.",
+        "moreHint": "Gunakan c1, c2 dan c3 untuk menguji pernyataan semua biru. Kemudian hadkan semakan kos kepada c1 dan c3; tentukan sama ada setiap pilihan memerlukan satu kad biru yang memenuhi syarat atau setiap kad biru."
+      },
+      "rationale": "The learner must connect each quantifier to its proper subset and cost test; no choice is announced.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-007",
+      "findings": [
+        "The question correctly distinguishes the printed Fire mark from the Attack category; preserve those definitions.",
+        "Make More Hint a two-case check so that all-to-some negation is not confused with no Fire cards being Attack."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A negation must describe exactly when the original claim is false."
+          },
+          {
+            "id": "nextStep",
+            "text": "To disprove an all claim, look for a single exception; do not require every card to be an exception."
+          }
+        ],
+        "hint": "A negation must describe exactly when the original claim is false. To disprove an all claim, look for a single exception; do not require every card to be an exception.",
+        "moreHint": "Imagine a collection consisting of one Fire card that is Attack. Now add a Fire card outside Attack. Check how the original claim and each option change between these two collections."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Penafian mesti menyatakan dengan tepat keadaan yang menjadikan pernyataan asal palsu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Untuk menyangkal pernyataan semua, cari satu pengecualian; jangan syaratkan setiap kad menjadi pengecualian."
+          }
+        ],
+        "hint": "Penafian mesti menyatakan dengan tepat keadaan yang menjadikan pernyataan asal palsu. Untuk menyangkal pernyataan semua, cari satu pengecualian; jangan syaratkan setiap kad menjadi pengecualian.",
+        "moreHint": "Bayangkan koleksi yang hanya mengandungi satu kad Api dalam kategori Serangan. Kemudian tambah satu kad Api di luar kategori Serangan. Semak perubahan pernyataan asal dan setiap pilihan antara dua koleksi ini."
+      },
+      "rationale": "The two collections provide an operational test of opposite truth values without reproducing the correct negation as a final sentence.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-008",
+      "findings": [
+        "The at-least-one meaning of some is already explicit.",
+        "Use existence and absence cases to distinguish negating some from merely finding a different-cost blue card."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The original claims that at least one blue card has the stated cost."
+          },
+          {
+            "id": "nextStep",
+            "text": "Its negation must rule out every such example while keeping blue and cost 0 together."
+          }
+        ],
+        "hint": "The original claims that at least one blue card has the stated cost. Its negation must rule out every such example while keeping blue and cost 0 together.",
+        "moreHint": "Compare two imagined collections: one contains a blue card with cost 0 and one contains none. For each option, check whether its truth value is opposite to the original in both cases."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Pernyataan asal menyatakan bahawa sekurang-kurangnya satu kad biru mempunyai kos tersebut."
+          },
+          {
+            "id": "nextStep",
+            "text": "Penafiannya mesti menolak setiap contoh sedemikian sambil mengekalkan syarat biru dan kos 0 bersama-sama."
+          }
+        ],
+        "hint": "Pernyataan asal menyatakan bahawa sekurang-kurangnya satu kad biru mempunyai kos tersebut. Penafiannya mesti menolak setiap contoh sedemikian sambil mengekalkan syarat biru dan kos 0 bersama-sama.",
+        "moreHint": "Bandingkan dua koleksi yang dibayangkan: satu mengandungi kad biru berkos 0 dan satu lagi tidak mengandungi kad sedemikian. Bagi setiap pilihan, semak sama ada nilai kebenarannya bertentangan dengan pernyataan asal dalam kedua-dua kes."
+      },
+      "rationale": "The learner tests candidates against the whole existential claim instead of mechanically inserting not into one property.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-009",
+      "findings": [
+        "The nonnegative-integer domain is clear and must remain unchanged.",
+        "The active Hint reference copies the solution column whose header is the exact correct inequality."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A statement and its negation must have opposite truth values at every allowed E."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check which side includes the boundary value 2 before choosing an inequality."
+          }
+        ],
+        "hint": "A statement and its negation must have opposite truth values at every allowed E. Check which side includes the boundary value 2 before choosing an inequality.",
+        "moreHint": "Use E = 0, 1, 2 and 3 to check the original inequality. Then test which option covers exactly the allowed values the original rejects, with no overlap at E = 2."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Pernyataan dan penafiannya mesti mempunyai nilai kebenaran bertentangan pada setiap nilai E yang dibenarkan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak bahagian yang merangkumi nilai sempadan 2 sebelum memilih ketaksamaan."
+          }
+        ],
+        "hint": "Pernyataan dan penafiannya mesti mempunyai nilai kebenaran bertentangan pada setiap nilai E yang dibenarkan. Semak bahagian yang merangkumi nilai sempadan 2 sebelum memilih ketaksamaan.",
+        "moreHint": "Gunakan E = 0, 1, 2 dan 3 untuk menyemak ketaksamaan asal. Kemudian uji pilihan yang merangkumi tepat nilai dibenarkan yang ditolak oleh pernyataan asal, tanpa pertindihan pada E = 2."
+      },
+      "rationale": "The learner gets the original boundary test and must form its complement; the completed target inequality belongs in the solution.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/88/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint contains solution headers E, E ≥ 2, E < 2. The third header is the exact correct choice, and that column is already evaluated.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check the original boundary",
+          "ms": "Semak sempadan asal"
+        },
+        "caption": {
+          "en": "These are sample allowed values near 2; allowed integers continue beyond 4. Use the original truth column to test a negation.",
+          "ms": "Ini contoh nilai dibenarkan berhampiran 2; integer yang dibenarkan berterusan melebihi 4. Gunakan lajur kebenaran asal untuk menguji penafian."
+        },
+        "headers": {
+          "en": [
+            "E",
+            "E ≥ 2"
+          ],
+          "ms": [
+            "E",
+            "E ≥ 2"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "0",
+              "False"
+            ],
+            [
+              "1",
+              "False"
+            ],
+            [
+              "2",
+              "True"
+            ],
+            [
+              "3",
+              "True"
+            ],
+            [
+              "4",
+              "True"
+            ]
+          ],
+          "ms": [
+            [
+              "0",
+              "Palsu"
+            ],
+            [
+              "1",
+              "Palsu"
+            ],
+            [
+              "2",
+              "Benar"
+            ],
+            [
+              "3",
+              "Benar"
+            ],
+            [
+              "4",
+              "Benar"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-010",
+      "findings": [
+        "The AND and inclusive OR definitions are accurate and remain unchanged.",
+        "The active Hint table contains both the target negation column and a column headed by the exact correct candidate expression."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A negation must have the opposite truth value to the original in every case."
+          },
+          {
+            "id": "nextStep",
+            "text": "For AND, first check when both claims hold together; then compare the proposed negations."
+          }
+        ],
+        "hint": "A negation must have the opposite truth value to the original in every case. For AND, first check when both claims hold together; then compare the proposed negations.",
+        "moreHint": "Use the cases p true with q false and p false with q true to test each option. Then check the both-false case too: a negation must match exactly the cases where the original fails."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Penafian mesti mempunyai nilai kebenaran yang bertentangan dengan pernyataan asal dalam setiap kes."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bagi DAN, semak dahulu bila kedua-dua pernyataan benar serentak; kemudian bandingkan penafian yang dicadangkan."
+          }
+        ],
+        "hint": "Penafian mesti mempunyai nilai kebenaran yang bertentangan dengan pernyataan asal dalam setiap kes. Bagi DAN, semak dahulu bila kedua-dua pernyataan benar serentak; kemudian bandingkan penafian yang dicadangkan.",
+        "moreHint": "Gunakan kes p benar dengan q palsu dan p palsu dengan q benar untuk menguji setiap pilihan. Kemudian semak juga kes kedua-duanya palsu: penafian mesti sepadan tepat dengan kes yang menjadikan pernyataan asal palsu."
+      },
+      "rationale": "The original conjunction can be a filled reference; the learner still has to negate it and compare every case, avoiding the not-both versus neither confusion.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/89/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint contains completed columns NOT(p AND q) and (NOT p) OR (NOT q). The latter header is the exact correct choice and matching values demonstrate the answer.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check the original conjunction",
+          "ms": "Semak pernyataan DAN asal"
+        },
+        "caption": {
+          "en": "Use the original column to test which candidate reverses its truth value in every row.",
+          "ms": "Gunakan lajur asal untuk menguji calon yang membalikkan nilai kebenarannya dalam setiap baris."
+        },
+        "headers": {
+          "en": [
+            "p",
+            "q",
+            "p AND q"
+          ],
+          "ms": [
+            "p",
+            "q",
+            "p DAN q"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "True",
+              "True",
+              "True"
+            ],
+            [
+              "True",
+              "False",
+              "False"
+            ],
+            [
+              "False",
+              "True",
+              "False"
+            ],
+            [
+              "False",
+              "False",
+              "False"
+            ]
+          ],
+          "ms": [
+            [
+              "Benar",
+              "Benar",
+              "Benar"
+            ],
+            [
+              "Benar",
+              "Palsu",
+              "Palsu"
+            ],
+            [
+              "Palsu",
+              "Benar",
+              "Palsu"
+            ],
+            [
+              "Palsu",
+              "Palsu",
+              "Palsu"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-011",
+      "findings": [
+        "The question supplies all required operator meanings.",
+        "The active Hint table currently evaluates all four offered expressions and marks the uniquely false one."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Substitute the given truth values into each expression."
+          },
+          {
+            "id": "nextStep",
+            "text": "Evaluate NOT first, then apply the requirement for AND or inclusive OR."
+          }
+        ],
+        "hint": "Substitute the given truth values into each expression. Evaluate NOT first, then apply the requirement for AND or inclusive OR.",
+        "moreHint": "For (NOT p) OR (NOT q), begin with (NOT True) OR (NOT False). Do the same substitution for the other options, then evaluate each expression with its own connection rule."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Gantikan nilai kebenaran yang diberi ke dalam setiap ungkapan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Nilai BUKAN dahulu, kemudian gunakan syarat bagi DAN atau ATAU inklusif."
+          }
+        ],
+        "hint": "Gantikan nilai kebenaran yang diberi ke dalam setiap ungkapan. Nilai BUKAN dahulu, kemudian gunakan syarat bagi DAN atau ATAU inklusif.",
+        "moreHint": "Bagi (BUKAN p) ATAU (BUKAN q), mulakan dengan (BUKAN Benar) ATAU (BUKAN Palsu). Lakukan penggantian yang sama bagi pilihan lain, kemudian nilai setiap ungkapan mengikut kata hubungnya sendiri."
+      },
+      "rationale": "A filled table of inputs and their negations supports substitution while leaving the offered compound expressions unevaluated.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/90/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint is the solution table Expression / Truth value. It evaluates every offered expression and singles out p AND q as false.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Values before combining",
+          "ms": "Nilai sebelum digabungkan"
+        },
+        "caption": {
+          "en": "Use this given pair and its negations to evaluate each offered expression.",
+          "ms": "Gunakan pasangan diberi ini dan penafiannya untuk menilai setiap ungkapan pilihan."
+        },
+        "headers": {
+          "en": [
+            "p",
+            "q",
+            "NOT p",
+            "NOT q"
+          ],
+          "ms": [
+            "p",
+            "q",
+            "BUKAN p",
+            "BUKAN q"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "True",
+              "False",
+              "False",
+              "True"
+            ]
+          ],
+          "ms": [
+            [
+              "Benar",
+              "Palsu",
+              "Palsu",
+              "Benar"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-012",
+      "findings": [
+        "The prompt clearly defines inclusive OR; preserve it.",
+        "The active one-row Hint table already gives the requested p OR q truth value."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Inclusive OR requires at least one true part and permits both parts to be true."
+          },
+          {
+            "id": "nextStep",
+            "text": "Apply that requirement to the given pair without adding an exactly-one condition."
+          }
+        ],
+        "hint": "Inclusive OR requires at least one true part and permits both parts to be true. Apply that requirement to the given pair without adding an exactly-one condition.",
+        "moreHint": "Make one tally mark for each true part in the given pair. Compare the tally with the minimum required by at least one, then judge the expression."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "ATAU inklusif memerlukan sekurang-kurangnya satu bahagian benar dan membenarkan kedua-dua bahagian benar."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan syarat itu pada pasangan yang diberi tanpa menambah syarat tepat satu."
+          }
+        ],
+        "hint": "ATAU inklusif memerlukan sekurang-kurangnya satu bahagian benar dan membenarkan kedua-dua bahagian benar. Gunakan syarat itu pada pasangan yang diberi tanpa menambah syarat tepat satu.",
+        "moreHint": "Buat satu tanda kira bagi setiap bahagian benar dalam pasangan yang diberi. Bandingkan bilangan tanda dengan minimum yang diperlukan oleh sekurang-kurangnya satu, kemudian nilai ungkapan itu."
+      },
+      "rationale": "The filled reference should contain the given p and q only; counting and applying inclusive OR remain the learner’s next step.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/91/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint contains p OR q = True for the exact given both-true row, which is the requested output.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "The given pair",
+          "ms": "Pasangan yang diberi"
+        },
+        "caption": {
+          "en": "Count the true parts, then apply the stated meaning of inclusive OR.",
+          "ms": "Hitung bahagian yang benar, kemudian gunakan maksud ATAU inklusif yang dinyatakan."
+        },
+        "headers": {
+          "en": [
+            "Part",
+            "Given truth value"
+          ],
+          "ms": [
+            "Bahagian",
+            "Nilai kebenaran diberi"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "p",
+              "True"
+            ],
+            [
+              "q",
+              "True"
+            ]
+          ],
+          "ms": [
+            [
+              "p",
+              "Benar"
+            ],
+            [
+              "q",
+              "Benar"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-013",
+      "findings": [
+        "The requested order is explicit and mathematically correct.",
+        "The active Hint reference gives both target compound truth values in the requested order."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "AND and inclusive OR apply different tests to the same given pair."
+          },
+          {
+            "id": "nextStep",
+            "text": "Evaluate them separately and list the AND result before the OR result."
+          }
+        ],
+        "hint": "AND and inclusive OR apply different tests to the same given pair. Evaluate them separately and list the AND result before the OR result.",
+        "moreHint": "Substitute the given values to obtain False AND True and False OR True. Apply the required number of true parts to each expression, then record the pair in the requested order."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "DAN dan ATAU inklusif menggunakan syarat yang berbeza pada pasangan diberi yang sama."
+          },
+          {
+            "id": "nextStep",
+            "text": "Nilai kedua-duanya secara berasingan dan senaraikan hasil DAN sebelum hasil ATAU."
+          }
+        ],
+        "hint": "DAN dan ATAU inklusif menggunakan syarat yang berbeza pada pasangan diberi yang sama. Nilai kedua-duanya secara berasingan dan senaraikan hasil DAN sebelum hasil ATAU.",
+        "moreHint": "Gantikan nilai yang diberi untuk mendapatkan Palsu DAN Benar dan Palsu ATAU Benar. Gunakan syarat bilangan bahagian benar bagi setiap ungkapan, kemudian catat pasangan mengikut urutan yang diminta."
+      },
+      "rationale": "The new More Hint supplies an unevaluated substitution rather than the completed pair.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/92/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint contains the completed p AND q and p OR q columns for the exact given row, directly giving the requested pair.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "The given truth values",
+          "ms": "Nilai kebenaran yang diberi"
+        },
+        "caption": {
+          "en": "Apply AND and OR separately to these inputs; the requested order is AND, then OR.",
+          "ms": "Gunakan DAN dan ATAU secara berasingan pada nilai ini; urutan yang diminta ialah DAN, kemudian ATAU."
+        },
+        "headers": {
+          "en": [
+            "p",
+            "q"
+          ],
+          "ms": [
+            "p",
+            "q"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "False",
+              "True"
+            ]
+          ],
+          "ms": [
+            [
+              "Palsu",
+              "Benar"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-014",
+      "findings": [
+        "The prompt’s implication truth rule is correct.",
+        "The active Hint reference evaluates both directions, directly supplying the final pair."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Identify the antecedent (condition) and consequent (result) of each implication."
+          },
+          {
+            "id": "nextStep",
+            "text": "Reversing the direction changes their roles, so apply the false-case test to each direction separately."
+          }
+        ],
+        "hint": "Identify the antecedent (condition) and consequent (result) of each implication. Reversing the direction changes their roles, so apply the false-case test to each direction separately.",
+        "moreHint": "Write two rows: condition p with result q, then condition q with result p. Insert the given values into these roles and compare each row with the failure condition stated in the question."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kenal pasti antejadian (syarat) dan akibat (hasil) bagi setiap implikasi."
+          },
+          {
+            "id": "nextStep",
+            "text": "Membalikkan arah menukar peranannya, maka gunakan ujian kes palsu pada setiap arah secara berasingan."
+          }
+        ],
+        "hint": "Kenal pasti antejadian (syarat) dan akibat (hasil) bagi setiap implikasi. Membalikkan arah menukar peranannya, maka gunakan ujian kes palsu pada setiap arah secara berasingan.",
+        "moreHint": "Tulis dua baris: antejadian p dengan akibat q, kemudian antejadian q dengan akibat p. Masukkan nilai diberi mengikut peranan ini dan bandingkan setiap baris dengan keadaan palsu yang dinyatakan dalam soalan."
+      },
+      "rationale": "A role-labelled input table prevents treating an implication and its converse as automatically equivalent without giving the two results.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/93/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint contains the completed If p, then q and If q, then p columns for the exact given row, directly giving the requested pair.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Identify each implication’s roles",
+          "ms": "Kenal pasti peranan setiap implikasi"
+        },
+        "caption": {
+          "en": "The entries are input values for the antecedent and consequent. Apply the implication rule to each direction.",
+          "ms": "Entri ialah nilai input bagi antejadian dan akibat. Gunakan peraturan implikasi pada setiap arah."
+        },
+        "headers": {
+          "en": [
+            "Direction",
+            "Antecedent value",
+            "Consequent value"
+          ],
+          "ms": [
+            "Arah",
+            "Nilai antejadian",
+            "Nilai akibat"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "p → q",
+              "True",
+              "False"
+            ],
+            [
+              "q → p",
+              "False",
+              "True"
+            ]
+          ],
+          "ms": [
+            [
+              "p → q",
+              "Benar",
+              "Palsu"
+            ],
+            [
+              "q → p",
+              "Palsu",
+              "Benar"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-015",
+      "findings": [
+        "The numerical claims and requested order are clear; preserve the prompt.",
+        "The active Hint table skips the number-claim stage and directly gives the two requested compound outputs."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "First evaluate the two number claims."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use their truth values to check AND and inclusive OR separately, in that order."
+          }
+        ],
+        "hint": "First evaluate the two number claims. Use their truth values to check AND and inclusive OR separately, in that order.",
+        "moreHint": "Calculate 12 ÷ 3 and test whether 12 is divisible by 2. Record the values of p and q before applying the both-true rule and the at-least-one rule."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Nilai kedua-dua pernyataan nombor dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan nilai kebenarannya untuk menyemak DAN dan ATAU inklusif secara berasingan, mengikut urutan itu."
+          }
+        ],
+        "hint": "Nilai kedua-dua pernyataan nombor dahulu. Gunakan nilai kebenarannya untuk menyemak DAN dan ATAU inklusif secara berasingan, mengikut urutan itu.",
+        "moreHint": "Hitung 12 ÷ 3 dan uji sama ada 12 boleh dibahagi tepat dengan 2. Catat nilai p dan q sebelum menggunakan syarat kedua-duanya benar dan syarat sekurang-kurangnya satu benar."
+      },
+      "rationale": "The filled prerequisite table can verify the simple claims, leaving the compound truth-value step for the learner.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/94/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint contains the completed p AND q and p OR q results, bypassing the simple number claims and supplying the requested pair.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check the simple number claims",
+          "ms": "Semak pernyataan nombor mudah"
+        },
+        "caption": {
+          "en": "These values concern p and q separately. Combine them yourself using each connection rule.",
+          "ms": "Nilai ini merujuk p dan q secara berasingan. Gabungkannya sendiri menggunakan syarat setiap kata hubung."
+        },
+        "headers": {
+          "en": [
+            "Claim",
+            "Calculation",
+            "Truth value"
+          ],
+          "ms": [
+            "Pernyataan",
+            "Pengiraan",
+            "Nilai kebenaran"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "p: 12 is a multiple of 3",
+              "12 ÷ 3 = 4",
+              "True"
+            ],
+            [
+              "q: 12 is odd",
+              "12 ÷ 2 = 6, remainder 0",
+              "False"
+            ]
+          ],
+          "ms": [
+            [
+              "p: 12 ialah gandaan 3",
+              "12 ÷ 3 = 4",
+              "Benar"
+            ],
+            [
+              "q: 12 ialah nombor ganjil",
+              "12 ÷ 2 = 6, baki 0",
+              "Palsu"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-016",
+      "findings": [
+        "The implication definition is appropriate for a definition question.",
+        "The active full implication truth table directly identifies the only false row, which is the answer requested."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Think of the implication as a promise about what follows when its condition holds."
+          },
+          {
+            "id": "nextStep",
+            "text": "Test each pair for a broken promise; distinguish a condition not met from a required result not met."
+          }
+        ],
+        "hint": "Think of the implication as a promise about what follows when its condition holds. Test each pair for a broken promise; distinguish a condition not met from a required result not met.",
+        "moreHint": "Group the rows by the value of p. Among rows where the condition holds, compare whether the promised result holds too; then decide which row actually breaks the rule."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Fikirkan implikasi sebagai janji tentang hasil apabila syaratnya dipenuhi."
+          },
+          {
+            "id": "nextStep",
+            "text": "Uji setiap pasangan untuk mencari janji yang dimungkiri; bezakan syarat yang tidak dipenuhi daripada hasil wajib yang tidak dipenuhi."
+          }
+        ],
+        "hint": "Fikirkan implikasi sebagai janji tentang hasil apabila syaratnya dipenuhi. Uji setiap pasangan untuk mencari janji yang dimungkiri; bezakan syarat yang tidak dipenuhi daripada hasil wajib yang tidak dipenuhi.",
+        "moreHint": "Kumpulkan baris mengikut nilai p. Antara baris yang memenuhi antejadian, bandingkan sama ada akibat yang dijanjikan turut benar; kemudian tentukan baris yang benar-benar memungkiri peraturan."
+      },
+      "rationale": "The reference retains all four given candidate pairs but requires the learner to apply the implication criterion.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/95/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint is the full evaluated implication truth table. Its unique false row directly identifies the requested candidate pair.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "The four possible input pairs",
+          "ms": "Empat pasangan input yang mungkin"
+        },
+        "caption": {
+          "en": "For each pair, check whether the condition is met and what the implication then requires of the result.",
+          "ms": "Bagi setiap pasangan, semak sama ada antejadian dipenuhi dan perkara yang kemudian diwajibkan oleh implikasi terhadap akibat."
+        },
+        "headers": {
+          "en": [
+            "p",
+            "q"
+          ],
+          "ms": [
+            "p",
+            "q"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "True",
+              "True"
+            ],
+            [
+              "True",
+              "False"
+            ],
+            [
+              "False",
+              "True"
+            ],
+            [
+              "False",
+              "False"
+            ]
+          ],
+          "ms": [
+            [
+              "Benar",
+              "Benar"
+            ],
+            [
+              "Benar",
+              "Palsu"
+            ],
+            [
+              "Palsu",
+              "Benar"
+            ],
+            [
+              "Palsu",
+              "Palsu"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-017",
+      "findings": [
+        "The fixed rune and gate are defined clearly.",
+        "The existing More Hint fills both sentence slots with the correct clauses; replace that reconstruction with per-option selection criteria."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An implication places its condition after if and its result after then."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use the definitions of p and q to check each option’s direction and any added negation or second rule."
+          }
+        ],
+        "hint": "An implication places its condition after if and its result after then. Use the definitions of p and q to check each option’s direction and any added negation or second rule.",
+        "moreHint": "Mark the clause after if in each option and compare it with p. For an option that passes, check its then-clause against q and check whether it adds any extra requirement."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Implikasi meletakkan antejadian selepas jika dan akibat selepas maka."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan takrif p dan q untuk menyemak arah setiap pilihan serta sebarang penafian atau peraturan kedua yang ditambah."
+          }
+        ],
+        "hint": "Implikasi meletakkan antejadian selepas jika dan akibat selepas maka. Gunakan takrif p dan q untuk menyemak arah setiap pilihan serta sebarang penafian atau peraturan kedua yang ditambah.",
+        "moreHint": "Tandakan klausa selepas jika dalam setiap pilihan dan bandingkan dengan p. Bagi pilihan yang memenuhi semakan itu, semak klausa selepas maka berdasarkan q dan semak sama ada terdapat syarat tambahan."
+      },
+      "rationale": "The learner checks the requested implication’s form without being handed the complete correct sentence.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-018",
+      "findings": [
+        "The if-and-only-if prompt is clear and its alternatives remain unchanged.",
+        "Make More Hint a two-direction checklist for each option instead of rebuilding the full correct answer."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "If and only if requires an implication in each direction."
+          },
+          {
+            "id": "nextStep",
+            "text": "Keep both original claims unchanged when separating the two directions."
+          }
+        ],
+        "hint": "If and only if requires an implication in each direction. Keep both original claims unchanged when separating the two directions.",
+        "moreHint": "Label the gate claim p and the key claim q. For each option, check separately for p to q and q to p, and check whether either clause introduces no key."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Jika dan hanya jika memerlukan implikasi dalam setiap arah."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kekalkan kedua-dua pernyataan asal apabila mengasingkan dua arah itu."
+          }
+        ],
+        "hint": "Jika dan hanya jika memerlukan implikasi dalam setiap arah. Kekalkan kedua-dua pernyataan asal apabila mengasingkan dua arah itu.",
+        "moreHint": "Labelkan pernyataan pintu pagar sebagai p dan pernyataan kunci sebagai q. Bagi setiap pilihan, semak arah p kepada q dan q kepada p secara berasingan, serta semak sama ada mana-mana klausa menambah penafian tentang kunci."
+      },
+      "rationale": "The checklist detects a missing reverse implication or an introduced negation without selecting an option for the learner.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-019",
+      "findings": [
+        "The original rule and integer domain are clear.",
+        "Keep the warning that a converse need not inherit the original truth value; use a form check rather than writing the whole reversed sentence."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The converse swaps the antecedent and consequent without negating either claim."
+          },
+          {
+            "id": "nextStep",
+            "text": "Judge this requested form separately from whether the new claim is true."
+          }
+        ],
+        "hint": "The converse swaps the antecedent and consequent without negating either claim. Judge this requested form separately from whether the new claim is true.",
+        "moreHint": "Label the original condition p: divisible by 4, and its result q: even. For each option, record which label comes first and whether either part is negated, then compare with the converse rule."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Akas menukar kedudukan antejadian dan akibat tanpa menafikan mana-mana pernyataan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Nilai bentuk yang diminta ini secara berasingan daripada kebenaran pernyataan baharu itu."
+          }
+        ],
+        "hint": "Akas menukar kedudukan antejadian dan akibat tanpa menafikan mana-mana pernyataan. Nilai bentuk yang diminta ini secara berasingan daripada kebenaran pernyataan baharu itu.",
+        "moreHint": "Labelkan antejadian asal sebagai p: boleh dibahagi tepat dengan 4, dan akibatnya sebagai q: genap. Bagi setiap pilihan, catat label yang muncul dahulu dan sama ada mana-mana bahagian dinafikan, kemudian bandingkan dengan peraturan akas."
+      },
+      "rationale": "This separates constructing the converse from proving it, and avoids confusing it with inverse or contrapositive.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-020",
+      "findings": [
+        "The Fire mark and red property have clear meanings.",
+        "Use an order-and-negation check for each candidate instead of supplying a completed inverse sentence."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The inverse negates both claims while keeping their original order."
+          },
+          {
+            "id": "nextStep",
+            "text": "Forming an inverse does not establish that it is true whenever the original is true."
+          }
+        ],
+        "hint": "The inverse negates both claims while keeping their original order. Forming an inverse does not establish that it is true whenever the original is true.",
+        "moreHint": "Mark the original clauses as Fire mark first and red second. For each candidate, check for two negations and compare its clause order with the original."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Songsangan menafikan kedua-dua pernyataan sambil mengekalkan urutan asalnya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Membentuk songsangan tidak membuktikan bahawa songsangan benar apabila pernyataan asal benar."
+          }
+        ],
+        "hint": "Songsangan menafikan kedua-dua pernyataan sambil mengekalkan urutan asalnya. Membentuk songsangan tidak membuktikan bahawa songsangan benar apabila pernyataan asal benar.",
+        "moreHint": "Tandakan klausa asal sebagai tanda Api dahulu dan merah kemudian. Bagi setiap calon, semak dua penafian dan bandingkan urutan klausanya dengan pernyataan asal."
+      },
+      "rationale": "The extra scaffold operationalises inverse construction without incorrectly teaching equivalence to the original.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-021",
+      "findings": [
+        "The card-category meaning is supplied in the prompt.",
+        "Make More Hint a clause-by-clause candidate check, retaining the distinction from inverse and converse."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A contrapositive reverses the two claims and negates both."
+          },
+          {
+            "id": "nextStep",
+            "text": "Track which claim was the original consequent before checking the candidates."
+          }
+        ],
+        "hint": "A contrapositive reverses the two claims and negates both. Track which claim was the original consequent before checking the candidates.",
+        "moreHint": "Label the original condition Guard and the original result blue. Check whether each candidate’s first clause negates the original result, then check its second clause against the original condition."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kontrapositif membalikkan kedudukan dua pernyataan dan menafikan kedua-duanya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kenal pasti pernyataan yang merupakan akibat asal sebelum menyemak calon."
+          }
+        ],
+        "hint": "Kontrapositif membalikkan kedudukan dua pernyataan dan menafikan kedua-duanya. Kenal pasti pernyataan yang merupakan akibat asal sebelum menyemak calon.",
+        "moreHint": "Labelkan antejadian asal sebagai Pengawal dan akibat asal sebagai biru. Semak sama ada klausa pertama setiap calon menafikan akibat asal, kemudian semak klausa keduanya berdasarkan antejadian asal."
+      },
+      "rationale": "The learner performs the reverse-and-negate operation without receiving the final contrapositive sentence.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-022",
+      "findings": [
+        "The two quantified integer claims are clear and mathematically correct.",
+        "Retain the general proof versus counterexample distinction; leave the algebraic completion and counterexample judgement to the learner."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Test each direction separately: a universal claim needs a general reason, while one allowed counterexample can disprove it."
+          },
+          {
+            "id": "nextStep",
+            "text": "Do not infer the converse’s truth value from the original rule alone."
+          }
+        ],
+        "hint": "Test each direction separately: a universal claim needs a general reason, while one allowed counterexample can disprove it. Do not infer the converse’s truth value from the original rule alone.",
+        "moreHint": "For p, write n = 4k for an integer k and factor out 2. For q, test 2, 4 and 6 by division by 4 and check for any remainder."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Uji setiap arah secara berasingan: pernyataan umum memerlukan alasan umum, manakala satu contoh penyangkal yang dibenarkan boleh menyangkalnya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Jangan tentukan nilai kebenaran akas daripada peraturan asal sahaja."
+          }
+        ],
+        "hint": "Uji setiap arah secara berasingan: pernyataan umum memerlukan alasan umum, manakala satu contoh penyangkal yang dibenarkan boleh menyangkalnya. Jangan tentukan nilai kebenaran akas daripada peraturan asal sahaja.",
+        "moreHint": "Bagi p, tulis n = 4k bagi suatu integer k dan keluarkan faktor 2. Bagi q, uji 2, 4 dan 6 dengan membahagikannya dengan 4 serta semak sebarang baki."
+      },
+      "rationale": "The hint avoids treating several supporting examples as a proof of a universal claim or treating a converse as equivalent automatically.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-023",
+      "findings": [
+        "The definition of equivalence is accurate and should remain.",
+        "The active Hint table prints the exact correct candidate as a header beside the matching original truth column."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Logical equivalence requires matching truth values in all four cases of p and q."
+          },
+          {
+            "id": "nextStep",
+            "text": "One mismatch rejects a candidate; one matching row is not enough to establish equivalence."
+          }
+        ],
+        "hint": "Logical equivalence requires matching truth values in all four cases of p and q. One mismatch rejects a candidate; one matching row is not enough to establish equivalence.",
+        "moreHint": "Begin with p false and q true. Apply any NOT first, identify each candidate’s own antecedent and consequent, and use the implication rule. Reject mismatches, then check the remaining rows."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesetaraan logik memerlukan nilai kebenaran yang sepadan dalam keempat-empat kes p dan q."
+          },
+          {
+            "id": "nextStep",
+            "text": "Satu ketidakpadanan menolak calon; satu baris yang sepadan belum mencukupi untuk membuktikan kesetaraan."
+          }
+        ],
+        "hint": "Kesetaraan logik memerlukan nilai kebenaran yang sepadan dalam keempat-empat kes p dan q. Satu ketidakpadanan menolak calon; satu baris yang sepadan belum mencukupi untuk membuktikan kesetaraan.",
+        "moreHint": "Mulakan dengan p palsu dan q benar. Nilai setiap BUKAN dahulu, kenal pasti antejadian dan akibat calon itu sendiri, lalu gunakan peraturan implikasi. Tolak calon yang tidak sepadan, kemudian semak baris lain."
+      },
+      "rationale": "Only the original’s completed truth table is retained as a reference, so the learner must evaluate candidates rather than read the equivalent expression from the table.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/102/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint places the correct candidate If NOT q, then NOT p in a header beside the original and gives matching values in all four rows.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Reference for the original implication",
+          "ms": "Rujukan bagi implikasi asal"
+        },
+        "caption": {
+          "en": "Evaluate each candidate in all four rows and compare it with the original column. One mismatch is enough to reject it.",
+          "ms": "Nilai setiap calon dalam keempat-empat baris dan bandingkan dengan lajur asal. Satu ketidakpadanan mencukupi untuk menolaknya."
+        },
+        "headers": {
+          "en": [
+            "p",
+            "q",
+            "If p, then q"
+          ],
+          "ms": [
+            "p",
+            "q",
+            "Jika p, maka q"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "True",
+              "True",
+              "True"
+            ],
+            [
+              "True",
+              "False",
+              "False"
+            ],
+            [
+              "False",
+              "True",
+              "True"
+            ],
+            [
+              "False",
+              "False",
+              "True"
+            ]
+          ],
+          "ms": [
+            [
+              "Benar",
+              "Benar",
+              "Benar"
+            ],
+            [
+              "Benar",
+              "Palsu",
+              "Palsu"
+            ],
+            [
+              "Palsu",
+              "Benar",
+              "Benar"
+            ],
+            [
+              "Palsu",
+              "Palsu",
+              "Benar"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-024",
+      "findings": [
+        "The prompt already explains both required counterexample properties.",
+        "The active Hint table fully classifies every offered number and directly exposes the unique prime-but-not-odd row."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A counterexample must satisfy the original condition and fail the claimed result."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check both prime and odd for each candidate; a non-prime does not test this claim."
+          }
+        ],
+        "hint": "A counterexample must satisfy the original condition and fail the claimed result. Check both prime and odd for each candidate; a non-prime does not test this claim.",
+        "moreHint": "Use each candidate’s factor list to check for exactly two positive factors. Among candidates that pass that test, use the remainder on division by 2 to check oddness."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Contoh penyangkal mesti memenuhi syarat asal tetapi tidak memenuhi hasil yang didakwa."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak sifat perdana dan ganjil bagi setiap calon; nombor bukan perdana tidak menguji pernyataan ini."
+          }
+        ],
+        "hint": "Contoh penyangkal mesti memenuhi syarat asal tetapi tidak memenuhi hasil yang didakwa. Semak sifat perdana dan ganjil bagi setiap calon; nombor bukan perdana tidak menguji pernyataan ini.",
+        "moreHint": "Gunakan senarai faktor setiap calon untuk menyemak sama ada terdapat tepat dua faktor positif. Antara calon yang memenuhi ujian itu, gunakan baki pembahagian dengan 2 untuk menyemak sifat ganjil."
+      },
+      "rationale": "Filled factor lists and division remainders supply prerequisites while leaving the two property judgements and counterexample selection to the learner.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/103/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint gives evaluated Prime? and Odd? for every option, exposing the unique prime-and-not-odd candidate without the factor/parity checks.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Factors and division remainders",
+          "ms": "Faktor dan baki pembahagian"
+        },
+        "caption": {
+          "en": "Use the factor lists to judge prime, and the remainders to judge odd. Then apply the counterexample criteria.",
+          "ms": "Gunakan senarai faktor untuk menilai sifat perdana dan baki untuk menilai sifat ganjil. Kemudian gunakan syarat contoh penyangkal."
+        },
+        "headers": {
+          "en": [
+            "Candidate",
+            "Positive factors",
+            "Remainder on division by 2"
+          ],
+          "ms": [
+            "Calon",
+            "Faktor positif",
+            "Baki pembahagian dengan 2"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "2",
+              "1, 2",
+              "0"
+            ],
+            [
+              "3",
+              "1, 3",
+              "1"
+            ],
+            [
+              "9",
+              "1, 3, 9",
+              "1"
+            ],
+            [
+              "5",
+              "1, 5",
+              "1"
+            ]
+          ],
+          "ms": [
+            [
+              "2",
+              "1, 2",
+              "0"
+            ],
+            [
+              "3",
+              "1, 3",
+              "1"
+            ],
+            [
+              "9",
+              "1, 3, 9",
+              "1"
+            ],
+            [
+              "5",
+              "1, 5",
+              "1"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-025",
+      "findings": [
+        "The positive-integer domain and strict inequality are clear.",
+        "The active Hint table includes the final comparison result for every candidate.",
+        "Avoid singling out the decisive candidate as the only number to test in More Hint."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A counterexample must be an allowed positive integer where the stated inequality fails."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare the square with the original number using the strict > sign, not ≥."
+          }
+        ],
+        "hint": "A counterexample must be an allowed positive integer where the stated inequality fails. Compare the square with the original number using the strict > sign, not ≥.",
+        "moreHint": "For each offered n, write n × n next to n. Mark whether the comparison is >, = or <; equality is one way for a strict > claim to fail."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Contoh penyangkal mestilah integer positif yang dibenarkan tetapi tidak memenuhi ketaksamaan yang dinyatakan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan kuasa dua dengan nombor asal menggunakan tanda >, yang tidak merangkumi kesamaan."
+          }
+        ],
+        "hint": "Contoh penyangkal mestilah integer positif yang dibenarkan tetapi tidak memenuhi ketaksamaan yang dinyatakan. Bandingkan kuasa dua dengan nombor asal menggunakan tanda >, yang tidak merangkumi kesamaan.",
+        "moreHint": "Bagi setiap n yang diberi sebagai pilihan, tulis n × n di sebelah n. Tandakan sama ada perbandingannya ialah >, = atau <; nilai yang sama tidak memenuhi syarat lebih besar daripada."
+      },
+      "rationale": "The learner must compare the filled square values with n and recognise equality as a failure of strict inequality.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/104/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint includes evaluated n² > n? for every offered n, exposing the unique failing candidate.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Compare each square with its input",
+          "ms": "Bandingkan setiap kuasa dua dengan inputnya"
+        },
+        "caption": {
+          "en": "All candidates are positive integers. Compare each completed square with n using the strict sign in the question.",
+          "ms": "Semua calon ialah integer positif. Bandingkan setiap kuasa dua yang lengkap dengan n menggunakan tanda ketat dalam soalan."
+        },
+        "headers": {
+          "en": [
+            "n",
+            "n²"
+          ],
+          "ms": [
+            "n",
+            "n²"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "4",
+              "16"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "3",
+              "9"
+            ]
+          ],
+          "ms": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "4",
+              "16"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "3",
+              "9"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-026",
+      "findings": [
+        "The integer domain and counterexample condition are explicit.",
+        "The active Hint table supplies both completed truth tests for every offered value.",
+        "The existing More Hint points only to the decisive negative value; broaden the operational test to all candidates."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An implication is disproved by an allowed case with a true antecedent and a false consequent."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare the square with 9 and the original number with 3 separately."
+          }
+        ],
+        "hint": "An implication is disproved by an allowed case with a true antecedent and a false consequent. Compare the square with 9 and the original number with 3 separately.",
+        "moreHint": "Make columns for n, n × n, comparison with 9 and comparison with 3. For a negative candidate, put parentheses around both factors; find a row that passes the first inequality but fails the second."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Implikasi disangkal oleh kes yang dibenarkan dengan antejadian benar dan akibat palsu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan kuasa dua dengan 9 dan nombor asal dengan 3 secara berasingan."
+          }
+        ],
+        "hint": "Implikasi disangkal oleh kes yang dibenarkan dengan antejadian benar dan akibat palsu. Bandingkan kuasa dua dengan 9 dan nombor asal dengan 3 secara berasingan.",
+        "moreHint": "Bina lajur bagi n, n × n, perbandingan dengan 9 dan perbandingan dengan 3. Bagi calon negatif, letakkan kurungan pada kedua-dua faktor; cari baris yang memenuhi ketaksamaan pertama tetapi tidak memenuhi ketaksamaan kedua."
+      },
+      "rationale": "The square reference supports the sign calculation without carrying out either target inequality judgement for the learner.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/105/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint includes evaluated n² > 9? and n > 3? for every offered n, exposing the true/false counterexample row.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Square first, then compare",
+          "ms": "Kuasa duakan dahulu, kemudian bandingkan"
+        },
+        "caption": {
+          "en": "Compare the square column with 9 and the original n column with 3. Judge the two inequalities separately.",
+          "ms": "Bandingkan lajur kuasa dua dengan 9 dan lajur n asal dengan 3. Nilai kedua-dua ketaksamaan secara berasingan."
+        },
+        "headers": {
+          "en": [
+            "n",
+            "n²"
+          ],
+          "ms": [
+            "n",
+            "n²"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "4",
+              "16"
+            ],
+            [
+              "3",
+              "9"
+            ],
+            [
+              "−4",
+              "16"
+            ],
+            [
+              "2",
+              "4"
+            ]
+          ],
+          "ms": [
+            [
+              "4",
+              "16"
+            ],
+            [
+              "3",
+              "9"
+            ],
+            [
+              "−4",
+              "16"
+            ],
+            [
+              "2",
+              "4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-027",
+      "findings": [
+        "The given implication and choices are clear.",
+        "The active Hint table directly classifies every candidate for both target properties."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A counterexample must meet the even condition but fail the multiple-of-4 result."
+          },
+          {
+            "id": "nextStep",
+            "text": "An odd value does not test the result promised by this implication."
+          }
+        ],
+        "hint": "A counterexample must meet the even condition but fail the multiple-of-4 result. An odd value does not test the result promised by this implication.",
+        "moreHint": "Among 8, 3, 4 and 6, first identify the numbers divisible by 2. Divide those numbers by 4 and check whether each quotient is an integer."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Contoh penyangkal mesti memenuhi syarat genap tetapi tidak memenuhi hasil gandaan 4."
+          },
+          {
+            "id": "nextStep",
+            "text": "Nilai ganjil tidak menguji hasil yang dijanjikan oleh implikasi ini."
+          }
+        ],
+        "hint": "Contoh penyangkal mesti memenuhi syarat genap tetapi tidak memenuhi hasil gandaan 4. Nilai ganjil tidak menguji hasil yang dijanjikan oleh implikasi ini.",
+        "moreHint": "Antara 8, 3, 4 dan 6, kenal pasti nombor yang boleh dibahagi tepat dengan 2 dahulu. Bahagikan nombor itu dengan 4 dan semak sama ada setiap hasil bahagi ialah integer."
+      },
+      "rationale": "Exact quotient data leave the learner to apply the divisibility tests and select the counterexample without a final truth row.",
+      "visualFindings": [
+        {
+          "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json#/questions/106/learning/visual/solution; selected for Hint by learning/support-visual.mjs:selectSupportVisual",
+          "problem": "The runtime Hint includes evaluated Even? and Multiple of 4? for every offered n, exposing the counterexample row.",
+          "proposedCorrection": "Use this item’s explicit reviewed hintReference for Hint and More Hint. Retain the authored solution visual unchanged. Every displayed reference cell remains filled; only prerequisite values or unevaluated comparisons remain for the learner to use."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Exact quotients for each candidate",
+          "ms": "Hasil bahagi tepat bagi setiap calon"
+        },
+        "caption": {
+          "en": "A divisibility test asks whether the exact quotient is an integer. Apply the test for 2 and for 4 separately.",
+          "ms": "Ujian kebolehbahagian menyemak sama ada hasil bahagi tepat ialah integer. Gunakan ujian bagi 2 dan bagi 4 secara berasingan."
+        },
+        "headers": {
+          "en": [
+            "n",
+            "n ÷ 2",
+            "n ÷ 4"
+          ],
+          "ms": [
+            "n",
+            "n ÷ 2",
+            "n ÷ 4"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "8",
+              "4",
+              "2"
+            ],
+            [
+              "3",
+              "3/2",
+              "3/4"
+            ],
+            [
+              "4",
+              "2",
+              "1"
+            ],
+            [
+              "6",
+              "3",
+              "3/2"
+            ]
+          ],
+          "ms": [
+            [
+              "8",
+              "4",
+              "2"
+            ],
+            [
+              "3",
+              "3/2",
+              "3/4"
+            ],
+            [
+              "4",
+              "2",
+              "1"
+            ],
+            [
+              "6",
+              "3",
+              "3/2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "LOGIC-028",
+      "findings": [
+        "The universal integer domain and two-direction requirement are explicit.",
+        "Make the concrete test apply to both directions without announcing the whole claim’s truth value or quoting a correct assessment."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "If and only if requires both directions to hold."
+          },
+          {
+            "id": "nextStep",
+            "text": "Split the claim into two implications; a counterexample to either direction defeats the combined claim."
+          }
+        ],
+        "hint": "If and only if requires both directions to hold. Split the claim into two implications; a counterexample to either direction defeats the combined claim.",
+        "moreHint": "Write divisible by 4 to even, and even to divisible by 4. Test 2 and 4 in each direction by checking both properties, then ask whether every required rule holds."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Jika dan hanya jika memerlukan kedua-dua arah benar."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pisahkan pernyataan kepada dua implikasi; contoh penyangkal bagi mana-mana arah menyangkal pernyataan gabungan itu."
+          }
+        ],
+        "hint": "Jika dan hanya jika memerlukan kedua-dua arah benar. Pisahkan pernyataan kepada dua implikasi; contoh penyangkal bagi mana-mana arah menyangkal pernyataan gabungan itu.",
+        "moreHint": "Tulis arah boleh dibahagi tepat dengan 4 kepada genap, dan genap kepada boleh dibahagi tepat dengan 4. Uji 2 dan 4 dalam setiap arah dengan menyemak kedua-dua sifat, kemudian tentukan sama ada setiap peraturan yang diperlukan dipenuhi."
+      },
+      "rationale": "The learner must connect a failed direction to the biconditional judgement rather than accept one true direction as sufficient.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-029",
+      "findings": [
+        "The premises explicitly concern the same labelled token; preserve them.",
+        "Keep direct application separate from adding a reverse or only-marked rule."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Use the general premise on a particular case only when that case meets the rule’s condition."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check R’s given mark before applying the stated rule in its forward direction."
+          }
+        ],
+        "hint": "Use the general premise on a particular case only when that case meets the rule’s condition. Check R’s given mark before applying the stated rule in its forward direction.",
+        "moreHint": "Verify that R belongs to the marked group, then apply the rule to that particular name. Compare the options with the result of this forward application; check whether an option adds a restriction not stated in the premises."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Gunakan premis umum pada kes tertentu hanya apabila kes itu memenuhi syarat peraturan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak tanda R yang diberi sebelum menggunakan peraturan mengikut arah asalnya."
+          }
+        ],
+        "hint": "Gunakan premis umum pada kes tertentu hanya apabila kes itu memenuhi syarat peraturan. Semak tanda R yang diberi sebelum menggunakan peraturan mengikut arah asalnya.",
+        "moreHint": "Pastikan R tergolong dalam kumpulan yang mempunyai tanda, kemudian gunakan peraturan pada nama tertentu itu. Bandingkan pilihan dengan hasil penggunaan mengikut arah asal ini; semak sama ada pilihan itu menambah sekatan yang tidak dinyatakan dalam premis."
+      },
+      "rationale": "The operational step identifies the matching case without stating the resulting conclusion about Gate A.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-030",
+      "findings": [
+        "The given true premises make a Form III deduction well-defined.",
+        "The existing More Hint is a useful temporary-assumption check and is retained."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A required conclusion must fit both premises at once."
+          },
+          {
+            "id": "nextStep",
+            "text": "Test a possible conclusion by following the rule and looking for a contradiction with the other premise."
+          }
+        ],
+        "hint": "A required conclusion must fit both premises at once. Test a possible conclusion by following the rule and looking for a contradiction with the other premise.",
+        "moreHint": "Temporarily suppose a key is present. Follow the rule to its required gate result, then compare that with premise 2."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesimpulan yang mesti benar perlu selaras dengan kedua-dua premis serentak."
+          },
+          {
+            "id": "nextStep",
+            "text": "Uji kesimpulan yang mungkin dengan mengikuti peraturan dan mencari percanggahan dengan premis yang satu lagi."
+          }
+        ],
+        "hint": "Kesimpulan yang mesti benar perlu selaras dengan kedua-dua premis serentak. Uji kesimpulan yang mungkin dengan mengikuti peraturan dan mencari percanggahan dengan premis yang satu lagi.",
+        "moreHint": "Andaikan sementara bahawa kunci ada. Ikuti peraturan hingga hasil pintu pagar yang diperlukan, kemudian bandingkan dengan premis 2."
+      },
+      "rationale": "The learner tests the condition against the absent consequent without being told the final key state.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-031",
+      "findings": [
+        "The prompt correctly restricts judgement to the supplied premises.",
+        "Use two possible card cases to test validity rather than infer the converse or announce the invalidity assessment."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A deduction is invalid if the premises can be true while the conclusion is false."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check what the Fire-to-Attack rule requires and which Attack cases it still permits."
+          }
+        ],
+        "hint": "A deduction is invalid if the premises can be true while the conclusion is false. Check what the Fire-to-Attack rule requires and which Attack cases it still permits.",
+        "moreHint": "Make two trial Attack cards: one with a Fire mark and one without. Place c7 in each case and check the rule, the given fact and the proposed conclusion separately."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Deduksi tidak sah jika premis boleh benar sedangkan kesimpulan palsu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak perkara yang diwajibkan oleh peraturan Api kepada Serangan dan kes Serangan yang masih dibenarkannya."
+          }
+        ],
+        "hint": "Deduksi tidak sah jika premis boleh benar sedangkan kesimpulan palsu. Semak perkara yang diwajibkan oleh peraturan Api kepada Serangan dan kes Serangan yang masih dibenarkannya.",
+        "moreHint": "Bina dua kes percubaan kad Serangan: satu mempunyai tanda Api dan satu lagi tidak. Letakkan c7 dalam setiap kes dan semak peraturan, fakta yang diberi serta kesimpulan yang dicadangkan secara berasingan."
+      },
+      "rationale": "The method demonstrates how to search for a countermodel to affirming the consequent without giving the final option text.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-032",
+      "findings": [
+        "The prompt asks validity using only the premises, which is the right restriction.",
+        "The existing More Hint singles out the countercase; compare both permitted trial states and require the learner to check them."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A valid conclusion must hold in every case allowed by the premises."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check what the rule says about Fire tokens and what it leaves open about tokens without Fire."
+          }
+        ],
+        "hint": "A valid conclusion must hold in every case allowed by the premises. Check what the rule says about Fire tokens and what it leaves open about tokens without Fire.",
+        "moreHint": "Make two trial cases for unmarked R: glowing and not glowing. For each, check whether both premises can hold and whether the proposed conclusion then holds."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesimpulan yang sah mesti benar dalam setiap kes yang dibenarkan oleh premis."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak perkara yang dinyatakan oleh peraturan tentang token Api dan kemungkinan yang masih terbuka bagi token tanpa Api."
+          }
+        ],
+        "hint": "Kesimpulan yang sah mesti benar dalam setiap kes yang dibenarkan oleh premis. Semak perkara yang dinyatakan oleh peraturan tentang token Api dan kemungkinan yang masih terbuka bagi token tanpa Api.",
+        "moreHint": "Bina dua kes percubaan bagi R tanpa tanda Api: bercahaya dan tidak bercahaya. Bagi setiap kes, semak sama ada kedua-dua premis boleh benar dan sama ada kesimpulan yang dicadangkan turut benar."
+      },
+      "rationale": "This tests denying the antecedent without teaching the incorrect claim that an inverse is always equivalent to its original.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-033",
+      "findings": [
+        "The prompt’s validity and soundness definitions are accurate; preserve them.",
+        "The supplied textbooks have inconsistent wording around validity/soundness, so retain the formal guarantee and DSKP false-premise distinction rather than copying those inconsistencies."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Check the argument’s form separately from the actual truth of its premises."
+          },
+          {
+            "id": "nextStep",
+            "text": "For soundness, check that the form is valid and that every premise is true."
+          }
+        ],
+        "hint": "Check the argument’s form separately from the actual truth of its premises. For soundness, check that the form is valid and that every premise is true.",
+        "moreHint": "Replace odd with P and divisible by 4 with Q to inspect the form. Separately test whether 3 has each property, and use that check when judging the first premise."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Semak bentuk hujah secara berasingan daripada kebenaran sebenar premisnya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Untuk menentukan kemunasabahan, semak bahawa bentuk hujah sah dan setiap premis benar."
+          }
+        ],
+        "hint": "Semak bentuk hujah secara berasingan daripada kebenaran sebenar premisnya. Untuk menentukan kemunasabahan, semak bahawa bentuk hujah sah dan setiap premis benar.",
+        "moreHint": "Gantikan ganjil dengan P dan boleh dibahagi tepat dengan 4 dengan Q untuk meneliti bentuk hujah. Secara berasingan, uji sama ada 3 mempunyai setiap sifat, lalu gunakan semakan itu untuk menilai premis pertama."
+      },
+      "rationale": "The support preserves the distinction between a valid form and true premises, without announcing either assessment for this argument.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-034",
+      "findings": [
+        "The direct-proof restriction avoids ambiguity about unrelated additional facts.",
+        "Give a specific subject/property check for every option instead of completing the missing premise for the learner."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An all-A-are-B rule applies to a particular object only when that object is known to be A."
+          },
+          {
+            "id": "nextStep",
+            "text": "The missing premise must connect the named card to the rule’s condition."
+          }
+        ],
+        "hint": "An all-A-are-B rule applies to a particular object only when that object is known to be A. The missing premise must connect the named card to the rule’s condition.",
+        "moreHint": "Mark c7 in each option. For an option that mentions it, check whether the stated property is the rule’s condition or its result, and whether the property is affirmed or negated."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Peraturan semua-A-ialah-B terpakai kepada objek tertentu hanya apabila objek itu diketahui sebagai A."
+          },
+          {
+            "id": "nextStep",
+            "text": "Premis yang hilang mesti menghubungkan kad yang dinamakan dengan syarat peraturan."
+          }
+        ],
+        "hint": "Peraturan semua-A-ialah-B terpakai kepada objek tertentu hanya apabila objek itu diketahui sebagai A. Premis yang hilang mesti menghubungkan kad yang dinamakan dengan syarat peraturan.",
+        "moreHint": "Tandakan c7 dalam setiap pilihan. Bagi pilihan yang menyebutnya, semak sama ada sifat yang dinyatakan ialah syarat atau hasil peraturan, serta sama ada sifat itu ditegaskan atau dinafikan."
+      },
+      "rationale": "The scaffold requires the learner to select the fact that lets the given rule apply directly to c7.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-035",
+      "findings": [
+        "The prompt explicitly says no rule for all terms is given; this prevents a false deductive guarantee.",
+        "More Hint uses the observed differences but does not label the reasoning type or claim a unique continuation."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Classify how the prediction is supported, rather than only checking whether 10 fits the visible pattern."
+          },
+          {
+            "id": "nextStep",
+            "text": "Distinguish applying a supplied generating rule from extending examples to an unobserved term."
+          }
+        ],
+        "hint": "Classify how the prediction is supported, rather than only checking whether 10 fits the visible pattern. Distinguish applying a supplied generating rule from extending examples to an unobserved term.",
+        "moreHint": "Compute 4 − 2, 6 − 4 and 8 − 6. Ask which feature is assumed to continue in the prediction, and check whether that assumption was supplied as a rule."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kelaskan asas sokongan bagi ramalan itu, bukan sekadar menyemak sama ada 10 sepadan dengan pola yang kelihatan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bezakan penggunaan peraturan penjanaan yang diberi daripada pelanjutan contoh kepada sebutan yang belum diperhatikan."
+          }
+        ],
+        "hint": "Kelaskan asas sokongan bagi ramalan itu, bukan sekadar menyemak sama ada 10 sepadan dengan pola yang kelihatan. Bezakan penggunaan peraturan penjanaan yang diberi daripada pelanjutan contoh kepada sebutan yang belum diperhatikan.",
+        "moreHint": "Hitung 4 − 2, 6 − 4 dan 8 − 6. Tentukan ciri yang diandaikan berterusan dalam ramalan, dan semak sama ada andaian itu diberikan sebagai peraturan."
+      },
+      "rationale": "The learner identifies the evidential move from observations to conjecture while the given numbers and prediction stay unchanged.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-036",
+      "findings": [
+        "The prompt correctly limits the evidence to three observed rooms.",
+        "Compare both possibilities for unvisited rooms so that unproved is not confused with certainly false."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Compare the cases actually observed with the scope of the conclusion."
+          },
+          {
+            "id": "nextStep",
+            "text": "Supporting examples need not settle what happens in rooms that were not checked."
+          }
+        ],
+        "hint": "Compare the cases actually observed with the scope of the conclusion. Supporting examples need not settle what happens in rooms that were not checked.",
+        "moreHint": "Consider two possible unvisited rooms: one with a chest and one without. Check whether the three recorded observations settle which case occurs, then compare the claim’s scope with the evidence’s scope."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bandingkan kes yang benar-benar diperhatikan dengan skop kesimpulan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Contoh yang menyokong tidak semestinya menentukan keadaan dalam bilik yang belum diperiksa."
+          }
+        ],
+        "hint": "Bandingkan kes yang benar-benar diperhatikan dengan skop kesimpulan. Contoh yang menyokong tidak semestinya menentukan keadaan dalam bilik yang belum diperiksa.",
+        "moreHint": "Pertimbangkan dua kemungkinan bagi bilik yang belum dikunjungi: satu mempunyai peti dan satu lagi tidak. Semak sama ada tiga pemerhatian yang direkodkan menentukan kes yang berlaku, kemudian bandingkan skop pernyataan dengan skop bukti."
+      },
+      "rationale": "The support teaches the gap between observations and a universal conclusion without quoting the final assessment.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-037",
+      "findings": [
+        "The prompt appropriately asks for the strongest basis among these options, not proof of every room.",
+        "Keep evidence quality broader than sample size alone; avoid quoting the large-random-sample option in More Hint."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Judge how well each method covers the rooms named by the claim."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare distinct rooms, coverage of both stages and room types, and selection that might favour supporting cases."
+          }
+        ],
+        "hint": "Judge how well each method covers the rooms named by the claim. Compare distinct rooms, coverage of both stages and room types, and selection that might favour supporting cases.",
+        "moreHint": "For each option, note the number of distinct rooms, the stages and types covered, and how rooms are selected. Revisiting one room adds visits; check whether it adds new cases."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Nilai sejauh mana setiap kaedah meliputi bilik yang dimaksudkan oleh pernyataan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan bilik berbeza, liputan kedua-dua peringkat dan jenis bilik, serta pemilihan yang mungkin memihak kepada kes penyokong."
+          }
+        ],
+        "hint": "Nilai sejauh mana setiap kaedah meliputi bilik yang dimaksudkan oleh pernyataan. Bandingkan bilik berbeza, liputan kedua-dua peringkat dan jenis bilik, serta pemilihan yang mungkin memihak kepada kes penyokong.",
+        "moreHint": "Bagi setiap pilihan, catat bilangan bilik berbeza, peringkat dan jenis yang diliputi, serta cara bilik dipilih. Mengunjungi semula satu bilik menambah lawatan; semak sama ada hal itu menambah kes baharu."
+      },
+      "rationale": "The selection criteria support a comparison of coverage and bias without treating inductive evidence as deductive proof.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-038",
+      "findings": [
+        "Both arguments are sufficiently explicit; no prompt change is needed.",
+        "Define the classification criteria and locate the evidence without stating the final A/B label pair."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Deductive reasoning applies a supplied rule, while inductive reasoning extends observed cases."
+          },
+          {
+            "id": "nextStep",
+            "text": "Identify the source of support for each argument separately before pairing the labels."
+          }
+        ],
+        "hint": "Deductive reasoning applies a supplied rule, while inductive reasoning extends observed cases. Identify the source of support for each argument separately before pairing the labels.",
+        "moreHint": "In A, mark the general rule and the fact about 12. In B, mark the result that has not been tested. For each argument, ask whether the conclusion follows by applying a given rule or predicts beyond checked cases."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Penaakulan deduktif menggunakan peraturan yang diberi, manakala penaakulan induktif melanjutkan kes yang diperhatikan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kenal pasti asas sokongan bagi setiap hujah secara berasingan sebelum memadankan labelnya."
+          }
+        ],
+        "hint": "Penaakulan deduktif menggunakan peraturan yang diberi, manakala penaakulan induktif melanjutkan kes yang diperhatikan. Kenal pasti asas sokongan bagi setiap hujah secara berasingan sebelum memadankan labelnya.",
+        "moreHint": "Dalam A, tandakan peraturan umum dan fakta tentang 12. Dalam B, tandakan hasil yang belum diuji. Bagi setiap hujah, tentukan sama ada kesimpulan terhasil melalui penggunaan peraturan yang diberi atau meramalkan sesuatu yang melampaui kes yang diperiksa."
+      },
+      "rationale": "The learner distinguishes rule application from extrapolation and must still assign and order the two labels.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-039",
+      "findings": [
+        "The direct-application wording is clear; preserve all category and mark definitions.",
+        "More Hint checks direction and universal applicability, distinguishing a general added premise from some Attack cards."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Start from the property already known about c7 and identify the property needed for the conclusion."
+          },
+          {
+            "id": "nextStep",
+            "text": "The added premise must provide a rule that applies to that specific card in the needed direction."
+          }
+        ],
+        "hint": "Start from the property already known about c7 and identify the property needed for the conclusion. The added premise must provide a rule that applies to that specific card in the needed direction.",
+        "moreHint": "Starting from c7 is Attack, check each option: can it apply to every card in that known category, including c7, and reach the required mark? An existence claim may refer to a different card."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Mulakan dengan sifat c7 yang sudah diketahui dan kenal pasti sifat yang diperlukan oleh kesimpulan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Premis tambahan mesti memberikan peraturan yang terpakai kepada kad tertentu itu mengikut arah yang diperlukan."
+          }
+        ],
+        "hint": "Mulakan dengan sifat c7 yang sudah diketahui dan kenal pasti sifat yang diperlukan oleh kesimpulan. Premis tambahan mesti memberikan peraturan yang terpakai kepada kad tertentu itu mengikut arah yang diperlukan.",
+        "moreHint": "Bermula dengan c7 ialah Serangan, semak setiap pilihan: bolehkah pilihan itu terpakai kepada setiap kad dalam kategori yang diketahui itu, termasuk c7, dan menghasilkan tanda yang diperlukan? Pernyataan kewujudan mungkin merujuk kad lain."
+      },
+      "rationale": "The scaffold does not assume the original rule can be reversed and does not state the full added rule that is the answer.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "LOGIC-040",
+      "findings": [
+        "The same-key/lamp/trap test restriction is important and already explicit.",
+        "The two-stage backward check is appropriate; leave the intermediate lamp judgement and final key conclusion unstated."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Work backwards from the stated final fact, keeping all three premises about the same test."
+          },
+          {
+            "id": "nextStep",
+            "text": "At each rule, test whether its condition can hold without contradicting the result known to be absent."
+          }
+        ],
+        "hint": "Work backwards from the stated final fact, keeping all three premises about the same test. At each rule, test whether its condition can hold without contradicting the result known to be absent.",
+        "moreHint": "Begin with premise 2: temporarily suppose the lamp glows and compare its required trap result with premise 3. Then use what you establish about the lamp to check premise 1."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bekerja secara mengundur daripada fakta akhir yang dinyatakan sambil memastikan ketiga-tiga premis merujuk ujian yang sama."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pada setiap peraturan, uji sama ada antejadiannya boleh benar tanpa bercanggah dengan akibat yang diketahui tidak berlaku."
+          }
+        ],
+        "hint": "Bekerja secara mengundur daripada fakta akhir yang dinyatakan sambil memastikan ketiga-tiga premis merujuk ujian yang sama. Pada setiap peraturan, uji sama ada antejadiannya boleh benar tanpa bercanggah dengan akibat yang diketahui tidak berlaku.",
+        "moreHint": "Mulakan dengan premis 2: andaikan sementara lampu bercahaya dan bandingkan hasil perangkap yang diwajibkannya dengan premis 3. Kemudian gunakan perkara yang anda tentukan tentang lampu untuk menyemak premis 1."
+      },
+      "rationale": "The learner applies the absent-result deduction twice without being given either derived conclusion or generalising beyond the specified test.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    }
+  ]
+}

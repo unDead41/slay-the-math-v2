@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-24",
+  "version": "2.38.0",
+  "masterSOR": "1.2.0",
+  "mainParent": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+  "featureParent": "6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0",
+  "authorization": "User now requests main publication; preview branch-only boundary superseded.",
+  "fullSuite": {
+    "command": "DOM_QA_MODULE=<jsdom> NODE_PATH=<runtime modules> npm test",
+    "tests": 947,
+    "pass": 947,
+    "fail": 0,
+    "skip": 0,
+    "durationMs": 404831.463984,
+    "logSHA256": "12d5082a873544ab8a99f9834ee383ff44bd22fc621c746ee1ef8513d8e6ce46"
+  },
+  "nativeReports": {
+    "flows": 6,
+    "geometryChecks": 18,
+    "webSecurityEnabled": true,
+    "errors": [],
+    "command": "node tests/question-report-browser.cjs"
+  },
+  "nativeGoogle": {
+    "command": "node tests/google-sheets-browser.cjs",
+    "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+    "checks": [
+      "The project default reaches the player report without URL controls, eager network or inherited consent.",
+      "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+      "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+      "Actual host reload replays local review flags through the same delivery projection with no invalid payload or duplicate row.",
+      "Reviewed tick and full comment reach the current generated Google receiver together; offline untick/edit updates one row and preserves the comment.",
+      "No capability in frame URLs; desktop/mobile journal has internal scroll, no URL controls and preserved question search.",
+      "Actual finished Artifact reports freeze source/language/support, queue offline, reconnect through the real nested-origin bridge, and create one private Issue without changing the pending gift/run.",
+      "Opening Practice and ticking Reviewed preserves the game comment context and the private developer Selesai status/notes, including steps that were opened then hidden."
+    ],
+    "errors": [],
+    "webSecurityEnabled": true
+  },
+  "nativeOfflineReport": {
+    "command": "node tests/question-report-offline-browser.cjs",
+    "checks": [
+      "Actual portable BM game opens a finished Artifact result, reports with frozen real help, saves on-device and returns to the unchanged pending result.",
+      "No HTTP requests, browser errors, false hint use or game save changes."
+    ],
+    "requests": [],
+    "errors": [],
+    "webSecurityEnabled": true
+  },
+  "nativeTutorial": {
+    "command": "TUTORIAL_QA_OFFLINE=1 node tests/tutorial-browser.cjs",
+    "checks": [
+      "17 chapters, all 11 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records",
+      "portrait: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "small-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "compact-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "narrow-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "Master Medium resolves a focused practice card with loaded definitions",
+      "storage denial leaves chapters and practice usable with a visible notice",
+      "in-run help warns for a live timed Mystery without extending its deadline",
+      "standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests"
+    ],
+    "errors": []
+  },
+  "developerAccess": {
+    "commands": [
+      "node tests/production-dev-browser.cjs",
+      "node tests/dev-toggle-browser.cjs"
+    ],
+    "productionStaticAndLocalPassed": true,
+    "settingsOnlyPreserved": true
+  },
+  "buildSyntax": {
+    "commands": [
+      "node tools/build-production.cjs",
+      "npm run check"
+    ],
+    "passed": true
+  },
+  "preservation": {
+    "main": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+    "feature": "6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0",
+    "educationRuntimeSourcesMatchFeature": [
+      "dist/app.js",
+      "dist/mechanics-host.js",
+      "dist/question-report.js",
+      "dist/question-report.css",
+      "dist/question-feedback.js",
+      "dist/mechanics.js",
+      "dist/question-language.js",
+      "dist/education-practice.js",
+      "tools/google-sheets/receiver.gs",
+      "integrations/google-sheets/Code.gs",
+      "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json"
+    ],
+    "latestMainDevGovernanceSourcesPreserved": [
+      "AGENTS.md",
+      "MASTER_SOR_PROJECT.md",
+      "SOR_README.md",
+      "tools/dev/controls.js",
+      "tools/dev/access.js",
+      "tests/dev-toggle-browser.cjs",
+      "tests/production-dev-browser.cjs"
+    ],
+    "originalArtAudioFilesUnchanged": 607,
+    "inheritedNativeCoverage": "The identical education source/component bytes retain the earlier 720 bilingual component and120 full Practice progression coverage; fresh full-app/Google/Dev/offline checks are recorded separately."
+  },
+  "integrity": {
+    "tutorialImages": 16,
+    "tutorialInputHashes": 87,
+    "cacheChecks": [
+      {
+        "file": "index.html",
+        "hashes": 86
+      },
+      {
+        "file": "MAIN-SEKARANG.html",
+        "hashes": 86
+      },
+      {
+        "file": "dist/index.html",
+        "hashes": 86
+      },
+      {
+        "file": "release-prod/index.html",
+        "hashes": 87
+      }
+    ],
+    "productionFilesMatchExceptIntentionalAppIndex": 708,
+    "portableBytes": 303384539,
+    "googleReceiverSha256": "c361d4202f4221039af32bd51a63a09fb978e8e3f322ecd9e8a8811728eb45e8",
+    "providedPDFHashesMatchAuditedFiles": true
+  },
+  "limits": [
+    "Live Google/Apps Script deployment/account/quota not validated. Owner must update the same receiver.",
+    "Physical-device/classroom and MODEL.zip review unavailable.",
+    "Historical720 component/all120 Practice browser coverage is retained for byte-identical education owners; fresh main flows are explicitly listed separately.",
+    "Main documentation DOC-001/DOC-002 remain outside scope."
+  ],
+  "publication": "Exact ordered parents/tree/version/ref are verified after a leased main update; published SHA is recorded in the user handoff."
+}

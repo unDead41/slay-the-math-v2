@@ -6,7 +6,7 @@ function createHandler(){
  const jobs=new Map();let latestId=null;
  const send=(res,status,data,type='application/json')=>{res.writeHead(status,{'Content-Type':type+'; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(type==='application/json'?JSON.stringify(data):data);};
  const snapshot=j=>({id:j.id,status:j.status,startedAt:j.startedAt,finishedAt:j.finishedAt||null,options:j.options,progress:j.progress,error:j.error||null,summary:summarize(j.rows,j.options)});
- const report=j=>({...j.metadata,...j.report,jobId:j.id,startedAt:j.startedAt,finishedAt:j.finishedAt||null,options:j.options,rows:j.rows,summary:summarize(j.rows,j.options),jobStatus:j.status,error:j.error||null,schemaVersion:2,pupilWinRatesMeasured:false});
+ const report=j=>({...j.metadata,...j.report,jobId:j.id,startedAt:j.startedAt,finishedAt:j.finishedAt||null,options:j.options,rows:j.rows,summary:summarize(j.rows,j.options),jobStatus:j.status,error:j.error||null,schemaVersion:3,pupilWinRatesMeasured:false});
  function local(req){if(!['127.0.0.1','::1','::ffff:127.0.0.1'].includes(req.socket.remoteAddress))return false;try{const h=new URL('http://'+req.headers.host);return !h.username&&!h.password&&['localhost','127.0.0.1','[::1]'].includes(h.hostname)&&Number(h.port||80)===req.socket.localPort;}catch{return false;}}
  function read(req,res,done){
   if(!/^application\/json(?:;|$)/i.test(req.headers['content-type']||'')){send(res,415,{error:'Send application/json.'});return;}

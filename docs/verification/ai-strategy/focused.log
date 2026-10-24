@@ -1,0 +1,55 @@
+
+> duel-cube-math@2.31.0 test:ai
+> node --test tests/ai-playtester-agent.test.cjs tests/ai-playtester-strategy.test.cjs tests/ai-playtester-effects.test.cjs tests/ai-playtester-deck.test.cjs tests/ai-playtester.test.cjs tests/ai-playtester-server.test.cjs
+
+✔ three skills return legal real plans without mutating the run (161.020712ms)
+✔ expert finds Weak Point before Rune Strike and Focus lethal (58.884652ms)
+✔ expert blocks visible lethal and ends turn when no legal card exists (13.456925ms)
+✔ hidden pile order and gameplay RNG do not influence any skill (240.290749ms)
+✔ expert samples unknown draws and respects its transition/turn budgets (39.54937ms)
+✔ unknown skill and pending questions are rejected (2.813799ms)
+✔ reward values Shield Shot synergy in a Block deck and skips duplicate unique Passive (406.142427ms)
+✔ upgrade chooses a marginal improvement and removal protects useful synergy (100.338451ms)
+✔ shop uses exact engine prices and never buys an unaffordable or harmful card (77.029904ms)
+✔ removal respects the actual minimum and one-removal-per-shop rule (73.910005ms)
+✔ real campaigns apply the deck policy and expose a bounded acquisition explanation trace (1928.941198ms)
+✔ upgrade ranking recognizes activation gifts and larger visible selection windows (359.95556ms)
+✔ Mystery declining an unwanted offered card applies the recorded skip (61.610118ms)
+✔ actual Block is allocated once, then unused remainder expires on reset (197.219195ms)
+✔ Weak and Defense report actual layered reduction and actual Block absorption (161.428616ms)
+✔ delayed and Passive draw report actual cards, not printed requests (113.173008ms)
+✔ actual direct draw respects the Hand cap and free-card ratios stay null (73.929168ms)
+✔ carried Block keeps its source and terminal remainder is unused (72.005726ms)
+✔ failed card actions and uncaptured planning never enter effects telemetry (132.10575ms)
+✔ completed experiment reports actual support units alongside paid resources (261.662139ms)
+✔ retention support credits the dominant cap without adding retained Block twice (86.665712ms)
+✔ support counters track actual Vulnerable use and Strength involvement without extra damage (65.988834ms)
+✔ Weak on a nonattacking turn expires without reporting prevented damage (72.6719ms)
+✔ job API rejects malformed, nonlocal/cross-origin and concurrent starts (350.804997ms)
+✔ completed jobs and their source-bound exports remain available after a new job starts (803.394024ms)
+✔ a delayed cancel for completed A never cancels running B (700.109634ms)
+✔ report history is bounded to five jobs with explicit eviction (311.218392ms)
+✔ player mode denies every AI resource and POST endpoint (71.183698ms)
+✔ Expert sees the later payoff of activating Strength before future attacks (291.500697ms)
+✔ Expert reserves current Focus when a larger future benefit is available (191.356508ms)
+✔ planning samples inferred public deck composition and ignores hidden order and RNG (108.756471ms)
+✔ Expert actually advances cloned enemy turns and finishes only resolved cutoff states (89.353124ms)
+✔ actual Passive replacement shares the Expert policy and preserves useful Strength (112.666ms)
+✔ strict options reject invalid numbers, unknown fields and non-string enemy IDs (5.738664ms)
+✔ actual campaign uses selected AI with real receipts and terminal outcome (2038.151242ms)
+✔ paired self-control has zero total, individual and interaction deltas (1755.993795ms)
+✔ factorial report separates card A, card B and excess pair interaction (0.671812ms)
+✔ unknown outcomes retain their denominator and CSV escapes text (0.554335ms)
+✔ card usage totals equal actual resolved engine receipts across immutable action copies (827.889703ms)
+✔ detached CSV carries source, policy, definition and full experiment identity (0.331629ms)
+✔ schema 3 and detached CSV expose actual support totals with source identity (79.110454ms)
+✔ support efficiency aggregates paid resources and preserves old unmeasured fields (0.46456ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5018.80822
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.

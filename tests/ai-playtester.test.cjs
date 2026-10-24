@@ -6,7 +6,7 @@ test('strict options reject invalid numbers, unknown fields and non-string enemy
  assert.equal(normalizeOptions({seed:4294967295,seeds:1}).seed,4294967295);assert.throws(()=>normalizeOptions({seed:4294967295,seeds:2}));
 });
 test('actual campaign uses selected AI with real receipts and terminal outcome',()=>{
- const r=experiment({mode:'campaign',seed:20,seeds:1,difficulty:'easy',skill:'intermediate',predict:'feedback'});assert.equal(r.rows.length,1);assert.ok(['VICTORY','DEFEAT'].includes(r.rows[0].status),JSON.stringify(r.rows[0]));assert.equal(r.rows[0].policyVersion,'visible-turn-search-1/intermediate');assert.ok(r.rows[0].ai.decisions>0);assert.ok(r.rows[0].ai.energySpent>0);assert.equal(r.summary.invalid,0);assert.equal(r.pupilWinRatesMeasured,false);assert.match(r.sourceHash,/^[a-f0-9]{64}$/);
+ const r=experiment({mode:'campaign',seed:20,seeds:1,difficulty:'easy',skill:'intermediate',predict:'feedback'});assert.equal(r.rows.length,1);assert.ok(['VICTORY','DEFEAT'].includes(r.rows[0].status),JSON.stringify(r.rows[0]));assert.equal(r.rows[0].policyVersion,'sampled-turn-search-2/intermediate');assert.ok(r.rows[0].ai.decisions>0);assert.ok(r.rows[0].ai.energySpent>0);assert.equal(r.summary.invalid,0);assert.equal(r.pupilWinRatesMeasured,false);assert.match(r.sourceHash,/^[a-f0-9]{64}$/);
  const cards=Object.values(r.rows[0].ai.cards);assert.equal(cards.reduce((n,c)=>n+c.plays,0),r.rows[0].committedCardPlays);assert.equal(cards.reduce((n,c)=>n+c.energySpent,0),r.rows[0].ai.energySpent);assert.equal(cards.reduce((n,c)=>n+c.focusSpent,0),r.rows[0].ai.focusSpent);
 });
 test('paired self-control has zero total, individual and interaction deltas',()=>{
@@ -34,4 +34,12 @@ test('detached CSV carries source, policy, definition and full experiment identi
  const report={jobId:'job-a',sourceHash:'source-a',agentVersion:'agent-a',jobStatus:'completed',options:{mode:'cards',predict:'low',cards:['stm.attack.rune_strike','stm.attack.weak_point'],enemy:'golem',upgraded:true},rows:[{difficulty:'medium',skill:'expert',seed:7,mask:3,status:'WIN',provenance:{definitionHash:'definition-a',engineHash:'engine-a'}}]};
  const [header,line]=toCSV(report).trim().split('\n'),fields=header.split(','),values=line.split(',');
  for(const [key,value]of Object.entries({jobId:'job-a',sourceHash:'source-a',agentVersion:'agent-a',definitionHash:'definition-a',engineHash:'engine-a',mode:'cards',predict:'low',cards:'stm.attack.rune_strike+stm.attack.weak_point',enemy:'golem',upgraded:'true',jobStatus:'completed'})){assert.ok(fields.includes(key),key);assert.equal(values[fields.indexOf(key)],value,key);}
+});
+test('schema 3 and detached CSV expose actual support totals with source identity',()=>{
+ const r=experiment({mode:'cards',cards:['stm.defend.cinder_guard'],skill:'intermediate',predict:'skip',seed:40,seeds:1});assert.equal(r.schemaVersion,3);const [header,...lines]=toCSV(r).trim().split('\n'),fields=header.split(','),values=lines[1].split(',');
+ for(const [key,value]of Object.entries({blockUsed:r.rows[1].ai.effects.totals.blockUsed,weakPrevented:r.rows[1].ai.effects.totals.weakPrevented,cardsToHand:r.rows[1].ai.effects.totals.cardsDrawn})){assert.ok(fields.includes(key));assert.equal(Number(values[fields.indexOf(key)]),value);}
+});
+test('support efficiency aggregates paid resources and preserves old unmeasured fields',()=>{
+ const rows=[{difficulty:'easy',skill:'intermediate',status:'WIN',ai:{cards:{a:{plays:1,energySpent:1,focusSpent:0,hpDamage:0,blockUsed:3,blockGranted:6,weakPrevented:2,defensePrevented:0,cardsDrawn:0}}}},{difficulty:'easy',skill:'intermediate',status:'WIN',ai:{cards:{a:{plays:1,energySpent:2,focusSpent:0,hpDamage:0,blockUsed:6,blockGranted:6,weakPrevented:0,defensePrevented:0,cardsDrawn:0},old:{plays:1,energySpent:1,focusSpent:0,hpDamage:3}}}}];
+ const s=summarize(rows,{mode:'campaign'}),a=s.cardUsage.find(c=>c.cardId==='a'),old=s.cardUsage.find(c=>c.cardId==='old');assert.equal(a.blockUsed,9);assert.equal(a.efficiency.blockUsedPerEnergy,3);assert.equal(a.efficiency.mitigationPerEnergy,11/3);assert.equal(old.blockUsed,undefined);assert.equal(old.efficiency,undefined);
 });

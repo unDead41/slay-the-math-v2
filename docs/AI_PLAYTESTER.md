@@ -18,15 +18,23 @@ Buka <http://localhost:4174/__dev/ai/> atau Developer Hub → AI Playtester. Ala
 | --- | --- |
 | Beginner | Pilih kad legal menggunakan stream polisi berseed; tanpa Focus. |
 | Intermediate | Skor current visible card plans dan penggunaan Focus. |
-| Expert | Cari sehingga 3 play / 48 transition, maksimum 6 calon per node, termasuk pilihan end turn. |
+| Expert | Simulasi tiga turn dalam tiga kemungkinan draw; enam calon awal + End Turn, maksimum 300 transition. |
 | Full campaign | Actual New Run, starting artifact, map bersambung, dua stage, musuh/Elite/boss, Predict, reward, Shop, Rest, Mystery dan carry sebenar. |
 | Card / pair comparison | Ganti satu/dua slot Rune Strike dalam deck campuran 12 kad. Satu kad = 2 mask; pasangan = 4 mask. Pilih satu enemy/difficulty dan base/upgraded. Tiada artifact dalam fixture ini. |
 
-Nama tahap tidak menjamin semakin tinggi win rate. Heuristic dan carian berhad boleh tersilap, terutama setup Passive/faedah tertunda. Campaign menggunakan polisi route/pembelian/reward/choice existing yang dikongsi; tahap combat bukan model murid sebenar.
+Nama tahap tidak menjamin semakin tinggi win rate. Heuristic dan carian berhad boleh tersilap, terutama setup Passive/faedah tertunda. Campaign berkongsi polisi route sedia ada dan polisi acquisition baharu yang menilai synergy deck. Tahap combat bukan model murid sebenar.
 
 Predict berasingan daripada combat: feedback memilih visible untried answers dan menggunakan maklum balas; high/low ialah model sintetik 85%/25% first-correct dengan canonical answer key dalam adapter kemampuan sahaja; skip tidak melakukan Predict. Artifact/Mystery campaign kekal dengan feedback existing. Combat agent tidak melihat answer key.
 
-Carian menggunakan engine/cardPlan sebenar pada salinan. Draw salinan dikanonkan dan gameplay/artifact RNG salinan diganti. Branch berhenti pada draw/search/reveal/Recall, pending choices, Hand UID baharu melalui Passive/artifact atau perubahan RNG; kad hipotetikal yang baru dicabut tidak dinilai. Lethal yang diketahui dinilai tanpa reward yang dijana. Future enemy turns dan Predict tidak dicari. Input run, RNG dan save tidak berubah oleh keputusan bot.
+Carian menggunakan engine/cardPlan sebenar pada salinan. Unknown draw pool dibina daripada deck yang dimiliki selepas menolak Hand/Discard/Exhaust/Active/Resolving yang diketahui. Tiga stream polisi bebas mensampel susunan draw; RNG game dan artifact sebenar diganti sebelum simulasi. Susunan draw tersembunyi sebenar tidak digunakan. Kad reveal/Recall diputuskan berdasarkan pilihan yang kelihatan dalam dunia simulasi itu sahaja. Actual combat menggunakan resolver pilihan yang sama melalui hook opt-in; legacy replay kekal dengan polisi asalnya.
+
+Setiap calon mendapat tiga sampel yang sama dan had 14 transition setiap sampel, termasuk Focus toggle, play, choice dan enemy turn. Maksimum tiga play setiap turn. Selepas had, pending choice dibuang daripada penilaian; semua calon dibandingkan pada bilangan enemy turn lengkap yang sama. Terminal state kekal terminal. Laporan menyatakan horizon sebenar dan bilangan rollout dipendekkan. Future Predict/jawapan/ganjaran tidak dinilai; Focus yang bakal diperoleh melalui Predict tidak diramal. Input run, RNG dan save kekal sama.
+
+## Pembinaan deck berdasarkan synergy
+
+Reward boleh dipilih atau di-skip berdasarkan perubahan mutu deck. Shop membandingkan kad/artifact yang ditawarkan serta removal menggunakan harga sebenar dan baki Gold; tiada reroll. Upgrade memilih peningkatan marginal termasuk activation gifts dan saiz window selection; Mystery benar-benar decline apabila polisi memilih skip dan event membenarkannya. Removal mengekalkan minimum deck/sekali setiap Shop mengikut engine. Rest mendahulukan pemulihan HP apabila perlu, kemudian upgrade. Pilihan sasaran kad dalam Mystery turut menggunakan polisi ini.
+
+Heuristic membaca mekanik sebenar dan mengambil kira Attack–Strength, Block–Agility/Shield Shot/retention, Skill–Grimoire Ward, Focus–Ember Core, kos, coverage dan salinan Passive unik. Ini anggaran strategi yang boleh tersilap, bukannya CP terukur. Semua tahap combat berkongsi acquisition ini. Tiga puluh penjelasan acquisition terakhir disimpan dalam JSON dan panel.
 
 ## Laporan yang ditambah baik
 
@@ -47,9 +55,15 @@ Utility = `100 × win + 20 × remaining HP/maxHP − min(10, turn/2)`.
 
 Hanya setiap seed yang lengkap, unik, terminal dan finite dalam konfigurasi menerima skor. Seed separa/duplicate/invalid/censored/di luar konfigurasi kekal tanpa skor. Seed lengkap/dirancang dipaparkan. Ini contextual exploratory utility, **bukan universal Combat Power**, rarity atau card-offer weights. Sampel kecil boleh melonjak apabila satu outcome berubah.
 
-Observed card use datang daripada receipt yang resolved: bilangan play, Energy/Focus dibayar dan direct HP damage. Pengiraan dideduplicate per battle/transaction, termasuk pilihan kad. Damage tidak merangkum nilai Block, buff, draw atau setup, jadi jangan gunakan angka itu sahaja untuk menilai kad. UI memaparkan top 20 mengikut play; JSON menyimpan semua.
+Observed card use datang daripada receipt dan event engine yang benar-benar berlaku dalam actual action. Pengiraan kos menggunakan ordinal committed play yang kekal apabila object battle diganti. Simulasi planning dan transaction gagal tidak masuk meter. Setiap row melaporkan plays/Energy/Focus/direct HP damage, Block diberi/diserap/luput/berbaki/tidak digunakan ketika combat tamat, sebenar kad ke Hand, status digunakan, stat diberi, trigger/damage Passive, retaliation serta pengurangan incoming damage daripada Weak/Defense.
 
-Eksport JSON mengandungi schema 2, konfigurasi, runtime, source SHA256/per-file hashes, binding identity setiap row, keputusan sebenar, telemetry serta 30 penjelasan terakhir. CSV ialah outcome/cost rata dan mengekalkan status invalid/censored serta job ID, source hash, agent/engine/definition identity dan konfigurasi mode/Predict/cards/enemy/upgrade. Alat tidak menala stat secara automatik. Sasaran murid Easy 90%, Medium 70%, Hard 50% masih belum diukur; kombinasi tidak diuji secara exhaustive.
+Block menggunakan aturan perakaunan **FIFO**: sumber paling awal digunakan dahulu. Block yang dibawa ke turn seterusnya mengekalkan sumber asal; retention support dikreditkan kepada cap dominan (Hold the Line jika capnya lebih besar, selain itu Lasting Shield). Ini konvensyen accounting, bukan bukti causal marginal power. Sumber awal/artifact yang tidak dipautkan kepada kad berada dalam `__other__`. Granted = absorbed + expired + unused-at-end + remaining.
+
+Draw mengira actual cards moved to Hand, termasuk Recall, delayed dan Passive; request yang tersekat oleh Hand cap tidak dikira. Buffed hits ialah penglibatan buff, bukan tambahan damage bebas. Weak/Vulnerable consumption, retention dan buff involvement ialah overlay; menjumlahkannya semula dengan damage/Block akan mengira kesan dua kali. Defense/Weak mengukur damage masuk yang dikurangkan; dalam overkill nilainya boleh melebihi HP hidup yang dijimatkan. Agility/Strength/Defense granted ialah unit kasar yang diberi, bukan stat kekal pada akhir combat.
+
+Output-per-Energy dipisahkan untuk damage, absorbed Block, mitigasi dan cards-to-Hand; kos sifar memberi null/Unmeasured. Jangan campurkan semua unit menjadi satu CP. UI menunjukkan 20 sumber teratas mengikut plays; JSON menyimpan semua. Data lama yang tiada support telemetry dipaparkan Unmeasured.
+
+Eksport JSON **schema 3**, agent **sampled-turn-search-2**, mengekalkan konfigurasi, runtime, source SHA256/per-file hashes, binding identity, keputusan sebenar, telemetry dan penjelasan. CSV menambah total Block/mitigation/draw/Passive sambil mengekalkan source/job/config identity. Alat tidak menala stat secara automatik. Sasaran murid Easy 90%, Medium 70%, Hard 50% belum diukur; kombinasi tidak diuji secara exhaustive.
 
 ## CLI
 
@@ -66,8 +80,16 @@ Pakej lokal sesi terdahulu telah dibersihkan oleh penyelenggaraan workspace dan 
 
 Hentikan job sebelum mengedit atau membina semula sumber game. Restart server selepas mengubah kod. Job menggunakan sumber semasa; menyunting fail ketika eksperimen berjalan bukan aliran kerja snapshot yang disokong.
 
-## Pengesahan semasa
+## Pengesahan asas terdahulu — sebelum penambahbaikan strategi
 
 790/790 ujian penuh, 18/18 ujian khusus, syntax, AI browser dan Developer Hub/toggle browser lulus. Ujian browser merangkumi response-order race, history/export/reload/cancel, player storage sentinels dan viewport 1440/750/390. Production build lulus; 822 fail production/module/entrypoint kekal sama, 705 production files sepadan dengan dist dan endpoint AI GET/POST semuanya 404.
 
 Batch sumber akhir: 9 actual campaign (3 difficulty × 3 polisi, synthetic low Predict, seed22) dan 48 encounter Fate Storm + Blazing Spirit (Wisp/Golem/Dealer serta Golem upgraded, 3 polisi, satu seed). Tiada invalid/censored, semua committed plays sepadan dengan receipt usage, dan identiti sumber CSV diperiksa. Raw JSON/CSV: reports/ai-playtester/branch-ai-2026-10-24/. Sampel kecil ini bukan pengesahan kadar menang murid. Ujian tambahan membuktikan actual HTTP worker campaign selesai dan CLI self-replacement delta sifar.
+
+## Penambahbaikan strategi semasa
+
+Ijamm memilih tiga perubahan di atas dan meminta implementasi. Bukti semasa direkodkan berasingan dalam [ai-strategy.json](verification/ai-strategy.json); angka 790 di atas ialah baseline terdahulu. Source hash dan semakan akhir mesti datang daripada run semasa.
+
+Pengesahan akhir strategi: **814/814** full tests dan **42/42** AI tests; actual AI browser, Developer Hub/toggle, syntax, HTTP worker campaign dan CLI lulus. Semua 40 kad melalui planning smoke; dua fixture multi-hit mengesahkan Weak/Defense/Agility/Block. Production dibina pada salinan input sama: 822 fail dilindungi kekal sama, 705 fail public byte-identical dengan dist, generated offline tiada AI, semua AI GET/POST 404.
+
+Batch sumber akhir: **9 campaign + 60 selected-pair encounters**, semuanya terminal, tiada invalid/censored; receipt costs, Block conservation, source hashes dan CSV identity/support diperiksa. Raw reports: reports/ai-playtester/strategy-2026-10-24/. Sampel satu seed setiap kombinasi konfigurasi ini tidak mengesahkan pupil win rates atau optimality. Semakan bebas menemui tiga Important yang dibaiki RED→GREEN: actual choice policy, Mystery skip dan upgrade-only mechanics; lihat [review](verification/ai-strategy-review.md).

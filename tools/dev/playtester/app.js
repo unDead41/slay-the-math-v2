@@ -25,6 +25,10 @@
   const number=n=>n===null||n===undefined?'Unmeasured':n.toFixed(2);$('powerSection').hidden=job.options.mode!=='cards';
   cells('power',s.power.map(p=>[p.difficulty+'/'+p.skill,p.seedsComplete+'/'+p.seedsExpected,number(p.individualDeltas[0]?.delta),number(p.individualDeltas[1]?.delta),number(p.totalDelta),number(p.interaction),p.status]));
   cells('usage',s.cardUsage.slice(0,20).map(c=>[c.policy,names.get(c.cardId)||c.cardId,c.plays,c.energySpent,c.focusSpent,c.hpDamage]));
+  const unit=n=>n===undefined||n===null?'Unmeasured':n,cardName=c=>names.get(c.cardId)||(c.cardId==='__other__'?'Other / starting / artifact sources':c.cardId),cards=s.cardUsage.slice(0,20);
+  cells('support',cards.map(c=>[c.policy,cardName(c),unit(c.blockGranted),unit(c.blockUsed),unit(c.blockExpired),unit(c.blockUnused),unit(c.blockRemaining),unit(c.weakPrevented),unit(c.defensePrevented),unit(c.blockRetained)]));
+  cells('utilities',cards.map(c=>[c.policy,cardName(c),unit(c.cardsDrawn),c.strengthGranted===undefined?'Unmeasured':[c.strengthGranted,c.agilityGranted,c.defenseGranted].join(' / '),unit(c.buffedHits),unit(c.statusesApplied),unit(c.statusesConsumed),unit(c.passiveTriggers),unit(c.passiveDamage),unit(c.retaliationDamage),unit(c.focusGained)]));
+  cells('efficiency',cards.map(c=>[c.policy,cardName(c),number(c.efficiency?.directDamagePerEnergy),number(c.efficiency?.blockUsedPerEnergy),number(c.efficiency?.mitigationPerEnergy),number(c.efficiency?.cardsDrawnPerEnergy)]));
  }
  function renderHistory(){
   $('history').replaceChildren(...history.map(j=>{const o=document.createElement('option');o.value=j.id;o.textContent=new Date(j.startedAt).toLocaleString()+' · '+j.options.mode+' / '+j.options.difficulty+' / '+j.options.skill+' · '+j.status;return o;}));
@@ -33,7 +37,8 @@
  }
  async function detail(){
   if(!job)return;const id=job.id,version=selectionVersion,report=await request('jobs/'+id+'/report');if(job?.id!==id||version!==selectionVersion)return;
-  const last=report.rows.at(-1);$('trace').textContent=last?JSON.stringify({seed:last.seed,difficulty:last.difficulty,skill:last.skill,decisions:last.ai},null,2):'No completed cases yet.';
+  const last=report.rows.at(-1);$('trace').textContent=last?JSON.stringify({seed:last.seed,difficulty:last.difficulty,skill:last.skill,searchNodes:last.ai?.searchNodes,maxHorizonTurns:last.ai?.maxHorizonTurns,sampledReveals:last.ai?.sampledReveals,truncatedRollouts:last.ai?.truncatedRollouts,decisions:last.ai?.trace,visibleChoices:last.ai?.choiceDecisions},null,2):'No completed cases yet.';
+  $('deckTrace').textContent=last?.ai?.deckDecisions?.length?JSON.stringify(last.ai.deckDecisions,null,2):'Deck decisions are recorded during full campaigns.';
   $('source').textContent=report.sourceHash?'Source SHA256: '+report.sourceHash:'Source snapshot pending; an early cancellation may have no source hash.';
  }
  async function refresh(){

@@ -138,4 +138,4 @@ Copy **integrations/google-sheets/Code.gs** into an owner-controlled Apps Script
 
 ## AI Playtester — branch ai
 
-Developer-only strategy/simulation tool: `npm run start:dev`, then http://localhost:4174/__dev/ai/. Three combat policies, actual campaigns, contextual single-card/pair measurements, five-report history and resolved Energy/Focus telemetry. See [AI Playtester](docs/AI_PLAYTESTER.md). Published to ai only; game 2.31.0 and player profiles remain unchanged.
+Developer-only strategy/simulation tool: `npm run start:dev`, then http://localhost:4174/__dev/ai/. Three combat policies, actual campaigns, contextual single-card/pair measurements, five-report history, actual support/cost telemetry, three-turn sampled Expert planning and deck-synergy acquisitions. See [AI Playtester](docs/AI_PLAYTESTER.md). Published to ai only; game 2.31.0 and player profiles remain unchanged.

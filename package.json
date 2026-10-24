@@ -59,8 +59,8 @@
     "test:tutorial-browser": "node tests/tutorial-browser.cjs",
     "capture:tutorial": "node tools/capture-tutorial.cjs",
     "ai:playtest": "node tools/ai-playtester/cli.cjs",
-    "test:ai": "node --test tests/ai-playtester-agent.test.cjs tests/ai-playtester.test.cjs tests/ai-playtester-server.test.cjs",
+    "test:ai": "node --test tests/ai-playtester-agent.test.cjs tests/ai-playtester-strategy.test.cjs tests/ai-playtester-effects.test.cjs tests/ai-playtester-deck.test.cjs tests/ai-playtester.test.cjs tests/ai-playtester-server.test.cjs",
     "test:ai-browser": "node tests/ai-playtester-browser.cjs",
-    "check:ai": "node --check tools/ai-playtester/agent.cjs && node --check tools/ai-playtester/experiments.cjs && node --check tools/ai-playtester/report.cjs && node --check tools/ai-playtester/worker.cjs && node --check tools/ai-playtester/cli.cjs && node --check tools/dev/playtester/server.cjs && node --check tools/dev/playtester/app.js"
+    "check:ai": "node --check tools/ai-playtester/agent.cjs && node --check tools/ai-playtester/experiments.cjs && node --check tools/ai-playtester/report.cjs && node --check tools/ai-playtester/worker.cjs && node --check tools/ai-playtester/cli.cjs && node --check tools/dev/playtester/server.cjs && node --check tools/dev/playtester/app.js && node --check tools/ai-playtester/effects.cjs && node --check tools/ai-playtester/deck-policy.cjs"
   }
 }

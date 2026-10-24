@@ -1,0 +1,9 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.31.0 build:prod
+> node tools/build-production.cjs
+
+{"modules":11,"bytes":4760473,"registryId":"093f5f3890bdbb614470d7da192726c665597ed111a907d5cea0d6b2f7ce71cd","overrides":["damage","block","strength","agility","focus","defend","passive","draw","d6"]}
+Portable game generated: 298528771 bytes
+Production player build: /workspace/scratch/50182eb5cf4b/ai-strategy-production/release-prod
+{"productionBuildPassed":true,"protectedFiles":822,"protectedChanged":[],"productionFiles":705,"productionBytesMatchDist":true,"offlineAIExcluded":true,"productionResponses":{"GET /__dev/ai/":404,"GET /__dev/ai/app.js":404,"GET /__dev/ai/jobs":404,"POST /__dev/ai/jobs":404}}

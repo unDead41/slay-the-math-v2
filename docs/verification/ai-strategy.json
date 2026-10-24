@@ -1,0 +1,203 @@
+{
+  "status": "PASSED",
+  "baseCommit": "02f9c948f73fe15a327a7925c9137b6ddcaf87fe",
+  "gameVersion": "2.31.0",
+  "targetBranch": "ai",
+  "publicationScope": "ai only",
+  "schemaVersion": 3,
+  "agentVersion": "sampled-turn-search-2",
+  "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+  "fullSuite": {
+    "exitCode": 0,
+    "counts": {
+      "tests": 814,
+      "pass": 814,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "completeSummary": true
+  },
+  "focusedTests": {
+    "pass": 42,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "status": "PASS",
+    "encounters": 4,
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+    "reportHistory": true,
+    "staleRefreshGuard": true,
+    "selectedHistorySurvivesReload": true,
+    "previousReportImmutable": true,
+    "downloads": true,
+    "cancellation": true,
+    "playerStorageUnchanged": true,
+    "viewports": [
+      1440,
+      750,
+      390
+    ],
+    "errors": []
+  },
+  "existingDeveloperBrowserPassed": true,
+  "syntaxPassed": true,
+  "production": {
+    "productionBuildPassed": true,
+    "protectedFiles": 822,
+    "protectedChanged": [],
+    "productionFiles": 705,
+    "productionBytesMatchDist": true,
+    "offlineAIExcluded": true,
+    "productionResponses": {
+      "GET /__dev/ai/": 404,
+      "GET /__dev/ai/app.js": 404,
+      "GET /__dev/ai/jobs": 404,
+      "POST /__dev/ai/jobs": 404
+    },
+    "isolatedIdenticalSourceBuild": true,
+    "originalProtectedFilesStillIdentical": true,
+    "generatedPortableAIExcluded": true
+  },
+  "allCardPlanning": {
+    "cases": 40,
+    "invalid": 0,
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d"
+  },
+  "cli": {
+    "passed": true,
+    "encounters": 2,
+    "selfReplacementDelta": 0,
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+    "csvSourceAndSupportVerified": true
+  },
+  "httpWorkerCampaign": {
+    "passed": true,
+    "jobId": "a47ea1e4-7d0c-43a9-918d-d56ce0fc255d",
+    "status": "VICTORY",
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+    "committedPlays": 160,
+    "energySpent": 167,
+    "choiceDecisions": 2,
+    "deckDecisions": 20,
+    "blockReconciled": true,
+    "csvSourceAndSupportVerified": true
+  },
+  "review": {
+    "critical": 0,
+    "importantFound": 3,
+    "fixedWithRedGreen": 3,
+    "outstandingImportant": 0,
+    "deferredMinor": []
+  },
+  "representativeCohorts": {
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+    "campaigns": 9,
+    "encounters": 60,
+    "invalid": 0,
+    "censored": 0,
+    "cohorts": [
+      {
+        "name": "campaign-all-profiles",
+        "attempts": 9,
+        "invalid": 0,
+        "censored": 0,
+        "wins": 7,
+        "losses": 2,
+        "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+        "schemaVersion": 3,
+        "receiptCostsReconciled": true,
+        "blockReconciled": true,
+        "sourceFilesVerified": true
+      },
+      {
+        "name": "pair-wisp",
+        "attempts": 12,
+        "invalid": 0,
+        "censored": 0,
+        "wins": 12,
+        "losses": 0,
+        "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+        "schemaVersion": 3,
+        "receiptCostsReconciled": true,
+        "blockReconciled": true,
+        "sourceFilesVerified": true
+      },
+      {
+        "name": "pair-golem",
+        "attempts": 12,
+        "invalid": 0,
+        "censored": 0,
+        "wins": 10,
+        "losses": 2,
+        "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+        "schemaVersion": 3,
+        "receiptCostsReconciled": true,
+        "blockReconciled": true,
+        "sourceFilesVerified": true
+      },
+      {
+        "name": "pair-dealer",
+        "attempts": 12,
+        "invalid": 0,
+        "censored": 0,
+        "wins": 2,
+        "losses": 10,
+        "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+        "schemaVersion": 3,
+        "receiptCostsReconciled": true,
+        "blockReconciled": true,
+        "sourceFilesVerified": true
+      },
+      {
+        "name": "pair-golem-upgraded",
+        "attempts": 12,
+        "invalid": 0,
+        "censored": 0,
+        "wins": 11,
+        "losses": 1,
+        "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+        "schemaVersion": 3,
+        "receiptCostsReconciled": true,
+        "blockReconciled": true,
+        "sourceFilesVerified": true
+      },
+      {
+        "name": "pair-guard-agility",
+        "attempts": 12,
+        "invalid": 0,
+        "censored": 0,
+        "wins": 8,
+        "losses": 4,
+        "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+        "schemaVersion": 3,
+        "receiptCostsReconciled": true,
+        "blockReconciled": true,
+        "sourceFilesVerified": true
+      }
+    ],
+    "csvIdentityAndSupportVerified": [
+      "pair-golem-upgraded.json",
+      "campaign-all-profiles.json",
+      "pair-dealer.json",
+      "pair-guard-agility.json",
+      "pair-golem.json",
+      "pair-wisp.json"
+    ]
+  },
+  "pupilWinRatesMeasured": false,
+  "limits": [
+    "Observed named units and contextual replacement utility, not universal CP.",
+    "FIFO source attribution and dominant retention cap are accounting conventions; support overlays are not additive damage.",
+    "Expert uses bounded heuristic continuations and sampled unknown draws; future Predict gains are not modeled.",
+    "Heuristic optimality, exhaustive combinations and guaranteed skill win-rate ordering are unverified.",
+    "Actual pupil 90/70/50 targets and physical Windows/devices remain unverified.",
+    "Five-job history remains in memory; large Expert campaigns take longer than other policies."
+  ],
+  "multiHitAcceptance": {
+    "cases": 2,
+    "passed": true,
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d"
+  }
+}

@@ -443,3 +443,10 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 ## 24 October 2026 — AI Playtester branch ai
 
 Published developer strategy/simulation AI on main 2.31.0 base, preserving the tutorial. Added five-report history, safe identity-bound cancellation and reload selection, individual A/B replacement deltas alongside pair interaction, and per-card resolved Energy/Focus/direct-damage telemetry. No gameplay or main publication change. Fresh validation replaces the unavailable local-draft evidence; see docs/AI_PLAYTESTER.md and docs/verification/ai-branch.json.
+
+## 24 October 2026 — AI strategy update on ai (game stays 2.31.0)
+
+- Track actual card support alongside paid Energy/Focus: absorbed/expired/unused Block, Weak/Defense mitigation, actual Hand moves, buff/status involvement and Passive effects.
+- Extend Expert to three sampled draw worlds and up to three complete turns, with equal budgets/common resolved cutoff and hidden order/RNG independence.
+- Choose reward/skip, Shop, upgrade/removal and Mystery targets by marginal deck synergy, preserving legacy replay behavior without optional hooks.
+- Publish schema 3 support tables/ratios, explanations and source-bound exports. [Verification](../verification/ai-strategy.json).

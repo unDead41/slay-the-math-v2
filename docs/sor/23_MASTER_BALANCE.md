@@ -55,3 +55,7 @@ Adapter semasa: `tools/cards/single-target.cjs`, sebelum `tools/import-cards.cjs
 ## MB-07 — developer AI Playtester, branch ai
 
 DISAHKAN, 24 October 2026: publish strategy/simulation AI to ai only and improve relevant shortcomings. Reuses candidate.3 bindings with unchanged card/enemy/artifact/economy/map/question numbers. Combat skill and Predict ability remain separate. Contextual complete-factorial individual/pair estimates and resolved usage telemetry do not constitute universal CP, exhaustive combinations or pupil 90/70/50 validation. See [guide](../AI_PLAYTESTER.md).
+
+## MB-08 — AI strategy improvements, branch ai
+
+DISAHKAN: Ijamm requests actual support-value measurement, multi-turn planning and synergistic acquisition. The AI developer harness consumes candidate.3 without changing numerical profiles. Named effect units/efficiencies and observed contextual deltas remain distinct; acquisition scores are heuristics. The shared specialist replay receives optional observation/policy callbacks only. Default specialist policies, source snapshots and pupil win-rate interpretation remain intact. [Design](../superpowers/specs/2026-10-24-ai-strategy-design.md), [verification](../verification/ai-strategy.json).

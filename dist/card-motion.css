@@ -30,6 +30,22 @@
 .card-motion-sigil.motif-draw{border-radius:9px;box-shadow:5px -4px 0 #1d2436,6px -5px 0 var(--cue)}
 .card-motion-spark{position:absolute;width:5px;height:5px;border-radius:2px;background:#ffe2a3;box-shadow:0 0 7px #ff9c4b;pointer-events:none}
 .card-motion-spark.ember,.card-motion-spark.last-ember{background:#ffc282;box-shadow:0 0 10px #ff713f}
+/* Ten distinct proc signatures use the existing card icon, never new artwork. */
+.card-motion-sigil::after{content:'';position:absolute;inset:-12px;border:1px solid var(--cue);opacity:.6;pointer-events:none}
+.card-motion-sigil.motif-strength::after{clip-path:polygon(50% 0,65% 25%,95% 15%,80% 50%,100% 80%,65% 75%,50% 100%,35% 75%,0 80%,20% 50%,5% 15%,35% 25%);background:color-mix(in srgb,var(--cue) 16%,transparent)}
+.card-motion-sigil.motif-growth::after{inset:-10px;border:3px double var(--cue);border-radius:20% 50% 40% 50%}
+.card-motion-sigil.motif-agility::after{inset:8px -18px;border-width:2px 0;border-radius:50%;transform:rotate(-25deg)}
+.card-motion-sigil.motif-rhythm::after{border-radius:50%;border-style:dotted;animation:passive-rhythm .32s ease-out 2}
+.card-motion-sigil.motif-armor::after{inset:-8px;border-radius:5px;transform:rotate(45deg)}
+.card-motion-sigil.motif-retain::after{inset:4px -10px -10px 4px;border-width:0 2px 2px 0;border-radius:0 0 40% 0}
+.card-motion-sigil.motif-ward::after{inset:-10px;border-radius:40% 40% 48% 48%;border-style:dashed}
+.card-motion-sigil.motif-ember::after{inset:-7px;border:3px dotted var(--cue);border-radius:50%}
+.card-motion-sigil.motif-draw::after{inset:5px -12px -10px 5px;border-radius:5px;transform:rotate(12deg);background:#0b172a55;z-index:-1}
+.card-motion-sigil.motif-last-ember::after{border-radius:50%;border:3px solid #ffb579;animation:passive-last-ember .3s ease-out 2}
+.card-motion-layer[data-quality=low] .card-motion-sigil::after{animation:none;opacity:.35}
+.card-motion-layer[data-quality=low] .card-motion-sigil{box-shadow:none}
+@keyframes passive-rhythm{from{transform:scale(.8);opacity:.8}to{transform:scale(1.25);opacity:0}}
+@keyframes passive-last-ember{from{transform:scale(.7);opacity:1}to{transform:scale(1.5);opacity:0}}
 .reduce-motion .card-motion-layer{display:none}
 @media(prefers-reduced-motion:reduce){.card-motion-layer{display:none}}
 @media(max-height:560px){.card-motion-passive{min-height:50px;padding-block:5px}.card-motion-passive>img{width:34px;height:34px}.card-motion-passive b{font-size:13px}.card-motion-sigil{width:60px;height:60px}.card-motion-sigil>img{width:40px;height:40px}}

@@ -21,6 +21,10 @@ Requested by Ijamm on 23 October 2026. These are proposed search terms and filen
 
 ## Selection and later integration
 
+### Synthesized routing — 24 October 2026 (combat-animation branch)
+
+The local polish selects one primary cue per committed action and schedules it with the visual presentation lead. Depletion, HP impact, shield absorption, debuff/stat loss, cleanse, shield gain and Passive feedback take precedence over routine card movement. Low/Full changes visual intensity only; Game Motion Off still permits independently enabled Sound FX. New commands, dialogs and hidden/navigation states cancel pending sound. Short synthesized tones are reversible fallbacks, not imported/recorded versions of the suggested WAV files. No supplied MP3 from another chat is claimed imported or auditioned by this change. The search table remains useful for replacing these fallbacks later.
+
 Prefer clean isolated one-shots without background music, voices or long silence. WAV is a useful source/master; runtime encoding and loudness matching happen after audition. Preserve natural decay and confirm game-use/redistribution terms when choosing clips.
 
 Play a status sound once for a new committed event. Persistent auras do not need loops. Continue, reload and rerender must not replay a sound. Shield absorption/break and normal expiry need different cues; queued Block does not play the active-shield sound early. For simultaneous Passive and stat effects, select a restrained primary cue and cap/merge repeated impacts so they do not stack loudly over Alyssa's voices or BGM.

@@ -1,0 +1,75 @@
+{
+  "status": "VERIFIED_FOR_COMBAT_ANIMATION_BRANCH",
+  "date": "2026-10-24",
+  "baseCommit": "6dc3ce366d266c33154f9b2e76afeb3bba224eca",
+  "publicVersionUnchanged": "2.31.0",
+  "unit": {
+    "tests": 170,
+    "passed": 170,
+    "failed": 0,
+    "skipped": 0,
+    "command": "DOM_QA_MODULE=<QA jsdom> node --test tests/status-vfx.test.cjs tests/card-motion.test.cjs tests/card-flow.test.cjs tests/card-combat.test.cjs tests/passive-limit.test.cjs tests/focus-passive-log.test.cjs tests/combat-compact-ui.test.cjs tests/tutorial-ui.test.cjs"
+  },
+  "syntax": {
+    "passed": true,
+    "files": [
+      "dist/app.js",
+      "dist/card-motion.js",
+      "dist/release.js",
+      "dist/status-vfx.js",
+      "tests/card-motion.test.cjs",
+      "tests/status-vfx-browser.cjs",
+      "tests/status-vfx.test.cjs",
+      "tests/combat-motion-polish-browser.cjs"
+    ]
+  },
+  "sourceAudit": {
+    "protectedSourcesUnchanged": [
+      "dist/engine.js",
+      "dist/card-combat.js",
+      "dist/card-data.js",
+      "dist/config.js",
+      "dist/artifact-data.js",
+      "dist/card-assets.js",
+      "dist/icon-assets.js",
+      "dist/animation-data.js",
+      "dist/animation.js",
+      "dist/math.js",
+      "dist/question-language.js",
+      "dist/music-data.js",
+      "dist/audio.js",
+      "dist/balance-config.js",
+      "dist/balance-data.js"
+    ],
+    "gameAssetFilesModified": 0,
+    "head": "6dc3ce366d266c33154f9b2e76afeb3bba224eca"
+  },
+  "browser": {
+    "passed": true,
+    "scenarioGroups": 6,
+    "realPassivePaths": 10,
+    "viewportQualityCombinations": 6,
+    "errors": [],
+    "report": "docs/verification/combat-motion-polish-browser-local.json",
+    "crowdedSummaryFitsAboveHP": true
+  },
+  "limits": [
+    "Browser viewport emulation; no physical-phone measurement or human SFX audition.",
+    "Partial source checkout: original large atlas/focus assets were not available; browser used the unchanged right-facing poster fallback. Full production/offline packaging was not run."
+  ],
+  "modelArchive": {
+    "available": false,
+    "used": false,
+    "reason": "MODEL.zip failed attachment materialization"
+  },
+  "verificationWasLocal": true,
+  "publication": {
+    "targetBranch": "combat-animation",
+    "expectedPreviousHead": "7e0e6d7804e78a837c2e572471c11d99331d0d9a",
+    "baseMain": "6dc3ce366d266c33154f9b2e76afeb3bba224eca",
+    "authorization": "Ijamm subsequently requests pushing the completed update to its branch.",
+    "mainUpdateAuthorized": false,
+    "forcePush": false,
+    "runtimeCodeUnchangedSinceLocalVerification": true
+  }
+}

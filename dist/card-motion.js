@@ -4,7 +4,7 @@
  const catalog=new Map(K.data.cards.map(c=>[c.id,c]));
  const motifs={blazing_spirit:'strength',growing_flame:'growth',swift_step:'agility',battle_rhythm:'rhythm',rune_armor:'armor',lasting_shield:'retain',grimoire_ward:'ward',ember_core:'ember',clear_mind:'draw',last_ember:'last-ember'};
  const timings=Object.freeze({draw:220,recall:260,discard:280,exhaust:400,activate:300,shuffle:240,return:240,stagger:32,passive:1250});
- function snapshot(run){if(run?.scene!=='battle'||!run.battle)return null;return {identity:[run.seed,run.stage,run.depth,run.route?.active||'',run.battle.enemyId].join(':'),seq:run.battle.combatLog?.seq||0};}
+ function snapshot(run){if(run?.scene!=='battle'||!run.battle)return null;return {identity:[run.seed,run.started,run.stage,run.depth,run.route?.active||'',run.battle.enemyId].join(':'),seq:run.battle.combatLog?.seq||0};}
  function describe(entry,lang='en'){
   const card=catalog.get(entry?.source);if(entry?.kind!=='passive-trigger'||card?.category!=='passive')return null;
   const v=entry.values||{},bm=['ms','bm'].includes(lang),motif=motifs[card.id.split('.').at(-1)],amount=n=>Number.isFinite(n)?n:0;let detail='';
@@ -14,7 +14,8 @@
   else if(motif==='ember')detail='−'+amount(v.damage)+' HP';
   else if(motif==='last-ember')detail='+'+amount(v.block)+' Block · +'+amount(v.focus)+' Focus';
   else if(motif==='ward')detail='+'+amount(v.block)+' Block';
-  return {id:entry.id,source:card.id,title:K.cardName(card,lang),icon:K.assetPath(card.icon),detail,summary:entry.summary,motif,target:motif==='ember'?'enemy':'player'};
+  const changes=v.attribute?{[v.attribute]:amount(v.amount)}:motif==='ward'?{block:amount(v.block)}:motif==='last-ember'?{block:amount(v.block),focus:amount(v.focus)}:{};
+  return {id:entry.id,source:card.id,title:K.cardName(card,lang),icon:K.assetPath(card.icon),detail,summary:entry.summary,motif,changes,target:motif==='ember'?'enemy':'player'};
  }
  function effects(before,run,lang='en'){
   const after=snapshot(run);if(!before||!after||before.identity!==after.identity||after.seq<before.seq)return [];
@@ -40,6 +41,7 @@
  function create(options={}){
   const doc=options.document||root.document;
   let layer=null,frame=0,dead=false;
+  const quality=()=>options.quality?.()==='low'?'low':'full';
   const animations=new Set(),hidden=new Map();
   const visible=()=>!dead&&!doc.hidden&&options.motion?.()!==false&&!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   function rect(el){if(!el)return null;const r=el.getBoundingClientRect();return r.width&&r.height?{x:r.x,y:r.y,width:r.width,height:r.height}:null;}
@@ -57,7 +59,7 @@
    layer?.remove();layer=null;
   }
   function capture(run){cancel();return {state:snapshot(run),geometry:geometry()};}
-  function host(){if(!layer){layer=doc.createElement('div');layer.className='card-motion-layer';layer.setAttribute('aria-hidden','true');layer.inert=true;doc.body.append(layer);}return layer;}
+  function host(){if(!layer){layer=doc.createElement('div');layer.className='card-motion-layer';layer.dataset.quality=quality();layer.setAttribute('aria-hidden','true');layer.inert=true;doc.body.append(layer);}return layer;}
   function remove(el){el.remove();if(layer&&!layer.childElementCount){layer.remove();layer=null;}}
   function animate(el,frames,settings,done=()=>{}){
    const a=el.animate(frames,{easing:'cubic-bezier(.2,.7,.2,1)',fill:'both',...settings});animations.add(a);
@@ -82,7 +84,7 @@
    const hand=after.hand;if(hand)return {x:hand.x+hand.width*.45,y:hand.y-75,width:80,height:120};return null;
   }
   function sparks(x,y,delay,motif='exhaust'){
-   for(let n=0;n<7;n++){
+   for(let n=0;n<(quality()==='low'?3:7);n++){
     const dot=doc.createElement('i');dot.className='card-motion-spark '+motif;dot.style.left=x+'px';dot.style.top=y+'px';host().append(dot);
     const angle=(n*137.5-90)*Math.PI/180,reach=20+n*5;
     animate(dot,[{transform:'translate(0,0) scale(1)',opacity:0},{offset:.18,opacity:1},{transform:'translate('+Math.cos(angle)*reach+'px,'+(-18+Math.sin(angle)*reach)+'px) scale(0)',opacity:0}],{duration:380,delay},()=>remove(dot));
@@ -109,8 +111,8 @@
    const pile=doc.querySelector('[data-action="pile"][data-zone="'+move.to+'"] .pile-art');
    if(pile)animate(pile,[{filter:'brightness(1)'},{offset:.5,filter:'brightness(1.7)'},{filter:'brightness(1)'}],{duration:220,delay:delay+duration*.7});
   }
-  function cue(effect,after,index){
-   if(!after.theatre)return;const arena=after.theatre,badge=after.passives.get(effect.source),compact=arena.height<300,delay=index*(compact?timings.passive:120);
+  function cue(effect,after,index,presentation){
+   if(!after.theatre)return;const arena=after.theatre,badge=after.passives.get(effect.source),compact=arena.height<300,delay=(presentation?.leadMs||0)+index*(presentation?.passiveGapMs||(compact?timings.passive:90));
    const el=doc.createElement('div');el.className='card-motion-passive motif-'+effect.motif;el.dataset.passiveSource=effect.source;el.dataset.effectDetail=effect.detail;
    const icon=doc.createElement('img');icon.src=root.DCIconAssets?.resolve(effect.icon.replace(/^assets\//,''),root.DC_ASSETS)||effect.icon;icon.alt='';icon.width=44;icon.height=44;
    const copy=doc.createElement('span'),name=doc.createElement('strong'),detail=doc.createElement('b');name.textContent=effect.title;detail.textContent=effect.detail;copy.append(name,detail);el.append(icon,copy);
@@ -123,9 +125,9 @@
    animate(sigil,[{opacity:0,transform:'translateY(12px) scale(.55)'},{offset:.25,opacity:.85,transform:'translateY(0) scale(1)'},{opacity:0,transform:'translateY(-18px) scale(1.15)'}],{duration:650,delay},()=>remove(sigil));
    if(['ember','last-ember','growth','strength'].includes(effect.motif))sparks(target.x+target.width/2,target.y-28,delay+120,effect.motif);
   }
-  function play(before,run,transfers=[],lang='en'){
+  function play(before,run,transfers=[],lang='en',presentation){
    cancel();if(!before||!visible()||run?.scene!=='battle'||typeof doc.createElement('div').animate!=='function')return;
-   const moves=plan(transfers),passives=effects(before.state,run,lang);if(!moves.length&&!passives.length)return;
+   const moves=plan(transfers),passives=presentation?.passives||effects(before.state,run,lang);if(!moves.length&&!passives.length)return;
    frame=root.requestAnimationFrame(()=>{
     frame=0;if(!visible()||doc.querySelector('dialog[open]')||!doc.querySelector('.combat-layout'))return;
     try{
@@ -135,7 +137,7 @@
       const cards=move.cards||[move.card],delay=Math.max(groupStart+index++*timings.stagger,...cards.map(c=>ends.get(c.uid)||0));
       flight(move,prior,after,delay);const end=delay+timings[move.kind];groupEnd=Math.max(groupEnd,end);for(const c of cards)ends.set(c.uid,end);
      }
-     passives.forEach((effect,index)=>cue(effect,after,index));
+     passives.forEach((effect,index)=>cue(effect,after,index,presentation));
     }catch(_){cancel();}
    });
   }

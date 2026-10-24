@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## Branch preview — combat-animation — 24 October 2026
+
+- Combat motion polish, now authorized for the existing combat-animation branch: ranked/combined status feedback, Passive/stat label ownership, clearer crowded auras, shared presentation/SFX timing, conservative shield shatter, ten distinct proc signatures and Low/Full intensity. The later user instruction authorizes this branch push only; no main update, release version bump or asset/gameplay change. [Scope and verification](../COMBAT_MOTION_POLISH_LOCAL.md).
+
 Versi dokumen berasingan daripada versi game.
 
 ## Game 2.31.0 — Complete illustrated tutorial

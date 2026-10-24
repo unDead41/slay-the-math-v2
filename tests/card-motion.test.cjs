@@ -38,3 +38,7 @@ test('movement planning folds resolving into its real destination and groups hid
 test('motion descriptions and plans cannot mutate saved results or consume gameplay RNG',()=>{
  const Motion=require('../dist/card-motion.js'),r=fixture(),before=Motion.snapshot(r);play(r,'Blazing Spirit');const saved=JSON.stringify(r);Motion.effects(before,r,'ms');Motion.plan([]);assert.equal(JSON.stringify(r),saved);
 });
+
+test('a new run with the same seed and encounter cannot replay another run’s Passive receipts',()=>{
+ const Motion=require('../dist/card-motion.js'),r=fixture(),before=Motion.snapshot(r);play(r,'Blazing Spirit');assert.equal(Motion.effects(before,r).length,1);const restarted=E.clone(r);restarted.started++;assert.deepEqual(Motion.effects(before,restarted),[]);
+});

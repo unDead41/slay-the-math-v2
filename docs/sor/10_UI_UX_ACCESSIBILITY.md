@@ -76,6 +76,8 @@ Semak desktop 1280×720, landscape 844×390 dan portrait 390×844. Desktop: MC k
 
 **UX-07:** Reduced motion, Music/SFX/mute, Predict skip dan pause disediakan. Countdown wajib tidak digunakan; masa aktif berhenti ketika pause/menu.
 
+**Combat-animation branch addition, 24 October 2026:** Settings includes Combat Effects: Low / Full (Full default). Low retains real status feedback while reducing particles, continuous aura movement and glow. Persist the choice only in UI settings. The existing Game Motion switch and OS Reduced Motion override both visual levels; audio has its independent Sound FX setting. Opening/changing Settings never replays historical effects or changes the run. [Owner and verification](../COMBAT_MOTION_POLISH_LOCAL.md).
+
 ## Error dan penerimaan
 
 Error pemain menyatakan tindakan: “Not enough Gold.”, “This room is complete.”, “Save could not be loaded.” Tiada seed, stack trace atau debug setting pada flow biasa.

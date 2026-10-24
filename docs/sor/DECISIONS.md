@@ -1,5 +1,13 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-COMBAT-POLISH-BRANCH — Publish to combat-animation only
+
+**DISAHKAN:** Ijamm subsequently asks to push the completed update to its branch if it has not been pushed. This supersedes DEC-20261024-COMBAT-POLISH-LOCAL’s no-branch-push boundary for this work only. Update the existing `combat-animation` branch from `7e0e6d7` using tested main `6dc3ce3` plus the completed polish. Preserve branch history with a checked fast-forward; do not update main or deploy. Runtime/artwork/gameplay remain the verified local result. [Scope, verification and limits](../COMBAT_MOTION_POLISH_LOCAL.md).
+
+## DEC-20261024-COMBAT-POLISH-LOCAL — Improve combat feedback without publishing
+
+**DISAHKAN:** after reviewing the eight proposed improvements, Ijamm says to update locally and not push to a branch. This supersedes previous main-push authorization for this new work only; existing published releases remain unchanged. **DITERUSKAN:** prioritize/merge actual status cues, combine exactly explained Passive/stat labels, separate crowded aura geometry, share cancelable presentation timing and one synthesized primary SFX, distinguish shield depletion from expiry, refine ten code-native Passive signatures, and persist Low/Full visual intensity in UI settings. Preserve artwork/icon mappings, source sprite timings, gameplay/RNG and run schema. **PERLU_VERIFIKASI:** physical devices, human SFX feel and a complete production/offline build with all original large assets. [Local scope and actual verification](../COMBAT_MOTION_POLISH_LOCAL.md). The later DEC-20261024-COMBAT-POLISH-BRANCH above supersedes the original no-branch-push instruction; main release is still not authorized.
+
 ## DEC-20261023-ART-RESTORE — Restore selected card and artifact illustrations
 
 **DISAHKAN:** Ijamm explicitly requests the previous card/artifact icons and says to retain buff, debuff and UI/menu icons. This overrides the card/artifact portion of the 2.23 all-icon integration only. Restore all 40 selected card mappings from `dist/assets/card-assets.json` and all 31 artifact filenames from `dist/artifact-data.js`, using their existing verified source derivatives. Keep current UI, map, status and topic mappings and image bytes. Normal card builds and explicit reviewed-package reimports must preserve this boundary. Publish together with the authorized combat motion as 2.25.1. [Scope and verification](../ICON_ART_RESTORE_2_25_1.md).

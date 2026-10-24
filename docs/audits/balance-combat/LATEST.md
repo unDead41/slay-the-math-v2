@@ -11,7 +11,7 @@
 | Main merged forward into working branch | 6376a222169815af582cf55aa4794f3c809a3515 / game2.37.0 |
 | Before-effects cartridge | c54ce92fdd8e43544b03a16ed995431da6fdb8f0 / game2.33.0 |
 | Current ordinary / Master | card-effects-1 / master-1.4.0-candidate.4 |
-| Publication | Actual data commit/ref verified after upload; publication receipt supplements this audit. |
+| Publication | Verified measured-data commit 678818448d0668a7f9e330e8588f85c66635ed88; [publication receipt](PUBLICATION.json). The later receipt commit is documentation only. |
 
 Previous Combat is an ancestor of main: its work was already integrated. New work starts from current implementation rather than replaying the old v1.2 overlay as if current. Main moved three more commits during testing; all24 loaded production dependencies are byte-identical between the tested50d snapshot and6376 publication base. Main's icon/SOR changes were fast-forwarded into the work branch. Historical reports retain their original labels.
 

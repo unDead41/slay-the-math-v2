@@ -176,3 +176,7 @@ First Focus write mengandungi1180/1200 rekod (satu part380 vs400). Ia **dikecual
 - Had100 cycle/500 paid play/10,000 estimated API/preview work ialah had benchmark, bukan game timer atau instrumentation semua atom. Censored U kekal null. Baseline/win-threshold sensitivity, forced openings, synthetic accuracy, adaptive selection dan reused seeds mengehadkan tafsiran.
 
 Raw/CSV/source yang disebut berada di [reports/combat-recheck-2026-10-24](../../../../reports/combat-recheck-2026-10-24). Cara ulangan dan polisi: [tool README](../../../../tools/balance/recheck/README.md). Rekod audit branch: [LATEST](../../../audits/balance-combat/LATEST.md). Ref terbitan disahkan berasingan selepas push; tiada main push oleh sesi ini.
+
+## Verified GitHub publication
+
+Measured data/source tree published and remote ref verified at **678818448d0668a7f9e330e8588f85c66635ed88** on balance/combat. Tree042f7a2b9e27f5fdd69f2b31d49921a406201f42 exactly matches the reviewed local source. [Publication receipt](../../../audits/balance-combat/PUBLICATION.json). The subsequent documentation-only receipt commit adds this publication record; no measurements or production files change. Main publication was not performed by this session.

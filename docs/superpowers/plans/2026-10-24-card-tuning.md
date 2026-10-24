@@ -38,4 +38,4 @@
 - [x] Update bilingual bodies/notes and source invariants; exercise v0/v1/v2 previews, Shop prices and Retry/reload.
 - [x] Verify seeded before/after results, full suite, syntax, production and native player/AI browser checks.
 - [x] Audit final diff, obtain one independent review, fix Important/Critical findings through RED→GREEN and rerun required checks.
-- [ ] Commit verified tree, publish with expected old branch SHA and no force, verify remote tree/ref, and record handoff. Main remains read-only.
+- [x] Commit verified tree, publish with expected old branch SHA and no force, verify remote tree/ref, and record handoff. Main remains read-only.

@@ -40,3 +40,6 @@ Second concurrent-main read:37558d5 is the same Settings update's2.37.1 metadata
 
 
 Final: fixed Last Page glossary interaction — four actual rendered ordinary/Master EN/BM accessibility regressions RED→GREEN, affected44/44 and final whole suite958/958. The corrected current Recall UI regression group4/4 also passed. Final full command `node --test --test-concurrency=2 tests/*.test.cjs` completed958 pass,0 fail/skip/cancel,255.382s; source local91b6447, with no runtime changes afterwards. Final main read remains37558d5. Prepared remote tree d43a5f7bca781d1ac71c9dccb7e549d113dd449f exactly matched the local verified tree before this receipt-only update. Branch reference has not yet moved.
+
+
+Task1: complete — source range6376a22→85d046c, final full suite958/958. Published remote content commit ecf0a9690f7630ecf781bc3dd0d7563bcfdcec6f, tree3cf0da0886f5d32e42af4cfb7508f6b406555577 exactly equal local verified tree. Parent37558d5 preserves current main; CAS expecteda9c49f0, no force. Feature ref readback matched; main readback stayed37558d5. This final receipt is documentation-only, no repeated runtime tests required. No unresolved Critical/Important or deferred Minor findings; both reviewer-declined behaviors have explicit rulings above.

@@ -50,4 +50,6 @@ Tiada isu tambahan ditemui dalam skop yang disemak. Universal balance, pupil out
 
 ## Publication receipt
 
-All implementation verification is complete; branch-only publication and remote readback are the remaining steps. Main at final pre-publication read: `37558d5a53d62e457c076b2444a1b71e8b42e50b`. This task never moves main. Candidate values, particularly Last Page's policy-dependent outcomes, require further human playtesting before a balance claim or main promotion.
+Published and read back: `balance/card-effects-20261024` → `ecf0a9690f7630ecf781bc3dd0d7563bcfdcec6f`, tree `3cf0da0886f5d32e42af4cfb7508f6b406555577`, exactly matching the local verified tree. Parent is current main `37558d5a53d62e457c076b2444a1b71e8b42e50b`. The branch moved by fast-forward with expected prior head `a9c49f03f5e60dc0309f90931469361e6febedee`, no force. Main readback remained `37558d5a53d62e457c076b2444a1b71e8b42e50b`. This receipt is a subsequent documentation-only commit; the published runtime remains byte-identical to the tested candidate.
+
+Candidate values, particularly Last Page's policy-dependent outcomes, require further human playtesting before a balance claim or main promotion. No main update is authorized by this task.

@@ -20,6 +20,10 @@ Initial focused baseline50/50 passed. The audit found shared quote/gross Gold/re
 | MBREF-06 |P2 / corrected|Detached CSV omitted selected route. RED→GREEN regression now checks appended route identity with all earlier positions retained.|
 | MBREF-07 |P2 / corrected test integration|Old Master browser assumed synchronous startup and no Enter Dungeon gate. Actual failures were ReferenceError/loader intercept; readiness/Enter/battle/reload waits now follow the real2.41 flow. Three profiles pass without production changes.|
 
+| MBREF-08 |P2 / corrected in review|ME08 canonical uppercase queued stats missed lowercase weights, causing free buffs to decline. Real-engine RED→GREEN regression now proves positive selection and committed modifier with immutable planning.|
+| MBREF-09 |P2 / corrected in review|Fresh gross spending inherited a historical net label. Paid Purse JSON/CSV export regression and an explicit observer marker correct new output; old raw data and their known label defect remain recorded.|
+| MBREF-10 |P2 / corrected reproducibility|Copied runner instructions referenced absent historical archives/old outputs. Actual ENOENT reproduced; current local runner/verifier commands pass raw integrity. Historical source links remain pinned.|
+
 ## Risks and follow-up
 
 | ID | Priority / status | Basis and next action |
@@ -33,4 +37,4 @@ No new optional improvement is treated as mandatory numerical tuning. Future imp
 
 ## Final audit boundary
 
-Current numerical runtime/assets/question/map/save owners are preserved. Only expected shared release/manifest/launcher outputs change under dist; developer AI/tooling changes are outside player gameplay. Fresh checks:1041/1041 Node, focused groups, actual AI and three-profile Master browsers,403 AI outcomes,42 Map records and independent score verification. Production735 files/673 manifest hashes, offline AI exclusion, AI GET/POST404 and actual protected Dev/static-subpath checks passed. Final review and publication receipts follow before delivery. No universal balance, physical-device or hosted-service claim is made.
+Current numerical runtime/assets/question/map/save owners are preserved. Only expected shared release/manifest/launcher outputs change under dist; developer AI/tooling changes are outside player gameplay. Fresh checks:1042/1042 Node, focused groups, actual AI and three-profile Master browsers,403 AI outcomes,42 Map records and independent score verification. Production735 files/673 manifest hashes, offline AI exclusion, AI GET/POST404 and actual protected Dev/static-subpath checks passed. The [fresh review](../../balance/master/refresh-20261024/final-review.md) is addressed in one fix pass;35 focused and1042 full tests pass. An additional42-record Easy repeated-protocol smoke retains one censor and a failed score gate despite passing raw integrity. It is not pooled with the42-record three-profile regression. The final403-outcome cohort, source hashes and independent receipt/Block/Gold/factorial/CSV checks pass; publication receipts follow separately. No universal balance, physical-device or hosted-service claim is made.

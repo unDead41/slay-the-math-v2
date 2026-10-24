@@ -59,5 +59,5 @@
 - [x] Record source registry and independent audit outcomes; characterize exact runtime parity for Map v1.5 and identify obsolete Combat/Economy labels without changing old evidence.
 - [x] Generate prerelease metadata; run fresh matched current campaigns across3tiers, representative skills/routes/Predict and selected current-card factorial cases into a new directory; verify raw status/cost/Block/Gold/source invariants and retain censored cases.
 - [x] Run final full suite, syntax, map validation, production build, native AI and selected Master/profile/production isolation checks. Record logs and counts from actual outputs; no fresh full-suite claim before footer+exit0.
-- [ ] Fresh-context whole-branch review; address Important/Critical findings in one RED→GREEN fix pass and document remaining risks/rulings.
+- [x] Fresh-context whole-branch review; address Important/Critical findings in one RED→GREEN fix pass and document remaining risks/rulings.
 - [ ] Final scoped diff audit and ref freshness check; create exact tested tree/commit and fast-forward balance/master with expected prior SHA, no force. Read back tree/ref and main unchanged. Keep worktree/branch for review; no main push.

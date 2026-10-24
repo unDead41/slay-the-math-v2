@@ -69,7 +69,7 @@ function createDeckPolicy(x){
     for(const id of nextOwned)if(!owned.has(id))gain+=artifacts.futureValue(run,id);
     for(const id of owned)if(!nextOwned.has(id))gain-=artifacts.futureValue(after,id);
     const modifiers=after.mysteryState.nextCombat.slice(run.mysteryState.nextCombat.length);
-    for(const m of modifiers)gain+=m.amount*({block:.72,energy:2,focus:1,strength:3,agility:2,draw:1.8}[m.stat]||0);
+    for(const m of modifiers)gain+=m.amount*({block:.72,energy:2,focus:1,strength:3,agility:2,draw:1.8}[String(m.stat).toLowerCase()]||0);
     choices.push({optionId:option.id,targetId,gain,reason:'Compare actual frozen Mystery outcomes, deck synergy and paid HP/Max HP/Gold on isolated copies.'});
    }
   }

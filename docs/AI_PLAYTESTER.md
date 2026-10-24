@@ -115,3 +115,5 @@ weights or pupil models. Prior numerical reports retain their recorded sources.
 Agent sampled-turn-search-3 menilai artifact dengan kos sebenar, kredit Gold, Max HP, trigger deck dan diskaun tertinggi yang sudah dimiliki. Gift percuma/Elite/Boss berkongsi polisi itu. Mystery dibandingkan menggunakan tawaran yang sudah dibuka pada salinan run; transform kehilangan upgrade dan tidak mengurangkan saiz deck. Pilihan optional yang merugikan boleh decline; hanya tindakan sebenar masuk telemetry. CSV kini menambah route, dan modul artifact termasuk dalam source hash. Anggaran peluang combat/Shop seterusnya ialah heuristic, bukan CP.
 
 Main2.41 dibaca bersama tiga branch specialist. Candidate.5, nilai kad/profile dan save key dikekalkan. [Handoff dan bukti semasa](balance/master/REFRESH_2026_10_24.md). Batch baharu403 outcome dan42 replay Map tidak mengesahkan kadar menang murid.
+
+Semakan akhir refresh membetulkan penilaian ID canonical ME08: buff Strength/Agility percuma kini dinilai positif. Suite1042/1042 lulus. Data selepas review menggunakan sumber baharu di `reports/master-balance/refresh-20261024/final/`; data sebelum review dikekalkan berasingan.

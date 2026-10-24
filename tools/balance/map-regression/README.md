@@ -1,33 +1,22 @@
-# Map regression v1.5 — fixed 2.40.0 pilot
+# Current Master map regression pilot
 
-Pin main `b730cad0cb27b53ffbdf687d8fc9edaed143ef43`, game2.40.0 and canonical Master `master-1.5.0-candidate.5`. This follows the already-published v1.4 cohort at8606616, which remains immutable evidence for candidate.4/game2.37.0. Do not pool versions or replace their contexts.
+This runner now targets audited main `45d2378302196d9b0b79af7b371e6f16d4f5768c` / game2.41.0 and `master-1.5.0-candidate.5`. The branch prerelease is2.42.0-balance.1. Its config records the source baseline; each execution fingerprints the actual runtime, protocol and analysis. It changes no production numbers.
 
-Before outcomes, fix100 registered seeds, allfive routing policies once per seed, and high/low/skip Predict once per seed on health-recovery. Its feedback control is the same health-recovery route case. That is800 full campaigns per difficulty/2,400 total. Capture at most one actual uniform-reference entry per seed/stage and replay allthree nominal ranks with identical state/RNG/clock. At most1,800 stage replays total; Stage2 entries exist only for actual survivors. N1 is a regression pilot with wide uncertainty, not the repeated primary study or pupil calibration.
-
-Use two workers per tier, three separate tier processes (six aggregate workers). Limits remain100 combat turns,500 plays,10,000 API actions,120 seconds/task and7,200 seconds/invocation. Resume only missing IDs with identical context; never replace a loss or censor, widen an outcome-dependent limit or resample for a better result. Versioned config and runner are included in protocol fingerprints.
+Use a fresh output for a new source/protocol. This one-seed smoke runs all three profiles, combines their tables without pooling scores, and verifies each profile:
 
 ```bash
-node tools/balance/map-regression/run.cjs --difficulty easy
-node tools/balance/map-regression/run.cjs --difficulty medium
-node tools/balance/map-regression/run.cjs --difficulty hard
-node -e "require('./tools/balance/map-regression/run.cjs').combine(require('node:path').resolve('reports/map-balance/v1.5'))"
-python3 tools/verify-map-advanced.py reports/map-balance/v1.5/easy
+node tools/balance/map-regression/run.cjs --difficulty all --seed-limit 1 --workers 1 --max-seconds 180 --out reports/local-map/new-refresh
+python3 tools/verify-map-advanced.py reports/local-map/new-refresh/easy
+python3 tools/verify-map-advanced.py reports/local-map/new-refresh/medium
+python3 tools/verify-map-advanced.py reports/local-map/new-refresh/hard
 ```
 
-Use `--seed-limit 1 --out /absolute/scratch/smoke-v15` for smoke; `--resume` preserves the same context. Run the verifier for allthree profiles. Prior study details, route/answer/acquisition policies, contextual CP formula, censor/null conventions and net Shop outflow limitations remain in `../map-recheck/README.md`. This is a bundled runtime/card/profile regression; differences cannot identify an isolated map or card effect. No production tuning or player UI CP is introduced.
+The default output is `reports/map-balance/master-refresh-20261024/map-regression`. Omit `--seed-limit` for all100 registered seeds. Use `--difficulty easy`, `medium` or `hard` for one tier; after separate runs call `combine` with that same output directory. `--resume` requires identical source, config and schedule and keeps every recorded outcome.
 
-## Closed results and exact source
+The fixed full schedule is five route policies plus high/low/skip Predict once per seed:800 campaigns per tier/2,400 total. Capture at most one actual uniform-reference entry per seed/stage and replay all three nominal ranks with identical state/RNG/clock. Stage2 is a survivor bank; entries are never fabricated. N1 is a regression pilot with wide uncertainty, not repeated calibration. Workers and time budgets remain explicit config/CLI limits; limits are censored, never losses.
 
-The complete fixed cohort has2,400 campaigns +1,683 matched replays,4,083 records,0 engine/policy error/invalid and21 Easy skip censors. Allthree independent integrity checks PASS; Easy score gate FAIL only for censoring. Stage2 entry banks100/95/66 make117 nominal rank scores unavailable. Same-context recovery retains every complete recorded outcome; final missing-record repairs use1 worker. See the handoff and validation-index for exact histories.
+All200 map snapshots and5,500 structural routes are checked. Nominal ranks use the existing pressure reference, not a prediction of current damage. Feedback uses real engine settlement; high/low are synthetic knowledge models and skip changes Predict/seals/Focus jointly. Resource/score populations and bounds remain explicit. Pupil90/70/50 and universal card power are unmeasured.
 
-Restore the65-file source archive before verifying/replaying this cohort after later runtime changes:
+Fresh telemetry tags `shopGoldSpentBasis=GROSS_CHECKOUT_SPENDING`, including full Purse checkout charge and its separate Gold credit. Historical raw records without that marker retain their net-action interpretation; they must not be relabeled. See [repeated current protocol](../map-recheck/README.md) and [Master refresh handoff](../../../docs/balance/master/REFRESH_2026_10_24.md).
 
-```bash
-python3 reports/map-balance/validation-v1.5/restore-source.py /tmp/stm-map-v15-source
-python3 /tmp/stm-map-v15-source/tools/verify-map-advanced.py reports/map-balance/v1.5/easy
-python3 /tmp/stm-map-v15-source/tools/verify-map-advanced.py reports/map-balance/v1.5/medium
-python3 /tmp/stm-map-v15-source/tools/verify-map-advanced.py reports/map-balance/v1.5/hard
-node /tmp/stm-map-v15-source/tools/balance/map-regression/run.cjs --difficulty all --out /tmp/stm-map-v15-replay
-```
-
-The source archive omits player assets and primary records; the repository retains the complete data. Three cold full-trial replays match exactly, adding no independent samples. N1 per seed yields coarse CP points and wide intervals; Master needs repeated current-runtime entries for final ranking.
+Historical v1.5 (game2.40.0) data, restore scripts, original commands and closed results belong to the [pinned Map branch](https://github.com/unDead41/slay-the-math-v2/tree/364a844879b8cd9463c4771eac15291a3fd22075/reports/map-balance/validation-v1.5) and its [historical README](https://github.com/unDead41/slay-the-math-v2/blob/364a844879b8cd9463c4771eac15291a3fd22075/tools/balance/map-regression/README.md). Those archives are not bundled in this branch. Restore and verify them from that source, keeping their original contexts and net spending labels.

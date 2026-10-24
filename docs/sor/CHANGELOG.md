@@ -624,4 +624,6 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 - Read exact Combat/Map/Economy heads against main2.41; retain current candidate.5 and historical cohort labels.
 - Bind current Master map diagnostics/verification, canonical artifact quotes, gross Gold and actual final-boss grant.
 - Improve AI artifact purchases/gifts and frozen Mystery choices; append CSV route identity. Update Master browser for the current Enter Dungeon flow.
-- Record1041 full tests,403 current AI outcomes and42 source-verified Map records with explicit sampling limits. [Current handoff](../balance/master/REFRESH_2026_10_24.md).
+- Record1042 full tests,403 current AI outcomes and42 source-verified Map records with explicit sampling limits. [Current handoff](../balance/master/REFRESH_2026_10_24.md).
+
+Review follow-up for2.42.0-balance.1: canonical ME08 queued buffs, explicit gross Shop spending basis and current runner instructions corrected in one RED→GREEN pass. Preserve pre-review raw data separately; the additional repeated Map smoke retains its censor and failed score gate.

@@ -1,0 +1,5 @@
+difficulty,balanceVersion,contextId,policy,pairs,unknown,bothWin,bothLose,onlyPolicyWins,onlyUniformWins,pairedWinRateDelta,interpretation
+hard,master-1.5.0-candidate.5,97d26ba108fe5bdd657d91694b26a7497590515523123e7cf44df929430075e2,avoid-elite,1,0,0,0,1,0,1,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,97d26ba108fe5bdd657d91694b26a7497590515523123e7cf44df929430075e2,seek-reward,1,0,0,1,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,97d26ba108fe5bdd657d91694b26a7497590515523123e7cf44df929430075e2,seek-shop,1,0,0,1,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,97d26ba108fe5bdd657d91694b26a7497590515523123e7cf44df929430075e2,health-recovery,1,0,0,1,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge

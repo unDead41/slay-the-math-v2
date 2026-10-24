@@ -81,3 +81,13 @@ test('actual starting artifact choice is explained by the shared acquisition pol
  const r=createReplay(f.x).runCampaign({runSeed:19,mode:'challenge',predictProfile:'skip',routePolicy:'health-recovery',deckPolicy:f.p,onDeckDecision:d=>decisions.push(d),trace:true,limits:{maxActions:1}});
  assert.notEqual(r.status,'INVALID_POLICY_OR_ENGINE',r.error);assert.ok(decisions.some(d=>d.scene==='artifact'&&d.id===r.actions[0].id));
 });
+
+test('Mystery accepts a free canonical next-combat buff without changing live state while planning',()=>{
+ const f=fixture(),pending=event(f,'ME08'),before=JSON.stringify(f.r);
+ const d=f.p.mystery(f.r,f.x.X.definition(f.r),pending);
+ assert.ok(['strength','agility'].includes(d.optionId),'free Strength/Agility must be valued positively');assert.ok(d.gain>0);
+ assert.equal(JSON.stringify(f.r),before);
+ const committed=JSON.parse(before);f.x.E.selectMysteryOption(committed,d.optionId);f.x.E.claimMystery(committed);
+ assert.ok(f.x.E.validate(committed));
+ assert.deepEqual(committed.mysteryState.nextCombat.slice(f.r.mysteryState.nextCombat.length).map(m=>[m.stat,m.amount]),[[d.optionId.toUpperCase(),2]]);
+});

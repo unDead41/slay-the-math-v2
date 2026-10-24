@@ -552,3 +552,7 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 ## Production Dev password — 24 October 2026
 
 DISAHKAN: Ijamm requests production Dev ON/OFF with password demo41, branch dev-tools only. Build a static password dialog and Hub using existing adapters; preserve player storage and isolate previews. Supersedes production exclusion on this feature branch. Client-side gate is not server authentication. Main publication is not authorized.
+
+## Extended developer sandbox — 24 October 2026
+
+DISAHKAN: Ijamm requests free map access, invulnerable HP, immediate card insertion and access to all 15 Mystery events in the production Dev sandbox. Keep source mechanics, saves and normal progression unchanged. Current branch only; no main publication. Suggestions in docs/DEV_FEATURES.md remain CADANGAN.

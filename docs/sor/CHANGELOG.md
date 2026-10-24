@@ -443,3 +443,7 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 ## Production Dev password — 24 October 2026
 
 Branch 2.31.1-dev.1: add password-gated production Dev in main menu and Settings, static Hub/sandbox build copies, session relock and relative paths for Netlify/Pages. Preserve player saves and local development mode. No main update.
+
+## Extended developer sandbox — 24 October 2026
+
+2.31.1-dev.2 on dev-tools: add all-node map clicks/teleport, God ON/OFF, insert normal/upgraded card copies into deck and combat zones, one-click eligible fixtures for all 15 Mystery events, and a current feature guide. Retain production password and player-storage isolation.

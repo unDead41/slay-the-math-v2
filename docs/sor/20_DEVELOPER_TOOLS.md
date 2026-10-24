@@ -1,6 +1,6 @@
 # 20 — Developer Tools
 
-Version: 1.1.0 · Branch build: 2.31.1-dev.1 · Date: 2026-10-24 (Malaysia)
+Version: 1.1.0 · Branch build: 2.31.1-dev.2 · Date: 2026-10-24 (Malaysia)
 
 DISAHKAN: Ijamm requested implementation from main v2.20.0 of the previously supplied Developer Tools SOR, including separate development and production commands. This domain owns developer access, sandbox fixtures and diagnostic controls. Existing card/combat/event/motion owners still own gameplay.
 
@@ -91,3 +91,7 @@ Player mode continues using real player storage. Only preview frames replace sto
 This is deliberately a client-side convenience lock for a static public game. The password, session flag, source and tools are inspectable/bypassable in browser developer tools. It is not secure server authentication. No private data belongs in the game bundle. No server/database/auth service is required or provisioned.
 
 Relevant checks: npm run check; node --test tests/dev-tools.test.cjs tests/release-build.test.cjs; npm run build:prod; npm run test:prod-dev-browser; npm run test:dev-browser. Hosted deployment is separate and main must remain unchanged until requested.
+
+## Extended sandbox tools — 24 October 2026
+
+DISAHKAN: add arbitrary map-node access across both stages, God Mode preventing HP loss, direct card insertion with copies/upgrade/Hand-or-draw, and one-click access to all 15 Mystery events. Ship only to dev-tools. These use the production renderer inside the isolated Hub preview, not the durable player run. Teleport uses a valid synthetic route prefix and preserves inventory; pending questions/choices must be finished. Card/Hand limits and Passive rules stay authoritative. Auto event fixtures satisfy prerequisites explicitly. God Mode is runtime-only, carries no save field and is unsuitable for balance evidence. [Current feature catalogue and limitations](../DEV_FEATURES.md).

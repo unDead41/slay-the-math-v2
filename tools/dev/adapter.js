@@ -1,4 +1,4 @@
-/* Injected inside the existing app closure by the development server only. */
+/* Injected inside sandbox app copies by the dev server or production builder. */
 {
  const F=window.STMDevFixtures;
  let devMotion=null,devLast=null,devBaseline=null,devSetup=null,devBefore=null;
@@ -42,8 +42,9 @@
  window.STMDevApi={
   catalog(){return {version:window.DCRelease?.version,maxHp:C.MAX_HP,enemies:C.enemies,events:Object.values(X.catalog),cards:K.data.cards,artifacts:Object.values(A.catalog),actors:{mc_01:S.data.hero,...S.data.actors}};},
   launch,snapshot,cards,testCard,motion:openMotion,
+  loadRun(next){if(!E.validate(next))throw Error('Invalid preview.');devSetup={kind:'edited',scene:next.scene,stage:next.stage,seed:next.seed};devBaseline=F.copy(next);devLast={kind:'edited'};install(next);return snapshot();},
   playback(action,value){if(!devMotion)throw Error('Open a motion preview first.');return action==='seek'?devMotion.seek(value):action==='step'?devMotion.step():devMotion.toggle();},
-  restart(){if(!devLast)return;const last=F.copy(devLast);if(last.kind==='scene'||last.kind==='cardCombat'){install(devBaseline);return snapshot();}if(last.kind==='cards')return cards(last.id,last.language,last.extra);return openMotion(last.options);},
+  restart(){if(!devLast)return;const last=F.copy(devLast);if(last.kind==='scene'||last.kind==='cardCombat'||last.kind==='edited'){install(devBaseline);return snapshot();}if(last.kind==='cards')return cards(last.id,last.language,last.extra);return openMotion(last.options);},
   home(){cleanup();run=null;ui.home=true;render();},
   command(action){if(run?.scene!=='battle')throw Error('Open a combat first.');if(action==='refill'){run.hp=run.maxHp;run.battle.energy=A.maxEnergy(run);}else if(action==='turn')E.endTurn(run);else if(action==='draw')E.draw(run,1);else if(action==='win'||action==='lose'){const next=F.copy(run);F.forceResult(next,action);run=next;}else throw Error('Unknown command.');render();return snapshot();}
  };

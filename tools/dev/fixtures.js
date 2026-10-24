@@ -59,6 +59,36 @@
   if(!Object.hasOwn(C.cards,id))throw Error('Unknown card.');
   return create({...extra,kind:'combat',deck:[{key:id,upgraded},...Array.from({length:11},()=>({key:'strike',upgraded:false}))],card:id,focus:focused?3:0,focused});
  }
+ function mapReady(source){
+  const r=copy(source);
+  if(r.scene==='education'||r.artifactState?.offer||r.battle?.question||r.battle?.cardChoice||r.mysteryState?.pending?.phase==='question')throw Error('Finish the pending question or card/artifact choice before teleporting.');
+  r.scene='map';r.battle=null;r.shop=null;r.rewards=[];r.checkpoint=null;delete r.finished;
+  if(r.mysteryState){r.mysteryState.pending=null;r.mysteryState.nextCombat=[];}
+  if(r.hp===0)r.hp=r.maxHp;
+  if(r.route)r.route.active=null;
+  if(!E.validate(r))throw Error('Cannot return this preview to the map.');return r;
+ }
+ function mapNodes(source,stage){const r=copy(source);r.stage=integer(stage,0,1,'Stage');if(!r.route||source.stage!==r.stage)r.route=G.begin(r.stage,r.seed,3);return G.get(r).nodes;}
+ function teleport(source,stage,id){
+  const r=mapReady(source);stage=integer(stage,0,1,'Stage');if(!r.route||r.stage!==stage)r.route=G.begin(stage,r.seed,3);r.stage=stage;
+  const nodes=G.get(r).nodes,target=nodes.find(n=>n.id===id);if(!target)throw Error('Unknown map node.');
+  function before(n){if(n.depth===0)return [];for(const p of nodes.filter(p=>p.next.includes(n.id))){const prefix=before(p);if(prefix)return [...prefix,p.id];}return null;}
+  const prefix=before(target);if(!prefix)throw Error('No valid map prefix for this node.');
+  r.depth=target.depth;r.route.path=prefix;r.route.active=null;E.enterNode(r,id);
+  if(!E.validate(r))throw Error('Teleport was rejected; preview is unchanged.');return r;
+ }
+ function addCards(source,id,count=1,upgraded=false,destination='draw'){
+  if(!Object.hasOwn(C.cards,id))throw Error('Unknown card.');count=integer(count,1,60,'Card count');if(!['draw','hand'].includes(destination))throw Error('Choose Draw pile or Hand.');
+  const r=copy(source);if(r.deck.length+count>60)throw Error('Keep the deck at or below 60 cards.');if(r.battle?.question||r.battle?.cardChoice||r.scene==='education'||r.artifactState?.offer||r.mysteryState?.pending?.phase==='question')throw Error('Finish the pending question or choice before adding cards.');
+  if(r.scene==='battle'&&destination==='hand'&&r.battle.hand.length+count>C.HAND_LIMIT)throw Error('Not enough space in Hand; choose Draw pile or add fewer cards.');
+  for(let i=0;i<count;i++){const c=E.card(r,id,!!upgraded);r.deck.push(c);if(r.scene==='battle')r.battle[destination].push(copy(c));}
+  if(!E.validate(r))throw Error('Card addition was rejected; preview is unchanged.');return r;
+ }
+ function eventSetup(id,options={}){
+  const e=X.catalog[id];if(!e)throw Error('Unknown Mystery event.');const A=typeof module!=='undefined'?require('../../dist/artifacts.js'):globalThis.DCArtifacts;
+  const starting=Object.values(A.catalog).find(a=>a.tier==='starting').id;
+  const setup={...options,kind:'event',event:id,stage:e.stages.includes(Number(options.stage)+1)?Number(options.stage):e.stages[0]-1,hp:20,gold:500,artifacts:[starting],deck:[]};return create(setup);
+ }
  function validatePreset(p){if(!p||p.version!==1||typeof p.name!=='string'||!p.name.trim()||p.name.length>80||!p.setup||typeof p.setup!=='object')throw Error('Invalid preset format.');create(p.setup);return copy(p);}
- return {create,forceResult,cardSetup,validatePreset,copy};
+ return {create,forceResult,cardSetup,validatePreset,copy,mapReady,mapNodes,teleport,addCards,eventSetup};
 });

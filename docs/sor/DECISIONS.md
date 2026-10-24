@@ -1,5 +1,13 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-MASTER-AUDIT-EVERY-UPDATE — Read first and review every branch update
+
+**DISAHKAN:** Ijamm asks Master Audit to look for problems, possible problems and improvements whenever a branch is updated, and to read this audit guidance before other work. This extends [Master SOR](../../MASTER_SOR_PROJECT.md) to version 1.2.0.
+
+**IMPLEMENTED:** AGENTS.md starts with the main-source reading instruction and links to a relevant latest audit. AUD-READ-01 precedes planning, implementation, builds, tests and commit/push except the minimum read-only discovery needed to locate the source. AUD-UPDATE-01–06 require scoped review before and after each coherent update, distinguish confirmed issues/risks/proposals, retain unresolved findings, allow an honest no-findings result and preserve existing permission/domain boundaries. The main documentation-only example records actual document inconsistencies and explicit unverified scope.
+
+**BOUNDARY:** publish this documentation-policy update through the established main workflow. It does not authorize unrelated fixes, merge other branches, audit every current game module, change game version/mechanics or create a background monitor/CI enforcement. [Audit, evidence and follow-up](../audits/main/LATEST.md).
+
 ## DEC-20261024-MASTER-SOR — Shared project and branch compatibility guidance
 
 **DISAHKAN:** Ijamm defines this chat as Master Audit — Branch Compatibility: verify actual GitHub main/branch SHAs, distinguish merge/remaining changes from current module compatibility, prioritize main for merged modules, test relevant scope and report VALID, PERLU UPDATE, CONFLICT or BELUM DISAHKAN with evidence and limits. Audit alone does not authorize code changes, merge or push. Ijamm then requests a reusable project SOR, asks for it to be installed, and asks to push it to GitHub.

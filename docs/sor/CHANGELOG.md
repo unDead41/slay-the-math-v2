@@ -1,5 +1,11 @@
 # Changelog SOR — Slay the Math
 
+## Master SOR 1.2.0 — 24 October 2026
+
+- Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.
+- Require scoped before/after issue, risk and improvement review for every coherent branch update; distinguish evidence from assumptions/proposals, retain open findings and preserve explicit fix/push boundaries.
+- Update the report format/index and add the [main documentation audit](../audits/main/LATEST.md), including two observed stale AGENTS statements. No runtime change, game-version bump or background/CI enforcement.
+
 ## 2.37.0 — 24 October 2026 — Functional icon clarity on main
 
 Integrate the approved icon branch with main 2.36.0. Enlarge functional icons, display real status names/counters and add the complete All statuses comparison. Preserve current BM/English percentage/duration effects, archived descriptions, question workspaces, run-aware card previews and Dev/VFX behavior. Recapture actual tutorial pictures and regenerate release/entrypoint/cache output. Original card/artifact artwork and mechanics remain unchanged. [Scope, actual checks and limits](../ICON_CLARITY_MAIN_2_37_0.md).

@@ -1,5 +1,7 @@
 # Arahan projek — Slay the Math
 
+**BACA DAHULU:** Sebelum kerja lain pada mana-mana branch, baca [Master SOR terkini pada main](https://github.com/unDead41/slay-the-math-v2/blob/main/MASTER_SOR_PROJECT.md), kemudian laporan audit/handoff berkaitan, termasuk [audit dokumentasi main](docs/audits/main/LATEST.md) apabila relevan. Ikuti AUD-READ-01 dan AUD-UPDATE-01–06; jika salinan branch lama atau akses terhalang, laporkan batasannya.
+
 Fail ini dibaca bersama [indeks SOR](SOR_README.md). Jika indeks dinamakan semula kepada SOR_README.md, laraskan pautan ini semasa integrasi.
 
 ## Tujuan
@@ -46,6 +48,7 @@ Nombor dalam jadual merujuk kepada fail bernombor dalam `docs/sor/`.
 - **AGT-16:** Design awal tidak mengaktifkan Passive. Resource Focus kekal; Ward ialah nama kerja konsep ungu.
 - **AGT-17:** Tiga fokus Probability ialah subfokus T1. Jangan menghilangkan T2/T3 atau mendakwa semua topik pada satu tingkatan tanpa pemetaan.
 - **AGT-18:** Ikuti [Master SOR](MASTER_SOR_PROJECT.md) bagi audit keserasian: semak main/branch sebenar dan SHA, bezakan keadaan Git daripada keserasian modul, utamakan modul pada main jika sudah merged, serta laporkan status, bukti, fail, ujian dan batasan. Audit sahaja tidak membenarkan perubahan, merge atau push. Dokumen pemilik domain dan arahan terkini Ijamm kekal berkuat kuasa.
+- **AGT-19:** Pada setiap set perubahan branch, lakukan audit awal dan audit diff akhir sebelum commit/push: cari masalah disahkan, risiko berpotensi dan penambahbaikan; rekod bukti, lokasi, keutamaan, ujian, perkara belum disahkan dan tindakan susulan dalam laporan/handoff. Jangan mencipta penemuan, menganggap cadangan wajib dilaksanakan atau meluaskan skop pembetulan tanpa arahan.
 
 ## Peringatan konteks
 

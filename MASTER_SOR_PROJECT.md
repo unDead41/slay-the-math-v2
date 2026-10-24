@@ -2,11 +2,21 @@
 
 | Medan | Rekod |
 | --- | --- |
-| Versi SOR | 1.1.0 |
+| Versi SOR | 1.2.0 |
 | Tarikh | 24 Oktober 2026, Asia/Kuala_Lumpur |
 | Pemilik keputusan | Ijamm |
 | Repository rujukan | https://github.com/unDead41/slay-the-math-v2 |
 | Branch utama | main |
+
+## 0. Bacaan wajib sebelum kerja lain
+
+**AUD-READ-01:** Pada awal sesi dan sebelum menyambung atau mengemas kini mana-mana branch, baca Master SOR ini daripada main terkini terlebih dahulu. Selepas itu baca AGENTS.md, governance, keputusan dan SOR modul serta laporan audit/handoff terkini yang berkaitan. Jika salinan branch ketinggalan, rujuk versi main; jangan bergantung pada ingatan atau laporan lama.
+
+Bacaan ini mendahului perancangan perubahan, penulisan kod, perubahan data/aset/dokumentasi, build, ujian, commit dan push. Operasi baca minimum untuk mengenal pasti repository, branch, SHA dan lokasi dokumen boleh dilakukan untuk mendapatkan rujukan tersebut.
+
+Nyatakan versi SOR, SHA main/branch dan penemuan terbuka yang relevan sebelum memulakan perubahan. Jika laporan terdahulu tiada, jalankan audit awal tanpa mereka sejarah audit. Jika dokumen atau GitHub tidak dapat dicapai, nyatakan batasan itu dan jangan mendakwa bacaan atau keserasian terkini telah disahkan.
+
+Arahan ini ialah kontrak kerja sesi yang mengakses repository. Penambahan fail Markdown tidak memasang pemantauan latar GitHub, hook atau CI yang membuktikan setiap agent telah membaca arahan.
 
 ## Kedudukan dalam repository
 
@@ -70,6 +80,33 @@ Jangan anggap persetujuan nama baharu turut membenarkan pertukaran repository, U
 
 Jika akses GitHub gagal, nyatakan bukti yang tersedia dan tandakan bahagian yang bergantung pada semakan itu BELUM DISAHKAN.
 
+## 4A. Audit masalah, risiko dan penambahbaikan pada setiap kemas kini branch
+
+**AUD-UPDATE-01:** Setiap set perubahan branch mesti disertai audit tertumpu terhadap masalah sebenar, masalah yang mungkin berlaku dan penambahbaikan yang munasabah. Ini terpakai kepada kod, data, aset, UI dan dokumentasi. Satu audit dibuat bagi set perubahan yang siap dikongsi; ia bukan arahan menjalankan semula suite besar pada setiap save fail.
+
+**AUD-UPDATE-02:** Lakukan dua semakan dalam aliran kerja:
+
+1. Sebelum perubahan: selepas bacaan wajib, semak keadaan semasa, diff terhadap main yang relevan dan laporan/handoff terdahulu. Kenal pasti isu terbuka yang boleh menjejaskan tugasan.
+2. Selepas perubahan, sebelum commit/push: semak diff akhir dan kesan terhadap modul berkaitan; jalankan ujian yang sesuai, semak semula isu lama dan laporkan penemuan baharu. Selepas push yang dibenarkan, sahkan ref sebenar dan rekod SHA terbitan dalam handoff. Jangan label snapshot atau laporan lama sebagai bukti untuk kod baharu.
+
+**AUD-UPDATE-03:** Bezakan kategori ini dalam laporan:
+
+| Kategori | Bukti dan cara melaporkan |
+| --- | --- |
+| MASALAH DISAHKAN | Nyatakan tingkah laku atau percanggahan yang diperhatikan, langkah reproduksi jika sesuai, fail/lokasi, SHA, kesan dan pembetulan yang diperlukan. |
+| RISIKO BERPOTENSI | Nyatakan asas teknikal, keadaan yang boleh mencetuskan masalah, kesan, tahap keyakinan dan semakan yang masih diperlukan. Jangan tulis andaian sebagai bug terbukti. |
+| PENAMBAHBAIKAN | Nyatakan perubahan konkrit, manfaat kepada pemain/pembangunan, fail terlibat, keutamaan dan cara menilai manfaatnya. Bezakan cadangan daripada arahan pelaksanaan. |
+
+Gunakan keutamaan P0–P3 mengikut [QA dan release](docs/sor/15_QA_RELEASE.md). Nyatakan skop serta keyakinan penemuan. Status keseluruhan tetap menggunakan VALID, PERLU UPDATE, CONFLICT atau BELUM DISAHKAN; kategori penemuan tidak menggantikannya. Cadangan pilihan sahaja tidak menjadikan branch PERLU UPDATE, dan risiko yang belum diuji tidak boleh disahkan secara senyap.
+
+**AUD-UPDATE-04:** Pilih semakan berdasarkan perubahan sebenar. Antara perkara yang relevan: kontrak fungsi/data dan pengguna modul lain; save/reload/RNG/transaksi; input kosong, sempadan atau rosak; UI/teks BM/BI, tutorial dan screenshot yang ketinggalan; pemuatan aset, offline dan saiz/peranti; ketepatan matematik; serta jurang ujian. Jangan mendakwa semua kawasan diperiksa jika hanya sebahagian disentuh.
+
+**AUD-UPDATE-05:** Baca dan kemas kini laporan audit/handoff branch yang sedia ada. Jika tiada, gunakan rekod seperti `docs/audits/<nama-branch>/LATEST.md`, dengan tarikh, skop, SHA yang diperiksa, penemuan, bukti, ujian dan batasan. Kekalkan penemuan yang belum selesai; tandakan selesai hanya selepas ada bukti baharu. [Audit dokumentasi main](docs/audits/main/LATEST.md) ialah contoh skop dokumentasi, bukan audit seluruh game.
+
+Jika tiada penemuan tambahan, tulis “Tiada isu tambahan ditemui dalam skop yang disemak” dan senaraikan semakan serta batasan. Tiada kuota masalah atau cadangan; jangan mencipta penemuan untuk memenuhi format.
+
+**AUD-UPDATE-06:** Melaporkan penemuan tidak membenarkan pembetulan di luar skop. Pembaikan yang telah diminta boleh diteruskan dengan bukti semakan; cadangan tambahan direkodkan dahulu. Kebenaran push/merge tetap mengikut arahan Ijamm bagi tugas tersebut.
+
 ## 5. Semakan kesan merentas modul
 
 Gunakan baris yang berkaitan dengan perubahan; audit tidak memerlukan semua modul diperiksa setiap kali.
@@ -127,7 +164,7 @@ Laporan mesti mengandungi:
 1. Sasaran, tarikh, repository, branch dan SHA penuh main serta sasaran.
 2. Keadaan Git dan perubahan yang masih belum masuk.
 3. Status keserasian serta sebab.
-4. Jadual penemuan: status, bukti, fail/lokasi, kesan dan pembetulan diperlukan.
+4. Jadual penemuan mengikut MASALAH DISAHKAN, RISIKO BERPOTENSI dan PENAMBAHBAIKAN: status, P0–P3, keyakinan, bukti, fail/lokasi, kesan dan tindakan diperlukan. Nyatakan jika tiada penemuan dalam sesuatu kategori.
 5. Ujian yang dijalankan beserta keputusan.
 6. Semakan yang belum dibuat dan had kesimpulan.
 7. Tindakan seterusnya dalam skop kebenaran pengguna.
@@ -150,12 +187,13 @@ Untuk sesi repository, baca fail ini pada root bersama AGENTS.md dan SOR modul b
 
 Untuk chat dalam ChatGPT Project, sediakan fail ini sebagai sumber projek dan gunakan arahan ringkas berikut dalam Project Instructions. Penerbitan di GitHub sahaja tidak memasang arahan tersebut:
 
-Gunakan MASTER_SOR_PROJECT.md yang tersedia dalam sumber projek sebagai SOR bersama untuk semua tugas berkaitan projek ini. Baca versi semasanya dan semak arahan terkini Ijamm sebelum bertindak. Bezakan cadangan, keputusan rasmi dan keadaan kod sebenar. Semasa audit, rekod branch serta SHA main dan sasaran; periksa kesan merentas modul; laporkan VALID, PERLU UPDATE, CONFLICT atau BELUM DISAHKAN dengan bukti, ujian dan batasan. Audit sahaja tidak membenarkan perubahan, merge atau push kod. Jika fail SOR tidak tersedia, nyatakan batasan itu dan gunakan arahan eksplisit yang tersedia.
+Gunakan MASTER_SOR_PROJECT.md yang tersedia dalam sumber projek sebagai SOR bersama untuk semua tugas berkaitan projek ini. Baca versi semasanya dan laporan audit/handoff berkaitan terlebih dahulu sebelum kerja lain. Semak arahan terkini Ijamm. Pada setiap kemas kini branch, audit masalah sebenar, risiko berpotensi dan penambahbaikan sebelum serta selepas perubahan. Bezakan cadangan, keputusan rasmi dan keadaan kod sebenar. Semasa audit, rekod branch serta SHA main dan sasaran; periksa kesan merentas modul; laporkan VALID, PERLU UPDATE, CONFLICT atau BELUM DISAHKAN dengan bukti, ujian dan batasan. Audit sahaja tidak membenarkan perubahan, merge atau push kod. Jika fail SOR tidak tersedia, nyatakan batasan itu dan gunakan arahan eksplisit yang tersedia.
 
 ## 11. Rekod pindaan
 
 | Versi SOR | Tarikh | Perubahan |
 | --- | --- | --- |
+| 1.2.0 | 24 Oktober 2026 | Bacaan Master SOR dan audit terdahulu sebelum kerja lain; audit masalah, risiko dan penambahbaikan bagi setiap kemas kini branch, dengan bukti serta had skop. |
 | 1.1.0 | 24 Oktober 2026 | Integrasi repository melalui AGENTS.md dan indeks SOR; kekalkan governance/pemilik domain serta bezakan pemasangan repository daripada ChatGPT Project. |
 | 1.0 | 24 Oktober 2026 | SOR projek bersama dan prosedur audit; Mathematics Slayer direkod sebagai cadangan nama. |
 

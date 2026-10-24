@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "A native Rune Guard commits the exact engine/save result before a noninteractive shield and actual Block-gain cue appear.",
+    "Strength, Agility, Defense and Thorns use distinct actual hero conditions and their source models/card icons stay intact.",
+    "The unpaid Passive swap dialog stays static; only its committed replacement lowers Strength and produces a real downward cue.",
+    "A real enemy receipt shows four Block absorbed even when the authored Layered Shield refill returns Block to its previous value; no fabricated +Block label."
+  ],
+  "viewports": [],
+  "profiles": [],
+  "errors": [],
+  "offlineRequests": [],
+  "failure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-status-effect=weak][data-status-kind=cleanse]') to be visible\u001b[22m\n\n    at /workspace/scratch/495591b4a1bf/icon-clarity-main/tests/status-vfx-browser.cjs:32:433"
+}

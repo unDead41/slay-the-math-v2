@@ -24,7 +24,7 @@
     icons:{focus:'ui-focus.webp',predict:'ui-predict.png',rest:mapIcons.camp,settings:'ui-settings.webp',book:'ui-tutorial.webp',
       cards:'ui-card_collection.webp',bolt:'ui-energy.webp',heart:'ui-health.webp',
       coin:'ui-money.webp',close:'ui-close.webp',hand:'ui-on_hand.webp',
-      drawPile:'ui-draw_pile.webp',discard:'ui-discard.webp',exhaust:'ui-exhaust.webp',...root.DCIconAssets?.ui},
+      drawPile:'ui-draw_pile.webp',discard:'ui-discard.webp',exhaust:'ui-exhaust.webp',...root.DCIconAssets?.ui,shop:mapIcons.shop,mystery:mapIcons.event},
     floatingEnemies:['wisp','bat','weaver'],
     scale:{hero:1,wisp:.64,beetle:.76,knight:.91,shard:.70,bat:.61,
       sentinel:1.04,dealer:1.02,weaver:.82,shade:.82,mimic:.61,golem:.86,reaper:.95},

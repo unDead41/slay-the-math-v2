@@ -1,0 +1,640 @@
+{
+  "version": "2.31.1-icons.1",
+  "branch": "codex/icon-clarity-audit",
+  "baseMain": "6dc3ce366d266c33154f9b2e76afeb3bba224eca",
+  "date": "2026-10-24",
+  "scope": {
+    "uiBindings": 45,
+    "statusBindings": 10,
+    "mapBindings": 6,
+    "uniqueArtworkFiles": 58,
+    "cardAndArtifactArtworkChanged": false,
+    "assetBytesChanged": false
+  },
+  "unitTests": {
+    "passed": 95,
+    "failed": 0,
+    "skipped": 0
+  },
+  "syntax": "passed",
+  "productionBuild": "passed",
+  "portableBytes": 298539538,
+  "browser": {
+    "screens": 38,
+    "errors": [],
+    "viewports": [
+      "1920x1080",
+      "1280x720",
+      "390x844",
+      "320x740",
+      "844x390",
+      "3840x2160"
+    ],
+    "screensMeasured": [
+      {
+        "name": "home",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 3,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "sound",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 7,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "soundtrack",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 9,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "settings",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 7,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "mode",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 7,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "combat-1920x1080",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 44,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "all-statuses-1920x1080",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 65,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "combat-1280x720",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "iconsMeasured": 44,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "all-statuses-1280x720",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "iconsMeasured": 65,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "combat-390x844",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 36,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "all-statuses-390x844",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 57,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "combat-320x740",
+        "viewport": {
+          "width": 320,
+          "height": 740
+        },
+        "iconsMeasured": 34,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "all-statuses-320x740",
+        "viewport": {
+          "width": 320,
+          "height": 740
+        },
+        "iconsMeasured": 51,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "combat-844x390",
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "iconsMeasured": 44,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "all-statuses-844x390",
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "iconsMeasured": 61,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "combat-3840x2160",
+        "viewport": {
+          "width": 3840,
+          "height": 2160
+        },
+        "iconsMeasured": 44,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "all-statuses-3840x2160",
+        "viewport": {
+          "width": 3840,
+          "height": 2160
+        },
+        "iconsMeasured": 65,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "predict",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 46,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "collection-ui",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 51,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "tutorial",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 45,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "map",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 22,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "rest",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 12,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "shop",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 8,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "reward",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 8,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "victory",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 11,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "defeat",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 11,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "mystery",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 9,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "mystery-question",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 9,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "master",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 5,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "artifact-question-ui",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "iconsMeasured": 6,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "settings-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 4,
+        "documentOverflow": {
+          "x": false,
+          "y": true
+        }
+      },
+      {
+        "name": "sound-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 6,
+        "documentOverflow": {
+          "x": false,
+          "y": true
+        }
+      },
+      {
+        "name": "rest-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 3,
+        "documentOverflow": {
+          "x": false,
+          "y": true
+        }
+      },
+      {
+        "name": "shop-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 7,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "map-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 16,
+        "documentOverflow": {
+          "x": false,
+          "y": true
+        }
+      },
+      {
+        "name": "collection-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 43,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "predict-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 38,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      },
+      {
+        "name": "tutorial-phone",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "iconsMeasured": 37,
+        "documentOverflow": {
+          "x": false,
+          "y": false
+        }
+      }
+    ],
+    "roleSizes": {
+      "arrow": {
+        "minCssPx": 28,
+        "maxCssPx": 28
+      },
+      "bolt": {
+        "minCssPx": 42,
+        "maxCssPx": 80
+      },
+      "book": {
+        "minCssPx": 30,
+        "maxCssPx": 96
+      },
+      "bossSealClosed": {
+        "minCssPx": 36,
+        "maxCssPx": 52
+      },
+      "bossSealOpen": {
+        "minCssPx": 36,
+        "maxCssPx": 52
+      },
+      "cards": {
+        "minCssPx": 30,
+        "maxCssPx": 68
+      },
+      "chance": {
+        "minCssPx": 28,
+        "maxCssPx": 66
+      },
+      "check": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "clock": {
+        "minCssPx": 30,
+        "maxCssPx": 30
+      },
+      "close": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "coin": {
+        "minCssPx": 28,
+        "maxCssPx": 40
+      },
+      "discard": {
+        "minCssPx": 28,
+        "maxCssPx": 52
+      },
+      "drawPile": {
+        "minCssPx": 42,
+        "maxCssPx": 80
+      },
+      "exhaust": {
+        "minCssPx": 28,
+        "maxCssPx": 52
+      },
+      "exportSave": {
+        "minCssPx": 36,
+        "maxCssPx": 36
+      },
+      "focus": {
+        "minCssPx": 42,
+        "maxCssPx": 80
+      },
+      "hand": {
+        "minCssPx": 28,
+        "maxCssPx": 28
+      },
+      "heart": {
+        "minCssPx": 28,
+        "maxCssPx": 40
+      },
+      "importSave": {
+        "minCssPx": 36,
+        "maxCssPx": 36
+      },
+      "intentAttackBlock": {
+        "minCssPx": 28,
+        "maxCssPx": 36
+      },
+      "map": {
+        "minCssPx": 30,
+        "maxCssPx": 32
+      },
+      "moon": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "muted": {
+        "minCssPx": 36,
+        "maxCssPx": 36
+      },
+      "predict": {
+        "minCssPx": 32,
+        "maxCssPx": 44
+      },
+      "rest": {
+        "minCssPx": 60,
+        "maxCssPx": 68
+      },
+      "save": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "search": {
+        "minCssPx": 28,
+        "maxCssPx": 28
+      },
+      "settings": {
+        "minCssPx": 30,
+        "maxCssPx": 40
+      },
+      "shield": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "skill": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "star": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "sword": {
+        "minCssPx": 32,
+        "maxCssPx": 32
+      },
+      "topicSets": {
+        "minCssPx": 28,
+        "maxCssPx": 32
+      },
+      "volume": {
+        "minCssPx": 30,
+        "maxCssPx": 40
+      }
+    },
+    "offline": {
+      "statuses": 10,
+      "embedded": true,
+      "unchangedSave": true,
+      "externalRequests": []
+    }
+  },
+  "limits": [
+    "Real device and pupil recognition have not been measured.",
+    "Decorative scene props, mathematical diagrams, browser favicon and excluded card/artifact art are not utility icon sizing targets."
+  ]
+}

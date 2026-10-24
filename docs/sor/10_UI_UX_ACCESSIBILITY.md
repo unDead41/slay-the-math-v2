@@ -240,3 +240,11 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Functional icon clarity — 2.31.1-icons.1 branch preview
+
+Use role-based icon sizing from ICO-16, visible status names/counters and an All statuses comparison dialog. The overview separates actual Buff/Debuff from Next turn effects, identifies the fighter and retains exact details. Queued borders also differ in shape. Full numeric values stay in accessible labels/details; oversized counters may clip visually rather than covering adjacent icons. Local status panning, count access and native dialog scroll handle crowded phone/landscape layouts without a combat page scrollbar. Keep the original card/artifact art, 44px targets, existing menu actions and color-only rich text. Ijamm authorizes this work on its own branch only. [Evidence and scope](../ICON_CLARITY_AUDIT_2026_10_24.md).
+
+## Functional icon clarity on main — 2.37.0
+
+Ijamm now authorizes main publication; the earlier preview-only boundary above is historical. Keep the current main's percentage/duration and BM status descriptions in both inline and comparison/detail surfaces. Preserve main's question retry focus/continuation and run-aware card display helpers when resolving shared app handlers. Recapture tutorial images from the merged UI rather than using the older small-icon screenshots as current evidence. [Combined release and actual checks](../ICON_CLARITY_MAIN_2_37_0.md).

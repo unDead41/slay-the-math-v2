@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## 2.37.0 — 24 October 2026 — Functional icon clarity on main
+
+Integrate the approved icon branch with main 2.36.0. Enlarge functional icons, display real status names/counters and add the complete All statuses comparison. Preserve current BM/English percentage/duration effects, archived descriptions, question workspaces, run-aware card previews and Dev/VFX behavior. Recapture actual tutorial pictures and regenerate release/entrypoint/cache output. Original card/artifact artwork and mechanics remain unchanged. [Scope, actual checks and limits](../ICON_CLARITY_MAIN_2_37_0.md).
+
 ## Master SOR 1.1.0 — 24 October 2026
 
 - Add [project-wide Master SOR](../../MASTER_SOR_PROJECT.md) for actual GitHub branch/SHA checks, merge-versus-module compatibility, cross-module impacts, scoped evidence and four audit statuses.
@@ -542,3 +546,10 @@ Published developer strategy/simulation AI on main 2.31.0 base, preserving the t
 ## Main integration — 2.35.0, 24 October 2026
 
 DISAHKAN: Ijamm now authorizes publishing the complete production/password/extended diagnostics Dev update to main. This supersedes the branch-only publication boundaries above. Merge with main 2.34.0, preserve AI/local-only backend and card effects. The status editor follows the current percentage/duration Weak/Vulnerable rules. Production ships the static password-gated Hub; AI Playtester remains local-dev-server-only.
+
+## 2.31.1-icons.1 — Functional icon clarity preview, 24 October 2026
+
+- Enlarge utility/HUD/seal icons according to role, preserve touch targets and use larger status art on wide displays.
+- Add visible status names and exact counters, immediate-debuff priority, queued-state cues and a fighter-specific All statuses comparison/detail flow with keyboard/touch/focus support.
+- Wire Hand, correct View Deck and soundtrack location symbols, mark missing semantic keys for QA, and label Block-only/no-attack previews correctly.
+- Preserve all original images and excluded card/artifact artwork; add focused UI and real-browser regression checks. Publish only `codex/icon-clarity-audit`, leaving main untouched by this work. [Audit](../ICON_CLARITY_AUDIT_2026_10_24.md).

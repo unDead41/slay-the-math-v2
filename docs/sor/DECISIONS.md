@@ -670,3 +670,17 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - **Implementation choice for this preview:** Reviewed means checked by the reviewer, independent of mathematical outcomes. Separate Question/Feedback views, readable checkbox rows, current-bank counts and review/feedback filters replace the large hero and dense grid; secondary controls move under Practice options.
 - **Architecture:** One optional local feedback flag, strict-compatible Question marker in existing transport, unchanged original comments, explicit consent and offline journals. No new database/server/receiver setup. All120 current items validate against the existing Google receiver.
 - **PERLU_VERIFIKASI:** live owner Google access/deployment/quota, physical classroom/Windows/mobile behavior and a later reviewed integration with newer main changes. Scope/run instructions and actual checks: docs/education/PRACTICE_WORKSPACE.md.
+
+## DEC-20261024-ICON-CLARITY — Functional icon audit (branch only)
+
+- DISAHKAN: Ijamm asks to open the current game, inspect all functional icons except card/artifact art, assess mapping, immediate buff/debuff distinction and actual size, recommend improvements and update a separate branch without pushing main.
+- DITERUSKAN: base the preview on main 2.31.0 / `6dc3ce366d266c33154f9b2e76afeb3bba224eca`; publish only `codex/icon-clarity-audit` as 2.31.1-icons.1.
+- IMPLEMENTED: role-based sizes, named status tiles, Debuff-first view ordering, a complete fighter-specific comparison dialog, overflow/count access and semantic fixes for Hand, View Deck, soundtrack locations and zero-damage intent copy. Keep original images, card/artifact registries, mechanics, question RNG, profile/save contracts, tutorial and audio.
+- PERLU_VERIFIKASI: real-device and pupil glance recognition. Browser inspection establishes rendered geometry, complete mappings, working controls and save immutability; it is not a measured pupil-recognition study. [Audit and actual checks](../ICON_CLARITY_AUDIT_2026_10_24.md).
+
+## DEC-20261024-ICON-CLARITY-MAIN — Publish functional icon clarity
+
+- **DISAHKAN:** Ijamm's follow-up “okay push ini pula please” authorizes publishing this icon update to main. It supersedes DEC-20261024-ICON-CLARITY's feature-branch-only boundary.
+- **DITERUSKAN:** integrate `codex/icon-clarity-audit` / `b18c4c99d28530026f8d90d28964569c2f7af610` with actual main `50d3af423cdc2240e949f4ddf29e023865304b65` / 2.36.0 as **2.37.0**. Keep the ten source artworks, enlarge functional UI, show actual status names/counters, and provide a complete read-only comparison. Current and archived effect descriptions, BM preference, question retries/continuation, run-aware card previews, combat VFX, AI and production Dev keep their current main owners.
+- **DITERUSKAN:** retain both decision histories, regenerate cache/version/launchers and actual tutorial screenshots, and verify the combined tree. Original card/artifact illustrations, other source artwork/audio, numerical rules, question bank and save contracts remain unchanged.
+- **PERLU_VERIFIKASI:** physical Windows/devices, pupil glance recognition, live Google service and public hosted deployment are separate from local production/browser evidence. [Main release](../ICON_CLARITY_MAIN_2_37_0.md).

@@ -17,7 +17,7 @@ function loadEngine({build='baseline',difficulty='medium'}={}){
   const module={exports:{}};cache.set(file,module);
   const localRequire=name=>name.startsWith('.')?load(path.resolve(path.dirname(file),name)):require(name);
   const code=source(file,pinned);new Function('require','module','exports','globalThis',code+'\n//# sourceURL='+file)(localRequire,module,module.exports,privateGlobal);
-  if(build!=='baseline'&&file===path.join(ROOT,'dist/card-data.js'))module.exports=candidate.cards(module.exports);
+  if(build!=='baseline'&&file===path.join(ROOT,'dist/card-data.js'))module.exports=candidate.cards(module.exports.legacyEffectsData||module.exports);
   if(build!=='baseline'&&file===path.join(ROOT,'dist/artifact-data.js'))module.exports=candidate.artifacts(module.exports);
   if(build==='candidate'&&file===path.join(ROOT,'dist/config.js'))candidate.config(module.exports,difficulty);
   return module.exports;

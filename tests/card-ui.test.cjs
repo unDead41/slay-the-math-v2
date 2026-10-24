@@ -65,7 +65,7 @@ test('preview numbers and calculation tooltips use the supplied snapshot and rej
    ['stm.attack.rune_strike',{focusUsed:true},true,'Deal 8 damage.',['Base: 6 + Strength: 2 + Focus: 0 = 8']],
    ['stm.attack.rune_strike',{hasTarget:false},true,'Deal 8 damage.',['Base: 6 + Strength: 2 + Focus: 0 = 8']],
    ['stm.attack.twin_shot',{},true,'Deal 8, then 5 damage to one enemy.',['Base: 3 + Strength: 2 + Focus: 3 = 8','Base: 3 + Strength: 2 = 5']],
-   ['stm.skill.mana_reading',{energy:2},true,'Spend all Energy (X). Draw 5 cards.',['Base: 0 + 2 × X(2): 4 + Focus: 1 = 5']],
+   ['stm.skill.mana_reading',{energy:2},true,'Draw 3 cards now; draw 1 next turn. Exhaust.',['Base: 2 + Focus: 1 = 3']],
    ['stm.skill.quick_study',{handAfterPlay:10},true,'Draw 2 cards.',['Base: 2 + Focus: 0 = 2']]
   ];
   for(const [id,overrides,requested,plain,formulas]of cases){

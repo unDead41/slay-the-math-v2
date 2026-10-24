@@ -1,7 +1,7 @@
 (function(root){'use strict';
  const D=root.DCTutorialData,T=root.DCTutorialCore,E=root.DCEngine,C=root.DCConfig,Q=root.DCEducation,M=root.STMMechanics,L=root.DCQuestionLanguage,K=root.STMCardKit;
  const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- function mount(host,{language='en',onclose=()=>{},timedMystery=false}={}){
+ function mount(host,{language='en',onclose=()=>{},timedMystery=false,legacyRules=false}={}){
   let storage;try{storage=root.localStorage;}catch(_){storage={getItem(){throw Error('Storage unavailable');},setItem(){throw Error('Storage unavailable');}};}
   const course=T.create({storage,language});let tips=null,expanded=false,resetPending=false,error='',destroyed=false;
   const w=(en,ms)=>course.progress().language==='ms'?ms:en;
@@ -71,7 +71,7 @@
    if(destroyed)return;tips?.destroy();tips=null;
    const oldFigure=host.querySelector('.tutorial-figure'),oldChapter=host.querySelector('[data-tutorial]')?.dataset.chapter;
    const oldTop=host.querySelector('.tutorial-content')?.scrollTop||0,oldNav=host.querySelector('.tutorial-toc')?.scrollTop||0,oldLeft=host.querySelector('.tutorial-toc')?.scrollLeft||0;
-   const p=course.progress(),i=D.chapters.findIndex(ch=>ch.id===p.chapter),ch=D.chapters[i],text=ch[p.language],complete=p.completed.includes(ch.id);
+   const p=course.progress(),i=D.chapters.findIndex(ch=>ch.id===p.chapter),ch=D.chapters[i],text=D.content(ch.id,p.language,legacyRules),complete=p.completed.includes(ch.id);
    host.innerHTML='<section class="tutorial-shell" data-tutorial data-chapter="'+ch.id+'" lang="'+p.language+'"><header class="tutorial-top"><div><p class="tutorial-kicker">'+esc(w('PLAYER FIELD GUIDE','PANDUAN PEMAIN'))+'</p><p class="tutorial-progress-label">'+p.completed.length+' / '+D.chapters.length+' '+esc(w('chapters complete','bab selesai'))+'</p><progress value="'+p.completed.length+'" max="'+D.chapters.length+'" aria-label="'+esc(w('Tutorial progress','Kemajuan tutorial'))+'"></progress></div><div class="tutorial-language" role="group" aria-label="'+esc(w('Tutorial language','Bahasa tutorial'))+'">'+button('English','language','en','aria-pressed="'+(p.language==='en')+'"')+button('Bahasa Melayu','language','ms','aria-pressed="'+(p.language==='ms')+'"')+'</div></header>'+
     '<div class="tutorial-body"><nav class="tutorial-toc" aria-label="'+esc(w('Tutorial chapters','Bab tutorial'))+'">'+D.chapters.map((c,n)=>'<button type="button" data-tutorial-action="chapter" data-value="'+c.id+'" aria-current="'+(c.id===ch.id?'step':'false')+'"><span class="tutorial-chapter-number">'+(p.completed.includes(c.id)?'✓':String(n+1).padStart(2,'0'))+'</span><span>'+esc(c[p.language].title)+'</span></button>').join('')+'</nav><article class="tutorial-content">'+
     (timedMystery?'<p class="tutorial-timed-warning" role="alert">'+esc(w('Your timed Mystery is still running. Return to the game to finish it first.','Masa Mystery anda masih berjalan. Kembali ke game untuk menyelesaikannya dahulu.'))+'</p>':'')+

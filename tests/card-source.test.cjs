@@ -1,11 +1,11 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),source=require('../modules/cards/source/data/cards.master.json'),runtime=require('../dist/card-data.js'),C=require('../dist/config.js');
 const digest=b=>crypto.createHash('sha256').update(b).digest('hex');
-test('card source: forty identities/assets and 38 unchanged definitions survive the explicit two-card correction',()=>{
- const changed=new Set(['stm.attack.rune_sweep','stm.attack.fate_storm']);
+test('card source: forty identities/assets and archived definitions survive the approved effects adapter',()=>{
+ const changed=new Set(['stm.attack.rune_sweep','stm.attack.fate_storm']),revised=new Set(['Weak Point','Cinder Guard','Growing Flame','Battle Rhythm','Mana Reading','Deep Study','Burning Page','Rune Armor','Clear Mind','Card Search','Last Ember']);
  assert.deepEqual(runtime.rules,source.rules);assert.deepEqual(runtime.frames,source.frames);
  for(const c of runtime.cards){const old=source.cards.find(s=>s.id===c.id);assert.ok(old);
-  if(!changed.has(c.id))assert.deepEqual(c,old);
+  if(!changed.has(c.id)){assert.deepEqual(runtime.legacyEffectsData.cards.find(a=>a.id===c.id),old);if(!revised.has(c.name))assert.deepEqual(c,old);else for(const key of ['id','name','category','selection_code','icon','display_name'])assert.deepEqual(c[key],old[key]);}
   else{for(const key of ['id','name','category','selection_code','icon','display_name'])assert.deepEqual(c[key],old[key]);assert.deepEqual(runtime.previousCardDefinitions[c.id],old);}
  }
  assert.equal(runtime.cards.length,40);assert.equal(new Set(C.CARD_POOL).size,40);

@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## 2.33.0 — 24 October 2026, card-effects feature branch
+
+Apply the user-approved card audit: percentage status phases, unused Last Ember Block carry, meaningful growth caps, revised draw/activation cards, fallback search and Master Twin Shot. Preserve archived ordinary runs and historical evidence. BM/English copy and new regression coverage follow [Card effects](../CARD_EFFECTS_2_33_0.md). Feature-branch publication only.
+
 ## Game 2.32.0 — Combat animation polish
 
 - Publish completed combat-animation `b422a18` to main after Ijamm’s explicit authorization: ranked/combined status feedback, named Passive/stat ownership, clearer auras and shield depletion/expiry, ten proc signatures, shared SFX timing and Low/Full intensity. Original artwork/icons, source sprite timing, balance, maths and run schema stay under their existing owners.

@@ -1,4 +1,4 @@
-# 23 — Master balancing, game 2.29.0
+# 23 — Master balancing, game 2.33.0
 
 Pemilik: Ijamm. Tarikh: 23 Oktober 2026. Branch pembangunan: `balance/master`; destinasi penerbitan yang disahkan: `main`.
 
@@ -51,3 +51,8 @@ Semakan kuasa baharu meliputi kesemua 40 kad biasa/upgraded dalam konteks fight 
 **IMPLEMENTED / CADANGAN UNTUK PLAYTEST:** Rune Sweep 2 Energy, 12 damage, Focus +4, upgrade +3. Fate Storm 2 Energy, 5+5+5 damage; Strength, Focus +4 dan upgrade +3 pada hit pertama sahaja. Nilai Master ini kekal; dua kad dalam mode biasa diselaraskan kepada nilai sama. Bahagian AoE Rune Sweep dibuang, bukannya ditambah sebagai damage percuma. RNG sasaran Fate Storm dibuang. Semua 40 kad kini mempunyai kesan serangan/debuff kepada satu musuh; self effects dan random draw kekal mengikut fungsi asal.
 
 Adapter semasa: `tools/cards/single-target.cjs`, sebelum `tools/import-cards.cjs` menjana runtime. Input pembekal kekal rekod sejarah. Receipt baharu merekod versi definisi; receipt lama mode biasa disemak dengan definisi asal dan tidak diselesaikan semula. Master menggunakan `master-1.3.0-candidate.3` dan save key baharu; save candidate.2 kekal tersimpan di key asal. Nilai 38 kad lain, enemy, artifak, harga, weighting loot, topology dan bank soalan kekal. [Bukti perbandingan dan semakan](../balance/master/SINGLE_TARGET_2_29_0.md). Bukti MB-05 di atas berasal daripada candidate.2, bukan hasil baharu candidate.3.
+
+
+## MB-07 — Card effects, 2.33.0
+
+DISAHKAN: approved card audit, feature-branch publication only. Current binding is `master-1.4.0-candidate.4`; the earlier candidate.3 descriptions and measurements above remain historical where superseded. [Card effects 2.33.0](../CARD_EFFECTS_2_33_0.md) owns current percentage phases, affected values and growth caps. No enemy/difficulty/economic/map/question numbers change. Old save keys and measured cohorts remain intact. Pupil targets are still unmeasured.

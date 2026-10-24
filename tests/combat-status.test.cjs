@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const E=require('../dist/engine.js'),C=require('../dist/config.js'),data=require('../dist/card-data.js'),Status=require('../dist/combat-status.js');
+const {E,C,data}=require('./helpers/card-legacy.cjs'),Status=require('../dist/combat-status.js');
 const key=name=>data.cards.find(c=>c.name===name).id;
 function fixture(){const r=E.newRun(867);delete r.route;r.seq=0;r.deck=data.cards.map(c=>E.card(r,c.id));E.startBattle(r,'sentinel');r.battle.hp=r.battle.maxHp=10000;r.battle.seals=2;r.battle.enemyBlock=0;r.battle.currentIntent.damage=0;return r;}
 function play(r,name){const b=r.battle,all=[...b.hand,...b.draw,...b.discard],i=all.findIndex(c=>c.key===key(name));assert.ok(i>=0,name+' is available');const c=all.splice(i,1)[0];b.hand=[c];b.draw=all;b.discard=[];b.energy=C.ENERGY;E.playCard(r,c.uid);return c;}

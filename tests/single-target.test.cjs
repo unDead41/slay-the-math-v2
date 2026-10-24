@@ -26,7 +26,7 @@ for(const mode of ['legacy','easy','medium','hard']){
  });
 }
 test('Fate Storm retains per-hit mitigation and applies Strength and Focus once',()=>{
- for(const [x,strength,want]of [[legacy,2,[5,3,3]],[loadMaster({difficulty:'medium'}),2,[5,3,3]]]){
+ for(const [x,strength,want]of [[legacy,2,[6,3,3]],[loadMaster({difficulty:'medium'}),2,[6,3,3]]]){
   const r=D.create(x,{seed:280030,enemy:'wisp',deck:['stm.passive.blazing_spirit',S+'weak_point',S+'fate_storm',...Array(9).fill('stm.defend.rune_guard')]});
   r.battle.hp=r.battle.maxHp=10000;x.E.playCard(r,hand(r,'stm.passive.blazing_spirit').uid);x.E.endTurn(r);
   x.E.playCard(r,hand(r,S+'weak_point').uid);assert.equal(r.battle.strength,strength);

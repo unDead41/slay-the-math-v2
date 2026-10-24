@@ -1,6 +1,7 @@
 'use strict';
 const {createHash}=require('node:crypto');
 function createReplay(runtime=null){
+const suppliedRuntime=runtime;runtime=runtime||require('../../cards/legacy-runtime.cjs')();
 const E=runtime?.E||require('../../../dist/engine.js');
 const C=runtime?.C||require('../../../dist/config.js');
 const A=runtime?.A||require('../../../dist/artifacts.js');
@@ -64,8 +65,8 @@ function plannedRoute(runSeed,stage,routeRandom,forced){
 }
 function runCampaign(options={}){
  const {runSeed,mode=options.initialState?.mode||defaults.mode,forcedRoutes=null,trace=false,predictProfile='feedback',routePolicy=defaults.routePolicyVersion}=options;
- const difficulty=runtime?runtime.difficulty:assertDifficulty(options.difficulty);
- if(runtime&&(!runtime.C.MASTER_BALANCE||options.difficulty&&options.difficulty!==difficulty))throw Error('Master replay difficulty mismatch.');
+ const difficulty=suppliedRuntime?runtime.difficulty:assertDifficulty(options.difficulty);
+ if(suppliedRuntime&&(!runtime.C.MASTER_BALANCE||options.difficulty&&options.difficulty!==difficulty))throw Error('Master replay difficulty mismatch.');
  if(!Number.isSafeInteger(runSeed)||runSeed<0||runSeed>4294967295||!['learn','challenge'].includes(mode))throw Error('A uint32 runSeed and supported mode are required.');
  if(!PROFILES[predictProfile])throw Error('Unknown Predict profile '+predictProfile);
  const adaptive=POLICIES.includes(routePolicy);if(!adaptive&&routePolicy!==defaults.routePolicyVersion)throw Error('Unknown route policy '+routePolicy);

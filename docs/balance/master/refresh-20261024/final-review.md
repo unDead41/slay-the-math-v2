@@ -18,3 +18,5 @@ Author's one fix pass: focused35/35 passed; final whole suite1042/1042 exit0, fi
 - Final: Ruling: physical-device and hosted-service behavior — local functional/browser/production receipts support only the tested environments; cost if wrong: device or hosting regressions remain undetected.
 
 No remaining deferred minor is hidden: the sole reviewer Minor was regraded by its broken-command effect and corrected within this pass. Original numerical runtime, questions, saves, artwork and Master identity stay unchanged.
+
+Final scoped diff check passed. Branch-only code publication057194e8ac41f464a367e76b12ac0ac0e6dd4937/tree80974c3b53e642ee7d4e2ba2cd9d37ba3932238b was read back exactly; main stays45d2378302196d9b0b79af7b371e6f16d4f5768c.

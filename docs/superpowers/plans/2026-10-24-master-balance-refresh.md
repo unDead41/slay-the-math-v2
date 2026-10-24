@@ -60,4 +60,4 @@
 - [x] Generate prerelease metadata; run fresh matched current campaigns across3tiers, representative skills/routes/Predict and selected current-card factorial cases into a new directory; verify raw status/cost/Block/Gold/source invariants and retain censored cases.
 - [x] Run final full suite, syntax, map validation, production build, native AI and selected Master/profile/production isolation checks. Record logs and counts from actual outputs; no fresh full-suite claim before footer+exit0.
 - [x] Fresh-context whole-branch review; address Important/Critical findings in one RED→GREEN fix pass and document remaining risks/rulings.
-- [ ] Final scoped diff audit and ref freshness check; create exact tested tree/commit and fast-forward balance/master with expected prior SHA, no force. Read back tree/ref and main unchanged. Keep worktree/branch for review; no main push.
+- [x] Final scoped diff audit and ref freshness check; create exact tested tree/commit and fast-forward balance/master with expected prior SHA, no force. Read back tree/ref and main unchanged. Keep worktree/branch for review; no main push.

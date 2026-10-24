@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "date": "2026-10-24",
+  "branch": "music",
+  "baseCommit": "264a60ecec7e64251304cdbc58b587a8867502ab",
+  "source": {
+    "filename": "Menu.mp3.mpeg",
+    "sha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681",
+    "sizeBytes": 4701741,
+    "codec": "mp3",
+    "sampleRate": 48000,
+    "channels": 2,
+    "duration": 199.608,
+    "title": "Ancient Stone Keep",
+    "artist": "zaimshahbudin"
+  },
+  "runtime": {
+    "id": "menu",
+    "bus": "bgm",
+    "srcs": [
+      "assets/music/menu_ancient_stone_keep.mp3"
+    ],
+    "title": "Ancient Stone Keep",
+    "label": "Main Menu",
+    "duration": 199.608,
+    "loop": true,
+    "playbackRate": 1,
+    "clipGain": 1,
+    "sourceFile": "Menu.mp3.mpeg",
+    "sourceSha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681",
+    "packageSha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681",
+    "artist": "zaimshahbudin",
+    "loopAuditionVerified": false
+  },
+  "previousMenu": {
+    "id": "menu",
+    "bus": "bgm",
+    "srcs": [
+      "assets/music/menu.ogg",
+      "assets/music/menu.mp3"
+    ],
+    "title": "The Door Below",
+    "label": "Main Menu",
+    "duration": 72,
+    "loop": true,
+    "playbackRate": 1,
+    "retainedFallback": true
+  },
+  "processing": "Byte-for-byte copy to an explicit .mp3 runtime path; no re-encoding, crop, gain, rate or pitch change.",
+  "sourceUnchanged": true,
+  "verification": {
+    "ffmpegDecode": "PASS",
+    "nativeBrowser": "PASS",
+    "report": "verification.json",
+    "decodedBufferDuration": 199.57349206349207
+  },
+  "limits": [
+    "No human listening or loop-seam audition; automated playback will be reported separately.",
+    "Saved mute/volume settings and browser first-gesture audio unlock remain in effect."
+  ],
+  "authorization": "Publish only the music branch; do not merge or push main.",
+  "gameVersion": "2.32.1"
+}

@@ -1,5 +1,7 @@
 # Slay the Math — Set of Rules
 
+Current branch-only Master/AI refresh **2.42.0-balance.1**: [handoff](docs/balance/master/REFRESH_2026_10_24.md), [source registry](docs/balance/master/refresh-20261024/sources.json), [audit](docs/audits/balance-master/LATEST.md). Numerical candidate.5 and existing saves remain unchanged.
+
 Current resource/runtime integration: [main2.41.0 release](docs/RUNTIME_OPTIMIZATION_MAIN_2_41_0.md), [SOR25](docs/sor/25_RUNTIME_OPTIMIZATION.md) and [latest audit](docs/audits/hosted-readiness/LATEST.md). Latest user authorization supersedes the historical feature-only boundary for this completed update.
 
 Current main integration: [game2.40.0](docs/CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.

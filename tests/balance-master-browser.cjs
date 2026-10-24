@@ -11,7 +11,11 @@ const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright');
    const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),page=await context.newPage();
    page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
    await context.addInitScript(()=>localStorage.setItem('duel-cube-settings.v1',JSON.stringify({sound:false,motion:false,musicMuted:true,voiceMuted:true})));
+   const enter=async()=>{await page.locator('#resource-enter').waitFor({state:'visible',timeout:180000});await page.locator('#resource-enter').click();await page.waitForFunction(()=>document.getElementById('resource-loader').hidden);};
    await page.goto('http://127.0.0.1:4191/?balance='+difficulty);
+   await enter();
+   // Hosted bootstrap now loads the game asynchronously after document load.
+   await page.waitForFunction(()=>typeof window.DCEngine?.newRun==='function'&&!!document.querySelector('[data-action="new"]'),{},{timeout:180000});
    // Pin only New Run's public seed; retain real engine actions and clock.
    await page.evaluate(()=>{const original=DCEngine.newRun;DCEngine.newRun=(_seed,...args)=>original(2000000020,...args);});
    await page.evaluate(()=>{localStorage.setItem('duel-cube-math.v1','legacy sentinel');});
@@ -22,9 +26,10 @@ const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright');
    await page.locator('[data-action=education-select][data-id="'+answer+'"]').click();await click('education-check');await click('education-continue');
    const node=await page.evaluate(()=>DCEngine.availableNodes(JSON.parse(localStorage.getItem(STMBalance.saveKey)))[0].id);
    await page.locator('[data-action=node][data-id="'+node+'"]').click();
+   await page.locator('.combat-layout').first().waitFor({state:'attached',timeout:60000});
    const state=await page.evaluate(()=>JSON.parse(localStorage.getItem(STMBalance.saveKey)));assert.equal(state.balanceState.difficulty,difficulty);assert.equal(state.scene,'battle');
    assert.equal(await page.evaluate(()=>DCEngine.validate(JSON.parse(localStorage.getItem(STMBalance.saveKey)))),true);
-   await click('forecast');await page.reload();await click('continue');
+   await click('forecast');await page.reload();await enter();await click('continue');
    assert.equal(await page.evaluate(()=>DCEngine.validate(JSON.parse(localStorage.getItem(STMBalance.saveKey)))),true);
    assert.equal(await page.evaluate(()=>localStorage.getItem('duel-cube-math.v1')),'legacy sentinel');
    await page.evaluate(()=>Promise.all([...document.images].filter(i=>i.hasAttribute('src')).map(i=>i.decode().catch(()=>{}))));

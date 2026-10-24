@@ -22,11 +22,11 @@ function summarize(rows,options){
  return {...counts(rows),groups:[...groups].map(([key,rs])=>({key,...counts(rs)})),power,cardUsage:[...cardUsage.values()].sort((a,b)=>b.plays-a.plays||a.cardId.localeCompare(b.cardId))};
 }
 function toCSV(report){
- const fields=['difficulty','skill','seed','mask','status','utility','finalHp','turns','energySpent','focusSpent','error','jobId','sourceHash','agentVersion','definitionHash','engineHash','mode','predict','cards','enemy','upgraded','jobStatus','blockGranted','blockUsed','blockExpired','blockUnused','blockRemaining','weakPrevented','defensePrevented','cardsToHand','passiveTriggers','passiveDamage'];
+ const fields=['difficulty','skill','seed','mask','status','utility','finalHp','turns','energySpent','focusSpent','error','jobId','sourceHash','agentVersion','definitionHash','engineHash','mode','predict','cards','enemy','upgraded','jobStatus','blockGranted','blockUsed','blockExpired','blockUnused','blockRemaining','weakPrevented','defensePrevented','cardsToHand','passiveTriggers','passiveDamage','route'];
  const quote=v=>{const s=v===null||v===undefined?'':String(v);return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;};
  return fields.join(',')+'\n'+report.rows.map(r=>{
   const o=report.options||{},values={...r,finalHp:r.final?.hp??r.final?.playerHp,turns:r.playerTurns??r.final?.turn,energySpent:r.energySpent??r.ai?.energySpent,focusSpent:r.focusSpent??r.ai?.focusSpent,
-   ...r.ai?.effects?.totals,cardsToHand:r.ai?.effects?.totals.cardsDrawn,jobId:report.jobId,sourceHash:report.sourceHash,agentVersion:report.agentVersion||r.policyVersion,definitionHash:r.provenance?.definitionHash,engineHash:r.provenance?.engineHash,mode:o.mode,predict:o.predict,cards:o.cards?.join('+'),enemy:o.enemy,upgraded:o.upgraded,jobStatus:report.jobStatus};
+   ...r.ai?.effects?.totals,cardsToHand:r.ai?.effects?.totals.cardsDrawn,jobId:report.jobId,sourceHash:report.sourceHash,agentVersion:report.agentVersion||r.policyVersion,definitionHash:r.provenance?.definitionHash,engineHash:r.provenance?.engineHash,mode:o.mode,predict:o.predict,route:o.route,cards:o.cards?.join('+'),enemy:o.enemy,upgraded:o.upgraded,jobStatus:report.jobStatus};
   return fields.map(k=>quote(values[k])).join(',');
  }).join('\n')+'\n';
 }

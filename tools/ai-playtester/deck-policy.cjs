@@ -1,6 +1,7 @@
 'use strict';
 // Transparent acquisition heuristics, deliberately separate from measured card power.
 function createDeckPolicy(x){
+ const artifacts=require('./artifact-policy.cjs').createArtifactPolicy(x);
  const cache=new Map(),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
  function profile(c){
   const key=c.key+':'+!!c.upgraded;if(cache.has(key))return cache.get(key);
@@ -52,17 +53,40 @@ function createDeckPolicy(x){
   return choices[0]?{...choices[0],reason:'Remove the card with the best resulting deck quality; preserve useful synergy.'}:{uid:null,gain:0,reason:'No removal target.'};
  }
  function camp(run){const best=upgrade(run);return run.hp<=run.maxHp-8||!best.uid?{action:'heal',reason:'Recover HP before the next encounter.'}:{...best,action:'upgrade'};}
+ function transform(run,transforms,candidates=run.deck,{allowSkip=true}={}){
+  const base=quality(run.deck),choices=candidates.filter(c=>x.C.cards[transforms[c.uid]]).map(c=>({uid:c.uid,gain:quality(run.deck.map(v=>v.uid===c.uid?{...v,key:transforms[c.uid],upgraded:false}:v))-base})).sort((a,b)=>b.gain-a.gain||a.uid.localeCompare(b.uid));
+  return choices[0]&&(!allowSkip||choices[0].gain>0)?{...choices[0],reason:'Compare the frozen replacement with the current card, including loss of its upgrade.'}:{uid:null,gain:0,reason:'Decline a transform which reduces deck quality.'};
+ }
+ function mystery(run,event,pending){
+  const choices=[],owned=new Set(x.A.owned(run).map(a=>a.id));
+  for(const option of event.success.options.filter(o=>x.X.actionable(run,o))){
+   const offer=pending.offers[option.id],targets=x.X.targets(run,option).filter(id=>!offer.cards||offer.cards.includes(id));
+   for(const targetId of targets.length?targets:[null]){
+    const after=JSON.parse(JSON.stringify(run));x.E.selectMysteryOption(after,option.id);if(targetId!==null)x.E.selectMysteryTarget(after,targetId);x.E.claimMystery(after);
+    if(!x.E.validate(after))throw Error('Invalid counterfactual Mystery reward.');
+    const nextOwned=new Set(x.A.owned(after).map(a=>a.id));
+    let gain=50*(quality(after.deck)-quality(run.deck))+1.4*(after.hp-run.hp)+2*(after.maxHp-run.maxHp)+(after.gold-run.gold)/12;
+    for(const id of nextOwned)if(!owned.has(id))gain+=artifacts.futureValue(run,id);
+    for(const id of owned)if(!nextOwned.has(id))gain-=artifacts.futureValue(after,id);
+    const modifiers=after.mysteryState.nextCombat.slice(run.mysteryState.nextCombat.length);
+    for(const m of modifiers)gain+=m.amount*({block:.72,energy:2,focus:1,strength:3,agility:2,draw:1.8}[m.stat]||0);
+    choices.push({optionId:option.id,targetId,gain,reason:'Compare actual frozen Mystery outcomes, deck synergy and paid HP/Max HP/Gold on isolated copies.'});
+   }
+  }
+  choices.sort((a,b)=>b.gain-a.gain||a.optionId.localeCompare(b.optionId)||String(a.targetId).localeCompare(String(b.targetId)));
+  return choices[0]&&(!event.success.mayDecline||choices[0].gain>0)?choices[0]:{optionId:null,targetId:null,gain:0,reason:'Decline: no legal Mystery reward has positive marginal value after its costs.'};
+ }
  function shop(run){
   const choices=[];
   if(run.deck.length<60)run.shop.offers.forEach((o,index)=>{const price=x.E.shopPrice(run,o),gain=marginal(run,{key:o.key,upgraded:false});if(!run.shop.bought.includes(index)&&price<=run.gold&&gain>.01)choices.push({kind:'card',index,price,gain,reason:'Buy '+x.C.cards[o.key].name+' for positive marginal deck synergy.'});});
   for(const [index,o]of (run.shop.artifacts||[]).entries())if(o.id&&!o.locked&&!run.shop.artifactBought.includes(index)&&!x.A.has(run,o.id)){
-   const price=x.E.shopPrice(run,o),v=x.A.catalog[o.id].values,gain=((v.energy||0)*16+(v.draw||0)*7+(v.initial_strength||v.strength||0)*3+(v.initial_agility||v.agility||0)*3+(v.heal||0)*Math.min(2,(run.maxHp-run.hp)/5)+(v.block||v.block_bonus||0)+(v.discount_percent||0)/4+2)/50;
-   if(price<=run.gold)choices.push({kind:'artifact',index,price,gain,reason:'Buy an affordable artifact with useful resource or recovery value.'});
+   const price=x.E.shopPrice(run,o),value=artifacts.score(run,o.id,{price});
+   if(price<=run.gold&&value.gain>0)choices.push({...value,kind:'artifact',index});
   }
   if(run.shop.version===2&&!run.shop.removed){const best=remove(run),price=x.E.shopRemovalPrice(run);if(best.uid&&best.gain>.01&&price<=run.gold)choices.push({...best,kind:'remove',price});}
   const reserve=run.hp<run.maxHp*.4?20:0,eligible=choices.filter(c=>run.gold-c.price>=reserve||c.gain>=.25).sort((a,b)=>b.gain/Math.max(1,b.price)-a.gain/Math.max(1,a.price)||a.kind.localeCompare(b.kind)||(a.index||0)-(b.index||0));
   return eligible[0]||{kind:'leave',reason:reserve?'Keep Gold for recovery; no purchase justifies the cost.':'Leave: no affordable positive marginal improvement.'};
  }
- return {reward,shop,camp,upgrade,remove};
+ return {reward,shop,camp,upgrade,remove,transform,mystery,artifact:artifacts.choose};
 }
 module.exports={createDeckPolicy};

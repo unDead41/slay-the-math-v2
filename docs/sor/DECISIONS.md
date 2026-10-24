@@ -766,3 +766,9 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 ## DEC-20261024-CARD-TUNING-MAIN — Publish the three-card follow-up
 
 **DISAHKAN:** “okay then push dekat main then update the version!!” supersedes the card follow-up's earlier assistant-branch-only boundary. Merge feature bb5f93b180616add5c7e16bb85fc91d9621d37df with current main ade5d3a21e55b9d2911bfa935c8095c95801bd8c as2.40.0. Preserve current education/report/Google, icon/readiness, Dev Settings and both decision histories. Keep exact approved card values, archived ordinary rules and separate Master candidate.5; no extra balance change. [Main release and fresh checks](../CARD_TUNING_MAIN_2_40_0.md).
+
+## DEC-20261024-MASTER-REFRESH — Three specialist sources and AI
+
+- DISAHKAN: Ijamm requests Master read its three balancing branches, update what is needed and AI together, and put it on the assistant branch before main. Publication target for this refresh is balance/master only.
+- DITERUSKAN: main45d2378/2.41.0 base, branch prerelease2.42.0-balance.1. Preserve numerical Mastercandidate.5, ordinary/archive rules, saves, assets and map. Correct source/runtime observations and improve actual-cost/frozen-offer acquisitions.
+- PERLU_VERIFIKASI: human90/70/50, exhaustive combinations, heuristic optimality and Hard Stage2 recovery causality. Preserve CCS-01 and DOC001/DOC002 with their owners. [Source registry, actual evidence and limits](../balance/master/REFRESH_2026_10_24.md).

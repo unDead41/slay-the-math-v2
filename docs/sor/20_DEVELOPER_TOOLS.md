@@ -153,3 +153,7 @@ DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all
 ## Education reports main publication — 2.38.0
 
 DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.
+
+## Master/AI refresh — 2.42.0-balance.1
+
+Current branch balance/master keeps schema3, upgrades acquisition to sampled-turn-search-3 and appends route to CSV. Free artifacts, actual acquisition costs and frozen Mystery effects use optional policies outside actual-action observation. Legacy replay defaults remain. AI remains Node development-only; existing password-protected static Dev is retained by its own production builder. [Source/verification](../balance/master/REFRESH_2026_10_24.md).

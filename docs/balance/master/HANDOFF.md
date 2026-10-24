@@ -1,3 +1,5 @@
+Current branch refresh: [2.42.0-balance.1 — three-source review and AI](REFRESH_2026_10_24.md). The candidate.2 results below remain historical; current candidate.5/source-specific results are recorded separately.
+
 # Master balancing handoff — game 2.27.0
 
 Current main integration: [game2.40.0](../../CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.

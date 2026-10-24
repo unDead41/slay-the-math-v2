@@ -10,12 +10,14 @@ function qualityGate({out,records,bank,summary,context}){
  if(summary.legacyCompatibility.status==='NEEDS_NEW_REFERENCE')warnings.push('RUNTIME_CHANGED_REBASELINE_REQUIRED');
  if(summary.incompleteMatchedTriplets)failures.push('INCOMPLETE_MATCHED_TRIPLETS');
  for(const r of records){
+  if(context.runtimeIdentity&&['version','difficulty','definitionHash','engineHash'].some(k=>r.runtimeIdentity?.[k]!==context.runtimeIdentity[k]))failures.push('RUNTIME_IDENTITY_MISMATCH:'+r.task.id);
   if(r.apiCalls>context.config.limits.maxActions)failures.push('API_LIMIT_EXCEEDED:'+r.task.id);
   if(r.task.batch==='matched'){const e=entries.get(r.task.entryId);if(!e||r.entryStateHash!==e.stateHash||r.task.entryStateHash!==e.stateHash)failures.push('MATCHED_ENTRY_CHANGED:'+r.task.id);}
   for(const room of r.rooms){if(room.metrics&&(room.metrics.hpRecovered-room.metrics.hpLost!==room.exit.hp-room.enter.hp||room.metrics.goldEarned-room.metrics.goldSpent!==room.exit.gold-room.enter.gold))failures.push('ROOM_RESOURCE_MISMATCH:'+r.task.id+':'+room.nodeId);}
  }
  if(summary.stage2Entries<context.seedList.length*context.config.matchedEntriesPerStage)warnings.push('STAGE2_BANK_IS_CONDITIONAL_AND_INCOMPLETE');
- warnings.push('FULL_EASY_MEDIUM_HARD_ADAPTER_UNAVAILABLE','SYNTHETIC_PREDICT_KNOWLEDGE_MODEL','SMALL_N_CP_PROVISIONAL','PUPIL_90_70_50_UNMEASURED');
+ if(!context.runtimeIdentity)warnings.push('FULL_EASY_MEDIUM_HARD_ADAPTER_UNAVAILABLE');
+ warnings.push('SYNTHETIC_PREDICT_KNOWLEDGE_MODEL','SMALL_N_CP_PROVISIONAL','PUPIL_90_70_50_UNMEASURED');
  return {status:failures.length?'FAIL':'PASS',contextId:hash(context),failures:[...new Set(failures)],warnings,meaning:'PASS verifies experiment integrity, not final game balance or pupil target acceptance'};
 }
 function checkFiles(out){

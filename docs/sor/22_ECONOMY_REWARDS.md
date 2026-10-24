@@ -15,3 +15,7 @@ Read [Deep Validation Report](../economy/deep/REPORT.md) with raw paired results
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+## Master refresh — branch2.42.0-balance.1
+
+Adopt specialist canonical artifact affordability and gross credit/payment accounting. These are observation/policy corrections; prices, source restrictions, frozen receipts, discounts, rewards and RNG ownership are unchanged. New AI artifact/Mystery heuristics do not become offer CP/weights. Preserve historical source labels and use fresh outputs/full policy hashes. [Handoff](../balance/master/REFRESH_2026_10_24.md).

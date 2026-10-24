@@ -1,0 +1,45 @@
+{
+  "reportVersion": "map-master-refresh-1.0.0",
+  "protocolVersion": "map-current-2.0.0-pilot",
+  "runtimeBaseCommit": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+  "previousAuditCommit": "8606616a475f21cc95bc5e4fc202c8914498bd78",
+  "runtimeBuild": "master",
+  "postRunBossGrant": 0,
+  "mode": "challenge",
+  "samplerSeed": 42,
+  "routePolicies": {
+    "uniform-visible-v1": 1,
+    "avoid-elite": 1,
+    "seek-reward": 1,
+    "seek-shop": 1,
+    "health-recovery": 1
+  },
+  "predictProfiles": {
+    "high": 1,
+    "low": 1,
+    "skip": 1
+  },
+  "predictRoutePolicy": "health-recovery",
+  "matchedEntriesPerStage": 1,
+  "ranks": [
+    "easiest",
+    "median",
+    "hardest"
+  ],
+  "rankReference": "pressure-debt-1.0.0; nominal reference ranks, not calibrated candidate damage",
+  "referenceWinProbability": 0.7,
+  "limits": {
+    "maxCombatTurns": 100,
+    "maxCombatPlays": 500,
+    "maxActions": 10000
+  },
+  "workers": 2,
+  "workerTimeoutMs": 120000,
+  "maxSeconds": 7200,
+  "shardBytes": 4194304,
+  "additionalProtocolFiles": [
+    "tools/balance/map-regression/config.json",
+    "tools/balance/map-regression/run.cjs"
+  ],
+  "defaultOutput": "reports/map-balance/master-refresh-20261024/map-regression"
+}

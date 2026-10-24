@@ -46,4 +46,4 @@ Interfaces: status descriptions read the active rule definitions; card kit uses 
 
 - [x] Run real browser ordinary/Master card interactions, multi-hit percentages, reload and legacy-save continuation; bounded deterministic balance probes without relabeling historical metrics.
 - [x] Obtain one fresh whole-branch review; resolve material findings with regression tests.
-- [ ] Record actual checks/limits, commit, publish only the feature branch and verify its remote tree/head. Confirm main was not changed by this work.
+- [x] Record actual checks/limits, commit, publish only the feature branch and verify its remote tree/head. Confirm main was not changed by this work.

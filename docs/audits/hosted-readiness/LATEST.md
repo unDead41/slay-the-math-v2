@@ -7,7 +7,7 @@
 | Initial main 2.36.0 | `50d3af423cdc2240e949f4ddf29e023865304b65` |
 | Main integrated during work, 2.37.0 | `6376a222169815af582cf55aa4794f3c809a3515` |
 | Initial local implementation / recovery checkpoints | `c06de595a1c41e481d212c966dc7b18acfdc4b82` / `5952053` (local work history, not claimed as published commits) |
-| Final source identity | Both generated manifest IDs, input hashes and preserved-source checks in [integration.json](../../verification/hosted-readiness-2-38-0/integration.json); published source SHA is recorded after the branch ref is verified. |
+| Final source identity | [Published source `8068ce7`](https://github.com/unDead41/slay-the-math-v2/commit/8068ce7535f1073eeb7bd4bdb3333896333fb1dc), full SHA `8068ce7535f1073eeb7bd4bdb3333896333fb1dc`, tree `6cfa5c302441f983d06e5238f5ea183384d82c1b`, identical to the tested local source tree. Manifest/input evidence: [integration.json](../../verification/hosted-readiness-2-38-0/integration.json). The following audit-only commit changes no runtime. |
 | Authorization | Implement and publish this feature branch only. No main push, merge, deployment or renamed game. |
 
 Status: **VALID within the targeted resource/input/build checks; BELUM DISAHKAN for a fresh complete regression-suite verdict**. This is a branch candidate, not a physical-device or pupil validation. Source publication and its exact Git tree are checked separately from runtime tests. The branch is published as a review candidate with this explicit validation limit; no main publication is authorized.
@@ -52,4 +52,4 @@ Original `dist/assets`, canonical mechanics/questions/card values, engine/map/RN
 
 ## Review and publication
 
-Use [the candidate guide](../../HOSTED_READINESS_2_38_0.md) to run the branch locally. GitHub Pages still follows main; no live-site change is claimed. The published source commit and final remote ref are checked after authorized branch publication and reported in the handoff.
+Use [the candidate guide](../../HOSTED_READINESS_2_38_0.md) to run the branch locally. GitHub Pages still follows main; no live-site change is claimed. Source commit `8068ce7535f1073eeb7bd4bdb3333896333fb1dc` was published on `fix/hosted-readiness-input` and read back from GitHub. Its tree matches the reviewed local tree exactly. This audit-only follow-up records that publication; the final ref and unchanged main are read back again before the handoff. No main mutation or Pages deployment was performed.

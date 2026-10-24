@@ -701,3 +701,7 @@ Publication authorization: Ijamm subsequently requests pushing this Settings-onl
 ## Settings-only main publication — 24 October 2026
 
 DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.
+
+## Release metadata correction — 2.37.1
+
+24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.

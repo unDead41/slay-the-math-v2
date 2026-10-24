@@ -1,4 +1,6 @@
-# Slay the Math — 2.30.0
+# Slay the Math — 2.31.0
+
+**Tutorial** now opens a complete English/BM field guide: 17 chapters, 16 real game screenshots and 11 safe, replayable practice chapters using the actual engine. Progress resumes independently of your run and Learning Report. Open Main Menu → Tutorial or the in-game Tutorial control. [How to use, scope and verification](docs/TUTORIAL_2_31_0.md).
 
 Alyssa has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md).
 

@@ -2,6 +2,12 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Game 2.31.0 — Complete illustrated tutorial
+
+- Replace four-page help with 17 English/BM chapters, 16 real UI screenshots and 11 safe actual-engine practice chapters.
+- Add chapter navigation, independently saved progress, replay/reset, screenshot enlargement, ordered canonical question help and boss-seal practice.
+- Preserve player records, original assets/rules, native focus and timed Mystery ownership; support desktop/phone scrolling and unavailable storage. [Owner and actual checks](../TUTORIAL_2_31_0.md).
+
 ## Game 2.29.0 — Single-enemy card correction
 
 - Convert Rune Sweep to one hit and Fate Storm to three hits on the same enemy; remove phantom AoE and target-selection RNG.

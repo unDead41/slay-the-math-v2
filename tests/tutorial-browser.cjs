@@ -1,0 +1,56 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{spawn}=require('node:child_process');
+const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright'),F=require('../tools/dev/fixtures.js'),Q=require('../dist/education.js');
+const root=path.resolve(__dirname,'..'),out=process.env.QA_SCREENSHOTS||'/tmp/stm-tutorial-browser',port=4197;
+(async()=>{let server,browser;const errors=[],checks=[];fs.mkdirSync(out,{recursive:true});
+ try{
+  server=spawn(process.execPath,['server.cjs',...(process.env.TUTORIAL_QA_PROD?['--prod']:[])],{cwd:root,env:{...process.env,PORT:String(port)},stdio:['ignore','pipe','pipe']});await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);});
+  const opts={headless:true,args:['--no-sandbox','--disable-gpu']};if(process.env.QA_CHROMIUM_MODULE){const loaded=require(process.env.QA_CHROMIUM_MODULE),c=loaded.default||loaded;opts.executablePath=await c.executablePath();opts.args=[...c.args.filter(a=>a!=='--single-process'),...opts.args];}
+  browser=await chromium.launch(opts);const url='http://127.0.0.1:'+port+'/';
+  async function open(viewport={width:1440,height:1000},suffix=''){
+   const context=await browser.newContext({viewport,reducedMotion:'reduce'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
+   await context.addInitScript(({save,history})=>{if(!localStorage.getItem('duel-cube-settings.v1'))localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true,voiceMuted:true}));if(!localStorage.getItem('duel-cube-math.v1'))localStorage.setItem('duel-cube-math.v1',JSON.stringify(save));if(!localStorage.getItem('duel-cube-question-history.v1'))localStorage.setItem('duel-cube-question-history.v1',JSON.stringify(history));},{save:F.create({kind:'combat',focus:1}),history:Q.history()});
+   await page.goto(url+suffix);return {context,page};
+  }
+  const snapshot=page=>page.evaluate(()=>Object.fromEntries(Object.keys(localStorage).filter(k=>k!=='slay-the-math.tutorial.v1').sort().map(k=>[k,localStorage.getItem(k)])));
+  const chapter=(page,id)=>page.locator('[data-tutorial-action=chapter][data-value='+id+']').click();
+  const action=(page,id)=>page.locator('[data-tutorial-action='+id+']:visible').first().click();
+  const answer=async page=>{const id=await page.locator('.tutorial-question').getAttribute('data-question-id'),correct=await page.evaluate(id=>DCEducation.catalog[id].correctChoiceId,id);await page.locator('[data-tutorial-action=choose][data-value="'+correct+'"]').click();await action(page,'check');};
+  const a=await open(),page=a.page;const before=await snapshot(page);await page.locator('.main-menu-actions [data-action=help]').click();
+  assert.equal(await page.locator('[data-tutorial-action=chapter]').count(),17);
+  assert.equal(await page.locator('.tutorial-toc').evaluate(nav=>{const a=nav.children[0].getBoundingClientRect(),b=nav.children[1].getBoundingClientRect();return b.top>=a.bottom&&nav.scrollWidth<=nav.clientWidth+1;}),true,'desktop chapter list stacks vertically without clipping');
+  for(const id of ['welcome','start','map','combat','cards','piles','predict','focus','passive','rewards','shop','rest','mystery','boss','learning','settings','ready']){
+   await chapter(page,id);assert.equal(await page.locator('[data-tutorial]').getAttribute('data-chapter'),id);assert.equal(await page.locator('.tutorial-error').innerText(),'');
+   await page.locator('.tutorial-figure img').evaluate(img=>img.decode());assert.equal(await page.locator('.tutorial-figure img').evaluate(img=>img.naturalWidth>0),true);
+   if(['welcome','start','mystery','learning','settings','ready'].includes(id))await action(page,'read');
+   else if(['cards','piles','passive'].includes(id))await action(page,'play');
+   else if(id==='combat'){await action(page,'play');await action(page,'end-turn');}
+   else if(id==='focus'){await action(page,'arm');await action(page,'play');}
+   else if(id==='map')await action(page,'enter');
+   else if(id==='rewards')await action(page,'take');
+   else if(id==='shop')await action(page,'buy');
+   else if(id==='rest'){await action(page,'upgrade');await action(page,'replay');await action(page,'heal');}
+   else if(id==='predict'){await answer(page);await action(page,'steps');assert.ok(await page.locator('.tutorial-solution li').count());}
+   else if(id==='boss'){await answer(page);await action(page,'next-predict');await answer(page);}
+   if(!['welcome','start','mystery','learning','settings','ready'].includes(id))assert.equal(await page.locator('[data-tutorial-complete]').count(),1,id+' completes');
+  }
+  assert.deepEqual(await snapshot(page),before);assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('slay-the-math.tutorial.v1')).completed.length),17);
+  await chapter(page,'combat');await page.locator('.tutorial-figure img').evaluate(img=>img.decode());await page.screenshot({path:path.join(out,'tutorial-desktop.png')});await action(page,'zoom');assert.equal(await page.locator('.tutorial-figure').evaluate(e=>e.classList.contains('is-expanded')),true);await page.keyboard.press('Escape');assert.equal(await page.locator('#dialog').evaluate(d=>d.open),false);assert.equal(await page.evaluate(()=>document.activeElement.dataset.action),'help');
+  await page.reload();await page.locator('.main-menu-actions [data-action=help]').click();assert.equal(await page.locator('[data-tutorial]').getAttribute('data-chapter'),'combat');await page.locator('[data-tutorial-action=language][data-value=ms]').click();assert.match(await page.locator('#tutorial-chapter-title').innerText(),/Baca tindakan/);assert.deepEqual(await snapshot(page),before);checks.push('17 chapters, all 11 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records');await a.context.close();
+  for(const [label,viewport]of [['portrait',{width:390,height:844}],['landscape',{width:844,height:390}],['small-landscape',{width:667,height:375}],['compact-landscape',{width:740,height:360}],['narrow-landscape',{width:568,height:320}]]){
+   const b=await open(viewport),p=b.page;await p.locator('.main-menu-actions [data-action=help]').click();await chapter(p,'predict');
+   const geometry=await p.evaluate(()=>{const d=document.querySelector('#dialog').getBoundingClientRect(),f=document.querySelector('.tutorial-footer').getBoundingClientRect(),article=document.querySelector('.tutorial-content'),r=article.getBoundingClientRect(),style=getComputedStyle(article);return {overflow:document.documentElement.scrollWidth>innerWidth+1,dialogInside:d.left>=0&&d.right<=innerWidth+1&&d.top>=0&&d.bottom<=innerHeight+1,footerInside:f.bottom<=innerHeight+1,articleReadable:r.bottom<=f.top+1&&r.height-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom)>=80};});assert.equal(geometry.overflow,false,label);assert.equal(geometry.dialogInside,true,label+JSON.stringify(geometry));assert.equal(geometry.footerInside,true,label+JSON.stringify(geometry));assert.equal(geometry.articleReadable,true,label+JSON.stringify(geometry));
+   await p.locator('.tutorial-figure img').evaluate(img=>img.decode());await p.screenshot({path:path.join(out,'tutorial-'+label+'.png')});await answer(p);await action(p,'close');assert.equal(await p.locator('#dialog').evaluate(d=>d.open),false);checks.push(label+': no page overflow, reachable footer, real Predict via touch-sized controls');await b.context.close();
+  }
+  const master=await open({width:1280,height:900},'?balance=medium');await master.page.locator('.main-menu-actions [data-action=help]').click();await chapter(master.page,'focus');await action(master.page,'arm');await action(master.page,'play');assert.equal(await master.page.locator('[data-tutorial-complete]').count(),1);checks.push('Master Medium resolves a focused practice card with loaded definitions');await master.context.close();
+  const denied=await browser.newContext({viewport:{width:1280,height:900}}),dp=await denied.newPage();dp.on('pageerror',e=>errors.push(e.message));await denied.addInitScript(()=>{Storage.prototype.getItem=function(){throw Error('denied');};Storage.prototype.setItem=function(){throw Error('denied');};});await dp.goto(url);await dp.locator('.main-menu-actions [data-action=help]').click();assert.equal(await dp.locator('.tutorial-storage-note').count(),1);await chapter(dp,'cards');await action(dp,'play');assert.equal(await dp.locator('[data-tutorial-complete]').count(),1);checks.push('storage denial leaves chapters and practice usable with a visible notice');await denied.close();
+  const timed=F.create({kind:'event',event:'ME01'});require('../dist/engine.js').startMystery(timed,[],null,Date.now());
+  const tc=await browser.newContext({viewport:{width:1280,height:900}}),tp=await tc.newPage();tp.on('pageerror',e=>errors.push(e.message));await tc.addInitScript(r=>{localStorage.setItem('duel-cube-math.v1',JSON.stringify(r));localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true,voiceMuted:true}));},timed);await tp.goto(url);await tp.locator('.main-menu-actions [data-action=continue]').click();await tp.locator('[data-action=help]:visible').first().click();assert.equal(await tp.locator('.tutorial-timed-warning').count(),1);assert.equal(await tp.evaluate(()=>JSON.parse(localStorage.getItem('duel-cube-math.v1')).mysteryState.pending.deadline),timed.mysteryState.pending.deadline);checks.push('in-run help warns for a live timed Mystery without extending its deadline');await tc.close();
+  if(process.env.TUTORIAL_QA_OFFLINE){
+   const oc=await browser.newContext({viewport:{width:1280,height:900},reducedMotion:'reduce'}),op=await oc.newPage(),requests=[];op.on('pageerror',e=>errors.push(e.message));op.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});
+   await op.goto(require('node:url').pathToFileURL(path.join(root,'SLAY-THE-MATH-OFFLINE.html')).href,{timeout:120000});await op.locator('.main-menu-actions [data-action=help]').click();await chapter(op,'cards');await op.locator('.tutorial-figure img').evaluate(img=>img.decode());assert.equal(await op.locator('.tutorial-figure img').evaluate(img=>img.src.startsWith('data:image/webp;base64,')),true);await action(op,'play');assert.equal(await op.locator('[data-tutorial-complete]').count(),1);
+   assert.equal(await op.evaluate(()=>DCTutorialData.chapters.every(ch=>DC_ASSETS['tutorial-'+ch.image+'.webp']?.startsWith('data:image/webp;base64,'))),true);assert.deepEqual(requests,[]);checks.push('standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests');await oc.close();
+  }
+  assert.deepEqual(errors,[]);const result={checks,errors};fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+ }finally{await browser?.close();server?.kill();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

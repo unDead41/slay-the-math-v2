@@ -209,3 +209,8 @@ Learning Report is available from actual Main Menu, Settings and Education Pract
 ## Google collection preview — 2.28.0-sheets.1
 
 Shared Learning Report adds a collapsed Collection link / Pautan pengumpulan field outside the asynchronously updated sending status. Both host and Practice use the same destination label, paused-on-switch consent and current-destination pending count. Validate /exec URLs before saving; preserve typed text/focus during delivery updates and focus Enable sharing after a destination change. Disable setup and sending in Dev/file Practice. Retain Ink/gold, native bounded dialog scrolling, color-only rich text and visible privacy/reopen guidance. [Owner setup](../GOOGLE_SHEETS_SETUP.md).
+
+
+## Complete player tutorial — 2.31.0
+
+Ijamm requests completing the full illustrated in-game tutorial, including self-captured screenshots. Replace the old four-page help with 17 English/BM chapters, genuine player-UI screenshots and isolated actual-engine exercises. Keep existing Tutorial entry/focus, native modal semantics, responsive scrolling and image enlargement. Only tutorial progress/language persist; never capture its examples into player saves/history/reports/collection. Timed Mystery deadlines continue and show a warning. Current owner and evidence: [Tutorial 2.31.0](../TUTORIAL_2_31_0.md).

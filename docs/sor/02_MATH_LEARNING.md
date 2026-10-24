@@ -166,3 +166,7 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. Review all 120 English/BM prompts and scaffold Hint as concept/approach, More Hint as a more concrete partial setup. Preserve given facts, choices, keys and full solutions; retain filled GIVEN values but replace 63 answer-revealing references and inherited solved SVG titles. Explicit compatible contentRevision clarity-2026-10-24.1 preserves bank/comment identities. No sampling, attempt or reward change. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).

@@ -1,5 +1,12 @@
 # Changelog SOR — Slay the Math
 
+## Game 2.37.0-report.4 — 24 October 2026, education-report only
+
+- Add Result-only bilingual issue reports for Predict, Artifact and Mystery with actual context, shared local feedback and opt-in delivery.
+- Add private Google Issues grouping, distinct device/active report counts, developer status/notes/fixed version and replay-safe reopening; preserve player review ticks.
+- Review all 120 bilingual question/hint sequences against focused supplied textbook/DSKP pages; refine 66 Hint/53 More Hint texts and 63 pre-answer reference visuals, retaining all original facts/answers/full solutions and source identities.
+- Fix inherited solved SVG accessible titles, retain proper MathML and refresh actual tutorial references. No main merge, live receiver deployment, gameplay retuning or artwork replacement. [Owner guide/evidence](../education/FEEDBACK_CLARITY.md).
+
 ## 2.37.0 — 24 October 2026 — Functional icon clarity on main
 
 Integrate the approved icon branch with main 2.36.0. Enlarge functional icons, display real status names/counters and add the complete All statuses comparison. Preserve current BM/English percentage/duration effects, archived descriptions, question workspaces, run-aware card previews and Dev/VFX behavior. Recapture actual tutorial pictures and regenerate release/entrypoint/cache output. Original card/artifact artwork and mechanics remain unchanged. [Scope, actual checks and limits](../ICON_CLARITY_MAIN_2_37_0.md).
@@ -406,7 +413,7 @@ Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Pe
 
 ## Game 2.18.0 — 22 October 2026
 
-Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
+Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all 120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
 
 
 ## Game 2.19.0 — 22 October 2026 (Malaysia)

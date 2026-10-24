@@ -1,5 +1,13 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-EDUCATION-REPORTS-CLARITY — Finished-result reports and private issue triage
+
+**DISAHKAN:** Ijamm selects Report a problem after in-game results and grouping comments in the existing private Google Sheet by question/category with developer statuses Baharu → Sedang disemak → Selesai. He also requests reviewing all120 English/BM prompts, Hint and More Hint for clear meaning and progressively more concrete help without stating the final answer. Publish to education-report only; earlier main authorization does not authorize this new preview on main.
+
+**DITERUSKAN:** shared comment owner/consent/outbox, actual closed-record context, local scroll/focus return, private retry-safe issue board and honest device counts. Preserve existing player Reviewed ticks, identities, questions/choices/answers/full solutions, game policy/RNG/resources and original assets. Apply source-reviewed scaffolding and remove target-bearing reference columns/accessible names. Keep stable bankVersion1.6 plus explicit compatible contentRevision.
+
+**PERLU_VERIFIKASI:** physical-device/classroom understanding, live Google deployment/account/quota and the unavailable MODEL.zip reference. Source inconsistencies are recorded explicitly. [Implementation, source audit, checks and owner update](../education/FEEDBACK_CLARITY.md).
+
 ## DEC-20261024-MASTER-SOR — Shared project and branch compatibility guidance
 
 **DISAHKAN:** Ijamm defines this chat as Master Audit — Branch Compatibility: verify actual GitHub main/branch SHAs, distinguish merge/remaining changes from current module compatibility, prioritize main for merged modules, test relevant scope and report VALID, PERLU UPDATE, CONFLICT or BELUM DISAHKAN with evidence and limits. Audit alone does not authorize code changes, merge or push. Ijamm then requests a reusable project SOR, asks for it to be installed, and asks to push it to GitHub.

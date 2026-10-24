@@ -248,3 +248,7 @@ Use role-based icon sizing from ICO-16, visible status names/counters and an All
 ## Functional icon clarity on main — 2.37.0
 
 Ijamm now authorizes main publication; the earlier preview-only boundary above is historical. Keep the current main's percentage/duration and BM status descriptions in both inline and comparison/detail surfaces. Preserve main's question retry focus/continuation and run-aware card display helpers when resolving shared app handlers. Recapture tutorial images from the merged UI rather than using the older small-icon screenshots as current evidence. [Combined release and actual checks](../ICON_CLARITY_MAIN_2_37_0.md).
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. Add one Report a problem / Laporkan masalah action in the finished Result view for actual game consumers. Use a small ink native dialog with local scrolling, bilingual labels, filled read-only context, categories/comment, explicit Save and return-to-result focus. Do not add a new player CSV/setup view. Hint references and accessible names must not inherit the computed solution target. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).

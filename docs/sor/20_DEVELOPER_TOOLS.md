@@ -135,3 +135,7 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. The private Google Sheet Issues board groups question/category reports and uses developer-only status Baharu/Sedang disemak/Selesai, notes and fixed-version cells. Player Reviewed ticks remain separate; distinct device IDs are not verified people. Setup/refresh runs as the Sheet owner in Apps Script, not from player RPC. Existing sandbox feedback remains temporary and cannot transmit. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).

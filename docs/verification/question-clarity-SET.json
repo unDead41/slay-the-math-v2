@@ -1,0 +1,3245 @@
+{
+  "topicCode": "SET",
+  "sourceReview": [
+    {
+      "file": "02-Mathematics-Form-4-KSSM.pdf",
+      "pdfPages": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        122,
+        123,
+        125,
+        126,
+        127,
+        128,
+        130,
+        131
+      ],
+      "notes": [
+        "Read focused pages extracted from every SET item harmonization.sources.pdfPages; did not audit the full book. Visually inspected PDF page 107 to confirm the intersection, three-set and subset diagrams and symbols.",
+        "These pages support common-element intersection, inclusive union, complements within the specified universal set, brackets first, and separate-region counting. Provided scenario values remain local data; they are not textbook game rules.",
+        "The three-group worked example on PDF page 123 separates inclusive pairwise counts from the all-three count; the proposed SET-038 Hint/More Hint follows that route."
+      ]
+    },
+    {
+      "file": "04-Matematik-Tingkatan-4-KSSM.pdf",
+      "pdfPages": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        105,
+        106,
+        107,
+        109,
+        110,
+        111,
+        114,
+        115,
+        117,
+        118,
+        119,
+        122
+      ],
+      "notes": [
+        "Read focused cited pages for BM wording; visually inspected PDF page 119 to verify pelengkap, set semesta and gabungan operasi set. No whole-book audit is claimed.",
+        "Retained KSSM terms unsur, set kosong, persilangan, kesatuan, pelengkap, set semesta, unsur sepunya and gambar rajah Venn. Used short membership and counting instructions instead of unnecessary advanced law names.",
+        "SET-033 and SET-035 only-group calculations use the given overlap once for each relevant only-group. SET-034 exactly-two values explicitly exclude the all-three group."
+      ]
+    },
+    {
+      "file": "03-DSKP-KSSM-MATEMATIK-TG-4-dan-5.pdf",
+      "pdfPages": [
+        62,
+        63
+      ],
+      "notes": [
+        "Read DSKP PDF pages 62–63, printed pages 48–49; visually inspected PDF page 62. Standards 4.1.1–4.1.3 cover intersection/complement/problems, 4.2.1–4.2.3 union/complement/problems, and 4.3.1–4.3.3 combined operations/complements/problems.",
+        "The DSKP asks for descriptions, symbolic/list representations and Venn diagrams with real situations. This review covers these 40 authored items, not complete DSKP mastery. SET-027 remains enrichment rather than a newly required named law."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "SET-001",
+      "findings": [
+        "The prompt and two hint levels already distinguish shared elements from all elements; retain their individual membership test."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The intersection A ∩ B contains elements that belong to both sets."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare each element of A with the list for B."
+          }
+        ],
+        "hint": "The intersection A ∩ B contains elements that belong to both sets. Compare each element of A with the list for B.",
+        "moreHint": "Test 1, 2, 3 and 4 against B = {3, 4, 5, 6}. Keep a number only if it appears in both lists."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Persilangan A ∩ B mengandungi unsur yang terdapat dalam kedua-dua set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan setiap unsur A dengan senarai B."
+          }
+        ],
+        "hint": "Persilangan A ∩ B mengandungi unsur yang terdapat dalam kedua-dua set. Bandingkan setiap unsur A dengan senarai B.",
+        "moreHint": "Semak 1, 2, 3 dan 4 dalam B = {3, 4, 5, 6}. Pilih nombor hanya jika nombor itu terdapat dalam kedua-dua senarai."
+      },
+      "rationale": "The prompt and two hint levels already distinguish shared elements from all elements; retain their individual membership test.",
+      "visualFindings": [
+        {
+          "path": "questions[40].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{3, 4}' at mask 3; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Compare the given lists",
+          "ms": "Bandingkan senarai yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "A",
+              "{1, 2, 3, 4}"
+            ],
+            [
+              "B",
+              "{3, 4, 5, 6}"
+            ],
+            [
+              "A ∩ B",
+              "Keep an element only if it is in both lists."
+            ]
+          ],
+          "ms": [
+            [
+              "A",
+              "{1, 2, 3, 4}"
+            ],
+            [
+              "B",
+              "{3, 4, 5, 6}"
+            ],
+            [
+              "A ∩ B",
+              "Kekalkan unsur hanya jika terdapat dalam kedua-dua senarai."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-002",
+      "findings": [
+        "The first intersection is an appropriate partial result, not the final triple intersection. Retain the staged check against C."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An element must belong to all three sets."
+          },
+          {
+            "id": "nextStep",
+            "text": "First find A ∩ B, then check that result against C."
+          }
+        ],
+        "hint": "An element must belong to all three sets. First find A ∩ B, then check that result against C.",
+        "moreHint": "A ∩ B = {2, 4}. Test each of these two numbers against C = {3, 4, 5}; a number must pass all three membership checks."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sesuatu unsur mesti tergolong dalam ketiga-tiga set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari A ∩ B dahulu, kemudian bandingkan hasilnya dengan C."
+          }
+        ],
+        "hint": "Sesuatu unsur mesti tergolong dalam ketiga-tiga set. Cari A ∩ B dahulu, kemudian bandingkan hasilnya dengan C.",
+        "moreHint": "A ∩ B = {2, 4}. Semak setiap nombor ini dalam C = {3, 4, 5}; nombor itu mesti memenuhi ketiga-tiga syarat keahlian."
+      },
+      "rationale": "The first intersection is an appropriate partial result, not the final triple intersection. Retain the staged check against C.",
+      "visualFindings": [
+        {
+          "path": "questions[41].learning.visual.solution.regions[7].text / rows[7][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{4}' at mask 7; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check the three given lists",
+          "ms": "Semak tiga senarai yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "A",
+              "{2, 4, 6, 8}"
+            ],
+            [
+              "B",
+              "{1, 2, 4, 7}"
+            ],
+            [
+              "C",
+              "{3, 4, 5}"
+            ],
+            [
+              "A ∩ B ∩ C",
+              "An element must pass all three membership checks."
+            ]
+          ],
+          "ms": [
+            [
+              "A",
+              "{2, 4, 6, 8}"
+            ],
+            [
+              "B",
+              "{1, 2, 4, 7}"
+            ],
+            [
+              "C",
+              "{3, 4, 5}"
+            ],
+            [
+              "A ∩ B ∩ C",
+              "Sesuatu unsur mesti memenuhi ketiga-tiga semakan keahlian."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-003",
+      "findings": [
+        "Checking the shorter list teaches the subset case without announcing that the answer equals A. Retain that approach."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Intersection keeps shared elements."
+          },
+          {
+            "id": "nextStep",
+            "text": "Start with the shorter list A and check each element against B."
+          }
+        ],
+        "hint": "Intersection keeps shared elements. Start with the shorter list A and check each element against B.",
+        "moreHint": "Check whether 2 appears in B, then do the same for 4. Do not add numbers that appear only in B."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Persilangan mengekalkan unsur sepunya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Mulakan dengan senarai A yang lebih pendek dan semak setiap unsurnya dalam B."
+          }
+        ],
+        "hint": "Persilangan mengekalkan unsur sepunya. Mulakan dengan senarai A yang lebih pendek dan semak setiap unsurnya dalam B.",
+        "moreHint": "Semak sama ada 2 terdapat dalam B, kemudian lakukan perkara yang sama bagi 4. Jangan tambah nombor yang terdapat dalam B sahaja."
+      },
+      "rationale": "Checking the shorter list teaches the subset case without announcing that the answer equals A. Retain that approach.",
+      "visualFindings": [
+        {
+          "path": "questions[42].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer reference classifies all A elements into the shared region and labels the answer directly; A itself is given and must remain visible.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Test the elements of A in B",
+          "ms": "Uji unsur A dalam B"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "A",
+              "{2, 4}"
+            ],
+            [
+              "B",
+              "{1, 2, 3, 4, 5}"
+            ],
+            [
+              "A ∩ B",
+              "Check each A element against B."
+            ]
+          ],
+          "ms": [
+            [
+              "A",
+              "{2, 4}"
+            ],
+            [
+              "B",
+              "{1, 2, 3, 4, 5}"
+            ],
+            [
+              "A ∩ B",
+              "Semak setiap unsur A dalam B."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-004",
+      "findings": [
+        "Replace the broad odd/even deduction with an explicit membership check and retain the distinction between an empty set and the set containing zero."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Intersection requires a number to occur in both lists."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare the entries; remember that ∅ has no elements, while {0} has one."
+          }
+        ],
+        "hint": "Intersection requires a number to occur in both lists. Compare the entries; remember that ∅ has no elements, while {0} has one.",
+        "moreHint": "Compare 1 with each number in B = {2, 4, 6}, then repeat for 3 and 5. Keep only exact matches. Use {0} only if 0 is actually shared by the two sets."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Persilangan mensyaratkan nombor itu terdapat dalam kedua-dua senarai."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan unsur; ingat bahawa ∅ tiada unsur, manakala {0} mempunyai satu unsur."
+          }
+        ],
+        "hint": "Persilangan mensyaratkan nombor itu terdapat dalam kedua-dua senarai. Bandingkan unsur; ingat bahawa ∅ tiada unsur, manakala {0} mempunyai satu unsur.",
+        "moreHint": "Bandingkan 1 dengan setiap nombor dalam B = {2, 4, 6}, kemudian ulang bagi 3 dan 5. Kekalkan padanan yang tepat sahaja. Gunakan {0} hanya jika 0 benar-benar unsur sepunya kedua-dua set."
+      },
+      "rationale": "Replace the broad odd/even deduction with an explicit membership check and retain the distinction between an empty set and the set containing zero.",
+      "visualFindings": [
+        {
+          "path": "questions[43].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '∅' at mask 3; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Look for exact matches",
+          "ms": "Cari padanan yang tepat"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "A",
+              "{1, 3, 5}"
+            ],
+            [
+              "B",
+              "{2, 4, 6}"
+            ],
+            [
+              "A ∩ B",
+              "Only numbers appearing in both lists qualify."
+            ]
+          ],
+          "ms": [
+            [
+              "A",
+              "{1, 3, 5}"
+            ],
+            [
+              "B",
+              "{2, 4, 6}"
+            ],
+            [
+              "A ∩ B",
+              "Hanya nombor yang terdapat dalam kedua-dua senarai memenuhi syarat."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-005",
+      "findings": [
+        "Replace the unexplained multiplier k with explicit multiplication trials while retaining the inclusive endpoint and both divisibility conditions."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An element must satisfy both rules: divisible by 2 and divisible by 3."
+          },
+          {
+            "id": "nextStep",
+            "text": "Look for their common multiples within U."
+          }
+        ],
+        "hint": "An element must satisfy both rules: divisible by 2 and divisible by 3. Look for their common multiples within U.",
+        "moreHint": "Numbers divisible by both 2 and 3 are multiples of 6. Try 6 × 1, 6 × 2, 6 × 3 and so on. Stop when a result is greater than 18; keep only results within U."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sesuatu unsur mesti memenuhi kedua-dua syarat: boleh dibahagi tepat dengan 2 dan 3."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari gandaan sepunya dalam U."
+          }
+        ],
+        "hint": "Sesuatu unsur mesti memenuhi kedua-dua syarat: boleh dibahagi tepat dengan 2 dan 3. Cari gandaan sepunya dalam U.",
+        "moreHint": "Nombor yang boleh dibahagi tepat dengan 2 dan 3 ialah gandaan 6. Cuba 6 × 1, 6 × 2, 6 × 3 dan seterusnya. Berhenti apabila hasil melebihi 18; kekalkan hasil dalam U sahaja."
+      },
+      "rationale": "Replace the unexplained multiplier k with explicit multiplication trials while retaining the inclusive endpoint and both divisibility conditions.",
+      "visualFindings": [
+        {
+          "path": "questions[44].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{6, 12, 18}' at mask 3; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Apply both given number rules",
+          "ms": "Gunakan kedua-dua syarat nombor"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "Integers from 1 to 18, inclusive."
+            ],
+            [
+              "A",
+              "Even numbers in U."
+            ],
+            [
+              "B",
+              "Multiples of 3 in U."
+            ],
+            [
+              "A ∩ B",
+              "Use both rules and stay within U."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "Integer dari 1 hingga 18, termasuk kedua-dua had."
+            ],
+            [
+              "A",
+              "Nombor genap dalam U."
+            ],
+            [
+              "B",
+              "Gandaan 3 dalam U."
+            ],
+            [
+              "A ∩ B",
+              "Gunakan kedua-dua syarat dan kekal dalam U."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-006",
+      "findings": [
+        "Retain card-ID membership checks: Fire and Attack are supplied labels, and one ID remains one element."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Treat each card ID as one element."
+          },
+          {
+            "id": "nextStep",
+            "text": "A card qualifies only when its ID appears in both lists."
+          }
+        ],
+        "hint": "Treat each card ID as one element. A card qualifies only when its ID appears in both lists.",
+        "moreHint": "Check c1, c2 and c5 from F against A = {c1, c3, c5, c6}. Remove any ID missing from A."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Anggap setiap ID kad sebagai satu unsur."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kad memenuhi syarat hanya apabila IDnya terdapat dalam kedua-dua senarai."
+          }
+        ],
+        "hint": "Anggap setiap ID kad sebagai satu unsur. Kad memenuhi syarat hanya apabila IDnya terdapat dalam kedua-dua senarai.",
+        "moreHint": "Semak c1, c2 dan c5 daripada F dalam A = {c1, c3, c5, c6}. Singkirkan ID yang tiada dalam A."
+      },
+      "rationale": "Retain card-ID membership checks: Fire and Attack are supplied labels, and one ID remains one element.",
+      "visualFindings": [
+        {
+          "path": "questions[45].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{c1, c5}' at mask 3; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Compare the given card IDs",
+          "ms": "Bandingkan ID kad yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "F: Fire",
+              "{c1, c2, c5}"
+            ],
+            [
+              "A: Attack",
+              "{c1, c3, c5, c6}"
+            ],
+            [
+              "Both labels",
+              "Check each F ID against A."
+            ]
+          ],
+          "ms": [
+            [
+              "F: Fire",
+              "{c1, c2, c5}"
+            ],
+            [
+              "A: Attack",
+              "{c1, c3, c5, c6}"
+            ],
+            [
+              "Kedua-dua label",
+              "Semak setiap ID F dalam A."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-007",
+      "findings": [
+        "Use the simpler phrase “every element of U” and preserve the complement of the whole intersection, including U elements outside both original sets."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "First find the elements shared by A and B."
+          },
+          {
+            "id": "nextStep",
+            "text": "The complement contains every element of U outside that entire intersection."
+          }
+        ],
+        "hint": "First find the elements shared by A and B. The complement contains every element of U outside that entire intersection.",
+        "moreHint": "A ∩ B = {3, 4}. Cross these numbers out of U = {1, 2, 3, 4, 5, 6, 7, 8}, then collect the uncrossed elements."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari unsur sepunya A dan B dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pelengkap mengandungi setiap unsur U di luar keseluruhan persilangan itu."
+          }
+        ],
+        "hint": "Cari unsur sepunya A dan B dahulu. Pelengkap mengandungi setiap unsur U di luar keseluruhan persilangan itu.",
+        "moreHint": "A ∩ B = {3, 4}. Potong nombor ini daripada U = {1, 2, 3, 4, 5, 6, 7, 8}, kemudian kumpulkan unsur yang tidak dipotong."
+      },
+      "rationale": "Use the simpler phrase “every element of U” and preserve the complement of the whole intersection, including U elements outside both original sets.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-008",
+      "findings": [
+        "Retain names as the given data and count people once; remove the computed count from the inherited accessible SVG title."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The given intersection already lists everyone who owns both items."
+          },
+          {
+            "id": "nextStep",
+            "text": "Count each different name once."
+          }
+        ],
+        "hint": "The given intersection already lists everyone who owns both items. Count each different name once.",
+        "moreHint": "Put one tally beside each of Lina, Omar, Suri and Wei. Owning two items still counts as one person."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Persilangan yang diberikan sudah menyenaraikan semua orang yang memiliki kedua-dua barang."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bilang setiap nama yang berbeza sekali sahaja."
+          }
+        ],
+        "hint": "Persilangan yang diberikan sudah menyenaraikan semua orang yang memiliki kedua-dua barang. Bilang setiap nama yang berbeza sekali sahaja.",
+        "moreHint": "Tandakan satu gundalan bagi setiap nama Lina, Omar, Suri dan Wei. Memiliki dua barang tetap dikira sebagai seorang."
+      },
+      "rationale": "Retain names as the given data and count people once; remove the computed count from the inherited accessible SVG title.",
+      "visualFindings": [
+        {
+          "path": "questions[47].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Count of people owning both: 4'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Count the given names once",
+          "ms": "Bilang nama yang diberikan sekali sahaja"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "A",
+              "People who own a map."
+            ],
+            [
+              "B",
+              "People who own a lantern."
+            ],
+            [
+              "Given A ∩ B",
+              "{Lina, Omar, Suri, Wei}"
+            ],
+            [
+              "Find n(A ∩ B)",
+              "One tally for each different person."
+            ]
+          ],
+          "ms": [
+            [
+              "A",
+              "Orang yang memiliki peta."
+            ],
+            [
+              "B",
+              "Orang yang memiliki tanglung."
+            ],
+            [
+              "Diberi A ∩ B",
+              "{Lina, Omar, Suri, Wei}"
+            ],
+            [
+              "Cari n(A ∩ B)",
+              "Satu gundalan bagi setiap orang yang berbeza."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-009",
+      "findings": [
+        "Retain the translation of two room features into an AND condition. No element lists or counts are supplied, so do not invent any."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Intersection means the same room must belong to both sets."
+          },
+          {
+            "id": "nextStep",
+            "text": "Translate each set label into its room feature."
+          }
+        ],
+        "hint": "Intersection means the same room must belong to both sets. Translate each set label into its room feature.",
+        "moreHint": "Replace A with “has a chest” and B with “has a blue door”. Check whether each description requires both tests or allows just one."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Persilangan bermaksud bilik yang sama mesti tergolong dalam kedua-dua set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tukarkan setiap label set kepada ciri biliknya."
+          }
+        ],
+        "hint": "Persilangan bermaksud bilik yang sama mesti tergolong dalam kedua-dua set. Tukarkan setiap label set kepada ciri biliknya.",
+        "moreHint": "Gantikan A dengan “mempunyai peti” dan B dengan “mempunyai pintu biru”. Semak sama ada setiap perihalan memerlukan kedua-dua syarat atau membenarkan satu sahaja."
+      },
+      "rationale": "Retain the translation of two room features into an AND condition. No element lists or counts are supplied, so do not invent any.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-010",
+      "findings": [
+        "Correct the awkward English phrase “must divide by both” to “must be divisible by both”. Keep list-before-count and inclusive U."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find the common multiples before counting."
+          },
+          {
+            "id": "nextStep",
+            "text": "A qualifying number must be divisible by both 2 and 5 without a remainder and must lie in U."
+          }
+        ],
+        "hint": "Find the common multiples before counting. A qualifying number must be divisible by both 2 and 5 without a remainder and must lie in U.",
+        "moreHint": "Common multiples of 2 and 5 are multiples of 10. Compare 10 × 1 and 10 × 2 with the allowed interval from 1 to 15, then count only allowed results."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari gandaan sepunya sebelum membilang."
+          },
+          {
+            "id": "nextStep",
+            "text": "Nombor yang memenuhi syarat mesti boleh dibahagi tepat dengan 2 dan 5 serta berada dalam U."
+          }
+        ],
+        "hint": "Cari gandaan sepunya sebelum membilang. Nombor yang memenuhi syarat mesti boleh dibahagi tepat dengan 2 dan 5 serta berada dalam U.",
+        "moreHint": "Gandaan sepunya 2 dan 5 ialah gandaan 10. Bandingkan 10 × 1 dan 10 × 2 dengan julat yang dibenarkan, iaitu dari 1 hingga 15, kemudian bilang hasil yang dibenarkan sahaja."
+      },
+      "rationale": "Correct the awkward English phrase “must divide by both” to “must be divisible by both”. Keep list-before-count and inclusive U.",
+      "visualFindings": [
+        {
+          "path": "questions[49].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Shared numbers: 1 element'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        },
+        {
+          "path": "questions[49].learning.visual.solution.regions[3].text / rows[3][1], copied by selectSupportVisual",
+          "problem": "The pre-answer reference has already generated the shared number from the divisibility rules. The SVG title also supplies its evaluated count.",
+          "proposedCorrection": "Use the supplied interval and two number rules in hintReference; let the learner generate and count the qualifying numbers. Keep the valued solution unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Find qualifying numbers before counting",
+          "ms": "Cari nombor yang memenuhi syarat sebelum membilang"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "Integers from 1 to 15, inclusive."
+            ],
+            [
+              "A",
+              "Multiples of 2 in U."
+            ],
+            [
+              "B",
+              "Multiples of 5 in U."
+            ],
+            [
+              "Find n(A ∩ B)",
+              "Find numbers satisfying both rules, then count them."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "Integer dari 1 hingga 15, termasuk kedua-dua had."
+            ],
+            [
+              "A",
+              "Gandaan 2 dalam U."
+            ],
+            [
+              "B",
+              "Gandaan 5 dalam U."
+            ],
+            [
+              "Cari n(A ∩ B)",
+              "Cari nombor yang memenuhi kedua-dua syarat, kemudian bilang."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-011",
+      "findings": [
+        "Retain an inclusive union and the instruction to add only new elements. Shared elements are included once."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Union keeps every element that appears in either set, including shared elements."
+          },
+          {
+            "id": "nextStep",
+            "text": "Copy A, then add only new elements from B."
+          }
+        ],
+        "hint": "Union keeps every element that appears in either set, including shared elements. Copy A, then add only new elements from B.",
+        "moreHint": "Begin with 1, 2 and 3. Compare B = {3, 4, 5} with what you have written, adding an element only if it is not already listed."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesatuan mengekalkan setiap unsur yang terdapat dalam mana-mana set, termasuk unsur sepunya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Salin A, kemudian tambah unsur baharu daripada B sahaja."
+          }
+        ],
+        "hint": "Kesatuan mengekalkan setiap unsur yang terdapat dalam mana-mana set, termasuk unsur sepunya. Salin A, kemudian tambah unsur baharu daripada B sahaja.",
+        "moreHint": "Mulakan dengan 1, 2 dan 3. Bandingkan B = {3, 4, 5} dengan senarai yang telah ditulis; tambah unsur hanya jika belum disenaraikan."
+      },
+      "rationale": "Retain an inclusive union and the instruction to add only new elements. Shared elements are included once.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-012",
+      "findings": [
+        "Make More Hint test the actual A elements rather than repeat the complete B list beside an instruction that can be mistaken for the answer."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Union must include every element of each set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Start with B and check whether A adds any new elements."
+          }
+        ],
+        "hint": "Union must include every element of each set. Start with B and check whether A adds any new elements.",
+        "moreHint": "Look for 2 and 6 from A in the given list B. For each number, check whether it needs to be added or is already present. Write each different element once."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesatuan mesti merangkumi setiap unsur dalam setiap set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Mulakan dengan B dan semak sama ada A menambah unsur baharu."
+          }
+        ],
+        "hint": "Kesatuan mesti merangkumi setiap unsur dalam setiap set. Mulakan dengan B dan semak sama ada A menambah unsur baharu.",
+        "moreHint": "Cari 2 dan 6 daripada A dalam senarai B yang diberikan. Bagi setiap nombor, semak sama ada nombor itu perlu ditambah atau sudah ada. Tulis setiap unsur yang berbeza sekali sahaja."
+      },
+      "rationale": "Make More Hint test the actual A elements rather than repeat the complete B list beside an instruction that can be mistaken for the answer.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-013",
+      "findings": [
+        "Retain the explanation that letters are elements and the concrete check of b and d after copying A."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Letters can be set elements."
+          },
+          {
+            "id": "nextStep",
+            "text": "A union combines all different elements from the two lists."
+          }
+        ],
+        "hint": "Letters can be set elements. A union combines all different elements from the two lists.",
+        "moreHint": "Copy the letters in A, then check b and d from B. Add every letter that has not already been written."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Huruf boleh menjadi unsur set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kesatuan menggabungkan semua unsur yang berbeza daripada kedua-dua senarai."
+          }
+        ],
+        "hint": "Huruf boleh menjadi unsur set. Kesatuan menggabungkan semua unsur yang berbeza daripada kedua-dua senarai.",
+        "moreHint": "Salin huruf dalam A, kemudian semak b dan d daripada B. Tambah setiap huruf yang belum ditulis."
+      },
+      "rationale": "Retain the explanation that letters are elements and the concrete check of b and d after copying A.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-014",
+      "findings": [
+        "Use membership trials with the actual A values instead of announcing that no element is added. Keep ∅ distinct from {0}."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Union combines elements from either set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Ask whether a set with no elements has anything to add."
+          }
+        ],
+        "hint": "Union combines elements from either set. Ask whether a set with no elements has anything to add.",
+        "moreHint": "Test 2 using the rule “in A or in ∅”, then repeat for 4 and 8. An option may include 0 only if 0 belongs to one of the given sets."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesatuan menggabungkan unsur daripada mana-mana set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Fikirkan sama ada set tanpa unsur boleh menambah apa-apa unsur."
+          }
+        ],
+        "hint": "Kesatuan menggabungkan unsur daripada mana-mana set. Fikirkan sama ada set tanpa unsur boleh menambah apa-apa unsur.",
+        "moreHint": "Uji 2 menggunakan syarat “dalam A atau dalam ∅”, kemudian ulang bagi 4 dan 8. Sesuatu pilihan boleh memasukkan 0 hanya jika 0 tergolong dalam salah satu set yang diberikan."
+      },
+      "rationale": "Use membership trials with the actual A values instead of announcing that no element is added. Keep ∅ distinct from {0}.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-015",
+      "findings": [
+        "Say explicitly that both original memberships fail, avoiding ambiguity in “outside both sets”. The complement remains relative to U."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find the union first."
+          },
+          {
+            "id": "nextStep",
+            "text": "Its complement contains the elements of U that are in neither A nor B."
+          }
+        ],
+        "hint": "Find the union first. Its complement contains the elements of U that are in neither A nor B.",
+        "moreHint": "A ∪ B = {1, 2, 3, 5, 6}. Cross this entire list out of U = {1, 2, 3, 4, 5, 6, 7} and list what remains."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari kesatuan dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pelengkapnya mengandungi unsur U yang tidak berada dalam A dan juga tidak berada dalam B."
+          }
+        ],
+        "hint": "Cari kesatuan dahulu. Pelengkapnya mengandungi unsur U yang tidak berada dalam A dan juga tidak berada dalam B.",
+        "moreHint": "A ∪ B = {1, 2, 3, 5, 6}. Potong seluruh senarai ini daripada U = {1, 2, 3, 4, 5, 6, 7} dan senaraikan unsur yang tinggal."
+      },
+      "rationale": "Say explicitly that both original memberships fail, avoiding ambiguity in “outside both sets”. The complement remains relative to U.",
+      "visualFindings": [
+        {
+          "path": "questions[54].learning.visual.solution.regions[0].text / rows[0][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{4, 7}' at mask 0; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Use U after forming the union",
+          "ms": "Gunakan U selepas membentuk kesatuan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6, 7}"
+            ],
+            [
+              "A",
+              "{1, 3, 5}"
+            ],
+            [
+              "B",
+              "{2, 3, 6}"
+            ],
+            [
+              "(A ∪ B)′",
+              "Keep U elements that are in neither A nor B."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6, 7}"
+            ],
+            [
+              "A",
+              "{1, 3, 5}"
+            ],
+            [
+              "B",
+              "{2, 3, 6}"
+            ],
+            [
+              "(A ∪ B)′",
+              "Kekalkan unsur U yang tidak berada dalam A dan juga tidak berada dalam B."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-016",
+      "findings": [
+        "Retain the overlap correction and the unevaluated total-minus-union setup; keep the computed neither-count out of the reference."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "First count members who own at least one item."
+          },
+          {
+            "id": "nextStep",
+            "text": "Adding the two ownership counts counts the shared members twice, so subtract the overlap once."
+          }
+        ],
+        "hint": "First count members who own at least one item. Adding the two ownership counts counts the shared members twice, so subtract the overlap once.",
+        "moreHint": "Set up 30 − (18 + 14 − 8). The brackets count members who own a map or a lantern, including those who own both."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kira ahli yang memiliki sekurang-kurangnya satu barang dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Penambahan kedua-dua bilangan pemilik mengira ahli sepunya dua kali, maka tolak pertindihan sekali."
+          }
+        ],
+        "hint": "Kira ahli yang memiliki sekurang-kurangnya satu barang dahulu. Penambahan kedua-dua bilangan pemilik mengira ahli sepunya dua kali, maka tolak pertindihan sekali.",
+        "moreHint": "Bentuk pengiraan 30 − (18 + 14 − 8). Kurungan mengira ahli yang memiliki peta atau tanglung, termasuk yang memiliki kedua-duanya."
+      },
+      "rationale": "Retain the overlap correction and the unevaluated total-minus-union setup; keep the computed neither-count out of the reference.",
+      "visualFindings": [
+        {
+          "path": "questions[55].learning.visual.solution.regions[0].text / rows[0][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '6' at mask 0; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        },
+        {
+          "path": "questions[55].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Members owning neither item: 6'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given membership counts",
+          "ms": "Bilangan ahli yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All members",
+              "30"
+            ],
+            [
+              "Own a map",
+              "18"
+            ],
+            [
+              "Own a lantern",
+              "14"
+            ],
+            [
+              "Own both",
+              "8"
+            ],
+            [
+              "Neither: calculation to complete",
+              "30 − (18 + 14 − 8)"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua ahli",
+              "30"
+            ],
+            [
+              "Memiliki peta",
+              "18"
+            ],
+            [
+              "Memiliki tanglung",
+              "14"
+            ],
+            [
+              "Memiliki kedua-duanya",
+              "8"
+            ],
+            [
+              "Tidak memiliki peta mahupun tanglung: lengkapkan pengiraan",
+              "30 − (18 + 14 − 8)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-017",
+      "findings": [
+        "Retain the double-counting explanation and numerical substitution. The inherited SVG title alone discloses the evaluated union count."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Adding the two set counts counts every shared element twice."
+          },
+          {
+            "id": "nextStep",
+            "text": "Subtract the intersection count once."
+          }
+        ],
+        "hint": "Adding the two set counts counts every shared element twice. Subtract the intersection count once.",
+        "moreHint": "Use n(A ∪ B) = n(A) + n(B) − n(A ∩ B), then substitute 13 + 11 − 5 without adding the overlap again."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Penambahan bilangan unsur kedua-dua set mengira setiap unsur sepunya dua kali."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tolak bilangan unsur persilangan sekali."
+          }
+        ],
+        "hint": "Penambahan bilangan unsur kedua-dua set mengira setiap unsur sepunya dua kali. Tolak bilangan unsur persilangan sekali.",
+        "moreHint": "Gunakan n(A ∪ B) = n(A) + n(B) − n(A ∩ B), kemudian gantikan 13 + 11 − 5 tanpa menambah pertindihan semula."
+      },
+      "rationale": "Retain the double-counting explanation and numerical substitution. The inherited SVG title alone discloses the evaluated union count.",
+      "visualFindings": [
+        {
+          "path": "questions[56].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Union count: 19 elements'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given set counts and union setup",
+          "ms": "Bilangan unsur yang diberikan dan bentuk pengiraan kesatuan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "n(A)",
+              "13"
+            ],
+            [
+              "n(B)",
+              "11"
+            ],
+            [
+              "n(A ∩ B)",
+              "5"
+            ],
+            [
+              "n(A ∪ B): calculation to complete",
+              "13 + 11 − 5"
+            ]
+          ],
+          "ms": [
+            [
+              "n(A)",
+              "13"
+            ],
+            [
+              "n(B)",
+              "11"
+            ],
+            [
+              "n(A ∩ B)",
+              "5"
+            ],
+            [
+              "n(A ∪ B): lengkapkan pengiraan",
+              "13 + 11 − 5"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-018",
+      "findings": [
+        "Explain the double-counting comparison before asking for rearrangement. More Hint gives one equation and the unevaluated difference."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Adding n(A) and n(B) counts each shared element twice."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare that sum with n(A ∪ B), where each element is counted once."
+          }
+        ],
+        "hint": "Adding n(A) and n(B) counts each shared element twice. Compare that sum with n(A ∪ B), where each element is counted once.",
+        "moreHint": "Write 21 = 16 + 12 − n(A ∩ B). The shared count is the difference between 16 + 12 and 21, so set up 16 + 12 − 21."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Penambahan n(A) dan n(B) mengira setiap unsur sepunya dua kali."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan hasil tambah itu dengan n(A ∪ B), yang mengira setiap unsur sekali sahaja."
+          }
+        ],
+        "hint": "Penambahan n(A) dan n(B) mengira setiap unsur sepunya dua kali. Bandingkan hasil tambah itu dengan n(A ∪ B), yang mengira setiap unsur sekali sahaja.",
+        "moreHint": "Tulis 21 = 16 + 12 − n(A ∩ B). Bilangan unsur sepunya ialah beza antara 16 + 12 dengan 21, maka bentuk pengiraan 16 + 12 − 21."
+      },
+      "rationale": "Explain the double-counting comparison before asking for rearrangement. More Hint gives one equation and the unevaluated difference.",
+      "visualFindings": [
+        {
+          "path": "questions[57].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '7' at mask 3; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        },
+        {
+          "path": "questions[57].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Intersection count: 7 elements'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Recover the shared count",
+          "ms": "Cari bilangan unsur sepunya"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "n(A)",
+              "16"
+            ],
+            [
+              "n(B)",
+              "12"
+            ],
+            [
+              "n(A ∪ B)",
+              "21"
+            ],
+            [
+              "n(A ∩ B): calculation to complete",
+              "16 + 12 − 21"
+            ]
+          ],
+          "ms": [
+            [
+              "n(A)",
+              "16"
+            ],
+            [
+              "n(B)",
+              "12"
+            ],
+            [
+              "n(A ∪ B)",
+              "21"
+            ],
+            [
+              "n(A ∩ B): lengkapkan pengiraan",
+              "16 + 12 − 21"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-019",
+      "findings": [
+        "Retain the partial union and the check of C; the learner still combines the three sets and removes repeats."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The union includes a number if it appears in at least one of the three sets."
+          },
+          {
+            "id": "nextStep",
+            "text": "Combine the lists without repeating numbers."
+          }
+        ],
+        "hint": "The union includes a number if it appears in at least one of the three sets. Combine the lists without repeating numbers.",
+        "moreHint": "A ∪ B = {1, 2, 4, 6}. Check C = {3, 6} and add only entries missing from this intermediate union."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kesatuan merangkumi nombor jika terdapat dalam sekurang-kurangnya satu daripada tiga set."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gabungkan senarai tanpa mengulang nombor."
+          }
+        ],
+        "hint": "Kesatuan merangkumi nombor jika terdapat dalam sekurang-kurangnya satu daripada tiga set. Gabungkan senarai tanpa mengulang nombor.",
+        "moreHint": "A ∪ B = {1, 2, 4, 6}. Semak C = {3, 6} dan tambah hanya unsur yang tiada dalam kesatuan perantaraan ini."
+      },
+      "rationale": "Retain the partial union and the check of C; the learner still combines the three sets and removes repeats.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-020",
+      "findings": [
+        "Retain the U-by-U crossing-out procedure. Do not assert in the Hint that the union already covers U or display the computed empty outside set."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Combine A and B, then compare the result with U."
+          },
+          {
+            "id": "nextStep",
+            "text": "The complement contains only elements of U missing from that union."
+          }
+        ],
+        "hint": "Combine A and B, then compare the result with U. The complement contains only elements of U missing from that union.",
+        "moreHint": "Cross each number from A and B out of U = {1, 2, 3, 4, 5, 6}. Check the uncrossed entries and distinguish a set with no elements from {0}."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Gabungkan A dan B, kemudian bandingkan hasilnya dengan U."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pelengkap hanya mengandungi unsur U yang tiada dalam kesatuan itu."
+          }
+        ],
+        "hint": "Gabungkan A dan B, kemudian bandingkan hasilnya dengan U. Pelengkap hanya mengandungi unsur U yang tiada dalam kesatuan itu.",
+        "moreHint": "Potong setiap nombor daripada A dan B dalam U = {1, 2, 3, 4, 5, 6}. Semak unsur yang tidak dipotong dan bezakan set tanpa unsur daripada {0}."
+      },
+      "rationale": "Retain the U-by-U crossing-out procedure. Do not assert in the Hint that the union already covers U or display the computed empty outside set.",
+      "visualFindings": [
+        {
+          "path": "questions[59].learning.visual.solution.regions[0].text / rows[0][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '∅' at mask 0; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check U against both lists",
+          "ms": "Semak U dengan kedua-dua senarai"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6}"
+            ],
+            [
+              "A",
+              "{1, 3, 5}"
+            ],
+            [
+              "B",
+              "{2, 4, 6}"
+            ],
+            [
+              "(A ∪ B)′",
+              "Check which U elements are missing from both lists."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6}"
+            ],
+            [
+              "A",
+              "{1, 3, 5}"
+            ],
+            [
+              "B",
+              "{2, 4, 6}"
+            ],
+            [
+              "(A ∪ B)′",
+              "Semak unsur U yang tidak terdapat dalam A dan juga tidak terdapat dalam B."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-021",
+      "findings": [
+        "Use direct “in A and outside B” language, then retain the concrete complement list as a partial step requiring the final membership check."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An element of A ∩ B′ must be in A and outside B."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use U when finding B′, then check which of its elements also belong to A."
+          }
+        ],
+        "hint": "An element of A ∩ B′ must be in A and outside B. Use U when finding B′, then check which of its elements also belong to A.",
+        "moreHint": "Removing B from U gives B′ = {1, 2, 6}. Compare this list with A = {1, 2, 3, 4}; every final element must occur in both lists."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Unsur A ∩ B′ mesti berada dalam A dan di luar B."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan U untuk mencari B′, kemudian semak unsurnya yang juga tergolong dalam A."
+          }
+        ],
+        "hint": "Unsur A ∩ B′ mesti berada dalam A dan di luar B. Gunakan U untuk mencari B′, kemudian semak unsurnya yang juga tergolong dalam A.",
+        "moreHint": "Mengeluarkan B daripada U memberikan B′ = {1, 2, 6}. Bandingkan senarai ini dengan A = {1, 2, 3, 4}; setiap unsur akhir mesti terdapat dalam kedua-dua senarai."
+      },
+      "rationale": "Use direct “in A and outside B” language, then retain the concrete complement list as a partial step requiring the final membership check.",
+      "visualFindings": [
+        {
+          "path": "questions[60].learning.visual.solution.regions[1].text / rows[1][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{1, 2}' at mask 1; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Apply A and not-B membership",
+          "ms": "Gunakan syarat dalam A dan bukan dalam B"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6}"
+            ],
+            [
+              "A",
+              "{1, 2, 3, 4}"
+            ],
+            [
+              "B",
+              "{3, 4, 5}"
+            ],
+            [
+              "A ∩ B′",
+              "An element must be in A and outside B, within U."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6}"
+            ],
+            [
+              "A",
+              "{1, 2, 3, 4}"
+            ],
+            [
+              "B",
+              "{3, 4, 5}"
+            ],
+            [
+              "A ∩ B′",
+              "Sesuatu unsur mesti berada dalam A dan di luar B, dalam U."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-022",
+      "findings": [
+        "Populate the empty nextStep and split the bracket-first instruction from the final intersection. Retain the valid partial union in More Hint.",
+        "The canonical nextStep is empty in both languages; the proposed Hint provides two non-empty teaching stages."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The brackets tell you to form A ∪ B first."
+          },
+          {
+            "id": "nextStep",
+            "text": "Then the intersection with C keeps only elements shared by that union and C."
+          }
+        ],
+        "hint": "The brackets tell you to form A ∪ B first. Then the intersection with C keeps only elements shared by that union and C.",
+        "moreHint": "A ∪ B = {1, 2, 3, 4, 5}. Test 2, 5 and 6 from C against this union, keeping only matches."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kurungan menunjukkan bahawa A ∪ B perlu dibentuk dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kemudian persilangan dengan C mengekalkan unsur sepunya kesatuan itu dan C sahaja."
+          }
+        ],
+        "hint": "Kurungan menunjukkan bahawa A ∪ B perlu dibentuk dahulu. Kemudian persilangan dengan C mengekalkan unsur sepunya kesatuan itu dan C sahaja.",
+        "moreHint": "A ∪ B = {1, 2, 3, 4, 5}. Semak 2, 5 dan 6 daripada C dalam kesatuan ini dan kekalkan yang sepadan sahaja."
+      },
+      "rationale": "Populate the empty nextStep and split the bracket-first instruction from the final intersection. Retain the valid partial union in More Hint.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-023",
+      "findings": [
+        "Retain the bracketed B-and-C intersection followed by a union with A. The intermediate set is not the final result."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The brackets require B ∩ C first."
+          },
+          {
+            "id": "nextStep",
+            "text": "Then combine that shared set with all elements of A."
+          }
+        ],
+        "hint": "The brackets require B ∩ C first. Then combine that shared set with all elements of A.",
+        "moreHint": "B ∩ C = {5}. Add this intermediate set to A = {1, 2, 3}, keeping each element once."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kurungan memerlukan B ∩ C diselesaikan dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kemudian gabungkan set sepunya itu dengan semua unsur A."
+          }
+        ],
+        "hint": "Kurungan memerlukan B ∩ C diselesaikan dahulu. Kemudian gabungkan set sepunya itu dengan semua unsur A.",
+        "moreHint": "B ∩ C = {5}. Tambah set perantaraan ini kepada A = {1, 2, 3}, dengan mengekalkan setiap unsur sekali sahaja."
+      },
+      "rationale": "Retain the bracketed B-and-C intersection followed by a union with A. The intermediate set is not the final result.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-024",
+      "findings": [
+        "Populate the empty nextStep. Separate complementing the whole bracketed intersection in U from checking membership in C.",
+        "The canonical nextStep is empty in both languages; the proposed Hint provides two non-empty teaching stages."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find A ∩ B first, then take the complement of that whole set in U."
+          },
+          {
+            "id": "nextStep",
+            "text": "The final intersection keeps only the remaining elements that also belong to C."
+          }
+        ],
+        "hint": "Find A ∩ B first, then take the complement of that whole set in U. The final intersection keeps only the remaining elements that also belong to C.",
+        "moreHint": "A ∩ B = {2, 3}. Cross these two elements out of U, then check C = {1, 3, 5, 7} against the remaining list."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari A ∩ B dahulu, kemudian cari pelengkap seluruh set itu dalam U."
+          },
+          {
+            "id": "nextStep",
+            "text": "Persilangan akhir mengekalkan unsur yang tinggal dan juga tergolong dalam C sahaja."
+          }
+        ],
+        "hint": "Cari A ∩ B dahulu, kemudian cari pelengkap seluruh set itu dalam U. Persilangan akhir mengekalkan unsur yang tinggal dan juga tergolong dalam C sahaja.",
+        "moreHint": "A ∩ B = {2, 3}. Potong kedua-dua unsur ini daripada U, kemudian bandingkan C = {1, 3, 5, 7} dengan senarai yang tinggal."
+      },
+      "rationale": "Populate the empty nextStep. Separate complementing the whole bracketed intersection in U from checking membership in C.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-025",
+      "findings": [
+        "Retain both complemented conditions and comparison of the two complement lists; avoid giving the final outside-both set in the reference."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The intersection requires both “not in A” and “not in B”."
+          },
+          {
+            "id": "nextStep",
+            "text": "List each complement within U, then compare them."
+          }
+        ],
+        "hint": "The intersection requires both “not in A” and “not in B”. List each complement within U, then compare them.",
+        "moreHint": "A′ = {4, 5, 6, 7, 8} and B′ = {1, 2, 6, 7, 8}. Keep only entries appearing in both of these lists."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Persilangan memerlukan kedua-dua syarat “tiada dalam A” dan “tiada dalam B”."
+          },
+          {
+            "id": "nextStep",
+            "text": "Senaraikan setiap pelengkap dalam U, kemudian bandingkannya."
+          }
+        ],
+        "hint": "Persilangan memerlukan kedua-dua syarat “tiada dalam A” dan “tiada dalam B”. Senaraikan setiap pelengkap dalam U, kemudian bandingkannya.",
+        "moreHint": "A′ = {4, 5, 6, 7, 8} dan B′ = {1, 2, 6, 7, 8}. Kekalkan hanya unsur yang terdapat dalam kedua-dua senarai ini."
+      },
+      "rationale": "Retain both complemented conditions and comparison of the two complement lists; avoid giving the final outside-both set in the reference.",
+      "visualFindings": [
+        {
+          "path": "questions[64].learning.visual.solution.regions[0].text / rows[0][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{6, 7, 8}' at mask 0; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check both complemented conditions",
+          "ms": "Semak kedua-dua syarat pelengkap"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6, 7, 8}"
+            ],
+            [
+              "A",
+              "{1, 2, 3}"
+            ],
+            [
+              "B",
+              "{3, 4, 5}"
+            ],
+            [
+              "A′ ∩ B′",
+              "An element must be outside A and outside B, within U."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6, 7, 8}"
+            ],
+            [
+              "A",
+              "{1, 2, 3}"
+            ],
+            [
+              "B",
+              "{3, 4, 5}"
+            ],
+            [
+              "A′ ∩ B′",
+              "Sesuatu unsur mesti berada di luar A dan di luar B, dalam U."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-026",
+      "findings": [
+        "Retain inclusive OR for the union of complements and the concrete merge-without-repeats step."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find each complement using U."
+          },
+          {
+            "id": "nextStep",
+            "text": "Their union includes a number if it belongs to either complement, including both."
+          }
+        ],
+        "hint": "Find each complement using U. Their union includes a number if it belongs to either complement, including both.",
+        "moreHint": "A′ = {4, 5, 6} and B′ = {1, 5, 6}. Merge these lists and write each repeated number only once."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari setiap pelengkap menggunakan U."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kesatuannya merangkumi nombor yang tergolong dalam salah satu atau kedua-dua pelengkap."
+          }
+        ],
+        "hint": "Cari setiap pelengkap menggunakan U. Kesatuannya merangkumi nombor yang tergolong dalam salah satu atau kedua-dua pelengkap.",
+        "moreHint": "A′ = {4, 5, 6} dan B′ = {1, 5, 6}. Gabungkan senarai ini dan tulis setiap nombor berulang sekali sahaja."
+      },
+      "rationale": "Retain inclusive OR for the union of complements and the concrete merge-without-repeats step.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-027",
+      "findings": [
+        "Add a rejecting case outside A so positive examples alone are not mistaken for proof. The item remains enrichment; no named distributive law is required."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "For an element to qualify, it must be in A and in at least one of B or C."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare this membership rule with each option."
+          }
+        ],
+        "hint": "For an element to qualify, it must be in A and in at least one of B or C. Compare this membership rule with each option.",
+        "moreHint": "Test an element in A and B but outside C, then one in A and C but outside B. Each option must handle both cases. Also test an element outside A: it must be rejected even if it is in B or C."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Untuk memenuhi syarat, unsur mesti berada dalam A dan dalam sekurang-kurangnya satu daripada B atau C."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan syarat keahlian ini dengan setiap pilihan."
+          }
+        ],
+        "hint": "Untuk memenuhi syarat, unsur mesti berada dalam A dan dalam sekurang-kurangnya satu daripada B atau C. Bandingkan syarat keahlian ini dengan setiap pilihan.",
+        "moreHint": "Uji unsur dalam A dan B tetapi di luar C, kemudian unsur dalam A dan C tetapi di luar B. Setiap pilihan mesti mengendalikan kedua-dua kes. Uji juga unsur di luar A: unsur itu mesti ditolak walaupun berada dalam B atau C."
+      },
+      "rationale": "Add a rejecting case outside A so positive examples alone are not mistaken for proof. The item remains enrichment; no named distributive law is required.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-028",
+      "findings": [
+        "Retain the Fire membership and not-cost-2 tests without printing the complete symbolic answer. Printed cost is local given data."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A qualifying card must pass two tests: membership in A and non-membership in B."
+          },
+          {
+            "id": "nextStep",
+            "text": "Decide which operation requires both tests."
+          }
+        ],
+        "hint": "A qualifying card must pass two tests: membership in A and non-membership in B. Decide which operation requires both tests.",
+        "moreHint": "Use A for the Fire test and a prime mark on B for the “not cost 2” test. The same card must satisfy both conditions."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kad yang memenuhi syarat mesti lulus dua semakan: tergolong dalam A dan tidak tergolong dalam B."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tentukan operasi yang memerlukan kedua-dua semakan."
+          }
+        ],
+        "hint": "Kad yang memenuhi syarat mesti lulus dua semakan: tergolong dalam A dan tidak tergolong dalam B. Tentukan operasi yang memerlukan kedua-dua semakan.",
+        "moreHint": "Gunakan A bagi semakan Fire dan tanda perdana pada B bagi semakan “kos bukan 2”. Kad yang sama mesti memenuhi kedua-dua syarat."
+      },
+      "rationale": "Retain the Fire membership and not-cost-2 tests without printing the complete symbolic answer. Printed cost is local given data.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-029",
+      "findings": [
+        "Populate the empty nextStep by separating the inner complement/union from the outer complement of the whole bracket.",
+        "The canonical nextStep is empty in both languages; the proposed Hint provides two non-empty teaching stages."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Work from the inside out: find B′, then combine it with A using union."
+          },
+          {
+            "id": "nextStep",
+            "text": "The outer prime mark takes the complement of the entire bracketed result in U."
+          }
+        ],
+        "hint": "Work from the inside out: find B′, then combine it with A using union. The outer prime mark takes the complement of the entire bracketed result in U.",
+        "moreHint": "B′ = {1, 3, 5}, so A ∪ B′ = {1, 2, 3, 5}. Cross this whole intermediate set out of U to apply the outer prime mark."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Selesaikan dari dalam ke luar: cari B′, kemudian gabungkannya dengan A menggunakan kesatuan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tanda perdana di luar kurungan mengambil pelengkap seluruh hasil dalam kurungan itu dalam U."
+          }
+        ],
+        "hint": "Selesaikan dari dalam ke luar: cari B′, kemudian gabungkannya dengan A menggunakan kesatuan. Tanda perdana di luar kurungan mengambil pelengkap seluruh hasil dalam kurungan itu dalam U.",
+        "moreHint": "B′ = {1, 3, 5}, maka A ∪ B′ = {1, 2, 3, 5}. Potong seluruh set perantaraan ini daripada U untuk menggunakan tanda perdana di luar kurungan."
+      },
+      "rationale": "Populate the empty nextStep by separating the inner complement/union from the outer complement of the whole bracket.",
+      "visualFindings": [
+        {
+          "path": "questions[68].learning.visual.solution.regions[2].text / rows[2][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '{4, 6}' at mask 2; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Follow the inner and outer prime marks",
+          "ms": "Ikut tanda perdana di dalam dan di luar kurungan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6}"
+            ],
+            [
+              "A",
+              "{1, 2, 3}"
+            ],
+            [
+              "B",
+              "{2, 4, 6}"
+            ],
+            [
+              "First",
+              "Find B′ in U."
+            ],
+            [
+              "Next",
+              "Form A ∪ B′, then complement the whole result in U."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "{1, 2, 3, 4, 5, 6}"
+            ],
+            [
+              "A",
+              "{1, 2, 3}"
+            ],
+            [
+              "B",
+              "{2, 4, 6}"
+            ],
+            [
+              "Pertama",
+              "Cari B′ dalam U."
+            ],
+            [
+              "Seterusnya",
+              "Bentuk A ∪ B′, kemudian cari pelengkap seluruh hasil itu dalam U."
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-030",
+      "findings": [
+        "Retain the pairwise intersection as a partial result, the third-set check, then complement in U. This is complement of intersection, not complement of union."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "First find the elements shared by all three sets."
+          },
+          {
+            "id": "nextStep",
+            "text": "Remove only that triple intersection from U."
+          }
+        ],
+        "hint": "First find the elements shared by all three sets. Remove only that triple intersection from U.",
+        "moreHint": "A ∩ B = {2, 3}. Check those candidates against C = {3, 6}, then cross the resulting shared elements out of U."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari unsur sepunya ketiga-tiga set dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Keluarkan hanya persilangan tiga set itu daripada U."
+          }
+        ],
+        "hint": "Cari unsur sepunya ketiga-tiga set dahulu. Keluarkan hanya persilangan tiga set itu daripada U.",
+        "moreHint": "A ∩ B = {2, 3}. Semak calon itu dalam C = {3, 6}, kemudian potong unsur sepunya yang diperoleh daripada U."
+      },
+      "rationale": "Retain the pairwise intersection as a partial result, the third-set check, then complement in U. This is complement of intersection, not complement of union.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-031",
+      "findings": [
+        "Populate the empty nextStep and simplify More Hint. Explain that a union may include an element supplied by one intermediate list even if absent from the other.",
+        "The canonical nextStep is empty in both languages; the proposed Hint provides two non-empty teaching stages."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find A ∩ B and C′ as two separate sets."
+          },
+          {
+            "id": "nextStep",
+            "text": "The final union includes an element if it is in either result, including both."
+          }
+        ],
+        "hint": "Find A ∩ B and C′ as two separate sets. The final union includes an element if it is in either result, including both.",
+        "moreHint": "A ∩ B = {3, 4}. Cross 4 and 6 out of U to form C′. Combine the two lists: being in either list is enough, even if a number is missing from the other list."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari A ∩ B dan C′ sebagai dua set yang berasingan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kesatuan akhir merangkumi unsur yang berada dalam salah satu atau kedua-dua hasil."
+          }
+        ],
+        "hint": "Cari A ∩ B dan C′ sebagai dua set yang berasingan. Kesatuan akhir merangkumi unsur yang berada dalam salah satu atau kedua-dua hasil.",
+        "moreHint": "A ∩ B = {3, 4}. Potong 4 dan 6 daripada U untuk membentuk C′. Gabungkan kedua-dua senarai: berada dalam salah satu senarai sudah memadai, walaupun nombor itu tiada dalam senarai yang satu lagi."
+      },
+      "rationale": "Populate the empty nextStep and simplify More Hint. Explain that a union may include an element supplied by one intermediate list even if absent from the other.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-032",
+      "findings": [
+        "Retain two intermediate lists and combine without repetition; the learner still performs the final union."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Work out A′ and the bracketed intersection separately."
+          },
+          {
+            "id": "nextStep",
+            "text": "The final union combines their elements without repeats."
+          }
+        ],
+        "hint": "Work out A′ and the bracketed intersection separately. The final union combines their elements without repeats.",
+        "moreHint": "A′ = {4, 5, 6, 7} and B ∩ C = {3, 4}. Merge these lists, including any shared entry only once."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari A′ dan persilangan dalam kurungan secara berasingan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kesatuan akhir menggabungkan unsurnya tanpa ulangan."
+          }
+        ],
+        "hint": "Cari A′ dan persilangan dalam kurungan secara berasingan. Kesatuan akhir menggabungkan unsurnya tanpa ulangan.",
+        "moreHint": "A′ = {4, 5, 6, 7} dan B ∩ C = {3, 4}. Gabungkan senarai ini dengan memasukkan setiap unsur sepunya sekali sahaja."
+      },
+      "rationale": "Retain two intermediate lists and combine without repetition; the learner still performs the final union.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-033",
+      "findings": [
+        "Retain subtraction of the shared group from sword owners; the total and shield total remain given reference facts even though unnecessary to this calculation."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The sword total includes those who also own a shield."
+          },
+          {
+            "id": "nextStep",
+            "text": "Remove the shared group to get sword owners outside the shield group."
+          }
+        ],
+        "hint": "The sword total includes those who also own a shield. Remove the shared group to get sword owners outside the shield group.",
+        "moreHint": "Use 24 − 11. The 11 shared members are already included among the 24 sword owners; the total of 40 is not needed for this subtraction."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Jumlah pemilik pedang termasuk mereka yang juga memiliki perisai."
+          },
+          {
+            "id": "nextStep",
+            "text": "Keluarkan kumpulan sepunya untuk memperoleh pemilik pedang di luar kumpulan perisai."
+          }
+        ],
+        "hint": "Jumlah pemilik pedang termasuk mereka yang juga memiliki perisai. Keluarkan kumpulan sepunya untuk memperoleh pemilik pedang di luar kumpulan perisai.",
+        "moreHint": "Gunakan 24 − 11. 11 ahli sepunya sudah termasuk dalam 24 pemilik pedang; jumlah 40 tidak diperlukan untuk penolakan ini."
+      },
+      "rationale": "Retain subtraction of the shared group from sword owners; the total and shield total remain given reference facts even though unnecessary to this calculation.",
+      "visualFindings": [
+        {
+          "path": "questions[72].learning.visual.solution.regions[1].text / rows[1][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '13' at mask 1; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        },
+        {
+          "path": "questions[72].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Sword-only members: 13'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given sword and shield counts",
+          "ms": "Bilangan pemilik pedang dan perisai yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All members",
+              "40"
+            ],
+            [
+              "Own a sword",
+              "24"
+            ],
+            [
+              "Own a shield",
+              "19"
+            ],
+            [
+              "Own both",
+              "11"
+            ],
+            [
+              "Sword only: calculation to complete",
+              "24 − 11"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua ahli",
+              "40"
+            ],
+            [
+              "Memiliki pedang",
+              "24"
+            ],
+            [
+              "Memiliki perisai",
+              "19"
+            ],
+            [
+              "Memiliki kedua-duanya",
+              "11"
+            ],
+            [
+              "Pedang sahaja: lengkapkan pengiraan",
+              "24 − 11"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-034",
+      "findings": [
+        "Explain that the all-three group is distinct from each explicitly exactly-two group. Keep the sum unevaluated."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "“At least two” includes exactly two and all three."
+          },
+          {
+            "id": "nextStep",
+            "text": "A person in the all-three group is not in any of the stated exactly-two groups, so count each of these separate groups once."
+          }
+        ],
+        "hint": "“At least two” includes exactly two and all three. A person in the all-three group is not in any of the stated exactly-two groups, so count each of these separate groups once.",
+        "moreHint": "Add 4 + 3 + 5 + 2. The first three counts already exclude the all-three group, and that last group also qualifies."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "“Sekurang-kurangnya dua” merangkumi tepat dua dan ketiga-tiganya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pemilik ketiga-tiga barang tidak termasuk dalam kumpulan yang memiliki tepat dua barang. Bilang setiap kumpulan berasingan sekali sahaja."
+          }
+        ],
+        "hint": "“Sekurang-kurangnya dua” merangkumi tepat dua dan ketiga-tiganya. Pemilik ketiga-tiga barang tidak termasuk dalam kumpulan yang memiliki tepat dua barang. Bilang setiap kumpulan berasingan sekali sahaja.",
+        "moreHint": "Tambah 4 + 3 + 5 + 2. Tiga bilangan pertama sudah mengecualikan kumpulan ketiga-tiga barang, dan kumpulan terakhir itu juga memenuhi syarat."
+      },
+      "rationale": "Explain that the all-three group is distinct from each explicitly exactly-two group. Keep the sum unevaluated.",
+      "visualFindings": [
+        {
+          "path": "questions[73].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'People owning at least two items: 14'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given separate ownership groups",
+          "ms": "Kumpulan pemilik berasingan yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Map and lantern, no key",
+              "4"
+            ],
+            [
+              "Map and key, no lantern",
+              "3"
+            ],
+            [
+              "Lantern and key, no map",
+              "5"
+            ],
+            [
+              "All three items",
+              "2"
+            ],
+            [
+              "At least two: calculation to complete",
+              "4 + 3 + 5 + 2"
+            ]
+          ],
+          "ms": [
+            [
+              "Peta dan tanglung, tiada kunci",
+              "4"
+            ],
+            [
+              "Peta dan kunci, tiada tanglung",
+              "3"
+            ],
+            [
+              "Tanglung dan kunci, tiada peta",
+              "5"
+            ],
+            [
+              "Ketiga-tiga barang",
+              "2"
+            ],
+            [
+              "Sekurang-kurangnya dua: lengkapkan pengiraan",
+              "4 + 3 + 5 + 2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-035",
+      "findings": [
+        "Retain separate map-only and lantern-only counts, then add. Remove the final answer from the inherited SVG title."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Exactly one means map only or lantern only."
+          },
+          {
+            "id": "nextStep",
+            "text": "Find each only-group by removing the overlap, then add those separate counts."
+          }
+        ],
+        "hint": "Exactly one means map only or lantern only. Find each only-group by removing the overlap, then add those separate counts.",
+        "moreHint": "Set up (28 − 12) + (25 − 12). The shared group is removed from both totals because it belongs to neither only-group."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tepat satu bermaksud peta sahaja atau tanglung sahaja."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari setiap kumpulan satu barang sahaja dengan mengeluarkan pertindihan, kemudian tambah bilangan yang berasingan itu."
+          }
+        ],
+        "hint": "Tepat satu bermaksud peta sahaja atau tanglung sahaja. Cari setiap kumpulan satu barang sahaja dengan mengeluarkan pertindihan, kemudian tambah bilangan yang berasingan itu.",
+        "moreHint": "Bentuk pengiraan (28 − 12) + (25 − 12). Kumpulan sepunya dikeluarkan daripada kedua-dua jumlah kerana tidak tergolong dalam mana-mana kumpulan satu barang sahaja."
+      },
+      "rationale": "Retain separate map-only and lantern-only counts, then add. Remove the final answer from the inherited SVG title.",
+      "visualFindings": [
+        {
+          "path": "questions[74].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Members owning exactly one item: 29'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given map and lantern counts",
+          "ms": "Bilangan pemilik peta dan tanglung yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All members",
+              "50"
+            ],
+            [
+              "Own a map",
+              "28"
+            ],
+            [
+              "Own a lantern",
+              "25"
+            ],
+            [
+              "Own both",
+              "12"
+            ],
+            [
+              "Exactly one: calculation to complete",
+              "(28 − 12) + (25 − 12)"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua ahli",
+              "50"
+            ],
+            [
+              "Memiliki peta",
+              "28"
+            ],
+            [
+              "Memiliki tanglung",
+              "25"
+            ],
+            [
+              "Memiliki kedua-duanya",
+              "12"
+            ],
+            [
+              "Tepat satu: lengkapkan pengiraan",
+              "(28 − 12) + (25 − 12)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-036",
+      "findings": [
+        "Replace “correct the repeated overlap” with the actual subtraction operation. Retain the unevaluated total-minus-union setup."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "First count cards with at least one of the two features."
+          },
+          {
+            "id": "nextStep",
+            "text": "Subtract the shared count once when adding the two feature counts, then subtract that union count from the total collection."
+          }
+        ],
+        "hint": "First count cards with at least one of the two features. Subtract the shared count once when adding the two feature counts, then subtract that union count from the total collection.",
+        "moreHint": "Use 18 − (10 + 9 − 4). The brackets count cards with at least one of the two features, with the shared cards counted once."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kira kad yang mempunyai sekurang-kurangnya satu daripada dua ciri dahulu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tolak bilangan kad sepunya sekali apabila menambah bilangan kad bagi kedua-dua ciri, kemudian tolak bilangan kesatuan itu daripada jumlah koleksi."
+          }
+        ],
+        "hint": "Kira kad yang mempunyai sekurang-kurangnya satu daripada dua ciri dahulu. Tolak bilangan kad sepunya sekali apabila menambah bilangan kad bagi kedua-dua ciri, kemudian tolak bilangan kesatuan itu daripada jumlah koleksi.",
+        "moreHint": "Gunakan 18 − (10 + 9 − 4). Kurungan mengira kad dengan sekurang-kurangnya satu daripada dua ciri, dengan kad sepunya dikira sekali."
+      },
+      "rationale": "Replace “correct the repeated overlap” with the actual subtraction operation. Retain the unevaluated total-minus-union setup.",
+      "visualFindings": [
+        {
+          "path": "questions[75].learning.visual.solution.regions[0].text / rows[0][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '3' at mask 0; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        },
+        {
+          "path": "questions[75].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Cards with neither feature: 3'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given card-feature counts",
+          "ms": "Bilangan ciri kad yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All separate cards",
+              "18"
+            ],
+            [
+              "Fire label",
+              "10"
+            ],
+            [
+              "Printed cost 2 Energy",
+              "9"
+            ],
+            [
+              "Both features",
+              "4"
+            ],
+            [
+              "Neither: calculation to complete",
+              "18 − (10 + 9 − 4)"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua kad berasingan",
+              "18"
+            ],
+            [
+              "Label Fire",
+              "10"
+            ],
+            [
+              "Kos bercetak 2 Energy",
+              "9"
+            ],
+            [
+              "Kedua-dua ciri",
+              "4"
+            ],
+            [
+              "Tiada label Fire dan kos bukan 2 Energy: lengkapkan pengiraan",
+              "18 − (10 + 9 − 4)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-037",
+      "findings": [
+        "Retain reconstruction from union and intersection but stop explicitly supplying every final B element. Ask the learner to inspect the remaining union entries."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "B must include the given intersection and every union element missing from A."
+          },
+          {
+            "id": "nextStep",
+            "text": "It cannot contain an A element outside the stated intersection."
+          }
+        ],
+        "hint": "B must include the given intersection and every union element missing from A. It cannot contain an A element outside the stated intersection.",
+        "moreHint": "Begin B with the given shared set {3, 4}. Check the other elements of A ∪ B = {1, 2, 3, 4, 5, 6} against A. An element in the union but missing from A must come from B. Finally, check both the stated union and intersection."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "B mesti merangkumi persilangan yang diberikan dan setiap unsur kesatuan yang tiada dalam A."
+          },
+          {
+            "id": "nextStep",
+            "text": "B tidak boleh mengandungi unsur A di luar persilangan yang dinyatakan."
+          }
+        ],
+        "hint": "B mesti merangkumi persilangan yang diberikan dan setiap unsur kesatuan yang tiada dalam A. B tidak boleh mengandungi unsur A di luar persilangan yang dinyatakan.",
+        "moreHint": "Mulakan B dengan set sepunya {3, 4} yang diberikan. Semak unsur lain dalam A ∪ B = {1, 2, 3, 4, 5, 6} dengan A. Unsur dalam kesatuan yang tiada dalam A mesti datang daripada B. Akhir sekali, semak kesatuan dan persilangan yang dinyatakan."
+      },
+      "rationale": "Retain reconstruction from union and intersection but stop explicitly supplying every final B element. Ask the learner to inspect the remaining union entries.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-038",
+      "findings": [
+        "Use one region-counting route throughout. More Hint now shows the actual exactly-two subtractions and one only-group setup before the final subtraction."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "To find how many own none, subtract the number owning at least one item from 60."
+          },
+          {
+            "id": "nextStep",
+            "text": "Count each person once: start with the all-three region, then find the exactly-two regions and the one-item-only regions."
+          }
+        ],
+        "hint": "To find how many own none, subtract the number owning at least one item from 60. Count each person once: start with the all-three region, then find the exactly-two regions and the one-item-only regions.",
+        "moreHint": "Put 4 in the all-three region. For exactly two items, use 10 − 4, 8 − 4 and 7 − 4. Map only starts with 30 − [(10 − 4) + (8 − 4) + 4]; use the lantern and key totals in the same way. Add the seven inside-region counts, then subtract their sum from 60."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Untuk mencari bilangan yang tidak memiliki sebarang barang, tolak bilangan pemilik sekurang-kurangnya satu barang daripada 60."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bilang setiap orang sekali sahaja: mulakan dengan kawasan ketiga-tiga barang, kemudian cari kawasan tepat dua barang dan kawasan satu barang sahaja."
+          }
+        ],
+        "hint": "Untuk mencari bilangan yang tidak memiliki sebarang barang, tolak bilangan pemilik sekurang-kurangnya satu barang daripada 60. Bilang setiap orang sekali sahaja: mulakan dengan kawasan ketiga-tiga barang, kemudian cari kawasan tepat dua barang dan kawasan satu barang sahaja.",
+        "moreHint": "Letakkan 4 dalam kawasan ketiga-tiga barang. Bagi tepat dua barang, gunakan 10 − 4, 8 − 4 dan 7 − 4. Peta sahaja bermula dengan 30 − [(10 − 4) + (8 − 4) + 4]; gunakan jumlah pemilik tanglung dan kunci dengan cara yang sama. Tambah bilangan tujuh kawasan dalaman, kemudian tolak hasil tambah itu daripada 60."
+      },
+      "rationale": "Use one region-counting route throughout. More Hint now shows the actual exactly-two subtractions and one only-group setup before the final subtraction.",
+      "visualFindings": [
+        {
+          "path": "questions[77].learning.visual.solution.regions[0].text / rows[0][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '6' at mask 0; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        },
+        {
+          "path": "questions[77].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Members owning none of the three items: 6'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given counts for the three items",
+          "ms": "Bilangan bagi tiga barang yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All members",
+              "60"
+            ],
+            [
+              "n(M): map",
+              "30"
+            ],
+            [
+              "n(L): lantern",
+              "25"
+            ],
+            [
+              "n(K): key",
+              "20"
+            ],
+            [
+              "n(M ∩ L)",
+              "10"
+            ],
+            [
+              "n(M ∩ K)",
+              "8"
+            ],
+            [
+              "n(L ∩ K)",
+              "7"
+            ],
+            [
+              "n(M ∩ L ∩ K)",
+              "4"
+            ],
+            [
+              "Pairwise counts",
+              "Each includes the all-three group."
+            ],
+            [
+              "None: calculation to complete",
+              "60 − n(M ∪ L ∪ K)"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua ahli",
+              "60"
+            ],
+            [
+              "n(M): peta",
+              "30"
+            ],
+            [
+              "n(L): tanglung",
+              "25"
+            ],
+            [
+              "n(K): kunci",
+              "20"
+            ],
+            [
+              "n(M ∩ L)",
+              "10"
+            ],
+            [
+              "n(M ∩ K)",
+              "8"
+            ],
+            [
+              "n(L ∩ K)",
+              "7"
+            ],
+            [
+              "n(M ∩ L ∩ K)",
+              "4"
+            ],
+            [
+              "Bilangan pasangan",
+              "Setiap bilangan merangkumi kumpulan ketiga-tiga barang."
+            ],
+            [
+              "Tiada sebarang barang: lengkapkan pengiraan",
+              "60 − n(M ∪ L ∪ K)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "SET-039",
+      "findings": [
+        "Retain independent union and complement lists and a final intersection check; being outside C alone is insufficient."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Form A ∪ B and C′ separately."
+          },
+          {
+            "id": "nextStep",
+            "text": "The final intersection keeps only elements appearing in both intermediate lists."
+          }
+        ],
+        "hint": "Form A ∪ B and C′ separately. The final intersection keeps only elements appearing in both intermediate lists.",
+        "moreHint": "A ∪ B = {1, 2, 3, 4, 5}, while C′ = {1, 4, 6}. Compare the lists; an element outside C still has to belong to the union."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bentuk A ∪ B dan C′ secara berasingan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Persilangan akhir mengekalkan hanya unsur yang terdapat dalam kedua-dua senarai perantaraan."
+          }
+        ],
+        "hint": "Bentuk A ∪ B dan C′ secara berasingan. Persilangan akhir mengekalkan hanya unsur yang terdapat dalam kedua-dua senarai perantaraan.",
+        "moreHint": "A ∪ B = {1, 2, 3, 4, 5}, manakala C′ = {1, 4, 6}. Bandingkan senarai; unsur di luar C masih perlu tergolong dalam kesatuan."
+      },
+      "rationale": "Retain independent union and complement lists and a final intersection check; being outside C alone is insufficient.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "SET-040",
+      "findings": [
+        "Retain the shared-card candidates and test them against G before counting. Do not show the empty target region or zero count in pre-answer references."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find cards whose IDs occur in both F and E."
+          },
+          {
+            "id": "nextStep",
+            "text": "Exclude any of those IDs that also occur in G, then count the remaining IDs."
+          }
+        ],
+        "hint": "Find cards whose IDs occur in both F and E. Exclude any of those IDs that also occur in G, then count the remaining IDs.",
+        "moreHint": "F ∩ E = {c, g}. Test each candidate against G = {c, d, g, h}; a candidate in G fails the condition G′. Count the candidates that pass."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari kad yang IDnya terdapat dalam F dan juga E."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kecualikan ID tersebut yang juga terdapat dalam G, kemudian bilang ID yang tinggal."
+          }
+        ],
+        "hint": "Cari kad yang IDnya terdapat dalam F dan juga E. Kecualikan ID tersebut yang juga terdapat dalam G, kemudian bilang ID yang tinggal.",
+        "moreHint": "F ∩ E = {c, g}. Semak setiap calon dalam G = {c, d, g, h}; calon dalam G tidak memenuhi syarat G′. Bilang calon yang memenuhi syarat."
+      },
+      "rationale": "Retain the shared-card candidates and test them against G before counting. Do not show the empty target region or zero count in pre-answer references.",
+      "visualFindings": [
+        {
+          "path": "questions[79].learning.visual.solution.regions[3].text / rows[3][1], copied by learning/support-visual.mjs selectSupportVisual",
+          "problem": "The pre-answer solution-copy reference displays the computed target region '∅' at mask 3; it is not a directly supplied target value.",
+          "proposedCorrection": "Use this item.hintReference only for Hint and More Hint. It retains all given data and asks for the target operation or an unevaluated calculation. Preserve the original solution visual and all solution values."
+        },
+        {
+          "path": "questions[79].learning.visual.solution.svg/title, retained by selectSupportVisual and visual-renderer.mjs safeVenn(reference)",
+          "problem": "The inherited SVG accessible title states the final evaluated answer: 'Selected set ∅; number of cards 0'. Changing the external reference heading and removing shading does not replace this title.",
+          "proposedCorrection": "Use the reviewed hintReference for this item and replace the SVG <title> with the localized pre-answer reference title whenever a reference SVG is rendered. Do not edit the solution title or worked solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Check the given card-ID lists",
+          "ms": "Semak senarai ID kad yang diberikan"
+        },
+        "caption": {
+          "en": "Use the given facts with the method in the Hint. Work out the requested result before choosing an answer.",
+          "ms": "Gunakan fakta yang diberikan bersama kaedah dalam Petunjuk. Tentukan hasil yang diminta sebelum memilih jawapan."
+        },
+        "headers": {
+          "en": [
+            "Given / task",
+            "Reference"
+          ],
+          "ms": [
+            "Diberi / tugasan",
+            "Rujukan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "U",
+              "{a, b, c, d, e, f, g, h}"
+            ],
+            [
+              "F: Fire",
+              "{a, c, e, g}"
+            ],
+            [
+              "E: printed cost 2 Energy",
+              "{b, c, f, g}"
+            ],
+            [
+              "G: Upgraded",
+              "{c, d, g, h}"
+            ],
+            [
+              "Find n((F ∩ E) ∩ G′)",
+              "Keep IDs in F and E but outside G, then count them."
+            ]
+          ],
+          "ms": [
+            [
+              "U",
+              "{a, b, c, d, e, f, g, h}"
+            ],
+            [
+              "F: Fire",
+              "{a, c, e, g}"
+            ],
+            [
+              "E: kos bercetak 2 Energy",
+              "{b, c, f, g}"
+            ],
+            [
+              "G: Upgraded",
+              "{c, d, g, h}"
+            ],
+            [
+              "Cari n((F ∩ E) ∩ G′)",
+              "Kekalkan ID dalam F dan E tetapi di luar G, kemudian bilang."
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "auditNotes": [
+    "Audited canonical SET-001..SET-040 and the full active BM question(q,ms) projection at education-report base 990541d57c6df96cefb21eddc7a365d1d989a74d. No repository file was changed by this audit.",
+    "All 40 prompts are sufficiently explicit; none requires a prompt rewrite. IDs, seeds, given numbers/facts, choices and bindings, correct keys, worked explanations and solutions remain untouched.",
+    "Raw q.learning.visual.hint placeholders are inactive for the actual filled Venn projection. selectSupportVisual copies the completed solution values, removes answer columns/region selections and replaces the caption. This review evaluates the effective pre-answer reference rather than treating inactive raw placeholders as the UI.",
+    "The explicit hintReference overrides are limited to direct target-value disclosures and inherited final-answer SVG titles. Other safely filled references should remain intact, with all supplied values and no question-mark placeholders. Apply a generic localized reference SVG-title fix even when no override is necessary.",
+    "Reference region areas must not represent counts. Not given means unspecified, not an empty set or zero; preserve the existing honest Not given values in retained diagrams.",
+    "No item in SET-001..SET-040 asks for a number of subsets or proper subsets, so no 2^n or 2^n−1 rule was introduced.",
+    "MODEL.zip is unavailable. This audit does not claim model/artwork, full-book, physical-device or classroom-comprehension validation.",
+    "checks.noFinalAnswerDisclosure refers to the proposed Hint, More Hint and hintReference teaching content. Audit finding strings quote the original leaks solely so the implementer can locate them.",
+    "Independent all-40 mathematical check passed against the fixed correct-choice bindings: finite-set enumeration/count arithmetic, description membership for SET-009, exhaustive Boolean membership tables for SET-027 and SET-028. This was a read-only content check; no application/browser tests were run by this audit."
+  ]
+}

@@ -1,5 +1,7 @@
 # Slay the Math — 2.36.0
 
+Education preview **2.37.0-report.4**, branch `education-report`: [in-game reports, private Google issue triage and clearer English/BM hints](docs/education/FEEDBACK_CLARITY.md). This preview is not published to main.
+
 Version **2.36.0** integrates clearer in-game Question / Help / Result tabs, two
 answers per game question, the simpler Learning Report and all120 review ticks/
 comments. Tutorial and AI follow the same attempt limit. Current card effects,

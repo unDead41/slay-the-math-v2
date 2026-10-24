@@ -10,6 +10,11 @@ export const QUESTION_FEEDBACK_CATEGORIES=Object.freeze([
  {id:'other',label:'Something else'}
 ]);
 const feedbackCategoryIds=new Set(QUESTION_FEEDBACK_CATEGORIES.map(c=>c.id));
+const gameplayFeedbackSources=new Set(['predict','artifact','mystery']);
+/** Opening then hiding worked steps still counts as having opened that help. */
+export function questionFeedbackSupport(record){
+ return {hintUsed:record?.hintState?.hintUsed===true,moreHintViewed:record?.hintState?.moreHintViewed===true,stepsViewed:record?.stepsViewed===true||(record?.events||[]).some(event=>event.type==='STEPS_TOGGLED')};
+}
 const feedbackReadError='Saved comments could not be read and have been kept. Download new comments before leaving this page.';
 const feedbackWriteError='Comments could not be saved on this device. Download your comments before leaving this page.';
 function feedbackIdentity(version,id){return version+':'+id;}
@@ -23,8 +28,11 @@ function feedbackParse(raw){
    !/^(PROB|SET|LOGIC)-\d{3}$/.test(entry.questionId)||typeof entry.comment!=='string'||entry.comment.length>2000||
    !Array.isArray(entry.categories)||entry.categories.some(id=>!feedbackCategoryIds.has(id))||
    typeof entry.question!=='string'||entry.question.length>8000||typeof entry.topic!=='string'||entry.topic.length>200||
-   (entry.reviewed!==undefined&&typeof entry.reviewed!=='boolean')||!['Easy','Medium','Hard'].includes(entry.difficulty)||!entry.context||!['learn','review'].includes(entry.context.mode)||
+   (entry.reviewed!==undefined&&typeof entry.reviewed!=='boolean')||!['Easy','Medium','Hard'].includes(entry.difficulty)||!entry.context||!['learn','review','gameplay'].includes(entry.context.mode)||
+   (entry.context.mode==='gameplay'?!gameplayFeedbackSources.has(entry.context.source):entry.context.source!==undefined)||
    !['pending','correct','revealed'].includes(entry.context.status)||
+   (entry.context.mode==='gameplay'&&!['correct','revealed'].includes(entry.context.status))||
+   ['hintUsed','moreHintViewed','stepsViewed'].some(key=>typeof entry.context[key]!=='boolean')||
    typeof entry.createdAt!=='string'||!Number.isFinite(Date.parse(entry.createdAt))||
    typeof entry.updatedAt!=='string'||!Number.isFinite(Date.parse(entry.updatedAt)))throw Error('Invalid feedback comment');
   const id=feedbackIdentity(entry.bankVersion,entry.questionId);
@@ -54,18 +62,21 @@ export function createQuestionFeedbackStore({storage,bankVersion,questionIds,now
   if(typeof comment!=='string'||comment.length>2000)throw Error('Keep your comment within 2,000 characters.');
   if(!Array.isArray(categories)||categories.some(id=>!feedbackCategoryIds.has(id)))throw Error('Choose a listed feedback category.');
   if(options.reviewed!==undefined&&typeof options.reviewed!=='boolean')throw Error('Choose a valid review state.');
+  if(context.mode==='gameplay'&&(!gameplayFeedbackSources.has(context.source)||!['correct','revealed'].includes(context.status)))throw Error('Report a finished game question.');
   const id=feedbackIdentity(bankVersion,question.id),previous=records.get(id),text=comment.trim(),chosen=[...new Set(categories)],reviewed=options.reviewed??previous?.reviewed??false;
   if(!text&&!chosen.length&&!reviewed){records.delete(id);dirty.set(id,null);flush();return null;}
   const timestamp=now(),entry={id,questionId:question.id,bankVersion,topic:question.topic||question.topicCode,difficulty:question.difficulty,
    question:question.prompt||question.themedRichText?.prompt?.map(s=>s.text||'').join('')||'',
    categories:chosen,comment:text,reviewed,createdAt:previous?.createdAt||timestamp,updatedAt:timestamp,
-   context:{mode:context.mode==='learn'?'learn':'review',language:context.language==='ms'?'ms':'en',status:['correct','revealed'].includes(context.status)?context.status:'pending',
+   context:{mode:context.mode==='gameplay'?'gameplay':context.mode==='learn'?'learn':'review',...(context.mode==='gameplay'?{source:context.source}:{}),language:context.language==='ms'?'ms':'en',status:['correct','revealed'].includes(context.status)?context.status:'pending',
     hintUsed:!!context.hintUsed,moreHintViewed:!!context.moreHintViewed,stepsViewed:!!context.stepsViewed}};
   records.set(id,entry);dirty.set(id,entry);flush();return get(question.id);
  }
  function setReviewed(question,value,context){
   if(typeof value!=='boolean')throw Error('Choose a valid review state.');
-  flush();const previous=get(question.id);return save(question,previous?.categories||[],previous?.comment||'',context??previous?.context??{},{reviewed:value});
+  flush();const previous=get(question.id);
+  const original=previous?{...question,prompt:previous.question,topic:previous.topic,difficulty:previous.difficulty}:question;
+  return save(original,previous?.categories||[],previous?.comment||'',previous?.context??context??{},{reviewed:value});
  }
  function exportData(){flush();return {schemaVersion:1,game:'Slay the Math',purpose:'Question improvements',exportedAt:now(),comments:list()};}
  return {get,list,save,setReviewed,flush,exportData,get error(){return error;}};

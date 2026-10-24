@@ -11,7 +11,10 @@
  }
  function texture(path){
   if(textures.has(path)){const promise=textures.get(path);textures.delete(path);textures.set(path,promise);return promise;}
-  const promise=(async()=>{const image=new root.Image();image.src=root.DC_ASSETS?.[path]||'assets/'+path;await image.decode();return image;})();
+  const promise=(async()=>{const image=new root.Image();let url;
+   try{if(root.STMHosted?.manager){const response=await root.STMHosted.manager.fetchAsset('assets/'+path,{priority:0});url=root.URL.createObjectURL(await response.blob());image.src=url;}else image.src=root.DC_ASSETS?.[path]||'assets/'+path;await image.decode();return image;}
+   finally{if(url)root.URL.revokeObjectURL(url);}
+  })();
   textures.set(path,promise);while(textures.size>4)textures.delete(textures.keys().next().value);
   promise.catch(()=>{if(textures.get(path)===promise)textures.delete(path);});return promise;
  }
@@ -72,6 +75,8 @@
   if(!actor||!canvas||typeof root.CanvasRenderingContext2D!=='function')return null;
   return create({canvas,spec:actor,...options});
  }
- const api={data:D,spec,intentAction,supports:(stage,id)=>!!spec(stage,id),create,mount};
+ function preload(stage,id){const actor=spec(stage,id);return actor?texture(actor.animations.idle.image):Promise.reject(Error('Unknown actor for this stage'));}
+ function forgetPreload(stage,id){const actor=spec(stage,id);if(actor)textures.delete(actor.animations.idle.image);}
+ const api={data:D,spec,intentAction,preload,forgetPreload,supports:(stage,id)=>!!spec(stage,id),create,mount};
  if(typeof module!=='undefined')module.exports=api;else root.DCActorAnimation=api;
 })(typeof window!=='undefined'?window:globalThis);

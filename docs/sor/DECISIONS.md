@@ -1,5 +1,14 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-HOSTED-READINESS — Feature branch only
+
+DISAHKAN: after the SOR-only planning phase, Ijamm requests implementation before the main menu, up to three minutes waiting, staged/background downloads, later Boss resources and full Practice presentation on demand; push the assistant branch, not main.
+
+DITERUSKAN: build candidate 2.38.0, integrating main 2.37.0 / 6376a222169815af582cf55aa4794f3c809a3515 after the initial 2.36.0 implementation. Preserve canonical question selection/save validation and all current rules; do not claim per-seed question payload splitting. Keep the approximately 4 MB canonical bank, defer the Practice renderer, prioritize real map actors without RNG mutation, and provide visible timeout/retry plus content-verified project-scoped caches. Original art/audio, player data and local-only AI remain. [SOR](24_HOSTED_READINESS_INPUT.md), [candidate guide](../HOSTED_READINESS_2_38_0.md).
+
+PERLU_VERIFIKASI: physical phones, the friend's exact failure and a future hosted deployment. Main publication is not authorized by this decision.
+
+
 ## DEC-20261024-MASTER-AUDIT-EVERY-UPDATE — Read first and review every branch update
 
 **DISAHKAN:** Ijamm asks Master Audit to look for problems, possible problems and improvements whenever a branch is updated, and to read this audit guidance before other work. This extends [Master SOR](../../MASTER_SOR_PROJECT.md) to version 1.2.0.

@@ -1,0 +1,20 @@
+✔ capability registration is idempotent only for the same secret and persists securely in SQLite (199.634913ms)
+✔ authenticated batches commit before ACK, stay isolated and ignore older revisions (42.804033ms)
+✔ invalid metadata, overlarge batches, content types and cross-origin writes cannot partially commit (24.077478ms)
+✔ canonical owner records are accepted and forged question metadata or evidence is rejected (21.870919ms)
+✔ a lost HTTP response after durable SQLite commit is replayed once across collector and client reopen (32.675025ms)
+✔ operator JSON and CSV export persist tombstones and neutralize formulas without exposing capabilities (230.774687ms)
+✔ optional server binds loopback, serves the game and exposes only the public endpoint hint (16.287435ms)
+✔ a raw secret without the Bearer authorization scheme cannot submit a batch (11.255182ms)
+✔ the database owner rejects public paths and symlinks before creating a public database (2.135031ms)
+✔ same-revision changed bytes conflict atomically while identical replay remains idempotent (25.221705ms)
+✔ overlapping localStorage tab writes at the same revision rebase and deliver the retained edit (79.252258ms)
+✔ genuine Bahasa Melayu feedback accepts the canonical localized topic without changing stored text (34.468236ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 978.901767

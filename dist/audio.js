@@ -120,8 +120,8 @@ class Music{
      let timer,controller;
      try{
       if(request.cancelled)throw new Error('Audio request superseded');
-      if(this.host.AbortController){controller=new this.host.AbortController();request.controllers.add(controller);timer=this.host.setTimeout(()=>controller.abort(),15000);}
-      const response=await this.host.fetch(src,controller?{signal:controller.signal}:{});
+      if(!this.host.STMHosted?.manager&&this.host.AbortController){controller=new this.host.AbortController();request.controllers.add(controller);timer=this.host.setTimeout(()=>controller.abort(),15000);}
+      const response=this.host.STMHosted?.manager?await this.host.STMHosted.manager.fetchAsset(src,{priority:0}):await this.host.fetch(src,controller?{signal:controller.signal}:{});
       if(!response.ok)throw new Error('Missing audio');
       const bytes=await response.arrayBuffer();
       if(request.cancelled)throw new Error('Audio request superseded');

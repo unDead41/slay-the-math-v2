@@ -1,5 +1,10 @@
 # Changelog SOR — Slay the Math
 
+## Candidate 2.38.0 — hosted readiness, feature branch only
+
+- Add SOR 24, early preparation/progress and three-minute recovery, verified priority/background downloads, lazy Practice, scene/actor warmup and native input guards.
+- Preserve main 2.37.0 gameplay, sources and saves; no main merge or hosted deployment is authorized.
+
 ## Master SOR 1.2.0 — 24 October 2026
 
 - Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.

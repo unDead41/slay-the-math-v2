@@ -37,7 +37,7 @@ Reviewer set-aside rulings: final suite/publication are root-verified separately
 
 ## Publication
 
-The source is prepared for feature-ref publication with an expected-SHA non-forced update frombcd90da6f1a6362449ca031fbaf9cada82aa4a92 and integrated maincb1bbcf as the second parent. Published source SHA/tree and final readbacks will be recorded after the update. No main ref is authorized to move.
+Published source: [`4cb5e38`](https://github.com/unDead41/slay-the-math-v2/commit/4cb5e3855c2e3f7567b637cdef3ec1b6234be20f), full SHA `4cb5e3855c2e3f7567b637cdef3ec1b6234be20f`, tree `cdf03423930335d2e1b3c317b0082a7e6ca6a637`. GitHub tree equals the locally tested source tree exactly. Ref update was non-forced with expected headbcd90da6f1a6362449ca031fbaf9cada82aa4a92; ordered parents are that old feature head and integrated maincb1bbcf688d9556b55bc8fe5522b5b652309640c. Source commit/tree/parents and feature ref were read back. Main remained `ade5d3a21e55b9d2911bfa935c8095c95801bd8c` before/after the push. This following audit-only update records publication; it does not change runtime. Final feature/main refs are read back again in the terminal handoff. No main mutation or Pages deployment was performed.
 
 ---
 

@@ -56,4 +56,6 @@ Current integration snapshot: main advanced tocb1bbcf688d9556b55bc8fe5522b5b6523
 - [x] Capture native baseline at parent snapshot: actor mount/decode counts and command duration distribution on a fixed controlled combat sequence.
 - [x] Implement incremental patching and retained actor controllers, including resource retry and new-encounter cleanup.
 - [x] Run relevant DOM/animation/card/status/readiness and native integration tests; run project `npm test` and report every failure/incomplete attempt accurately. Build/check sequentially and verify all manifest hashes and protected files.
-- [ ] One fresh whole-change code review, one verified fix pass for Important findings; update audit with measured outcomes and limitations, commit and publish feature branch with an expected-SHA lease; read back both refs.
+- [x] One fresh whole-change code review, one verified fix pass for Important findings; update audit with measured outcomes and limitations, commit and publish feature branch with an expected-SHA lease; read back both refs.
+
+Completion evidence: final977/977, denied-cache dynamic images/recovery and paired native checks; source4cb5e3855c2e3f7567b637cdef3ec1b6234be20f /treecdf03423930335d2e1b3c317b0082a7e6ca6a637 published to the feature ref and read back. Mainade5d3a21e55b9d2911bfa935c8095c95801bd8c untouched. Later-main icon integration and physical-device validation remain explicit limits in the branch audit.

@@ -3,6 +3,7 @@
  const script=document.currentScript,home=new URL('./',script.src),key='slay-the-math.prod-dev-unlocked.v1';
  let session;try{session=window.sessionStorage;}catch{}
  let fallback=false,pending=null;
+ const transferKey='slay-the-math.dev-player-copy.v1';
  const authorized=()=>{try{return session?session.getItem(key)==='on':fallback;}catch{return fallback;}};
  function set(value){fallback=!!value;try{if(value)session?.setItem(key,'on');else session?.removeItem(key);}catch{}return authorized();}
  function requestEnable(){
@@ -16,6 +17,11 @@
    dialog.querySelector('[data-dev-cancel]').addEventListener('click',()=>finish(false));dialog.addEventListener('cancel',e=>{e.preventDefault();finish(false);});dialog.showModal();input.focus();
   });return pending;
  }
- window.STMDevMode={get:authorized,set,requestEnable,hubUrl:new URL('__dev/index.html',home).href,production:true};
- window.STMDevAccess={authorized,requestEnable,home:home.href,lock(){set(false);location.href=home.href;}};
+ window.STMDevMode={get:authorized,set,requestEnable,hubUrl:new URL('__dev/index.html'+location.search,home).href,production:true};
+ window.STMDevAccess={authorized,requestEnable,home:home.href+location.search,
+ copySave(name,query=''){
+  if(!authorized())throw Error('Unlock Dev first.');if(!/^duel-cube-math\./.test(name))throw Error('Unknown player save key.');const raw=window.localStorage.getItem(name);if(!raw)throw Error('No saved player run found. Start a run first.');if(raw.length>2000000)throw Error('Save exceeds 2 MB.');if(!window.DCEngine.restore(JSON.parse(raw)))throw Error('Player save is invalid.');if(!session)throw Error('Session storage is needed to transfer a copy.');session.setItem(transferKey,JSON.stringify({version:1,key:name,query,content:raw}));return new URL('__dev/index.html'+query,home).href;
+ },
+ copiedSave(){if(!authorized())throw Error('Unlock Dev first.');const raw=session?.getItem(transferKey);if(!raw)throw Error('No copied player run. Use Copy Player Run to Dev in the player menu, or import an exported save.');const data=JSON.parse(raw);if(data.version!==1||typeof data.content!=='string')throw Error('Copied save is invalid.');return data;},
+ clearCopy(){session?.removeItem(transferKey);},lock(){set(false);session?.removeItem(transferKey);location.href=home.href+location.search;}};
 })();

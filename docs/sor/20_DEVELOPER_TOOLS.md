@@ -1,6 +1,6 @@
 # 20 — Developer Tools
 
-Version: 1.1.0 · Branch build: 2.31.1-dev.2 · Date: 2026-10-24 (Malaysia)
+Version: 1.1.0 · Branch build: 2.31.1-dev.3 · Date: 2026-10-24 (Malaysia)
 
 DISAHKAN: Ijamm requested implementation from main v2.20.0 of the previously supplied Developer Tools SOR, including separate development and production commands. This domain owns developer access, sandbox fixtures and diagnostic controls. Existing card/combat/event/motion owners still own gameplay.
 
@@ -95,3 +95,7 @@ Relevant checks: npm run check; node --test tests/dev-tools.test.cjs tests/relea
 ## Extended sandbox tools — 24 October 2026
 
 DISAHKAN: add arbitrary map-node access across both stages, God Mode preventing HP loss, direct card insertion with copies/upgrade/Hand-or-draw, and one-click access to all 15 Mystery events. Ship only to dev-tools. These use the production renderer inside the isolated Hub preview, not the durable player run. Teleport uses a valid synthetic route prefix and preserves inventory; pending questions/choices must be finished. Card/Hand limits and Passive rules stay authoritative. Auto event fixtures satisfy prerequisites explicitly. God Mode is runtime-only, carries no save field and is unsuitable for balance evidence. [Current feature catalogue and limitations](../DEV_FEATURES.md).
+
+## Exact questions, status editor and bug reproduction — 24 October 2026
+
+DISAHKAN: Ijamm authorizes the five recommendations in the current feature guide, branch-only. Add exact-ID/consumer/language fixtures; validated native buff/debuff values and expiry; explicit one-way player-save copy/import; local HTML bug reports with optional user-selected screen capture; and four built-in real-engine scenarios. Preserve random sampling, authored question contents, profile-specific saves, native status caps/expiry and existing God/map/card tools. Unsupported status/expiry combinations are rejected rather than inventing new mechanics. The screenshot permission picker is browser-owned. No capture, report upload or player import occurs automatically. See docs/DEV_FEATURES.md.

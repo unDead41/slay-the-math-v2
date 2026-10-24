@@ -1,4 +1,4 @@
-# Feature Dev — 2.31.1-dev.2
+# Feature Dev — 2.31.1-dev.3
 
 Branch: `dev-tools`. DISAHKAN: kemas kini di branch ini sahaja; jangan merge ke main tanpa arahan baharu.
 
@@ -31,12 +31,23 @@ Run `npm run start:prod`, buka http://localhost:4173, hidupkan Dev pada main men
 - Restart selepas teleport/tambah kad bermula daripada baseline preview yang baru diedit. God/free-map ialah toggle sementara, bukan medan save.
 - Auto Setup event menggantikan preview dengan fixture baharu; ia tidak mengubah save pemain atau memalsukan jawapan/ganjaran event.
 
-## Cadangan seterusnya — belum diimplementasikan
+## Lima feature tambahan — sudah tersedia
 
-1. Pilih ID soalan tertentu dan bahasa untuk mengulang bug soalan dengan tepat.
-2. Tambah/buang status buff/debuff dengan stack dan duration tertentu.
-3. Salin save pemain ke sandbox melalui tindakan jelas, tanpa menulis balik perubahan.
-4. Butang laporan bug yang mengumpulkan screenshot, versi, seed, node, deck dan log.
-5. Preset senario khas: HP rendah, Hand penuh, draw kosong dan tiga Passive aktif.
+| Feature | Cara guna |
+| --- | --- |
+| Exact Question | Questions & Status → pilih satu daripada 120 ID, konteks Predict/Artifact/Mystery dan BM/English → Open Exact Question. Membuka fixture baharu; Mystery memilih event topik yang sepadan. |
+| Status editor | Questions & Status → target, status, value dan expiry → Set Status. Nilai 0 membuang status. |
+| Salin save pemain | Dalam main menu/Settings production, unlock Dev → Copy Player Run to Dev. Dalam Hub → Presets → Load Copied Player Run. Atau pilih fail Export Save melalui Import Player Save. |
+| Bug report | Logs → tulis nota → Capture Screen + Download Report. Pilih tab/tetingkap dalam prompt browser. Fail HTML tunggal mengandungi screenshot dan data diagnosis. Pilihan tanpa screenshot juga tersedia. |
+| Built-in scenarios | Presets → pilih Low HP, Full Hand, Empty Draw pile atau Three Active Passives → Launch Built-in Scenario. |
 
-Feature ini cadangan sahaja. Jangan gambarkan ia sudah ada.
+### Status dan expiry sebenar
+
+Weak/Vulnerable disokong pada pemain/musuh, maksimum 3 stack. Native expiry menggunakan peraturan engine; pilihan Current turn juga tersedia. Thorns pemain mengikut cap dan tamat selepas enemy phase. Block pemain/musuh, Strength/Agility pemain (0–30 modifier combat) dan Defense musuh juga disokong. Kombinasi yang tidak disokong atau duration tidak sah ditolak. Strength/Agility menggunakan saluran modifier combat sedia ada; ia bukan Passive baharu. Defense pemain ditentukan oleh mekanik Passive; jangan memalsukan nilai yang melanggar validator. Editor tidak mencipta duration beberapa turn yang tiada dalam engine.
+
+### Pengasingan dan diagnosis
+
+- Exact Question mengehadkan candidate bank hanya sepanjang panggilan synchronous fixture, dan sentiasa memulihkan bank asal dalam finally. Jawapan, hints dan validator asal kekal. Setiap preview ialah run baharu, jadi ia boleh mengulang ID untuk diagnosis tanpa mengubah polisi non-repeat biasa.
+- Copy Player Run membaca hanya save profil aktif setelah butang ditekan, menyimpan satu salinan sementara dalam session transfer dan tidak menulis ke key save asal. Hub memuatkan profil balance yang sama melalui URL. Import yang rosak/berbeza profil ditolak; salinan transfer dibuang selepas import berjaya. Tiada import automatik.
+- Capture screenshot memerlukan HTTPS/localhost, browser yang menyokong Screen Capture dan pilihan/izin pengguna setiap kali. Stream dihentikan selepas satu frame atau kegagalan. Jika dibatalkan, tiada report screenshot dicipta. Gunakan report tanpa screenshot jika capture tidak disokong. Fail hanya dimuat turun, tidak diupload.
+- Low HP menetapkan 1 HP; Full Hand memindahkan kad fizikal dari Draw; Empty Draw memindahkan Draw ke Discard; Three Active Passives memainkan tiga kad Passive sebenar melalui engine. Nilai/kos/limit mekanik asal tidak ditukar.

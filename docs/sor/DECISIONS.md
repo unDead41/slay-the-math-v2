@@ -556,3 +556,7 @@ DISAHKAN: Ijamm requests production Dev ON/OFF with password demo41, branch dev-
 ## Extended developer sandbox — 24 October 2026
 
 DISAHKAN: Ijamm requests free map access, invulnerable HP, immediate card insertion and access to all 15 Mystery events in the production Dev sandbox. Keep source mechanics, saves and normal progression unchanged. Current branch only; no main publication. Suggestions in docs/DEV_FEATURES.md remain CADANGAN.
+
+## Developer diagnostics — 24 October 2026
+
+DISAHKAN: apply the five previously proposed developer features on dev-tools only. Include 120 exact question IDs in three contexts with language selection, supported native status edits, explicit copied player-save import, local bug report/screenshot export and four built-in scenarios. Keep main unchanged and player data isolated.

@@ -447,3 +447,7 @@ Branch 2.31.1-dev.1: add password-gated production Dev in main menu and Settings
 ## Extended developer sandbox — 24 October 2026
 
 2.31.1-dev.2 on dev-tools: add all-node map clicks/teleport, God ON/OFF, insert normal/upgraded card copies into deck and combat zones, one-click eligible fixtures for all 15 Mystery events, and a current feature guide. Retain production password and player-storage isolation.
+
+## Developer diagnostics — 24 October 2026
+
+2.31.1-dev.3: implement exact-question fixtures, validated status editor, explicit profile-aware player-save transfer/import, local HTML reports with optional user-selected screenshot, and Low HP/Full Hand/Empty Draw/Three Active Passives scenarios. Preserve existing dev and production password workflows.

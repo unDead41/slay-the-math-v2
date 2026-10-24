@@ -3,10 +3,15 @@
  const Log=typeof module!=='undefined'?require('./combat-log.js'):root.DCCombatLog;
  const Flow=typeof module!=='undefined'?require('./card-flow.js'):root.DCCardFlow;
  let catalog=Object.fromEntries(data.cards.map(c=>[c.id,c]));
- const currentData=data,currentCatalog=catalog,legacyData=data.legacyEffectsData,legacyCatalog=legacyData&&Object.fromEntries(legacyData.cards.map(c=>[c.id,c]));
+ const currentData=data,currentCatalog=catalog,legacyData=data.legacyEffectsData,legacyCatalog=legacyData&&Object.fromEntries(legacyData.cards.map(c=>[c.id,c])),archives=data.archivedEffectsData||{};
+ const archivedCatalogs=new Map(Object.values(archives).map(d=>[d,Object.fromEntries(d.cards.map(c=>[c.id,c]))]));
  // Every action is synchronous. Reentrant binding keeps old saves and pending
  // choices on their original definitions without replaying HP, RNG or costs.
- function withRun(r,fn){if(!r||r.version!==1)return fn();const priorData=data,priorCatalog=catalog,legacy=!!(legacyData&&r.cardRulesVersion===undefined&&!r.balanceState);data=legacy?legacyData:currentData;catalog=legacy?legacyCatalog:currentCatalog;try{return fn();}finally{data=priorData;catalog=priorCatalog;}}
+ function withRun(r,fn){if(!r||r.version!==1)return fn();const priorData=data,priorCatalog=catalog;
+  data=!r.balanceState&&legacyData&&r.cardRulesVersion===undefined?legacyData:!r.balanceState&&typeof r.cardRulesVersion==='string'&&Object.hasOwn(archives,r.cardRulesVersion)?archives[r.cardRulesVersion]:currentData;
+  catalog=data===legacyData?legacyCatalog:data===currentData?currentCatalog:archivedCatalogs.get(data);
+  try{return fn();}finally{data=priorData;catalog=priorCatalog;}
+ }
  function statusDamage(n,weak,vulnerable){return data.effectsVersion?Math.floor(Math.max(0,n)*(weak?100-data.status_definitions.weak.reduction_percent:100)*(vulnerable?100+data.status_definitions.vulnerable.bonus_percent:100)/10000):Math.max(0,n+(vulnerable?2:0)-(weak?2:0));}
  function decay(status,key){if(status[key]>0){status[key]--;if(!status[key])status[key+'Until']=0;}}
  const categoryRole={attack:'attack',defend:'guard',skill:'tactic',passive:'passive'};

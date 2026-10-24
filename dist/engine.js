@@ -7,10 +7,9 @@ const CC=typeof module!=='undefined'?require('./card-combat.js'):root.DCCardComb
 const P=typeof module!=='undefined'?require('./combat-predict.js'):root.DCCombatPredict;
 const Log=typeof module!=='undefined'?require('./combat-log.js'):root.DCCombatLog;
 const Flow=typeof module!=='undefined'?require('./card-flow.js'):root.DCCardFlow;
-const ordinaryCards=C.cards,priorCards=CC.definitionData?.()?.legacyEffectsData?.cards;
-const legacyCards=priorCards?{...ordinaryCards}:null;
-if(legacyCards)for(const d of priorCards)legacyCards[d.id]={...ordinaryCards[d.id],cost:d.energy.kind==='fixed'?d.energy.amount:'X',text:d.mechanic_notes?.en||ordinaryCards[d.id].text};
-function rulesAction(r,fn){return (CC.withRun||((run,resolve)=>resolve()))(r,()=>{if(!r||r.version!==1)return fn();const previous=C.cards;C.cards=!CC.definitionData?.()?.effectsVersion&&legacyCards?legacyCards:ordinaryCards;try{return fn();}finally{C.cards=previous;}});}
+const ordinaryCards=C.cards,cardMetadata=new Map([[CC.definitionData?.(),ordinaryCards]]);
+function metadataFor(data){if(!data?.cards)return ordinaryCards;if(!cardMetadata.has(data)){const cards={...ordinaryCards};for(const d of data.cards)cards[d.id]={...ordinaryCards[d.id],cost:d.energy.kind==='fixed'?d.energy.amount:'X',text:d.mechanic_notes?.en||ordinaryCards[d.id].text};cardMetadata.set(data,cards);}return cardMetadata.get(data);}
+function rulesAction(r,fn){return (CC.withRun||((run,resolve)=>resolve()))(r,()=>{if(!r||r.version!==1)return fn();const previous=C.cards;C.cards=metadataFor(CC.definitionData?.());try{return fn();}finally{C.cards=previous;}});}
 
 const artifactContext={draw,deal,notify};
 const mysteryContext={card,draw,startBattle,finishNode};

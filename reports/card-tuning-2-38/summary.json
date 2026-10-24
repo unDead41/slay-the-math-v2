@@ -1,0 +1,120 @@
+{
+  "base": "6376a222169815af582cf55aa4794f3c809a3515",
+  "candidate": "2.38.0-card-tuning.1",
+  "seeds": [
+    424240,
+    424241
+  ],
+  "predict": "high: synthetic 85% first correct",
+  "skill": "intermediate",
+  "enemies": [
+    "wisp",
+    "golem",
+    "dealer"
+  ],
+  "archetypes": [
+    "attack",
+    "block"
+  ],
+  "observation": "Identical private planning runtime on both revisions; hypothetical choice estimates excluded.",
+  "interpretation": "Paired exploratory combat contexts, no artifacts; outcomes may diverge after changed choices; not pupil win rates or exhaustive combo validation.",
+  "cells": 96,
+  "encounters": 384,
+  "errors": [],
+  "invalid": [],
+  "censored": [],
+  "cards": [
+    {
+      "mode": "ordinary",
+      "name": "Last Page",
+      "pairs": 24,
+      "beforeWins": 20,
+      "afterWins": 19,
+      "meanUtilityDelta": -4.333333333333333,
+      "meanTurnDelta": 0.7083333333333334,
+      "targetPlaysBefore": 19,
+      "targetPlaysAfter": 53
+    },
+    {
+      "mode": "ordinary",
+      "name": "Recall",
+      "pairs": 24,
+      "beforeWins": 24,
+      "afterWins": 24,
+      "meanUtilityDelta": 0.5416666666666666,
+      "meanTurnDelta": -0.20833333333333334,
+      "targetPlaysBefore": 15,
+      "targetPlaysAfter": 22
+    },
+    {
+      "mode": "ordinary",
+      "name": "Mana Barrier",
+      "pairs": 24,
+      "beforeWins": 20,
+      "afterWins": 20,
+      "meanUtilityDelta": 0.1388888888888887,
+      "meanTurnDelta": 0.16666666666666666,
+      "targetPlaysBefore": 97,
+      "targetPlaysAfter": 100
+    },
+    {
+      "mode": "ordinary",
+      "name": "Rune Strike",
+      "pairs": 24,
+      "beforeWins": 22,
+      "afterWins": 22,
+      "meanUtilityDelta": 0,
+      "meanTurnDelta": 0,
+      "targetPlaysBefore": 136,
+      "targetPlaysAfter": 136
+    },
+    {
+      "mode": "master",
+      "name": "Last Page",
+      "pairs": 24,
+      "beforeWins": 21,
+      "afterWins": 19,
+      "meanUtilityDelta": -8.77724358974359,
+      "meanTurnDelta": 1.7916666666666667,
+      "targetPlaysBefore": 71,
+      "targetPlaysAfter": 133
+    },
+    {
+      "mode": "master",
+      "name": "Recall",
+      "pairs": 24,
+      "beforeWins": 20,
+      "afterWins": 22,
+      "meanUtilityDelta": 9.05448717948718,
+      "meanTurnDelta": 0.875,
+      "targetPlaysBefore": 22,
+      "targetPlaysAfter": 22
+    },
+    {
+      "mode": "master",
+      "name": "Mana Barrier",
+      "pairs": 24,
+      "beforeWins": 18,
+      "afterWins": 18,
+      "meanUtilityDelta": 0,
+      "meanTurnDelta": 0,
+      "targetPlaysBefore": 150,
+      "targetPlaysAfter": 150
+    },
+    {
+      "mode": "master",
+      "name": "Rune Strike",
+      "pairs": 24,
+      "beforeWins": 24,
+      "afterWins": 24,
+      "meanUtilityDelta": 0,
+      "meanTurnDelta": 0,
+      "targetPlaysBefore": 181,
+      "targetPlaysAfter": 181
+    }
+  ],
+  "measurementCandidateMasterDefinitionHash": "4ad6754290f8de93b80c8f3e56376eda93530cfe29200d44bfb398a0bc211d4c",
+  "finalCandidateMasterDefinitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+  "postMeasurementChange": "Restored Last Page Draw/Hand glossary tokens only; all card numbers/actions/lifecycles and archived definitions deep-equal measurement source.",
+  "finalNumericParityVerified": true
+}

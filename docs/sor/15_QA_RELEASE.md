@@ -215,3 +215,8 @@ Before branch publication verify current versus archived rules, signed values, a
 ## Status explanations main integration — 2.39.0
 
 DISAHKAN: Ijamm now requests publishing all six improvements from icon81533b3 after education main2.38.0. This supersedes the icon preview's branch-only boundary. Preserve current education source/report/Google owners and Settings-only Dev controls. Integrate actual units/timing, ten bilingual explanations, Normal/Large status display, three approved Block-family variants, comparison summaries and bounded icon readiness/fallbacks. Preserve numerical rules, saves/RNG, original card/artifact/model/audio assets and Publish Handler ownership. [Current main audit and fresh evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+
+## Card tuning main publication — 2.40.0
+
+DISAHKAN: Ijamm now authorizes publishing the completed card follow-up to main and updating the version. Integrate bb5f93b with current main ade5d3a /2.39.0 as2.40.0, preserving education reports/hints, status explanations/readiness and Dev Settings. Three approved card values and AI actual-choice accounting retain their feature owner; ordinary v0/v1 rules/payments/offers and Master candidate.5 keys remain separated. [Fresh combined-tree evidence and limits](../CARD_TUNING_MAIN_2_40_0.md).

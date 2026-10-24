@@ -1,8 +1,12 @@
 # Slay the Math — Set of Rules
 
+Current main integration: [game2.40.0](docs/CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
+
+Historical feature card owner: [2.38.0-card-tuning.1](docs/CARD_TUNING_2_38_0.md), ordinary `card-effects-2` and Master candidate.5. Prior unmarked/v1 ordinary saves retain their rules; historical Master cohorts remain separate. [Audit and handoff](docs/audits/card-effects/LATEST.md).
+
 Current cross-branch audit and project-wide guidance: [Master SOR](MASTER_SOR_PROJECT.md), version 1.2.0, 24 October 2026. Read it first, followed by the relevant latest audit/handoff, before branch work. Every branch update includes a scoped before/after review of confirmed problems, potential risks and improvements with evidence, priorities and limits. Read through [AGENTS.md](AGENTS.md); preserve the existing governance/domain owners. GitHub publication provides repository guidance, not automatic ChatGPT Project setup. Mathematics Slayer remains a proposed name; this documentation update does not rename the game.
 
-Current card rules, game 2.34.0: [approved card effects](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md). Percentage statuses apply throughout their attack phase; prior ordinary saves and historical reports retain their original definitions. Current Master identity is candidate.4. AI incoming-damage estimates and support attribution use the active rules.
+Earlier main card rules, game 2.34.0: [approved card effects](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md). Percentage statuses apply throughout their attack phase; prior ordinary saves and historical reports retain their original definitions. That release uses Master candidate.4. AI incoming-damage estimates and support attribution use the active rules.
 
 Current combat presentation, game 2.32.0: [main polish and actual verification](docs/COMBAT_MOTION_MAIN_2_32_0.md), [RPG status baseline](docs/ALYSSA_STATUS_VFX_2_28_0.md), [motion owner](docs/sor/11_ANIMATION_VFX_AUDIO.md) and [SFX search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md). Prioritized actual status/Block receipts, combined Passive labels, ten motifs and Low/Full intensity preserve existing artwork, gameplay, Master balancing and analytics.
 

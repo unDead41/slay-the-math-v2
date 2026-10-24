@@ -1,0 +1,59 @@
+{
+  "sourceLocalCommit": "91b6447290ef6a48469d9a36969f21dd64f258ec",
+  "release": "2.38.0-card-tuning.1",
+  "baselineMain": "6376a222169815af582cf55aa4794f3c809a3515",
+  "publicationMain": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+  "baselineTests": 923,
+  "finalSuite": {
+    "command": "node --test --test-concurrency=2 tests/*.test.cjs",
+    "passed": 958,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "durationMilliseconds": 255382.159383
+  },
+  "productionPortableBytes": 303171444,
+  "syntax": "PASS",
+  "currentAndV1ProductionBrowserCases": 10,
+  "additionalEffectsProductionBrowserCases": 4,
+  "masterBrowserProfiles": [
+    "easy",
+    "medium",
+    "hard"
+  ],
+  "combinedMainDevTests": 20,
+  "productionDevStaticSubpath": "PASS",
+  "aiBrowser": {
+    "encounters": 4,
+    "viewports": [
+      1440,
+      750,
+      390
+    ],
+    "historyDownloadsCancellationPlayerStorage": "PASS",
+    "sourceHash": "13a83637fc503a16936a74c80425d9ba7864b3008cbec8185eb406a143cdc5f9",
+    "note": "Before text-only glossary correction; final numeric/actions parity verified separately."
+  },
+  "independentReview": {
+    "count": 1,
+    "importantFindings": 1,
+    "fixedWithRedGreen": 1,
+    "deferredMinors": 0
+  },
+  "sha256": {
+    "dist/card-data.js": "ef00192fe6fed2851aeb37c69b2bd9fd2a3c3205893597e8d390287e2aa14a35",
+    "dist/balance-data.js": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d",
+    "dist/card-combat.js": "24db816bf336a3227d436de5e625aedc12f52af8b79cee4a043af418d2b5f97f",
+    "dist/engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
+    "tools/ai-playtester/experiments.cjs": "70251761d23c6439b6a17195d741378796f19f4fe1be29760525b4120c9d9997",
+    "tools/cards/effects.cjs": "7ccacf8fcaf3328bfe8a9fd6f52b3f00f0f7afdcb96c6a3bcfbafa7b0f2dcd9d",
+    "tools/cards/effects-v1.cjs": "38f58160b2f85245c3a19ef875e2ccf0708740f76225c09dcbae707a54b0a3b6",
+    "tools/cards/effects-v1.json": "57184282341057a1495e28f21c0569cf7664b063c0093e5932e4fa4b8b31a72d",
+    "tools/dev/access.js": "c5390c94127e61580da1bf2ff266c60d7eb6566f37c60ae0e11ebc2605f22a14",
+    "tools/dev/controls.js": "d79b78c05845f7b51318cafb222fdbdc96a4f8e0cb5ac08bd04a3e25efe9e973"
+  },
+  "limits": [
+    "Candidate balance, particularly Last Page outcomes, requires human playtests.",
+    "No pupil win rates, physical-device or live-host validation."
+  ]
+}

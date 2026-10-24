@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "cb1bbcf688d9556b55bc8fe5522b5b652309640c",
-  "gameVersion": "2.39.0",
+  "sourceCommit": "e6a7407e004b8e3f141b4e34a3b0975763a0c886",
+  "gameVersion": "2.40.0",
   "viewport": {
     "width": 1440,
     "height": 1000
@@ -14,7 +14,7 @@
       "width": 1440,
       "height": 1000,
       "bytes": 173132,
-      "sha256": "3b706acd50be41622d3ba395740c0cf8a8281ec12b2e9af13cfa8ada0f15e711",
+      "sha256": "3973bb452824968432678b9eaf17614df4ae342be6c91b9568da2687b779b80c",
       "setup": "Main Menu",
       "action": null
     },
@@ -35,8 +35,8 @@
       "file": "tutorial-map.webp",
       "width": 1440,
       "height": 946,
-      "bytes": 118034,
-      "sha256": "b830a2314e6a588b2990482cdb927251a6eb5a1d2d3d38d276f8a5597ab30d43",
+      "bytes": 117998,
+      "sha256": "4b228033e75653d92b99c9fb018a309a6208735eab5b25152254454cc01310ca",
       "setup": {
         "kind": "map"
       },
@@ -59,8 +59,8 @@
       "file": "tutorial-cards.webp",
       "width": 1384,
       "height": 976,
-      "bytes": 157286,
-      "sha256": "a2eea1aed7346dc0301c94d0d6c3f18db1f07f00d7b58210415b93dd30883f81",
+      "bytes": 157406,
+      "sha256": "ad2b098f00822580687335171d6a96b2f727138aa8fa7ba14d395bbb585d25f4",
       "setup": {
         "kind": "combat"
       },
@@ -83,8 +83,8 @@
       "file": "tutorial-focus.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 148870,
-      "sha256": "690bfea9622d8f15a513bb018c8e1593db4a3cdd3499698d57e88693acad04d9",
+      "bytes": 148848,
+      "sha256": "14ce06f8447d4abd66aea718c55efa02efc7f19e6a477b7e730a0f87a8f83cfd",
       "setup": {
         "kind": "combat",
         "focus": 1,
@@ -97,8 +97,8 @@
       "file": "tutorial-passive.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 140238,
-      "sha256": "71847944a8a0ab96145aa32dab684c1c1e304058a28830d43c60158496b7563c",
+      "bytes": 140286,
+      "sha256": "c575ef8fbe78a022ae419e30f43b3abe0b81de557b156a427cb5985b929d3690",
       "setup": {
         "kind": "combat",
         "deck": [
@@ -124,8 +124,8 @@
       "file": "tutorial-rewards.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 154990,
-      "sha256": "e5df69ad78d4fd5ad7b9125b9789de6af9a1d4942db91d98dc9e19b906a03df2",
+      "bytes": 155534,
+      "sha256": "7cc6f7b8bafe7324c1e645b565169e04ca35ff4af5a14249f9d6ea8480e52e19",
       "setup": {
         "kind": "reward"
       },
@@ -137,7 +137,7 @@
       "width": 1440,
       "height": 922,
       "bytes": 171946,
-      "sha256": "a7088641151d1d19f9afe5d4301376668782e168a1cfe52fe4c0baa808309172",
+      "sha256": "841d0a44fdd3165c03f3494e3a05732cba14677e939c1ddca59d393739298125",
       "setup": {
         "kind": "shop"
       },
@@ -148,8 +148,8 @@
       "file": "tutorial-rest.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 128840,
-      "sha256": "8ddb75dea71414644b3e99df490b371c451b5972592afcfcbc35575dc884b7e5",
+      "bytes": 128792,
+      "sha256": "af70bf18aca823b86839e176177a689a9c60479425a9e8f5a953e59d9c7f9a49",
       "setup": {
         "kind": "rest",
         "hp": 24
@@ -197,8 +197,8 @@
       "file": "tutorial-settings.webp",
       "width": 560,
       "height": 856,
-      "bytes": 32044,
-      "sha256": "29533d86fd4be4fb33451874f17799c4c67254e4c0bf8285a57fd22c3bfcdd67",
+      "bytes": 31986,
+      "sha256": "a569c4e861bf25ab8482d96e9d437a35097a95e97f191b7ca33f35049b5e57f6",
       "setup": "Main Menu",
       "action": "saves"
     },
@@ -216,7 +216,7 @@
     }
   ],
   "runtimeInputs": {
-    "index.html": "31525fbc099a418989657320067dbcaa42a6fb292529fb4d35123e7eb96c3e0b",
+    "index.html": "f4ed832ff9bda520cca26ec504d3946c44e408752b526659dd7ea5b686189e24",
     "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
     "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
     "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
@@ -246,9 +246,9 @@
     "status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee",
     "tutorial.css": "e8bec001a3d6c2b24baf9d01ed83ab59b1bba875f0c3adbf2ebf1cd399c2d7db",
     "icon-clarity.css": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd",
-    "release.js": "580f66b393c2750860aa20cb14f8cb15ebf226d632bdaaaebd9bf84edbb0c4c3",
-    "card-data.js": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148",
-    "balance-data.js": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b",
+    "release.js": "580132bf469bf6becab2354fda2cf8ce99ddedb0c29a2f2120af30b4e64747cc",
+    "card-data.js": "ef00192fe6fed2851aeb37c69b2bd9fd2a3c3205893597e8d390287e2aa14a35",
+    "balance-data.js": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d",
     "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
     "icon-assets.js": "0b97b47759ff7dbaf556174bbec8b68f632ba6ca34520a891c30eaacfd7ed28a",
     "icon-readiness.js": "a53d351a69f053dda5ca1f53e75f42d5116caaeed6f5dac98335eb55e5794414",
@@ -274,8 +274,8 @@
     "combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
     "combat-predict.js": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a",
     "card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
-    "card-combat.js": "9f088cbf5777fa9c474b378097dbb2e0d549f569b56b508d803fd1329f0aed57",
-    "engine.js": "51c9b3ba468a764340a5b04dbda0a5e3d597a9afb7878c62b32b9fae45c0fc42",
+    "card-combat.js": "24db816bf336a3227d436de5e625aedc12f52af8b79cee4a043af418d2b5f97f",
+    "engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
     "music-data.js": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3",
     "audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
     "audio.js": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17",
@@ -305,5 +305,5 @@
     "tutorial.js": "1c10f2fc3e8c33d3e5dbf37d9b341b825eccb37385c08df8a4ea2a9372a6e803",
     "app.js": "cd258dcb372b68091d68c621356356ca917b63b57b55c1fbd8f2956aeb31b80b"
   },
-  "sourceWorkingTreeDirty": true
+  "sourceWorkingTreeDirty": false
 }

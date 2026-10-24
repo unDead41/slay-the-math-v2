@@ -710,6 +710,13 @@ Publication authorization: Ijamm subsequently requests pushing this Settings-onl
 
 DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.
 
+
+## 24 October 2026 — Three-card audit follow-up
+
+- **DISAHKAN:** “okay update dekat branch kamu dulu ni please!!” authorizes implementing the three audit recommendations and confirmed AI observation fix on the assistant branch only. Do not update main under the earlier 2.34.0 approval.
+- **DITERUSKAN / PLAYTEST:** Last Page 1 Energy, Draw 2 +1 empty; Recall 0 Energy + Exhaust; ordinary Mana Barrier 7X. Preserve Master Mana Barrier bonuses and growth Passive numbers. Version 2.38.0-card-tuning.1, ordinary marker2 and separate Master candidate.5. Preserve all prior ordinary definitions and pending payment semantics. [Owner](../CARD_TUNING_2_38_0.md).
+- **BELUM DISAHKAN:** Universal card balance, exhaustive combinations and pupil win rates; seeded AI evidence remains policy-dependent.
+
 ## Release metadata correction — 2.37.1
 
 24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.
@@ -733,3 +740,8 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 **DISAHKAN:** Ijamm requests publishing codex/icon-clarity-audit81533b38b8c7be1d897c3acc282f749df9beaeab to main after the education publication. Use maincb1bbcf688d9556b55bc8fe5522b5b652309640c (2.38.0) as first parent and the icon feature as second parent; publish2.39.0. This supersedes the earlier icon branch-only boundary.
 
 **IMPLEMENTED:** Merge status presentation and readiness with the existing game report controller. Preserve all education scripts/generated owners, current Dev Settings access and both script-check/test sets. Regenerate launchers and all tutorial screenshots from the combined UI. Three approved runtime pictures are added while original V1/card/artifact art stays intact. Historical932/947 test runs remain separate from fresh combined verification. [Audit, validation and limits](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+
+## DEC-20261024-CARD-TUNING-MAIN — Publish the three-card follow-up
+
+**DISAHKAN:** “okay then push dekat main then update the version!!” supersedes the card follow-up's earlier assistant-branch-only boundary. Merge feature bb5f93b180616add5c7e16bb85fc91d9621d37df with current main ade5d3a21e55b9d2911bfa935c8095c95801bd8c as2.40.0. Preserve current education/report/Google, icon/readiness, Dev Settings and both decision histories. Keep exact approved card values, archived ordinary rules and separate Master candidate.5; no extra balance change. [Main release and fresh checks](../CARD_TUNING_MAIN_2_40_0.md).

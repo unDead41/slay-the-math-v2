@@ -107,3 +107,13 @@ The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_M
 ## Approved card-effects revision — 2.33.0
 
 DISAHKAN: Ijamm approves all card-audit proposals, initially for feature-branch publication; the later “okay push ke main” instruction authorizes integration as game 2.34.0. [Main integration](../CARD_EFFECTS_MAIN_2_34_0.md). The new ordinary/Master percentages, phase timing, card values, fallback search, Passive growth/activation and prior-save contracts supersede the corresponding earlier rules for new runs. Owner: [Card effects 2.33.0](../CARD_EFFECTS_2_33_0.md). Unmarked ordinary runs retain their original definitions; do not reinterpret old receipts.
+
+
+## Card tuning follow-up — 2.38.0-card-tuning.1
+
+DISAHKAN: Ijamm authorizes updating the assistant branch only after the 40-card audit. Last Page becomes Draw 2 +1 empty-Hand at 1 Energy; Recall costs 0 and retains Exhaust; ordinary Mana Barrier becomes 7X. Master Mana Barrier and both growth Passives retain their numbers. New ordinary marker `card-effects-2` preserves unmarked and `card-effects-1` runs, pending payments and opened offers. Master candidate.5 uses separate save keys. Actual AI choice commits are observed after policy ranking. [Current owner and verification](../CARD_TUNING_2_38_0.md). Numerical tuning is a playtest candidate, not verified pupil balance.
+
+
+## Card tuning main publication — 2.40.0
+
+DISAHKAN: Ijamm now authorizes publishing the completed card follow-up to main and updating the version. Integrate bb5f93b with current main ade5d3a /2.39.0 as2.40.0, preserving education reports/hints, status explanations/readiness and Dev Settings. Three approved card values and AI actual-choice accounting retain their feature owner; ordinary v0/v1 rules/payments/offers and Master candidate.5 keys remain separated. [Fresh combined-tree evidence and limits](../CARD_TUNING_MAIN_2_40_0.md).

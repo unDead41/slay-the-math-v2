@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## Game2.40.0 — Three-card tuning and corrected AI observation on main
+
+Integrate the reviewed card follow-up with2.39.0: Last Page2+1 empty-Hand, Recall0 Energy +Exhaust, ordinary Mana Barrier7X; preserve old ordinary rules/choices/offers and Master candidate.5 isolation. Actual AI choice commits are observed separately from hypothetical rankings. Keep all current education reports/clearer hints, icon explanations/readiness and Settings-only Dev controls; regenerate package-derived release/cache/launchers. [Main scope, audit and fresh verification](../CARD_TUNING_MAIN_2_40_0.md).
+
 ## Game2.39.0 — Six status-icon improvements on main
 
 After education2.38.0, integrate icon81533b3: run-aware units/duration, complete ten-status BM/English explanations, Normal/Large preference, three distinct Block-family silhouettes, inline comparison summaries, and named pending/local SVG fallback controls with a bounded priority manifest. Preserve education reports/Google triage, reviewed hints, Dev Settings, numerical gameplay/saves and original artwork. [Fresh main integration evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
@@ -11,6 +15,13 @@ Integrate education-report6bfb483 with main2.37.1 while retaining Settings-only 
 ## 2.38.0-icons.1 — 24 October 2026 — Explained statuses, branch only
 
 Apply the six approved follow-ups on codex/icon-clarity-audit: clear units/percentage/duration, complete shared BM/English status labels/details and VFX names, readable Normal/Large status sizing, three distinct transparent Block-family variants, brief comparison effects and real slow/error image handling. Preserve current/archived rule owners and original card/artifact art. Expose fifteen critical icons to Publish Handler. [Scope/source/export limits](../STATUS_ICON_POLISH_2_38_0.md); [fresh branch audit](../audits/icon-clarity-audit/LATEST.md).
+
+## 2.38.0-card-tuning.1 — 24 October 2026 — Assistant branch candidate
+
+- Tune Last Page to Draw 2 +1 empty at 1 Energy, Recall to 0 Energy with Exhaust, and ordinary Mana Barrier to 7X. Preserve Master Mana Barrier and growth bonuses.
+- Keep ordinary v0/v1 definitions, pending paid/unpaid choices and Shop metadata under their original rules; introduce marker2 and separate Master candidate.5 storage.
+- Exclude hypothetical AI card-choice ranking from actual Block/effect telemetry. Preserve existing main question, icon and developer-tool updates.
+- Branch-only authorization and evidence: [owner](../CARD_TUNING_2_38_0.md), [audit](../audits/card-effects/LATEST.md).
 
 ## Master SOR 1.2.0 — 24 October 2026
 

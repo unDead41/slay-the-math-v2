@@ -548,3 +548,7 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - **DITERUSKAN:** implement on `tutorial` from main `d76ad6e` / 2.30.0 as 2.31.0. Use 17 English/BM chapters, 16 real screenshots and 11 replayable actual-engine practice chapters. Independent memory-only training and a tutorial-only progress key preserve the player run, question ledger, report, artifact history and collection.
 - **DITERUSKAN:** retain current artwork/card/question/rules, existing native Tutorial controls and Learn entry. Enlarge example screenshots, preserve focus, support natural scrolling and storage failure. Timed Mystery keeps its deadline and warns before prolonged guide use. Publishing the feature branch is delivery; main integration remains separate.
 - **PERLU_VERIFIKASI:** physical devices, classroom comprehension and future screenshots after UI changes. MODEL.zip failed to arrive and is not used; the three uploaded PDFs are not modified. [Scope and verification](../TUTORIAL_2_31_0.md).
+
+## Production Dev password — 24 October 2026
+
+DISAHKAN: Ijamm requests production Dev ON/OFF with password demo41, branch dev-tools only. Build a static password dialog and Hub using existing adapters; preserve player storage and isolate previews. Supersedes production exclusion on this feature branch. Client-side gate is not server authentication. Main publication is not authorized.

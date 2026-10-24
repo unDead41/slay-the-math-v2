@@ -439,3 +439,7 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 - Merge the reviewed Google Sheets education collection feature with main 2.29.0, preserving single-enemy cards/candidate.3, legacy receipts, Alyssa status effects, original artwork/audio and Pages setup.
 - Main Menu/Settings/Practice Learning Report includes Google /exec configuration and opt-in delivery with offline pending records, current-destination consent/receipts and exact confirmed upserts. Ship one copyable Apps Script receiver and BM owner setup.
 - Regenerate package/version/cache entrypoints; retain all main QA commands and add Google build/QA. Live Google authorization/deployment remains an explicit owner step. [Main integration](../GOOGLE_SHEETS_MAIN_2_30_0.md).
+
+## Production Dev password — 24 October 2026
+
+Branch 2.31.1-dev.1: add password-gated production Dev in main menu and Settings, static Hub/sandbox build copies, session relock and relative paths for Netlify/Pages. Preserve player saves and local development mode. No main update.

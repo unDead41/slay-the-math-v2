@@ -10,4 +10,5 @@ for(const script of ['tools/import-mechanics.cjs','build-portable.cjs']){
 }
 fs.cpSync(path.join(root,'dist'),out,{recursive:true});
 const html=fs.readFileSync(path.join(out,'index.html'),'utf8');if(html.includes('/__dev/')||fs.existsSync(path.join(out,'tools/dev')))throw Error('Developer files leaked into production.');
+require('./dev/build-production.cjs')(out);
 console.log('Production player build: '+out);

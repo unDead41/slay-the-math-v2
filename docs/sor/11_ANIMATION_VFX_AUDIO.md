@@ -1,6 +1,144 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.1.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.8.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+
+## Penerbitan branch — 25 Oktober 2026
+
+**DISAHKAN:** Ijamm membenarkan push preview siap ke `combat-animation` sahaja. Ini menggantikan batas tiada push bagi preview V4–V10 di bawah, tanpa membenarkan integrasi runtime, merge main atau deployment. Branch berasaskan main 2.43.0; game runtime dan versi release dikekalkan. [Audit dan handoff](../audits/combat-animation/LATEST.md).
+
+## Identiti Passive V10 — perbezaan siluet yang ketara
+
+**MOT-28 (DISAHKAN):** Ijamm menunjukkan Blazing Spirit, Growing Flame dan Last Ember serentak dalam pelan atas V9 (`image(20261024-153100).png`) dan mendapati elemen tambahannya masih kelihatan sama. Bezakan tiga itu dan semak kesemua sepuluh Passive. Perbezaan mesti jelas melalui bentuk utama serta gerakan, termasuk pada saiz/layer sama; perbezaan warna sahaja tidak mencukupi. Asas circle bersama dalam MOT-11 tetap sama.
+
+**DITERUSKAN reka bentuk preview:** jadual ini menggantikan motif V4 dalam MOT-13 apabila bercanggah. Nilai/warna ini ialah persembahan, bukan perubahan kesan kad.
+
+| Passive | Siluet utama V10 | Gerakan pengenal |
+| --- | --- | --- |
+| Blazing Spirit | Empat pedang bara jingga dengan bilah lurus, palang hulu dan pommel | Beredar searah jam; lidah api dan jejak bara |
+| Growing Flame | Lima bunga radial emas, setiap satu enam kelopak dan benih pusat | Kelopak mengembang/menguncup; kedudukan hanya berayun lembut |
+| Swift Step | Tiga komet sabit panjang | Luncuran pantas dengan ekor berlapis |
+| Battle Rhythm | Dua belas kumpulan bar equalizer | Gelombang ketinggian/cahaya berjalan mengikut cadence |
+| Rune Armor | Enam plat perisai V dengan rune biru ais | Ayunan bertahan dan bingkai pengukuh |
+| Lasting Shield | Empat mangga dengan pemegang U dan lubang kunci turquoise | Pengunci berayun pada sambungan berkembar |
+| Grimoire Ward | Lapan gulungan azimat ungu, hujung kertas melengkung dan cop berlian | Tulisan rune menyala bergilir |
+| Ember Core | Tiga turbin jingga bergerigi, rotor tiga bilah dan hab pijar | Rotor berputar di dalam shell; hab berdenyut |
+| Clear Mind | Tiga buku terbuka dengan belahan tengah | Halaman melentur/berpusing bergilir |
+| Last Ember | Tiga jantung koral bercuping dua, retakan zigzag dan garis nadi pendek | Denyutan jantung berganda yang lembut |
+
+**MOT-29 (DITERUSKAN rawatan kejelasan):** Motif mempunyai isi lutsinar, tepi bercahaya dan garis bawah gelap untuk memisahkannya daripada geometri asas. Low mengurangkan hiasan kecil tetapi mengekalkan semua bentuk utama. Kitaran 24 saat, intro sekali, transisi 0.85 saat, urutan trigger, struktur 1/2/3 dan pemilikan lantai MOT-10 kekal. Perancang partikel stat V9, barrier, Shield V3, imej/ikon asal dan renderer pemain/musuh tidak ditukar oleh revisi identiti ini.
+
+**Semakan sebenar:** 60 variasi identiti/slot/quality mempunyai endpoint geometri dan piksel Canvas yang sama; 1,440 susunan tiga Passive berkongsi asas identik. Struktur asas dibandingkan dengan V9; 21 imej terbenam dan modul stat/barrier/Shield dikekalkan. Galeri native browser diperiksa berwarna dan grayscale, Full/Low, bersama paparan tiga motif di lantai pemain/musuh. Ini semakan preview; bukan regresi seluruh game atau ukuran FPS peranti fizikal.
+
+**Skop:** HTML V10 dan galeri perbandingan sepuluh motif, bersama SOR tempatan. “Preview dahulu” masih terpakai; tiada integrasi runtime, perubahan versi game, commit, push atau deployment. MODEL.zip tidak tersedia dan tidak digunakan. Rekod V4–V9 di bawah disimpan sebagai sejarah; nama motif terdahulu bukan reka bentuk semasa.
+
+## Kejelasan dan prestasi V9 — pemain serta musuh
+
+**MOT-25 (DISAHKAN):** Partikel stat naik/turun tidak boleh bertindih apabila dua atau tiga stat aktif serentak. Gunakan satu perancang laluan bersama bagi pemain dan musuh. Ring masih boleh bersilang mengikut rujukan V7; larangan ini untuk partikel yang bergerak naik/turun. **DITERUSKAN rawatan:** Strength menggunakan dua laluan pada x ±84, Agility ±122 dan Defense ±160 unit watak. Laluan kekal pada stat walaupun urutan ring berubah; fasa dan arah boleh berbeza tanpa berkongsi laluan. Jadual partikel dibina apabila pilihan/kualiti berubah, bukan carian perlanggaran setiap frame.
+
+**MOT-26 (DISAHKAN):** Aturan yang sama mesti berfungsi pada musuh. Preview menawarkan Alyssa, musuh atau dua-dua, dengan Alyssa menghadap kanan dan Twin Sigil Guardian asal menghadap kiri. Ketinggian badan dikalibrasi tanpa mengubah bait imej. Setiap watak mempunyai anchor, klip, cache dan fasa partikel sendiri. Dua watak disusun menegak pada ruang sempit supaya kesan tidak dikecilkan berlebihan. Paparan musuh ialah demonstrasi VFX; ia tidak memberi mekanik Passive baharu kepada musuh dalam game.
+
+**MOT-27 (DISAHKAN arah optimasi; DITERUSKAN bajet):** Kekalkan warna, bentuk runcing, arah buff/debuff dan kejelasan pada paparan padat. Tiga stat aktif menggunakan 12 partikel per watak dalam profil berbilang efek, berbanding 27 dalam V8. Auto mengawal profil mengikut jumlah efek, bajet piksel dan kos lukisan; Low/Full masih boleh dipilih. Setiap medan aura menyimpan maksimum dua permukaan tekstur; medan tidak aktif dilepaskan. Hentikan callback render ketika dijeda, tab tersembunyi atau animasi sekali sudah selesai. Nilai bajet ialah pilihan preview; ujian renderer browser bukan jaminan FPS bagi semua peranti fizikal.
+
+**Skop dipilih Ijamm:** “Preview dahulu”. Hasil ialah HTML preview pemain + musuh, bukan integrasi runtime game. Thorns radial, rantai ungu Weak, lilitan merah Vulnerable tanpa bubble, Shield V3, Passive V4, ikon dan artwork asal kekal. Tiada commit, push atau deployment oleh tugasan ini.
+
+## Status VFX V8 — Thorns radial, rantai terbuka dan partikel berfaset
+
+**MOT-22 (DISAHKAN):** Apabila menerima hit, Thorns memancarkan duri perang ke semua arah di seluruh permukaan barrier, termasuk hemisfera depan dan belakang. Semua duri terpasang menyentak keluar; pancaran duri bergerak ke luar kemudian pudar, sementara barrier kembali stabil. Ini menggantikan rawatan V6 yang hanya memanjangkan duri berhampiran impak kanan. Keadaan aktif, terbentuk dan tamat tempoh dikekalkan.
+
+**MOT-23:** **DISAHKAN:** Weak bertukar kepada rantai ungu bergradasi hitam; membran/bubble bulat shield dibuang, pautan rantai dikekalkan. Pembentukan dan pecah ketika tamat tempoh masih berfungsi. **DITERUSKAN tafsiran:** frasa Ijamm “sama juga” untuk Vulnerable ditafsir sebagai membuang bubble bulat sambil mengekalkan lilitan merah serta elektrik. Tafsiran ini dimaklumkan semasa kerja; gambar rujukan `image(20261024-140541).png` dan `image(20261024-140714).png` diperiksa tanpa mengubah imej asal.
+
+**MOT-24 (DISAHKAN arah; DITERUSKAN reka bentuk):** Partikel berbentuk bebola ditukar kepada bentuk lebih bergaya: Strength serpihan bara merah berteras pijar, Agility komet angin hijau berekor kembar, Defense kristal biru berfaset. Hujung runcing dan pergerakan mengikut arah: naik untuk buff, turun untuk debuff. Warna dan motif ring asas, serta urutan slot 1/2/3 V7 dikekalkan. Cadangan tambahan label besar ↑ STR / ↓ STR daripada perbincangan ialah **CADANGAN sahaja**, belum dipasang pada watak.
+
+**Batas:** tiada VFX lantai baharu. Shield V3, Passive V4 dan artwork/ikon asal dikekalkan. Nilai dan masa ialah persembahan HTML preview; tiada perubahan mekanik, release game, commit, push atau deployment. MODEL.zip masih tidak tersedia dan tidak digunakan.
+
+## Ring stat dan bebola V7 — asas ring yang dikekalkan
+
+**MOT-20 (DISAHKAN):** Strength merah, Agility hijau dan Defense biru mengekalkan motif ring asas stat masing-masing. Tambah bebola kecil berwarna stat yang **naik untuk buff** dan **turun untuk debuff**. Ini menggantikan kesamaan gerakan penuh buff/debuff dalam MOT-17: ring dan motif kekal sama bagi pasangan stat; arah bebola membezakan +/−.
+
+**MOT-21 (DISAHKAN susunan; DITERUSKAN rawatan preview):** Rujukan `image(20261024-122631).png` menunjukkan satu ring mendatar, dua ring menyerong bersilang dan tiga ring dengan ring ketiga mendatar. Ring 1 dimiliki stat pertama aktif, ring 2 oleh stat kedua dan ring 3 oleh stat ketiga. Warna lakaran menandakan susunan; warna sebenar kekal mengikut identiti Strength/Agility/Defense. Susunan Agility → Defense → Strength bermaksud ring 1 hijau, ring 2 biru, ring 3 merah. Satu stat tidak menghasilkan dua slot apabila ditukar antara buff dan debuff.
+
+Preview menyediakan pilihan 1/2/3 stat, +/− bagi setiap stat, buang stat dan susun semula urutan. Pertukaran +/− mengekalkan slot/jam orbit; perubahan susunan menggunakan interpolasi lembut 0.72 saat. Bebola pudar di awal/akhir laluannya supaya reset kedudukan tidak berkelip. Ini nilai persembahan preview, bukan mekanik/tempoh stat dalam game.
+
+**Batas:** lantai kekal khas untuk Passive; barrier V6, Shield V3, Passive V4 dan bait artwork/ikon asal dikekalkan. HTML preview dan SOR setempat sahaja; tiada integrasi production, version game, commit, push atau deployment baharu.
+
+## Orbit stat dan barrier V6 — sejarah dan barrier yang dikekalkan
+
+**MOT-17 (DISAHKAN):** Strength merah, Agility hijau dan Defense biru mengelilingi Alyssa dalam ruang badan, dengan jejak partikel/orbit di depan serta belakang watak seperti gambar 1. Setiap stat mempunyai motif orbit tersendiri. Buff dan debuff bagi **stat yang sama mesti berkongsi bentuk, warna dan gerakan yang sama**. Label + / − membezakan perubahan; penukaran pasangan tidak memulakan semula jam orbit. Ini menggantikan bahagian MOT-15/V5 yang meminta animasi stat turun berbeza daripada stat naik.
+
+| Stat | Warna | Motif V6 yang dikongsi buff/debuff |
+| --- | --- | --- |
+| Strength | Merah | Bilah bara berorbit, filamen dan serpihan cahaya |
+| Agility | Hijau | Sayap angin berorbit dengan jejak berkembar |
+| Defense | Biru | Simpulan kristal berfaset dan orbit pelindung |
+
+**MOT-18 (DISAHKAN):** Thorns, Vulnerable dan Weak menggunakan bentuk barrier mengelilingi badan. Setiap bahan/struktur tetap berbeza:
+
+| Status | Rujukan / bahan | Keadaan wajib | Tamat tempoh |
+| --- | --- | --- | --- |
+| Thorns | Gambar 5; perang, membran dengan duri mencucuk keluar | Aktif, terbentuk, menerima hit, tamat tempoh | Duri masuk semula, kemudian membran melarut |
+| Vulnerable | Gambar 6; lilitan merah bergradasi hitam dan sedikit elektrik | Aktif, terbentuk, tamat tempoh | Elektrik reda dan lilitan terurai |
+| Weak | Gambar 7; biru bergradasi hitam, rantai bersilang mengelilingi Alyssa | Aktif, terbentuk, tamat tempoh | **Pautan rantai pecah**, berputar dan berterbangan sebelum hilang |
+
+Gambar sumber yang diperiksa tanpa mengubah bait: `image(20261024-093607).png` (1), `image(20261024-094349).png` (5), `image(20261024-094938).png` (6), `image(20261024-095224).png` (7). Gambar 2 ialah gambaran orbit badan; gambar 3/4 menunjukkan pasangan stat turun/naik yang hendak disamakan. Rujukan memandu reka bentuk, bukan data gameplay atau aset yang ditampal terus ke VFX.
+
+**MOT-19 (DISAHKAN arah; DITERUSKAN rawatan preview):** MOT-10 kekal: hanya Passive mempunyai circle, rune atau glow yang diproyeksikan pada lantai. Orbit stat dan barrier V6 berada di badan; bahagian bawah/flying links pudar sebelum melintasi lantai. Shield V3, Passive V4 dan ikon/artwork asal dikekalkan. Motion mesti lancar, lapisan depan/belakang bertukar secara lembut, dan awal/akhir loop bersambung.
+
+Preview menggunakan orbit/aktif 12 saat, pembentukan/tamat tempoh 10 saat dan Thorns hit 8 saat. Demo berulang boleh membentuk semula barrier dengan lembut; **one-shot tamat tempoh mesti berakhir tanpa barrier atau pautan rantai**. Pertukaran Low/Full mengekalkan identiti. Nilai ini ialah pilihan persembahan preview, bukan perubahan tempoh stat/gameplay. Tiada perubahan combat/RNG/save/audio atau penerbitan Git oleh tugasan ini.
+
+Paparan gabungan tujuh status menggunakan kepadatan geometri/partikel yang lebih rendah untuk mengurangkan kos render. Profil Full/Low bagi preview setiap efek secara individu dikekalkan; pengurangan ini tidak mengubah warna atau motif utama.
+
+**Status implementasi:** 16 senario V6 (6 senario naik/turun bagi tiga stat dan 10 keadaan barrier) berada dalam HTML preview sahaja. Kontrak V5 di bawah disimpan sebagai sejarah dan digantikan apabila bercanggah dengan MOT-17–19. Tiada dakwaan integrasi game atau prestasi FPS peranti fizikal.
+
+## Buff dan Debuff V5 — sejarah identiti, material dan loop
+
+**MOT-15 (DISAHKAN):** Setiap Buff/Debuff mesti mempunyai bentuk dan gerakan utama yang unik, termasuk apabila dibandingkan dengan Shield dan Passive. Jangan menyalin bentuk utama kategori lain dengan sekadar menukar warna, arah atau kelajuan. Perubahan stat turun dan berakhir juga mesti berbeza daripada aura stat naik. Kekalkan artwork Alyssa dan semua ikon asal.
+
+| Keadaan | Motif preview V5 | Perbezaan utama |
+| --- | --- | --- |
+| Strength naik | Solar Mantle · tirai api berlapis | Aliran tegak dan filamen panas; bukan crest api Passive |
+| Agility naik | Slipstream · jejak sutera menyerong | Sapuan tirus melintasi ruang bahu; bukan orbit komet di kaki |
+| Defense naik | Bastion Ribs · rusuk berfaset | Bevel dan binaan terbuka; bukan kubah heksagon atau cop perisai Passive |
+| Thorns | Cinder Briar · dahan duri bara | Batang melengkung, cabang dan urat pijar; tiada mahkota duri lantai |
+| Weak | Heavy Shroud · kabus berat | Lipatan melendut dan gumpalan turun; bukan rantai/pautan Passive |
+| Vulnerable | Faultline · tiga tompok rekahan | Cabang rekahan tidak simetri; tiada mesh atau shatter Shield |
+| Strength turun | Spent Cinders · abu luruh | Kepingan abu, tepi bara dan jalur tenaga lusuh; bukan heliks terbalik |
+| Agility turun | Temporal Drag · gema tertahan | Hentian berperingkat dan echo mendatar; bukan reverse Slipstream |
+| Defense turun | Open Breach · celah pelindung | Dua rahang terbuka dan tegangan pada celah; bukan jatuhan kepingan Shield |
+| Weak berakhir | Unbound Silk · kipas sutera | Filamen terurai ke atas dan luar; tiada gelang cleanse |
+| Vulnerable berakhir | Golden Suture · jahitan cahaya | Titik sambungan bergerak ke atas, benang dan debu halus; bukan kipas Unbound Silk |
+
+**MOT-16 (DISAHKAN arah; DITERUSKAN nilai preview):** Material mempunyai isi lutsinar, tepi cahaya dan kedalaman depan/belakang yang menjaga kebolehbacaan Alyssa. Gerakan mesti lancar dan loop hujung/awal bersambung tanpa burst/reveal berulang. Preview menggunakan loop aura 12 saat, demo berakhir 8 saat dengan ruang reda pada kedua-dua hujung, serta kitaran bersama 24 saat bagi gabungan enam aura dan Shield 8 saat. Pembentukan masuk/replay 0.95 saat berada di luar loop stabil. Low mengekalkan siluet/makna, mengurangkan filamen dan partikel. Tiada audio baharu atau perubahan gameplay/RNG/save.
+
+MOT-10 kekal mengatasi semua rawatan aura: tiada bulatan, rune, kolam cahaya atau partikel baharu pada/bawah lantai. Tekstur aura V5 berakhir 38 unit visual di atas pivot kaki, dengan fade sebelum had itu. Shield V3 dan Passive V4 tidak ditukar oleh revisi ini. Nilai contoh stat dalam preview bukan resolusi tempur.
+
+**Status:** V5 ialah HTML preview bersama kemas kini SOR tempatan. Tiada integrasi runtime, perubahan versi game, push branch/main atau deployment. Semakan meliputi kontrak loop/identiti, rendering browser dan ruang lantai; prestasi peranti fizikal serta kelulusan rasa visual Ijamm masih berasingan.
+
+## Passive magic circles dan pemilikan lantai — 24 Oktober 2026
+
+**MOT-10 (DISAHKAN):** VFX yang diproyeksikan pada lantai di kaki Alyssa khas untuk Passive. Buff, debuff dan shield tidak mempunyai magic circle, rune lantai, gelang lantai, kolam glow atau partikel di bawah floor. Aura badan, permukaan shield dan impak menggunakan ruang badan; hujungnya berhenti/pudar di atas satah kaki. Ini mengatasi contoh lama Strength/Defense/Thorns dan floor glow shield. Artwork, bayang asal dan persekitaran dungeon bukan VFX baharu dan dikekalkan.
+
+**MOT-11 (DISAHKAN):** Semua Passive berkongsi asas circle yang sama pada bilangan trigger yang sama, termasuk warna asas, geometri, rune umum dan timing. Satu trigger: bulatan ringkas. Dua: geometri tambahan. Tiga: circle berlapis paling kompleks, berasaskan gambar 15 yang diberikan Ijamm (`image(20261024-064500).png`). Identiti atau urutan Passive hanya menentukan elemen motif tambahan; ia tidak menukar asas tiga-trigger.
+
+**MOT-12 (DISAHKAN):** Layer ditentukan oleh urutan trigger sebenar, bukan ID, senarai kad atau susunan abjad. Trigger pertama → layer 1, kedua → layer 2, ketiga → layer 3. A → B dan B → A mesti bertukar penempatan. Dalam preview ini layer 1 ialah gelang dalam, 2 tengah dan 3 luar. Tambahan/reorder menggunakan transisi lembut dan mesti mengambil posisi semasa jika diganggu. Removal dalam preview memampatkan slot tanpa menukar urutan relatif yang tinggal. Untuk integrasi game, terima turutan receipt yang telah commit; jangan menyimpulkan trigger daripada pemilikan kad atau log lama. Had tiga yang dipaparkan ialah skop visual preview, bukan perubahan had mekanik Passive.
+
+**MOT-13 (DISAHKAN):** Setiap sepuluh Passive mesti mempunyai motif tambahan yang jelas berbeza melalui bentuk dan gerakan. Semua motif/partikel kekal pada satah kaki dan pada gelangnya sendiri; tiada aura badan atau kesan lantai buff yang disamarkan sebagai Passive.
+
+| Passive | Motif preview V4 |
+| --- | --- |
+| Blazing Spirit | Crest api melentur, teras pijar, ekor filamen |
+| Growing Flame | Kuntum berkelopak dan pengembangan yang lembut |
+| Swift Step | Komet angin, ekor berlapis dan hujung bulu |
+| Battle Rhythm | Bar resonans, simpulan beat dan gelombang ritma |
+| Rune Armor | Plat perisai, pengukuh sisi dan teras rune |
+| Lasting Shield | Pautan bercantum, gelang berkembar dan pengunci |
+| Grimoire Ward | Cop heksagon rune dan sambungan filamen |
+| Ember Core | Reaktor heksagon, teras segi tiga dan corona bara |
+| Clear Mind | Folio terbuka, halaman melentur dan aliran helaian |
+| Last Ember | Nyala bara, denyutan berganda dan riak degupan |
+
+**MOT-14 (DISAHKAN arah; DITERUSKAN nilai preview):** Pergerakan lancar dan hujung/awal loop bersambung. Preview menggunakan kitaran berkala 24 saat, easing quintic 0.85 saat untuk pertukaran layer dan intro 1.15 saat yang hanya dimainkan ketika masuk/replay. Loop tidak mengulang intro. Low mengekalkan identiti/geometri utama dan mengurangkan hiasan. Jeda, resume, kelajuan, scrub dan resize tidak melompatkan posisi. Reduced Motion bermula dijeda. Semua ini presentation sahaja, tidak mengubah gameplay/RNG/save atau menambah audio.
+
+**Status implementasi:** MOT-10–14 diterapkan dalam `STM_Stat_Animations_Preview.html` V4, bukan runtime game 2.32.0. SOR ini merekod permintaan terkini untuk integrasi seterusnya; jangan mendakwa game sudah mematuhinya. Tiada push atau deployment oleh tugasan preview ini.
 
 ## Audio source pack v1 — sejarah 22 Oktober 2026
 

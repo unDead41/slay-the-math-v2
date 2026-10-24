@@ -1,5 +1,21 @@
 # Slay the Math — Set of Rules
 
+Branch preview publication, 25 October 2026: [Combat VFX V10 audit and handoff](docs/audits/combat-animation/LATEST.md), [preview and sources](previews/combat-vfx/README.md). Ijamm authorizes pushing the completed V10 preview to `combat-animation` only. Its branch now uses current main 2.43.0; these visuals remain standalone and are not installed in the production game.
+
+Latest Passive identity preview, 24 October 2026: [MOT-28–29 · Ten visibly distinct Passive ornaments](docs/sor/11_ANIMATION_VFX_AUDIO.md). V10 replaces the three similar flame/leaf motifs with ember swords, radial fireflowers and fractured hearts, and clarifies padlocks, scrolls and turbines among the remaining identities. Preserve the common circle, trigger-order layers, original art/icons and V9 stat/barrier renderer. Standalone preview and comparison gallery only; no game integration or Git publication.
+
+Latest clarity/performance preview, 24 October 2026: [MOT-25–27 · Separate stat lanes, player/enemy comparison and render budgets](docs/sor/11_ANIMATION_VFX_AUDIO.md). V9 separates simultaneous stat particles, preserves ordered rings, adds a shared player/enemy renderer, Auto quality and idle suspension. Ijamm selected **Preview dahulu**; no runtime game integration or Git publication is claimed.
+
+Latest status VFX preview, 24 October 2026: [MOT-22–24 · Radial Thorns, open chains and directional shards](docs/sor/11_ANIMATION_VFX_AUDIO.md). V8 emits brown Thorns spikes in all directions on hit, uses purple-black Weak chains without a bubble, removes Vulnerable's bubble under the stated same-treatment interpretation, and replaces stat spheres with ember/wind/crystal particles. V7 ring order, original art/icons, Shield V3 and Passive V4 remain. HTML preview/local SOR only; no production integration or Git publication.
+
+Latest stat VFX preview, 24 October 2026: [MOT-20–21 · Directional beads and ordered stat rings](docs/sor/11_ANIMATION_VFX_AUDIO.md). V7 adds rising Buff spheres and falling Debuff spheres, coloured by stat, plus one horizontal/two crossed/three layered rings in activation order. Base motifs and earlier barriers/Shield/Passive/art remain. HTML preview and local SOR only; no game integration or Git publication.
+
+Latest VFX preview, 24 October 2026: [MOT-17–19 · Shared stat orbits and status-barrier lifecycles](docs/sor/11_ANIMATION_VFX_AUDIO.md). V6 shares red/green/blue orbit geometry between each stat's buff/debuff and adds the requested brown Thorns, red-black electric Vulnerable and blue-black chained Weak. Weak expiry breaks its links. This replaces conflicting V5 design requirements in the preview only; no game integration or Git publication is claimed.
+
+Latest body VFX preview, 24 October 2026: [MOT-15–16 · Unique Buff/Debuff identities and smooth loops](docs/sor/11_ANIMATION_VFX_AUDIO.md). V5 provides eleven distinct body-space effects and preserves the Passive-only floor, Shield V3 and ordered Passive V4. Preview/SOR update only; no production integration or publication is claimed.
+
+Latest preview contract, 24 October 2026: [MOT-10–14 · Passive-only floor, shared circles and trigger-order layers](docs/sor/11_ANIMATION_VFX_AUDIO.md). Passive V4 HTML has ten unique ornaments and a shared three-trigger reference-15 structure. This new contract is implemented in the downloadable preview only; game 2.32.0 has not received these new visuals.
+
 Current branch-only Master/AI refresh **2.42.0-balance.1**: [handoff](docs/balance/master/REFRESH_2026_10_24.md), [source registry](docs/balance/master/refresh-20261024/sources.json), [audit](docs/audits/balance-master/LATEST.md). Numerical candidate.5 and existing saves remain unchanged.
 
 Current resource/runtime integration: [main2.41.0 release](docs/RUNTIME_OPTIMIZATION_MAIN_2_41_0.md), [SOR25](docs/sor/25_RUNTIME_OPTIMIZATION.md) and [latest audit](docs/audits/hosted-readiness/LATEST.md). Latest user authorization supersedes the historical feature-only boundary for this completed update.

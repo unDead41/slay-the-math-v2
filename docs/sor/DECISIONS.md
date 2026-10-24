@@ -1,5 +1,59 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-COMBAT-V10-BRANCH — Publish the completed standalone preview
+
+**DISAHKAN:** Ijamm now requests pushing the completed work to the assistant branch if it has not been pushed. Publish the V10 HTML, ten-motif gallery, editable sources and scoped verification on the existing `combat-animation` branch, based on main `2aea9057eba8ce0c23c5fdd203dfe12637c1d871` / 2.43.0. This supersedes the earlier no-branch-push boundary for this preview only. Preserve the current main runtime, original assets, language/balance owners and release version. No main merge, game VFX integration or deployment is authorized. [Audit and handoff](../audits/combat-animation/LATEST.md).
+
+## DEC-20261024-PASSIVE-V10 — Clearly different Passive silhouettes
+
+- **DISAHKAN:** the V9 screenshot's Blazing Spirit / Growing Flame / Last Ember ornaments appear too similar. Redesign those three and inspect all ten; differences must be conspicuous through silhouette and motion, not merely colour.
+- **DITERUSKAN preview treatment:** ember swords, six-petal radial fireflowers and cracked hearts replace the three flame/leaf families. Differentiate the remaining set as crescent comets, equalizers, V shields, padlocks, rolled talismans, toothed turbines and open books. Strengthen ornament contrast while preserving the shared seal, activation-order slots and floor ownership.
+- **Verification:** inspect a same-layer native browser gallery in colour/grayscale and Full/Low, compare Canvas endpoint pixels for all 60 identity/slot/quality variants, and preserve V9 stat/barrier/Shield sources plus all embedded original assets. This does not establish physical-device FPS or game integration.
+- **Scope:** downloadable V10 HTML and ten-motif gallery, local SOR only. Ijamm's preview-only choice persists; no commit, branch/main push, deployment or game version bump. Owner: [MOT-28–29](11_ANIMATION_VFX_AUDIO.md).
+
+## DEC-20261024-CLARITY-V9 — Separate particle lanes and actor-neutral preview
+
+- **DISAHKAN:** prevent overlapping upward/downward stat particles for simultaneous two/three statuses; use the same rule on enemies and optimise clarity/render cost. Ijamm explicitly selected **Preview dahulu** when asked about runtime integration.
+- **DITERUSKAN treatment:** fixed left/right channels per attribute, evenly spaced emissions, actor-specific phase, budgeted particle count, and shared player/enemy planner. Ring slots remain activation-ordered while particle channels remain stable through reordering and sign changes.
+- **DITERUSKAN preview/performance:** Alyssa / enemy / both views, original left-facing Guardian poster, calibrated actor anchors, vertical layout in narrow regions, Auto/Low/Full, bounded texture caches and idle/hidden/completed render suspension. Do not represent a browser CPU benchmark as physical-device FPS.
+- **Scope:** standalone HTML preview and local SOR only; preserve prior status identities, original art/icons, Shield V3 and Passive V4. No game code integration or Git publication. Owner: [MOT-25–27](11_ANIMATION_VFX_AUDIO.md).
+
+## DEC-20261024-STATUS-V8 — Radial Thorns, open chains and directional shards
+
+- **DISAHKAN:** Thorns hit emits brown spikes outward from all sides, including front/back, then settles. Preserve active/formation/expiry behaviour.
+- **DISAHKAN:** Weak becomes purple-black chains without its spherical membrane; links and expiry break remain. **DITERUSKAN interpretation:** Vulnerable's “sama juga” is treated as removal of its bubble while preserving red coils and electricity, as stated during work. Both supplied screenshots were inspected without altering their image bytes.
+- **DISAHKAN direction / DITERUSKAN treatment:** replace stat spheres with red ember lances, green twin-trail wind comets and blue faceted crystals. Keep up/down travel, stat colours, base ornaments and ordered ring slots. Large ↑ STR / ↓ STR actor labels remain an unimplemented suggestion.
+- **Scope:** HTML preview and local SOR only. Preserve Passive-only floor, original art/icons, Shield V3 and Passive V4. No gameplay, game-version or Git publication changes. Owner: [MOT-22–24](11_ANIMATION_VFX_AUDIO.md).
+
+## DEC-20261024-STAT-RINGS-V7 — Directional beads and ordered stat rings
+
+- **DISAHKAN:** Strength red, Agility green, Defense blue. Keep each stat's base orbit/motif, add small same-colour spheres rising for buffs and descending for debuffs. This supersedes V6's identical complete positive/negative motion.
+- **DISAHKAN:** Latest reference has one horizontal ring, two crossing tilted rings, then a third horizontal ring. Slot ownership follows activation order across the three attributes, including mixed buffs/debuffs. Actual colour follows the stat in the slot, not the drawing's slot colour. Replacing a stat's sign keeps its slot; no duplicate attribute slot.
+- **DITERUSKAN preview treatment:** 12-second steady loop, faded sphere wrap, 0.72-second ring rearrangement, ordered selection and removal in the HTML. Preserve V6 barrier frames, Shield V3, Passive V4, Passive-only floor and original artwork/icons.
+- **Scope:** downloadable HTML and local SOR only, without game integration or Git publication. The current MODEL.zip upload is unavailable and not used. Owner: [MOT-20–21](11_ANIMATION_VFX_AUDIO.md).
+
+## DEC-20261024-ORBIT-V6 — Paired stat orbits and status barriers
+
+- **DISAHKAN:** Ijamm supplies seven references and requests body orbits: Strength red, Agility green, Defense blue. Each attribute has a unique ornament, while its buff/debuff share the same ornament, colour and motion. This explicitly supersedes V5's separate positive/negative geometry for these three attributes.
+- **DISAHKAN:** Thorns is a brown protruding-spike barrier with active/formation/hit/expiry; Vulnerable is a red-to-black swirling barrier with light electricity and active/formation/expiry; Weak is a blue-to-black chain barrier with active/formation/expiry. Weak expiry must break the chain into links, rather than merely fade it.
+- **DITERUSKAN preview choices:** twelve-second stable cycles, ten-second formation/expiry demos, eight-second Thorns impact; smooth body-depth handoff and bounded material caches. Loop demos can re-form barriers; one-shot expiry leaves no barrier/links. Preserve the paired stat phase, Passive-only floor, Shield V3, Passive V4 and original embedded images/icons.
+- **Scope:** standalone HTML preview and local SOR. No game source integration, release version bump, Git push, or deployment. MODEL.zip and the latest Matematik Tingkatan 4 KSSM.pdf upload were unavailable and are not used. Owner: [MOT-17–19](11_ANIMATION_VFX_AUDIO.md).
+
+## DEC-20261024-AURA-V5 — Unique Buff/Debuff body effects
+
+- **DISAHKAN:** Ijamm requests professional material detail, smoother animation and seamless loops for every Buff/Debuff, with a unique identity even compared with other categories. Foot/floor circles remain exclusive to Passive.
+- **DITERUSKAN preview choices:** eleven distinct body-space painters for four Buffs, five ongoing Debuff/stat-loss states and two ending states. Use fire veils, diagonal slipstreams, beveled ribs, branching briars, heavy shrouds, asymmetric fractures, falling ash, staggered echoes, opening breaches, rising silk fans and repair stitches. Do not reuse Shield/Passive primary painters or just reverse a positive aura.
+- **DITERUSKAN timing:** 12-second continuous aura, 8-second ending demo with quiet seam, 24-second combined loop and one-time 0.95-second introduction. Material/opacity layers and Low/Full retain actor readability. Existing poster/icon bytes and Shield V3/Passive V4 source modules are preserved.
+- **Scope:** downloadable HTML preview and local SOR only; production gameplay, source art, audio and release metadata stay under their owners. No Git publication or deployment is performed. Native loop/floor checks are scoped to this preview, not a game-wide regression or physical-device performance claim. Owner: [MOT-15–16](11_ANIMATION_VFX_AUDIO.md).
+
+## DEC-20261024-PASSIVE-FLOOR — Shared circles, ordered layers and Passive-only floor
+
+- **DISAHKAN:** Ijamm requests professional detail and smooth looping for all ten Passive motifs. At three triggers every Passive uses the same most-complex layered circle based on reference 15; each Passive adds its own clearly distinguishable ornament.
+- **DISAHKAN:** Floor VFX are exclusive to Passive. Buff/debuff/shield do not add floor circles, projected glow or below-floor particles. First trigger owns layer 1, second layer 2, third layer 3; reversing A/B reverses their slots.
+- **DITERUSKAN preview choices:** ivory/gold shared base, inner/middle/outer concentric tracks, deterministic 24-second loop, 0.85-second interrupted-position transition and one-time 1.15-second intro. The HTML exposes ordered selection/reorder, top view, Low/Full, scrub and loop seam review. These visual values do not change card mechanics or activate untriggered Passives.
+- **Scope:** update downloadable preview and local SOR only. The existing Shield V3 retains its material/impact identities while its projected floor glow is removed. Production gameplay/code, original image bytes, icons and audio remain outside this preview revision. No new branch/main push or deployment is performed.
+- **PERLU_VERIFIKASI:** Ijamm's visual approval, physical-device performance and future receipt-backed game integration. MODEL.zip remains unavailable and is not used. Owner: [MOT-10–14](11_ANIMATION_VFX_AUDIO.md).
+
 ## DEC-20261024-RUNTIME-MAIN — Publish the completed update
 
 DISAHKAN: Ijamm's latest “okay push ni juga please!!” follows the verified feature publication and authorizes main integration/publication of this completed update. This supersedes its earlier feature-only boundary. Candidate2.41.0 merges mainb730cad (2.40.0) and feature61ca126, retaining newer numerical/status/education/Dev owners. No additional numerical tuning or identity change. [Integration evidence and limits](../RUNTIME_OPTIMIZATION_MAIN_2_41_0.md).

@@ -1,5 +1,55 @@
 # Changelog SOR — Slay the Math
 
+## Combat VFX V10 branch publication — 25 October 2026
+
+- Ijamm authorizes publishing the completed standalone preview to `combat-animation`. Base the update on current main 2.43.0 while retaining the old branch history.
+- Add the exact delivered V10 HTML, ten-motif gallery, portable source rebuild/checks and before/after audit. Preserve newer runtime, language, balance, artwork and release files without modifying them.
+- This supersedes the earlier local-only publication boundary for this preview; production integration, main merge and deployment remain separate.
+
+## Passive Identity V10 HTML preview — 24 October 2026
+
+- Replace the similar Blazing Spirit, Growing Flame and Last Ember ornaments with flaming swords, radial fireflowers and cracked hearts. Clarify all ten through primary silhouette, motion and stronger contrast; padlocks, scrolls and toothed turbines remove other overlapping shape families.
+- Add a same-layer ten-motif comparison gallery with Full/Low, grayscale and phase controls. Verify loop continuity, activation-order transitions, unchanged shared bases and original embedded assets.
+- Preserve the V9 stat/barrier renderer, Shield V3 and preview-only scope. No runtime integration, game version change, commit, push or deployment.
+
+## Clear Combat VFX V9 HTML preview — 24 October 2026
+
+- Separate vertical stat particles into fixed attribute lanes for players and enemies. Preserve activation-ordered rings and mixed buff/debuff directions.
+- Add actor comparison with the original Guardian image and a vertical narrow-screen layout. Reduce three-stat particle count from 27 to 12 per actor while retaining clear motifs.
+- Add Auto quality, bounded active texture buffers and render suspension when paused, hidden or complete. Validate collision margins and measure renderer CPU cost separately from physical FPS.
+- Ijamm chose preview-only scope. No runtime integration, game version change, commit, push or deployment.
+
+## Status VFX V8 HTML preview — 24 October 2026
+
+- Thorns hit launches radial brown spikes from both hemispheres and all sides of its barrier, then settles.
+- Weak is purple-black with its chains retained and bubble removed. Apply the stated same-treatment interpretation to Vulnerable: retain red coils/electricity, remove the bubble. Keep their lifecycle behaviour and Weak link break.
+- Replace stat spheres with directional ember, wind and crystal silhouettes while preserving stat ring geometry, colours and activation-order slots. Record the unimplemented Strength-label suggestion separately.
+- Preview/SOR only; original art/icons, Passive V4 and Shield V3 remain. No production integration, game version change, commit, push or deployment.
+
+## Directional stat rings V7 HTML preview — 24 October 2026
+
+- Add same-colour spheres that rise for buffs and descend for debuffs; preserve each stat's base motif. Record this override in MOT-20.
+- Follow the new one/two/three ring sketch and activation-order slot ownership in MOT-21. Add mixed-sign stat selection, removal and reorder controls with smooth rearrangement.
+- Preserve V6 barrier lifecycle geometry, Shield V3, Passive V4 and original art/icons. Preview/SOR only; no game integration, game version change, commit, push or deployment.
+
+## Orbit / Barrier V6 HTML preview — 24 October 2026
+
+- Follow the seven new references: shared red/green/blue positive-negative stat orbits, brown spiked Thorns, red-black electric Vulnerable and blue-black chained Weak. Weak expiry physically detaches source chain links.
+- Record the exact 4/3/3 barrier lifecycle requirements and the override of V5 positive/negative differences in MOT-17–19; preserve Passive-only floor ownership and earlier Shield/Passive source modules.
+- Add lifecycle selection and loop review to the local HTML. No production gameplay/artwork/audio changes, game version bump, Git push or deployment.
+
+## Buff / Debuff V5 HTML preview — 24 October 2026
+
+- Record unique body-space identity across Buff, Debuff, Shield and Passive in MOT-15–16. Preserve MOT-10's Passive-only floor ownership and the preceding ordered-layer contract.
+- Preview adds eleven independent material/motion designs, continuous 12-second auras, 8-second ending demos and a 24-second combined loop, plus scrub/seam controls. Keep Shield/Passive modules and original embedded art/icons unchanged.
+- Local preview/documentation update only; no game version bump, gameplay changes, Git push, deployment or physical-device FPS claim.
+
+## Passive V4 HTML preview and floor contract — 24 October 2026
+
+- Record Ijamm's Passive-only floor requirement, common reference-15 circle at three triggers, ten unique ornaments and layer assignment by trigger order in SOR 11 / MOT-10–14 and the decision register.
+- Local preview adds ordered concentric tracks, smooth interrupted transitions, a continuous 24-second cycle, top view and seam/scrub controls. Remove non-Passive projected floor VFX in that preview.
+- This is preview/documentation work. Production VFX integration and physical-device validation remain separate; no game version bump, Git push or deployment.
+
 ## Game 2.43.0 — whole-game Bahasa Melayu / English
 
 Publish the approved local language update after main2.42.0 Balance/AI. Settings controls live player text, loading/recovery, cards/status/Artifact, help and existing question/Practice language owners. Retain recognized game keywords and simple KSSM/DSKP explanations. Preserve numerical rules, saves, RNG and original media. Existing voices and baked Tutorial screenshots remain English. [Release and current-source verification](../DUAL_LANGUAGE_MAIN_2_43_0.md).

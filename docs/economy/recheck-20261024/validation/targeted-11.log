@@ -1,0 +1,19 @@
+✔ Master artifact affordability telemetry uses the actual profile quote at a tight Gold boundary (583.622582ms)
+✔ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (98.954651ms)
+✔ current economy audit runs the bound Master and preserves runtime source restrictions (794.021255ms)
+✔ two-attempt Artifact failure loses the offered gift and retains a valid once-only decline (277.054963ms)
+✔ Master Mystery first error retries before the same deadline and exact-deadline retry fails (314.024452ms)
+✔ current real-combat economy campaign conserves Gold through purchases and reloads (1917.315756ms)
+✔ Master Shop locks Boss stock until Stage 2 and settles one sale, discounts and paid removal exactly once (458.059488ms)
+✔ failed Boss artifact continues to Stage 2 with the selected profile recovery and checkpoint intact (214.389167ms)
+✔ bounded economy campaign retains censoring separately from loss or invalid engine state (93.947267ms)
+✔ cohort reporting retains bounded cases in the denominator without calling them invalid (1.464518ms)
+✔ event timeout distinguishes submitted answers from attempts accepted by the education ledger (101.043919ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5069.264002

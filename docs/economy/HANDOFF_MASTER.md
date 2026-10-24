@@ -1,5 +1,10 @@
 # Handoff kepada Balance Master
 
+## Current compatibility recheck — 24 October 2026
+
+Latest economy audit owner: [current report](recheck-20261024/REPORT.md) and [fresh verification](recheck-20261024/VERIFICATION.md), pinned to main `50d3af423cdc2240e949f4ddf29e023865304b65` / game2.36.0 and Master `master-1.4.0-candidate.4`. The earlier specialist/conditional numbers below retain their historical source and do not measure the current revision. Current profiles/artifact values and two-attempt reward loss are covered in the new report. The branch corrects financial telemetry, adds source-pinned current experiments and leaves player tuning unchanged.
+
+
 **Base:** 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7 (2.24.0). **Branch:** balance/economy. Tiada merge atau push ke main dilakukan.
 
 Baca [SOR Economy & Rewards](SOR_ECONOMY_REWARDS.md), [audit runtime](AUDIT_RUNTIME.md), [dapatan simulasi](SIMULATION_FINDINGS.md) dan jadual dalam `tables/`. Data mentah/seeds/resit dalam `evidence/`; empat plot dalam `figures/`.
@@ -38,3 +43,6 @@ Sasaran murid Easy/Medium/Hard 90/70/50 kekal **UNMEASURED**. Pilih cohort playt
 ## Deep validation extension — 23 October 2026
 
 Read [Deep Validation Report](deep/REPORT.md) with raw paired results and recorded seeds. Extension covers diverse decks, six adaptive spending policies, answer/deadline sensitivity, cumulative HP/MaxHP costs, recovery choices, exact min/max-Elite route surveys and stateful transactions. No numerical runtime tuning or combat/map topology changes. CP stays UNMEASURED. Same 100 paired seeds per policy/difficulty; answer/budget sensitivity cells have 12/13 unique seeds. Model HP budget exhaustion is not combat defeat. Explore remains NEEDS_INPUT_DEFINITION. Master must combine measured Combat/Map inputs before changing profiles or asserting pupil win targets.
+
+
+Closing compatibility: branch now derives from main2.37.0 `6376a22`; economy/Combat/policy owners are byte-identical to measured2.36.0. Read [current audit](../audits/balance-economy/LATEST.md), [verification](recheck-20261024/VERIFICATION.md) and publication receipt for exact tested/published revisions. The12 bounded skip/Boss states are included for Master/Combat; seven ordinary Energy-band price changes remain decisions, not an automatic retune.

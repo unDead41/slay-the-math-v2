@@ -1,0 +1,15 @@
+# Verification and limits
+
+24 October 2026, Asia/Kuala_Lumpur. Initial main2.36.0:50d3af423cdc2240e949f4ddf29e023865304b65. Publication base main2.37.0:6376a222169815af582cf55aa4794f3c809a3515. Master candidate.4 in both; all economy/Combat/policy owners byte-identical across this main advance.
+
+- Complete underlying suite: **928/928 pass**, 0failed/cancelled/skipped; `NODE_PATH=/tmp/stm-education-qa/node_modules:$CODEX_PRIMARY_RUNTIME_NODE_MODULES node --test --test-concurrency=2 --test-reporter=tap tests/*.test.cjs` on the2.36.0 runtime/telemetry correction. [Raw](validation/full-928.tap).
+- After current-main UI integration: **70/70 pass**, covering all economy tests, Master integration and new icon UI cases. [Raw](validation/v237-70-tests.log). The report-only timeout attempt-count distinction has its explicit RED→GREEN test; final targeted suite **11/11** [raw](validation/targeted-11.log). Full928 cohort is not relabeled as a full2.37.0 suite.
+- Current native browser: **24/24**, three difficulties, desktop1440×900/mobile390×844; real sale checkout/reload, Boss lock, Purse charge/+40, profile Rest; no page errors. [Report](browser.json). These are narrow economic flows, not a complete UI/accessibility/device audit.
+- npm run check; current helper syntax checks; Python parse; git diff whitespace checks pass. Current2.37.0 `npm run build:prod` generates portable303072585 bytes and production player successfully [log](validation/v237-production.log). No hosted deployment, CI billing, live Google delivery or physical-device claim.
+- Current Master128-seed,12-fixture,3-context,6-source sampling:165888 offers/525312 slots,165888 frozen replays,82944 paired first-slot rarity checks; no invariant violations. All15 events cover3360 answer/timing cases plus1080 HP/Gold boundaries.600 Shop fixtures and96 Rest fixtures use explicit declared budgets.
+- Real engine cohort:600 attempts (100 shared baseline seeds/difficulty;20 matched seeds/difficulty for each of five spending sensitivities),341 wins/247losses/12bounded;0invalid.2102paid transactions pass quote/grant conservation, immutable stock, unchanged question/combat RNG and restore.12censored replays exactly match trace/final resources/metrics and retain full valid state/deck for Master.
+- Author final diff/report review and visual inspection of both plots. No independent reviewer was requested for this recheck. Historical specialist/Master measurements are preserved under their own source identities.
+
+Initial test execution lacked jsdom at an old QA path; the available education QA dependency path fixes that environment issue. Development-pilot scope and two harness defects (nullable Shop after leaving; censored classification) were corrected and excluded from the primary600 observations. The event matrix was regenerated after distinguishing submitted answers from ledger-accepted attempts at deadline. No gameplay value was retuned.
+
+Unmeasured: pupil90/70/50, universal current CP, whether bounded skip/Boss cases eventually resolve, ordinary price-band desirability, Explore and exhaustive combinations.

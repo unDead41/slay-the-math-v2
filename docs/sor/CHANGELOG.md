@@ -559,3 +559,8 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - Add visible status names and exact counters, immediate-debuff priority, queued-state cues and a fighter-specific All statuses comparison/detail flow with keyboard/touch/focus support.
 - Wire Hand, correct View Deck and soundtrack location symbols, mark missing semantic keys for QA, and label Block-only/no-attack previews correctly.
 - Preserve all original images and excluded card/artifact artwork; add focused UI and real-browser regression checks. Publish only `codex/icon-clarity-audit`, leaving main untouched by this work. [Audit](../ICON_CLARITY_AUDIT_2026_10_24.md).
+
+
+## 24 October 2026 — Economy current-main recheck (branch only)
+
+Correct affordability/gross Purse telemetry; add current Master source/price/event/transaction/actual-campaign evidence and handoff. Preserve all player values, assets, question/combat RNG and main publication boundary. See ../economy/recheck-20261024/REPORT.md.

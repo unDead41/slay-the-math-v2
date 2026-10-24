@@ -15,3 +15,8 @@ Read [Deep Validation Report](../economy/deep/REPORT.md) with raw paired results
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+
+## Economy compatibility recheck — 24 October 2026
+
+[Current scope, financial telemetry corrections and fresh evidence](../economy/recheck-20261024/REPORT.md) target game2.36.0 / Master candidate.4. Historical cohorts retain their original source. No new player price/stat/profile change is introduced by the audit. Pupil targets and the 12 bounded Predict-skip Boss cases require Master/Combat follow-up.

@@ -1,5 +1,10 @@
 # SOR Economy, Loot & Rewards — Slay the Math
 
+## Current compatibility recheck — 24 October 2026
+
+Latest economy audit owner: [current report](recheck-20261024/REPORT.md) and [fresh verification](recheck-20261024/VERIFICATION.md), pinned to main `50d3af423cdc2240e949f4ddf29e023865304b65` / game2.36.0 and Master `master-1.4.0-candidate.4`. The earlier specialist/conditional numbers below retain their historical source and do not measure the current revision. Current profiles/artifact values and two-attempt reward loss are covered in the new report. The branch corrects financial telemetry, adds source-pinned current experiments and leaves player tuning unchanged.
+
+
 Versi calon: **economy-1.2-candidate.1** · 23 Oktober 2026 (Malaysia). Branch: `balance/economy`. BASE_COMMIT: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (game 2.24.0).
 
 **Status:** aturan skop daripada Ijamm ialah DISAHKAN. Angka tuning ialah **CADANGAN yang sudah diimplementasi sebagai eksperimen opt-in dan diuji**; belum calibrated. Runtime/default dan save tanpa `economyState` kekal baseline. Ini belum menjadi difficulty tempur penuh v1.2. Sasaran 90%/70%/50% murid menang dua boss ialah sasaran Master; tiada data murid atau nilai CP terukur dibekalkan oleh kerja ini.

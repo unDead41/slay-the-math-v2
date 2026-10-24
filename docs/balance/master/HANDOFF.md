@@ -71,3 +71,8 @@ Large positive U often crosses the loss/win threshold. It does not prove an infi
 Every measured cohort keeps manifest tasks, compressed raw records and exact source snapshots under reports/master-balance. Analytics integration initially preserved every engine dependency byte. The final review then strengthened save validation in dist/economy.js, dist/card-combat.js: mandatory matching Economy state and the candidate Thorns bound. These are validator changes, not new card/profile numbers. All 18 difficulty/Predict/route cells for held-out seed20 were replayed after those fixes and exactly matched the prior outcomes, carried state, room snapshots, action trace/RNG and metrics. See [comparison](../../../reports/master-balance/validation-replay/comparison.json) and its separate source snapshot. Do not relabel historical source hashes as the final tree.
 
 The final validation record is [VALIDATION.md](VALIDATION.md). [Execution plan](../MASTER_PLAN.md) records scope and the concurrent main update. Real pupil win rates, physical device/audio audition, all possible combinations and universal CP rankings remain unverified.
+
+
+## Economy compatibility recheck — 24 October 2026
+
+[Current scope, financial telemetry corrections and fresh evidence](../../economy/recheck-20261024/REPORT.md) target game2.36.0 / Master candidate.4. Historical cohorts retain their original source. No new player price/stat/profile change is introduced by the audit. Pupil targets and the 12 bounded Predict-skip Boss cases require Master/Combat follow-up.

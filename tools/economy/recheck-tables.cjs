@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict'),R=require('./recheck.cjs'),{loadMaster}=require('../balance/master/loader.cjs');
+const copy=x=>JSON.parse(JSON.stringify(x));
+const rows=[],recovery=[],profiles={},prices=[],configs={},ordinary=[];
+for(const difficulty of R.difficulties){const x=loadMaster({difficulty}),profile=x.binding.profile;profiles[difficulty]=copy(profile);configs[difficulty]={version:x.binding.identity,alpha:x.Eco.data.alpha[difficulty],economy:x.Eco.data.economy,requirements:x.Eco.data.requirements};
+ for(const stage of [0,1])for(const seed of require('./deep-common.cjs').seeds(100)){
+  let r=R.room(x,'shop',seed,stage),stock=copy(r.shop),entryGold=r.gold,cardQuotes=stock.offers.map(o=>x.E.shopPrice(r,o)),artifactQuotes=stock.artifacts.map(o=>o.id?x.E.shopPrice(r,o):null);
+  assert.equal(new Set(stock.offers.map(o=>o.key)).size,6);assert.equal(stock.offers.filter(o=>o.sale).length,1);assert.equal(stock.artifacts.length,6);assert.equal(stock.artifacts[5].id===null,stage===0);
+  const entry={difficulty,stage:stage+1,seed,entryGold,cardQuotes,artifactQuotes,affordableCards:cardQuotes.filter(p=>p<=entryGold).length,affordableArtifacts:artifactQuotes.filter(p=>p!==null&&p<=entryGold).length,firstRemoval:x.E.shopRemovalPrice(r)};
+  r.gold=1000;const i=stock.offers.findIndex(o=>o.sale),gold=r.gold;x.E.buyCard(r,i);assert.equal(r.gold,gold-cardQuotes[i]);r=x.E.restore(r);assert.ok(r);let before=copy(r);assert.throws(()=>x.E.buyCard(r,i));assert.deepEqual(r,before);
+  const ai=stock.artifacts.findIndex(o=>o.id),a=x.A.catalog[stock.artifacts[ai].id],prior=r.gold,price=x.E.shopPrice(r,stock.artifacts[ai]);x.E.buyArtifact(r,ai);assert.equal(r.gold,prior-price+(a.values.gold||0));r=x.E.restore(r);assert.ok(r);before=copy(r);assert.throws(()=>x.E.buyArtifact(r,ai));assert.deepEqual(r,before);assert.deepEqual(r.shop.offers,stock.offers);assert.deepEqual(r.shop.artifacts,stock.artifacts);rows.push(entry);
+ }
+ for(const seed of require('./deep-common.cjs').seeds(4))for(const hp of [1,Math.floor(profile.starting_max_hp/2),profile.starting_max_hp-1,profile.starting_max_hp])for(const action of ['heal','upgrade']){
+  const r=R.room(x,'camp',seed);r.hp=hp;const requested=x.E.restHeal(r),c=r.deck.find(x.E.canUpgrade);x.E.camp(r,action,c.uid);assert.ok(x.E.restore(r));recovery.push({difficulty,seed,hp,action,requestedHeal:action==='heal'?requested:0,actualHeal:r.hp-hp,wastedHeal:action==='heal'?requested-(r.hp-hp):0,upgraded:r.deck.filter(c=>c.upgraded).length});
+ }
+ const r=x.E.newRun(19,'learn');for(const [rarity,base]of Object.entries(x.Eco.data.economy.card_prices_by_rarity))for(const sale of [false,true])for(const discount of [0,10,20]){const quoteRun={...r,artifactState:{owned:discount?[x.A.id(discount===10?'s06':'e14')]:[]}};prices.push({difficulty,rarity,base,sale,discount,quote:x.Eco.quote(quoteRun,base,{sale}).value});}
+}
+const E=require('../../dist/engine.js'),C=require('../../dist/config.js'),current=E.newRun(19,'learn'),master=loadMaster({difficulty:'medium'}),masterCards=Object.fromEntries(master.data.cards.map(c=>[c.id,c])),legacy=copy(current);delete legacy.cardRulesVersion;
+for(const card of require('../../dist/card-data.js').cards){const c={key:card.id,upgraded:false},a=E.definition(c,current).cost,b=E.definition(c,legacy).cost;ordinary.push({id:card.id,name:card.name,currentCost:a,archivedCost:b,currentOrdinaryBase:C.ECONOMY.prices[a==='X'?2:a],archivedOrdinaryBase:C.ECONOMY.prices[b==='X'?2:b],MasterRarity:masterCards[card.id].rarity,MasterRarityBase:master.Eco.data.economy.card_prices_by_rarity[masterCards[card.id].rarity]});}
+R.save('tables.json.gz',{shopFixtureRows:rows,recovery,profiles,prices,configs,ordinary,interpretation:'Shop affordability is a fresh node fixture at starting Gold, not campaign income. Transactions then use declared 1000-Gold fixtures solely for atomicity/receipt verification.'});console.log(JSON.stringify({shopFixtures:rows.length,recovery:recovery.length,cardPriceRows:prices.length,ordinary:ordinary.length}));

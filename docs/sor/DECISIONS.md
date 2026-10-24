@@ -692,3 +692,12 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - **DITERUSKAN:** integrate `codex/icon-clarity-audit` / `b18c4c99d28530026f8d90d28964569c2f7af610` with actual main `50d3af423cdc2240e949f4ddf29e023865304b65` / 2.36.0 as **2.37.0**. Keep the ten source artworks, enlarge functional UI, show actual status names/counters, and provide a complete read-only comparison. Current and archived effect descriptions, BM preference, question retries/continuation, run-aware card previews, combat VFX, AI and production Dev keep their current main owners.
 - **DITERUSKAN:** retain both decision histories, regenerate cache/version/launchers and actual tutorial screenshots, and verify the combined tree. Original card/artifact illustrations, other source artwork/audio, numerical rules, question bank and save contracts remain unchanged.
 - **PERLU_VERIFIKASI:** physical Windows/devices, pupil glance recognition, live Google service and public hosted deployment are separate from local production/browser evidence. [Main release](../ICON_CLARITY_MAIN_2_37_0.md).
+
+
+## DEC-20261024-ECON-RECHECK — current economy compatibility
+
+DISAHKAN: Ijamm requests rechecking Economy/Loot/Rewards after current changes and publication to the Economy branch for Master, without main publication. Main snapshot2.36.0 `50d3af4`; previous Economy `df53579` is already integrated.
+
+IMPLEMENTED: correct observer affordability to use checkout quotes and separate Purse acquisition Gold from gross charges. Keep runtime balances, existing save identities and legacy receipt rules. Export current candidate.4 profiles, price/event tables, seeded offers and actual engine campaign diagnostics.
+
+BELUM DISAHKAN: pupil90/70/50, current universal CP/loot usefulness, the seven ordinary Energy-band price changes and eventual outcomes of capped skip/Boss scenarios. Do not treat old candidate.2/3 power tables as fresh candidate.4 measurements. See docs/economy/recheck-20261024/REPORT.md.

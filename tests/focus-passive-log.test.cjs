@@ -143,16 +143,16 @@ test('committed choices defer the card and Passive trigger history until one fin
  assert.deepEqual(r,complete,'reload/replay cannot repeat costs, results or history');
 });
 
-for(const [passive,card,attribute]of [['Growing Flame','Rune Strike','strength'],['Battle Rhythm','Rune Guard','agility']])test(passive+' exposes source-based progress and exactly three real triggers',()=>{
- const r=fixture([passive,...Array(10).fill(card)]);hand(r,[passive]);play(r,passive);
- assert.deepEqual(view(r,passive).progress,{current:0,target:3,maximum:3});
- for(let n=1;n<=10;n++){
+for(const [passive,card,attribute]of [['Growing Flame','Rune Strike','strength'],['Battle Rhythm','Rune Guard','agility']])test(passive+' exposes source-based progress and exactly four real triggers',()=>{
+ const r=fixture([passive,...Array(12).fill(card)]);hand(r,[passive]);play(r,passive);
+ assert.deepEqual(view(r,passive).progress,{current:0,target:3,maximum:4});
+ for(let n=1;n<=13;n++){
   r.battle.energy=3;hand(r,[card]);play(r,card);
-  assert.equal(view(r,passive).triggeredCount,Math.min(3,Math.floor(n/3)));
-  assert.equal(r.battle[attribute],Math.min(3,Math.floor(n/3)));
+  assert.equal(view(r,passive).triggeredCount,Math.min(4,Math.floor(n/3)));
+  assert.equal(r.battle[attribute],Math.min(4,Math.floor(n/3)));
  }
- assert.deepEqual(rows(r,passive,'passive-trigger').map(e=>e.values.count),[3,6,9]);
- assert.equal(view(r,passive).status,'complete');assert.match(view(r,passive).waitingCondition,/3\/3/);
+ assert.deepEqual(rows(r,passive,'passive-trigger').map(e=>e.values.count),[3,6,9,12]);
+ assert.equal(view(r,passive).status,'complete');assert.match(view(r,passive).waitingCondition,/4\/4/);
  assert.equal(view(r,passive).lastTurn,1);assert.ok(E.restore(copy(r)));
  const before=copy(r),first=CC.passiveView(r);first[0].progress.current=999;first[0].name='Changed';
  assert.deepEqual(r,before);assert.notEqual(CC.passiveView(r)[0].name,'Changed');

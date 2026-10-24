@@ -13,7 +13,7 @@ test('balance loader isolates data and keeps player defaults unchanged',()=>{
  const legacy=loadEngine({build:'baseline'}),candidate=loadEngine({build:'candidate'});
  assert.equal(legacy.C.cards[key('skill.deep_study')].cost,2);
  assert.equal(candidate.C.cards[key('skill.deep_study')].cost,1);
- assert.equal(require('../dist/config.js').cards[key('skill.deep_study')].cost,2);
+ assert.equal(require('../dist/config.js').cards[key('skill.deep_study')].cost,1);
  assert.equal(legacy.data.cards.length,40);assert.equal(candidate.C.PASSIVE_LIMIT,3);
 });
 test('explicit upgrades and Focus resolve once through the execution plan',()=>{

@@ -1,0 +1,11 @@
+# Card balance main integration — 2.34.0
+
+24 October 2026 (Malaysia). Ijamm explicitly authorizes “okay push ke main”, superseding the original feature-only boundary. Merge feature `a9c49f03f5e60dc0309f90931469361e6febedee` with main `c54ce92fdd8e43544b03a16ed995431da6fdb8f0`. The feature was originally versioned 2.33.0 before main independently released AI as 2.33.0; the combined release is **2.34.0**.
+
+The [card-effects owner](CARD_EFFECTS_2_33_0.md) defines the approved numerical revision and save compatibility. New ordinary runs use `card-effects-1`; Master uses `master-1.4.0-candidate.4`. Start a New Run for revised values. Existing ordinary saves retain their old rules and receipts; earlier Master storage keys remain intact.
+
+The merge retains the supplied menu recording, AI Playtester, original images, combat/status motion, tutorial, learning collection and question bank. Both SOR histories are retained; Master card decisions use MB-10/MB-11 after the existing AI MB-07–09 records. Generated release and cache metadata come from package.json.
+
+AI integration needed a small rules adjustment: AI and explicit current-Master map incoming views now call the actual engine damage calculation on an isolated status copy. Historical ordinary map views retain their original calculations. Weak mitigation uses an actual no-Weak counterfactual, including Vulnerable rounding before Defense. All affected hits retain the source of the active duration until phase decay. Status uses count benefiting phases, while Vulnerable hits count every hit; zero-attack expiry is not a use. Effects telemetry advances to version 2. Emergency retention credits Last Ember when its cap exceeds the other retain caps. Prior ordinary flat-per-hit observation remains supported. These are observations and bounded strategy heuristics, not universal card power or pupil win rates. [Independent review and resolutions](verification/card-effects-main-review.md).
+
+Fresh verification of the merged tree is recorded in `docs/verification/card-effects-main-2-34-0.json` and its evidence directory. Historical branch/AI reports are preserved as measurements of their original source. Hosted CI/deployment, physical devices and pupil balance calibration are separate from local checks.

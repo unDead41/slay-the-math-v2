@@ -80,7 +80,7 @@
     return result;
   }
   function preparePlay(id, raw = {}, requestedFocus = false) {
-    const card = byId.get(id); if (!card) throw new Error('Unknown card ID: '+id);
+    const card = typeof id==="string"?byId.get(id):id; if (!card) throw new Error('Unknown card ID: '+id);
     const ctx = context(raw), errors = [];
     const cost = card.energy.kind === 'fixed' ? card.energy.amount : ctx.energy;
     if (ctx.energy < cost || (card.energy.kind === 'all_remaining' && ctx.energy < card.energy.minimum)) errors.push('insufficient_energy');
@@ -97,7 +97,7 @@
     const focused = reason === 'focused';
     const {values,calculations} = compute(card,ctx,focused);
     const actions = card.actions.filter(a => !a.condition || condition(a.condition,ctx)).map(a => materializeAction(a,values));
-    return {card,context:ctx,legal:!errors.length,errors,requestedFocus,focused,focusReason:reason,values,calculations,actions,
+    return {card,glossary:raw.glossary||data.glossary,context:ctx,legal:!errors.length,errors,requestedFocus,focused,focusReason:reason,values,calculations,actions,
       payEnergy:errors.length ? 0 : cost,payFocus:focused ? 1 : 0,
       focusArmedAfter:requestedFocus && !focused, focusUsedAfter:ctx.focusUsed || focused,
       passive:card.passive ? {...card.passive,effects:card.passive.effects.map(a=>materializeAction(a,values))} : null};
@@ -132,7 +132,7 @@
       let label, tooltip;
       if(t.type==='calculation') { label=plan.values[t.ref]; tooltip=calculationTip(plan,t.ref,lang); }
       else {
-        const term=data.glossary[t.ref]; if(!term)throw new Error('Missing glossary '+t.ref);
+        const term=(plan.glossary||data.glossary)[t.ref]; if(!term)throw new Error('Missing glossary '+t.ref);
         label=term.label[lang] || term.label.en; tooltip=term.tooltip[lang] || term.tooltip.en;
       }
       return '<span class="stm-rt stm-rt-'+esc(t.type)+'" tabindex="0" data-kind="'+esc(t.type)+'" data-tooltip="'+esc(tooltip)+'" aria-label="'+esc(label+': '+tooltip)+'">'+esc(label)+'</span>';
@@ -140,7 +140,7 @@
   }
   function renderPlain(plan,lang='en') {
     lang = normalizeLanguage(lang);
-    return getTokens(plan,lang).map(t => t.type==='text'?t.text:t.type==='calculation'?plan.values[t.ref]:data.glossary[t.ref].label[lang]).join('');
+    return getTokens(plan,lang).map(t => t.type==='text'?t.text:t.type==='calculation'?plan.values[t.ref]:(plan.glossary||data.glossary)[t.ref].label[lang]).join('');
   }
   function framePath(card, focused, fourK=false) {
     const paths = data.frames.categories[card.category];

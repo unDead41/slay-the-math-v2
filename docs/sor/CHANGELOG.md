@@ -1,5 +1,14 @@
 # Changelog SOR — Slay the Math
 
+## Game 2.34.0 — 24 October 2026, card-effects main integration
+
+- Ijamm authorizes main publication of the completed card audit. Combine feature `a9c49f0` with main `c54ce92`, retaining the current menu recording, AI Playtester and existing presentation/assets/save contracts.
+- Align AI incoming estimates and per-source status/retention observations with percentage phases and emergency carry. Preserve archived flat per-hit observation and historical reports. [Combined scope and verification](../CARD_EFFECTS_MAIN_2_34_0.md).
+
+## 2.33.0 — 24 October 2026, card-effects feature branch
+
+Apply the user-approved card audit: percentage status phases, unused Last Ember Block carry, meaningful growth caps, revised draw/activation cards, fallback search and Master Twin Shot. Preserve archived ordinary runs and historical evidence. BM/English copy and new regression coverage follow [Card effects](../CARD_EFFECTS_2_33_0.md). Feature-branch publication only.
+
 ## Game 2.32.0 — Combat animation polish
 
 - Publish completed combat-animation `b422a18` to main after Ijamm’s explicit authorization: ranked/combined status feedback, named Passive/stat ownership, clearer auras and shield depletion/expiry, ten proc signatures, shared SFX timing and Low/Full intensity. Original artwork/icons, source sprite timing, balance, maths and run schema stay under their existing owners.

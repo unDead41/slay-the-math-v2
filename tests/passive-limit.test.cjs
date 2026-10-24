@@ -53,7 +53,7 @@ test('Growing Flame progress pauses while inactive and its earned Strength is re
  for(let n=0;n<3;n++)play(r,'Rune Strike');assert.equal(r.battle.strength,2);
  play(r,'Growing Flame');choose(r,active(r,'Blazing Spirit').uid);assert.equal(r.battle.strength,1);assert.equal(r.battle.cardCombat.counters[key('Growing Flame')].count,4);
  for(let n=0;n<7;n++)play(r,'Rune Strike');assert.equal(r.battle.strength,3);assert.equal(r.battle.cardCombat.counters[key('Growing Flame')].triggers,3);
- play(r,'Blazing Spirit');choose(r,active(r,'Growing Flame').uid);play(r,'Growing Flame');choose(r,active(r,'Blazing Spirit').uid);play(r,'Rune Strike');assert.equal(r.battle.strength,3);assert.equal(r.battle.cardCombat.counters[key('Growing Flame')].triggers,3);conserved(r);
+ play(r,'Blazing Spirit');choose(r,active(r,'Growing Flame').uid);play(r,'Growing Flame');choose(r,active(r,'Blazing Spirit').uid);play(r,'Rune Strike');assert.equal(r.battle.strength,4);assert.equal(r.battle.cardCombat.counters[key('Growing Flame')].triggers,4);conserved(r);
 });
 
 // Catches using a Passive's inactive historical counter as an active effect.

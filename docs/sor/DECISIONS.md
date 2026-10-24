@@ -598,3 +598,15 @@ DISAHKAN: Ijamm quotes and selects the first three proposed AI improvements and 
 - DISAHKAN: Ijamm questions why the AI feature update retained the game version. Correct release identification within the already authorized main publication.
 - DITERUSKAN: use **2.33.0**, a minor increment from 2.32.1 for the added AI features. Generate release.js, version/cache metadata and all launchers from package.json; retain runtime rules, numerical profiles, AI logic and save keys.
 - Verification is scoped to this metadata change; retain the original 820-test integration result as historical evidence. [Release record](../AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).
+
+## DEC-20261024-CARD-EFFECTS — Apply approved audit on a feature branch
+
+**DISAHKAN:** Ijamm requests applying every proposal in the 40-card audit and pushing to the assistant feature branch, explicitly excluding main.
+
+**IMPLEMENTED / PLAYTEST:** game 2.33.0 on `balance/card-effects-20261024`, base 264a60e. Vulnerable +50% and Weak −25% are phase-duration effects; Last Ember retains only unused emergency Block once; growth caps are 4/5; draw/activation cards, failed search and Master Twin Shot follow [the current owner](../CARD_EFFECTS_2_33_0.md). Cinder Guard starts at 4 Block to offset whole-phase Weak. Ordinary prior runs retain archived definitions, costs, Shop previews and paid receipts; Master uses candidate.4. Original assets and all unrelated domain values remain unchanged. These are candidate game values, not verified pupil win rates. Publication authorization is feature-branch only.
+
+## DEC-20261024-CARD-EFFECTS-MAIN — Publish approved card balance to main
+
+- DISAHKAN: Ijamm says “okay push ke main”, superseding CARD-EFFECTS' earlier branch-only boundary.
+- DITERUSKAN: integrate feature `a9c49f0` with current main `c54ce92` / 2.33.0 as **2.34.0**. Preserve the supplied menu recording, AI developer tool, original artwork, combat presentation, questions, existing saves and both branches' decision histories. AI incoming estimates, duration-source support accounting and Last Ember retention attribution follow the current rules; historical numeric reports keep their original provenance.
+- Verification covers the merged tree, including active/archived cards and production/developer separation. Synthetic checks do not establish pupil win rates, physical-device behavior or hosted deployment. [Integration record](../CARD_EFFECTS_MAIN_2_34_0.md).

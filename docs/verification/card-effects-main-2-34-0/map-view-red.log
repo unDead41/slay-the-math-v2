@@ -1,0 +1,38 @@
+✔ AI values whole-phase Weak using the real incoming multi-hit calculation without mutating the run (199.802274ms)
+✔ AI credits every Vulnerable hit to its phase source, with one duration used (140.841197ms)
+✔ AI Weak telemetry uses percentage rounding and Vulnerable before Defense on every hit (70.551361ms)
+✔ AI keeps extended Weak ownership through later attack phases (66.823875ms)
+✔ AI retention credits Last Ember when its emergency carry exceeds Hold the Line (61.18873ms)
+✔ archived ordinary AI observation retains flat per-hit status behavior (115.769297ms)
+✖ current Master map views use phase damage while archived replay retains its original calculation (232.574437ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 999.931282
+
+✖ failing tests:
+
+test at tests/card-effects-ai-integration.test.cjs:45:1
+✖ current Master map views use phase damage while archived replay retains its original calculation (232.574437ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  58 !== 45
+
+      at TestContext.<anonymous> (/workspace/scratch/a30ca7928b97/card-balance/tests/card-effects-ai-integration.test.cjs:50:87)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 58,
+    expected: 45,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

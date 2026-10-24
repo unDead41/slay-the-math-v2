@@ -1,6 +1,6 @@
-# Slay the Math — 2.33.0
+# Slay the Math — 2.34.0
 
-Version 2.33.0 identifies the new developer AI Playtester: actual support/cost telemetry, sampled future-turn planning and synergy-aware deck decisions. [AI setup, integration and release verification](docs/AI_PLAYTESTER_MAIN_2026_10_24.md).
+Version 2.34.0 integrates the approved card balance: percentage Vulnerable/Weak phases, Last Ember emergency Block carry, revised growth/draw/Passive cards and search fallback. Start a New Run for these values; prior ordinary saves retain their original rules. The current menu music, combat presentation and developer AI Playtester are included, with AI status calculations aligned to the new rules. [Card changes](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md), [AI setup](docs/AI_PLAYTESTER.md).
 
 **Tutorial** now opens a complete English/BM field guide: 17 chapters, 16 real game screenshots and 11 safe, replayable practice chapters using the actual engine. Progress resumes independently of your run and Learning Report. Open Main Menu → Tutorial or the in-game Tutorial control. [How to use, scope and verification](docs/TUTORIAL_2_31_0.md).
 

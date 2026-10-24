@@ -1,0 +1,1346 @@
+{
+  "base": "264a60ecec7e64251304cdbc58b587a8867502ab",
+  "vulnerable": {
+    "version": 1,
+    "textLocale": "en",
+    "mode": "learn",
+    "rng": 485546096,
+    "seed": 9421,
+    "seq": 10,
+    "stage": 0,
+    "depth": 0,
+    "hp": 60,
+    "maxHp": 60,
+    "deck": [
+      {
+        "uid": "c1",
+        "key": "stm.attack.weak_point",
+        "upgraded": false
+      },
+      {
+        "uid": "c2",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c3",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c4",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c5",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c6",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c7",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c8",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c9",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c10",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      }
+    ],
+    "cleared": [],
+    "scene": "battle",
+    "battle": {
+      "enemyId": "sentinel",
+      "elite": false,
+      "hp": 9996,
+      "maxHp": 10000,
+      "turn": 1,
+      "energy": 2,
+      "block": 0,
+      "enemyBlock": 0,
+      "focus": 0,
+      "boostArmed": false,
+      "boostUsed": false,
+      "seals": 2,
+      "draw": [
+        {
+          "uid": "c8",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c4",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c10",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c7",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c6",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c5",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        }
+      ],
+      "hand": [
+        {
+          "uid": "c9",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        }
+      ],
+      "discard": [
+        {
+          "uid": "c1",
+          "key": "stm.attack.weak_point",
+          "upgraded": false
+        }
+      ],
+      "exhaust": [],
+      "question": null,
+      "forecastUsed": false,
+      "log": [
+        "Weak Point gives 4 damage.",
+        "Turn 1 · Enemy intent: Stone Fist."
+      ],
+      "cardCombat": {
+        "version": 1,
+        "definitionVersion": "single-enemy-1",
+        "seq": 1,
+        "passiveRule": 1,
+        "passiveHistory": {},
+        "stats": {
+          "strength": 0,
+          "agility": 0,
+          "defense": 0
+        },
+        "counters": {},
+        "carry": 0,
+        "queue": [],
+        "lostHpLastEnemyTurn": false,
+        "statuses": {
+          "self": {
+            "weak": 0,
+            "weakUntil": 0,
+            "vulnerable": 0,
+            "vulnerableUntil": 0
+          },
+          "enemy": {
+            "weak": 0,
+            "weakUntil": 0,
+            "vulnerable": 1,
+            "vulnerableUntil": 1
+          },
+          "thorns": 0,
+          "thornsUntil": 0
+        },
+        "receipts": [
+          {
+            "definitionVersion": "single-enemy-1",
+            "id": "card:1",
+            "uid": "c1",
+            "key": "stm.attack.weak_point",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "resolved",
+            "rngBefore": 485546096,
+            "rngAfter": 485546096,
+            "values": {
+              "damage": 4,
+              "stacks": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "damage",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 1,
+              "availableDrawCards": 8,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": false,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": [
+              {
+                "ref": "damage",
+                "target": "sentinel",
+                "random": false,
+                "beforeStatus": 4,
+                "vulnerable": false,
+                "weak": false,
+                "beforeDefense": 4,
+                "defense": 0,
+                "afterDefense": 4,
+                "sealed": false,
+                "afterSeal": 4,
+                "pierce": false,
+                "absorbed": 0,
+                "hpBefore": 10000,
+                "hpAfter": 9996,
+                "hpLost": 4
+              }
+            ]
+          }
+        ]
+      },
+      "active": [],
+      "resolving": [],
+      "cardChoice": null,
+      "strength": 0,
+      "agility": 0,
+      "defense": 0,
+      "enemyDefense": 0,
+      "currentIntent": {
+        "damage": 0,
+        "label": "Stone Fist",
+        "rage": 0
+      },
+      "combatLog": {
+        "version": 1,
+        "seq": 2,
+        "entries": [
+          {
+            "id": 1,
+            "turn": 1,
+            "actor": "player",
+            "actorName": "Alyssa",
+            "kind": "status",
+            "source": "stm.attack.weak_point",
+            "label": "Weak Point",
+            "summary": "Applied 1 vulnerable to enemy (1 active).",
+            "key": "card:1:status:1",
+            "values": {
+              "status": "vulnerable",
+              "target": "enemy",
+              "requested": 1,
+              "before": 0,
+              "after": 1,
+              "amount": 1,
+              "untilTurn": 1
+            }
+          },
+          {
+            "id": 2,
+            "turn": 1,
+            "actor": "player",
+            "actorName": "Alyssa",
+            "kind": "card",
+            "source": "stm.attack.weak_point",
+            "label": "Weak Point",
+            "summary": "Energy −1; 4 enemy HP damage.",
+            "key": "card:1",
+            "values": {
+              "energy": 1,
+              "focus": 0,
+              "damage": 4,
+              "block": 0,
+              "cardsToHand": 0,
+              "discarded": 0,
+              "exhausted": 0,
+              "upgraded": false
+            }
+          }
+        ]
+      }
+    },
+    "rewards": [],
+    "checkpoint": null,
+    "started": 1792808566006,
+    "gold": 80,
+    "shop": null,
+    "stats": {
+      "cardsPlayed": 1,
+      "hintsUsed": 0,
+      "battles": 0,
+      "turns": 0,
+      "forecasts": 0,
+      "firstCorrect": 0,
+      "assisted": 0,
+      "wrong": 0,
+      "concepts": {}
+    },
+    "notice": "Weak Point gives 4 damage.",
+    "calculationState": {
+      "version": 1,
+      "nextId": 1,
+      "entries": [
+        {
+          "id": 1,
+          "label": "Weak Point",
+          "artifactIds": [],
+          "stage": 0,
+          "depth": 0,
+          "turn": 1,
+          "results": [
+            {
+              "label": "Damage before defenses",
+              "unit": "damage",
+              "kind": "total",
+              "value": 4,
+              "before": 4,
+              "after": 4,
+              "lines": [
+                "Card calculation: base: 4; strength: +0; Focus: +0",
+                "Damage before Defense: 4",
+                "Enemy Defense: 0"
+              ]
+            },
+            {
+              "label": "Enemy HP lost",
+              "unit": "HP",
+              "kind": "delta",
+              "value": -4,
+              "before": 10000,
+              "after": 9996,
+              "lines": [
+                "Card calculation: base: 4; strength: +0; Focus: +0",
+                "Damage before Defense: 4",
+                "Enemy Defense: 0",
+                "Enemy Block: 4 − 0 = 4",
+                "Enemy HP after: max(0, 10000 − 4) = 9996"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pending": {
+    "version": 1,
+    "textLocale": "en",
+    "mode": "learn",
+    "rng": 3079872021,
+    "seed": 9421,
+    "seq": 9,
+    "stage": 0,
+    "depth": 0,
+    "hp": 60,
+    "maxHp": 60,
+    "deck": [
+      {
+        "uid": "c1",
+        "key": "stm.skill.burning_page",
+        "upgraded": false
+      },
+      {
+        "uid": "c2",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c3",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c4",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c5",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c6",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c7",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c8",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c9",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      }
+    ],
+    "cleared": [],
+    "scene": "battle",
+    "battle": {
+      "enemyId": "sentinel",
+      "elite": false,
+      "hp": 10000,
+      "maxHp": 10000,
+      "turn": 1,
+      "energy": 2,
+      "block": 0,
+      "enemyBlock": 0,
+      "focus": 0,
+      "boostArmed": false,
+      "boostUsed": false,
+      "seals": 2,
+      "draw": [
+        {
+          "uid": "c8",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c7",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c4",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c3",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c6",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c2",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        },
+        {
+          "uid": "c5",
+          "key": "stm.attack.rune_strike",
+          "upgraded": false
+        }
+      ],
+      "hand": [],
+      "discard": [],
+      "exhaust": [],
+      "question": null,
+      "forecastUsed": false,
+      "log": [
+        "Turn 1 · Enemy intent: Stone Fist."
+      ],
+      "cardCombat": {
+        "version": 1,
+        "definitionVersion": "single-enemy-1",
+        "seq": 1,
+        "passiveRule": 1,
+        "passiveHistory": {},
+        "stats": {
+          "strength": 0,
+          "agility": 0,
+          "defense": 0
+        },
+        "counters": {},
+        "carry": 0,
+        "queue": [],
+        "lostHpLastEnemyTurn": false,
+        "statuses": {
+          "self": {
+            "weak": 0,
+            "weakUntil": 0,
+            "vulnerable": 0,
+            "vulnerableUntil": 0
+          },
+          "enemy": {
+            "weak": 0,
+            "weakUntil": 0,
+            "vulnerable": 0,
+            "vulnerableUntil": 0
+          },
+          "thorns": 0,
+          "thornsUntil": 0
+        },
+        "receipts": [
+          {
+            "definitionVersion": "single-enemy-1",
+            "id": "card:1",
+            "uid": "c1",
+            "key": "stm.skill.burning_page",
+            "turn": 1,
+            "energyBefore": 3,
+            "energy": 1,
+            "upgraded": false,
+            "focus": 0,
+            "focused": false,
+            "status": "choice",
+            "rngBefore": 3079872021,
+            "rngAfter": 3079872021,
+            "values": {
+              "replace": 1,
+              "take": 1
+            },
+            "context": {
+              "upgraded": false,
+              "upgradeField": "replace",
+              "upgradeAmount": 0,
+              "upgradeCostReduction": 0,
+              "energy": 3,
+              "strength": 0,
+              "agility": 0,
+              "focusStock": 0,
+              "focusUsed": false,
+              "handAfterPlay": 0,
+              "availableDrawCards": 8,
+              "discardCount": 0,
+              "hasTarget": true,
+              "lostHpLastEnemyTurn": false,
+              "hasBlock": false,
+              "enemyAttacks": false,
+              "activePassives": [],
+              "firstDamage": [],
+              "firstBlock": []
+            },
+            "selection": null,
+            "discarded": 0,
+            "exhausted": 0,
+            "randomTargets": [],
+            "damageEvents": []
+          }
+        ]
+      },
+      "active": [],
+      "resolving": [
+        {
+          "uid": "c1",
+          "key": "stm.skill.burning_page",
+          "upgraded": false
+        }
+      ],
+      "cardChoice": {
+        "id": "card:1",
+        "kind": "burning_page",
+        "sourceUid": "c1",
+        "committed": true,
+        "candidates": [
+          {
+            "uid": "c9",
+            "key": "stm.attack.rune_strike",
+            "upgraded": false
+          }
+        ],
+        "options": [
+          "take",
+          "replace"
+        ],
+        "replacementsRemaining": 1,
+        "replacementsUsed": 0,
+        "windowRemaining": 7
+      },
+      "strength": 0,
+      "agility": 0,
+      "defense": 0,
+      "enemyDefense": 0,
+      "currentIntent": {
+        "damage": 0,
+        "label": "Stone Fist",
+        "rage": 0
+      }
+    },
+    "rewards": [],
+    "checkpoint": null,
+    "started": 1792808566013,
+    "gold": 80,
+    "shop": null,
+    "stats": {
+      "cardsPlayed": 1,
+      "hintsUsed": 0,
+      "battles": 0,
+      "turns": 0,
+      "forecasts": 0,
+      "firstCorrect": 0,
+      "assisted": 0,
+      "wrong": 0,
+      "concepts": {}
+    },
+    "notice": "Turn 1 · Enemy intent: Stone Fist."
+  },
+  "shop": {
+    "version": 1,
+    "textLocale": "en",
+    "mode": "learn",
+    "rng": 2,
+    "seed": 2,
+    "seq": 12,
+    "stage": 0,
+    "depth": 0,
+    "hp": 60,
+    "maxHp": 60,
+    "deck": [
+      {
+        "uid": "c1",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c2",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c3",
+        "key": "stm.attack.rune_strike",
+        "upgraded": false
+      },
+      {
+        "uid": "c4",
+        "key": "stm.attack.weak_point",
+        "upgraded": false
+      },
+      {
+        "uid": "c5",
+        "key": "stm.attack.weak_point",
+        "upgraded": false
+      },
+      {
+        "uid": "c6",
+        "key": "stm.attack.weak_point",
+        "upgraded": false
+      },
+      {
+        "uid": "c7",
+        "key": "stm.defend.rune_guard",
+        "upgraded": false
+      },
+      {
+        "uid": "c8",
+        "key": "stm.defend.rune_guard",
+        "upgraded": false
+      },
+      {
+        "uid": "c9",
+        "key": "stm.defend.flash_ward",
+        "upgraded": false
+      },
+      {
+        "uid": "c10",
+        "key": "stm.defend.flash_ward",
+        "upgraded": false
+      },
+      {
+        "uid": "c11",
+        "key": "stm.skill.quick_study",
+        "upgraded": false
+      },
+      {
+        "uid": "c12",
+        "key": "stm.skill.read_ahead",
+        "upgraded": false
+      }
+    ],
+    "cleared": [],
+    "route": {
+      "version": 3,
+      "path": [],
+      "active": "s1-l01-n4",
+      "catalogueSeed": "STM-003",
+      "snapshot": {
+        "generatorVersion": "1.0.0",
+        "rulesVersion": "1.0.0",
+        "seed": "STM-003",
+        "stage": 1,
+        "stageName": "Sigil Keep",
+        "bossId": "s1_twin_sigil_guardian",
+        "bossName": "Twin Sigil Guardian",
+        "initialPaths": 4,
+        "preRestPaths": 5,
+        "quotas": {
+          "shop": 2,
+          "elite": 6,
+          "rest": 3
+        },
+        "levels": [
+          {
+            "level": 1,
+            "nodeIds": [
+              "s1-l01-n1",
+              "s1-l01-n2",
+              "s1-l01-n3",
+              "s1-l01-n4"
+            ]
+          },
+          {
+            "level": 2,
+            "nodeIds": [
+              "s1-l02-n1",
+              "s1-l02-n2",
+              "s1-l02-n3"
+            ]
+          },
+          {
+            "level": 3,
+            "nodeIds": [
+              "s1-l03-n1",
+              "s1-l03-n2",
+              "s1-l03-n3",
+              "s1-l03-n4"
+            ]
+          },
+          {
+            "level": 4,
+            "nodeIds": [
+              "s1-l04-n1",
+              "s1-l04-n2",
+              "s1-l04-n3",
+              "s1-l04-n4",
+              "s1-l04-n5"
+            ]
+          },
+          {
+            "level": 5,
+            "nodeIds": [
+              "s1-l05-n1",
+              "s1-l05-n2",
+              "s1-l05-n3",
+              "s1-l05-n4",
+              "s1-l05-n5"
+            ]
+          },
+          {
+            "level": 6,
+            "nodeIds": [
+              "s1-l06-n1",
+              "s1-l06-n2",
+              "s1-l06-n3",
+              "s1-l06-n4",
+              "s1-l06-n5"
+            ]
+          },
+          {
+            "level": 7,
+            "nodeIds": [
+              "s1-l07-n1",
+              "s1-l07-n2",
+              "s1-l07-n3",
+              "s1-l07-n4",
+              "s1-l07-n5"
+            ]
+          },
+          {
+            "level": 8,
+            "nodeIds": [
+              "s1-l08-n1",
+              "s1-l08-n2",
+              "s1-l08-n3",
+              "s1-l08-n4",
+              "s1-l08-n5"
+            ]
+          },
+          {
+            "level": 9,
+            "nodeIds": [
+              "s1-l09-n1"
+            ]
+          },
+          {
+            "level": 10,
+            "nodeIds": [
+              "s1-l10-n1"
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "s1-l01-n1",
+            "level": 1,
+            "column": 0,
+            "x": 0.12,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l01-n2",
+            "level": 1,
+            "column": 1,
+            "x": 0.373333,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l01-n3",
+            "level": 1,
+            "column": 2,
+            "x": 0.626667,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l01-n4",
+            "level": 1,
+            "column": 3,
+            "x": 0.88,
+            "type": "shop"
+          },
+          {
+            "id": "s1-l02-n1",
+            "level": 2,
+            "column": 0,
+            "x": 0.12,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l02-n2",
+            "level": 2,
+            "column": 1,
+            "x": 0.5,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l02-n3",
+            "level": 2,
+            "column": 2,
+            "x": 0.88,
+            "type": "elite"
+          },
+          {
+            "id": "s1-l03-n1",
+            "level": 3,
+            "column": 0,
+            "x": 0.12,
+            "type": "elite"
+          },
+          {
+            "id": "s1-l03-n2",
+            "level": 3,
+            "column": 1,
+            "x": 0.373333,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l03-n3",
+            "level": 3,
+            "column": 2,
+            "x": 0.626667,
+            "type": "shop"
+          },
+          {
+            "id": "s1-l03-n4",
+            "level": 3,
+            "column": 3,
+            "x": 0.88,
+            "type": "elite"
+          },
+          {
+            "id": "s1-l04-n1",
+            "level": 4,
+            "column": 0,
+            "x": 0.12,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l04-n2",
+            "level": 4,
+            "column": 1,
+            "x": 0.31,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l04-n3",
+            "level": 4,
+            "column": 2,
+            "x": 0.5,
+            "type": "elite"
+          },
+          {
+            "id": "s1-l04-n4",
+            "level": 4,
+            "column": 3,
+            "x": 0.69,
+            "type": "elite"
+          },
+          {
+            "id": "s1-l04-n5",
+            "level": 4,
+            "column": 4,
+            "x": 0.88,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l05-n1",
+            "level": 5,
+            "column": 0,
+            "x": 0.12,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l05-n2",
+            "level": 5,
+            "column": 1,
+            "x": 0.31,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l05-n3",
+            "level": 5,
+            "column": 2,
+            "x": 0.5,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l05-n4",
+            "level": 5,
+            "column": 3,
+            "x": 0.69,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l05-n5",
+            "level": 5,
+            "column": 4,
+            "x": 0.88,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l06-n1",
+            "level": 6,
+            "column": 0,
+            "x": 0.12,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l06-n2",
+            "level": 6,
+            "column": 1,
+            "x": 0.31,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l06-n3",
+            "level": 6,
+            "column": 2,
+            "x": 0.5,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l06-n4",
+            "level": 6,
+            "column": 3,
+            "x": 0.69,
+            "type": "elite"
+          },
+          {
+            "id": "s1-l06-n5",
+            "level": 6,
+            "column": 4,
+            "x": 0.88,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l07-n1",
+            "level": 7,
+            "column": 0,
+            "x": 0.12,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l07-n2",
+            "level": 7,
+            "column": 1,
+            "x": 0.31,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l07-n3",
+            "level": 7,
+            "column": 2,
+            "x": 0.5,
+            "type": "rest"
+          },
+          {
+            "id": "s1-l07-n4",
+            "level": 7,
+            "column": 3,
+            "x": 0.69,
+            "type": "rest"
+          },
+          {
+            "id": "s1-l07-n5",
+            "level": 7,
+            "column": 4,
+            "x": 0.88,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l08-n1",
+            "level": 8,
+            "column": 0,
+            "x": 0.12,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l08-n2",
+            "level": 8,
+            "column": 1,
+            "x": 0.31,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l08-n3",
+            "level": 8,
+            "column": 2,
+            "x": 0.5,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l08-n4",
+            "level": 8,
+            "column": 3,
+            "x": 0.69,
+            "type": "mystery"
+          },
+          {
+            "id": "s1-l08-n5",
+            "level": 8,
+            "column": 4,
+            "x": 0.88,
+            "type": "battle"
+          },
+          {
+            "id": "s1-l09-n1",
+            "level": 9,
+            "column": 0,
+            "x": 0.5,
+            "type": "rest"
+          },
+          {
+            "id": "s1-l10-n1",
+            "level": 10,
+            "column": 0,
+            "x": 0.5,
+            "type": "boss"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1-l01-n1",
+            "to": "s1-l02-n1"
+          },
+          {
+            "from": "s1-l01-n2",
+            "to": "s1-l02-n1"
+          },
+          {
+            "from": "s1-l01-n3",
+            "to": "s1-l02-n2"
+          },
+          {
+            "from": "s1-l01-n4",
+            "to": "s1-l02-n3"
+          },
+          {
+            "from": "s1-l02-n1",
+            "to": "s1-l03-n1"
+          },
+          {
+            "from": "s1-l02-n1",
+            "to": "s1-l03-n2"
+          },
+          {
+            "from": "s1-l02-n2",
+            "to": "s1-l03-n3"
+          },
+          {
+            "from": "s1-l02-n3",
+            "to": "s1-l03-n4"
+          },
+          {
+            "from": "s1-l02-n2",
+            "to": "s1-l03-n4"
+          },
+          {
+            "from": "s1-l03-n1",
+            "to": "s1-l04-n1"
+          },
+          {
+            "from": "s1-l03-n1",
+            "to": "s1-l04-n2"
+          },
+          {
+            "from": "s1-l03-n2",
+            "to": "s1-l04-n3"
+          },
+          {
+            "from": "s1-l03-n3",
+            "to": "s1-l04-n4"
+          },
+          {
+            "from": "s1-l03-n4",
+            "to": "s1-l04-n5"
+          },
+          {
+            "from": "s1-l04-n1",
+            "to": "s1-l05-n1"
+          },
+          {
+            "from": "s1-l04-n2",
+            "to": "s1-l05-n2"
+          },
+          {
+            "from": "s1-l04-n3",
+            "to": "s1-l05-n3"
+          },
+          {
+            "from": "s1-l04-n4",
+            "to": "s1-l05-n4"
+          },
+          {
+            "from": "s1-l04-n5",
+            "to": "s1-l05-n5"
+          },
+          {
+            "from": "s1-l04-n3",
+            "to": "s1-l05-n2"
+          },
+          {
+            "from": "s1-l05-n1",
+            "to": "s1-l06-n1"
+          },
+          {
+            "from": "s1-l05-n2",
+            "to": "s1-l06-n2"
+          },
+          {
+            "from": "s1-l05-n3",
+            "to": "s1-l06-n3"
+          },
+          {
+            "from": "s1-l05-n4",
+            "to": "s1-l06-n4"
+          },
+          {
+            "from": "s1-l05-n5",
+            "to": "s1-l06-n5"
+          },
+          {
+            "from": "s1-l05-n3",
+            "to": "s1-l06-n4"
+          },
+          {
+            "from": "s1-l05-n4",
+            "to": "s1-l06-n5"
+          },
+          {
+            "from": "s1-l06-n1",
+            "to": "s1-l07-n1"
+          },
+          {
+            "from": "s1-l06-n2",
+            "to": "s1-l07-n2"
+          },
+          {
+            "from": "s1-l06-n3",
+            "to": "s1-l07-n3"
+          },
+          {
+            "from": "s1-l06-n4",
+            "to": "s1-l07-n4"
+          },
+          {
+            "from": "s1-l06-n5",
+            "to": "s1-l07-n5"
+          },
+          {
+            "from": "s1-l06-n2",
+            "to": "s1-l07-n3"
+          },
+          {
+            "from": "s1-l07-n1",
+            "to": "s1-l08-n1"
+          },
+          {
+            "from": "s1-l07-n2",
+            "to": "s1-l08-n2"
+          },
+          {
+            "from": "s1-l07-n3",
+            "to": "s1-l08-n3"
+          },
+          {
+            "from": "s1-l07-n4",
+            "to": "s1-l08-n4"
+          },
+          {
+            "from": "s1-l07-n5",
+            "to": "s1-l08-n5"
+          },
+          {
+            "from": "s1-l08-n1",
+            "to": "s1-l09-n1"
+          },
+          {
+            "from": "s1-l08-n2",
+            "to": "s1-l09-n1"
+          },
+          {
+            "from": "s1-l08-n3",
+            "to": "s1-l09-n1"
+          },
+          {
+            "from": "s1-l08-n4",
+            "to": "s1-l09-n1"
+          },
+          {
+            "from": "s1-l08-n5",
+            "to": "s1-l09-n1"
+          },
+          {
+            "from": "s1-l09-n1",
+            "to": "s1-l10-n1"
+          }
+        ]
+      }
+    },
+    "scene": "shop",
+    "battle": null,
+    "rewards": [],
+    "checkpoint": null,
+    "started": 1792809192895,
+    "gold": 80,
+    "shop": {
+      "version": 2,
+      "offers": [
+        {
+          "key": "stm.passive.last_ember",
+          "basePrice": 45,
+          "price": 45,
+          "sale": false
+        },
+        {
+          "key": "stm.attack.twin_shot",
+          "basePrice": 45,
+          "price": 45,
+          "sale": false
+        },
+        {
+          "key": "stm.attack.weak_point",
+          "basePrice": 45,
+          "price": 45,
+          "sale": false
+        },
+        {
+          "key": "stm.defend.flash_ward",
+          "basePrice": 60,
+          "price": 60,
+          "sale": false
+        },
+        {
+          "key": "stm.passive.rune_armor",
+          "basePrice": 65,
+          "price": 65,
+          "sale": false
+        },
+        {
+          "key": "stm.attack.rune_sweep",
+          "basePrice": 65,
+          "price": 26,
+          "sale": true
+        }
+      ],
+      "bought": [],
+      "ownedBefore": [],
+      "artifacts": [
+        {
+          "id": "s08_travelers_ration",
+          "tier": "starting",
+          "price": 80
+        },
+        {
+          "id": "s09_copper_purse",
+          "tier": "starting",
+          "price": 80
+        },
+        {
+          "id": "s11_scribes_pebble",
+          "tier": "starting",
+          "price": 80
+        },
+        {
+          "id": "e04_ember_balance",
+          "tier": "elite_mystery",
+          "price": 140
+        },
+        {
+          "id": "e10_rune_bats_bell",
+          "tier": "elite_mystery",
+          "price": 140
+        },
+        {
+          "id": "b02_sovereign_grimoire_clasp",
+          "tier": "boss",
+          "price": 220
+        }
+      ],
+      "artifactBought": [],
+      "removed": null
+    },
+    "stats": {
+      "cardsPlayed": 0,
+      "hintsUsed": 0,
+      "battles": 0,
+      "turns": 0,
+      "forecasts": 0,
+      "firstCorrect": 0,
+      "assisted": 0,
+      "wrong": 0,
+      "concepts": {}
+    },
+    "notice": "",
+    "nodeChoice": "normal"
+  }
+}

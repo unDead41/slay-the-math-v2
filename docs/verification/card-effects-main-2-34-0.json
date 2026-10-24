@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "timezone": "Asia/Kuala_Lumpur",
+  "gameVersion": "2.34.0",
+  "target": "main",
+  "mainBase": "c54ce92fdd8e43544b03a16ed995431da6fdb8f0",
+  "featureHead": "a9c49f03f5e60dc0309f90931469361e6febedee",
+  "master": {
+    "version": "master-1.4.0-candidate.4",
+    "difficulty": "medium",
+    "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194"
+  },
+  "tests": {
+    "command": "npm test",
+    "passed": 870,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "exitCode": 0,
+    "durationMs": 309051.844466,
+    "environment": "External QA-only jsdom via NODE_PATH; no project dependency changes."
+  },
+  "syntax": {
+    "command": "npm run check",
+    "exitCode": 0
+  },
+  "production": {
+    "command": "npm run build:prod",
+    "exitCode": 0,
+    "version": "2.34.0",
+    "productionFiles": 706,
+    "productionBytes": 253279835,
+    "allDistInputsMatch": true,
+    "developerFilesAbsent": true,
+    "portableBytes": 302993459,
+    "release": "/* Generated from package.json and current runtime contents. */\n(function(root){root.DCRelease=Object.freeze({\"version\":\"2.34.0\",\"build\":\"722f6e9ebc5b523d\"});})(globalThis);\n",
+    "indexSha256": "f8b0b073ebef300c309146de72aa74265e7386085a1663528c11ea5d6aaff3e9"
+  },
+  "browsers": {
+    "player": {
+      "checks": [
+        "ordinary: actual production UI, effects, reload, valid save, decoded original art",
+        "master: actual production UI, effects, reload, valid save, decoded original art",
+        "last-ember: actual production UI, effects, reload, valid save, decoded original art",
+        "legacy: actual production UI, effects, reload, valid save, decoded original art"
+      ],
+      "errors": []
+    },
+    "profiles": {
+      "checks": [
+        "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+        "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+        "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+      ],
+      "errors": []
+    },
+    "ai": {
+      "status": "PASS",
+      "encounters": 4,
+      "sourceHash": "687d36d96093a05d93be9df2ed74281d35259618ee94154e83661b38a4a293e1",
+      "reportHistory": true,
+      "staleRefreshGuard": true,
+      "selectedHistorySurvivesReload": true,
+      "previousReportImmutable": true,
+      "downloads": true,
+      "cancellation": true,
+      "playerStorageUnchanged": true,
+      "viewports": [
+        1440,
+        750,
+        390
+      ],
+      "errors": []
+    },
+    "productionPlayer": true,
+    "profileEntry": "generated dist; all 706 dist files match production copy"
+  },
+  "preservedMainChanges": 99,
+  "preservedInputs": [
+    {
+      "path": "dist/music-data.js",
+      "unchangedFromMain": true,
+      "sha256": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3"
+    },
+    {
+      "path": "dist/assets/music/menu_ancient_stone_keep.mp3",
+      "unchangedFromMain": true,
+      "sha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681"
+    },
+    {
+      "path": "dist/animation.js",
+      "unchangedFromMain": true,
+      "sha256": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52"
+    },
+    {
+      "path": "dist/animation-data.js",
+      "unchangedFromMain": true,
+      "sha256": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9"
+    },
+    {
+      "path": "dist/audio.js",
+      "unchangedFromMain": true,
+      "sha256": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17"
+    },
+    {
+      "path": "dist/status-vfx.js",
+      "unchangedFromMain": true,
+      "sha256": "ef5585cbdbf2af43adf2f3926fbd091f63828e21e1c37be186dd3dcf8cfac8e9"
+    },
+    {
+      "path": "dist/card-motion.js",
+      "unchangedFromMain": true,
+      "sha256": "fe6a747dc29b0eab084f3ae8d5b1c006073d1428b3f5345c21a2d018796ab9be"
+    },
+    {
+      "path": "dist/card-assets.js",
+      "unchangedFromMain": true,
+      "sha256": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528"
+    },
+    {
+      "path": "dist/artifact-data.js",
+      "unchangedFromMain": true,
+      "sha256": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da"
+    },
+    {
+      "path": "dist/question-data.js",
+      "unchangedFromMain": true,
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+    },
+    {
+      "path": "dist/mechanics.js",
+      "unchangedFromMain": true,
+      "sha256": "91384cf36eae881ac47246c656c5221511b8a66a1b0832098e6a6acbd6dd7883"
+    },
+    {
+      "path": "dist/learning-google.js",
+      "unchangedFromMain": true,
+      "sha256": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf"
+    },
+    {
+      "path": "dist/learning-delivery.js",
+      "unchangedFromMain": true,
+      "sha256": "15636497c2191eab4b3cc2f4f0bf69f67a2e758e966ab387e1faa18051fb9168"
+    }
+  ],
+  "review": {
+    "independentTargetedPassed": 73,
+    "critical": 0,
+    "importantFound": 1,
+    "importantResolved": 1,
+    "minorFound": 1,
+    "minorResolved": 1,
+    "record": "docs/verification/card-effects-main-review.md",
+    "regressionsObservedRedThenGreen": true
+  },
+  "sourceHashes": {
+    "package.json": "252b2f7ee6e446fef7cdf218fe6c1f5a5f0b4bd662cab2cd61c3d26e14d8318c",
+    "dist/release.js": "add2ec9c612f19b8ce4939258521f202dd8d34bfdc5dcf54cbd05571f5bc9ff7",
+    "dist/index.html": "f8b0b073ebef300c309146de72aa74265e7386085a1663528c11ea5d6aaff3e9",
+    "dist/engine.js": "1eeb3bc0ea98a50ec99972118cb093476cd2adc99ff5db9bc6fc19dca054bc91",
+    "dist/card-combat.js": "9f088cbf5777fa9c474b378097dbb2e0d549f569b56b508d803fd1329f0aed57",
+    "dist/card-data.js": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148",
+    "dist/balance-data.js": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b",
+    "dist/card-kit.js": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402",
+    "dist/app.js": "37e58322550acb2314f82edd554c1c803b4e92e24d41765ab69f8fdac104bee0",
+    "dist/combat-status.js": "d80f1754ad79cb4c3c4423640fd6de156267276039a0a56b909b85c8b1fba9e3",
+    "dist/tutorial-data.js": "13adf9eec0015c14b9c0ed7c0b62bb7f0c2b96dd2194a2518647888d847ab046",
+    "dist/tutorial.js": "96144bfaee27c3c839ae07a0b99a5d0afa5d08598a8d3657c298168b24482114",
+    "dist/music-data.js": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3",
+    "tools/cards/effects.json": "57184282341057a1495e28f21c0569cf7664b063c0093e5932e4fa4b8b31a72d",
+    "tools/cards/effects.cjs": "e2b47c9b321008e4bb6148c6670f1f2c5abf0444d36597c7f79635a5457959ed",
+    "tools/ai-playtester/agent.cjs": "f1f5fa3b55222fc7180cfbd8729c47e31796723fde56db2f7cf567cd2d92a24c",
+    "tools/ai-playtester/effects.cjs": "048a3f4fa815ea7beb1826a03fd4f296c1a10eb8a42558f59b4970eab8647283",
+    "tools/balance/map/replay.cjs": "1a9217c2746f7e83fae7bc07f0cd7e6bbe226a2fc8fd8a35f3771a327bb81018"
+  },
+  "limits": [
+    "Existing ordinary runs retain prior rules; New Run activates revised values.",
+    "Historical strategy weights and prior numeric reports remain contextual heuristics/evidence of their original source.",
+    "Pupil win rates, physical devices and hosted CI/deployment are not established by these local checks."
+  ]
+}

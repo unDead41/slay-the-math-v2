@@ -1,0 +1,619 @@
+{
+  "main": "c54ce92fdd8e43544b03a16ed995431da6fdb8f0",
+  "featureBase": "264a60ecec7e64251304cdbc58b587a8867502ab",
+  "checkedMainChanges": 99,
+  "unchanged": true,
+  "intentionalIntegrationPaths": [
+    "MAIN-SEKARANG.html",
+    "README.md",
+    "SOR_README.md",
+    "dist/index.html",
+    "dist/release.js",
+    "docs/AI_PLAYTESTER.md",
+    "docs/sor/23_MASTER_BALANCE.md",
+    "docs/sor/CHANGELOG.md",
+    "docs/sor/DECISIONS.md",
+    "index.html",
+    "package.json",
+    "tests/ai-playtester-effects.test.cjs",
+    "tools/ai-playtester/agent.cjs",
+    "tools/ai-playtester/effects.cjs",
+    "tools/balance/map/replay.cjs"
+  ],
+  "files": [
+    {
+      "path": "dist/assets/music/audio-pack-5.json",
+      "mainBlob": "6414d946696c38b652fe573db050385756e106a6",
+      "currentBlob": "6414d946696c38b652fe573db050385756e106a6",
+      "unchanged": true
+    },
+    {
+      "path": "dist/assets/music/menu_ancient_stone_keep.mp3",
+      "mainBlob": "9faba3c7cd5cef46c0d10f8bc08b35304e2dfb9b",
+      "currentBlob": "9faba3c7cd5cef46c0d10f8bc08b35304e2dfb9b",
+      "unchanged": true
+    },
+    {
+      "path": "dist/music-data.js",
+      "mainBlob": "e1d13a23d4bf93f18f42f02064daa066151f9cf3",
+      "currentBlob": "e1d13a23d4bf93f18f42f02064daa066151f9cf3",
+      "unchanged": true
+    },
+    {
+      "path": "docs/AI_PLAYTESTER_MAIN_2026_10_24.md",
+      "mainBlob": "f64a975d1954b9ca344bb8e6f6a085709a51ee3d",
+      "currentBlob": "f64a975d1954b9ca344bb8e6f6a085709a51ee3d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audio/menu-2026-10-24/README.md",
+      "mainBlob": "1a1fbc31247317ba164c8415a4e5e19dd786dcb0",
+      "currentBlob": "1a1fbc31247317ba164c8415a4e5e19dd786dcb0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audio/menu-2026-10-24/source-audit.json",
+      "mainBlob": "c55b76de635f510abe1248861b78aadcfef5e037",
+      "currentBlob": "c55b76de635f510abe1248861b78aadcfef5e037",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audio/menu-2026-10-24/verification.json",
+      "mainBlob": "464b81ff97b3655b2038927859e2f187f78ef425",
+      "currentBlob": "464b81ff97b3655b2038927859e2f187f78ef425",
+      "unchanged": true
+    },
+    {
+      "path": "docs/sor/11_ANIMATION_VFX_AUDIO.md",
+      "mainBlob": "39c7bb0acb259622ad252075c5d18695b2a86512",
+      "currentBlob": "39c7bb0acb259622ad252075c5d18695b2a86512",
+      "unchanged": true
+    },
+    {
+      "path": "docs/sor/14_ASSET_PIPELINE.md",
+      "mainBlob": "253b28ccd87571eb9f7ee420f937f7ebb06bae98",
+      "currentBlob": "253b28ccd87571eb9f7ee420f937f7ebb06bae98",
+      "unchanged": true
+    },
+    {
+      "path": "docs/sor/20_DEVELOPER_TOOLS.md",
+      "mainBlob": "ab220ec31034c38f2b2ebc0dde1cef8bf1c6000f",
+      "currentBlob": "ab220ec31034c38f2b2ebc0dde1cef8bf1c6000f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-24-ai-branch.md",
+      "mainBlob": "19d82976aab39dbd7b147c94e954e9506090eb1c",
+      "currentBlob": "19d82976aab39dbd7b147c94e954e9506090eb1c",
+      "unchanged": true
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-24-ai-strategy.md",
+      "mainBlob": "2375ddf4f82f2b97558e27fa8472da4ae8e4a931",
+      "currentBlob": "2375ddf4f82f2b97558e27fa8472da4ae8e4a931",
+      "unchanged": true
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-24-ai-branch.md",
+      "mainBlob": "f5d028fe44049510c3073011588347e6f6af2a43",
+      "currentBlob": "f5d028fe44049510c3073011588347e6f6af2a43",
+      "unchanged": true
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-24-ai-strategy-design.md",
+      "mainBlob": "5f99cdcdf682c964f641c7d3df103e2862f4aea6",
+      "currentBlob": "5f99cdcdf682c964f641c7d3df103e2862f4aea6",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch-review.md",
+      "mainBlob": "479bfcc8d7bd04cbd4074ee7ca81c01b52224fd3",
+      "currentBlob": "479bfcc8d7bd04cbd4074ee7ca81c01b52224fd3",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch.json",
+      "mainBlob": "9004aa0898e42c4e0bcee5f0394735ca765b75dc",
+      "currentBlob": "9004aa0898e42c4e0bcee5f0394735ca765b75dc",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/baseline-restored.log",
+      "mainBlob": "a570fe85da6e6fc67adcf49b1ecec5a4b77258af",
+      "currentBlob": "a570fe85da6e6fc67adcf49b1ecec5a4b77258af",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/browser.log",
+      "mainBlob": "db23f353c7e4a9b0341e944cf002f405510cffc0",
+      "currentBlob": "db23f353c7e4a9b0341e944cf002f405510cffc0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/cli.json",
+      "mainBlob": "5b3ed6edf5a3ec6a822e7933b74a572bc4d4707d",
+      "currentBlob": "5b3ed6edf5a3ec6a822e7933b74a572bc4d4707d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/cohort-integrity.json",
+      "mainBlob": "54614db2dc75712ed09b7af56f2384feb723e923",
+      "currentBlob": "54614db2dc75712ed09b7af56f2384feb723e923",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/developer-browser.log",
+      "mainBlob": "58c46f058fbd62783c5de83beeeb568555aa8f71",
+      "currentBlob": "58c46f058fbd62783c5de83beeeb568555aa8f71",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/full-suite.log",
+      "mainBlob": "e3a2f5d4a9aeca1e701846a0daf62d8e0144d35d",
+      "currentBlob": "e3a2f5d4a9aeca1e701846a0daf62d8e0144d35d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/production.log",
+      "mainBlob": "2069c058a5edb37cb278d7212e5e41ff0f417a36",
+      "currentBlob": "2069c058a5edb37cb278d7212e5e41ff0f417a36",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/syntax.log",
+      "mainBlob": "f66e077ecc14fd42a7d7e06476077e4c21bc7a19",
+      "currentBlob": "f66e077ecc14fd42a7d7e06476077e4c21bc7a19",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/targeted.log",
+      "mainBlob": "b45ae0aebbb50f2f08d27e649fd0c7e4cfcf4965",
+      "currentBlob": "b45ae0aebbb50f2f08d27e649fd0c7e4cfcf4965",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-branch/worker-campaign.json",
+      "mainBlob": "bd57e0ce15f742fbb75ef185f71d0c5ae8caa177",
+      "currentBlob": "bd57e0ce15f742fbb75ef185f71d0c5ae8caa177",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24.json",
+      "mainBlob": "929f784526fe0fdd045a3e8e9ef9e9f89991d335",
+      "currentBlob": "929f784526fe0fdd045a3e8e9ef9e9f89991d335",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/browser.log",
+      "mainBlob": "cb007760751506cf691280635d25ea93c9ae07fb",
+      "currentBlob": "cb007760751506cf691280635d25ea93c9ae07fb",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/developer-browser.log",
+      "mainBlob": "37a58c2a73b6a16ffb3bd313e0b91701bb0ba3b9",
+      "currentBlob": "37a58c2a73b6a16ffb3bd313e0b91701bb0ba3b9",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/full-suite.log",
+      "mainBlob": "6b200e612d64b38eccb87139c2b2195afff53926",
+      "currentBlob": "6b200e612d64b38eccb87139c2b2195afff53926",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/integration-scope.json",
+      "mainBlob": "ba20e49ad8e46feb12907d4ca98e82eed10c9a59",
+      "currentBlob": "ba20e49ad8e46feb12907d4ca98e82eed10c9a59",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/production-inputs.json",
+      "mainBlob": "490e439672bed6cd2b0ab71ff4fcbbe70e524e20",
+      "currentBlob": "490e439672bed6cd2b0ab71ff4fcbbe70e524e20",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/production.json",
+      "mainBlob": "0662c34f4e5fb5a206ecf19ca397ac0bdfd82943",
+      "currentBlob": "0662c34f4e5fb5a206ecf19ca397ac0bdfd82943",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/production.log",
+      "mainBlob": "703e0820c99cede3e899634259731e1d008fd7ad",
+      "currentBlob": "703e0820c99cede3e899634259731e1d008fd7ad",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-main-2026-10-24/syntax.log",
+      "mainBlob": "3ca98070ae2ae4ec162b801837260bca1dd9d0de",
+      "currentBlob": "3ca98070ae2ae4ec162b801837260bca1dd9d0de",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-release-2-33-0.json",
+      "mainBlob": "c8d77259fc6d0d4820f1068faeb16a2996430ae6",
+      "currentBlob": "c8d77259fc6d0d4820f1068faeb16a2996430ae6",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-release-2-33-0/browser.json",
+      "mainBlob": "eda9fa73d4747c04374c5599c764e3200675fc53",
+      "currentBlob": "eda9fa73d4747c04374c5599c764e3200675fc53",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-release-2-33-0/build.log",
+      "mainBlob": "78b71f75974c613cf5a1dd7e5c8b131ac0bbe733",
+      "currentBlob": "78b71f75974c613cf5a1dd7e5c8b131ac0bbe733",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-release-2-33-0/offline-rebuild.log",
+      "mainBlob": "02f79013458f555f2b379de42502a58ec9104c8a",
+      "currentBlob": "02f79013458f555f2b379de42502a58ec9104c8a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-release-2-33-0/syntax.log",
+      "mainBlob": "2b2d3341e8fe1a0e65db29645b6808571e9dcabd",
+      "currentBlob": "2b2d3341e8fe1a0e65db29645b6808571e9dcabd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-release-2-33-0/tests.log",
+      "mainBlob": "a4a35d1129c4492983930d60c15e406d2ce2e940",
+      "currentBlob": "a4a35d1129c4492983930d60c15e406d2ce2e940",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy-review.md",
+      "mainBlob": "de0664185401ad845eb09a77f7a5e46d8af732f4",
+      "currentBlob": "de0664185401ad845eb09a77f7a5e46d8af732f4",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy.json",
+      "mainBlob": "2e4d5201d65818430d4ded3cc0deceada1d5cbfd",
+      "currentBlob": "2e4d5201d65818430d4ded3cc0deceada1d5cbfd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/all-card-planning.json",
+      "mainBlob": "ea1edcff06e4f081848c8938e93fcfd988044681",
+      "currentBlob": "ea1edcff06e4f081848c8938e93fcfd988044681",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/browser.log",
+      "mainBlob": "908b1a3b5c7b595533d34f33166285ab404bd1bc",
+      "currentBlob": "908b1a3b5c7b595533d34f33166285ab404bd1bc",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/cli.json",
+      "mainBlob": "6c6cb366e19b92305661d63faa9e47b81abcc465",
+      "currentBlob": "6c6cb366e19b92305661d63faa9e47b81abcc465",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/cli.log",
+      "mainBlob": "def4f3359f5d672c3ef947731e4483d70e44ac45",
+      "currentBlob": "def4f3359f5d672c3ef947731e4483d70e44ac45",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/cohort-integrity.json",
+      "mainBlob": "c271e81298eefcbef9c15bb0fcebfebf1ca074ef",
+      "currentBlob": "c271e81298eefcbef9c15bb0fcebfebf1ca074ef",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/developer-browser.log",
+      "mainBlob": "7dc120f9f7287d68feb57eecf5f7736ea9ca109e",
+      "currentBlob": "7dc120f9f7287d68feb57eecf5f7736ea9ca109e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/focused.log",
+      "mainBlob": "4400b3da3a7114c16035f734b857a57e66994e29",
+      "currentBlob": "4400b3da3a7114c16035f734b857a57e66994e29",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/full-suite-result.json",
+      "mainBlob": "fad37d6bc155610891743a5f74acd215a6058e1d",
+      "currentBlob": "fad37d6bc155610891743a5f74acd215a6058e1d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/full-suite.log",
+      "mainBlob": "f8c712c731251efa480526363ec00e444e2510c1",
+      "currentBlob": "f8c712c731251efa480526363ec00e444e2510c1",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/http-worker.json",
+      "mainBlob": "e79e930cf8691d68085e675ebe63a6b4856135f5",
+      "currentBlob": "e79e930cf8691d68085e675ebe63a6b4856135f5",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/multi-hit-acceptance.json",
+      "mainBlob": "2f869f9024b3e17366b6716873a7793ea5bd2974",
+      "currentBlob": "2f869f9024b3e17366b6716873a7793ea5bd2974",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/production.json",
+      "mainBlob": "3756cd2031865257748a0981e096c9821e066db3",
+      "currentBlob": "3756cd2031865257748a0981e096c9821e066db3",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/production.log",
+      "mainBlob": "7aab9dce8698853c57f8047cd0e3a25aca76c7dd",
+      "currentBlob": "7aab9dce8698853c57f8047cd0e3a25aca76c7dd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/review-red.log",
+      "mainBlob": "bd9b8f73bb92d5dbcc8ec328533f5adc6e22a694",
+      "currentBlob": "bd9b8f73bb92d5dbcc8ec328533f5adc6e22a694",
+      "unchanged": true
+    },
+    {
+      "path": "docs/verification/ai-strategy/syntax.log",
+      "mainBlob": "82ff575da16b7a824775ccc595314cdcf05084a4",
+      "currentBlob": "82ff575da16b7a824775ccc595314cdcf05084a4",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/campaign-all-profiles.csv",
+      "mainBlob": "92955b51f29fee9d74f5e5bf37ba2c1ed00daca8",
+      "currentBlob": "92955b51f29fee9d74f5e5bf37ba2c1ed00daca8",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/campaign-all-profiles.json",
+      "mainBlob": "2fe86bec1b56b869be9398a723c01f4ac2e69a50",
+      "currentBlob": "2fe86bec1b56b869be9398a723c01f4ac2e69a50",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-dealer.csv",
+      "mainBlob": "6de21ab03d2803a33efb814df6cf1b7732ecbc3c",
+      "currentBlob": "6de21ab03d2803a33efb814df6cf1b7732ecbc3c",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-dealer.json",
+      "mainBlob": "261edb708b2ceb8c20c24df3b8e0007bc23c0f94",
+      "currentBlob": "261edb708b2ceb8c20c24df3b8e0007bc23c0f94",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-golem-up.csv",
+      "mainBlob": "6a1b154b046174b380f4c9e8a16558cb95bde956",
+      "currentBlob": "6a1b154b046174b380f4c9e8a16558cb95bde956",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-golem-up.json",
+      "mainBlob": "569b0c0ece1e3edd18dac965ec362e216963485c",
+      "currentBlob": "569b0c0ece1e3edd18dac965ec362e216963485c",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-golem.csv",
+      "mainBlob": "28baac9e1c30b0dd441c7e68743d191f380699d2",
+      "currentBlob": "28baac9e1c30b0dd441c7e68743d191f380699d2",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-golem.json",
+      "mainBlob": "b69733fc19f7de6553208f7c25b3c8b8bf6078fd",
+      "currentBlob": "b69733fc19f7de6553208f7c25b3c8b8bf6078fd",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-wisp.csv",
+      "mainBlob": "5cb5bb247f7b67726636519948c8baa6bd085e32",
+      "currentBlob": "5cb5bb247f7b67726636519948c8baa6bd085e32",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/branch-ai-2026-10-24/pair-wisp.json",
+      "mainBlob": "c51282fa10c4c72d9e844d02afd155fc6987c021",
+      "currentBlob": "c51282fa10c4c72d9e844d02afd155fc6987c021",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/campaign-all-profiles.csv",
+      "mainBlob": "ef9f2c273056f17bec9aaa06fa2ad850c35c1683",
+      "currentBlob": "ef9f2c273056f17bec9aaa06fa2ad850c35c1683",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/campaign-all-profiles.json",
+      "mainBlob": "d0b3d8ff2af78ed94d8c85e4fe2014dfdb5049b6",
+      "currentBlob": "d0b3d8ff2af78ed94d8c85e4fe2014dfdb5049b6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-dealer.csv",
+      "mainBlob": "67ad4b1c70a5a03921e8ee492ef5311cc478bb84",
+      "currentBlob": "67ad4b1c70a5a03921e8ee492ef5311cc478bb84",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-dealer.json",
+      "mainBlob": "41d7a522b37f4eda33d04cbe83c752d28831fee6",
+      "currentBlob": "41d7a522b37f4eda33d04cbe83c752d28831fee6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-golem-upgraded.csv",
+      "mainBlob": "a200e16e7ce29e2c2fb7345c970887fa918a6b03",
+      "currentBlob": "a200e16e7ce29e2c2fb7345c970887fa918a6b03",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-golem-upgraded.json",
+      "mainBlob": "a4ccc9c404a5e503b296f7d1dfb2bfef64b7f695",
+      "currentBlob": "a4ccc9c404a5e503b296f7d1dfb2bfef64b7f695",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-golem.csv",
+      "mainBlob": "6f204a349f19f385edcafb8b21bafb7dd86f6183",
+      "currentBlob": "6f204a349f19f385edcafb8b21bafb7dd86f6183",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-golem.json",
+      "mainBlob": "8c383ed9aed6e284f05a69cfb746f6c66c642c78",
+      "currentBlob": "8c383ed9aed6e284f05a69cfb746f6c66c642c78",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-guard-agility.csv",
+      "mainBlob": "fd4be971c32e975cabc09060b29ff4fed22dfabe",
+      "currentBlob": "fd4be971c32e975cabc09060b29ff4fed22dfabe",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-guard-agility.json",
+      "mainBlob": "8141726ffdf093fe5b4e2c6e8c8d35eb59bc6379",
+      "currentBlob": "8141726ffdf093fe5b4e2c6e8c8d35eb59bc6379",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-wisp.csv",
+      "mainBlob": "d28477b4a38f0641ecb05f08c825e389688be427",
+      "currentBlob": "d28477b4a38f0641ecb05f08c825e389688be427",
+      "unchanged": true
+    },
+    {
+      "path": "reports/ai-playtester/strategy-2026-10-24/pair-wisp.json",
+      "mainBlob": "0ca828a3d64a50ab00341bb1cf3d24dc50a5edb5",
+      "currentBlob": "0ca828a3d64a50ab00341bb1cf3d24dc50a5edb5",
+      "unchanged": true
+    },
+    {
+      "path": "server.cjs",
+      "mainBlob": "a0c01bde0d34442719ed286758adbf60272615ea",
+      "currentBlob": "a0c01bde0d34442719ed286758adbf60272615ea",
+      "unchanged": true
+    },
+    {
+      "path": "tests/ai-playtester-agent.test.cjs",
+      "mainBlob": "013e2cd7ffa32fc2c1253e0c91a69563e0673398",
+      "currentBlob": "013e2cd7ffa32fc2c1253e0c91a69563e0673398",
+      "unchanged": true
+    },
+    {
+      "path": "tests/ai-playtester-browser.cjs",
+      "mainBlob": "b80f36ed78520e99f9ea81850800578d9b8d681d",
+      "currentBlob": "b80f36ed78520e99f9ea81850800578d9b8d681d",
+      "unchanged": true
+    },
+    {
+      "path": "tests/ai-playtester-deck.test.cjs",
+      "mainBlob": "6759e5f98f98bcc9a2e040d50f410710a741762f",
+      "currentBlob": "6759e5f98f98bcc9a2e040d50f410710a741762f",
+      "unchanged": true
+    },
+    {
+      "path": "tests/ai-playtester-server.test.cjs",
+      "mainBlob": "21c8abf3fb98fdc12dd67033b29a10c03988158b",
+      "currentBlob": "21c8abf3fb98fdc12dd67033b29a10c03988158b",
+      "unchanged": true
+    },
+    {
+      "path": "tests/ai-playtester-strategy.test.cjs",
+      "mainBlob": "cf2f1758744c95f6190b5333ae5c93f499751941",
+      "currentBlob": "cf2f1758744c95f6190b5333ae5c93f499751941",
+      "unchanged": true
+    },
+    {
+      "path": "tests/ai-playtester.test.cjs",
+      "mainBlob": "1ff98b49822718bc7b9c883ff2c7c1ca4e6690a8",
+      "currentBlob": "1ff98b49822718bc7b9c883ff2c7c1ca4e6690a8",
+      "unchanged": true
+    },
+    {
+      "path": "tests/audio-pack.test.cjs",
+      "mainBlob": "3b390e2517fc0c94acd0fb07cfa217397cc1ad71",
+      "currentBlob": "3b390e2517fc0c94acd0fb07cfa217397cc1ad71",
+      "unchanged": true
+    },
+    {
+      "path": "tests/audio.test.cjs",
+      "mainBlob": "ca412cbc52ea8b8003eda38a52f07e026fbff1c3",
+      "currentBlob": "ca412cbc52ea8b8003eda38a52f07e026fbff1c3",
+      "unchanged": true
+    },
+    {
+      "path": "tools/ai-playtester/cli.cjs",
+      "mainBlob": "0bbbedc5ef9d51f9e61649e9ed0c9e98532eac02",
+      "currentBlob": "0bbbedc5ef9d51f9e61649e9ed0c9e98532eac02",
+      "unchanged": true
+    },
+    {
+      "path": "tools/ai-playtester/deck-policy.cjs",
+      "mainBlob": "0fbafb9b9036de1e151f34126444509a7a5bb60d",
+      "currentBlob": "0fbafb9b9036de1e151f34126444509a7a5bb60d",
+      "unchanged": true
+    },
+    {
+      "path": "tools/ai-playtester/experiments.cjs",
+      "mainBlob": "38e25ca03b3cfd5920fd63fc6cf40b8636486008",
+      "currentBlob": "38e25ca03b3cfd5920fd63fc6cf40b8636486008",
+      "unchanged": true
+    },
+    {
+      "path": "tools/ai-playtester/report.cjs",
+      "mainBlob": "1342d01343f21420200cdc2ff6a5105ec6d66527",
+      "currentBlob": "1342d01343f21420200cdc2ff6a5105ec6d66527",
+      "unchanged": true
+    },
+    {
+      "path": "tools/ai-playtester/worker.cjs",
+      "mainBlob": "4d1a83d0ab7b1415c0b9050e44bb22dc1997b63b",
+      "currentBlob": "4d1a83d0ab7b1415c0b9050e44bb22dc1997b63b",
+      "unchanged": true
+    },
+    {
+      "path": "tools/dev/index.html",
+      "mainBlob": "f1e18b8fcddb13ce95a9ed6a60ea250784a17fd0",
+      "currentBlob": "f1e18b8fcddb13ce95a9ed6a60ea250784a17fd0",
+      "unchanged": true
+    },
+    {
+      "path": "tools/dev/playtester/app.js",
+      "mainBlob": "290880b47e776f8d00e1c30839a1e93799873b92",
+      "currentBlob": "290880b47e776f8d00e1c30839a1e93799873b92",
+      "unchanged": true
+    },
+    {
+      "path": "tools/dev/playtester/index.html",
+      "mainBlob": "b8c365e79e75899676cc091ead859e680a72ca75",
+      "currentBlob": "b8c365e79e75899676cc091ead859e680a72ca75",
+      "unchanged": true
+    },
+    {
+      "path": "tools/dev/playtester/server.cjs",
+      "mainBlob": "783a8e31e37a590cbb484a7be03416c988e31a9b",
+      "currentBlob": "783a8e31e37a590cbb484a7be03416c988e31a9b",
+      "unchanged": true
+    },
+    {
+      "path": "tools/dev/playtester/style.css",
+      "mainBlob": "0bf4d9beb39b1028e52b476969d700e9ed7ab9d2",
+      "currentBlob": "0bf4d9beb39b1028e52b476969d700e9ed7ab9d2",
+      "unchanged": true
+    }
+  ]
+}

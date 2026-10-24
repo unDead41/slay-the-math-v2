@@ -17,6 +17,17 @@ function createEffectsTracker(x){
   for(const status of ['weak','vulnerable']){const n=b.cardCombat?.statuses.enemy[status]||0,d=n-amount(s[status]);if(d>0)s[status].push({key:OTHER,amount:d});else if(d<0)consume(s[status],-d,null,true);}
  }
  function wrap(owner,name,make){const original=owner[name],wrapped=make(original);owner[name]=wrapped;undo.push(()=>{if(owner[name]===wrapped)owner[name]=original;});}
+ const phaseRules=r=>!!x.CC.definitionData?.(r).effectsVersion;
+ function statusUse(ledger,field,phase){
+  const source=ledger[0],key=source?.key||OTHER;
+  if(!phase||!source?.used){add(key,'statusesConsumed',1);if(field)add(key,field,1);if(source)source.used=true;}
+  if(!phase)consume(ledger,1);
+  return key;
+ }
+ for(const [method,status]of [['beforeEnemy','vulnerable'],['afterEnemy','weak']])wrap(x.CC,method,original=>function(r,...args){
+  const before=r.battle.cardCombat.statuses.enemy[status],phase=phaseRules(r),result=original(r,...args),used=before-r.battle.cardCombat.statuses.enemy[status];
+  if(pending&&phase&&used>0)pending.push({kind:'statusDecay',status,n:used});return result;
+ });
  function strengthSources(r,ref,key){
   if(x.CC.catalog[key]?.values[ref]?.stat!=='strength')return [];
   return r.battle.active.filter(c=>x.CC.catalog[c.key].passive?.effects.some(a=>a.op==='add_attribute'&&a.attribute==='strength')&&(r.battle.cardCombat.counters[c.key]?.triggers||0)>0).map(c=>c.key);
@@ -28,7 +39,7 @@ function createEffectsTracker(x){
   const tx=r.battle.cardCombat?.receipts.at(-1);
   if(d?.actions.some(a=>a.op==='damage')&&tx?.key===key&&tx.status!=='resolved'&&results.some(v=>v.label==='Enemy HP lost')){
    const index=pending.filter(v=>v.kind==='attackHit'&&v.tx===tx.id).length,e=tx.damageEvents[index];
-   if(e)pending.push({kind:'attackHit',tx:tx.id,event:copy(e),sources:strengthSources(r,e.ref,key)});
+   if(e)pending.push({kind:'attackHit',tx:tx.id,event:copy(e),phase:phaseRules(r),sources:strengthSources(r,e.ref,key)});
   }
   return result;
  });
@@ -40,18 +51,20 @@ function createEffectsTracker(x){
   }return result;
  });
  wrap(x.CC,'enemyDamage',original=>function(r,n){
-  const b=r.battle,weak=n>0&&b.cardCombat.statuses.enemy.weak>0,vulnerable=n>0&&b.cardCombat.statuses.self.vulnerable>0,defender=b.active.find(c=>x.CC.catalog[c.key].passive?.effects.some(a=>a.op==='add_attribute'&&a.attribute==='defense'))?.key;
-  const result=original(r,n);if(pending)pending.push({kind:'hit',weak,weakPrevented:weak?Math.max(0,n+(vulnerable?2:0))-result.afterStatus:0,defensePrevented:Math.max(0,result.afterStatus-result.amount),defender,blocked:Math.min(result.amount,b.block)});return result;
+  const b=r.battle,weak=n>0&&b.cardCombat.statuses.enemy.weak>0,defender=b.active.find(c=>x.CC.catalog[c.key].passive?.effects.some(a=>a.op==='add_attribute'&&a.attribute==='defense'))?.key;
+  const counterfactual={...r,battle:{...b,cardCombat:copy(b.cardCombat)}};counterfactual.battle.cardCombat.statuses.enemy.weak=0;
+  const unweakened=weak?original(counterfactual,n).afterStatus:0,result=original(r,n);if(pending)pending.push({kind:'hit',weak,phase:phaseRules(r),weakPrevented:weak?Math.max(0,unweakened-result.afterStatus):0,defensePrevented:Math.max(0,result.afterStatus-result.amount),defender,blocked:Math.min(result.amount,b.block)});return result;
  });
  wrap(x.CC,'resetBlock',original=>function(r){const before=r.battle.block,result=original(r);if(pending)pending.push({kind:'reset',before,retained:result});return result;});
  function apply(v){
   if(v.kind==='block')grant(v.key,v.n);
   else if(v.kind==='reset'){if(amount(s.block)<v.before)grant(OTHER,v.before-amount(s.block));consume(s.block,Math.max(0,v.before-v.retained),'blockExpired',true);}
+  else if(v.kind==='statusDecay'){consume(s[v.status],v.n);if(s[v.status][0])s[v.status][0].used=false;}
   else if(v.kind==='hit'){
-   if(v.weak){const key=s.weak[0]?.key||OTHER;consume(s.weak,1);add(key,'statusesConsumed',1);add(key,'weakConsumed',1);add(key,'weakPrevented',v.weakPrevented);}
+   if(v.weak){const key=statusUse(s.weak,'weakConsumed',v.phase);add(key,'weakPrevented',v.weakPrevented);}
    add(v.defender||OTHER,'defensePrevented',v.defensePrevented);if(amount(s.block)<v.blocked)grant(OTHER,v.blocked-amount(s.block));consume(s.block,v.blocked,'blockUsed');
   }else if(v.kind==='attackHit'){
-   if(v.event.vulnerable){const key=s.vulnerable[0]?.key||OTHER;consume(s.vulnerable,1);add(key,'statusesConsumed',1);add(key,'vulnerableHits',1);}
+   if(v.event.vulnerable){const key=statusUse(s.vulnerable,null,v.phase);add(key,'vulnerableHits',1);}
    for(const key of v.sources)add(key,'buffedHits',1);
   }else if(v.kind==='log'){
    const e=v.event,a=e.values||{},key=e.source;
@@ -62,7 +75,7 @@ function createEffectsTracker(x){
     grant(key,a.block||0);add(key,'cardsDrawn',e.kind==='passive-activation-gift'?(a.actualDraw||0):a.draw);add(key,'passiveDamage',a.damage);add(key,'focusGained',a.focus);
     if(['strength','agility','defense'].includes(a.attribute))add(key,a.attribute+'Granted',a.amount);
    }
-   if(a.retained)add(a.temporaryCap>a.passiveCap?byName.get('Hold the Line'):key,'blockRetained',a.retained);
+   if(a.retained)add(a.emergencyCap>Math.max(a.temporaryCap||0,a.passiveCap||0)?byName.get('Last Ember'):a.temporaryCap>a.passiveCap?byName.get('Hold the Line'):key,'blockRetained',a.retained);
    if(e.kind==='retaliation')add(key,'retaliationDamage',a.damage);
   }
  }
@@ -78,7 +91,7 @@ function createEffectsTracker(x){
    return result;
   }catch(error){pending=null;s=before;throw error;}
  }
- function snapshot(){const cards=copy(s.cards);for(const v of s.block){cards[v.key]??=Object.fromEntries(FIELDS.map(k=>[k,0]));cards[v.key].blockRemaining+=v.amount;}const totals=Object.fromEntries(FIELDS.map(k=>[k,0]));for(const c of Object.values(cards)){for(const k of FIELDS)totals[k]+=c[k];c.efficiency=efficiency(c);}return {version:1,blockAccounting:'FIFO source accounting; retained Block keeps original source',cards,totals,interpretation:'Observed units, not universal CP. Buff involvement, retention and status consumption are support overlays; do not add them again to damage or Block. Mitigation describes incoming damage reduction, not counterfactual surviving HP.'};}
+ function snapshot(){const cards=copy(s.cards);for(const v of s.block){cards[v.key]??=Object.fromEntries(FIELDS.map(k=>[k,0]));cards[v.key].blockRemaining+=v.amount;}const totals=Object.fromEntries(FIELDS.map(k=>[k,0]));for(const c of Object.values(cards)){for(const k of FIELDS)totals[k]+=c[k];c.efficiency=efficiency(c);}return {version:2,blockAccounting:'FIFO source accounting; retained Block keeps original source',statusAccounting:'Status uses count attack phases benefiting from a duration under phase rules, or individual consumed hits under archived rules; Vulnerable hits count every affected hit. No-attack expiry is not a use.',cards,totals,interpretation:'Observed units, not universal CP. Buff involvement, retention and status consumption are support overlays; do not add them again to damage or Block. Mitigation describes incoming damage reduction, not counterfactual surviving HP.'};}
  return {capture,snapshot,dispose(){if(!disposed){for(const restore of undo.reverse())restore();disposed=true;}}};
 }
 module.exports={createEffectsTracker,FIELDS,efficiency,OTHER};

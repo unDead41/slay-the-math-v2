@@ -118,3 +118,8 @@ DISAHKAN: Ijamm requests deep evolved-deck/Predict/setup/exploit/artifact-trigge
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+
+## Percentage status phases and Last Ember — 2.33.0
+
+DISAHKAN: Ijamm approves all card-audit proposals, initially for feature-branch publication; the later “okay push ke main” instruction authorizes integration as game 2.34.0. [Main integration](../CARD_EFFECTS_MAIN_2_34_0.md). The new ordinary/Master percentages, phase timing, card values, fallback search, Passive growth/activation and prior-save contracts supersede the corresponding earlier rules for new runs. Owner: [Card effects 2.33.0](../CARD_EFFECTS_2_33_0.md). Unmarked ordinary runs retain their original definitions; do not reinterpret old receipts.

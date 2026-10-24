@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-24",
+  "baseCommit": "264a60ecec7e64251304cdbc58b587a8867502ab",
+  "branch": "balance/card-effects-20261024",
+  "gameVersion": "2.33.0",
+  "ordinaryRules": "card-effects-1",
+  "masterVersion": "master-1.4.0-candidate.4",
+  "fullSuite": {
+    "tests": 821,
+    "pass": 821,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "syntax": "PASS",
+  "productionBuild": "PASS",
+  "portableBytes": 298646493,
+  "productionBrowser": {
+    "checks": [
+      "ordinary: actual production UI, effects, reload, valid save, decoded original art",
+      "master: actual production UI, effects, reload, valid save, decoded original art",
+      "last-ember: actual production UI, effects, reload, valid save, decoded original art",
+      "legacy: actual production UI, effects, reload, valid save, decoded original art"
+    ],
+    "errors": []
+  },
+  "masterProfilesBrowser": {
+    "checks": [
+      "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+      "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+      "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+    ],
+    "errors": []
+  },
+  "boundedScreen": {
+    "context": "Constructed 18-card decks against a sealed Stage 2 boss; existing strategic heuristic and synthetic developing Predict. Integration screen, not pupil win rates or a card ranking.",
+    "cases": 24,
+    "wins": 23,
+    "losses": 1,
+    "invalid": 0,
+    "censored": 0
+  },
+  "sourceSha256": {
+    "dist/card-data.js": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148",
+    "dist/balance-data.js": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b",
+    "dist/card-combat.js": "9f088cbf5777fa9c474b378097dbb2e0d549f569b56b508d803fd1329f0aed57",
+    "dist/engine.js": "1eeb3bc0ea98a50ec99972118cb093476cd2adc99ff5db9bc6fc19dca054bc91",
+    "dist/card-kit.js": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402",
+    "dist/card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
+    "dist/combat-status.js": "d80f1754ad79cb4c3c4423640fd6de156267276039a0a56b909b85c8b1fba9e3",
+    "dist/app.js": "37e58322550acb2314f82edd554c1c803b4e92e24d41765ab69f8fdac104bee0",
+    "dist/tutorial.js": "96144bfaee27c3c839ae07a0b99a5d0afa5d08598a8d3657c298168b24482114",
+    "dist/tutorial-data.js": "13adf9eec0015c14b9c0ed7c0b62bb7f0c2b96dd2194a2518647888d847ab046"
+  },
+  "review": {
+    "independent": true,
+    "critical": 0,
+    "materialIssuesFixed": [
+      "archived glossary, Library and tutorial explanation binding",
+      "Master Twin Shot first-hit Strength notes"
+    ],
+    "regressions": "7 RED before fix; 66 related regressions GREEN after fix",
+    "deferredMinors": []
+  },
+  "limits": [
+    "Card numbers remain playtest candidates.",
+    "Synthetic boss screen is not pupil full-run win-rate evidence.",
+    "No hosted CI success is claimed."
+  ],
+  "logs": "card-effects-2-33-0/"
+}

@@ -18,7 +18,7 @@ test('actual Block is allocated once, then unused remainder expires on reset',()
 test('Weak and Defense report actual layered reduction and actual Block absorption',()=>{
  const f=fixture(['defend.cinder_guard','passive.rune_armor']);try{
   f.play('passive.rune_armor');f.play('defend.cinder_guard');f.end();const m=f.t.snapshot();
-  assert.equal(m.totals.weakPrevented,2);assert.equal(m.totals.defensePrevented,1);assert.equal(m.totals.blockUsed,2);assert.equal(m.totals.blockExpired,3);
+  assert.equal(m.totals.weakPrevented,2);assert.equal(m.totals.defensePrevented,1);assert.equal(m.totals.blockUsed,2);assert.equal(m.totals.blockExpired,2);
   assert.equal(m.cards[S+'defend.cinder_guard'].weakPrevented,2);assert.equal(m.cards[S+'passive.rune_armor'].defensePrevented,1);assert.equal(m.cards[S+'passive.rune_armor'].defenseGranted,1);
  }finally{f.t.dispose();}
 });
@@ -59,7 +59,7 @@ test('retention support credits the dominant cap without adding retained Block t
  const f=fixture(['defend.hold_the_line','passive.lasting_shield']);try{f.play('passive.lasting_shield');f.play('defend.hold_the_line');f.end();const m=f.t.snapshot();assert.equal(m.cards[S+'defend.hold_the_line'].blockRetained,5);assert.equal(m.cards[S+'passive.lasting_shield'].blockRetained,0);assert.equal(m.totals.blockGranted,12);assert.equal(m.totals.blockRemaining,5);}finally{f.t.dispose();}
 });
 test('support counters track actual Vulnerable use and Strength involvement without extra damage',()=>{
- const f=fixture(['passive.blazing_spirit','attack.weak_point','attack.rune_strike']);try{f.play('passive.blazing_spirit');f.play('attack.weak_point');f.play('attack.rune_strike');const m=f.t.snapshot();assert.equal(m.cards[S+'attack.weak_point'].vulnerableHits,1);assert.equal(m.cards[S+'attack.weak_point'].statusesConsumed,1);assert.equal(m.cards[S+'passive.blazing_spirit'].buffedHits,2);assert.equal(m.totals.hpDamage,16);}finally{f.t.dispose();}
+ const f=fixture(['passive.blazing_spirit','attack.weak_point','attack.rune_strike']);try{f.play('passive.blazing_spirit');f.play('attack.weak_point');f.play('attack.rune_strike');const m=f.t.snapshot();assert.equal(m.cards[S+'attack.weak_point'].vulnerableHits,1);assert.equal(m.cards[S+'attack.weak_point'].statusesConsumed,1);assert.equal(m.cards[S+'passive.blazing_spirit'].buffedHits,2);assert.equal(m.totals.hpDamage,18);}finally{f.t.dispose();}
 });
 test('Weak on a nonattacking turn expires without reporting prevented damage',()=>{
  const f=fixture(['defend.cinder_guard']);try{f.end();f.end();assert.equal(f.r.battle.currentIntent.damage,0);f.play('defend.cinder_guard');f.end();const c=f.t.snapshot().cards[S+'defend.cinder_guard'];assert.equal(c.statusesApplied,1);assert.equal(c.weakConsumed,0);assert.equal(c.weakPrevented,0);assert.equal(c.blockUsed,0);}finally{f.t.dispose();}

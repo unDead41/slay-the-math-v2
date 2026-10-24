@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-const E=require('../dist/engine.js'),A=require('../dist/artifacts.js'),C=require('../dist/config.js'),data=require('../dist/card-data.js');
+const {E,A,C,data}=require('./helpers/card-legacy.cjs');
 const byName=Object.fromEntries(data.cards.map(c=>[c.name,c])),key=name=>byName[name]?.id||name,copy=E.clone;
 function fixture(names=data.cards.map(c=>c.name),seed=702){const r=E.newRun(seed);delete r.route;r.seq=0;r.deck=names.map(name=>E.card(r,key(name)));E.startBattle(r,'sentinel');r.battle.hp=r.battle.maxHp=10000;r.battle.seals=2;r.battle.currentIntent.damage=0;r.battle.enemyBlock=0;return r;}
 function hand(r,names){const b=r.battle,all=[...b.hand,...b.draw,...b.discard];b.hand=[];b.draw=all;b.discard=[];for(const name of names){const i=b.draw.findIndex(c=>c.key===key(name));assert.ok(i>=0,name+' must be available');b.hand.push(b.draw.splice(i,1)[0]);}return b.hand;}

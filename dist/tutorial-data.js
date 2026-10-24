@@ -94,12 +94,14 @@
   ['Passives, buffs and debuffs','A Passive must be played before its ongoing effect can help you.',[
    'Up to {passiveLimit} different Passives can be active. Playing another when full asks which one to replace; the replaced card goes to Discard.',
    'Some Passives help immediately. Others wait for a condition. Read their counter and description; a visible card does not mean its trigger has happened.',
-   'Strength helps Attack damage, Agility helps Block from Defend cards, and Defense reduces incoming damage. Read status badges for conditions and duration.'
+   'Strength helps Attack damage, Agility helps Block from Defend cards, and Defense reduces incoming damage. Read status badges for conditions and duration.',
+   'Vulnerable adds 50% to Attack damage for the affected attack phase. Weak reduces Attack damage by 25%. Every hit is affected; stacks extend duration. Unused Last Ember emergency Block survives the next player-turn reset once.'
   ],'Auras and animations show status feedback. The current numbers and descriptions determine the actual effect.'],
   ['Passive, buff dan debuff','Kad Passive perlu dimainkan dahulu sebelum kesan berterusannya membantu.',[
    'Paling banyak {passiveLimit} Passive yang berbeza boleh aktif. Jika penuh, game meminta anda memilih satu untuk diganti; kad lama masuk ke Discard.',
    'Sesetengah Passive memberi kesan segera. Yang lain menunggu syarat. Baca kaunter dan penerangan; kad yang kelihatan belum tentu sudah mencetuskan kesannya.',
-   'Strength membantu kerosakan Attack, Agility membantu Block daripada Defend, dan Defense mengurangkan kerosakan masuk. Baca lencana status untuk syarat dan tempoh kesan.'
+   'Strength membantu kerosakan Attack, Agility membantu Block daripada Defend, dan Defense mengurangkan kerosakan masuk. Baca lencana status untuk syarat dan tempoh kesan.',
+   'Terdedah menambah 50% kerosakan Serangan pada fasa serangan yang terlibat. Lemah mengurangkan kerosakan Serangan sebanyak 25%. Setiap pukulan terlibat; tindanan memanjangkan tempoh. Baki Blok kecemasan Bara Terakhir disimpan sekali pada awal giliran pemain berikutnya.'
   ],'Aura dan animasi memberi maklum balas status. Nilai serta penerangan semasa menentukan kesan sebenar.']),
  lesson('rewards','rewards','reward',
   ['Choose rewards for your deck','After a battle, review your card choices before adding one.',[
@@ -190,5 +192,7 @@
    'Gunakan Predict dan bantuannya untuk memahami konsep. Jawapan salah ialah peluang untuk membaiki penaakulan.'
   ],'Kembali ke game untuk menyambung run sedia ada, atau pilih New Run dari Main Menu apabila bersedia.'])
  ];
- const api={chapters};if(typeof module!=='undefined')module.exports=api;else root.DCTutorialData=api;
+ const legacyStatus={en:'Vulnerable adds 2 damage to one incoming Attack hit. Weak removes 2 damage from one outgoing Attack hit. Each hit uses one stack. Last Ember Block follows the original turn reset unless another effect retains it.',ms:'Terdedah menambah 2 kerosakan pada satu pukulan Serangan yang diterima. Lemah mengurangkan 2 kerosakan pada satu pukulan Serangan yang diberi. Setiap pukulan menggunakan satu tindanan. Blok Bara Terakhir mengikut tetapan semula giliran asal kecuali disimpan oleh kesan lain.'};
+ function content(id,language='en',legacyRules=false){const text=chapters.find(ch=>ch.id===id)[language];return legacyRules&&id==='passive'?{...text,steps:[...text.steps.slice(0,-1),legacyStatus[language]]}:text;}
+ const api={chapters,content};if(typeof module!=='undefined')module.exports=api;else root.DCTutorialData=api;
 })(globalThis);

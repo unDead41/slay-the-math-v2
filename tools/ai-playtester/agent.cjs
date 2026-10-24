@@ -10,9 +10,9 @@ function planningWorld(run,sample=0){
  r.battle.draw=copy(pool);for(let i=pool.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[r.battle.draw[i],r.battle.draw[j]]=[r.battle.draw[j],r.battle.draw[i]];}r.rng=seed;
  return r;
 }
-function incoming(r){
- const b=r.battle,s=b.cardCombat?.statuses,it=b.currentIntent||{};let weak=s?.enemy?.weak||0,vulnerable=s?.self?.vulnerable||0,total=0;
- for(let i=0;i<(it.hits||1);i++){const attacking=(it.damage||0)>0;total+=Math.max(0,(it.damage||0)-(attacking&&weak?2:0)+(attacking&&vulnerable?2:0)-(b.defense||0));if(attacking){weak=Math.max(0,weak-1);vulnerable=Math.max(0,vulnerable-1);}}
+function incoming(x,r){
+ const b=r.battle,it=b.currentIntent||{},projected={...r,battle:{...b,cardCombat:copy(b.cardCombat)}};let total=0;
+ for(let i=0;i<(it.hits||1);i++)total+=x.CC.enemyDamage(projected,it.damage||0).amount;
  return Math.max(0,total-b.block);
 }
 function immediate(x,r,c,p){
@@ -38,7 +38,7 @@ function immediate(x,r,c,p){
    if(a.op==='gain_focus')support+=v*.7;
   }
  }
- const mitigation=Math.max(0,incoming(r)-incoming(after)),needed=Number(r.hp<=incoming(r))*1.2;
+ const mitigation=Math.max(0,incoming(x,r)-incoming(x,after)),needed=Number(r.hp<=incoming(x,r))*1.2;
  return damage+(1.5+needed)*mitigation+Math.min(draw,x.C.HAND_LIMIT-p.context.handAfterPlay)*(r.battle.energy>p.payEnergy?2.1:.4)+selection*(r.battle.energy>p.payEnergy?3:1)+delayed+support-.15*p.payEnergy-.7*p.payFocus+(damage>=r.battle.hp?1000:0);
 }
 function candidates(x,r){
@@ -52,16 +52,16 @@ function candidates(x,r){
 }
 function choice(x,r){
  const ch=x.E.cardChoice(r),rank=c=>{const v={...r,battle:{...r.battle,cardChoice:null,hand:[...r.battle.hand.filter(v=>v.uid!==c.uid),c]}},p=x.E.cardPlan(v,c);return p?immediate(x,v,c,p):0;};
- if(ch.kind==='card_search')return incoming(r)>0?'defend':'attack';
+ if(ch.kind==='card_search')return incoming(x,r)>0?'defend':'attack';
  if(ch.kind==='burning_page')return 'take';
  const sorted=ch.candidates.slice().sort((a,b)=>rank(b)-rank(a)||a.uid.localeCompare(b.uid));
  if(['passive_swap','passive_trim'].includes(ch.kind))return sorted.at(-1).uid;
  return ch.kind==='read_ahead'?{take:sorted[0].uid,order:sorted.slice(1).map(c=>c.uid)}:sorted[0].uid;
 }
-function value(root,r){
+function value(x,root,r){
  if(r.hp<=0||r.scene==='defeat')return -10000+(root.battle.hp-r.battle.hp);
  if(r.battle.hp<=0||r.scene!=='battle')return 10000+2*r.hp;
- return root.battle.hp-r.battle.hp+2.5*(r.hp-root.hp)-.35*incoming(r)+.2*(r.battle.strength||0)+.15*(r.battle.agility||0)+.4*(r.battle.defense||0)+.08*r.battle.energy+.5*r.battle.focus;
+ return root.battle.hp-r.battle.hp+2.5*(r.hp-root.hp)-.35*incoming(x,r)+.2*(r.battle.strength||0)+.15*(r.battle.agility||0)+.4*(r.battle.defense||0)+.08*r.battle.energy+.5*r.battle.focus;
 }
 function rollout(x,run,first,sample){
  let r=planningWorld(run,sample),calls=0,reveals=0,plays=0,depth=0,started=false,truncated=false,last=copy(r);const initialTurn=r.battle.turn,states=[copy(r)];
@@ -98,7 +98,7 @@ function createAgent(x,{skill='intermediate'}={}){
   else if(options.length){
    const roots=[null,...options.slice(0,LIMITS.width)],evaluations=roots.map(c=>({c,worlds:Array.from({length:LIMITS.samples},(_,i)=>rollout(x,run,c,i))}));
    const cutoff=Math.min(LIMITS.turns,...evaluations.flatMap(e=>e.worlds.map(w=>w.states.length-1)));let best=-Infinity;
-   for(const e of evaluations){const score=e.worlds.reduce((n,w)=>n+value(run,w.states[cutoff]),0)/LIMITS.samples;if(score>best+1e-9){best=score;selected=e.c;meta.depth=Math.max(...e.worlds.map(w=>w.depth));}
+   for(const e of evaluations){const score=e.worlds.reduce((n,w)=>n+value(x,run,w.states[cutoff]),0)/LIMITS.samples;if(score>best+1e-9){best=score;selected=e.c;meta.depth=Math.max(...e.worlds.map(w=>w.depth));}
     for(const w of e.worlds){meta.searchNodes+=w.nodes;meta.sampledReveals+=w.reveals;meta.truncatedRollouts+=Number(w.truncated);}
    }
    meta.horizonTurns=cutoff;meta.samples=LIMITS.samples;

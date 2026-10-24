@@ -1,6 +1,7 @@
 'use strict';
 const {createHash}=require('node:crypto');
 function createReplay(runtime=null){
+const suppliedRuntime=runtime;runtime=runtime||require('../../cards/legacy-runtime.cjs')();
 const E=runtime?.E||require('../../../dist/engine.js');
 const C=runtime?.C||require('../../../dist/config.js');
 const A=runtime?.A||require('../../../dist/artifacts.js');
@@ -28,7 +29,10 @@ function briefPlan(p){
 function publicCombatView(r){
  const b=r.battle,it=E.intent(r),s=b.cardCombat?.statuses;
  let incoming=0,weak=s?.enemy?.weak||0,vuln=s?.self?.vulnerable||0;
- for(let i=0;i<(it.hits||1);i++){incoming+=Math.max(0,it.damage-(weak>0?2:0)+(vuln>0?2:0)-(b.defense||0));weak=Math.max(0,weak-1);vuln=Math.max(0,vuln-1);}
+ if(runtime.CC?.definitionData?.(r)?.effectsVersion){
+  const projected={...r,battle:{...b,cardCombat:copy(b.cardCombat)}};
+  for(let i=0;i<(it.hits||1);i++)incoming+=runtime.CC.enemyDamage(projected,it.damage||0).amount;
+ }else for(let i=0;i<(it.hits||1);i++){incoming+=Math.max(0,it.damage-(weak>0?2:0)+(vuln>0?2:0)-(b.defense||0));weak=Math.max(0,weak-1);vuln=Math.max(0,vuln-1);}
  const plain={...r,battle:{...b,boostArmed:false}},focused={...r,battle:{...b,boostArmed:true}};
  return {hp:r.hp,maxHp:r.maxHp,enemyHp:b.hp,energy:b.energy,block:b.block,incoming,neededBlock:Math.max(0,incoming-b.block),active:(b.active||[]).map(publicCard),
   cards:b.hand.map(c=>({uid:c.uid,key:c.key,normal:briefPlan(E.cardPlan(plain,c)),focused:b.focus>0&&!b.boostUsed?briefPlan(E.cardPlan(focused,c)):null}))};
@@ -66,8 +70,8 @@ function runCampaign(options={}){
  const deckPolicy=options.deckPolicy;
  function deckDecision(scene,decision){options.onDeckDecision?.({scene,...decision});return decision;}
  const {runSeed,mode=options.initialState?.mode||defaults.mode,forcedRoutes=null,trace=false,predictProfile='feedback',routePolicy=defaults.routePolicyVersion}=options;
- const difficulty=runtime?runtime.difficulty:assertDifficulty(options.difficulty);
- if(runtime&&(!runtime.C.MASTER_BALANCE||options.difficulty&&options.difficulty!==difficulty))throw Error('Master replay difficulty mismatch.');
+ const difficulty=suppliedRuntime?runtime.difficulty:assertDifficulty(options.difficulty);
+ if(suppliedRuntime&&(!runtime.C.MASTER_BALANCE||options.difficulty&&options.difficulty!==difficulty))throw Error('Master replay difficulty mismatch.');
  if(!Number.isSafeInteger(runSeed)||runSeed<0||runSeed>4294967295||!['learn','challenge'].includes(mode))throw Error('A uint32 runSeed and supported mode are required.');
  if(!PROFILES[predictProfile])throw Error('Unknown Predict profile '+predictProfile);
  const adaptive=POLICIES.includes(routePolicy);if(!adaptive&&routePolicy!==defaults.routePolicyVersion)throw Error('Unknown route policy '+routePolicy);

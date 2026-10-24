@@ -1,4 +1,4 @@
-# 23 — Master balancing, game 2.29.0
+# 23 — Master balancing, game 2.34.0
 
 Pemilik: Ijamm. Tarikh: 23 Oktober 2026. Branch pembangunan: `balance/master`; destinasi penerbitan yang disahkan: `main`.
 
@@ -63,3 +63,12 @@ DISAHKAN: Ijamm requests actual support-value measurement, multi-turn planning a
 ## MB-09 — AI main publication
 
 DISAHKAN, 24 October 2026: Ijamm now authorizes publishing the completed AI update to main. This supersedes MB-07's ai-only boundary. The integration retains main game 2.32.1 and candidate.3 numeric profiles. Current support telemetry and sampled strategy remain developer diagnostics; pupil targets and exhaustive synergy validation remain unmeasured. [Fresh integration checks](../AI_PLAYTESTER_MAIN_2026_10_24.md).
+
+
+## MB-10 — Card effects, feature build 2.33.0 / main 2.34.0
+
+DISAHKAN: approved card audit, feature-branch publication only. Current binding is `master-1.4.0-candidate.4`; the earlier candidate.3 descriptions and measurements above remain historical where superseded. [Card effects 2.33.0](../CARD_EFFECTS_2_33_0.md) owns current percentage phases, affected values and growth caps. No enemy/difficulty/economic/map/question numbers change. Old save keys and measured cohorts remain intact. Pupil targets are still unmeasured.
+
+## MB-11 — Card effects main integration, 2.34.0
+
+DISAHKAN: Ijamm's follow-up “okay push ke main” supersedes MB-10's feature-only publication boundary. Merge card-effects `a9c49f0` with main `c54ce92` / 2.33.0 and identify the combined release as 2.34.0. Preserve both AI and audio histories. The AI consumes candidate.4 and uses actual engine incoming-damage calculations; phase-based status ownership and emergency retention telemetry follow the new rules. Older numeric AI reports remain evidence of their original candidate.3 source, not measurements of this revision. [Integration evidence](../CARD_EFFECTS_MAIN_2_34_0.md).

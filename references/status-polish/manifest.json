@@ -1,0 +1,136 @@
+{
+  "version": 2,
+  "tool": "built-in imagegen",
+  "nativeDetail": "Native generated source dimensions recorded per asset. 4096 exports are resampled, not additional native detail.",
+  "assets": [
+    {
+      "id": "block",
+      "file": "stm_icon_status_block_v2.webp",
+      "sha256": "97723db3249b273c5d4e5e2a13e18271e3b0d4114b08fadea0c847386b534ac4",
+      "bytes": 121348,
+      "source": "block-source.png",
+      "sourceSHA256": "ea4f5e7a92dd2b2c59e869b0a327e6ef9a61cca393a98f2edd88fba6f19a8218",
+      "sourceCanvas": [
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        0,
+        47,
+        1217,
+        1221
+      ],
+      "runtimeCanvas": [
+        512,
+        512
+      ],
+      "runtimePadding": 40,
+      "exports": {
+        "square1080": {
+          "file": "1080/block.png",
+          "canvas": [
+            1080,
+            1080
+          ],
+          "padding": 100
+        },
+        "square4K": {
+          "file": "4k/block.webp",
+          "canvas": [
+            4096,
+            4096
+          ],
+          "padding": 100,
+          "resampled": true
+        }
+      },
+      "motif": "single broad shield"
+    },
+    {
+      "id": "next-block",
+      "file": "stm_icon_status_next_block_v2.webp",
+      "sha256": "2889a5d91665d214e673f2bd83d838d1331e3ad2b924765881cd130f0dba074a",
+      "bytes": 135988,
+      "source": "next-block-source.png",
+      "sourceSHA256": "a8fddb8ec94970ba3bbf74828316d964b58dd8558f4e38bf78eaa5d1be6b7bfb",
+      "sourceCanvas": [
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        33,
+        20,
+        1233,
+        1229
+      ],
+      "runtimeCanvas": [
+        512,
+        512
+      ],
+      "runtimePadding": 40,
+      "exports": {
+        "square1080": {
+          "file": "1080/next-block.png",
+          "canvas": [
+            1080,
+            1080
+          ],
+          "padding": 100
+        },
+        "square4K": {
+          "file": "4k/next-block.webp",
+          "canvas": [
+            4096,
+            4096
+          ],
+          "padding": 100,
+          "resampled": true
+        }
+      },
+      "motif": "dominant hourglass"
+    },
+    {
+      "id": "retain-block",
+      "file": "stm_icon_status_retain_block_v2.webp",
+      "sha256": "b55474faa53d2f782aa9e9871154908d45732ae3719c04a1f2c302bfd3e6a9bf",
+      "bytes": 132538,
+      "source": "retain-block-source.png",
+      "sourceSHA256": "8f497ec6c1bbc7f3cd19e9984138aad1e4462f551370ccbe9ab4095c2612088a",
+      "sourceCanvas": [
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        0,
+        45,
+        1211,
+        1253
+      ],
+      "runtimeCanvas": [
+        512,
+        512
+      ],
+      "runtimePadding": 40,
+      "exports": {
+        "square1080": {
+          "file": "1080/retain-block.png",
+          "canvas": [
+            1080,
+            1080
+          ],
+          "padding": 100
+        },
+        "square4K": {
+          "file": "4k/retain-block.webp",
+          "canvas": [
+            4096,
+            4096
+          ],
+          "padding": 100,
+          "resampled": true
+        }
+      },
+      "motif": "dominant circular return arrow"
+    }
+  ]
+}

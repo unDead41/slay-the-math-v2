@@ -199,3 +199,7 @@ DISAHKAN: check latest main (2.23.1), apply MUSIC(5) on music first, then integr
 ## Supplied Main Menu recording — game 2.32.1
 
 DISAHKAN: Ijamm supplies Menu.mp3.mpeg for the opening/Main Menu, first requests publication to music only, then explicitly authorizes main publication. Replace the canonical menu cue with Ancient Stone Keep at assets/music/menu_ancient_stone_keep.mp3. The active registry chooses only this MP3; historical menu OGG files cannot shadow it. Retain full-track loop, first-gesture browser unlock, saved mute/volume and ordinary scene routing/crossfades. The input is preserved byte-for-byte; other music and all 75 voices retain their existing owners. [Source, authorization and actual checks](../audio/menu-2026-10-24/README.md).
+
+## Shared status names — 2.38.0-icons.1 preview
+
+VFX numeric status labels consume `DCCombatStatus.name` in the saved language, including Block absorption, rather than a separate translation table. Existing motifs, timing, sound selection, reduced motion and action receipts remain unchanged. This icon-branch update does not add animation or audio effects. [Owner](../STATUS_ICON_POLISH_2_38_0.md).

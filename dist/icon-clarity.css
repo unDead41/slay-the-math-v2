@@ -116,3 +116,69 @@ body.home-active #dialog:not(.wide) .icon-btn>img.icon,#dialog .dialog-head .ico
 }
 /* Keep the existing Passive caption inside the viewport; card art is untouched. */
 @media(max-width:800px){.combat-passives .passive-rail-label{flex-direction:column;align-items:flex-start;gap:0}}
+
+/* Explained statuses: units stay readable; extra information scrolls locally. */
+.combat-status-group{grid-template-columns:minmax(0,1fr) 60px}
+.combat-status-rack{min-height:124px}
+.combat-status-badge{width:100px;min-width:100px;flex-basis:100px;height:122px;min-height:122px;gap:2px;padding:2px 4px}
+.status-name{font:700 12px/1.15 var(--sans);white-space:normal;text-align:center;overflow-wrap:anywhere}
+.status-measure{display:block;max-width:100%;font:12px/1.2 var(--sans);text-align:center;color:#e5decf;overflow-wrap:anywhere}
+.status-overview-trigger{min-height:122px}.status-overview-trigger span{font-size:12px;line-height:1.2;overflow-wrap:anywhere}
+.combat-layout .battle-theatre{--ground-y:calc(100% - 190px)}
+.status-overview-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.status-overview-grid .combat-status-badge{min-height:204px;height:auto;gap:5px}
+.status-overview-grid .status-name{font-size:16px}
+.status-summary{font:14px/1.3 var(--sans);text-align:center;color:#fff2d2}
+.status-timing{font:12px/1.3 var(--sans);text-align:center;color:#c4d7e6}
+.status-detail-summary{font-weight:700;color:#fff2d2}
+img[data-icon-state=pending]{background:radial-gradient(circle,#243c4c 25%,#b99c5950 28%,#102334 31%,transparent 68%);border-radius:50%}
+body[data-status-size=large] .combat-status-badge:not(.status-overview-item){width:120px;min-width:120px;flex-basis:120px;height:148px;min-height:148px}
+body[data-status-size=large] .combat-status-rack{min-height:150px}
+body[data-status-size=large] .combat-status-badge:not(.status-overview-item) .status-art,body[data-status-size=large] .combat-status-badge:not(.status-overview-item) img{width:72px;height:72px}
+body[data-status-size=large] .status-name,body[data-status-size=large] .status-measure{font-size:14px}
+body[data-status-size=large] .status-overview-trigger{min-height:148px}
+body[data-status-size=large] .battle-theatre{--ground-y:calc(100% - 218px)}
+body[data-status-size=large] .status-overview-grid{--status-overview-art:88px}
+@media(max-width:500px){
+ .combat-status-group{grid-template-columns:minmax(0,1fr) 52px}
+ .combat-status-rack{min-height:116px}
+ .combat-status-badge{width:96px;min-width:96px;flex-basis:96px;height:114px;min-height:114px}
+ .status-name,.status-measure{font-size:12px}
+ .status-overview-trigger{min-height:114px}
+ .combat-layout .battle-theatre{--ground-y:calc(100% - 194px)}
+ .status-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .status-overview-grid .status-name{font-size:15px}
+ body[data-status-size=large] .combat-status-badge:not(.status-overview-item){width:112px;min-width:112px;flex-basis:112px;height:134px;min-height:134px}
+ body[data-status-size=large] .combat-status-rack{min-height:136px}
+ body[data-status-size=large] .combat-status-badge:not(.status-overview-item) .status-art,body[data-status-size=large] .combat-status-badge:not(.status-overview-item) img{width:56px;height:56px}
+ body[data-status-size=large] .status-overview-trigger{min-height:134px}
+}
+@media(max-height:560px) and (min-width:501px){
+ .combat-status-badge{display:grid;grid-template-columns:36px minmax(0,1fr);grid-template-rows:auto auto;width:128px;min-width:128px;flex-basis:128px;height:68px;min-height:68px;gap:2px 4px}
+ .combat-status-badge .status-art{grid-row:1/3}
+ .combat-status-rack{min-height:70px}
+ .status-name,.status-measure{text-align:left;font-size:12px}
+ .status-overview-trigger{min-height:68px;height:68px;flex-direction:column}
+ .combat-layout .battle-theatre{--ground-y:calc(100% - 86px)}
+ .combat-layout .fighter-panel{display:grid;grid-template-columns:minmax(90px,34%) minmax(0,1fr);grid-template-rows:auto 6px;gap:2px 6px;align-items:center;padding-inline:4px}
+ .combat-layout .fighter-label{grid-column:1;grid-row:1;flex-direction:column;align-items:flex-start;gap:1px;min-height:0}
+ .combat-layout .meter.health{grid-column:1;grid-row:2;width:100%}
+ .combat-layout .combat-status-group{grid-column:2;grid-row:1/3;margin-top:0;min-width:0}
+ .combat-layout .intent{top:auto;bottom:calc(100% - var(--ground-y) + 6px);display:flex;align-items:center;gap:5px;min-width:0;max-width:100%;padding:2px 4px}
+ .combat-layout .intent>strong{white-space:nowrap}.combat-layout .intent>small{max-width:120px;font-size:9px;line-height:1.15}
+ .status-overview-grid .combat-status-badge{display:flex;min-height:190px}
+ body[data-status-size=large] .combat-status-badge:not(.status-overview-item){width:148px;min-width:148px;flex-basis:148px;height:80px;min-height:80px}
+ body[data-status-size=large] .combat-status-rack{min-height:82px}
+ body[data-status-size=large] .combat-status-badge:not(.status-overview-item) .status-art,body[data-status-size=large] .combat-status-badge:not(.status-overview-item) img{width:40px;height:40px}
+ body[data-status-size=large] .status-overview-trigger{min-height:80px;height:80px}
+ body[data-status-size=large] .battle-theatre{--ground-y:calc(100% - 96px)}
+}
+@media(min-width:2200px) and (min-height:1200px){
+ .combat-layout .battle-theatre{--ground-y:calc(100% - 215px)}.status-overview-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .combat-status-badge:not(.status-overview-item){width:120px;min-width:120px;flex-basis:120px;height:148px;min-height:148px}
+ .combat-status-rack{min-height:150px}.status-overview-trigger{min-height:148px}
+ body[data-status-size=large] .combat-status-badge:not(.status-overview-item){width:140px;min-width:140px;flex-basis:140px;height:174px;min-height:174px}
+ body[data-status-size=large] .combat-status-badge:not(.status-overview-item) .status-art,body[data-status-size=large] .combat-status-badge:not(.status-overview-item) img{width:88px;height:88px}
+ body[data-status-size=large] .combat-status-rack{min-height:176px}body[data-status-size=large] .status-overview-trigger{min-height:174px}
+ body[data-status-size=large] .battle-theatre{--ground-y:calc(100% - 244px)}
+}

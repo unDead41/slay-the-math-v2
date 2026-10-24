@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Intent covers enemy statuses 844,390,en,normal
+
+false !== true
+
+    at /workspace/scratch/495591b4a1bf/icon-clarity-audit/tests/status-explanation-browser.cjs:20:11 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

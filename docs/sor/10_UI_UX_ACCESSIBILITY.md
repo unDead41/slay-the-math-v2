@@ -248,3 +248,7 @@ Use role-based icon sizing from ICO-16, visible status names/counters and an All
 ## Functional icon clarity on main — 2.37.0
 
 Ijamm now authorizes main publication; the earlier preview-only boundary above is historical. Keep the current main's percentage/duration and BM status descriptions in both inline and comparison/detail surfaces. Preserve main's question retry focus/continuation and run-aware card display helpers when resolving shared app handlers. Recapture tutorial images from the merged UI rather than using the older small-icon screenshots as current evidence. [Combined release and actual checks](../ICON_CLARITY_MAIN_2_37_0.md).
+
+## Explained status preview — 2.38.0-icons.1
+
+Ijamm approves six follow-up changes on the icon branch only. Use ICO-20–24: shared BM/English names/full explanations, visible unit/percentage/duration distinctions, readable phone labels, stored Normal/Large status size, brief comparison effects, three distinct shield-family silhouettes and usable pending/fallback states. The size preference writes UI settings only. Preserve native focus/Escape/local scrolling and existing card/arena sizes. [Scope and checks](../STATUS_ICON_POLISH_2_38_0.md).

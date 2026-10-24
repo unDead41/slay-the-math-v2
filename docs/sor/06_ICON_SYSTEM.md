@@ -126,3 +126,15 @@ Full inventory, observed issues, validation limits and preview: [Icon clarity au
 ## Icon clarity main integration — 2.37.0, 24 October 2026
 
 **ICO-19 (DISAHKAN):** Ijamm's later instruction, “okay push ini pula please”, authorizes integrating the completed icon branch with current main. This supersedes ICO-15's branch-only publication boundary. Combine icon head `b18c4c99d28530026f8d90d28964569c2f7af610` with main `50d3af423cdc2240e949f4ddf29e023865304b65` / 2.36.0. Retain current percentage/duration Weak and Vulnerable, the saved BM/English preference, archived-save rules, question workspaces, combat presentation and developer isolation. The read-only icon projection passes language to the current status owner; it does not redefine effects. Refresh actual tutorial screenshots and generate release/cache/entrypoint metadata from package.json. [Main scope, evidence and limitations](../ICON_CLARITY_MAIN_2_37_0.md).
+
+## Explained status icons — 2.38.0-icons.1 branch preview
+
+**ICO-20 (DISAHKAN):** Ijamm accepts all six icon follow-up proposals and requests updating the assistant branch only. Use `codex/icon-clarity-audit` based on current main; do not publish this new preview to main. [Scope/source/export contract](../STATUS_ICON_POLISH_2_38_0.md), [branch audit](../audits/icon-clarity-audit/LATEST.md).
+
+**ICO-21:** One read-only status owner provides ten BM/English names, units, short effects, timing and details; VFX uses the same names. Current percentage/phase rules and archived flat-hit/stack rules remain distinct. Raw counters retain their actual signed values.
+
+**ICO-22:** Inline status names/units are at least 12 CSS px. Settings Normal/Large changes status components only; Large uses 14px labels and larger artwork. Preserve 44px targets, local scrolling, card/arena geometry and save contents.
+
+**ICO-23:** Three approved Block-family variants use dominant shield/hourglass/return-arrow silhouettes. Preserve original V1 files and all other art. Runtime 512 with 40px alpha strips, 1080 PNG and 4096 WebP exports with 100px padding; 4096 is explicitly resampled from retained 1254px generated sources. Manifest and deterministic export/build tools own mappings.
+
+**ICO-24:** Comparison entries include actual brief effects/timing. Queued grants and retention caps must not appear as extra active Block. Slow/error image states keep names, counters and usable controls; fallbacks are local semantic SVGs, not recursive downloads. `DCIconReadiness.criticalAssets()` exposes only ten status and five HUD icons to Publish Handler; wider loading/cache behavior retains its separate owner.

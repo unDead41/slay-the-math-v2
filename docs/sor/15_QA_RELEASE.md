@@ -197,3 +197,7 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Explained status branch — 2.38.0-icons.1
+
+Before branch publication verify current versus archived rules, signed values, all ten complete BM/English presentations, shared VFX names, actual phase expiry/queued grants, Normal/Large persistence with unchanged gameplay/card geometry, 12px phone labels/44px controls, three source/runtime/export hashes and transparent padding. Exercise actual delayed and 404 image requests, semantic fallback decode, dynamic renders, production Dev and zero-network portable output. Recapture real tutorial UI and run final syntax/regression/build checks. Record initial/final findings under docs/audits/icon-clarity-audit/LATEST.md per Master SOR 1.2.0. Human recognition/physical device checks remain separate. Main push is not authorized.

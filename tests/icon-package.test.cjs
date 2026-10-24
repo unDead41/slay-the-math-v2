@@ -47,8 +47,10 @@ test('regenerating the supplier card adapter restores all selected originals and
  assert.ok(scripts.indexOf('icon-assets.js')<scripts.indexOf('card-assets.js'));
 });
 
-test('all published UI, map, buff/debuff and topic mappings remain identical to main v2.24.0',()=>{
- const unchanged=JSON.stringify({ui:I.ui,map:I.map,status:I.status,topics:I.topics});
+test('only the three approved status variants change the published UI, map, status and topic mappings',()=>{
+ const status={...I.status},variants=require('../references/status-polish/manifest.json');
+ for(const x of variants.assets){assert.equal(I.status[x.id],'assets/'+x.file);status[x.id]='assets/stm_icon_status_'+x.id.replaceAll('-','_')+'_v1.webp';}
+ const unchanged=JSON.stringify({ui:I.ui,map:I.map,status,topics:I.topics});
  assert.equal(crypto.createHash('sha256').update(unchanged).digest('hex'),'1bf09671147cad741b62447aff83195a96533c39e3cfb99be00c64b5f173dd65');
 });
 

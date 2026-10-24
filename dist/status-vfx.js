@@ -1,15 +1,15 @@
 /* Read-only RPG presentation. The engine and existing status badges own all values. */
 (function(root){'use strict';
  const Status=typeof module!=='undefined'&&module.exports?require('./combat-status.js'):root.DCCombatStatus;
- const definitions=Object.freeze({
-  strength:{name:'Strength',ms:'Kekuatan',motif:'ember'},
-  agility:{name:'Agility',ms:'Ketangkasan',motif:'agility'},
-  defense:{name:'Defense',ms:'Pertahanan',motif:'armor'},
-  block:{name:'Block',ms:'Block',motif:'shield'},
-  thorns:{name:'Thorns',ms:'Duri',motif:'thorns'},
-  weak:{name:'Weak',ms:'Lemah',motif:'weak',harmful:true},
-  vulnerable:{name:'Vulnerable',ms:'Terdedah',motif:'vulnerable',harmful:true}
- });
+ const definitions=Object.freeze(Object.fromEntries(Object.entries({
+  strength:{motif:'ember'},
+  agility:{motif:'agility'},
+  defense:{motif:'armor'},
+  block:{motif:'shield'},
+  thorns:{motif:'thorns'},
+  weak:{motif:'weak',harmful:true},
+  vulnerable:{motif:'vulnerable',harmful:true}
+ }).map(([id,d])=>[id,{...d,name:Status.name(id),ms:Status.name(id,'ms')}])));
  function snapshot(run){
   if(run?.scene!=='battle'||!run.battle)return null;
   return {identity:[run.seed,run.started,run.stage,run.depth,run.route?.active??'',run.battle.enemyId].join(':'),seq:run.battle.combatLog?.seq||0,hp:run.hp,enemyHp:run.battle.hp,values:Object.fromEntries(Status.view(run,'player').filter(s=>definitions[s.id]).map(s=>[s.id,s.value]))};
@@ -21,12 +21,12 @@
   const out=[],bm=['ms','bm'].includes(lang);
   for(const e of run.battle.combatLog?.entries||[]){
    const amount=e.values?.blockAbsorbed;
-   if(e.id>before.seq&&e.actor==='enemy'&&e.kind==='enemy-turn'&&Number.isSafeInteger(amount)&&amount>0)out.push({id:'block',kind:'impact',motif:'shield',amount,broken:!after.values.block,label:amount+' Block '+(bm?'diserap':'absorbed'),receipt:e.id});
+   if(e.id>before.seq&&e.actor==='enemy'&&e.kind==='enemy-turn'&&Number.isSafeInteger(amount)&&amount>0)out.push({id:'block',kind:'impact',motif:'shield',amount,broken:!after.values.block,label:amount+' '+Status.name('block',lang)+' '+(bm?'diserap':'absorbed'),receipt:e.id});
   }
   for(const [id,d]of Object.entries(definitions)){
    const delta=(after.values[id]||0)-(before.values[id]||0);if(!delta)continue;
    const kind=['block','thorns'].includes(id)&&delta<0?'expire':d.harmful?(delta>0?'down':'cleanse'):delta>0?'up':'down';
-   out.push({id,kind,motif:d.motif,delta,label:(delta>0?'+':'−')+Math.abs(delta)+' '+(bm?d.ms:d.name)});
+   out.push({id,kind,motif:d.motif,delta,label:(delta>0?'+':'−')+Math.abs(delta)+' '+Status.name(id,lang)});
   }
   return out;
  }

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "role": "painted_combat_status_badges",
   "provenance": "Reviewed Slay the Math icon package in the supplied MathMon buff/debuff painted style. Existing SVG masters remain unchanged.",
   "canvas": [
@@ -42,7 +42,7 @@
     },
     {
       "id": "block",
-      "file": "stm_icon_status_block_v1.webp",
+      "file": "stm_icon_status_block_v2.webp",
       "glyph": "Full shield with a protective check mark"
     },
     {
@@ -67,13 +67,14 @@
     },
     {
       "id": "next-block",
-      "file": "stm_icon_status_next_block_v1.webp",
+      "file": "stm_icon_status_next_block_v2.webp",
       "glyph": "Shield with a plus beneath a forward turn arrow"
     },
     {
       "id": "retain-block",
-      "file": "stm_icon_status_retain_block_v1.webp",
+      "file": "stm_icon_status_retain_block_v2.webp",
       "glyph": "Shield encircled by a returning retention arrow"
     }
-  ]
+  ],
+  "variantSource": "references/status-polish/manifest.json"
 }

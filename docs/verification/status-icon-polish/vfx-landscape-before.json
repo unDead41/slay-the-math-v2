@@ -1,0 +1,30 @@
+{
+  "checks": [
+    "A native Rune Guard commits the exact engine/save result before a noninteractive shield and actual Block-gain cue appear.",
+    "Strength, Agility, Defense and Thorns use distinct actual hero conditions and their source models/card icons stay intact.",
+    "The unpaid Passive swap dialog stays static; only its committed replacement lowers Strength and produces a real downward cue.",
+    "A real enemy receipt shows four Block absorbed even when the authored Layered Shield refill returns Block to its previous value; no fabricated +Block label.",
+    "Valid player Weak/Vulnerable saves have distinct auras without historical bursts; current Weak persists through an individual Attack and its real phase-end decay emits the cleanse cue. Enemy-only Weak never affects Alyssa.",
+    "Settings/native dialogs cancel effects and restore only current auras; Motion Off and OS reduced motion leave no decorative overlay and preserve exact gameplay."
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "noDocumentOverflow": true,
+      "insideArena": true,
+      "nodes": 34
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "noDocumentOverflow": true,
+      "insideArena": true,
+      "nodes": 34
+    }
+  ],
+  "profiles": [],
+  "errors": [],
+  "offlineRequests": [],
+  "failure": "AssertionError [ERR_ASSERTION]: {\"width\":844,\"height\":390,\"noDocumentOverflow\":true,\"insideArena\":false,\"nodes\":34}\n    at /workspace/scratch/495591b4a1bf/icon-clarity-audit/tests/status-vfx-browser.cjs:38:843"
+}

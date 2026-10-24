@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## 2.38.0-icons.1 — 24 October 2026 — Explained statuses, branch only
+
+Apply the six approved follow-ups on codex/icon-clarity-audit: clear units/percentage/duration, complete shared BM/English status labels/details and VFX names, readable Normal/Large status sizing, three distinct transparent Block-family variants, brief comparison effects and real slow/error image handling. Preserve current/archived rule owners and original card/artifact art. Expose fifteen critical icons to Publish Handler. [Scope/source/export limits](../STATUS_ICON_POLISH_2_38_0.md); [fresh branch audit](../audits/icon-clarity-audit/LATEST.md).
+
 ## Master SOR 1.2.0 — 24 October 2026
 
 - Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.

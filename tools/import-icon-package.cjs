@@ -51,6 +51,7 @@ async function importIcons(source,root=path.resolve(__dirname,'..')){
  status.version=2;status.role='painted_combat_status_badges';status.provenance='Reviewed Slay the Math icon package in the supplied MathMon buff/debuff painted style. Existing SVG masters remain unchanged.';status.canvas=[512,512];status.safe_area=40;delete status.glyph_stroke;status.rules=status.rules.filter(x=>!x.includes('native vector'));status.rules.push('docs/sor/06_ICON_SYSTEM.md: ICO-10 through ICO-13, reviewed painted icon package');status.frame='Shared gold celestial frame and neutral navy backing. Live type, count and tooltip stay in the existing HTML controls.';
  for(const s of status.icons)s.file=data.status[s.id].replace(/^assets\//,'');
  fs.writeFileSync(path.join(root,'dist/assets/status-icons.json'),JSON.stringify(status,null,2)+'\n');
+ require('./build-status-variants.cjs')(root);
  console.log(JSON.stringify({entries:130,uniqueFiles:records.length,runtimeMiB:(totalBytes/1048576).toFixed(2)}));
 }
 module.exports=importIcons;module.exports.restoreOriginalArtwork=restoreOriginalArtwork;if(require.main===module)importIcons(process.argv[2]).catch(e=>{console.error(e);process.exit(1);});

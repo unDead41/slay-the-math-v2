@@ -100,6 +100,7 @@ function runCampaign(options={}){
   else if(['passive_swap','passive_trim'].includes(ch.kind))value=candidates.slice().sort((a,b)=>cardMerit(a)-cardMerit(b)||a.uid.localeCompare(b.uid))[0].uid;
   else{const sorted=candidates.slice().sort((a,b)=>cardMerit(b)-cardMerit(a)||a.uid.localeCompare(b.uid));value=ch.kind==='read_ahead'?{take:sorted[0].uid,order:sorted.slice(1).map(c=>c.uid)}:sorted[0].uid;}
   act('cardChoice',()=>E.chooseCardOption(run,value),{choiceKind:ch.kind});
+  if(options.onCombatPlay)options.onCombatPlay(run,{kind:'choice'});
  }
  function mysteryReward(){
   const event=X.definition(run),p=X.pending(run),options=event.success.options.filter(o=>X.actionable(run,o));
@@ -161,9 +162,9 @@ function runCampaign(options={}){
      }
     }
     if(run.battle.question){act('forecastClose',()=>E.closeForecast(run));continue;}
-    const chosen=chooseCombatAction(publicCombatView(run));
+    const chosen=options.combatAgent?options.combatAgent(run,publicCombatView(run)):chooseCombatAction(publicCombatView(run));
     if(chosen.kind==='endTurn')act('endTurn',()=>E.endTurn(run));
-    else{if(!!run.battle.boostArmed!==chosen.focus&&run.battle.focus>0&&!run.battle.boostUsed)act('focusToggle',()=>E.armFocus(run));act('playCard',()=>E.playCard(run,chosen.uid),{uid:chosen.uid});combatPlays++;}
+    else{if(!!run.battle.boostArmed!==chosen.focus&&run.battle.focus>0&&!run.battle.boostUsed)act('focusToggle',()=>E.armFocus(run));act('playCard',()=>E.playCard(run,chosen.uid),{uid:chosen.uid,...(options.combatAgent?{decision:chosen.explanation}:{})});if(options.onCombatPlay)options.onCombatPlay(run,chosen);combatPlays++;}
    }else if(run.scene==='reward'){
     if(run.artifactState?.offer?.ready){const a=E.artifactChoices(run).slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id))[0];act('artifactChoice',()=>E.chooseArtifact(run,a.id),{id:a.id});}
     else{const choices=run.rewards.slice().sort((a,b)=>rewardMerit(run,b,!!run.battle?.elite)-rewardMerit(run,a,!!run.battle?.elite)||a.localeCompare(b));const key=run.deck.length<24?choices[0]:null;act('rewardChoice',()=>E.chooseReward(run,key),{key});}
@@ -196,7 +197,7 @@ function runCampaign(options={}){
  function result(status,error=null){
   if(status==='BENCHMARK_LIMIT_CENSORED')reconcile();
   if(active){active.exit=takeSnapshot(run);active.result=status;active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;}
-  return {runSeed,seed:'STM-'+String(runSeed%100+1).padStart(3,'0'),mode,difficulty,policyVersion:defaults.playerPolicyVersion,routePolicy:forcedRoutes?'forced-route-diagnostic':routePolicy,
+  return {runSeed,seed:'STM-'+String(runSeed%100+1).padStart(3,'0'),mode,difficulty,policyVersion:options.agentVersion||defaults.playerPolicyVersion,routePolicy:forcedRoutes?'forced-route-diagnostic':routePolicy,
    status,error,campaignWon:options.stopAfterStage||options.stopAtEntry||entryStage!==1?null:status==='VICTORY'?true:status==='DEFEAT'?false:null,entryStage,entryStateHash,stages,plannedRoutes:plans,rooms,routeDecisions,checkpoints,apiCalls,committedCardPlays:(run?.stats.cardsPlayed||0)-startingPlays,answerAttempts,firstCorrect,invalidStates,
    final:run?takeSnapshot(run):null,traceHash:hash(actions),...(trace?{actions}:{}),...(observer?{metrics:observer.metrics}:{}),predictProfile,syntheticOracleUsed:PROFILES[predictProfile].oracle,
    learningModel:predictProfile==='feedback'?'uniform untried visible choice; use feedback for Predict/artifact, one attempt for Mystery; no answer key access':'Predict '+predictProfile+' sensitivity; artifact/Mystery retain feedback policy; canonical key used only for declared high/low knowledge model',entrySet:options.initialState?'captured-valid-stage-entry':'actual-new-run-and-campaign-carry'};

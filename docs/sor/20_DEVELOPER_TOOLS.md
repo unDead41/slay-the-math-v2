@@ -77,3 +77,9 @@ DISAHKAN: developer-only branch work, no merge/push to main. Start at the game m
 ## Main integration — 2.23.1
 
 DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle to main over v2.23.0. This supersedes the earlier branch-only restriction. Keep production free of developer controls; use npm start dev to see the main-menu and Settings toggle.
+
+## AI Playtester — branch ai, 24 October 2026
+
+DISAHKAN: Ijamm authorizes publishing the previously local strategy/simulation AI to ai and improving it, superseding no-push for this branch only. Main remains unchanged. Base main 6dc3ce3 / game 2.31.0 retains the illustrated tutorial.
+
+Developer Hub links /__dev/ai/. A loopback-only worker runs beginner/intermediate/expert campaigns and selected-card/pair screens. History retains five jobs, identity-bound cancel/reconnect/downloads; schema 2 separates individual A/B contributions, combined delta and excess pair interaction. Real resolved receipts measure per-card plays/Energy/Focus/direct HP damage. Current player saves, storage, gameplay values and production files are unchanged. [Guide](../AI_PLAYTESTER.md), [spec](../superpowers/specs/2026-10-24-ai-branch.md), [verification](../verification/ai-branch.json).

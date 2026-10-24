@@ -135,3 +135,7 @@ Open http://localhost:4173. `npm run build:prod` only builds, and `npm start` ke
 Main now includes an optional Google destination to Main Menu / Settings / Education Practice → Learning Report. No database server is needed for this option. Records stay on-device until the player opts in and the Google receiver confirms the exact revision. The existing local SQLite option remains available.
 
 Copy **integrations/google-sheets/Code.gs** into an owner-controlled Apps Script project, run its private setup once, deploy the web app, and paste its `/exec` URL into **Collection link**. Full BM instructions, site defaults, Wi-Fi recovery, export and limits: [Google Sheets setup](docs/GOOGLE_SHEETS_SETUP.md). Live Google authorization/deployment is still an owner setup step; game code publication does not deploy or authorize the Google receiver.
+
+## AI Playtester — branch ai
+
+Developer-only strategy/simulation tool: `npm run start:dev`, then http://localhost:4174/__dev/ai/. Three combat policies, actual campaigns, contextual single-card/pair measurements, five-report history and resolved Energy/Focus telemetry. See [AI Playtester](docs/AI_PLAYTESTER.md). Published to ai only; game 2.31.0 and player profiles remain unchanged.

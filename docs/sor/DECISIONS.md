@@ -548,3 +548,11 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - **DITERUSKAN:** implement on `tutorial` from main `d76ad6e` / 2.30.0 as 2.31.0. Use 17 English/BM chapters, 16 real screenshots and 11 replayable actual-engine practice chapters. Independent memory-only training and a tutorial-only progress key preserve the player run, question ledger, report, artifact history and collection.
 - **DITERUSKAN:** retain current artwork/card/question/rules, existing native Tutorial controls and Learn entry. Enlarge example screenshots, preserve focus, support natural scrolling and storage failure. Timed Mystery keeps its deadline and warns before prolonged guide use. Publishing the feature branch is delivery; main integration remains separate.
 - **PERLU_VERIFIKASI:** physical devices, classroom comprehension and future screenshots after UI changes. MODEL.zip failed to arrive and is not used; the three uploaded PDFs are not modified. [Scope and verification](../TUTORIAL_2_31_0.md).
+
+## DEC-20261024-AI — publish and improve AI Playtester
+
+**DISAHKAN:** Ijamm explicitly requests pushing AI to branch ai and adding useful improvements before pushing. Supersedes earlier local-only/no-push boundary for ai; no main/other-branch write is authorized.
+
+**IMPLEMENTED:** reconstruct the pruned local draft from the retained session over actual main 6dc3ce3/game 2.31.0; independently rerun checks. Developer-only three-policy strategy/search, real campaigns and contextual selected-card/pair screens, five-job memory history, source-bound exports, strict identity cancellation and individual A/B/combined/interaction utility. Per-card receipt plays/Energy/Focus/direct HP damage are usage telemetry, not power ratings. No trained model, cloud, player advisor, automatic tuning, save migration or numerical changes.
+
+**PERLU_VERIFIKASI:** human pupil 90/70/50 targets, exhaustive combinations, physical Windows/devices and public hosting remain unverified. Previous raw/log evidence was pruned and is not fabricated. [Current guide](../AI_PLAYTESTER.md) and [fresh verification](../verification/ai-branch.json).

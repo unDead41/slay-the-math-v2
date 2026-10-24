@@ -1,8 +1,12 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.8.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.8.1. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
 
-## Penerbitan branch — 25 Oktober 2026
+## Penerbitan main — 25 Oktober 2026
+
+**DISAHKAN:** Ijamm kini meminta “okay push ke main please” untuk hasil preview V10 yang telah diterbitkan pada `combat-animation` / `e1775c673d3b663273ce8ab2d9d9e4df28d27fc6`. Ini membenarkan penerbitan HTML, sumber dan dokumentasi siap ke main serta menggantikan batas branch-only di bawah. Preview kekal di `previews/combat-vfx/`; integrasi VFX ke combat sebenar belum dibuat. Kod runtime, aset asal dan versi game 2.43.0 dikekalkan. [Handoff semasa](../audits/combat-animation/LATEST.md).
+
+## Penerbitan branch — sejarah 25 Oktober 2026
 
 **DISAHKAN:** Ijamm membenarkan push preview siap ke `combat-animation` sahaja. Ini menggantikan batas tiada push bagi preview V4–V10 di bawah, tanpa membenarkan integrasi runtime, merge main atau deployment. Branch berasaskan main 2.43.0; game runtime dan versi release dikekalkan. [Audit dan handoff](../audits/combat-animation/LATEST.md).
 

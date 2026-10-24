@@ -1,5 +1,7 @@
 # Slay the Math — Set of Rules
 
+Current V10 preview publication, 25 October 2026: Ijamm now authorizes publishing the completed `combat-animation` preview to main. [Current handoff](docs/audits/combat-animation/LATEST.md), [open/edit the standalone preview](previews/combat-vfx/README.md). This supersedes the earlier branch-only boundary below. Production combat integration is still separate; game runtime and release version remain 2.43.0.
+
 Branch preview publication, 25 October 2026: [Combat VFX V10 audit and handoff](docs/audits/combat-animation/LATEST.md), [preview and sources](previews/combat-vfx/README.md). Ijamm authorizes pushing the completed V10 preview to `combat-animation` only. Its branch now uses current main 2.43.0; these visuals remain standalone and are not installed in the production game.
 
 Latest Passive identity preview, 24 October 2026: [MOT-28–29 · Ten visibly distinct Passive ornaments](docs/sor/11_ANIMATION_VFX_AUDIO.md). V10 replaces the three similar flame/leaf motifs with ember swords, radial fireflowers and fractured hearts, and clarifies padlocks, scrolls and turbines among the remaining identities. Preserve the common circle, trigger-order layers, original art/icons and V9 stat/barrier renderer. Standalone preview and comparison gallery only; no game integration or Git publication.

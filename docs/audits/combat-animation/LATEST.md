@@ -1,5 +1,26 @@
 # Combat animation — V10 preview branch audit
 
+## Main publication addendum — 25 October 2026
+
+| Field | Record |
+| --- | --- |
+| Target | main |
+| Main before publication | 2aea9057eba8ce0c23c5fdd203dfe12637c1d871 |
+| Feature snapshot | e1775c673d3b663273ce8ab2d9d9e4df28d27fc6 |
+| Main/feature relationship | Feature is one commit ahead, zero behind; direct fast-forward ancestry |
+| Master SOR | 1.2.0, reread from current main |
+| Scope/status | VALID — exact standalone V10 preview plus publication documentation |
+
+Ijamm now explicitly requests pushing the completed update to main. This supersedes the feature-only boundary in the original report below. Publish the reviewed feature snapshot and its publication-status documentation; keep the preview outside production runtime. The original report is retained as the initial branch audit and must not be read as current publication permission.
+
+Fresh pre-publication review confirms the 24-file feature diff is limited to previews and related SOR/audit records. The follow-up changes only these six text documents: this report, the preview README, SOR_README, SOR 11, DECISIONS and CHANGELOG. The exact HTML, gallery, JavaScript/CSS modules, fixtures and recorded native evidence remain identical to the feature snapshot. Preserve the main `dist`, modules, assets, scripts, tests, package and release tree entries.
+
+Fresh checks for this publication: portable source rebuild check, Passive geometry/order/preservation checks, exact file/blob hashes, repository-relative links and final tree/diff review. The contract run covers 60 loop variants, 1,440 shared-base ordered triples and 11,580 finite samples. The existing native evidence remains scoped to the exact unchanged HTML, not a new production-game or device test. Production/full-game tests are NOT_RUN because no production code/data/build input changes.
+
+**Initial/final findings:** no additional confirmed issue was found within this main-publication diff. VFX-001 / PUB-001 / PUB-002 remain resolved as documented below. RISK-001 (future gameplay integration), RISK-002 (physical-device performance) and proposed IMP-002 (human recognition check) remain open within their stated limits. Main publication does not close them or imply the preview is installed in live combat.
+
+Publication uses a commit descended from the reviewed feature, followed by a non-forced update of main guarded by its expected old SHA. The current remote main ref, commit ancestry and unchanged production tree entries are verified after the update; the final commit is identified in the handoff. If main advances before the guarded update, reconcile its new snapshot before retrying.
+
 | Field | Record |
 | --- | --- |
 | Date | 25 October 2026, Asia/Kuala_Lumpur |

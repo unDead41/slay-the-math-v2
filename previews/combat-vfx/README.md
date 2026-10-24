@@ -36,4 +36,4 @@ After changing a source module, run `python3 previews/combat-vfx/rebuild.py` bef
 
 The checks cover periodic geometry, all sixty identity/layer/quality variants, the shared base, trigger-order interruption/removal, finite geometry, source/asset preservation and inline-script validity. Historical native Canvas and visual evidence for this exact HTML is in the [branch audit](../../docs/audits/combat-animation/LATEST.md).
 
-Preview publication is authorized for `combat-animation` only. Production integration, main merge, deployment and physical-device FPS validation are separate tasks. MODEL.zip was unavailable and was not used.
+Ijamm subsequently authorizes publishing this completed preview from `combat-animation` to main on 25 October 2026. The earlier branch-only boundary is historical. Production combat integration and physical-device FPS validation remain separate; no game runtime or release-version change is included. MODEL.zip was unavailable and was not used.

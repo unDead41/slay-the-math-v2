@@ -1,5 +1,11 @@
 # Changelog SOR — Slay the Math
 
+## Combat VFX V10 preview on main — 25 October 2026
+
+- Ijamm now authorizes main publication of the completed `combat-animation` / e1775c6 preview. Supersede the previous branch-only boundary for these finished files.
+- Preserve the exact reviewed HTML, gallery and source modules. Update SOR/README/audit publication status and rerun the portable rebuild/contract checks.
+- Keep these files under `previews/combat-vfx/`; production combat integration and physical-device acceptance remain separate. Runtime, original assets, release metadata and game version 2.43.0 are unchanged.
+
 ## Combat VFX V10 branch publication — 25 October 2026
 
 - Ijamm authorizes publishing the completed standalone preview to `combat-animation`. Base the update on current main 2.43.0 while retaining the old branch history.

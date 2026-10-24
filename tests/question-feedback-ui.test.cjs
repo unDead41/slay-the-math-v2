@@ -65,8 +65,8 @@ test('DOM: every question has its own editable persistent comment, unaffected by
  try{
   assert.equal(d.querySelectorAll('.atlas-question').length,120);
   const ids=M.data.bank.questions.map(q=>q.id);
-  for(const id of ids){select(id);assert.equal(d.getElementById('feedback-question-id').textContent,id);assert.equal(d.getElementById('feedback-comment').value,'');write('Improve '+id);}
-  assert.equal(JSON.parse(values.get(feedbackKey)).comments.length,120);
+  for(const id of ids){select(id);assert.equal(d.getElementById('feedback-question-id').textContent,id);assert.equal(d.getElementById('feedback-comment').value,'');write('Improve '+id);d.getElementById('feedback-reviewed').click();}
+  assert.equal(JSON.parse(values.get(feedbackKey)).comments.length,120);assert.equal(JSON.parse(values.get(feedbackKey)).comments.filter(e=>e.reviewed).length,120);
   select('PROB-003');d.querySelector('input[value="hint-unclear"]').click();
   d.getElementById('hint-tab').click();assert.equal(d.getElementById('feedback-comment').value,'Improve PROB-003');
   d.getElementById('restart-review').click();assert.equal(d.getElementById('feedback-comment').value,'Improve PROB-003');
@@ -75,7 +75,7 @@ test('DOM: every question has its own editable persistent comment, unaffected by
   assert.equal(values.get('duel-cube-math.v1'),'keep-run');assert.equal(values.get('duel-cube-question-history.v1'),'keep-rewarded');
   assert.deepEqual(errors,[]);
  }finally{dom.window.close();}
- const reopened=boot(values);try{reopened.select('PROB-003');assert.equal(reopened.d.getElementById('feedback-comment').value,'Improve PROB-003');assert.equal(reopened.d.querySelector('input[value="hint-unclear"]').checked,true);assert.deepEqual(reopened.errors,[]);}finally{reopened.dom.window.close();}
+ const reopened=boot(values);try{reopened.select('PROB-003');assert.equal(reopened.d.getElementById('feedback-reviewed').checked,true);assert.equal(reopened.d.getElementById('feedback-comment').value,'Improve PROB-003');assert.equal(reopened.d.querySelector('input[value="hint-unclear"]').checked,true);assert.deepEqual(reopened.errors,[]);}finally{reopened.dom.window.close();}
 });
 test('DOM: comments stay inert and their shared settings keep cancellation and saved text',{skip:!JSDOM},()=>{
  const {dom,d,write,downloads,errors}=boot();try{

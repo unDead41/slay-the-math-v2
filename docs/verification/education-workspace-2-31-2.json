@@ -1,0 +1,501 @@
+{
+  "base": "35610a5e0aed7b0aba708ba6c7998349c16d5a19",
+  "version": "2.31.0-report.2",
+  "protectedFiles": 640,
+  "originalAssets": 606,
+  "changedProtectedFiles": [],
+  "receiverUnchanged": true,
+  "receiverSHA256": "7f3bcd5ae3f1b52bb7f4e38d92c88a1d7ee991cb1c54d79fcaea5f045430f92a",
+  "productionFilesIdentical": 685,
+  "runtimeResourcesVerified": 78,
+  "resourceSHA256": {
+    "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
+    "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
+    "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
+    "music.css": "969fed6d068de80695aab6866031fed020adcdc3e0ff4f0df54d1337e500d92c",
+    "dungeon.css": "e303c1a5a6be561ef78c5962d56f2b25db612032cfce4c5ab14d19bbf9abd543",
+    "scene.css": "1e865966d0bc0601d47767a7b7cdda79729dc9b93b6e306a37da9b389bbdb8f7",
+    "combat.css": "860b7e946ecc4f2d7a686671ff319d6a290d0ef6b4b6479f6bf94a66ab05862f",
+    "dungeon-2-3.css": "ce7aed65f6d0a5f9f16063b3d0b6b76440da2f152b84258016db41fb0cdb10cc",
+    "artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
+    "mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
+    "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
+    "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
+    "education.css": "cbc64b5d1d70a78bb472f300c4ada4648d13689caf4bb7a99d3e5ba400d2dd65",
+    "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
+    "animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
+    "hand.css": "cd52cf1c7c42978b56ae978bdec07aa04c1dce2243ee47503ae80ca8f310d476",
+    "mechanics-host.css": "138a24eaffb062b7c82eac66457c72ffdadbc817be26c88e58b001e52c84c2a7",
+    "shop.css": "bb7f039dfff9fa10ff1270ea1bf8f8822134ea49dac91c1aedc1acb7e6119ee2",
+    "mystery.css": "ac1fe38ebd6ac50cc7c1cbdf08602a7f383ba7c90354dfeae66e6418ee213c61",
+    "cards.css": "983579dd64d3737e62291c882f187a42f563ec483ed24f568b53da13d4b9cb68",
+    "combat-compact.css": "1a3b4cb712415ab5dd7fb7147f27d7dabaf6ab3f2b482af2064262bb5489f758",
+    "passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+    "icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
+    "card-motion.css": "927ecf6affc053a8a384e1b760552d91bf4e175c76c66df8bf845496ee5a273f",
+    "analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
+    "status-vfx.css": "a741eef9646981611447d6bf5c2cf3c17d01f5423bc076f1b6396f922831e935",
+    "release.js": "123043ed6b5f3825d90d2408c6bcb44efe71d5275b93f87e7b7ea6673d971fd0",
+    "card-data.js": "b519e9cba7387656f86eca65642080a938d1253666995b91d294858758bd1c81",
+    "balance-data.js": "5f4391410240cf770c5060cfd00d3d08dc93684fae6d89d3f203634f02711bf9",
+    "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "icon-assets.js": "82f3bf36b255a5723f67ccaf82bd4aefc47cfcd41f9f1881287d3efa20f13074",
+    "card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
+    "card-kit.js": "6470cd7445aee863ad6eab19b2cd1ff6959ddede78ccc64d91ea40ef32e246a8",
+    "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "mechanics.js": "91384cf36eae881ac47246c656c5221511b8a66a1b0832098e6a6acbd6dd7883",
+    "question-language.js": "676f963f8a9df3c5494d56886f5b746037cf18d4c4ce19ac37eb6ec6f13fe1b3",
+    "rich-text-data.js": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
+    "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "balance-config.js": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
+    "rich-text.js": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+    "economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "artifacts.js": "e85e15e40e39276d47e0958a86c825010ed2347c1385c03c76216448e3c87790",
+    "question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "education.js": "9a8d31059ec0aa70effcc07a54dadbc02763f76628aa891d40852142589e5ae5",
+    "mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "mystery.js": "b192bb133d996e62a40c77ff3681cf501bd97839f1056b29bb4c345d26d6ed9a",
+    "combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "combat-predict.js": "3a3056225b3411aabf22a0f045ad8f4abf3e609e7e8a53fe21a624c24d79abb7",
+    "card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "card-combat.js": "55e7490e328b62fc590614a7d3061085d71b674a4fc42bfc95f7655401f4e0da",
+    "engine.js": "232f66ab9607a4f442329cdefb20b34e34c27e019dbca38d0ed4b732b11457a5",
+    "music-data.js": "dc2442ded9e366567b65ca247f55e7d9984d685dcc93fd5ae9e2f04750cd9ca7",
+    "audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
+    "audio.js": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17",
+    "visuals.js": "5466d2bbaf6016a6b1cbcaf9e3a8c7e6c11eed9c890446a846214f7a0ea2c4c5",
+    "animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
+    "animation.js": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52",
+    "artifact-ui.js": "aca0675a0e08e7fd1c6359cfd544270b6aa5c37ed6769c41338a3aaffa3165bb",
+    "mechanics-host.js": "a4d1c9e17cff43f5b5cf94103f9833a6231768788716a3760cfb55d90050bd1a",
+    "hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
+    "mystery-ui.js": "cb9a259cf95a84be636e1d1d3a9d584b0d2242acaf8e0692b2a427246935b731",
+    "education-practice.js": "8e5c6a7e51a804d6abb1dabde4cc86cbdfd2ebe1dc59095f84a580efd89bf70c",
+    "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
+    "combat-status.js": "c3b93d38e6593517af089eaee0d76af752251c264165a1e066e164482acf7f96",
+    "status-vfx.js": "b08065599bfca0c2b17fe5298095e7e2411dfdaebf3941179dcfa978725e2543",
+    "card-motion.js": "1771f5914f0121cecdc00eeb4a7ef5a0ee919a64313ca33eec0a2fbd0382c49a",
+    "learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
+    "learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
+    "learning-sync.js": "a45da8f82dd33088ca707687e9856db88ca4a2d449b28752b15bb2d0c6087125",
+    "learning-collection-config.js": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2",
+    "learning-google.js": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf",
+    "learning-delivery.js": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275",
+    "analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
+    "app.js": "2e2acf3027ad30b796cc11ce3dc5e829087b06c2551d6fa04c1d4c484b7ad8c1"
+  },
+  "blankProjectDefault": true,
+  "portableBytes": 295711725,
+  "branch": "education-report",
+  "postFullSuiteProductionRechecked": true,
+  "serialFullSuite": {
+    "tests": 778,
+    "pass": 778,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 359846.373983
+  },
+  "baseline": {
+    "tests": 13,
+    "pass": 13,
+    "fail": 0
+  },
+  "targetedOwnerAndUI": {
+    "tests": 40,
+    "pass": 40,
+    "fail": 0
+  },
+  "native": {
+    "workspace": {
+      "checks": [
+        "All120 question rows have separate native review checkboxes; ticking a different row does not open or answer it.",
+        "BM/English question and feedback views fit desktop, portrait phone and short landscape; checkbox targets are at least44px, question list scrolls locally and drawer Escape restores access.",
+        "Reload preserves marks and original comment; unticking retains it, shared report has consent without setup/CSV, and exit cancellation keeps the same feedback view and game save."
+      ],
+      "geometry": [
+        {
+          "view": "question",
+          "viewport": [
+            390,
+            771
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "feedback",
+          "viewport": [
+            390,
+            771
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "question",
+          "viewport": [
+            844,
+            316
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "feedback",
+          "viewport": [
+            844,
+            316
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "question",
+          "viewport": [
+            1366,
+            826
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "feedback",
+          "viewport": [
+            1366,
+            826
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        }
+      ],
+      "errors": [],
+      "webSecurityEnabled": true,
+      "keyboardFocus": {
+        "id": "PROB-002",
+        "outlineWidth": 2,
+        "visible": true
+      }
+    },
+    "google": {
+      "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+      "checks": [
+        "The project default reaches the player report without URL controls, eager network or inherited consent.",
+        "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+        "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+        "Actual host reload replays local review flags through the same delivery projection with no invalid payload or duplicate row.",
+        "Reviewed tick and full comment reach the unchanged Google receiver together; offline untick/edit updates one row and preserves the comment.",
+        "No capability in frame URLs; desktop/mobile journal has internal scroll, no URL controls and preserved question search."
+      ],
+      "errors": [],
+      "webSecurityEnabled": true
+    },
+    "all120": {
+      "checks": [
+        "Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.",
+        "All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.",
+        "Learning progress and pending Hint survive a reload. Existing pending Artifact trial and rewarded question history remain byte-identical.",
+        "Portable SLAY-THE-MATH-OFFLINE.html opens Education Practice with all 120 questions and zero network requests."
+      ],
+      "questions": 120,
+      "viewports": [
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "overflow": false
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    "report": {
+      "checks": [
+        "All three journal views fit desktop, phone and short landscape with local scroll, unchanged artwork geometry and unchanged game save.",
+        "Actual generated Practice uses the same BM/English journal and comment-sharing navigation; status updates retain question search and saved comment text.",
+        "Developer Hub saves only a validated project default; a fresh player receives it without URL controls or automatic sharing. Player servers deny developer routes."
+      ],
+      "geometry": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "view": "overview",
+          "dialog": {
+            "x": 8,
+            "y": 8,
+            "width": 374,
+            "height": 828,
+            "clientHeight": 824,
+            "scrollHeight": 1553
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "view": "details",
+          "dialog": {
+            "x": 8,
+            "y": 8,
+            "width": 374,
+            "height": 828,
+            "clientHeight": 824,
+            "scrollHeight": 1652
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "view": "sharing",
+          "dialog": {
+            "x": 8,
+            "y": 8,
+            "width": 374,
+            "height": 828,
+            "clientHeight": 824,
+            "scrollHeight": 1048
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "view": "overview",
+          "dialog": {
+            "x": 14,
+            "y": 15,
+            "width": 816,
+            "height": 360,
+            "clientHeight": 356,
+            "scrollHeight": 1231
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "view": "details",
+          "dialog": {
+            "x": 14,
+            "y": 15,
+            "width": 816,
+            "height": 360,
+            "clientHeight": 356,
+            "scrollHeight": 1368
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "view": "sharing",
+          "dialog": {
+            "x": 14,
+            "y": 15,
+            "width": 816,
+            "height": 360,
+            "clientHeight": 356,
+            "scrollHeight": 805
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            1366,
+            900
+          ],
+          "view": "overview",
+          "dialog": {
+            "x": 223,
+            "y": 15,
+            "width": 920,
+            "height": 870,
+            "clientHeight": 866,
+            "scrollHeight": 1211
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            1366,
+            900
+          ],
+          "view": "details",
+          "dialog": {
+            "x": 223,
+            "y": 15,
+            "width": 920,
+            "height": 870,
+            "clientHeight": 866,
+            "scrollHeight": 1372
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            1366,
+            900
+          ],
+          "view": "sharing",
+          "dialog": {
+            "x": 223,
+            "y": 55.078125,
+            "width": 920,
+            "height": 789.828125,
+            "clientHeight": 786,
+            "scrollHeight": 786
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        }
+      ],
+      "errors": [],
+      "environment": "Native Chromium with local player/developer servers; no live Google collection",
+      "webSecurityEnabled": true,
+      "asyncState": {
+        "before": [
+          1,
+          3,
+          "backward",
+          140,
+          0
+        ],
+        "after": [
+          1,
+          3,
+          "backward",
+          140,
+          0
+        ]
+      },
+      "practiceIntro": {
+        "text": "Jurnal latihan anda",
+        "font": "14.08px / 21.824px system-ui, sans-serif",
+        "position": "static",
+        "width": 344,
+        "height": 21.8125,
+        "overflow": "visible",
+        "clip": "auto",
+        "display": "block"
+      },
+      "operatorResponses": [
+        {
+          "status": 200,
+          "body": "{\"googleScriptUrl\":\"\",\"revision\":\"a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2\"}"
+        },
+        {
+          "status": 400,
+          "body": "{\"error\":\"Paste a deployed Google Apps Script link ending in /exec.\"}"
+        },
+        {
+          "status": 200,
+          "body": "{\"googleScriptUrl\":\"https://script.google.com/macros/s/QA_REPORT_DEPLOYMENT1234567890/exec\",\"revision\":\"a1834bcd29c6d3ce88910e83dc48102a3677dd9680da2a656ea97e77d112ea2c\"}"
+        }
+      ]
+    }
+  },
+  "nativeDeveloperChecks": [
+    "dev-tools-browser passed",
+    "dev-toggle-browser passed"
+  ],
+  "review": {
+    "workflow": "Shiro fix and own producer/accessibility audit",
+    "resolved": [
+      "Phone comment below fold",
+      "Clipped list keyboard outline",
+      "Host boot raw-feedback replay"
+    ],
+    "unresolvedMaterialFindings": 0
+  },
+  "liveGoogleAccountTested": false,
+  "physicalDevicesTested": false,
+  "publication": {
+    "target": "education-report",
+    "expectedParent": "35610a5e0aed7b0aba708ba6c7998349c16d5a19",
+    "mainWritten": false,
+    "receiverDeploymentChanged": false
+  }
+}

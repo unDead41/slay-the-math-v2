@@ -1,6 +1,6 @@
 # Google Sheets — Slay the Math
 
-Pratonton **2.31.0-report.1**, branch **education-report**, berasaskan main 2.30.0. Perubahan laporan dan tetapan developer belum diterbitkan ke main. Akaun Google, Sheet dan deployment Apps Script masih disediakan pemilik sekali sahaja. Laporan latihan terus berfungsi tanpa sambungan Google. [Panduan pratonton](LEARNING_REPORT_PREVIEW.md).
+Pratonton **2.31.0-report.2**, branch **education-report**, berasaskan main 2.30.0. Perubahan laporan dan tetapan developer belum diterbitkan ke main. Akaun Google, Sheet dan deployment Apps Script masih disediakan pemilik sekali sahaja. Laporan latihan terus berfungsi tanpa sambungan Google. [Panduan pratonton](LEARNING_REPORT_PREVIEW.md).
 
 ## Apa yang anda dapat
 
@@ -29,7 +29,7 @@ Hentikan server game lama dengan **Ctrl+C**. Dalam PowerShell di folder projek:
 }
 ```
 
-Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` tanpa menyemak perubahan itu terlebih dahulu. Buka **http://localhost:4173**. Terminal dan menu perlu memaparkan **v2.31.0-report.1**. Jika port digunakan, hentikan proses server lama dahulu. Google collection menggunakan `npm start` biasa; `start:analytics` hanya diperlukan bagi pilihan SQLite yang lama.
+Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` tanpa menyemak perubahan itu terlebih dahulu. Buka **http://localhost:4173**. Terminal dan menu perlu memaparkan **v2.31.0-report.2**. Jika port digunakan, hentikan proses server lama dahulu. Google collection menggunakan `npm start` biasa; `start:analytics` hanya diperlukan bagi pilihan SQLite yang lama.
 
 ## 2. Cipta penerima Google sekali sahaja
 
@@ -72,6 +72,12 @@ Untuk game yang dihoskan, tambah origin game sebenar pada `STM_ALLOWED_GAME_ORIG
 Rekod disimpan pada peranti. Apabila internet pulih **dan game masih dibuka**, penghantaran dicuba semula secara terhad. Jika game ditutup semasa offline, buka semula **alamat dan browser yang sama** selepas internet pulih. Anda juga boleh menekan **Try sending now / Cuba hantar sekarang**. Tiada penghantaran latar belakang apabila browser ditutup.
 
 Jangan clear site data sebelum penerimaan disahkan atau sebelum mengeksport salinan. Selepas kegagalan berulang, gunakan butang hantar semula, sambung semula internet atau buka semula game. Respons hilang selepas Google menyimpan tidak menggandakan baris; revision yang sama dipadankan semula. Komen yang diedit dikemas kini dan pemadaman dihantar sebagai penanda pemadaman apabila perkongsian diaktifkan.
+
+## Tick dan komen dalam Education Practice
+
+Dalam branch ini, tick bermaksud **Sudah disemak**, berasingan daripada betul/salah. Komen boleh ditulis tanpa tick. Pilih tab **Maklum balas** pada soalan; semua perubahan disimpan secara automatik pada peranti. Tapisan **Belum disemak / Sudah disemak / Ada maklum balas** membantu menyambung semakan.
+
+Apabila perkongsian diaktifkan, tick dan komen menggunakan penerima Google yang sama. Dalam tab **Comments**, medan **Question** bermula dengan `[REVIEWED] ` jika soalan ditick; medan **Comment** mengekalkan teks asal, termasuk had 2000 aksara. Untick mengekalkan komen/kategori dan mengemas kini baris sama. Jika tiada tick, komen atau kategori lagi, penanda pemadaman sedia ada digunakan. Tiada lajur atau field protokol baharu; pautan `/exec` sedia ada boleh digunakan tanpa redeploy kerana perubahan Practice ini.
 
 ## Cara membaca Sheet
 

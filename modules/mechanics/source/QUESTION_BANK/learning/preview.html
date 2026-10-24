@@ -12,38 +12,30 @@
 <a class="skip-link" href="#question-heading">Skip to question</a>
 <main data-stm-richtext data-theme="dark" data-mode="review" id="preview">
 <header class="masthead" id="masthead">
- <div class="brand-line"><span class="brand-seal" aria-hidden="true">∑</span><div><div class="eyebrow">Slay the Math</div><div class="brand-subtitle">Form 4 · The question folio</div></div><span class="edition" id="bank-version"></span></div>
- <div class="hero-line"><div><p class="chapter-kicker">A quiet moment before your next move</p><h1>Understand the idea.<br>Find your way.</h1><p class="intro">120 questions. Three topics. Take your time, check an idea, and build your confidence.</p></div><button class="hero-action" id="resume-learning"><span class="button-kicker">Your learning record</span><span id="resume-learning-label">Start learning</span><span aria-hidden="true">↗</span></button></div>
- <div class="desk-controls">
-  <div class="control"><label for="mode-select">Practice mode</label><select id="mode-select"><option value="review">Review questions</option><option value="learn">Learning session</option></select></div>
-  <div class="mode-description" id="mode-description"></div>
-  <div class="control compact-control"><label for="theme-select">Page style</label><select id="theme-select"><option value="light">Parchment</option><option value="dark" selected>Ink</option></select></div>
-  <div class="control language-control"><label for="language-select">Question language</label><select id="language-select"><option value="en">English</option><option value="ms">Bahasa Melayu</option></select></div>
- </div>
+ <div class="practice-heading"><div><h1>Education Practice</h1><p>Choose a question, try it, then leave feedback.</p></div><div class="practice-header-actions"><button id="learning-report" aria-haspopup="dialog">Learning Report</button><button id="feedback-finish">Finish practice</button></div></div>
+ <div class="practice-toolbar"><button id="atlas-toggle" class="atlas-toggle" aria-expanded="false" aria-controls="atlas-panel">Questions <span id="atlas-mobile-count">120</span></button><p id="practice-review-count" role="status">0 / 120 reviewed</p>
+ <details id="practice-options"><summary>Practice options</summary><div class="practice-options-panel"><div class="practice-language"><label for="language-select">Question language</label><select id="language-select"><option value="en">English</option><option value="ms">Bahasa Melayu</option></select></div><div class="control"><label for="mode-select">Practice mode</label><select id="mode-select"><option value="review">Review questions</option><option value="learn">Learning session</option></select></div><p id="mode-description"></p><button id="resume-learning"><span id="resume-learning-label">Start learning</span></button><button id="progress-button" aria-expanded="false" aria-controls="progress-panel">Practice record <span id="progress-mini">0 / 120</span></button><span class="mode-badge" id="mode-badge">Review</span></div></details></div>
 </header>
 <button id="atlas-backdrop" class="atlas-backdrop" aria-label="Close question atlas" tabindex="-1" hidden></button>
 <div class="desk-layout">
 <aside class="atlas-panel" id="atlas-panel" aria-labelledby="atlas-title">
- <div class="atlas-heading"><div><p class="section-kicker">The full collection</p><h2 id="atlas-title">Question atlas</h2></div><button class="icon-button atlas-close" id="atlas-close" aria-label="Close question atlas">×</button></div>
+ <div class="atlas-heading"><div><h2 id="atlas-title">Questions</h2></div><button class="icon-button atlas-close" id="atlas-close" aria-label="Close question atlas">×</button></div>
  <p class="atlas-intro" id="atlas-intro">Open any question in Review.</p>
  <div class="atlas-filters">
   <div class="search-control"><label for="question-search">Search questions</label><input id="question-search" type="search" placeholder="ID, word or concept" autocomplete="off" spellcheck="false"></div>
-  <div class="filter-pair"><div><label for="atlas-topic-select">Topic</label><select id="atlas-topic-select"><option value="">All topics</option></select></div><div><label for="difficulty-select">Difficulty</label><select id="difficulty-select"><option value="">All levels</option><option>Easy</option><option>Medium</option><option>Hard</option></select></div></div>
-  <div class="question-picker" id="question-picker"><label for="question-select">Jump to any question</label><select id="question-select"></select></div>
+  <div><label for="atlas-topic-select">Topic</label><select id="atlas-topic-select"><option value="">All topics</option></select></div>
+  <div><label for="review-status-select">Review status</label><select id="review-status-select"><option value="all">All questions</option><option value="unreviewed">Not reviewed</option><option value="reviewed">Reviewed</option><option value="commented">With feedback</option></select></div>
+  <details class="atlas-extra-filters"><summary>More filters</summary><div><label for="difficulty-select">Difficulty</label><select id="difficulty-select"><option value="">All levels</option><option>Easy</option><option>Medium</option><option>Hard</option></select></div>
+  <div class="question-picker" id="question-picker"><label for="question-select">Jump to any question</label><select id="question-select"></select></div></details>
  </div>
  <div class="atlas-result-line"><span id="atlas-results" aria-live="polite"></span><button id="clear-filters" class="text-button" hidden>Clear filters</button></div>
  <p class="sr-only" id="atlas-keyboard-help">Use the arrow keys to move between question numbers. Home and End move to the first and last number. Press Enter to open a review.</p><div id="question-atlas" class="question-atlas" aria-describedby="atlas-keyboard-help"></div>
  <p class="atlas-empty" id="atlas-empty" hidden>No questions match. Try a shorter search or clear the filters.</p>
- <div class="atlas-legend" aria-label="Question status key"><span><i data-status="pending"></i>Opened</span><span><i data-status="correct"></i>Correct</span><span><i data-status="revealed"></i>Revealed</span></div>
+ <p class="atlas-legend">Tick means reviewed. Answer results are separate.</p>
  <p class="atlas-footnote" id="atlas-footnote">Review stays in this open page.</p>
 </aside>
 <div class="main-pane" id="main-pane">
- <div class="page-toolbar">
-  <button id="atlas-toggle" class="atlas-toggle" aria-expanded="false" aria-controls="atlas-panel"><span aria-hidden="true">▦</span> Question atlas <span id="atlas-mobile-count">120</span></button>
-  <span class="mode-badge" id="mode-badge">Review</span>
-  <button id="learning-report" class="progress-button" aria-haspopup="dialog">Learning Report</button>
-  <button id="progress-button" class="progress-button" aria-expanded="false" aria-controls="progress-panel">Practice record <span id="progress-mini">0 / 120</span></button>
- </div>
+
  <p class="storage-notice" id="storage-notice" role="status" hidden></p>
  <section class="progress-panel folio-panel" id="progress-panel" hidden aria-labelledby="progress-title">
   <div class="panel-title-line"><div><p class="section-kicker">Your learning session</p><h2 id="progress-title">A record of your practice</h2></div><span class="save-status" id="save-status" role="status"></span></div>
@@ -58,6 +50,9 @@
  <article class="folio-panel question-folio" id="question-surface" aria-labelledby="question-heading">
   <div class="folio-topline"><span id="question-position"></span><span class="folio-mark" aria-hidden="true">✦</span><span id="question-state"></span></div>
   <header class="question-header"><div class="question-meta" id="question-meta"></div><h2 id="question-heading" tabindex="-1">Question 001</h2></header>
+  <div class="question-review-line"><label class="review-check-control" for="feedback-reviewed"><input id="feedback-reviewed" type="checkbox" aria-describedby="review-mark-help"><span id="feedback-reviewed-label">Reviewed</span></label><span id="review-mark-help">Separate from correct or wrong answers.</span></div>
+  <nav id="practice-section-nav" aria-label="Question sections"><button data-practice-panel-toggle="question" aria-pressed="true" aria-controls="practice-question-view">Question</button><button data-practice-panel-toggle="feedback" aria-pressed="false" aria-controls="question-feedback">Feedback</button></nav>
+  <div id="practice-question-view" data-practice-panel="question">
   <p class="question" id="question-prompt"></p>
   <section class="scenario-note" id="context-panel" hidden aria-labelledby="context-title"><h3 id="context-title">In this question</h3><p id="context-note"></p></section>
   <div class="question-data" id="question-data" hidden><section id="given-panel" hidden><h3>Given</h3><ul id="given-facts"></ul></section><section id="asked-panel" hidden><h3>Find</h3><p id="asked-text"></p></section></div>
@@ -76,23 +71,26 @@
    <section class="support" role="tabpanel" aria-labelledby="more-hint-tab" id="more-hint-panel" hidden><h4>A more specific next step</h4><p id="more-hint-text"></p><div class="learning-visual" id="more-hint-visual"></div></section>
   </section>
   <section class="answer-panel" id="answer-panel" hidden aria-labelledby="answer-title"><p class="section-kicker" id="solution-kicker">The completed idea</p><h3 id="answer-title"></h3><p id="explanation"></p><button id="show-steps" aria-expanded="false" aria-controls="worked-steps">Show Steps</button><ol class="learning-worked-steps" id="worked-steps" hidden></ol><details id="solution-visual-details"><summary>See the completed visual</summary><div class="learning-visual" id="solution-visual"></div></details></section>
-  <section class="question-feedback" id="question-feedback" aria-labelledby="feedback-title">
-   <div class="feedback-heading"><div><p class="section-kicker">Help shape the next version</p><h3 id="feedback-title">Help improve this question</h3><p class="feedback-reassurance">Yes, we do read your comments.</p></div><span id="feedback-question-id" class="feedback-question-id"></span></div>
-   <p class="small-note">Tell us what needs work. Choose any that apply, or write your own comment.</p>
+  <details class="source-details" id="source-details"><summary><span>Sources &amp; curriculum fit</span><span class="alignment-badge" id="alignment-badge"></span></summary><p class="small-note" id="bank-version"></p><div id="source-alignment"></div><div id="question-sources"></div><p class="source-explainer">PDF pages count from the first page of each file. Printed pages are the page labels inside the book. These references support the mathematics; the game scenario is local to this question.</p></details>
+ <div class="term-guide"><div class="legend" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div><p id="term-interaction-help">Hover, focus or tap a highlighted term. Press Escape or tap outside to close it.</p></div>
+  </div>
+  <section class="question-feedback" id="question-feedback" data-practice-panel="feedback" hidden aria-labelledby="feedback-title">
+   <div class="feedback-heading"><div><p class="section-kicker">Help shape the next version</p><h3 id="feedback-title">Question feedback</h3><p class="feedback-reassurance">Yes, we do read your comments.</p></div><span id="feedback-question-id" class="sr-only"></span></div>
    <form id="question-feedback-form">
-    <fieldset><legend>What could we improve?</legend><div class="feedback-categories" id="feedback-categories"></div></fieldset>
+
     <label class="feedback-text-label" for="feedback-comment">Your comment <span>(optional)</span></label>
-    <textarea id="feedback-comment" rows="4" maxlength="2000" placeholder="For example: the Hint explains the rule, but I need a clearer example." aria-describedby="feedback-input-help feedback-character-count feedback-status"></textarea>
+    <textarea id="feedback-comment" rows="5" maxlength="2000" placeholder="For example: the Hint explains the rule, but I need a clearer example." aria-describedby="feedback-input-help feedback-character-count feedback-status"></textarea>
     <div class="feedback-input-note"><span id="feedback-input-help">Saved automatically on this device. Please leave out personal details.</span><span id="feedback-character-count">0 / 2,000</span></div>
+    <details class="feedback-concerns"><summary>Choose what needs work (optional)</summary><fieldset><legend>What could we improve?</legend><div class="feedback-categories" id="feedback-categories"></div></fieldset></details>
     <button type="submit" id="feedback-save">Save comment</button><p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
    </form>
    <div class="feedback-tools"><strong id="feedback-count">0 questions have a comment</strong><p id="feedback-delivery-note">Your comments are saved on this device. Open Sharing settings to choose whether to send them.</p><p class="feedback-warning" id="feedback-storage-warning" role="status" hidden></p><div class="feedback-buttons"><button type="button" data-feedback-sharing>Sharing settings</button></div></div>
   </section>
-  <details class="source-details" id="source-details"><summary><span>Sources &amp; curriculum fit</span><span class="alignment-badge" id="alignment-badge"></span></summary><div id="source-alignment"></div><div id="question-sources"></div><p class="source-explainer">PDF pages count from the first page of each file. Printed pages are the page labels inside the book. These references support the mathematics; the game scenario is local to this question.</p></details>
+
   <footer class="folio-navigation"><div><button id="previous-question" class="text-button">← Previous</button><button id="restart-review" class="text-button">Reset this review</button></div><button id="next-question">Next review <span aria-hidden="true">→</span></button><p id="next-question-note" class="small-note"></p></footer>
  </article>
- <div class="term-guide"><div class="legend" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div><p id="term-interaction-help">Hover, focus or tap a highlighted term. Press Escape or tap outside to close it.</p></div>
- <div class="feedback-session-footer"><p>Finished testing? Your comments can help improve the next version.</p><button id="feedback-finish">Finish practice</button></div>
+
+
  <p class="page-footnote">An offline question bank for Slay the Math. Your learning record and comments stay in this browser until you share them.</p>
 </div>
 </div>

@@ -2,6 +2,13 @@
 
 Versi dokumen berasingan daripada versi game.
 
+## Feature preview 2.31.0-report.2 — Education Practice
+
+- Simplify the 120-question folio into Question and Feedback views with a readable checkbox list and reviewed/feedback filters. Move language and optional session controls under Practice options; keep the ink style and canonical quiz/support rules.
+- Persist independent Reviewed flags and comments, preserve them through untick/reload and merge latest comments before stale-tab marking. Keep user comments at their full 2000 characters.
+- Deliver flags through the existing strict Google feedback schema without a new database, receiver field or deployment. Player CSV/import and URL setup remain absent; developer setup stays in the Hub.
+- Continue education-report only and preserve newer main work. [Guide](../education/PRACTICE_WORKSPACE.md); [actual verification](../education/PRACTICE_WORKSPACE_VERIFICATION.md).
+
 
 ## Feature preview 2.31.0-report.1 — education-report only
 

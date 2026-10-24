@@ -1,6 +1,6 @@
 # Learning Report preview — education-report
 
-Version **2.31.0-report.1**, based on main **d76ad6e / 2.30.0**. Ijamm requests branch-only publication; main is not updated.
+Version **2.31.0-report.2**, based on main **d76ad6e / 2.30.0**. Ijamm requests branch-only publication; main is not updated.
 
 ## Player flow
 
@@ -10,6 +10,12 @@ Version **2.31.0-report.1**, based on main **d76ad6e / 2.30.0**. Ijamm requests 
 - Question comments and the exit popup use **Sharing settings / Tetapan perkongsian** to open this same view. Comment text and its local save/delete behavior stay unchanged. No in-game CSV download/import/native CSV-sharing controls remain; ordinary game-save import/export stays available.
 
 The JSON backup remains for offline/quota/corrupt-storage recovery. It includes known learning evidence, comments, the current destination's pending entries and current owner recovery; it excludes device capabilities and credentials. It is not a combined export of every old destination journal. The game had no CSV importer; the removed CSV UI was export/native file sharing. Historical pure CSV formatters and the external collector export tool remain compatible, outside the player flow.
+
+## Education Practice update
+
+All120 questions now have an independent **Reviewed / Sudah disemak** checkbox. Use the list filters for Not reviewed, Reviewed or With feedback, or search a question ID. Switch between Question and Feedback to reach the comment without scrolling through every hint/solution. Language, mode and saved-session controls are under Practice options. No player CSV/import or Google URL setup is added.
+
+Review marks do not count as correct answers, mastery or run exposure. Comments remain editable without a tick; unticking keeps them. They use the existing consent/offline queue and private Google Sheet. The Sheet's Comments → Question value starts with `[REVIEWED] ` for a ticked entry; the original free-text comment remains unchanged. No new receiver field or redeployment is needed. [Full guide and latest verification](education/PRACTICE_WORKSPACE.md).
 
 ## Developer setup
 

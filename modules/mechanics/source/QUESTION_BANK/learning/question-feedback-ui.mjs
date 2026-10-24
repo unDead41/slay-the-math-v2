@@ -1,5 +1,5 @@
 /** Accessible comments; sharing and JSON recovery use the common Learning Report. */
-export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,onChange=()=>{},getDelivery=()=>null,onOpenSharing=()=>{}}){
+export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,onChange=()=>{},onUpdate=()=>{},getDelivery=()=>null,onOpenSharing=()=>{}}){
  const node=id=>document.getElementById(id),feedbackOrigin=window.origin||location.origin;let disk=null;
  try{disk=globalThis.localStorage;}catch{}
  const store=createQuestionFeedbackStore({storage:disk,bankVersion:bank.bankVersion,questionIds:bank.questions.map(q=>q.id)});
@@ -25,8 +25,8 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
   return deliveryCopy('Your comments are saved on this device. Sharing is enabled; queued records and comments are waiting for the collector. Keep the game open or reopen it to retry.','Komen anda disimpan pada peranti ini. Perkongsian aktif; rekod dan komen menunggu pelayan. Biarkan permainan terbuka atau buka semula untuk mencuba lagi.');
  }
  function controls(){
-  const count=store.list().length;
-  node('feedback-count').textContent=count+' '+(count===1?'question has':'questions have')+' a comment';
+  const entries=store.list().filter(e=>e.bankVersion===bank.bankVersion),count=entries.filter(e=>e.comment||e.categories.length).length,reviewed=entries.filter(e=>e.reviewed).length;
+  node('feedback-count').textContent=deliveryCopy(count+' '+(count===1?'question has':'questions have')+' feedback · '+reviewed+' / '+bank.questions.length+' reviewed',count+' soalan mempunyai maklum balas · '+reviewed+' / '+bank.questions.length+' disemak');
   node('feedback-storage-warning').hidden=!store.error;node('feedback-storage-warning').textContent=store.error;
   node('feedback-character-count').textContent=text.value.length+' / 2,000';
   if(node('feedback-delivery-note'))node('feedback-delivery-note').textContent=deliveryText();
@@ -40,37 +40,40 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
   if(renderedId!==question.id){
    const comment=store.get(question.id);renderedId=question.id;
    text.value=comment?.comment||'';
+   node('feedback-reviewed').checked=!!comment?.reviewed;
    for(const input of node('feedback-categories').querySelectorAll('input'))input.checked=!!comment?.categories.includes(input.value);
    node('feedback-question-id').textContent=question.id;
-   announce(comment?(store.error?deliveryCopy('Comment kept for this open page. Open Sharing settings to download a backup.','Komen dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran.'):'Your comment is saved on this device. You can edit it here.'):'');
+   announce(comment?(store.error?deliveryCopy('Comment kept for this open page. Open Sharing settings to download a backup.','Komen dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran.'):comment.comment||comment.categories.length?'Your comment is saved on this device. You can edit it here.':deliveryCopy('Review mark saved on this device.','Tanda semakan disimpan pada peranti ini.')):'');
   }
   controls();
  }
  function save({explicit=false}={}){
   const categories=[...node('feedback-categories').querySelectorAll('input:checked')].map(input=>input.value),record=getRecord();
-  if(explicit&&!categories.length&&!text.value.trim()){announce('Choose what needs improvement or write a comment.');text.focus();return false;}
+  if(explicit&&!categories.length&&!text.value.trim()&&!node('feedback-reviewed').checked){announce('Choose what needs improvement or write a comment.');text.focus();return false;}
   try{
    store.flush();
    const question=getQuestion(),previous=store.get(question.id),context={mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',hintUsed:!!record?.hintState.hintUsed,moreHintViewed:!!record?.hintState.moreHintViewed,stepsViewed:!!record?.stepsViewed};
-   const unchanged=previous&&previous.comment===text.value.trim()&&JSON.stringify(previous.categories)===JSON.stringify(categories)&&JSON.stringify(previous.context)===JSON.stringify(context);
+   const reviewed=node('feedback-reviewed').checked,unchanged=previous&&previous.reviewed===reviewed&&previous.comment===text.value.trim()&&JSON.stringify(previous.categories)===JSON.stringify(categories)&&JSON.stringify(previous.context)===JSON.stringify(context);
    if(!unchanged){
-    const saved=store.save(question,categories,text.value,context);
+    const saved=store.save(question,categories,text.value,context,{reviewed});
     if(saved)onChange(saved);
     else if(previous)onChange({id:previous.id,questionId:question.id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
    }
-   announce(store.error?deliveryCopy('Comment kept for this open page. Open Sharing settings to download a backup.','Komen dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran.'):categories.length||text.value.trim()?deliveryCopy('Saved on this device. Open Sharing settings to choose whether to send it.','Disimpan pada peranti ini. Buka Tetapan perkongsian untuk memilih sama ada mahu menghantarnya.'):'This question has no comment.');
-   controls();return true;
+   announce(store.error?deliveryCopy('Comment kept for this open page. Open Sharing settings to download a backup.','Komen dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran.'):reviewed||categories.length||text.value.trim()?deliveryCopy('Saved on this device. Open Sharing settings to choose whether to send it.','Disimpan pada peranti ini. Buka Tetapan perkongsian untuk memilih sama ada mahu menghantarnya.'):'This question has no comment.');
+   controls();onUpdate();return true;
   }catch(e){announce(e.message);return false;}
  }
  form.addEventListener('submit',event=>{event.preventDefault();save({explicit:true});});
  text.addEventListener('input',()=>save());
+ node('feedback-reviewed').addEventListener('change',()=>setReviewed(getQuestion().id,node('feedback-reviewed').checked));
  node('feedback-categories').addEventListener('change',()=>save());
  for(const button of root.querySelectorAll('[data-feedback-sharing]')){
   button.addEventListener('click',()=>{if(dialog.open)cancelExit();onOpenSharing();});
  }
  function renderExit(){
-  const count=store.list().length;
-  node('feedback-exit-summary').textContent=count?(store.error?deliveryCopy(count+' '+(count===1?'question has':'questions have')+' a comment kept for this open page. Open Sharing settings to download a backup before leaving.',count+' soalan mempunyai komen yang dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran sebelum keluar.'):deliveryCopy(count+' '+(count===1?'question has':'questions have')+' a comment saved on this device. Shared comments help improve the questions, hints, diagrams and worked steps.',count+' soalan mempunyai komen yang disimpan pada peranti ini. Komen yang dikongsi membantu menambah baik soalan, petunjuk, rajah dan langkah penyelesaian.')):deliveryCopy('Your feedback helps improve the questions, hints, diagrams and worked steps. You can return to any question to leave a comment.','Maklum balas anda membantu menambah baik soalan, petunjuk, rajah dan langkah penyelesaian. Anda boleh kembali ke mana-mana soalan untuk memberi komen.');
+  const entries=store.list().filter(e=>e.bankVersion===bank.bankVersion),count=entries.filter(e=>e.comment||e.categories.length).length,reviewed=entries.filter(e=>e.reviewed).length;
+  const summary=deliveryCopy(reviewed+' / '+bank.questions.length+' reviewed. '+count+' '+(count===1?'question has':'questions have')+' feedback.',reviewed+' / '+bank.questions.length+' disemak. '+count+' soalan mempunyai maklum balas.');
+  node('feedback-exit-summary').textContent=summary+' '+(store.error?deliveryCopy('Kept for this open page. Open Sharing settings to download a backup before leaving.','Dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran sebelum keluar.'):deliveryCopy('Saved on this device. Shared feedback helps improve the questions, hints and worked steps.','Disimpan pada peranti ini. Maklum balas yang dikongsi membantu menambah baik soalan, petunjuk dan langkah penyelesaian.'));
   node('feedback-exit-delivery').textContent=deliveryText();
   node('feedback-exit-confirm').textContent=closingForGame?'Return to Main Menu':'Finish for now';
   globalThis.DCQuestionLanguage?.applyInterface(dialog,globalThis.DCQuestionLanguage.language());
@@ -94,5 +97,13 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
  window.addEventListener('pagehide',()=>store.flush());
  // A reopened folio resumes delivery of saved comments without needing an edit.
  for(const comment of store.list())onChange(comment);
- return {render,requestExit,refreshDelivery:controls,exportData:()=>store.exportData(),get error(){return store.error;}};
+ function setReviewed(id,value){
+  const current=id===getQuestion().id,question=current?getQuestion():bank.questions.find(q=>q.id===id);if(!question)return;
+  store.flush();const previous=store.get(id),record=current?getRecord():null;
+  const context=current?{mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',hintUsed:!!record?.hintState.hintUsed,moreHintViewed:!!record?.hintState.moreHintViewed,stepsViewed:!!record?.stepsViewed}:undefined;
+  const saved=store.setReviewed(question,value,context);
+  if(saved)onChange(saved);else if(previous)onChange({id:previous.id,questionId:id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
+  if(current){renderedId=null;render();}else controls();onUpdate();
+ }
+ return {render,requestExit,setReviewed,get:id=>store.get(id),list:()=>store.list(),refreshDelivery:controls,exportData:()=>store.exportData(),get error(){return store.error;}};
 }

@@ -1,4 +1,4 @@
-# Slay the Math — 2.31.0-report.1 preview
+# Slay the Math — 2.31.0-report.2 preview
 
 Alyssa has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md).
 
@@ -7,6 +7,8 @@ Battles have one enemy. Rune Sweep now delivers one 12-damage hit; Fate Storm de
 Master balance playtest: New Run → Easy / Medium / Hard, or open `?balance=medium`. The three profiles share versioned combat/economy/loot definitions and separate saves. [Balance handoff and unmeasured pupil targets](docs/balance/master/HANDOFF.md).
 
 This branch **education-report** previews a simpler BM/English Learning Report: Overview, Details and Sharing. Google link setup lives in **Developer Hub → Education collection**. Player CSV/file-sharing controls are removed; one disclosed JSON recovery backup remains. Main is not updated by this preview. [Try the branch and configure collection](docs/LEARNING_REPORT_PREVIEW.md).
+
+Education Practice now has separate **Question / Feedback** views, a review checkbox for each of all120 questions, and Not reviewed / Reviewed / With feedback filters. Marks are independent of correct answers; comments and offline delivery stay in the existing Google flow. Language and saved-session controls live in **Practice options**. [Practice preview, Google mark format and run commands](docs/education/PRACTICE_WORKSPACE.md).
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 

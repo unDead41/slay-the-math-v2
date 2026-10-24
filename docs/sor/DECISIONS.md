@@ -548,3 +548,10 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - **DITERUSKAN:** a developer-only loopback/same-origin editor changes the public project collection default, with strict URL/body validation, stale-revision checks and atomic replacement. Existing browser destinations and per-target consent/identity/receipts are retained; explicit default adoption pauses sharing. Developer sandbox never sends or reads player saves.
 - **DITERUSKAN:** include the already-delivered selectable owner setup fix (`setupCollector` guards account identity and calls private `setupCollector_`). The receiver URL is public browser configuration, while Sheet access stays private.
 - **PERLU_VERIFIKASI:** live Google deployment/account policy/quotas, classroom use and physical Windows/device behavior. No main merge or live deployment is performed. [Preview flow and limits](../LEARNING_REPORT_PREVIEW.md).
+
+## DEC-20261024-PRACTICE-WORKSPACE — Education Practice simplification
+
+- **DISAHKAN:** Ijamm asks to simplify the 120-question Education screen like the report, remove redundant player CSV/import controls, allow each question to be ticked and commented on, retain Google delivery and show Google setup only to developers. The prior branch-only boundary continues; do not write main.
+- **Implementation choice for this preview:** Reviewed means checked by the reviewer, independent of mathematical outcomes. Separate Question/Feedback views, readable checkbox rows, current-bank counts and review/feedback filters replace the large hero and dense grid; secondary controls move under Practice options.
+- **Architecture:** One optional local feedback flag, strict-compatible Question marker in existing transport, unchanged original comments, explicit consent and offline journals. No new database/server/receiver setup. All120 current items validate against the existing Google receiver.
+- **PERLU_VERIFIKASI:** live owner Google access/deployment/quota, physical classroom/Windows/mobile behavior and a later reviewed integration with newer main changes. Scope/run instructions and actual checks: docs/education/PRACTICE_WORKSPACE.md.

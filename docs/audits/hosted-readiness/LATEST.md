@@ -26,7 +26,9 @@ Reviewer set-aside rulings: root owns native/build/suite/publication evidence; o
 
 ## Publication
 
-Pending expected-SHA non-forced main update, exact source-tree/parent/ref/version readback and separate Pages workflow observation. Ordered merge parents must remain mainb730cad then feature61ca126.
+Published source: [`0796afd`](https://github.com/unDead41/slay-the-math-v2/commit/0796afd2e9ead9cb87825b4decf65950a21c2a19), full SHA `0796afd2e9ead9cb87825b4decf65950a21c2a19`, tree `3bee8c9982e031685673ea27fd401293d7399302`. The remote tree equals the locally verified source/evidence tree exactly. The main ref update was non-forced with expected headb730cad0cb27b53ffbdf687d8fc9edaed143ef43. Commit/tree/ordered parents (mainb730cad then feature61ca126), main ref and exact package2.41.0 contents were read back. Feature ref was not changed.
+
+GitHub Pages [run40091388174](https://github.com/unDead41/slay-the-math-v2/actions/runs/40091388174) built the source commit successfully; production build, runtime syntax, artifact upload and deploy/Publish game all report success. [The existing game URL](https://undead41.github.io/slay-the-math-v2/) is unchanged. This establishes the observed Pages deployment, not a new physical-device or pupil test. The following audit-only commit records this receipt; final ref/tree/version and its Pages run are read back separately in the terminal handoff.
 
 ---
 

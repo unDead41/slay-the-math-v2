@@ -35,3 +35,5 @@ VIS-241-01 is a scoped visual follow-up: the selected1366×768 mid-action Develo
 ## Release use
 
 Pull main, restart the existing server and verify2.41.0. The existing Pages URL remains the same. Repository publication, Pages workflow success and actual public deployment are verified separately; the publication receipt records their observed status.
+
+Source2.41.0 is published on main as [`0796afd`](https://github.com/unDead41/slay-the-math-v2/commit/0796afd2e9ead9cb87825b4decf65950a21c2a19), with an exact match to the tested local tree and read-back package/version/ordered merge parents. Pages [run40091388174](https://github.com/unDead41/slay-the-math-v2/actions/runs/40091388174) reports successful build and deployment to [Slay the Math](https://undead41.github.io/slay-the-math-v2/). The following documentation-only receipt does not change runtime; see the current audit and structured evidence for details and limits.

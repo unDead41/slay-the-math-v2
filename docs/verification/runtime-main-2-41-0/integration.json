@@ -198,8 +198,31 @@
   },
   "evidenceFormatting": "Log trailing whitespace normalized only",
   "publication": {
-    "status": "pending main expected-SHA update",
+    "status": "source published to main; source Pages build and deployment succeeded",
+    "sourceCommit": "0796afd2e9ead9cb87825b4decf65950a21c2a19",
+    "sourceTree": "3bee8c9982e031685673ea27fd401293d7399302",
+    "localVerifiedCommit": "6763a7ef85829a13d17ebca103384235e5fd9791",
+    "remoteTreeExactlyMatchesLocal": true,
     "expectedMain": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
-    "force": false
+    "orderedParents": [
+      "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+      "61ca12635ae2bd23f04400b7cc6399a9836adfd8"
+    ],
+    "force": false,
+    "sourceRefReadback": true,
+    "commitTreeParentsReadback": true,
+    "packageVersionReadback": "2.41.0",
+    "exactPackageContentsReadback": true,
+    "featureRefChanged": false,
+    "pages": {
+      "runId": 40091388174,
+      "headSha": "0796afd2e9ead9cb87825b4decf65950a21c2a19",
+      "build": "success",
+      "deploy": "success",
+      "url": "https://undead41.github.io/slay-the-math-v2/",
+      "workflowUrl": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40091388174"
+    },
+    "receipt": "Following documentation-only commit; final ref/tree/version/Pages read back separately in terminal handoff",
+    "recordedAt": "2026-10-24T11:50:32.239621+00:00"
   }
 }

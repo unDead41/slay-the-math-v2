@@ -14,7 +14,7 @@ Current audio integration: [Expanded talking and checked answers, game 2.24.0](d
 
 Current Main Menu music, game 2.32.1: [supplied Ancient Stone Keep recording](docs/audio/menu-2026-10-24/README.md). This replaces only the menu cue. Ijamm authorized main publication after the completed update was first published to `music`.
 
-Current map balance audit: [Map SOR v1.3](modules/map/SOR/04_MAP_COMBAT_POWER.md) and [Master handoff](docs/MAP_BALANCE_V1_3_HANDOFF.md), based on game 2.24.0 / 2800f9a. Adaptive routing, matched-entry route replay, recovery/reward telemetry, Predict sensitivity and regression checks; no gameplay tuning or player-facing Combat Power. [V1.2 evidence](docs/MAP_BALANCE_HANDOFF.md) remains historical.
+Current map balance audit: [Map SOR v1.4](modules/map/SOR/04_MAP_COMBAT_POWER.md) and [current-runtime handoff](docs/MAP_BALANCE_V1_4_HANDOFF.md), based on inspected main2.37.0 /990541d and canonical Master candidate.4. Developer-only contextual measurements; [v1.3](docs/MAP_BALANCE_V1_3_HANDOFF.md) remains historical.
 
 Versi dokumen: **2.0.1** · Tarikh: **18 Oktober 2026 (Malaysia)** · Pemilik: **Ijamm**
 

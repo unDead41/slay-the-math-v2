@@ -31,9 +31,49 @@ def near(actual, expected):
     assert actual is not None and math.isclose(actual, expected, rel_tol=1e-11, abs_tol=1e-10), (actual, expected)
 
 
+def verify_score(row, cohort, stage, planned, reference):
+    """Reconstruct a table scope directly from immutable trials, including unknowns."""
+    selected = [r for r in cohort if stage is None or r["stages"][stage-1]["reached"]]
+    unresolved = [r for r in cohort if stage is None or not r["stages"][stage-1]["cleared"]]
+    terminal = [r for r in selected if (stage is not None and r["stages"][stage-1]["cleared"]) or r["status"] in ["VICTORY", "DEFEAT"]]
+    wins = sum(r["status"] == "VICTORY" if stage is None else r["stages"][stage-1]["cleared"] for r in terminal)
+    errors = sum(r["status"] == "INVALID_POLICY_OR_ENGINE" for r in unresolved)
+    censored = sum(r["status"] == "BENCHMARK_LIMIT_CENSORED" for r in unresolved)
+    n = len(terminal)
+    expected = {"plannedTrials": planned, "completedCampaignTrials": len(cohort), "trials": n, "wins": wins, "losses": n-wins, "notReached": len(cohort)-len(selected), "errors": errors, "censored": censored,
+                "campaignErrors": sum(r["status"] == "INVALID_POLICY_OR_ENGINE" for r in cohort), "campaignCensored": sum(r["status"] == "BENCHMARK_LIMIT_CENSORED" for r in cohort),
+                "scoreStatus": "UNSCORABLE" if errors or censored else "PROVISIONAL" if n else "NOT_SIMULATED", "evaluationComplete": len(cohort) == planned and not errors and not censored}
+    for key, value in expected.items():
+        assert row[key] == value, (key, row[key], value)
+    if errors or censored or not n:
+        assert all(row[key] is None for key in ["combatPower", "winRate", "smoothedWinProbability", "winInterval95", "combatPowerInterval95"])
+    else:
+        p, smoothed, z = wins/n, (wins+.5)/(n+1), 1.959963984540054
+        center = (p+z*z/(2*n))/(1+z*z/n)
+        half = z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/(1+z*z/n)
+        interval = [0 if wins == 0 else max(0, center-half), 1 if wins == n else min(1, center+half)]
+        power = lambda probability: 1000*math.log(1/probability)/math.log(1/reference)
+        near(row["winRate"], p)
+        near(row["smoothedWinProbability"], smoothed)
+        near(row["combatPower"], power(smoothed))
+        for actual, value in zip(row["winInterval95"], interval):
+            near(actual, value)
+        near(row["combatPowerInterval95"][0], power(interval[1]))
+        if interval[0]:
+            near(row["combatPowerInterval95"][1], power(interval[0]))
+        else:
+            assert row["combatPowerInterval95"][1] is None
+        assert row["cpUpperUnbounded"] == (interval[0] == 0)
+    if stage is None:
+        unknown = errors+censored+max(0, planned-len(cohort))
+        near(row["allCaseWinBounds"][0], wins/planned)
+        near(row["allCaseWinBounds"][1], (wins+unknown)/planned)
+
+
 def verify(out):
     context, manifest = load(out / "context.json"), load(out / "manifest.json")
     cfg = context["config"]
+    current = cfg.get("runtimeBuild") == "master"
     context_id = digest(compact(context))
     assert context_id == manifest["contextId"]
     files = 0
@@ -65,9 +105,12 @@ def verify(out):
             assert r["contextId"] == context_id and r["task"]["id"] not in seen
             seen.add(r["task"]["id"])
             assert r["seed"] in context["seedList"] and r["runSeed"] % 100 + 1 == int(r["seed"][4:])
-            assert r["status"] in ["VICTORY", "DEFEAT", "STAGE_CLEARED"], (r["task"]["id"], r["status"])
+            assert r["status"] in ["VICTORY", "DEFEAT", "STAGE_CLEARED", "BENCHMARK_LIMIT_CENSORED"], (r["task"]["id"], r["status"])
             assert r["invalidStates"] == 0 and 0 < r["apiCalls"] <= cfg["limits"]["maxActions"]
             assert r["syntheticOracleUsed"] == (r["predictProfile"] in ["high", "low"])
+            if current:
+                assert r["difficulty"] == context["difficulty"] and r["runtimeIdentity"] == context["runtimeIdentity"]
+                assert r["metrics"]["predict"]["attempts"] <= 2 * r["metrics"]["predict"]["firstAttempts"]
             assert r["metrics"]["predict"]["attempts"] == sum(x["predict"]["attempts"] for x in r["rooms"])
             for stage in [1, 2]:
                 rs = [x for x in r["rooms"] if x["stage"] == stage]
@@ -99,6 +142,11 @@ def verify(out):
                 assert state == checkpoint["state"] and state["scene"] == "map" and state["depth"] == 0
                 assert state["seed"] == r["runSeed"] and state["stage"] + 1 == checkpoint["stage"]
                 assert state["route"]["version"] == 3 and checkpoint["clock"] >= state["started"]
+                if current:
+                    assert state["balanceState"]["difficulty"] == context["difficulty"]
+                    assert state["balanceState"]["version"] == context["runtimeIdentity"]["version"]
+                    assert state["balanceState"]["definitionHash"] == context["runtimeIdentity"]["definitionHash"]
+                    assert state["economyState"]["difficulty"] == context["difficulty"]
                 captured[r["task"]["id"], checkpoint["stage"]] = checkpoint
             records.append(r)
     assert len(records) == index["records"]
@@ -157,9 +205,11 @@ def verify(out):
     score_checks = 0
     for row in score_rows:
         scope = [r for r in matched if r["seed"] == row["seed"] and r["task"]["targetStage"] == row["stage"] and r["task"]["rank"] == row["rank"]]
-        n, w = len(scope), sum(r["stages"][row["stage"] - 1]["cleared"] for r in scope)
+        terminal = [r for r in scope if r["stages"][row["stage"]-1]["cleared"] or r["status"] in ["VICTORY", "DEFEAT"]]
+        n, w = len(terminal), sum(r["stages"][row["stage"] - 1]["cleared"] for r in terminal)
+        unresolved = any(r["status"] == "BENCHMARK_LIMIT_CENSORED" and not r["stages"][row["stage"]-1]["cleared"] for r in scope)
         assert (row["trials"], row["wins"], row["losses"]) == (n, w, n - w)
-        if n:
+        if n and not unresolved:
             probability = (w + .5) / (n + 1)
             near(row["combatPower"], 1000 * math.log(1 / probability) / math.log(1 / cfg["referenceWinProbability"]))
             z, p = 1.959963984540054, w / n
@@ -175,7 +225,9 @@ def verify(out):
     for row in contrasts:
         a, b = triples[row["entryId"]]["easiest"], triples[row["entryId"]][row["challengerRank"]]
         stage = row["stage"] - 1
-        assert row["winDelta"] == int(b["stages"][stage]["cleared"]) - int(a["stages"][stage]["cleared"])
+        resolved = all(r["stages"][stage]["cleared"] or r["status"] == "DEFEAT" for r in [a,b])
+        expected_delta = int(b["stages"][stage]["cleared"]) - int(a["stages"][stage]["cleared"]) if resolved else None
+        assert row["winDelta"] == expected_delta
         assert row["finalHpDelta"] == b["final"]["hp"] - a["final"]["hp"]
 
     cells = 0
@@ -225,7 +277,8 @@ def verify(out):
         cohort = [r for r in campaigns if r["seed"] == row["seed"] and r["task"]["group"] == "route" and r["task"]["policy"] == row["policy"]]
         arrived = [r for r in cohort if r["stages"][row["stage"]-1]["reached"]]
         wins = sum(r["stages"][row["stage"]-1]["cleared"] for r in arrived)
-        assert (row["trials"], row["wins"], row["notReached"]) == (len(arrived), wins, len(cohort)-len(arrived))
+        resolved = [r for r in arrived if r["stages"][row["stage"]-1]["cleared"] or r["status"] in ["VICTORY", "DEFEAT"]]
+        assert (row["trials"], row["wins"], row["notReached"]) == (len(resolved), wins, len(cohort)-len(arrived))
     for row in load(out / "risk-reward.json"):
         cohort = [r for r in campaigns if r["task"]["policy"] == row["policy"] and r["predictProfile"] == row["predictProfile"]]
         rooms = [x for r in cohort for x in r["rooms"] if {"camp": "rest", "event": "mystery"}.get(x["roomType"], x["roomType"]) == row["roomType"]]
@@ -251,11 +304,33 @@ def verify(out):
         assert driver["mysteryFailureHpLossWindows"] == len(windows)
         assert driver["mysteryFailureDeathsBeforeRest"] == sum(w["deathBeforeRest"] for w in windows)
     summary, gate = load(out / "summary.json"), load(out / "quality-gate.json")
-    assert summary["evaluationComplete"] and gate["status"] == "PASS" and not gate["failures"]
+    assert summary["evaluationComplete"]
+    assert not set(gate["failures"]) - {"CENSORED_SCOPE_SCORES"}, gate["failures"]
+    assert (gate["status"] == "PASS") == (not gate["failures"])
+    assert summary["censored"] == sum(r["status"] == "BENCHMARK_LIMIT_CENSORED" for r in records)
     assert summary["campaignReturned"] == len(campaigns) and summary["matchedReturned"] == len(matched)
     assert summary["actualEngineCalls"] == sum(r["apiCalls"] for r in records)
-    assert summary["fullDifficultyProfilesImplemented"] == [] and summary["studentPlaytests"] == 0
-    return {"status": "PASS", "contextId": context_id, "manifestFiles": files, "sourceAndInputHashes": len(sources), "trialRecords": len(records), "campaigns": len(campaigns), "matchedReplays": len(matched), "entryStates": len(bank), "matchedScoreRows": score_checks, "csvCells": cells, "routeRows": len(coverage), "uniformLegacyTraceMatches": legacy_matches, "legacyReferenceStatus": "PASS" if same_reference_runtime else "NEEDS_NEW_REFERENCE", "studentCalibration": False}
+    assert summary["fullDifficultyProfilesImplemented"] == ([context["difficulty"]] if current else []) and summary["studentPlaytests"] == 0
+    if current:
+        assert context["postRunBossGrant"] == cfg["postRunBossGrant"] == 0
+        for table in ["policy-summary", "policy-stage-summary", "predict-summary", "seed-policy-summary", "matched-route-summary"]:
+            for row in load(out / (table+".json")):
+                if table == "matched-route-summary":
+                    cohort = [r for r in matched if r["seed"] == row["seed"] and r["task"]["targetStage"] == row["stage"] and r["task"]["rank"] == row["rank"]]
+                    planned = sum(e["seed"] == row["seed"] and e["stage"] == row["stage"] for e in bank)
+                else:
+                    cohort = [r for r in campaigns if r["task"]["policy"] == row["policy"] and r["predictProfile"] == row["predictProfile"] and ("seed" not in row or r["seed"] == row["seed"])]
+                    if table == "predict-summary":
+                        per_seed = max(cfg["predictProfiles"].values()) if row["predictProfile"] == "feedback" else cfg["predictProfiles"][row["predictProfile"]]
+                        cohort = [r for r in cohort if r["task"]["repetition"] < per_seed]
+                    else:
+                        per_seed = cfg["routePolicies"][row["policy"]] if row["predictProfile"] == "feedback" else cfg["predictProfiles"][row["predictProfile"]]
+                    planned = per_seed*(1 if "seed" in row else len(context["seedList"]))
+                verify_score(row, cohort, row.get("stage"), planned, cfg["referenceWinProbability"])
+        for row in load(out / "policy-summary.json"):
+            near(row["meanFinalGoldExcludingPostRunBossGrant"], row["meanFinalGold"])
+        assert "FULL_EASY_MEDIUM_HARD_ADAPTER_UNAVAILABLE" not in gate["warnings"]
+    return {"status": "PASS", "contextId": context_id, "manifestFiles": files, "sourceAndInputHashes": len(sources), "trialRecords": len(records), "campaigns": len(campaigns), "matchedReplays": len(matched), "entryStates": len(bank), "matchedScoreRows": score_checks, "csvCells": cells, "routeRows": len(coverage), "uniformLegacyTraceMatches": legacy_matches, "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE" if current else "PASS" if same_reference_runtime else "NEEDS_NEW_REFERENCE", "censoredTrials": summary["censored"], "scoreGateStatus": gate["status"], "studentCalibration": False}
 
 
 if __name__ == "__main__":

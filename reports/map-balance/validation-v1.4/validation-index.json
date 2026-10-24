@@ -1,0 +1,141 @@
+{
+  "status": "PASS_WITH_EXPLICIT_UNSCORABLE_SCOPES",
+  "measuredVersion": "2.37.0",
+  "closingVersion": "2.37.1",
+  "closingMain": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+  "rootTests": {
+    "start": "2026-10-24T08:26:16.010159+00:00",
+    "end": "2026-10-24T08:32:43.574971+00:00",
+    "sourceHead": "66b3474e3f8f6cfc8735759e479afadf6dc6d17e",
+    "gameVersion": "2.37.1",
+    "exitCode": 0,
+    "totals": {
+      "tests": 930,
+      "pass": 930,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "logBytes": 99775,
+    "logSha256": "59cc27dc574599e8928a15f360714ada783060d086cc662596c9d24d1cba791d"
+  },
+  "profiles": {
+    "easy": {
+      "status": "PASS",
+      "contextId": "5a37cb02ac2b2c6272faad14d155444fab90c1a48f2a8a706e5bdc7ec62df2fc",
+      "manifestFiles": 82,
+      "sourceAndInputHashes": 58,
+      "trialRecords": 4200,
+      "campaigns": 1800,
+      "matchedReplays": 2400,
+      "entryStates": 800,
+      "matchedScoreRows": 600,
+      "csvCells": 307347,
+      "routeRows": 5500,
+      "uniformLegacyTraceMatches": 0,
+      "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+      "censoredTrials": 54,
+      "scoreGateStatus": "FAIL",
+      "studentCalibration": false
+    },
+    "medium": {
+      "status": "PASS",
+      "contextId": "bbff0f9e103417797ee6108b87113947bff9a217636d7a00ae6b298ceb3b064c",
+      "manifestFiles": 83,
+      "sourceAndInputHashes": 58,
+      "trialRecords": 4152,
+      "campaigns": 1800,
+      "matchedReplays": 2352,
+      "entryStates": 784,
+      "matchedScoreRows": 600,
+      "csvCells": 316657,
+      "routeRows": 5500,
+      "uniformLegacyTraceMatches": 0,
+      "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+      "censoredTrials": 0,
+      "scoreGateStatus": "PASS",
+      "studentCalibration": false
+    },
+    "hard": {
+      "status": "PASS",
+      "contextId": "52ddf2a428dd37d06fd58414261a5376f860c7d2366648c5c8ce99fd35cc5105",
+      "manifestFiles": 70,
+      "sourceAndInputHashes": 58,
+      "trialRecords": 3834,
+      "campaigns": 1800,
+      "matchedReplays": 2034,
+      "entryStates": 678,
+      "matchedScoreRows": 600,
+      "csvCells": 293851,
+      "routeRows": 5500,
+      "uniformLegacyTraceMatches": 0,
+      "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+      "censoredTrials": 0,
+      "scoreGateStatus": "PASS",
+      "studentCalibration": false
+    }
+  },
+  "coldReplay": {
+    "status": "PASS",
+    "contextsIdentical": 3,
+    "fullTrialReplays": 3,
+    "exactMatches": 3,
+    "additionalUniqueScoredCampaigns": 0,
+    "cases": [
+      {
+        "difficulty": "easy",
+        "contextId": "5a37cb02ac2b2c6272faad14d155444fab90c1a48f2a8a706e5bdc7ec62df2fc",
+        "trialId": "route:STM-001:uniform-visible-v1:0",
+        "status": "VICTORY",
+        "traceHash": "089b95fdc2a02ec25ae3ddfbfba35cceca2ea1b2fb4fd5d9c84135409464cc8a",
+        "entryStateHash": "ce5d86f1a4b4f55b4bc075df91badad9e0ff8b71eb5abac5d0b4f77763cd7ff5",
+        "runtimeIdentity": {
+          "version": "master-1.4.0-candidate.4",
+          "difficulty": "easy",
+          "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+          "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+          "source": "integrated working tree",
+          "pupilCalibration": false
+        }
+      },
+      {
+        "difficulty": "medium",
+        "contextId": "bbff0f9e103417797ee6108b87113947bff9a217636d7a00ae6b298ceb3b064c",
+        "trialId": "route:STM-001:uniform-visible-v1:0",
+        "status": "VICTORY",
+        "traceHash": "b367c17abd058930ffb2e5a1b40212d04e01a8cdb301d1b7bef48da0fd55a7ab",
+        "entryStateHash": "6902e7c492de1d230f347cb1e1d5ec7f051f64a0c818746f48739276692483f8",
+        "runtimeIdentity": {
+          "version": "master-1.4.0-candidate.4",
+          "difficulty": "medium",
+          "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+          "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+          "source": "integrated working tree",
+          "pupilCalibration": false
+        }
+      },
+      {
+        "difficulty": "hard",
+        "contextId": "52ddf2a428dd37d06fd58414261a5376f860c7d2366648c5c8ce99fd35cc5105",
+        "trialId": "route:STM-001:uniform-visible-v1:0",
+        "status": "DEFEAT",
+        "traceHash": "1fd21d959015757deb356430d5dd915aa5906c48a1b363b4e27ba3aeb14b6be1",
+        "entryStateHash": "e7018acad3b3e73cd8f8620e90f7cadfa3c9395b4eb6c6dc8ff7e28447f0a256",
+        "runtimeIdentity": {
+          "version": "master-1.4.0-candidate.4",
+          "difficulty": "hard",
+          "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+          "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+          "source": "integrated working tree",
+          "pupilCalibration": false
+        }
+      }
+    ]
+  },
+  "verifierSha256": "f37bcef301038943e59f6c3a1092488997c55bb2718915d43497afc4cfdb1cc6",
+  "productionBuild": "PASS",
+  "mapValidation": "PASS",
+  "syntax": "PASS",
+  "pupilWinRatesMeasured": false
+}

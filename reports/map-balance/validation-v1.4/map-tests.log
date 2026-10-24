@@ -1,0 +1,31 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.37.0 test:maps
+> npm --prefix modules/map test && npm --prefix modules/map run validate
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> slay-the-math-map-module@1.0.0 test
+> node --test test/map-rng.test.cjs test/browser-global.test.cjs
+
+✔ browser-global API reproduces all exported maps without CommonJS (522.964931ms)
+✔ ES module API reproduces all 200 saved maps (181.951474ms)
+✔ all original 50 seeds preserve their saved map snapshots in both stages (40.693172ms)
+✔ confirmed quotas and mandatory levels hold for every path count in both stages (209.59735ms)
+✔ 100 seeds are unique, reproducible, and include expanding and merging maps (307.390301ms)
+✔ validator detects broken guarantees, counts, and disconnected rooms (3.059352ms)
+✔ invalid seed and options fail clearly (0.480707ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1169.067421
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> slay-the-math-map-module@1.0.0 validate
+> node tools/validate.cjs
+
+{"seeds":100,"maps":200,"uniqueLayouts":200,"pngs":12,"pngHashes":"passed","sorFiles":4,"htmlFiles":0}

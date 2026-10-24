@@ -20,7 +20,7 @@ function createTelemetry({E,A,cardMerit,hash},initial){
   if(kind==='forecastExhausted')predictCount('exhausted');
   if(kind==='forecastClose'&&!before.solved&&!before.failed)predictCount('abandoned');
   if(kind==='enterNode'&&r.scene==='shop'){
-   const cardPrices=r.shop.offers.filter((o,i)=>!r.shop.bought.includes(i)).map(o=>E.shopPrice(r,o)),artifactPrices=(r.shop.artifacts||[]).filter((o,i)=>o.id&&!r.shop.artifactBought.includes(i)&&!A.has(r,o.id)).map(o=>A.price(r,o.price));
+   const cardPrices=r.shop.offers.filter((o,i)=>!r.shop.bought.includes(i)).map(o=>E.shopPrice(r,o)),artifactPrices=(r.shop.artifacts||[]).filter((o,i)=>o.id&&!r.shop.artifactBought.includes(i)&&!A.has(r,o.id)).map(o=>r.economyState?E.shopPrice(r,o):A.price(r,o.price));
    const shop={gold:r.gold,offeredCards:cardPrices.length,affordableCards:cardPrices.filter(p=>p<=r.gold).length,affordableArtifacts:artifactPrices.filter(p=>p<=r.gold).length,minCardPrice:cardPrices.length?Math.min(...cardPrices):null};metrics.shop.visits++;if(shop.affordableCards===0)metrics.shop.zeroAffordableCards++;if(room)room.shop=shop;
   }
   if(kind==='buyCard')metrics.shop.cardPurchases++;

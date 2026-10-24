@@ -1,0 +1,11 @@
+Error: Resume context changed; use a fresh output directory.
+    at new Journal (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/storage.cjs:12:70)
+    at runExperiments (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/experiments.cjs:67:182)
+    at run (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-recheck/run.cjs:30:22)
+    at Object.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-recheck/run.cjs:35:26)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14)
+    at Object..js (node:internal/modules/cjs/loader:2003:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)

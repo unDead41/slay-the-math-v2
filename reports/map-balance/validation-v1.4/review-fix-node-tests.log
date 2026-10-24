@@ -1,0 +1,46 @@
+✔ fixed campaign matrix pairs common seeds without duplicating feedback controls (2.344727ms)
+✔ matched route triplets preserve captured state/clock/RNG and never invent Stage 2 entries (76.850779ms)
+✔ journal round trips immutable results and rejects changed context or corrupted records (3.335192ms)
+✔ worker returns real engine censoring as an unknown outcome, not defeat (9.398929ms)
+✔ worker pool returns bounded canonical outcomes and closes its workers (836.871882ms)
+✔ a timed-out worker is replaced so remaining scheduled tasks are not silently omitted (23.063304ms)
+✔ avoid-elite and reward policies choose different legal categories without hidden identities (21.699978ms)
+✔ shop routing responds to actual Gold and recovery routing to low HP (0.406433ms)
+✔ Predict ability model separates one-attempt high/low from skip and declares its oracle (0.41097ms)
+✔ unimplemented difficulty cannot silently masquerade as the runtime baseline (9.813194ms)
+✔ canonical stage entry is captured, replayed immutably and finishes only the requested scope (1938.092818ms)
+✔ two-attempt game controls reproduce the current canonical action hash (1474.226963ms)
+✔ adaptive recovery and Predict skip run through valid engine actions without forecasts (197.994118ms)
+✔ room resource accounting excludes later stage-transition and artifact actions (470.626929ms)
+✔ high and low Predict scenarios commit at most one answer per opportunity in the actual engine (359.980771ms)
+✔ room-level Predict and Rest actions reconcile to campaign telemetry (467.677899ms)
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (3.786322ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (1.018827ms)
+✔ recovery combat load includes an observed Mystery battle but not an ordinary event (0.454966ms)
+✔ difficulty driver numerators use the same feedback trial population as stage entries (0.899827ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (0.741328ms)
+✔ matched route coverage excludes the random preplan for the stage outside replay scope (0.281655ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (1.211138ms)
+✔ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.518061ms)
+✔ Rest opportunity and actual HP recovery remain different measures (3.184655ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.487706ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.281054ms)
+✔ automatic comparisons detect changes in the legacy replay and report analysis too (0.216908ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (1.23321ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.409648ms)
+✔ file gate rejects missing raw records even when the outer manifest is internally hashed (2.904431ms)
+✔ current integrity gate rejects records executed under another runtime identity (2.209063ms)
+✔ current worker captures real Master entries for all three bound profiles (1348.554857ms)
+✔ Master runtime choice is preserved by fixed campaign tasks and context (83.296464ms)
+✔ current worker rejects a captured entry from a different difficulty (6.876003ms)
+✔ current feedback settles two wrong attempts without a third attempt or loop (1609.025001ms)
+✔ artifact affordability observes the same Master quote used by a purchase (112.516378ms)
+✔ current report does not deduct a legacy Gold grant which Master never awards (0.677281ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6226.280695

@@ -1,0 +1,1320 @@
+{
+  "sourceMainCommit": "990541d57c6df96cefb21eddc7a365d1d989a74d",
+  "method": "Read canonical integrated binding/config and actual newRun before artifact. Enemy templates require the accompanying profile multipliers, phase/rage and engine rules; these are inputs, not simulated damage results.",
+  "profiles": [
+    {
+      "difficulty": "easy",
+      "runtimeIdentity": {
+        "version": "master-1.4.0-candidate.4",
+        "difficulty": "easy",
+        "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+        "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "profile": {
+        "target_win_rate": 0.9,
+        "starting_max_hp": 70,
+        "starting_gold": 100,
+        "starting_focus": 1,
+        "enemy_hp_mult": 0.85,
+        "enemy_attack_mult": 0.78,
+        "enemy_block_mult": 0.75,
+        "enemy_defense_adjust": -1,
+        "phase_attack_bonus": 1,
+        "rage_every_turns": 6,
+        "rage_damage_step": 0,
+        "rest_heal": 18,
+        "stage_clear_heal": 18,
+        "battle_gold": 30,
+        "elite_gold": 50,
+        "boss1_gold": 75,
+        "shop_price_mult": 0.9,
+        "event_gold_reward_mult": 1.2,
+        "event_gold_cost_mult": 0.8,
+        "event_heal_mult": 1.25,
+        "event_hp_cost_mult": 0.6,
+        "event_failure_hp_mult": 0,
+        "event_max_hp_cost": 3,
+        "event_time_mult": 2,
+        "event_next_energy_loss": 0
+      },
+      "referenceStarterBeforeArtifact": {
+        "stm.attack.rune_strike": 3,
+        "stm.attack.weak_point": 3,
+        "stm.defend.rune_guard": 2,
+        "stm.defend.flash_ward": 2,
+        "stm.skill.quick_study": 1,
+        "stm.skill.read_ahead": 1
+      },
+      "referenceNewRun": {
+        "hp": 70,
+        "maxHp": 70,
+        "gold": 100,
+        "deckSize": 12
+      },
+      "stages": [
+        {
+          "name": "Sigil Keep",
+          "subtitle": "Explore the dungeon. Learn how events overlap.",
+          "color": "gold",
+          "boss": "sentinel",
+          "basic": "wisp",
+          "ordinary": "beetle",
+          "elite": "knight",
+          "normals": [
+            "wisp",
+            "beetle",
+            "bat"
+          ],
+          "elites": [
+            "shard",
+            "knight"
+          ]
+        },
+        {
+          "name": "Deck Tower",
+          "subtitle": "Climb deeper. Learn how two draws work.",
+          "color": "ice",
+          "boss": "dealer",
+          "basic": "knight",
+          "ordinary": "shade",
+          "elite": "shade",
+          "normals": [
+            "weaver",
+            "shade",
+            "mimic"
+          ],
+          "elites": [
+            "golem",
+            "reaper"
+          ]
+        }
+      ],
+      "enemyTemplates": {
+        "wisp": {
+          "name": "Ember Mirror",
+          "title": "Burning Reflection",
+          "art": "s1_ember_mirror.webp",
+          "hp": 30,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 1,
+              "label": "Spark"
+            },
+            {
+              "damage": 8,
+              "block": 0,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 0,
+              "block": 7,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "beetle": {
+          "name": "Prism Guard",
+          "title": "Crystal Sentinel",
+          "art": "s1_prism_guard.webp",
+          "hp": 34,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 3,
+              "hits": 1,
+              "label": "Shell Guard"
+            },
+            {
+              "damage": 0,
+              "block": 9,
+              "hits": 1,
+              "label": "Charge"
+            },
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Stalk"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "normal"
+        },
+        "knight": {
+          "name": "Mirror Knight",
+          "title": "Sigil Keep Elite",
+          "art": "s1_mirror_knight.webp",
+          "hp": 54,
+          "patterns": [
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Slash"
+            },
+            {
+              "damage": 5,
+              "block": 6,
+              "hits": 1,
+              "label": "Guard Up"
+            },
+            {
+              "damage": 13,
+              "block": 0,
+              "hits": 1,
+              "label": "Heavy Strike"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "elite"
+        },
+        "shade": {
+          "name": "Deck Guard",
+          "title": "Deck Tower Sentinel",
+          "art": "s2_deck_guard.webp",
+          "hp": 48,
+          "patterns": [
+            {
+              "damage": 8,
+              "block": 4,
+              "hits": 1,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 12,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "normal"
+        },
+        "sentinel": {
+          "name": "Twin Sigil Guardian",
+          "title": "Boss · Sigil Keep",
+          "art": "s1_twin_sigil_guardian.webp",
+          "hp": 90,
+          "boss": true,
+          "seals": [
+            "exclusive",
+            "overlap"
+          ],
+          "patterns": [
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Stone Fist"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Rune Shield"
+            },
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 2,
+              "label": "Double Strike"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "boss"
+        },
+        "dealer": {
+          "name": "Deck Lord",
+          "title": "Boss · Deck Tower",
+          "art": "s2_deck_lord.webp",
+          "hp": 125,
+          "boss": true,
+          "seals": [
+            "pairWithout",
+            "pairWith"
+          ],
+          "patterns": [
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Sharp Cards"
+            },
+            {
+              "damage": 7,
+              "block": 10,
+              "hits": 1,
+              "label": "Dark Veil"
+            },
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 3,
+              "label": "Rune Storm"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "boss"
+        },
+        "bat": {
+          "name": "Rune Bat",
+          "title": "Crystal Wings",
+          "art": "s1_rune_bat.webp",
+          "hp": 28,
+          "patterns": [
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 2,
+              "label": "Spark"
+            },
+            {
+              "damage": 7,
+              "block": 0,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 0,
+              "block": 5,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "shard": {
+          "name": "Shard Beast",
+          "title": "Sigil Keep Elite",
+          "art": "s1_shard_beast.webp",
+          "hp": 56,
+          "patterns": [
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 2,
+              "label": "Slash"
+            },
+            {
+              "damage": 0,
+              "block": 10,
+              "hits": 1,
+              "label": "Guard Up"
+            },
+            {
+              "damage": 14,
+              "block": 0,
+              "hits": 1,
+              "label": "Heavy Strike"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "elite"
+        },
+        "weaver": {
+          "name": "Chain Weaver",
+          "title": "Chain Caster",
+          "art": "s2_chain_weaver.webp",
+          "hp": 44,
+          "patterns": [
+            {
+              "damage": 8,
+              "block": 0,
+              "hits": 1,
+              "label": "Spark"
+            },
+            {
+              "damage": 0,
+              "block": 9,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "mimic": {
+          "name": "Card Mimic",
+          "title": "A Hungry Deck",
+          "art": "s2_card_mimic.webp",
+          "hp": 46,
+          "patterns": [
+            {
+              "damage": 4,
+              "block": 0,
+              "hits": 3,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 8,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 10,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "golem": {
+          "name": "Chain Golem",
+          "title": "Deck Tower Elite",
+          "art": "s2_chain_golem.webp",
+          "hp": 70,
+          "patterns": [
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 6,
+              "block": 10,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 15,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 2,
+          "balanceTier": "elite"
+        },
+        "reaper": {
+          "name": "Rune Reaper",
+          "title": "Deck Tower Elite",
+          "art": "s2_rune_reaper.webp",
+          "hp": 72,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 2,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 17,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "elite"
+        }
+      }
+    },
+    {
+      "difficulty": "medium",
+      "runtimeIdentity": {
+        "version": "master-1.4.0-candidate.4",
+        "difficulty": "medium",
+        "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+        "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "profile": {
+        "target_win_rate": 0.7,
+        "starting_max_hp": 65,
+        "starting_gold": 80,
+        "starting_focus": 0,
+        "enemy_hp_mult": 0.9,
+        "enemy_attack_mult": 0.85,
+        "enemy_block_mult": 1,
+        "enemy_defense_adjust": 0,
+        "phase_attack_bonus": 1,
+        "rage_every_turns": 7,
+        "rage_damage_step": 1,
+        "rest_heal": 15,
+        "stage_clear_heal": 12,
+        "battle_gold": 25,
+        "elite_gold": 40,
+        "boss1_gold": 60,
+        "shop_price_mult": 1,
+        "event_gold_reward_mult": 1,
+        "event_gold_cost_mult": 1,
+        "event_heal_mult": 1,
+        "event_hp_cost_mult": 1,
+        "event_failure_hp_mult": 1,
+        "event_max_hp_cost": 5,
+        "event_time_mult": 1.5,
+        "event_next_energy_loss": -1
+      },
+      "referenceStarterBeforeArtifact": {
+        "stm.attack.rune_strike": 3,
+        "stm.attack.weak_point": 3,
+        "stm.defend.rune_guard": 2,
+        "stm.defend.flash_ward": 2,
+        "stm.skill.quick_study": 1,
+        "stm.skill.read_ahead": 1
+      },
+      "referenceNewRun": {
+        "hp": 65,
+        "maxHp": 65,
+        "gold": 80,
+        "deckSize": 12
+      },
+      "stages": [
+        {
+          "name": "Sigil Keep",
+          "subtitle": "Explore the dungeon. Learn how events overlap.",
+          "color": "gold",
+          "boss": "sentinel",
+          "basic": "wisp",
+          "ordinary": "beetle",
+          "elite": "knight",
+          "normals": [
+            "wisp",
+            "beetle",
+            "bat"
+          ],
+          "elites": [
+            "shard",
+            "knight"
+          ]
+        },
+        {
+          "name": "Deck Tower",
+          "subtitle": "Climb deeper. Learn how two draws work.",
+          "color": "ice",
+          "boss": "dealer",
+          "basic": "knight",
+          "ordinary": "shade",
+          "elite": "shade",
+          "normals": [
+            "weaver",
+            "shade",
+            "mimic"
+          ],
+          "elites": [
+            "golem",
+            "reaper"
+          ]
+        }
+      ],
+      "enemyTemplates": {
+        "wisp": {
+          "name": "Ember Mirror",
+          "title": "Burning Reflection",
+          "art": "s1_ember_mirror.webp",
+          "hp": 30,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 1,
+              "label": "Spark"
+            },
+            {
+              "damage": 8,
+              "block": 0,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 0,
+              "block": 7,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "beetle": {
+          "name": "Prism Guard",
+          "title": "Crystal Sentinel",
+          "art": "s1_prism_guard.webp",
+          "hp": 34,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 3,
+              "hits": 1,
+              "label": "Shell Guard"
+            },
+            {
+              "damage": 0,
+              "block": 9,
+              "hits": 1,
+              "label": "Charge"
+            },
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Stalk"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "normal"
+        },
+        "knight": {
+          "name": "Mirror Knight",
+          "title": "Sigil Keep Elite",
+          "art": "s1_mirror_knight.webp",
+          "hp": 54,
+          "patterns": [
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Slash"
+            },
+            {
+              "damage": 5,
+              "block": 6,
+              "hits": 1,
+              "label": "Guard Up"
+            },
+            {
+              "damage": 13,
+              "block": 0,
+              "hits": 1,
+              "label": "Heavy Strike"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "elite"
+        },
+        "shade": {
+          "name": "Deck Guard",
+          "title": "Deck Tower Sentinel",
+          "art": "s2_deck_guard.webp",
+          "hp": 48,
+          "patterns": [
+            {
+              "damage": 8,
+              "block": 4,
+              "hits": 1,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 12,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "normal"
+        },
+        "sentinel": {
+          "name": "Twin Sigil Guardian",
+          "title": "Boss · Sigil Keep",
+          "art": "s1_twin_sigil_guardian.webp",
+          "hp": 90,
+          "boss": true,
+          "seals": [
+            "exclusive",
+            "overlap"
+          ],
+          "patterns": [
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Stone Fist"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Rune Shield"
+            },
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 2,
+              "label": "Double Strike"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "boss"
+        },
+        "dealer": {
+          "name": "Deck Lord",
+          "title": "Boss · Deck Tower",
+          "art": "s2_deck_lord.webp",
+          "hp": 125,
+          "boss": true,
+          "seals": [
+            "pairWithout",
+            "pairWith"
+          ],
+          "patterns": [
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Sharp Cards"
+            },
+            {
+              "damage": 7,
+              "block": 10,
+              "hits": 1,
+              "label": "Dark Veil"
+            },
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 3,
+              "label": "Rune Storm"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "boss"
+        },
+        "bat": {
+          "name": "Rune Bat",
+          "title": "Crystal Wings",
+          "art": "s1_rune_bat.webp",
+          "hp": 28,
+          "patterns": [
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 2,
+              "label": "Spark"
+            },
+            {
+              "damage": 7,
+              "block": 0,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 0,
+              "block": 5,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "shard": {
+          "name": "Shard Beast",
+          "title": "Sigil Keep Elite",
+          "art": "s1_shard_beast.webp",
+          "hp": 56,
+          "patterns": [
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 2,
+              "label": "Slash"
+            },
+            {
+              "damage": 0,
+              "block": 10,
+              "hits": 1,
+              "label": "Guard Up"
+            },
+            {
+              "damage": 14,
+              "block": 0,
+              "hits": 1,
+              "label": "Heavy Strike"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "elite"
+        },
+        "weaver": {
+          "name": "Chain Weaver",
+          "title": "Chain Caster",
+          "art": "s2_chain_weaver.webp",
+          "hp": 44,
+          "patterns": [
+            {
+              "damage": 8,
+              "block": 0,
+              "hits": 1,
+              "label": "Spark"
+            },
+            {
+              "damage": 0,
+              "block": 9,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "mimic": {
+          "name": "Card Mimic",
+          "title": "A Hungry Deck",
+          "art": "s2_card_mimic.webp",
+          "hp": 46,
+          "patterns": [
+            {
+              "damage": 4,
+              "block": 0,
+              "hits": 3,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 8,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 10,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "golem": {
+          "name": "Chain Golem",
+          "title": "Deck Tower Elite",
+          "art": "s2_chain_golem.webp",
+          "hp": 70,
+          "patterns": [
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 6,
+              "block": 10,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 15,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 2,
+          "balanceTier": "elite"
+        },
+        "reaper": {
+          "name": "Rune Reaper",
+          "title": "Deck Tower Elite",
+          "art": "s2_rune_reaper.webp",
+          "hp": 72,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 2,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 17,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "elite"
+        }
+      }
+    },
+    {
+      "difficulty": "hard",
+      "runtimeIdentity": {
+        "version": "master-1.4.0-candidate.4",
+        "difficulty": "hard",
+        "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+        "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "profile": {
+        "target_win_rate": 0.5,
+        "starting_max_hp": 60,
+        "starting_gold": 70,
+        "starting_focus": 0,
+        "enemy_hp_mult": 0.95,
+        "enemy_attack_mult": 0.9,
+        "enemy_block_mult": 1.05,
+        "enemy_defense_adjust": 0,
+        "phase_attack_bonus": 2,
+        "rage_every_turns": 6,
+        "rage_damage_step": 1,
+        "rest_heal": 12,
+        "stage_clear_heal": 8,
+        "battle_gold": 22,
+        "elite_gold": 36,
+        "boss1_gold": 54,
+        "shop_price_mult": 1.1,
+        "event_gold_reward_mult": 0.9,
+        "event_gold_cost_mult": 1.1,
+        "event_heal_mult": 0.8,
+        "event_hp_cost_mult": 1.2,
+        "event_failure_hp_mult": 1.25,
+        "event_max_hp_cost": 6,
+        "event_time_mult": 1,
+        "event_next_energy_loss": -1
+      },
+      "referenceStarterBeforeArtifact": {
+        "stm.attack.rune_strike": 3,
+        "stm.attack.weak_point": 3,
+        "stm.defend.rune_guard": 2,
+        "stm.defend.flash_ward": 2,
+        "stm.skill.quick_study": 1,
+        "stm.skill.read_ahead": 1
+      },
+      "referenceNewRun": {
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 70,
+        "deckSize": 12
+      },
+      "stages": [
+        {
+          "name": "Sigil Keep",
+          "subtitle": "Explore the dungeon. Learn how events overlap.",
+          "color": "gold",
+          "boss": "sentinel",
+          "basic": "wisp",
+          "ordinary": "beetle",
+          "elite": "knight",
+          "normals": [
+            "wisp",
+            "beetle",
+            "bat"
+          ],
+          "elites": [
+            "shard",
+            "knight"
+          ]
+        },
+        {
+          "name": "Deck Tower",
+          "subtitle": "Climb deeper. Learn how two draws work.",
+          "color": "ice",
+          "boss": "dealer",
+          "basic": "knight",
+          "ordinary": "shade",
+          "elite": "shade",
+          "normals": [
+            "weaver",
+            "shade",
+            "mimic"
+          ],
+          "elites": [
+            "golem",
+            "reaper"
+          ]
+        }
+      ],
+      "enemyTemplates": {
+        "wisp": {
+          "name": "Ember Mirror",
+          "title": "Burning Reflection",
+          "art": "s1_ember_mirror.webp",
+          "hp": 30,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 1,
+              "label": "Spark"
+            },
+            {
+              "damage": 8,
+              "block": 0,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 0,
+              "block": 7,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "beetle": {
+          "name": "Prism Guard",
+          "title": "Crystal Sentinel",
+          "art": "s1_prism_guard.webp",
+          "hp": 34,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 3,
+              "hits": 1,
+              "label": "Shell Guard"
+            },
+            {
+              "damage": 0,
+              "block": 9,
+              "hits": 1,
+              "label": "Charge"
+            },
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Stalk"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "normal"
+        },
+        "knight": {
+          "name": "Mirror Knight",
+          "title": "Sigil Keep Elite",
+          "art": "s1_mirror_knight.webp",
+          "hp": 54,
+          "patterns": [
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Slash"
+            },
+            {
+              "damage": 5,
+              "block": 6,
+              "hits": 1,
+              "label": "Guard Up"
+            },
+            {
+              "damage": 13,
+              "block": 0,
+              "hits": 1,
+              "label": "Heavy Strike"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "elite"
+        },
+        "shade": {
+          "name": "Deck Guard",
+          "title": "Deck Tower Sentinel",
+          "art": "s2_deck_guard.webp",
+          "hp": 48,
+          "patterns": [
+            {
+              "damage": 8,
+              "block": 4,
+              "hits": 1,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 12,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "normal"
+        },
+        "sentinel": {
+          "name": "Twin Sigil Guardian",
+          "title": "Boss · Sigil Keep",
+          "art": "s1_twin_sigil_guardian.webp",
+          "hp": 90,
+          "boss": true,
+          "seals": [
+            "exclusive",
+            "overlap"
+          ],
+          "patterns": [
+            {
+              "damage": 9,
+              "block": 0,
+              "hits": 1,
+              "label": "Stone Fist"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Rune Shield"
+            },
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 2,
+              "label": "Double Strike"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "boss"
+        },
+        "dealer": {
+          "name": "Deck Lord",
+          "title": "Boss · Deck Tower",
+          "art": "s2_deck_lord.webp",
+          "hp": 125,
+          "boss": true,
+          "seals": [
+            "pairWithout",
+            "pairWith"
+          ],
+          "patterns": [
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Sharp Cards"
+            },
+            {
+              "damage": 7,
+              "block": 10,
+              "hits": 1,
+              "label": "Dark Veil"
+            },
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 3,
+              "label": "Rune Storm"
+            }
+          ],
+          "defense": 1,
+          "balanceTier": "boss"
+        },
+        "bat": {
+          "name": "Rune Bat",
+          "title": "Crystal Wings",
+          "art": "s1_rune_bat.webp",
+          "hp": 28,
+          "patterns": [
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 2,
+              "label": "Spark"
+            },
+            {
+              "damage": 7,
+              "block": 0,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 0,
+              "block": 5,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "shard": {
+          "name": "Shard Beast",
+          "title": "Sigil Keep Elite",
+          "art": "s1_shard_beast.webp",
+          "hp": 56,
+          "patterns": [
+            {
+              "damage": 5,
+              "block": 0,
+              "hits": 2,
+              "label": "Slash"
+            },
+            {
+              "damage": 0,
+              "block": 10,
+              "hits": 1,
+              "label": "Guard Up"
+            },
+            {
+              "damage": 14,
+              "block": 0,
+              "hits": 1,
+              "label": "Heavy Strike"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "elite"
+        },
+        "weaver": {
+          "name": "Chain Weaver",
+          "title": "Chain Caster",
+          "art": "s2_chain_weaver.webp",
+          "hp": 44,
+          "patterns": [
+            {
+              "damage": 8,
+              "block": 0,
+              "hits": 1,
+              "label": "Spark"
+            },
+            {
+              "damage": 0,
+              "block": 9,
+              "hits": 1,
+              "label": "Flame Burst"
+            },
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Fire Shield"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "mimic": {
+          "name": "Card Mimic",
+          "title": "A Hungry Deck",
+          "art": "s2_card_mimic.webp",
+          "hp": 46,
+          "patterns": [
+            {
+              "damage": 4,
+              "block": 0,
+              "hits": 3,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 8,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 10,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "normal"
+        },
+        "golem": {
+          "name": "Chain Golem",
+          "title": "Deck Tower Elite",
+          "art": "s2_chain_golem.webp",
+          "hp": 70,
+          "patterns": [
+            {
+              "damage": 11,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 6,
+              "block": 10,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 15,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 2,
+          "balanceTier": "elite"
+        },
+        "reaper": {
+          "name": "Rune Reaper",
+          "title": "Deck Tower Elite",
+          "art": "s2_rune_reaper.webp",
+          "hp": 72,
+          "patterns": [
+            {
+              "damage": 6,
+              "block": 0,
+              "hits": 2,
+              "label": "Dark Pulse"
+            },
+            {
+              "damage": 0,
+              "block": 12,
+              "hits": 1,
+              "label": "Mist Shield"
+            },
+            {
+              "damage": 17,
+              "block": 0,
+              "hits": 1,
+              "label": "Dark Wave"
+            }
+          ],
+          "defense": 0,
+          "balanceTier": "elite"
+        }
+      }
+    }
+  ]
+}

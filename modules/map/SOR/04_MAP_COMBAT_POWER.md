@@ -1,7 +1,7 @@
-# SOR Map Balance & Combat Power — v1.3
+# SOR Map Balance & Combat Power — v1.4
 
-Tarikh: 23 Oktober 2026. Pemilik domain: Map. Penyatuan dan keputusan balance akhir: Master.
-Kod rujukan: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (game 2.24.0), branch `balance/map`.
+Tarikh semakan: 24 Oktober 2026. Pemilik domain: Map. Penyatuan dan keputusan balance akhir: Master.
+Kod semakan semasa: `990541d57c6df96cefb21eddc7a365d1d989a74d` (game 2.37.0), branch `balance/map`. Baseline sejarah: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (2.24.0).
 
 ## Status dan keutamaan
 
@@ -10,9 +10,10 @@ Kod rujukan: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (game 2.24.0), branch `b
 - **DISAHKAN:** enam penambahbaikan v1.3: polisi laluan realistik, perbandingan entry setara dengan ulangan, tekanan sebelum recovery, risiko–ganjaran sebenar, sensitiviti Predict/difficulty dan laporan punca serta regression gate.
 - **DITERUSKAN:** generator 1.0.0, katalog 1.1.0, `STM-001` hingga `STM-100`, route save versi 3 untuk run baharu. Save route 1/2 kekal dengan graph asalnya.
 - **CADANGAN UNTUK DIUJI:** model anggaran, polisi bot, skala CP, saiz pilot dan semua angka baharu daripada Balance v1.2. Tiada calon stat/harga diaktifkan oleh audit ini.
-- **PERLU_VERIFIKASI:** difficulty adapter Easy/Medium/Hard, CP route yang dikalibrasi, fairness untuk murid, build domain combat/ekonomi yang disatukan.
+- **DISAHKAN PADA RUNTIME SEMASA:** adapter Easy/Medium/Hard wujud dalam Master candidate.4; v1.4 menggunakan loader sebenar. Kenyataan adapter belum tersedia dalam bahagian sejarah merujuk runtime v1.2/v1.3.
+- **PERLU_VERIFIKASI:** CP route yang dikalibrasi, fairness untuk murid dan keputusan balance akhir gabungan Combat/Economy/Map.
 
-Dokumen ini menambah pemilik penilaian kepada [01_MAP_RNG.md](01_MAP_RNG.md), bukan menggantikan peraturan penjanaannya. Hasil semasa ada dalam [handoff v1.3](../../../docs/MAP_BALANCE_V1_3_HANDOFF.md) dan [README eksperimen](../../../tools/balance/map-advanced/README.md). [Handoff v1.2](../../../docs/MAP_BALANCE_HANDOFF.md) dan dataset asal kekal bukti sejarah pada kod asal; perubahan harness v1.3 tidak menulis semula fingerprint sejarah itu.
+Dokumen ini menambah pemilik penilaian kepada [01_MAP_RNG.md](01_MAP_RNG.md), bukan menggantikan peraturan penjanaannya. Hasil semasa ada dalam [handoff v1.4](../../../docs/MAP_BALANCE_V1_4_HANDOFF.md) dan [README runtime semasa](../../../tools/balance/map-recheck/README.md). [Handoff v1.3](../../../docs/MAP_BALANCE_V1_3_HANDOFF.md) ialah rekod sejarah. [Handoff v1.2](../../../docs/MAP_BALANCE_HANDOFF.md) dan dataset asal kekal bukti sejarah pada kod asal; perubahan harness v1.3 tidak menulis semula fingerprint sejarah itu.
 
 ## MAP-BAL-01 — Kontrak map dikekalkan
 
@@ -60,6 +61,8 @@ Setiap stage mempunyai tiga normal dan dua Elite. Bagi satu ID katalog, semua ru
 Sampler pilot mengambil lapan uint32 yang sah bagi setiap ID katalog, dengan replacement, melalui rejection sampling bagi mengelakkan bias modulo. `samplerSeed=42`, algoritma, senarai runSeed sebenar dan semua had direkodkan. Ini meliputi 800 run, bukan keseluruhan ruang uint32.
 
 ## MAP-BAL-05 — Formula anggaran tekanan v1
+
+Ini ialah nominal reference pada baseline asal. Elite +10 dan Learn0.7 di bawah bukan peraturan damage/HP Master candidate.4; versi semasa menggunakan formula ini untuk label rank rujukan sahaja.
 
 Parameter rujukan abstrak: 12 damage pemain/giliran, 6 Block/giliran, nominal Rest 12 HP. Ini bukan dakwaan sesuatu deck benar-benar mengeluarkan angka tersebut.
 
@@ -144,6 +147,10 @@ Master perlu menentukan polisi forced Elite/akses Rest mengikut difficulty sebel
 
 Penerimaan audit domain ini: 100 seed direkod, semua 200 map/5,500 route valid, konteks dan formula tersedia, trial sah/error/censor berasingan, output boleh diulang, dan tiada CP pada UI/build pemain. Penerimaan balance akhir memerlukan domain combat/ekonomi yang sama versinya, ujian polisi/deck berbeza serta playtest murid yang Master kendalikan. Dataset ini tidak menetapkan ambang senang/sukar muktamad.
 
+## Kaedah dan bukti asal v1.3
+
+MAP-BAL-11 hingga16 merekod kaedah/jadual dan readiness ketika v1.3. Kontrak pemilihan public-state, entry setara dan pemisahan bukti diteruskan. Bilangan ulangan, adapter, peraturan soalan serta observation Gold semasa mengikut MAP-BAL-17 dan handoff v1.4.
+
 ## MAP-BAL-11 — Polisi laluan adaptif
 
 Keempat-empat polisi baharu hanya membaca kategori/edge yang terlihat, HP, Max HP dan Gold. Pada setiap pilihan sah, guna utiliti kategori ditambah `0.75 × nilai maksimum sambungan seterusnya`. Keadaan HP/Gold semasa digunakan untuk penilaian lookahead; ia tidak meramalkan hasil encounter atau inventori Shop tersembunyi. Seri dipecahkan oleh RNG polisi berseed.
@@ -206,3 +213,23 @@ Arahan CLI dan verifier bebas ada dalam README eksperimen. Master perlu run semu
 ## Master integration — 2.27.0
 
 The full candidate adapter is now available through `tools/balance/master/loader.cjs` and `createReplay(runtime)` in the existing replay module. The new [Master SOR](../../../docs/sor/23_MASTER_BALANCE.md) and [handoff](../../../docs/balance/master/HANDOFF.md) own its measured campaign cohorts. Historical v1.2/v1.3 reports and default worker source remain baseline experiments; they are not relabeled as candidate trials. Topology, registered seeds and contextual map CP formula remain unchanged.
+
+
+## MAP-BAL-17 — Recheck runtime semasa,24 Oktober2026
+
+DISAHKAN: Ijamm meminta recheck kerana banyak perubahan dan publish ke balance/map untuk Master. Main990541d/game2.37.0 sudah mengintegrasikan semua branch specialist dan menggunakan master-1.4.0-candidate.4. Pernyataan lama bahawa adapter belum tersedia menerangkan snapshot audit v1.3, bukan keadaan game semasa. Node worker kini menggunakan loader Master yang sama dengan cartridge/browser definitions, lengkap dengan identiti difficulty/versi/hash. Data semasa berada dalam v1.4; jangan menamakan data2800f9a/candidate.2/.3 sebagai pengukuran candidate.4.
+
+Semua200 graph dan5,500 route dikekalkan. Polisi combat/reward rujukan kekal heuristik terlihat; route policies kekal kategori/edge/HP/Gold sahaja. Entry bank dan ranks dipilih sebelum hasil; nominal pressure reference tidak memodelkan percentage phases atau pertumbuhan deck semasa. Four unique uniform entries per seed/stage ialah budget recheck calon, bukan pupil calibration. Jadual tetap5,400 campaign merentas tiga difficulty dan replay tiga rank per entry tersedia. Stage2 survivor tidak direka.
+
+Soalan mengikut settlement dua salah semasa. Feedback meneruskan jawapan belum dicuba hanya sehingga engine selesai; high/low satu Predict attempt berorakel85%/25% yang dinyatakan; Mystery/artifact menggunakan flow feedback semasa. Starting artifact boleh gagal diperoleh. Skip tidak memberi Predict/seal progress atau Predict-earned Focus, tetapi Focus asal/artifact/Passive tidak dipadam. Oleh itu hasil bukan sebab-akibat Focus sahaja.
+
+Affordability artifak mesti menggunakan E.shopPrice ketika ekonomi aktif, sama dengan purchase. Gold selepas boss akhir menggunakan grant sebenar0, bukan potongan60 yang hanya sesuai untuk runtime sejarah. Transaksi, HP/deck/upgrade/artifact dan state masuk boss tetap melalui API sebenar. Tiada harga/stat/loot/topology/save/UI diubah oleh recheck.
+
+Gunakan fail context dan field difficulty/balanceVersion/contextId dalam setiap jadual. Semua case IDs, state hashes dan source/protocol hashes mesti disemak. Censored/error bukan loss; unresolved scope mengekalkan null CP dan FAIL score gate. Integrity PASS pada raw data tidak mengatasi batas score gate. Full-campaign bounds merangkumi case yang belum resolved. Sasaran murid90/70/50 masih UNMEASURED; keputusan akhir tetap milik Master.
+
+
+### Keputusan penutupan v1.4
+
+DISAHKAN: semua100 seed/200 graph/5,500 laluan struktur kekal. Primary5,400 campaign dan6,786 matched replay melalui Master candidate.4 menghasilkan12,186 rekod lengkap yang diverifikasi bebas;0 engine/policy error dan0 invalid. Easy54 skip censored, Medium/Hard0; scope unresolved kekal null. Hard STM-064 Stage2 tiada uniform survivor entry. CP bukan kuasa kad dan bukan bukti target murid.
+
+Runtime pengukuran2.37.0 dipelihara dalam63 fail sumber/input; tiga full-trial cold replay sepadan tepat. Branch mengandungi main2.37.1;29 fail engine/input sama byte dan perbezaan package hanya version. Gunakan restored-source verifier untuk cohort asal; jangan mengubah label atau melonggarkan fingerprint. Laporan semasa dan keutamaan recovery/ranking/Shop ada dalam handoff v1.4 dan docs/audits/balance-map/LATEST.md.

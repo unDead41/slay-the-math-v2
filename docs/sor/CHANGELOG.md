@@ -1,5 +1,11 @@
 # Changelog SOR — Slay the Math
 
+## Map audit v1.4 —24 October2026
+
+- Recheck current main2.37.0 and Master candidate.4; retain all old measurements as history. Full profiles are now integrated and the actual two-attempt game flow is used.
+- Add runtime-aware workers/provenance, fix artifact affordability and final-boss Gold observations, and run a fixed three-profile matrix with same-entry rank replays. No production tuning or player-facing map CP.
+- [Current handoff](../MAP_BALANCE_V1_4_HANDOFF.md), source hashes and raw/derived results expose censoring, coverage and conditional populations; pupil targets remain unmeasured.
+
 ## Master SOR 1.2.0 — 24 October 2026
 
 - Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.

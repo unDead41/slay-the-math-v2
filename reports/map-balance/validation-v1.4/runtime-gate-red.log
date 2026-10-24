@@ -1,0 +1,36 @@
+✖ current integrity gate rejects records executed under another runtime identity (1.82938ms)
+✔ current worker captures real Master entries for all three bound profiles (840.926613ms)
+✔ Master runtime choice is preserved by fixed campaign tasks and context (54.967908ms)
+✔ current worker rejects a captured entry from a different difficulty (5.605637ms)
+✔ current feedback settles two wrong attempts without a third attempt or loop (1090.030436ms)
+✔ artifact affordability observes the same Master quote used by a purchase (71.300808ms)
+✔ current report does not deduct a legacy Gold grant which Master never awards (1.086339ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2566.516607
+
+✖ failing tests:
+
+test at tests/map-balance-current.test.cjs:11:1
+✖ current integrity gate rejects records executed under another runtime identity (1.82938ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'PASS' !== 'FAIL'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tests/map-balance-current.test.cjs:15:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'PASS',
+    expected: 'FAIL',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

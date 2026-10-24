@@ -7,14 +7,15 @@ const {sourceAudit,sha}=require('../map/source-audit.cjs');
 const {safeOutput,writeJson}=require('../map/export.cjs');
 const {difficultyReadiness,assertDifficulty}=require('./scenarios.cjs');
 const {Journal}=require('./storage.cjs');
+const {runtimeFor,runtimeContext}=require('./runtime.cjs');
 const E=require('../../../dist/engine.js');
 const root=path.resolve(__dirname,'../../..');
 function buildCampaignTasks(seeds,config=defaults){
  const tasks=[];
  for(const seed of seeds){
   const samples=sampleRunSeeds(seed,Math.max(...Object.values(config.routePolicies),...Object.values(config.predictProfiles)),config.samplerSeed);
-  for(const [policy,count] of Object.entries(config.routePolicies))for(let repetition=0;repetition<count;repetition++)tasks.push({id:`route:${seed}:${policy}:${repetition}`,batch:'campaign',group:'route',seed,runSeed:samples[repetition],policy,predictProfile:'feedback',repetition,referenceTrialId:policy==='uniform-visible-v1'?`pilot:${seed}:${repetition}`:null,options:{mode:config.mode,difficulty:config.difficulty,telemetry:true,captureCheckpoints:policy==='uniform-visible-v1',limits:config.limits}});
-  for(const [predictProfile,count] of Object.entries(config.predictProfiles))for(let repetition=0;repetition<count;repetition++)tasks.push({id:`predict:${seed}:${predictProfile}:${repetition}`,batch:'campaign',group:'predict',seed,runSeed:samples[repetition],policy:config.predictRoutePolicy,predictProfile,repetition,options:{mode:config.mode,difficulty:config.difficulty,telemetry:true,limits:config.limits}});
+  for(const [policy,count] of Object.entries(config.routePolicies))for(let repetition=0;repetition<count;repetition++)tasks.push({id:`route:${seed}:${policy}:${repetition}`,batch:'campaign',group:'route',seed,runSeed:samples[repetition],policy,predictProfile:'feedback',repetition,referenceTrialId:config.runtimeBuild!=='master'&&policy==='uniform-visible-v1'?`pilot:${seed}:${repetition}`:null,options:{mode:config.mode,difficulty:config.difficulty,...(config.runtimeBuild?{runtimeBuild:config.runtimeBuild}:{}),telemetry:true,captureCheckpoints:policy==='uniform-visible-v1',limits:config.limits}});
+  for(const [predictProfile,count] of Object.entries(config.predictProfiles))for(let repetition=0;repetition<count;repetition++)tasks.push({id:`predict:${seed}:${predictProfile}:${repetition}`,batch:'campaign',group:'predict',seed,runSeed:samples[repetition],policy:config.predictRoutePolicy,predictProfile,repetition,options:{mode:config.mode,difficulty:config.difficulty,...(config.runtimeBuild?{runtimeBuild:config.runtimeBuild}:{}),telemetry:true,limits:config.limits}});
  }
  return tasks;
 }
@@ -32,7 +33,7 @@ function buildMatchedTasks(bank,analyses,config=defaults){
  const lookup=new Map(analyses.map(a=>[a.summary.seed+':'+a.summary.stage,a]));
  return bank.flatMap(entry=>config.ranks.map(rank=>{
   const a=lookup.get(entry.seed+':'+entry.stage),route=a.routes.find(r=>r.id===a.summary[rank+'RouteId']);
-  return {id:`matched:${entry.id}:${rank}`,batch:'matched',group:'matched',seed:entry.seed,runSeed:entry.runSeed,policy:'uniform-visible-v1',predictProfile:'feedback',entryId:entry.id,entryStateHash:entry.stateHash,targetStage:entry.stage,rank,routeId:route.id,options:{mode:config.mode,difficulty:config.difficulty,initialState:entry.state,initialClock:entry.clock,initialRngStates:entry.policyRngStates,forcedRoutes:{[entry.stage]:route.nodeIds},stopAfterStage:entry.stage,telemetry:true,limits:config.limits}};
+  return {id:`matched:${entry.id}:${rank}`,batch:'matched',group:'matched',seed:entry.seed,runSeed:entry.runSeed,policy:'uniform-visible-v1',predictProfile:'feedback',entryId:entry.id,entryStateHash:entry.stateHash,targetStage:entry.stage,rank,routeId:route.id,options:{mode:config.mode,difficulty:config.difficulty,...(config.runtimeBuild?{runtimeBuild:config.runtimeBuild}:{}),initialState:entry.state,initialClock:entry.clock,initialRngStates:entry.policyRngStates,forcedRoutes:{[entry.stage]:route.nodeIds},stopAfterStage:entry.stage,telemetry:true,limits:config.limits}};
  }));
 }
 async function runPool(tasks,{workers,deadline,timeoutMs,onResult}){
@@ -58,11 +59,11 @@ async function runPool(tasks,{workers,deadline,timeoutMs,onResult}){
  return {completed:done,budgetExhausted};
 }
 function makeContext(seeds,config){
- const input=sourceAudit(),files=['config.json','experiments.cjs','storage.cjs','worker.cjs','route-policy.cjs','question-policy.cjs','telemetry.cjs','scenarios.cjs'];
- return {reportVersion:config.reportVersion,protocolVersion:config.protocolVersion,config,seedList:seeds,sourceHashes:input.sourceHashes,legacyToolHashes:input.toolHashes,protocolHashes:Object.fromEntries(files.map(f=>['tools/balance/map-advanced/'+f,sha(fs.readFileSync(path.join(__dirname,f)))])),previousAuditCommit:config.previousAuditCommit,referenceRuntimeHashes:JSON.parse(fs.readFileSync(path.join(root,'reports/map-balance/base-2800f9a/context.json'))).sourceHashes,referenceHashes:Object.fromEntries(['context.json','trials.json','seeds.json','routes.json','maps.json'].map(f=>['reports/map-balance/base-2800f9a/'+f,sha(fs.readFileSync(path.join(root,'reports/map-balance/base-2800f9a',f)))])),mode:config.mode,difficulty:config.difficulty,syntheticPredictOracleProfiles:['high','low'],difficultyReadiness:difficultyReadiness(),entryPopulation:'Stage 1 post-starting-artifact; Stage 2 actual uniform-reference survivors, conditional; unique runSeed per seed/stage',rngLimitation:'Identical engine/policy RNG at entry; route divergence changes later RNG consumption. Matched estimates are bundled route effects, not isolated room causality.'};
+ const input=sourceAudit(),files=['config.json','experiments.cjs','storage.cjs','worker.cjs','route-policy.cjs','question-policy.cjs','telemetry.cjs','scenarios.cjs','runtime.cjs'];
+ return {reportVersion:config.reportVersion,protocolVersion:config.protocolVersion,config,seedList:seeds,sourceHashes:input.sourceHashes,legacyToolHashes:input.toolHashes,protocolHashes:Object.fromEntries([...files.map(f=>['tools/balance/map-advanced/'+f,sha(fs.readFileSync(path.join(__dirname,f)))]),...(config.runtimeBuild==='master'?['config.json','run.cjs'].map(f=>['tools/balance/map-recheck/'+f,sha(fs.readFileSync(path.join(__dirname,'../map-recheck',f)))]):[])]),previousAuditCommit:config.previousAuditCommit,referenceRuntimeHashes:JSON.parse(fs.readFileSync(path.join(root,'reports/map-balance/base-2800f9a/context.json'))).sourceHashes,referenceHashes:Object.fromEntries(['context.json','trials.json','seeds.json','routes.json','maps.json'].map(f=>['reports/map-balance/base-2800f9a/'+f,sha(fs.readFileSync(path.join(root,'reports/map-balance/base-2800f9a',f)))])),mode:config.mode,difficulty:config.difficulty,syntheticPredictOracleProfiles:['high','low'],difficultyReadiness:difficultyReadiness(),...(runtimeContext(config)||{}),entryPopulation:'Stage 1 post-starting-artifact; Stage 2 actual uniform-reference survivors, conditional; unique runSeed per seed/stage',rngLimitation:'Identical engine/policy RNG at entry; route divergence changes later RNG consumption. Matched estimates are bundled route effects, not isolated room causality.'};
 }
 async function runExperiments(options={}){
- const start=performance.now(),config={...defaults,...options.config};assertDifficulty(config.difficulty);
+ const start=performance.now(),config={...defaults,...options.config};runtimeFor(config);
  const seeds=registry.seeds.slice(0,options.seedLimit||registry.seeds.length),context=makeContext(seeds,config),out=safeOutput(root,options.out||'reports/map-balance/v1.3'),journal=new Journal(out,context,{resume:!!options.resume,shardBytes:config.shardBytes});
  const analyses=seeds.flatMap(seed=>[1,2].map(stage=>analyzeMap(seed,stage,require('../map/config.json')))),campaignTasks=buildCampaignTasks(seeds,config),knownCampaigns=new Set(campaignTasks.map(t=>t.id));
  const onResult=r=>{journal.append(r);if(journal.records.length%50===0)process.stdout.write(JSON.stringify({completed:journal.records.length,last:r.task.id,status:r.status})+'\n');};

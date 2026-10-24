@@ -1,0 +1,7 @@
+REJECTED policy-summary combatPower
+REJECTED predict-summary combatPower
+REJECTED policy-stage-summary combatPower
+REJECTED seed-policy-summary combatPower
+REJECTED policy-summary allCaseWinBounds
+REJECTED predict-summary censoredNull
+PASS: all six consistently corrupted JSON/CSV exports rejected against raw records

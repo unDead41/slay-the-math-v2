@@ -1,0 +1,61 @@
+{
+  "status": "PASS_SCOPED_LATEST_MAIN_CONTRACT_PROBES",
+  "latestMain": "ade5d3a21e55b9d2911bfa935c8095c95801bd8c",
+  "latestGameVersion": "2.39.0",
+  "measuredGameVersion": "2.37.0",
+  "branchIntegrationMain": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+  "canonicalQuestionContractsEqual": 120,
+  "profilesEqual": 3,
+  "probes": [
+    {
+      "difficulty": "easy",
+      "taskId": "route:STM-001:uniform-visible-v1:0",
+      "status": "VICTORY",
+      "mechanicalFieldsMatch": 15,
+      "traceHashMatch": true,
+      "entryStateHashMatch": true,
+      "latestRuntimeIdentity": {
+        "version": "master-1.4.0-candidate.4",
+        "difficulty": "easy",
+        "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+        "engineHash": "8188b9ea4abf9722cb1e841aa0b645bc5387170dad790a11dd0cdbdcb2b5c78b",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "difficulty": "medium",
+      "taskId": "route:STM-001:uniform-visible-v1:0",
+      "status": "VICTORY",
+      "mechanicalFieldsMatch": 15,
+      "traceHashMatch": true,
+      "entryStateHashMatch": true,
+      "latestRuntimeIdentity": {
+        "version": "master-1.4.0-candidate.4",
+        "difficulty": "medium",
+        "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+        "engineHash": "8188b9ea4abf9722cb1e841aa0b645bc5387170dad790a11dd0cdbdcb2b5c78b",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "difficulty": "hard",
+      "taskId": "route:STM-001:uniform-visible-v1:0",
+      "status": "DEFEAT",
+      "mechanicalFieldsMatch": 15,
+      "traceHashMatch": true,
+      "entryStateHashMatch": true,
+      "latestRuntimeIdentity": {
+        "version": "master-1.4.0-candidate.4",
+        "difficulty": "hard",
+        "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+        "engineHash": "8188b9ea4abf9722cb1e841aa0b645bc5387170dad790a11dd0cdbdcb2b5c78b",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    }
+  ],
+  "fullMatrixReexecutedOnLatestMain": false,
+  "limitations": "New source signature and question presentation are distinct. Three deterministic probes and canonical contracts do not certify all new UI/human effects. Existing cohort retains original source; merge specialist audit with current main before a future calibrated study."
+}

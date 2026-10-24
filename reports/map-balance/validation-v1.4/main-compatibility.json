@@ -1,0 +1,46 @@
+{
+  "status": "VALID_RUNTIME_PARITY",
+  "measuredSourceMain": "990541d57c6df96cefb21eddc7a365d1d989a74d",
+  "closingMain": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+  "measuredVersion": "2.37.0",
+  "closingVersion": "2.37.1",
+  "byteIdenticalEngineInputFiles": [
+    "dist/artifact-data.js",
+    "dist/artifacts.js",
+    "dist/balance-config.js",
+    "dist/balance-data.js",
+    "dist/balance.js",
+    "dist/card-combat.js",
+    "dist/card-data.js",
+    "dist/card-flow.js",
+    "dist/card-kit.js",
+    "dist/combat-log.js",
+    "dist/combat-predict.js",
+    "dist/config.js",
+    "dist/economy-data.js",
+    "dist/economy.js",
+    "dist/education.js",
+    "dist/engine.js",
+    "dist/map-rng.js",
+    "dist/map.js",
+    "dist/math.js",
+    "dist/mechanics.js",
+    "dist/mystery-data.js",
+    "dist/mystery.js",
+    "dist/question-data.js",
+    "dist/rich-text-data.js",
+    "dist/rich-text.js",
+    "modules/map/data/seed-registry.json",
+    "modules/map/src/map-rng.js",
+    "tools/balance/master/config.json",
+    "tools/balance/master/loader.cjs"
+  ],
+  "metadataOnlyDifferences": [
+    "package.json"
+  ],
+  "metadataFieldsChanged": [
+    "version"
+  ],
+  "measuredContextsRelabeled": false,
+  "existingDataVerification": "Use restored source archive, not current package metadata."
+}

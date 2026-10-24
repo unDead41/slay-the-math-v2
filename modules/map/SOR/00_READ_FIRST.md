@@ -19,3 +19,5 @@ Pakej ini merangkumi modul peta dan aset nod peta. Ia tidak menetapkan statistik
 combat, kos kad, kadar event, harga Shop atau mekanik keseluruhan game.
 
 Audit balance v1.3 menambah polisi adaptif, replay entry setara, recovery/risiko–ganjaran, sensitiviti Predict dan semakan regresi. CP hanya rujukan pembangunan; jangan paparkan pada menu, map, HUD atau UI pemain. [Hasil semasa dan had](../../../docs/MAP_BALANCE_V1_3_HANDOFF.md); [audit v1.2](../../../docs/MAP_BALANCE_HANDOFF.md) kekal sejarah.
+
+Recheck semasa: [Map audit v1.4](../../../docs/MAP_BALANCE_V1_4_HANDOFF.md), menggunakan integrasi Master pada main2.37.0. SOR04/MAP-BAL-17 mengatasi pernyataan availability v1.3 yang bersejarah.

@@ -692,6 +692,13 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - **DITERUSKAN:** integrate `codex/icon-clarity-audit` / `b18c4c99d28530026f8d90d28964569c2f7af610` with actual main `50d3af423cdc2240e949f4ddf29e023865304b65` / 2.36.0 as **2.37.0**. Keep the ten source artworks, enlarge functional UI, show actual status names/counters, and provide a complete read-only comparison. Current and archived effect descriptions, BM preference, question retries/continuation, run-aware card previews, combat VFX, AI and production Dev keep their current main owners.
 - **DITERUSKAN:** retain both decision histories, regenerate cache/version/launchers and actual tutorial screenshots, and verify the combined tree. Original card/artifact illustrations, other source artwork/audio, numerical rules, question bank and save contracts remain unchanged.
 - **PERLU_VERIFIKASI:** physical Windows/devices, pupil glance recognition, live Google service and public hosted deployment are separate from local production/browser evidence. [Main release](../ICON_CLARITY_MAIN_2_37_0.md).
+
+## DEC-20261024-MAP-RECHECK — Current integrated runtime
+
+DISAHKAN: Ijamm requests recheck and publication to balance/map for Master; no main publication. All specialist heads inspected are already ancestors of main990541d/game2.37.0. Preserve every domain's production values and historical evidence; fast-forward isolated feature checkout to main and evaluate canonical candidate.4 rather than stale baseline assumptions.
+
+IMPLEMENTED: explicit runtime/profile identity, canonical artifact affordability and actual zero final-boss grant; fixed100-seed three-difficulty matrix and paired rank replays. Censoring remains unknown with null CP where unresolved. [Map SOR v1.4](../../modules/map/SOR/04_MAP_COMBAT_POWER.md) and [handoff](../MAP_BALANCE_V1_4_HANDOFF.md). No card/enemy/economy/graph/question-content/UI/save tuning. Pupil90/70/50 remains unmeasured.
+
 ## Settings-only Developer controls — 24 October 2026
 
 DISAHKAN: Ijamm requests removing redundant Developer controls from the main menu. Dev ON/OFF, Open Developer Hub and Copy Player Run to Dev appear only in Settings, in both local development and production. Password and sandbox isolation remain unchanged. This update is local only; no commit or remote push is authorized. This supersedes earlier main-menu access instructions.

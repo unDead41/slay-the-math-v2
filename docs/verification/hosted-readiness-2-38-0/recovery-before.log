@@ -1,0 +1,29 @@
+FAIL verified images without a worker or disk cache: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('#resource-enter') to be visible[22m
+[2m    23 × locator resolved to hidden <button hidden="" id="resource-enter">Enter Game</button>[22m
+
+FAIL Practice retries after a real download timeout: Expected values to be strictly equal:
++ actual - expected
+
++ 'Download cancelled'
+- true
+
+FAIL obsolete Practice completion cannot hide a newer room and decode has a deadline: Practice must not hide the room loading panel
+
+false !== true
+
+verified images without a worker or disk cache: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('#resource-enter') to be visible[22m
+[2m    23 × locator resolved to hidden <button hidden="" id="resource-enter">Enter Game</button>[22m
+
+Practice retries after a real download timeout: Expected values to be strictly equal:
++ actual - expected
+
++ 'Download cancelled'
+- true
+
+obsolete Practice completion cannot hide a newer room and decode has a deadline: Practice must not hide the room loading panel
+
+false !== true

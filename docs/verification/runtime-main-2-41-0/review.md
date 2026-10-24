@@ -1,0 +1,5 @@
+# Main integration review
+
+One fresh read-only reviewer checked cf9b594 against mainb730cad with plan/ledger. Verdict PERLU UPDATE for sole ImportantP2 Tutorial screenshots/card previews using raw/release-valued paths. No Critical/Minor. Root reproduced the request with worker/cache denied and hash-only routing, then one fix pass rewrote Tutorial HTML through verified images while preserving portable mode and same-chapter figure. The expanded native regression covers all17 chapters and unchanged real game state. Valid card/frame decode failures were additionally reproduced and resolved through per-element/key job ownership, unchanged-src avoidance and explicit prepared-byte decode. Final1022/1022 suite and native cases pass. No second independent review.
+
+Reviewer declined native/build/suite/publication: root verified them separately. Physical RAM/audio/FPS, classroom/pupil outcomes, live Google/multi-version behavior remain unverified. Mathematical/balance domains were preserved, not retuned/revalidated. DOC-001/DOC-002 and original map report are out of scope and unchanged. No deferred minor.

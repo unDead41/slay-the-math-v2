@@ -1,0 +1,36 @@
+{
+  "version": "2.39.0",
+  "runtimeHashes": {
+    "app.js": "620274e9c84d23467f9897e663e34e12d9a517f2c82900e2ffc7cd969eb4d787",
+    "animation.js": "d46f19bce7916f79a811bbdfcdd768d199586c15322b8cc08b008e8bc6b1670f",
+    "asset-readiness.js": "1840770a06d6e94879d505869406f3db89862c4d72a428b00cfe4e6009a11d5c",
+    "dom-patch.js": "cb7029f184c86fabd64d0c33c9e9d40dcdb92618df84a04bcb9e4221d3ef9f2d",
+    "bootstrap.js": "e0d4f9564516124fc9a215796c27c926eb5a6270868933e705bfdfbf40b19cde",
+    "card-motion.js": "439970ffbc28b2a0b339332d3bf4677e59a3282cee900976065a777fb5760af4",
+    "mechanics-host.js": "5637e39e01e8d5f83bad25e583cd4873897c35c75ed170730f26a180f2d57f97"
+  },
+  "fullRenderControl": true,
+  "mode": "before",
+  "scenario": "30 native Dev refill commands within one unchanged encounter; 1366x768; not a physical-device FPS benchmark",
+  "retainedCanvasesCommands": 0,
+  "commands": 30,
+  "commandMs": {
+    "median": 6.399999998509884,
+    "p95": 9.599999997764826
+  },
+  "frameGapMs": {
+    "median": 66.69999999999982,
+    "p95": 133.39999999999964
+  },
+  "texture": {
+    "bytes": 45137920,
+    "budgetBytes": 100663296,
+    "overBudgetBytes": 0,
+    "entries": 2,
+    "pending": 0,
+    "owners": 2,
+    "loads": 2,
+    "hits": 60
+  },
+  "errors": []
+}

@@ -23,9 +23,10 @@ const F=require('./dev/fixtures.js'),X=require('../dist/mystery.js'),root=path.r
    const context=await browser.newContext({viewport:manifest.viewport,reducedMotion:'reduce'}),page=await context.newPage(),errors=[];
    page.on('pageerror',e=>errors.push(e.message));
    await context.addInitScript(save=>{localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:false,sound:false,musicMuted:true,voiceMuted:true}));if(save)localStorage.setItem('duel-cube-math.v1',JSON.stringify(save));},setup?F.create({...setup,seed:7}):null);
-   await page.goto('http://127.0.0.1:4196/');if(setup)await page.locator('[data-action=continue]:visible').first().click();
+   await page.goto('http://127.0.0.1:4196/');await page.locator('#resource-enter').waitFor({state:'visible',timeout:120000});await page.locator('#resource-enter').click();if(setup)await page.locator('[data-action=continue]:visible').first().click();
    if(action)await page.locator('[data-action='+action+']:visible').first().click();
    if(id==='learning')await page.frameLocator('#education-practice-frame').locator('#question-prompt').waitFor();
+   await page.waitForFunction(()=>!document.body.classList.contains('scene-preparing')&&[...document.querySelectorAll('img[data-stm-asset]')].filter(im=>im.offsetParent!==null&&(!im.matches('.menu-ambience,.menu-backdrop')||im.classList.contains('active'))).every(im=>im.dataset.stmImageState==='ready'||im.dataset.iconFallback==='true'),null,{timeout:60000});
    await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.offsetParent!==null).map(i=>i.decode().catch(()=>{})));});
    const target=action==='library'||action==='forecast'||action==='saves'?page.locator('#dialog'):page.locator('#game');
    const png=await target.screenshot({animations:'disabled'}),file='tutorial-'+id+'.webp',out=path.join(root,'dist/assets',file);

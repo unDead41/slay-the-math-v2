@@ -1,8 +1,14 @@
 # Slay the Math — Set of Rules
 
+Current resource/runtime integration: [main2.41.0 release](docs/RUNTIME_OPTIMIZATION_MAIN_2_41_0.md), [SOR25](docs/sor/25_RUNTIME_OPTIMIZATION.md) and [latest audit](docs/audits/hosted-readiness/LATEST.md). Latest user authorization supersedes the historical feature-only boundary for this completed update.
+
 Current main integration: [game2.40.0](docs/CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 
 Historical feature card owner: [2.38.0-card-tuning.1](docs/CARD_TUNING_2_38_0.md), ordinary `card-effects-2` and Master candidate.5. Prior unmarked/v1 ordinary saves retain their rules; historical Master cohorts remain separate. [Audit and handoff](docs/audits/card-effects/LATEST.md).
+
+Runtime optimization candidate2.39.0: [SOR25](docs/sor/25_RUNTIME_OPTIMIZATION.md), [guide](docs/RUNTIME_OPTIMIZATION_2_39_0.md) and [current branch audit](docs/audits/hosted-readiness/LATEST.md). Persistent combat actors and bounded session/texture caches; feature branch only.
+
+Hosted resource readiness candidate 2.38.0: [SOR 24](docs/sor/24_HOSTED_READINESS_INPUT.md) and [implementation guide](docs/HOSTED_READINESS_2_38_0.md). Feature-branch only: pre-menu resources, 180-second recovery, run-priority background loading, on-demand Practice and native input guards.
 
 Current cross-branch audit and project-wide guidance: [Master SOR](MASTER_SOR_PROJECT.md), version 1.2.0, 24 October 2026. Read it first, followed by the relevant latest audit/handoff, before branch work. Every branch update includes a scoped before/after review of confirmed problems, potential risks and improvements with evidence, priorities and limits. Read through [AGENTS.md](AGENTS.md); preserve the existing governance/domain owners. GitHub publication provides repository guidance, not automatic ChatGPT Project setup. Mathematics Slayer remains a proposed name; this documentation update does not rename the game.
 

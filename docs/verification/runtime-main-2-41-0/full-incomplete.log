@@ -1,0 +1,90 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.41.0 pretest
+> npm run build
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.41.0 build
+> node tools/import-mechanics.cjs && node tools/build-google-sheets.cjs && node build-portable.cjs
+
+{"modules":11,"bytes":4884523,"registryId":"093f5f3890bdbb614470d7da192726c665597ed111a907d5cea0d6b2f7ce71cd","overrides":["damage","block","strength","agility","focus","defend","passive","draw","d6"]}
+{"file":"/workspace/scratch/0829a1232d36/game/integrations/google-sheets/Code.gs","questions":120,"bytes":116475}
+Portable game generated: 304067710 bytes
+
+> duel-cube-math@2.41.0 test
+> node --test --test-concurrency=1 tests/*.test.cjs
+
+✔ AI Read Ahead choice metrics equal real enemy-turn Block absorption (285.48263ms)
+✔ AI Clear Choice choice metrics equal real enemy-turn Block absorption (285.142461ms)
+✔ AI Card Search choice metrics equal real enemy-turn Block absorption (164.999396ms)
+✔ AI Recall choice metrics equal real enemy-turn Block absorption (167.44205ms)
+✔ AI Burning Page choice metrics equal real enemy-turn Block absorption (108.35455ms)
+✔ three skills return legal real plans without mutating the run (125.593912ms)
+✔ expert finds Weak Point before Rune Strike and Focus lethal (72.051354ms)
+✔ expert blocks visible lethal and ends turn when no legal card exists (11.734018ms)
+✔ hidden pile order and gameplay RNG do not influence any skill (350.107552ms)
+✔ expert samples unknown draws and respects its transition/turn budgets (61.535483ms)
+✔ unknown skill and pending questions are rejected (4.380827ms)
+✔ reward values Shield Shot synergy in a Block deck and skips duplicate unique Passive (510.20492ms)
+✔ upgrade chooses a marginal improvement and removal protects useful synergy (125.788365ms)
+✔ shop uses exact engine prices and never buys an unaffordable or harmful card (126.778307ms)
+✔ removal respects the actual minimum and one-removal-per-shop rule (105.613925ms)
+✔ real campaigns apply the deck policy and expose a bounded acquisition explanation trace (2938.872372ms)
+✔ upgrade ranking recognizes activation gifts and larger visible selection windows (634.735465ms)
+✔ Mystery declining an unwanted offered card applies the recorded skip (107.039452ms)
+✔ actual Block is allocated once, then unused remainder expires on reset (315.792107ms)
+✔ Weak and Defense report actual layered reduction and actual Block absorption (225.378408ms)
+✔ delayed and Passive draw report actual cards, not printed requests (106.020626ms)
+✔ actual direct draw respects the Hand cap and free-card ratios stay null (82.681635ms)
+✔ carried Block keeps its source and terminal remainder is unused (88.170783ms)
+✔ failed card actions and uncaptured planning never enter effects telemetry (173.682018ms)
+✔ completed experiment reports actual support units alongside paid resources (320.67426ms)
+✔ retention support credits the dominant cap without adding retained Block twice (122.528237ms)
+✔ support counters track actual Vulnerable use and Strength involvement without extra damage (105.443635ms)
+✔ Weak on a nonattacking turn expires without reporting prevented damage (74.032983ms)
+✔ job API rejects malformed, nonlocal/cross-origin and concurrent starts (407.28913ms)
+✔ completed jobs and their source-bound exports remain available after a new job starts (845.361569ms)
+✔ a delayed cancel for completed A never cancels running B (945.533519ms)
+✔ report history is bounded to five jobs with explicit eviction (339.642595ms)
+✔ player mode denies every AI resource and POST endpoint (89.482408ms)
+✔ Expert sees the later payoff of activating Strength before future attacks (312.962975ms)
+✔ Expert reserves current Focus when a larger future benefit is available (229.655953ms)
+✔ planning samples inferred public deck composition and ignores hidden order and RNG (166.813532ms)
+✔ Expert actually advances cloned enemy turns and finishes only resolved cutoff states (109.533616ms)
+✔ actual Passive replacement shares the Expert policy and preserves useful Strength (160.809956ms)
+✔ strict options reject invalid numbers, unknown fields and non-string enemy IDs (2.237475ms)
+✔ actual campaign uses selected AI with real receipts and terminal outcome (2424.654485ms)
+✔ paired self-control has zero total, individual and interaction deltas (2401.46563ms)
+✔ factorial report separates card A, card B and excess pair interaction (0.745055ms)
+✔ unknown outcomes retain their denominator and CSV escapes text (0.701794ms)
+✔ card usage totals equal actual resolved engine receipts across immutable action copies (740.398669ms)
+✔ detached CSV carries source, policy, definition and full experiment identity (0.366012ms)
+✔ schema 3 and detached CSV expose actual support totals with source identity (113.238187ms)
+✔ support efficiency aggregates paid resources and preserves old unmeasured fields (0.489679ms)
+✔ capability registration is idempotent only for the same secret and persists securely in SQLite (65.198771ms)
+✔ authenticated batches commit before ACK, stay isolated and ignore older revisions (32.407801ms)
+✔ invalid metadata, overlarge batches, content types and cross-origin writes cannot partially commit (22.977419ms)
+✔ canonical owner records are accepted and forged question metadata or evidence is rejected (18.394615ms)
+✔ a lost HTTP response after durable SQLite commit is replayed once across collector and client reopen (29.296502ms)
+✔ operator JSON and CSV export persist tombstones and neutralize formulas without exposing capabilities (273.653473ms)
+✔ optional server binds loopback, serves the game and exposes only the public endpoint hint (15.953195ms)
+✔ a raw secret without the Bearer authorization scheme cannot submit a batch (5.699591ms)
+✔ the database owner rejects public paths and symlinks before creating a public database (2.611781ms)
+✔ same-revision changed bytes conflict atomically while identical replay remains idempotent (12.65705ms)
+✔ overlapping localStorage tab writes at the same revision rebase and deliver the retained edit (59.994988ms)
+✔ genuine Bahasa Melayu feedback accepts the canonical localized topic without changing stored text (6.64633ms)
+✔ Practice captures real Learning transitions once per occurrence and rotates only on explicit Learning reset (3220.72882ms)
+✔ Practice restores persisted Learning with the same analytics identity while Review remains separately scoped (3605.096326ms)
+✔ Practice feedback queues actual changed snapshots and deletion tombstones without altering comment text or native exit cancellation (1525.973644ms)
+✔ Practice report is a named native dialog with one JSON backup and shared comment settings (1629.885032ms)
+✔ Practice collection stays off by default, reports waiting until exact acknowledgement, and never starts in Dev (2663.498268ms)
+✔ Practice keeps unreadable original progress/comments and exportable new observations when browser storage fails (1306.239991ms)
+✔ Practice permits the real inherited HTTP srcdoc origin while every Dev iframe remains local (2191.304677ms)
+✔ Practice preserves a receiver failure as unavailable rather than labelling it a local save failure (1341.700821ms)
+✔ Practice capture and enqueue exceptions cannot block owner saving or JSON recovery export (2606.236148ms)
+✔ Generated folio uses real analytics modules for Learning, reopen, explicit reset and separately filtered Review (3305.448134ms)
+✔ Generated folio keeps real feedback revisions and tombstones in the local outbox and exports comments without credentials (1264.170963ms)
+✔ Generated folio preserves earlier evidence when an unreadable Practice save starts a temporary new owner session (2210.419956ms)
+✔ Generated folio explicit Save keeps the visible comment authoritative after another tab edits the same question (1921.811699ms)
+✔ Generated inherited-srcdoc folio uses actual consent/flush controls and waits for the exact latest revision acknowledgement (

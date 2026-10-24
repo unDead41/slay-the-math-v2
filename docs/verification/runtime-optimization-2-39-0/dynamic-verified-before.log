@@ -1,0 +1,22 @@
+AssertionError [ERR_ASSERTION]: Combat poses, passive cues and Artifact HUD must avoid raw asset requests
++ actual - expected
+
++ [
++   '/assets/artifact-s02_cinder_whetstone.webp',
++   '/assets/artifact-s02_cinder_whetstone.webp',
++   '/assets/cards-01_blazing_spirit_a01.webp',
++   '/assets/alyssa-right-idle.webp',
++   '/assets/ground-ember_mirror-standing.webp'
++ ]
+- []
+
+    at /workspace/scratch/0829a1232d36/game/tests/dynamic-verified-browser.cjs:12:9
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

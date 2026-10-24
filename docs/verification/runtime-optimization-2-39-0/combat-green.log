@@ -1,0 +1,14 @@
+✔ a committed card updates HP and hand without replacing either actor canvas or the fighter panel (396.14851ms)
+✔ End Turn retains actor canvases and produces the exact independent engine result (274.827002ms)
+✔ language and Motion changes preserve canvases while updating status names and native disabled controls (185.906378ms)
+✔ scene exit disposes old actors and Continue creates fresh owners even for the same encounter (155.273491ms)
+✔ an explicit resource retry replaces actor owners without altering the saved encounter (133.882058ms)
+✔ keyed DOM patching moves cards and preserves live canvas metadata while updating changed text (10.793153ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1739.754306

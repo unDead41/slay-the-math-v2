@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "e6a7407e004b8e3f141b4e34a3b0975763a0c886",
-  "gameVersion": "2.40.0",
+  "sourceCommit": "cf9b594e5193a5e62507062ff4376cf799d1b0b8",
+  "gameVersion": "2.41.0",
   "viewport": {
     "width": 1440,
     "height": 1000
@@ -13,8 +13,8 @@
       "file": "tutorial-menu.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 173132,
-      "sha256": "3973bb452824968432678b9eaf17614df4ae342be6c91b9568da2687b779b80c",
+      "bytes": 173944,
+      "sha256": "940c6e2901193d430ce5141c834509854511d8c53036a782ff16f1f6097057af",
       "setup": "Main Menu",
       "action": null
     },
@@ -35,8 +35,8 @@
       "file": "tutorial-map.webp",
       "width": 1440,
       "height": 946,
-      "bytes": 117998,
-      "sha256": "4b228033e75653d92b99c9fb018a309a6208735eab5b25152254454cc01310ca",
+      "bytes": 118034,
+      "sha256": "b830a2314e6a588b2990482cdb927251a6eb5a1d2d3d38d276f8a5597ab30d43",
       "setup": {
         "kind": "map"
       },
@@ -59,8 +59,8 @@
       "file": "tutorial-cards.webp",
       "width": 1384,
       "height": 976,
-      "bytes": 157406,
-      "sha256": "ad2b098f00822580687335171d6a96b2f727138aa8fa7ba14d395bbb585d25f4",
+      "bytes": 157374,
+      "sha256": "7e487f2aa7725327779d91eac980d1623262a564a399f493dcb4c9211c267e7f",
       "setup": {
         "kind": "combat"
       },
@@ -83,8 +83,8 @@
       "file": "tutorial-focus.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 148848,
-      "sha256": "14ce06f8447d4abd66aea718c55efa02efc7f19e6a477b7e730a0f87a8f83cfd",
+      "bytes": 148870,
+      "sha256": "690bfea9622d8f15a513bb018c8e1593db4a3cdd3499698d57e88693acad04d9",
       "setup": {
         "kind": "combat",
         "focus": 1,
@@ -97,8 +97,8 @@
       "file": "tutorial-passive.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 140286,
-      "sha256": "c575ef8fbe78a022ae419e30f43b3abe0b81de557b156a427cb5985b929d3690",
+      "bytes": 140238,
+      "sha256": "71847944a8a0ab96145aa32dab684c1c1e304058a28830d43c60158496b7563c",
       "setup": {
         "kind": "combat",
         "deck": [
@@ -124,8 +124,8 @@
       "file": "tutorial-rewards.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 155534,
-      "sha256": "7cc6f7b8bafe7324c1e645b565169e04ca35ff4af5a14249f9d6ea8480e52e19",
+      "bytes": 155470,
+      "sha256": "5d0f805638e699ebad6842758866efb70993aa2a637302af977416cd815dc3ca",
       "setup": {
         "kind": "reward"
       },
@@ -148,8 +148,8 @@
       "file": "tutorial-rest.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 128792,
-      "sha256": "af70bf18aca823b86839e176177a689a9c60479425a9e8f5a953e59d9c7f9a49",
+      "bytes": 128688,
+      "sha256": "2f6a21fbefaebc37194bd66af42d0ebe7c0b7c3ea2b97eb44d909331c2aadff3",
       "setup": {
         "kind": "rest",
         "hp": 24
@@ -197,8 +197,8 @@
       "file": "tutorial-settings.webp",
       "width": 560,
       "height": 856,
-      "bytes": 31986,
-      "sha256": "a569c4e861bf25ab8482d96e9d437a35097a95e97f191b7ca33f35049b5e57f6",
+      "bytes": 31818,
+      "sha256": "58dc0fd5f26bd4e3113ac112157951f22209ed34e74eae9e91cf1da9d6a0f4a8",
       "setup": "Main Menu",
       "action": "saves"
     },
@@ -216,7 +216,7 @@
     }
   ],
   "runtimeInputs": {
-    "index.html": "f4ed832ff9bda520cca26ec504d3946c44e408752b526659dd7ea5b686189e24",
+    "index.html": "4b311f079f8d1ffed0ce28cc86a2d6d2e04d39f1bb1f87e1a235b24147c94d99",
     "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
     "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
     "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
@@ -229,7 +229,6 @@
     "mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
     "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
     "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
-    "question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
     "education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
     "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
     "animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
@@ -245,13 +244,19 @@
     "analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
     "status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee",
     "tutorial.css": "e8bec001a3d6c2b24baf9d01ed83ab59b1bba875f0c3adbf2ebf1cd399c2d7db",
+    "boot.css": "8ce0b3215f81b6eae17417329336b7d2cdc5e060891bdd6519c32e08c47852a9",
+    "input-guard.css": "95ed26e45472e41d41107f9504ee14249a1385207c428e69e9d18ea416300048",
     "icon-clarity.css": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd",
-    "release.js": "580132bf469bf6becab2354fda2cf8ce99ddedb0c29a2f2120af30b4e64747cc",
+    "question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
+    "asset-readiness.js": "1840770a06d6e94879d505869406f3db89862c4d72a428b00cfe4e6009a11d5c",
+    "input-guard.js": "eae325489eeecc73c1dbd939c44beda6d2b58a9aa0eb66a9cade2c1c15ecae08",
+    "bootstrap.js": "1e009b61e7662f1fa335c9826894e2361eae7b62ab905a8f79e334fb3d989ef7",
+    "release.js": "a1cec2bc0bc6b9e639f40945a840dbcc9fb8711ff227e2dd7c0ddb7590d86352",
     "card-data.js": "ef00192fe6fed2851aeb37c69b2bd9fd2a3c3205893597e8d390287e2aa14a35",
     "balance-data.js": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d",
     "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
     "icon-assets.js": "0b97b47759ff7dbaf556174bbec8b68f632ba6ca34520a891c30eaacfd7ed28a",
-    "icon-readiness.js": "a53d351a69f053dda5ca1f53e75f42d5116caaeed6f5dac98335eb55e5794414",
+    "icon-readiness.js": "418ccc860df0d51f4b81600cdb1fc1228fa773d56afc1d8eb0e076be6205e285",
     "card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
     "card-kit.js": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402",
     "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
@@ -278,19 +283,19 @@
     "engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
     "music-data.js": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3",
     "audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
-    "audio.js": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17",
+    "audio.js": "a5c60c8e4cf4baf66851bbac7c9e7204468fafb8e9c1c181ced40e6656f7fcf0",
     "visuals.js": "0be6597746e629a7849043a7f276f64b50dee0eb77fca4470fcb3404bdff5a92",
     "animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
-    "animation.js": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52",
+    "animation.js": "d46f19bce7916f79a811bbdfcdd768d199586c15322b8cc08b008e8bc6b1670f",
     "artifact-ui.js": "1d1f49e5a6a142e934a6c4f6a83934b01df2627d8171a5e2c9faf10a957941b9",
-    "mechanics-host.js": "1e8df25658849b5ddbd810717423253edba7e0717c6e584669563b17e12db16f",
+    "mechanics-host.js": "5637e39e01e8d5f83bad25e583cd4873897c35c75ed170730f26a180f2d57f97",
     "hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
     "mystery-ui.js": "745d53d569da96e407a6803227659bdbf90b01f56185db936d999da46c4f359b",
-    "education-practice.js": "d5d068f8a5a9857765a76d1c844232503515edfed0d44015965aed9562692eb6",
+    "education-practice.js": "e6bc3cdb0a82954b6ae04fa8fc8225c7ab8d32ae35dfea292902ee57e01805c0",
     "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
     "combat-status.js": "98550dc47e68f15702e37d2c0721fa4a0357559a9f73c19c89e34f4cceefb8eb",
     "status-vfx.js": "2d723ec9d95fdf5789aac9cbd8fe634859a517e38393c360e795bb18d86b4124",
-    "card-motion.js": "fe6a747dc29b0eab084f3ae8d5b1c006073d1428b3f5345c21a2d018796ab9be",
+    "card-motion.js": "439970ffbc28b2a0b339332d3bf4677e59a3282cee900976065a777fb5760af4",
     "learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
     "learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
     "learning-sync.js": "a45da8f82dd33088ca707687e9856db88ca4a2d449b28752b15bb2d0c6087125",
@@ -302,8 +307,9 @@
     "analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
     "tutorial-data.js": "537460decb20a65b1f7df589b5b09d2c82c813e72edd251992d910b1e9430602",
     "tutorial-core.js": "177f18c30942ea8885084e3a3c6eea7e3b811708e7118f825381cd9b507ab3bc",
-    "tutorial.js": "1c10f2fc3e8c33d3e5dbf37d9b341b825eccb37385c08df8a4ea2a9372a6e803",
-    "app.js": "cd258dcb372b68091d68c621356356ca917b63b57b55c1fbd8f2956aeb31b80b"
+    "tutorial.js": "24a7851d35b5f83c117cc51fa859a7b557512cea865610772ab4591d25f8e86c",
+    "dom-patch.js": "a073f05e6a6aa4c23559c46652da4e0e5502e3048fa6038fb19836e68cc744e8",
+    "app.js": "1dcdb58310069155cfbdb3892939d1490152e3b54dc8e50be3ad468cf4af7bb5"
   },
-  "sourceWorkingTreeDirty": false
+  "sourceWorkingTreeDirty": true
 }

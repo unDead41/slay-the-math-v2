@@ -1,0 +1,131 @@
+{
+  "checks": [
+    "A native Passive has one named result, a synchronized hero burst and the exact saved engine result.",
+    "All ten real Passive trigger paths retain their actual/capped values and have ten distinct decorative signatures.",
+    "Seven concurrent status auras remain registered and readable on desktop/portrait/landscape; Low reduces particles and continuous motion, and the native setting persists.",
+    "Partial absorption/ordinary expiry never shatter; actual depletion has fragments, with exact engine/save equality.",
+    "Confirmed Passive replacement shows the real stat decrease after its dialog closes; a new modal cancels every delayed effect.",
+    "Motion Off/OS reduction keep the single primary SFX; opening Settings before impact cancels it and creates no late audio."
+  ],
+  "passives": [
+    {
+      "name": "Blazing Spirit",
+      "detail": "+2 Strength",
+      "signature": "solid|1px|0px|-12px|none|polygon(50% 0px, 65% 25%, 95% 15%, 80% 50%, 100% 80%, 65% 75%, 50% 100%, 35% 75%, 0px 80%, 20% 50%, 5% 15%, 35% 25%)|none"
+    },
+    {
+      "name": "Growing Flame",
+      "detail": "+1 Strength",
+      "signature": "double|3px|20% 50% 40%|-10px|none|none|none"
+    },
+    {
+      "name": "Swift Step",
+      "detail": "+2 Agility",
+      "signature": "solid|2px 0px|50%|8px -18px|matrix(0.906308, -0.422618, 0.422618, 0.906308, 0, 0)|none|none"
+    },
+    {
+      "name": "Battle Rhythm",
+      "detail": "+1 Agility",
+      "signature": "dotted|1px|50%|-12px|matrix(0.838493, 0, 0, 0.838493, 0, 0)|none|passive-rhythm"
+    },
+    {
+      "name": "Rune Armor",
+      "detail": "+1 Defense",
+      "signature": "solid|1px|5px|-8px|matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)|none|none"
+    },
+    {
+      "name": "Lasting Shield",
+      "detail": "4 Block kept",
+      "signature": "solid|0px 2px 2px 0px|0px 0px 40%|4px -10px -10px 4px|none|none|none"
+    },
+    {
+      "name": "Grimoire Ward",
+      "detail": "+3 Block",
+      "signature": "dashed|1px|40% 40% 48% 48%|-10px|none|none|none"
+    },
+    {
+      "name": "Ember Core",
+      "detail": "−2 HP",
+      "signature": "dotted|3px|50%|-7px|none|none|none"
+    },
+    {
+      "name": "Clear Mind",
+      "detail": "1 card drawn",
+      "signature": "solid|1px|5px|5px -12px -10px 5px|matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)|none|none"
+    },
+    {
+      "name": "Last Ember",
+      "detail": "+6 Block · +0 Focus",
+      "signature": "solid|3px|50%|-12px|matrix(0.908237, 0, 0, 0.908237, 0, 0)|none|passive-last-ember"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "quality": "full",
+      "insideArena": true,
+      "readoutAboveHP": true,
+      "noOverflow": true,
+      "auras": 7,
+      "nodes": 46
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "quality": "low",
+      "insideArena": true,
+      "readoutAboveHP": true,
+      "noOverflow": true,
+      "auras": 7,
+      "nodes": 40
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "quality": "full",
+      "insideArena": true,
+      "readoutAboveHP": true,
+      "noOverflow": true,
+      "auras": 7,
+      "nodes": 46
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "quality": "low",
+      "insideArena": true,
+      "readoutAboveHP": true,
+      "noOverflow": true,
+      "auras": 7,
+      "nodes": 40
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "quality": "full",
+      "insideArena": true,
+      "readoutAboveHP": true,
+      "noOverflow": true,
+      "auras": 7,
+      "nodes": 46
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "quality": "low",
+      "insideArena": true,
+      "readoutAboveHP": true,
+      "noOverflow": true,
+      "auras": 7,
+      "nodes": 40
+    }
+  ],
+  "profiles": [],
+  "errors": [],
+  "baseAssetFailures": [],
+  "version": "2.41.0",
+  "limits": [
+    "Browser viewport emulation; no physical-phone measurement or human SFX audition."
+  ]
+}

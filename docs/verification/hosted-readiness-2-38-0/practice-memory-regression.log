@@ -1,0 +1,15 @@
+✔ native drag and selection are blocked on game art but inputs and repeated binds remain usable (142.186711ms)
+✔ DOM: all 120 questions switch between authored BM and English, with translated guidance and unchanged answer identities (250845.585226ms)
+✔ DOM: language changes keep selection, learning reservation, open guidance and comments, and restore the preference (4378.156848ms)
+✔ DOM: every question has its own editable persistent comment, unaffected by Hint, review reset or learning reset (42010.90913ms)
+✔ DOM: comments stay inert and their shared settings keep cancellation and saved text (2184.381932ms)
+✔ DOM: leaving sharing settings preserves comments without invoking native file sharing (2160.062749ms)
+✔ DOM: comment-only storage failure stays truthful at exit and offers the in-memory comment in shared JSON recovery (4618.532839ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 307409.37446

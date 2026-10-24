@@ -56,6 +56,7 @@ require('./build-question-feedback.cjs')(project);
 const practice=require('./build-education-practice.cjs')(project,registry);
 require('./build-master-balance.cjs')(project);
 require('./sync-game-entrypoints.cjs')(project);
+require('./build-asset-manifest.cjs')(project);
 const audit={sourceZip:'QUESTION_BANK_HARMONIZED_v1_6.zip',sha256:'58bdc02a9e7df6a37a30f7012a17600b0f47bd0d9886411cd5640188c08efa58',artifactSourceZip:'INTEGRATION.zip',artifactPackage:'3.5',questionPackage:'1.6.0',bankVersion:bank.bankVersion,contentRevision:bank.contentRevision||null,supplierRegistryId,hostRegistryId:registry.registryId,overrides,sourceHashes,practice,output:{'dist/mechanics.js':hash(out),'dist/mechanics-source.css':hash(css),'dist/education-practice.js':hash(fs.readFileSync(path.join(project,'dist/education-practice.js')))},counts:{artifacts:31,questions:120,glossary:Object.keys(registry.entries).length,foundations:data.foundations.modules.length,practiceChecks:data.foundations.modules.reduce((n,m)=>n+m.checks.length,0)},omitted:'Duplicate PNG/4K sheets, PDF previews and demo hosts. The reviewed icon registry maps all 31 artifact identities to versioned painted WebP derivatives; original verified art remains preserved; the game engine owns effects, rewards and save commits. Education Practice has its own storage key and uses the same active bank.'};
 audit.localization=localization;
 fs.writeFileSync(path.join(project,'modules/mechanics/integration-audit.json'),JSON.stringify(audit,null,2)+'\n');

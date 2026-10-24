@@ -1,0 +1,13 @@
+PASS verified images without a worker or disk cache
+PASS Practice retries after a real download timeout
+PASS obsolete Practice completion cannot hide a newer room and decode has a deadline
+State "SLAY THE MATH\nResources need another try\n\nHTTP 404 loading assets/stm_icon_status_block_v2.webp\n\n29 / 153 files · 3.6 / 14.6 MB\n\n179 seconds remaining\n\nRetry Resources"
+FAIL missing functional icons keep Enter and named combat fallbacks usable: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('#resource-enter') to be visible[22m
+[2m    23 × locator resolved to hidden <button hidden="" id="resource-enter">Enter Game</button>[22m
+
+missing functional icons keep Enter and named combat fallbacks usable: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('#resource-enter') to be visible[22m
+[2m    23 × locator resolved to hidden <button hidden="" id="resource-enter">Enter Game</button>[22m

@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path');const root=__dirname;let html=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
-html=html.replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,name)=>'<style>'+fs.readFileSync(path.join(root,'dist',name.split(/[?#]/)[0]),'utf8')+'</style>');
-html=html.replace(/<script src="([^"]+)"><\/script>/g,(_,name)=>'<script>'+fs.readFileSync(path.join(root,'dist',name.split(/[?#]/)[0]),'utf8').replace(/<\/script/gi,'<\\/script')+'</script>');
+html=html.replace(/<link rel="stylesheet" href="([^"]+)"[^>]*>/g,(_,name)=>'<style>'+fs.readFileSync(path.join(root,'dist',name.split(/[?#]/)[0]),'utf8')+'</style>');
+html=html.replace(/<script src="([^"]+)"[^>]*><\/script>/g,(_,name)=>'<script>'+fs.readFileSync(path.join(root,'dist',name.split(/[?#]/)[0]),'utf8').replace(/<\/script/gi,'<\\/script')+'</script>');
 const mime=name=>({'.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'}[path.extname(name)]);
 html=html.replace(/(href=")assets\/([^"<>]+)(")/g,(_,a,file,z)=>a+'data:'+mime(file)+';base64,'+fs.readFileSync(path.join(root,'dist/assets',file)).toString('base64')+z);
 const retiredHero=/^ground-alyssa-(?:standing|attack|defend|skill|damage)\.webp$/;

@@ -1,0 +1,16 @@
+AssertionError [ERR_ASSERTION]: Tutorial screenshots must use manifest-verified bytes
++ actual - expected
+
++ [
++   '/assets/tutorial-menu.webp'
++ ]
+- []
+
+    at /workspace/scratch/0829a1232d36/game/tests/dynamic-verified-browser.cjs:14:239 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

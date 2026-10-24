@@ -1,0 +1,9 @@
+AssertionError [ERR_ASSERTION]: Loading panel must fit before deferred game CSS at 320x740: {"x":-1,"y":149.4375,"width":322,"height":441.125}
+    at /workspace/scratch/0829a1232d36/game/tests/readiness-viewport-browser.cjs:6:175 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

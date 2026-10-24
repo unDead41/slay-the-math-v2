@@ -1,5 +1,26 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-RUNTIME-MAIN — Publish the completed update
+
+DISAHKAN: Ijamm's latest “okay push ni juga please!!” follows the verified feature publication and authorizes main integration/publication of this completed update. This supersedes its earlier feature-only boundary. Candidate2.41.0 merges mainb730cad (2.40.0) and feature61ca126, retaining newer numerical/status/education/Dev owners. No additional numerical tuning or identity change. [Integration evidence and limits](../RUNTIME_OPTIMIZATION_MAIN_2_41_0.md).
+
+## DEC-20261024-RUNTIME-OPTIMIZATION — Three approved updates
+
+DISAHKAN: Ijamm explicitly requests UPDATE for recommendations1–3: avoid rebuilding combat actors, reuse resources already verified during the session, and budget decoded textures by bytes while keeping live actors. Prior feature-branch-only publication authorization persists.
+
+IMPLEMENTED: candidate2.39.0 on fix/hosted-readiness-input, using a32MiB immutable verified Blob LRU, a96MiB estimated RGBA texture LRU with current-clip ownership and preferred idle retention, and keyed combat DOM updates. Current maincb1bbcf is integrated without changing its education reports/hints, Settings-only Developer controls, original artwork or engine/RNG/save values. [SOR25](25_RUNTIME_OPTIMIZATION.md).
+
+PERLU_VERIFIKASI: physical-device memory/FPS and real classroom connections. Cache limits describe retained data, not total browser/GPU RAM. Adaptive VFX, resized canvases, save-write changes and question-bank sharding remain outside this update.
+
+## DEC-20261024-HOSTED-READINESS — Feature branch only
+
+DISAHKAN: after the SOR-only planning phase, Ijamm requests implementation before the main menu, up to three minutes waiting, staged/background downloads, later Boss resources and full Practice presentation on demand; push the assistant branch, not main.
+
+DITERUSKAN: build candidate 2.38.0, integrating main 2.37.0 / 6376a222169815af582cf55aa4794f3c809a3515 after the initial 2.36.0 implementation. Preserve canonical question selection/save validation and all current rules; do not claim per-seed question payload splitting. Keep the approximately 4 MB canonical bank, defer the Practice renderer, prioritize real map actors without RNG mutation, and provide visible timeout/retry plus content-verified project-scoped caches. Original art/audio, player data and local-only AI remain. [SOR](24_HOSTED_READINESS_INPUT.md), [candidate guide](../HOSTED_READINESS_2_38_0.md).
+
+PERLU_VERIFIKASI: physical phones, the friend's exact failure and a future hosted deployment. Main publication is not authorized by this decision.
+
+
 ## DEC-20261024-MASTER-AUDIT-EVERY-UPDATE — Read first and review every branch update
 
 **DISAHKAN:** Ijamm asks Master Audit to look for problems, possible problems and improvements whenever a branch is updated, and to read this audit guidance before other work. This extends [Master SOR](../../MASTER_SOR_PROJECT.md) to version 1.2.0.

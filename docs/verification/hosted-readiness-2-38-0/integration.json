@@ -1,0 +1,172 @@
+{
+  "verifiedAt": "2026-10-24T07:28:45.540Z",
+  "repository": "unDead41/slay-the-math-v2",
+  "branch": "fix/hosted-readiness-input",
+  "version": "2.38.0",
+  "initialMain": "50d3af423cdc2240e949f4ddf29e023865304b65",
+  "integratedMain": "6376a222169815af582cf55aa4794f3c809a3515",
+  "masterSOR": "1.2.0",
+  "publication": {
+    "status": "Source published on the authorized feature branch; audit-only follow-up records this verification",
+    "branch": "fix/hosted-readiness-input",
+    "sourceCommit": "8068ce7535f1073eeb7bd4bdb3333896333fb1dc",
+    "sourceTree": "6cfa5c302441f983d06e5238f5ea183384d82c1b",
+    "sourceTreeMatchesTestedLocalCommit": "33b20d83a256e605da35283ca0817e1c237aae41",
+    "sourceRefVerifiedAt": "2026-10-24T07:32:17.347059+00:00",
+    "mainChecked": "6376a222169815af582cf55aa4794f3c809a3515",
+    "mainPublicationAuthorized": false,
+    "url": "https://github.com/unDead41/slay-the-math-v2/tree/fix/hosted-readiness-input"
+  },
+  "nodeTests": {
+    "preFixWholeSuite": {
+      "tests": 928,
+      "pass": 927,
+      "fail": 1,
+      "skipped": 0,
+      "log": "before-memory-fix.log",
+      "failure": "question-feedback-ui.test.cjs exhausted the default Node heap"
+    },
+    "postFixFocused": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0,
+      "log": "practice-memory-regression.log",
+      "coverage": "All six Practice feedback/UI tests and the input guard; no heap increase"
+    },
+    "postFixGenerated": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0,
+      "log": "generated-resource-tests.log"
+    },
+    "unchangedCollectorIsolated": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "log": "collector-isolated.log"
+    },
+    "freshWholeSuite": {
+      "completed": false,
+      "status": "BELUM DISAHKAN",
+      "logs": [
+        "combined-suite-interrupted.log",
+        "remaining-tests-interrupted.log"
+      ],
+      "reason": "One combined run ended without summary; the other-file rerun stalled after collector output and was stopped. Its isolated 12-test collector rerun passed. No completed fresh whole-suite pass is claimed."
+    },
+    "runtime": "Node 24.19.0; jsdom 26.1.0; external QA dependency only"
+  },
+  "manifests": {
+    "dist": {
+      "gameVersion": "2.38.0",
+      "manifestId": "77cbf6bd1f155c3c302e3a35",
+      "entries": 664,
+      "requiredCoreBytes": 13898532,
+      "optionalMenuAudioBytes": 4701741,
+      "practiceBytes": 1155168,
+      "totalBytes": 225633683,
+      "manifestSHA256": "15c7488fffe14d78b7ceafb03af7eea09b9f727395292c84fbec518d1c0d3cff",
+      "entrypointSHA256": "7606f4a3791b7e7d4850682faec85fcb52e153f42c95284f91a137d793f9ee30",
+      "mismatches": []
+    },
+    "release-prod": {
+      "gameVersion": "2.38.0",
+      "manifestId": "e9ac5392a9c01f780f042c80",
+      "entries": 665,
+      "requiredCoreBytes": 13904970,
+      "optionalMenuAudioBytes": 4701741,
+      "practiceBytes": 1155168,
+      "totalBytes": 225640121,
+      "manifestSHA256": "58e136128c12bd3d95d33d6906d51cbd99376cd2edc9dc6efb64bb731feedac9",
+      "entrypointSHA256": "ee8ea442b5dc4d1237388ec483508b0a8f29bff3a3cd38733f51f493dd9bbbeb",
+      "mismatches": []
+    }
+  },
+  "browser": {
+    "runtime": "Native Chromium 138.0.7204.0 / Playwright",
+    "hostedCases": 8,
+    "recoveryCases": 3,
+    "portableAndLocalDevCases": 2,
+    "viewportSizes": [
+      [
+        320,
+        740
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "productionDeveloperHub": "Full existing scenario suite passed on a static /slay-the-math-v2/ host and the actual --prod server",
+    "pageErrors": [],
+    "logs": [
+      "hosted-browser.log",
+      "recovery-browser.log",
+      "portable-dev-browser.log",
+      "production-dev-browser.log",
+      "viewport-browser.log"
+    ]
+  },
+  "preservation": {
+    "referenceMain": "6376a222169815af582cf55aa4794f3c809a3515",
+    "protectedPaths": [
+      "dist/assets",
+      "dist/mechanics.js",
+      "dist/engine.js",
+      "dist/question-data.js",
+      "dist/education.js",
+      "dist/config.js",
+      "dist/math.js",
+      "dist/map-rng.js",
+      "dist/map.js",
+      "dist/card-data.js",
+      "dist/card-combat.js",
+      "dist/combat-status.js",
+      "dist/animation-data.js",
+      "dist/status-vfx.js",
+      "dist/tutorial.js",
+      "dist/learning-analytics.js",
+      "tools/ai-playtester"
+    ],
+    "unexpectedChanges": []
+  },
+  "corrections": [
+    {
+      "id": "LOAD-01",
+      "verified": "Native timeout/retry, panel ownership, decoded actor frame and unchanged pre-entry raw save"
+    },
+    {
+      "id": "LOAD-02",
+      "verified": "Native worker-blocked/cache-denied/raw-assets-blocked boot consumes verified image bytes"
+    },
+    {
+      "id": "DEV-01",
+      "verified": "Plain/developer mode loads the existing Practice factory before adapter capture"
+    },
+    {
+      "id": "INPUT-01",
+      "verified": "Removed subtree observer; rapid 120-question BM/English and comments test passes without raising default heap limit"
+    },
+    {
+      "id": "VIEW-01",
+      "verified": "Loading shell fits three viewport shapes before deferred game CSS; landscape Enter remains reachable"
+    }
+  ],
+  "validationNote": "Targeted post-fix regressions and native/build checks pass. A fresh completed whole-suite pass is not claimed; exact attempts, the initial heap failure and isolated reruns are preserved. Runtime JavaScript remained frozen after the input-guard fix. A shell-only responsive CSS adjustment and regenerated cache metadata were also checked with six manifest/entrypoint/build tests and native viewport/browser reruns.",
+  "limits": [
+    "No physical phone, friend-device or pupil validation",
+    "Canonical question bank remains with synchronous engine/save validation; no per-seed bank splitting",
+    "180 seconds is a recovery deadline, not a network speed guarantee",
+    "Cache storage can be denied or evicted; old project namespaces remain and full offline readiness is not inferred",
+    "Fresh complete whole-suite run remains unverified; targeted post-fix checks pass",
+    "Public Pages deployment and live Google collection not performed"
+  ],
+  "logFormatting": "Trailing whitespace and redundant terminal blank lines removed; log content otherwise retained."
+}

@@ -1,0 +1,21 @@
+✔ a committed card updates HP and hand without replacing either actor canvas or the fighter panel (450.624414ms)
+✔ End Turn retains actor canvases and produces the exact independent engine result (275.885004ms)
+✔ language and Motion changes preserve canvases while updating status names and native disabled controls (191.454057ms)
+✔ scene exit disposes old actors and Continue creates fresh owners even for the same encounter (141.872812ms)
+✔ an explicit resource retry replaces actor owners without altering the saved encounter (152.294056ms)
+✔ keyed DOM patching moves cards and preserves live canvas metadata while updating changed text (12.082229ms)
+✔ incremental combat updates keep an icon fallback until its resource changes (14.101825ms)
+✔ slow and failed status images retain their usable named control and receive a local semantic fallback once (53.222781ms)
+✔ a changed icon source can load normally after a prior failure without affecting card/artifact art (9.591921ms)
+✔ the Publish Handler integration exposes a bounded critical-icon list, with no cards, artifacts, sounds or questions (1.137556ms)
+✔ full tutorial opens from existing entry, practises and closes without changing host records (452.440134ms)
+✔ tutorial language and confirmed reset affect only tutorial progress (362.096401ms)
+✔ Predict practice keeps support, wrong answers and successful retry inside the tutorial (487.086867ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4085.477457

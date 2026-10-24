@@ -1,0 +1,119 @@
+✔ concurrent requests share bytes and a verified disk hit avoids another download (51.548969ms)
+✔ a corrupt cached response is rejected and replaced without clearing unrelated data (8.939351ms)
+✔ transient HTTP failures retry twice but missing assets fail once and never become ready (16.150675ms)
+✔ a stalled response has a bounded failure and a loading budget cancels outstanding work (37.823454ms)
+✔ foreground work precedes queued boss downloads and background concurrency stays bounded (19.270924ms)
+✔ cache quota failure keeps downloads usable online and rejects URLs outside this manifest (4.162112ms)
+✔ an update reuses unchanged verified bytes and replaces changed bytes within the same project (5.295071ms)
+✖ cache denial still reuses verified bytes for sequential consumers without repeating SHA work (10.2769ms)
+✖ a verified disk read is retained privately and consumers cannot mutate later responses (3.022692ms)
+✖ the compressed byte budget evicts background entries before a foreground resource (8.49408ms)
+✖ oversized verified assets remain usable without exceeding the session budget (4.306359ms)
+✖ wrong-hash bytes never enter the trusted session cache, and a retry can populate it (7.578448ms)
+✖ verified session reuse is isolated by manifest and still obeys pause and destroy (5.77774ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 7
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 265.354948
+
+✖ failing tests:
+
+test at tests/asset-readiness.test.cjs:49:1
+✖ cache denial still reuses verified bytes for sequential consumers without repeating SHA work (10.2769ms)
+  AssertionError [ERR_ASSERTION]: Completed consumers must reuse this session’s verified download
+
+  4 !== 1
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/asset-readiness.test.cjs:54:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/asset-readiness.test.cjs:56:1
+✖ a verified disk read is retained privately and consumers cannot mutate later responses (3.022692ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  2 !== 1
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/asset-readiness.test.cjs:60:143)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/asset-readiness.test.cjs:62:1
+✖ the compressed byte budget evicts background entries before a foreground resource (8.49408ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  2 !== 1
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/asset-readiness.test.cjs:66:70)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/asset-readiness.test.cjs:68:1
+✖ oversized verified assets remain usable without exceeding the session budget (4.306359ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  undefined !== 0
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/asset-readiness.test.cjs:70:120)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/asset-readiness.test.cjs:72:1
+✖ wrong-hash bytes never enter the trusted session cache, and a retry can populate it (7.578448ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  3 !== 2
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/asset-readiness.test.cjs:74:185)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/asset-readiness.test.cjs:76:1
+✖ verified session reuse is isolated by manifest and still obeys pause and destroy (5.77774ms)
+  Error: Content verification failed: a
+      at request (/workspace/scratch/0829a1232d36/game/dist/asset-readiness.js:29:51)
+      at async perform (/workspace/scratch/0829a1232d36/game/dist/asset-readiness.js:44:17)
+      at async TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/asset-readiness.test.cjs:78:162)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    retryable: false
+  }

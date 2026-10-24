@@ -1,0 +1,205 @@
+{
+  "date": "2026-10-24",
+  "timezone": "Asia/Kuala_Lumpur",
+  "version": "2.41.0",
+  "masterSOR": "1.2.0",
+  "mainInput": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+  "featureInput": "61ca12635ae2bd23f04400b7cc6399a9836adfd8",
+  "localMerge": "cf9b594e5193a5e62507062ff4376cf799d1b0b8",
+  "localReviewFix": "99a31e93e6084da547a06cbb46b18b697961fc22",
+  "fullSuite": {
+    "passed": 1022,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 405577.148702,
+    "command": "TMPDIR=<task RAM> DOM_QA_MODULE=<jsdom26> npm test",
+    "log": "full-suite.log",
+    "frozen672InputsUnchanged": true
+  },
+  "targeted": {
+    "passed": 84,
+    "failed": 0,
+    "log": "targeted.log"
+  },
+  "reviewFixUnits": {
+    "passed": 13,
+    "failed": 0
+  },
+  "native": {
+    "batch": [
+      {
+        "name": "runtime",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "hosted",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "recovery",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "production-dev",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "combat-motion",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "question-report",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "offline-report",
+        "code": 0,
+        "signal": null
+      }
+    ],
+    "status": {
+      "states": 24,
+      "checks": 5,
+      "errors": [],
+      "production": true,
+      "portable": true
+    },
+    "cards": {
+      "flows": 10,
+      "ordinaryMasterV1Archive": true,
+      "languages": [
+        "en",
+        "ms"
+      ],
+      "errors": []
+    },
+    "verifiedImages": {
+      "tutorialChapters": 17,
+      "checks": [
+        "worker blocked + disk cache denied + raw URLs rejected",
+        "real passive/pose/reset and exact engine save",
+        "Artifact HUD and all31 Codex icons decoded from verified blobs",
+        "all Tutorial chapters/screenshots/card previews use verified blobs with unchanged game save"
+      ],
+      "rawRequests": [],
+      "errors": [],
+      "cache": {
+        "requests": 382,
+        "cacheHits": 0,
+        "memoryHits": 142,
+        "hashes": 382,
+        "bytes": 104679613,
+        "maxActive": 4,
+        "cacheMode": "online",
+        "active": 0,
+        "queued": 0,
+        "memoryBytes": 33350024,
+        "memoryEntries": 89,
+        "memoryBudgetBytes": 33554432,
+        "verifiedFiles": 370,
+        "verifiedBytes": 98950045
+      }
+    },
+    "combatMotion": {
+      "summaryChecks": 6,
+      "passivePaths": 10,
+      "viewportsAndQuality": 6,
+      "masterProfiles": 0,
+      "errors": []
+    }
+  },
+  "build": {
+    "syntax": "passed",
+    "productionPortable": "passed",
+    "sourceManifests": [
+      {
+        "directory": "dist",
+        "entries": 672,
+        "manifestId": "27cebd88e82a8d247d85674b",
+        "requiredBytes": 9744484,
+        "bad": []
+      },
+      {
+        "directory": "release-prod",
+        "entries": 673,
+        "manifestId": "accbd865088e4e72a46c881a",
+        "requiredBytes": 9750801,
+        "bad": []
+      }
+    ],
+    "tutorialImages": 16,
+    "tutorialInputHashes": 94,
+    "wrongTutorialInputs": []
+  },
+  "protected": {
+    "base": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+    "paths": [
+      "dist/engine.js",
+      "dist/math.js",
+      "dist/map.js",
+      "dist/map-rng.js",
+      "dist/config.js",
+      "dist/card-data.js",
+      "dist/card-combat.js",
+      "dist/card-flow.js",
+      "dist/artifacts.js",
+      "dist/education.js",
+      "dist/combat-status.js",
+      "dist/status-vfx.js",
+      "dist/mechanics.js",
+      "dist/question-language.js",
+      "dist/balance-data.js",
+      "tools/cards",
+      "tools/balance/master/config.json",
+      "modules/mechanics/source",
+      "tools/ai-playtester"
+    ],
+    "differentFiles": [],
+    "originalArtExceptTutorialCapturesUnchanged": true,
+    "changedTutorialAssets": [
+      "dist/assets/tutorial-cards.webp",
+      "dist/assets/tutorial-focus.webp",
+      "dist/assets/tutorial-map.webp",
+      "dist/assets/tutorial-menu.webp",
+      "dist/assets/tutorial-passive.webp",
+      "dist/assets/tutorial-rest.webp",
+      "dist/assets/tutorial-rewards.webp",
+      "dist/assets/tutorial-settings.webp"
+    ]
+  },
+  "review": {
+    "freshIntegrationReviews": 1,
+    "critical": 0,
+    "important": 1,
+    "minor": 0,
+    "soleFinding": "Tutorial images bypassed verification",
+    "rootFixPass": "verified by native RED-to-GREEN; concurrent valid-image decode failure also reproduced and fixed",
+    "secondIndependentReview": false
+  },
+  "limits": [
+    "No physical-device RAM/GPU/FPS or pupil validation",
+    "No new whole-bank mathematical review or numerical tuning",
+    "No new human audio audition or live Google deployment",
+    "Older disk caches retained and future pinned-manifest updates can require a user reload",
+    "MODEL.zip unavailable; PDFs available but unchanged math data does not require rereading",
+    "Selected mid-action1366x768 Dev capture clips upper hero; fixed actor geometry/art preserved against main; framing follow-up recorded separately"
+  ],
+  "incompleteAttempt": {
+    "log": "full-incomplete.log",
+    "exitCode": 1,
+    "summary": false,
+    "cause": "not captured; disk-pressure conditions observed; not counted as a verdict"
+  },
+  "evidenceFormatting": "Log trailing whitespace normalized only",
+  "publication": {
+    "status": "pending main expected-SHA update",
+    "expectedMain": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+    "force": false
+  }
+}

@@ -12,7 +12,7 @@ module.exports=function devResponse(pathname){
   let html=fs.readFileSync(path.join(dist,'index.html'),'utf8');
   html=html.replace('<head>','<head><base href="/"><script src="/__dev/storage.js"></script><script src="/__dev/runtime-tools.js"></script><script src="/__dev/fixtures.js"></script>');
   // Fixtures are loaded after the engine, before the app; no production file is changed.
-  html=html.replace('<script src="/__dev/fixtures.js"></script>','').replace(/<script src="app\.js[^\"]*"><\/script>/,'<script src="/__dev/fixtures.js"></script><script src="/__dev/app.js"></script>');
+  html=html.replace('<script src="/__dev/fixtures.js"></script>','').replace(/<script src="app\.js[^\"]*"[^>]*><\/script>/,'<script src="/__dev/fixtures.js" type="application/stm-runtime"></script><script src="/__dev/app.js" type="application/stm-runtime"></script>');
   return {type:'text/html',data:html};
  }
  if(pathname==='/__dev/app.js'){

@@ -114,7 +114,7 @@
   function cue(effect,after,index,presentation){
    if(!after.theatre)return;const arena=after.theatre,badge=after.passives.get(effect.source),compact=arena.height<300,delay=(presentation?.leadMs||0)+index*(presentation?.passiveGapMs||(compact?timings.passive:90));
    const el=doc.createElement('div');el.className='card-motion-passive motif-'+effect.motif;el.dataset.passiveSource=effect.source;el.dataset.effectDetail=effect.detail;
-   const icon=doc.createElement('img');icon.src=root.DCIconAssets?.resolve(effect.icon.replace(/^assets\//,''),root.DC_ASSETS)||effect.icon;icon.alt='';icon.width=44;icon.height=44;
+   const icon=doc.createElement('img'),iconName=effect.icon.replace(/^assets\//,'');if(root.STMHosted?.manager){icon.dataset.stmAsset='assets/'+(root.DCIconAssets?.aliases[iconName]||iconName);root.STMHosted.imageElement(icon).catch(()=>{});}else icon.src=root.DCIconAssets?.resolve(iconName,root.DC_ASSETS)||effect.icon;icon.alt='';icon.width=44;icon.height=44;
    const copy=doc.createElement('span'),name=doc.createElement('strong'),detail=doc.createElement('b');name.textContent=effect.title;detail.textContent=effect.detail;copy.append(name,detail);el.append(icon,copy);
    const left=Math.min(root.innerWidth-240,Math.max(12,(badge?.rect?.x||arena.x)+52)),top=Math.min(root.innerHeight-80,arena.y+Math.max(60,arena.height*.28)+(compact?0:index*71));
    el.style.left=Math.max(8,left)+'px';el.style.top=Math.max(8,top)+'px';host().append(el);

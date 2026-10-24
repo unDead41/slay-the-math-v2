@@ -1,0 +1,32 @@
+AssertionError [ERR_ASSERTION]: Combat poses, passive cues and Artifact HUD must avoid raw asset requests
++ actual - expected
+
++ [
++   '/assets/stm_icon_status_strength_v1.webp',
++   '/assets/stm_icon_status_agility_v1.webp',
++   '/assets/stm_icon_status_defense_v1.webp',
++   '/assets/stm_icon_status_block_v2.webp',
++   '/assets/stm_icon_status_weak_v1.webp',
++   '/assets/stm_icon_status_vulnerable_v1.webp',
++   '/assets/stm_icon_status_thorns_v1.webp',
++   '/assets/stm_icon_status_next_draw_v1.webp',
++   '/assets/stm_icon_status_next_block_v2.webp',
++   '/assets/stm_icon_status_retain_block_v2.webp',
++   '/assets/stm_icon_ui_heart_v1.webp',
++   '/assets/stm_icon_ui_bolt_v1.webp',
++   '/assets/stm_icon_ui_focus_v1.webp',
++   '/assets/stm_icon_ui_predict_v1.webp',
++   '/assets/stm_icon_ui_hand_v1.webp'
++ ]
+- []
+
+    at /workspace/scratch/0829a1232d36/game/tests/dynamic-verified-browser.cjs:12:9
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

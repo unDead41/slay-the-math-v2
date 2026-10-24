@@ -6,16 +6,26 @@
  function install(doc){
   if(!doc||installed.has(doc))return installed.get(doc);
   const records=new WeakMap(),win=doc.defaultView;
-  function watch(im){if(!im.matches?.(selector))return;const src=im.getAttribute('src');if(!src)return;let r=records.get(im);if(r?.fallback===src)return;if(!r||r.source!==src){r={source:src};records.set(im,r);delete im.dataset.iconFallback;im.dataset.iconSource=src;}im.dataset.iconState=im.complete&&im.naturalWidth?'ready':'pending';im.decoding='async';im.fetchPriority='high';}
+  function watch(im){if(!im.matches?.(selector))return;const src=im.getAttribute('src');if(!src)return;let r=records.get(im);if(r?.fallback===src)return;if(!r||r.source!==src){r={source:src};records.set(im,r);delete im.dataset.iconFallback;im.dataset.iconSource=src;}im.dataset.iconState=im.dataset.stmImageState==='pending'?'pending':im.complete&&im.naturalWidth?'ready':'pending';im.decoding='async';im.fetchPriority='high';}
   function scan(node){if(node.nodeType!==1&&node.nodeType!==9)return;watch(node);for(const im of node.querySelectorAll(selector))watch(im);}
   function failed(event){const im=event.target;if(!im.matches?.(selector))return;watch(im);const r=records.get(im);if(!r||r.fallback)return;const key=im.dataset.statusIcon||im.dataset.icon||'asset';r.fallback=fallback(key);im.dataset.iconState='fallback';im.dataset.iconFallback='true';im.src=r.fallback;}
-  function loaded(event){const im=event.target;if(im.matches?.(selector))im.dataset.iconState=im.dataset.iconFallback?'fallback':'ready';}
+  function loaded(event){const im=event.target;if(im.matches?.(selector))im.dataset.iconState=im.dataset.iconFallback?'fallback':im.dataset.stmImageState==='pending'?'pending':'ready';}
   doc.addEventListener('error',failed,true);doc.addEventListener('load',loaded,true);scan(doc);
   const observer=new win.MutationObserver(changes=>{for(const c of changes)if(c.type==='attributes')watch(c.target);else for(const n of c.addedNodes)scan(n);});observer.observe(doc.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src']});
-  const api={scan:()=>scan(doc),destroy(){observer.disconnect();doc.removeEventListener('error',failed,true);doc.removeEventListener('load',loaded,true);installed.delete(doc);}};installed.set(doc,api);return api;
+  const api={scan:()=>scan(doc),refreshImage:watch,destroy(){observer.disconnect();doc.removeEventListener('error',failed,true);doc.removeEventListener('load',loaded,true);installed.delete(doc);}};installed.set(doc,api);return api;
  }
  function criticalAssets(registry=root.DCIconAssets){return [...new Set([...Object.values(registry?.status||{}),...['heart','bolt','focus','predict','hand'].map(k=>registry?.ui?.[k]).filter(Boolean).map(p=>p.startsWith('assets/')?p:'assets/'+p)])];}
  const warmed=new Map();
- function warm(){if(!root.Image)return Promise.resolve([]);return Promise.allSettled(criticalAssets().map(path=>{const src=root.DCIconAssets?.resolve(path.replace(/^assets\//,''),root.DC_ASSETS)||path;if(!warmed.has(src))warmed.set(src,new Promise(resolve=>{const im=new root.Image();im.decoding='async';im.fetchPriority='high';im.onload=()=>resolve({src,loaded:true});im.onerror=()=>resolve({src,loaded:false});im.src=src;}));return warmed.get(src);}));}
+ function warm(){
+  if(!root.Image)return Promise.resolve([]);
+  return Promise.allSettled(criticalAssets().map(path=>{
+   const src=root.DCIconAssets?.resolve(path.replace(/^assets\//,''),root.DC_ASSETS)||path;
+   if(!warmed.has(src))warmed.set(src,root.STMHosted?.manager
+    ?root.STMHosted.prepareImage(path,{priority:60}).then(url=>({src:url,loaded:true}),()=>({src,loaded:false}))
+    :new Promise(resolve=>{const im=new root.Image();im.decoding='async';im.fetchPriority='high';im.onload=()=>resolve({src,loaded:true});im.onerror=()=>resolve({src,loaded:false});im.src=src;}));
+   return warmed.get(src);
+  }));
+ }
+
  const api={install,fallback,criticalAssets,warm};if(typeof module!=='undefined'&&module.exports)module.exports=api;else{root.DCIconReadiness=api;install(root.document);}
 })(typeof window!=='undefined'?window:globalThis);

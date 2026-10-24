@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## Game 2.41.0 — hosted resources and runtime optimization on main
+
+Integrate the completed resource/optimization branch with main2.40.0. Preserve current cards/status/education/Dev owners. Add pre-entry180s recovery, staged verified resources, native input guard, persistent combat canvases,32MiB session bytes and96MiB decoded actor retention. Coordinate optional icon fallbacks and all Tutorial images with the same verified transport. [Main release and audit](../RUNTIME_OPTIMIZATION_MAIN_2_41_0.md).
+
 ## Game2.40.0 — Three-card tuning and corrected AI observation on main
 
 Integrate the reviewed card follow-up with2.39.0: Last Page2+1 empty-Hand, Recall0 Energy +Exhaust, ordinary Mana Barrier7X; preserve old ordinary rules/choices/offers and Master candidate.5 isolation. Actual AI choice commits are observed separately from hypothetical rankings. Keep all current education reports/clearer hints, icon explanations/readiness and Settings-only Dev controls; regenerate package-derived release/cache/launchers. [Main scope, audit and fresh verification](../CARD_TUNING_MAIN_2_40_0.md).
@@ -7,6 +11,18 @@ Integrate the reviewed card follow-up with2.39.0: Last Page2+1 empty-Hand, Recal
 ## Game2.39.0 — Six status-icon improvements on main
 
 After education2.38.0, integrate icon81533b3: run-aware units/duration, complete ten-status BM/English explanations, Normal/Large preference, three distinct Block-family silhouettes, inline comparison summaries, and named pending/local SVG fallback controls with a bounded priority manifest. Preserve education reports/Google triage, reviewed hints, Dev Settings, numerical gameplay/saves and original artwork. [Fresh main integration evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+## Candidate 2.39.0 — runtime optimization, feature branch only
+
+- Keep actor canvases/controllers within one encounter and reconcile changed combat UI; preserve disabled-control focus recovery.
+- Reuse verified immutable resources within a32MiB session budget and retain decoded textures under a96MiB estimated pixel budget with live-actor ownership.
+- Integrate maincb1bbcf (education reports/hints and Settings-only Developer controls). Engine/RNG/save/artwork owners stay identical to that main. No main merge or Pages deployment.
+- [Scope and measured verification](../RUNTIME_OPTIMIZATION_2_39_0.md), [branch audit](../audits/hosted-readiness/LATEST.md).
+
+## Candidate 2.38.0 — hosted readiness, feature branch only
+
+- Add SOR 24, early preparation/progress and three-minute recovery, verified priority/background downloads, lazy Practice, scene/actor warmup and native input guards.
+- Preserve main 2.37.0 gameplay, sources and saves; no main merge or hosted deployment is authorized.
 
 ## Game2.38.0 — Education reports and clearer hints on main
 

@@ -1,5 +1,7 @@
 # SOR Combat/Card Synergy — experimental handoff
 
+Current recheck: [24 October2026 handoff](recheck-2026-10-24/HANDOFF_MASTER.md) and [all40 current before/after states](recheck-2026-10-24/40_CARDS.md). The original tables below retain their v1.2 experimental source and must not be treated as current candidate.4 measurements.
+
 23 October 2026 (Malaysia). Branch balance/combat. Base 2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7. Status: candidate for Master; no main merge/push, no claim of student balance.
 
 ## Implementation and ownership

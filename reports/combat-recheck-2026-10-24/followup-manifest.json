@@ -1,0 +1,5464 @@
+{
+  "schemaVersion": 1,
+  "cohort": "followup",
+  "main": "50d3af423cdc2240e949f4ddf29e023865304b65",
+  "oldRemoteCombat": "1bf66320ed275755d25734ad907395443f71176f",
+  "sourceHash": "8a6fa60e76aa02c2fcb4b046e19446869657709d741aa96fe5d84dfaf0a76003",
+  "sourceFile": "sources-8a6fa60e76aa02c2fcb4b046e19446869657709d741aa96fe5d84dfaf0a76003.json.gz",
+  "provenance": [
+    {
+      "family": "ordinary",
+      "difficulty": "ordinary-challenge",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "card-effects-1",
+      "engineHash": "d0240deec8aadbc86e104d00c4f06dba514f48a449378a0d2bfe158c2225f7ca",
+      "cardHash": "b3bb88f8ac6673e04e478e018b8e99b73edecc8aff622744a8e5417cd782a9ea",
+      "artifactHash": "b09dc4efc258416b95c5978865d5c28ace321d3b93e039d775efd26fbd926641",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "easy",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "medium",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "hard",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    }
+  ],
+  "node": "v24.19.0",
+  "tasks": [
+    {
+      "index": 0,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025200,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 1,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025201,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 2,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025202,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 3,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025203,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 4,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025204,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 5,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025205,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 6,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025206,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 7,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025207,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 8,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025208,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 9,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025209,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 10,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025210,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 11,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025211,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 12,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025212,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 13,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025213,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 14,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025214,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 15,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025215,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 16,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025216,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 17,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025217,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 18,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025218,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 19,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025219,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 20,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025220,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 21,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025221,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 22,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025222,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 23,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025223,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 24,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025224,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 25,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025225,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 26,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025226,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 27,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025227,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 28,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025228,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 29,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025229,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 30,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025230,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 31,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025231,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 32,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025232,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 33,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025233,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 34,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025234,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 35,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025235,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 36,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025236,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 37,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025237,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 38,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025238,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 39,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025239,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 40,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025240,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 41,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025241,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 42,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025242,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 43,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025243,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 44,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025244,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 45,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025245,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 46,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025246,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 47,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025247,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 48,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025248,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 49,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025249,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 50,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025200,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 51,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025201,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 52,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025202,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 53,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025203,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 54,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025204,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 55,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025205,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 56,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025206,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 57,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025207,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 58,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025208,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 59,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025209,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 60,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025210,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 61,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025211,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 62,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025212,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 63,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025213,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 64,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025214,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 65,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025215,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 66,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025216,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 67,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025217,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 68,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025218,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 69,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025219,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 70,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025220,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 71,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025221,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 72,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025222,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 73,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025223,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 74,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025224,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 75,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025225,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 76,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025226,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 77,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025227,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 78,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025228,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 79,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025229,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 80,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025230,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 81,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025231,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 82,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025232,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 83,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025233,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 84,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025234,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 85,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025235,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 86,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025236,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 87,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025237,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 88,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025238,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 89,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025239,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 90,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025240,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 91,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025241,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 92,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025242,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 93,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025243,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 94,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025244,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 95,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025245,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 96,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025246,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 97,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025247,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 98,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025248,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 99,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.flash_ward",
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025249,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 100,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025200,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 101,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025201,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 102,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025202,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 103,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025203,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 104,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025204,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 105,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025205,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 106,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025206,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 107,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025207,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 108,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025208,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 109,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025209,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 110,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025210,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 111,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025211,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 112,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025212,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 113,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025213,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 114,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025214,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 115,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025215,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 116,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025216,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 117,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025217,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 118,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025218,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 119,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025219,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 120,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025220,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 121,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025221,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 122,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025222,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 123,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025223,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 124,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025224,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 125,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025225,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 126,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025226,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 127,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025227,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 128,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025228,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 129,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025229,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 130,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025230,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 131,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025231,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 132,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025232,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 133,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025233,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 134,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025234,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 135,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025235,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 136,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025236,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 137,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025237,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 138,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025238,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 139,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025239,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 140,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025240,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 141,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025241,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 142,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025242,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 143,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025243,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 144,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025244,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 145,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025245,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 146,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025246,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 147,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025247,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 148,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025248,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 149,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025249,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 150,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025200,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 151,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025201,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 152,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025202,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 153,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025203,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 154,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025204,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 155,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025205,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 156,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025206,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 157,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025207,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 158,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025208,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 159,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025209,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 160,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025210,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 161,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025211,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 162,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025212,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 163,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025213,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 164,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025214,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 165,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025215,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 166,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025216,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 167,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025217,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 168,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025218,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 169,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025219,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 170,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025220,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 171,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025221,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 172,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025222,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 173,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025223,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 174,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025224,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 175,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025225,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 176,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025226,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 177,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025227,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 178,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025228,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 179,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025229,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 180,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025230,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 181,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025231,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 182,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025232,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 183,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025233,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 184,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025234,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 185,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025235,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 186,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025236,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 187,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025237,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 188,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025238,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 189,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025239,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 190,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025240,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 191,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025241,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 192,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025242,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 193,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025243,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 194,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025244,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 195,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025245,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 196,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025246,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 197,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025247,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 198,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025248,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 199,
+      "cohort": "followup",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.clear_choice",
+        "stm.passive.blazing_spirit"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025249,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 200,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025200,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 201,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025201,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 202,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025202,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 203,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025203,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 204,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025204,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 205,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025205,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 206,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025206,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 207,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025207,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 208,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025208,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 209,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025209,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 210,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025210,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 211,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025211,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 212,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025212,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 213,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025213,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 214,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025214,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 215,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025215,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 216,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025216,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 217,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025217,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 218,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025218,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 219,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025219,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 220,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025220,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 221,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025221,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 222,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025222,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 223,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025223,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 224,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025224,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 225,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025225,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 226,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025226,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 227,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025227,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 228,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025228,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 229,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025229,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 230,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025230,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 231,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025231,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 232,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025232,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 233,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025233,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 234,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025234,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 235,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025235,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 236,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025236,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 237,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025237,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 238,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025238,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 239,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025239,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 240,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025240,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 241,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025241,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 242,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025242,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 243,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025243,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 244,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025244,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 245,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025245,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 246,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025246,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 247,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025247,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 248,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025248,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 249,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1
+      ],
+      "seed": 261025249,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 250,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025200,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 251,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025201,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 252,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025202,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 253,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025203,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 254,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025204,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 255,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025205,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 256,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025206,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 257,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025207,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 258,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025208,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 259,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025209,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 260,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025210,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 261,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025211,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 262,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025212,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 263,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025213,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 264,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025214,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 265,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025215,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 266,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025216,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 267,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025217,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 268,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025218,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 269,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025219,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 270,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025220,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 271,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025221,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 272,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025222,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 273,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025223,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 274,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025224,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 275,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025225,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 276,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025226,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 277,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025227,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 278,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025228,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 279,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025229,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 280,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025230,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 281,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025231,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 282,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025232,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 283,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025233,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 284,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025234,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 285,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025235,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 286,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025236,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 287,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025237,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 288,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025238,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 289,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025239,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 290,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025240,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 291,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025241,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 292,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025242,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 293,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025243,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 294,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025244,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 295,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025245,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 296,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025246,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 297,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025247,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 298,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025248,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    },
+    {
+      "index": 299,
+      "cohort": "followup",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        1,
+        0
+      ],
+      "seed": 261025249,
+      "selection": "Adaptive pilot selection; 50 disjoint new seeds, selection bias retained"
+    }
+  ],
+  "policy": "recheck-visible-phase-greedy-1; actual engine plans/damage; forced legal physical-slot orders only where declared",
+  "utility": "100*win+20*terminalHP/maxHP-min(10,turns/2); null when censored/invalid; support units separate",
+  "generated": "2026-10-24T06:35:52.131Z",
+  "pupilWinRatesMeasured": false
+}

@@ -559,3 +559,8 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - Add visible status names and exact counters, immediate-debuff priority, queued-state cues and a fighter-specific All statuses comparison/detail flow with keyboard/touch/focus support.
 - Wire Hand, correct View Deck and soundtrack location symbols, mark missing semantic keys for QA, and label Block-only/no-attack previews correctly.
 - Preserve all original images and excluded card/artifact artwork; add focused UI and real-browser regression checks. Publish only `codex/icon-clarity-audit`, leaving main untouched by this work. [Audit](../ICON_CLARITY_AUDIT_2026_10_24.md).
+
+
+## 24 October 2026 — Combat/Card Synergy current recheck
+
+Add current ordinary/Master candidate.4 internal evidence and Master handoff on balance/combat:40-card four-state before/after probes,820 rule-screen pairs,30 Lite+9 risk pairs,8 forward/reverse triads,Focus opportunity/50-seed follow-ups,12 enemies,real campaigns,31 artifact scopes and restore/exploit contracts. Preserve production values/assets/questions and historical reports; do not infer pupil targets or a universal power ranking. [Handoff](../balance/combat/recheck-2026-10-24/HANDOFF_MASTER.md).

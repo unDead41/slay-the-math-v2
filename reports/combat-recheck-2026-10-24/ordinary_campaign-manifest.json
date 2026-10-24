@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "cohort": "ordinary_campaign",
+  "main": "50d3af423cdc2240e949f4ddf29e023865304b65",
+  "oldRemoteCombat": "1bf66320ed275755d25734ad907395443f71176f",
+  "sourceHash": "0a8099eb052d78dbf18c269b7c7b351ebace2a4ac3a9da72313884c9e44aab2b",
+  "sourceFile": "sources-0a8099eb052d78dbf18c269b7c7b351ebace2a4ac3a9da72313884c9e44aab2b.json.gz",
+  "provenance": [
+    {
+      "family": "ordinary",
+      "difficulty": "ordinary-challenge",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "card-effects-1",
+      "engineHash": "d0240deec8aadbc86e104d00c4f06dba514f48a449378a0d2bfe158c2225f7ca",
+      "cardHash": "b3bb88f8ac6673e04e478e018b8e99b73edecc8aff622744a8e5417cd782a9ea",
+      "artifactHash": "b09dc4efc258416b95c5978865d5c28ace321d3b93e039d775efd26fbd926641",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "easy",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "medium",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "hard",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    }
+  ],
+  "node": "v24.19.0",
+  "tasks": [
+    {
+      "index": 0,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025000
+    },
+    {
+      "index": 1,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025001
+    },
+    {
+      "index": 2,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025002
+    },
+    {
+      "index": 3,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025003
+    },
+    {
+      "index": 4,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025004
+    },
+    {
+      "index": 5,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025005
+    },
+    {
+      "index": 6,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025006
+    },
+    {
+      "index": 7,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025007
+    },
+    {
+      "index": 8,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025008
+    },
+    {
+      "index": 9,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025009
+    },
+    {
+      "index": 10,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025010
+    },
+    {
+      "index": 11,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025011
+    },
+    {
+      "index": 12,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025012
+    },
+    {
+      "index": 13,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025013
+    },
+    {
+      "index": 14,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025014
+    },
+    {
+      "index": 15,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025015
+    },
+    {
+      "index": 16,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025016
+    },
+    {
+      "index": 17,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025017
+    },
+    {
+      "index": 18,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "risk",
+      "seed": 261025018
+    },
+    {
+      "index": 19,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "independent",
+      "routePolicy": "safe",
+      "seed": 261025019
+    },
+    {
+      "index": 20,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025000
+    },
+    {
+      "index": 21,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025001
+    },
+    {
+      "index": 22,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025002
+    },
+    {
+      "index": 23,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025003
+    },
+    {
+      "index": 24,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025004
+    },
+    {
+      "index": 25,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025005
+    },
+    {
+      "index": 26,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025006
+    },
+    {
+      "index": 27,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025007
+    },
+    {
+      "index": 28,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025008
+    },
+    {
+      "index": 29,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025009
+    },
+    {
+      "index": 30,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025010
+    },
+    {
+      "index": 31,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025011
+    },
+    {
+      "index": 32,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025012
+    },
+    {
+      "index": 33,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025013
+    },
+    {
+      "index": 34,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025014
+    },
+    {
+      "index": 35,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025015
+    },
+    {
+      "index": 36,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025016
+    },
+    {
+      "index": 37,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025017
+    },
+    {
+      "index": 38,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "risk",
+      "seed": 261025018
+    },
+    {
+      "index": 39,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "developing",
+      "routePolicy": "safe",
+      "seed": 261025019
+    },
+    {
+      "index": 40,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025000
+    },
+    {
+      "index": 41,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025001
+    },
+    {
+      "index": 42,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025002
+    },
+    {
+      "index": 43,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025003
+    },
+    {
+      "index": 44,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025004
+    },
+    {
+      "index": 45,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025005
+    },
+    {
+      "index": 46,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025006
+    },
+    {
+      "index": 47,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025007
+    },
+    {
+      "index": 48,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025008
+    },
+    {
+      "index": 49,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025009
+    },
+    {
+      "index": 50,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025010
+    },
+    {
+      "index": 51,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025011
+    },
+    {
+      "index": 52,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025012
+    },
+    {
+      "index": 53,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025013
+    },
+    {
+      "index": 54,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025014
+    },
+    {
+      "index": 55,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025015
+    },
+    {
+      "index": 56,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025016
+    },
+    {
+      "index": 57,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025017
+    },
+    {
+      "index": 58,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "risk",
+      "seed": 261025018
+    },
+    {
+      "index": 59,
+      "cohort": "ordinary_campaign",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "predictProfile": "struggling",
+      "routePolicy": "safe",
+      "seed": 261025019
+    }
+  ],
+  "policy": "recheck-visible-phase-greedy-1; actual engine plans/damage; forced legal physical-slot orders only where declared",
+  "utility": "100*win+20*terminalHP/maxHP-min(10,turns/2); null when censored/invalid; support units separate",
+  "generated": "2026-10-24T06:25:27.931Z",
+  "pupilWinRatesMeasured": false
+}

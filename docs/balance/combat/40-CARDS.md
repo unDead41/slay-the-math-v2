@@ -1,5 +1,7 @@
 # 40-card before/after execution-plan values
 
+Current recheck: [24 October2026 handoff](recheck-2026-10-24/HANDOFF_MASTER.md) and [all40 current before/after states](recheck-2026-10-24/40_CARDS.md). The original tables below retain their v1.2 experimental source and must not be treated as current candidate.4 measurements.
+
 Context: Medium, sentinel, full HP, no player stat/artifact; damage values precede mitigation. See audit JSON for exact actions, conditional fields and delayed effects. Passive Focus is not applicable.
 
 | Card | Before Energy | Candidate Energy | Before N/F/U/UF | Candidate N/F/U/UF |

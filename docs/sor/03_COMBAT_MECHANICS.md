@@ -138,3 +138,8 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+
+## Current Combat/Synergy recheck — 24 October 2026
+
+DISAHKAN: Ijamm requests a fresh current-main recheck and publication to balance/combat for Master, excluding main. Runtime50d3af4/game2.36.0 (ordinary card-effects-1; Master candidate.4) is remeasured; all24 loaded production dependencies remain identical at6376a22/game2.37.0, whose other changes are preserved. New internal evidence covers all40 states, complete selected pair/triple factorials, Focus opportunity cost, real campaigns and artifact/restore contracts. No runtime values or CP UI are changed. Historical numbers retain their original profiles. Current owner/report: [Combat recheck handoff](../balance/combat/recheck-2026-10-24/HANDOFF_MASTER.md); [branch audit](../audits/balance-combat/LATEST.md). Pupil90/70/50 remains unmeasured; ordinary Spool scope is a recorded latent discrepancy, not silently fixed.

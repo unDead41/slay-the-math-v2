@@ -1,0 +1,3712 @@
+{
+  "schemaVersion": 1,
+  "cohort": "triads",
+  "main": "50d3af423cdc2240e949f4ddf29e023865304b65",
+  "oldRemoteCombat": "1bf66320ed275755d25734ad907395443f71176f",
+  "sourceHash": "bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14",
+  "sourceFile": "sources-bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14.json.gz",
+  "provenance": [
+    {
+      "family": "ordinary",
+      "difficulty": "ordinary-challenge",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "card-effects-1",
+      "engineHash": "d0240deec8aadbc86e104d00c4f06dba514f48a449378a0d2bfe158c2225f7ca",
+      "cardHash": "b3bb88f8ac6673e04e478e018b8e99b73edecc8aff622744a8e5417cd782a9ea",
+      "artifactHash": "b09dc4efc258416b95c5978865d5c28ace321d3b93e039d775efd26fbd926641",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "easy",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "medium",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "hard",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    }
+  ],
+  "node": "v24.19.0",
+  "tasks": [
+    {
+      "index": 0,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 1,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 2,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 3,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 4,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 5,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 6,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 7,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 8,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 9,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 10,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 11,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 12,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 13,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 14,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 15,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 16,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 17,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 18,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 19,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 20,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 21,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 22,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 23,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 24,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 25,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 26,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 27,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 28,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 29,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 30,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 31,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 32,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 33,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 34,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 35,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 36,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 37,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 38,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 39,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 40,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 41,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 42,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 43,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 44,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 45,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 46,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 47,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 48,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 49,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 50,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 51,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 52,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 53,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 54,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 55,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 56,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 57,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 58,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 59,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 60,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 61,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 62,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 63,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 64,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 65,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 66,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 67,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 68,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 69,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 70,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 71,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 72,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 73,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 74,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 75,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 76,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 77,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 78,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 79,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 80,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 81,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 82,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 83,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 84,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 85,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 86,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 87,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 88,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 89,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 90,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 91,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 92,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 93,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 94,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 95,
+      "cohort": "triads",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 96,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 97,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 98,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 99,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 100,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 101,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 102,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 103,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 104,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 105,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 106,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 107,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 108,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 109,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 110,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 111,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 112,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 113,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 114,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 115,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 116,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 117,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 118,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 119,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 120,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 121,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 122,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 123,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 124,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 125,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 126,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 127,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 128,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 129,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 130,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 131,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 132,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 133,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 134,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 135,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 136,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 137,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 138,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 139,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 140,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 141,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 142,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 143,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 144,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 145,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 146,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 147,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 148,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 149,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.blazing_spirit",
+        "stm.passive.growing_flame",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 150,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 151,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 152,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 153,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 154,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 155,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.swift_step",
+        "stm.passive.battle_rhythm",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 156,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 157,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 158,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 159,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 160,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 161,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.quick_study",
+        "stm.defend.flash_ward",
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 162,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 163,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 164,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 165,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 166,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 167,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.read_ahead",
+        "stm.attack.rune_sweep",
+        "stm.attack.fate_storm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 168,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 169,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 170,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 171,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 172,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 173,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.recall",
+        "stm.defend.flash_ward",
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 174,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 175,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 176,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 177,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 178,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 179,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.grimoire_ward",
+        "stm.passive.clear_mind",
+        "stm.skill.next_chapter"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 180,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 181,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 182,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 183,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 184,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 185,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.ember_core",
+        "stm.passive.last_ember",
+        "stm.defend.tower_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 186,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 187,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 188,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    },
+    {
+      "index": 189,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024300
+    },
+    {
+      "index": 190,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024301
+    },
+    {
+      "index": 191,
+      "cohort": "triads",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.lasting_shield",
+        "stm.defend.hold_the_line",
+        "stm.defend.layered_shield"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seed": 261024302
+    }
+  ],
+  "policy": "recheck-visible-phase-greedy-1; actual engine plans/damage; forced legal physical-slot orders only where declared",
+  "utility": "100*win+20*terminalHP/maxHP-min(10,turns/2); null when censored/invalid; support units separate",
+  "generated": "2026-10-24T06:21:31.115Z",
+  "pupilWinRatesMeasured": false
+}

@@ -1,0 +1,642 @@
+{
+  "status": "PASS",
+  "runtimeMain": "50d3af423cdc2240e949f4ddf29e023865304b65",
+  "publicationBase": "6376a222169815af582cf55aa4794f3c809a3515",
+  "historicalRef": "c54ce92fdd8e43544b03a16ed995431da6fdb8f0",
+  "primaryCoverage": [
+    {
+      "cohort": "icp",
+      "tasks": 3200,
+      "encounters": 6400,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14",
+      "workerCounterEncounters": 6400,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "focus",
+      "tasks": 1200,
+      "encounters": 1200,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "0fbb59824ab8e4b188a89ad27e531f8afeceda1d11c2ebeef59b4a9ce19a51ec",
+      "workerCounterEncounters": 1200,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "pairs",
+      "tasks": 1872,
+      "encounters": 7488,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14",
+      "workerCounterEncounters": 7488,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "triads",
+      "tasks": 192,
+      "encounters": 1536,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14",
+      "workerCounterEncounters": 1536,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "triads_reverse",
+      "tasks": 192,
+      "encounters": 1536,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "8a6fa60e76aa02c2fcb4b046e19446869657709d741aa96fe5d84dfaf0a76003",
+      "workerCounterEncounters": 1536,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "evolved",
+      "tasks": 1080,
+      "encounters": 1080,
+      "invalid": 0,
+      "censored": 92,
+      "mismatches": 0,
+      "sourceHash": "d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e",
+      "workerCounterEncounters": 1080,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "roster",
+      "tasks": 864,
+      "encounters": 864,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e",
+      "workerCounterEncounters": 864,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "clusters",
+      "tasks": 200,
+      "encounters": 400,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e",
+      "workerCounterEncounters": 400,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "reload",
+      "tasks": 200,
+      "encounters": 400,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e",
+      "workerCounterEncounters": 400,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "revision",
+      "tasks": 288,
+      "encounters": 1152,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e",
+      "workerCounterEncounters": 1152,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "campaign",
+      "tasks": 228,
+      "encounters": 2645,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "0a8099eb052d78dbf18c269b7c7b351ebace2a4ac3a9da72313884c9e44aab2b",
+      "workerCounterEncounters": 2644,
+      "extraMysteryCombats": 1
+    },
+    {
+      "cohort": "ordinary_campaign",
+      "tasks": 60,
+      "encounters": 699,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "0a8099eb052d78dbf18c269b7c7b351ebace2a4ac3a9da72313884c9e44aab2b",
+      "workerCounterEncounters": 699,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "followup",
+      "tasks": 300,
+      "encounters": 1200,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "8a6fa60e76aa02c2fcb4b046e19446869657709d741aa96fe5d84dfaf0a76003",
+      "workerCounterEncounters": 1200,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "focus_followup",
+      "tasks": 150,
+      "encounters": 450,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "5bfc759de4769db70ab762826166b2b1d4c7f423f2155f0c439bb44b609918e4",
+      "workerCounterEncounters": 450,
+      "extraMysteryCombats": 0
+    },
+    {
+      "cohort": "artifact_gate",
+      "tasks": 80,
+      "encounters": 1006,
+      "invalid": 0,
+      "censored": 0,
+      "mismatches": 0,
+      "sourceHash": "75a11e7abbb10e00c2a936bec377a88896b21a4416ed421bc95adbcef8328743",
+      "workerCounterEncounters": 1006,
+      "extraMysteryCombats": 0
+    }
+  ],
+  "primaryTotals": {
+    "tasks": 10106,
+    "encounters": 28056,
+    "invalid": 0,
+    "censored": 92,
+    "mismatches": 0
+  },
+  "exactSerializedReplays": [
+    {
+      "cohort": "icp",
+      "index": 0,
+      "seed": 261024100,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "icp",
+      "index": 3199,
+      "seed": 261024104,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "focus",
+      "index": 0,
+      "seed": 261024100,
+      "status": "WIN"
+    },
+    {
+      "cohort": "focus",
+      "index": 1199,
+      "seed": 261024104,
+      "status": "LOSS"
+    },
+    {
+      "cohort": "pairs",
+      "index": 0,
+      "seed": 261024200,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "pairs",
+      "index": 1871,
+      "seed": 261024202,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "triads",
+      "index": 0,
+      "seed": 261024300,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "triads",
+      "index": 191,
+      "seed": 261024302,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "triads_reverse",
+      "index": 0,
+      "seed": 261024300,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "triads_reverse",
+      "index": 191,
+      "seed": 261024302,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "evolved",
+      "index": 0,
+      "seed": 261024400,
+      "status": "WIN"
+    },
+    {
+      "cohort": "evolved",
+      "index": 1079,
+      "seed": 261024402,
+      "status": "LOSS"
+    },
+    {
+      "cohort": "roster",
+      "index": 0,
+      "seed": 261024500,
+      "status": "WIN"
+    },
+    {
+      "cohort": "roster",
+      "index": 863,
+      "seed": 261024502,
+      "status": "WIN"
+    },
+    {
+      "cohort": "clusters",
+      "index": 0,
+      "seed": 261024600,
+      "status": "PAIRED"
+    },
+    {
+      "cohort": "clusters",
+      "index": 199,
+      "seed": 261024604,
+      "status": "PAIRED"
+    },
+    {
+      "cohort": "reload",
+      "index": 0,
+      "seed": 261024700,
+      "status": "MATCH"
+    },
+    {
+      "cohort": "reload",
+      "index": 199,
+      "seed": 261024704,
+      "status": "MATCH"
+    },
+    {
+      "cohort": "revision",
+      "index": 0,
+      "seed": 261024800,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "revision",
+      "index": 287,
+      "seed": 261024802,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "campaign",
+      "index": 0,
+      "seed": 261024900,
+      "status": "VICTORY"
+    },
+    {
+      "cohort": "campaign",
+      "index": 180,
+      "seed": 261024900,
+      "status": "DEFEAT"
+    },
+    {
+      "cohort": "campaign",
+      "index": 226,
+      "seed": 261024901,
+      "status": "DEFEAT"
+    },
+    {
+      "cohort": "ordinary_campaign",
+      "index": 0,
+      "seed": 261025000,
+      "status": "LOSS"
+    },
+    {
+      "cohort": "ordinary_campaign",
+      "index": 59,
+      "seed": 261025019,
+      "status": "LOSS"
+    },
+    {
+      "cohort": "followup",
+      "index": 0,
+      "seed": 261025200,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "followup",
+      "index": 299,
+      "seed": 261025249,
+      "status": "MEASURED"
+    },
+    {
+      "cohort": "focus_followup",
+      "index": 0,
+      "seed": 261025300,
+      "status": "PAIRED"
+    },
+    {
+      "cohort": "focus_followup",
+      "index": 149,
+      "seed": 261025349,
+      "status": "PAIRED"
+    },
+    {
+      "cohort": "artifact_gate",
+      "index": 0,
+      "seed": 261025400,
+      "status": "VICTORY"
+    },
+    {
+      "cohort": "artifact_gate",
+      "index": 79,
+      "seed": 261025404,
+      "status": "VICTORY"
+    }
+  ],
+  "sourceSnapshotsVerified": 16,
+  "productionDependencyParity": [
+    {
+      "path": "dist/balance.js",
+      "sha256": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f"
+    },
+    {
+      "path": "dist/balance-data.js",
+      "sha256": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b"
+    },
+    {
+      "path": "dist/engine.js",
+      "sha256": "51c9b3ba468a764340a5b04dbda0a5e3d597a9afb7878c62b32b9fae45c0fc42"
+    },
+    {
+      "path": "dist/config.js",
+      "sha256": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74"
+    },
+    {
+      "path": "dist/card-kit.js",
+      "sha256": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402"
+    },
+    {
+      "path": "dist/card-data.js",
+      "sha256": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148"
+    },
+    {
+      "path": "dist/math.js",
+      "sha256": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9"
+    },
+    {
+      "path": "dist/map.js",
+      "sha256": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09"
+    },
+    {
+      "path": "dist/map-rng.js",
+      "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c"
+    },
+    {
+      "path": "dist/artifacts.js",
+      "sha256": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d"
+    },
+    {
+      "path": "dist/artifact-data.js",
+      "sha256": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da"
+    },
+    {
+      "path": "dist/rich-text.js",
+      "sha256": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8"
+    },
+    {
+      "path": "dist/rich-text-data.js",
+      "sha256": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad"
+    },
+    {
+      "path": "dist/mechanics.js",
+      "sha256": "861a33ae7f167c2984b7dfbb3c80b4c1994378dd5cfbdefba3801957eeedb697"
+    },
+    {
+      "path": "dist/economy.js",
+      "sha256": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d"
+    },
+    {
+      "path": "dist/economy-data.js",
+      "sha256": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102"
+    },
+    {
+      "path": "dist/education.js",
+      "sha256": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed"
+    },
+    {
+      "path": "dist/question-data.js",
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+    },
+    {
+      "path": "dist/mystery.js",
+      "sha256": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec"
+    },
+    {
+      "path": "dist/mystery-data.js",
+      "sha256": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b"
+    },
+    {
+      "path": "dist/card-combat.js",
+      "sha256": "9f088cbf5777fa9c474b378097dbb2e0d549f569b56b508d803fd1329f0aed57"
+    },
+    {
+      "path": "dist/combat-log.js",
+      "sha256": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9"
+    },
+    {
+      "path": "dist/card-flow.js",
+      "sha256": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb"
+    },
+    {
+      "path": "dist/combat-predict.js",
+      "sha256": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a"
+    }
+  ],
+  "rawParts": {
+    "icp-0.jsonl.gz": {
+      "sha256": "de90f8e80b32ddefe1317c7ec5671dcf171905cc30d53d3ee92e866bdf6d2af5",
+      "cases": 1067
+    },
+    "icp-1.jsonl.gz": {
+      "sha256": "bb14241c39d1f25e1087e07039db5cc00857f2af1659e6053de41beaa39f1716",
+      "cases": 1067
+    },
+    "icp-2.jsonl.gz": {
+      "sha256": "28a3daebbe06470abc33f6d128f7597afe588bc225872afaa68326f0b8178180",
+      "cases": 1066
+    },
+    "focus-reviewed/focus-0.jsonl.gz": {
+      "sha256": "e7f3324181a88241c3cb0ad8a86fe282d3eff4311d8e24a645a19d3f92142699",
+      "cases": 600
+    },
+    "focus-reviewed/focus-1.jsonl.gz": {
+      "sha256": "df23641c720115114ddb05448e7a409d1318c0a914a0e3149e991184d7610ff9",
+      "cases": 600
+    },
+    "pairs-0.jsonl.gz": {
+      "sha256": "b9244c69308677a7100741ea96a79ab9371f93d9c52302bc346378492eff86d0",
+      "cases": 624
+    },
+    "pairs-1.jsonl.gz": {
+      "sha256": "f239d0799f1c2895035c8b72f8dd0fc91afe3c7d2552098ac760d7ad2f277a6d",
+      "cases": 624
+    },
+    "pairs-2.jsonl.gz": {
+      "sha256": "d8e2790ac531717b6a8ed64cd29915c4e2f69991d46b25989b8b00a3b7ebc773",
+      "cases": 624
+    },
+    "triads-0.jsonl.gz": {
+      "sha256": "7a4cbedb5b94581613fab78d419e0c01916fb815087a47bcf69599d9cdbbf6fc",
+      "cases": 64
+    },
+    "triads-1.jsonl.gz": {
+      "sha256": "af70f7888af77b6e93a0a1b551cc7d5a87d2785b77b25588db149fe37eda0bec",
+      "cases": 64
+    },
+    "triads-2.jsonl.gz": {
+      "sha256": "30aaf5504310717daa73eb687f6ad784b4821cb7dccfa812b235c1636e25dca2",
+      "cases": 64
+    },
+    "triads_reverse-0.jsonl.gz": {
+      "sha256": "70668bd3ed04ce0d89692c12f475a46fee7346c1a9f7ddf12a5a9e819135a813",
+      "cases": 96
+    },
+    "triads_reverse-1.jsonl.gz": {
+      "sha256": "baf2c17c6aec9f548b3ee912a987a17df056b5061a49a7158c7db1b4ca12f69a",
+      "cases": 96
+    },
+    "evolved-0.jsonl.gz": {
+      "sha256": "080dfce42764055d9ded6b72a8acc9eacb1c0c33cf8f5c5e2842217e1599ff2b",
+      "cases": 360
+    },
+    "evolved-1.jsonl.gz": {
+      "sha256": "aea92f21e91c539f68cd18e97e3f711123cb505b6e3b5c303491c3612b071ae8",
+      "cases": 360
+    },
+    "evolved-2.jsonl.gz": {
+      "sha256": "8473dfbac24d110dd7ed53f5c7ea655d033d84024fff2e75e597833556347508",
+      "cases": 360
+    },
+    "roster-0.jsonl.gz": {
+      "sha256": "5fa2879da06f4b05cf5422245e6b276a0df9c0b2ba159ea55725f4c04bdabd82",
+      "cases": 288
+    },
+    "roster-1.jsonl.gz": {
+      "sha256": "1e84cffbd2f63fe9406906c6dbb1c0faf4e1a0575d154a1a496e7a95d6d904b5",
+      "cases": 288
+    },
+    "roster-2.jsonl.gz": {
+      "sha256": "4090009144b3bad960fbda27812bc507b270e360b60af811b6edf35d381a9c4c",
+      "cases": 288
+    },
+    "clusters-0.jsonl.gz": {
+      "sha256": "ccb3dad2eb59f3e5a48e82f94f98effb3325be19adedfeb09e4344667cadedc4",
+      "cases": 67
+    },
+    "clusters-1.jsonl.gz": {
+      "sha256": "ddcccf92719db16505e6f77784224acb1047f91f0523407336b13c2ebe628be5",
+      "cases": 67
+    },
+    "clusters-2.jsonl.gz": {
+      "sha256": "cc86805d6ffd17f8c2e569d57d96aea90b862adc1926041d582aca48aa92c10c",
+      "cases": 66
+    },
+    "reload-0.jsonl.gz": {
+      "sha256": "0a425b8d1979c3cfce3cffad2f19e4e75bf72ecda82d8018c9de61fb9aaa743e",
+      "cases": 67
+    },
+    "reload-1.jsonl.gz": {
+      "sha256": "bfb86c63abaff5d558f966dff0fa1acadb262f479528b527b7c2c57476a5fffb",
+      "cases": 67
+    },
+    "reload-2.jsonl.gz": {
+      "sha256": "46acd6e6a220c6a96fb3ab80f053b220be20b83d3a791ff8d0fe7f3cb0a9190f",
+      "cases": 66
+    },
+    "revision-0.jsonl.gz": {
+      "sha256": "637e41563e97cb23e1f407b98ec05131fa2ce94309538afb78ce43c38db1e021",
+      "cases": 96
+    },
+    "revision-1.jsonl.gz": {
+      "sha256": "9c55971853dd9ada87e9c626614ceda0edaa3779838a6fdec4dc952cef5f20b9",
+      "cases": 96
+    },
+    "revision-2.jsonl.gz": {
+      "sha256": "140a8a1f07300015b8e15e33b27d1c680ef97e5a8b3bd91696916df6e0156c00",
+      "cases": 96
+    },
+    "campaign-0.jsonl.gz": {
+      "sha256": "58a8e385d656e8a69894f1ce202413b9f322e8c16cb92391712f50e8a8c2a7dc",
+      "cases": 76
+    },
+    "campaign-1.jsonl.gz": {
+      "sha256": "f33319847a72a1df912229659d2f5e918fa9dad41e470cf9e9000ab5e8f5b929",
+      "cases": 76
+    },
+    "campaign-2.jsonl.gz": {
+      "sha256": "986875dd8fae7ee4264f5855ea6daec311ce7241fdeec0df184fb7a9cf498018",
+      "cases": 76
+    },
+    "ordinary_campaign-0.jsonl.gz": {
+      "sha256": "1c808de7a2a43d59fd1c62cae55fcece6b8fc075d6b37ea59d3facc5384b74bf",
+      "cases": 20
+    },
+    "ordinary_campaign-1.jsonl.gz": {
+      "sha256": "4b633b7e9e1cecfd9d79cdbc5dca1cc70c1d4ef9b6c72a6c06eca5bba2c143d5",
+      "cases": 20
+    },
+    "ordinary_campaign-2.jsonl.gz": {
+      "sha256": "367ffec5913ee42bb260f39cdd58ead665016f0c2bad4604549fa41587cd7549",
+      "cases": 20
+    },
+    "followup-0.jsonl.gz": {
+      "sha256": "a4fe1e40378f7a387d2641be8691d9826470a85049dc288230ca5ed3f862de97",
+      "cases": 150
+    },
+    "followup-1.jsonl.gz": {
+      "sha256": "818603d1e5072b4f352925951bd2ff2cb5b59f6d75205ef0a3efd03adc05a9ff",
+      "cases": 150
+    },
+    "focus_followup-0.jsonl.gz": {
+      "sha256": "5d87cbaf2564cd6eaa9af0f367349b79c0ef5c1b25756e3da1a3a2e3c335b23e",
+      "cases": 75
+    },
+    "focus_followup-1.jsonl.gz": {
+      "sha256": "28b8ed430f3fab78fe8092d157ab446037e5e1dcdfafec37085b98572d8ba842",
+      "cases": 75
+    },
+    "artifact_gate-0.jsonl.gz": {
+      "sha256": "cb012ca81ae17ceabbfa1ef122eb2f0ab3532c69f2927f17137432d729c134f8",
+      "cases": 40
+    },
+    "artifact_gate-1.jsonl.gz": {
+      "sha256": "aace0e03fcf8af5a736eb76c6fa0ad588836424cc9bf909fdd022e255f5731e8",
+      "cases": 40
+    }
+  },
+  "focusRecovery": {
+    "excluded": "excluded-focus-write",
+    "primary": "focus-reviewed",
+    "originalAvailable": 1180,
+    "primaryCases": 1200,
+    "matchedAvailable": 1180,
+    "regeneratedMissing": 20,
+    "mismatches": [],
+    "reason": "One original gzip part contained380 records although its worker metadata said400. Entire cohort rerun using open descriptor, fsync and post-rename record/index checks."
+  },
+  "artifactsKnownFailure": "ordinary e13 exclusion; positive legal hand discard unavailable",
+  "excludedEvidence": "excluded-focus-write is not a primary cohort; complete focus-reviewed replaces it",
+  "pupilWinRatesMeasured": false
+}

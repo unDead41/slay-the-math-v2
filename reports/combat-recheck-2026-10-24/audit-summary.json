@@ -1,0 +1,74 @@
+{
+  "sourceHash": "bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14",
+  "sourceFile": "sources-bc53e1284d63aa97fe3364ee7e3c98de52e642d942751fbbee9c57650ba6ef14.json.gz",
+  "auditRows": 640,
+  "cardFailures": 0,
+  "screens": {
+    "ordinary": {
+      "distinct": 780,
+      "duplicates": 40
+    },
+    "master/easy": {
+      "distinct": 780,
+      "duplicates": 40
+    },
+    "master/medium": {
+      "distinct": 780,
+      "duplicates": 40
+    },
+    "master/hard": {
+      "distinct": 780,
+      "duplicates": 40
+    }
+  },
+  "contracts": [
+    {
+      "context": "ordinary",
+      "count": 29,
+      "failures": []
+    },
+    {
+      "context": "master/easy",
+      "count": 29,
+      "failures": []
+    },
+    {
+      "context": "master/medium",
+      "count": 29,
+      "failures": []
+    },
+    {
+      "context": "master/hard",
+      "count": 29,
+      "failures": []
+    }
+  ],
+  "artifacts": [
+    {
+      "context": "ordinary",
+      "count": 31,
+      "failures": [
+        {
+          "id": "e13_chain_weavers_spool",
+          "name": "Chain Weaver's Spool",
+          "error": "Ineligible Spool triggered from Clear Choice Draw-Pile discard; the advertised trigger requires hand discard\n\n1 !== 0\n"
+        }
+      ]
+    },
+    {
+      "context": "master/easy",
+      "count": 31,
+      "failures": []
+    },
+    {
+      "context": "master/medium",
+      "count": 31,
+      "failures": []
+    },
+    {
+      "context": "master/hard",
+      "count": 31,
+      "failures": []
+    }
+  ]
+}

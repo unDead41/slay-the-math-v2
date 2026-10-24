@@ -1,5 +1,7 @@
 # Slay the Math — Set of Rules
 
+Current Combat/Card Synergy evidence: [24 October2026 recheck](docs/balance/combat/recheck-2026-10-24/HANDOFF_MASTER.md), [branch audit](docs/audits/balance-combat/LATEST.md). Current ordinary card-effects-1/Master candidate.4, source/seed/real-engine validation; internal CP only, no production tuning or pupil-rate claim. Historical specialist tables remain historical.
+
 Current cross-branch audit and project-wide guidance: [Master SOR](MASTER_SOR_PROJECT.md), version 1.2.0, 24 October 2026. Read it first, followed by the relevant latest audit/handoff, before branch work. Every branch update includes a scoped before/after review of confirmed problems, potential risks and improvements with evidence, priorities and limits. Read through [AGENTS.md](AGENTS.md); preserve the existing governance/domain owners. GitHub publication provides repository guidance, not automatic ChatGPT Project setup. Mathematics Slayer remains a proposed name; this documentation update does not rename the game.
 
 Current card rules, game 2.34.0: [approved card effects](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md). Percentage statuses apply throughout their attack phase; prior ordinary saves and historical reports retain their original definitions. Current Master identity is candidate.4. AI incoming-damage estimates and support attribution use the active rules.

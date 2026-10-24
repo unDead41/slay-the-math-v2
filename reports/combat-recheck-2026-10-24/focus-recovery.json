@@ -1,0 +1,10 @@
+{
+  "excluded": "excluded-focus-write",
+  "primary": "focus-reviewed",
+  "originalAvailable": 1180,
+  "primaryCases": 1200,
+  "matchedAvailable": 1180,
+  "regeneratedMissing": 20,
+  "mismatches": [],
+  "reason": "One original gzip part contained380 records although its worker metadata said400. Entire cohort rerun using open descriptor, fsync and post-rename record/index checks."
+}

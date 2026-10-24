@@ -107,3 +107,8 @@ The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_M
 ## Approved card-effects revision — 2.33.0
 
 DISAHKAN: Ijamm approves all card-audit proposals, initially for feature-branch publication; the later “okay push ke main” instruction authorizes integration as game 2.34.0. [Main integration](../CARD_EFFECTS_MAIN_2_34_0.md). The new ordinary/Master percentages, phase timing, card values, fallback search, Passive growth/activation and prior-save contracts supersede the corresponding earlier rules for new runs. Owner: [Card effects 2.33.0](../CARD_EFFECTS_2_33_0.md). Unmarked ordinary runs retain their original definitions; do not reinterpret old receipts.
+
+
+## Current Combat/Synergy recheck — 24 October 2026
+
+DISAHKAN: Ijamm requests a fresh current-main recheck and publication to balance/combat for Master, excluding main. Runtime50d3af4/game2.36.0 (ordinary card-effects-1; Master candidate.4) is remeasured; all24 loaded production dependencies remain identical at6376a22/game2.37.0, whose other changes are preserved. New internal evidence covers all40 states, complete selected pair/triple factorials, Focus opportunity cost, real campaigns and artifact/restore contracts. No runtime values or CP UI are changed. Historical numbers retain their original profiles. Current owner/report: [Combat recheck handoff](../balance/combat/recheck-2026-10-24/HANDOFF_MASTER.md); [branch audit](../audits/balance-combat/LATEST.md). Pupil90/70/50 remains unmeasured; ordinary Spool scope is a recorded latent discrepancy, not silently fixed.

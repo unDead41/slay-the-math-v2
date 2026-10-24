@@ -1,0 +1,3520 @@
+{
+  "schemaVersion": 1,
+  "cohort": "revision",
+  "main": "50d3af423cdc2240e949f4ddf29e023865304b65",
+  "oldRemoteCombat": "1bf66320ed275755d25734ad907395443f71176f",
+  "sourceHash": "d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e",
+  "sourceFile": "sources-d905d3631247869ffb8607c03cf085ec139b4e6089f64fa204a2e9c78acea21e.json.gz",
+  "provenance": [
+    {
+      "family": "ordinary",
+      "difficulty": "ordinary-challenge",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "card-effects-1",
+      "engineHash": "d0240deec8aadbc86e104d00c4f06dba514f48a449378a0d2bfe158c2225f7ca",
+      "cardHash": "b3bb88f8ac6673e04e478e018b8e99b73edecc8aff622744a8e5417cd782a9ea",
+      "artifactHash": "b09dc4efc258416b95c5978865d5c28ace321d3b93e039d775efd26fbd926641",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "easy",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "medium",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    },
+    {
+      "family": "master",
+      "difficulty": "hard",
+      "sourceRef": "50d3af423cdc2240e949f4ddf29e023865304b65",
+      "source": "working production files at audited main",
+      "version": "master-1.4.0-candidate.4",
+      "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+      "engineHash": "4176aff02ea46eacfc32e46583de8fe57a25f9e61c7918a72e67795798c678e3",
+      "cardHash": "89bb4c4abe9183fd6734b0621e82c0d8f99fed133d0421e33cff598a8e549530",
+      "artifactHash": "77dc8c8c8aaa185665b14e84a239a28de38519a469747b16150bf989996db627",
+      "pupilCalibration": false
+    }
+  ],
+  "node": "v24.19.0",
+  "tasks": [
+    {
+      "index": 0,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 1,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 2,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 3,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 4,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 5,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 6,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 7,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 8,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 9,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 10,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 11,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 12,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 13,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 14,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 15,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 16,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 17,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 18,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 19,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 20,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 21,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 22,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 23,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 24,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 25,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 26,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 27,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 28,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 29,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 30,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 31,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 32,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 33,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 34,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 35,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 36,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 37,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 38,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 39,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 40,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 41,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 42,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 43,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 44,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 45,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 46,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 47,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 48,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 49,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 50,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 51,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 52,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 53,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 54,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 55,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 56,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 57,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 58,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 59,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 60,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 61,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 62,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 63,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 64,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 65,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 66,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 67,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 68,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 69,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 70,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 71,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 72,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 73,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 74,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 75,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 76,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 77,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 78,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 79,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 80,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 81,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 82,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 83,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 84,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 85,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 86,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 87,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 88,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 89,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 90,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 91,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 92,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 93,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 94,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 95,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 96,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 97,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 98,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 99,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 100,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 101,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 102,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 103,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 104,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 105,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 106,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 107,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 108,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 109,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 110,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 111,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 112,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 113,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 114,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 115,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 116,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 117,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 118,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 119,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 120,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 121,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 122,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 123,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 124,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 125,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 126,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 127,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 128,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 129,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 130,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 131,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 132,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 133,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 134,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 135,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 136,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 137,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 138,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 139,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 140,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 141,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 142,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 143,
+      "cohort": "revision",
+      "family": "ordinary",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 144,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 145,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 146,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 147,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 148,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 149,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 150,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 151,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 152,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 153,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 154,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 155,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 156,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 157,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 158,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 159,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 160,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 161,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 162,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 163,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 164,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 165,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 166,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 167,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 168,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 169,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 170,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 171,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 172,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 173,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 174,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 175,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 176,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 177,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 178,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 179,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 180,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 181,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 182,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 183,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 184,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 185,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 186,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 187,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 188,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 189,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 190,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 191,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 192,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 193,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 194,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 195,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 196,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 197,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 198,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 199,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 200,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 201,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 202,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 203,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 204,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 205,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 206,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 207,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 208,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 209,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 210,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 211,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 212,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 213,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 214,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 215,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "wisp",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 216,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 217,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 218,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 219,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 220,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 221,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.weak_point"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 222,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 223,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 224,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 225,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 226,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 227,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.attack.twin_shot"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 228,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 229,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 230,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 231,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 232,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 233,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.defend.cinder_guard"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 234,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 235,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 236,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 237,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 238,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 239,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.deep_study"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 240,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 241,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 242,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 243,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 244,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 245,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.mana_reading"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 246,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 247,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 248,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 249,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 250,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 251,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.burning_page"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 252,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 253,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 254,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 255,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 256,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 257,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.skill.card_search"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 258,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 259,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 260,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 261,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 262,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 263,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.growing_flame"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 264,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 265,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 266,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 267,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 268,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 269,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.battle_rhythm"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 270,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 271,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 272,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 273,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 274,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 275,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.rune_armor"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 276,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 277,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 278,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 279,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 280,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 281,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.clear_mind"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    },
+    {
+      "index": 282,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024800
+    },
+    {
+      "index": 283,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024801
+    },
+    {
+      "index": 284,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": false,
+      "seed": 261024802
+    },
+    {
+      "index": 285,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024800
+    },
+    {
+      "index": 286,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024801
+    },
+    {
+      "index": 287,
+      "cohort": "revision",
+      "family": "master",
+      "difficulty": "medium",
+      "cards": [
+        "stm.passive.last_ember"
+      ],
+      "enemy": "dealer",
+      "upgraded": true,
+      "seed": 261024802
+    }
+  ],
+  "policy": "recheck-visible-phase-greedy-1; actual engine plans/damage; forced legal physical-slot orders only where declared",
+  "utility": "100*win+20*terminalHP/maxHP-min(10,turns/2); null when censored/invalid; support units separate",
+  "generated": "2026-10-24T06:24:47.810Z",
+  "pupilWinRatesMeasured": false
+}

@@ -692,3 +692,12 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - **DITERUSKAN:** integrate `codex/icon-clarity-audit` / `b18c4c99d28530026f8d90d28964569c2f7af610` with actual main `50d3af423cdc2240e949f4ddf29e023865304b65` / 2.36.0 as **2.37.0**. Keep the ten source artworks, enlarge functional UI, show actual status names/counters, and provide a complete read-only comparison. Current and archived effect descriptions, BM preference, question retries/continuation, run-aware card previews, combat VFX, AI and production Dev keep their current main owners.
 - **DITERUSKAN:** retain both decision histories, regenerate cache/version/launchers and actual tutorial screenshots, and verify the combined tree. Original card/artifact illustrations, other source artwork/audio, numerical rules, question bank and save contracts remain unchanged.
 - **PERLU_VERIFIKASI:** physical Windows/devices, pupil glance recognition, live Google service and public hosted deployment are separate from local production/browser evidence. [Main release](../ICON_CLARITY_MAIN_2_37_0.md).
+## Settings-only Developer controls — 24 October 2026
+
+DISAHKAN: Ijamm requests removing redundant Developer controls from the main menu. Dev ON/OFF, Open Developer Hub and Copy Player Run to Dev appear only in Settings, in both local development and production. Password and sandbox isolation remain unchanged. This update is local only; no commit or remote push is authorized. This supersedes earlier main-menu access instructions.
+
+Publication authorization: Ijamm subsequently requests pushing this Settings-only update to `dev-tools`. This supersedes the local-only boundary for this update; main remains excluded. Verification: production build, local-dev toggle browser test and production/static-subpath browser suite passed.
+
+## Settings-only main publication — 24 October 2026
+
+DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.

@@ -4,7 +4,7 @@ Release: `main` 2.35.0. DISAHKAN: Ijamm kini membenarkan integrasi ke main pada 
 
 ## Buka dalam production
 
-Run `npm run start:prod`, buka http://localhost:4173, hidupkan Dev pada main menu atau Settings, masukkan `demo41`, kemudian pilih **Open Developer Hub**. Folder `release-prod` yang sama boleh diupload ke Netlify. Ini renderer/game production sebenar dalam preview sandbox; save pemain kekal berasingan. Password statik ialah kunci UI, bukan keselamatan server.
+Run `npm run start:prod`, buka http://localhost:4173, hidupkan Dev pada Settings sahaja, masukkan `demo41`, kemudian pilih **Open Developer Hub**. Folder `release-prod` yang sama boleh diupload ke Netlify. Ini renderer/game production sebenar dalam preview sandbox; save pemain kekal berasingan. Password statik ialah kunci UI, bukan keselamatan server.
 
 ## Feature yang tersedia
 
@@ -37,7 +37,7 @@ Run `npm run start:prod`, buka http://localhost:4173, hidupkan Dev pada main men
 | --- | --- |
 | Exact Question | Questions & Status → pilih satu daripada 120 ID, konteks Predict/Artifact/Mystery dan BM/English → Open Exact Question. Membuka fixture baharu; Mystery memilih event topik yang sepadan. |
 | Status editor | Questions & Status → target, status, value dan expiry → Set Status. Nilai 0 membuang status. |
-| Salin save pemain | Dalam main menu/Settings production, unlock Dev → Copy Player Run to Dev. Dalam Hub → Presets → Load Copied Player Run. Atau pilih fail Export Save melalui Import Player Save. |
+| Salin save pemain | Dalam Settings production, unlock Dev → Copy Player Run to Dev. Dalam Hub → Presets → Load Copied Player Run. Atau pilih fail Export Save melalui Import Player Save. |
 | Bug report | Logs → tulis nota → Capture Screen + Download Report. Pilih tab/tetingkap dalam prompt browser. Fail HTML tunggal mengandungi screenshot dan data diagnosis. Pilihan tanpa screenshot juga tersedia. |
 | Built-in scenarios | Presets → pilih Low HP, Full Hand, Empty Draw pile atau Three Active Passives → Launch Built-in Scenario. |
 

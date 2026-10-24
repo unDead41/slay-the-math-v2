@@ -135,3 +135,12 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+## Settings-only Developer controls — 24 October 2026
+
+DISAHKAN: Ijamm requests removing redundant Developer controls from the main menu. Dev ON/OFF, Open Developer Hub and Copy Player Run to Dev appear only in Settings, in both local development and production. Password and sandbox isolation remain unchanged. This update is local only; no commit or remote push is authorized. This supersedes earlier main-menu access instructions.
+
+Publication authorization: Ijamm subsequently requests pushing this Settings-only update to `dev-tools`. This supersedes the local-only boundary for this update; main remains excluded. Verification: production build, local-dev toggle browser test and production/static-subpath browser suite passed.
+
+## Settings-only main publication — 24 October 2026
+
+DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.

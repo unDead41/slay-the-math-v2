@@ -1,0 +1,87 @@
+{
+  "status": "PASSED",
+  "dateMalaysia": "2026-10-24",
+  "gameVersion": "2.33.0",
+  "baseMain": "f190fafeaf7e1a5113a03725ce9310e1a2e00a14",
+  "reason": "Identify the newly integrated AI features with a minor release increment from 2.32.1.",
+  "checks": {
+    "releaseEntrypointUiTests": {
+      "tests": 49,
+      "pass": 49,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "exitCode": 0
+    },
+    "syntax": {
+      "exitCode": 0
+    },
+    "productionBuild": {
+      "exitCode": 0,
+      "publicFiles": 706,
+      "allPublicFilesMatchDist": true
+    },
+    "browser": {
+      "status": "PASSED",
+      "checks": [
+        {
+          "mode": "PLAYER",
+          "startupVersion": "2.33.0",
+          "menu": "v2.33.0",
+          "settings": "v2.33.0",
+          "aiStatus": 404,
+          "errors": []
+        },
+        {
+          "mode": "DEVELOPMENT",
+          "startupVersion": "2.33.0",
+          "menu": "v2.33.0",
+          "settings": "v2.33.0",
+          "aiStatus": 200,
+          "errors": []
+        },
+        {
+          "mode": "PRODUCTION",
+          "startupVersion": "2.33.0",
+          "menu": "v2.33.0",
+          "settings": "v2.33.0",
+          "aiStatus": 404,
+          "errors": []
+        }
+      ]
+    },
+    "offline": {
+      "completeRebuiltBytes": 302886092,
+      "sizeUnchangedAcrossPassingTests": true,
+      "portableDomBootTestPassed": true
+    }
+  },
+  "scope": {
+    "protectedFiles": 823,
+    "expectedGeneratedFilesChanged": [
+      "MAIN-SEKARANG.html",
+      "dist/index.html",
+      "dist/release.js",
+      "index.html"
+    ],
+    "remainingProtectedFilesUnchanged": 819,
+    "gameplayAndAiLogicUnchanged": true
+  },
+  "initialFailure": {
+    "test": "DOM: portable HTML boots without external scripts/styles and embeds all images",
+    "observedLocalFileBytes": 142606336,
+    "expectedBuildBytes": 302886092,
+    "observedCause": "Local generated artifact was truncated before its first closing script tag.",
+    "resolution": "Regenerate the ignored portable artifact and run checks immediately; 49/49 pass without changing implementation or test sources.",
+    "truncationOrigin": "Not established; do not attribute it to version metadata or claim a code fix."
+  },
+  "historicalEvidence": {
+    "originalMainIntegrationTests": 820,
+    "freshFullSuiteRerun": false,
+    "reference": "ai-main-2026-10-24.json"
+  },
+  "limits": [
+    "Version and release follow-up only; no new balance or pupil-rate validation.",
+    "No physical Windows/device or hosted-deployment verification."
+  ]
+}

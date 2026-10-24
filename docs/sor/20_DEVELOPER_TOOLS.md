@@ -91,3 +91,5 @@ DISAHKAN: Ijamm selects improvements 1–3 and requests implementation on ai. Sc
 ## AI main integration — 24 October 2026
 
 DISAHKAN: Ijamm now explicitly requests pushing this completed AI update to main. This supersedes the two earlier ai-only publication boundaries. Integrate ai `807be67` with main `d5533ad`, retaining game 2.32.1, current combat presentation and menu music. AI remains available through `npm run start:dev` and `/__dev/ai/`; production/player routes and gameplay profiles retain their existing owners. Historical branch evidence is not evidence for the merged tree. [Main integration and fresh checks](../AI_PLAYTESTER_MAIN_2026_10_24.md).
+
+Release follow-up: Ijamm asks why the new AI feature did not increase the version. Release **2.33.0** identifies the added AI capabilities; generated metadata and launchers use the package version. Earlier 2.32.1 references above record the initial merge, not the current release. [Release-specific verification](../AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).

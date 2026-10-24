@@ -592,3 +592,9 @@ DISAHKAN: Ijamm quotes and selects the first three proposed AI improvements and 
 - DISAHKAN: Ijamm says "okay push ke main please" after delivery of all three AI strategy improvements. This supersedes DEC-20261024-AI and AI-STRATEGY's ai-only publication boundary.
 - DITERUSKAN: merge ai `807be67` into main `d5533ad`; preserve game 2.32.1, supplied menu music, combat animation, tutorial, artwork, save keys and numerical balance. Keep the AI tool developer-only. Resolve both SOR append conflicts by retaining both histories.
 - PERLU_VERIFIKASI: heuristic optimality, exhaustive combinations, physical devices, hosted deployment and pupil 90/70/50 targets remain separate from integration verification. [Main integration evidence](../AI_PLAYTESTER_MAIN_2026_10_24.md).
+
+## DEC-20261024-AI-VERSION — Identify the AI feature release
+
+- DISAHKAN: Ijamm questions why the AI feature update retained the game version. Correct release identification within the already authorized main publication.
+- DITERUSKAN: use **2.33.0**, a minor increment from 2.32.1 for the added AI features. Generate release.js, version/cache metadata and all launchers from package.json; retain runtime rules, numerical profiles, AI logic and save keys.
+- Verification is scoped to this metadata change; retain the original 820-test integration result as historical evidence. [Release record](../AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).

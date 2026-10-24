@@ -1,4 +1,6 @@
-# Slay the Math — 2.32.1
+# Slay the Math — 2.33.0
+
+Version 2.33.0 identifies the new developer AI Playtester: actual support/cost telemetry, sampled future-turn planning and synergy-aware deck decisions. [AI setup, integration and release verification](docs/AI_PLAYTESTER_MAIN_2026_10_24.md).
 
 **Tutorial** now opens a complete English/BM field guide: 17 chapters, 16 real game screenshots and 11 safe, replayable practice chapters using the actual engine. Progress resumes independently of your run and Learning Report. Open Main Menu → Tutorial or the in-game Tutorial control. [How to use, scope and verification](docs/TUTORIAL_2_31_0.md).
 

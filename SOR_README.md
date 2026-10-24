@@ -102,4 +102,4 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 
 - [22 — Economy, loot and rewards candidate](docs/sor/22_ECONOMY_REWARDS.md): exact-base audit, opt-in tuning, source rules, saved receipts, all-event tables, seed histograms/Gold-recovery projections and Master handoff. Student 90/70/50 targets remain unmeasured.
 
-AI Playtester on main: [operator guide](docs/AI_PLAYTESTER.md), [developer owner](docs/sor/20_DEVELOPER_TOOLS.md), [main integration](docs/AI_PLAYTESTER_MAIN_2026_10_24.md), [historical strategy verification](docs/verification/ai-strategy.json), [original baseline](docs/verification/ai-branch.json). No automatic tuning or pupil win-rate claim.
+AI Playtester on main, release 2.33.0: [operator guide](docs/AI_PLAYTESTER.md), [developer owner](docs/sor/20_DEVELOPER_TOOLS.md), [main integration and release verification](docs/AI_PLAYTESTER_MAIN_2026_10_24.md), [historical strategy verification](docs/verification/ai-strategy.json), [original baseline](docs/verification/ai-branch.json). No automatic tuning or pupil win-rate claim.

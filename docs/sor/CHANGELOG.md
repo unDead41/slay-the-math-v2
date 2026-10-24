@@ -472,3 +472,8 @@ Published developer strategy/simulation AI on main 2.31.0 base, preserving the t
 - Integrate the completed support valuation, sampled future-turn planning and deck-synergy AI after Ijamm's explicit main publication request.
 - Preserve current game 2.32.1, combat animation, supplied menu music, tutorial, player saves and numerical gameplay. Retain both main and AI SOR histories; the tool remains developer-only.
 - Record fresh merged-tree verification separately from historical ai-branch results. [Integration](../AI_PLAYTESTER_MAIN_2026_10_24.md).
+
+## 2.33.0 — Identify the AI feature release
+
+- Increase the minor version after Ijamm questions the unchanged 2.32.1 number for the new AI features. Regenerate shared release/cache metadata and normal, file, production and offline entrypoints from package.json.
+- Retain the already integrated AI behavior, game rules, artwork, current menu music and save keys. [Release checks](../AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).

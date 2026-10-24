@@ -19,3 +19,9 @@ The game/AI source fingerprint remains `d010faa0bb405a10dd2066f1444bd07b9d5d847f
 ## Limits
 
 Heuristic strategy is not trained ML. Exhaustive combinations, physical-device behavior and actual pupil 90/70/50 win rates remain unverified. Code publication does not establish a successful hosted deployment or configure Google collection.
+
+## Release version 2.33.0
+
+Ijamm questions why the AI feature update left the game version unchanged. Identify the new feature release as **2.33.0**, using a minor increment from 2.32.1. The original integration commit `f190faf` and its verification above remain historical facts. This follow-up updates package.json and regenerates the shared release metadata and all three launch pages, including the offline and production builds. Runtime rules, AI logic and save identities remain unchanged.
+
+Fresh release-specific checks passed: **49/49 release, entrypoint and UI tests**, syntax, production build and real Chromium startup/menu/Settings checks in Player, Dev and Production. All seven version-bearing package/runtime/production files identify 2.33.0; all 706 public files match dist. Only four generated release/launcher files changed among 823 protected files. A truncated temporary offline artifact was regenerated; its complete 302,886,092 bytes remained unchanged across the passing checks. No implementation or test code needed modification. Details are recorded in [ai-release-2-33-0.json](verification/ai-release-2-33-0.json). The 820-test result above belongs to the original integration; it is not a new full-suite claim for the version-only follow-up.

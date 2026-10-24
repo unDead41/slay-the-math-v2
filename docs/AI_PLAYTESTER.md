@@ -1,5 +1,7 @@
 # AI Playtester
 
+Versi game semasa: **2.33.0**. Nombor minor dinaikkan untuk mengenal pasti penambahan ciri AI ini selepas gabungan asal di bawah. Metadata versi dijana daripada package.json untuk semua entrypoint. [Rekod release](AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).
+
 24 Oktober 2026 (Malaysia). Ijamm kini membenarkan penerbitan ke **main**, menggantikan had branch ai sahaja. Gabungan AI `807be67` dengan main `d5533ad` mengekalkan game 2.32.1, tutorial, animasi tempur serta muzik menu terkini. Semua nilai gameplay dikekalkan. [Rekod integrasi main](AI_PLAYTESTER_MAIN_2026_10_24.md).
 
 ## Buka alat

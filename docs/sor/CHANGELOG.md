@@ -1,8 +1,16 @@
 # Changelog SOR — Slay the Math
 
+## Game 2.43.0 — whole-game Bahasa Melayu / English
+
+Publish the approved local language update after main2.42.0 Balance/AI. Settings controls live player text, loading/recovery, cards/status/Artifact, help and existing question/Practice language owners. Retain recognized game keywords and simple KSSM/DSKP explanations. Preserve numerical rules, saves, RNG and original media. Existing voices and baked Tutorial screenshots remain English. [Release and current-source verification](../DUAL_LANGUAGE_MAIN_2_43_0.md).
+
 ## Game 2.41.0 — hosted resources and runtime optimization on main
 
 Integrate the completed resource/optimization branch with main2.40.0. Preserve current cards/status/education/Dev owners. Add pre-entry180s recovery, staged verified resources, native input guard, persistent combat canvases,32MiB session bytes and96MiB decoded actor retention. Coordinate optional icon fallbacks and all Tutorial images with the same verified transport. [Main release and audit](../RUNTIME_OPTIMIZATION_MAIN_2_41_0.md).
+
+## 24 October 2026 — Whole-game bilingual presentation, local branch
+
+Update [SOR 26](26_DUAL_LANGUAGE.md) and the related UI/math/architecture/QA guidance. Add shared game UI localization, BM Artifact definitions/descriptions and language-aware tooltips; retain established game keywords and current identity. Correct obsolete Passive/Defend/Block/Focus presentation. Preserve all numerical rules, IDs, artwork, saves and user comments. Refreshed onto main 45d23783 / 2.41.0 after the initial ade5d3a audit; no Git push. Actual validation is recorded in the [branch audit](../audits/dual-language-bm-bi/LATEST.md).
 
 ## Game2.40.0 — Three-card tuning and corrected AI observation on main
 

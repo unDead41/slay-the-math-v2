@@ -10,7 +10,7 @@
  const roles={attack:'attack',defend:'guard',skill:'tactic',passive:'passive'};
  const copy={
   en:{attack:'Attack',defend:'Defend',skill:'Skill',passive:'Passive',energy:'Energy',cost:'Cost'},
-  bm:{attack:'Serang',defend:'Bertahan',skill:'Kemahiran',passive:'Pasif',energy:'Tenaga',cost:'Kos'}
+  bm:{attack:'Attack',defend:'Defend',skill:'Skill',passive:'Passive',energy:'Energy',cost:'Kos'}
  };
  let renderSequence=0;
 

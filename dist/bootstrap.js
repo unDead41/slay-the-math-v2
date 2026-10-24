@@ -142,6 +142,7 @@ function downloadStatus(){if(!manager)return;const stats=manager.stats(),total=m
 function startDownloadStatus(){if(downloadTimer)host.clearInterval(downloadTimer);downloadStatus();downloadTimer=host.setInterval(downloadStatus,1000);}
 function enter(){host.DCAudio?.unlock();gate().hidden=true;if(manager){byId('resource-downloads').hidden=false;startDownloadStatus();}doc.querySelector('[data-action="new"]')?.focus();if(manager)for(const e of manifest.entries.filter(e=>e.pack==='menu'))manager.fetchAsset(e.url,{priority:80}).catch(()=>{});}
 function start(){
+ host.DCGameLanguage?.install(doc);
  doc.addEventListener('click',prepareEntry,{capture:true});
  byId('resource-download-all').addEventListener('click',async()=>{if(downloadAllRunning||!manager)return;downloadAllRunning=true;manager.resume();const button=byId('resource-download-all');button.disabled=true;button.textContent='Downloading in the background…';try{await Promise.all(manifest.entries.map(e=>manager.fetchAsset(e.url,{priority:85})));button.textContent='All resources ready';}catch(_){button.textContent='Retry remaining resources';}finally{downloadAllRunning=false;button.disabled=false;downloadStatus();}});
  host.addEventListener('pagehide',()=>{host.clearInterval(downloadTimer);downloadTimer=null;});host.addEventListener('pageshow',event=>{if(event.persisted&&manager&&!gate().hidden)downloadStatus();else if(event.persisted&&manager)startDownloadStatus();});

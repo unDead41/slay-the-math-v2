@@ -11,6 +11,10 @@
 | Snapshot hasil yang disemak | Diff dokumentasi 1.2.0 terhadap SHA asas di atas sebelum commit; SHA terbitan disahkan dalam handoff. |
 | Status keseluruhan dokumentasi berkaitan | PERLU UPDATE — dua percanggahan arahan lama masih terbuka. |
 
+## Resolution addendum — language main2.43.0
+
+The scoped language integration corrects DOC-001 and DOC-002 in AGENTS to the active Form4 topics and approved Alyssa identity, preserving technical IDs. The table below remains the historical audit of990541d; it does not describe those two instructions after this correction. See the [current language audit](../dual-language-bm-bi/LATEST.md) for the actual integration and checks. No broader game audit is inferred.
+
 ## Hasil tugas semasa
 
 Keperluan bacaan dahulu dan audit setiap kemas kini branch dilaksanakan dalam [Master SOR](../../../MASTER_SOR_PROJECT.md), [AGENTS.md](../../../AGENTS.md) dan [indeks](../../../SOR_README.md). Penambahan ini mengekalkan governance, arahan pengguna, dokumen pemilik modul dan had push/merge.

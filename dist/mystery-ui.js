@@ -2,8 +2,8 @@
  const X=root.DCMystery,Q=root.DCEducation,M=root.STMMechanics,C=root.DCConfig,A=root.DCArtifacts,R=root.DCRichText,L=root.DCQuestionLanguage;
  const escapeText=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const words=['max_hp','hp','gold','heal','strength','agility','energy','focus','attack','defend','skill','artifact','combat','first_turn','draw','hand','block'].map(id=>[R.data.glossary[id].label.toLowerCase(),id]);
- words.push(['artifacts','artifact']);words.sort((a,b)=>b[0].length-a[0].length);
- const wordIds=new Map(words),tokens=new RegExp('([+]?\\d+)(\\s+(?:extra\\s+)?)(Max HP|HP|Gold|Strength|Agility|Energy|cards?)\\b|\\b('+words.map(([word])=>word).join('|')+')\\b','gi');
+ words.push(['artifacts','artifact'],['pulihkan','heal'],['pertarungan','combat'],['giliran pertama','first_turn']);words.sort((a,b)=>b[0].length-a[0].length);
+ const wordIds=new Map(words),tokens=new RegExp('([+]?\\d+)(\\s+(?:extra\\s+)?)(Max HP|HP|Gold|Strength|Agility|Energy|cards?|kad)\\b|\\b('+words.map(([word])=>word).join('|')+')\\b','gi');
  // These are read-only previews of authored event rules, never a resolution
  // record or a teaching-pool definition applied to the player's real deck.
  function previews(r,e,kind){
@@ -34,11 +34,12 @@
   return result;
  }
  function rich(text,r,e,kind='success'){
+  text=root.DCGameLanguage?.translate(text,L.language())||text;
   const values=previews(r,e,kind);let html='',last=0;
   for(const match of String(text).matchAll(tokens)){
    html+=escapeText(text.slice(last,match.index));
    if(match[1]){
-    const [value,space,unit]=match.slice(1,4),preview=values.get(Number(value)+':'+unit.toLowerCase());
+    const [value,space,unit]=match.slice(1,4),preview=values.get(Number(value)+':'+(unit.toLowerCase()==='kad'?'cards':unit.toLowerCase()));
     html+=preview?'<button type="button" class="rt-calculation" data-richtext-kind="calculation" data-richtext-scope="artifact" data-category="calculation" data-rt-calculation="'+escapeText(JSON.stringify(M.shared.calculation({origin:'preview',value,...preview})))+'" aria-label="'+escapeText(value+' '+unit+'. Show preview')+'">'+escapeText(value)+'</button>':escapeText(value);
     html+=escapeText(space)+(wordIds.has(unit.toLowerCase())?R.term(wordIds.get(unit.toLowerCase()),unit):escapeText(unit));
    }else html+=R.term(wordIds.get(match[4].toLowerCase()),match[4]);

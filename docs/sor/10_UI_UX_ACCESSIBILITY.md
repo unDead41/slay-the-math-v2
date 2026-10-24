@@ -1,29 +1,12 @@
 # 10 — UI, English mudah dan aksesibiliti
 
-Versi: 2.0.1. Bahasa game English mengikut arahan Ijamm; dokumentasi SOR boleh kekal BM.
+Current language policy: [26 — Whole-game English / Bahasa Melayu](26_DUAL_LANGUAGE.md), approved 24 October 2026. This supersedes the original English-only baseline.
 
-## Bahasa produksi
+## Production language
 
-**UX-01:** Gunakan ayat pendek, kata kerja jelas dan istilah RPG biasa. Jangan campur BM/English pada kad, tutorial, error, map, menu atau teks gambar yang dirender.
+**UX-01:** Use short sentences, clear verbs and familiar game keywords in either selected language. Settings controls the game language. Keep HP, Energy, Block, Focus, Attack, Defend, Skill, Passive, Buff/Debuff and other reviewed game terms; explain them simply in BM. Defense is an attribute and Defend is a card category. Preserve names, numbers, IDs, user input and mathematical notation. Formal mathematics terms follow the supplied KSSM/DSKP sources. See SOR 24 for terminology, exceptions and acceptance checks.
 
-| Konsep | Label produksi |
-| --- | --- |
-| Tenaga / perisai / Fokus | Energy / Block / Focus |
-| Ramalan | Predict |
-| Serangan / Perisai / Taktik | Attack / Defense / Skill |
-| Tebas / Bara / Benteng-Lindung | Slash / Ember / Guard |
-| Tarik / Tapis | Draw / Filter |
-| Mula / Sambung | New Run / Continue |
-| Tamat giliran / Kembali | End Turn / Back |
-| Pilih / Langkau | Choose / Skip |
-| Kem / Kedai / Tanda soal | Rest / Shop / Mystery |
-| Beli / Pulih / Naik taraf | Buy / Heal / Upgrade |
-
-Nama kerja kad ungu ialah Ward; ia bukan nama baharu resource Focus. Alias dan ID dimiliki [04](04_CARD_SYSTEM.md).
-
-Contoh copy: “Deal 6 damage.”, “Gain 5 Block.”, “Draw 2 cards.”, “Not enough Energy.”, “Choose your next room.”, “Cards are put back after each draw.”
-
-Istilah matematik perlu tepat walaupun ringkas: mutually exclusive tidak ditukar kepada independent. Tutorial boleh memberi contoh selepas definisi.
+Examples: “Gain 5 Block.” / “Dapatkan 5 Block.”; “Not enough Energy.” / “Energy tidak cukup.”; “Choose your next room.” / “Pilih bilik seterusnya.”
 
 ## Token dan hierarki
 

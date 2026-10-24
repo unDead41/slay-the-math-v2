@@ -60,7 +60,7 @@ test('v1 Shop stock and future quotes use original Recall metadata while new off
  const fresh=atShop(saved.shop.seed);assert.equal(ordinary.E.definition({key:'stm.skill.recall',upgraded:false},fresh).cost,0);assert.equal(fresh.shop.offers.find(o=>o.key==='stm.skill.recall').basePrice,60);valid(ordinary,old);valid(ordinary,fresh);
 });
 test('old v1 preview, retry and a rejected archive request cannot leak into a new run',()=>{
- const r=ordinary.E.restore(ordinary.E.clone(saved.lastPage));assert.ok(r);for(const lang of ['en','bm']){const old=K.renderPlain(ordinary.E.cardDisplayPlan('stm.skill.last_page',r),lang),fresh=K.renderPlain(ordinary.E.cardDisplayPlan('stm.skill.last_page'),lang);assert.match(old,lang==='en'?/Draw(?: cards:)? 1/:/Ambil(?: kad:)? 1/);assert.match(fresh,lang==='en'?/Draw 2/:/Ambil 2/);}
+ const r=ordinary.E.restore(ordinary.E.clone(saved.lastPage));assert.ok(r);for(const lang of ['en','bm']){const old=K.renderPlain(ordinary.E.cardDisplayPlan('stm.skill.last_page',r),lang),fresh=K.renderPlain(ordinary.E.cardDisplayPlan('stm.skill.last_page'),lang);assert.match(old,lang==='en'?/Draw(?: cards:)? 1/:/Draw(?: kad:)? 1/);assert.match(fresh,lang==='en'?/Draw 2/:/Draw 2/);}
  r.hp=0;r.scene='defeat';r.finished=Math.max(Date.now(),r.started);assert.ok(ordinary.E.validate(r));assert.equal(ordinary.E.retry(r).cardRulesVersion,'card-effects-1');assert.equal(ordinary.E.newRun(941).cardRulesVersion,'card-effects-2');
  const unknown=ordinary.E.clone(saved.lastPage);unknown.cardRulesVersion='__proto__';assert.equal(ordinary.E.restore(unknown),null);assert.equal(ordinary.E.definition({key:'stm.skill.recall',upgraded:false}).cost,0);
 });
@@ -70,8 +70,8 @@ test('the complete v1 card definitions remain frozen and prior Master storage ha
 });
 for(const [mode,make]of [['ordinary',()=>ordinary],['Master',()=>loadMaster()]])for(const lang of ['en','bm'])test(mode+' Last Page preserves the three accessible Draw/Hand glossary targets in '+lang,()=>{
  const {JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom'),x=make(),plan=x.E.cardDisplayPlan('stm.skill.last_page'),dom=new JSDOM(K.renderHTML(plan,lang));
- try{const targets=[...dom.window.document.querySelectorAll('[data-kind=game]')];assert.equal(targets.length,3);assert.deepEqual(targets.map(n=>n.textContent),lang==='en'?['Draw','Hand','Draw']:['Ambil','Tangan','Ambil']);
+ try{const targets=[...dom.window.document.querySelectorAll('[data-kind=game]')];assert.equal(targets.length,3);assert.deepEqual(targets.map(n=>n.textContent),lang==='en'?['Draw','Hand','Draw']:['Draw','Hand','Draw']);
   for(const n of targets){assert.equal(n.tabIndex,0);assert.ok(n.getAttribute('aria-label'));assert.ok(n.dataset.tooltip);assert.match(n.dataset.tooltip,/10/);}
-  assert.match(dom.window.document.body.textContent,lang==='en'?/Draw 2/:/Ambil 2/);
+  assert.match(dom.window.document.body.textContent,lang==='en'?/Draw 2/:/Draw 2/);
  }finally{dom.window.close();}
 });

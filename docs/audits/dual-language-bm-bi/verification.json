@@ -1,0 +1,103 @@
+{
+  "checkedAtUTC": "2026-10-24T13:15:49.841344+00:00",
+  "branch": "dual-language-bm-bi",
+  "mainBase": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+  "version": "2.41.0",
+  "gitPush": false,
+  "compatibility": "VALID within recorded scope and stated media/readability limits",
+  "unitAndDOM": {
+    "tests": 1037,
+    "pass": 1037,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "fullSuiteLog": "full-suite.log",
+  "duration_ms": 463450.822975,
+  "targetedCardAndLanguage": {
+    "tests": 237,
+    "pass": 237,
+    "fail": 0,
+    "log": "card-language-targeted.log"
+  },
+  "matrix": [
+    {
+      "language": "en",
+      "states": 240,
+      "strings": 1894,
+      "errors": []
+    },
+    {
+      "language": "ms",
+      "states": 240,
+      "strings": 1906,
+      "errors": []
+    }
+  ],
+  "artifactCoverage": {
+    "normalDescriptions": 31,
+    "masterProfiles": 3,
+    "masterDescriptions": 93,
+    "definitions": 55
+  },
+  "cards": 40,
+  "questions": 120,
+  "uiDictionaryStrings": 1401,
+  "browser": {
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "lang": "ms",
+        "focus": "BUTTON",
+        "practiceLanguages": [
+          "ms",
+          "en",
+          "ms"
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "lang": "ms",
+        "focus": "BUTTON",
+        "practiceLanguages": [
+          "ms",
+          "en",
+          "ms"
+        ]
+      }
+    ],
+    "errors": [],
+    "failedAssets": []
+  },
+  "additionalNative": {
+    "statusStates": 24,
+    "iconUIStates": 41,
+    "errors": []
+  },
+  "build": "npm run build: passed",
+  "syntax": "npm run check: passed",
+  "portableBytes": 304219360,
+  "portableSHA256": "3c647090d97015c8bf72e0f7ff86b29777804ec9c4197b07c4bca4640cf116f8",
+  "runtimeSHA256": {
+    "dist/game-language.js": "c46a62b7a01693472772718dd171b39e59ce470421202d612710febd8082a561",
+    "dist/question-language.js": "750f0c85df6263006b2fc0f9da96626a6aa9bd9604e14107ecc6264d5d571b06",
+    "dist/card-kit.js": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12",
+    "dist/app.js": "36bb4fece24a0800da5bfb7cafcff495ce9c4f455a4a5d3420c44288cb57b058",
+    "dist/mechanics.js": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907",
+    "dist/education-practice.js": "78c5e6549808e26ee3984fe38bb11016858140622cc867fa7c2e78ab4eb2d8d2",
+    "dist/bootstrap.js": "39e591b667535c53a5757428c93878305c614a0e8acd62ba1900148742fafac8",
+    "dist/asset-manifest.json": "49133aa715e98b46132ab03b9eb178403021648e170b73afd55a4e997beb8171"
+  },
+  "captureSHA256": {
+    "loading-bm-1440.png": "2885b1016934ed6a84b0c8001125752e9ba6e3d1ba8dc8d7528fe1c01f82eaa3",
+    "status-bm-390.png": "72490d68e56179aa253ad799b4089718f46648d71aaf46f97ef66e748e676b5d",
+    "settings-bm-1440.png": "67471db4a9e81fb8b43b615fccf4c3baed4307205d5b282acd38352af88e127d",
+    "settings-bm-390.png": "2a1bcf438ba90c3bf51368bef9137859f96ac003f6a91d96c45b41aabfa2cdad",
+    "loading-bm-390.png": "12f2abb68561ddc04b7784a967b91bd24c8fec8d985c72310bbf12e8d19bc640",
+    "status-bm-1440.png": "9758d254e619305a3e1a514c349a44b9f17193ef5af3d8fe3e9a37ad63563a25"
+  }
+}

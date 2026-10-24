@@ -26,7 +26,7 @@ test('player debuff gains and clears differ from enemy statuses and pending futu
  const V=require('../dist/status-vfx.js'),r=fixture(),before=V.snapshot(r),s=r.battle.cardCombat.statuses;
  s.self.weak=2;s.self.weakUntil=2;s.self.vulnerable=1;s.self.vulnerableUntil=2;s.enemy.weak=3;s.enemy.weakUntil=1;r.battle.cardCombat.queue.push({kind:'block',value:4,turn:2,source:key('Layered Shield'),agility:0});assert.ok(E.validate(r));
  const cues=V.effects(before,r);assert.deepEqual(cues.map(e=>[e.id,e.kind]),[['weak','down'],['vulnerable','down']]);assert.equal(V.ambient(r).some(e=>e.id==='block'),false);
- const applied=V.snapshot(r);s.self.weak=0;s.self.vulnerable=0;assert.ok(V.effects(applied,r,'ms').every(e=>e.kind==='cleanse'));assert.match(V.effects(applied,r,'ms')[0].label,/−2 Lemah/);
+ const applied=V.snapshot(r);s.self.weak=0;s.self.vulnerable=0;assert.ok(V.effects(applied,r,'ms').every(e=>e.kind==='cleanse'));assert.match(V.effects(applied,r,'ms')[0].label,/−2 Weak/);
 });
 
 test('Continue, unchanged renders and different battles cannot replay historical effects',()=>{

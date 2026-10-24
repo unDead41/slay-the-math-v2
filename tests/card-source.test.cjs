@@ -5,7 +5,7 @@ test('card source: forty identities/assets and archived definitions survive the 
  const changed=new Set(['stm.attack.rune_sweep','stm.attack.fate_storm']),revised=new Set(['Weak Point','Cinder Guard','Growing Flame','Battle Rhythm','Mana Reading','Deep Study','Burning Page','Rune Armor','Clear Mind','Card Search','Last Ember','Last Page','Recall','Mana Barrier']);
  assert.deepEqual(runtime.rules,source.rules);assert.deepEqual(runtime.frames,source.frames);
  for(const c of runtime.cards){const old=source.cards.find(s=>s.id===c.id);assert.ok(old);
-  if(!changed.has(c.id)){assert.deepEqual(runtime.legacyEffectsData.cards.find(a=>a.id===c.id),old);if(!revised.has(c.name))assert.deepEqual(c,old);else for(const key of ['id','name','category','selection_code','icon','display_name'])assert.deepEqual(c[key],old[key]);}
+  if(!changed.has(c.id)){assert.deepEqual(runtime.legacyEffectsData.cards.find(a=>a.id===c.id),old);if(!revised.has(c.name)){const mechanics=({text,mechanic_notes,...rest})=>rest;assert.deepEqual(mechanics(c),mechanics(old));}else for(const key of ['id','name','category','selection_code','icon','display_name'])assert.deepEqual(c[key],old[key]);}
   else{for(const key of ['id','name','category','selection_code','icon','display_name'])assert.deepEqual(c[key],old[key]);assert.deepEqual(runtime.previousCardDefinitions[c.id],old);}
  }
  assert.equal(runtime.cards.length,40);assert.equal(new Set(C.CARD_POOL).size,40);

@@ -100,7 +100,9 @@
   tracker=new M.ArtifactCore.ArtifactTracker(M.data.catalog.artifacts);
   try{const raw=localStorage.getItem(PROFILE);if(raw){const saved=JSON.parse(raw);if(!tracker.restore(saved))throw Error('Invalid Artifact Codex save');}}
   catch(_){profileWritable=false;warn?.('Artifact Codex history could not be read. The original history has been kept.');}
-  artUI=new M.ArtifactUI({tracker,data:M.data.artifact,getTheme:()=> 'dark',motion:()=>!document.documentElement.classList.contains('reduce-motion')});
+  artUI=new M.ArtifactUI({tracker,data:M.data.artifact,getLanguage:()=>L.language(),getTheme:()=> 'dark',motion:()=>!document.documentElement.classList.contains('reduce-motion')});
+  artUI.description=id=>R.description(id);
+  artUI.term=(text,key)=>R.term(key,text);
   artUI.image=a=>{const name=A.catalog[a.id].icon;return root.STMHosted?.manager?root.STMHosted.imageURL('assets/'+(root.DCIconAssets?.aliases[name]||name)):root.DCIconAssets?root.DCIconAssets.resolve(name,root.DC_ASSETS):root.DC_ASSETS?.[name]||'assets/'+name;};
   // The existing app owns toast announcements. Only pulse the source HUD here;
   // actual resolved values remain available in the canonical Calculations log.

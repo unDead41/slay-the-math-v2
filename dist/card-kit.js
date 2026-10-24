@@ -11,7 +11,7 @@
   const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalizeLanguage = value => /^(bm|ms)(-|$)/i.test(String(value)) ? 'bm' : 'en';
   const cardName = (card, lang='en') => card.display_name?.[normalizeLanguage(lang)] || card.name;
-  const cardNotes = (card, lang='en') => card.mechanic_notes?.[normalizeLanguage(lang)] || '';
+  const cardNotes = (card, lang='en') => normalizeLanguage(lang)==='bm'?presentationBM(card.mechanic_notes?.bm||''):card.mechanic_notes?.en||'';
   const assetPath = path => globalThis.STM_CARD_ASSETS?.[path] || path;
   function context(raw = {}) {
     return {
@@ -104,14 +104,21 @@
   }
   function calculationTip(plan, ref, lang) {
     const calc = plan.calculations[ref]; if (!calc) throw new Error('Missing calculation: '+ref);
-    const words = lang === 'bm' ? {base:'Asas',strength:'Kekuatan',agility:'Ketangkasan',Focus:'Fokus',
-      lost_hp_last_enemy_turn:'Bonus kerana HP berkurang',has_block:'Bonus kerana ada Blok',enemy_attacks:'Bonus kerana musuh akan menyerang',empty_hand_after_play_snapshot:'Bonus tangan kosong'}
+    const words = lang === 'bm' ? {base:'Asas',strength:'Strength',agility:'Agility',Focus:'Focus',
+      lost_hp_last_enemy_turn:'Bonus kerana HP berkurang',has_block:'Bonus kerana ada Block',enemy_attacks:'Bonus kerana musuh akan menyerang',empty_hand_after_play_snapshot:'Bonus tangan kosong'}
       : {base:'Base',strength:'Strength',agility:'Agility',Focus:'Focus',lost_hp_last_enemy_turn:'Bonus for losing HP',has_block:'Bonus for having Block',enemy_attacks:'Bonus for an enemy Attack',empty_hand_after_play_snapshot:'Empty hand bonus'};
     const suffix=plan.card.category==='attack' && !ref.startsWith('constant_')
-      ? (lang==='bm'?'. Sebelum Pertahanan dan Blok musuh.':'. Before enemy Defense and Block.')
+      ? (lang==='bm'?'. Sebelum Defense dan Block musuh.':'. Before enemy Defense and Block.')
       : (lang==='bm'?'. Dikira sekali menggunakan nilai pratonton ini.':'. Calculated once using these preview values.');
     return calc.terms.map(t => (words[t.name] || t.name)+': '+t.amount).join(' + ')+' = '+calc.result+suffix;
   }
+  const presentationBM=(()=>{const aliases={"Timbunan Ambilan":"Draw Pile","Timbunan Buangan":"Discard Pile","Habis Guna":"Exhaust","Duri Bara":"Thorns","Blok":"Block","Kekuatan":"Strength","Ketangkasan":"Agility","Kelincahan":"Agility","Pertahanan":"Defense","Fokus":"Focus","Tenaga":"Energy","Pasif":"Passive","Terdedah":"Vulnerable","Lemah":"Weak","Tangan":"Hand","Bertahan":"Defend","Kemahiran":"Skill","Serangan":"Attack"},pattern=new RegExp('\\b('+Object.keys(aliases).join('|')+')\\b','g');const terms=function terms(text,names=[]){
+ if(typeof text!=='string')return text;
+ if(!names.length)return text.replace(pattern,word=>aliases[word]);
+ const escaped=names.map(x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length);
+ const protectedNames=new Set(names),all=new RegExp('\\b('+[...escaped,...Object.keys(aliases)].join('|')+')\\b','g');
+ return text.replace(all,word=>protectedNames.has(word)?word:aliases[word]);
+};return text=>terms(text,data.cards.map(c=>c.display_name.bm));})();
   function getTokens(plan, lang) {
     // Keep the Normal Recall description concise instead of displaying “Draw 0”.
     lang = normalizeLanguage(lang);
@@ -122,25 +129,25 @@
     }
     const tokens=plan.card.text[lang] || plan.card.text.en,gift=plan.upgraded&&plan.card.upgrade?.activation;
     if(!gift)return tokens;
-    const effects=[gift.block?(lang==='bm'?'dapat '+gift.block+' Blok':'gain '+gift.block+' Block'):'',gift.draw?(lang==='bm'?'ambil '+gift.draw+' kad':'draw '+gift.draw+' card'):''].filter(Boolean).join(lang==='bm'?' dan ':' and ');
+    const effects=[gift.block?(lang==='bm'?'dapat '+gift.block+' Block':'gain '+gift.block+' Block'):'',gift.draw?(lang==='bm'?'ambil '+gift.draw+' kad':'draw '+gift.draw+' card'):''].filter(Boolean).join(lang==='bm'?' dan ':' and ');
     return [...tokens,{type:'text',text:(lang==='bm'?' Pada pengaktifan pertama combat ini, ':' On first activation this combat, ')+effects+'.'}];
   }
   function renderHTML(plan, lang = 'en') {
     lang = normalizeLanguage(lang);
     return getTokens(plan,lang).map(t => {
-      if(t.type==='text') return esc(t.text);
+      if(t.type==='text') return esc(lang==='bm'?presentationBM(t.text):t.text);
       let label, tooltip;
       if(t.type==='calculation') { label=plan.values[t.ref]; tooltip=calculationTip(plan,t.ref,lang); }
       else {
         const term=(plan.glossary||data.glossary)[t.ref]; if(!term)throw new Error('Missing glossary '+t.ref);
-        label=term.label[lang] || term.label.en; tooltip=term.tooltip[lang] || term.tooltip.en;
+        label=(lang==='bm'?data.glossary[t.ref].label.bm:term.label.en); tooltip=term.tooltip[lang] || term.tooltip.en;if(lang==='bm')tooltip=presentationBM(tooltip);
       }
       return '<span class="stm-rt stm-rt-'+esc(t.type)+'" tabindex="0" data-kind="'+esc(t.type)+'" data-tooltip="'+esc(tooltip)+'" aria-label="'+esc(label+': '+tooltip)+'">'+esc(label)+'</span>';
     }).join('');
   }
   function renderPlain(plan,lang='en') {
     lang = normalizeLanguage(lang);
-    return getTokens(plan,lang).map(t => t.type==='text'?t.text:t.type==='calculation'?plan.values[t.ref]:(plan.glossary||data.glossary)[t.ref].label[lang]).join('');
+    return getTokens(plan,lang).map(t => t.type==='text'?(lang==='bm'?presentationBM(t.text):t.text):t.type==='calculation'?plan.values[t.ref]:(lang==='bm'?data.glossary[t.ref].label.bm:(plan.glossary||data.glossary)[t.ref].label.en)).join('');
   }
   function framePath(card, focused, fourK=false) {
     const paths = data.frames.categories[card.category];

@@ -79,8 +79,8 @@ test('preview numbers and calculation tooltips use the supplied snapshot and rej
    }
   }
   const bm=K.preparePlay('stm.attack.rune_strike',context,true);doc.body.innerHTML=render(bm,{lang:'ms-MY'});
-  assert.equal(doc.querySelector('.package-card-description').textContent,'Beri 11 kerosakan.');
-  assert.match(doc.querySelector('.stm-rt-calculation').dataset.tooltip,/Asas: 6 \+ Kekuatan: 2 \+ Fokus: 3 = 11/);
+  assert.equal(doc.querySelector('.package-card-description').textContent,'Beri 11 damage.');
+  assert.match(doc.querySelector('.stm-rt-calculation').dataset.tooltip,/Asas: 6 \+ Strength: 2 \+ Focus: 3 = 11/);
  }finally{dom.window.close();}
 });
 

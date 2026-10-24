@@ -3,9 +3,9 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const E=require('../dist/engine.js'),S=require('../dist/combat-status.js'),V=require('../dist/status-vfx.js'),fixture=require('./helpers/icon-status.cjs');
 test('all ten effects have complete BM names, effect, units, timing and descriptions without mutating gameplay',()=>{
  const r=fixture(),before=JSON.stringify(r),en=S.view(r,'player'),bm=S.view(r,'player','ms');assert.equal(bm.length,10);
- const labels=['Lemah','Terdedah','Kekuatan','Ketangkasan','Pertahanan','Blok','Duri','Tarikan Seterusnya','Blok Seterusnya','Simpan Blok'];
+ const labels=['Weak','Vulnerable','Strength','Agility','Defense','Block','Thorns','Draw seterusnya','Block Seterusnya','Simpan Block'];
  for(const x of bm){assert.ok(labels.includes(x.label),x.label);assert.ok(x.summary&&x.measure&&x.timing&&x.description);assert.equal(x.value,en.find(a=>a.id===x.id).value);}
- assert.match(bm.find(x=>x.id==='weak').summary,/−25%/);assert.match(bm.find(x=>x.id==='weak').measure,/2 fasa serangan/);assert.match(bm.find(x=>x.id==='weak').inlineMeasure,/−25%.*2 fasa/);assert.match(bm.find(x=>x.id==='vulnerable').summary,/\+50%/);assert.match(bm.find(x=>x.id==='retain-block').summary,/baki Blok/);assert.equal(JSON.stringify(r),before);
+ assert.match(bm.find(x=>x.id==='weak').summary,/−25%/);assert.match(bm.find(x=>x.id==='weak').measure,/2 fasa serangan/);assert.match(bm.find(x=>x.id==='weak').inlineMeasure,/−25%.*2 fasa/);assert.match(bm.find(x=>x.id==='vulnerable').summary,/\+50%/);assert.match(bm.find(x=>x.id==='retain-block').summary,/baki Block/);assert.equal(JSON.stringify(r),before);
 });
 test('the same status ID explains archived hit stacks and current phase durations separately',()=>{
  const r=E.restore(E.clone(require('./fixtures/card-effects-legacy.json').vulnerable)),old=S.view(r,'enemy','ms').find(x=>x.id==='vulnerable'),current=S.view(fixture(),'player','ms').find(x=>x.id==='vulnerable');

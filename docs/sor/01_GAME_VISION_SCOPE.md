@@ -15,7 +15,7 @@ Nama prototaip terdahulu Duel Cube Math — Menara Kemungkinan kekal rekod sejar
 - **VIS-03:** Kos, intent, syarat dan kesan jelas sebelum confirm.
 - **VIS-04:** MC red-haired dungeon adventurer; kad ilustrasi berframe emas dan parchment.
 - **VIS-05:** Dua stage dengan satu boss setiap stage, melalui map bercabang.
-- **VIS-06:** Bahasa game English mudah, istilah RPG biasa dan tiada countdown wajib.
+- **VIS-06:** Bahasa pemain English/Bahasa Melayu pada aras bacaan Tingkatan 1 mengikut [SOR 26](26_DUAL_LANGUAGE.md), istilah game yang dikekalkan dan tiada countdown wajib.
 
 Dokumen pembangunan boleh kekal BM. Semua teks yang dilihat pemain mengikuti [10](10_UI_UX_ACCESSIBILITY.md).
 
@@ -46,7 +46,7 @@ Sasaran dua minggu kekal sasaran kerja, bukan jaminan. Utamakan core stabil dan 
 
 ## Penerimaan
 
-Dua stage boleh ditamatkan, route bercabang sah, boss tidak boleh dilangkau, semua room mempunyai tindakan jelas, English konsisten, identiti dua design terpelihara dan save tidak menggandakan hasil.
+Dua stage boleh ditamatkan, route bercabang sah, boss tidak boleh dilangkau, semua room mempunyai tindakan jelas, BM/English konsisten, identiti dua design terpelihara dan save tidak menggandakan hasil.
 
 
 ## Supplied 40-card mechanics and display — 2.18.0

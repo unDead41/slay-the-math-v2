@@ -175,3 +175,7 @@ DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all
 ## Education reports main publication — 2.38.0
 
 DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.
+
+## Whole-game language — 24 October 2026
+
+The approved [SOR 26](26_DUAL_LANGUAGE.md) supersedes earlier English-only presentation clauses. Canonical question IDs/data and numerical owners remain unchanged; both English and simple BM must preserve meaning, bindings and state. Keep formal KSSM/DSKP mathematics terms with short explanations and retained game keywords. Validate language changes without awarding progression, rerolling offers or extending deadlines. See the [local branch audit](../audits/dual-language-bm-bi/LATEST.md) for actual checks and limitations.

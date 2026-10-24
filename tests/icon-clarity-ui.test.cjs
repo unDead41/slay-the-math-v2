@@ -44,7 +44,7 @@ test('a Block-only preview is labelled Block, not zero damage or a made-up Skill
 });
 test('comparison and details preserve current BM percentage rules and archived save descriptions',()=>{
  const current=fixture(),archived=E.restore(E.clone(require('./fixtures/card-effects-legacy.json').vulnerable));
- for(const [run,language,who,id,label,effect]of [[current,'ms','player','weak','Lemah',/25%.*kurang/],[current,'ms','player','vulnerable','Terdedah',/50%.*lebih/],[archived,'en','enemy','vulnerable','Vulnerable',/2 extra damage.*uses 1 stack/]]){
+ for(const [run,language,who,id,label,effect]of [[current,'ms','player','weak','Weak',/25%.*kurang/],[current,'ms','player','vulnerable','Vulnerable',/50%.*lebih/],[archived,'en','enemy','vulnerable','Vulnerable',/2 extra damage.*uses 1 stack/]]){
   const {dom,d,click,state}=boot(run,language);
   try{const before=state();click('[data-action=statuses][data-who='+who+']');const tile=d.querySelector('.status-overview-grid [data-id='+id+']');assert.equal(tile.querySelector('.status-name').textContent,label);assert.match(tile.getAttribute('aria-label'),effect);click('#dialog [data-id='+id+']');assert.equal(d.querySelector('#dialog-title').textContent,label);assert.match(d.querySelector('.status-detail').textContent,effect);assert.deepEqual(state(),before);}
   finally{dom.window.close();}

@@ -2,7 +2,7 @@
 export function createQuestionLanguageService(data){
  const key='slay-the-math.question-language.v1',copies=new WeakMap(),textOriginals=new WeakMap(),attributeOriginals=new WeakMap();
  const clone=value=>JSON.parse(JSON.stringify(value));
- const normalize=value=>value==='ms'?'ms':'en';let volatileLanguage='en';
+ const normalize=value=>/^(?:bm|ms)(?:-|$)/i.test(String(value))?'ms':'en';let volatileLanguage='en';
  function language(storage){try{const value=(storage||globalThis.localStorage).getItem(key);return ['en','ms'].includes(value)?normalize(value):volatileLanguage;}catch{return volatileLanguage;}}
  function setLanguage(value,storage){const lang=normalize(value);volatileLanguage=lang;try{(storage||globalThis.localStorage).setItem(key,lang);return {language:lang,saved:true};}catch{return {language:lang,saved:false};}}
  function t(text,lang='en',topic){if(lang!=='ms'||typeof text!=='string')return text;return data.topics?.[topic]?.strings?.[text]??data.support?.strings?.[text]??data.ui?.[text]??text;}
@@ -73,6 +73,8 @@ export function createQuestionLanguageService(data){
  }
  function interfaceText(text,lang){
   const direct=t(text,lang);if(direct!==text||lang!=='ms')return direct;
+  const mathLabel=text.match(/^(.+) — (Variable|Fraction|Probability \/ P\(A\)|Intersection \/ ∩|Product \/ multiply)$/);
+  if(mathLabel)return mathLabel[1]+' — '+t(mathLabel[2],lang);
   const patterns=[
    [/^(\d+) \/ (\d+) questions seen$/,(_,a,b)=>a+' / '+b+' soalan telah dilihat'],
    [/^Question (\d+) \/ (\d+)$/i,(_,a,b)=>'Soalan '+a+' / '+b],
@@ -119,7 +121,8 @@ export function createQuestionLanguageService(data){
   }
  }
  function control(id='question-language-select',lang=language()){
-  return '<label class="question-language-control" for="'+id+'">'+t('Question language',lang)+' <select id="'+id+'"><option value="en" '+(lang==='en'?'selected':'')+'>English</option><option value="ms" '+(lang==='ms'?'selected':'')+'>Bahasa Melayu</option></select></label>';
+  const title=id==='settings-question-language-select'?(lang==='ms'?'Bahasa permainan':'Game language'):t('Question language',lang);
+  return '<label class="question-language-control" for="'+id+'">'+title+' <select id="'+id+'"><option value="en" '+(lang==='en'?'selected':'')+'>English</option><option value="ms" '+(lang==='ms'?'selected':'')+'>Bahasa Melayu</option></select></label>';
  }
  function installGlossary(glossary){
   for(const [id,title] of Object.entries(data.support?.termLabels||{})){
@@ -131,5 +134,5 @@ export function createQuestionLanguageService(data){
   }
   return glossary;
  }
- return {data,key,language,setLanguage,t,rich,question,visual,foundation,applyInterface,control,installGlossary};
+ return {data,key,language,setLanguage,t,rich,question,visual,foundation,applyInterface,interfaceText,control,installGlossary};
 }

@@ -220,3 +220,7 @@ DISAHKAN: Ijamm now requests publishing all six improvements from icon81533b3 af
 ## Card tuning main publication — 2.40.0
 
 DISAHKAN: Ijamm now authorizes publishing the completed card follow-up to main and updating the version. Integrate bb5f93b with current main ade5d3a /2.39.0 as2.40.0, preserving education reports/hints, status explanations/readiness and Dev Settings. Three approved card values and AI actual-choice accounting retain their feature owner; ordinary v0/v1 rules/payments/offers and Master candidate.5 keys remain separated. [Fresh combined-tree evidence and limits](../CARD_TUNING_MAIN_2_40_0.md).
+
+## Whole-game language — 24 October 2026
+
+The approved [SOR 26](26_DUAL_LANGUAGE.md) supersedes earlier English-only presentation clauses. Canonical question IDs/data and numerical owners remain unchanged; both English and simple BM must preserve meaning, bindings and state. Keep formal KSSM/DSKP mathematics terms with short explanations and retained game keywords. Validate language changes without awarding progression, rerolling offers or extending deadlines. See the [local branch audit](../audits/dual-language-bm-bi/LATEST.md) for actual checks and limitations.

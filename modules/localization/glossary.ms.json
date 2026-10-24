@@ -1,0 +1,277 @@
+{
+  "artifact": {
+    "label": "Artifact",
+    "en": "An item that works automatically when its condition is met. It does not cost Energy to activate.",
+    "ms": "Item yang berfungsi secara automatik apabila syaratnya dipenuhi. Artifact tidak menggunakan Energy untuk diaktifkan."
+  },
+  "hp": {
+    "label": "HP",
+    "en": "Your current health. At 0 HP, Alyssa is defeated.",
+    "ms": "Kesihatan Alyssa sekarang. Apabila HP menjadi 0, Alyssa tewas."
+  },
+  "max_hp": {
+    "label": "Max HP",
+    "en": "The most HP Alyssa can have. Healing stops at this value.",
+    "ms": "Jumlah HP paling tinggi yang boleh dimiliki Alyssa. Pemulihan HP berhenti pada nilai ini."
+  },
+  "heal": {
+    "label": "pulihkan",
+    "en": "Restore missing HP, up to Max HP. The result shows the HP actually restored.",
+    "ms": "Memulihkan HP yang hilang, setakat Max HP. Nilai yang dipaparkan ialah HP yang benar-benar dipulihkan."
+  },
+  "damage": {
+    "label": "Damage",
+    "en": "Sealed bosses halve incoming damage, rounded up, before enemy Block. Any remaining damage reduces HP. A sealed boss remains at least 1 HP until its seals open.",
+    "ms": "Kerosakan Attack boleh dikurangkan oleh Defense dan Block. Boss yang masih bermeterai menerima separuh damage, dibundarkan ke atas, dan kekal sekurang-kurangnya 1 HP sehingga meterainya dibuka."
+  },
+  "block": {
+    "label": "Block",
+    "en": "Temporary protection that absorbs incoming damage before HP. At the next player turn, unused Block is cleared except the amount retained by card rules, then queued and artifact effects follow the turn order.",
+    "ms": "Block menghalang kerosakan sebelum HP berkurang. Pada awal giliran seterusnya, baki Block dibuang kecuali bahagian yang kad benarkan anda simpan. Tambahan Artifact dan kesan tertunda berlaku mengikut aturan permainan."
+  },
+  "strength": {
+    "label": "Strength",
+    "en": "Adds its value to Attack damage before enemy defenses. The card preview shows which hit receives it. It resets each combat.",
+    "ms": "Tambah nilai ini pada damage Attack yang menggunakan Strength. Pratonton kad menunjukkan jumlah bagi setiap pukulan. Bonus kad biasanya tamat apabila pertarungan berakhir; bonus Artifact mengikut peraturannya."
+  },
+  "agility": {
+    "label": "Agility",
+    "en": "Adds its value to Block from Defend cards. The card preview shows which grant receives it. It resets each combat. Attack cards do not get Agility.",
+    "ms": "Tambah nilai ini pada Block daripada kad Defend yang menggunakan Agility. Pratonton kad menunjukkan pemberian Block yang menerima bonus. Kad Attack tidak menerima bonus Agility."
+  },
+  "energy": {
+    "label": "Energy",
+    "en": "Points used to pay the Energy cost of playing cards.",
+    "ms": "Mata yang digunakan untuk membayar kos Energy apabila memainkan kad."
+  },
+  "focus": {
+    "label": "Focus",
+    "en": "A resource capped at 3. Spend 1 Focus on one eligible card each turn. Its preview shows the card-specific bonus. An unaided first-try correct Predict grants 1 Focus.",
+    "ms": "Simpan paling banyak 3 Focus. Guna 1 Focus pada satu kad yang layak setiap giliran. Pratonton menunjukkan bonus kad itu. Jawapan Predict yang betul pada cubaan pertama tanpa bantuan memberi 1 Focus."
+  },
+  "attack": {
+    "label": "Attack",
+    "en": "A card type used to attack enemies.",
+    "ms": "Jenis kad untuk menyerang musuh."
+  },
+  "defend": {
+    "label": "Defend",
+    "en": "Defend is a card category, such as Guard. Eligible Block values receive Agility and first-Defend bonuses. Defense is a separate attribute that reduces incoming damage.",
+    "ms": "Defend ialah jenis kad yang biasanya memberi Block. Kad ini menerima bonus Agility jika dinyatakan pada kad. Defense ialah sifat berbeza yang mengurangkan damage diterima."
+  },
+  "skill": {
+    "label": "Skill",
+    "en": "A card type with a special effect, such as drawing or replacing cards. Read its description for the exact effect.",
+    "ms": "Jenis kad dengan kesan khas, contohnya menarik atau menggantikan kad. Baca penerangan kad untuk mengetahui kesannya."
+  },
+  "passive": {
+    "label": "Passive",
+    "en": "A Passive card costs Energy to activate an ongoing effect for this combat. Only one copy of the same Passive can be active; the active limit and replacement choice are shown in combat.",
+    "ms": "Mainkan kad Passive untuk mengaktifkan kesan yang berterusan sehingga pertarungan tamat. Bayar kos Energy yang ditunjukkan. Hanya satu salinan Passive yang sama boleh aktif."
+  },
+  "draw": {
+    "label": "Draw",
+    "en": "Move available cards from Draw Pile into Hand. If Draw Pile is empty, shuffle Discard into it. A full Hand stops further draws. Extra cards stay in their pile; drawing also stops when no cards are available.",
+    "ms": "Ambil kad dari atas Draw Pile ke Hand. Jika Draw Pile kosong, kocok kad Discard ke dalamnya. Berhenti apabila Hand penuh atau tiada kad berbaki. Kad tambahan kekal dalam timbunannya."
+  },
+  "hand": {
+    "label": "Hand",
+    "en": "The cards currently held for you to play.",
+    "ms": "Kad yang sedang berada dalam tangan pemain dan boleh dimainkan."
+  },
+  "draw_pile": {
+    "label": "Draw Pile",
+    "en": "The pile from which you draw cards. Reshuffling follows the core game rules.",
+    "ms": "Longgokan tempat pemain mengambil kad. Aturan mengocok semula mengikut peraturan game."
+  },
+  "discard": {
+    "label": "Discard",
+    "en": "The pile for played or discarded cards. These cards can re-enter the draw cycle under the core game rules.",
+    "ms": "Longgokan kad yang telah dimainkan atau dibuang. Kad ini boleh masuk semula ke kitaran cabutan mengikut peraturan game."
+  },
+  "exhaust": {
+    "label": "Exhaust",
+    "en": "A separate pile for cards removed from the normal Draw and Discard cycle during this combat.",
+    "ms": "Longgokan berasingan untuk kad yang dikeluarkan daripada kitaran Draw dan Discard biasa dalam combat ini."
+  },
+  "gold": {
+    "label": "Gold",
+    "en": "Money used for purchases in the Shop.",
+    "ms": "Wang yang digunakan untuk membeli barang di Shop."
+  },
+  "shop": {
+    "label": "Kedai",
+    "en": "A dungeon location where you can buy the available goods with Gold.",
+    "ms": "Lokasi dalam dungeon untuk membeli barang yang tersedia menggunakan Gold."
+  },
+  "discount": {
+    "label": "diskaun",
+    "en": "A reduction in a purchase price. The final price uses the highest applicable artifact discount and rounds up to a whole Gold.",
+    "ms": "Potongan harga. Gunakan diskaun artifact tertinggi yang layak, kemudian bundarkan harga ke atas kepada Gold bulat."
+  },
+  "turn": {
+    "label": "giliran",
+    "en": "One period in which the player or enemies act.",
+    "ms": "Satu tempoh apabila pemain atau musuh bertindak."
+  },
+  "combat": {
+    "label": "pertarungan",
+    "en": "One battle, from its start until victory or defeat.",
+    "ms": "Satu pertempuran, dari mula hingga menang atau tewas."
+  },
+  "run": {
+    "label": "permainan",
+    "en": "One dungeon attempt, from its start until victory or defeat.",
+    "ms": "Satu percubaan meneroka dungeon, dari mula hingga menang atau tewas."
+  },
+  "first_turn": {
+    "label": "giliran pertama",
+    "en": "Only Alyssa’s opening turn in each combat.",
+    "ms": "Giliran pembukaan Alyssa sahaja dalam setiap combat."
+  },
+  "combat_start": {
+    "label": "awal pertarungan",
+    "en": "When a new battle begins, before the opening turn actions.",
+    "ms": "Masa combat baharu bermula, sebelum tindakan giliran pembukaan."
+  },
+  "start_turn": {
+    "label": "awal setiap giliran",
+    "en": "The beginning of each player turn. Apply core resets before the relevant artifact additions.",
+    "ms": "Permulaan setiap giliran pemain. Reset asas game berlaku sebelum tambahan artifact yang berkaitan."
+  },
+  "once_turn": {
+    "label": "Sekali setiap giliran",
+    "en": "This effect can activate only once in the stated turn, then becomes available for the next turn.",
+    "ms": "Kesan ini hanya boleh aktif sekali dalam giliran yang dinyatakan. Ia tersedia semula pada giliran seterusnya."
+  },
+  "once_combat": {
+    "label": "Sekali setiap pertarungan",
+    "en": "This effect can activate only once in this battle. A new battle resets it.",
+    "ms": "Kesan ini hanya boleh aktif sekali dalam combat ini. Combat baharu mereset had tersebut."
+  },
+  "acquisition": {
+    "label": "Apabila diperoleh",
+    "en": "Apply the effect once when this artifact is acquired in the run. Viewing the item again does not repeat it.",
+    "ms": "Gunakan kesan sekali apabila artifact diperoleh dalam run ini. Membuka butiran artifact tidak mengulang kesannya."
+  },
+  "end_turn": {
+    "label": "Tamat giliran",
+    "en": "Finish the player’s turn. Unspent Energy checks happen before unused Energy is cleared.",
+    "ms": "Menamatkan giliran pemain. Semakan baki Energy berlaku sebelum Energy yang tidak digunakan dikosongkan."
+  },
+  "played_card": {
+    "label": "kad dimainkan",
+    "en": "A card successfully resolved from your Hand. Drawing, previewing, canceled cards and artifact retaliation do not count.",
+    "ms": "Kad dari Hand yang kesannya berjaya diselesaikan. Kad yang baru dicabut, dipratonton atau dibatalkan tidak dikira."
+  },
+  "first_attack": {
+    "label": "Attack pertama anda setiap giliran",
+    "en": "Only the first eligible Attack card in this player turn receives this artifact bonus.",
+    "ms": "Hanya kad Attack pertama yang layak dalam giliran pemain ini mendapat bonus artifact tersebut."
+  },
+  "first_defend": {
+    "label": "Defend pertama anda setiap giliran",
+    "en": "Only the first eligible Defend card in this player turn receives this artifact bonus.",
+    "ms": "Hanya kad Defend pertama yang layak dalam giliran pemain ini mendapat bonus artifact tersebut."
+  },
+  "first_skill_combat": {
+    "label": "Skill pertama anda dalam pertarungan ini",
+    "en": "Only the first successfully resolved Skill card in this combat triggers this effect.",
+    "ms": "Hanya kad Skill pertama yang berjaya diselesaikan dalam combat ini mencetuskan kesan tersebut."
+  },
+  "first_skill_turn": {
+    "label": "Skill pertama anda setiap giliran",
+    "en": "Only the first successfully resolved Skill card in this player turn triggers this effect.",
+    "ms": "Hanya kad Skill pertama yang berjaya diselesaikan dalam giliran pemain ini mencetuskan kesan tersebut."
+  },
+  "first_passive": {
+    "label": "Passive pertama anda dalam pertarungan ini",
+    "en": "Only the first successfully resolved Passive card in this combat triggers this effect. Ultimate is not automatically Passive.",
+    "ms": "Hanya kad Passive pertama yang berjaya diselesaikan dalam combat ini mencetuskan kesan. Ultimate tidak dianggap sebagai Passive secara automatik."
+  },
+  "first_exhaust_combat": {
+    "label": "Exhaust pertama anda dalam pertarungan ini",
+    "en": "Only the first owned card that actually enters Exhaust in this combat triggers this effect.",
+    "ms": "Hanya kad milik pemain pertama yang benar-benar masuk ke Exhaust dalam combat ini mencetuskan kesan."
+  },
+  "first_exhaust_turn": {
+    "label": "Exhaust pertama anda setiap giliran",
+    "en": "Only the first owned card that actually enters Exhaust in this player turn triggers this effect.",
+    "ms": "Hanya kad milik pemain pertama yang benar-benar masuk ke Exhaust dalam giliran pemain ini mencetuskan kesan."
+  },
+  "at_least": {
+    "label": "sekurang-kurangnya",
+    "en": "The value must be equal to or greater than the stated number: ≥.",
+    "ms": "Nilai mesti sama dengan atau lebih besar daripada nombor yang dinyatakan. Simbolnya ialah ≥."
+  },
+  "or_less": {
+    "label": "atau kurang",
+    "en": "The value must be equal to or smaller than the stated number: ≤.",
+    "ms": "Nilai mesti sama dengan atau lebih kecil daripada nombor yang dinyatakan. Simbolnya ialah ≤."
+  },
+  "d6": {
+    "label": "d6",
+    "en": "A six-sided die with results 1 to 6. Chance Die rolls once on the separate saved artifact random stream; viewing it never rolls again.",
+    "ms": "Dadu enam muka dengan hasil 1 hingga 6. Chance Die dilambung sekali menggunakan rawak Artifact yang disimpan. Membuka butiran tidak melambung semula dadu."
+  },
+  "unspent": {
+    "label": "Energy yang belum digunakan",
+    "en": "Energy still left when you choose End Turn. One or more Energy triggers the same fixed Block bonus.",
+    "ms": "Energy yang masih berbaki apabila pemain memilih End Turn. Satu atau lebih Energy mencetuskan bonus Block tetap yang sama."
+  },
+  "fully_blocked": {
+    "label": "satu serangan musuh dihalang sepenuhnya",
+    "en": "Block absorbs all the positive damage of one enemy hit. A zero-damage hit or canceled attack does not qualify.",
+    "ms": "Block menyerap semua damage positif daripada satu serangan musuh. Serangan tanpa damage atau yang dibatalkan tidak dikira."
+  },
+  "retaliation": {
+    "label": "kerosakan balasan",
+    "en": "Damage sent back to the attacker by an artifact. It follows enemy damage reduction and does not count as an Attack card.",
+    "ms": "Damage yang dihantar semula kepada penyerang oleh artifact. Ia masih melalui pertahanan musuh dan bukan kad Attack."
+  },
+  "cycle": {
+    "label": "Sekali bagi pasangan giliran pemain dan musuh",
+    "en": "At most once across one player turn and its associated enemy turn.",
+    "ms": "Paling banyak sekali sepanjang satu giliran pemain bersama giliran musuh yang berkaitan."
+  },
+  "hp_threshold": {
+    "label": "50% Max HP atau kurang",
+    "en": "At or below half your Max HP while still alive. This also checks if you start combat below half HP.",
+    "ms": "HP berada pada separuh Max HP atau kurang, dan Alyssa masih hidup. Syarat ini turut diperiksa jika combat bermula di bawah separuh HP."
+  },
+  "effect_discard": {
+    "label": "Discard oleh kesan kad",
+    "en": "A card effect moves a card from Hand to Discard. End Turn cleanup, played cards going to Discard and direct Draw Pile discards do not qualify.",
+    "ms": "Kesan kad memindahkan kad dari Hand ke Discard. Pembersihan End Turn dan kad yang dibuang terus dari Draw Pile tidak dikira."
+  },
+  "highest_discount": {
+    "label": "diskaun tertinggi sahaja",
+    "en": "Use the largest applicable artifact discount. Owning 5% and 15% gives 15%, not 20%.",
+    "ms": "Gunakan diskaun artifact terbesar yang layak. Jika ada 5% dan 15%, diskaun yang digunakan ialah 15%."
+  },
+  "cap": {
+    "label": "had sumbangan Artifact",
+    "en": "A limit on this artifact’s own bonus. Bonuses from other sources can still increase the total.",
+    "ms": "Had bagi bonus artifact ini sendiri. Bonus daripada sumber lain masih boleh menambah jumlah keseluruhan."
+  },
+  "per_stat": {
+    "label": "setiap sifat",
+    "en": "Apply the stated amount separately to every named stat. For example, +3 Strength and +3 Agility each get their own +3.",
+    "ms": "Gunakan jumlah yang dinyatakan secara berasingan bagi setiap stat. Contohnya, +3 Strength dan +3 Agility masing-masing mendapat tambahan 3."
+  },
+  "percent": {
+    "label": "Peratus (%)",
+    "en": "A number out of 100. To find p% of a value, multiply that value by p and divide by 100.",
+    "ms": "Nombor daripada setiap 100. Untuk mencari p% daripada suatu nilai, darab nilai itu dengan p, kemudian bahagi dengan 100."
+  },
+  "round_up": {
+    "label": "Bundar ke atas",
+    "en": "Use the smallest whole number that is not below the calculated price. Example: 86.7 Gold becomes 87 Gold.",
+    "ms": "Pilih nombor bulat paling kecil yang tidak kurang daripada harga yang dikira. Contohnya, 86.7 Gold menjadi 87 Gold."
+  },
+  "range": {
+    "label": "Julat",
+    "en": "In a die result such as 1–2, either 1 or 2 qualifies. The dash marks a range, not subtraction.",
+    "ms": "Dalam hasil dadu seperti 1–2, hasil 1 atau 2 memenuhi syarat. Tanda sengkang menunjukkan julat, bukannya operasi tolak."
+  }
+}

@@ -9,6 +9,7 @@ const read=id=>fs.readFileSync(path.join(source,id),'utf8');
 const json=id=>JSON.parse(read(id));
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
 const host=require('../dist/rich-text-data.js'),catalog=require('../dist/artifact-data.js');
+const artifactLanguage=JSON.parse(fs.readFileSync(path.join(project,'modules/localization/glossary.ms.json'),'utf8'));
 const registry=json('STM_SHARED/registry.json'),supplierRegistryId=registry.registryId;
 const glossary=json('ARTIFACT/rich_text/glossary.json'),overrides=[];
 for(const [id,item] of Object.entries(host.glossary)){
@@ -17,16 +18,25 @@ for(const [id,item] of Object.entries(host.glossary)){
   overrides.push({id,supplied:old.definition,host:item.definition});
   Object.assign(old,{definition:item.definition});
   const entry=registry.entries[registry.domains.artifact[id]];
-  entry.definition=item.definition;entry.definition_ms=item.definition;
-  if(entry.mathText)entry.mathText.definition={en:[{text:item.definition}],ms:[{text:item.definition}]};
+  entry.definition=item.definition;
   registry.sourceSignatures.artifact[id].definition=item.definition;
  }
+ const translated=artifactLanguage[id];
+ if(!translated||translated.en!==item.definition||!translated.ms)throw Error('Artifact translation needs review '+id);
+ old.definition_ms=translated.ms;
+ const entry=registry.entries[registry.domains.artifact[id]];
+ entry.definition_ms=translated.ms;
+ if(entry.mathText)entry.mathText.definition={en:[{text:item.definition}],ms:[{text:translated.ms}]};
+ if(entry.teaching){entry.teaching.title_ms=translated.label;entry.teaching.definition.ms=translated.ms;}
 }
 delete registry.registryId;registry.registryId=hash(JSON.stringify(registry));
 const sourceCatalog=json('ARTIFACT/artifact_catalog.json');
 for(const a of sourceCatalog.artifacts){const b=catalog.artifacts.find(x=>x.id===a.id);if(!b||a.trigger!==b.trigger||JSON.stringify(a.values)!==JSON.stringify(b.values))throw Error('Effect drift '+a.id);}
 const bank=json('QUESTION_BANK/question-bank-form4-120.json');bank.version=bank.bankVersion;bank.total=bank.totalQuestions;
 const artifactRich=json('ARTIFACT/rich_text/artifact_richtext.json');
+// Supplier Focus example predates the confirmed cap. Correct presentation only.
+const focusCap=require('../dist/config.js').FOCUS_CAP,focusExample=artifactRich.artifacts.find(a=>a.id==='s04_clairvoyance_lens');
+focusExample.example_snapshot={context:'Focus before: '+(focusCap-1)+'; cap: '+focusCap+'.',results:[{label:'Focus gained',value:'+1',unit:'Focus',lines:['Requested Focus: +1','Focus before: '+(focusCap-1),'Focus after: '+focusCap,'Actual gain: '+focusCap+' − '+(focusCap-1)+' = 1 Focus']}]};
 const data={bank,glossary:json('QUESTION_BANK/rich_text/glossary.json'),foundations:json('QUESTION_BANK/learning/foundations.json'),artifact:{...artifactRich,glossary:glossary.entries},catalog:sourceCatalog};
 const modules=new Map(),sourceHashes={};
 function resolve(from,to){if(!to.startsWith('.'))throw Error('External module '+to);return path.posix.normalize(path.posix.join(path.posix.dirname(from),to));}
@@ -52,6 +62,7 @@ const css=['STM_SHARED/rich-text.css','QUESTION_BANK/rich_text/renderer.css','QU
 fs.writeFileSync(path.join(project,'dist/mechanics-source.css'),css);
 for(const id of ['QUESTION_BANK/question-bank-form4-120.json','QUESTION_BANK/rich_text/glossary.json','QUESTION_BANK/learning/foundations.json','ARTIFACT/artifact_catalog.json','ARTIFACT/rich_text/artifact_richtext.json','ARTIFACT/rich_text/glossary.json','STM_SHARED/registry.json'])sourceHashes[id]=hash(read(id));
 const localization=require('./build-question-language.cjs')(project);
+const gameLocalization=require('./build-game-language.cjs')(project);
 require('./build-question-feedback.cjs')(project);
 const practice=require('./build-education-practice.cjs')(project,registry);
 require('./build-master-balance.cjs')(project);
@@ -59,5 +70,6 @@ require('./sync-game-entrypoints.cjs')(project);
 require('./build-asset-manifest.cjs')(project);
 const audit={sourceZip:'QUESTION_BANK_HARMONIZED_v1_6.zip',sha256:'58bdc02a9e7df6a37a30f7012a17600b0f47bd0d9886411cd5640188c08efa58',artifactSourceZip:'INTEGRATION.zip',artifactPackage:'3.5',questionPackage:'1.6.0',bankVersion:bank.bankVersion,contentRevision:bank.contentRevision||null,supplierRegistryId,hostRegistryId:registry.registryId,overrides,sourceHashes,practice,output:{'dist/mechanics.js':hash(out),'dist/mechanics-source.css':hash(css),'dist/education-practice.js':hash(fs.readFileSync(path.join(project,'dist/education-practice.js')))},counts:{artifacts:31,questions:120,glossary:Object.keys(registry.entries).length,foundations:data.foundations.modules.length,practiceChecks:data.foundations.modules.reduce((n,m)=>n+m.checks.length,0)},omitted:'Duplicate PNG/4K sheets, PDF previews and demo hosts. The reviewed icon registry maps all 31 artifact identities to versioned painted WebP derivatives; original verified art remains preserved; the game engine owns effects, rewards and save commits. Education Practice has its own storage key and uses the same active bank.'};
 audit.localization=localization;
+audit.gameLocalization=gameLocalization;
 fs.writeFileSync(path.join(project,'modules/mechanics/integration-audit.json'),JSON.stringify(audit,null,2)+'\n');
 console.log(JSON.stringify({modules:modules.size,bytes:out.length,registryId:registry.registryId,overrides:overrides.map(x=>x.id)}));

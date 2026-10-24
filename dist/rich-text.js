@@ -32,10 +32,12 @@
  }
  function term(id,label){
   const item=D.glossary[id];if(!item)return esc(label);
-  return shared.termHTML('artifact',label||item.label,id).replace('data-richtext-kind=', 'data-rt-term="'+esc(id)+'" data-richtext-kind=');
+  return shared.termHTML('artifact',root.DCGameLanguage?.termLabel(id,label||item.label)||label||item.label,id).replace('data-richtext-kind=', 'data-rt-term="'+esc(id)+'" data-richtext-kind=');
  }
  function description(id){
   const item=D.artifacts[id];if(!item)return '';
+  const localized=root.DCGameLanguage?.artifactParts(id,item.segments.map(s=>s.text).join(''));
+  if(localized)return localized.map(s=>s.term?term(s.term,s.text):esc(s.text)).join('');
   return item.segments.map(s=>s.type==='term'?term(s.glossary_id,s.text):esc(s.text)).join('');
  }
  const unitIds={'HP':'hp','Max HP':'max_hp','Block':'block','Energy':'energy','Focus':'focus','Gold':'gold','damage':'damage','Strength':'strength','Agility':'agility','d6':'d6'};
@@ -46,10 +48,10 @@
   return '<span class="rt-result">'+(showLabel?'<span class="rt-result-label">'+esc(result.label)+': </span>':'')+'<button type="button" class="rt-calculation" data-richtext-kind="calculation" data-richtext-scope="artifact" data-category="calculation" data-rt-calculation="'+calculation+'" data-rt-detail="'+detail+'" aria-label="'+esc(result.label+': '+display+' '+result.unit+'. Show calculation')+'">'+display+'</button> '+term(unitIds[result.unit],result.unit)+'</span>';
  }
  function eventHTML(entry){return '<article class="rt-event" data-stm-richtext><h3>'+esc(entry.label)+'</h3><p class="rt-context">Stage '+(entry.stage+1)+' · Room '+(entry.depth+1)+(entry.turn?' · Turn '+entry.turn:'')+'</p><div class="rt-results">'+entry.results.map(r=>resultHTML(r,entry.label)).join('')+'</div></article>';}
- function history(r){return '<p>Resolved results from this run. Select an underlined number for its calculation, or a term for its meaning.</p><div class="rt-history">'+(entries(r).length?entries(r).map(eventHTML).join(''):'<p>No results yet. Calculations appear after effects resolve.</p>')+'</div>';}
- function glossary(){return '<details class="rt-glossary" data-stm-richtext><summary>Game & math glossary · 55 terms</summary><p>Green: game terms · Pink: math terms · Purple: resolved calculations</p><div>'+Object.entries(D.glossary).map(([id,item])=>'<p>'+term(id)+': '+esc(item.definition)+'</p>').join('')+'</div></details>';}
+ function history(r){return '<p>Resolved results from this run. Select a purple number for its calculation, or a colored term for its meaning.</p><div class="rt-history">'+(entries(r).length?entries(r).map(eventHTML).join(''):'<p>No results yet. Calculations appear after effects resolve.</p>')+'</div>';}
+ function glossary(){return '<details class="rt-glossary" data-stm-richtext><summary>Game & math glossary · 55 terms</summary><p>Green: game terms · Pink: math terms · Purple: resolved calculations</p><div>'+Object.entries(D.glossary).map(([id,item])=>'<p>'+term(id)+': '+esc(root.DCGameLanguage?.translate(item.definition,root.DCQuestionLanguage?.language())||item.definition)+'</p>').join('')+'</div></details>';}
  let controller=null;
- function bind(doc){controller?.destroy();controller=shared.attachTooltips(doc,{domain:'artifact',getLanguage:()=> 'en',getTheme:()=> 'dark'});}
+ function bind(doc){controller?.destroy();controller=shared.attachTooltips(doc,{domain:'artifact',getLanguage:()=>root.DCQuestionLanguage?.language()||'en',getTheme:()=> 'dark'});}
  function dismiss(){controller?.close();}
  const api={data:D,delta,total,healing,record,entries,latest,valid,term,description,resultHTML,eventHTML,history,glossary,bind,hide:()=>dismiss()};
  if(typeof module!=='undefined')module.exports=api;else root.DCRichText=api;

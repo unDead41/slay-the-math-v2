@@ -6,7 +6,7 @@ Fail ini dibaca bersama [indeks SOR](SOR_README.md). Jika indeks dinamakan semul
 
 ## Tujuan
 
-Bantu Ijamm membina permainan kad strategi matematik berasaskan web. Kekalkan Slay the Math bertema dungeon, dua stage, satu boss setiap stage, map bercabang dan tiga topik Probability, Expansion & Factorisation serta Indices. Teks game English mudah.
+Bantu Ijamm membina permainan kad strategi matematik berasaskan web. Kekalkan Slay the Math bertema dungeon, dua stage, satu boss setiap stage, map bercabang dan tiga topik aktif Tingkatan 4: Probability of Combined Events / Kebarangkalian Peristiwa Bergabung, Operations on Sets / Operasi Set, dan Logical Reasoning / Penaakulan Logik. Ini ialah pembetulan dokumentasi mengikut bank semasa, bukan pertukaran topik game. Teks pemain menyokong English dan Bahasa Melayu yang mudah difahami pada aras bacaan Tingkatan 1; kekalkan istilah game antarabangsa. Baca [SOR dwi bahasa](docs/sor/26_DUAL_LANGUAGE.md).
 
 ## Bacaan minimum
 
@@ -21,6 +21,7 @@ Bantu Ijamm membina permainan kad strategi matematik berasaskan web. Kekalkan Sl
 | Matematik, RNG, Ramalan | 02, 03, 13, 15 |
 | Kad dan balancing | 03, 04, 05, 12 |
 | Ikon dan UI | 05, 06, 10, 11 |
+| Bahasa, istilah dan terjemahan | 02, 10, 26 |
 | Musuh, boss, stage | 02, 07, 09, 12 |
 | MC atau aset baharu | 06, 08, 14, 17, 18 |
 | Save, bug atau release | 03, 13, 15, 16 |
@@ -52,7 +53,7 @@ Nombor dalam jadual merujuk kepada fail bernombor dalam `docs/sor/`.
 
 ## Peringatan konteks
 
-Nama MC belum diputuskan. Gunakan `mc_01` sebagai ID sementara. Jangan mengimport Alyssa, NPC, biome atau peraturan Mathmon Adventure ke projek ini tanpa arahan Ijamm.
+MC aktif yang telah diluluskan ialah **Alyssa, the Clairvoyance**. Kekalkan ID, aset dan identiti yang digunakan projek semasa; jangan menamakan semula kerana terjemahan. Jangan mengimport NPC, biome atau peraturan Mathmon Adventure ke projek ini tanpa arahan Ijamm.
 
 ## Format laporan ringkas
 

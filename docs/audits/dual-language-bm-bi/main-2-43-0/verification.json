@@ -1,0 +1,156 @@
+{
+  "checkedAtLocal": "2026-10-24T23:19:43.967653+08:00",
+  "mainBase": "ee65fa24a7f70157a946608277fa641652fe0057",
+  "version": "2.43.0",
+  "status": "PASSED within publication scope",
+  "targeted": {
+    "tests": 377,
+    "pass": 377,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "testFiles": [
+    "tests/game-language.test.cjs",
+    "tests/ai-playtester-acquisition.test.cjs",
+    "tests/ai-playtester-agent.test.cjs",
+    "tests/ai-playtester-deck.test.cjs",
+    "tests/ai-playtester-effects.test.cjs",
+    "tests/ai-playtester-server.test.cjs",
+    "tests/ai-playtester-strategy.test.cjs",
+    "tests/ai-playtester.test.cjs",
+    "tests/asset-manifest.test.cjs",
+    "tests/asset-readiness.test.cjs",
+    "tests/balance-master-ui.test.cjs",
+    "tests/balance-master.test.cjs",
+    "tests/card-combat.test.cjs",
+    "tests/card-effects-ai-integration.test.cjs",
+    "tests/card-effects-explanations.test.cjs",
+    "tests/card-effects-ui.test.cjs",
+    "tests/card-effects.test.cjs",
+    "tests/card-flow.test.cjs",
+    "tests/card-game-ui.test.cjs",
+    "tests/card-motion.test.cjs",
+    "tests/card-selection.test.cjs",
+    "tests/card-source.test.cjs",
+    "tests/card-tuning.test.cjs",
+    "tests/card-ui.test.cjs",
+    "tests/combat-persistence.test.cjs",
+    "tests/combat-status.test.cjs",
+    "tests/entrypoints.test.cjs",
+    "tests/icon-clarity-ui.test.cjs",
+    "tests/icon-readiness.test.cjs",
+    "tests/master-refresh-economy.test.cjs",
+    "tests/question-language.test.cjs",
+    "tests/release-build.test.cjs",
+    "tests/status-explanation.test.cjs",
+    "tests/status-vfx.test.cjs",
+    "tests/map-balance-current.test.cjs"
+  ],
+  "fullSuiteRerun": false,
+  "priorFullSuite": {
+    "version": "2.41.0",
+    "tests": 1037,
+    "evidence": "../verification.json"
+  },
+  "matrix": [
+    {
+      "language": "en",
+      "states": 240,
+      "strings": 1894,
+      "errors": []
+    },
+    {
+      "language": "ms",
+      "states": 240,
+      "strings": 1905,
+      "errors": []
+    }
+  ],
+  "languageBrowser": {
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "lang": "ms",
+        "focus": "BUTTON",
+        "practiceLanguages": [
+          "ms",
+          "en",
+          "ms"
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "lang": "ms",
+        "focus": "BUTTON",
+        "practiceLanguages": [
+          "ms",
+          "en",
+          "ms"
+        ]
+      }
+    ],
+    "errors": [],
+    "failedAssets": []
+  },
+  "masterBrowser": {
+    "checks": [
+      "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+      "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+      "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+    ],
+    "errors": []
+  },
+  "aiBrowser": {
+    "status": "PASS",
+    "encounters": 4,
+    "sourceHash": "fdf3456ef110ea2b24f3bc8042e4d208eda7821985a2e97d6ef943a52a671c8f",
+    "reportHistory": true,
+    "staleRefreshGuard": true,
+    "selectedHistorySurvivesReload": true,
+    "previousReportImmutable": true,
+    "downloads": true,
+    "cancellation": true,
+    "playerStorageUnchanged": true,
+    "viewports": [
+      1440,
+      750,
+      390
+    ],
+    "errors": []
+  },
+  "production": {
+    "version": "2.43.0",
+    "resourceHashesVerified": 674,
+    "sourceEqualFiles": 720,
+    "expectedTransforms": [
+      "app.js",
+      "asset-manifest.json",
+      "index.html"
+    ],
+    "protectedStaticSubpathBrowser": "PASSED",
+    "aiExcludedFromStaticHub": true
+  },
+  "normalResourceHashesVerified": 673,
+  "runtimeSHA256": {
+    "dist/game-language.js": "c46a62b7a01693472772718dd171b39e59ce470421202d612710febd8082a561",
+    "dist/question-language.js": "750f0c85df6263006b2fc0f9da96626a6aa9bd9604e14107ecc6264d5d571b06",
+    "dist/card-kit.js": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12",
+    "dist/app.js": "36bb4fece24a0800da5bfb7cafcff495ce9c4f455a4a5d3420c44288cb57b058",
+    "dist/mechanics.js": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907",
+    "dist/education-practice.js": "78c5e6549808e26ee3984fe38bb11016858140622cc867fa7c2e78ab4eb2d8d2",
+    "dist/bootstrap.js": "39e591b667535c53a5757428c93878305c614a0e8acd62ba1900148742fafac8",
+    "dist/release.js": "ae310d6d9d7b1a10a9426cc6c36663f3b1044d42a4f1a1466d8897906366a469",
+    "dist/asset-manifest.json": "f9218e3bffd77c3c9acd5c6132c9138e942969986f67d23932d26a6d8447c5c2",
+    "dist/index.html": "8ade77ddbce025a09c9c36487916ac1418710465e0416c0b0e911050e165a4fb",
+    "package.json": "bec1af72317078bee45e6ce2dabf938eadd947d2e1720e4ce95d77519347bbd8"
+  },
+  "portable": {
+    "bytes": 304219360,
+    "sha256": "7466839dd2ca4b7d8a112ceef6fad49fedc2d4e1b6c599d412116371ec2c62ea"
+  }
+}

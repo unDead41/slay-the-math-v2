@@ -7,7 +7,7 @@
   "bankVersion": "form4-review-1.6.0",
   "contentRevision": "clarity-2026-10-24.1",
   "supplierRegistryId": "881ed46c93d9444d01853bf2056a09e5216a8b5278ecb3aacdb069ca21818201",
-  "hostRegistryId": "093f5f3890bdbb614470d7da192726c665597ed111a907d5cea0d6b2f7ce71cd",
+  "hostRegistryId": "fe059764ac0d6a8ef3d3631c5d7963ab1b8aaf348dd4688ebc91a4615a8e3b83",
   "overrides": [
     {
       "id": "damage",
@@ -17,7 +17,7 @@
     {
       "id": "block",
       "supplied": "Temporary protection that absorbs incoming damage. Its reset follows the core combat rules.",
-      "host": "Temporary protection that absorbs incoming damage. Player Block resets to 0 at the start of the next player turn, before artifact additions."
+      "host": "Temporary protection that absorbs incoming damage before HP. At the next player turn, unused Block is cleared except the amount retained by card rules, then queued and artifact effects follow the turn order."
     },
     {
       "id": "strength",
@@ -37,12 +37,12 @@
     {
       "id": "defend",
       "supplied": "A card type used to gain Block.",
-      "host": "Defense is the game label for Defend cards, such as Guard. These cards receive Agility and first-Defend bonuses."
+      "host": "Defend is a card category, such as Guard. Eligible Block values receive Agility and first-Defend bonuses. Defense is a separate attribute that reduces incoming damage."
     },
     {
       "id": "passive",
       "supplied": "A card type that gives buffs or ongoing effects as described on the card. It must still be played at its stated cost.",
-      "host": "A card type for ongoing effects. This version has no Passive cards, so artifacts requiring them are excluded from offers."
+      "host": "A Passive card costs Energy to activate an ongoing effect for this combat. Only one copy of the same Passive can be active; the active limit and replacement choice are shown in combat."
     },
     {
       "id": "draw",
@@ -65,7 +65,7 @@
     "QUESTION_BANK/rich_text/renderer.mjs": "f88195e427b391a37181908f560113302f132e2e23d014c382a6a42b404136a1",
     "QUESTION_BANK/learning/support-visual.mjs": "06f9f5a826fc8c4fe66c615a23f7834f2dc8ba66517bd15d17ec21563f01076f",
     "QUESTION_BANK/learning/visual-renderer.mjs": "acf63116a41621f04469643a8d3614bc307bbcdf447848a4ab73b8aedefa1ba1",
-    "ARTIFACT/runtime/artifact-core.js": "bfa5ec749c70c189e98060c2cb3d187703a7534d3ffded0a47d813499315c1c5",
+    "ARTIFACT/runtime/artifact-core.js": "75df3e0c55bf37a8dc6e2b7dc3fc8426931d3317c0e112d4fe9b8cbe46281837",
     "ARTIFACT/runtime/artifact-ui.js": "99ce876f1f9a4329d29c8d644840ac89a4e9b347503c0d87b773e6ae6eb82b8d",
     "STM_SHARED/rich-text.css": "02aa28168327d24372e4c43e25b512736f7b82e7e92d3f505139b5fef6f18ac8",
     "QUESTION_BANK/rich_text/renderer.css": "7f24d77f44b37f413b25fe7b3d16d056d3c0d7cbca3b003842e91ddc46923454",
@@ -80,7 +80,7 @@
     "STM_SHARED/registry.json": "1889d009a2f8b6f0601ff4fe617944daa87d3c890c386deaee728fb7d692dcf4"
   },
   "practice": {
-    "bytes": 1240587,
+    "bytes": 1242444,
     "modules": [
       "more-hint-state.mjs",
       "rich_text/renderer.mjs",
@@ -93,9 +93,9 @@
     ]
   },
   "output": {
-    "dist/mechanics.js": "a37ebd533fe9235061df9c411305c39a2fb28df3139977353eab73b343c57596",
+    "dist/mechanics.js": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907",
     "dist/mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
-    "dist/education-practice.js": "e6bc3cdb0a82954b6ae04fa8fc8225c7ab8d32ae35dfea292902ee57e01805c0"
+    "dist/education-practice.js": "78c5e6549808e26ee3984fe38bb11016858140622cc867fa7c2e78ab4eb2d8d2"
   },
   "counts": {
     "artifacts": 31,
@@ -107,12 +107,17 @@
   "omitted": "Duplicate PNG/4K sheets, PDF previews and demo hosts. The reviewed icon registry maps all 31 artifact identities to versioned painted WebP derivatives; original verified art remains preserved; the game engine owns effects, rewards and save commits. Education Practice has its own storage key and uses the same active bank.",
   "localization": {
     "version": "1.0.0",
-    "bytes": 707704,
-    "sha256": "271168059de55c05c4eafb066a2e0db1308ae31ebd155efb6cb0f9f167a5e8c4",
+    "bytes": 708772,
+    "sha256": "750f0c85df6263006b2fc0f9da96626a6aa9bd9604e14107ecc6264d5d571b06",
     "strings": {
       "PROB": 1321,
       "SET": 1366,
       "LOGIC": 1207
     }
+  },
+  "gameLocalization": {
+    "bytes": 137246,
+    "strings": 1401,
+    "sha256": "c46a62b7a01693472772718dd171b39e59ce470421202d612710febd8082a561"
   }
 }

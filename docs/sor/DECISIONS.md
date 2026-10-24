@@ -776,3 +776,11 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 ## DEC-20261024-MASTER-REFRESH-MAIN — Publish Balance and AI
 
 DISAHKAN: “ni please push dekat main please” authorizes publishing reviewed balance/master b281dc69e752f84424b81d0d051644b9da154dd9 to main, superseding its earlier branch-only boundary. Use main45d2378302196d9b0b79af7b371e6f16d4f5768c as first parent and the Master branch as second parent, with release2.42.0. Preserve current numeric/runtime owners and all unrelated main features. Actual combined checks, source parity and limits: [main release](../balance/master/MAIN_RELEASE_2_42_0.md). Human win rates/optimality and the inherited Spool/documentation findings remain unverified/open as recorded.
+
+## 24 October 2026 — Whole-game BM / English, local branch
+
+DISAHKAN: Ijamm requests reading latest main, auditing BM/English and mathematics/game names, switching all live English player text to simple BM suitable for Form 1 reading, retaining established game terms, and updating SOR/implementation locally without Git push. [SOR 26](26_DUAL_LANGUAGE.md) owns copy/terminology; active identity remains Slay the Math: Dungeon of Chance. Initial base: main 2.39.0. Refreshed onto main 2.41.0 / 45d23783, retaining current and archived card rules, verified resource loading and retained combat actors; do not replay the obsolete catalogue-only branch. Preserve numerical mechanics, current/archived rule identities, artwork and player records. [Audit](../audits/dual-language-bm-bi/LATEST.md).
+
+## DEC-20261024-DUAL-LANGUAGE-MAIN — Publish whole-game BM / English
+
+DISAHKAN: Ijamm’s “push ni kalau tak push lagi please” supersedes the earlier local-only language boundary. Main ee65fa24a7f70157a946608277fa641652fe0057 /2.42.0 explicitly excludes this pending language work. Publish the reviewed language update with current main as2.43.0. Preserve the Balance/AI refresh, numerical owners, archived/current rules, bank, original artwork/audio and save contracts. Keep the earlier1037-test2.41.0 evidence historical; record fresh integration checks and publication read-back in the [release](../DUAL_LANGUAGE_MAIN_2_43_0.md) and [audit](../audits/dual-language-bm-bi/LATEST.md).

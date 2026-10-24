@@ -51,3 +51,15 @@ Semakan kuasa baharu meliputi kesemua 40 kad biasa/upgraded dalam konteks fight 
 **IMPLEMENTED / CADANGAN UNTUK PLAYTEST:** Rune Sweep 2 Energy, 12 damage, Focus +4, upgrade +3. Fate Storm 2 Energy, 5+5+5 damage; Strength, Focus +4 dan upgrade +3 pada hit pertama sahaja. Nilai Master ini kekal; dua kad dalam mode biasa diselaraskan kepada nilai sama. Bahagian AoE Rune Sweep dibuang, bukannya ditambah sebagai damage percuma. RNG sasaran Fate Storm dibuang. Semua 40 kad kini mempunyai kesan serangan/debuff kepada satu musuh; self effects dan random draw kekal mengikut fungsi asal.
 
 Adapter semasa: `tools/cards/single-target.cjs`, sebelum `tools/import-cards.cjs` menjana runtime. Input pembekal kekal rekod sejarah. Receipt baharu merekod versi definisi; receipt lama mode biasa disemak dengan definisi asal dan tidak diselesaikan semula. Master menggunakan `master-1.3.0-candidate.3` dan save key baharu; save candidate.2 kekal tersimpan di key asal. Nilai 38 kad lain, enemy, artifak, harga, weighting loot, topology dan bank soalan kekal. [Bukti perbandingan dan semakan](../balance/master/SINGLE_TARGET_2_29_0.md). Bukti MB-05 di atas berasal daripada candidate.2, bukan hasil baharu candidate.3.
+
+## MB-07 — developer AI Playtester, branch ai
+
+DISAHKAN, 24 October 2026: publish strategy/simulation AI to ai only and improve relevant shortcomings. Reuses candidate.3 bindings with unchanged card/enemy/artifact/economy/map/question numbers. Combat skill and Predict ability remain separate. Contextual complete-factorial individual/pair estimates and resolved usage telemetry do not constitute universal CP, exhaustive combinations or pupil 90/70/50 validation. See [guide](../AI_PLAYTESTER.md).
+
+## MB-08 — AI strategy improvements, branch ai
+
+DISAHKAN: Ijamm requests actual support-value measurement, multi-turn planning and synergistic acquisition. The AI developer harness consumes candidate.3 without changing numerical profiles. Named effect units/efficiencies and observed contextual deltas remain distinct; acquisition scores are heuristics. The shared specialist replay receives optional observation/policy callbacks only. Default specialist policies, source snapshots and pupil win-rate interpretation remain intact. [Design](../superpowers/specs/2026-10-24-ai-strategy-design.md), [verification](../verification/ai-strategy.json).
+
+## MB-09 — AI main publication
+
+DISAHKAN, 24 October 2026: Ijamm now authorizes publishing the completed AI update to main. This supersedes MB-07's ai-only boundary. The integration retains main game 2.32.1 and candidate.3 numeric profiles. Current support telemetry and sampled strategy remain developer diagnostics; pupil targets and exhaustive synergy validation remain unmeasured. [Fresh integration checks](../AI_PLAYTESTER_MAIN_2026_10_24.md).

@@ -1,0 +1,7 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.32.1 test:dev-browser
+> node tests/dev-tools-browser.cjs && node tests/dev-toggle-browser.cjs
+
+PASS: real scenes, card comparison/combat, motion step/teardown, exact restart, presets, player storage isolation and small viewport
+PASS npm start dev, main menu, synchronized Settings toggle, disabled API, refresh persistence and Hub combat

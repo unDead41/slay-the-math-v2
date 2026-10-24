@@ -1,0 +1,31 @@
+{
+  "status": "PASSED",
+  "gameVersion": "2.32.1",
+  "protectedFiles": 823,
+  "changedProtected": [],
+  "publicFiles": 706,
+  "publicFilesIdenticalToDist": true,
+  "offlineExcludesAi": true,
+  "routes": [
+    {
+      "method": "GET",
+      "route": "/__dev/ai/",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "route": "/__dev/ai/app.js",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "route": "/__dev/ai/jobs",
+      "status": 404
+    },
+    {
+      "method": "POST",
+      "route": "/__dev/ai/jobs",
+      "status": 404
+    }
+  ]
+}

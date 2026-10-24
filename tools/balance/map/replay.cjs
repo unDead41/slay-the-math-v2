@@ -63,6 +63,8 @@ function plannedRoute(runSeed,stage,routeRandom,forced){
  return routes.find(x=>JSON.stringify(x.nodeIds)===JSON.stringify(ids));
 }
 function runCampaign(options={}){
+ const deckPolicy=options.deckPolicy;
+ function deckDecision(scene,decision){options.onDeckDecision?.({scene,...decision});return decision;}
  const {runSeed,mode=options.initialState?.mode||defaults.mode,forcedRoutes=null,trace=false,predictProfile='feedback',routePolicy=defaults.routePolicyVersion}=options;
  const difficulty=runtime?runtime.difficulty:assertDifficulty(options.difficulty);
  if(runtime&&(!runtime.C.MASTER_BALANCE||options.difficulty&&options.difficulty!==difficulty))throw Error('Master replay difficulty mismatch.');
@@ -81,7 +83,7 @@ function runCampaign(options={}){
  let clock=options.initialClock??defaults.clockEpoch,run,observer,entryStateHash=null,startingPlays=options.initialState?.stats.cardsPlayed||0,active=null,invalidStates=0,apiCalls=0,combatPlays=0,combatKey=null,answerAttempts=0,firstCorrect=0;
  const realNow=Date.now;Date.now=()=>clock;
  class ReplayLimit extends Error{}
- function act(kind,fn,detail={}){if(apiCalls>=limits.maxActions)throw new ReplayLimit();const before=observer?.mark(run);apiCalls++;actions.push({n:apiCalls,kind,stage:run?.stage,depth:run?.depth,...detail});const result=fn();if(observer)observer.observe(kind,before,run,result);return result;}
+ function act(kind,fn,detail={}){if(apiCalls>=limits.maxActions)throw new ReplayLimit();const before=observer?.mark(run);apiCalls++;actions.push({n:apiCalls,kind,stage:run?.stage,depth:run?.depth,...detail});const result=options.observeAction?options.observeAction(run,fn):fn();if(observer)observer.observe(kind,before,run,result);return result;}
  const takeSnapshot=r=>observer?observer.snapshot(r):snapshot(r);
  function validate(where){if(!E.validate(run)){invalidStates++;throw Error('Invalid engine state at '+where);}}
  function finishRoom(){if(active){active.exit=takeSnapshot(run);active.result=run.scene==='defeat'?'DEFEAT':run.scene==='victory'?'VICTORY':'CLEARED';active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;observer?.detachRoom();}}
@@ -94,12 +96,14 @@ function runCampaign(options={}){
  function pickFeedback(choices,attempts=[]){const unused=choices.filter(id=>!attempts.includes(id));if(!unused.length)throw Error('Question has no remaining answer.');return unused[Math.floor(answerRandom()*unused.length)];}
  function resolveCardChoice(){
   const ch=E.cardChoice(run),candidates=ch.candidates||[];
+  if(options.combatChoice){const value=options.combatChoice(run);act('cardChoice',()=>E.chooseCardOption(run,value),{choiceKind:ch.kind});options.onCombatChoice?.(run,{kind:ch.kind,value});options.onCombatPlay?.(run,{kind:'choice'});return;}
   let value;
   if(ch.kind==='card_search')value=E.intent(run).damage>0?'defend':'attack';
   else if(ch.kind==='burning_page')value='take';
   else if(['passive_swap','passive_trim'].includes(ch.kind))value=candidates.slice().sort((a,b)=>cardMerit(a)-cardMerit(b)||a.uid.localeCompare(b.uid))[0].uid;
   else{const sorted=candidates.slice().sort((a,b)=>cardMerit(b)-cardMerit(a)||a.uid.localeCompare(b.uid));value=ch.kind==='read_ahead'?{take:sorted[0].uid,order:sorted.slice(1).map(c=>c.uid)}:sorted[0].uid;}
   act('cardChoice',()=>E.chooseCardOption(run,value),{choiceKind:ch.kind});
+  if(options.onCombatPlay)options.onCombatPlay(run,{kind:'choice'});
  }
  function mysteryReward(){
   const event=X.definition(run),p=X.pending(run),options=event.success.options.filter(o=>X.actionable(run,o));
@@ -112,6 +116,11 @@ function runCampaign(options={}){
    const type=option.effects.find(e=>['UPGRADE_CARD','REMOVE_CARD','TRANSFORM_CARD','CONSUME_ARTIFACT','CHOOSE_CARD_REWARD'].includes(e.type)).type;
    const score=id=>type==='CONSUME_ARTIFACT'?artifactMerit(A.catalog[id]):type==='CHOOSE_CARD_REWARD'?rewardMerit(run,id):cardMerit(run.deck.find(c=>c.uid===id));
    const sign=['REMOVE_CARD','TRANSFORM_CARD','CONSUME_ARTIFACT'].includes(type)?1:-1;targets.sort((a,b)=>sign*(score(a)-score(b))||a.localeCompare(b));
+   if(deckPolicy&&type!=='CONSUME_ARTIFACT'){
+    const cards=run.deck.filter(c=>targets.includes(c.uid)),d=deckDecision('mystery',type==='CHOOSE_CARD_REWARD'?deckPolicy.reward(run,targets,false,{allowSkip:event.success.mayDecline}):type==='UPGRADE_CARD'?deckPolicy.upgrade(run,cards):deckPolicy.remove(run,cards)),selected=d.key||d.uid;
+    if(type==='CHOOSE_CARD_REWARD'&&d.key===null&&event.success.mayDecline){act('mysteryDecline',()=>E.leaveMystery(run,clock));return;}
+    if(selected&&targets.includes(selected))targets=[selected,...targets.filter(t=>t!==selected)];
+   }
    act('mysteryTarget',()=>E.selectMysteryTarget(run,targets[0]),{id:targets[0]});
   }
   act('mysteryClaim',()=>E.claimMystery(run));
@@ -161,17 +170,24 @@ function runCampaign(options={}){
      }
     }
     if(run.battle.question){act('forecastClose',()=>E.closeForecast(run));continue;}
-    const chosen=chooseCombatAction(publicCombatView(run));
+    const chosen=options.combatAgent?options.combatAgent(run,publicCombatView(run)):chooseCombatAction(publicCombatView(run));
     if(chosen.kind==='endTurn')act('endTurn',()=>E.endTurn(run));
-    else{if(!!run.battle.boostArmed!==chosen.focus&&run.battle.focus>0&&!run.battle.boostUsed)act('focusToggle',()=>E.armFocus(run));act('playCard',()=>E.playCard(run,chosen.uid),{uid:chosen.uid});combatPlays++;}
+    else{if(!!run.battle.boostArmed!==chosen.focus&&run.battle.focus>0&&!run.battle.boostUsed)act('focusToggle',()=>E.armFocus(run));act('playCard',()=>E.playCard(run,chosen.uid),{uid:chosen.uid,...(options.combatAgent?{decision:chosen.explanation}:{})});if(options.onCombatPlay)options.onCombatPlay(run,chosen);combatPlays++;}
    }else if(run.scene==='reward'){
     if(run.artifactState?.offer?.ready){const a=E.artifactChoices(run).slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id))[0];act('artifactChoice',()=>E.chooseArtifact(run,a.id),{id:a.id});}
-    else{const choices=run.rewards.slice().sort((a,b)=>rewardMerit(run,b,!!run.battle?.elite)-rewardMerit(run,a,!!run.battle?.elite)||a.localeCompare(b));const key=run.deck.length<24?choices[0]:null;act('rewardChoice',()=>E.chooseReward(run,key),{key});}
+    else{const choices=run.rewards.slice().sort((a,b)=>rewardMerit(run,b,!!run.battle?.elite)-rewardMerit(run,a,!!run.battle?.elite)||a.localeCompare(b));const key=deckPolicy?deckDecision('reward',deckPolicy.reward(run,run.rewards,!!run.battle?.elite)).key:run.deck.length<24?choices[0]:null;act('rewardChoice',()=>E.chooseReward(run,key),{key});}
    }else if(run.scene==='camp'){
+    if(deckPolicy){const d=deckDecision('camp',deckPolicy.camp(run));act(d.action==='heal'?'campHeal':'campUpgrade',()=>E.camp(run,d.action,d.uid),{uid:d.uid});continue;}
     const card=run.deck.filter(c=>E.canUpgrade(c)).sort((a,b)=>cardMerit(b)-cardMerit(a)||a.uid.localeCompare(b.uid))[0];
     if(run.hp<=run.maxHp-8||!card)act('campHeal',()=>E.camp(run,'heal'));
     else act('campUpgrade',()=>E.camp(run,'upgrade',card.uid),{uid:card.uid});
    }else if(run.scene==='shop'){
+    if(deckPolicy){const d=deckDecision('shop',deckPolicy.shop(run));
+     if(d.kind==='leave')act('shopLeave',()=>E.leaveShop(run));
+     else if(d.kind==='remove')act('removeCard',()=>E.removeShopCard(run,d.uid),{uid:d.uid});
+     else act(d.kind==='card'?'buyCard':'buyArtifact',()=>d.kind==='card'?E.buyCard(run,d.index):E.buyArtifact(run,d.index),{index:d.index});
+     continue;
+    }
     const options=[];
     if(run.deck.length<24)run.shop.offers.forEach((o,i)=>{const price=E.shopPrice(run,o);if(!run.shop.bought.includes(i)&&price<=run.gold)options.push({kind:'card',i,value:rewardMerit(run,o.key)/price});});
     (run.shop.artifacts||[]).forEach((o,i)=>{if(o.id&&!run.shop.artifactBought.includes(i)&&!A.has(run,o.id)){const price=run.economyState?E.shopPrice(run,o):A.price(run,o.price);if(price<=run.gold)options.push({kind:'artifact',i,value:artifactMerit(A.catalog[o.id])/price});}});
@@ -196,7 +212,7 @@ function runCampaign(options={}){
  function result(status,error=null){
   if(status==='BENCHMARK_LIMIT_CENSORED')reconcile();
   if(active){active.exit=takeSnapshot(run);active.result=status;active.playerTurns=run.stats.turns-active.turnsBefore;delete active.turnsBefore;rooms.push(active);active=null;}
-  return {runSeed,seed:'STM-'+String(runSeed%100+1).padStart(3,'0'),mode,difficulty,policyVersion:defaults.playerPolicyVersion,routePolicy:forcedRoutes?'forced-route-diagnostic':routePolicy,
+  return {runSeed,seed:'STM-'+String(runSeed%100+1).padStart(3,'0'),mode,difficulty,policyVersion:options.agentVersion||defaults.playerPolicyVersion,routePolicy:forcedRoutes?'forced-route-diagnostic':routePolicy,
    status,error,campaignWon:options.stopAfterStage||options.stopAtEntry||entryStage!==1?null:status==='VICTORY'?true:status==='DEFEAT'?false:null,entryStage,entryStateHash,stages,plannedRoutes:plans,rooms,routeDecisions,checkpoints,apiCalls,committedCardPlays:(run?.stats.cardsPlayed||0)-startingPlays,answerAttempts,firstCorrect,invalidStates,
    final:run?takeSnapshot(run):null,traceHash:hash(actions),...(trace?{actions}:{}),...(observer?{metrics:observer.metrics}:{}),predictProfile,syntheticOracleUsed:PROFILES[predictProfile].oracle,
    learningModel:predictProfile==='feedback'?'uniform untried visible choice; use feedback for Predict/artifact, one attempt for Mystery; no answer key access':'Predict '+predictProfile+' sensitivity; artifact/Mystery retain feedback policy; canonical key used only for declared high/low knowledge model',entrySet:options.initialState?'captured-valid-stage-entry':'actual-new-run-and-campaign-carry'};

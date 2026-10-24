@@ -1,0 +1,105 @@
+✔ reward values Shield Shot synergy in a Block deck and skips duplicate unique Passive (337.042848ms)
+✔ upgrade chooses a marginal improvement and removal protects useful synergy (76.607131ms)
+✔ shop uses exact engine prices and never buys an unaffordable or harmful card (71.250525ms)
+✔ removal respects the actual minimum and one-removal-per-shop rule (73.42093ms)
+✖ real campaigns apply the deck policy and expose a bounded acquisition explanation trace (1629.981558ms)
+✖ upgrade ranking recognizes activation gifts and larger visible selection windows (63.900589ms)
+✖ Mystery declining an unwanted offered card applies the recorded skip (76.167581ms)
+✔ Expert sees the later payoff of activating Strength before future attacks (234.808893ms)
+✔ Expert reserves current Focus when a larger future benefit is available (207.564823ms)
+✔ planning samples inferred public deck composition and ignores hidden order and RNG (116.493038ms)
+✔ Expert actually advances cloned enemy turns and finishes only resolved cutoff states (89.382669ms)
+✖ actual Passive replacement shares the Expert policy and preserves useful Strength (114.359144ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 8
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2434.064084
+
+✖ failing tests:
+
+test at tests/ai-playtester-deck.test.cjs:26:1
+✖ real campaigns apply the deck policy and expose a bounded acquisition explanation trace (1629.981558ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.ai.choiceDecisions?.length>0)
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/slay-the-math-ai/tests/ai-playtester-deck.test.cjs:28:290)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/ai-playtester-deck.test.cjs:30:1
+✖ upgrade ranking recognizes activation gifts and larger visible selection windows (63.900589ms)
+  AssertionError [ERR_ASSERTION]: passive.rune_armor must value its actual upgrade mechanics
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/slay-the-math-ai/tests/ai-playtester-deck.test.cjs:31:315)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/ai-playtester-deck.test.cjs:33:1
+✖ Mystery declining an unwanted offered card applies the recorded skip (76.167581ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  13 !== 12
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/slay-the-math-ai/tests/ai-playtester-deck.test.cjs:37:375)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 13,
+    expected: 12,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ai-playtester-strategy.test.cjs:24:1
+✖ actual Passive replacement shares the Expert policy and preserves useful Strength (114.359144ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/slay-the-math-ai/tests/ai-playtester-strategy.test.cjs:28:217)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

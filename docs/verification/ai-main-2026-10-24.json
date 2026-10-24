@@ -1,0 +1,114 @@
+{
+  "status": "PASSED",
+  "dateMalaysia": "2026-10-24",
+  "scope": "AI Playtester integration into main",
+  "parents": {
+    "main": "d5533ad14568ace062642adcb67809a878e665e7",
+    "ai": "807be6763cac1bc97134f86031d42e5dc720d6d1"
+  },
+  "gameVersion": "2.32.1",
+  "fullSuite": {
+    "tests": 820,
+    "pass": 820,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "exitCode": 0,
+    "durationMs": 355130.090047
+  },
+  "syntax": {
+    "passed": true,
+    "exitCode": 0
+  },
+  "aiBrowser": {
+    "status": "PASS",
+    "encounters": 4,
+    "sourceHash": "d010faa0bb405a10dd2066f1444bd07b9d5d847fc7a62a34d78d1e30f84d6c4d",
+    "reportHistory": true,
+    "staleRefreshGuard": true,
+    "selectedHistorySurvivesReload": true,
+    "previousReportImmutable": true,
+    "downloads": true,
+    "cancellation": true,
+    "playerStorageUnchanged": true,
+    "viewports": [
+      1440,
+      750,
+      390
+    ],
+    "errors": []
+  },
+  "developerBrowser": {
+    "passed": true,
+    "exitCode": 0,
+    "coverage": [
+      "real scenes and card comparisons",
+      "motion step and teardown",
+      "presets and restart",
+      "player storage isolation",
+      "main menu and synchronized Settings toggle",
+      "refresh persistence and disabled mutation API"
+    ]
+  },
+  "production": {
+    "status": "PASSED",
+    "gameVersion": "2.32.1",
+    "protectedFiles": 823,
+    "changedProtected": [],
+    "publicFiles": 706,
+    "publicFilesIdenticalToDist": true,
+    "offlineExcludesAi": true,
+    "routes": [
+      {
+        "method": "GET",
+        "route": "/__dev/ai/",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "route": "/__dev/ai/app.js",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "route": "/__dev/ai/jobs",
+        "status": 404
+      },
+      {
+        "method": "POST",
+        "route": "/__dev/ai/jobs",
+        "status": 404
+      }
+    ]
+  },
+  "productionInputs": {
+    "status": "PASSED",
+    "identicalTrackedInputs": 1859,
+    "changedInputs": [],
+    "verificationEnvironment": "isolated byte-identical source export while original full suite is running"
+  },
+  "scopeVerification": {
+    "protectedFiles": 823,
+    "changedProtected": [],
+    "aiFiles": 14,
+    "changedAiImplementation": [],
+    "version": "2.32.1"
+  },
+  "conflictResolution": {
+    "files": [
+      "docs/sor/CHANGELOG.md",
+      "docs/sor/DECISIONS.md"
+    ],
+    "method": "retain both append histories",
+    "gameplayConflict": false
+  },
+  "publication": "User authorized direct main publication; remote head and tree are verified after the final ref update.",
+  "limits": [
+    "Heuristic optimality and exhaustive combinations remain unverified.",
+    "No actual pupil 90/70/50 win-rate validation.",
+    "No physical Windows/device testing or hosted-deployment claim.",
+    "Historical branch reports retain their source identities.",
+    "MODEL.zip was unavailable and not used."
+  ]
+}

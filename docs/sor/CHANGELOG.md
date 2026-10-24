@@ -455,3 +455,20 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 - Use the supplied Menu.mp3.mpeg / Ancient Stone Keep recording for Home, preserving its exact MP3 bytes and replacing the canonical menu source so old OGG files cannot override it.
 - Preserve existing Music settings, first-gesture unlock, full-track looping, scene crossfades and all talking. Generate normal/production/offline builds from the shared registry.
 - Publish the completed music-branch update to main following Ijamm's explicit follow-up authorization. [Source and actual verification](../audio/menu-2026-10-24/README.md).
+
+## 24 October 2026 — AI Playtester branch ai
+
+Published developer strategy/simulation AI on main 2.31.0 base, preserving the tutorial. Added five-report history, safe identity-bound cancellation and reload selection, individual A/B replacement deltas alongside pair interaction, and per-card resolved Energy/Focus/direct-damage telemetry. No gameplay or main publication change. Fresh validation replaces the unavailable local-draft evidence; see docs/AI_PLAYTESTER.md and docs/verification/ai-branch.json.
+
+## 24 October 2026 — AI strategy update on ai (game stays 2.31.0)
+
+- Track actual card support alongside paid Energy/Focus: absorbed/expired/unused Block, Weak/Defense mitigation, actual Hand moves, buff/status involvement and Passive effects.
+- Extend Expert to three sampled draw worlds and up to three complete turns, with equal budgets/common resolved cutoff and hidden order/RNG independence.
+- Choose reward/skip, Shop, upgrade/removal and Mystery targets by marginal deck synergy, preserving legacy replay behavior without optional hooks.
+- Publish schema 3 support tables/ratios, explanations and source-bound exports. [Verification](../verification/ai-strategy.json).
+
+## 24 October 2026 — AI Playtester on main
+
+- Integrate the completed support valuation, sampled future-turn planning and deck-synergy AI after Ijamm's explicit main publication request.
+- Preserve current game 2.32.1, combat animation, supplied menu music, tutorial, player saves and numerical gameplay. Retain both main and AI SOR histories; the tool remains developer-only.
+- Record fresh merged-tree verification separately from historical ai-branch results. [Integration](../AI_PLAYTESTER_MAIN_2026_10_24.md).

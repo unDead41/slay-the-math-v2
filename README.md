@@ -1,4 +1,4 @@
-# Slay the Math — 2.32.0
+# Slay the Math — 2.32.1
 
 **Tutorial** now opens a complete English/BM field guide: 17 chapters, 16 real game screenshots and 11 safe, replayable practice chapters using the actual engine. Progress resumes independently of your run and Learning Report. Open Main Menu → Tutorial or the in-game Tutorial control. [How to use, scope and verification](docs/TUTORIAL_2_31_0.md).
 
@@ -137,3 +137,7 @@ Open http://localhost:4173. `npm run build:prod` only builds, and `npm start` ke
 Main now includes an optional Google destination to Main Menu / Settings / Education Practice → Learning Report. No database server is needed for this option. Records stay on-device until the player opts in and the Google receiver confirms the exact revision. The existing local SQLite option remains available.
 
 Copy **integrations/google-sheets/Code.gs** into an owner-controlled Apps Script project, run its private setup once, deploy the web app, and paste its `/exec` URL into **Collection link**. Full BM instructions, site defaults, Wi-Fi recovery, export and limits: [Google Sheets setup](docs/GOOGLE_SHEETS_SETUP.md). Live Google authorization/deployment is still an owner setup step; game code publication does not deploy or authorize the Google receiver.
+
+## AI Playtester
+
+Developer-only strategy/simulation tool: `npm run start:dev`, then http://localhost:4174/__dev/ai/. Three combat policies, actual campaigns, contextual single-card/pair measurements, five-report history, actual support/cost telemetry, three-turn sampled Expert planning and deck-synergy acquisitions. See [AI Playtester](docs/AI_PLAYTESTER.md). Integrated into main on game 2.32.1, retaining current combat animation, menu music and player profiles.

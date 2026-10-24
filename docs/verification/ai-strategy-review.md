@@ -1,0 +1,11 @@
+# AI strategy review — 24 October 2026
+
+Fresh read-only whole-change review checked the approved three-feature design against the real engine, optional replay hooks, effects accounting, sampled planning, acquisition policy and report/browser behavior. No Critical findings; three Important findings were reproduced and fixed in one pass:
+
+1. **Planning/execution choices diverged.** Expert simulated removing Swift Step while actual legacy resolution removed Blazing Spirit in the same valid Passive-swap fixture. `agent.choose` now supplies the same visible-choice resolver to rollouts, actual encounters and opt-in campaign resolution. The real fixture retains useful Strength, and actual campaign reports record resolved choices. Default specialist replay keeps its original resolver.
+2. **Mystery skip was ignored.** In a real ME03 reward fixture with seven upgraded Rune Sweeps and five upgraded Tower Shields, the policy said Skip but execution added a Skill (12 → 13 cards). The replay now performs the allowed decline; mandatory rewards request a legal least-harmful choice instead. The regression checks actual engine settlement and its action trace.
+3. **Upgrade-only mechanics were missing.** Rune Armor/Clear Mind activation gifts and expanded Read Ahead/Burning Page/Clear Choice/Card Search selection windows had zero marginal value. The heuristic now includes these runtime-defined differences. Six real-runtime upgrade cases verify positive gain.
+
+All findings had explicit RED failures before implementation and GREEN coverage afterward. Final focused suite: 42/42. The pre-review full suite passed 811/811, but that is not evidence for the post-fix tree; current full-suite/build/cohort results are recorded separately in ai-strategy.json. No second review seat was used after the fixes; covering regressions and fresh end-to-end checks verify the changed behavior.
+
+The reviewer set aside heuristic coefficient optimality, exhaustive combinations, real pupil outcomes and guaranteed ordering of skill win rates. These are explicitly unclaimed empirical limits: strategy choices can still be poor despite legal execution. No deferred minor findings. The original artwork, production/gameplay files and numeric profiles remain outside the implementation diff.

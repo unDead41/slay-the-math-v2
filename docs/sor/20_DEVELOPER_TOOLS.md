@@ -77,3 +77,17 @@ DISAHKAN: developer-only branch work, no merge/push to main. Start at the game m
 ## Main integration — 2.23.1
 
 DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle to main over v2.23.0. This supersedes the earlier branch-only restriction. Keep production free of developer controls; use npm start dev to see the main-menu and Settings toggle.
+
+## AI Playtester — branch ai, 24 October 2026
+
+DISAHKAN: Ijamm authorizes publishing the previously local strategy/simulation AI to ai and improving it, superseding no-push for this branch only. Main remains unchanged. Base main 6dc3ce3 / game 2.31.0 retains the illustrated tutorial.
+
+Developer Hub links /__dev/ai/. A loopback-only worker runs beginner/intermediate/expert campaigns and selected-card/pair screens. History retains five jobs, identity-bound cancel/reconnect/downloads; schema 2 separates individual A/B contributions, combined delta and excess pair interaction. Real resolved receipts measure per-card plays/Energy/Focus/direct HP damage. Current player saves, storage, gameplay values and production files are unchanged. [Guide](../AI_PLAYTESTER.md), [spec](../superpowers/specs/2026-10-24-ai-branch.md), [verification](../verification/ai-branch.json).
+
+## AI effects, strategy and deck synergy — 24 October 2026
+
+DISAHKAN: Ijamm selects improvements 1–3 and requests implementation on ai. Schema 3 adds actual support effects/cost ratios, FIFO Block attribution and explicit support overlays. Expert evaluates three sampled public-deck draw worlds through up to three completed turns with a common resolved cutoff and <=300 engine transitions. Opt-in acquisition policy ranks deck synergy for reward/skip, Shop, upgrade/removal and Mystery targets. Future Predict gains and pupil models are not simulated. Production/default saves/gameplay values remain under existing owners. [Design](../superpowers/specs/2026-10-24-ai-strategy-design.md), [current verification](../verification/ai-strategy.json).
+
+## AI main integration — 24 October 2026
+
+DISAHKAN: Ijamm now explicitly requests pushing this completed AI update to main. This supersedes the two earlier ai-only publication boundaries. Integrate ai `807be67` with main `d5533ad`, retaining game 2.32.1, current combat presentation and menu music. AI remains available through `npm run start:dev` and `/__dev/ai/`; production/player routes and gameplay profiles retain their existing owners. Historical branch evidence is not evidence for the merged tree. [Main integration and fresh checks](../AI_PLAYTESTER_MAIN_2026_10_24.md).

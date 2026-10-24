@@ -1,0 +1,26 @@
+✔ three skills return legal real plans without mutating the run (24.220317ms)
+✔ expert finds Weak Point before Rune Strike and Focus lethal (8.545126ms)
+✔ expert blocks visible lethal and ends turn when no legal card exists (2.153916ms)
+✔ hidden pile order and gameplay RNG do not influence any skill (15.060835ms)
+✔ expert stops at hidden draws and respects its transition/depth budgets (4.387401ms)
+✔ unknown skill and pending questions are rejected (4.228621ms)
+✔ job API rejects malformed, nonlocal/cross-origin and concurrent starts (282.79764ms)
+✔ completed jobs and their source-bound exports remain available after a new job starts (792.801469ms)
+✔ a delayed cancel for completed A never cancels running B (713.536068ms)
+✔ report history is bounded to five jobs with explicit eviction (288.543554ms)
+✔ player mode denies every AI resource and POST endpoint (74.165106ms)
+✔ strict options reject invalid numbers, unknown fields and non-string enemy IDs (4.075521ms)
+✔ actual campaign uses selected AI with real receipts and terminal outcome (2879.31536ms)
+✔ paired self-control has zero total, individual and interaction deltas (247.723178ms)
+✔ factorial report separates card A, card B and excess pair interaction (0.5047ms)
+✔ unknown outcomes retain their denominator and CSV escapes text (0.449698ms)
+✔ card usage totals equal actual resolved engine receipts across immutable action copies (127.844087ms)
+✔ detached CSV carries source, policy, definition and full experiment identity (0.363518ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3498.019596

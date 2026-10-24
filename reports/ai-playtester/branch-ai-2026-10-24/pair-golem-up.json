@@ -1,0 +1,5613 @@
+{
+  "schemaVersion": 2,
+  "agentVersion": "visible-turn-search-1",
+  "jobStatus": "completed",
+  "options": {
+    "mode": "cards",
+    "difficulty": "medium",
+    "skill": "all",
+    "predict": "low",
+    "route": "health-recovery",
+    "seed": 40,
+    "seeds": 1,
+    "enemy": "golem",
+    "cards": [
+      "stm.attack.fate_storm",
+      "stm.passive.blazing_spirit"
+    ],
+    "upgraded": true
+  },
+  "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+  "sources": {
+    "dist/artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "dist/artifacts.js": "e85e15e40e39276d47e0958a86c825010ed2347c1385c03c76216448e3c87790",
+    "dist/balance-data.js": "5f4391410240cf770c5060cfd00d3d08dc93684fae6d89d3f203634f02711bf9",
+    "dist/balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "dist/card-combat.js": "55e7490e328b62fc590614a7d3061085d71b674a4fc42bfc95f7655401f4e0da",
+    "dist/card-data.js": "b519e9cba7387656f86eca65642080a938d1253666995b91d294858758bd1c81",
+    "dist/card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "dist/card-kit.js": "6470cd7445aee863ad6eab19b2cd1ff6959ddede78ccc64d91ea40ef32e246a8",
+    "dist/combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "dist/combat-predict.js": "3a3056225b3411aabf22a0f045ad8f4abf3e609e7e8a53fe21a624c24d79abb7",
+    "dist/config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "dist/economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "dist/economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "dist/education.js": "9a8d31059ec0aa70effcc07a54dadbc02763f76628aa891d40852142589e5ae5",
+    "dist/engine.js": "232f66ab9607a4f442329cdefb20b34e34c27e019dbca38d0ed4b732b11457a5",
+    "dist/map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "dist/map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "dist/math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "dist/mechanics.js": "91384cf36eae881ac47246c656c5221511b8a66a1b0832098e6a6acbd6dd7883",
+    "dist/mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "dist/mystery.js": "b192bb133d996e62a40c77ff3681cf501bd97839f1056b29bb4c345d26d6ed9a",
+    "dist/question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "dist/rich-text-data.js": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
+    "dist/rich-text.js": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+    "tools/ai-playtester/agent.cjs": "832fbe3fbebc7a1b687707848d65521c4e3584526a07ec5d69ec4b2e97da4e24",
+    "tools/ai-playtester/experiments.cjs": "1e7c170fa9fd33c67e0bb757cf8461a5dcf32d2b8475e94fa3426c4863d96aaa",
+    "tools/ai-playtester/report.cjs": "8ee09dead426dd0d117b50ffb3f51617783379baeed002795d993b5edb145ec9",
+    "tools/ai-playtester/worker.cjs": "de134c1a7e7c6510d85014dbfcaba720bcabea2a7a28b2ea5ccdfe015f524ecb",
+    "tools/balance/candidate.cjs": "ba67f6c69621d2297d134e6371312e88a9d96927ade32fa2848ef3a3b7ff3154",
+    "tools/balance/combat.cjs": "9aabe52146a87e7330754bb7290128e454ee59b9220c119481ef52e2e5d74ab8",
+    "tools/balance/deep.cjs": "5f0ab6f67f1b41cf378812fb982ba5ac4128ea4d1f9f0fd9200fe400ff1a7a37",
+    "tools/balance/map-advanced/question-policy.cjs": "02abed3bce27fe52e12d0c013b14fd800228a3d2be2112071943db7a194025b9",
+    "tools/balance/map-advanced/route-policy.cjs": "11ce54c3aa9ffcdfa87e4bb701c87c2f73c57e7c3846e2756a14a34b2c559774",
+    "tools/balance/map-advanced/scenarios.cjs": "2b63d11c760d074c50069d36ee0b2af9684d9991aa3d1977d9ae310a88e51385",
+    "tools/balance/map-advanced/telemetry.cjs": "924be7ce10acc1c04767d53ec43c3df7801e89680d1e3a2de3dce3f1cf2d5a2c",
+    "tools/balance/map/config.json": "9677b7ca5aa64f620220303e6734b47d7a5f83d5ae50c08187dba412cb1aa9fa",
+    "tools/balance/map/policy.cjs": "9f98eb17a7d253c520122b9833d1beeecadcd147de8b97e303e74e8c93076051",
+    "tools/balance/map/replay.cjs": "3ccc4d8f9bf9423c49b2427ab498e3bc0d00c08e4cddb5b9b32e3ea9e8d156e6",
+    "tools/balance/map/structure.cjs": "89ae7f11cf3c7369b0a7bb349bea73d84532b42d7c945c2291d2172175327ca4",
+    "tools/balance/master/config.json": "49693f71e60aa6138338b5ae7747fc28bbb147bf333dd94f15ae7e56e6b100e0",
+    "tools/balance/master/loader.cjs": "98717d5a96d97c5fd8cf5110d621e28addf64d02cd149ba040ed60c118c28c0b",
+    "tools/balance/specs/balance-spec.v1.2.json": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f"
+  },
+  "rows": [
+    {
+      "status": "LOSS",
+      "utility": -6,
+      "final": {
+        "turn": 12,
+        "playerHp": 0,
+        "enemyHp": 10,
+        "energy": 0,
+        "focus": 3,
+        "block": 0,
+        "strength": 0,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [],
+        "piles": {
+          "hand": 0,
+          "draw": 6,
+          "discard": 5,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 14,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Wave",
+          "rage": 1,
+          "phase": 1
+        }
+      },
+      "playerTurns": 12,
+      "committedCardPlays": 37,
+      "validFinal": true,
+      "ai": {
+        "decisions": 49,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 36,
+        "focusSpent": 0,
+        "cards": {
+          "stm.attack.weak_point": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 4
+          },
+          "stm.attack.rune_strike": {
+            "plays": 12,
+            "energySpent": 12,
+            "focusSpent": 0,
+            "hpDamage": 43
+          },
+          "stm.skill.quick_study": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.read_ahead": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 6
+          }
+        },
+        "trace": [
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 12,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 12,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 12,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 12,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "beginner",
+      "mask": 0,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "LOSS",
+      "utility": -5,
+      "final": {
+        "turn": 10,
+        "playerHp": 0,
+        "enemyHp": 4,
+        "energy": 0,
+        "focus": 3,
+        "block": 0,
+        "strength": 0,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [],
+        "piles": {
+          "hand": 0,
+          "draw": 7,
+          "discard": 4,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 10,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 1,
+          "phase": 1
+        }
+      },
+      "playerTurns": 10,
+      "committedCardPlays": 27,
+      "validFinal": true,
+      "ai": {
+        "decisions": 37,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 30,
+        "focusSpent": 0,
+        "cards": {
+          "stm.attack.weak_point": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 4
+          },
+          "stm.attack.rune_strike": {
+            "plays": 6,
+            "energySpent": 6,
+            "focusSpent": 0,
+            "hpDamage": 25
+          },
+          "stm.attack.fate_storm": {
+            "plays": 4,
+            "energySpent": 8,
+            "focusSpent": 0,
+            "hpDamage": 24
+          },
+          "stm.skill.clear_choice": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 6
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.read_ahead": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "beginner: Flash Ward; 0 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Fate Storm; 2 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Fate Storm; 2 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Fate Storm; 2 Energy, 12 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "beginner: Weak Point; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "beginner",
+      "mask": 1,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 102.88461538461539,
+      "final": {
+        "turn": 9,
+        "playerHp": 24,
+        "enemyHp": 0,
+        "energy": 2,
+        "focus": 3,
+        "block": 0,
+        "strength": 3,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [
+          "stm.passive.blazing_spirit"
+        ],
+        "piles": {
+          "hand": 3,
+          "draw": 6,
+          "discard": 1,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 14,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Wave",
+          "rage": 1,
+          "phase": 1
+        }
+      },
+      "playerTurns": 9,
+      "committedCardPlays": 26,
+      "validFinal": true,
+      "ai": {
+        "decisions": 34,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 25,
+        "focusSpent": 0,
+        "cards": {
+          "stm.attack.weak_point": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 12
+          },
+          "stm.passive.blazing_spirit": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.rune_strike": {
+            "plays": 9,
+            "energySpent": 9,
+            "focusSpent": 0,
+            "hpDamage": 51
+          },
+          "stm.skill.quick_study": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.read_ahead": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "beginner: Flash Ward; 0 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "beginner: Weak Point; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 10 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "beginner: Weak Point; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "beginner: Weak Point; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 9 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "beginner",
+      "mask": 2,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 106.57692307692308,
+      "final": {
+        "turn": 9,
+        "playerHp": 36,
+        "enemyHp": 0,
+        "energy": 0,
+        "focus": 3,
+        "block": 0,
+        "strength": 3,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [
+          "stm.passive.blazing_spirit"
+        ],
+        "piles": {
+          "hand": 4,
+          "draw": 4,
+          "discard": 2,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 14,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Wave",
+          "rage": 1,
+          "phase": 1
+        }
+      },
+      "playerTurns": 9,
+      "committedCardPlays": 26,
+      "validFinal": true,
+      "ai": {
+        "decisions": 34,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 27,
+        "focusSpent": 0,
+        "cards": {
+          "stm.attack.weak_point": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 7
+          },
+          "stm.passive.blazing_spirit": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.rune_strike": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 23
+          },
+          "stm.attack.fate_storm": {
+            "plays": 2,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 21
+          },
+          "stm.skill.clear_choice": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 4,
+            "energySpent": 4,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 12
+          },
+          "stm.skill.read_ahead": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Fate Storm; 2 Energy, 12 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "beginner: Flash Ward; 0 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "beginner: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "beginner: Weak Point; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "beginner: Twin Shot; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "beginner: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "beginner: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "beginner: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "beginner: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "beginner: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "beginner: Fate Storm; 2 Energy, 9 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "beginner",
+      "mask": 3,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 106.3076923076923,
+      "final": {
+        "turn": 12,
+        "playerHp": 40,
+        "enemyHp": 0,
+        "energy": 2,
+        "focus": 1,
+        "block": 0,
+        "strength": 0,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [],
+        "piles": {
+          "hand": 3,
+          "draw": 7,
+          "discard": 1,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 14,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Wave",
+          "rage": 1,
+          "phase": 1
+        }
+      },
+      "playerTurns": 12,
+      "committedCardPlays": 35,
+      "validFinal": true,
+      "ai": {
+        "decisions": 46,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 34,
+        "focusSpent": 4,
+        "cards": {
+          "stm.attack.rune_strike": {
+            "plays": 10,
+            "energySpent": 10,
+            "focusSpent": 0,
+            "hpDamage": 61
+          },
+          "stm.skill.read_ahead": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 5,
+            "energySpent": 5,
+            "focusSpent": 2,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 6,
+            "energySpent": 6,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 5,
+            "energySpent": 5,
+            "focusSpent": 2,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.weak_point": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 2
+          }
+        },
+        "trace": [
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "intermediate: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "intermediate: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "intermediate: Quick Study with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": true,
+            "explanation": "intermediate: Cinder Guard with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "intermediate: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 8,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 9,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": true,
+            "explanation": "intermediate: Cinder Guard with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "intermediate: Twin Shot; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 10,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "intermediate: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 11,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 12,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "intermediate",
+      "mask": 0,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 104.8076923076923,
+      "final": {
+        "turn": 7,
+        "playerHp": 27,
+        "enemyHp": 0,
+        "energy": 2,
+        "focus": 0,
+        "block": 0,
+        "strength": 0,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [],
+        "piles": {
+          "hand": 3,
+          "draw": 3,
+          "discard": 5,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 9,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 7,
+      "committedCardPlays": 18,
+      "validFinal": true,
+      "ai": {
+        "decisions": 24,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 19,
+        "focusSpent": 3,
+        "cards": {
+          "stm.attack.rune_strike": {
+            "plays": 6,
+            "energySpent": 6,
+            "focusSpent": 0,
+            "hpDamage": 30
+          },
+          "stm.skill.read_ahead": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 1,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.fate_storm": {
+            "plays": 2,
+            "energySpent": 4,
+            "focusSpent": 1,
+            "hpDamage": 28
+          },
+          "stm.defend.rune_guard": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 1,
+            "hpDamage": 5
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "intermediate: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "intermediate: Quick Study with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "intermediate: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "intermediate: Flash Ward; 0 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "intermediate: Fate Storm; 2 Energy, 12 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "intermediate: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "intermediate: Quick Study; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": true,
+            "explanation": "intermediate: Fate Storm with Focus; 2 Energy, 16 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 4 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": true,
+            "explanation": "intermediate: Twin Shot with Focus; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "intermediate",
+      "mask": 1,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 105.73076923076923,
+      "final": {
+        "turn": 7,
+        "playerHp": 30,
+        "enemyHp": 0,
+        "energy": 1,
+        "focus": 0,
+        "block": 0,
+        "strength": 3,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [
+          "stm.passive.blazing_spirit"
+        ],
+        "piles": {
+          "hand": 2,
+          "draw": 1,
+          "discard": 7,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 9,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 7,
+      "committedCardPlays": 21,
+      "validFinal": true,
+      "ai": {
+        "decisions": 27,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 20,
+        "focusSpent": 3,
+        "cards": {
+          "stm.passive.blazing_spirit": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.rune_strike": {
+            "plays": 6,
+            "energySpent": 6,
+            "focusSpent": 1,
+            "hpDamage": 51
+          },
+          "stm.attack.weak_point": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 7
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 2,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 5
+          },
+          "stm.skill.read_ahead": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Blazing Spirit; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "intermediate: Quick Study with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "intermediate: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "intermediate: Flash Ward; 0 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 10 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "intermediate: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "intermediate: Quick Study with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "intermediate: Twin Shot; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "intermediate: Read Ahead; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": true,
+            "explanation": "intermediate: Rune Strike with Focus; 1 Energy, 13 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 2 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "intermediate",
+      "mask": 2,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 112.38461538461539,
+      "final": {
+        "turn": 6,
+        "playerHp": 50,
+        "enemyHp": 0,
+        "energy": 0,
+        "focus": 0,
+        "block": 0,
+        "strength": 3,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [
+          "stm.passive.blazing_spirit"
+        ],
+        "piles": {
+          "hand": 2,
+          "draw": 6,
+          "discard": 2,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 13,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Wave",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 6,
+      "committedCardPlays": 16,
+      "validFinal": true,
+      "ai": {
+        "decisions": 21,
+        "searchNodes": 0,
+        "maxDepth": 1,
+        "revealStops": 0,
+        "energySpent": 18,
+        "focusSpent": 2,
+        "cards": {
+          "stm.passive.blazing_spirit": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.rune_strike": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 14
+          },
+          "stm.attack.weak_point": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 5
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.fate_storm": {
+            "plays": 3,
+            "energySpent": 6,
+            "focusSpent": 1,
+            "hpDamage": 39
+          },
+          "stm.defend.rune_guard": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 5
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 1,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "intermediate: Blazing Spirit; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": true,
+            "explanation": "intermediate: Fate Storm with Focus; 2 Energy, 9 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "intermediate: Rune Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "intermediate: Twin Shot; 1 Energy, 5 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "intermediate: Flash Ward; 0 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "intermediate: Clear Choice; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "intermediate: Fate Storm; 2 Energy, 15 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "intermediate: Quick Study with Focus; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "intermediate: Cinder Guard; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "intermediate: Weak Point; 1 Energy, 0 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "intermediate: Fate Storm; 2 Energy, 15 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "intermediate: Rune Strike; 1 Energy, 7 projected HP damage. Uses current visible legal card plans.",
+            "searchNodes": 0,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "intermediate",
+      "mask": 3,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 105.73076923076923,
+      "final": {
+        "turn": 7,
+        "playerHp": 30,
+        "enemyHp": 0,
+        "energy": 0,
+        "focus": 0,
+        "block": 0,
+        "strength": 0,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [],
+        "piles": {
+          "hand": 2,
+          "draw": 6,
+          "discard": 3,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 9,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 7,
+      "committedCardPlays": 22,
+      "validFinal": true,
+      "ai": {
+        "decisions": 28,
+        "searchNodes": 315,
+        "maxDepth": 3,
+        "revealStops": 97,
+        "energySpent": 21,
+        "focusSpent": 3,
+        "cards": {
+          "stm.attack.rune_strike": {
+            "plays": 10,
+            "energySpent": 10,
+            "focusSpent": 2,
+            "hpDamage": 59
+          },
+          "stm.attack.weak_point": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 4
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 1,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.read_ahead": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "expert: Weak Point; 1 Energy, 2 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 6 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 48,
+            "depth": 2,
+            "revealStops": 21,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "expert: Quick Study with Focus; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 18,
+            "depth": 1,
+            "revealStops": 8,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "expert: Clear Choice; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 1,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 40,
+            "depth": 3,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "expert: Flash Ward; 0 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 15,
+            "depth": 3,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "expert: Weak Point; 1 Energy, 2 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 2,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 9 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 1,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 4 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 14,
+            "depth": 2,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "expert: Quick Study; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 1,
+            "revealStops": 4,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 1,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 48,
+            "depth": 3,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "expert: Weak Point; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 24,
+            "depth": 2,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": true,
+            "explanation": "expert: Rune Strike with Focus; 1 Energy, 1 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 6,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "expert: Quick Study; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 1,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 1,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": true,
+            "explanation": "expert: Rune Strike with Focus; 1 Energy, 7 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 28,
+            "depth": 2,
+            "revealStops": 21,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "expert: Read Ahead; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 1,
+            "revealStops": 4,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 4 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "expert",
+      "mask": 0,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 105.73076923076923,
+      "final": {
+        "turn": 7,
+        "playerHp": 30,
+        "enemyHp": 0,
+        "energy": 1,
+        "focus": 0,
+        "block": 0,
+        "strength": 0,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [],
+        "piles": {
+          "hand": 2,
+          "draw": 7,
+          "discard": 2,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 9,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 7,
+      "committedCardPlays": 19,
+      "validFinal": true,
+      "ai": {
+        "decisions": 25,
+        "searchNodes": 240,
+        "maxDepth": 3,
+        "revealStops": 76,
+        "energySpent": 20,
+        "focusSpent": 3,
+        "cards": {
+          "stm.attack.rune_strike": {
+            "plays": 7,
+            "energySpent": 7,
+            "focusSpent": 1,
+            "hpDamage": 42
+          },
+          "stm.attack.weak_point": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 2
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 1,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.fate_storm": {
+            "plays": 2,
+            "energySpent": 4,
+            "focusSpent": 1,
+            "hpDamage": 18
+          },
+          "stm.defend.rune_guard": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 1
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "expert: Weak Point; 1 Energy, 2 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 6 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 28,
+            "depth": 2,
+            "revealStops": 12,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "expert: Quick Study with Focus; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 9,
+            "depth": 1,
+            "revealStops": 5,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "expert: Clear Choice; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 1,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Fate Storm; 2 Energy, 12 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 34,
+            "depth": 3,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "expert: Flash Ward; 0 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 1,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 4 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 14,
+            "depth": 2,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "expert: Quick Study; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 1,
+            "revealStops": 4,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 1,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 48,
+            "depth": 2,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": true,
+            "explanation": "expert: Fate Storm with Focus; 2 Energy, 6 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 12,
+            "depth": 1,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 6,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": false,
+            "explanation": "expert: Quick Study; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 1,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 4 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 4,
+            "depth": 1,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": true,
+            "explanation": "expert: Rune Strike with Focus; 1 Energy, 7 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 22,
+            "depth": 2,
+            "revealStops": 15,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "expert: Twin Shot; 1 Energy, 1 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 1,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "expert",
+      "mask": 1,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 110.34615384615384,
+      "final": {
+        "turn": 7,
+        "playerHp": 45,
+        "enemyHp": 0,
+        "energy": 2,
+        "focus": 0,
+        "block": 0,
+        "strength": 3,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [
+          "stm.passive.blazing_spirit"
+        ],
+        "piles": {
+          "hand": 3,
+          "draw": 2,
+          "discard": 5,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 9,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 7,
+      "committedCardPlays": 20,
+      "validFinal": true,
+      "ai": {
+        "decisions": 26,
+        "searchNodes": 285,
+        "maxDepth": 3,
+        "revealStops": 124,
+        "energySpent": 19,
+        "focusSpent": 3,
+        "cards": {
+          "stm.passive.blazing_spirit": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.weak_point": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 1,
+            "hpDamage": 12
+          },
+          "stm.attack.rune_strike": {
+            "plays": 6,
+            "energySpent": 6,
+            "focusSpent": 1,
+            "hpDamage": 46
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.defend.rune_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 5
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 1,
+            "hpDamage": 0
+          },
+          "stm.skill.read_ahead": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Blazing Spirit; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "expert: Weak Point; 1 Energy, 5 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 9 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 48,
+            "depth": 3,
+            "revealStops": 19,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": true,
+            "explanation": "expert: Rune Strike with Focus; 1 Energy, 3 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 18,
+            "depth": 2,
+            "revealStops": 8,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "expert: Twin Shot; 1 Energy, 5 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 9,
+            "depth": 3,
+            "revealStops": 5,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "expert: Flash Ward; 0 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 2,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "expert: Clear Choice; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 1,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 10 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "expert: Quick Study with Focus; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 30,
+            "depth": 1,
+            "revealStops": 24,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 31,
+            "depth": 2,
+            "revealStops": 6,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "expert: Read Ahead; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 10 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": true,
+            "explanation": "expert: Weak Point with Focus; 1 Energy, 7 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 11,
+            "depth": 1,
+            "revealStops": 5,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "expert",
+      "mask": 2,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "status": "WIN",
+      "utility": 109.73076923076923,
+      "final": {
+        "turn": 7,
+        "playerHp": 43,
+        "enemyHp": 0,
+        "energy": 1,
+        "focus": 1,
+        "block": 0,
+        "strength": 3,
+        "agility": 0,
+        "defense": 0,
+        "seals": 0,
+        "phase": 1,
+        "active": [
+          "stm.passive.blazing_spirit"
+        ],
+        "piles": {
+          "hand": 3,
+          "draw": 1,
+          "discard": 6,
+          "exhaust": 1
+        },
+        "intent": {
+          "damage": 9,
+          "block": 0,
+          "hits": 1,
+          "label": "Dark Pulse",
+          "rage": 0,
+          "phase": 1
+        }
+      },
+      "playerTurns": 7,
+      "committedCardPlays": 18,
+      "validFinal": true,
+      "ai": {
+        "decisions": 24,
+        "searchNodes": 237,
+        "maxDepth": 3,
+        "revealStops": 113,
+        "energySpent": 20,
+        "focusSpent": 2,
+        "cards": {
+          "stm.passive.blazing_spirit": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.weak_point": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 5
+          },
+          "stm.attack.rune_strike": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 16
+          },
+          "stm.defend.cinder_guard": {
+            "plays": 3,
+            "energySpent": 3,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.fate_storm": {
+            "plays": 3,
+            "energySpent": 6,
+            "focusSpent": 1,
+            "hpDamage": 37
+          },
+          "stm.defend.rune_guard": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.attack.twin_shot": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 5
+          },
+          "stm.defend.flash_ward": {
+            "plays": 1,
+            "energySpent": 0,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.clear_choice": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 0,
+            "hpDamage": 0
+          },
+          "stm.skill.quick_study": {
+            "plays": 1,
+            "energySpent": 1,
+            "focusSpent": 1,
+            "hpDamage": 0
+          },
+          "stm.skill.read_ahead": {
+            "plays": 2,
+            "energySpent": 2,
+            "focusSpent": 0,
+            "hpDamage": 0
+          }
+        },
+        "trace": [
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c2",
+            "focus": false,
+            "explanation": "expert: Blazing Spirit; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c4",
+            "focus": false,
+            "explanation": "expert: Weak Point; 1 Energy, 5 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 7,
+            "depth": 2,
+            "revealStops": 3,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c3",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 9 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 1,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 28,
+            "depth": 2,
+            "revealStops": 12,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": true,
+            "explanation": "expert: Fate Storm with Focus; 2 Energy, 9 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 9,
+            "depth": 1,
+            "revealStops": 5,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 2,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 25,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c5",
+            "focus": false,
+            "explanation": "expert: Twin Shot; 1 Energy, 5 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 9,
+            "depth": 3,
+            "revealStops": 5,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c8",
+            "focus": false,
+            "explanation": "expert: Flash Ward; 0 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 2,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c11",
+            "focus": false,
+            "explanation": "expert: Clear Choice; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 1,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 3,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Fate Storm; 2 Energy, 15 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 15,
+            "depth": 2,
+            "revealStops": 6,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 3,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 4,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c9",
+            "focus": true,
+            "explanation": "expert: Quick Study with Focus; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 30,
+            "depth": 1,
+            "revealStops": 24,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c7",
+            "focus": false,
+            "explanation": "expert: Cinder Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 31,
+            "depth": 2,
+            "revealStops": 6,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "expert: Read Ahead; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 1,
+            "revealStops": 1,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 5,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c6",
+            "focus": false,
+            "explanation": "expert: Rune Guard; 1 Energy, 0 projected HP damage. Compared visible sequences up to 3 plays; unknown draws use a heuristic.",
+            "searchNodes": 14,
+            "depth": 3,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c12",
+            "focus": false,
+            "explanation": "expert: Rune Strike; 1 Energy, 7 projected HP damage. Compared visible sequences up to 2 plays; unknown draws use a heuristic.",
+            "searchNodes": 5,
+            "depth": 2,
+            "revealStops": 4,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c10",
+            "focus": false,
+            "explanation": "expert: Read Ahead; 1 Energy, 0 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 2,
+            "depth": 1,
+            "revealStops": 2,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 6,
+            "enemy": "golem",
+            "kind": "endTurn",
+            "explanation": "End turn: no searched visible sequence improves the current position.",
+            "searchNodes": 0,
+            "depth": 0,
+            "revealStops": 0,
+            "hiddenInformationUsed": false
+          },
+          {
+            "turn": 7,
+            "enemy": "golem",
+            "kind": "play",
+            "uid": "c1",
+            "focus": false,
+            "explanation": "expert: Fate Storm; 2 Energy, 13 projected HP damage. Compared visible sequences up to 1 plays; unknown draws use a heuristic.",
+            "searchNodes": 23,
+            "depth": 1,
+            "revealStops": 10,
+            "hiddenInformationUsed": false
+          }
+        ]
+      },
+      "syntheticOracleUsed": true,
+      "seed": 40,
+      "difficulty": "medium",
+      "skill": "expert",
+      "mask": 3,
+      "provenance": {
+        "version": "master-1.3.0-candidate.3",
+        "difficulty": "medium",
+        "definitionHash": "960d9b1a52ebf89d00dfa29b47ea9b359b5779859c5ae905148104afce2f2f02",
+        "engineHash": "c8d46b84d56c69ab963e83306f4e9d1afd6500b35653e742b4f45979c7bb6ecc",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    }
+  ],
+  "total": 12,
+  "summary": {
+    "attempts": 12,
+    "wins": 10,
+    "losses": 2,
+    "censored": 0,
+    "invalid": 0,
+    "terminalWinRate": 0.8333333333333334,
+    "meanFinalHp": 29.583333333333332,
+    "groups": [
+      {
+        "key": "medium/beginner",
+        "attempts": 4,
+        "wins": 2,
+        "losses": 2,
+        "censored": 0,
+        "invalid": 0,
+        "terminalWinRate": 0.5,
+        "meanFinalHp": 15
+      },
+      {
+        "key": "medium/intermediate",
+        "attempts": 4,
+        "wins": 4,
+        "losses": 0,
+        "censored": 0,
+        "invalid": 0,
+        "terminalWinRate": 1,
+        "meanFinalHp": 36.75
+      },
+      {
+        "key": "medium/expert",
+        "attempts": 4,
+        "wins": 4,
+        "losses": 0,
+        "censored": 0,
+        "invalid": 0,
+        "terminalWinRate": 1,
+        "meanFinalHp": 37
+      }
+    ],
+    "power": [
+      {
+        "difficulty": "medium",
+        "skill": "beginner",
+        "status": "MEASURED_EXPLORATORY",
+        "seedsComplete": 1,
+        "seedsExpected": 1,
+        "seedsUnscored": 0,
+        "totalDelta": 112.57692307692308,
+        "individualDeltas": [
+          {
+            "cardId": "stm.attack.fate_storm",
+            "slot": 0,
+            "delta": 1
+          },
+          {
+            "cardId": "stm.passive.blazing_spirit",
+            "slot": 1,
+            "delta": 108.88461538461539
+          }
+        ],
+        "interaction": 2.6923076923076934,
+        "interpretation": "Contextual replacement utility versus Rune Strike; not universal Combat Power."
+      },
+      {
+        "difficulty": "medium",
+        "skill": "intermediate",
+        "status": "MEASURED_EXPLORATORY",
+        "seedsComplete": 1,
+        "seedsExpected": 1,
+        "seedsUnscored": 0,
+        "totalDelta": 6.07692307692308,
+        "individualDeltas": [
+          {
+            "cardId": "stm.attack.fate_storm",
+            "slot": 0,
+            "delta": -1.5
+          },
+          {
+            "cardId": "stm.passive.blazing_spirit",
+            "slot": 1,
+            "delta": -0.5769230769230802
+          }
+        ],
+        "interaction": 8.15384615384616,
+        "interpretation": "Contextual replacement utility versus Rune Strike; not universal Combat Power."
+      },
+      {
+        "difficulty": "medium",
+        "skill": "expert",
+        "status": "MEASURED_EXPLORATORY",
+        "seedsComplete": 1,
+        "seedsExpected": 1,
+        "seedsUnscored": 0,
+        "totalDelta": 4,
+        "individualDeltas": [
+          {
+            "cardId": "stm.attack.fate_storm",
+            "slot": 0,
+            "delta": 0
+          },
+          {
+            "cardId": "stm.passive.blazing_spirit",
+            "slot": 1,
+            "delta": 4.615384615384613
+          }
+        ],
+        "interaction": -0.6153846153846132,
+        "interpretation": "Contextual replacement utility versus Rune Strike; not universal Combat Power."
+      }
+    ],
+    "cardUsage": [
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.attack.rune_strike",
+        "plays": 31,
+        "energySpent": 31,
+        "focusSpent": 0,
+        "hpDamage": 142
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.attack.rune_strike",
+        "plays": 25,
+        "energySpent": 25,
+        "focusSpent": 4,
+        "hpDamage": 163
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.attack.rune_strike",
+        "plays": 24,
+        "energySpent": 24,
+        "focusSpent": 1,
+        "hpDamage": 156
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.defend.cinder_guard",
+        "plays": 13,
+        "energySpent": 13,
+        "focusSpent": 2,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.defend.rune_guard",
+        "plays": 13,
+        "energySpent": 13,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.skill.clear_choice",
+        "plays": 12,
+        "energySpent": 12,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.attack.weak_point",
+        "plays": 11,
+        "energySpent": 11,
+        "focusSpent": 0,
+        "hpDamage": 27
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.skill.quick_study",
+        "plays": 11,
+        "energySpent": 11,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.defend.cinder_guard",
+        "plays": 10,
+        "energySpent": 10,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.defend.cinder_guard",
+        "plays": 10,
+        "energySpent": 10,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.skill.quick_study",
+        "plays": 10,
+        "energySpent": 10,
+        "focusSpent": 6,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.attack.twin_shot",
+        "plays": 9,
+        "energySpent": 9,
+        "focusSpent": 0,
+        "hpDamage": 24
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.defend.rune_guard",
+        "plays": 9,
+        "energySpent": 9,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.skill.clear_choice",
+        "plays": 8,
+        "energySpent": 8,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.skill.quick_study",
+        "plays": 8,
+        "energySpent": 8,
+        "focusSpent": 4,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.attack.weak_point",
+        "plays": 7,
+        "energySpent": 7,
+        "focusSpent": 0,
+        "hpDamage": 12
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.attack.weak_point",
+        "plays": 7,
+        "energySpent": 7,
+        "focusSpent": 1,
+        "hpDamage": 23
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.defend.rune_guard",
+        "plays": 7,
+        "energySpent": 7,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.skill.read_ahead",
+        "plays": 7,
+        "energySpent": 7,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.attack.fate_storm",
+        "plays": 6,
+        "energySpent": 12,
+        "focusSpent": 0,
+        "hpDamage": 45
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.attack.fate_storm",
+        "plays": 5,
+        "energySpent": 10,
+        "focusSpent": 2,
+        "hpDamage": 67
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.attack.fate_storm",
+        "plays": 5,
+        "energySpent": 10,
+        "focusSpent": 2,
+        "hpDamage": 55
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.attack.twin_shot",
+        "plays": 4,
+        "energySpent": 4,
+        "focusSpent": 1,
+        "hpDamage": 17
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.defend.flash_ward",
+        "plays": 4,
+        "energySpent": 0,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.defend.flash_ward",
+        "plays": 4,
+        "energySpent": 0,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.defend.flash_ward",
+        "plays": 4,
+        "energySpent": 0,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.skill.clear_choice",
+        "plays": 4,
+        "energySpent": 4,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.skill.read_ahead",
+        "plays": 4,
+        "energySpent": 4,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.skill.read_ahead",
+        "plays": 4,
+        "energySpent": 4,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.attack.twin_shot",
+        "plays": 3,
+        "energySpent": 3,
+        "focusSpent": 0,
+        "hpDamage": 11
+      },
+      {
+        "policy": "medium/beginner",
+        "cardId": "stm.passive.blazing_spirit",
+        "plays": 2,
+        "energySpent": 2,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/intermediate",
+        "cardId": "stm.passive.blazing_spirit",
+        "plays": 2,
+        "energySpent": 2,
+        "focusSpent": 0,
+        "hpDamage": 0
+      },
+      {
+        "policy": "medium/expert",
+        "cardId": "stm.passive.blazing_spirit",
+        "plays": 2,
+        "energySpent": 2,
+        "focusSpent": 0,
+        "hpDamage": 0
+      }
+    ]
+  },
+  "runtime": "v24.19.0",
+  "pupilWinRatesMeasured": false,
+  "interpretation": "Synthetic AI playtests; shared heuristic campaign routing/acquisition. Contextual card measurements, no exhaustive combinations or pupil win-rate validation."
+}

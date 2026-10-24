@@ -1,0 +1,149 @@
+{
+  "status": "PASSED",
+  "baseCommit": "6dc3ce366d266c33154f9b2e76afeb3bba224eca",
+  "gameVersion": "2.31.0",
+  "targetBranch": "ai",
+  "mainPublicationAuthorized": false,
+  "targetedTests": {
+    "pass": 18,
+    "fail": 0,
+    "skipped": 0
+  },
+  "historicalBaselineRestoredTests": {
+    "pass": 10,
+    "fail": 0
+  },
+  "browser": {
+    "status": "PASS",
+    "encounters": 4,
+    "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+    "reportHistory": true,
+    "staleRefreshGuard": true,
+    "selectedHistorySurvivesReload": true,
+    "previousReportImmutable": true,
+    "downloads": true,
+    "cancellation": true,
+    "playerStorageUnchanged": true,
+    "viewports": [
+      1440,
+      750,
+      390
+    ],
+    "errors": []
+  },
+  "existingDeveloperBrowserPassed": true,
+  "cohorts": {
+    "cohorts": [
+      {
+        "file": "/workspace/scratch/50182eb5cf4b/slay-the-math-ai/reports/ai-playtester/branch-ai-2026-10-24/campaign-all-profiles.json",
+        "attempts": 9,
+        "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+        "invalid": 0,
+        "censored": 0,
+        "sourceFilesVerified": true,
+        "receiptPlaysReconciled": true,
+        "csvIdentityVerified": true
+      },
+      {
+        "file": "/workspace/scratch/50182eb5cf4b/slay-the-math-ai/reports/ai-playtester/branch-ai-2026-10-24/pair-dealer.json",
+        "attempts": 12,
+        "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+        "invalid": 0,
+        "censored": 0,
+        "sourceFilesVerified": true,
+        "receiptPlaysReconciled": true,
+        "csvIdentityVerified": true
+      },
+      {
+        "file": "/workspace/scratch/50182eb5cf4b/slay-the-math-ai/reports/ai-playtester/branch-ai-2026-10-24/pair-golem-up.json",
+        "attempts": 12,
+        "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+        "invalid": 0,
+        "censored": 0,
+        "sourceFilesVerified": true,
+        "receiptPlaysReconciled": true,
+        "csvIdentityVerified": true
+      },
+      {
+        "file": "/workspace/scratch/50182eb5cf4b/slay-the-math-ai/reports/ai-playtester/branch-ai-2026-10-24/pair-golem.json",
+        "attempts": 12,
+        "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+        "invalid": 0,
+        "censored": 0,
+        "sourceFilesVerified": true,
+        "receiptPlaysReconciled": true,
+        "csvIdentityVerified": true
+      },
+      {
+        "file": "/workspace/scratch/50182eb5cf4b/slay-the-math-ai/reports/ai-playtester/branch-ai-2026-10-24/pair-wisp.json",
+        "attempts": 12,
+        "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+        "invalid": 0,
+        "censored": 0,
+        "sourceFilesVerified": true,
+        "receiptPlaysReconciled": true,
+        "csvIdentityVerified": true
+      }
+    ],
+    "attempts": 57
+  },
+  "review": {
+    "critical": 0,
+    "importantFound": 3,
+    "fixedWithRedGreen": 3,
+    "deferredMinor": [],
+    "outstandingImportant": 0
+  },
+  "fullSuite": {
+    "exitCode": 0,
+    "counts": {
+      "tests": 790,
+      "pass": 790,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "completeSummary": true
+  },
+  "production": {
+    "productionBuildPassed": true,
+    "protectedFiles": 822,
+    "protectedChanged": [],
+    "productionFiles": 705,
+    "productionBytesMatchDist": true,
+    "offlineAIExcluded": true,
+    "productionResponses": {
+      "GET /__dev/ai/": 404,
+      "GET /__dev/ai/app.js": 404,
+      "GET /__dev/ai/jobs": 404,
+      "POST /__dev/ai/jobs": 404
+    }
+  },
+  "pupilWinRatesMeasured": false,
+  "limits": [
+    "Five-job in-memory history is not durable across server restart.",
+    "Contextual selected-card/pair utility, not universal CP or exhaustive combinations.",
+    "Shared campaign route/acquisition policies are heuristics, not pupil skill models.",
+    "Stop jobs before source edits/build; restart after code changes.",
+    "Physical Windows/devices and actual pupil 90/70/50 rates remain unverified."
+  ],
+  "publicationScope": "ai only",
+  "syntaxPassed": true,
+  "httpWorkerCampaign": {
+    "passed": true,
+    "status": "VICTORY",
+    "campaignAttempts": 1,
+    "committedCards": 179,
+    "energySpent": 160,
+    "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+    "csvJobAndSourceIdentityVerified": true
+  },
+  "cli": {
+    "passed": true,
+    "encounters": 2,
+    "selfReplacementDelta": 0,
+    "sourceHash": "404f744026b1278899ed4392d00aef832b571cf3aa7984b96ab28c52fccdf9d4",
+    "csvSourceIdentityVerified": true
+  },
+  "runtime": "Node v24.19.0"
+}

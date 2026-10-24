@@ -574,3 +574,21 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - DISAHKAN: Ijamm's follow-up “push ke main please” authorizes publishing the completed music update to main. This supersedes DEC-20261024-MENU-MUSIC's earlier branch-only boundary.
 - DITERUSKAN: integrate music 0f6e426 with current main 264a60e / 2.32.0, retaining game 2.32.1 and the already verified runtime. Preserve the current combat-motion polish, tutorial, balance, analytics, original artwork and save rules.
 - VERIFIED: 84 production/runtime resources match, including the exact new menu MP3; native browser/offline results are recorded in the source audit folder. The 45 focused audio/UI/entrypoint/release checks are repeated for publication. Hosted CI remains separate from local verification. [Source and evidence](../audio/menu-2026-10-24/README.md).
+
+## DEC-20261024-AI — publish and improve AI Playtester
+
+**DISAHKAN:** Ijamm explicitly requests pushing AI to branch ai and adding useful improvements before pushing. Supersedes earlier local-only/no-push boundary for ai; no main/other-branch write is authorized.
+
+**IMPLEMENTED:** reconstruct the pruned local draft from the retained session over actual main 6dc3ce3/game 2.31.0; independently rerun checks. Developer-only three-policy strategy/search, real campaigns and contextual selected-card/pair screens, five-job memory history, source-bound exports, strict identity cancellation and individual A/B/combined/interaction utility. Per-card receipt plays/Energy/Focus/direct HP damage are usage telemetry, not power ratings. No trained model, cloud, player advisor, automatic tuning, save migration or numerical changes.
+
+**PERLU_VERIFIKASI:** human pupil 90/70/50 targets, exhaustive combinations, physical Windows/devices and public hosting remain unverified. Previous raw/log evidence was pruned and is not fabricated. [Current guide](../AI_PLAYTESTER.md) and [fresh verification](../verification/ai-branch.json).
+
+## DEC-20261024-AI-STRATEGY — Support value, future turns and acquisition
+
+DISAHKAN: Ijamm quotes and selects the first three proposed AI improvements and says to update them. Continue on ai under the existing ai-only publication authorization. DITERUSKAN: scoped actual-effect accounting, three-world/three-turn bounded engine rollouts, common fully resolved cutoff, and mechanic-derived marginal deck acquisition. FIFO Block and dominant retention-cap accounting are explicit builder conventions; buff involvement/status/retention overlays are not additive damage. Preserve production owners, numerical game balance, save keys and main. PERLU_VERIFIKASI: broader strategy optimality, actual pupils and 90/70/50 targets. [Current evidence](../verification/ai-strategy.json).
+
+## DEC-20261024-AI-MAIN — Publish the completed AI update to main
+
+- DISAHKAN: Ijamm says "okay push ke main please" after delivery of all three AI strategy improvements. This supersedes DEC-20261024-AI and AI-STRATEGY's ai-only publication boundary.
+- DITERUSKAN: merge ai `807be67` into main `d5533ad`; preserve game 2.32.1, supplied menu music, combat animation, tutorial, artwork, save keys and numerical balance. Keep the AI tool developer-only. Resolve both SOR append conflicts by retaining both histories.
+- PERLU_VERIFIKASI: heuristic optimality, exhaustive combinations, physical devices, hosted deployment and pupil 90/70/50 targets remain separate from integration verification. [Main integration evidence](../AI_PLAYTESTER_MAIN_2026_10_24.md).

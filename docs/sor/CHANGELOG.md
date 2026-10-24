@@ -439,3 +439,11 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 - Merge the reviewed Google Sheets education collection feature with main 2.29.0, preserving single-enemy cards/candidate.3, legacy receipts, Alyssa status effects, original artwork/audio and Pages setup.
 - Main Menu/Settings/Practice Learning Report includes Google /exec configuration and opt-in delivery with offline pending records, current-destination consent/receipts and exact confirmed upserts. Ship one copyable Apps Script receiver and BM owner setup.
 - Regenerate package/version/cache entrypoints; retain all main QA commands and add Google build/QA. Live Google authorization/deployment remains an explicit owner step. [Main integration](../GOOGLE_SHEETS_MAIN_2_30_0.md).
+
+
+## 2.31.1-icons.1 — Functional icon clarity preview, 24 October 2026
+
+- Enlarge utility/HUD/seal icons according to role, preserve touch targets and use larger status art on wide displays.
+- Add visible status names and exact counters, immediate-debuff priority, queued-state cues and a fighter-specific All statuses comparison/detail flow with keyboard/touch/focus support.
+- Wire Hand, correct View Deck and soundtrack location symbols, mark missing semantic keys for QA, and label Block-only/no-attack previews correctly.
+- Preserve all original images and excluded card/artifact artwork; add focused UI and real-browser regression checks. Publish only `codex/icon-clarity-audit`, leaving main untouched by this work. [Audit](../ICON_CLARITY_AUDIT_2026_10_24.md).

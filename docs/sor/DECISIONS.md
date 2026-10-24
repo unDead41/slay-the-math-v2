@@ -548,3 +548,11 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - **DITERUSKAN:** implement on `tutorial` from main `d76ad6e` / 2.30.0 as 2.31.0. Use 17 English/BM chapters, 16 real screenshots and 11 replayable actual-engine practice chapters. Independent memory-only training and a tutorial-only progress key preserve the player run, question ledger, report, artifact history and collection.
 - **DITERUSKAN:** retain current artwork/card/question/rules, existing native Tutorial controls and Learn entry. Enlarge example screenshots, preserve focus, support natural scrolling and storage failure. Timed Mystery keeps its deadline and warns before prolonged guide use. Publishing the feature branch is delivery; main integration remains separate.
 - **PERLU_VERIFIKASI:** physical devices, classroom comprehension and future screenshots after UI changes. MODEL.zip failed to arrive and is not used; the three uploaded PDFs are not modified. [Scope and verification](../TUTORIAL_2_31_0.md).
+
+
+## DEC-20261024-ICON-CLARITY — Functional icon audit (branch only)
+
+- DISAHKAN: Ijamm asks to open the current game, inspect all functional icons except card/artifact art, assess mapping, immediate buff/debuff distinction and actual size, recommend improvements and update a separate branch without pushing main.
+- DITERUSKAN: base the preview on main 2.31.0 / `6dc3ce366d266c33154f9b2e76afeb3bba224eca`; publish only `codex/icon-clarity-audit` as 2.31.1-icons.1.
+- IMPLEMENTED: role-based sizes, named status tiles, Debuff-first view ordering, a complete fighter-specific comparison dialog, overflow/count access and semantic fixes for Hand, View Deck, soundtrack locations and zero-damage intent copy. Keep original images, card/artifact registries, mechanics, question RNG, profile/save contracts, tutorial and audio.
+- PERLU_VERIFIKASI: real-device and pupil glance recognition. Browser inspection establishes rendered geometry, complete mappings, working controls and save immutability; it is not a measured pupil-recognition study. [Audit and actual checks](../ICON_CLARITY_AUDIT_2026_10_24.md).

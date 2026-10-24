@@ -1,0 +1,118 @@
+/* Icon roles follow actual viewing size, not a universal bitmap size.
+ * Card/artifact artwork and its renderers are deliberately outside this scope. */
+body .btn>img.icon,.current-hp>img.icon,.track-row img.icon{width:32px;height:32px;flex:none}
+body[data-scene] #header .nav-btn>img.icon{width:32px;height:32px}
+body[data-scene] #header .nav-btn.icon-only{padding:4px;min-width:44px}
+body[data-scene] #header .combat-gold>img.icon{width:32px;height:32px}
+body[data-scene] #header .combat-gold{grid-template-columns:32px auto}
+body .run-status .hp-pill>img.icon,body .run-status .gold-pill>img.icon,body .run-status>.btn>img.icon{width:32px;height:32px;flex:none}
+body.home-active .dungeon-home-footer .text-btn>img.icon{width:32px;height:32px}
+body.home-active #dialog:not(.wide) .icon-btn>img.icon,#dialog .dialog-head .icon-btn>img.icon{width:32px;height:32px}
+#dialog .dialog-head .icon-btn{min-width:44px;min-height:44px;padding:4px;flex:none}
+.collection-tabs [data-action=library-role]>img.icon{width:32px;height:32px;flex:none}
+.collection-search>img.icon{width:28px;height:28px;flex:none}
+.mode-cta>img.icon{width:28px;height:28px;flex:none}
+.save-panel .button-row .icon,.music-panel .button-row .icon{width:36px;height:36px}
+.stage-results>span>.icon{width:32px;height:32px}
+.hand-count{display:flex;align-items:center;justify-content:center;gap:4px}
+.hand-count>img.icon{width:28px;height:28px;flex:none}
+.combat-layout .fighter-stats>img.icon{width:32px;height:32px}
+.combat-layout .forecast-btn>img.icon{width:36px;height:36px;flex-basis:36px}
+.combat-layout .battle-actions .primary>img.icon{width:28px;height:28px}
+.combat-layout .seal{width:44px;height:44px}
+.combat-layout .seal>img.icon{width:100%;height:100%}
+.combat-layout .seals{display:grid;grid-template-columns:repeat(2,44px);gap:4px 6px;justify-content:center}
+.combat-layout .seals small{grid-column:1/-1;font-size:11px;line-height:1.25}
+.combat-layout .intent>strong>img.icon{width:36px;height:36px}
+.combat-layout .battle-theatre{--ground-y:calc(100% - 140px)}
+.combat-status-group{display:grid;grid-template-columns:minmax(0,1fr) 48px;align-items:stretch;gap:4px;margin-top:3px}
+.combat-status-group:has(.combat-status-rack:empty){grid-template-columns:1fr}
+.combat-status-rack{min-height:76px;min-width:0;gap:4px;padding:2px 2px 5px;justify-content:safe center;scrollbar-width:thin;scrollbar-color:#c4a167 #071622;scroll-padding-inline:3px;overscroll-behavior-x:contain}
+.combat-status-rack::-webkit-scrollbar{display:block;height:4px}
+.combat-status-rack::-webkit-scrollbar-thumb{background:#c4a167;border-radius:3px}
+.combat-status-rack:empty{min-height:0;padding:0}
+.combat-status-badge{width:68px;min-width:68px;height:74px;min-height:74px;flex:0 0 68px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:0;padding:0 2px 2px;background:#071622ed;border:1px solid #769a74;border-radius:5px;color:#f2efdf}
+.combat-status-badge:focus-visible,.status-overview-trigger:focus-visible{outline:2px solid #8ce4f0;outline-offset:1px}
+.combat-status-badge.debuff{border-color:#ef92a1;background:#29121fef}
+.combat-status-badge.queued{border-color:#bca2ec;background:#1b1531ef;border-style:dashed}
+.status-art{display:block;position:relative;width:56px;height:56px;flex:none}
+.combat-status-badge .status-art img{width:56px;height:56px;max-width:none;object-fit:contain}
+.combat-status-badge .status-art b{right:-4px;bottom:0;min-width:21px;max-width:64px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 13px/1.25 var(--sans);padding:0 3px}
+.status-name{display:block;max-width:100%;font:11px/1.2 var(--sans);white-space:nowrap}
+.status-overview-trigger{position:relative;z-index:1;min-height:74px;min-width:44px;align-self:start;border:1px solid #c4a167;border-radius:5px;background:#102334;color:#f5e3b9;padding:4px 1px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.status-overview-trigger strong{font:700 17px/1 var(--sans)}
+.status-overview-trigger span{font:10px/1.1 var(--sans)}
+.status-overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:12px;margin-top:16px}
+.status-overview-grid .combat-status-badge{width:100%;min-width:0;min-height:132px;height:auto;padding:8px;gap:4px;flex:none}
+.status-overview-grid .status-art,.status-overview-grid .combat-status-badge .status-art img{width:var(--status-overview-art,72px);height:var(--status-overview-art,72px)}
+.status-overview-grid .status-name{font:700 15px/1.25 var(--sans);white-space:normal;text-align:center}
+.status-overview-grid .status-art b{font-size:16px;min-width:26px;right:-3px}
+.status-kind{font:12px/1.3 var(--sans);color:#c4e4b5}
+.debuff .status-kind{color:#ffb3c1}.queued .status-kind{color:#d4bffa}
+.status-detail>img{width:96px;height:96px;flex:none;object-fit:contain}
+@media(max-width:800px){
+ body[data-scene] #header .nav-btn>img.icon{width:30px;height:30px}
+ body[data-scene] #header .combat-gold>img.icon{width:28px;height:28px}
+ .combat-layout .fighter-stats>img.icon{width:28px;height:28px}
+ .combat-layout .forecast-btn>img.icon{width:32px;height:32px;flex-basis:32px}
+ .combat-layout .seal{width:36px;height:36px}
+ .combat-layout .seals{grid-template-columns:repeat(2,36px)}
+ .combat-layout .seals small{font-size:10px}
+ .combat-layout .intent>strong>img.icon{width:28px;height:28px}
+}
+@media(max-width:500px){
+ .combat-layout .battle-theatre{--ground-y:calc(100% - 144px)}
+ .combat-layout .combat-dock{grid-template-rows:90px minmax(0,1fr)}
+ .combat-layout .energy,.combat-layout .focus-btn{grid-template-columns:44px auto}
+ .combat-layout .energy>span:first-child,.combat-layout .focus-btn>.icon{width:44px;height:44px}
+ .combat-layout .deck-summary .pile-art{width:44px;height:44px}
+ .combat-layout .spent-piles .pile-art{width:44px;height:44px}
+ .combat-layout .arena-center{left:38%;width:16%}
+ .combat-status-group{grid-template-columns:minmax(0,1fr) 44px;gap:2px}
+ .combat-status-rack{min-height:68px;gap:3px;justify-content:flex-start}
+ .combat-status-badge{height:66px;min-height:66px}
+ .status-art,.combat-status-badge .status-art img{width:48px;height:48px}
+ .status-overview-trigger{min-height:66px}
+ .combat-status-badge{width:65px;min-width:65px;flex-basis:65px}
+ .status-name{font-size:10px}
+ .status-overview-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .status-overview-grid .status-name{font-size:14px}
+}
+@media(max-width:360px){.status-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-height:560px) and (min-width:501px){
+ .combat-layout .battle-theatre{--ground-y:calc(100% - 90px)}
+ .combat-layout .fighter-label{min-height:28px}
+ .combat-status-rack{min-height:44px;padding-bottom:2px;gap:3px}
+ .combat-status-badge{width:84px;min-width:84px;flex-basis:84px;height:44px;min-height:44px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:3px;padding:2px}
+ .status-art,.combat-status-badge .status-art img{width:32px;height:32px}
+ .combat-status-badge .status-art b{font-size:11px;min-width:17px;right:-2px}
+ .status-name{font-size:10px;white-space:normal;text-align:left;overflow-wrap:anywhere}
+ .status-overview-trigger{height:44px;min-height:44px;flex-direction:row;gap:4px}
+ .status-overview-trigger strong{font-size:14px}.status-overview-trigger span{font-size:9px}
+ .status-overview-grid .combat-status-badge{display:flex;min-height:112px}
+ .status-overview-grid{--status-overview-art:64px}
+}
+@media(forced-colors:active){
+ .combat-status-badge,.status-overview-trigger{border-color:ButtonText;color:ButtonText;background:Canvas}
+ .status-kind{color:ButtonText}
+}
+
+@media(min-width:2200px) and (min-height:1200px){
+ body[data-scene] #header .nav-btn>img.icon,body[data-scene] #header .combat-gold>img.icon{width:40px;height:40px}
+ .combat-layout .fighter-stats>img.icon{width:40px;height:40px}
+ .combat-layout .battle-theatre{--ground-y:calc(100% - 168px)}
+ .combat-status-rack{min-height:94px}
+ .combat-status-badge{width:84px;min-width:84px;flex-basis:84px;height:90px;min-height:90px}
+ .status-art,.combat-status-badge .status-art img{width:72px;height:72px}
+ .status-name{font-size:12px}.status-overview-trigger{min-height:90px}
+ .combat-layout .energy>span:first-child,.combat-layout .focus-btn>.icon,.combat-layout .deck-summary .pile-art{width:80px;height:80px}
+ .combat-layout .spent-piles .pile-art{width:52px;height:52px}
+ .combat-layout .forecast-btn>img.icon{width:44px;height:44px;flex-basis:44px}
+ .combat-layout .seal{width:52px;height:52px}.combat-layout .seals{grid-template-columns:repeat(2,52px)}
+ #dialog[data-kind=statuses]{width:min(1100px,94vw)}
+ .status-overview-grid{--status-overview-art:96px;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+ .status-overview-grid .combat-status-badge{width:100%;min-width:0;min-height:160px}
+ .status-overview-grid .status-name{font-size:18px}
+}
+/* Keep the existing Passive caption inside the viewport; card art is untouched. */
+@media(max-width:800px){.combat-passives .passive-rail-label{flex-direction:column;align-items:flex-start;gap:0}}

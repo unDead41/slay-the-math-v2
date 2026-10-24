@@ -214,3 +214,8 @@ Shared Learning Report adds a collapsed Collection link / Pautan pengumpulan fie
 ## Complete player tutorial — 2.31.0
 
 Ijamm requests completing the full illustrated in-game tutorial, including self-captured screenshots. Replace the old four-page help with 17 English/BM chapters, genuine player-UI screenshots and isolated actual-engine exercises. Keep existing Tutorial entry/focus, native modal semantics, responsive scrolling and image enlargement. Only tutorial progress/language persist; never capture its examples into player saves/history/reports/collection. Timed Mystery deadlines continue and show a warning. Current owner and evidence: [Tutorial 2.31.0](../TUTORIAL_2_31_0.md).
+
+
+## Functional icon clarity — 2.31.1-icons.1 branch preview
+
+Use role-based icon sizing from ICO-16, visible status names/counters and an All statuses comparison dialog. The overview separates actual Buff/Debuff from Next turn effects, identifies the fighter and retains exact details. Queued borders also differ in shape. Full numeric values stay in accessible labels/details; oversized counters may clip visually rather than covering adjacent icons. Local status panning, count access and native dialog scroll handle crowded phone/landscape layouts without a combat page scrollbar. Keep the original card/artifact art, 44px targets, existing menu actions and color-only rich text. Ijamm authorizes this work on its own branch only. [Evidence and scope](../ICON_CLARITY_AUDIT_2026_10_24.md).

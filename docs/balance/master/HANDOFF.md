@@ -1,6 +1,10 @@
+Current main release: [2.42.0 — reviewed Balance + AI refresh](MAIN_RELEASE_2_42_0.md). Ijamm's new instruction authorizes main publication; original branch-only and study records below remain historical.
+
+Current branch refresh: [2.42.0-balance.1 — three-source review and AI](REFRESH_2026_10_24.md). The candidate.2 results below remain historical; current candidate.5/source-specific results are recorded separately.
+
 # Master balancing handoff — game 2.27.0
 
-Current main integration: [game2.40.0](../../CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
+Earlier main integration: [game2.40.0](../../CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 
 Current assistant-branch follow-up: [2.38.0-card-tuning.1 / candidate.5](../../CARD_TUNING_2_38_0.md). Last Page and Recall are tuned; prior Master saves are isolated. The candidate.2 measurements below retain their original source and are not candidate.5 evidence.
 

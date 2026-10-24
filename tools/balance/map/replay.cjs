@@ -110,6 +110,13 @@ function runCampaign(options={}){
   if(options.onCombatPlay)options.onCombatPlay(run,{kind:'choice'});
  }
  function mysteryReward(){
+  if(deckPolicy?.mystery){
+   const d=deckDecision('mystery',deckPolicy.mystery(run,X.definition(run),X.pending(run)));
+   if(d.optionId===null){act('mysteryDecline',()=>E.leaveMystery(run,clock));return;}
+   act('mysteryOption',()=>E.selectMysteryOption(run,d.optionId),{id:d.optionId});
+   if(d.targetId!==null)act('mysteryTarget',()=>E.selectMysteryTarget(run,d.targetId),{id:d.targetId});
+   act('mysteryClaim',()=>E.claimMystery(run));return;
+  }
   const event=X.definition(run),p=X.pending(run),options=event.success.options.filter(o=>X.actionable(run,o));
   const value=o=>o.effects.reduce((n,e)=>n+({HEAL_HP:Math.min(e.amount||0,run.maxHp-run.hp)*1.4,ADD_GOLD:(e.amount||0)/12,UPGRADE_CARD:6,REMOVE_CARD:run.deck.length>14?5:0,TRANSFORM_CARD:3,CHOOSE_CARD_REWARD:7,GRANT_ARTIFACT:10,QUEUE_COMBAT_MODIFIER:4}[e.type]||0),0)-o.costs.reduce((n,c)=>n+c.amount*(c.resource==='gold'?1/12:c.resource==='maxHp'?3:run.hp<run.maxHp/2?2:1),0);
   options.sort((a,b)=>value(b)-value(a)||a.id.localeCompare(b.id));
@@ -128,6 +135,12 @@ function runCampaign(options={}){
    act('mysteryTarget',()=>E.selectMysteryTarget(run,targets[0]),{id:targets[0]});
   }
   act('mysteryClaim',()=>E.claimMystery(run));
+ }
+ function artifactChoice(){
+  const choices=E.artifactChoices(run);
+  if(!choices.length)return null;
+  if(deckPolicy?.artifact){const d=deckDecision('artifact',deckPolicy.artifact(run,choices.map(a=>a.id)));if(!choices.some(a=>a.id===d.id))throw Error('Artifact policy must select an offered artifact.');return d.id;}
+  return choices.slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id))[0].id;
  }
  try{
   run=options.initialState?copy(options.initialState):E.newRun(runSeed,mode);validate('new run');
@@ -152,8 +165,7 @@ function runCampaign(options={}){
     if(observer)observer.attachRoom(active);
     act('enterNode',()=>E.enterNode(run,id),{nodeId:id});validate('after entry');combatKey=null;
    }else if(run.scene==='master'){
-    const offer=E.artifactChoices(run).slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id))[0];
-    act('artifactChoice',()=>E.chooseArtifact(run,offer.id),{id:offer.id});
+    const id=artifactChoice();act('artifactChoice',()=>E.chooseArtifact(run,id),{id});
    }else if(run.scene==='education'){
     const p=run.educationState.pending;
     if(Q.ready(run)){act('educationContinue',()=>E.continueEducation(run));if(run.stage===1)stages[0].cleared=true;}
@@ -178,7 +190,7 @@ function runCampaign(options={}){
     if(chosen.kind==='endTurn')act('endTurn',()=>E.endTurn(run));
     else{if(!!run.battle.boostArmed!==chosen.focus&&run.battle.focus>0&&!run.battle.boostUsed)act('focusToggle',()=>E.armFocus(run));act('playCard',()=>E.playCard(run,chosen.uid),{uid:chosen.uid,...(options.combatAgent?{decision:chosen.explanation}:{})});if(options.onCombatPlay)options.onCombatPlay(run,chosen);combatPlays++;}
    }else if(run.scene==='reward'){
-    if(run.artifactState?.offer?.ready){const a=E.artifactChoices(run).slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id))[0];act('artifactChoice',()=>E.chooseArtifact(run,a.id),{id:a.id});}
+    if(run.artifactState?.offer?.ready){const id=artifactChoice();act('artifactChoice',()=>E.chooseArtifact(run,id),{id});}
     else{const choices=run.rewards.slice().sort((a,b)=>rewardMerit(run,b,!!run.battle?.elite)-rewardMerit(run,a,!!run.battle?.elite)||a.localeCompare(b));const key=deckPolicy?deckDecision('reward',deckPolicy.reward(run,run.rewards,!!run.battle?.elite)).key:run.deck.length<24?choices[0]:null;act('rewardChoice',()=>E.chooseReward(run,key),{key});}
    }else if(run.scene==='camp'){
     if(deckPolicy){const d=deckDecision('camp',deckPolicy.camp(run));act(d.action==='heal'?'campHeal':'campUpgrade',()=>E.camp(run,d.action,d.uid),{uid:d.uid});continue;}
@@ -206,8 +218,7 @@ function runCampaign(options={}){
     else if(p.phase==='reward')mysteryReward();else throw Error('Unexpected Mystery phase '+p.phase);
    }else if(run.scene==='stageclear'){
     stages[0].cleared=true;
-    const choices=E.artifactChoices(run).slice().sort((a,b)=>artifactMerit(b)-artifactMerit(a)||a.id.localeCompare(b.id));
-    if(choices.length)act('bossArtifact',()=>E.chooseArtifact(run,choices[0].id),{id:choices[0].id});else act('nextStage',()=>E.nextStage(run));
+    const id=artifactChoice();if(id)act('bossArtifact',()=>E.chooseArtifact(run,id),{id});else act('nextStage',()=>E.nextStage(run));
    }else throw Error('Unhandled engine scene '+run.scene);
   }
   validate('terminal');reconcile();return result(run.scene==='victory'?'VICTORY':'DEFEAT');

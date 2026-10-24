@@ -1,0 +1,218 @@
+✖ current integrity gate rejects records executed under another runtime identity (2.576047ms)
+✖ current worker captures real Master entries for all three bound profiles (1.276676ms)
+✖ Master runtime choice is preserved by fixed campaign tasks and context (4.959853ms)
+✖ current worker rejects a captured entry from a different difficulty (0.326653ms)
+✖ versioned regression protocol fingerprints its actual runner and schedule (0.295565ms)
+✖ current feedback settles two wrong attempts without a third attempt or loop (0.340454ms)
+✖ artifact affordability observes the same Master quote used by a purchase (207.681042ms)
+✖ current report does not deduct a legacy Gold grant which Master never awards (0.741949ms)
+✖ Master artifact affordability telemetry uses the actual profile quote at a tight Gold boundary (233.780947ms)
+✖ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (194.069738ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 0
+ℹ fail 10
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1220.696437
+
+✖ failing tests:
+
+test at tests/map-balance-current.test.cjs:11:1
+✖ current integrity gate rejects records executed under another runtime identity (2.576047ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  'PASS' !== 'FAIL'
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:15:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'PASS',
+    expected: 'FAIL',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-current.test.cjs:17:1
+✖ current worker captures real Master entries for all three bound profiles (1.276676ms)
+  AssertionError [ERR_ASSERTION]: NEEDS_COMBAT_MASTER_ADAPTER: easy is not implemented by this runtime; economy-only profiles are insufficient.
+  + actual - expected
+
+  + 'INVALID_POLICY_OR_ENGINE'
+  - 'ENTRY_CAPTURED'
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:20:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'INVALID_POLICY_OR_ENGINE',
+    expected: 'ENTRY_CAPTURED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-current.test.cjs:27:1
+✖ Master runtime choice is preserved by fixed campaign tasks and context (4.959853ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(tasks.every(t=>t.options.runtimeBuild==='master'))
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:29:60)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-current.test.cjs:34:1
+✖ current worker rejects a captured entry from a different difficulty (0.326653ms)
+  TypeError: Cannot read properties of undefined (reading 'state')
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:37:119)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/map-balance-current.test.cjs:40:1
+✖ versioned regression protocol fingerprints its actual runner and schedule (0.295565ms)
+  Error: Cannot find module '../tools/balance/map-regression/config.json'
+  Require stack:
+  - /workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+      at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+      at Module._load (node:internal/modules/cjs/loader:1294:5)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+      at Module.require (node:internal/modules/cjs/loader:1617:12)
+      at require (node:internal/modules/helpers:153:16)
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:41:19)
+      at Test.runInAsyncScope (node:async_hooks:227:14) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [ '/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs' ]
+  }
+
+test at tests/map-balance-current.test.cjs:47:1
+✖ current feedback settles two wrong attempts without a third attempt or loop (0.340454ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'NEEDS_COMBAT_MASTER_ADAPTER: medium is not implemented by this runtime; economy-only profiles are insufficient.'
+  - null
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:49:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'NEEDS_COMBAT_MASTER_ADAPTER: medium is not implemented by this runtime; economy-only profiles are insufficient.',
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-current.test.cjs:51:1
+✖ artifact affordability observes the same Master quote used by a purchase (207.681042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  0 !== 1
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:56:41)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-current.test.cjs:58:1
+✖ current report does not deduct a legacy Gold grant which Master never awards (0.741949ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  63 !== 123
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/map-balance-current.test.cjs:60:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 63,
+    expected: 123,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/master-refresh-economy.test.cjs:7:1
+✖ Master artifact affordability telemetry uses the actual profile quote at a tight Gold boundary (233.780947ms)
+  AssertionError [ERR_ASSERTION]: easy affordability must use checkout quotes at 72
+
+  0 !== 3
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/master-refresh-economy.test.cjs:10:194)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/master-refresh-economy.test.cjs:13:1
+✖ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (194.069738ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  0 !== 40
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/master-refresh-economy.test.cjs:17:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 40,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

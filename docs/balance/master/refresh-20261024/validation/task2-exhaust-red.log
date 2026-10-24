@@ -1,0 +1,40 @@
+✔ AI leaves a Gold-only artifact whose actual price exceeds its one-time grant (211.346401ms)
+✔ AI does not pay for a weaker discount already covered by its owned Contract (177.092555ms)
+✔ free artifact selection recognizes Gold and maximum HP without charging a Shop price (73.6061ms)
+✖ Exhaust-trigger artifact value follows the actual zero-Energy Recall lifecycle (74.523424ms)
+✔ frozen transform compares replacements at deck ten and preserves all live card instances (88.152288ms)
+✔ transform accounts for losing an upgrade and retains a legal mandatory alternative (81.603552ms)
+✔ optional harmful Mystery transform actually declines instead of silently falling back (147.199802ms)
+✔ Mystery planning chooses the real Gold alternative without changing offers or RNG (71.283387ms)
+✔ actual starting artifact choice is explained by the shared acquisition policy (71.370799ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1290.661085
+
+✖ failing tests:
+
+test at tests/ai-playtester-acquisition.test.cjs:46:1
+✖ Exhaust-trigger artifact value follows the actual zero-Energy Recall lifecycle (74.523424ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(f.p.artifact(f.r,[id]).gain>0)
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:50:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -19,7 +19,7 @@ function normalizeOptions(input={}){
  return o;
 }
 function sourceIdentity(x){
- const files=new Set([...x.sourceFiles,'dist/balance.js','dist/balance-data.js','tools/balance/master/config.json','tools/balance/master/loader.cjs','tools/balance/combat.cjs','tools/balance/deep.cjs','tools/balance/candidate.cjs','tools/balance/specs/balance-spec.v1.2.json',...['replay.cjs','policy.cjs','config.json','structure.cjs'].map(p=>'tools/balance/map/'+p),...['route-policy.cjs','question-policy.cjs','scenarios.cjs','telemetry.cjs'].map(p=>'tools/balance/map-advanced/'+p),...['agent.cjs','experiments.cjs','effects.cjs','deck-policy.cjs','report.cjs','worker.cjs'].map(p=>'tools/ai-playtester/'+p)]);
+ const files=new Set([...x.sourceFiles,'dist/balance.js','dist/balance-data.js','tools/balance/master/config.json','tools/balance/master/loader.cjs','tools/balance/combat.cjs','tools/balance/deep.cjs','tools/balance/candidate.cjs','tools/balance/specs/balance-spec.v1.2.json',...['replay.cjs','policy.cjs','config.json','structure.cjs'].map(p=>'tools/balance/map/'+p),...['route-policy.cjs','question-policy.cjs','scenarios.cjs','telemetry.cjs'].map(p=>'tools/balance/map-advanced/'+p),...['agent.cjs','experiments.cjs','effects.cjs','deck-policy.cjs','artifact-policy.cjs','report.cjs','worker.cjs'].map(p=>'tools/ai-playtester/'+p)]);
  const sources=Object.fromEntries([...files].sort().map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,p))).digest('hex')]));
  return {sourceHash:crypto.createHash('sha256').update(JSON.stringify(sources)).digest('hex'),sources};
 }

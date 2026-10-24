@@ -1,0 +1,4 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.42.0-balance.1 check:ai
+> node --check tools/ai-playtester/agent.cjs && node --check tools/ai-playtester/experiments.cjs && node --check tools/ai-playtester/report.cjs && node --check tools/ai-playtester/worker.cjs && node --check tools/ai-playtester/cli.cjs && node --check tools/dev/playtester/server.cjs && node --check tools/dev/playtester/app.js && node --check tools/ai-playtester/effects.cjs && node --check tools/ai-playtester/deck-policy.cjs && node --check tools/ai-playtester/artifact-policy.cjs

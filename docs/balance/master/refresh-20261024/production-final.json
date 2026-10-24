@@ -1,0 +1,50 @@
+{
+  "status": "PASSED",
+  "isolatedIdenticalInputs": 999,
+  "publicFiles": 735,
+  "unchangedPublicFilesMatchDist": 719,
+  "expectedProductionTransforms": [
+    "app.js",
+    "asset-manifest.json",
+    "index.html"
+  ],
+  "addedStaticDevFiles": [
+    "__dev/app.js",
+    "__dev/collection.js",
+    "__dev/fixtures.js",
+    "__dev/game/index.html",
+    "__dev/hub-access.js",
+    "__dev/hub.js",
+    "__dev/index.html",
+    "__dev/report.js",
+    "__dev/runtime-tools.js",
+    "__dev/sandbox/index.html",
+    "__dev/storage.js",
+    "__dev/style.css",
+    "dev-access.js"
+  ],
+  "assetManifestHashesVerified": 673,
+  "offlineExcludesAi": true,
+  "routes": [
+    {
+      "method": "GET",
+      "route": "/__dev/ai/",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "route": "/__dev/ai/app.js",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "route": "/__dev/ai/jobs",
+      "status": 404
+    },
+    {
+      "method": "POST",
+      "route": "/__dev/ai/jobs",
+      "status": 404
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+✔ AI leaves a Gold-only artifact whose actual price exceeds its one-time grant (189.628488ms)
+✔ AI does not pay for a weaker discount already covered by its owned Contract (183.495258ms)
+✔ free artifact selection recognizes Gold and maximum HP without charging a Shop price (91.820587ms)
+✔ Exhaust-trigger artifact value follows the actual zero-Energy Recall lifecycle (96.268343ms)
+✔ frozen transform compares replacements at deck ten and preserves all live card instances (74.720998ms)
+✔ transform accounts for losing an upgrade and retains a legal mandatory alternative (76.423546ms)
+✔ optional harmful Mystery transform actually declines instead of silently falling back (160.903758ms)
+✔ Mystery planning chooses the real Gold alternative without changing offers or RNG (78.461261ms)
+✔ actual starting artifact choice is explained by the shared acquisition policy (84.404297ms)
+✖ Mystery accepts a free canonical next-combat buff without changing live state while planning (107.392387ms)
+✔ Master artifact affordability telemetry uses the actual profile quote at a tight Gold boundary (361.295442ms)
+✖ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (273.209179ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 10
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2522.521352
+
+✖ failing tests:
+
+test at tests/ai-playtester-acquisition.test.cjs:85:1
+✖ Mystery accepts a free canonical next-combat buff without changing live state while planning (107.392387ms)
+  AssertionError [ERR_ASSERTION]: free Strength/Agility must be valued positively
+      at TestContext.<anonymous> (/dev/shm/stm-master-refresh-50182eb5cf4b/worktree/tests/ai-playtester-acquisition.test.cjs:88:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/master-refresh-economy.test.cjs:16:1
+✖ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (273.209179ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'SUM_OF_NET_ACTION_DECREASES; paid Purse credit offsets purchase outflow; not gross checkout spending'
+  - 'GROSS_CHECKOUT_SPENDING'
+
+      at TestContext.<anonymous> (/dev/shm/stm-master-refresh-50182eb5cf4b/worktree/tests/master-refresh-economy.test.cjs:29:48)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'SUM_OF_NET_ACTION_DECREASES; paid Purse credit offsets purchase outflow; not gross checkout spending',
+    expected: 'GROSS_CHECKOUT_SPENDING',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

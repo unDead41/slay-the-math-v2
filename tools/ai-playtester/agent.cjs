@@ -1,5 +1,5 @@
 'use strict';
-const VERSION='sampled-turn-search-2',SKILLS=['beginner','intermediate','expert'];
+const VERSION='sampled-turn-search-3',SKILLS=['beginner','intermediate','expert'];
 const LIMITS=Object.freeze({turns:3,samples:3,width:6,playsPerTurn:3,perRollout:14,nodes:300,choices:4}),copy=v=>JSON.parse(JSON.stringify(v));
 function planningWorld(run,sample=0){
  const b=run.battle,known=new Set(['hand','discard','exhaust','active','resolving'].flatMap(k=>(b[k]||[]).map(c=>c.uid))),pool=run.deck.filter(c=>!known.has(c.uid)).sort((a,b)=>a.uid.localeCompare(b.uid));

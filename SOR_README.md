@@ -1,5 +1,7 @@
 # Slay the Math — Set of Rules
 
+Current branch-only Master/AI refresh **2.42.0-balance.1**: [handoff](docs/balance/master/REFRESH_2026_10_24.md), [source registry](docs/balance/master/refresh-20261024/sources.json), [audit](docs/audits/balance-master/LATEST.md). Numerical candidate.5 and existing saves remain unchanged.
+
 Current resource/runtime integration: [main2.41.0 release](docs/RUNTIME_OPTIMIZATION_MAIN_2_41_0.md), [SOR25](docs/sor/25_RUNTIME_OPTIMIZATION.md) and [latest audit](docs/audits/hosted-readiness/LATEST.md). Latest user authorization supersedes the historical feature-only boundary for this completed update.
 
 Current main integration: [game2.40.0](docs/CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
@@ -117,3 +119,5 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 - [22 — Economy, loot and rewards candidate](docs/sor/22_ECONOMY_REWARDS.md): exact-base audit, opt-in tuning, source rules, saved receipts, all-event tables, seed histograms/Gold-recovery projections and Master handoff. Student 90/70/50 targets remain unmeasured.
 
 AI Playtester on main, release 2.33.0: [operator guide](docs/AI_PLAYTESTER.md), [developer owner](docs/sor/20_DEVELOPER_TOOLS.md), [main integration and release verification](docs/AI_PLAYTESTER_MAIN_2026_10_24.md), [historical strategy verification](docs/verification/ai-strategy.json), [original baseline](docs/verification/ai-branch.json). No automatic tuning or pupil win-rate claim.
+
+Main release2.42.0 integrates the reviewed Master Balance/AI refresh after Ijamm's explicit main-publication instruction. [Release and verification](docs/balance/master/MAIN_RELEASE_2_42_0.md); original branch studies retain their own sources.

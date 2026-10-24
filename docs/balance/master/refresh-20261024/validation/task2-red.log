@@ -1,0 +1,151 @@
+✖ AI leaves a Gold-only artifact whose actual price exceeds its one-time grant (156.757984ms)
+✖ AI does not pay for a weaker discount already covered by its owned Contract (146.678867ms)
+✖ free artifact selection recognizes Gold and maximum HP without charging a Shop price (67.985902ms)
+✖ frozen transform compares replacements at deck ten and preserves all live card instances (67.506258ms)
+✖ transform accounts for losing an upgrade and retains a legal mandatory alternative (63.902521ms)
+✖ optional harmful Mystery transform actually declines instead of silently falling back (96.018616ms)
+✖ Mystery planning chooses the real Gold alternative without changing offers or RNG (74.181269ms)
+✖ actual starting artifact choice is explained by the shared acquisition policy (74.858882ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 992.442181
+
+✖ failing tests:
+
+test at tests/ai-playtester-acquisition.test.cjs:31:1
+✖ AI leaves a Gold-only artifact whose actual price exceeds its one-time grant (156.757984ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'artifact'
+  - 'leave'
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:34:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'artifact',
+    expected: 'leave',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ai-playtester-acquisition.test.cjs:36:1
+✖ AI does not pay for a weaker discount already covered by its owned Contract (146.678867ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'artifact'
+  - 'leave'
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:38:42)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'artifact',
+    expected: 'leave',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ai-playtester-acquisition.test.cjs:40:1
+✖ free artifact selection recognizes Gold and maximum HP without charging a Shop price (67.985902ms)
+  TypeError: f.p.artifact is not a function
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:42:19)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/ai-playtester-acquisition.test.cjs:46:1
+✖ frozen transform compares replacements at deck ten and preserves all live card instances (67.506258ms)
+  TypeError: f.p.transform is not a function
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:49:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/ai-playtester-acquisition.test.cjs:51:1
+✖ transform accounts for losing an upgrade and retains a legal mandatory alternative (63.902521ms)
+  TypeError: f.p.transform is not a function
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:54:19)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/ai-playtester-acquisition.test.cjs:58:1
+✖ optional harmful Mystery transform actually declines instead of silently falling back (96.018616ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'mysteryOption'
+  - 'mysteryDecline'
+            ^
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:65:80)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'mysteryOption',
+    expected: 'mysteryDecline',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ai-playtester-acquisition.test.cjs:68:1
+✖ Mystery planning chooses the real Gold alternative without changing offers or RNG (74.181269ms)
+  TypeError: f.p.mystery is not a function
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:70:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/ai-playtester-acquisition.test.cjs:73:1
+✖ actual starting artifact choice is explained by the shared acquisition policy (74.858882ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(decisions.some(d=>d.scene==='artifact'&&d.id===r.actions[0].id))
+
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/master-balance-refresh-20261024/tests/ai-playtester-acquisition.test.cjs:76:70)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

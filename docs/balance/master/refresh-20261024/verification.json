@@ -1,0 +1,285 @@
+{
+  "status": "PASSED",
+  "gameVersion": "2.42.0-balance.1",
+  "masterSor": "1.2.0",
+  "auditedMain": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+  "targetBranch": "balance/master",
+  "mainPublicationAuthorized": false,
+  "masterIdentity": {
+    "version": "master-1.5.0-candidate.5",
+    "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7"
+  },
+  "checks": {
+    "fullSuite": {
+      "tests": 1042,
+      "pass": 1042,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "exitCode": 0,
+      "durationMs": 482996.919679
+    },
+    "syntax": {
+      "exitCode": 0
+    },
+    "mapModule": {
+      "tests": 7,
+      "seeds": 100,
+      "maps": 200,
+      "layouts": 200,
+      "pngHashes": 12,
+      "exitCode": 0
+    },
+    "aiBrowser": {
+      "status": "PASS",
+      "encounters": 4,
+      "sourceHash": "3fb221253beb57ab5fe7b2fcdfacb7eeb615c37711cf2631efa1a9a705b415bc",
+      "reportHistory": true,
+      "staleRefreshGuard": true,
+      "selectedHistorySurvivesReload": true,
+      "previousReportImmutable": true,
+      "downloads": true,
+      "cancellation": true,
+      "playerStorageUnchanged": true,
+      "viewports": [
+        1440,
+        750,
+        390
+      ],
+      "errors": []
+    },
+    "masterBrowser": {
+      "profiles": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "realEnterDungeonGate": true,
+      "giftRouteCombatPredictReloadValidSave": true,
+      "errors": []
+    },
+    "production": {
+      "status": "PASSED",
+      "isolatedIdenticalInputs": 999,
+      "publicFiles": 735,
+      "unchangedPublicFilesMatchDist": 719,
+      "expectedProductionTransforms": [
+        "app.js",
+        "asset-manifest.json",
+        "index.html"
+      ],
+      "addedStaticDevFiles": [
+        "__dev/app.js",
+        "__dev/collection.js",
+        "__dev/fixtures.js",
+        "__dev/game/index.html",
+        "__dev/hub-access.js",
+        "__dev/hub.js",
+        "__dev/index.html",
+        "__dev/report.js",
+        "__dev/runtime-tools.js",
+        "__dev/sandbox/index.html",
+        "__dev/storage.js",
+        "__dev/style.css",
+        "dev-access.js"
+      ],
+      "assetManifestHashesVerified": 673,
+      "offlineExcludesAi": true,
+      "routes": [
+        {
+          "method": "GET",
+          "route": "/__dev/ai/",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "route": "/__dev/ai/app.js",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "route": "/__dev/ai/jobs",
+          "status": 404
+        },
+        {
+          "method": "POST",
+          "route": "/__dev/ai/jobs",
+          "status": 404
+        }
+      ]
+    },
+    "productionBrowser": {
+      "status": "PASS",
+      "staticSubpath": true,
+      "passwordSettingsReload": true,
+      "godModeMapTeleport15EventsCardInsertion": true,
+      "playerCopyIsolation": true,
+      "questionsStatusScenariosReports": true,
+      "actualProdServer": true
+    },
+    "mapPilot": {
+      "campaigns": 24,
+      "matchedReplays": 18,
+      "invalid": 0,
+      "censored": 0,
+      "profiles": [
+        {
+          "status": "PASS",
+          "contextId": "e678c967a17fd3c49b42cedd69a1a23c3cb4d88d116be7486851ad568d2a342a",
+          "manifestFiles": 31,
+          "sourceAndInputHashes": 60,
+          "trialRecords": 14,
+          "campaigns": 8,
+          "matchedReplays": 6,
+          "entryStates": 2,
+          "matchedScoreRows": 6,
+          "csvCells": 4842,
+          "routeRows": 56,
+          "uniformLegacyTraceMatches": 0,
+          "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+          "censoredTrials": 0,
+          "scoreGateStatus": "PASS",
+          "studentCalibration": false
+        },
+        {
+          "status": "PASS",
+          "contextId": "d8ebf73d54af0805b66421c735dc138fb17572f16889886441b2749b0f119030",
+          "manifestFiles": 31,
+          "sourceAndInputHashes": 60,
+          "trialRecords": 14,
+          "campaigns": 8,
+          "matchedReplays": 6,
+          "entryStates": 2,
+          "matchedScoreRows": 6,
+          "csvCells": 4842,
+          "routeRows": 56,
+          "uniformLegacyTraceMatches": 0,
+          "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+          "censoredTrials": 0,
+          "scoreGateStatus": "PASS",
+          "studentCalibration": false
+        },
+        {
+          "status": "PASS",
+          "contextId": "97d26ba108fe5bdd657d91694b26a7497590515523123e7cf44df929430075e2",
+          "manifestFiles": 31,
+          "sourceAndInputHashes": 60,
+          "trialRecords": 14,
+          "campaigns": 8,
+          "matchedReplays": 6,
+          "entryStates": 2,
+          "matchedScoreRows": 6,
+          "csvCells": 4796,
+          "routeRows": 56,
+          "uniformLegacyTraceMatches": 0,
+          "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+          "censoredTrials": 0,
+          "scoreGateStatus": "PASS",
+          "studentCalibration": false
+        }
+      ],
+      "output": "reports/master-balance/refresh-20261024/final/map"
+    },
+    "aiCohort": {
+      "status": "PASSED",
+      "reports": 192,
+      "rows": 403,
+      "receiptBlockChecks": 403,
+      "grossGoldChecks": 15,
+      "individualFactorialChecks": 177,
+      "allCardContexts": 160,
+      "sourceHashesVerified": true,
+      "sourceHash": "3fb221253beb57ab5fe7b2fcdfacb7eeb615c37711cf2631efa1a9a705b415bc",
+      "csvRows": 403,
+      "routeIdentityVerified": true,
+      "pupilTargetsMeasured": false
+    },
+    "additionalRepeatedMapSmoke": {
+      "status": "PASS",
+      "contextId": "0ebc60e67e9bf762067dbc1f5fd886573ed5fdc35eb44c102beaa919350b4b69",
+      "manifestFiles": 31,
+      "sourceAndInputHashes": 58,
+      "trialRecords": 42,
+      "campaigns": 18,
+      "matchedReplays": 24,
+      "entryStates": 8,
+      "matchedScoreRows": 6,
+      "csvCells": 5462,
+      "routeRows": 56,
+      "uniformLegacyTraceMatches": 0,
+      "legacyReferenceStatus": "NOT_COMPARABLE_CURRENT_PROFILE",
+      "censoredTrials": 1,
+      "scoreGateStatus": "FAIL",
+      "studentCalibration": false,
+      "interpretation": "Additional Easy repeated-protocol documentation smoke:42 records, one censor retained; independent raw integrity PASS, score gate FAIL. Not pooled with the three-profile regression pilot."
+    },
+    "finalReview": {
+      "reviewedLocalCommit": "6472e4605ae6a0d948e617db83fc4a7673a0e372",
+      "equivalentRemoteSnapshot": "85574de0d225f86cd58c060bd749fcc122d25139",
+      "reviewedTree": "124e5775102e1782fd55de9f303fa460ed082454",
+      "model": "gpt-6-astra",
+      "reasoning": "high",
+      "mode": "fresh-context read-only",
+      "reviewerFocusedTests": 19,
+      "fixPasses": 1,
+      "authorFocusedTests": 35,
+      "critical": 0,
+      "importantFixed": 2,
+      "reproducibilityFindingRegradedAndFixed": 1,
+      "deferredMinors": 0,
+      "reReview": false
+    },
+    "preReviewCohort": {
+      "location": "reports/master-balance/refresh-20261024",
+      "sourceHash": "bab88347c90a06b65545c6c27e67f4a984e4afb08eb1fd0c8668e31e11a74cfb",
+      "preservedUnchanged": true,
+      "notPooledWithFinal": true,
+      "mapLabelDefectRecorded": true
+    }
+  },
+  "scope": {
+    "protectedFiles": 840,
+    "expectedGeneratedChanges": [
+      "MAIN-SEKARANG.html",
+      "dist/asset-manifest.json",
+      "dist/index.html",
+      "dist/release.js",
+      "index.html"
+    ],
+    "otherProtectedFilesUnchanged": 835,
+    "numericalProfilesAssetsQuestionsMapAndSavesUnchanged": true
+  },
+  "environment": {
+    "firstFullPretest": "ENOSPC before tests; not counted as a test result",
+    "resolution": "Only owned reproducible QA outputs removed; same worktree moved to RAM-backed QA storage and Git repaired",
+    "productionInputs": "isolated export of999 byte-identical inputs",
+    "masterHarness": "updated to actual asynchronous2.41 startup/Enter gate, no production workaround"
+  },
+  "producerSha256": "60828b5e395fec7000921c2a77cf8b24e2093da0f7666edb7519b91fb82e304d",
+  "limits": [
+    "One seed per condition in fresh pilots; no pupil90/70/50 measurement or universal CP.",
+    "No exhaustive combinations, heuristic optimality, physical-device or hosted-service verification.",
+    "Inherited Hard pre-Rest, ordinary Spool and main documentation findings remain in the scoped audit."
+  ],
+  "preReviewProducerSha256": "62c35b451d2f4695a972c05f4c2118b0557945391d31009310c2a75e860f919e",
+  "producer": "docs/balance/master/refresh-20261024/final-producer.cjs",
+  "independentVerifier": "docs/balance/master/refresh-20261024/verify-cohort.py",
+  "publication": {
+    "status": "VERIFIED",
+    "verifiedAt": "2026-10-24T14:13:55.163994+00:00",
+    "branch": "balance/master",
+    "version": "2.42.0-balance.1",
+    "previousBranchHead": "8b6a3c688dc83db31685cdc7ec653ee25554e62d",
+    "publishedCodeCommit": "057194e8ac41f464a367e76b12ac0ac0e6dd4937",
+    "publishedCodeTree": "80974c3b53e642ee7d4e2ba2cd9d37ba3932238b",
+    "codeParent": "85574de0d225f86cd58c060bd749fcc122d25139",
+    "parentBaseMain": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+    "mainReadback": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+    "expectedHeadChecked": true,
+    "force": false,
+    "exactTestedTreeVerified": true,
+    "mainChanged": false,
+    "sourceHash": "3fb221253beb57ab5fe7b2fcdfacb7eeb615c37711cf2631efa1a9a705b415bc",
+    "metadataFollowup": "This receipt records the published code commit. A documentation-only follow-up may carry the receipt itself; source/runtime fingerprint remains unchanged."
+  }
+}

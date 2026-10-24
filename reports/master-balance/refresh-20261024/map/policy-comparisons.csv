@@ -1,0 +1,13 @@
+difficulty,balanceVersion,contextId,policy,pairs,unknown,bothWin,bothLose,onlyPolicyWins,onlyUniformWins,pairedWinRateDelta,interpretation
+easy,master-1.5.0-candidate.5,845e09c67d455f34bc04d03c6235140660fd1719f69c3def106ecaef568eac3f,avoid-elite,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+easy,master-1.5.0-candidate.5,845e09c67d455f34bc04d03c6235140660fd1719f69c3def106ecaef568eac3f,seek-reward,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+easy,master-1.5.0-candidate.5,845e09c67d455f34bc04d03c6235140660fd1719f69c3def106ecaef568eac3f,seek-shop,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+easy,master-1.5.0-candidate.5,845e09c67d455f34bc04d03c6235140660fd1719f69c3def106ecaef568eac3f,health-recovery,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+medium,master-1.5.0-candidate.5,9bc9cb84d5970cb7c95eb046ef7b44b785d6aa15b28c3fda259a07cfceceda6c,avoid-elite,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+medium,master-1.5.0-candidate.5,9bc9cb84d5970cb7c95eb046ef7b44b785d6aa15b28c3fda259a07cfceceda6c,seek-reward,1,0,0,0,0,1,-1,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+medium,master-1.5.0-candidate.5,9bc9cb84d5970cb7c95eb046ef7b44b785d6aa15b28c3fda259a07cfceceda6c,seek-shop,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+medium,master-1.5.0-candidate.5,9bc9cb84d5970cb7c95eb046ef7b44b785d6aa15b28c3fda259a07cfceceda6c,health-recovery,1,0,1,0,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,e167ba02c14c47fb719ca1344e1df88c64d04180d34c844f5c2502bfd478904c,avoid-elite,1,0,0,0,1,0,1,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,e167ba02c14c47fb719ca1344e1df88c64d04180d34c844f5c2502bfd478904c,seek-reward,1,0,0,1,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,e167ba02c14c47fb719ca1344e1df88c64d04180d34c844f5c2502bfd478904c,seek-shop,1,0,0,1,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge
+hard,master-1.5.0-candidate.5,e167ba02c14c47fb719ca1344e1df88c64d04180d34c844f5c2502bfd478904c,health-recovery,1,0,0,1,0,0,0,shared runSeed and identical stage-1 entry; subsequent route RNG consumption can diverge

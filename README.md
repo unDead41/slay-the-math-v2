@@ -1,4 +1,6 @@
-# Slay the Math — 2.40.0
+# Slay the Math — 2.42.0
+
+Version **2.42.0** integrates the reviewed Master Balance/AI refresh: current-runtime map/economy observations, actual-cost artifact choices, frozen-offer Mystery/transform decisions and canonical next-combat buff valuation. Current numerical card/profile values, saves and original artwork are preserved. [Main release, source parity, verification and limits](docs/balance/master/MAIN_RELEASE_2_42_0.md).
 
 Version **2.40.0** integrates the approved three-card tuning: Last Page draws 2 +1 empty-Hand, Recall costs 0 with Exhaust, and ordinary Mana Barrier gives 7 Block per Energy. AI choice telemetry observes only actual actions. Current education reports, clearer hints, status explanations and Settings-only Developer access are retained. Prior ordinary saves keep their original rules; start a New Run for the new values. [Changes, compatibility and fresh main checks](docs/CARD_TUNING_MAIN_2_40_0.md).
 

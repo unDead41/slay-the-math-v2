@@ -1,5 +1,7 @@
 # Map experiments v1.3
 
+Historical v1.3/default baseline instructions. The current integrated three-profile recheck uses [map-recheck](../map-recheck/README.md) and its v1.4 outputs; the optional Master worker adapter is now implemented. The old full-tier-unavailable statements below describe the original/default baseline, not current main.
+
 Developer analysis only. No player UI or production gameplay parameter reads these outputs.
 
 ```bash

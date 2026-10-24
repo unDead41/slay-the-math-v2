@@ -1,4 +1,6 @@
-# 23 — Master balancing, game2.40.0
+# 23 — Master balancing, branch2.42.0-balance.1
+
+Current refresh publication target is **balance/master only**, following Ijamm’s latest request to update the three-source balance integration and AI before main. Current numerical binding is candidate.5; earlier publication approvals below refer to their recorded releases. [Current source review and checks](../balance/master/REFRESH_2026_10_24.md).
 
 Current main integration: [game2.40.0](../CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 
@@ -84,3 +86,11 @@ DISAHKAN: Ijamm's latest instruction authorizes this follow-up on `balance/card-
 ## Card tuning main publication — 2.40.0
 
 DISAHKAN: Ijamm now authorizes publishing the completed card follow-up to main and updating the version. Integrate bb5f93b with current main ade5d3a /2.39.0 as2.40.0, preserving education reports/hints, status explanations/readiness and Dev Settings. Three approved card values and AI actual-choice accounting retain their feature owner; ordinary v0/v1 rules/payments/offers and Master candidate.5 keys remain separated. [Fresh combined-tree evidence and limits](../CARD_TUNING_MAIN_2_40_0.md).
+
+## MB-13 — Current-source Master and AI refresh
+
+DISAHKAN: Ijamm asks Master to read Combat/Map/Economy branch work, update necessary scope and AI, and put the result on its branch before main. DITERUSKAN: base main45d2378/game2.41; branch prerelease2.42.0-balance.1, candidate.5 unchanged. Adopt explicit Master map runtime/identity, correct gross Gold/canonical quotes and final-boss Gold; improve marginal artifacts and frozen Mystery decisions in sampled-turn-search-3. Preserve all numerical owners, topology, historical rules/saves and original assets. Historical candidate.4 evidence is not relabeled. Human targets and universal tuning remain unverified. [Handoff](../balance/master/REFRESH_2026_10_24.md), [audit](../audits/balance-master/LATEST.md).
+
+## Main publication — 2.42.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing the completed Master refresh to main. This supersedes the original branch-only boundary for balance/master b281dc69e752f84424b81d0d051644b9da154dd9. Base main45d2378302196d9b0b79af7b371e6f16d4f5768c remains the first merge parent; the reviewed Master branch is the second. Publish game2.42.0 through shared release metadata. Mastercandidate.5, numerical values, ordinary saves/rules, map, questions and artwork stay unchanged. Original prerelease cohorts retain their source identities. [Combined release and fresh checks](../balance/master/MAIN_RELEASE_2_42_0.md).

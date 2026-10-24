@@ -1,0 +1,41 @@
+{
+  "reportVersion": "map-master-refresh-1.0.0",
+  "protocolVersion": "map-current-1.0.0",
+  "runtimeBaseCommit": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+  "previousAuditCommit": "5480273cb28752741f3043f8d23753aa0374902d",
+  "runtimeBuild": "master",
+  "postRunBossGrant": 0,
+  "mode": "challenge",
+  "samplerSeed": 42,
+  "routePolicies": {
+    "uniform-visible-v1": 4,
+    "avoid-elite": 2,
+    "seek-reward": 2,
+    "seek-shop": 2,
+    "health-recovery": 2
+  },
+  "predictProfiles": {
+    "high": 2,
+    "low": 2,
+    "skip": 2
+  },
+  "predictRoutePolicy": "health-recovery",
+  "matchedEntriesPerStage": 4,
+  "ranks": [
+    "easiest",
+    "median",
+    "hardest"
+  ],
+  "rankReference": "pressure-debt-1.0.0; nominal reference ranks, not calibrated candidate damage",
+  "referenceWinProbability": 0.7,
+  "limits": {
+    "maxCombatTurns": 100,
+    "maxCombatPlays": 500,
+    "maxActions": 10000
+  },
+  "workers": 8,
+  "workerTimeoutMs": 120000,
+  "maxSeconds": 7200,
+  "shardBytes": 4194304,
+  "defaultOutput": "reports/map-balance/master-refresh-20261024/map-recheck"
+}

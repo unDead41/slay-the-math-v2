@@ -1,0 +1,149 @@
+{
+  "status": "PASSED",
+  "time": "2026-10-24T22:56:51.989505+08:00",
+  "gameVersion": "2.42.0",
+  "masterSor": "1.2.0",
+  "mainBase": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+  "sourceBranch": "balance/master",
+  "sourceSha": "b281dc69e752f84424b81d0d051644b9da154dd9",
+  "mergeParents": [
+    "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+    "b281dc69e752f84424b81d0d051644b9da154dd9"
+  ],
+  "localMergeConflicts": false,
+  "checks": {
+    "fullSuite": {
+      "tests": 1042,
+      "pass": 1042,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "durationMs": 428057.961162,
+      "exitCode": 0
+    },
+    "syntax": {
+      "exitCode": 0
+    },
+    "aiBrowser": {
+      "status": "PASS",
+      "encounters": 4,
+      "sourceHash": "3fb221253beb57ab5fe7b2fcdfacb7eeb615c37711cf2631efa1a9a705b415bc",
+      "reportHistory": true,
+      "staleRefreshGuard": true,
+      "selectedHistorySurvivesReload": true,
+      "previousReportImmutable": true,
+      "downloads": true,
+      "cancellation": true,
+      "playerStorageUnchanged": true,
+      "viewports": [
+        1440,
+        750,
+        390
+      ],
+      "errors": []
+    },
+    "masterBrowser": {
+      "checks": [
+        "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+        "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+        "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+      ],
+      "errors": []
+    },
+    "production": {
+      "status": "PASSED",
+      "version": "2.42.0",
+      "isolatedIdenticalInputs": 999,
+      "publicFiles": 735,
+      "unchangedPublicFilesMatchDist": 719,
+      "expectedProductionTransforms": [
+        "app.js",
+        "asset-manifest.json",
+        "index.html"
+      ],
+      "addedStaticDevFiles": [
+        "__dev/app.js",
+        "__dev/collection.js",
+        "__dev/fixtures.js",
+        "__dev/game/index.html",
+        "__dev/hub-access.js",
+        "__dev/hub.js",
+        "__dev/index.html",
+        "__dev/report.js",
+        "__dev/runtime-tools.js",
+        "__dev/sandbox/index.html",
+        "__dev/storage.js",
+        "__dev/style.css",
+        "dev-access.js"
+      ],
+      "assetManifestHashesVerified": 673,
+      "releaseBuild": "d199f764fafcf106",
+      "manifestId": "efadd04fd70bbd3008f55638",
+      "offlineExcludesAi": true,
+      "routes": [
+        {
+          "method": "GET",
+          "route": "/__dev/ai/",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "route": "/__dev/ai/app.js",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "route": "/__dev/ai/jobs",
+          "status": 404
+        },
+        {
+          "method": "POST",
+          "route": "/__dev/ai/jobs",
+          "status": 404
+        }
+      ]
+    },
+    "productionBrowser": {
+      "status": "PASS",
+      "protectedDevStaticSubpathAndRealProductionServer": true
+    },
+    "reviewedSourceParity": {
+      "status": "PASSED",
+      "historicalAiSourceHash": "3fb221253beb57ab5fe7b2fcdfacb7eeb615c37711cf2631efa1a9a705b415bc",
+      "comparedSourceFiles": 45,
+      "changedSourceFiles": [],
+      "policyRuntimeByteIdenticalToReviewedBranch": true,
+      "historicalCohortRelabeled": false,
+      "releaseVersion": "2.42.0",
+      "prereleaseVersion": "2.42.0-balance.1"
+    },
+    "historicalCohortRevalidation": {
+      "status": "PASSED",
+      "reports": 192,
+      "rows": 403,
+      "receiptBlockChecks": 403,
+      "grossGoldChecks": 15,
+      "individualFactorialChecks": 177,
+      "allCardContexts": 160,
+      "sourceHashesVerified": true,
+      "sourceHash": "3fb221253beb57ab5fe7b2fcdfacb7eeb615c37711cf2631efa1a9a705b415bc",
+      "csvRows": 403,
+      "routeIdentityVerified": true,
+      "pupilTargetsMeasured": false
+    }
+  },
+  "publication": {
+    "authorized": true,
+    "targetBranch": "main",
+    "expectedMain": "45d2378302196d9b0b79af7b371e6f16d4f5768c",
+    "force": false,
+    "remoteReadbackAndPages": "Verify actual commit/tree/parents/version and workflow after ref update; delivery receipt records results."
+  },
+  "limitations": [
+    "403 outcomes are preserved prerelease measurements, not rerun as2.42.0",
+    "Historical Map input differs only in package metadata; no old context relabeled",
+    "Additional repeated Easy Map smoke retains one censor/FAIL score gate",
+    "Pupil90/70/50, heuristic optimality, exhaustive combos, physical-device/Windows and live Google behavior remain unverified",
+    "Inherited ordinary Spool and DOC001/DOC002 remain with their owners"
+  ]
+}

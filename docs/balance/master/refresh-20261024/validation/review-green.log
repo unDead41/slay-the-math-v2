@@ -1,0 +1,43 @@
+✔ AI leaves a Gold-only artifact whose actual price exceeds its one-time grant (179.555671ms)
+✔ AI does not pay for a weaker discount already covered by its owned Contract (175.123845ms)
+✔ free artifact selection recognizes Gold and maximum HP without charging a Shop price (77.662307ms)
+✔ Exhaust-trigger artifact value follows the actual zero-Energy Recall lifecycle (77.606288ms)
+✔ frozen transform compares replacements at deck ten and preserves all live card instances (69.20232ms)
+✔ transform accounts for losing an upgrade and retains a legal mandatory alternative (80.091177ms)
+✔ optional harmful Mystery transform actually declines instead of silently falling back (152.75879ms)
+✔ Mystery planning chooses the real Gold alternative without changing offers or RNG (84.69366ms)
+✔ actual starting artifact choice is explained by the shared acquisition policy (75.373045ms)
+✔ Mystery accepts a free canonical next-combat buff without changing live state while planning (80.084347ms)
+✔ stage summaries preserve conditional denominators and downstream-resolved wins (1.940228ms)
+✔ failure HP windows retain death before a reachable Rest rather than inventing recovery (0.580576ms)
+✔ recovery combat load includes an observed Mystery battle but not an ordinary event (0.315947ms)
+✔ difficulty driver numerators use the same feedback trial population as stage entries (0.413954ms)
+✔ route coverage keeps unvisited routes and partial adaptive paths distinct (0.518712ms)
+✔ matched route coverage excludes the random preplan for the stage outside replay scope (0.194904ms)
+✔ matched contrasts require identical entry and keep unknown boss HP missing (0.551632ms)
+✔ unobserved entry in a censored comparison remains unknown rather than crashing or losing (0.366753ms)
+✔ Rest opportunity and actual HP recovery remain different measures (0.482898ms)
+✔ canonical reference drift cannot pass as a harmless balancing result (0.369928ms)
+✔ automatic comparisons refuse changed methods instead of claiming balance regression (0.19859ms)
+✔ automatic comparisons detect changes in the legacy replay and report analysis too (0.12564ms)
+✔ compatible comparison leaves a previously unobserved cohort delta unknown (0.257318ms)
+✔ stage resource endpoints stop at that stage instead of using the later campaign result (0.350429ms)
+✔ file gate rejects missing raw records even when the outer manifest is internally hashed (2.003112ms)
+✔ current integrity gate rejects records executed under another runtime identity (1.496378ms)
+✔ current worker captures real Master entries for all three bound profiles (880.923679ms)
+✔ Master runtime choice is preserved by fixed campaign tasks and context (122.990476ms)
+✔ current worker rejects a captured entry from a different difficulty (4.287108ms)
+✔ versioned regression protocol fingerprints its actual runner and schedule (39.812721ms)
+✔ current feedback settles two wrong attempts without a third attempt or loop (748.109709ms)
+✔ artifact affordability observes the same Master quote used by a purchase (71.586287ms)
+✔ current report does not deduct a legacy Gold grant which Master never awards (0.703311ms)
+✔ Master artifact affordability telemetry uses the actual profile quote at a tight Gold boundary (326.427355ms)
+✔ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (288.758602ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4701.014902

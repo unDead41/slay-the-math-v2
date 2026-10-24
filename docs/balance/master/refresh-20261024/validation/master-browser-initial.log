@@ -1,0 +1,12 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.42.0-balance.1 test:balance-master-browser
+> node tests/balance-master-browser.cjs
+
+page.evaluate: ReferenceError: DCEngine is not defined
+    at eval (eval at evaluate (:311:30), <anonymous>:1:21)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at /dev/shm/stm-master-refresh-50182eb5cf4b/worktree/tests/balance-master-browser.cjs:16:15 {
+  log: []
+}

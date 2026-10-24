@@ -618,3 +618,18 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 ## Release metadata correction — 2.37.1
 
 24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.
+
+## 2.42.0-balance.1 — Master Balance/AI refresh, branch only
+
+- Read exact Combat/Map/Economy heads against main2.41; retain current candidate.5 and historical cohort labels.
+- Bind current Master map diagnostics/verification, canonical artifact quotes, gross Gold and actual final-boss grant.
+- Improve AI artifact purchases/gifts and frozen Mystery choices; append CSV route identity. Update Master browser for the current Enter Dungeon flow.
+- Record1042 full tests,403 current AI outcomes and42 source-verified Map records with explicit sampling limits. [Current handoff](../balance/master/REFRESH_2026_10_24.md).
+
+Review follow-up for2.42.0-balance.1: canonical ME08 queued buffs, explicit gross Shop spending basis and current runner instructions corrected in one RED→GREEN pass. Preserve pre-review raw data separately; the additional repeated Map smoke retains its censor and failed score gate.
+
+## 2.42.0 — Master Balance and AI main integration
+
+- Publish the reviewed balance/master refresh after explicit user authorization. Preserve main2.41 startup/resource handling, current cards/profiles, saves, education, original art/audio and Settings-only Dev access.
+- Integrate canonical quotes/gross Gold, explicit Master map diagnostics, actual-cost artifact choices, frozen Mystery/transform decisions and canonical queued buffs.
+- Promote prerelease2.42.0-balance.1 to release2.42.0 with generated launchers/cache metadata. Preserve original measurement/source labels; record fresh merged-tree validation in [the main release](../balance/master/MAIN_RELEASE_2_42_0.md).

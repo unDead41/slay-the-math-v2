@@ -1,10 +1,12 @@
 # AI Playtester
 
-Current main integration: [game2.40.0](CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
+Current main release: **2.42.0**, integrating the reviewed artifact/Mystery acquisitions and current-source Map/economy observations. [Main publication, validation and limits](balance/master/MAIN_RELEASE_2_42_0.md).
 
-Current game: **2.40.0**, Master candidate.5. Choice ranking runs outside the actual-action observation boundary; only the resulting choice commit can affect telemetry. Five regressions match reported Block use against actual enemy-turn logs. Earlier reports retain their original source and may include the former card-comparison choice-observation defect. [Current changes and verification](CARD_TUNING_2_38_0.md).
+Earlier main integration: [game2.40.0](CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 
-24 Oktober 2026 (Malaysia). Ijamm kini membenarkan penerbitan ke **main**, menggantikan had branch ai sahaja. Gabungan AI `807be67` dengan main `d5533ad` mengekalkan game 2.32.1, tutorial, animasi tempur serta muzik menu terkini. Semua nilai gameplay dikekalkan. [Rekod integrasi main](AI_PLAYTESTER_MAIN_2026_10_24.md).
+Earlier game: **2.40.0**, Master candidate.5. Choice ranking runs outside the actual-action observation boundary; only the resulting choice commit can affect telemetry. Five regressions match reported Block use against actual enemy-turn logs. Earlier reports retain their original source and may include the former card-comparison choice-observation defect. [Current changes and verification](CARD_TUNING_2_38_0.md).
+
+Rekod integrasi AI terdahulu, 24 Oktober 2026 (Malaysia): Ijamm membenarkan penerbitan ke **main**, menggantikan had branch ai sahaja. Gabungan AI `807be67` dengan main `d5533ad` mengekalkan game 2.32.1, tutorial, animasi tempur serta muzik menu terkini. Semua nilai gameplay dikekalkan. [Rekod integrasi main](AI_PLAYTESTER_MAIN_2026_10_24.md).
 
 ## Buka alat
 
@@ -67,7 +69,7 @@ Draw mengira actual cards moved to Hand, termasuk Recall, delayed dan Passive; r
 
 Output-per-Energy dipisahkan untuk damage, absorbed Block, mitigasi dan cards-to-Hand; kos sifar memberi null/Unmeasured. Jangan campurkan semua unit menjadi satu CP. UI menunjukkan 20 sumber teratas mengikut plays; JSON menyimpan semua. Data lama yang tiada support telemetry dipaparkan Unmeasured.
 
-Eksport JSON **schema 3**, agent **sampled-turn-search-2**, mengekalkan konfigurasi, runtime, source SHA256/per-file hashes, binding identity, keputusan sebenar, telemetry dan penjelasan. CSV menambah total Block/mitigation/draw/Passive sambil mengekalkan source/job/config identity. Alat tidak menala stat secara automatik. Sasaran murid Easy 90%, Medium 70%, Hard 50% belum diukur; kombinasi tidak diuji secara exhaustive.
+Eksport JSON **schema 3**, agent **sampled-turn-search-3**, mengekalkan konfigurasi, runtime, source SHA256/per-file hashes, binding identity, keputusan sebenar, telemetry dan penjelasan. CSV menambah total Block/mitigation/draw/Passive sambil mengekalkan source/job/config identity. Alat tidak menala stat secara automatik. Sasaran murid Easy 90%, Medium 70%, Hard 50% belum diukur; kombinasi tidak diuji secara exhaustive.
 
 ## CLI
 
@@ -109,3 +111,11 @@ Feedback now honours the live two-answer game policy and closes a failed Predict
 without a third submission. Campaign event choices exclude tried answers. These
 are compatibility updates, not changes to agent search, card valuation, synergy
 weights or pupil models. Prior numerical reports retain their recorded sources.
+
+## Master refresh semasa — branch sahaja
+
+Agent sampled-turn-search-3 menilai artifact dengan kos sebenar, kredit Gold, Max HP, trigger deck dan diskaun tertinggi yang sudah dimiliki. Gift percuma/Elite/Boss berkongsi polisi itu. Mystery dibandingkan menggunakan tawaran yang sudah dibuka pada salinan run; transform kehilangan upgrade dan tidak mengurangkan saiz deck. Pilihan optional yang merugikan boleh decline; hanya tindakan sebenar masuk telemetry. CSV kini menambah route, dan modul artifact termasuk dalam source hash. Anggaran peluang combat/Shop seterusnya ialah heuristic, bukan CP.
+
+Main2.41 dibaca bersama tiga branch specialist. Candidate.5, nilai kad/profile dan save key dikekalkan. [Handoff dan bukti semasa](balance/master/REFRESH_2026_10_24.md). Batch baharu403 outcome dan42 replay Map tidak mengesahkan kadar menang murid.
+
+Semakan akhir refresh membetulkan penilaian ID canonical ME08: buff Strength/Agility percuma kini dinilai positif. Suite1042/1042 lulus. Data selepas review menggunakan sumber baharu di `reports/master-balance/refresh-20261024/final/`; data sebelum review dikekalkan berasingan.

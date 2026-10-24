@@ -720,3 +720,16 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 **DISAHKAN:** Ijamm explicitly requests pushing the completed education-report update to main. Merge feature6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0 with main37558d5a53d62e457c076b2444a1b71e8b42e50b as game2.38.0. This supersedes the previous branch-only boundary for these two report features and the120-item clarity pass. Keep Master SOR1.2.0, current Dev Settings placement, original assets and game/save/answer identities.
 
 **IMPLEMENTED:** Resolve generated release/launcher conflicts by rebuilding from package.json; retain both append-only SOR histories. Follow existing consent/local queue and preserve original report context on player ticks. Copy/deploy the same Code.gs remains an owner action. Fresh main checks and limits: [release](../education/MAIN_2_38_0.md).
+
+## DEC-20261024-ICON-EXPLANATION — All six follow-ups, branch only
+
+- DISAHKAN: Ijamm says “nice saya nak semua ni dulu please!!! update dekat dalam branch kamu”, selecting all six proposed improvements. This is new branch-only authorization; earlier approval of the completed 2.37.0 main release does not authorize this preview on main.
+- IMPLEMENTED: shared BM/English status text/units/timing and VFX names, Normal/Large readable labels, three generated shield-family variants, brief comparison effects and real slow/error image handling with a bounded Publish Handler icon API. Preserve canonical effects, archived saves and original card/artifact art. Version 2.38.0-icons.1 on codex/icon-clarity-audit, current main 6376a22 / Master SOR 1.2.0.
+- PERLU_VERIFIKASI: actual pupil recognition and physical Windows/mobile behavior, future Publish Handler integration and live public service/deployment. Native/export dimensions and resampling limits are explicit. [Scope](../STATUS_ICON_POLISH_2_38_0.md), [audit](../audits/icon-clarity-audit/LATEST.md).
+
+
+## DEC-20261024-STATUS-POLISH-MAIN — Publish the six icon improvements after education
+
+**DISAHKAN:** Ijamm requests publishing codex/icon-clarity-audit81533b38b8c7be1d897c3acc282f749df9beaeab to main after the education publication. Use maincb1bbcf688d9556b55bc8fe5522b5b652309640c (2.38.0) as first parent and the icon feature as second parent; publish2.39.0. This supersedes the earlier icon branch-only boundary.
+
+**IMPLEMENTED:** Merge status presentation and readiness with the existing game report controller. Preserve all education scripts/generated owners, current Dev Settings access and both script-check/test sets. Regenerate launchers and all tutorial screenshots from the combined UI. Three approved runtime pictures are added while original V1/card/artifact art stays intact. Historical932/947 test runs remain separate from fresh combined verification. [Audit, validation and limits](../STATUS_ICON_POLISH_MAIN_2_39_0.md).

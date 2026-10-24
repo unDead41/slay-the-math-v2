@@ -1,8 +1,16 @@
 # Changelog SOR — Slay the Math
 
+## Game2.39.0 — Six status-icon improvements on main
+
+After education2.38.0, integrate icon81533b3: run-aware units/duration, complete ten-status BM/English explanations, Normal/Large preference, three distinct Block-family silhouettes, inline comparison summaries, and named pending/local SVG fallback controls with a bounded priority manifest. Preserve education reports/Google triage, reviewed hints, Dev Settings, numerical gameplay/saves and original artwork. [Fresh main integration evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
 ## Game2.38.0 — Education reports and clearer hints on main
 
 Integrate education-report6bfb483 with main2.37.1 while retaining Settings-only Developer access. Add Result-only reports, private question/category Issues triage, and source-reviewed staged English/BM help for all120 questions. Preserve source identities, original answers/full solutions, gameplay, saves and artwork. [Fresh integration checks and receiver update](../education/MAIN_2_38_0.md).
+
+## 2.38.0-icons.1 — 24 October 2026 — Explained statuses, branch only
+
+Apply the six approved follow-ups on codex/icon-clarity-audit: clear units/percentage/duration, complete shared BM/English status labels/details and VFX names, readable Normal/Large status sizing, three distinct transparent Block-family variants, brief comparison effects and real slow/error image handling. Preserve current/archived rule owners and original card/artifact art. Expose fifteen critical icons to Publish Handler. [Scope/source/export limits](../STATUS_ICON_POLISH_2_38_0.md); [fresh branch audit](../audits/icon-clarity-audit/LATEST.md).
 
 ## Master SOR 1.2.0 — 24 October 2026
 

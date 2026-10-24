@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
-  "gameVersion": "2.38.0",
+  "sourceCommit": "cb1bbcf688d9556b55bc8fe5522b5b652309640c",
+  "gameVersion": "2.39.0",
   "viewport": {
     "width": 1440,
     "height": 1000
@@ -13,8 +13,8 @@
       "file": "tutorial-menu.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 173134,
-      "sha256": "24fb5a747bb17113e78e08eaf5a7c31af90d43447a27dc8eeedb0a4d3c375967",
+      "bytes": 173132,
+      "sha256": "3b706acd50be41622d3ba395740c0cf8a8281ec12b2e9af13cfa8ada0f15e711",
       "setup": "Main Menu",
       "action": null
     },
@@ -35,8 +35,8 @@
       "file": "tutorial-map.webp",
       "width": 1440,
       "height": 946,
-      "bytes": 117992,
-      "sha256": "2518c583c31960d0af3ec508ddaa45c56250ba9732f6aa717b7093251f6b4106",
+      "bytes": 118034,
+      "sha256": "b830a2314e6a588b2990482cdb927251a6eb5a1d2d3d38d276f8a5597ab30d43",
       "setup": {
         "kind": "map"
       },
@@ -47,8 +47,8 @@
       "file": "tutorial-combat.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 143464,
-      "sha256": "1a12b49a591dd8709d89b92ad4bd4e6f5b5da256188a0f76d234bc151da3f8b7",
+      "bytes": 142218,
+      "sha256": "854afaa133c1cb19c736d056b1cd518df9283e8faf57b2f170c6c7c18e440386",
       "setup": {
         "kind": "combat"
       },
@@ -71,8 +71,8 @@
       "file": "tutorial-predict.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 28234,
-      "sha256": "a1c19c1b68e753df66df9580549e12657131eea6458f2d3b3f496e2c4a8d07b1",
+      "bytes": 28228,
+      "sha256": "64e31fb3c2005b00ca8c5ceace35cb545be2cdddece6b38edd57e1f9ec6a9400",
       "setup": {
         "kind": "combat"
       },
@@ -83,8 +83,8 @@
       "file": "tutorial-focus.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 150182,
-      "sha256": "a4587664fefb2f8bd94165355ed473230224cf24dd8d42da2c6a275c60a70c15",
+      "bytes": 148870,
+      "sha256": "690bfea9622d8f15a513bb018c8e1593db4a3cdd3499698d57e88693acad04d9",
       "setup": {
         "kind": "combat",
         "focus": 1,
@@ -97,8 +97,8 @@
       "file": "tutorial-passive.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 141882,
-      "sha256": "e0aa42a8c4f8f735326a3e9e77b56a62961e955a0cac5d94ae81b438c887ba5a",
+      "bytes": 140238,
+      "sha256": "71847944a8a0ab96145aa32dab684c1c1e304058a28830d43c60158496b7563c",
       "setup": {
         "kind": "combat",
         "deck": [
@@ -124,8 +124,8 @@
       "file": "tutorial-rewards.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 154972,
-      "sha256": "6579db08e474c88493c3357da2eef06ba70ce0df21700f6a1538a84ad671f738",
+      "bytes": 154990,
+      "sha256": "e5df69ad78d4fd5ad7b9125b9789de6af9a1d4942db91d98dc9e19b906a03df2",
       "setup": {
         "kind": "reward"
       },
@@ -137,7 +137,7 @@
       "width": 1440,
       "height": 922,
       "bytes": 171946,
-      "sha256": "841d0a44fdd3165c03f3494e3a05732cba14677e939c1ddca59d393739298125",
+      "sha256": "a7088641151d1d19f9afe5d4301376668782e168a1cfe52fe4c0baa808309172",
       "setup": {
         "kind": "shop"
       },
@@ -148,8 +148,8 @@
       "file": "tutorial-rest.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 128688,
-      "sha256": "2f6a21fbefaebc37194bd66af42d0ebe7c0b7c3ea2b97eb44d909331c2aadff3",
+      "bytes": 128840,
+      "sha256": "8ddb75dea71414644b3e99df490b371c451b5972592afcfcbc35575dc884b7e5",
       "setup": {
         "kind": "rest",
         "hp": 24
@@ -174,8 +174,8 @@
       "file": "tutorial-boss.webp",
       "width": 1440,
       "height": 939,
-      "bytes": 182812,
-      "sha256": "1a3340f52f415a43385e853bb3537d90e00cf50f689f918ad6dc51e43afc9634",
+      "bytes": 181106,
+      "sha256": "5432b0b6e9412104681c2dacc8edd9815d77cc6311a53f4aebdc527326adf4c4",
       "setup": {
         "kind": "combat",
         "enemy": "sentinel"
@@ -196,9 +196,9 @@
       "id": "settings",
       "file": "tutorial-settings.webp",
       "width": 560,
-      "height": 732,
-      "bytes": 26502,
-      "sha256": "85caffaf8b541a19473de4285c6ccfea0d1784559724dbb9a79d87df43606c71",
+      "height": 856,
+      "bytes": 32044,
+      "sha256": "29533d86fd4be4fb33451874f17799c4c67254e4c0bf8285a57fd22c3bfcdd67",
       "setup": "Main Menu",
       "action": "saves"
     },
@@ -216,7 +216,7 @@
     }
   ],
   "runtimeInputs": {
-    "index.html": "bd6a51662464b206a3025179425aeb9dda855c4eb4c2901892ee384f5a942945",
+    "index.html": "31525fbc099a418989657320067dbcaa42a6fb292529fb4d35123e7eb96c3e0b",
     "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
     "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
     "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
@@ -245,12 +245,13 @@
     "analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
     "status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee",
     "tutorial.css": "e8bec001a3d6c2b24baf9d01ed83ab59b1bba875f0c3adbf2ebf1cd399c2d7db",
-    "icon-clarity.css": "03d15ae5df387bfb58cc8e8fec343b317d13420a9110a9cbe5c35ba91a24a549",
-    "release.js": "c1d63af0d2e1c5b36c9c55e1fbbeaaea0f0baea67b5c53ad9d3ba772bb40421f",
+    "icon-clarity.css": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd",
+    "release.js": "580f66b393c2750860aa20cb14f8cb15ebf226d632bdaaaebd9bf84edbb0c4c3",
     "card-data.js": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148",
     "balance-data.js": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b",
     "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
-    "icon-assets.js": "82f3bf36b255a5723f67ccaf82bd4aefc47cfcd41f9f1881287d3efa20f13074",
+    "icon-assets.js": "0b97b47759ff7dbaf556174bbec8b68f632ba6ca34520a891c30eaacfd7ed28a",
+    "icon-readiness.js": "a53d351a69f053dda5ca1f53e75f42d5116caaeed6f5dac98335eb55e5794414",
     "card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
     "card-kit.js": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402",
     "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
@@ -287,8 +288,8 @@
     "mystery-ui.js": "745d53d569da96e407a6803227659bdbf90b01f56185db936d999da46c4f359b",
     "education-practice.js": "d5d068f8a5a9857765a76d1c844232503515edfed0d44015965aed9562692eb6",
     "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
-    "combat-status.js": "d80f1754ad79cb4c3c4423640fd6de156267276039a0a56b909b85c8b1fba9e3",
-    "status-vfx.js": "ef5585cbdbf2af43adf2f3926fbd091f63828e21e1c37be186dd3dcf8cfac8e9",
+    "combat-status.js": "98550dc47e68f15702e37d2c0721fa4a0357559a9f73c19c89e34f4cceefb8eb",
+    "status-vfx.js": "2d723ec9d95fdf5789aac9cbd8fe634859a517e38393c360e795bb18d86b4124",
     "card-motion.js": "fe6a747dc29b0eab084f3ae8d5b1c006073d1428b3f5345c21a2d018796ab9be",
     "learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
     "learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
@@ -302,7 +303,7 @@
     "tutorial-data.js": "537460decb20a65b1f7df589b5b09d2c82c813e72edd251992d910b1e9430602",
     "tutorial-core.js": "177f18c30942ea8885084e3a3c6eea7e3b811708e7118f825381cd9b507ab3bc",
     "tutorial.js": "1c10f2fc3e8c33d3e5dbf37d9b341b825eccb37385c08df8a4ea2a9372a6e803",
-    "app.js": "d5d4b09f055d9a16377902afc2b349fc142d6a32b64bdb02fa91d77e90dab8f0"
+    "app.js": "cd258dcb372b68091d68c621356356ca917b63b57b55c1fbd8f2956aeb31b80b"
   },
   "sourceWorkingTreeDirty": true
 }

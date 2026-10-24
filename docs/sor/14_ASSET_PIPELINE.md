@@ -179,3 +179,12 @@ Import the verified `STM_Icons_Individual_FHD_1080.zip` review PNGs using `tools
 ## Supplied Main Menu MP3 — game 2.32.1
 
 Menu.mp3.mpeg is an MP3 container with audio at 48 kHz stereo, 199.608 s. Copy its exact 4,701,741 bytes to assets/music/menu_ancient_stone_keep.mp3 without re-encoding or editing the original. SHA-256 is 9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681. The canonical menu record in audio-pack-5.json owns the runtime source; the generated catalog and portable DC_MUSIC.menu consume that record. Preserve the prior menu files as historical provenance. Detailed source metadata and earlier menu record: [audit](../audio/menu-2026-10-24/source-audit.json). Human loop audition remains unverified.
+
+## Three explained status variants — 2.38.0-icons.1
+
+Preserve native generated PNGs and prompts in references/status-polish. The manifest records true 1254px sources, 512px lossless runtime derivatives with 40px alpha strips, 1080px PNGs and resampled 4096px lossless WebP exports with 100px alpha padding. `export-status-variants.cjs` handles mechanical aspect-preserving exports; `build-status-variants.cjs` applies only the approved three mappings during ordinary builds and explicit package imports. Preserve all original files/card/artifact owners and verify alpha/hash/metadata rather than claiming native 4K detail. [Source contract](../STATUS_ICON_POLISH_2_38_0.md).
+
+
+## Status explanations main integration — 2.39.0
+
+DISAHKAN: Ijamm now requests publishing all six improvements from icon81533b3 after education main2.38.0. This supersedes the icon preview's branch-only boundary. Preserve current education source/report/Google owners and Settings-only Dev controls. Integrate actual units/timing, ten bilingual explanations, Normal/Large status display, three approved Block-family variants, comparison summaries and bounded icon readiness/fallbacks. Preserve numerical rules, saves/RNG, original card/artifact/model/audio assets and Publish Handler ownership. [Current main audit and fresh evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).

@@ -1,6 +1,6 @@
 # Google Sheets — Slay the Math
 
-Keluaran main **2.38.0** menambah butang **Laporkan masalah**, Hint yang
+Keluaran main **2.38.0** (dikekalkan dalam **2.39.0**) menambah butang **Laporkan masalah**, Hint yang
 diperjelas dan tab **Issues** peribadi. Ikut [panduan main dan kemas kini penerima
 yang sama](education/MAIN_2_38_0.md). Gunakan keseluruhan Code.gs baharu,
 **setupCollector → Run**, kemudian deploy versi baharu dengan URL `/exec`

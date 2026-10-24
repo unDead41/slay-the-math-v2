@@ -1,0 +1,247 @@
+{
+  "date": "2026-10-24",
+  "version": "2.39.0",
+  "masterSOR": "1.2.0",
+  "mainParent": "cb1bbcf688d9556b55bc8fe5522b5b652309640c",
+  "iconParent": "81533b38b8c7be1d897c3acc282f749df9beaeab",
+  "authorization": "User explicitly requests main publication after education2.38.0; prior icon branch-only boundary superseded.",
+  "fullSuite": {
+    "command": "DOM_QA_MODULE=<jsdom> NODE_PATH=<runtime modules> npm test",
+    "tests": 956,
+    "pass": 956,
+    "fail": 0,
+    "skip": 0,
+    "durationMs": 474304.836195,
+    "logSHA256": "23c2b4c18c0cd89874ad4bbc825f17dbe984c56a6c564a3799c40872a85ac7b0",
+    "runtimeFrozenDuringRun": true
+  },
+  "statusBrowser": {
+    "command": "QA_PRODUCTION=1 QA_OFFLINE=1 node tests/status-explanation-browser.cjs",
+    "states": 24,
+    "checks": [
+      "24 actual viewport/language/size states: names, units, canonical percentages, short descriptions, detail timing, >=12px labels, 44px targets, no clipped badge text or combat page overflow, unchanged saves.",
+      "Settings Normal/Large works in BM, persists after reload and leaves game-save bytes and card geometry unchanged.",
+      "A deferred real Block image keeps a named usable status button and becomes ready after delivery.",
+      "Four intentional HTTP 404s decode semantic inline SVG fallbacks; names/counts/controls and canonical status details remain available.",
+      "Real portable file embeds all three new variants and BM explanations, honors Large and makes zero HTTP requests."
+    ],
+    "errors": [],
+    "logSHA256": "bb8d6689c30569ef74ad11bb7745cfb680c6767840713053e27b4200173b4205"
+  },
+  "statusVFX": {
+    "command": "QA_PRODUCTION=1 node tests/status-vfx-browser.cjs",
+    "checks": [
+      "A native Rune Guard commits the exact engine/save result before a noninteractive shield and actual Block-gain cue appear.",
+      "Strength, Agility, Defense and Thorns use distinct actual hero conditions and their source models/card icons stay intact.",
+      "The unpaid Passive swap dialog stays static; only its committed replacement lowers Strength and produces a real downward cue.",
+      "A real enemy receipt shows four Block absorbed even when the authored Layered Shield refill returns Block to its previous value; no fabricated +Block label.",
+      "Valid player Weak/Vulnerable saves have distinct auras without historical bursts; current Weak persists through an individual Attack and its real phase-end decay emits the cleanse cue. Enemy-only Weak never affects Alyssa.",
+      "Settings/native dialogs cancel effects and restore only current auras; Motion Off and OS reduced motion leave no decorative overlay and preserve exact gameplay.",
+      "Desktop, portrait phone and landscape effects fit the arena above HP/actions, stay bounded and cancel bursts on resize while keeping active auras.",
+      "Rapid next actions, keyboard play, status inspection and Main Menu cleanup leave no late particles or input blockers.",
+      "Easy, Medium and Hard Master profiles use their actual bound Block values, preserve legacy saves and reload current auras without replaying bursts.",
+      "The actual standalone file shows the same shield and saved paid result with no HTTP or dependent local assets."
+    ],
+    "viewports": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 34
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 34
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "noDocumentOverflow": true,
+        "insideArena": true,
+        "nodes": 34
+      }
+    ],
+    "profiles": [
+      {
+        "difficulty": "easy",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "medium",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      },
+      {
+        "difficulty": "hard",
+        "exactGameplay": true,
+        "isolatedSave": true,
+        "block": 6
+      }
+    ],
+    "errors": [],
+    "offlineRequests": []
+  },
+  "educationReports": {
+    "command": "node tests/question-report-browser.cjs",
+    "flows": 6,
+    "geometryChecks": 18,
+    "errors": [],
+    "webSecurityEnabled": true
+  },
+  "educationGoogle": {
+    "command": "node tests/google-sheets-browser.cjs",
+    "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+    "checks": [
+      "The project default reaches the player report without URL controls, eager network or inherited consent.",
+      "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+      "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+      "Actual host reload replays local review flags through the same delivery projection with no invalid payload or duplicate row.",
+      "Reviewed tick and full comment reach the current generated Google receiver together; offline untick/edit updates one row and preserves the comment.",
+      "No capability in frame URLs; desktop/mobile journal has internal scroll, no URL controls and preserved question search.",
+      "Actual finished Artifact reports freeze source/language/support, queue offline, reconnect through the real nested-origin bridge, and create one private Issue without changing the pending gift/run.",
+      "Opening Practice and ticking Reviewed preserves the game comment context and the private developer Selesai status/notes, including steps that were opened then hidden."
+    ],
+    "errors": [],
+    "webSecurityEnabled": true
+  },
+  "tutorial": {
+    "command": "TUTORIAL_QA_OFFLINE=1 node tests/tutorial-browser.cjs",
+    "checks": [
+      "17 chapters, all 11 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records",
+      "portrait: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "small-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "compact-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "narrow-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "Master Medium resolves a focused practice card with loaded definitions",
+      "storage denial leaves chapters and practice usable with a visible notice",
+      "in-run help warns for a live timed Mystery without extending its deadline",
+      "standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests"
+    ],
+    "errors": []
+  },
+  "developerSettings": {
+    "commands": [
+      "node tests/production-dev-browser.cjs",
+      "node tests/dev-toggle-browser.cjs"
+    ],
+    "productionStaticLocalPassed": true
+  },
+  "buildSyntax": {
+    "commands": [
+      "node tools/build-production.cjs",
+      "npm run check"
+    ],
+    "passed": true
+  },
+  "integrity": {
+    "main": "cb1bbcf688d9556b55bc8fe5522b5b652309640c",
+    "feature": "81533b38b8c7be1d897c3acc282f749df9beaeab",
+    "educationSourcesMatchMain": [
+      "dist/mechanics-host.js",
+      "dist/question-report.js",
+      "dist/question-report.css",
+      "dist/question-feedback.js",
+      "dist/mechanics.js",
+      "dist/question-language.js",
+      "dist/education-practice.js",
+      "dist/education.js",
+      "dist/mystery.js",
+      "tools/google-sheets/receiver.gs",
+      "integrations/google-sheets/Code.gs",
+      "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json"
+    ],
+    "latestDevGovernancePreserved": [
+      "AGENTS.md",
+      "MASTER_SOR_PROJECT.md",
+      "SOR_README.md",
+      "tools/dev/controls.js",
+      "tools/dev/access.js",
+      "tests/production-dev-browser.cjs",
+      "tests/dev-toggle-browser.cjs"
+    ],
+    "iconOwnersMatchFeature": [
+      "dist/combat-status.js",
+      "dist/status-vfx.js",
+      "dist/icon-assets.js",
+      "dist/icon-readiness.js",
+      "dist/icon-clarity.css",
+      "dist/assets/status-icons.json",
+      "references/status-polish/manifest.json"
+    ],
+    "educationAppFunctionsPreserved": [
+      "showQuestionReport",
+      "updateAnalyticsStatus",
+      "learningDeliveryStatus",
+      "bankForecastModal"
+    ],
+    "originalArtworkAudioFilesUnchanged": 606,
+    "intentionalExistingMetadataChange": "dist/assets/status-icons.json; exactly three new runtime variants added and original V1 files retained",
+    "approvedRuntimeVariantHashes": [
+      {
+        "id": "block",
+        "file": "stm_icon_status_block_v2.webp",
+        "sha256": "97723db3249b273c5d4e5e2a13e18271e3b0d4114b08fadea0c847386b534ac4"
+      },
+      {
+        "id": "next-block",
+        "file": "stm_icon_status_next_block_v2.webp",
+        "sha256": "2889a5d91665d214e673f2bd83d838d1331e3ad2b924765881cd130f0dba074a"
+      },
+      {
+        "id": "retain-block",
+        "file": "stm_icon_status_retain_block_v2.webp",
+        "sha256": "b55474faa53d2f782aa9e9871154908d45732ae3719c04a1f2c302bfd3e6a9bf"
+      }
+    ],
+    "tutorialImages": 16,
+    "tutorialInputHashes": 88,
+    "cacheChecks": [
+      {
+        "file": "index.html",
+        "hashes": 87
+      },
+      {
+        "file": "MAIN-SEKARANG.html",
+        "hashes": 87
+      },
+      {
+        "file": "dist/index.html",
+        "hashes": 87
+      },
+      {
+        "file": "release-prod/index.html",
+        "hashes": 88
+      }
+    ],
+    "productionFilesMatchExceptIntentionalAppIndex": 712,
+    "portableBytes": 303923448,
+    "googleReceiverSHA256": "c361d4202f4221039af32bd51a63a09fb978e8e3f322ecd9e8a8811728eb45e8"
+  },
+  "actualScreenshots": [
+    {
+      "file": "status-icon-main-2-39-0/statuses-390-ms.png",
+      "sha256": "8f89954d135576c484e95491a963fc4ab859a7fb695d6db5038916ef78a5249f"
+    },
+    {
+      "file": "status-icon-main-2-39-0/combat-844-ms-large.png",
+      "sha256": "b2eeac06618732100c02af2dd53ee9231725be3534ec33679260e862b28138f9"
+    }
+  ],
+  "sourcePreservation": "Education and Google owner bytes match the published2.38.0 main. Four actual education app functions match exactly; fresh mixed-app reports and Google flows passed. Icon owner bytes match81533b3.",
+  "historicalCoverage": "The earlier all120 Practice and720 bilingual component render results belong to education-report/main2.38 source owners, not a newly relabelled2.39 browser run. Fresh combined checks are listed above.",
+  "limits": [
+    "No physical-device/pupil glance-recognition outcome measured.",
+    "No live Google deployment/account/quota check; receiver code is unchanged from2.38.0 and still needs the owner update if not deployed.",
+    "MODEL.zip unavailable; installed models and original art remain preserved.",
+    "Main documentation DOC-001/DOC-002 and broader Publish Handler scheduling remain outside scope."
+  ],
+  "publication": "Exact two-parent tree/package/main ref are verified after a non-forced expected-SHA update; published SHA recorded in user handoff."
+}

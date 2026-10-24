@@ -206,3 +206,12 @@ DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all
 ## Education reports main publication — 2.38.0
 
 DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.
+
+## Explained status branch — 2.38.0-icons.1
+
+Before branch publication verify current versus archived rules, signed values, all ten complete BM/English presentations, shared VFX names, actual phase expiry/queued grants, Normal/Large persistence with unchanged gameplay/card geometry, 12px phone labels/44px controls, three source/runtime/export hashes and transparent padding. Exercise actual delayed and 404 image requests, semantic fallback decode, dynamic renders, production Dev and zero-network portable output. Recapture real tutorial UI and run final syntax/regression/build checks. Record initial/final findings under docs/audits/icon-clarity-audit/LATEST.md per Master SOR 1.2.0. Human recognition/physical device checks remain separate. Main push is not authorized.
+
+
+## Status explanations main integration — 2.39.0
+
+DISAHKAN: Ijamm now requests publishing all six improvements from icon81533b3 after education main2.38.0. This supersedes the icon preview's branch-only boundary. Preserve current education source/report/Google owners and Settings-only Dev controls. Integrate actual units/timing, ten bilingual explanations, Normal/Large status display, three approved Block-family variants, comparison summaries and bounded icon readiness/fallbacks. Preserve numerical rules, saves/RNG, original card/artifact/model/audio assets and Publish Handler ownership. [Current main audit and fresh evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).

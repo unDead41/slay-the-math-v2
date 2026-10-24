@@ -2,6 +2,7 @@
  * Original modules remain under modules/mechanics/source. No runtime fetches. */
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const project=path.resolve(__dirname,'..'),source=path.join(project,'modules/mechanics/source');
+require('./build-status-variants.cjs')(project);
 require('./import-cards.cjs')(project);
 require('./build_music_catalog.cjs').buildCatalog(project);
 const read=id=>fs.readFileSync(path.join(source,id),'utf8');

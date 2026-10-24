@@ -1,12 +1,13 @@
 # Reports after a game question and clearer guidance
 
-Main release **2.38.0**, 24 October2026. Ijamm explicitly authorizes merging the
+Education introduced in main **2.38.0**, retained in current **2.39.0**, 24 October2026. Ijamm explicitly authorizes merging the
 reviewed education-report preview into main. This replaces the earlier
 branch-only publication boundary; live Apps Script deployment remains an owner
 step. The preview originated at990541d and is integrated with current
 main37558d5, preserving Settings-only Developer controls.
 
-[Current main release and fresh combined-tree verification](MAIN_2_38_0.md).
+[Education main verification](MAIN_2_38_0.md) and
+[current icon/education combined release](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
 Historical report4 test results below describe that preview; the main guide
 records fresh integration checks separately.
 
@@ -137,7 +138,7 @@ Stop the old server with Ctrl+C, then run:
 }
 ```
 
-Open **http://localhost:4173**, check **v2.38.0**, and use Education
+Open **http://localhost:4173**, check **v2.39.0**, and use Education
 Practice for all 120 questions. For a game report, finish a Predict/Artifact/Mystery
 question and open Result. Keep the stash until its contents have been reviewed.
 

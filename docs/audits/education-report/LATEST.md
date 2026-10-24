@@ -66,3 +66,28 @@ Final code/data diff and whitespace were checked. The remote feature ref
 remainedaf03f38 before publication; latest main6376a22 had no runtime delta.
 Only the education-report ref is authorized to move. After the authorized branch push, verify
 remote tree/package/ref and record the published SHA in the user handoff.
+
+## Publication readback and later main update
+
+Published runtime commit: `3ba47d424329fc647b86895e3e37d5a8f40ad305`.
+Remote tree: `7a4ad5905edb84de71c9c737d835728417f9a735`; remote package version:
+`2.37.0-report.4`. Exact feature ref/tree/version and the matching local index
+were read back after the non-forced, expected-SHA branch update. Tracked files
+were clean; the two unrelated map-trial temporary files were retained.
+
+During that final readback, main had independently advanced from 6376a22 to
+`37558d5a53d62e457c076b2444a1b71e8b42e50b` (2.37.1). Its three-commit delta was
+read through the GitHub compare API. It changes Developer controls to Settings
+only, their access copy/browser checks, release entrypoints/version and related
+SOR/audit documents. It does not change the question bank, hint/localization
+owner, game Result controller, feedback validator, Google receiver or delivery
+owners. This preview retains its explicitly tested 990541d runtime base and the
+old Dev-control placement; it does not undo the newer main branch.
+
+Git divergence is distinct from an education defect: this branch's reported
+947 tests and native checks apply to its published runtime, not a hypothetical
+merge with 2.37.1. A future main integration must preserve the newer Settings-only
+Developer implementation, resolve version/generated launchers/SOR deliberately,
+and verify that combined tree. Combined 2.37.1 integration remains BELUM DISAHKAN;
+no main merge is requested or performed here. This final note changes audit
+text only and does not change the tested runtime or version.

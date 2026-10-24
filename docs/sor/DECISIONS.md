@@ -1,5 +1,13 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-RUNTIME-OPTIMIZATION — Three approved updates
+
+DISAHKAN: Ijamm explicitly requests UPDATE for recommendations1–3: avoid rebuilding combat actors, reuse resources already verified during the session, and budget decoded textures by bytes while keeping live actors. Prior feature-branch-only publication authorization persists.
+
+IMPLEMENTED: candidate2.39.0 on fix/hosted-readiness-input, using a32MiB immutable verified Blob LRU, a96MiB estimated RGBA texture LRU with current-clip ownership and preferred idle retention, and keyed combat DOM updates. Current maincb1bbcf is integrated without changing its education reports/hints, Settings-only Developer controls, original artwork or engine/RNG/save values. [SOR25](25_RUNTIME_OPTIMIZATION.md).
+
+PERLU_VERIFIKASI: physical-device memory/FPS and real classroom connections. Cache limits describe retained data, not total browser/GPU RAM. Adaptive VFX, resized canvases, save-write changes and question-bank sharding remain outside this update.
+
 ## DEC-20261024-HOSTED-READINESS — Feature branch only
 
 DISAHKAN: after the SOR-only planning phase, Ijamm requests implementation before the main menu, up to three minutes waiting, staged/background downloads, later Boss resources and full Practice presentation on demand; push the assistant branch, not main.
@@ -16,6 +24,14 @@ PERLU_VERIFIKASI: physical phones, the friend's exact failure and a future hoste
 **IMPLEMENTED:** AGENTS.md starts with the main-source reading instruction and links to a relevant latest audit. AUD-READ-01 precedes planning, implementation, builds, tests and commit/push except the minimum read-only discovery needed to locate the source. AUD-UPDATE-01–06 require scoped review before and after each coherent update, distinguish confirmed issues/risks/proposals, retain unresolved findings, allow an honest no-findings result and preserve existing permission/domain boundaries. The main documentation-only example records actual document inconsistencies and explicit unverified scope.
 
 **BOUNDARY:** publish this documentation-policy update through the established main workflow. It does not authorize unrelated fixes, merge other branches, audit every current game module, change game version/mechanics or create a background monitor/CI enforcement. [Audit, evidence and follow-up](../audits/main/LATEST.md).
+
+## DEC-20261024-EDUCATION-REPORTS-CLARITY — Finished-result reports and private issue triage
+
+**DISAHKAN:** Ijamm selects Report a problem after in-game results and grouping comments in the existing private Google Sheet by question/category with developer statuses Baharu → Sedang disemak → Selesai. He also requests reviewing all120 English/BM prompts, Hint and More Hint for clear meaning and progressively more concrete help without stating the final answer. Publish to education-report only; earlier main authorization does not authorize this new preview on main.
+
+**DITERUSKAN:** shared comment owner/consent/outbox, actual closed-record context, local scroll/focus return, private retry-safe issue board and honest device counts. Preserve existing player Reviewed ticks, identities, questions/choices/answers/full solutions, game policy/RNG/resources and original assets. Apply source-reviewed scaffolding and remove target-bearing reference columns/accessible names. Keep stable bankVersion1.6 plus explicit compatible contentRevision.
+
+**PERLU_VERIFIKASI:** physical-device/classroom understanding, live Google deployment/account/quota and the unavailable MODEL.zip reference. Source inconsistencies are recorded explicitly. [Implementation, source audit, checks and owner update](../education/FEEDBACK_CLARITY.md).
 
 ## DEC-20261024-MASTER-SOR — Shared project and branch compatibility guidance
 
@@ -701,3 +717,23 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - **DITERUSKAN:** integrate `codex/icon-clarity-audit` / `b18c4c99d28530026f8d90d28964569c2f7af610` with actual main `50d3af423cdc2240e949f4ddf29e023865304b65` / 2.36.0 as **2.37.0**. Keep the ten source artworks, enlarge functional UI, show actual status names/counters, and provide a complete read-only comparison. Current and archived effect descriptions, BM preference, question retries/continuation, run-aware card previews, combat VFX, AI and production Dev keep their current main owners.
 - **DITERUSKAN:** retain both decision histories, regenerate cache/version/launchers and actual tutorial screenshots, and verify the combined tree. Original card/artifact illustrations, other source artwork/audio, numerical rules, question bank and save contracts remain unchanged.
 - **PERLU_VERIFIKASI:** physical Windows/devices, pupil glance recognition, live Google service and public hosted deployment are separate from local production/browser evidence. [Main release](../ICON_CLARITY_MAIN_2_37_0.md).
+## Settings-only Developer controls — 24 October 2026
+
+DISAHKAN: Ijamm requests removing redundant Developer controls from the main menu. Dev ON/OFF, Open Developer Hub and Copy Player Run to Dev appear only in Settings, in both local development and production. Password and sandbox isolation remain unchanged. This update is local only; no commit or remote push is authorized. This supersedes earlier main-menu access instructions.
+
+Publication authorization: Ijamm subsequently requests pushing this Settings-only update to `dev-tools`. This supersedes the local-only boundary for this update; main remains excluded. Verification: production build, local-dev toggle browser test and production/static-subpath browser suite passed.
+
+## Settings-only main publication — 24 October 2026
+
+DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.
+
+## Release metadata correction — 2.37.1
+
+24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.
+
+
+## DEC-20261024-EDUCATION-REPORT4-MAIN — Publish reviewed reports and guidance
+
+**DISAHKAN:** Ijamm explicitly requests pushing the completed education-report update to main. Merge feature6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0 with main37558d5a53d62e457c076b2444a1b71e8b42e50b as game2.38.0. This supersedes the previous branch-only boundary for these two report features and the120-item clarity pass. Keep Master SOR1.2.0, current Dev Settings placement, original assets and game/save/answer identities.
+
+**IMPLEMENTED:** Resolve generated release/launcher conflicts by rebuilding from package.json; retain both append-only SOR histories. Follow existing consent/local queue and preserve original report context on player ticks. Copy/deploy the same Code.gs remains an owner action. Fresh main checks and limits: [release](../education/MAIN_2_38_0.md).

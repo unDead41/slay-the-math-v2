@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-24",
+  "branch": "fix/hosted-readiness-input",
+  "candidateVersion": "2.39.0",
+  "masterSOR": "1.2.0",
+  "initialRemoteBranch": "bcd90da6f1a6362449ca031fbaf9cada82aa4a92",
+  "integratedMain": "cb1bbcf688d9556b55bc8fe5522b5b652309640c",
+  "laterMainRead": "ade5d3a21e55b9d2911bfa935c8095c95801bd8c",
+  "laterMainCombinedCompatibility": "BELUM DISAHKAN; status/icon/readiness integration requires its own combined check; main untouched",
+  "runtimeHashes": {
+    "app.js": "620274e9c84d23467f9897e663e34e12d9a517f2c82900e2ffc7cd969eb4d787",
+    "animation.js": "d46f19bce7916f79a811bbdfcdd768d199586c15322b8cc08b008e8bc6b1670f",
+    "asset-readiness.js": "1840770a06d6e94879d505869406f3db89862c4d72a428b00cfe4e6009a11d5c",
+    "dom-patch.js": "cb7029f184c86fabd64d0c33c9e9d40dcdb92618df84a04bcb9e4221d3ef9f2d",
+    "bootstrap.js": "e0d4f9564516124fc9a215796c27c926eb5a6270868933e705bfdfbf40b19cde",
+    "card-motion.js": "439970ffbc28b2a0b339332d3bf4677e59a3282cee900976065a777fb5760af4",
+    "mechanics-host.js": "5637e39e01e8d5f83bad25e583cd4873897c35c75ed170730f26a180f2d57f97"
+  },
+  "verification": {
+    "fullSuite": {
+      "command": "DOM_QA_MODULE=<jsdom26> npm test",
+      "passed": 977,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 408645.514535,
+      "log": "full-suite.log"
+    },
+    "preReviewFixFullSuite": {
+      "passed": 977,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 485777.731096,
+      "log": "full-suite-before-review-fix.log"
+    },
+    "targeted": {
+      "passed": 114,
+      "failed": 0,
+      "skipped": 0,
+      "log": "targeted.log"
+    },
+    "syntax": "passed",
+    "productionPortableBuild": "passed",
+    "native": {
+      "finalDynamicVerifiedImages": "passed; zero raw requests with workers/cache denied, all31 Codex images decoded",
+      "finalRecovery": "passed3cases",
+      "finalRuntime": "passed;30/30 retained, real card exact engine equality, release/replacement",
+      "combinedHosted": "passed8cases before image-consumer fix",
+      "combinedProductionDev": "passed complete static Hub before image-consumer fix",
+      "combinedResultReports": "passed6flows18geometry states before image-consumer fix",
+      "combinedOffline": "passed BM actual portable before image-consumer fix",
+      "combatMotion": "six real-action viewport/quality cases and all ten Passive paths pass; synthetic summary-label aboveHP fails at844x390 identically with patcher disabled"
+    }
+  },
+  "transport": {
+    "scenario": "one prepare plus three reads, persistent cache denied",
+    "beforeRequests": 4,
+    "beforeDigests": 4,
+    "afterRequests": 1,
+    "afterDigests": 1,
+    "memoryBudgetBytes": 33554432
+  },
+  "texture": {
+    "budgetBytes": 100663296,
+    "estimate": "naturalWidth*naturalHeight*4; retained decoded pixels, not total browser/GPU RAM",
+    "currentClipsPinned": true,
+    "idlePreferredWithinBudget": true,
+    "activeOnlyOversize": "reported and retained to preserve display"
+  },
+  "performance": {
+    "fullRender": "performance-full-render.json",
+    "retained": "performance-retained.json",
+    "identicalFinalRuntimeHashes": true,
+    "baselineRetained": 0,
+    "afterRetained": 30,
+    "controlP95Ms": 9.599999997764826,
+    "afterP95Ms": 7.799999997019768,
+    "physicalDeviceFPSClaim": false
+  },
+  "manifests": [
+    {
+      "directory": "dist",
+      "version": "2.39.0",
+      "manifestId": "45dbd80565bd6882d3842919",
+      "entries": 668,
+      "requiredBytes": 14132509,
+      "badEntries": []
+    },
+    {
+      "directory": "release-prod",
+      "version": "2.39.0",
+      "manifestId": "d84ef9a4968385a53d0e14bf",
+      "entries": 669,
+      "requiredBytes": 14138826,
+      "badEntries": []
+    }
+  ],
+  "protected": {
+    "base": "cb1bbcf688d9556b55bc8fe5522b5b652309640c",
+    "paths": [
+      "dist/engine.js",
+      "dist/math.js",
+      "dist/map.js",
+      "dist/map-rng.js",
+      "dist/config.js",
+      "dist/card-data.js",
+      "dist/card-combat.js",
+      "dist/card-flow.js",
+      "dist/artifacts.js",
+      "dist/education.js",
+      "dist/combat-status.js",
+      "dist/status-vfx.js",
+      "dist/tutorial.js",
+      "dist/mechanics.js",
+      "dist/question-language.js"
+    ],
+    "allDistAssetsIdentical": true,
+    "differentFiles": []
+  },
+  "review": {
+    "independentWholeBranchReviews": 1,
+    "critical": 0,
+    "important": 1,
+    "minor": 0,
+    "importantFinding": "OPT-05 dynamic image transport bypass; native RED\u2192GREEN in one root fix pass",
+    "secondIndependentReview": false
+  },
+  "limits": [
+    "No physical-device/pupil validation",
+    "No live deployment or live multi-version update test",
+    "Latest mainade5d3a is not integrated into this candidate",
+    "Synthetic summary-label landscape baseline failure remains on candidatecb1 UI",
+    "Older disk-cache namespaces remain; cache budgets exclude other browser memory"
+  ],
+  "publication": {
+    "authorizedBranchOnly": true,
+    "mainRefMutatedByThisTask": false,
+    "status": "await exact reviewed tree/ref readback"
+  },
+  "evidenceLogFormatting": "Trailing whitespace only normalized; diagnostic content and outcomes preserved.",
+  "productionInstrumentationMatchesSource": true
+}

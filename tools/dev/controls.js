@@ -12,12 +12,11 @@
  }
  function refreshControls(){
   document.querySelectorAll('.dev-mode-controls').forEach(e=>e.remove());
-  const menu=document.querySelector('.main-menu-actions');if(menu)menu.append(controls('menu'));
   const panel=document.querySelector('#dialog .save-panel');if(panel)panel.prepend(controls('settings'));
   document.body.dataset.devEnabled=String(mode.get());
  }
  const baseRender=render;render=function(...args){const result=baseRender.apply(this,args);refreshControls();return result;};
  const baseSettings=showSaves;showSaves=function(...args){const result=baseSettings.apply(this,args);refreshControls();return result;};
  // Disabling access also rejects stale hub/API mutation calls.
- if(window.STMDevApi)for(const name of ['launch','cards','testCard','motion','playback','restart','command','loadRun','godMode','freeMap','teleport','returnMap','addCards','openEvent','question','setStatus','scenario','loadPlayerRun']){const original=window.STMDevApi[name];window.STMDevApi[name]=function(...args){if(!mode.get())throw Error('Turn Dev ON in the main menu or Settings.');return original.apply(this,args);};}
+ if(window.STMDevApi)for(const name of ['launch','cards','testCard','motion','playback','restart','command','loadRun','godMode','freeMap','teleport','returnMap','addCards','openEvent','question','setStatus','scenario','loadPlayerRun']){const original=window.STMDevApi[name];window.STMDevApi[name]=function(...args){if(!mode.get())throw Error('Turn Dev ON in Settings.');return original.apply(this,args);};}
 }

@@ -1,3 +1,48 @@
+# Runtime optimization — current branch audit
+
+24 October2026 UTC. Branch `fix/hosted-readiness-input`, candidate **2.39.0**, Master SOR **1.2.0**. Initial update base `bcd90da6f1a6362449ca031fbaf9cada82aa4a92`. Read/integrated main `1ece105903ee34c81c38a338ead01db65a834523`, then newer main `cb1bbcf688d9556b55bc8fe5522b5b652309640c` (2.38.0). Local implementation commits `1aae6ac`, `c89efe6`, `8f899f5`; latest-main integration `00bfe4b`. These local SHAs identify work history, not a claim of remote publication.
+
+User authorization: update recommendations1–3 and publish this feature branch. No main merge, main push or Pages deployment. Main's Settings-only Developer controls and education-report/hint update are retained. Read the [approved scope](../../sor/25_RUNTIME_OPTIMIZATION.md), [candidate guide](../../RUNTIME_OPTIMIZATION_2_39_0.md) and [structured evidence](../../verification/runtime-optimization-2-39-0/integration.json).
+
+**Status: VALID for the three approved optimizations on the testedcb1bbcf integration; BELUM DISAHKAN for combination with later mainade5d3a.** Final post-review-fix full suite passes977/977, zero failed/skipped,408645ms. The historical2.38.0 audit follows below; its old suite limitation is superseded only for this freshly checked candidate, not rewritten as historical success.
+
+## Confirmed findings
+
+| ID | Priority / confidence | Evidence and action |
+| --- | --- | --- |
+| OPT-01 | P2 / high / fixed | Combat previously replaced both actor canvases on every render (native0/30 retained commands). `dist/dom-patch.js` and `dist/app.js` now keep canvases/controllers within the same run/stage/room/enemy and nondecreasing turn. Native30/30 retained, actual card/End Turn state equals an independent engine transaction. Card transactions replace battle data, so battle-object identity intentionally does not own presentation. |
+| OPT-02 | P2 / high / fixed | With persistent cache unavailable, prepare plus three reads downloaded/hashed one resource four times. `dist/asset-readiness.js` now returns fresh Responses over immutable verified session Blobs; measured1 network/1 digest.32MiB LRU prefers background eviction and preserves verification/cancellation/isolation. |
+| OPT-03 | P2 / high / fixed | Four decoded textures did not describe retained memory. `dist/animation.js` uses estimated RGBA bytes,96MiB, shared current-clip ownership and preferred idle retention. Rejected/late loads, release, byte pressure and active-only oversize are tested. |
+| OPT-04 | P2 / high / fixed | Retaining a disabled Predict button also retained the old focus target. `close()` now rejects a disabled connected target and restores End Turn. The actual existing UI regression passes without weakening the test. |
+
+| OPT-05 | P2 / high / fixed after independent review | Fighter reset images, Passive cue icons and supplier Artifact HUD/Codex bypassed the verified transport with raw URLs. The new native regression reproduced five raw requests with worker/cache denied. Direct image consumers now use existing imageElement; the supplier URL bridge gives pending images a per-key placeholder and checks their current source before attaching verified bytes. Final native check shows zero raw requests, all31 Codex images decoded and exact gameplay save equality (excluding the presentation-only Artifact tracker). |
+
+## Verification, review and limits
+
+Targeted checks on the combined main snapshot pass114/114, zero skipped; syntax and production/portable builds pass. Native hosted readiness, complete production static Dev Hub, six bilingual Result-report flows/18 geometry states and actual BM portable reporting pass. One fresh read-only whole-branch review reported OPT-05 as the sole Important/P2 finding; no Critical/Minor findings were reported. One root fix pass addressed it, with a native RED→GREEN regression. Recovery tests pass after the fix. Final source passes977/977, syntax and production/portable build checks. All668 source-manifest entries and669 production entries match exact bytes/SHA. Production app equals the expected Settings-only instrumentation of source; other changed runtime files match directly. Fresh identical-build control/persistent runs retain0/30 versus30/30 canvases, command p50/p95=6.4/9.6 versus4.4/7.8ms; timings are small local samples, not a phone FPS guarantee. Reports include identical per-file hashes. Original initial timing samples remain available separately.
+
+An initial targeted run found OPT-04 (105/106); the fix then passed50 UI/persistence cases and the later combined114 checks. A separate retry overlapped a generator and read an incomplete mechanics file; its test-file failure is retained and superseded by the serialized post-build run. The first whole-suite attempt on the older main snapshot was explicitly stopped when main advanced. New report/motion browser harnesses needed to wait for Enter after boot/reload; those setup errors are retained rather than described as product failures.
+
+Original `dist/assets` and the15 protected gameplay/question/status/tutorial owners compare identically to maincb1bbcf; new main tutorial captures are retained. No asset regeneration, numerical balance, RNG, canonical bank or save-schema change is introduced by this branch. The pre-existing untracked map-trial fragment is excluded.
+
+Risks carried forward: physical phones/classroom connectivity remain unmeasured (DEVICE-01); pinned-manifest live deployments may require a user reload for replaced uncached future resources (UPDATE-01); older project disk-cache namespaces remain retained (CACHE-01). New32/96MiB budgets describe private retained Blobs/decoded pixels, not total browser/GPU RAM. Current-only oversize is reported and remains visible. No adaptive VFX, canvas resizing, save-write rewrite or question sharding is included.
+
+### Later main snapshot and scope ruling
+
+During final validation, main independently advanced to `ade5d3a21e55b9d2911bfa935c8095c95801bd8c` (2.39.0), adding explained status labels/size preference, three icon variants, icon readiness, VFX localization and tutorial captures. Master SOR remains1.2.0 and was read at that exact SHA; the compare API and current main handoff were read. This candidate freezes the testedcb1bbcf integration. The new icon-readiness schedule overlaps resource ownership and requires a deliberate combined check before any main release; **combined compatibility withade5d3a is BELUM DISAHKAN**. Do not replace latest-main icon/status owners with this older snapshot. Publishing this feature ref does not undo or modify main.
+
+The existing combat-motion browser passed all ten real Passive paths and six real-action viewport/quality cases, then failed its synthetic four-summary-label aboveHP assertion at844×390. The identical failure reproduced with incremental patching disabled, establishing a baseline issue on this candidate'scb1bbcf UI. No status/VFX/CSS change is made here. Main's newer2.39 handoff reports its own passing VFX checks; that evidence is not transferred to this branch. Record this candidate limitation for later integration rather than claiming the whole native VFX suite passed.
+
+Reviewer set-aside rulings: final suite/publication are root-verified separately; physical-device RAM/audio/FPS and live multi-version deployment remain unverified; the synthetic summary probe is the explicit baseline limitation above. No silent set-aside or second independent review is claimed.
+
+## Publication
+
+The source is prepared for feature-ref publication with an expected-SHA non-forced update frombcd90da6f1a6362449ca031fbaf9cada82aa4a92 and integrated maincb1bbcf as the second parent. Published source SHA/tree and final readbacks will be recorded after the update. No main ref is authorized to move.
+
+---
+
+## Historical2.38.0 readiness audit
+
 # Hosted readiness — branch audit and handoff
 
 24 October 2026 UTC. Repository `unDead41/slay-the-math-v2`. Branch `fix/hosted-readiness-input`, candidate **2.38.0**. Master SOR **1.2.0**.

@@ -85,3 +85,7 @@ test('all six Skill body silhouettes keep the same crown-to-floor size, independ
  }
  f.player.destroy();
 });
+
+test('repeated unchanged configuration preserves an active animation clock',async()=>{
+ const f=fixture();await flush();await f.step(0);await f.step(100);f.player.configure({motion:true,paused:false});await f.step(80);assert.equal(f.player.snapshot().frame,1,'Same-encounter UI updates must not restart frame timing');f.player.destroy();
+});

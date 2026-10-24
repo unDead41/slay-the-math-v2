@@ -1,0 +1,22 @@
+✔ the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets (837.495794ms)
+✔ concurrent requests share bytes and a verified disk hit avoids another download (61.20211ms)
+✔ a corrupt cached response is rejected and replaced without clearing unrelated data (10.787318ms)
+✔ transient HTTP failures retry twice but missing assets fail once and never become ready (19.349329ms)
+✔ a stalled response has a bounded failure and a loading budget cancels outstanding work (40.383828ms)
+✔ foreground work precedes queued boss downloads and background concurrency stays bounded (27.525113ms)
+✔ cache quota failure keeps downloads usable online and rejects URLs outside this manifest (6.208549ms)
+✔ an update reuses unchanged verified bytes and replaces changed bytes within the same project (7.122077ms)
+✔ cache denial still reuses verified bytes for sequential consumers without repeating SHA work (4.76462ms)
+✔ a verified disk read is retained privately and consumers cannot mutate later responses (3.786784ms)
+✔ the compressed byte budget evicts background entries before a foreground resource (14.681415ms)
+✔ oversized verified assets remain usable without exceeding the session budget (5.483976ms)
+✔ wrong-hash bytes never enter the trusted session cache, and a retry can populate it (11.613636ms)
+✔ verified session reuse is isolated by manifest and still obeys pause and destroy (6.735054ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 941.823548

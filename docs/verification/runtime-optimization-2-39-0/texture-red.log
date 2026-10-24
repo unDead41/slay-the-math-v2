@@ -1,0 +1,212 @@
+✔ only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames (2.018102ms)
+✔ idle advances at source FPS; non-looping Attack completes once and returns to idle (1.779172ms)
+✔ every frame uses the same floor registration and source rectangles, without per-pose recentering (0.902691ms)
+✔ pause freezes the exact frame and resumes without counting hidden time (0.957073ms)
+✔ Motion Off uses the supplied idle frame, schedules no animation, and never replays an action (0.476328ms)
+✔ a late action load cannot replace a newer reaction or revive a destroyed actor (0.467344ms)
+✔ missing action textures recover to idle and a missing idle leaves the original image fallback (0.606334ms)
+✔ variable frame durations keep windup and recovery timing and finish exactly at the source total (0.689008ms)
+✔ actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor (0.562457ms)
+✔ Alyssa animation spans both stages while enemy IDs remain stage scoped (0.281395ms)
+✔ all six Skill body silhouettes keep the same crown-to-floor size, independently of fire effects (0.824222ms)
+✖ repeated unchanged configuration preserves an active animation clock (1.320341ms)
+✖ decoded cache evicts by pixel bytes rather than number of textures (1.702316ms)
+✖ active clips survive pressure and idle is preferred ahead of unrelated textures (0.304399ms)
+✖ one released owner cannot unpin a clip still used by another actor (0.239371ms)
+✖ oversized unowned images can be displayed without staying in the cache (0.260883ms)
+✖ active-only oversize is reported and released immediately when its owner exits (0.232781ms)
+✖ concurrent requests decode one image and a failed decode never poisons retry (0.2128ms)
+✖ a forgotten late load cannot replace or inflate a newer same-path entry (0.195154ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 11
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 113.70146
+
+✖ failing tests:
+
+test at tests/animation.test.cjs:89:1
+✖ repeated unchanged configuration preserves an active animation clock (1.320341ms)
+  AssertionError [ERR_ASSERTION]: Same-encounter UI updates must not restart frame timing
+
+  0 !== 1
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/animation.test.cjs:90:139)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:5:1
+✖ decoded cache evicts by pixel bytes rather than number of textures (1.702316ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:6:25)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:9:1
+✖ active clips survive pressure and idle is preferred ahead of unrelated textures (0.304399ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:10:25)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:13:1
+✖ one released owner cannot unpin a clip still used by another actor (0.239371ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:14:25)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:16:1
+✖ oversized unowned images can be displayed without staying in the cache (0.260883ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:17:22)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:19:1
+✖ active-only oversize is reported and released immediately when its owner exits (0.232781ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:20:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:22:1
+✖ concurrent requests decode one image and a failed decode never poisons retry (0.2128ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:23:22)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/texture-cache.test.cjs:26:1
+✖ a forgotten late load cannot replace or inflate a newer same-path entry (0.195154ms)
+  AssertionError [ERR_ASSERTION]: Decoded texture cache must budget pixels, not a fixed file count
+  + actual - expected
+
+  + 'undefined'
+  - 'function'
+
+      at cache (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:4:32)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/texture-cache.test.cjs:27:26)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

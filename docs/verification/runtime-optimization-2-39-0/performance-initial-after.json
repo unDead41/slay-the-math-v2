@@ -1,0 +1,31 @@
+{
+  "mode": "after",
+  "scenario": "30 native Dev refill commands within one unchanged encounter; 1366x768; not a physical-device FPS benchmark",
+  "retainedCanvasesCommands": 30,
+  "commands": 30,
+  "commandMs": {
+    "median": 4.5,
+    "p95": 5.699999999254942
+  },
+  "frameGapMs": {
+    "median": 16.699999999999818,
+    "p95": 16.700000000000045
+  },
+  "texture": {
+    "bytes": 45137920,
+    "budgetBytes": 100663296,
+    "overBudgetBytes": 0,
+    "entries": 2,
+    "pending": 0,
+    "owners": 2,
+    "loads": 2,
+    "hits": 0
+  },
+  "errors": [],
+  "checks": [
+    "persistent canvas identity",
+    "real card exact engine/RNG equality",
+    "owner release on scene exit",
+    "new-run replacement"
+  ]
+}

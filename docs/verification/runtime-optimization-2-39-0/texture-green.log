@@ -1,0 +1,28 @@
+✔ only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames (4.122145ms)
+✔ idle advances at source FPS; non-looping Attack completes once and returns to idle (1.537829ms)
+✔ every frame uses the same floor registration and source rectangles, without per-pose recentering (0.521216ms)
+✔ pause freezes the exact frame and resumes without counting hidden time (0.708097ms)
+✔ Motion Off uses the supplied idle frame, schedules no animation, and never replays an action (0.439593ms)
+✔ a late action load cannot replace a newer reaction or revive a destroyed actor (0.381755ms)
+✔ missing action textures recover to idle and a missing idle leaves the original image fallback (0.332712ms)
+✔ variable frame durations keep windup and recovery timing and finish exactly at the source total (1.376856ms)
+✔ actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor (2.448072ms)
+✔ Alyssa animation spans both stages while enemy IDs remain stage scoped (0.259321ms)
+✔ all six Skill body silhouettes keep the same crown-to-floor size, independently of fire effects (0.502648ms)
+✔ repeated unchanged configuration preserves an active animation clock (0.248034ms)
+✔ decoded cache evicts by pixel bytes rather than number of textures (1.600964ms)
+✔ active clips survive pressure and idle is preferred ahead of unrelated textures (0.666004ms)
+✔ one released owner cannot unpin a clip still used by another actor (0.392221ms)
+✔ oversized unowned images can be displayed without staying in the cache (0.34535ms)
+✔ active-only oversize is reported and released immediately when its owner exits (0.341705ms)
+✔ concurrent requests decode one image and a failed decode never poisons retry (0.814328ms)
+✔ a forgotten late load cannot replace or inflate a newer same-path entry (8.931638ms)
+✔ warming the current actor reuses its decoded idle texture for the first canvas frame (7.598308ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 105.146184

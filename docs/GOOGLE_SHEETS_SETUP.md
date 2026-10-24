@@ -1,5 +1,11 @@
 # Google Sheets — Slay the Math
 
+Keluaran main **2.38.0** menambah butang **Laporkan masalah**, Hint yang
+diperjelas dan tab **Issues** peribadi. Ikut [panduan main dan kemas kini penerima
+yang sama](education/MAIN_2_38_0.md). Gunakan keseluruhan Code.gs baharu,
+**setupCollector → Run**, kemudian deploy versi baharu dengan URL `/exec`
+sedia ada. [Cara membaca Issues dan status developer](education/GOOGLE_ISSUES.md).
+
 Keluaran main **2.36.0** menggabungkan Learning Report, tick/komen Practice dan polisi dua cubaan dalam game. Akaun Google, Sheet dan deployment Apps Script disediakan pemilik sekali sahaja; laporan terus berfungsi tanpa Google. [Panduan keluaran main](education/MAIN_2_36_0.md).
 
 ## Kemas kini penerima sedia ada untuk 2.36.0

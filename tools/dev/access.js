@@ -22,6 +22,6 @@
  copySave(name,query=''){
   if(!authorized())throw Error('Unlock Dev first.');if(!/^duel-cube-math\./.test(name))throw Error('Unknown player save key.');const raw=window.localStorage.getItem(name);if(!raw)throw Error('No saved player run found. Start a run first.');if(raw.length>2000000)throw Error('Save exceeds 2 MB.');if(!window.DCEngine.restore(JSON.parse(raw)))throw Error('Player save is invalid.');if(!session)throw Error('Session storage is needed to transfer a copy.');session.setItem(transferKey,JSON.stringify({version:1,key:name,query,content:raw}));return new URL('__dev/index.html'+query,home).href;
  },
- copiedSave(){if(!authorized())throw Error('Unlock Dev first.');const raw=session?.getItem(transferKey);if(!raw)throw Error('No copied player run. Use Copy Player Run to Dev in the player menu, or import an exported save.');const data=JSON.parse(raw);if(data.version!==1||typeof data.content!=='string')throw Error('Copied save is invalid.');return data;},
+ copiedSave(){if(!authorized())throw Error('Unlock Dev first.');const raw=session?.getItem(transferKey);if(!raw)throw Error('No copied player run. Use Copy Player Run to Dev in Settings, or import an exported save.');const data=JSON.parse(raw);if(data.version!==1||typeof data.content!=='string')throw Error('Copied save is invalid.');return data;},
  clearCopy(){session?.removeItem(transferKey);},lock(){set(false);session?.removeItem(transferKey);location.href=home.href+location.search;}};
 })();

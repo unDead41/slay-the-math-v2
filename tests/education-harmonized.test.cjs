@@ -45,10 +45,17 @@ test('every table and Venn Hint contains values while unspecified regions stay h
     assert.equal(v.answer,null,q.id);
     if(v.visual.kind==='venn')assert.equal(v.visual.headers.length,2,q.id);
   }
-  const q=Q.catalog['SET-017'];
+  const q=Q.catalog['SET-009'];
   let s=M.session.reserveNext(M.session.createSession({seed:1}),{...Q.bank,questions:[q]}).session;
   s=M.session.openSupport(s,q.id,'hint');
   assert.equal(M.session.selectLearningView(q,s.records[q.id]).visual.rows[0][1],'Not given');
+  const target=Q.catalog['SET-017'];
+  let scaffold=M.session.reserveNext(M.session.createSession({seed:1}),{...Q.bank,questions:[target]}).session;
+  scaffold=M.session.openSupport(scaffold,target.id,'hint');
+  const reference=M.session.selectLearningView(target,scaffold.records[target.id]).visual;
+  assert.deepEqual(reference.rows.slice(0,3),[['n(A)','13'],['n(B)','11'],['n(A ∩ B)','5']]);
+  assert.equal(reference.rows[3][1],'13 + 11 − 5');
+  assert.ok(!reference.rows.flat().includes('19'),'the requested computed union must remain for the learner');
 });
 
 test('a real pre-harmonization pending trial and profile resume without losing attempts or unlocking a claim', () => {

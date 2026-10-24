@@ -31,6 +31,14 @@ function decode(url){
 function visibleImages(root){return [...root.querySelectorAll('img[data-stm-asset]')].filter(img=>!img.matches('.menu-ambience,.menu-backdrop')||img.classList.contains('active'));}
 async function imageElement(img){const key=img.dataset.stmAsset;if(!key)return;if(!manager)return;const url=await decode(key);if(!img.isConnected||img.dataset.stmAsset!==key)return;img.src=url;await img.decode();}
 function paintImages(root=doc){return Promise.all(visibleImages(root).map(imageElement));}
+// Supplier renderers accept a URL string rather than an existing image node.
+// A per-resource placeholder lets late completion identify only its own images.
+function imageURL(url){
+ const key=assetKey(url);if(!key)return EMPTY;
+ const saved=visuals.get(key),source=saved?.ready?saved.url:EMPTY+'#stm-asset='+encodeURIComponent(key);
+ host.queueMicrotask(()=>{for(const img of doc.images)if(img.getAttribute('src')===source){img.dataset.stmAsset=key;imageElement(img).catch(()=>{});}});
+ return source;
+}
 function pruneVisuals(){
  const keep=new Set([...manifest.entries.filter(e=>e.pack==='core'&&e.kind==='image').map(e=>e.url),...[...doc.querySelectorAll('[data-stm-asset]')].map(el=>el.dataset.stmAsset)]);
  const recent=[...visuals.keys()].slice(-16);for(const [key,v]of visuals)if(v.ready&&!keep.has(key)&&!recent.includes(key)){visuals.delete(key);host.URL.revokeObjectURL(v.url);}
@@ -115,7 +123,7 @@ function prepareEntry(event){
   finishPanel(owner);permitEntry=target;target.click();
  }).catch(()=>{pendingEntry=false;failPanel(owner,'This room is not ready. Your position is unchanged. Retry resources.',()=>target.click());});
 }
-const api=host.STMHosted={scene,practice,audio,assetURL,imageElement,paintImages,manager:null};
+const api=host.STMHosted={scene,practice,audio,assetURL,imageURL,imageElement,paintImages,manager:null};
 function downloadStatus(){if(!manager)return;const stats=manager.stats(),total=manifest.entries.reduce((s,e)=>s+e.bytes,0);byId('resource-download-status').textContent=stats.verifiedFiles+' / '+manifest.entries.length+' resources ready · '+(stats.verifiedBytes/1048576).toFixed(1)+' / '+(total/1048576).toFixed(1)+' MB · '+(stats.queued+stats.active)+' pending';}
 function startDownloadStatus(){if(downloadTimer)host.clearInterval(downloadTimer);downloadStatus();downloadTimer=host.setInterval(downloadStatus,1000);}
 function enter(){host.DCAudio?.unlock();gate().hidden=true;if(manager){byId('resource-downloads').hidden=false;startDownloadStatus();}doc.querySelector('[data-action="new"]')?.focus();if(manager)for(const e of manifest.entries.filter(e=>e.pack==='menu'))manager.fetchAsset(e.url,{priority:80}).catch(()=>{});}

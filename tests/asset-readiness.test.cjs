@@ -45,3 +45,36 @@ test('an update reuses unchanged verified bytes and replaces changed bytes withi
  assert.equal(await (await next.fetchAsset('changed.js')).text(),'new');assert.equal(site.count(),1);
  assert.equal(await (await prior.match(site.base+'changed.js')).text(),'old');assert.equal(await (await unrelated.match(site.base+'same.js')).text(),'corrupt');first.destroy();next.destroy();
 });
+
+test('cache denial still reuses verified bytes for sequential consumers without repeating SHA work',async t=>{
+ const site=await fixture(t,(_q,r)=>r.end('verified session bytes'));let hashes=0;
+ const host={fetch,Headers,Response,AbortController,setTimeout,clearTimeout,crypto:{subtle:{digest(...args){hashes++;return globalThis.crypto.subtle.digest(...args);}}}};
+ const a=create({host,base:site.base,manifest:manifest([['a','verified session bytes']]),cache:null});
+ await a.prepare(['a']);for(let n=0;n<3;n++)assert.equal(await(await a.fetchAsset('a')).text(),'verified session bytes');
+ assert.equal(site.count(),1,'Completed consumers must reuse this session’s verified download');assert.equal(hashes,1,'Reusing immutable verified bytes must not hash them again');a.destroy();
+});
+test('a verified disk read is retained privately and consumers cannot mutate later responses',async t=>{
+ const site=await fixture(t,(_q,r)=>r.end('network')),cache=new MemoryCache();await cache.put(site.base+'a',new Response('safe',{headers:{'Content-Type':'image/webp'}}));let hashes=0;
+ const host={fetch,Headers,Response,AbortController,setTimeout,clearTimeout,crypto:{subtle:{digest(...args){hashes++;return globalThis.crypto.subtle.digest(...args);}}}};
+ const a=create({host,base:site.base,manifest:manifest([['a','safe']]),cache});const first=await a.fetchAsset('a');new Uint8Array(await first.arrayBuffer()).fill(0);first.headers.set('Content-Type','text/plain');
+ const next=await a.fetchAsset('a');assert.equal(await next.text(),'safe');assert.equal(next.headers.get('Content-Type'),'image/webp');assert.equal(hashes,1);assert.equal(site.count(),0);a.destroy();
+});
+test('the compressed byte budget evicts background entries before a foreground resource',async t=>{
+ const calls={};const site=await fixture(t,(q,r)=>{const name=q.url.split('?')[0].split('/').at(-1);calls[name]=(calls[name]||0)+1;r.end('1234');});
+ const a=create({base:site.base,manifest:manifest([['hot','1234'],['later1','1234'],['later2','1234']]),cache:null,memoryBudgetBytes:8});
+ for(const [url,priority]of [['hot',0],['later1',80],['later2',80]])await(await a.fetchAsset(url,{priority})).text();
+ assert.equal(await(await a.fetchAsset('hot')).text(),'1234');assert.equal(calls.hot,1);await(await a.fetchAsset('later1',{priority:80})).text();assert.equal(calls.later1,2);assert.equal(a.stats().memoryBytes,8);a.destroy();assert.equal(a.stats().memoryBytes,0);
+});
+test('oversized verified assets remain usable without exceeding the session budget',async t=>{
+ const site=await fixture(t,(_q,r)=>r.end('12345'));const a=create({base:site.base,manifest:manifest([['big','12345']]),cache:null,memoryBudgetBytes:4});
+ for(let n=0;n<2;n++)assert.equal(await(await a.fetchAsset('big')).text(),'12345');assert.equal(site.count(),2);assert.equal(a.stats().memoryBytes,0);a.destroy();
+});
+test('wrong-hash bytes never enter the trusted session cache, and a retry can populate it',async t=>{
+ const site=await fixture(t,(_q,r,count)=>r.end(count===1?'wrong':'right'));const a=create({base:site.base,manifest:manifest([['a','right']]),cache:null});
+ await assert.rejects(a.fetchAsset('a'),/verification/i);assert.equal(await(await a.fetchAsset('a')).text(),'right');assert.equal(await(await a.fetchAsset('a')).text(),'right');assert.equal(site.count(),2);a.destroy();
+});
+test('verified session reuse is isolated by manifest and still obeys pause and destroy',async t=>{
+ let payload='old';const site=await fixture(t,(_q,r)=>r.end(payload));const a=create({base:site.base,manifest:manifest([['a','old']],'old'),cache:null});await(await a.fetchAsset('a')).text();payload='new';
+ const b=create({base:site.base,manifest:manifest([['a','new']],'new'),cache:null});assert.equal(await(await b.fetchAsset('a')).text(),'new');assert.equal(await(await a.fetchAsset('a')).text(),'old');assert.equal(site.count(),2);
+ a.pause();await assert.rejects(a.fetchAsset('a'),/cancel/i);a.resume();assert.equal(await(await a.fetchAsset('a')).text(),'old');a.destroy();await assert.rejects(a.fetchAsset('a'),/cancel/i);b.destroy();
+});

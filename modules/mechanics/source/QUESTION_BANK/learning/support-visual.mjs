@@ -3,6 +3,9 @@
  */
 export function selectSupportVisual(question) {
   const hint=question.learning.visual.hint,solution=question.learning.visual.solution;
+  // Reviewed references retain the GIVEN data/partial setup without copying
+  // computed target columns, marked choices or verdicts from the solution.
+  if(hint.reviewedReference)return {...hint,reference:true};
   if(!['table','venn'].includes(hint.kind))return hint;
   const venn=hint.kind==='venn';
   const text=value=>typeof value==='object'?value.text:value;

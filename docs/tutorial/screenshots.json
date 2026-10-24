@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "50d3af423cdc2240e949f4ddf29e023865304b65",
-  "gameVersion": "2.37.0",
+  "sourceCommit": "37558d5a53d62e457c076b2444a1b71e8b42e50b",
+  "gameVersion": "2.38.0",
   "viewport": {
     "width": 1440,
     "height": 1000
@@ -13,8 +13,8 @@
       "file": "tutorial-menu.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 173126,
-      "sha256": "e24d0005f54e1365787f9c8f15e55f7dff4d5636306a694f4527c44c841baa58",
+      "bytes": 173134,
+      "sha256": "24fb5a747bb17113e78e08eaf5a7c31af90d43447a27dc8eeedb0a4d3c375967",
       "setup": "Main Menu",
       "action": null
     },
@@ -35,8 +35,8 @@
       "file": "tutorial-map.webp",
       "width": 1440,
       "height": 946,
-      "bytes": 118034,
-      "sha256": "b830a2314e6a588b2990482cdb927251a6eb5a1d2d3d38d276f8a5597ab30d43",
+      "bytes": 117992,
+      "sha256": "2518c583c31960d0af3ec508ddaa45c56250ba9732f6aa717b7093251f6b4106",
       "setup": {
         "kind": "map"
       },
@@ -48,7 +48,7 @@
       "width": 1440,
       "height": 939,
       "bytes": 143464,
-      "sha256": "cfcf486cea436d7c8676c0e8edf8aed65d1812c1109992137ab724def9759cbc",
+      "sha256": "1a12b49a591dd8709d89b92ad4bd4e6f5b5da256188a0f76d234bc151da3f8b7",
       "setup": {
         "kind": "combat"
       },
@@ -137,7 +137,7 @@
       "width": 1440,
       "height": 922,
       "bytes": 171946,
-      "sha256": "a7088641151d1d19f9afe5d4301376668782e168a1cfe52fe4c0baa808309172",
+      "sha256": "841d0a44fdd3165c03f3494e3a05732cba14677e939c1ddca59d393739298125",
       "setup": {
         "kind": "shop"
       },
@@ -148,8 +148,8 @@
       "file": "tutorial-rest.webp",
       "width": 1440,
       "height": 922,
-      "bytes": 128682,
-      "sha256": "abde55cf5274752abbd9650bb074659f407a1364ba806c86c2939237f93b5a4a",
+      "bytes": 128688,
+      "sha256": "2f6a21fbefaebc37194bd66af42d0ebe7c0b7c3ea2b97eb44d909331c2aadff3",
       "setup": {
         "kind": "rest",
         "hp": 24
@@ -197,8 +197,8 @@
       "file": "tutorial-settings.webp",
       "width": 560,
       "height": 732,
-      "bytes": 26490,
-      "sha256": "bc10d4850b044ba17772e11b7cc87a24f9fa97627488594bde1045e049bad302",
+      "bytes": 26502,
+      "sha256": "85caffaf8b541a19473de4285c6ccfea0d1784559724dbb9a79d87df43606c71",
       "setup": "Main Menu",
       "action": "saves"
     },
@@ -216,7 +216,7 @@
     }
   ],
   "runtimeInputs": {
-    "index.html": "af5ca200fb164496af46089ebda29f4ca0a6b17195c40eb10f089329956b580f",
+    "index.html": "bd6a51662464b206a3025179425aeb9dda855c4eb4c2901892ee384f5a942945",
     "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
     "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
     "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
@@ -229,6 +229,7 @@
     "mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
     "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
     "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
+    "question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
     "education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
     "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
     "animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
@@ -245,7 +246,7 @@
     "status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee",
     "tutorial.css": "e8bec001a3d6c2b24baf9d01ed83ab59b1bba875f0c3adbf2ebf1cd399c2d7db",
     "icon-clarity.css": "03d15ae5df387bfb58cc8e8fec343b317d13420a9110a9cbe5c35ba91a24a549",
-    "release.js": "999c9fb0cb68752724b471b703ce419fe60a9413d59d35c5756bea505dfe1cbd",
+    "release.js": "c1d63af0d2e1c5b36c9c55e1fbbeaaea0f0baea67b5c53ad9d3ba772bb40421f",
     "card-data.js": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148",
     "balance-data.js": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b",
     "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
@@ -257,8 +258,8 @@
     "map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
     "map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
     "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
-    "mechanics.js": "861a33ae7f167c2984b7dfbb3c80b4c1994378dd5cfbdefba3801957eeedb697",
-    "question-language.js": "88d085fd08f83db1953df3bcdf636b36079eaab6487330b19e03100c28667ca1",
+    "mechanics.js": "a37ebd533fe9235061df9c411305c39a2fb28df3139977353eab73b343c57596",
+    "question-language.js": "271168059de55c05c4eafb066a2e0db1308ae31ebd155efb6cb0f9f167a5e8c4",
     "rich-text-data.js": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
     "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
     "balance-config.js": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
@@ -280,11 +281,11 @@
     "visuals.js": "0be6597746e629a7849043a7f276f64b50dee0eb77fca4470fcb3404bdff5a92",
     "animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
     "animation.js": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52",
-    "artifact-ui.js": "b5a9d93f313af4d5cdaf2ff121d4bba59b3840cc66e8b8a750d2c5f42fe352e1",
-    "mechanics-host.js": "ba1377c8588008f30b1d3153ee9411de1968b6e85672cfdb85d84c06b89dbfc4",
+    "artifact-ui.js": "1d1f49e5a6a142e934a6c4f6a83934b01df2627d8171a5e2c9faf10a957941b9",
+    "mechanics-host.js": "1e8df25658849b5ddbd810717423253edba7e0717c6e584669563b17e12db16f",
     "hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
-    "mystery-ui.js": "086cfe739d0ae9bcbc5043a684bcc77bfdb545af45b8240cf4db3ac4d60958ee",
-    "education-practice.js": "1cf58d2ac207da20d707c6d781be6634e3fc19586032d65a305e691dc362b2f9",
+    "mystery-ui.js": "745d53d569da96e407a6803227659bdbf90b01f56185db936d999da46c4f359b",
+    "education-practice.js": "d5d068f8a5a9857765a76d1c844232503515edfed0d44015965aed9562692eb6",
     "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
     "combat-status.js": "d80f1754ad79cb4c3c4423640fd6de156267276039a0a56b909b85c8b1fba9e3",
     "status-vfx.js": "ef5585cbdbf2af43adf2f3926fbd091f63828e21e1c37be186dd3dcf8cfac8e9",
@@ -295,11 +296,13 @@
     "learning-collection-config.js": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2",
     "learning-google.js": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf",
     "learning-delivery.js": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275",
+    "question-feedback.js": "bfc95f5e26d4045fe3ce0d58cdd6f7f62063cdd032e4530628740717d1ab3614",
+    "question-report.js": "ab3a909649242107412b0c1736b0d1803a5aac842ed92c312d25a407db48de16",
     "analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
-    "tutorial-data.js": "69e7cc514080b7e3dd3e0a15090cbdf54e570449bb468621c203d15d737a365c",
+    "tutorial-data.js": "537460decb20a65b1f7df589b5b09d2c82c813e72edd251992d910b1e9430602",
     "tutorial-core.js": "177f18c30942ea8885084e3a3c6eea7e3b811708e7118f825381cd9b507ab3bc",
     "tutorial.js": "1c10f2fc3e8c33d3e5dbf37d9b341b825eccb37385c08df8a4ea2a9372a6e803",
-    "app.js": "d6165e931008562856c114c1a392c850765dea0782a912dfa9bd896536a5320d"
+    "app.js": "d5d4b09f055d9a16377902afc2b349fc142d6a32b64bdb02fa91d77e90dab8f0"
   },
   "sourceWorkingTreeDirty": true
 }

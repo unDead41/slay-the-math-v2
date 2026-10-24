@@ -1,15 +1,33 @@
 # Changelog SOR — Slay the Math
 
+## Candidate 2.39.0 — runtime optimization, feature branch only
+
+- Keep actor canvases/controllers within one encounter and reconcile changed combat UI; preserve disabled-control focus recovery.
+- Reuse verified immutable resources within a32MiB session budget and retain decoded textures under a96MiB estimated pixel budget with live-actor ownership.
+- Integrate maincb1bbcf (education reports/hints and Settings-only Developer controls). Engine/RNG/save/artwork owners stay identical to that main. No main merge or Pages deployment.
+- [Scope and measured verification](../RUNTIME_OPTIMIZATION_2_39_0.md), [branch audit](../audits/hosted-readiness/LATEST.md).
+
 ## Candidate 2.38.0 — hosted readiness, feature branch only
 
 - Add SOR 24, early preparation/progress and three-minute recovery, verified priority/background downloads, lazy Practice, scene/actor warmup and native input guards.
 - Preserve main 2.37.0 gameplay, sources and saves; no main merge or hosted deployment is authorized.
+
+## Game2.38.0 — Education reports and clearer hints on main
+
+Integrate education-report6bfb483 with main2.37.1 while retaining Settings-only Developer access. Add Result-only reports, private question/category Issues triage, and source-reviewed staged English/BM help for all120 questions. Preserve source identities, original answers/full solutions, gameplay, saves and artwork. [Fresh integration checks and receiver update](../education/MAIN_2_38_0.md).
 
 ## Master SOR 1.2.0 — 24 October 2026
 
 - Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.
 - Require scoped before/after issue, risk and improvement review for every coherent branch update; distinguish evidence from assumptions/proposals, retain open findings and preserve explicit fix/push boundaries.
 - Update the report format/index and add the [main documentation audit](../audits/main/LATEST.md), including two observed stale AGENTS statements. No runtime change, game-version bump or background/CI enforcement.
+
+## Game 2.37.0-report.4 — 24 October 2026, education-report only
+
+- Add Result-only bilingual issue reports for Predict, Artifact and Mystery with actual context, shared local feedback and opt-in delivery.
+- Add private Google Issues grouping, distinct device/active report counts, developer status/notes/fixed version and replay-safe reopening; preserve player review ticks.
+- Review all 120 bilingual question/hint sequences against focused supplied textbook/DSKP pages; refine 66 Hint/53 More Hint texts and 63 pre-answer reference visuals, retaining all original facts/answers/full solutions and source identities.
+- Fix inherited solved SVG accessible titles, retain proper MathML and refresh actual tutorial references. No main merge, live receiver deployment, gameplay retuning or artwork replacement. [Owner guide/evidence](../education/FEEDBACK_CLARITY.md).
 
 ## 2.37.0 — 24 October 2026 — Functional icon clarity on main
 
@@ -417,7 +435,7 @@ Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Pe
 
 ## Game 2.18.0 — 22 October 2026
 
-Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
+Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all 120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
 
 
 ## Game 2.19.0 — 22 October 2026 (Malaysia)
@@ -564,3 +582,16 @@ DISAHKAN: Ijamm now authorizes publishing the complete production/password/exten
 - Add visible status names and exact counters, immediate-debuff priority, queued-state cues and a fighter-specific All statuses comparison/detail flow with keyboard/touch/focus support.
 - Wire Hand, correct View Deck and soundtrack location symbols, mark missing semantic keys for QA, and label Block-only/no-attack previews correctly.
 - Preserve all original images and excluded card/artifact artwork; add focused UI and real-browser regression checks. Publish only `codex/icon-clarity-audit`, leaving main untouched by this work. [Audit](../ICON_CLARITY_AUDIT_2026_10_24.md).
+## Settings-only Developer controls — 24 October 2026
+
+DISAHKAN: Ijamm requests removing redundant Developer controls from the main menu. Dev ON/OFF, Open Developer Hub and Copy Player Run to Dev appear only in Settings, in both local development and production. Password and sandbox isolation remain unchanged. This update is local only; no commit or remote push is authorized. This supersedes earlier main-menu access instructions.
+
+Publication authorization: Ijamm subsequently requests pushing this Settings-only update to `dev-tools`. This supersedes the local-only boundary for this update; main remains excluded. Verification: production build, local-dev toggle browser test and production/static-subpath browser suite passed.
+
+## Settings-only main publication — 24 October 2026
+
+DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.
+
+## Release metadata correction — 2.37.1
+
+24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.

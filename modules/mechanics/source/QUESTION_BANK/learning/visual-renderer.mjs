@@ -5,7 +5,7 @@ const SVG_TAGS=new Set(['svg','title','desc','defs','clipPath','circle','mask','
 const SVG_ATTRS=new Set(['viewBox','role','aria-labelledby','id','cx','cy','r','x','y','width','height','fill','fill-opacity','stroke','stroke-width','rx','maskUnits','mask','clip-path','text-anchor','data-role','font-size','font-weight','font-family','dy']);
 let diagramSequence=0;
 
-function safeVenn(xml,glossary,reference=false,language='en') {
+function safeVenn(xml,glossary,reference=false,language='en',referenceTitle='') {
   const parsed=new DOMParser().parseFromString(xml,'image/svg+xml');
   if(parsed.querySelector('parsererror')||parsed.documentElement.localName!=='svg')throw new Error('Invalid diagram SVG');
   function clone(source) {
@@ -33,6 +33,8 @@ function safeVenn(xml,glossary,reference=false,language='en') {
     }
   }
   if(reference){
+    const title=svg.querySelector('title');
+    if(title)title.textContent=referenceTitle||(language==='ms'?'Rujukan set yang diberikan':'Given set reference');
     for(const text of svg.querySelectorAll('tspan'))if(text.textContent==='?')text.textContent=language==='ms'?'Tidak diberikan':'Not given';
     for(const shade of svg.querySelectorAll('rect[mask]'))shade.remove();
     const description=svg.querySelector('desc');
@@ -54,7 +56,7 @@ export function renderVisual(container,visual,options) {
   container.replaceChildren();if(!visual)return;
   const title=document.createElement('h3');title.textContent=visual.title;container.append(title);
   const rich=(parent,runs)=>renderRichText(parent,runs,options);
-  if(visual.kind==='venn')container.append(safeVenn(visual.svg,options.glossary,visual.reference,visual.displayLanguage));
+  if(visual.kind==='venn')container.append(safeVenn(visual.svg,options.glossary,visual.reference,visual.displayLanguage,visual.title));
   if(['venn','table'].includes(visual.kind)) {
     const wrap=document.createElement('div');wrap.className='learning-table-scroll';
     wrap.setAttribute('tabindex','0');wrap.setAttribute('role','region');wrap.setAttribute('aria-label',visual.title+' table');

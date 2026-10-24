@@ -1,0 +1,429 @@
+{
+  "date": "2026-10-24",
+  "version": "2.37.0-report.4",
+  "repository": "unDead41/slay-the-math-v2",
+  "authorizedBranch": "education-report",
+  "runtimeBase": "990541d57c6df96cefb21eddc7a365d1d989a74d",
+  "previousFeatureRef": "af03f38ca252c17b72ed55d4dd779b00e7923d52",
+  "latestMainRead": "6376a222169815af582cf55aa4794f3c809a3515",
+  "mainDelta": "One documentation-only commit; latest Master SOR1.2.0, AGENTS and main audit read. No main write authorized.",
+  "publication": "Final branch ref/tree/version and published SHA are verified separately in the user handoff; this file describes the exact tested runtime inputs.",
+  "contentReview": {
+    "reviewedOn": "2026-10-24",
+    "baseMain": "990541d57c6df96cefb21eddc7a365d1d989a74d",
+    "bankVersion": "form4-review-1.6.0",
+    "contentRevision": "clarity-2026-10-24.1",
+    "files": [
+      {
+        "file": "02-Mathematics-Form-4-KSSM.pdf",
+        "pdfPages": [
+          65,
+          66,
+          67,
+          68,
+          70,
+          71,
+          72,
+          73,
+          75,
+          77,
+          78,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          93,
+          105,
+          106,
+          107,
+          108,
+          109,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          122,
+          123,
+          125,
+          126,
+          127,
+          128,
+          130,
+          131,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          265,
+          266,
+          267,
+          268,
+          271,
+          272,
+          274,
+          275,
+          276
+        ],
+        "sha256": "9c37df34c09fd014bcbd34f519e3ef8b8b5b1703e48b18a5fe1d2a5fbd6eeb2a",
+        "bytes": 19572747
+      },
+      {
+        "file": "04-Matematik-Tingkatan-4-KSSM.pdf",
+        "pdfPages": [
+          57,
+          58,
+          60,
+          62,
+          63,
+          64,
+          65,
+          67,
+          69,
+          70,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          82,
+          84,
+          85,
+          97,
+          98,
+          99,
+          100,
+          101,
+          105,
+          106,
+          107,
+          109,
+          110,
+          111,
+          114,
+          115,
+          117,
+          118,
+          119,
+          122,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          257,
+          258,
+          259,
+          260,
+          263,
+          264,
+          266,
+          267,
+          268
+        ],
+        "sha256": "9670c16808756789dfde30d8bcc192b2a1535a730a4579de867d9c272fabc471",
+        "bytes": 121692930
+      },
+      {
+        "file": "03-DSKP-KSSM-MATEMATIK-TG-4-dan-5.pdf",
+        "pdfPages": [
+          56,
+          57,
+          58,
+          59,
+          62,
+          63,
+          82,
+          83,
+          84
+        ],
+        "sha256": "808c11240f6d25233bfb64e1e0ae4b871143967c3f50f4cb4ce9b2b8a0841d00",
+        "bytes": 934554
+      }
+    ],
+    "items": 120,
+    "sourcePromptChanges": 0,
+    "hintChanges": 66,
+    "moreHintChanges": 53,
+    "reviewedHintReferences": 63,
+    "fullSolutionsAndChoicesPreserved": true,
+    "rootChecks": [
+      "Focused source review and root spot-check of Logic EN84–85/BM76–77 and DSKP Probability82.",
+      "All120 original EN identities/solutions and BM prompt/choices/full-solution identity hashes preserved.",
+      "Original equivalent shared BM solution labels retained; no incidental full-solution wording changes."
+    ],
+    "limitations": [
+      "Focused cited source pages, not a full-book reread.",
+      "Editorial clarity and factual/source checks do not establish that every learner understands every hint; learner comments remain part of future review.",
+      "MODEL.zip was unavailable and no new character-model review is claimed."
+    ],
+    "bilingualChanges": {
+      "en": {
+        "prompt": 0,
+        "hint": 66,
+        "moreHint": 53
+      },
+      "ms": {
+        "prompt": 0,
+        "hint": 65,
+        "moreHint": 54
+      }
+    }
+  },
+  "serialSuite": {
+    "command": "DOM_QA_MODULE=<jsdom> NODE_PATH=<runtime modules> npm test",
+    "tests": 947,
+    "pass": 947,
+    "fail": 0,
+    "skip": 0,
+    "durationMs": 595086.073398,
+    "logSha256": "fe5887dbbf008257c7464ef2e4b413377dbfa856301f69d8ea93237a98123d7b",
+    "runtimeFrozenDuringRun": true
+  },
+  "nativeReport": {
+    "command": "node tests/question-report-browser.cjs",
+    "flows": 6,
+    "geometryChecks": 18,
+    "errors": [],
+    "webSecurityEnabled": true,
+    "logSha256": "eea263c8cfd2b8e95f81db75a08c21e6e15306d1b8788298e292c136c50bdc62"
+  },
+  "nativeGameQuestions": {
+    "command": "node tests/game-questions-browser.cjs",
+    "flows": 6,
+    "geometryChecks": 18,
+    "errors": [],
+    "webSecurityEnabled": true,
+    "logSha256": "03c69f720e63a708085a22919921104f1228da43154a441c70e121cee08659a5"
+  },
+  "all120Components": {
+    "command": "QA_LANGUAGE=en|ms node tests/game-question-render-browser.cjs",
+    "en": {
+      "questions": 120,
+      "states": 360,
+      "language": "en",
+      "viewport": [
+        390,
+        844
+      ],
+      "component": "real DCArtifactUI + STMMechanicsHost; app controller omitted",
+      "checks": [
+        "All120 question choices and rich text",
+        "First-wrong Hint and More Hint with filled given/reference values and safe accessible names",
+        "Two-wrong lock and canonical worked steps",
+        "No workspace/document horizontal overflow; strict saves"
+      ],
+      "webSecurityEnabled": true,
+      "errors": []
+    },
+    "ms": {
+      "questions": 120,
+      "states": 360,
+      "language": "ms",
+      "viewport": [
+        390,
+        844
+      ],
+      "component": "real DCArtifactUI + STMMechanicsHost; app controller omitted",
+      "checks": [
+        "All120 question choices and rich text",
+        "First-wrong Hint and More Hint with filled given/reference values and safe accessible names",
+        "Two-wrong lock and canonical worked steps",
+        "No workspace/document horizontal overflow; strict saves"
+      ],
+      "webSecurityEnabled": true,
+      "errors": []
+    },
+    "totalStates": 720,
+    "limit": "Real DCArtifactUI/STMMechanicsHost components; app controller omitted. Separate full-app flows cover all three consumers."
+  },
+  "nativeGoogle": {
+    "command": "node tests/google-sheets-browser.cjs",
+    "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+    "checks": [
+      "The project default reaches the player report without URL controls, eager network or inherited consent.",
+      "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+      "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+      "Actual host reload replays local review flags through the same delivery projection with no invalid payload or duplicate row.",
+      "Reviewed tick and full comment reach the current generated Google receiver together; offline untick/edit updates one row and preserves the comment.",
+      "No capability in frame URLs; desktop/mobile journal has internal scroll, no URL controls and preserved question search.",
+      "Actual finished Artifact reports freeze source/language/support, queue offline, reconnect through the real nested-origin bridge, and create one private Issue without changing the pending gift/run.",
+      "Opening Practice and ticking Reviewed preserves the game comment context and the private developer Selesai status/notes, including steps that were opened then hidden."
+    ],
+    "errors": [],
+    "webSecurityEnabled": true,
+    "logSha256": "a7b0f990cbac41ef63befeb507d0a6e1facfb711098eb15b2fd1e1bd51f25920"
+  },
+  "nativePractice": {
+    "command": "node tests/education-practice-browser.cjs",
+    "checks": [
+      "Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.",
+      "All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.",
+      "Learning progress and pending Hint survive a reload. Existing pending Artifact trial and rewarded question history remain byte-identical.",
+      "Portable SLAY-THE-MATH-OFFLINE.html opens Education Practice with all 120 questions and zero network requests."
+    ],
+    "questions": 120,
+    "viewports": [
+      {
+        "width": 320,
+        "height": 740,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "overflow": false
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": false
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "logSha256": "6db8b9e5ee0a3bb0c8a3a96216bb6d186250fd2d66170818e7485e191280a6f6"
+  },
+  "nativePortableReport": {
+    "command": "node tests/question-report-offline-browser.cjs",
+    "checks": [
+      "Actual portable BM game opens a finished Artifact result, reports with frozen real help, saves on-device and returns to the unchanged pending result.",
+      "No HTTP requests, browser errors, false hint use or game save changes."
+    ],
+    "requests": [],
+    "errors": [],
+    "webSecurityEnabled": true
+  },
+  "nativeTutorial": {
+    "command": "TUTORIAL_QA_OFFLINE=1 node tests/tutorial-browser.cjs",
+    "checks": [
+      "17 chapters, all 11 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records",
+      "portrait: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "small-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "compact-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "narrow-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "Master Medium resolves a focused practice card with loaded definitions",
+      "storage denial leaves chapters and practice usable with a visible notice",
+      "in-run help warns for a live timed Mystery without extending its deadline",
+      "standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests"
+    ],
+    "errors": []
+  },
+  "productionDeveloperHub": {
+    "command": "node tests/production-dev-browser.cjs",
+    "passed": true,
+    "logSha256": "2896a182a06e3b18ed6c44c1e0e15a67d33bc1e4848150fa03fba9ddccb00390"
+  },
+  "buildAndSyntax": {
+    "commands": [
+      "node tools/build-production.cjs",
+      "npm run check"
+    ],
+    "passed": true
+  },
+  "integrity": {
+    "againstRuntimeBase": "990541d57c6df96cefb21eddc7a365d1d989a74d",
+    "latestMainRead": "6376a222169815af582cf55aa4794f3c809a3515",
+    "latestMainDelta": "one documentation-only commit; Master SOR1.2.0 and main audit read",
+    "originalArtAudioFilesUnchanged": 607,
+    "protectedRuntimeFilesUnchanged": [
+      "dist/card-data.js",
+      "dist/card-combat.js",
+      "dist/config.js",
+      "dist/balance-config.js",
+      "dist/balance-data.js",
+      "dist/economy-data.js",
+      "dist/music-data.js",
+      "dist/animation-data.js",
+      "dist/status-vfx.js",
+      "dist/combat-predict.js",
+      "dist/engine.js",
+      "dist/education.js",
+      "dist/mystery.js",
+      "dist/learning-sync.js",
+      "dist/learning-delivery.js"
+    ],
+    "tutorialImagesVerified": 16,
+    "tutorialRuntimeInputsVerified": 87,
+    "cacheEntries": [
+      {
+        "file": "index.html",
+        "hashes": 86
+      },
+      {
+        "file": "MAIN-SEKARANG.html",
+        "hashes": 86
+      },
+      {
+        "file": "dist/index.html",
+        "hashes": 86
+      },
+      {
+        "file": "release-prod/index.html",
+        "hashes": 87
+      }
+    ],
+    "productionFilesMatchingDistExceptAppIndex": 708,
+    "productionDeveloperCollectionRetained": true,
+    "googleReceiverBytes": 116475,
+    "googleReceiverSha256": "c361d4202f4221039af32bd51a63a09fb978e8e3f322ecd9e8a8811728eb45e8",
+    "portableBytes": 303385605,
+    "portableSha256": "9f63dccd7c694d4489820a723cd156ad74904a16c8d524131c39e47ddd85b86a"
+  },
+  "runtimeInputSha256": {
+    "dist/question-report.js": "ab3a909649242107412b0c1736b0d1803a5aac842ed92c312d25a407db48de16",
+    "dist/question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
+    "dist/question-feedback.js": "bfc95f5e26d4045fe3ce0d58cdd6f7f62063cdd032e4530628740717d1ab3614",
+    "dist/app.js": "d5d4b09f055d9a16377902afc2b349fc142d6a32b64bdb02fa91d77e90dab8f0",
+    "dist/mechanics-host.js": "1e8df25658849b5ddbd810717423253edba7e0717c6e584669563b17e12db16f",
+    "dist/education-practice.js": "d5d068f8a5a9857765a76d1c844232503515edfed0d44015965aed9562692eb6",
+    "dist/mechanics.js": "a37ebd533fe9235061df9c411305c39a2fb28df3139977353eab73b343c57596",
+    "dist/question-language.js": "271168059de55c05c4eafb066a2e0db1308ae31ebd155efb6cb0f9f167a5e8c4",
+    "tools/google-sheets/receiver.gs": "8e1ac7be56de0696b9732c5277ab8e7c2ceceddd8894fb1845385007d4b1d915",
+    "integrations/google-sheets/Code.gs": "c361d4202f4221039af32bd51a63a09fb978e8e3f322ecd9e8a8811728eb45e8",
+    "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json": "7c674b850ba38e40a6108213a8eb28d0f33c72bb65070cb7dcd3ff3ee69fa00d"
+  },
+  "resolvedVerificationIssues": [
+    "Updated obsolete SET017 positional reference expectation; SET009 retains the genuinely unspecified outside-region check.",
+    "Corrected test-only Artifact Home/close selectors and reran the final eight Google flows.",
+    "Tick-only changes preserve original report prompt/topic/context even when Practice switches language."
+  ],
+  "limitations": [
+    "Apps Script/Google services simulated; no live deployment, account or quota validation. Owner must update the same receiver/deployment before gameplay reports can be accepted.",
+    "No physical-device/classroom claim. Source/editorial review does not establish every pupil's understanding.",
+    "MODEL.zip unavailable; original artwork retained.",
+    "Main documentation audit DOC-001/DOC-002 remain outside this education task."
+  ]
+}

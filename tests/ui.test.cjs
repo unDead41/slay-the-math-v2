@@ -407,7 +407,7 @@ test('DOM: Mystery failed review distinguishes maximum HP loss from the capped c
  const r=mysteryRoom('ME01');r.hp=2;const {dom,w,click,state}=boot(r);
  try{
   click('continue');click('mystery-start');const q=w.DCEducation.catalog[state().mysteryState.pending.questionId];
-  click('mystery-answer',q.choices.find(c=>c.id!==q.correctChoiceId).id);const before=state(),number=w.document.querySelector('.mystery-review>p[data-stm-richtext] [data-category=calculation]');
+  for(const c of q.choices.filter(c=>c.id!==q.correctChoiceId).slice(0,2))click('mystery-answer',c.id);const before=state(),number=w.document.querySelector('.mystery-review>p[data-stm-richtext] [data-category=calculation]');
   assert.ok(number,'The authored maximum loss must retain its preview in review');assert.equal(number.textContent,'4');number.focus();
   const popup=w.document.querySelector('[role=tooltip]').textContent;assert.match(popup,/Maximum HP loss/);assert.match(popup,/Actual loss: min\(4, max\(0, 2 − 1\)\) = 1 HP/);
   assert.deepEqual(state(),before);assert.equal(state().hp,2);

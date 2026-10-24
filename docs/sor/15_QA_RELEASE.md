@@ -173,3 +173,27 @@ Verify lazy nested-origin handshake, nonce/port/source checks, abort/cleanup, de
 ## Google collection main integration — 2.30.0
 
 Ijamm now authorizes main publication. Integrate a535a04 with 8b6a3c6 rather than copying the older preview over current main. Verify the actual Main Menu/Settings/Practice setup, BM/English, consent/offline/exact-ACK/reopen, preserved single-enemy/candidate.3 saves and status-VFX hooks, complete regression/syntax/production, private receiver exclusion and version/cache hashes. Keep live Google account/deployment/quota and hosted Pages results distinct from local evidence. [Combined verification](../GOOGLE_SHEETS_MAIN_2_30_0.md).
+
+## Learning Report preview — 2.31.0-report.1
+
+Publish only education-report. Verify all three shared report views, BM/English, real source filtering, sparse evidence, all-120-ID search/filter, async view/focus/selection/scroll retention, comments and exit navigation, absent CSV/URL controls and credential-free JSON recovery. Test explicit adoption of the project default without inherited consent/ACKs or lost old journals. Exercise local developer configuration shape/URL/body/Host/Origin/peer/stale-write guards, unchanged unrelated files and production denial, plus guarded owner setup. Run full serial Node/jsdom, syntax, production/cache/preservation and native desktop/phone/short-landscape/report/Google-retry/developer isolation checks. Distinguish simulated service boundaries from live Google account/deployment success. See docs/LEARNING_REPORT_PREVIEW.md and the branch verification evidence.
+
+## Practice workspace preview — 2.31.0-report.2
+
+Publish only education-report. Verify all120 question-to-mark/comment bindings, independent mark/comment/answer semantics, stale-tab mark merge, reload/edit/untick/delete, corrupt/quota recovery and maximum comments against the unchanged strict Google validator. Exercise real Question/Feedback navigation, BM/English, local list scroll and drawer keyboard/focus at desktop/phone/short landscape, actual all120 Hint/wrong/More Hint/solution flows and portable zero-network boot. Native Google services are simulated; verify offline mark/comment delivery and untick/edit updating one existing row with exact ACKs. Run the full serial suite, syntax, production/resource/preservation and current developer isolation checks. Preserve the original bank, assets, combat and live receiver bytes. Actual evidence: docs/education/PRACTICE_WORKSPACE_VERIFICATION.md.
+
+
+## In-game question workspace — 24 October 2026
+
+For 2.31.0-report.3 verify all120 policy replays, honest help snapshots, second-correct acceptance, two-wrong/third-answer lock, legacy pending upgrades, all relevant continuation/reward gates, timed retry/expiry and strict sender/receiver validation. Inspect actual desktop/portrait/landscape English/BM tabs, keyboard/focus, local scrolling, art geometry and reload before/after failure. Run the complete serial Node/jsdom suite, production/syntax/resource/preservation checks and native game/offline/collection regressions. Record actual results and service/device limitations in [verification](../education/GAME_QUESTIONS_VERIFICATION.md); publish education-report only.
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

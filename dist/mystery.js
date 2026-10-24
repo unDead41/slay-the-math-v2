@@ -74,6 +74,7 @@
   const q=Q.catalog[p.questionId];if(!integer(now)||now<p.startedAt||(!abandoned&&choiceId!==null&&!p.choiceOrder.includes(choiceId)))throw Error('Choose one of the displayed answers.');
   const outcome=now>=p.deadline?'TIMEOUT':abandoned?'ABANDONED_AFTER_START':choiceId===q.correctChoiceId?'CORRECT':'INCORRECT';
   Q.resolveMystery(r,q.id,['CORRECT','INCORRECT'].includes(outcome)?choiceId:null);
+  if(outcome==='INCORRECT'&&Q.getSession(r).records[q.id].status==='pending')return r;
   p.selectedId=['CORRECT','INCORRECT'].includes(outcome)?choiceId:null;p.outcome=outcome;p.phase='review';p.resolvedAt=Math.max(now,p.startedAt);
   if(outcome!=='CORRECT'&&definition(r).failure.effects.some(e=>e.type==='START_COMBAT'))p.encounter={enemyId:choose(ensure(r),C.stages[r.stage].normals),seed:Math.floor(random(ensure(r),'rewardRng')*4294967296)};
   return r;
@@ -164,10 +165,10 @@
   if(p.phase==='intro')return p.questionId===null&&p.deadline===null;
   const q=Q.catalog[p.questionId],rec=r.educationState?.session?.records[p.questionId];
   if(!q||q.topicCode!==event.topicCode||!(r.educationState.runUsedIds||r.educationState.usedIds).includes(q.id)||JSON.stringify(p.choiceOrder)!==JSON.stringify(q.choices.map(c=>c.id))||!integer(p.startedAt)||p.deadline!==p.startedAt+event.timeLimitSeconds*1000||!rec)return false;
-  if(p.phase==='question')return p.outcome===null&&p.selectedId===null&&rec.status==='pending'&&rec.attempts.length===0;
+  if(p.phase==='question')return p.outcome===null&&p.selectedId===null&&rec.status==='pending'&&rec.attempts.length<2&&rec.attempts.every(a=>!a.correct);
   if(!['CORRECT','INCORRECT','TIMEOUT','ABANDONED_AFTER_START'].includes(p.outcome)||!integer(p.resolvedAt)||p.resolvedAt<p.startedAt)return false;
-  if(p.outcome==='CORRECT')return p.resolvedAt<p.deadline&&p.selectedId===q.correctChoiceId&&rec.status==='correct'&&rec.attempts.length===1;
-  if(p.outcome==='INCORRECT'&&(!p.choiceOrder.includes(p.selectedId)||p.selectedId===q.correctChoiceId||p.resolvedAt>=p.deadline||rec.attempts.length!==1))return false;
+  if(p.outcome==='CORRECT')return p.resolvedAt<p.deadline&&p.selectedId===q.correctChoiceId&&rec.status==='correct'&&rec.attempts.length>=1&&rec.attempts.length<=2;
+  if(p.outcome==='INCORRECT'&&(!p.choiceOrder.includes(p.selectedId)||p.selectedId===q.correctChoiceId||p.resolvedAt>=p.deadline||rec.lastChoiceId!==p.selectedId||rec.attempts.length!==(rec.gamePolicy?2:1)))return false;
   return p.phase==='review'&&rec.status==='revealed'&&(p.outcome!=='TIMEOUT'||p.resolvedAt>=p.deadline);
  }
  const api={data,catalog,category,ensure,definition,pending,targets,actionable,enter,start,resolve,expire,selectOption,selectTarget,commit,proceed,leave,combatStart,firstTurn,valid};

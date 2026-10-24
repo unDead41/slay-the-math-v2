@@ -2,6 +2,13 @@
 (function(root,factory){'use strict';if(typeof module==='object'&&module.exports)module.exports=factory(root,require('./learning-sync.js'),require('./learning-google.js'),require('./learning-analytics.js'));else root.DCLearningDelivery=factory(root,root.DCLearningSync,root.DCLearningGoogle,root.DCAnalytics);})(globalThis,function(root,Sync,Google,Analytics){'use strict';
  const DESTINATION_KEY='slay-the-math.learning-destination.v1',BASE=Sync.STORAGE_KEY;
  const clone=value=>JSON.parse(JSON.stringify(value));
+ function feedbackPayload(entry){
+  const {reviewed,...payload}=entry;
+  if(reviewed!==undefined&&typeof reviewed!=='boolean')throw Error('Choose a valid review state.');
+  if(reviewed&&!payload.deleted){if(typeof payload.question!=='string')throw Error('The reviewed question could not be shared.');payload.question='[REVIEWED] '+payload.question;if(payload.question.length>8000)throw Error('The reviewed question is too long to share. Keep a JSON backup.');}
+  return payload;
+ }
+ function collectionInput(input){return input?.kind==='question-feedback'?{...input,payload:feedbackPayload(input.payload)}:input;}
  function createClient(options={}){
   const host=options.host||root,storage=options.storage,known=new Map();let current,transport=null,url='',configError='',started=false,changing=false;
   const defaultURL=options.googleScriptUrl===undefined?(host.DCLearningCollectionConfig?.googleScriptUrl||''):options.googleScriptUrl;
@@ -40,7 +47,8 @@
    current=Sync.createClient({...options,...area,fetch,onchange:changed});
    if(pause||configError)current.setEnabled(false);
   }
-  function status(){const value=current.status();return {...value,...(configError?{enabled:false,state:'save-error',error:configError}:{}),destination:{kind:url?'google-sheets':'local',url}};}
+  function destination(){let supplied='';try{supplied=Google.normalizeURL(defaultURL);}catch{}return {kind:url?'google-sheets':'local',url,canUseDefault:!!supplied&&(!!configError||supplied!==url)};}
+  function status(){const value=current.status();return {...value,...(configError?{enabled:false,state:'save-error',error:configError}:{}),destination:destination()};}
   function apply(value,persist){
    value=Google.normalizeURL(value);collect();changing=true;
    try{
@@ -48,19 +56,20 @@
     // queued data and original configuration intact.
     if(persist){if(!storage)throw Error('The collection link could not be saved on this device.');storage.setItem(DESTINATION_KEY,JSON.stringify({schemaVersion:1,googleScriptUrl:value}));}
     current.setEnabled(false);current.stop();closeTransport();url=value;configError='';make(url,true);
-    const retained=[...known.values()];known.clear();for(const entry of retained)try{const result=current.enqueue({id:entry.id,kind:entry.kind,payload:entry.payload});if(result.entry)remember(result.entry);}catch{}
+    const retained=[...known.values()];known.clear();for(const entry of retained)try{const result=current.enqueue(collectionInput({id:entry.id,kind:entry.kind,payload:entry.payload}));if(result.entry)remember(result.entry);}catch{}
     if(started)current.start();
    }finally{changing=false;}
    changed();return status();
   }
   function storageChanged(event){if(event?.key!==DESTINATION_KEY&&event?.key!==null)return;const previous=configError;configError='';const value=configuration();if(configError){current.setEnabled(false);current.stop();closeTransport();changed();return;}if(value!==url||previous)apply(value,false);}
-  function enqueue(input){const result=current.enqueue(input);if(result.entry)remember(result.entry);return result;}
-  function setEnabled(value){if(value&&configError)throw Error(configError);const result=current.setEnabled(value);if(!value)closeTransport();return {...result,destination:{kind:url?'google-sheets':'local',url}};}
+  function enqueue(input){const result=current.enqueue(collectionInput(input));if(result.entry)remember(result.entry);return result;}
+  function setEnabled(value){if(value&&configError)throw Error(configError);const result=current.setEnabled(value);if(!value)closeTransport();return {...result,destination:destination()};}
   function flush(){return configError?Promise.resolve(status()):current.flush().then(status);}
   function start(){if(!started){started=true;host.addEventListener?.('storage',storageChanged);storageChanged({key:DESTINATION_KEY});if(!configError)current.start();}return status();}
   function stop(){started=false;host.removeEventListener?.('storage',storageChanged);current.stop();closeTransport();return status();}
   url=configuration();make(url,false);
-  return {enqueue,setEnabled,status,flush,start,stop,setDestination:value=>apply(value,true)};
+  function useDefaultDestination(){const value=Google.normalizeURL(defaultURL);if(!value)throw Error('The organiser has not configured a Google collection link for this game.');return apply(value,true);}
+  return {enqueue,setEnabled,status,flush,start,stop,setDestination:value=>apply(value,true),useDefaultDestination};
  }
- return {DESTINATION_KEY,createClient};
+ return {DESTINATION_KEY,createClient,feedbackPayload};
 });

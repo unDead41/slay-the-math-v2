@@ -50,7 +50,7 @@ function boot(values=new Map(),options={}){
    setEnabled(enabled){probe.enabledCalls.push(enabled);probe.status.enabled=enabled;probe.status.state=enabled?'waiting':'on-device';changed?.();},
    status:()=>clone(probe.status),flush:async()=>{changed?.();},start(){probe.starts++;},stop(){probe.stops++;}
   };}};
-  w.DCAnalyticsUI=options.realUI?require('../dist/analytics-ui.js'):{html:({report,status,language})=>'<p data-test-report>'+report.scope+' '+language+'</p><p role="status">'+status.state+' '+status.error+'</p><button data-analytics-action="scope" data-scope="review">Review</button><button data-analytics-action="export" data-exportformat="csv">CSV</button><button data-analytics-action="export" data-exportformat="json">JSON</button><button data-analytics-action="share">Share records</button><button data-analytics-action="sync">Send pending</button>'};
+  w.DCAnalyticsUI=require('../dist/analytics-ui.js');
   w.addEventListener('error',event=>errors.push(event.error?.message||event.message));
  }});
  const w=dom.window,d=w.document;
@@ -103,19 +103,19 @@ test('Practice feedback queues actual changed snapshots and deletion tombstones 
   app.click('feedback-save');assert.equal(app.queued.filter(e=>e.kind==='question-feedback').length,1,'unchanged explicit save does not enqueue an edit');
   app.click('feedback-finish');assert.match(app.d.getElementById('feedback-exit-delivery').textContent,/not been sent automatically|on this device/i);
   app.click('feedback-exit-cancel');assert.equal(app.d.getElementById('feedback-comment').value,comment);assert.equal(app.d.activeElement.id,'feedback-finish');
-  app.d.querySelector('#question-feedback [data-feedback-export="csv"]').click();assert.equal(app.downloads.length,1);assert.match(app.downloads[0].name,/comments.*\.csv$/);
+  assert.equal(app.d.querySelector('[data-feedback-export],[data-feedback-share]'),null);app.d.querySelector('#question-feedback [data-feedback-sharing]').click();assert.equal(app.d.getElementById('practice-analytics-dialog').open,true);app.click('close-practice-analytics');
   app.set('feedback-comment','');const deleted=app.queued.filter(e=>e.kind==='question-feedback').at(-1);assert.equal(deleted.id,saved[0].id);assert.equal(deleted.payload.deleted,true);assert.equal(deleted.payload.questionId,saved[0].payload.questionId);assert.equal(JSON.parse(app.values.get(feedbackKey)).comments.length,0);assert.deepEqual(app.errors,[]);
  }finally{app.dom.window.close();}
 });
 
-test('Practice report is a named native dialog, preserves keyboard focus and exports data while native comment sharing still works',{skip:!JSDOM},async()=>{
- const app=boot(new Map(),{abortShare:true});try{
+test('Practice report is a named native dialog with one JSON backup and shared comment settings',{skip:!JSDOM},async()=>{
+ const app=boot();try{
   app.click('learning-report');const dialog=app.d.getElementById('practice-analytics-dialog');assert.equal(dialog.open,true);assert.equal(dialog.getAttribute('aria-labelledby'),'practice-analytics-title');
-  app.d.querySelector('[data-analytics-action="scope"]').click();assert.match(app.d.querySelector('[data-test-report]').textContent,/review/);
-  app.d.querySelector('[data-analytics-action="export"]').focus();app.changeStatus({state:'offline'});assert.equal(app.d.activeElement.dataset.analyticsAction,'export','transport refresh keeps the current keyboard action');
-  app.d.querySelector('[data-analytics-action="export"]').click();assert.equal(app.downloads.length,1);assert.match(app.downloads[0].name,/learning.*\.csv$/);
+  const source=app.d.querySelector('[data-analytics-scope]');source.value='review';source.dispatchEvent(new app.w.Event('change',{bubbles:true}));assert.equal(app.d.querySelector('[data-analytics-scope]').value,'review');
+  const download=app.d.querySelector('[data-analytics-action="export"]');download.focus();app.changeStatus({state:'offline'});assert.equal(app.d.activeElement.dataset.analyticsAction,'export','transport refresh keeps the current keyboard action');
+  app.d.querySelector('[data-analytics-action="export"]').click();assert.equal(app.downloads.length,1);assert.match(app.downloads[0].name,/learning.*\.json$/);assert.equal(app.d.querySelector('[data-exportformat=csv]'),null);
   dialog.dispatchEvent(new app.w.Event('cancel',{cancelable:true}));assert.equal(dialog.open,false);assert.equal(app.d.activeElement.id,'learning-report');
-  app.set('feedback-comment','Share this exact comment.');app.d.querySelector('#question-feedback [data-feedback-share]').click();await new Promise(resolve=>setImmediate(resolve));assert.equal(app.shares.length,1);assert.match(app.shares[0].files[0].name,/comments/);assert.equal(app.d.getElementById('feedback-comment').value,'Share this exact comment.');assert.match(app.d.getElementById('feedback-status').textContent,/Sharing cancelled/);assert.deepEqual(app.errors,[]);
+  app.set('feedback-comment','Keep this exact comment.');app.d.querySelector('#question-feedback [data-feedback-sharing]').focus();app.d.querySelector('#question-feedback [data-feedback-sharing]').click();assert.equal(app.d.querySelector('[data-analytics-panel=sharing]').hidden,false);assert.equal(app.shares.length,0);assert.equal(app.d.getElementById('feedback-comment').value,'Keep this exact comment.');assert.deepEqual(app.errors,[]);
  }finally{app.dom.window.close();}
 });
 
@@ -134,7 +134,7 @@ test('Practice keeps unreadable original progress/comments and exportable new ob
  try{
   app.click('resume-learning');app.answer(false);app.set('feedback-comment','New feedback remains here.');app.click('learning-report');
   assert.equal(values.get(learningKey),'{broken-learning');assert.equal(values.get(feedbackKey),'{broken-comments');assert.ok([...app.snapshots.values()].some(r=>r.record.attempts.length===1));
-  assert.match(app.d.getElementById('feedback-storage-warning').textContent,/could not be read|could not be saved/);assert.match(app.d.getElementById('practice-analytics-content').textContent,/Export before leaving|could not be saved/);assert.deepEqual(app.errors,[]);
+  assert.match(app.d.getElementById('feedback-storage-warning').textContent,/could not be read|could not be saved/);assert.equal(app.d.querySelector('[data-analytics-delivery-state]').dataset.analyticsDeliveryState,'save-error');assert.deepEqual(app.errors,[]);
  }finally{app.dom.window.close();}
 });
 
@@ -146,7 +146,7 @@ test('Practice permits the real inherited HTTP srcdoc origin while every Dev ifr
 test('Practice preserves a receiver failure as unavailable rather than labelling it a local save failure',{skip:!JSDOM},()=>{
  const app=boot(new Map(),{realUI:true});try{
   app.set('language-select','ms');app.changeStatus({enabled:true,pending:1,state:'unavailable',error:'The receiver is unavailable.'});app.click('learning-report');
-  const state=app.d.querySelector('.analytics-sync-state').textContent;assert.match(state,/Pelayan penerima belum tersedia/);assert.doesNotMatch(state,/Simpanan memerlukan perhatian/);assert.deepEqual(app.errors,[]);
+  const state=app.d.querySelector('.analytics-sync-state').textContent;assert.match(state,/Penghantaran belum berjaya/);assert.doesNotMatch(state,/Simpanan.*memerlukan perhatian/);assert.deepEqual(app.errors,[]);
  }finally{app.dom.window.close();}
 });
 
@@ -156,7 +156,7 @@ test('Practice capture and enqueue exceptions cannot block owner saving or JSON 
   const app=boot(new Map(),{[failure]:true});try{
    app.click('resume-learning');if(!app.values.get(learningKey)){blocked.push(failure);continue;}
    const id=app.question().id;app.answer(false);const saved=app.values.get(learningKey),owner=JSON.parse(saved);assert.equal(owner.records[id].attempts.length,1);assert.equal(app.d.getElementById('question-heading').textContent,id);
-   app.click('learning-report');assert.match(app.d.getElementById('practice-analytics-content').textContent,/export.*before leaving/i);
+   app.click('learning-report');assert.equal(app.d.querySelector('[data-analytics-delivery-state]').dataset.analyticsDeliveryState,'save-error');
    app.d.querySelector('[data-analytics-action="export"][data-exportformat="json"]').click();const exported=JSON.parse(await app.readFile(app.downloads.at(-1)));
    assert.equal(exported.ownerRecovery.schemaVersion,1);assert.equal(exported.ownerRecovery.scope,'practice');assert.deepEqual(exported.ownerRecovery.session,owner);assert.equal(app.values.get(learningKey),saved,'recovery export leaves the owner unchanged');assert.equal(JSON.stringify(exported).includes('"secret"'),false);assert.equal(JSON.stringify(exported).includes('"clientId"'),false);assert.equal(app.queued.some(entry=>entry.payload.ownerRecovery),false);assert.deepEqual(app.errors,[]);
   }finally{app.dom.window.close();}
@@ -195,10 +195,10 @@ test('Generated folio uses real analytics modules for Learning, reopen, explicit
   const report=first.store().report();assert.equal(report.totals.answered,1);assert.equal(report.totals.attempts,2);assert.equal(report.totals.correctWithSupport,1);assert.equal(report.totals.wrongAttempts,1);
   originalSession=first.store().records().find(r=>r.scope==='practice').sessionId;
   first.click('learning-report');assert.equal(first.d.querySelector('[data-analytics-metric="answered"]').textContent,'1');
-  const disclosure=first.d.querySelector('.analytics-disclosure'),exportButton=first.d.querySelector('[data-analytics-action="export"][data-exportformat="csv"]');disclosure.open=true;exportButton.focus();
+  first.d.querySelector('[data-analytics-action=view][data-view=sharing]').click();const disclosure=first.d.querySelector('.analytics-backup'),exportButton=first.d.querySelector('[data-analytics-action="export"][data-exportformat="json"]');disclosure.open=true;exportButton.focus();
   const intro=first.d.querySelector('.analytics-intro'),range=first.d.createRange();range.selectNodeContents(intro);first.w.getSelection().addRange(range);const selectedText=first.w.getSelection().toString();
   first.w.dispatchEvent(new first.w.Event('offline'));assert.equal(first.d.activeElement,exportButton);assert.equal(disclosure.open,true);assert.equal(first.w.getSelection().toString(),selectedText,'asynchronous sharing status preserves report text selection');
-  const before=values.get('slay-the-math.learning-sync.v1');first.d.querySelector('[data-analytics-action="export"][data-exportformat="csv"]').click();first.click('close-practice-analytics');first.set('language-select','ms');
+  const before=values.get('slay-the-math.learning-sync.v1');first.d.querySelector('[data-analytics-action="export"][data-exportformat="json"]').click();first.click('close-practice-analytics');first.set('language-select','ms');
   assert.equal(values.get('slay-the-math.learning-sync.v1'),before,'report/language/export do not create queue revisions');assert.equal(first.requests.length,0);assert.deepEqual(first.errors,[]);
  }finally{first.dom.window.close();}
  const reopened=realBoot(values);try{
@@ -254,10 +254,10 @@ test('Generated inherited-srcdoc folio uses actual consent/flush controls and wa
   app.d.querySelector('[data-analytics-action="share"]').click();app.d.querySelector('[data-analytics-action="sync"]').click();await until(()=>replies.length===1);
   assert.match(app.d.querySelector('.analytics-sync-state').textContent,/Sending/);assert.doesNotMatch(app.d.querySelector('.analytics-sync-state').textContent,/^Receiver confirmed/);
   app.click('close-practice-analytics');app.set('feedback-comment','Newer revision while sending.');app.click('learning-report');
-  replies[0].resolve({acknowledged:replies[0].entries.map(({id,revision})=>({id,revision}))});await until(()=>/Waiting/.test(app.d.querySelector('.analytics-sync-state').textContent));
+  replies[0].resolve({acknowledged:replies[0].entries.map(({id,revision})=>({id,revision}))});await until(()=>app.d.querySelector('[data-analytics-delivery-state]').dataset.analyticsDeliveryState==='waiting');
   assert.equal(app.d.querySelector('[data-analytics-pending]').textContent,'1','old ACK cannot clear the newer edit');
   app.d.querySelector('[data-analytics-action="sync"]').click();await until(()=>replies.length===2);assert.equal(replies[1].entries[0].revision,2);
-  replies[1].resolve({acknowledged:replies[1].entries.map(({id,revision})=>({id,revision}))});await until(()=>/^Receiver confirmed/.test(app.d.querySelector('.analytics-sync-state').textContent));
+  replies[1].resolve({acknowledged:replies[1].entries.map(({id,revision})=>({id,revision}))});await until(()=>app.d.querySelector('[data-analytics-delivery-state]').dataset.analyticsDeliveryState==='received');
   assert.equal(app.d.querySelector('[data-analytics-pending]').textContent,'0');app.click('close-practice-analytics');app.click('feedback-finish');assert.match(app.d.getElementById('feedback-exit-delivery').textContent,/acknowledged/);assert.deepEqual(app.errors,[]);
  }finally{app.dom.window.close();}
 });

@@ -40,7 +40,7 @@ function predictCombat(x,r,profile,seed){
  if(profile==='skip')return;
  const p=x.E.forecast(r),random=createReplay(x).stream(seed,'ai-predict:'+r.battle.turn);
  if(p.exhausted)x.E.completeExhaustedForecast(r);
- else{let count=0;while(!p.solved&&count++<12){const q={...p,...(PROFILES[profile].oracle?{correctChoiceId:x.Q.catalog[p.questionId].correctChoiceId}:{})},a=predictDecision(q,profile,random);x.E.selectForecast(r,a.choiceId);x.E.answerBankForecast(r);if(!PROFILES[profile].retry)break;}}
+ else{let count=0;while(!r.battle.forecastUsed&&!p.solved&&count++<12){const q={...p,...(PROFILES[profile].oracle?{correctChoiceId:x.Q.catalog[p.questionId].correctChoiceId}:{})},a=predictDecision(q,profile,random);x.E.selectForecast(r,a.choiceId);x.E.answerBankForecast(r);if(!PROFILES[profile].retry)break;}}
  x.E.closeForecast(r);
 }
 function combat(x,o,seed,mask,agent){

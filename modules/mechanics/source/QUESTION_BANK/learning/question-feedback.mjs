@@ -23,12 +23,12 @@ function feedbackParse(raw){
    !/^(PROB|SET|LOGIC)-\d{3}$/.test(entry.questionId)||typeof entry.comment!=='string'||entry.comment.length>2000||
    !Array.isArray(entry.categories)||entry.categories.some(id=>!feedbackCategoryIds.has(id))||
    typeof entry.question!=='string'||entry.question.length>8000||typeof entry.topic!=='string'||entry.topic.length>200||
-   !['Easy','Medium','Hard'].includes(entry.difficulty)||!entry.context||!['learn','review'].includes(entry.context.mode)||
+   (entry.reviewed!==undefined&&typeof entry.reviewed!=='boolean')||!['Easy','Medium','Hard'].includes(entry.difficulty)||!entry.context||!['learn','review'].includes(entry.context.mode)||
    !['pending','correct','revealed'].includes(entry.context.status)||
    typeof entry.createdAt!=='string'||!Number.isFinite(Date.parse(entry.createdAt))||
    typeof entry.updatedAt!=='string'||!Number.isFinite(Date.parse(entry.updatedAt)))throw Error('Invalid feedback comment');
   const id=feedbackIdentity(entry.bankVersion,entry.questionId);
-  records.set(id,{...entry,id,categories:[...new Set(entry.categories)]});
+  records.set(id,{...entry,id,reviewed:entry.reviewed===true,categories:[...new Set(entry.categories)]});
  }
  return records;
 }
@@ -49,21 +49,26 @@ export function createQuestionFeedbackStore({storage,bankVersion,questionIds,now
   }catch{error=feedbackWriteError;return false;}
  }
  function get(questionId){const value=records.get(feedbackIdentity(bankVersion,questionId));return value?{...value,categories:value.categories.slice(),context:{...value.context}}:null;}
- function save(question,categories,comment,context={}){
+ function save(question,categories,comment,context={},options={}){
   if(!known.has(question.id))throw Error('Unknown question');
   if(typeof comment!=='string'||comment.length>2000)throw Error('Keep your comment within 2,000 characters.');
   if(!Array.isArray(categories)||categories.some(id=>!feedbackCategoryIds.has(id)))throw Error('Choose a listed feedback category.');
-  const id=feedbackIdentity(bankVersion,question.id),previous=records.get(id),text=comment.trim(),chosen=[...new Set(categories)];
-  if(!text&&!chosen.length){records.delete(id);dirty.set(id,null);flush();return null;}
+  if(options.reviewed!==undefined&&typeof options.reviewed!=='boolean')throw Error('Choose a valid review state.');
+  const id=feedbackIdentity(bankVersion,question.id),previous=records.get(id),text=comment.trim(),chosen=[...new Set(categories)],reviewed=options.reviewed??previous?.reviewed??false;
+  if(!text&&!chosen.length&&!reviewed){records.delete(id);dirty.set(id,null);flush();return null;}
   const timestamp=now(),entry={id,questionId:question.id,bankVersion,topic:question.topic||question.topicCode,difficulty:question.difficulty,
    question:question.prompt||question.themedRichText?.prompt?.map(s=>s.text||'').join('')||'',
-   categories:chosen,comment:text,createdAt:previous?.createdAt||timestamp,updatedAt:timestamp,
+   categories:chosen,comment:text,reviewed,createdAt:previous?.createdAt||timestamp,updatedAt:timestamp,
    context:{mode:context.mode==='learn'?'learn':'review',language:context.language==='ms'?'ms':'en',status:['correct','revealed'].includes(context.status)?context.status:'pending',
     hintUsed:!!context.hintUsed,moreHintViewed:!!context.moreHintViewed,stepsViewed:!!context.stepsViewed}};
   records.set(id,entry);dirty.set(id,entry);flush();return get(question.id);
  }
+ function setReviewed(question,value,context){
+  if(typeof value!=='boolean')throw Error('Choose a valid review state.');
+  flush();const previous=get(question.id);return save(question,previous?.categories||[],previous?.comment||'',context??previous?.context??{},{reviewed:value});
+ }
  function exportData(){flush();return {schemaVersion:1,game:'Slay the Math',purpose:'Question improvements',exportedAt:now(),comments:list()};}
- return {get,list,save,flush,exportData,get error(){return error;}};
+ return {get,list,save,setReviewed,flush,exportData,get error(){return error;}};
 }
 export function questionFeedbackCSV(report){
  const labels=new Map(QUESTION_FEEDBACK_CATEGORIES.map(c=>[c.id,c.label]));

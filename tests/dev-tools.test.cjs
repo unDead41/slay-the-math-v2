@@ -30,7 +30,7 @@ test('player server denies direct developer routes',async t=>{
  const {spawn}=require('node:child_process'),path=require('node:path');
  const server=spawn(process.execPath,[path.resolve(__dirname,'../server.cjs')],{env:{...process.env,PORT:'0'},stdio:['ignore','pipe','pipe']});t.after(()=>server.kill());
  const port=await new Promise((ok,no)=>{let text='';server.stdout.on('data',chunk=>{text+=chunk;const match=text.match(/Game: http:\/\/localhost:(\d+)/);if(match)ok(match[1]);});server.once('error',no);server.stderr.once('data',x=>no(Error(String(x))));});
- for(const route of ['/__dev/','/__dev/app.js','/__dev/sandbox/','/tools/dev/hub.js'])assert.equal((await fetch('http://127.0.0.1:'+port+route)).status,404);
+ for(const route of ['/__dev/','/__dev/app.js','/__dev/sandbox/','/tools/dev/hub.js','/__dev/collection.js','/__dev/education-collection'])assert.equal((await fetch('http://127.0.0.1:'+port+route)).status,404);
  const html=await (await fetch('http://127.0.0.1:'+port)).text();assert.doesNotMatch(html,/__dev/);
 });
 

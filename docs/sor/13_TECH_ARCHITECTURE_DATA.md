@@ -218,3 +218,25 @@ The optional Node22.13+ wrapper serves dist and authenticated same-origin SQLite
 `learning-delivery.js` wraps the unchanged revisioned outbox. A normalized Google /exec destination uses a SHA-256 storage namespace, distinct capability/consent/receipts and fresh paused consent on switches. The original local receiver uses its original key. Invalid stored configuration remains untouched and blocks sending until repaired; healthy inputs/deletion tombstones are carried to an explicitly selected destination. Pagehide closes owned transport; persisted pageshow restarts it.
 
 `learning-google.js` lazily establishes a nonce/origin-checked MessageChannel to the nested HtmlService frame. Capabilities travel only through its port/RPC, never iframe URLs, site config or exports. The generated Apps Script bundles the unchanged canonical owner/validator and slim metadata for all 120 IDs. ScriptLock and prevalidation precede canonical/projection writes; exact ACK follows flush. Partial service writes are repaired by identical replay, including older incoming revisions when a newer canonical row exists. Google quotas/limits can delay receipt; offline/local exports remain available. No live account/deployment is created. [Setup and limits](../GOOGLE_SHEETS_SETUP.md).
+
+## Practice review marks — 2.31.0-report.2 preview
+
+The existing question-feedback owner adds an optional boolean reviewed. Old records default false; malformed supplied flags preserve the unreadable original. A checkbox updates this owner without creating answers, rewards or learning exposure; stale-tab marking first merges the latest stored comment. Unticking preserves comments/categories; an otherwise empty entry follows the established tombstone flow. Canonical game/session/analytics/sync schemas remain unchanged.
+
+For strict existing receivers, DCLearningDelivery.feedbackPayload omits the local reviewed field and adds `[REVIEWED] ` to the outbound Question string when checked. The original local question and the full 2000-character user comment remain intact. The helper rejects an oversized outbound question rather than truncating it. No receiver schema/category, credential, consent, ACK namespace or Google deployment changes. JSON recovery retains the local flag. See docs/education/PRACTICE_WORKSPACE.md.
+
+
+## In-game question workspace — 24 October 2026
+
+A versioned GAME_POLICY_APPLIED event opts gameplay records into two-attempts-v1. The canonical session reducer owns limits, first-wrong availability and failed reveal; ordered old events remain unchanged. Upgrade only pending active bank consumers, appending the policy after real events. Old completed records/Practice replay identically. New failed Artifact receipts pair with declined source records, and Predict has optional failure counters. New saves are forward extensions and are not readable by older reducers. Regenerate the Google receiver from this owner; an existing deployment must be updated before accepting new policy records. [Migration and deployment](../education/GAME_QUESTIONS.md).
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

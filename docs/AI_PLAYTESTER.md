@@ -99,3 +99,11 @@ Batch sumber akhir: **9 campaign + 60 selected-pair encounters**, semuanya termi
 ## Pengesahan integrasi main
 
 Gabungan dengan main 2.32.1 lulus **820/820** full tests (tiada skip), syntax, AI browser dan Developer Hub/toggle. Build produksi pada export sumber sama lulus: 823 fail dilindungi kekal, 706 fail public sepadan dengan dist, offline tidak mengandungi AI dan semua AI GET/POST 404. [Bukti integrasi semasa](verification/ai-main-2026-10-24.json). Angka 814/814 di atas kekal hasil branch ai terdahulu.
+
+
+## Question-policy integration — 2.36.0
+
+Feedback now honours the live two-answer game policy and closes a failed Predict
+without a third submission. Campaign event choices exclude tried answers. These
+are compatibility updates, not changes to agent search, card valuation, synergy
+weights or pupil models. Prior numerical reports retain their recorded sources.

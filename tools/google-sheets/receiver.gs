@@ -21,8 +21,18 @@ function stmWrite_(sheet,row,values){
  sheet.getRange(row,1,1,values.length).setNumberFormat('@').setValues([values.map(stmSafeCell_)]);
 }
 function stmBook_(){const id=PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID');if(!id)throw Error('Run owner setup first.');return SpreadsheetApp.openById(id);}
-/* Run this private owner function ONCE in the Apps Script editor and authorize it.
-   Re-running it reuses the same Sheet. It cannot be invoked by google.script.run. */
+/* Select setupCollector in the editor dropdown and click Run once.
+   Keep both function names unchanged before and after deployment. */
+function setupCollector(){
+ const activeEmail=Session.getActiveUser().getEmail();
+ const effectiveEmail=Session.getEffectiveUser().getEmail();
+ if(!activeEmail||!effectiveEmail||activeEmail!==effectiveEmail){
+  throw Error('Owner setup only. Run setupCollector in the Apps Script editor using the Google account that owns this project.');
+ }
+ setupCollector_();
+}
+/* Private implementation: re-running setup reuses the same Sheet.
+   This function cannot be invoked by google.script.run. */
 function setupCollector_(){
  const lock=LockService.getScriptLock();if(!lock.tryLock(10000))throw Error('Collector is busy; retry setup.');
  try{const props=PropertiesService.getScriptProperties(),id=props.getProperty('SPREADSHEET_ID'),book=id?SpreadsheetApp.openById(id):SpreadsheetApp.create('Slay the Math — Learning & Comments');

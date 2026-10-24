@@ -27,19 +27,52 @@
     return '<article><strong>'+esc(ref.title)+'</strong><p>'+esc(s.section)+' · PDF pages '+esc(s.pdfPages.join(', '))+' · Printed pages '+esc(s.printedPages)+'</p>'+(closed?'<p>'+esc(s.basis)+'</p>':'')+'</article>';
    }).join('')+(closed?'<p>'+esc(h.alignmentNote)+'</p>':'<p>Authoring notes appear after the question is finished.</p>')+'</details>';
  }
- function supportHTML(q,record,view,{esc,kind='education',singleAttempt=false}){
+ function supportHTML(q,record,view,{esc,kind='education',singleAttempt=false,omitHints=false,omitSolution=false}){
   const hint=record.hintState;
-  const rule=view.closed?'This question is finished. You can review the solution below.':singleAttempt?'One answer only. Use Hint before answering. More Hint is available in the final review.':hint.moreHintUnlocked?'More Hint is ready. Open it for a more specific next step.':hint.hintUsed?'Hint is open. A wrong answer submitted now unlocks More Hint.':'Open Hint first. A wrong answer after that unlocks More Hint.';
+  const game=record.gamePolicy===M.session.GAME_QUESTION_POLICY;
+  const rule=view.closed?'This question is finished. Review the solution in Result.':game?(hint.moreHintUnlocked?'Hint and More Hint are ready. Open either before your last attempt.':'Hint is available now. More Hint unlocks after your first incorrect answer.'):singleAttempt?'One answer only. Use Hint before answering. More Hint is available in the final review.':hint.moreHintUnlocked?'More Hint is ready. Open it for a more specific next step.':hint.hintUsed?'Hint is open. A wrong answer submitted now unlocks More Hint.':'Open Hint first. A wrong answer after that unlocks More Hint.';
   const steps=q.hintSteps.map(step=>'<div><h4>'+(step.id==='concept'?'Understand':'Try')+'</h4><p data-q-rich="hint:'+step.id+'">'+esc(step.text)+'</p></div>').join('');
-  return '<section class="question-guidance" aria-label="Question guidance"><h2>Work through the idea</h2><p class="question-hint-rule">'+esc(rule)+'</p>'+
-   (hint.hintUsed?'<section id="'+kind+'-hint" class="education-hint" tabindex="-1"><h3>Hint</h3>'+steps+'<figure class="learning-visual" data-q-visual="hint" aria-label="Hint visual"></figure></section>':'')+
-   (hint.moreHintViewed?'<section id="'+kind+'-more-hint" class="education-hint" tabindex="-1"><h3>More Hint</h3><p data-q-rich="moreHint">'+esc(q.moreHint)+'</p><figure class="learning-visual" data-q-visual="hint" aria-label="More Hint visual"></figure></section>':'')+
-   (view.closed?'<details class="question-solution-visual"><summary>Solution visual</summary><figure class="learning-visual" data-q-visual="solution" aria-label="Solution visual"></figure></details>':'')+
-   (view.workedSteps?'<section id="'+kind+'-steps" class="education-hint" tabindex="-1"><h2>Worked solution</h2><ol>'+view.workedSteps.map(step=>'<li><strong>'+esc(step.label)+'</strong><div data-q-rich="step:'+step.id+'">'+esc(step.text)+'</div></li>').join('')+'</ol></section>':'')+'</section>';
+  return '<section class="question-guidance" aria-label="Question guidance">'+(!omitHints?'<h2>Work through the idea</h2><p class="question-hint-rule">'+esc(rule)+'</p>':'')+
+   (!omitHints&&hint.hintUsed?'<section id="'+kind+'-hint" class="education-hint" tabindex="-1"><h3>Hint</h3>'+steps+'<figure class="learning-visual" data-q-visual="hint" aria-label="Hint visual"></figure></section>':'')+
+   (!omitHints&&hint.moreHintViewed?'<section id="'+kind+'-more-hint" class="education-hint" tabindex="-1"><h3>More Hint</h3><p data-q-rich="moreHint">'+esc(q.moreHint)+'</p><figure class="learning-visual" data-q-visual="hint" aria-label="More Hint visual"></figure></section>':'')+
+   (!omitSolution&&view.closed?'<details class="question-solution-visual"><summary>Solution visual</summary><figure class="learning-visual" data-q-visual="solution" aria-label="Solution visual"></figure></details>':'')+
+   (!omitSolution&&view.workedSteps?'<section id="'+kind+'-steps" class="education-hint" tabindex="-1"><h2>Worked solution</h2><ol>'+view.workedSteps.map(step=>'<li><strong>'+esc(step.label)+'</strong><div data-q-rich="step:'+step.id+'">'+esc(step.text)+'</div></li>').join('')+'</ol></section>':'')+'</section>';
  }
+ // Presentation state only: switching tabs never submits, restarts a timer or uses help.
+ const questionTabs=new Map();
+ function workspaceHTML(q,record,view,{esc,kind,key,question,checkAction='',helpActions='',result='',continueAction='',stepsAction='',basicsAction='',note='',immediate=false}){
+  const word=(en,ms)=>L.language()==='ms'?ms:en,closed=view.closed,n=record.attempts.length,old=questionTabs.get(key);
+  const helpSignature=record.hintState.hintUsed+':'+record.hintState.moreHintViewed;
+  let tab=old?.tab||'question';
+  if(closed&&(!old||old.status==='pending'))tab='result';
+  else if(!closed&&old&&old.attempts!==n)tab='question';
+  else if(!closed&&old&&old.helpSignature!==helpSignature)tab='help';
+  if(tab==='result'&&!closed)tab='question';
+  questionTabs.set(key,{tab,attempts:n,status:record.status,helpSignature});
+  const goHelp='<button type="button" class="btn subtle" data-question-tab-target="help">'+word('Open Help','Buka Bantuan')+'</button>';
+  const failed=M.session.attemptsExhausted(record),instruction=closed?word('Review the answer, then continue.','Semak jawapan, kemudian teruskan.'):n?word('One attempt left. Hint and More Hint are ready. Open Help before trying again.','Tinggal satu cubaan. Petunjuk dan Petunjuk Lanjut sedia dibuka. Buka Bantuan sebelum cuba lagi.'):immediate?word('Read the question, then select an answer to submit. Open Help if needed.','Baca soalan, kemudian pilih jawapan untuk menghantarnya. Buka Bantuan jika perlu.'):word('Read the question, choose an answer and check it. Help is available if you need it.','Baca soalan, pilih jawapan dan semak. Buka Bantuan jika perlu.');
+  const tabs=[['question',word('Question','Soalan')],['help',word('Help','Bantuan')],['result',word('Result','Keputusan')]];
+  const panel=(name,html)=>'<section id="'+kind+'-panel-'+name+'" role="tabpanel" aria-labelledby="'+kind+'-tab-'+name+'" data-question-panel="'+name+'" tabindex="0" '+(tab===name?'':'hidden')+'>'+html+'</section>';
+  return '<div class="game-question-workspace" data-question-workspace="'+esc(key)+'" data-question-kind="'+kind+'">'+
+   '<div class="question-flow"><strong>'+word('Your next step','Langkah seterusnya')+'</strong><span class="question-attempts">'+(closed?word('Finished','Selesai'):word('Attempt '+(n+1)+' of 2','Cubaan '+(n+1)+' daripada 2'))+'</span><p>'+instruction+'</p></div>'+
+   '<div class="question-tabs" role="tablist" aria-label="'+word('Question steps','Langkah soalan')+'">'+tabs.map(([name,label],i)=>'<button type="button" role="tab" id="'+kind+'-tab-'+name+'" data-question-tab="'+name+'" aria-controls="'+kind+'-panel-'+name+'" aria-selected="'+(tab===name)+'" tabindex="'+(tab===name?0:-1)+'" '+(name==='result'&&!closed?'disabled':'')+'><span class="question-tab-number">'+(i+1)+'</span>'+label+(name==='help'&&n&&!closed?'<small>'+word('Ready','Sedia')+'</small>':'')+'</button>').join('')+'</div>'+
+   panel('question',(n&&!closed?'<div id="'+kind+'-feedback" class="question-retry-callout education-feedback" role="status" tabindex="-1"><strong>'+word('Not quite — try once more.','Belum tepat — cuba sekali lagi.')+'</strong><p>'+instruction+'</p>'+goHelp+'</div>':'')+question+'<div class="question-next-actions">'+(closed?'<button type="button" class="btn primary" data-question-tab-target="result">'+word('View Result','Lihat Keputusan')+'</button>':checkAction+(!n?goHelp:''))+'</div>')+
+   panel('help','<h2>'+word('Choose the support you need','Pilih bantuan yang diperlukan')+'</h2><p>'+word('Opening help does not spend an answer attempt.','Membuka bantuan tidak menggunakan cubaan menjawab.')+'</p><div class="education-actions">'+helpActions+basicsAction+'</div>'+supportHTML(q,record,view,{esc,kind,omitSolution:true})+(!closed?'<button type="button" class="btn primary" data-question-tab-target="question">'+word('Back to Question','Kembali ke Soalan')+'</button>':''))+
+   panel('result',closed?'<div class="question-result-state '+(failed?'failed':'')+'">'+(failed?'<strong>'+word('No attempts left. Answers are locked.','Tiada cubaan berbaki. Jawapan telah dikunci.')+'</strong>':'')+'</div>'+result+'<div class="education-actions">'+continueAction+stepsAction+'</div>'+supportHTML(q,record,view,{esc,kind,omitHints:true}):'<p>'+word('Finish the question to see the result.','Selesaikan soalan untuk melihat keputusan.')+'</p>')+
+   (note?'<p class="education-note">'+note+'</p>':'')+'</div>';
+ }
+ function activateQuestionTab(workspace,name,{focus=true}={}){
+  const target=workspace.querySelector('[data-question-tab="'+name+'"]');if(!target||target.disabled)return;
+  for(const t of workspace.querySelectorAll('[data-question-tab]')){t.setAttribute('aria-selected',String(t===target));t.tabIndex=t===target?0:-1;}
+  for(const panel of workspace.querySelectorAll('[data-question-panel]'))panel.hidden=panel.dataset.questionPanel!==name;
+  const state=questionTabs.get(workspace.dataset.questionWorkspace);if(state)state.tab=name;
+  if(focus)target.focus({preventScroll:true});
+ }
+ document.addEventListener('click',event=>{const button=event.target.closest('[data-question-tab],[data-question-tab-target]'),workspace=button?.closest('[data-question-workspace]');if(workspace&&!button.disabled)activateQuestionTab(workspace,button.dataset.questionTab||button.dataset.questionTabTarget);});
+ document.addEventListener('keydown',event=>{const button=event.target.closest('[data-question-tab]'),workspace=button?.closest('[data-question-workspace]');if(!workspace||!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;const tabs=[...workspace.querySelectorAll('[data-question-tab]')].filter(t=>!t.disabled),index=tabs.indexOf(button),next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;event.preventDefault();activateQuestionTab(workspace,tabs[next].dataset.questionTab);});
  function hydrateQuestion(host,q,view){
   disposeQuestion();if(!host||!q||!view)return;host.setAttribute('data-stm-richtext','');host.dataset.theme='dark';host.lang=L.language();
-  const existing=host.querySelector('#question-language-select');if(!existing)host.insertAdjacentHTML('afterbegin',L.control()+'<div class="question-term-legend" role="note" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div>');
+  const existing=host.querySelector('#question-language-select');if(!existing)host.insertAdjacentHTML('afterbegin','<div hidden>'+L.control()+'</div><div class="question-term-legend" role="note" aria-label="Rich text categories"><span data-key="math">Math term</span><span data-key="game">Game term</span><span data-key="calculation">Calculation</span></div>');
   const index=new Map();
   for(const el of host.querySelectorAll('[data-q-rich]')){
    const key=el.dataset.qRich;let parts;
@@ -120,5 +153,5 @@
  }
  function coverageHTML(run,lifetime=[]){const c=Q.coverage(run,lifetime);return '<div class="question-coverage" aria-label="Questions seen"><span data-question-coverage="run"><span>This run</span>: '+c.run+' / '+c.total+'</span><span data-question-coverage="lifetime"><span>Lifetime</span>: '+c.lifetime+' / '+c.total+'</span></div>';}
  function progressHTML(run,{esc,lifetime=[]}){const rows=Q.progress(run);return coverageHTML(run,lifetime)+'<p>Unique questions opened. This run resets with New Run. Lifetime is kept on this browser.</p><p>Practice evidence from the Master’s trials. Fewer than 3 completed items is “Building evidence”; these local records are not a mastery certificate.</p><div class="learning-progress">'+rows.map(p=>'<article><h3>'+esc(p.label)+'</h3><p>'+p.completed+' / '+p.totalQuestions+' completed · '+esc(p.status)+'</p><dl><div><dt>Independent first try</dt><dd>'+p.independentFirstTry+'</dd></div><div><dt>With support</dt><dd>'+p.correctWithSupport+'</dd></div><div><dt>After retry</dt><dd>'+p.correctAfterRetry+'</dd></div></dl></article>').join('')+'</div>';}
- root.STMMechanicsHost={coverageHTML,teachingHTML,supportHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
+ root.STMMechanicsHost={workspaceHTML,coverageHTML,teachingHTML,supportHTML,hydrateEducation,hydrateQuestion,disposeQuestion,disposeDialog,syncArtifacts,mountCodex,comparison,basicsHTML,hydrateBasics,progressHTML,get tracker(){return tracker;}};
 })(window);

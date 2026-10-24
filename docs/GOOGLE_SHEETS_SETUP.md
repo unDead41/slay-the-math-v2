@@ -1,6 +1,16 @@
 # Google Sheets — Slay the Math
 
-Main **2.30.0** menggabungkan branch Google Sheets `a535a04` dengan main **2.29.0 / 8b6a3c6**, termasuk pembetulan satu musuh dan kesan status Alyssa. Kod telah disediakan untuk penerbitan main; akaun Google, Sheet dan deployment Apps Script masih perlu disediakan pemilik sekali sahaja. Laporan latihan terus berfungsi tanpa sambungan Google. [Rekod integrasi](GOOGLE_SHEETS_MAIN_2_30_0.md).
+Keluaran main **2.36.0** menggabungkan Learning Report, tick/komen Practice dan polisi dua cubaan dalam game. Akaun Google, Sheet dan deployment Apps Script disediakan pemilik sekali sahaja; laporan terus berfungsi tanpa Google. [Panduan keluaran main](education/MAIN_2_36_0.md).
+
+## Kemas kini penerima sedia ada untuk 2.36.0
+
+Perubahan soalan **dalam game** kini mempunyai event polisi dua cubaan. Gantikan
+Code.gs dalam projek Apps Script yang sama dengan fail repo terkini, kekalkan
+STM_ALLOWED_GAME_ORIGINS sebenar, kemudian **Deploy → Manage deployments → Edit →
+New version → Deploy**. Kekalkan deployment dan URL /exec yang sama; Sheet dan
+Script Properties sedia ada tidak perlu dibina semula. Penerima lama boleh menolak
+rekod polisi baharu; rekod belum disahkan kekal dalam giliran. [Panduan perubahan
+soalan dan langkah terperinci](education/GAME_QUESTIONS.md).
 
 ## Apa yang anda dapat
 
@@ -17,8 +27,10 @@ Hentikan server game lama dengan **Ctrl+C**. Dalam PowerShell di folder projek:
 & {
     Set-Location "C:\Users\ijmah\Desktop\slay-the-math-v2" -ErrorAction Stop
     git status -sb
-    git stash push -m "backup-before-google-sheets-main"
+    git stash push -m "backup-before-education-main-2.36"
     if ($LASTEXITCODE -ne 0) { throw "Backup perubahan gagal." }
+    git fetch origin
+    if ($LASTEXITCODE -ne 0) { throw "Fetch gagal." }
     git switch main
     if ($LASTEXITCODE -ne 0) { throw "Gagal tukar ke main." }
     git pull --ff-only origin main
@@ -27,47 +39,55 @@ Hentikan server game lama dengan **Ctrl+C**. Dalam PowerShell di folder projek:
 }
 ```
 
-Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` tanpa menyemak perubahan itu terlebih dahulu. Buka **http://localhost:4173**. Terminal dan menu perlu memaparkan **v2.30.0** atau versi main yang lebih baharu. Jika port digunakan, hentikan proses server lama dahulu. Google collection menggunakan `npm start` biasa; `start:analytics` hanya diperlukan bagi pilihan SQLite yang lama.
+Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` tanpa menyemak perubahan itu terlebih dahulu. Buka **http://localhost:4173**. Terminal dan menu perlu memaparkan **v2.36.0**. Jika port digunakan, hentikan proses server lama dahulu. Google collection menggunakan `npm start` biasa; `start:analytics` hanya diperlukan bagi pilihan SQLite yang lama.
 
 ## 2. Cipta penerima Google sekali sahaja
 
 1. Buka [Google Apps Script](https://script.google.com/) menggunakan akaun Google yang akan memiliki data. Pilih **New project**.
 2. Buka fail repo **integrations/google-sheets/Code.gs**. Salin **seluruh fail** ke `Code.gs` dalam editor Apps Script, menggantikan kod contoh. Simpan projek sebagai `Slay the Math Collection`.
 3. Di bahagian atas fail terdapat `STM_ALLOWED_GAME_ORIGINS`. `http://localhost:4173` dan `http://127.0.0.1:4173` sudah disediakan. Jika game dihoskan, tambah origin tepat, misalnya `https://game-sekolah.example` — tanpa path atau slash terakhir. Domain contoh ini perlu diganti dengan domain sebenar anda.
-4. Pilih fungsi **setupCollector_** dalam dropdown editor, kemudian **Run**. Benarkan kebenaran Google yang diperlukan untuk mencipta dan mengubah Spreadsheet. Semak kod dan projek milik anda sebelum meneruskan paparan kebenaran Google.
-5. Buka **Execution log**. Pautan `Open your private collection Sheet: …` membawa ke Google Sheet baharu dalam Drive anda. Menjalankan setup sekali lagi akan menggunakan Sheet yang sama.
+4. Pilih fungsi **setupCollector** (tanpa `_`) dalam dropdown editor, kemudian **Run**. Benarkan kebenaran Google yang diperlukan untuk mencipta dan mengubah Spreadsheet. Semak kod dan projek milik anda sebelum meneruskan paparan kebenaran Google.
+5. Buka **Execution log**. Pautan `Open your private collection Sheet: …` membawa ke Google Sheet baharu dalam Drive anda. Menjalankan setup sekali lagi akan menggunakan Sheet yang sama. Kekalkan kedua-dua fungsi `setupCollector` dan `setupCollector_` seperti dalam fail; tidak perlu menukar nama sebelum/selepas Run. Fungsi boleh dipilih itu menyemak akaun aktif berbanding akaun yang menjalankan skrip sebelum memanggil implementation private. Kebenaran identiti akaun hanya digunakan bagi semakan setup pemilik.
 6. Pilih **Deploy → New deployment → Web app**. Tetapkan **Execute as: Me** dan akses **Anyone** supaya pemain tidak perlu login. Pilihan akses bergantung pada dasar akaun/organisasi; jika `Anyone` tanpa login tidak dibenarkan, pentadbir perlu membenarkannya atau gunakan eksport manual/SQLite dahulu. Jangan anggap deployment yang meminta login pemain sudah sedia untuk aliran ini.
 7. Klik **Deploy** dan salin **Web app URL** berakhir dengan `/exec`. Jangan gunakan pautan Spreadsheet, Drive, editor atau `/dev`.
 
 Google Sheet sendiri kekal private. Pemain berhubung dengan skrip penerima, bukannya memperoleh akses membaca keseluruhan Sheet. Jangan jadikan Sheet awam untuk mengaktifkan game. Tiada token OAuth, kata laluan Google atau Sheet ID perlu dimasukkan ke game/Git.
 
-## 3. Sambungkan dalam game
+## 3. Tetapkan sambungan sebagai developer
 
-1. **Main Menu → Learning Report → Collection link / Pautan pengumpulan**.
-2. Tampal pautan `/exec`, kemudian **Use Google Sheets / Gunakan Google Sheets**.
-3. Semak destinasi yang dipaparkan. Tekan **Enable sharing / Aktifkan perkongsian**. Menyimpan pautan sahaja belum menghantar data.
-4. Jawab soalan atau hantar komen dalam Education Practice. **Pending** hanya berkurang selepas Google mengesahkan simpanan lengkap.
-5. Buka Sheet melalui Drive anda. Tab **Learning** mengandungi rekod pembelajaran; **Comments** mengandungi komen. Muat turun daripada Google Sheets melalui **File → Download** jika mahu CSV/Excel.
+Gunakan semula pautan `/exec` yang telah dideploy. Protokol penerimaan tidak berubah oleh pembetulan layout ini.
 
-Pautan disimpan pada browser dan origin game itu. Gunakan alamat yang sama setiap kali: `localhost` dan `127.0.0.1`, port berlainan, profil browser dan komputer lain mempunyai simpanan berasingan. Mod developer dan fail HTML `file://` tidak menghantar; jalankan game melalui HTTP untuk collection.
+1. Hentikan server game dengan **Ctrl+C**, kemudian jalankan `npm.cmd start dev`.
+2. Buka **http://localhost:4174**. Tekan **Dev: OFF** untuk mengaktifkannya, kemudian **Open Developer Hub**.
+3. Dalam Hub, pilih **Education collection**. Tampal pautan Google Apps Script `/exec` dan tekan **Save Google Sheets connection**.
+4. Tetapan disimpan dalam `dist/learning-collection-config.js` untuk projek ini. Sandbox developer tetap tidak menghantar data atau membaca simpanan pemain.
+5. Hentikan server developer dan jalankan `npm.cmd start`. Buka **http://localhost:4173**.
+6. Dalam game, buka **Learning Report → Sharing / Perkongsian**. Tekan **Enable sharing / Aktifkan perkongsian** jika mahu menghantar data.
+7. Jawab satu soalan dan simpan satu komen. Semak **Waiting to send / Menunggu penghantaran**, kemudian tab **Learning** dan **Comments** dalam Sheet pemilik.
 
-## Untuk semua pemain tanpa tampal pautan seorang demi seorang
+Hanya developer mengubah pautan melalui Hub. Pemain melihat persetujuan, status penghantaran dan sandaran JSON dalam bahagian tertutup. Kawalan CSV/import CSV dan perkongsian fail komen yang bertindih telah dikeluarkan daripada flow pemain. Import/Export Save permainan kekal berasingan.
 
-Tetapkan `googleScriptUrl` dalam **dist/learning-collection-config.js** kepada URL `/exec` anda, kemudian bina/hoskan versi game tersebut. Contoh:
+Alamat penerima Google ialah konfigurasi awam yang diperlukan browser; menyembunyikan input tidak menjadikannya rahsia. Google Sheet tidak perlu dijadikan public. Developer Hub mengubah konfigurasi hanya melalui sambungan localhost pada komputer itu dan origin yang sama; mod pemain/production tidak menyediakan endpoint ini.
 
-```js
-globalThis.DCLearningCollectionConfig={
-  googleScriptUrl:'https://script.google.com/macros/s/ID_DEPLOYMENT_ANDA/exec'
-};
-```
+Pilihan destinasi yang pernah disimpan dalam browser dikekalkan bersama jurnal/consent/receipt asalnya. Jika destinasi berbeza daripada default Google projek, pemain boleh menekan **Use the organiser’s current connection / Gunakan sambungan semasa pengendali**. Pertukaran ini menjeda perkongsian dan memerlukan persetujuan semula; ia tidak memindahkan pengesahan penghantaran daripada destinasi lama.
 
-Ini URL destinasi awam, bukan rahsia Google. Browser baharu menggunakan tetapan ini. Pilihan yang pernah disimpan pemain mengatasinya; pemain masih perlu mengaktifkan perkongsian. Operator hanya perlu menyebarkan game yang telah ditetapkan ini, bukannya akses editor Apps Script atau Sheet.
+## Untuk semua pemain
+
+Selepas menyimpan pautan dalam Developer Hub, jalankan **`npm.cmd run build:prod`** dan sebarkan/hoskan hasil `release-prod` yang baharu. Browser baharu menggunakan tetapan projek, manakala pilihan browser terdahulu kekal sehingga pengguna memilih untuk menukarnya. Pemain masih perlu mengaktifkan perkongsian. Jangan sebarkan akses editor Apps Script atau private Sheet.
+
+Untuk game yang dihoskan, tambah origin game sebenar pada `STM_ALLOWED_GAME_ORIGINS` dalam Apps Script dan kemas kini deployment. Contohnya, jika menggunakan laman repo `https://undead41.github.io/slay-the-math-v2/`, origin ialah `https://undead41.github.io` tanpa path. Ini contoh konfigurasi, bukan pengesahan bahawa hosting itu telah berjaya.
 
 ## Apabila tiada Wi-Fi
 
-Rekod disimpan pada peranti. Apabila internet pulih **dan game masih dibuka**, penghantaran dicuba semula secara terhad. Jika game ditutup semasa offline, buka semula **alamat dan browser yang sama** selepas internet pulih. Anda juga boleh menekan **Send pending records**. Tiada penghantaran latar belakang apabila browser ditutup.
+Rekod disimpan pada peranti. Apabila internet pulih **dan game masih dibuka**, penghantaran dicuba semula secara terhad. Jika game ditutup semasa offline, buka semula **alamat dan browser yang sama** selepas internet pulih. Anda juga boleh menekan **Try sending now / Cuba hantar sekarang**. Tiada penghantaran latar belakang apabila browser ditutup.
 
 Jangan clear site data sebelum penerimaan disahkan atau sebelum mengeksport salinan. Selepas kegagalan berulang, gunakan butang hantar semula, sambung semula internet atau buka semula game. Respons hilang selepas Google menyimpan tidak menggandakan baris; revision yang sama dipadankan semula. Komen yang diedit dikemas kini dan pemadaman dihantar sebagai penanda pemadaman apabila perkongsian diaktifkan.
+
+## Tick dan komen dalam Education Practice
+
+Dalam branch ini, tick bermaksud **Sudah disemak**, berasingan daripada betul/salah. Komen boleh ditulis tanpa tick. Pilih tab **Maklum balas** pada soalan; semua perubahan disimpan secara automatik pada peranti. Tapisan **Belum disemak / Sudah disemak / Ada maklum balas** membantu menyambung semakan.
+
+Apabila perkongsian diaktifkan, tick dan komen menggunakan penerima Google yang sama. Dalam tab **Comments**, medan **Question** bermula dengan `[REVIEWED] ` jika soalan ditick; medan **Comment** mengekalkan teks asal, termasuk had 2000 aksara. Untick mengekalkan komen/kategori dan mengemas kini baris sama. Jika tiada tick, komen atau kategori lagi, penanda pemadaman sedia ada digunakan. Perubahan tick/komen Practice sendiri tidak memerlukan lajur atau protokol baharu. Untuk pakej report.3 keseluruhan, kemas kini deployment seperti di atas kerana polisi soalan dalam game turut berubah; URL `/exec` yang sama boleh dikekalkan.
 
 ## Cara membaca Sheet
 
@@ -102,4 +122,4 @@ Kod, protokol, simpanan terputus/cuba semula dan iframe Google bersarang diuji d
 
 Rujukan pelaksanaan rasmi: [Web apps dan deployment](https://developers.google.com/apps-script/guides/web), [HtmlService server communication](https://developers.google.com/apps-script/guides/html/communication), [iframe restrictions](https://developers.google.com/apps-script/guides/html/restrictions), [frame options](https://developers.google.com/apps-script/reference/html/x-frame-options-mode), [LockService](https://developers.google.com/apps-script/reference/lock/lock-service). Build penerima daripada sumber: `npm run build:google-sheets`.
 
-Pratonton asal `education-google-sheets` kekal dalam sejarah pada `a535a04` / 2.28.0-sheets.1. Main 2.30.0 mengintegrasikannya dengan main 2.29.0; gunakan main untuk mendapatkan kedua-dua perubahan terkini, bukannya kembali ke pratonton lama.
+Pratonton asal `education-google-sheets` kekal dalam sejarah pada `a535a04` / 2.28.0-sheets.1. Main 2.30.0 mengintegrasikannya dengan main 2.29.0. Branch education-report menambah laporan yang dikemas kini di atas main tersebut; main sendiri tidak diubah oleh pratonton ini.

@@ -17,12 +17,12 @@
   ['Start or continue','New Run starts a fresh journey. Continue returns to your saved journey.',[
    'Choose Learn for a gentler introduction or Challenge for the artifact journey. Easy, Medium and Hard are separate balance playtest profiles.',
    'In Challenge, meet the Dungeon Master. Select an offered artifact, then choose Claim & Choose Artifact.',
-   'Answer the trial correctly and continue to receive the artifact. Hint, More Hint and Basics can help. Read the artifact effect before choosing.'
+   'Answer the trial correctly and continue to receive the artifact. Two wrong answers end the trial: review the solution and continue without the artifact. Hint, More Hint and Basics can help.'
   ],'Learn does not start with the Dungeon Master. Starting a replacement run asks before replacing that profile’s save.'],
   ['Mula atau sambung','New Run memulakan perjalanan baharu. Continue menyambung perjalanan yang disimpan.',[
    'Pilih Learn untuk pengenalan yang lebih mudah atau Challenge untuk perjalanan dengan artifak. Easy, Medium dan Hard ialah profil ujian imbangan yang berasingan.',
    'Dalam Challenge, jumpa Dungeon Master. Pilih satu artifak yang ditawarkan, kemudian tekan Claim & Choose Artifact.',
-   'Jawab soalan percubaan dengan betul dan teruskan untuk menerima artifak. Hint, More Hint dan Basics boleh membantu. Baca kesan artifak sebelum memilih.'
+   'Jawab soalan percubaan dengan betul dan teruskan untuk menerima artifak. Dua jawapan salah menamatkan percubaan: semak penyelesaian dan teruskan tanpa artifak. Hint, More Hint dan Basics boleh membantu.'
   ],'Learn tidak bermula dengan Dungeon Master. Game meminta pengesahan sebelum menggantikan save profil tersebut.']),
  lesson('map','map','map',
   ['Choose your next room','Follow the paths from the bottom of the map towards the boss.',[
@@ -71,12 +71,12 @@
  lesson('predict','predict','predict',
   ['Predict, Hint and More Hint','Predict opens a maths question from the shared 120-question bank.',[
    'Choose an answer, then check it. An independent correct first answer earns 1 Focus up to the cap of {focusCap}. A helped or retried answer is recorded separately.',
-   'Open Hint for a starting idea. A wrong answer submitted after opening Hint unlocks More Hint. Basics explains the foundation; worked steps are available after completion.',
+   'Use Question, Help and Result. You have two attempts: the first incorrect answer unlocks Hint and More Hint even if Hint was not opened. The second incorrect answer locks answers and reveals the solution. Basics and worked steps support your review.',
    'Predict is optional and can be used once per turn. Closing it ends that turn’s attempt without a reward. A question already opened will not be repeated in the same run.'
   ],'Pink terms explain maths, green terms explain the game, and purple calculations explain values. Hover, keyboard-focus or tap a highlighted term.'],
   ['Predict, Hint dan More Hint','Predict membuka soalan matematik daripada bank bersama yang mempunyai 120 soalan.',[
    'Pilih jawapan, kemudian semak. Jawapan pertama yang betul secara kendiri memberi 1 Focus sehingga had {focusCap}. Jawapan dengan bantuan atau cubaan semula direkodkan secara berasingan.',
-   'Buka Hint untuk idea awal. Jawapan salah yang dihantar selepas Hint dibuka akan membuka More Hint. Basics menerangkan asas; jalan kerja tersedia selepas soalan selesai.',
+   'Gunakan Soalan, Bantuan dan Keputusan. Anda mempunyai dua cubaan: jawapan salah pertama membuka Hint dan More Hint walaupun Hint belum dibuka. Jawapan salah kedua mengunci jawapan dan memaparkan penyelesaian. Basics dan jalan kerja membantu semakan anda.',
    'Predict ialah pilihan dan boleh digunakan sekali setiap giliran. Menutupnya menamatkan cubaan giliran itu tanpa ganjaran. Soalan yang sudah dibuka tidak diulang dalam run yang sama.'
   ],'Istilah merah jambu menerangkan matematik, hijau menerangkan game, dan pengiraan ungu menerangkan nilai. Letakkan penuding, fokus papan kekunci atau tekan istilah yang disorot.']),
  lesson('focus','focus','focus',
@@ -139,12 +139,12 @@
  lesson('mystery','mystery',null,
   ['Read a Mystery before committing','Mystery rooms have event-specific choices, costs and consequences.',[
    'Read the introduction and each option before choosing. Some choices use HP or Gold, change your deck, or lead to a battle.',
-   'A timed challenge shows its deadline. Use the available help before submitting; Mystery uses one final answer, unlike Predict retries.',
+   'A timed challenge allows two attempts. The first wrong answer unlocks both hints; a second wrong answer or time up ends it. The same deadline continues during retries and Help.',
    'Review the outcome and claim any required reward or target before leaving. Refreshing does not give a fresh question or restart the deadline.'
   ],'A timed Mystery keeps running while other panels are open. Finish it before spending time in this guide.'],
   ['Baca Mystery sebelum memilih','Bilik Mystery mempunyai pilihan, kos dan akibat mengikut event.',[
    'Baca pengenalan dan setiap pilihan dahulu. Sesetengah pilihan menggunakan HP atau Gold, mengubah deck atau membawa kepada pertempuran.',
-   'Cabaran bermasa memaparkan had masa. Gunakan bantuan sebelum menghantar jawapan; Mystery menggunakan satu jawapan akhir, berbeza daripada cubaan semula Predict.',
+   'Cabaran bermasa membenarkan dua cubaan. Jawapan salah pertama membuka kedua-dua petunjuk; salah kedua atau masa tamat menamatkannya. Had masa yang sama terus berjalan semasa cuba semula dan Bantuan.',
    'Semak keputusan dan tuntut ganjaran atau pilih sasaran yang diperlukan sebelum keluar. Refresh tidak memberi soalan baharu atau memulakan masa semula.'
   ],'Masa Mystery terus berjalan apabila panel lain dibuka. Selesaikannya sebelum meluangkan masa dalam panduan ini.']),
  lesson('boss','boss','boss',
@@ -162,12 +162,12 @@
   ['Practise maths and read your report','Education Practice is available from the Main Menu without starting a run.',[
    'Explore Probability, Sets and Logical Reasoning. Learning selects unseen questions; Review lets you revisit a chosen question.',
    'Use Hint, More Hint, Basics, diagrams and worked solutions. Settings changes the language of questions, hints and solutions between BM and English.',
-   'Learning Report separates independent, supported, retried and revealed work. Comments help improve a question. Export records when needed; sharing starts off and needs a configured destination and your consent.'
+   'Learning Report has Overview, Details and Sharing. Tick Reviewed and add a comment to help improve any question. Sharing starts off and needs the organiser’s connection and your consent.'
   ],'Tutorial exercises are practice examples and never count towards your real Learning Report or question history.'],
   ['Latih matematik dan baca laporan','Education Practice boleh dibuka dari Main Menu tanpa memulakan run.',[
    'Terokai Kebarangkalian, Set dan Penaakulan Logik. Learning memilih soalan belum dilihat; Review membolehkan anda mengulang soalan pilihan.',
    'Gunakan Hint, More Hint, Basics, rajah dan jalan kerja. Settings menukar bahasa soalan, petunjuk dan jalan kerja antara BM dengan English.',
-   'Learning Report membezakan jawapan kendiri, berbantu, cubaan semula dan jawapan yang didedahkan. Komen membantu menambah baik soalan. Eksport rekod jika perlu; perkongsian bermula dalam keadaan tutup dan memerlukan destinasi serta persetujuan anda.'
+   'Learning Report mempunyai Gambaran keseluruhan, Butiran dan Perkongsian. Tick Sudah disemak dan tambah komen untuk menambah baik soalan. Perkongsian bermula dalam keadaan tutup dan memerlukan sambungan pengendali serta persetujuan anda.'
   ],'Latihan tutorial ialah contoh dan tidak dikira dalam Learning Report atau sejarah soalan sebenar.']),
  lesson('settings','settings',null,
   ['Save, sound and controls','Your current run saves automatically in this browser and profile.',[

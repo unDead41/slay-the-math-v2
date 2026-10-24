@@ -1,5 +1,12 @@
 # Complete player tutorial — 2.31.0
 
+Current integration: [Education main 2.36.0](education/MAIN_2_36_0.md). The original
+implementation evidence below is historical. The current guide explains two
+answers, first-wrong Hint/More Hint, failed review/Replay without chapter credit,
+the simpler report and developer-only connection setup. All16 actual UI captures
+are refreshed for 2.36.0, with release-version image URLs and capture provenance
+in docs/tutorial/screenshots.json.
+
 Open **Main Menu → Tutorial**, or **Tutorial / How to Play** in the game header. Learn still opens the tutorial at the beginning of a new run. Return to game and Escape close the guide and restore focus to its entry control.
 
 ## Player content

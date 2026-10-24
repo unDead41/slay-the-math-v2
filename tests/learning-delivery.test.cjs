@@ -7,6 +7,12 @@ function disk(){const m=new Map();return {m,get length(){return m.size;},key:i=>
 function fake(){let created=0,closed=0;const rows=new Map();const fetch=async(url,init)=>{const route=new URL(url,'http://localhost').pathname.split('/').at(-1);const body=init.body?JSON.parse(init.body):null;if(route==='status')return {ok:true,status:200,json:async()=>({protocolVersion:1,enabled:true})};if(route==='register')return {ok:true,status:200,json:async()=>({registered:true})};for(const e of body.entries)rows.set(e.id,e);return {ok:true,status:200,json:async()=>({acknowledged:body.entries.map(e=>({id:e.id,revision:e.revision}))})};};return {rows,fetch,get created(){return created;},get closed(){return closed;},create(){created++;return {fetch,close(){closed++;}};}};}
 const input=comment=>({id:'question-1',kind:'question-feedback',payload:{comment}});
 function client(storage,service=fake(),extra={}){return api().createClient({storage,fetch:service.fetch,crypto:webcrypto,online:true,createGoogleTransport:()=>service.create(),...extra});}
+test('host reopen and Practice enqueue use one strict-compatible review projection without new revisions',async()=>{
+ const storage=disk(),service=fake(),raw={id:'form4-review-1.6.0:PROB-001',questionId:'PROB-001',bankVersion:'form4-review-1.6.0',question:'Original question',comment:'x'.repeat(2000),reviewed:true};
+ let c=client(storage,service);c.enqueue({id:raw.id,kind:'question-feedback',payload:raw});let pending=c.status().pendingEntries[0];assert.equal(pending.payload.reviewed,undefined);assert.equal(pending.payload.question,'[REVIEWED] Original question');assert.equal(pending.payload.comment.length,2000);assert.equal(raw.question,'Original question');const revision=pending.revision;
+ c.setEnabled(true);await c.flush();assert.equal(c.status().pending,0);c.stop();c=client(storage,service);c.enqueue({id:raw.id,kind:'question-feedback',payload:raw});assert.equal(c.status().pending,0);assert.equal([...service.rows.values()][0].revision,revision);
+ c.enqueue({id:raw.id,kind:'question-feedback',payload:{...raw,reviewed:false}});pending=c.status().pendingEntries[0];assert.equal(pending.payload.question,'Original question');assert.equal(pending.payload.reviewed,undefined);assert.equal(pending.payload.comment.length,2000);c.stop();
+});
 test('default destination keeps the existing local receiver storage and exact receipts',async()=>{
  const storage=disk(),service=fake(),c=client(storage,service);c.enqueue(input('Local'));c.setEnabled(true);await c.flush();assert.equal(c.status().pending,0);assert.equal(c.status().destination.kind,'local');assert.ok(storage.getItem(sync.STORAGE_KEY));assert.equal(service.created,0);c.stop();
 });
@@ -43,4 +49,13 @@ test('resuming a stopped client re-reads a destination changed elsewhere and req
 });
 test('resuming after stored configuration is corrupted blocks sending and preserves the original bytes',()=>{
  const storage=disk(),service=fake(),c=client(storage,service);c.enqueue(input('Suspended'));c.setEnabled(true);c.stop();storage.setItem(api().DESTINATION_KEY,'{damaged');c.start();assert.equal(c.status().state,'save-error');assert.equal(c.status().enabled,false);assert.equal(storage.getItem(api().DESTINATION_KEY),'{damaged');assert.equal(service.rows.size,0);c.stop();
+});
+
+test('explicitly adopting the organiser default preserves old journals and requires fresh consent',async()=>{
+ const storage=disk(),service=fake(),other=URL_.replace('1234567890','9999999999');
+ storage.setItem(api().DESTINATION_KEY,JSON.stringify({schemaVersion:1,googleScriptUrl:other}));
+ const c=client(storage,service,{googleScriptUrl:URL_});c.enqueue(input('Retain this comment'));c.setEnabled(true);await c.flush();
+ const oldKeys=[...storage.m.keys()],created=service.created;assert.equal(c.status().destination.canUseDefault,true);
+ assert.equal(typeof c.useDefaultDestination,'function');c.useDefaultDestination();assert.equal(c.status().destination.url,URL_);assert.equal(c.status().enabled,false);assert.equal(c.status().pending,1);assert.equal(c.status().pendingEntries[0].payload.comment,'Retain this comment');assert.equal(service.created,created);
+ for(const key of oldKeys)assert.ok(storage.m.has(key));assert.equal(JSON.parse(storage.getItem(api().DESTINATION_KEY)).googleScriptUrl,URL_);assert.equal(c.status().destination.canUseDefault,false);c.stop();
 });

@@ -2,6 +2,7 @@
 // Conditional financial model. Combat outcome and HP costs are declared fixtures.
 const assert=require('node:assert/strict');
 const T=require('./deep-common.cjs'),{E,C,Eco,A,cards,describeCard,hash}=T;
+const GAME_MAX_ATTEMPTS=require('../../dist/mechanics.js').session.GAME_MAX_ATTEMPTS;
 const Q=require('../../dist/education.js'),X=require('../../dist/mystery.js'),G=require('../../dist/map.js');
 const policies=['sale_only','tag_support','artifact_first','removal_first','reserve','saver'];
 const answerProfiles={struggling:{accuracy:.4,responseMs:55000},developing:{accuracy:.6,responseMs:35000},proficient:{accuracy:.8,responseMs:15000},strong:{accuracy:.95,responseMs:15000}};
@@ -9,19 +10,19 @@ const budgets={moderate:{battle:4,elite:8,boss:12},severe:{battle:7,elite:14,bos
 function prefersArtifact(a){return a.values.discount_percent?4:a.values.heal&&a.trigger==='combat_won'?3:a.values.max_hp?2:a.values.gold?1:0;}
 function giftKey(r){return E.artifactChoices(r).slice().sort((a,b)=>prefersArtifact(b)-prefersArtifact(a)||a.id.localeCompare(b.id))[0]?.id;}
 function claimGift(r,answer,key=E.artifactChoices(r)[0]?.id){
- if(!key)return {attempts:0,wrongAttempts:0,claimsBeforeCorrect:0,timeMs:0};
+ if(!key)return {attempts:0,wrongAttempts:0,claimsBeforeCorrect:0,timeMs:0,claimed:false};
  const before=A.owned(r).length;E.chooseArtifact(r,key);const q=Q.current(r);let attempts=0,wrongAttempts=0;
  if(q){
   const wrong=q.choices.filter(c=>c.id!==q.correctChoiceId).map(c=>c.id);
-  for(let attempt=0;attempt<4;attempt++){
-   const correct=attempt===3||hash(r.seed,'artifact|'+r.stage+'|'+r.route.active+'|'+key+'|'+attempt)/4294967296<answer.accuracy;
+  for(let attempt=0;attempt<GAME_MAX_ATTEMPTS&&!Q.ready(r);attempt++){
+   const correct=hash(r.seed,'artifact|'+r.stage+'|'+r.route.active+'|'+key+'|'+attempt)/4294967296<answer.accuracy;
    E.selectEducation(r,correct?q.correctChoiceId:wrong[wrongAttempts]);E.answerEducation(r);attempts++;
    assert.equal(A.owned(r).length,before,'preview/answer cannot grant gift');
    if(correct)break;wrongAttempts++;
   }
  }
- E.continueEducation(r);assert.ok(A.has(r,key));
- return {attempts,wrongAttempts,claimsBeforeCorrect:0,timeMs:attempts*answer.responseMs};
+ const claimed=!q||r.educationState.pending.solved;E.continueEducation(r);assert.equal(A.has(r,key),claimed);
+ return {attempts,wrongAttempts,claimsBeforeCorrect:0,timeMs:attempts*answer.responseMs,claimed};
 }
 function removalTarget(r){
  const counts=r.deck.reduce((a,c)=>(a[c.key]=(a[c.key]||0)+1,a),{});
@@ -82,9 +83,9 @@ function simulateFlow({seed,difficulty,policy,answer='proficient',budget='modera
  assert.ok(profile&&damage);const r=E.newRun(seed,'challenge',3,{economy:true,difficulty});
  const s={seed,difficulty,policy,answer:typeof answer==='string'?answer:'custom',budget:typeof budget==='string'?budget:'custom',routeStyle,status:'MODEL_FLOW_COMPLETE',completed:false,startGold:r.gold,goldEarned:0,goldSpent:0,recovery:0,wastedRest:0,hpFixturePaid:0,eventHpLost:0,maxHpLost:0,cardsBought:0,artifactsBought:0,removals:0,freeCards:0,cardSkips:0,upgrades:0,rests:0,nodes:0,elites:0,normalCombats:0,shops:0,noAffordableCards:0,noAffordableProxyCards:0,shopGold:[],unspentAtLastShop:null,postLastShopNetGold:0,eventCorrect:0,eventWrong:0,eventTimeout:0,eventDeclined:0,artifactAttempts:0,artifactWrong:0,scriptedAttemptTimeMs:0,firstShopDepth:null,firstShopStage:null};
  const rows=[],vector=[];let stop=false;
- function act(kind,fn,{paid=0,earned=0,...extra}={}){const b={gold:r.gold,hp:r.hp,maxHp:r.maxHp,stage:r.stage+1,node:r.route.active};fn();assert.equal(r.gold-b.gold,earned-paid,'Gold delta '+kind+' '+seed);s.goldEarned+=earned;s.goldSpent+=paid;s.recovery+=Math.max(0,r.hp-b.hp);if(kind.startsWith('event'))s.eventHpLost+=Math.max(0,b.hp-r.hp);s.maxHpLost+=Math.max(0,b.maxHp-r.maxHp);if(trace)rows.push({kind,...b,goldAfter:r.gold,hpAfter:r.hp,maxHpAfter:r.maxHp,paid,earned,...extra});}
+ function act(kind,fn,{paid=0,earned=0,...extra}={}){const b={gold:r.gold,hp:r.hp,maxHp:r.maxHp,stage:r.stage+1,node:r.route.active};fn();earned=typeof earned==='function'?earned():earned;assert.equal(r.gold-b.gold,earned-paid,'Gold delta '+kind+' '+seed);s.goldEarned+=earned;s.goldSpent+=paid;s.recovery+=Math.max(0,r.hp-b.hp);if(kind.startsWith('event'))s.eventHpLost+=Math.max(0,b.hp-r.hp);s.maxHpLost+=Math.max(0,b.maxHp-r.maxHp);if(trace)rows.push({kind,...b,goldAfter:r.gold,hpAfter:r.hp,maxHpAfter:r.maxHp,paid,earned,...extra});}
  function gift(){const key=giftKey(r);if(!key){if(r.artifactState?.offer?.kind==='elite')act('skip_empty_gift',()=>E.skipArtifact(r));return;}
-  let result;act('artifact_claim',()=>{result=claimGift(r,profile,key);},{earned:A.catalog[key].values.gold||0,key});s.artifactAttempts+=result.attempts;s.artifactWrong+=result.wrongAttempts;s.scriptedAttemptTimeMs+=result.timeMs;}
+  let result;act('artifact_claim',()=>{result=claimGift(r,profile,key);},{earned:()=>result.claimed?(A.catalog[key].values.gold||0):0,key});s.artifactAttempts+=result.attempts;s.artifactWrong+=result.wrongAttempts;s.scriptedAttemptTimeMs+=result.timeMs;}
  gift();
  function fight(type){
   const cost=damage[type],hp=r.hp;if(hp<=cost){s.status='MODEL_HP_BUDGET_EXHAUSTED';stop=true;if(trace)rows.push({kind:'assumption_budget_stop',hp,assumedDamage:cost,stage:r.stage+1,node:r.route.active});return;}
@@ -104,9 +105,13 @@ function simulateFlow({seed,difficulty,policy,answer='proficient',budget='modera
  function mystery(){let p=r.mysteryState.pending;
   if(p.phase==='empty'){act('event_empty',()=>E.continueMystery(r));return;}
   const now=1000000+r.stage*1000000+r.depth*200000,eventId=p.eventId;act('event_start',()=>E.startMystery(r,[],null,now));p=r.mysteryState.pending;
-  const q=Q.catalog[p.questionId],correct=hash(seed,'mystery|'+r.stage+'|'+r.depth)/4294967296<profile.accuracy;
-  act('event_answer',()=>E.answerMystery(r,correct?q.correctChoiceId:q.choices.find(c=>c.id!==q.correctChoiceId).id,now+profile.responseMs),{eventId,scriptedCorrect:correct,responseMs:profile.responseMs});
-  const outcome=r.mysteryState.pending.outcome;s.scriptedAttemptTimeMs+=profile.responseMs;s[outcome==='CORRECT'?'eventCorrect':outcome==='TIMEOUT'?'eventTimeout':'eventWrong']++;
+  const q=Q.catalog[p.questionId],wrong=q.choices.filter(c=>c.id!==q.correctChoiceId);let attempt=0;
+  while(r.mysteryState.pending.phase==='question'&&attempt<2){
+   const correct=hash(seed,'mystery|'+r.stage+'|'+r.depth+(attempt?'|retry':''))/4294967296<profile.accuracy;
+   const tried=Q.getSession(r).records[q.id].attempts.map(a=>a.choiceId),choice=correct?q.correctChoiceId:wrong.find(c=>!tried.includes(c.id)).id;
+   attempt++;act('event_answer',()=>E.answerMystery(r,choice,now+attempt*profile.responseMs),{eventId,scriptedCorrect:correct,responseMs:profile.responseMs,attempt});s.scriptedAttemptTimeMs+=profile.responseMs;
+  }
+  const outcome=r.mysteryState.pending.outcome;s[outcome==='CORRECT'?'eventCorrect':outcome==='TIMEOUT'?'eventTimeout':'eventWrong']++;
   const def=X.definition(r),auto=outcome==='CORRECT'&&def.success.mode==='AUTOMATIC'?def.success.options[0]:null;
   act('event_review',()=>E.continueMystery(r),{earned:auto?eventGold(r,auto):0,eventId,outcome});
   if(r.scene==='event'&&r.mysteryState.pending?.phase==='reward'){

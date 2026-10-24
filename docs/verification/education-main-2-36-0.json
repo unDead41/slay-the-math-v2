@@ -1,0 +1,2359 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "2.36.0",
+  "status": "VALID within the recorded scope",
+  "verifiedAtUtc": "2026-10-24T05:10:32.066537+00:00",
+  "repository": "unDead41/slay-the-math-v2",
+  "mainParent": "bb0e80f288ced028f51cc69b84ca3ff5bcc02165",
+  "runtimeIntegrationBase": "beb4a4d76248fb2cc88c5532075876f9ca3fef48",
+  "featureBranch": "education-report",
+  "featureParent": "af03f38ca252c17b72ed55d4dd779b00e7923d52",
+  "mergeBase": "d76ad6e26ada3b3aea98db0b4d0462f3f6f026a4",
+  "authorization": "Ijamm: okay push ke main please; newer documentation on main retained.",
+  "unit": {
+    "command": "DOM_QA_MODULE=/tmp/stm-education-qa/node_modules/jsdom NODE_PATH=/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules npm test",
+    "node": "v24.19.0",
+    "tests": 918,
+    "pass": 918,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 355680.368505
+  },
+  "syntax": {
+    "command": "npm run check",
+    "exitCode": 0
+  },
+  "production": {
+    "command": "npm run build:prod",
+    "exitCode": 0
+  },
+  "nativeEnvironment": {
+    "browser": "Chromium 138.0.2 via Playwright",
+    "webSecurityEnabled": true,
+    "reducedMotion": true,
+    "storage": "isolated synthetic fixtures"
+  },
+  "native": {
+    "report": {
+      "checks": [
+        "All three journal views fit desktop, phone and short landscape with local scroll, unchanged artwork geometry and unchanged game save.",
+        "Actual generated Practice uses the same BM/English journal and comment-sharing navigation; status updates retain question search and saved comment text.",
+        "Developer Hub saves only a validated project default; a fresh player receives it without URL controls or automatic sharing. Player servers deny developer routes."
+      ],
+      "geometry": [
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "view": "overview",
+          "dialog": {
+            "x": 8,
+            "y": 8,
+            "width": 374,
+            "height": 828,
+            "clientHeight": 824,
+            "scrollHeight": 1553
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "view": "details",
+          "dialog": {
+            "x": 8,
+            "y": 8,
+            "width": 374,
+            "height": 828,
+            "clientHeight": 824,
+            "scrollHeight": 1652
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "view": "sharing",
+          "dialog": {
+            "x": 8,
+            "y": 8,
+            "width": 374,
+            "height": 828,
+            "clientHeight": 824,
+            "scrollHeight": 1048
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "view": "overview",
+          "dialog": {
+            "x": 14,
+            "y": 15,
+            "width": 816,
+            "height": 360,
+            "clientHeight": 356,
+            "scrollHeight": 1231
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "view": "details",
+          "dialog": {
+            "x": 14,
+            "y": 15,
+            "width": 816,
+            "height": 360,
+            "clientHeight": 356,
+            "scrollHeight": 1368
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "view": "sharing",
+          "dialog": {
+            "x": 14,
+            "y": 15,
+            "width": 816,
+            "height": 360,
+            "clientHeight": 356,
+            "scrollHeight": 805
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            1366,
+            900
+          ],
+          "view": "overview",
+          "dialog": {
+            "x": 223,
+            "y": 15,
+            "width": 920,
+            "height": 870,
+            "clientHeight": 866,
+            "scrollHeight": 1211
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            1366,
+            900
+          ],
+          "view": "details",
+          "dialog": {
+            "x": 223,
+            "y": 15,
+            "width": 920,
+            "height": 870,
+            "clientHeight": 866,
+            "scrollHeight": 1372
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        },
+        {
+          "viewport": [
+            1366,
+            900
+          ],
+          "view": "sharing",
+          "dialog": {
+            "x": 223,
+            "y": 55.078125,
+            "width": 920,
+            "height": 789.828125,
+            "clientHeight": 786,
+            "scrollHeight": 786
+          },
+          "pageOverflow": false,
+          "journalOverflow": false,
+          "closeVisible": true
+        }
+      ],
+      "errors": [],
+      "environment": "Native Chromium with local player/developer servers; no live Google collection",
+      "webSecurityEnabled": true,
+      "asyncState": {
+        "before": [
+          1,
+          3,
+          "backward",
+          140,
+          0
+        ],
+        "after": [
+          1,
+          3,
+          "backward",
+          140,
+          0
+        ]
+      },
+      "practiceIntro": {
+        "text": "Jurnal latihan anda",
+        "font": "14.08px / 21.824px system-ui, sans-serif",
+        "position": "static",
+        "width": 344,
+        "height": 21.8125,
+        "overflow": "visible",
+        "clip": "auto",
+        "display": "block"
+      },
+      "operatorResponses": [
+        {
+          "status": 200,
+          "body": "{\"googleScriptUrl\":\"\",\"revision\":\"a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2\"}"
+        },
+        {
+          "status": 400,
+          "body": "{\"error\":\"Paste a deployed Google Apps Script link ending in /exec.\"}"
+        },
+        {
+          "status": 200,
+          "body": "{\"googleScriptUrl\":\"https://script.google.com/macros/s/QA_REPORT_DEPLOYMENT1234567890/exec\",\"revision\":\"a1834bcd29c6d3ce88910e83dc48102a3677dd9680da2a656ea97e77d112ea2c\"}"
+        }
+      ]
+    },
+    "workspace": {
+      "checks": [
+        "All120 question rows have separate native review checkboxes; ticking a different row does not open or answer it.",
+        "BM/English question and feedback views fit desktop, portrait phone and short landscape; checkbox targets are at least44px, question list scrolls locally and drawer Escape restores access.",
+        "Reload preserves marks and original comment; unticking retains it, shared report has consent without setup/CSV, and exit cancellation keeps the same feedback view and game save."
+      ],
+      "geometry": [
+        {
+          "view": "question",
+          "viewport": [
+            390,
+            771
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "feedback",
+          "viewport": [
+            390,
+            771
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "question",
+          "viewport": [
+            844,
+            316
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "feedback",
+          "viewport": [
+            844,
+            316
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "question",
+          "viewport": [
+            1366,
+            826
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        },
+        {
+          "view": "feedback",
+          "viewport": [
+            1366,
+            826
+          ],
+          "pageOverflow": false,
+          "cardOverflow": false,
+          "visiblePanels": 1,
+          "checkboxTarget": [
+            150.359375,
+            44
+          ]
+        }
+      ],
+      "errors": [],
+      "webSecurityEnabled": true,
+      "keyboardFocus": {
+        "id": "PROB-002",
+        "outlineWidth": 2,
+        "visible": true
+      }
+    },
+    "google": {
+      "environment": "Native Chromium; mocked Google HtmlService/RPC/Sheets, not live deployment",
+      "checks": [
+        "The project default reaches the player report without URL controls, eager network or inherited consent.",
+        "Lost response after Sheet flush stays pending across reopen, then identical replay confirms one row.",
+        "Offline Practice retains pending evidence and reconnects through the top-document Google bridge; game save stays unchanged.",
+        "Actual host reload replays local review flags through the same delivery projection with no invalid payload or duplicate row.",
+        "Reviewed tick and full comment reach the current generated Google receiver together; offline untick/edit updates one row and preserves the comment.",
+        "No capability in frame URLs; desktop/mobile journal has internal scroll, no URL controls and preserved question search."
+      ],
+      "errors": [],
+      "webSecurityEnabled": true
+    },
+    "tutorial": {
+      "checks": [
+        "17 chapters, all 11 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records",
+        "portrait: no page overflow, reachable footer, real Predict via touch-sized controls",
+        "landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+        "small-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+        "compact-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+        "narrow-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+        "Master Medium resolves a focused practice card with loaded definitions",
+        "storage denial leaves chapters and practice usable with a visible notice",
+        "in-run help warns for a live timed Mystery without extending its deadline",
+        "standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests"
+      ],
+      "errors": []
+    },
+    "questions": {
+      "flows": [
+        {
+          "kind": "predict",
+          "language": "en",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "checks": "Keyboard tabs; first wrong CTA; both hints without prior Hint; preserved timer/art/scroll; reload before/after two-wrong lock; solution/steps; exactly-once continuation."
+        }
+      ],
+      "geometry": [
+        {
+          "kind": "predict",
+          "language": "en",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            856,
+            856
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 854,
+              "scroll": 854,
+              "width": 855.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 820,
+              "scroll": 820,
+              "width": 821.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 786,
+              "scroll": 786,
+              "width": 787.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 854,
+              "scroll": 854,
+              "width": 855.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 820,
+              "scroll": 820,
+              "width": 821.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 786,
+              "scroll": 786,
+              "width": 787.71875,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            60,
+            1366,
+            534
+          ],
+          "targets": [
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.25,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "en",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            282,
+            282
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 280,
+              "scroll": 280,
+              "width": 282,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 246,
+              "scroll": 246,
+              "width": 248,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 212,
+              "scroll": 212,
+              "width": 214,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 280,
+              "scroll": 280,
+              "width": 282,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 246,
+              "scroll": 246,
+              "width": 248,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 212,
+              "scroll": 212,
+              "width": 214,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 203.734375,
+              "text": "n(A)+n(B)\u2212n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 74.390625,
+              "text": "n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 39.546875,
+              "text": "A\u2229B"
+            },
+            {
+              "tag": "mo",
+              "cls": "rt-term",
+              "width": 10.078125,
+              "text": "\u2229"
+            },
+            {
+              "tag": "mi",
+              "cls": "rt-term",
+              "width": 11.46875,
+              "text": "B"
+            },
+            {
+              "tag": "mo",
+              "cls": "",
+              "width": 13.21875,
+              "text": ")"
+            }
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            74,
+            390,
+            407.09375
+          ],
+          "targets": [
+            [
+              90,
+              59.578125
+            ],
+            [
+              90,
+              59.578125
+            ],
+            [
+              90,
+              59.578125
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "en",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            702,
+            702
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 700,
+              "scroll": 700,
+              "width": 701.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 666,
+              "scroll": 666,
+              "width": 667.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 632,
+              "scroll": 632,
+              "width": 633.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 700,
+              "scroll": 700,
+              "width": 701.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 666,
+              "scroll": 666,
+              "width": 667.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 632,
+              "scroll": 632,
+              "width": 633.8125,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            45,
+            844,
+            165
+          ],
+          "targets": [
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            638,
+            638
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 636,
+              "scroll": 636,
+              "width": 637.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 602,
+              "scroll": 602,
+              "width": 603.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 568,
+              "scroll": 568,
+              "width": 569.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 636,
+              "scroll": 636,
+              "width": 637.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 602,
+              "scroll": 602,
+              "width": 603.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 568,
+              "scroll": 568,
+              "width": 569.765625,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              208.578125,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            298,
+            298
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 296,
+              "scroll": 296,
+              "width": 298,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 262,
+              "scroll": 262,
+              "width": 264,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 228,
+              "scroll": 228,
+              "width": 230,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 296,
+              "scroll": 296,
+              "width": 298,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 262,
+              "scroll": 262,
+              "width": 264,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 228,
+              "scroll": 228,
+              "width": 230,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 203.734375,
+              "text": "n(A)+n(B)\u2212n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 74.390625,
+              "text": "n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 39.546875,
+              "text": "A\u2229B"
+            },
+            {
+              "tag": "mi",
+              "cls": "rt-term",
+              "width": 11.46875,
+              "text": "B"
+            },
+            {
+              "tag": "mo",
+              "cls": "",
+              "width": 13.21875,
+              "text": ")"
+            }
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            245
+          ],
+          "targets": [
+            [
+              95.328125,
+              58.1875
+            ],
+            [
+              95.328125,
+              58.1875
+            ],
+            [
+              95.34375,
+              58.1875
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "en",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            698,
+            698
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 696,
+              "scroll": 696,
+              "width": 697.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 662,
+              "scroll": 662,
+              "width": 663.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 628,
+              "scroll": 628,
+              "width": 629.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 696,
+              "scroll": 696,
+              "width": 697.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 662,
+              "scroll": 662,
+              "width": 663.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 628,
+              "scroll": 628,
+              "width": 629.8125,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            156
+          ],
+          "targets": [
+            [
+              228.59375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            553,
+            553
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 551,
+              "scroll": 551,
+              "width": 552.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 517,
+              "scroll": 517,
+              "width": 518.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 483,
+              "scroll": 483,
+              "width": 484.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 551,
+              "scroll": 551,
+              "width": 552.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 517,
+              "scroll": 517,
+              "width": 518.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 483,
+              "scroll": 483,
+              "width": 484.875,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              180.28125,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            280,
+            280
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 278,
+              "scroll": 278,
+              "width": 280,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 244,
+              "scroll": 244,
+              "width": 246,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 210,
+              "scroll": 236,
+              "width": 212,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 278,
+              "scroll": 278,
+              "width": 280,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 244,
+              "scroll": 244,
+              "width": 246,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 210,
+              "scroll": 236,
+              "width": 212,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            422
+          ],
+          "targets": [
+            [
+              89.328125,
+              59.578125
+            ],
+            [
+              89.328125,
+              59.578125
+            ],
+            [
+              89.34375,
+              59.578125
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "en",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            660,
+            660
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 658,
+              "scroll": 658,
+              "width": 659.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 624,
+              "scroll": 624,
+              "width": 625.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 590,
+              "scroll": 590,
+              "width": 591.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 658,
+              "scroll": 658,
+              "width": 659.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 624,
+              "scroll": 624,
+              "width": 625.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 590,
+              "scroll": 590,
+              "width": 591.8125,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            195
+          ],
+          "targets": [
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            856,
+            856
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 854,
+              "scroll": 854,
+              "width": 855.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 820,
+              "scroll": 820,
+              "width": 821.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 786,
+              "scroll": 786,
+              "width": 787.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 854,
+              "scroll": 854,
+              "width": 855.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 820,
+              "scroll": 820,
+              "width": 821.71875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 786,
+              "scroll": 786,
+              "width": 787.71875,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            60,
+            1366,
+            534
+          ],
+          "targets": [
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.234375,
+              48
+            ],
+            [
+              281.25,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            282,
+            282
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 280,
+              "scroll": 280,
+              "width": 282,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 246,
+              "scroll": 246,
+              "width": 248,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 212,
+              "scroll": 212,
+              "width": 214,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 280,
+              "scroll": 280,
+              "width": 282,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 246,
+              "scroll": 246,
+              "width": 248,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 212,
+              "scroll": 212,
+              "width": 214,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 203.734375,
+              "text": "n(A)+n(B)\u2212n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 74.390625,
+              "text": "n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 39.546875,
+              "text": "A\u2229B"
+            },
+            {
+              "tag": "mo",
+              "cls": "rt-term",
+              "width": 10.078125,
+              "text": "\u2229"
+            },
+            {
+              "tag": "mi",
+              "cls": "rt-term",
+              "width": 11.46875,
+              "text": "B"
+            },
+            {
+              "tag": "mo",
+              "cls": "",
+              "width": 13.21875,
+              "text": ")"
+            }
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            74,
+            390,
+            407.09375
+          ],
+          "targets": [
+            [
+              90,
+              77.765625
+            ],
+            [
+              90,
+              77.765625
+            ],
+            [
+              90,
+              77.765625
+            ]
+          ]
+        },
+        {
+          "kind": "predict",
+          "language": "ms",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            702,
+            702
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 700,
+              "scroll": 700,
+              "width": 701.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 666,
+              "scroll": 666,
+              "width": 667.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 632,
+              "scroll": 632,
+              "width": 633.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 700,
+              "scroll": 700,
+              "width": 701.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 666,
+              "scroll": 666,
+              "width": 667.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 632,
+              "scroll": 632,
+              "width": 633.8125,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            45,
+            844,
+            165
+          ],
+          "targets": [
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ],
+            [
+              229.9375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            638,
+            638
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 636,
+              "scroll": 636,
+              "width": 637.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 602,
+              "scroll": 602,
+              "width": 603.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 568,
+              "scroll": 568,
+              "width": 569.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 636,
+              "scroll": 636,
+              "width": 637.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 602,
+              "scroll": 602,
+              "width": 603.765625,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 568,
+              "scroll": 568,
+              "width": 569.765625,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              208.578125,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ],
+            [
+              208.59375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            298,
+            298
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 296,
+              "scroll": 296,
+              "width": 298,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 262,
+              "scroll": 262,
+              "width": 264,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 228,
+              "scroll": 228,
+              "width": 230,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 296,
+              "scroll": 296,
+              "width": 298,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 262,
+              "scroll": 262,
+              "width": 264,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 228,
+              "scroll": 228,
+              "width": 230,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 203.734375,
+              "text": "n(A)+n(B)\u2212n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 74.390625,
+              "text": "n(A\u2229B)"
+            },
+            {
+              "tag": "mrow",
+              "cls": "",
+              "width": 39.546875,
+              "text": "A\u2229B"
+            },
+            {
+              "tag": "mi",
+              "cls": "rt-term",
+              "width": 11.46875,
+              "text": "B"
+            },
+            {
+              "tag": "mo",
+              "cls": "",
+              "width": 13.21875,
+              "text": ")"
+            }
+          ],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            245
+          ],
+          "targets": [
+            [
+              95.328125,
+              59.578125
+            ],
+            [
+              95.328125,
+              59.578125
+            ],
+            [
+              95.34375,
+              59.578125
+            ]
+          ]
+        },
+        {
+          "kind": "artifact",
+          "language": "ms",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            698,
+            698
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 696,
+              "scroll": 696,
+              "width": 697.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 662,
+              "scroll": 662,
+              "width": 663.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 628,
+              "scroll": 628,
+              "width": 629.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 696,
+              "scroll": 696,
+              "width": 697.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 662,
+              "scroll": 662,
+              "width": 663.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 628,
+              "scroll": 628,
+              "width": 629.8125,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            156
+          ],
+          "targets": [
+            [
+              228.59375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ],
+            [
+              228.609375,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "viewport": [
+            1366,
+            900
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            553,
+            553
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 551,
+              "scroll": 551,
+              "width": 552.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 517,
+              "scroll": 517,
+              "width": 518.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 483,
+              "scroll": 483,
+              "width": 484.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 551,
+              "scroll": 551,
+              "width": 552.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 517,
+              "scroll": 517,
+              "width": 518.875,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 483,
+              "scroll": 483,
+              "width": 484.875,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            1366,
+            822
+          ],
+          "targets": [
+            [
+              180.28125,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ],
+            [
+              180.296875,
+              48
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "viewport": [
+            390,
+            844
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            280,
+            280
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 278,
+              "scroll": 278,
+              "width": 280,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 244,
+              "scroll": 244,
+              "width": 246,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 210,
+              "scroll": 236,
+              "width": 212,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 278,
+              "scroll": 278,
+              "width": 280,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 244,
+              "scroll": 244,
+              "width": 246,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 210,
+              "scroll": 236,
+              "width": 212,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            66,
+            390,
+            422
+          ],
+          "targets": [
+            [
+              89.328125,
+              77.765625
+            ],
+            [
+              89.328125,
+              77.765625
+            ],
+            [
+              89.34375,
+              77.765625
+            ]
+          ]
+        },
+        {
+          "kind": "mystery",
+          "language": "ms",
+          "viewport": [
+            844,
+            390
+          ],
+          "documentOverflow": false,
+          "workspaceOverflow": false,
+          "workspaceSize": [
+            660,
+            660
+          ],
+          "wrappers": [
+            {
+              "cls": "education-hint",
+              "client": 658,
+              "scroll": 658,
+              "width": 659.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 624,
+              "scroll": 624,
+              "width": 625.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 590,
+              "scroll": 590,
+              "width": 591.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "education-hint",
+              "client": 658,
+              "scroll": 658,
+              "width": 659.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-visual",
+              "client": 624,
+              "scroll": 624,
+              "width": 625.8125,
+              "overflow": "auto",
+              "display": "block"
+            },
+            {
+              "cls": "learning-table-scroll",
+              "client": 590,
+              "scroll": 590,
+              "width": 591.8125,
+              "overflow": "auto",
+              "display": "block"
+            }
+          ],
+          "overflowElements": [],
+          "localScroll": true,
+          "art": [
+            0,
+            78,
+            844,
+            195
+          ],
+          "targets": [
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ],
+            [
+              215.9375,
+              48
+            ]
+          ]
+        }
+      ],
+      "errors": [],
+      "webSecurityEnabled": true
+    },
+    "all120": {
+      "questions": 120,
+      "states": 360,
+      "language": "ms",
+      "viewport": [
+        390,
+        844
+      ],
+      "component": "real DCArtifactUI + STMMechanicsHost; app controller omitted",
+      "checks": [
+        "All120 question choices and rich text",
+        "First-wrong Hint and More Hint with filled values",
+        "Two-wrong lock and canonical worked steps",
+        "No workspace/document horizontal overflow; strict saves"
+      ],
+      "webSecurityEnabled": true,
+      "errors": []
+    },
+    "practice": {
+      "checks": [
+        "Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.",
+        "All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.",
+        "Learning progress and pending Hint survive a reload. Existing pending Artifact trial and rewarded question history remain byte-identical.",
+        "Portable SLAY-THE-MATH-OFFLINE.html opens Education Practice with all 120 questions and zero network requests."
+      ],
+      "questions": 120,
+      "viewports": [
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "overflow": false
+        },
+        {
+          "width": 3440,
+          "height": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    },
+    "dev": {
+      "stdout": "PASS: real scenes, card comparison/combat, motion step/teardown, exact restart, presets, player storage isolation and small viewport"
+    },
+    "toggle": {
+      "stdout": "PASS npm start dev, main menu, synchronized Settings toggle, disabled API, refresh persistence and Hub combat"
+    },
+    "prod-dev": {
+      "stdout": "PASS production/static subpath: wrong password, Cancel, Settings unlock, reload, Hub combat/cards/motion, God ON/OFF, every map node, all 15 events, upgraded card insertion, OFF/relock, direct-route gating, player copy isolation, exact question contexts, native status edits, four scenarios, HTML/screenshot reports, capture cancellation and real --prod server."
+    }
+  },
+  "integrity": {
+    "againstMain": "bb0e80f288ced028f51cc69b84ca3ff5bcc02165",
+    "originalArtAudioAnimationFilesUnchanged": 607,
+    "protectedSourceAndDataFilesUnchanged": [
+      "dist/card-data.js",
+      "dist/config.js",
+      "dist/card-combat.js",
+      "dist/balance-data.js",
+      "dist/balance-config.js",
+      "dist/economy-data.js",
+      "dist/music-data.js",
+      "dist/animation-data.js",
+      "dist/status-vfx.js",
+      "dist/visuals.js",
+      "dist/question-data.js",
+      "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json",
+      "modules/mechanics/source/QUESTION_BANK/localization/logic.ms.json",
+      "modules/mechanics/source/QUESTION_BANK/localization/prob.ms.json",
+      "modules/mechanics/source/QUESTION_BANK/localization/runtime.mjs",
+      "modules/mechanics/source/QUESTION_BANK/localization/set.ms.json",
+      "modules/mechanics/source/QUESTION_BANK/localization/support.ms.json"
+    ],
+    "tutorialCaptures": 16,
+    "tutorialRuntimeInputsVerified": 83,
+    "cacheChecks": [
+      {
+        "path": "index.html",
+        "hashedResources": 82
+      },
+      {
+        "path": "MAIN-SEKARANG.html",
+        "hashedResources": 82
+      },
+      {
+        "path": "dist/index.html",
+        "hashedResources": 82
+      },
+      {
+        "path": "release-prod/index.html",
+        "hashedResources": 83
+      }
+    ],
+    "productionFilesMatchDistExceptIntentionalAppAndIndex": 704,
+    "productionDeveloperHubRetained": true,
+    "googleReceiverSha256": "27d365febeb32e4435753eab13d04c111ac254c1a3111f7c4e17a83badc47172",
+    "googleReceiverBytes": 106721,
+    "portableBytes": 303052686
+  },
+  "testedRuntimeInputs": {
+    "index.html": "cf3f92484e91bfd4c09bc61b69967899f1e2163e54619fee8803b9f238235d56",
+    "style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
+    "crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
+    "map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
+    "music.css": "969fed6d068de80695aab6866031fed020adcdc3e0ff4f0df54d1337e500d92c",
+    "dungeon.css": "e303c1a5a6be561ef78c5962d56f2b25db612032cfce4c5ab14d19bbf9abd543",
+    "scene.css": "1e865966d0bc0601d47767a7b7cdda79729dc9b93b6e306a37da9b389bbdb8f7",
+    "combat.css": "860b7e946ecc4f2d7a686671ff319d6a290d0ef6b4b6479f6bf94a66ab05862f",
+    "dungeon-2-3.css": "ce7aed65f6d0a5f9f16063b3d0b6b76440da2f152b84258016db41fb0cdb10cc",
+    "artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
+    "mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
+    "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
+    "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
+    "education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
+    "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
+    "animation.css": "cf9557d350ab5f0d353133511ad58ee0f13e734f6237f87fa9c0bbb3c52ccf2e",
+    "hand.css": "cd52cf1c7c42978b56ae978bdec07aa04c1dce2243ee47503ae80ca8f310d476",
+    "mechanics-host.css": "138a24eaffb062b7c82eac66457c72ffdadbc817be26c88e58b001e52c84c2a7",
+    "shop.css": "bb7f039dfff9fa10ff1270ea1bf8f8822134ea49dac91c1aedc1acb7e6119ee2",
+    "mystery.css": "ac1fe38ebd6ac50cc7c1cbdf08602a7f383ba7c90354dfeae66e6418ee213c61",
+    "cards.css": "983579dd64d3737e62291c882f187a42f563ec483ed24f568b53da13d4b9cb68",
+    "combat-compact.css": "1a3b4cb712415ab5dd7fb7147f27d7dabaf6ab3f2b482af2064262bb5489f758",
+    "passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+    "icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
+    "card-motion.css": "5103374cd9ee1c5e7844f76d1a7e941b1ec5a99960d81830bdcc466857b49603",
+    "analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
+    "status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee",
+    "tutorial.css": "e8bec001a3d6c2b24baf9d01ed83ab59b1bba875f0c3adbf2ebf1cd399c2d7db",
+    "release.js": "34e719e0b8ff208a270d4b2026cf7cddf73df706cf09b0de99ac6b857c0f6165",
+    "card-data.js": "4fc989efc48c309997616c74ab932346b1532274b7c3ec994f3bfcb39fbe8148",
+    "balance-data.js": "6455c7fd8b328665dcb720158957d4c29ae5402ce9815ed96517c7a4a4714c1b",
+    "balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "icon-assets.js": "82f3bf36b255a5723f67ccaf82bd4aefc47cfcd41f9f1881287d3efa20f13074",
+    "card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
+    "card-kit.js": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402",
+    "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "mechanics.js": "861a33ae7f167c2984b7dfbb3c80b4c1994378dd5cfbdefba3801957eeedb697",
+    "question-language.js": "88d085fd08f83db1953df3bcdf636b36079eaab6487330b19e03100c28667ca1",
+    "rich-text-data.js": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
+    "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "balance-config.js": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
+    "rich-text.js": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+    "economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "artifacts.js": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d",
+    "question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
+    "mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "mystery.js": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
+    "combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "combat-predict.js": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a",
+    "card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "card-combat.js": "9f088cbf5777fa9c474b378097dbb2e0d549f569b56b508d803fd1329f0aed57",
+    "engine.js": "51c9b3ba468a764340a5b04dbda0a5e3d597a9afb7878c62b32b9fae45c0fc42",
+    "music-data.js": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3",
+    "audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
+    "audio.js": "745b468713efc6179d35e4839ac8737122da44a3c67a451a0f4d2fe19c050a17",
+    "visuals.js": "5466d2bbaf6016a6b1cbcaf9e3a8c7e6c11eed9c890446a846214f7a0ea2c4c5",
+    "animation-data.js": "059bb3f4fedb6e385a34687af829e910160612a5ba03d6a6930fe3cd223dcea9",
+    "animation.js": "785a535a061a451c819a6a35315e5b411d0ab4779ad8a472e7610133d2030a52",
+    "artifact-ui.js": "b5a9d93f313af4d5cdaf2ff121d4bba59b3840cc66e8b8a750d2c5f42fe352e1",
+    "mechanics-host.js": "ba1377c8588008f30b1d3153ee9411de1968b6e85672cfdb85d84c06b89dbfc4",
+    "hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
+    "mystery-ui.js": "086cfe739d0ae9bcbc5043a684bcc77bfdb545af45b8240cf4db3ac4d60958ee",
+    "education-practice.js": "1cf58d2ac207da20d707c6d781be6634e3fc19586032d65a305e691dc362b2f9",
+    "card-ui.js": "e172317d46a5b1ac20c6beedea20ec2b65bb71f0c39e1667c4a318ffac453759",
+    "combat-status.js": "d80f1754ad79cb4c3c4423640fd6de156267276039a0a56b909b85c8b1fba9e3",
+    "status-vfx.js": "ef5585cbdbf2af43adf2f3926fbd091f63828e21e1c37be186dd3dcf8cfac8e9",
+    "card-motion.js": "fe6a747dc29b0eab084f3ae8d5b1c006073d1428b3f5345c21a2d018796ab9be",
+    "learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
+    "learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
+    "learning-sync.js": "a45da8f82dd33088ca707687e9856db88ca4a2d449b28752b15bb2d0c6087125",
+    "learning-collection-config.js": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2",
+    "learning-google.js": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf",
+    "learning-delivery.js": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275",
+    "analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
+    "tutorial-data.js": "69e7cc514080b7e3dd3e0a15090cbdf54e570449bb468621c203d15d737a365c",
+    "tutorial-core.js": "177f18c30942ea8885084e3a3c6eea7e3b811708e7118f825381cd9b507ab3bc",
+    "tutorial.js": "1c10f2fc3e8c33d3e5dbf37d9b341b825eccb37385c08df8a4ea2a9372a6e803",
+    "app.js": "d878e94eead86559824b4f5882b81b4b29c86a5620246fcb1fd0071e1da8c4f9"
+  },
+  "runtimeInputManifestSha256": "9b71d6a8e017b19398fba9b49b6a5234599934f442b4a331bcf8dc5da1827644",
+  "initialSuiteResolution": {
+    "initialRun": {
+      "tests": 918,
+      "pass": 917,
+      "fail": 1
+    },
+    "failure": "AI campaign seed 20 still finishes validly but no longer exercises a selection card with the two-attempt policy. Its old assertion required at least one choice.",
+    "correction": "Use deterministic seed 21: actual valid victory, 19 deck decisions and 6 card-choice decisions; keep every existing assertion. Agent scores/search, game rules and RNG are unchanged.",
+    "targetedRerun": {
+      "command": "node --test tests/ai-playtester-deck.test.cjs",
+      "tests": 7,
+      "pass": 7,
+      "fail": 0
+    },
+    "finalFullRerun": {
+      "tests": 918,
+      "pass": 918,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "durationMs": 355680.368505
+    }
+  },
+  "limitations": [
+    "No live Google account, Apps Script deployment or quota check; Google boundary is simulated.",
+    "Native headless Chromium viewport/touch-target checks do not certify physical devices, Windows PowerShell or classroom learning outcomes.",
+    "MODEL.zip was unavailable; existing repository assets were preserved and no new model-reference audit is claimed.",
+    "No card/enemy/economy retuning, broad balance approval or wholesale textbook re-audit is claimed for this integration.",
+    "Git publication and hosting deployment are distinct; hosting status is checked after the push."
+  ],
+  "screenshots": [
+    {
+      "path": "docs/verification/education-main-2-36-0/artifact-help-ms.jpg",
+      "bytes": 75780,
+      "sha256": "2c97cb10a2c1d278b5895713a3689e639e90f57f3d070a19a9d9a0a5eb43208c",
+      "provenance": "Fresh native game flow run on merged 2.36.0 candidate; canonical engine fixtures; screenshots can be byte-identical to historical captures."
+    },
+    {
+      "path": "docs/verification/education-main-2-36-0/artifact-question-ms.jpg",
+      "bytes": 278845,
+      "sha256": "3f6c0917a0242cebc3b3d4a85b467fe2d836be6bff888f42fd4d4f07b4fdbf30",
+      "provenance": "Fresh native game flow run on merged 2.36.0 candidate; canonical engine fixtures; screenshots can be byte-identical to historical captures."
+    },
+    {
+      "path": "docs/verification/education-main-2-36-0/mystery-result-ms.jpg",
+      "bytes": 270224,
+      "sha256": "3522e1640e861817714d26aae53d17a901620616615c3a0bf193034b049c024b",
+      "provenance": "Fresh native game flow run on merged 2.36.0 candidate; canonical engine fixtures; screenshots can be byte-identical to historical captures."
+    },
+    {
+      "path": "docs/verification/education-main-2-36-0/predict-retry-en.jpg",
+      "bytes": 106004,
+      "sha256": "51a00b51265ce051167c465bc7ea9a4274b2e372e2993ad7b8be72a81ba12332",
+      "provenance": "Fresh native game flow run on merged 2.36.0 candidate; canonical engine fixtures; screenshots can be byte-identical to historical captures."
+    }
+  ]
+}

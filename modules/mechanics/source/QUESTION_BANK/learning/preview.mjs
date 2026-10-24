@@ -9,7 +9,8 @@ const shortTopics={PROB:'Probability',SET:'Sets',LOGIC:'Logic'};
 const drawerMedia=globalThis.matchMedia('(max-width: 960px)');
 let session,storageError='',storagePaused=false,storageAvailable=true,savedLearningText=null;
 let question=bank.questions[0],selectedChoice=null,attemptCounter=0,mode='review',empty=false;
-let lastRenderedQuestionKey=null,atlasIsOpen=false;
+let lastRenderedQuestionKey=null,atlasIsOpen=false,practicePanel='question',atlasFeedbackSignature='';
+root.dataset.embedded=String(parent!==window);
 let contentLanguage=QL.language();byId('language-select').value=contentLanguage;document.documentElement.lang=contentLanguage;
 let analyticsDisk=null,devPractice=false,analyticsEndpoint=globalThis.DC_EDUCATION_ENDPOINT||'/api/education',analyticsPageURL=location.href;
 try{analyticsDisk=globalThis.localStorage;}catch{}
@@ -19,7 +20,7 @@ try{
 }catch{}
 if(!/^https?:\/\//.test(analyticsPageURL))analyticsPageURL=document.baseURI;
 const analyticsStore=globalThis.DCAnalytics.createStore({storage:analyticsDisk,bank,curriculum:globalThis.DCLearningCurriculum});
-let practiceAnalyticsId=analyticsStore.getSessionId('practice'),reviewAnalyticsId=null,analyticsScope='all',analyticsReturnFocus=null,analyticsClient=null,questionFeedback=null,localAnalyticsError='';
+let practiceAnalyticsId=analyticsStore.getSessionId('practice'),reviewAnalyticsId=null,analyticsScope='all',analyticsView='overview',analyticsReturnFocus=null,analyticsClient=null,questionFeedback=null,localAnalyticsError='';
 const reviewAnalyticsIds=new Map(),collectionAvailable=!devPractice&&/^https?:\/\//.test(analyticsPageURL);
 analyticsClient=(globalThis.DCLearningDelivery||globalThis.DCLearningSync).createClient({storage:analyticsDisk,endpoint:analyticsEndpoint,host:globalThis,
  fetch:devPractice?async()=>{throw Error('Collection is disabled in developer practice.');}:typeof globalThis.fetch==='function'?globalThis.fetch.bind(globalThis):async()=>{throw Error('The collector is unavailable here.');},
@@ -27,7 +28,7 @@ analyticsClient=(globalThis.DCLearningDelivery||globalThis.DCLearningSync).creat
 for(const option of byId('difficulty-select').options)option.value=option.value;
 const tips=attachRichTextTooltips(root,{glossary,calculationIndex,getLanguage:()=>byId('language-select').value,getTheme:()=>root.dataset.theme});
 questionFeedback=attachQuestionFeedback({bank,root,getQuestion:()=>question,getRecord:()=>currentRecord(),getMode:()=>mode,
- onChange:payload=>enqueueAnalytics(payload,'question-feedback'),getDelivery:analyticsStatus});
+ onChange:entry=>enqueueAnalytics(entry,'question-feedback'),onUpdate:()=>refreshFeedbackAtlas(),getDelivery:analyticsStatus,onOpenSharing:()=>openAnalyticsReport('sharing')});
 
 try{savedLearningText=localStorage.getItem(storageKey);}
 catch{storageAvailable=false;storageError='Saving between visits is unavailable. Your progress will stay available while this page is open.';}
@@ -63,8 +64,8 @@ function putSession(next){
 function analyticsText(english,malay){return contentLanguage==='ms'?malay:english;}
 function analyticsStatus(){
  const status=analyticsClient?.status()||{enabled:false,pending:0,state:'on-device',error:''};
- const localError=[analyticsStore.error,localAnalyticsError].filter(Boolean).join(' '),error=[localError,status.error].filter(Boolean).join(' ');
- return {...status,...(!collectionAvailable?{enabled:false,state:'on-device'}:{}),...(error?{error}:{}),...(localError?{state:'save-error'}:{}),dev:devPractice};
+ const localError=[analyticsStore.error,localAnalyticsError,questionFeedback?.error].filter(Boolean).join(' '),error=[localError,status.error].filter(Boolean).join(' ');
+ return {...status,collectionDisabled:!collectionAvailable,...(!collectionAvailable?{enabled:false,state:'on-device'}:{}),...(error?{error}:{}),...(localError?{state:'save-error'}:{}),dev:devPractice};
 }
 function noteAnalyticsFailure(){localAnalyticsError=analyticsText('Learning reporting could not update. Keep this page open and export a copy before leaving.','Rekod laporan pembelajaran tidak dapat dikemas kini. Biarkan halaman ini terbuka dan eksport salinan sebelum keluar.');}
 function enqueueAnalytics(payload,kind='learning-record'){
@@ -83,40 +84,37 @@ function refreshAnalyticsSurfaces(statusOnly=false){
  if(byId('practice-analytics-dialog')?.open)renderAnalyticsReport(statusOnly);
  questionFeedback?.refreshDelivery();
 }
-function renderAnalyticsReport(statusOnly=false,preserveDraft=true){
- const status=analyticsStatus(),content=byId('practice-analytics-content');
- const draft=content.querySelector('[data-analytics-google-url]'),draftValue=draft?.value,draftFocused=!!draft&&document.activeElement===draft;
- const syncArea=statusOnly&&globalThis.DCAnalyticsUI.syncHTML?content.querySelector('[data-analytics-sync]'):null,area=syncArea||content;
- const focused=area.contains(document.activeElement)?document.activeElement.closest('[data-analytics-action]'):null;
- const focusKey=focused?['analyticsAction','scope','exportformat','id'].map(key=>focused.dataset[key]||''):null;
- const disclosureState=[...area.querySelectorAll('details')].map(detail=>detail.open),scrollTop=byId('practice-analytics-dialog').scrollTop;
+function renderAnalyticsReport(statusOnly=false){
+ const status=analyticsStatus(),content=byId('practice-analytics-content'),UI=globalThis.DCAnalyticsUI;
+ const saved=UI.captureState(content.querySelector('.learning-report'));
+ const syncArea=statusOnly?content.querySelector('[data-analytics-sync]'):null;
+ const scrollTop=byId('practice-analytics-dialog').scrollTop;
  byId('practice-analytics-title').textContent=analyticsText('Learning Report','Laporan Pembelajaran');
  byId('close-practice-analytics').textContent=analyticsText('Close report','Tutup laporan');
- if(syncArea)syncArea.innerHTML=globalThis.DCAnalyticsUI.syncHTML(status,contentLanguage);
- else content.innerHTML=globalThis.DCAnalyticsUI.html({report:analyticsStore.report({scope:analyticsScope,language:contentLanguage}),status,language:contentLanguage});
- if(!syncArea&&preserveDraft&&draft){const input=content.querySelector('[data-analytics-google-url]');if(input){input.value=draftValue;if(draftFocused)input.focus({preventScroll:true});}}
- if(!collectionAvailable){
+ if(syncArea)syncArea.innerHTML=UI.syncHTML(status,contentLanguage);
+ else content.innerHTML=UI.html({report:analyticsStore.report({scope:analyticsScope,language:contentLanguage}),status,language:contentLanguage,view:analyticsView});
+ const report=content.querySelector('.learning-report');UI.restoreState(report,saved,{focus:true});analyticsView=report.dataset.view;
+ if(!syncArea&&!collectionAvailable){
   const notice=document.createElement('p');notice.className='analytics-practice-note';notice.textContent=devPractice?analyticsText('Developer practice stays in this temporary session. Collection is disabled.','Latihan pembangun kekal dalam sesi sementara ini. Pengumpulan dinyahaktifkan.'):analyticsText('This offline file keeps records on this device. Open the game through its HTTP server to enable collection.','Fail luar talian ini menyimpan rekod pada peranti ini. Buka permainan melalui pelayan HTTP untuk mengaktifkan pengumpulan.');content.prepend(notice);
-  for(const control of content.querySelectorAll('[data-analytics-action="share"],[data-analytics-action="sync"],[data-analytics-action="destination-save"],[data-analytics-action="destination-local"],[data-analytics-google-url]'))control.disabled=true;
  }
- for(const [index,detail] of [...area.querySelectorAll('details')].entries())if(index<disclosureState.length)detail.open=disclosureState[index];
- if(focusKey){const replacement=[...area.querySelectorAll('[data-analytics-action]')].find(control=>['analyticsAction','scope','exportformat','id'].every((key,index)=>(control.dataset[key]||'')===focusKey[index]));(replacement&&!replacement.disabled?replacement:byId('close-practice-analytics')).focus({preventScroll:true});}
  byId('practice-analytics-dialog').scrollTop=scrollTop;
 }
-function openAnalyticsReport(){
+function openAnalyticsReport(view){
+ byId('practice-options').open=false;
  analyticsReturnFocus=document.activeElement;byId('practice-analytics-status').textContent='';renderAnalyticsReport();
+ if(view){analyticsView=view;globalThis.DCAnalyticsUI.selectView(byId('practice-analytics-content').querySelector('.learning-report'),view);}
  if(!byId('practice-analytics-dialog').open)byId('practice-analytics-dialog').showModal();byId('close-practice-analytics').focus();
 }
 function closeAnalyticsReport(){byId('practice-analytics-dialog').close();analyticsReturnFocus?.focus();}
-function analyticsFile(format='csv'){
- const json=format==='json',data=analyticsStore.exportData(),status=analyticsStatus();
- const content=json?JSON.stringify({...data,questionFeedback:questionFeedback.exportData(),collection:{enabled:status.enabled,pendingEntries:status.pendingEntries||[]},ownerRecovery:{schemaVersion:1,scope:'practice',sessionId:practiceAnalyticsId,session:JSON.parse(JSON.stringify(session))}},null,2)+'\n':analyticsStore.csv();
- return new File([content],'slay-the-math-learning-'+new Date().toISOString().slice(0,10)+'.'+(json?'json':'csv'),{type:json?'application/json':'text/csv;charset=utf-8'});
+function analyticsFile(){
+ const data=analyticsStore.exportData(),status=analyticsStatus();
+ const content=JSON.stringify({...data,questionFeedback:questionFeedback.exportData(),collection:{enabled:status.enabled,pendingEntries:status.pendingEntries||[]},ownerRecovery:{schemaVersion:1,scope:'practice',sessionId:practiceAnalyticsId,session:JSON.parse(JSON.stringify(session))}},null,2)+'\n';
+ return new File([content],'slay-the-math-learning-backup-'+new Date().toISOString().slice(0,10)+'.json',{type:'application/json'});
 }
-function downloadAnalytics(format='csv'){
+function downloadAnalytics(){
  try{
-  const file=analyticsFile(format),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=file.name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
-  byId('practice-analytics-status').textContent=analyticsText('Learning report download prepared.','Muat turun laporan pembelajaran disediakan.');
+  const file=analyticsFile(),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=file.name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  byId('practice-analytics-status').textContent=analyticsText('Learning backup download prepared.','Muat turun sandaran pembelajaran disediakan.');
  }catch{byId('practice-analytics-status').textContent=analyticsText('The download could not start. Keep this page open and try again.','Muat turun tidak dapat dimulakan. Biarkan halaman ini terbuka dan cuba lagi.');}
 }
 function setMessage(text,tone=''){messages.set(questionKey(),{text,tone});}
@@ -133,40 +131,58 @@ function filteredQuestions(){
  return bank.questions.filter(q=>{
   if(topic&&q.topicCode!==topic)return false;
   if(difficulty&&q.difficulty!==difficulty)return false;
+  const feedback=questionFeedback?.get(q.id),filter=byId('review-status-select').value;
+  if(filter==='reviewed'&&!feedback?.reviewed)return false;
+  if(filter==='unreviewed'&&feedback?.reviewed)return false;
+  if(filter==='commented'&&!feedback?.comment&&!feedback?.categories.length)return false;
   if(!search)return true;
   const localized=QL.question(q,contentLanguage);
   const text=[q.id,q.topic,q.topicCode,shortTopics[q.topicCode],q.difficulty,q.prompt,localized.prompt,localized.topic,QL.t(shortTopics[q.topicCode],contentLanguage),QL.t(q.difficulty,contentLanguage),localized.harmonization?.contextNote||'',...(q.curriculumStandards||[])].join(' ').toLocaleLowerCase();
   return search.split(/\s+/).every(word=>text.includes(word));
  });
 }
+function feedbackSignature(){return (questionFeedback?.list()||[]).map(e=>e.id+':'+!!e.reviewed+':'+!!(e.comment||e.categories.length)).join('|');}
+function refreshFeedbackAtlas(){if(feedbackSignature()!==atlasFeedbackSignature)renderAtlas();}
 function renderAtlas(){
- const filtered=filteredQuestions(),hasFilters=!!(byId('question-search').value||byId('atlas-topic-select').value||byId('difficulty-select').value);
- byId('atlas-results').textContent=`${filtered.length} of ${bank.questions.length} questions`;
+ atlasFeedbackSignature=feedbackSignature();
+ const atlas=byId('question-atlas'),top=atlas.scrollTop,active=document.activeElement,focused=atlas.contains(active)?{id:active.dataset.reviewQuestionId||active.dataset.questionId,check:active.hasAttribute('data-review-question-id')}:null;
+ const filtered=filteredQuestions(),hasFilters=!!(byId('question-search').value||byId('atlas-topic-select').value||byId('difficulty-select').value||byId('review-status-select').value!=='all');
+ const reviewed=questionFeedback?.list().filter(e=>e.bankVersion===bank.bankVersion&&e.reviewed).length||0;
+ const summary=analyticsText(reviewed+' / '+bank.questions.length+' reviewed',reviewed+' / '+bank.questions.length+' disemak');if(byId('practice-review-count').textContent!==summary)byId('practice-review-count').textContent=summary;
+ byId('atlas-results').textContent=analyticsText(filtered.length+' of '+bank.questions.length+' questions',filtered.length+' daripada '+bank.questions.length+' soalan');
  byId('atlas-mobile-count').textContent=bank.questions.length;
- byId('clear-filters').hidden=!hasFilters;byId('atlas-empty').hidden=filtered.length>0;
- byId('question-atlas').replaceChildren();
- byId('atlas-intro').textContent=mode==='learn'?'The atlas opens Review. Your Learning question stays saved.':'Open any question in Review.';
- byId('atlas-footnote').textContent=mode==='learn'?'Dots show your Learning record. Atlas visits use a separate review.':'Review stays in this open page.';
+ byId('clear-filters').hidden=!hasFilters;byId('atlas-empty').hidden=filtered.length>0;atlas.replaceChildren();
+ byId('atlas-intro').textContent=analyticsText('Open a question or tick it as reviewed.','Buka soalan atau tandakan sebagai sudah disemak.');
+ byId('atlas-footnote').textContent=mode==='learn'?analyticsText('Opening a question switches to Review. Your Learning question stays saved.','Membuka soalan menukar mod kepada Semakan. Soalan Pembelajaran anda kekal disimpan.') : analyticsText('Review marks and comments save on this device.','Tanda semakan dan komen disimpan pada peranti ini.');
  const rovingId=filtered.some(q=>q.id===question.id)?question.id:filtered[0]?.id;
  for(const code of topicCodes){
   const rows=filtered.filter(q=>q.topicCode===code);if(!rows.length)continue;
   const section=document.createElement('section');section.className='atlas-topic';section.setAttribute('aria-label',topicName(code));
   const heading=document.createElement('h3');heading.className='atlas-topic-heading';
-  const title=document.createElement('span');title.textContent=shortTopics[code]||topicName(code);
-  const count=document.createElement('span');count.textContent=`${rows.length} questions`;heading.append(title,count);
-  const grid=document.createElement('div');grid.className='atlas-grid';grid.setAttribute('role','group');grid.setAttribute('aria-label',title.textContent+' questions');
+  const title=document.createElement('span');title.textContent=QL.t(shortTopics[code]||topicName(code),contentLanguage);
+  const count=document.createElement('span');count.textContent=rows.length;heading.append(title,count);
+  const grid=document.createElement('div');grid.className='atlas-grid';grid.setAttribute('role','group');grid.setAttribute('aria-label',title.textContent);
   for(const q of rows){
-   const record=mode==='learn'?session.records[q.id]:reviewStates.get(q.id)?.records[q.id];
+   const record=mode==='learn'?session.records[q.id]:reviewStates.get(q.id)?.records[q.id],feedback=questionFeedback?.get(q.id),row=document.createElement('div');row.className='atlas-question-row';row.dataset.reviewed=String(!!feedback?.reviewed);
    const button=document.createElement('button');button.type='button';button.className='atlas-question';button.dataset.questionId=q.id;
-   button.textContent=q.id.split('-').at(-1).replace(/^0/,'');
+   const label=document.createElement('strong');label.textContent=q.id;const detail=document.createElement('span');detail.textContent=feedback?.comment||feedback?.categories.length?analyticsText('Has feedback','Ada maklum balas'):QL.t(q.difficulty,contentLanguage);button.append(label,detail);
    const status=record?.status||'unseen';button.dataset.status=status;
-   const statusName=status==='pending'?'opened':status==='correct'?'correct':status==='revealed'?'answer revealed':'not started';
-   button.setAttribute('aria-label',`${q.id}, ${q.difficulty}, ${statusName}`);button.title=`${q.id} · ${q.difficulty} · ${statusName}`;
-   button.setAttribute('aria-current',String(q.id===question.id&&!empty));button.tabIndex=q.id===rovingId?0:-1;
-   button.addEventListener('click',()=>navigateReview(q.id,{focus:true}));grid.append(button);
+   button.setAttribute('aria-label',q.id+', '+analyticsText('open question','buka soalan'));button.setAttribute('aria-current',String(q.id===question.id&&!empty));button.tabIndex=q.id===rovingId?0:-1;
+   button.addEventListener('click',()=>navigateReview(q.id,{focus:true}));
+   const checkLabel=document.createElement('label');checkLabel.className='atlas-review-label';const check=document.createElement('input');check.type='checkbox';check.dataset.reviewQuestionId=q.id;check.checked=!!feedback?.reviewed;check.setAttribute('aria-label',q.id+' · '+analyticsText('Reviewed','Sudah disemak'));
+   check.addEventListener('change',()=>questionFeedback.setReviewed(q.id,check.checked));checkLabel.append(check);row.append(button,checkLabel);grid.append(row);
   }
-  section.append(heading,grid);byId('question-atlas').append(section);
+  section.append(heading,grid);atlas.append(section);
  }
+ QL.applyInterface(byId('atlas-panel'),contentLanguage);
+ if(focused){const next=[...atlas.querySelectorAll(focused.check?'[data-review-question-id]':'.atlas-question')].find(el=>(el.dataset.reviewQuestionId||el.dataset.questionId)===focused.id);if(next)next.focus({preventScroll:true});else byId('review-status-select').focus({preventScroll:true});}
+ atlas.scrollTop=top;
+}
+function setPracticePanel(view,{focus=false}={}){
+ const next=view==='feedback'?'feedback':'question';if(next!==practicePanel)tips.close();practicePanel=next;
+ for(const panel of root.querySelectorAll('[data-practice-panel]'))panel.hidden=panel.dataset.practicePanel!==practicePanel;
+ for(const button of root.querySelectorAll('[data-practice-panel-toggle]'))button.setAttribute('aria-pressed',String(button.dataset.practicePanelToggle===practicePanel));
+ if(focus)(practicePanel==='feedback'?byId('feedback-comment'):byId('question-heading')).focus({preventScroll:true});
 }
 function navigateReview(id,{focus=false}={}){
  const q=bank.questions.find(item=>item.id===id);if(!q)return;
@@ -176,7 +192,7 @@ function navigateReview(id,{focus=false}={}){
  if(focus)focusQuestion();
 }
 function nextReview(direction=1){
- const filtered=filteredQuestions(),rows=filtered.length?filtered:bank.questions;
+ const rows=filteredQuestions();if(!rows.length){setAtlasOpen(true);byId('review-status-select').focus();return;}
  let index=rows.findIndex(q=>q.id===question.id);
  index=index<0?(direction>0?0:rows.length-1):(index+direction+rows.length)%rows.length;
  navigateReview(rows[index].id,{focus:true});
@@ -395,9 +411,9 @@ function render(){
  byId('choice-feedback-panel').hidden=!wrongFeedback;
  byId('choice-feedback-title').textContent=wrongFeedback?`Answer ${question.choices.find(c=>c.id===record.lastChoiceId)?.label||''} · try this idea`:'Try this idea';
  rich('choice-feedback',wrongFeedback?view.feedback.richText:[]);
- renderSupport(view,record);renderSolution(view,record);questionFeedback.render();
+ renderSupport(view,record);renderSolution(view,record);questionFeedback.render();setPracticePanel(practicePanel);
  byId('next-question').disabled=mode==='learn'&&!!session.pendingQuestionId;
- byId('next-question').textContent=mode==='learn'?'Next unseen question →':'Next review →';
+ byId('next-question').textContent=mode==='learn'?'Next unseen question →':analyticsText('Next question →','Soalan seterusnya →');
  byId('next-question-note').textContent=mode==='learn'&&session.pendingQuestionId?'Finish this question or view its solution to continue.':mode==='learn'?'Your next question has not been seen in this learning record.':'';
  QL.applyInterface(root,contentLanguage);
  notifyAudio(record,view.closed);
@@ -417,7 +433,7 @@ function setAtlasOpen(open,{restoreFocus=false}={}){
  if(atlasIsOpen){byId('atlas-panel').setAttribute('role','dialog');byId('atlas-panel').setAttribute('aria-modal','true');byId('atlas-close').focus();}
  else{byId('atlas-panel').removeAttribute('role');byId('atlas-panel').removeAttribute('aria-modal');if(restoreFocus&&mobile)byId('atlas-toggle').focus();}
 }
-function toggleProgress(open=byId('progress-panel').hidden){byId('progress-panel').hidden=!open;byId('progress-button').setAttribute('aria-expanded',String(open));renderProgress();}
+function toggleProgress(open=byId('progress-panel').hidden){byId('practice-options').open=false;byId('progress-panel').hidden=!open;byId('progress-button').setAttribute('aria-expanded',String(open));renderProgress();}
 function openResetDialog(){byId('reset-description').textContent=analyticsText('This clears the current Practice record. Every question will be unseen again. Earlier Learning Reports and your open Review questions stay available.','Ini mengosongkan rekod Latihan semasa. Semua soalan akan menjadi belum dilihat semula. Laporan Pembelajaran terdahulu dan soalan Semakan yang terbuka masih tersedia.');byId('reset-learning-dialog').showModal();}
 
 for(const code of topicCodes){
@@ -426,14 +442,14 @@ for(const code of topicCodes){
 for(const q of bank.questions){const option=document.createElement('option');option.value=q.id;option.textContent=`${q.id} · ${shortTopics[q.topicCode]||q.topicCode} · ${q.difficulty}`;byId('question-select').append(option);}
 byId('question-select').addEventListener('change',()=>navigateReview(byId('question-select').value,{focus:true}));
 byId('mode-select').addEventListener('change',()=>switchMode(byId('mode-select').value));
-byId('resume-learning').addEventListener('click',()=>{switchMode('learn');if(!empty)focusQuestion();});
+byId('resume-learning').addEventListener('click',()=>{byId('practice-options').open=false;setPracticePanel('question');switchMode('learn');if(!empty)focusQuestion();});
 byId('next-question').addEventListener('click',()=>{if(mode==='learn')nextLearningQuestion({focus:true});else nextReview();});
 byId('previous-question').addEventListener('click',()=>nextReview(-1));
 byId('topic-select').addEventListener('change',()=>{if(empty)render();else byId('learning-selection-note').textContent='Select Next unseen question when you are ready.';});
-byId('theme-select').addEventListener('change',()=>{root.dataset.theme=byId('theme-select').value;tips.close();});
-byId('language-select').addEventListener('change',()=>{contentLanguage=byId('language-select').value;QL.setLanguage(contentLanguage);document.documentElement.lang=contentLanguage;render();});
+for(const button of root.querySelectorAll('[data-practice-panel-toggle]'))button.addEventListener('click',()=>setPracticePanel(button.dataset.practicePanelToggle,{focus:true}));
+byId('language-select').addEventListener('change',()=>{byId('practice-options').open=false;contentLanguage=byId('language-select').value;QL.setLanguage(contentLanguage);document.documentElement.lang=contentLanguage;render();byId('practice-options').querySelector('summary').focus({preventScroll:true});});
 byId('progress-button').addEventListener('click',()=>toggleProgress(byId('progress-panel').hidden));
-byId('learning-report').addEventListener('click',openAnalyticsReport);
+byId('learning-report').addEventListener('click',()=>openAnalyticsReport());
 byId('close-practice-analytics').addEventListener('click',closeAnalyticsReport);
 byId('practice-analytics-dialog').addEventListener('cancel',event=>{event.preventDefault();closeAnalyticsReport();});
 byId('practice-analytics-content').addEventListener('click',event=>{
@@ -442,22 +458,30 @@ byId('practice-analytics-content').addEventListener('click',event=>{
  if(action==='scope'){
   if(!['all','gameplay','practice','review'].includes(control.dataset.scope))return;
   analyticsScope=control.dataset.scope;renderAnalyticsReport();byId('practice-analytics-content').querySelector('[data-analytics-action="scope"][data-scope="'+analyticsScope+'"]')?.focus();
- }else if(action==='export')downloadAnalytics(control.dataset.exportformat==='json'?'json':'csv');
+ }else if(action==='view'){analyticsView=control.dataset.view;globalThis.DCAnalyticsUI.selectView(byId('practice-analytics-content').querySelector('.learning-report'),analyticsView);byId('practice-analytics-dialog').scrollTop=0;}
+ else if(action==='export'&&control.dataset.exportformat==='json')downloadAnalytics();
+ else if(action==='practice'){closeAnalyticsReport();byId('resume-learning').click();}
  else if(action==='share'&&collectionAvailable){analyticsClient.setEnabled(!analyticsClient.status().enabled);refreshAnalyticsSurfaces();}
  else if(action==='sync'&&collectionAvailable)analyticsClient.flush();
- else if((action==='destination-save'||action==='destination-local')&&collectionAvailable){
-  try{analyticsClient.setDestination(action==='destination-local'?'':byId('practice-analytics-content').querySelector('[data-analytics-google-url]').value);renderAnalyticsReport(false,false);byId('practice-analytics-status').textContent='';byId('practice-analytics-content').querySelector('[data-analytics-action=share]')?.focus({preventScroll:true});}
+ else if(action==='use-default-destination'&&collectionAvailable){
+  try{analyticsClient.useDefaultDestination();renderAnalyticsReport();byId('practice-analytics-status').textContent='';byId('practice-analytics-content').querySelector('[data-analytics-action=share]')?.focus({preventScroll:true});}
   catch(error){byId('practice-analytics-status').textContent=error.message;}
  }
- else if(action==='review'){
+ else if(action==='review'){setPracticePanel('question');
   const id=control.dataset.id,target=bank.questions.find(q=>q.id===id);if(!target)return;
   closeAnalyticsReport();navigateReview(target.id,{focus:true});
- }else if(action==='foundation'){
+ }else if(action==='foundation'){setPracticePanel('question');
   const target=bank.questions.find(q=>q.id===question.id&&q.learning.foundationId===control.dataset.id)||bank.questions.find(q=>q.learning.foundationId===control.dataset.id);if(!target)return;
   closeAnalyticsReport();if(target.id!==question.id)navigateReview(target.id);
   basicsOpen.add(questionKey());putSession(openSupport(currentSession(),question.id,'foundation'));render();byId('basics-title').scrollIntoView({block:'start'});byId('basics-button').focus();
  }
 });
+byId('practice-analytics-content').addEventListener('change',event=>{
+ const report=byId('practice-analytics-content').querySelector('.learning-report');
+ if(event.target.matches('[data-analytics-scope]')){if(!['all','gameplay','practice','review'].includes(event.target.value))return;analyticsScope=event.target.value;renderAnalyticsReport();byId('practice-analytics-content').querySelector('[data-analytics-scope]')?.focus({preventScroll:true});}
+ else if(event.target.matches('[data-analytics-question-filter]'))globalThis.DCAnalyticsUI.filterQuestions(report);
+});
+byId('practice-analytics-content').addEventListener('input',event=>{if(event.target.matches('[data-analytics-search]'))globalThis.DCAnalyticsUI.filterQuestions(byId('practice-analytics-content').querySelector('.learning-report'));});
 byId('basics-button').addEventListener('click',()=>{
  const key=questionKey();
  if(basicsOpen.has(key))basicsOpen.delete(key);else{basicsOpen.add(key);putSession(openSupport(currentSession(),question.id,'foundation'));}
@@ -484,13 +508,13 @@ byId('restart-review').addEventListener('click',()=>{
  reviewAnalyticsIds.set(question.id,analyticsStore.startSession('review'));
  reviewStates.delete(question.id);basicsOpen.delete(questionKey());activeTabs.delete(questionKey());messages.delete(questionKey());selectedChoice=null;byId('solution-visual-details').open=false;render();
 });
-for(const id of ['question-search','atlas-topic-select','difficulty-select'])byId(id).addEventListener(id==='question-search'?'input':'change',renderAtlas);
-byId('clear-filters').addEventListener('click',()=>{byId('question-search').value='';byId('atlas-topic-select').value='';byId('difficulty-select').value='';renderAtlas();});
+for(const id of ['question-search','atlas-topic-select','difficulty-select','review-status-select'])byId(id).addEventListener(id==='question-search'?'input':'change',renderAtlas);
+byId('clear-filters').addEventListener('click',()=>{byId('question-search').value='';byId('atlas-topic-select').value='';byId('difficulty-select').value='';byId('review-status-select').value='all';renderAtlas();});
 byId('question-atlas').addEventListener('keydown',event=>{
  if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key))return;
  if(!event.target.classList.contains('atlas-question'))return;event.preventDefault();
  const buttons=[...byId('question-atlas').querySelectorAll('.atlas-question')],index=buttons.indexOf(event.target);if(index<0)return;
- const step={ArrowLeft:-1,ArrowRight:1,ArrowUp:-8,ArrowDown:8}[event.key]||0;
+ const step={ArrowLeft:-1,ArrowRight:1,ArrowUp:-1,ArrowDown:1}[event.key]||0;
  const next=event.key==='Home'?0:event.key==='End'?buttons.length-1:Math.max(0,Math.min(buttons.length-1,index+step));
  for(const button of byId('question-atlas').querySelectorAll('button'))button.tabIndex=-1;buttons[next].tabIndex=0;buttons[next].focus();
 });
@@ -501,7 +525,7 @@ byId('atlas-panel').addEventListener('keydown',event=>{
  if(!atlasIsOpen)return;
  if(event.key==='Escape'){event.preventDefault();setAtlasOpen(false,{restoreFocus:true});return;}
  if(event.key!=='Tab')return;
- const focusable=[...byId('atlas-panel').querySelectorAll('button:not(:disabled),input,select')].filter(node=>!node.hidden&&node.tabIndex>=0),first=focusable[0],last=focusable.at(-1);
+ const focusable=[...byId('atlas-panel').querySelectorAll('button:not(:disabled),input,select')].filter(node=>!node.hidden&&node.tabIndex>=0&&node.getClientRects().length>0),first=focusable[0],last=focusable.at(-1);
  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
 });
 drawerMedia.addEventListener('change',()=>setAtlasOpen(false));

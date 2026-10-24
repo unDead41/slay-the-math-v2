@@ -8,9 +8,10 @@ test('55-second correct answer earns Easy reward but times out on the Medium che
  const easy=V.eventScenario({id:'ME01',difficulty:'easy',seed:19,mode:'correct_55s'}),medium=V.eventScenario({id:'ME01',difficulty:'medium',seed:19,mode:'correct_55s'});
  assert.equal(easy.outcome,'CORRECT');assert.equal(easy.goldDelta,48);assert.equal(medium.outcome,'TIMEOUT');assert.equal(medium.goldDelta,0);assert.equal(medium.hpDelta,-4);
 });
-test('artifact retry model grants nothing after wrong attempts and claims exactly once after success',()=>{
+test('artifact model respects two answers and never claims a failed trial',()=>{
  assert.ok(F,'flow APIs exist');const r=E.newRun(19,'challenge',3,{economy:true,difficulty:'medium'}),key=r.artifactState.offer.ids[0];
- const result=F.claimGift(r,{accuracy:0,responseMs:35000});assert.equal(result.wrongAttempts,3);assert.equal(result.attempts,4);assert.equal(result.claimsBeforeCorrect,0);assert.ok(A.has(r,key));assert.equal(r.scene,'map');assert.ok(E.restore(r));assert.throws(()=>E.continueEducation(r));
+ const result=F.claimGift(r,{accuracy:0,responseMs:35000});assert.equal(result.wrongAttempts,2);assert.equal(result.attempts,2);assert.equal(result.claimed,false);assert.equal(result.claimsBeforeCorrect,0);assert.equal(A.has(r,key),false);assert.equal(r.scene,'map');assert.ok(E.restore(r));assert.throws(()=>E.continueEducation(r));
+ const success=E.newRun(19,'challenge',3,{economy:true,difficulty:'medium'}),gift=success.artifactState.offer.ids[0],passed=F.claimGift(success,{accuracy:1,responseMs:15000});assert.equal(passed.attempts,1);assert.equal(passed.claimed,true);assert.ok(A.has(success,gift));assert.ok(E.restore(success));assert.throws(()=>E.continueEducation(success));
 });
 test('adaptive Rest heals low HP and upgrades at full HP',()=>{
  assert.ok(F,'flow APIs exist');const low=room('camp','hard');low.hp=8;const a=F.restDecision(low,'tag_support');assert.equal(a.action,'heal');E.camp(low,a.action,a.uid);assert.equal(low.hp,20);

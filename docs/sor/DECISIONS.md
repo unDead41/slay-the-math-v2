@@ -10,6 +10,17 @@
 
 **Scope and risk:** documentation only; preserve game/release versions, runtime, assets, saved data and other branch history. Repository guidance requires sessions to read the files; GitHub publication does not configure ChatGPT Project Instructions or Project Sources. Review the documentation diff and new relative links, and verify the published commit/ref; runtime and browser testing are outside this documentation-only change.
 
+## DEC-20261024-EDUCATION-MAIN — Publish reviewed education to current main
+
+**DISAHKAN:** Ijamm explicitly requests "okay push ke main please". Integrate
+education-report af03f38 with current main beb4a4d / 2.35.0 as 2.36.0. Supersedes
+the education-report-only boundaries, without authorizing replacement of newer
+main systems. Preserve card values/rule identities, art/audio, AI strategy,
+tutorial and production Dev. Adapt tutorial/AI/Hub integration points to the
+actual two-attempt owner and regenerate cache/production outputs.
+[Audit, current scope and fresh checks](../education/MAIN_2_36_0.md).
+
+
 ## DEC-20261024-COMBAT-POLISH-MAIN — Publish completed combat polish as 2.32.0
 
 **DISAHKAN:** Ijamm now says “Okay push ke main please”. This supersedes the previous branch-only publication boundary for this completed combat update. Fast-forward tested main `6dc3ce3` through feature `b422a18`, then publish version/cache metadata and actual combined verification as 2.32.0. Preserve original art/icon mappings, source animations, gameplay/RNG and saves. The feature’s poster-based browser coverage and incomplete production/offline-build coverage remain explicit limits. [Main verification](../COMBAT_MOTION_MAIN_2_32_0.md).
@@ -21,6 +32,15 @@
 ## DEC-20261024-COMBAT-POLISH-LOCAL — Improve combat feedback without publishing
 
 **DISAHKAN:** after reviewing the eight proposed improvements, Ijamm says to update locally and not push to a branch. This supersedes previous main-push authorization for this new work only; existing published releases remain unchanged. **DITERUSKAN:** prioritize/merge actual status cues, combine exactly explained Passive/stat labels, separate crowded aura geometry, share cancelable presentation timing and one synthesized primary SFX, distinguish shield depletion from expiry, refine ten code-native Passive signatures, and persist Low/Full visual intensity in UI settings. Preserve artwork/icon mappings, source sprite timings, gameplay/RNG and run schema. **PERLU_VERIFIKASI:** physical devices, human SFX feel and a complete production/offline build with all original large assets. [Local scope and actual verification](../COMBAT_MOTION_POLISH_LOCAL.md). The later DEC-20261024-COMBAT-POLISH-BRANCH above supersedes the original no-branch-push instruction; main release is still not authorized.
+
+## DEC-20261024-GAME-QUESTIONS — Clear steps and two answers in game
+
+**DISAHKAN:** Ijamm requests clearer question layout/tabs/next actions and at most two answers for Predict, events and Artifact trials. First wrong allows retry and unlocks both hints, even without earlier Hint use; second wrong locks input. Publish to a feature branch, never main for this task.
+
+**DITERUSKAN (implementation):** continue education-report as 2.31.0-report.3. Question / Help / Result, a first-wrong Help call to action, truthful support snapshots and versioned canonical replay preserve historical/Practice evidence. Correct retry remains valid. Preserve reward gates: no Focus/seal on Predict failure; Continue without the chosen Artifact on failed trial; original Mystery consequence only after terminal result/Continue. Timer, offers, stable IDs and RNG remain frozen. Regenerate the Google receiver and document same-deployment updating. [Scope, compatibility and owner guide](../education/GAME_QUESTIONS.md).
+
+**PERLU_VERIFIKASI:** pupil/physical-device usability and the owner's live Google deployment. Automated checks do not establish these. Existing balance reports remain historical; no numeric tuning or main integration is authorized.
+
 
 ## DEC-20261023-ART-RESTORE — Restore selected card and artifact illustrations
 
@@ -635,3 +655,18 @@ DISAHKAN: Ijamm quotes and selects the first three proposed AI improvements and 
 ## Main integration — 2.35.0, 24 October 2026
 
 DISAHKAN: Ijamm now authorizes publishing the complete production/password/extended diagnostics Dev update to main. This supersedes the branch-only publication boundaries above. Merge with main 2.34.0, preserve AI/local-only backend and card effects. The status editor follows the current percentage/duration Weak/Vulnerable rules. Production ships the static password-gated Hub; AI Playtester remains local-dev-server-only.
+
+## DEC-20261023-LEARNING-REPORT — Harmonised report preview
+
+- **DISAHKAN:** Ijamm asks to harmonise the cluttered Learning Report, remove in-game CSV export/import and move Google-link setup to developer access. He delegates reasonable choices and explicitly excludes main publication. Work belongs to `education-report`, based on main d76ad6e / 2.30.0, labelled 2.31.0-report.1.
+- **DITERUSKAN:** use three shared BM/English views (Overview, Details, Sharing), honest canonical counts/evidence and one disclosed JSON recovery backup. Comments/exit use the shared Sharing view; preserve ordinary game-save import/export. The old game had no CSV importer. External/pure historical CSV formatters stay outside the player flow.
+- **DITERUSKAN:** a developer-only loopback/same-origin editor changes the public project collection default, with strict URL/body validation, stale-revision checks and atomic replacement. Existing browser destinations and per-target consent/identity/receipts are retained; explicit default adoption pauses sharing. Developer sandbox never sends or reads player saves.
+- **DITERUSKAN:** include the already-delivered selectable owner setup fix (`setupCollector` guards account identity and calls private `setupCollector_`). The receiver URL is public browser configuration, while Sheet access stays private.
+- **PERLU_VERIFIKASI:** live Google deployment/account policy/quotas, classroom use and physical Windows/device behavior. No main merge or live deployment is performed. [Preview flow and limits](../LEARNING_REPORT_PREVIEW.md).
+
+## DEC-20261024-PRACTICE-WORKSPACE — Education Practice simplification
+
+- **DISAHKAN:** Ijamm asks to simplify the 120-question Education screen like the report, remove redundant player CSV/import controls, allow each question to be ticked and commented on, retain Google delivery and show Google setup only to developers. The prior branch-only boundary continues; do not write main.
+- **Implementation choice for this preview:** Reviewed means checked by the reviewer, independent of mathematical outcomes. Separate Question/Feedback views, readable checkbox rows, current-bank counts and review/feedback filters replace the large hero and dense grid; secondary controls move under Practice options.
+- **Architecture:** One optional local feedback flag, strict-compatible Question marker in existing transport, unchanged original comments, explicit consent and offline journals. No new database/server/receiver setup. All120 current items validate against the existing Google receiver.
+- **PERLU_VERIFIKASI:** live owner Google access/deployment/quota, physical classroom/Windows/mobile behavior and a later reviewed integration with newer main changes. Scope/run instructions and actual checks: docs/education/PRACTICE_WORKSPACE.md.

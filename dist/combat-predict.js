@@ -13,13 +13,20 @@
   b.question={source:'bank',questionId:q?.id||null,choiceOrder:q?q.choices.map(c=>c.id):[],selectedId:null,attempts:[],hinted:false,solved:false,first:false,seal:e.boss&&b.seals<e.seals.length?b.seals:null,exhausted:!q,unscored:!q};
   return b.question;
  }
- function select(r,id){const p=pending(r);if(p.exhausted||p.solved||!p.choiceOrder.includes(id)||p.attempts.includes(id))throw Error('Choose an answer that is still available.');p.selectedId=id;return r;}
+ function failed(r){return S.attemptsExhausted(Q.consumerRecord(r));}
+ function settleFailure(r,ctx){
+  const p=pending(r),b=r.battle;if(!failed(r)||b.forecastUsed)return r;
+  b.forecastUsed=true;r.stats.forecasts++;r.stats.failedPredictions=(r.stats.failedPredictions||0)+1;const q=Q.catalog[p.questionId],st=r.stats.concepts[q.topicCode]||(r.stats.concepts[q.topicCode]={total:0,first:0,assisted:0});st.total++;st.failed=(st.failed||0)+1;
+  const message='Two incorrect answers. Predict is finished. Review the solution, then return to battle. No Focus or boss seal.';
+  ctx.notify(r,message);Log?.record(r,{actor:'player',kind:'predict-failed',source:q.id,label:'Predict',summary:message,key:'predict:'+b.turn,values:{questionId:q.id,first:false,focusGained:0,sealOpened:false,scored:true}});return r;
+ }
+ function select(r,id){const p=pending(r);if(p.exhausted||p.solved||failed(r)||!p.choiceOrder.includes(id)||p.attempts.includes(id))throw Error('Choose an answer that is still available.');p.selectedId=id;return r;}
  function answer(r,ctx){
   const p=pending(r),q=Q.catalog[p.questionId],b=r.battle;
-  if(!q||p.solved||!p.selectedId||p.attempts.includes(p.selectedId))throw Error('Select an answer before checking it.');
+  if(!q||p.solved||failed(r)||!p.selectedId||p.attempts.includes(p.selectedId))throw Error('Select an answer before checking it.');
   r.educationState.session=S.submitAnswer(Q.getSession(r),Q.bank,{questionId:q.id,choiceId:p.selectedId,attemptId:q.id+':predict:'+(p.attempts.length+1)});
   p.attempts.push(p.selectedId);p.solved=p.selectedId===q.correctChoiceId;
-  if(!p.solved){r.stats.wrong++;p.selectedId=null;return {valid:true,correct:false,scored:true,first:false,message:'Try again. Check the question and use Hint if needed.'};}
+  if(!p.solved){r.stats.wrong++;p.selectedId=null;settleFailure(r,ctx);return {valid:true,correct:false,scored:true,first:false,message:failed(r)?'No attempts left. Review the solution, then return to battle.':'One attempt left. Hint and More Hint are ready; open Help before trying again.'};}
   p.first=Q.consumerRecord(r).completion.category==='independent';b.forecastUsed=true;r.stats.forecasts++;
   const st=r.stats.concepts[q.topicCode]||(r.stats.concepts[q.topicCode]={total:0,first:0,assisted:0});st.total++;
   const before=b.focus;if(p.first){b.focus=Math.min(C.FOCUS_CAP,b.focus+1);r.stats.firstCorrect++;st.first++;}else{r.stats.assisted++;st.assisted++;}
@@ -41,14 +48,15 @@
   ctx.notify(r,message);Log?.record(r,{actor:'player',kind:'predict-exhausted',source:'question-bank',label:'Predict',summary:message,key:'predict:'+b.turn,values:{exhausted:true,scored:false,focusGained:0,sealOpened:opened}});
   return {valid:true,correct:false,first:false,scored:false,exhausted:true,unscored:true,focusGained:0,sealOpened:opened,message};
  }
- function close(r){const p=pending(r);if(!p.solved){if(p.questionId)Q.retireQuestion(r,p.questionId);Log?.record(r,{actor:'player',kind:'predict-abandoned',source:p.questionId||'question-bank',label:'Predict',summary:'Predict closed without a reward or boss seal.',key:'predict:'+r.battle.turn,values:{scored:false,focusGained:0,sealOpened:false}});}r.battle.forecastUsed=true;r.battle.question=null;return r;}
+ function close(r){const p=pending(r);if(!p.solved&&!failed(r)){if(p.questionId)Q.retireQuestion(r,p.questionId);Log?.record(r,{actor:'player',kind:'predict-abandoned',source:p.questionId||'question-bank',label:'Predict',summary:'Predict closed without a reward or boss seal.',key:'predict:'+r.battle.turn,values:{scored:false,focusGained:0,sealOpened:false}});}r.battle.forecastUsed=true;r.battle.question=null;return r;}
  function valid(r){
   const b=r.battle,p=b?.question;if(p?.source!=='bank')return true;const e=C.enemies[b.enemyId];
-  if(!e||!Array.isArray(p.choiceOrder)||!Array.isArray(p.attempts)||p.attempts.length>4||new Set(p.attempts).size!==p.attempts.length||!['hinted','solved','first','exhausted','unscored'].every(k=>typeof p[k]==='boolean')||(p.seal!==null&&(!integer(p.seal)||!e.boss||p.seal>=e.seals.length))||p.solved!==b.forecastUsed)return false;
+  const ended=S.attemptsExhausted(r.educationState?.session?.records[p.questionId]);
+  if(!e||!Array.isArray(p.choiceOrder)||!Array.isArray(p.attempts)||p.attempts.length>4||new Set(p.attempts).size!==p.attempts.length||!['hinted','solved','first','exhausted','unscored'].every(k=>typeof p[k]==='boolean')||(p.seal!==null&&(!integer(p.seal)||!e.boss||p.seal>=e.seals.length))||(p.solved||ended)!==b.forecastUsed)return false;
   if(p.exhausted)return p.unscored&&p.questionId===null&&(r.educationState?.runUsedIds||[]).length===Q.bank.total&&!p.choiceOrder.length&&!p.attempts.length&&p.selectedId===null&&!p.hinted&&!p.first&&(p.seal===null||b.seals===p.seal+(p.solved?1:0));
   const q=Q.catalog[p.questionId],rec=r.educationState?.session?.records[p.questionId];
-  if(p.unscored||!q||!rec||!r.educationState.runUsedIds?.includes(q.id)||JSON.stringify(p.choiceOrder)!==JSON.stringify(q.choices.map(c=>c.id))||JSON.stringify(p.attempts)!==JSON.stringify(rec.attempts.map(a=>a.choiceId))||p.hinted!==rec.hintState.hintUsed||p.solved!==(rec.status==='correct')||rec.status==='revealed'||p.first!==(rec.completion?.category==='independent')||(p.selectedId!==null&&!p.choiceOrder.includes(p.selectedId)))return false;
+  if(p.unscored||!q||!rec||!r.educationState.runUsedIds?.includes(q.id)||JSON.stringify(p.choiceOrder)!==JSON.stringify(q.choices.map(c=>c.id))||JSON.stringify(p.attempts)!==JSON.stringify(rec.attempts.map(a=>a.choiceId))||p.hinted!==rec.hintState.hintUsed||p.solved!==(rec.status==='correct')||(rec.status==='revealed'&&!ended)||p.first!==(rec.completion?.category==='independent')||(p.selectedId!==null&&!p.choiceOrder.includes(p.selectedId)))return false;
   return p.solved?p.selectedId===q.correctChoiceId&&(p.seal===null||b.seals===p.seal+1):!p.attempts.includes(p.selectedId)&&(p.seal===null||b.seals===p.seal);
  }
- const api={forecast,select,answer,support,completeExhausted,close,valid};if(typeof module!=='undefined')module.exports=api;else root.DCCombatPredict=api;
+ const api={settleFailure,forecast,select,answer,support,completeExhausted,close,valid};if(typeof module!=='undefined')module.exports=api;else root.DCCombatPredict=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

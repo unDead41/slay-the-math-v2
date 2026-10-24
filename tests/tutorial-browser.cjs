@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),out=process.env.QA_SCREENSHOTS||'/tmp/st
 (async()=>{let server,browser;const errors=[],checks=[];fs.mkdirSync(out,{recursive:true});
  try{
   server=spawn(process.execPath,['server.cjs',...(process.env.TUTORIAL_QA_PROD?['--prod']:[])],{cwd:root,env:{...process.env,PORT:String(port)},stdio:['ignore','pipe','pipe']});await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);});
-  const opts={headless:true,args:['--no-sandbox','--disable-gpu']};if(process.env.QA_CHROMIUM_MODULE){const loaded=require(process.env.QA_CHROMIUM_MODULE),c=loaded.default||loaded;opts.executablePath=await c.executablePath();opts.args=[...c.args.filter(a=>a!=='--single-process'),...opts.args];}
+  const opts={headless:true,args:['--no-sandbox','--disable-gpu']};if(process.env.QA_CHROMIUM_MODULE){const loaded=require(process.env.QA_CHROMIUM_MODULE),c=loaded.default||loaded;opts.executablePath=await c.executablePath();opts.args=[...c.args.filter(a=>!['--single-process','--disable-web-security'].includes(a)),...opts.args];}
   browser=await chromium.launch(opts);const url='http://127.0.0.1:'+port+'/';
   async function open(viewport={width:1440,height:1000},suffix=''){
    const context=await browser.newContext({viewport,reducedMotion:'reduce'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});

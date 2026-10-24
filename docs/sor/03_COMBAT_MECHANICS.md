@@ -123,3 +123,18 @@ The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_M
 ## Percentage status phases and Last Ember — 2.33.0
 
 DISAHKAN: Ijamm approves all card-audit proposals, initially for feature-branch publication; the later “okay push ke main” instruction authorizes integration as game 2.34.0. [Main integration](../CARD_EFFECTS_MAIN_2_34_0.md). The new ordinary/Master percentages, phase timing, card values, fallback search, Passive growth/activation and prior-save contracts supersede the corresponding earlier rules for new runs. Owner: [Card effects 2.33.0](../CARD_EFFECTS_2_33_0.md). Unmarked ordinary runs retain their original definitions; do not reinterpret old receipts.
+
+## In-game question workspace — 24 October 2026
+
+Bank Predict consumes the turn on its second wrong answer, with zero Focus and no boss seal. Keep independent first-try Focus and any-correct seal gates; retry/help never grants first-try credit. Failure counters are separate from correct/assisted counters. Close/reload cannot add a reward or duplicate log. Snapshot live-deck predictions remain historical compatibility. [Current contract](../education/GAME_QUESTIONS.md).
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

@@ -43,8 +43,8 @@ test('legacy pending Mystery preserves question, support, offers and exact deadl
  const restored=E.restore(copy(r));assert.ok(restored);assert.deepEqual(restored.mysteryState.pending,pending);assert.deepEqual(restored.educationState.session,session);
  E.answerMystery(restored,q.correctChoiceId,pending.startedAt+1);E.continueMystery(restored);assert.equal(restored.scene,'map');assert.ok(E.restore(copy(restored)));
 });
-test('first wrong answer ends the challenge, nonlethal damage applies once after review',()=>{
- const r=room();r.hp=2;const q=start(r);E.answerMystery(r,q.choices.find(c=>c.id!==q.correctChoiceId).id,100001);assert.equal(r.hp,2);assert.equal(r.mysteryState.pending.outcome,'INCORRECT');assert.throws(()=>E.answerMystery(r,q.correctChoiceId,100002));
+test('second wrong answer ends the challenge, nonlethal damage applies once after review',()=>{
+ const r=room();r.hp=2;const q=start(r);for(const c of q.choices.filter(c=>c.id!==q.correctChoiceId).slice(0,2))E.answerMystery(r,c.id,100001);assert.equal(r.hp,2);assert.equal(r.mysteryState.pending.outcome,'INCORRECT');assert.throws(()=>E.answerMystery(r,q.correctChoiceId,100002));
  const restored=E.restore(copy(r));assert.ok(restored);E.continueMystery(restored);assert.equal(restored.hp,1);assert.equal(restored.scene,'map');assert.throws(()=>E.continueMystery(restored));assert.ok(E.restore(copy(restored)));
 });
 test('strict deadline accepts only earlier answers; timeout and abandon share one settlement',()=>{
@@ -88,7 +88,7 @@ test('Garden grants an unowned Starting artifact; Bargain pays Max HP without ex
  const x=room('ME15');solve(x);const hp=x.hp,max=x.maxHp;claim(x,'bargain');assert.equal(x.maxHp,max-5);assert.equal(x.hp,Math.min(hp,max-5));assert.ok(E.restore(copy(x)));assert.ok(A.owned(x).some(a=>a.tier==='elite_mystery'));
 });
 test('Echo failure starts one stage-correct Normal combat after review, with normal rewards and one node completion',()=>{
- const r=room('ME13'),q=start(r),depth=r.depth;E.answerMystery(r,q.choices.find(c=>c.id!==q.correctChoiceId).id,100001);assert.equal(r.scene,'event');E.continueMystery(r);assert.equal(r.scene,'battle');assert.ok(C.stages[r.stage].normals.includes(r.battle.enemyId));assert.equal(r.battle.elite,false);assert.ok(E.restore(copy(r)));assert.throws(()=>E.continueMystery(r));
+ const r=room('ME13'),q=start(r),depth=r.depth;for(const c of q.choices.filter(c=>c.id!==q.correctChoiceId).slice(0,2))E.answerMystery(r,c.id,100001);assert.equal(r.scene,'event');E.continueMystery(r);assert.equal(r.scene,'battle');assert.ok(C.stages[r.stage].normals.includes(r.battle.enemyId));assert.equal(r.battle.elite,false);assert.ok(E.restore(copy(r)));assert.throws(()=>E.continueMystery(r));
  r.battle.hp=1;r.battle.enemyBlock=0;const hit=[...r.battle.hand,...r.battle.draw].find(c=>C.cards[c.key].role==='attack');if(!r.battle.hand.includes(hit)){r.battle.draw.splice(r.battle.draw.indexOf(hit),1);r.battle.hand.push(hit);}E.playCard(r,hit.uid);assert.equal(r.scene,'reward');assert.ok(E.restore(copy(r)));E.chooseReward(r,null);assert.equal(r.depth,depth+1);assert.ok(E.restore(copy(r)));
 });
 test('Oracle Strength/Agility affect the next combat only, including saved combat reload',()=>{
@@ -96,7 +96,7 @@ test('Oracle Strength/Agility affect the next combat only, including saved comba
 });
 test('Hourglass extra draw and Energy penalty apply on first turn only and obey Hand capacity',()=>{
  const r=room('ME14');solve(r);battle(r);assert.ok(r.battle.hand.length>=6);E.endTurn(r);assert.equal(r.battle.hand.length,C.HAND);assert.ok(E.restore(copy(r)));
- const x=room('ME14');const q=start(x);E.answerMystery(x,q.choices.find(c=>c.id!==q.correctChoiceId).id,100001);E.continueMystery(x);battle(x);assert.equal(x.battle.energy,C.ENERGY-1);E.endTurn(x);assert.equal(x.battle.energy,C.ENERGY);assert.ok(E.restore(copy(x)));
+ const x=room('ME14');const q=start(x);for(const c of q.choices.filter(c=>c.id!==q.correctChoiceId).slice(0,2))E.answerMystery(x,c.id,100001);E.continueMystery(x);battle(x);assert.equal(x.battle.energy,C.ENERGY-1);E.endTurn(x);assert.equal(x.battle.energy,C.ENERGY);assert.ok(E.restore(copy(x)));
 });
 test('Learn mode Mystery shares profile history and artifact grants remain valid',()=>{
  const r=room('ME11','learn');solve(r);claim(r,'artifact');assert.ok(A.owned(r).some(a=>a.tier==='starting'));assert.ok(E.restore(copy(r)));assert.ok(Q.validHistory(Q.history(r.educationState.usedIds,r.educationState.session)));

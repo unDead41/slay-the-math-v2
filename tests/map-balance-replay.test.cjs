@@ -32,11 +32,11 @@ test('benchmark action limit is censored, never counted as player defeat',()=>{
  assert.equal(r.campaignWon,null);
 });
 test('budget boundaries preserve completed Rest and Boss outcomes',()=>{
- const rest=runCampaign({runSeed:2822299500,limits:{maxActions:160},trace:true});
- assert.equal(rest.status,'BENCHMARK_LIMIT_CENSORED');assert.equal(rest.apiCalls,160);
+ const rest=runCampaign({runSeed:2822299500,limits:{maxActions:128},trace:true});
+ assert.equal(rest.status,'BENCHMARK_LIMIT_CENSORED');assert.equal(rest.apiCalls,128);
  assert.equal(rest.actions.at(-1).kind,'campHeal');assert.equal(rest.rooms.at(-1).result,'CLEARED');
- assert.equal(rest.rooms.at(-1).exit.hp,60);
- const boss=runCampaign({runSeed:2822299500,limits:{maxActions:362}});
+ assert.equal(rest.rooms.at(-1).exit.hp,Math.min(rest.rooms.at(-1).enter.maxHp,rest.rooms.at(-1).enter.hp+12));
+ const boss=runCampaign({runSeed:2822299500,limits:{maxActions:347}});
  assert.equal(boss.status,'BENCHMARK_LIMIT_CENSORED');assert.equal(boss.stages[0].cleared,true);
  assert.equal(boss.rooms.at(-1).roomType,'boss');assert.equal(boss.rooms.at(-1).result,'CLEARED');
  const midPair=runCampaign({runSeed:2822299500,limits:{maxActions:2}});

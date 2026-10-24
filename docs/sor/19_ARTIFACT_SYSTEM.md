@@ -97,3 +97,19 @@ Only runs explicitly created with economy=true use [SOR 22](22_ECONOMY_REWARDS.m
 ## Master integration — game 2.27.0
 
 The explicit Easy/Medium/Hard playtest now uses the integrated [Master SOR](23_MASTER_BALANCE.md). It supersedes the earlier integration gaps only for that versioned candidate. See [Master handoff](../balance/master/HANDOFF.md) for actual source/validation and unmeasured pupil targets; legacy entry and historical specialist evidence retain their own definitions.
+
+
+## In-game question workspace — 24 October 2026
+
+DISAHKAN: Artifact bank trials now permit two answers. A correct answer still precedes the explicit final Claim and all artifact effects. Two wrong answers reveal the solution and enable Continue without artifact, including Starting and Boss, so progression cannot soft-lock. Keep a declined receipt paired with the failed trial; no acquired receipt/one-shot effect, reroll or later duplicate source claim. Existing purchases and direct Mystery rewards keep their original owners. [Policy](../education/GAME_QUESTIONS.md).
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

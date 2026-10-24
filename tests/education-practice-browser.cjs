@@ -9,11 +9,15 @@ let browser,server;
  fs.mkdirSync(output,{recursive:true});
  server=require('node:child_process').spawn(process.execPath,[path.join(root,'server.cjs')],{env:{...process.env,PORT:'4198'},stdio:['ignore','pipe','pipe']});
  await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);server.stderr.once('data',d=>reject(Error(String(d))));});
- browser=await chromium.launch({headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE,args:['--no-sandbox','--disable-dev-shm-usage']});
+ console.error('QA all120 server ready');
+ const launch={headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE,args:['--no-sandbox','--disable-dev-shm-usage',...(process.env.QA_DISABLE_GPU?['--disable-gpu']:[])]};
+ if(process.env.QA_CHROMIUM_MODULE){let c=require(process.env.QA_CHROMIUM_MODULE);c=c.default||c;launch.executablePath=await c.executablePath();launch.args=[...c.args.filter(a=>a!=='--disable-web-security'),'--no-sandbox',...(process.env.QA_DISABLE_GPU?['--disable-gpu']:[])];}
+ browser=await chromium.launch(launch);console.error('QA all120 browser ready');
  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
  page.on('pageerror',e=>report.errors.push(e.message));
+ page.on('console',message=>{if(message.text().startsWith('QA all120 '))console.error(message.text());});
  page.on('response',r=>{if(r.status()>=400)report.errors.push(r.status()+' '+r.url());});
- await page.goto('http://127.0.0.1:4198/');
+ await page.goto('http://127.0.0.1:4198/');console.error('QA all120 game ready');
  assert.equal(await page.locator('[data-action=education-practice]').count(),1,'Education Practice must be reachable from Main Menu');
  const fixture=require('./fixtures/education-v1_4-pending.json');
  await page.evaluate(r=>{
@@ -34,7 +38,7 @@ let browser,server;
   await frame.locator('#question-heading').waitFor();
   return frame;
  };
- let frame=await open();
+ let frame=await open();console.error('QA all120 practice ready');
  assert.equal(await frame.locator('.atlas-question').count(),120);
  await frame.locator('#hint-tab').click();
  assert.equal(await frame.locator('#hint-visual td').filter({hasText:'?'}).count(),0);
@@ -49,8 +53,9 @@ let browser,server;
  assert.equal(await frame.locator('#answer-panel').isVisible(),false);
  await page.screenshot({path:path.join(output,'more-hint-desktop.png'),fullPage:true});
  report.checks.push('Main Menu opens all 120 questions; Hint 1 immediately contains all eight ordered pairs, with no question-mark placeholders. More Hint explains the same filled values.');
+ console.error('QA all120 starting question loop');
  const items=Q.bank.questions.map(({id,choices,correctChoiceId})=>({id,choices:choices.map(c=>({id:c.id})),correctChoiceId}));
- report.questions=await frame.locator('#preview').evaluate((root,items)=>{
+ report.questions=await frame.locator('#preview').evaluate(async(root,items)=>{
   const byId=id=>document.getElementById(id),check=(condition,message)=>{if(!condition)throw Error(message);};
   function choose(id){root.querySelector('input[value="'+id+'"]').click();byId('submit-answer').click();}
   let count=0;
@@ -69,12 +74,14 @@ let browser,server;
    byId('show-steps').click();check(byId('worked-steps').children.length===3,item.id+' steps');
    byId('solution-visual-details').open=true;check(byId('solution-visual').textContent.length>0,item.id+' solution visual');
    const ids=[...root.querySelectorAll('svg [id]')].map(e=>e.id);check(new Set(ids).size===ids.length,item.id+' duplicate diagram IDs');
-   count++;
+   count++;if(count%20===0)console.log('QA all120 '+count);
+   // Release mutation/voice work between questions, as real user actions do.
+   await new Promise(resolve=>setTimeout(resolve,0));
   }
   return count;
  },items);
  report.checks.push('All 120 questions: wrong-before-Hint stays locked, Hint then wrong unlocks More Hint, correct reveals the answer, three worked steps and completed visual.');
- await frame.locator('#resume-learning').click();
+ await frame.locator('#practice-options > summary').click();await frame.locator('#resume-learning').click();
  const pendingId=await frame.locator('#question-select').inputValue();
  await frame.locator('#hint-tab').click();
  const learningKey='slay-the-math.education-practice.v1';
@@ -82,7 +89,7 @@ let browser,server;
  assert.deepEqual(await saved(),before,'practice must not write the run or rewarded exposure history');
  await closePractice();
  assert.equal(await page.locator('[data-action=education-practice]').isVisible(),true);
- await page.reload();frame=await open();await frame.locator('#resume-learning').click();
+ await page.reload();frame=await open();await frame.locator('#practice-options > summary').click();await frame.locator('#resume-learning').click();
  assert.equal(await frame.locator('#question-select').inputValue(),pendingId);
  assert.equal(await frame.locator('#hint-tab').getAttribute('aria-selected'),'true');
  assert.deepEqual(await saved(),before);
@@ -94,7 +101,7 @@ let browser,server;
   assert.ok(outer&&inner,'practice overflow at '+width);
   await closePractice();
   const buttons=await page.locator('.main-menu-actions>button').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {height:r.height,left:r.left,right:r.right};}));
-  assert.equal(buttons.length,6);for(const b of buttons)assert.ok(b.height>=44&&b.left>=0&&b.right<=width);
+  assert.equal(buttons.length,7);for(const b of buttons)assert.ok(b.height>=44&&b.left>=0&&b.right<=width);
   frame=await open();report.viewports.push({width,height,overflow:false});
   if(width===390)await page.screenshot({path:path.join(output,'practice-mobile.png'),fullPage:true});
  }

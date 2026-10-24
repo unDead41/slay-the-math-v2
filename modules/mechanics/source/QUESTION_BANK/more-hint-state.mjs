@@ -1,7 +1,7 @@
 export function createHintState(questionId) {
   return { version: 1, questionId, hintUsed: false, attempts: 0, wrongAfterHint: 0, moreHintUnlocked: false, moreHintViewed: false, completed: false };
 }
-export function reduceHintState(state, event) {
+export function reduceHintState(state, event, {unlockAfterWrong=false}={}) {
   if (!event || event.questionId !== state.questionId) return state;
   if (event.type === 'MORE_HINT_OPENED') {
     return state.moreHintUnlocked ? { ...state, moreHintViewed: true } : state;
@@ -11,7 +11,7 @@ export function reduceHintState(state, event) {
   if (event.type !== 'ANSWER_SUBMITTED' || typeof event.correct !== 'boolean') return state;
   const wrongAfterHint = state.wrongAfterHint + Number(!event.correct && state.hintUsed);
   return { ...state, attempts: state.attempts + 1, wrongAfterHint,
-    moreHintUnlocked: wrongAfterHint > 0, completed: event.correct };
+    moreHintUnlocked: wrongAfterHint > 0 || (unlockAfterWrong && (state.moreHintUnlocked || !event.correct)), completed: event.correct };
 }
 export function restoreHintState(saved, questionId) {
   if (!saved || saved.questionId !== questionId || saved.version !== 1) return createHintState(questionId);

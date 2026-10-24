@@ -11,7 +11,7 @@ const F=require('./dev/fixtures.js'),X=require('../dist/mystery.js'),root=path.r
   manifest.sourceWorkingTreeDirty=!!require('node:child_process').execFileSync('git',['status','--short','--untracked-files=no'],{cwd:root,encoding:'utf8'}).trim();
   server=spawn(process.execPath,['server.cjs'],{cwd:root,env:{...process.env,PORT:'4196'},stdio:['ignore','pipe','pipe']});await new Promise((resolve,reject)=>{server.once('error',reject);server.stdout.once('data',resolve);});
   const opts={headless:true,args:['--no-sandbox','--disable-gpu']};
-  if(process.env.QA_CHROMIUM_MODULE){const loaded=require(process.env.QA_CHROMIUM_MODULE),c=loaded.default||loaded;opts.executablePath=await c.executablePath();opts.args=[...c.args.filter(a=>a!=='--single-process'),...opts.args];}
+  if(process.env.QA_CHROMIUM_MODULE){const loaded=require(process.env.QA_CHROMIUM_MODULE),c=loaded.default||loaded;opts.executablePath=await c.executablePath();opts.args=[...c.args.filter(a=>!['--single-process','--disable-web-security'].includes(a)),...opts.args];}
   browser=await chromium.launch(opts);
   const shots=[
    ['menu',null],['master',{kind:'master'}],['map',{kind:'map'}],['combat',{kind:'combat'}],['cards',{kind:'combat'},'library'],['predict',{kind:'combat'},'forecast'],

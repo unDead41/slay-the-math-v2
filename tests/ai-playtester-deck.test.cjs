@@ -24,7 +24,8 @@ test('removal respects the actual minimum and one-removal-per-shop rule',()=>{
  f.r.deck.push(f.x.E.card(f.r,S+'passive.blazing_spirit'),f.x.E.card(f.r,S+'passive.blazing_spirit'));const d=f.p.shop(f.r);assert.equal(d.kind,'remove');f.x.E.removeShopCard(f.r,d.uid);assert.equal(f.r.deck.length,11);assert.equal(f.p.shop(f.r).kind,'leave');
 });
 test('real campaigns apply the deck policy and expose a bounded acquisition explanation trace',()=>{
- const r=require('../tools/ai-playtester/experiments.cjs').experiment({mode:'campaign',seed:20,seeds:1,difficulty:'easy',skill:'intermediate',predict:'feedback'}).rows[0];
+ // Seed 21 reaches actual selection cards with the current two-attempt question rule.
+ const r=require('../tools/ai-playtester/experiments.cjs').experiment({mode:'campaign',seed:21,seeds:1,difficulty:'easy',skill:'intermediate',predict:'feedback'}).rows[0];
  assert.ok(['VICTORY','DEFEAT'].includes(r.status),r.error);assert.ok(r.ai.deckDecisions?.length>0);assert.ok(r.ai.deckDecisions.length<=30);assert.ok(r.ai.deckDecisions.some(d=>['reward','shop','camp','mystery'].includes(d.scene)));assert.ok(r.ai.deckDecisions.every(d=>d.reason));assert.ok(r.ai.choiceDecisions?.length>0);
 });
 test('upgrade ranking recognizes activation gifts and larger visible selection windows',()=>{

@@ -150,3 +150,19 @@ DISAHKAN: every newly opened gameplay question must be random and unique in the 
 ## Learning analytics preview — 2.25.0-analytics.1
 
 DISAHKAN: Ijamm requests the feedback/learning analytics system in a feature branch before main. DITERUSKAN: observe existing canonical owner events for gameplay, Practice and separate Review; show chapter/SK/SP/skill evidence with distinct sample counts, independent/support/retry/reveal separation and linked Basics/review suggestions. Require three distinct answered IDs before a group guides revision. Never label a single error as a weakness or assign an official TP. Current run filtering excludes inherited lifetime-only records; Retry keeps the same analytics session. Selected BM SK/SP names come from the supplied DSKP printed pages42–45,48–49,68–70; English labels are working translations. Existing120 question content and selection remain authoritative. [Feature contract](../EDUCATION_ANALYTICS_2_25_0.md).
+
+
+## In-game question workspace — 24 October 2026
+
+DISAHKAN: Ijamm requests at most two submitted answers for bank Predict, Mystery and Artifact trials. First wrong unlocks Hint and More Hint without fabricating support use; second wrong reveals the canonical solution and locks answers. Correct retry is accepted. Education Practice and historical untagged records retain their learning/replay rules. This supersedes unlimited Artifact/Predict retries and the one-answer Mystery baseline for new bank gameplay. [Current policy and compatibility](../education/GAME_QUESTIONS.md).
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

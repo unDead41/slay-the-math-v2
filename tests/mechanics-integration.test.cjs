@@ -4,10 +4,8 @@ const clone=x=>JSON.parse(JSON.stringify(x));
 function trial(){const r=E.newRun(17,'challenge');E.chooseArtifact(r,E.artifactChoices(r)[0].id);return r;}
 function wrong(r){const q=Q.current(r),id=q.choices.find(c=>c.id!==q.correctChoiceId&&!r.educationState.pending.attempts.includes(c.id)).id;E.selectEducation(r,id);E.answerEducation(r);}
 test('integrated bank passes the supplier preflight, retaining 120 IDs and 30 skills',()=>{assert.equal(M.validateQuestionBankBundle(M.data).skills,30);assert.equal(Q.bank.version,'form4-review-1.6.0');});
-test('More Hint requires a wrong submission after Hint; both orders survive restore',()=>{
- let r=trial();wrong(r);E.hintEducation(r);r=E.restore(clone(r));assert.ok(r);assert.equal(Q.learningView(r).moreHint,null);
- wrong(r);r=E.restore(clone(r));assert.ok(Q.learningView(r).moreHint);Q.support(r,'moreHint');assert.equal(Q.record(r).hintState.moreHintViewed,true);
- assert.ok(E.restore(clone(r)));assert.equal(Q.learningView(r).workedSteps,null);
+test('game More Hint unlocks at the first wrong submission regardless of Hint order and survives restore',()=>{
+ for(const order of ['wrong-first','hint-first']){let r=trial();if(order==='hint-first')E.hintEducation(r);wrong(r);if(order==='wrong-first')E.hintEducation(r);r=E.restore(clone(r));assert.ok(r);assert.ok(Q.learningView(r).moreHint);Q.support(r,'moreHint');assert.equal(Q.record(r).hintState.moreHintViewed,true);assert.ok(E.restore(clone(r)));assert.equal(Q.learningView(r).workedSteps,null);}
 });
 test('learning support cannot grant or reveal a claim, and worked steps open only after correct',()=>{
  const r=trial(),before={hp:r.hp,gold:r.gold,rng:r.rng,owned:clone(r.artifactState.owned)};
@@ -19,7 +17,7 @@ test('learning support cannot grant or reveal a claim, and worked steps open onl
 test('legacy pending saves retain item, shuffled choices and attempts with conservative Hint ordering',()=>{
  const r=trial();wrong(r);E.hintEducation(r);delete r.educationState.session;delete r.educationState.selectionVersion;delete r.educationState.runUsedIds;r.educationState.bankVersion='form4-review-1.0.0';
  const before=clone(r.educationState.pending),restored=E.restore(clone(r));assert.ok(restored);assert.deepEqual(restored.educationState.pending,before);
- assert.equal(Q.learningView(restored).moreHint,null);assert.equal(Q.current(restored).id,before.questionId);
+ assert.ok(Q.learningView(restored).moreHint);assert.equal(Q.record(restored).hintState.wrongAfterHint,0);assert.equal(Q.record(restored).attempts[0].hintUsed,false);assert.equal(Q.current(restored).id,before.questionId);
 });
 test('profile learning records and reservations persist between runs without combat RNG use',()=>{
  const r=trial();E.selectEducation(r,Q.current(r).correctChoiceId);E.answerEducation(r);E.continueEducation(r);

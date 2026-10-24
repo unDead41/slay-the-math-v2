@@ -55,6 +55,11 @@
   s.offer=null;return {artifact:a,kind};
  }
  function choices(r){return r.artifactState?.offer?.ready?r.artifactState.offer.ids.map(key=>catalog[key]):[];}
+ function decline(r,key){
+  const s=r.artifactState,o=s?.offer;
+  if(!o?.ready||!o.ids.includes(key)||(s.declined||[]).some(x=>x.source===o.source))throw new Error('This artifact offer is no longer available.');
+  (s.declined||(s.declined=[])).push({id:key,kind:o.kind,source:o.source});s.offer=null;return {kind:o.kind};
+ }
  function discount(r){return Math.max(0,...owned(r).map(a=>a.values.discount_percent||0));}
  function priceCalculation(r,base){
   const rate=discount(r),unrounded=base*(100-rate)/100,final=Math.max(1,Math.ceil(unrounded));
@@ -195,16 +200,18 @@
   const consumed=s.consumed||[];
   if(!Array.isArray(consumed)||consumed.length>15||consumed.some(x=>!x||!catalog[x.id]||catalog[x.id].tier!=='starting'||typeof x.source!=='string'||x.source.length>120||typeof x.consumedBy!=='string'||!/^mystery:[01]:/.test(x.consumedBy)))return false;
   const ledger=[...s.acquired,...consumed];if(new Set(ledger.map(x=>x.source)).size!==ledger.length)return false;
+  const declined=s.declined||[];
+  if(!Array.isArray(declined)||declined.length>31||new Set(declined.map(x=>x?.source)).size!==declined.length||declined.some(x=>!x||!catalog[x.id]||typeof x.source!=='string'||x.source.length>120||!['starting','elite','mystery','boss'].includes(x.kind)||(x.kind==='starting'?x.source!=='starting':!new RegExp('^'+x.kind+':[01]:').test(x.source))||catalog[x.id].tier!==(x.kind==='starting'?'starting':x.kind==='boss'?'boss':'elite_mystery')||ledger.some(a=>a.source===x.source)||!r.educationState?.completed?.some(a=>a.failed===true&&a.source===x.source&&a.artifactId===x.id&&a.kind===x.kind)))return false;
   const extraSource=x=>/^(shop|mystery):[01]:/.test(x.source);
   if(s.shopOnly!==undefined&&s.shopOnly!==true)return false;
   const starters=ledger.filter(x=>catalog[x.id].tier==='starting');
   if(r.mode==='learn'){if(s.startingId!==null||s.offer||ledger.some(x=>!extraSource(x)))return false;}
   else if(s.shopOnly===true){if(s.startingId!==null||r.scene==='master'||starters.some(x=>!extraSource(x))||s.offer?.kind==='starting')return false;}
-  else if(s.startingId===null){if(r.scene!=='master'||s.owned.length||r.stage!==0||r.depth!==0||r.battle||s.offer?.kind!=='starting')return false;}
+  else if(s.startingId===null){if(declined.some(x=>x.kind==='starting')){if(r.scene==='master'||s.offer?.kind==='starting'||starters.some(x=>!extraSource(x)))return false;}else if(r.scene!=='master'||s.owned.length||r.stage!==0||r.depth!==0||r.battle||s.offer?.kind!=='starting')return false;}
   else if(!starters.some(x=>x.id===s.startingId&&x.source==='starting')||starters.some(x=>x.source!=='starting'&&!extraSource(x))||r.scene==='master')return false;
   if(s.offer){
    const o=s.offer,tier=o.kind==='starting'?'starting':o.kind==='boss'?'boss':'elite_mystery';
-   if(!['starting','elite','mystery','boss'].includes(o.kind)||typeof o.ready!=='boolean'||!Array.isArray(o.ids)||!o.ids.length||o.ids.length>3||new Set(o.ids).size!==o.ids.length||o.source!==source(r,o.kind)||s.acquired.some(x=>x.source===o.source)||o.ids.some(key=>!catalog[key]||catalog[key].tier!==tier||has(r,key)||!eligible(r,catalog[key])))return false;
+   if(!['starting','elite','mystery','boss'].includes(o.kind)||typeof o.ready!=='boolean'||!Array.isArray(o.ids)||!o.ids.length||o.ids.length>3||new Set(o.ids).size!==o.ids.length||o.source!==source(r,o.kind)||s.acquired.some(x=>x.source===o.source)||declined.some(x=>x.source===o.source)||o.ids.some(key=>!catalog[key]||catalog[key].tier!==tier||has(r,key)||!eligible(r,catalog[key])))return false;
    if(Eco.active(r)&&JSON.stringify(o.ids)!==JSON.stringify(Eco.lookup(r,'artifact',o.kind)?.ids))return false;
    if(o.kind==='starting'&&(r.scene!=='master'||!o.ready))return false;
    if(o.kind==='elite'&&(r.scene!=='reward'||!r.battle?.elite))return false;
@@ -220,7 +227,7 @@
   }
   return true;
  }
- const api={catalog,codes,id,get,has,owned,eligible,pool,enable,offer,claim,choices,acquire,source,maxHp,discount,price,priceCalculation,random,cardContributions,
+ const api={catalog,codes,id,get,has,owned,eligible,pool,enable,offer,claim,decline,choices,acquire,source,maxHp,discount,price,priceCalculation,random,cardContributions,
   startCombat,startTurn,checkHp,cardBonuses,cardResolved,exhausted,discardedByCard,beforeEnemy,fullyBlocked,won,maxEnergy,valid};
  if(typeof module!=='undefined')module.exports=api;else root.DCArtifacts=api;
 })(typeof window!=='undefined'?window:globalThis);

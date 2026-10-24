@@ -13,6 +13,7 @@ function boot(run,storage={},options={}){
   const name=m[1].split('?')[0];
   if(name==='app.js'&&options.throwQueue){const create=w.DCLearningSync.createClient;w.DCLearningSync.createClient=(...args)=>{const client=create(...args);client.enqueue=()=>{throw Error('The education entry is too large.');};return client;};}
   w.eval(fs.readFileSync(path.join(dir,name),'utf8'));
+  if(name==='learning-collection-config.js'&&options.siteURL)w.DCLearningCollectionConfig={googleScriptUrl:options.siteURL};
  }
  const click=s=>{const el=d.querySelector(s);assert.ok(el,s);assert.equal(el.disabled,false,s);el.click();};
  return{dom,w,d,click,requests,state:()=>JSON.parse(w.localStorage.getItem('duel-cube-math.v1')),snapshot:()=>Object.fromEntries(Object.keys(w.localStorage).map(k=>[k,w.localStorage.getItem(k)]))};
@@ -40,7 +41,7 @@ test('Real Predict wrong/Hint/retry is captured once, survives reload, and repor
   const metrics=()=>Object.fromEntries([...b.d.querySelectorAll('[data-analytics-metric]')].map(e=>[e.dataset.analyticsMetric,e.textContent]));
   assert.equal(metrics().answered,'1');assert.equal(metrics().wrongAttempts,'1');assert.equal(metrics().independentFirstTry,'0');
   assert.match(b.d.querySelector('.learning-report').textContent,/Not enough evidence|At least 3/i);
-  b.click('[data-analytics-action=scope][data-scope=gameplay]');
+  const source=b.d.querySelector('[data-analytics-scope]');source.value='gameplay';source.dispatchEvent(new b.w.Event('change',{bubbles:true}));
   assert.equal(metrics().answered,'1');assert.equal(b.w.localStorage.getItem('duel-cube-math.v1'),before);
   const saved=b.snapshot();b.dom.window.close();b=boot(null,saved);b.click('[data-action=analytics]');
   assert.equal(b.d.querySelector('[data-analytics-metric=answered]').textContent,'1');
@@ -70,14 +71,14 @@ test('Shared report escapes stored content and explains sparse evidence without 
  const status=new JSDOM(UI.syncHTML({enabled:true,pending:2,state:'offline'},'ms')).window.document;
  assert.match(status.body.textContent,/2/);assert.match(status.body.textContent,/peranti|talian/i);
 });
-test('Analytics CSV/JSON export contains durable records and owner recovery without exposing sync credentials',async()=>{
+test('one JSON backup contains durable records and owner recovery without exposing sync credentials',async()=>{
  const b=boot(F.create({kind:'combat'}));try{
   b.click('[data-action=continue]');b.click('[data-action=forecast]');b.click('#dialog [data-action=close]');b.click('[data-action=home]');b.click('[data-action=analytics]');
   b.click('[data-analytics-action=share]');
   const secret=JSON.parse(b.w.localStorage.getItem('slay-the-math.learning-sync.v1')).identity.secret;
   const downloads=[];b.w.URL.createObjectURL=blob=>{downloads.push(blob);return 'blob:learning';};b.w.URL.revokeObjectURL=()=>{};b.w.HTMLAnchorElement.prototype.click=function(){};
-  b.click('[data-analytics-action=export][data-exportformat=json]');b.click('[data-analytics-action=export][data-exportformat=csv]');
-  assert.equal(downloads.length,2);assert.equal(downloads[0].type,'application/json');assert.match(downloads[1].type,/text\/csv/);
+  b.click('[data-analytics-action=export][data-exportformat=json]');assert.equal(b.d.querySelector('[data-exportformat=csv]'),null);
+  assert.equal(downloads.length,1);assert.equal(downloads[0].type,'application/json');
   const content=await new Promise((resolve,reject)=>{const reader=new b.w.FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsText(downloads[0]);});
   const exported=JSON.parse(content);assert.ok(exported.analytics.records.length);assert.ok(exported.ownerRecovery.session.records);assert.equal(exported.ownerRecovery.scope,'gameplay');assert.ok(!content.includes(secret));assert.equal(Object.hasOwn(exported,'identity'),false);
   assert.ok(b.w.localStorage.getItem(key));
@@ -101,6 +102,20 @@ test('Report sharing updates preserve keyboard focus on the replacement consent 
   assert.equal(b.d.activeElement?.dataset.analyticsAction,'share');assert.equal(b.d.activeElement?.getAttribute('aria-pressed'),'true');
  }finally{b.dom.window.close();}
 });
+
+test('host journal views, source filter and question search survive asynchronous sending updates',()=>{
+ const b=boot(F.create({kind:'combat'}));try{
+  b.click('[data-action=analytics]');b.click('[data-analytics-action=view][data-view=details]');
+  assert.equal(b.d.querySelector('[data-analytics-panel=details]').hidden,false);
+  const source=b.d.querySelector('[data-analytics-scope]');source.value='review';source.dispatchEvent(new b.w.Event('change',{bubbles:true}));
+  assert.equal(b.d.querySelector('.learning-report').dataset.view,'details');assert.equal(b.d.querySelector('[data-analytics-scope]').value,'review');
+  const filter=b.d.querySelector('[data-analytics-question-filter]');filter.value='all';filter.dispatchEvent(new b.w.Event('change',{bubbles:true}));
+  const search=b.d.querySelector('[data-analytics-search]');search.value='SET-';search.focus();search.dispatchEvent(new b.w.Event('input',{bubbles:true}));
+  assert.equal(b.d.querySelectorAll('[data-analytics-question]:not([hidden])').length,40);
+  const before=b.w.localStorage.getItem('duel-cube-math.v1');b.w.dispatchEvent(new b.w.StorageEvent('storage',{key:'slay-the-math.learning-sync.v1'}));
+  assert.equal(b.d.activeElement,search);assert.equal(search.value,'SET-');assert.equal(b.d.querySelector('.learning-report').dataset.view,'details');assert.equal(b.w.localStorage.getItem('duel-cube-math.v1'),before);assert.equal(b.requests.length,0);
+ }finally{b.dom.window.close();}
+});
 test('A failed analytics enqueue cannot prevent a correct answer and run progress from saving',()=>{
  const b=boot(F.create({kind:'combat'}),{},{throwQueue:true});try{
   b.click('[data-action=continue]');b.click('[data-action=forecast]');
@@ -121,19 +136,14 @@ test('A restored older run is observed through confirmed current-run receipts wi
 });
 test('Main Menu report warns about unreadable learning storage even with no active run',()=>{
  const original='{keep-unreadable-learning',b=boot(null,{[key]:original});try{
-  b.click('[data-action=analytics]');assert.match(b.d.querySelector('[data-analytics-sync]').textContent,/learning records could not be read/i);
+  b.click('[data-action=analytics]');assert.equal(b.d.querySelector('[data-analytics-delivery-state]').dataset.analyticsDeliveryState,'save-error');assert.ok(b.d.querySelector('[data-analytics-action=export]'));
   assert.equal(b.w.localStorage.getItem(key),original);
  }finally{b.dom.window.close();}
 });
 
-test('Google collection setup is shared, escaped and outside asynchronous delivery status',()=>{
- const UI=require('../dist/analytics-ui.js'),d=new JSDOM(UI.html({status:{destination:{kind:'google-sheets',url:'https://script.google.com/macros/s/DEPLOYMENT1234567890/exec'}},language:'ms'})).window.document;
- const input=d.querySelector('[data-analytics-google-url]');assert.ok(input);assert.equal(input.closest('[data-analytics-sync]'),null);assert.equal(input.value,'https://script.google.com/macros/s/DEPLOYMENT1234567890/exec');assert.match(d.querySelector('label[for="analytics-google-url"]').textContent,/Pautan/);assert.ok(d.querySelector('[data-analytics-action=destination-save]'));
-});
-test('host saves a Google destination paused, preserves typed input during async status and rejects Drive links',()=>{
- const b=boot();try{
-  b.click('[data-action=analytics]');const input=b.d.querySelector('[data-analytics-google-url]');assert.ok(input);input.focus();input.value='typing stays here';b.w.dispatchEvent(new b.w.StorageEvent('storage',{key:'slay-the-math.learning-sync.v1'}));assert.equal(b.d.activeElement,input);assert.equal(input.value,'typing stays here');
-  input.value='https://drive.google.com/file/d/example/view';b.click('[data-analytics-action=destination-save]');assert.match(b.d.querySelector('#toast').textContent,/Apps Script|deployed Google/i);assert.equal(b.w.localStorage.getItem('slay-the-math.learning-destination.v1'),null);
-  input.value='https://script.google.com/macros/s/DEPLOYMENT1234567890/exec';b.click('[data-analytics-action=destination-save]');assert.match(b.d.querySelector('[data-analytics-sync]').textContent,/Google Sheets/);assert.equal(b.d.querySelector('[data-analytics-action=share]').getAttribute('aria-pressed'),'false');assert.equal(b.d.activeElement.dataset.analyticsAction,'share');assert.equal(b.d.querySelector('iframe[title="Education collection"]'),null);assert.equal(b.requests.length,0);
- }finally{b.dom.window.close();}
+test('host preserves an existing Google destination while keeping its address out of player controls',()=>{
+ const url='https://script.google.com/macros/s/DEPLOYMENT1234567890/exec';
+ const b=boot(null,{'slay-the-math.learning-destination.v1':JSON.stringify({schemaVersion:1,googleScriptUrl:url})});try{
+  b.click('[data-action=analytics]');assert.equal(b.d.querySelector('[data-analytics-google-url]'),null);assert.equal(b.d.querySelector('.learning-report').innerHTML.includes(url),false);assert.equal(JSON.parse(b.w.localStorage.getItem('slay-the-math.learning-destination.v1')).googleScriptUrl,url);assert.equal(b.d.querySelector('[data-analytics-action=share]').getAttribute('aria-pressed'),'false');assert.equal(b.d.querySelector('iframe[title="Education collection"]'),null);assert.equal(b.requests.length,0);
+ }finally{b.w.close();}
 });

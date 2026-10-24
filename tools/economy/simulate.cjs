@@ -59,6 +59,7 @@ function simulate(seed,difficulty,policy,budgetName){
   const now=1000000+r.stage*100000+r.depth*1000;E.startMystery(r,[],null,now);p=r.mysteryState.pending;if(p.phase==='empty'){E.continueMystery(r);return true;}
   const q=Q.catalog[p.questionId],success=((Math.imul(seed^r.stage^r.depth,2654435761)>>>0)%100)<75;
   E.answerMystery(r,success?q.correctChoiceId:q.choices.find(c=>c.id!==q.correctChoiceId).id,now+1);
+  if(r.mysteryState.pending.phase==='question')E.answerMystery(r,q.choices.filter(c=>c.id!==q.correctChoiceId)[1].id,now+2);
   const oldGold=r.gold,oldHp=r.hp;E.continueMystery(r);
   if(r.scene==='event'&&r.mysteryState.pending?.phase==='reward'){
    const options=X.definition(r).success.options.filter(o=>X.actionable(r,o));

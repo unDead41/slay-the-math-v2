@@ -1,4 +1,10 @@
-# Slay the Math — 2.34.0
+# Slay the Math — 2.36.0
+
+Version **2.36.0** integrates clearer in-game Question / Help / Result tabs, two
+answers per game question, the simpler Learning Report and all120 review ticks/
+comments. Tutorial and AI follow the same attempt limit. Current card effects,
+music, combat presentation and production Developer Hub are retained.
+[Main release, verification, Windows commands and Google update](docs/education/MAIN_2_36_0.md).
 
 Version 2.34.0 integrates the approved card balance: percentage Vulnerable/Weak phases, Last Ember emergency Block carry, revised growth/draw/Passive cards and search fallback. Start a New Run for these values; prior ordinary saves retain their original rules. The current menu music, combat presentation and developer AI Playtester are included, with AI status calculations aligned to the new rules. [Card changes](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md), [AI setup](docs/AI_PLAYTESTER.md).
 
@@ -12,7 +18,9 @@ Battles have one enemy. Rune Sweep now delivers one 12-damage hit; Fate Storm de
 
 Master balance playtest: New Run → Easy / Medium / Hard, or open `?balance=medium`. The three profiles share versioned combat/economy/loot definitions and separate saves. [Balance handoff and unmeasured pupil targets](docs/balance/master/HANDOFF.md).
 
-Learning Report is available from Main Menu, Settings and Education Practice, with BM/English chapter/SK/SP evidence, offline recording, optional comments collection and CSV/JSON exports. This release integrates `education-analytics` with main 2.25.1, retaining combat card motion, the original card/artifact artwork and Pack5 audio. [Windows update, database setup and central collection](docs/EDUCATION_ANALYTICS_2_26_0.md).
+Version **2.36.0** integrates the reviewed education-report changes into main: a simpler BM/English Learning Report with Overview, Details and Sharing. Google link setup lives in **Developer Hub → Education collection**. Player CSV/file-sharing controls are removed; one disclosed JSON recovery backup remains. [Current main release, run commands and Google update](docs/education/MAIN_2_36_0.md).
+
+Education Practice now has separate **Question / Feedback** views, a review checkbox for each of all120 questions, and Not reviewed / Reviewed / With feedback filters. Marks are independent of correct answers; comments and offline delivery stay in the existing Google flow. Language and saved-session controls live in **Practice options**. [Current education release](docs/education/MAIN_2_36_0.md). Predict, Mystery and Artifact trials now use Question / Help / Result tabs and two answers: first wrong unlocks both hints; second wrong reveals and locks.
 
 Start with **[MULA-DI-SINI.md](MULA-DI-SINI.md)** for Windows/VS Code instructions.
 
@@ -29,7 +37,7 @@ supplied 100-seed map module, original icon PNGs, exported layouts, tests and SO
 It reuses the full 120-question folio: browse, Hint/More Hint, worked solutions,
 Basics, full English/Bahasa Melayu question switching and a separate saved learning session.
 Each question now has improvement categories and a comment box. Comments save on
-this device; the exit reminder offers CSV/JSON download and file sharing for Ijamm.
+this device; the exit reminder opens the shared Sharing settings, with one JSON recovery backup.
 Collection is off until a player enables sharing in Learning Report. For a receiver that creates its own SQLite database, use `npm.cmd run start:analytics:prod` (Node 22.13+); ordinary `npm start` needs no database. See [current feedback and delivery limits](docs/EDUCATION_ANALYTICS_2_26_0.md).
 The same harmonized 1.6 bank is active in Predict, Artifact trials and Mystery challenges. Its shared run ledger prevents repeat questions; New Run resets exclusion while lifetime history remains.
 See [Education 2.14.0](docs/EDUCATION_PRACTICE_2_14_0.md).
@@ -138,8 +146,8 @@ Open http://localhost:4173. `npm run build:prod` only builds, and `npm start` ke
 
 Main now includes an optional Google destination to Main Menu / Settings / Education Practice → Learning Report. No database server is needed for this option. Records stay on-device until the player opts in and the Google receiver confirms the exact revision. The existing local SQLite option remains available.
 
-Copy **integrations/google-sheets/Code.gs** into an owner-controlled Apps Script project, run its private setup once, deploy the web app, and paste its `/exec` URL into **Collection link**. Full BM instructions, site defaults, Wi-Fi recovery, export and limits: [Google Sheets setup](docs/GOOGLE_SHEETS_SETUP.md). Live Google authorization/deployment is still an owner setup step; game code publication does not deploy or authorize the Google receiver.
+Use the current **integrations/google-sheets/Code.gs** in an owner-controlled Apps Script project. Run **setupCollector** once for a new project; update the same deployment for an existing receiver. Configure its `/exec` URL in the **local Developer Hub → Education collection**, then rebuild production. Player reports contain consent and sending status. [Current setup and Wi-Fi recovery](docs/GOOGLE_SHEETS_SETUP.md). Code publication does not authorize or deploy the receiver.
 
 ## AI Playtester
 
-Developer-only strategy/simulation tool: `npm run start:dev`, then http://localhost:4174/__dev/ai/. Three combat policies, actual campaigns, contextual single-card/pair measurements, five-report history, actual support/cost telemetry, three-turn sampled Expert planning and deck-synergy acquisitions. See [AI Playtester](docs/AI_PLAYTESTER.md). Integrated into main on game 2.32.1, retaining current combat animation, menu music and player profiles.
+Developer-only strategy/simulation tool: `npm run start:dev`, then http://localhost:4174/__dev/ai/. Three combat policies, actual campaigns, contextual single-card/pair measurements, five-report history, actual support/cost telemetry, three-turn sampled Expert planning and deck-synergy acquisitions. See [AI Playtester](docs/AI_PLAYTESTER.md). Current main retains the AI release alongside combat animation, menu music and player profiles.

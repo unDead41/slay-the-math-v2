@@ -216,3 +216,27 @@ Shared Learning Report adds a collapsed Collection link / Pautan pengumpulan fie
 ## Complete player tutorial — 2.31.0
 
 Ijamm requests completing the full illustrated in-game tutorial, including self-captured screenshots. Replace the old four-page help with 17 English/BM chapters, genuine player-UI screenshots and isolated actual-engine exercises. Keep existing Tutorial entry/focus, native modal semantics, responsive scrolling and image enlargement. Only tutorial progress/language persist; never capture its examples into player saves/history/reports/collection. Timed Mystery deadlines continue and show a warning. Current owner and evidence: [Tutorial 2.31.0](../TUTORIAL_2_31_0.md).
+
+## Learning journal preview — 2.31.0-report.1
+
+On education-report only, the real host and generated Practice use the same Overview, Details and Sharing views. A labelled source select retains Game/Practice/Review separation. Primary evidence and chapter tracks lead; SK/SP, session detail and searchable question records live under Details. Sharing shows consent/status and a disclosed JSON recovery action. No Google URL form, CSV download/import or duplicate native comment-file sharing appears in the player's flow. Comments/exit open this same Sharing view, preserving comment text and return focus. Native 44px controls, keyboard focus and bounded dialog scroll keep artwork geometry unchanged. The existing ink/navy/gold visual system and settings-owned BM/English selection remain canonical. See DEC-20261023-LEARNING-REPORT and docs/LEARNING_REPORT_PREVIEW.md.
+
+## Practice workspace preview — 2.31.0-report.2
+
+Continue education-report only. The oversized folio hero and parchment switch are replaced by a compact ink header, readable 44px question rows with separate checkboxes, All/Not reviewed/Reviewed/With feedback filters and Question/Feedback views. Reviewed is an annotation, not a correct answer. Comments are optional and independent of ticks. Language and saved Learning-session controls live under Practice options; the shared report owns Sharing and one disclosed JSON recovery action. Keep native drawer focus/Escape, current question ID, rich-text colors, canonical support gates and math rendering. Source/preservation and native desktop/phone/landscape evidence: docs/education/PRACTICE_WORKSPACE.md.
+
+
+## In-game question workspace — 24 October 2026
+
+DISAHKAN: simplify in-game question navigation and next actions. Predict/Artifact/Mystery share Question, Help and Result tabs, attempt status, first-wrong Open Help call to action and automatic terminal Result. Help availability differs from actual use. Native 44px controls, keyboard tab navigation, BM/English, colored-term legend, Settings language preference and local scrolling preserve viewport artwork. [Workspace](../education/GAME_QUESTIONS.md).
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

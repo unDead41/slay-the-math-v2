@@ -1,6 +1,13 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),{services}=require('./helpers/google-services.cjs'),M=require('../dist/mechanics.js'),bank=M.data.bank;
 const CLIENT='a'.repeat(48),SECRET='b'.repeat(64),at='2026-10-23T10:00:00.000Z';
+test('selectable owner setup checks the account and logs rather than returning the private Sheet URL',()=>{
+ const s=services(),c=s.load();c.Session={getActiveUser:()=>({getEmail:()=>'owner@example.com'}),getEffectiveUser:()=>({getEmail:()=>'owner@example.com'})};
+ assert.equal(typeof c.setupCollector,'function');assert.equal(c.setupCollector(),undefined);c.setupCollector();assert.equal(s.books.size,1);assert.match(s.logs[0],/^Open your private collection Sheet:/);
+});
+test('anonymous and other-account callers cannot invoke the public owner setup',()=>{
+ for(const email of ['', 'player@example.com']){const s=services(),c=s.load();c.Session={getActiveUser:()=>({getEmail:()=>email}),getEffectiveUser:()=>({getEmail:()=>'owner@example.com'})};assert.equal(typeof c.setupCollector,'function');assert.throws(()=>c.setupCollector(),/Owner setup/);assert.equal(s.books.size,0);assert.equal(s.logs.length,0);}
+});
 function feedback(comment='Hint kurang jelas'){return {id:bank.bankVersion+':PROB-003',questionId:'PROB-003',bankVersion:bank.bankVersion,topic:bank.topics.PROB.malay,difficulty:'Easy',question:'Soalan kebarangkalian',categories:['hint-unclear'],comment,createdAt:at,updatedAt:at,context:{mode:'learn',language:'ms',status:'pending',hintUsed:true,moreHintViewed:false,stepsViewed:false}};}
 function entry(payload=feedback(),revision=1,kind='question-feedback'){return {id:payload.id,revision,kind,payload};}
 function request(action,body=null,secret=SECRET){return {protocolVersion:1,action,body,clientId:action==='batch'?CLIENT:null,secret:action==='batch'?secret:null};}
@@ -11,6 +18,13 @@ test('owner setup is idempotent, keeps raw/client tabs hidden and stores only ha
 });
 test('real owner records and BM feedback project diagnostic metrics only after flush',()=>{
  const {s,batch}=setup(),p=learning();assert.equal(batch([entry(p,1,'learning-record'),entry()]).status,200);assert.equal(s.rows('Learning').length,2);assert.equal(s.rows('Comments')[1].includes('Hint kurang jelas'),true);const row=Object.fromEntries(s.rows('Learning')[0].map((h,i)=>[h,s.rows('Learning')[1][i]]));assert.equal(row['Wrong attempts'],1);assert.equal(row['Answered'],1);assert.equal(row['Independent first try'],0);assert.equal(row['Hint used'],true);assert.equal(row.Language,'ms');assert.ok(s.flushes>0);
+});
+test('versioned two-attempt game records reach Sheets with honest wrong/help/reveal counts',()=>{
+ const {s,batch}=setup(),payload=learning(),q=bank.questions.find(q=>q.id===payload.questionId);let session=M.session.reserveNext(M.session.createSession({seed:8}),{...bank,questions:[q]}).session;session=M.session.applyGamePolicy(session,bank,q.id);
+ const wrong=q.choices.filter(c=>c.id!==q.correctChoiceId);session=M.session.submitAnswer(session,bank,{questionId:q.id,choiceId:wrong[0].id,attemptId:'game:first'});session=M.session.openSupport(session,q.id,'moreHint');session=M.session.submitAnswer(session,bank,{questionId:q.id,choiceId:wrong[1].id,attemptId:'game:last'});
+ payload.record=session.records[q.id];payload.scope='gameplay';payload.source='predict';assert.equal(batch([entry(payload,1,'learning-record')]).status,200);
+ const row=Object.fromEntries(s.rows('Learning')[0].map((h,i)=>[h,s.rows('Learning')[1][i]]));assert.equal(row['Wrong attempts'],2);assert.equal(row['Answered'],1);assert.equal(row['Independent first try'],0);assert.equal(row['Hint used'],false);assert.equal(row['More Hint viewed'],true);assert.equal(row['Revealed'],true);assert.equal(row.Status,'revealed');assert.equal(payload.record.attempts.length,2);
+ const forged=JSON.parse(JSON.stringify(payload));forged.record.status='correct';assert.equal(batch([entry(forged,2,'learning-record')]).status,400);
 });
 test('invalid canonical metadata/events and unauthenticated writes cannot partially persist a batch',()=>{
  const {s,batch,dispatch}=setup(),p=learning();assert.equal(dispatch(request('batch',{entries:[entry()]},'0'.repeat(64))).status,401);

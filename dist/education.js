@@ -26,6 +26,8 @@
  }
  function consumerRecord(run){const q=currentConsumer(run)?.question;return q?getSession(run).records[q.id]||null:null;}
  function consumerLearningView(run){const q=currentConsumer(run)?.question;return q?S.selectLearningView(q,consumerRecord(run)):null;}
+ function upgradeActiveQuestion(run){const active=currentConsumer(run),state=run.educationState;if(active?.question&&state){const session=getSession(run);if(session.pendingQuestionId===active.question.id)state.session=S.applyGamePolicy(session,bank,active.question.id);}return run;}
+ function failed(run){return S.attemptsExhausted(record(run));}
  function ensureRunState(run,seen=[],profile=null){
   const state=run.educationState||{version:1,bankVersion:bank.version,rng:(run.seed^0x6d617468)>>>0,usedIds:[],completed:[],pending:null};
   const local=state.session||legacySession(state),active=currentConsumer(run),activeId=active?.pending?.solved?null:active?.question?.id||null;
@@ -53,7 +55,9 @@
   const result=S.reserveNext(selection,{...bank,questions:questions.filter(q=>!state.runUsedIds.includes(q.id))},{topicCode,selectionPolicy:'random'});
   if(result.question){const old=state.session.records[result.question.id];if(old){const prefix='previous:'+result.question.id+':';let n=1;while(result.session.archivedRecords[prefix+n])n++;result.session.archivedRecords[prefix+n]=copy(old);}}
   state.runUsedIds=merge(state.runUsedIds,result.question?[result.question.id]:[]);
-  state.usedIds=merge(state.usedIds,state.runUsedIds);state.session={...result.session,exposureIds:state.usedIds.slice()};state.rng=state.session.rngState;
+  state.usedIds=merge(state.usedIds,state.runUsedIds);state.session={...result.session,exposureIds:state.usedIds.slice()};
+  if(result.question)state.session=S.applyGamePolicy(state.session,bank,result.question.id);
+  state.rng=state.session.rngState;
   return {...result,session:state.session};
  }
  function mergeRunHistory(run,previous=null){const used=merge(previous?.usedIds||[],run.educationState?.usedIds||[],runIds(run)),session=mergeSessions(previous?.session,run.educationState?.session);return history(used,session);}
@@ -72,8 +76,8 @@
   return {question:result.question,preferred:!!result.question&&event.education.preferredQuestionIds.includes(result.question.id)};
  }
  function resolveMystery(run,questionId,choiceId=null){
-  let session=getSession(run);if(choiceId)session=S.submitAnswer(session,bank,{questionId,choiceId,attemptId:questionId+':mystery'});
-  if(session.pendingQuestionId===questionId)session=S.revealAnswer(session,questionId);
+  upgradeActiveQuestion(run);let session=getSession(run);if(choiceId)session=S.submitAnswer(session,bank,{questionId,choiceId,attemptId:questionId+':mystery:'+(session.records[questionId].attempts.length+1)});
+  else if(session.pendingQuestionId===questionId)session=S.revealAnswer(session,questionId);
   run.educationState.session=session;
  }
  function mysterySupport(run,kind){const p=run.mysteryState?.pending;if(run.scene!=='event'||!p?.questionId||!['question','review'].includes(p.phase))throw Error('No Mystery question is waiting.');run.educationState.session=S.openSupport(getSession(run),p.questionId,kind);return run;}
@@ -90,20 +94,20 @@
  }
  function pending(run){if(run.scene!=='education'||!run.educationState?.pending)throw new Error('No artifact question is waiting.');return run.educationState.pending;}
  function current(run){return catalog[run.educationState?.pending?.questionId]||null;}
- function select(run,id){const p=pending(run),q=current(run);if(!q||p.solved||!p.choiceOrder.includes(id)||p.attempts.includes(id))throw new Error('Choose an answer that is still available.');p.selectedId=id;return run;}
+ function select(run,id){const p=pending(run),q=current(run);if(!q||p.solved||failed(run)||!p.choiceOrder.includes(id)||p.attempts.includes(id))throw new Error('Choose an answer that is still available.');p.selectedId=id;return run;}
  function answer(run){
   const p=pending(run),q=current(run);
-  if(!q||p.solved||!p.selectedId||p.attempts.includes(p.selectedId))throw new Error('Select an answer before checking it.');
+  if(!q||p.solved||failed(run)||!p.selectedId||p.attempts.includes(p.selectedId))throw new Error('Select an answer before checking it.');
   const session=getSession(run);run.educationState.session=S.submitAnswer(session,bank,{questionId:q.id,choiceId:p.selectedId,attemptId:q.id+':'+(p.attempts.length+1)});
   p.attempts.push(p.selectedId);p.solved=p.selectedId===q.correctChoiceId;
   if(!p.solved)p.selectedId=null;
   return {correct:p.solved,first:p.solved&&record(run)?.completion?.category==='independent'};
  }
- function hint(run){const p=pending(run);if(!current(run)||p.solved)throw new Error('No hint is needed for this question.');run.educationState.session=S.openSupport(getSession(run),p.questionId,'hint');p.hinted=true;return run;}
- function ready(run){const p=pending(run);return p.questionId===null||p.solved;}
+ function hint(run){const p=pending(run);if(!current(run)||p.solved||failed(run))throw new Error('This question is finished. Review its solution.');run.educationState.session=S.openSupport(getSession(run),p.questionId,'hint');p.hinted=true;return run;}
+ function ready(run){const p=pending(run);return p.questionId===null||p.solved||failed(run);}
  function finish(run){
-  const p=pending(run);if(!ready(run))throw new Error('Answer the question correctly before continuing.');
-  run.educationState.completed.push({source:p.source,artifactId:p.artifactId,kind:p.kind,questionId:p.questionId,attempts:p.attempts.length,hinted:p.hinted,first:p.solved&&record(run)?.completion?.category==='independent'});
+  const p=pending(run);if(!ready(run))throw new Error('Finish the question before continuing.');
+  run.educationState.completed.push({source:p.source,artifactId:p.artifactId,kind:p.kind,questionId:p.questionId,attempts:p.attempts.length,hinted:p.hinted,first:p.solved&&record(run)?.completion?.category==='independent',...(failed(run)?{failed:true}:{})});
   run.educationState.pending=null;return p;
  }
  function context(run){const p=run.educationState?.pending;return run.scene==='education'&&p?{...run,scene:{starting:'master',elite:'reward',mystery:'event',boss:'stageclear'}[p.kind]}:run;}
@@ -118,12 +122,14 @@
   if(!Array.isArray(acquired)||new Set(state.completed.map(x=>x?.source)).size!==state.completed.length)return false;
   const completedIds=state.completed.map(x=>x?.questionId).filter(Boolean);if(new Set(completedIds).size!==completedIds.length)return false;
   for(const record of state.completed){
-   if(!record||!kinds.includes(record.kind)||!acquired.some(x=>x.source===record.source&&x.id===record.artifactId)||!integer(record.attempts)||record.attempts>4||typeof record.hinted!=='boolean'||typeof record.first!=='boolean')return false;
+   if(!record||!kinds.includes(record.kind)||!integer(record.attempts)||record.attempts>4||typeof record.hinted!=='boolean'||typeof record.first!=='boolean')return false;
+   if(record.failed!==undefined){const row=state.session?.records[record.questionId];if(record.failed!==true||record.first||!S.attemptsExhausted(row)||record.hinted!==row.hintState.hintUsed||record.attempts!==row.attempts.length||!(run.artifactState?.declined||[]).some(x=>x.source===record.source&&x.id===record.artifactId&&x.kind===record.kind)||acquired.some(x=>x.source===record.source))return false;}
+   else if(!acquired.some(x=>x.source===record.source&&x.id===record.artifactId))return false;
    if(record.questionId===null){if(record.attempts||record.hinted||record.first)return false;}
    else if(!catalog[record.questionId]||!state.usedIds.includes(record.questionId)||!record.attempts||(record.first&&(record.hinted||record.attempts!==1)))return false;
   }
   const mystery=run.mysteryState?.pending;
-  const predict=run.battle?.question?.source==='bank'?run.battle.question:null,activeId=predict&&!predict.solved&&!predict.exhausted?predict.questionId:mystery?.phase==='question'?mystery.questionId:null;
+  const predict=run.battle?.question?.source==='bank'?run.battle.question:null,activeId=predict&&!predict.solved&&!predict.exhausted&&!S.attemptsExhausted(state.session?.records[predict.questionId])?predict.questionId:mystery?.phase==='question'?mystery.questionId:null;
   if(state.session&&(!validSession(state.session,state.usedIds,state.pending)||(!state.pending&&state.session.pendingQuestionId!==activeId)))return false;
   if(!state.pending)return run.scene!=='education';
   const p=state.pending,offer=run.artifactState?.offer;
@@ -167,7 +173,7 @@
    if(JSON.stringify(restored.records)!==JSON.stringify(saved.records)||restored.pendingQuestionId!==saved.pendingQuestionId)return false;
    if(pendingTrial){const r=restored.records[pendingTrial.questionId];
     if(pendingTrial.questionId===null)return !restored.pendingQuestionId;
-    return !!r&&JSON.stringify(r.attempts.map(a=>a.choiceId))===JSON.stringify(pendingTrial.attempts)&&r.hintState.hintUsed===pendingTrial.hinted&&(r.status==='correct')===pendingTrial.solved&&r.status!=='revealed'&&restored.pendingQuestionId===(pendingTrial.solved?null:pendingTrial.questionId);
+    return !!r&&JSON.stringify(r.attempts.map(a=>a.choiceId))===JSON.stringify(pendingTrial.attempts)&&r.hintState.hintUsed===pendingTrial.hinted&&(r.status==='correct')===pendingTrial.solved&&(r.status!=='revealed'||S.attemptsExhausted(r))&&restored.pendingQuestionId===(r.status==='pending'?pendingTrial.questionId:null);
    }
    return true;
   }catch(_){return false;}
@@ -192,6 +198,6 @@
   }
   return S.restoreSession(result,bank);
  }
- const api={coverage,runIds,ensureRunState,reserveForConsumer,retireQuestion,currentConsumer,consumerRecord,consumerLearningView,mergeRunHistory,carryRunQuestions,syncMystery,reserveMystery,resolveMystery,mysterySupport,getSession,record,learningView,support,progress,mergeSessions,bank,catalog,ids,validIds,merge,history,validHistory,prepare,pending,current,select,answer,hint,ready,finish,context,valid};
+ const api={upgradeActiveQuestion,failed,coverage,runIds,ensureRunState,reserveForConsumer,retireQuestion,currentConsumer,consumerRecord,consumerLearningView,mergeRunHistory,carryRunQuestions,syncMystery,reserveMystery,resolveMystery,mysterySupport,getSession,record,learningView,support,progress,mergeSessions,bank,catalog,ids,validIds,merge,history,validHistory,prepare,pending,current,select,answer,hint,ready,finish,context,valid};
  if(typeof module!=='undefined')module.exports=api;else root.DCEducation=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

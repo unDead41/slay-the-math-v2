@@ -118,3 +118,20 @@ Release follow-up: Ijamm asks why the new AI feature did not increase the versio
 ## Main integration — 2.35.0, 24 October 2026
 
 DISAHKAN: Ijamm now authorizes publishing the complete production/password/extended diagnostics Dev update to main. This supersedes the branch-only publication boundaries above. Merge with main 2.34.0, preserve AI/local-only backend and card effects. The status editor follows the current percentage/duration Weak/Vulnerable rules. Production ships the static password-gated Hub; AI Playtester remains local-dev-server-only.
+
+## Education collection configuration preview — 2.31.0-report.1
+
+Branch education-report adds **Developer Hub → Education collection**. The development server alone exposes GET/POST `/__dev/education-collection`; production/player servers deny it. Access requires a loopback peer and a localhost/127.0.0.1/[::1] Host matching the listening port; writes also require the exact same Origin and JSON. Exact `{googleScriptUrl,revision}` writes are capped at 2 KB, validated with the existing strict Apps Script `/exec` URL owner, and rejected when the source revision changed. Atomic replacement writes only `dist/learning-collection-config.js`; it never reads player saves, private Google Sheets or collection credentials.
+
+This is deliberate project configuration outside sandbox progress. The sandbox still uses memory and cannot send. The public receiver URL is included in future player builds, where consent remains off unless explicitly enabled. Existing browser destinations are preserved; adopting a changed Google project default is an explicit action that pauses sharing. The input is absent from player/production Learning Report, not treated as a secret hidden from browser inspection. Rebuild the player release to distribute a saved setting.
+
+
+## Education main integration — 2.36.0, 24 October 2026
+
+DISAHKAN: Ijamm now requests publishing education-report to main. This supersedes
+the earlier branch-only publication boundary. Merge af03f38 with main beb4a4d,
+retaining the current tutorial, card rules, AI and production Dev access. Align
+tutorial exercises/text, AI attempt termination and developer collection routes
+with the versioned question policy. Run fresh combined-tree tests and record
+actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
+remain historical evidence; live Google and pupil/device validation are separate.

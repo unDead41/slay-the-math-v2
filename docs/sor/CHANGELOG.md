@@ -6,6 +6,15 @@
 - Link through AGENTS.md and SOR_README.md without replacing current governance, domain owners or earlier decisions. [Decision](DECISIONS.md#dec-20261024-master-sor--shared-project-and-branch-compatibility-guidance).
 - Record Mathematics Slayer as a proposal, retain explicit change/push boundaries and distinguish repository guidance from ChatGPT Project setup. Documentation only; no game version, runtime, asset or save change.
 
+## 2.36.0 — 24 October 2026 — Education main integration
+
+Merge reviewed report/Practice/game-question features into main 2.35.0. Retain
+card effects, audio/motion, AI and production Dev. Align Tutorial text, failed
+practice/replay and screenshots; stop AI feedback at the actual attempt limit;
+keep collection project setup local-only while preserving the production Hub.
+Fresh combined-tree checks and publication evidence: ../education/MAIN_2_36_0.md.
+
+
 ## Game 2.34.0 — 24 October 2026, card-effects main integration
 
 - Ijamm authorizes main publication of the completed card audit. Combine feature `a9c49f0` with main `c54ce92`, retaining the current menu recording, AI Playtester and existing presentation/assets/save contracts.
@@ -31,6 +40,32 @@ Versi dokumen berasingan daripada versi game.
 - Replace four-page help with 17 English/BM chapters, 16 real UI screenshots and 11 safe actual-engine practice chapters.
 - Add chapter navigation, independently saved progress, replay/reset, screenshot enlargement, ordered canonical question help and boss-seal practice.
 - Preserve player records, original assets/rules, native focus and timed Mystery ownership; support desktop/phone scrolling and unavailable storage. [Owner and actual checks](../TUTORIAL_2_31_0.md).
+
+## 2.31.0-report.3 — 24 October 2026 — education-report only
+
+- Shared in-game Question / Help / Result navigation, attempt/next-action copy and first-wrong Help prompt in English/BM; stable artwork with local question/visual scrolling.
+- Versioned two-answer game policy: first wrong unlocks both hints honestly; second wrong reveals/locks. Correct retry succeeds. Preserve Practice and old ordered evidence.
+- Predict failure has no Focus/seal; failed Artifact continues without gift; Mystery retains its timer and settles its original terminal consequence once. Save/reward validation and pending upgrades follow the same owners.
+- Regenerated Google canonical receiver; existing deployments require code/version updating. No new database/Sheet/protocol, card/enemy/economy tuning or main push.
+
+
+Versi dokumen berasingan daripada versi game.
+
+## Feature preview 2.31.0-report.2 — Education Practice
+
+- Simplify the 120-question folio into Question and Feedback views with a readable checkbox list and reviewed/feedback filters. Move language and optional session controls under Practice options; keep the ink style and canonical quiz/support rules.
+- Persist independent Reviewed flags and comments, preserve them through untick/reload and merge latest comments before stale-tab marking. Keep user comments at their full 2000 characters.
+- Deliver flags through the existing strict Google feedback schema without a new database, receiver field or deployment. Player CSV/import and URL setup remain absent; developer setup stays in the Hub.
+- Continue education-report only and preserve newer main work. [Guide](../education/PRACTICE_WORKSPACE.md); [actual verification](../education/PRACTICE_WORKSPACE_VERIFICATION.md).
+
+
+## Feature preview 2.31.0-report.1 — education-report only
+
+- Harmonise Main Menu, Settings and Practice Learning Report into Overview, Details and Sharing, with matching BM/English wording, honest evidence counts and bounded local scrolling.
+- Remove player CSV/native CSV-sharing controls and Google URL inputs; keep one disclosed JSON recovery action, ordinary game-save controls and existing local records.
+- Move project Google connection setup to Developer Hub with strict local-origin validation, atomic writes and stale-edit protection. Explicit adoption of a changed default pauses sharing and preserves old delivery journals.
+- Preserve search selection, focus, disclosures and inner table scroll across asynchronous refreshes; report comment-only storage failures truthfully and retain in-memory JSON recovery.
+- Carry the selectable, owner-guarded Apps Script setup entry into source and generated receiver. Main is not updated. [Preview and run instructions](../LEARNING_REPORT_PREVIEW.md); [verification](../LEARNING_REPORT_VERIFICATION.md).
 
 ## Game 2.29.0 — Single-enemy card correction
 

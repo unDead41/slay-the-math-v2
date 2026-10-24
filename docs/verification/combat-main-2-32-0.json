@@ -1,0 +1,68 @@
+{
+  "status": "VERIFIED_MAIN_CANDIDATE",
+  "version": "2.32.0",
+  "date": "2026-10-24",
+  "baseMain": "6dc3ce366d266c33154f9b2e76afeb3bba224eca",
+  "featureCommit": "b422a184b000f1042d378251e24a5d0d34415225",
+  "targetBranch": "main",
+  "authorization": "Ijamm: Okay push ke main please.",
+  "unit": {
+    "status": "PASS",
+    "tests": 172,
+    "passed": 172,
+    "failed": 0,
+    "skipped": 0,
+    "command": "DOM_QA_MODULE=<QA jsdom> node --test tests/status-vfx.test.cjs tests/card-motion.test.cjs tests/card-flow.test.cjs tests/card-combat.test.cjs tests/passive-limit.test.cjs tests/focus-passive-log.test.cjs tests/combat-compact-ui.test.cjs tests/tutorial-ui.test.cjs tests/entrypoints.test.cjs"
+  },
+  "syntax": {
+    "status": "PASS",
+    "files": [
+      "dist/app.js",
+      "dist/card-motion.js",
+      "dist/status-vfx.js",
+      "dist/release.js",
+      "tests/status-vfx.test.cjs",
+      "tests/card-motion.test.cjs",
+      "tests/status-vfx-browser.cjs",
+      "tests/combat-motion-polish-browser.cjs"
+    ]
+  },
+  "preservation": {
+    "status": "PASS",
+    "featureRuntimeIdenticalToBranch": true,
+    "featureHashes": {
+      "dist/app.js": "db99d2780deb85b4fbf0ed9d7fc231510efef848ae58bda3d2ad9de0666d065d",
+      "dist/card-motion.js": "fe6a747dc29b0eab084f3ae8d5b1c006073d1428b3f5345c21a2d018796ab9be",
+      "dist/card-motion.css": "5103374cd9ee1c5e7844f76d1a7e941b1ec5a99960d81830bdcc466857b49603",
+      "dist/status-vfx.js": "ef5585cbdbf2af43adf2f3926fbd091f63828e21e1c37be186dd3dcf8cfac8e9",
+      "dist/status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee"
+    },
+    "assetsModified": 0,
+    "version": "2.32.0"
+  },
+  "browser": {
+    "status": "PASS_WITH_RECORDED_ASSET_LIMITS",
+    "runtimeAndSettingsVersion": "2.32.0",
+    "scenarioGroups": 6,
+    "actualPassivePaths": 10,
+    "viewportQualityCombinations": 6,
+    "errors": [],
+    "report": "docs/verification/combat-main-2-32-0-browser.json"
+  },
+  "productionAndOffline": {
+    "status": "BLOCKED",
+    "executed": false,
+    "reason": "Recovered checkout lacks source inputs and original large binary assets. No full production or standalone build was run."
+  },
+  "physicalDeviceAndHumanAudio": {
+    "status": "NOT_RUN"
+  },
+  "limits": [
+    "Browser viewport emulation; no physical-phone measurement or human SFX audition.",
+    "Partial source checkout: original large atlas/focus assets were not available; browser used the unchanged right-facing poster fallback. Full production/offline packaging was not run."
+  ],
+  "modelArchive": {
+    "available": false,
+    "used": false
+  }
+}

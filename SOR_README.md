@@ -1,6 +1,6 @@
 # Slay the Math — Set of Rules
 
-Current Alyssa status presentation, game 2.28.0: [RPG status effects](docs/ALYSSA_STATUS_VFX_2_28_0.md), [motion owner](docs/sor/11_ANIMATION_VFX_AUDIO.md) and [SFX search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md). Actual status/Block-absorption values drive decorative effects; Master balancing and analytics remain integrated.
+Current combat presentation, game 2.32.0: [main polish and actual verification](docs/COMBAT_MOTION_MAIN_2_32_0.md), [RPG status baseline](docs/ALYSSA_STATUS_VFX_2_28_0.md), [motion owner](docs/sor/11_ANIMATION_VFX_AUDIO.md) and [SFX search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md). Prioritized actual status/Block receipts, combined Passive labels, ten motifs and Low/Full intensity preserve existing artwork, gameplay, Master balancing and analytics.
 
 Current Master balance integration, game 2.29.0: [Master SOR](docs/sor/23_MASTER_BALANCE.md), [single-enemy correction and validation](docs/balance/master/SINGLE_TARGET_2_29_0.md), [preceding integration evidence](docs/balance/master/HANDOFF.md). Explicit Easy/Medium/Hard playtest profiles bind Combat, Map and Economy. Pupil 90/70/50 goals remain unmeasured. Historical handoffs retain their recorded sources.
 

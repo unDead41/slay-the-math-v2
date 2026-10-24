@@ -1,5 +1,9 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261024-COMBAT-POLISH-MAIN — Publish completed combat polish as 2.32.0
+
+**DISAHKAN:** Ijamm now says “Okay push ke main please”. This supersedes the previous branch-only publication boundary for this completed combat update. Fast-forward tested main `6dc3ce3` through feature `b422a18`, then publish version/cache metadata and actual combined verification as 2.32.0. Preserve original art/icon mappings, source animations, gameplay/RNG and saves. The feature’s poster-based browser coverage and incomplete production/offline-build coverage remain explicit limits. [Main verification](../COMBAT_MOTION_MAIN_2_32_0.md).
+
 ## DEC-20261024-COMBAT-POLISH-BRANCH — Publish to combat-animation only
 
 **DISAHKAN:** Ijamm subsequently asks to push the completed update to its branch if it has not been pushed. This supersedes DEC-20261024-COMBAT-POLISH-LOCAL’s no-branch-push boundary for this work only. Update the existing `combat-animation` branch from `7e0e6d7` using tested main `6dc3ce3` plus the completed polish. Preserve branch history with a checked fast-forward; do not update main or deploy. Runtime/artwork/gameplay remain the verified local result. [Scope, verification and limits](../COMBAT_MOTION_POLISH_LOCAL.md).

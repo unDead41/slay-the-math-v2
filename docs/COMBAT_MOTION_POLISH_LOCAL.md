@@ -1,8 +1,8 @@
-# Combat motion polish — combat-animation branch
+# Combat motion polish — main 2.32.0
 
 24 October 2026. Source baseline: main `6dc3ce366d266c33154f9b2e76afeb3bba224eca` (2.31.0).
 
-Ijamm initially requested the eight listed animation improvements locally without a push. On 24 October 2026, Ijamm subsequently authorizes pushing the completed work to its existing `combat-animation` branch. This supersedes the earlier local-only boundary for this work. Main and the public version remain unchanged; no main merge or deployment is authorized. The branch advances from `7e0e6d7804e78a837c2e572471c11d99331d0d9a`, incorporating main `6dc3ce366d266c33154f9b2e76afeb3bba224eca` as its tested baseline, without a force-push. Runtime code and assets are identical to the previously verified local result; this publication adds authorization/status documentation only.
+Main release 2.32.0 integrates the completed `combat-animation` feature `b422a184b000f1042d378251e24a5d0d34415225` on main `6dc3ce366d266c33154f9b2e76afeb3bba224eca`. On 24 October 2026 Ijamm explicitly authorizes pushing this update to main, superseding the earlier local-only and branch-only boundaries. Feature code and original assets retain the verified branch result; release changes update version/cache metadata, authorization and combined verification. No new model, artwork, game rules or uploaded audio files are imported. [Main verification and limits](COMBAT_MOTION_MAIN_2_32_0.md).
 
 ## Behaviour
 

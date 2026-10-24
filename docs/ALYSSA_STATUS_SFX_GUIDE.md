@@ -21,7 +21,7 @@ Requested by Ijamm on 23 October 2026. These are proposed search terms and filen
 
 ## Selection and later integration
 
-### Synthesized routing — 24 October 2026 (combat-animation branch)
+### Synthesized routing — 24 October 2026 (main 2.32.0)
 
 The local polish selects one primary cue per committed action and schedules it with the visual presentation lead. Depletion, HP impact, shield absorption, debuff/stat loss, cleanse, shield gain and Passive feedback take precedence over routine card movement. Low/Full changes visual intensity only; Game Motion Off still permits independently enabled Sound FX. New commands, dialogs and hidden/navigation states cancel pending sound. Short synthesized tones are reversible fallbacks, not imported/recorded versions of the suggested WAV files. No supplied MP3 from another chat is claimed imported or auditioned by this change. The search table remains useful for replacing these fallbacks later.
 

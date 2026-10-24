@@ -1,5 +1,10 @@
 # Changelog SOR — Slay the Math
 
+## Game 2.32.0 — Combat animation polish
+
+- Publish completed combat-animation `b422a18` to main after Ijamm’s explicit authorization: ranked/combined status feedback, named Passive/stat ownership, clearer auras and shield depletion/expiry, ten proc signatures, shared SFX timing and Low/Full intensity. Original artwork/icons, source sprite timing, balance, maths and run schema stay under their existing owners.
+- Update release/cache metadata. Record focused tests, native browser viewport/quality checks and source preservation separately from the incomplete production/offline and physical-device/audio checks. [Actual main verification](../COMBAT_MOTION_MAIN_2_32_0.md).
+
 ## Branch preview — combat-animation — 24 October 2026
 
 - Combat motion polish, now authorized for the existing combat-animation branch: ranked/combined status feedback, Passive/stat label ownership, clearer crowded auras, shared presentation/SFX timing, conservative shield shatter, ten distinct proc signatures and Low/Full intensity. The later user instruction authorizes this branch push only; no main update, release version bump or asset/gameplay change. [Scope and verification](../COMBAT_MOTION_POLISH_LOCAL.md).

@@ -1,6 +1,8 @@
-# Slay the Math — 2.31.0
+# Slay the Math — 2.32.0
 
 **Tutorial** now opens a complete English/BM field guide: 17 chapters, 16 real game screenshots and 11 safe, replayable practice chapters using the actual engine. Progress resumes independently of your run and Learning Report. Open Main Menu → Tutorial or the in-game Tutorial control. [How to use, scope and verification](docs/TUTORIAL_2_31_0.md).
+
+Combat feedback now prioritizes important status changes, combines matching Passive/stat labels, separates shield depletion from expiry, and offers Settings → Combat Effects → Low / Full. All ten Passive motifs keep their original icons; visual motion and synthesized SFX use shared cancelable timing. [2.32.0 scope, actual checks and remaining production/offline limits](docs/COMBAT_MOTION_MAIN_2_32_0.md).
 
 Alyssa has RPG-style shield, buff/debuff auras and actual stat-change effects, with Motion Off/reduced-motion support. [Visual scope and verification](docs/ALYSSA_STATUS_VFX_2_28_0.md). [Sound-effect search guide](docs/ALYSSA_STATUS_SFX_GUIDE.md).
 

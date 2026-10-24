@@ -11,7 +11,28 @@
       "balanceVersion": "master-1.4.0-candidate.4",
       "records": 12186,
       "verification": "Remote ref and tree read back; historical dataset retained unchanged"
+    },
+    {
+      "cohort": "v1.5",
+      "contentCommit": "d13c7758b7580bbb10d352fbb9388f1f87df1032",
+      "tree": "547d05fb051229697d6273f07281e757b8ea0943",
+      "orderedParents": [
+        "8606616a475f21cc95bc5e4fc202c8914498bd78",
+        "b730cad0cb27b53ffbdf687d8fc9edaed143ef43"
+      ],
+      "nativeVerifiedContentCommit": "7d5e858c3d3707b99a77e62a70c188571b47b242",
+      "sourceMainCommit": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+      "gameVersion": "2.40.0",
+      "balanceVersion": "master-1.5.0-candidate.5",
+      "records": 4083,
+      "campaigns": 2400,
+      "matchedStageReplays": 1683,
+      "censoredEasySkip": 21,
+      "verification": "Expected-head ref update without force; GitHub compare confirms ref; native fetch confirms exact tree and ordered parents; pinned main is ancestor",
+      "verifiedAtUtc": "2026-10-24T11:38:56.684081+00:00"
     }
   ],
-  "v15Status": "CONTENT_VERIFIED_LOCALLY_PENDING_REMOTE_RECEIPT"
+  "v15Status": "PUBLISHED_VERIFIED",
+  "mainAtClosingRead": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+  "followingReceiptCommitScope": "Documentation only; validated gameplay/data content remains the recorded v1.5 tree."
 }

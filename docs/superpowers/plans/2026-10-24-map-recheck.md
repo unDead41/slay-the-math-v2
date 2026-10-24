@@ -56,4 +56,4 @@
 - [x] Report VALID/PERLU UPDATE/CONFLICT/BELUM DISAHKAN per finding, full inspected SHAs, Git relationships, old-vs-current limitations, changed files and input ownership.
 - [x] Run root npm test with required temporary test dependencies, map tests/validation, syntax and production build/exclusion checks. No gameplay diff relative inspected main.
 - [x] One fresh read-only reviewer; fix material findings RED→GREEN and rerun appropriate suite.
-- [ ] Recheck main/feature heads and affected inputs, publish only balance/map with a lease, verify remote tree and handoff.
+- [x] Recheck main/feature heads and affected inputs, publish only balance/map with a lease, verify remote tree and handoff.

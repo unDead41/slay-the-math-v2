@@ -79,3 +79,9 @@ Target murid Easy90%/Medium70%/Hard50% kekal BELUM DISAHKAN dan milik Master. Pe
 ## Nota pemulihan pelaksanaan
 
 ENOSPC menghentikan penulisan tiga journal. Semua2,873 rekod lengkap disahkan hash dan disimpan; tiga suffix JSON yang terputus diasingkan bersama salinan shard asal sebelum dibersihkan. Resume menggunakan context/task/seed/runSeed/limits yang sama, hanya bagi ID yang belum tersimpan. Fail retention-before/after membuktikan setiap rekod lengkap sedia ada kekal, termasuk semua loss/censor. Ini pemulihan data persekitaran, bukan penukaran hasil game. Raw sejarah v1.4 kekal penuh dalam Git/remote; hanya materialisasi145 fail tempatan diketepikan selepas pengesahan blob bagi mengosongkan ruang. `elapsedSeconds` mencerminkan invocation terakhir, bukan masa keseluruhan pengumpulan.
+
+## Resit penerbitan
+
+Kandungan penuh diterbitkan pada **`d13c7758b7580bbb10d352fbb9388f1f87df1032`**, tree **`547d05fb051229697d6273f07281e757b8ea0943`**, branch [balance/map](https://github.com/unDead41/slay-the-math-v2/tree/balance/map). Ordered parents ialah published Map8606616 dan mainb730cad; pinned main ialah ancestor sebenar. Ref dipindah dengan expected old SHA, tanpa force; compare GitHub serta native fetch mengesahkan ref/tree/parents. Main masihb730cad ketika readback dan tidak ditulis oleh chat ini. Commit resit susulan mengubah dokumentasi sahaja; data/runtime yang diuji kekal. [Resit berstruktur](audits/balance-map/PUBLICATION.json).
+
+Persekitaran ujian: Node24.19.0; suite penuh menggunakan jsdom26.1.0 dan sharp melalui NODE_PATH di luar repository. Pure Node engine replay/source verifier tidak memerlukan pakej UI tersebut.

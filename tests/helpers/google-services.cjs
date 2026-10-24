@@ -3,9 +3,9 @@
 const vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 function services(){
  const properties=new Map(),books=new Map(),logs=[];let count=0,locked=false,flushes=0,failure=null;
- function trip(label){if(failure===label){failure=null;throw Error('Injected service failure: '+label);}}
+ function trip(label){if(failure?.label===label&&!--failure.remaining){failure=null;throw Error('Injected service failure: '+label);}}
  class Sheet{
-  constructor(name){this.name=name;this.rows=[];this.hidden=false;}
+  constructor(name){this.name=name;this.rows=[];this.hidden=false;this.writes=[];this.reads=[];this.validations=[];this.formats=[];this.filter=null;}
   getLastRow(){return this.rows.length;}
   getMaxRows(){return this.maxRows||1000;}
   getMaxColumns(){return this.maxCols||26;}
@@ -13,12 +13,13 @@ function services(){
   insertColumnsAfter(at,n){this.maxCols=at+n;}
   getName(){return this.name;}
   hideSheet(){this.hidden=true;return this;}
-  setFrozenRows(){return this;}
-  getRange(row,col,height=1,width=1){const sheet=this;return {setNumberFormat(){return this;},setValues(values){trip(sheet.name);for(let r=0;r<height;r++){sheet.rows[row+r-1]??=[];for(let c=0;c<width;c++)sheet.rows[row+r-1][col+c-1]=values[r][c];}return this;},getValues(){return Array.from({length:height},(_,r)=>Array.from({length:width},(_,c)=>sheet.rows[row+r-1]?.[col+c-1]??''));}};}
+  setFrozenRows(rows){this.frozenRows=rows;return this;}
+  getFilter(){return this.filter;}
+  getRange(row,col,height=1,width=1){const sheet=this;return {setNumberFormat(format){sheet.formats.push({row,col,height,width,format});return this;},setDataValidation(rule){sheet.validations.push({row,col,height,width,rule});return this;},createFilter(){if(sheet.filter)throw Error('Filter already exists');sheet.filter={row,col,height,width};return sheet.filter;},setValues(values){trip(sheet.name);for(let r=0;r<height;r++){sheet.rows[row+r-1]??=[];for(let c=0;c<width;c++)sheet.rows[row+r-1][col+c-1]=values[r][c];}sheet.writes.push({row,col,height,width,values:values.map(r=>r.slice())});return this;},getValues(){sheet.reads.push({row,col,height,width});return Array.from({length:height},(_,r)=>Array.from({length:width},(_,c)=>sheet.rows[row+r-1]?.[col+c-1]??''));}};}
  }
  function book(id){const sheets=new Map();return {id,sheets,getId:()=>id,getUrl:()=> 'https://docs.google.com/spreadsheets/d/'+id,getSheetByName:name=>sheets.get(name)||null,insertSheet(name){const s=new Sheet(name);sheets.set(name,s);return s;},getSheets:()=>[...sheets.values()]};}
- const context={console:{log:v=>logs.push(v)},PropertiesService:{getScriptProperties:()=>({getProperty:k=>properties.get(k)||null,setProperty:(k,v)=>properties.set(k,v)})},SpreadsheetApp:{create(){const b=book('sheet-'+ ++count);books.set(b.id,b);return b;},openById(id){if(!books.has(id))throw Error('Not found');return books.get(id);},flush(){trip('flush');flushes++;}},LockService:{getScriptLock:()=>({tryLock(){if(locked)return false;locked=true;return true;},releaseLock(){locked=false;}})},HtmlService:{XFrameOptionsMode:{ALLOWALL:'ALLOWALL'},createHtmlOutput(html){return {html,setXFrameOptionsMode(value){this.mode=value;return this;},setTitle(){return this;}};}}};
+ const context={console:{log:v=>logs.push(v)},PropertiesService:{getScriptProperties:()=>({getProperty:k=>properties.get(k)||null,setProperty:(k,v)=>properties.set(k,v)})},SpreadsheetApp:{create(){const b=book('sheet-'+ ++count);books.set(b.id,b);return b;},openById(id){if(!books.has(id))throw Error('Not found');return books.get(id);},flush(){trip('flush');flushes++;},newDataValidation(){const rule={};return {requireValueInList(values,showDropdown){rule.values=Array.from(values);rule.showDropdown=showDropdown;return this;},setAllowInvalid(value){rule.allowInvalid=value;return this;},setHelpText(value){rule.helpText=value;return this;},build:()=>rule};}},LockService:{getScriptLock:()=>({tryLock(){if(locked)return false;locked=true;return true;},releaseLock(){locked=false;}})},HtmlService:{XFrameOptionsMode:{ALLOWALL:'ALLOWALL'},createHtmlOutput(html){return {html,setXFrameOptionsMode(value){this.mode=value;return this;},setTitle(){return this;}};}}};
  vm.createContext(context);
- return {context,properties,books,logs,get flushes(){return flushes;},get locked(){return locked;},failOnce:label=>failure=label,holdLock:value=>locked=value,load(file=path.resolve(__dirname,'../../integrations/google-sheets/Code.gs')){vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});return context;},rows(name){return [...books.values()][0]?.getSheetByName(name)?.rows||[];}};
+ return {context,properties,books,logs,get flushes(){return flushes;},get locked(){return locked;},failOnce:(label,remaining=1)=>failure={label,remaining},holdLock:value=>locked=value,load(file=path.resolve(__dirname,'../../integrations/google-sheets/Code.gs')){vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});return context;},loadReceiver(){const file=path.resolve(__dirname,'../../tools/google-sheets/receiver.gs'),generated=fs.readFileSync(path.resolve(__dirname,'../../integrations/google-sheets/Code.gs'),'utf8'),tail=generated.indexOf('\nconst STM_BRIDGE_SOURCE_=');if(tail<0)throw Error('Generated receiver boundary missing');vm.runInContext(fs.readFileSync(file,'utf8')+generated.slice(tail),context,{filename:file});return context;},rows(name){return [...books.values()][0]?.getSheetByName(name)?.rows||[];}};
 }
 module.exports={services};

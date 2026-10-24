@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-24T11:14:53.305280+00:00",
+  "combinedTables": 6,
+  "combinedCsvCells": 127281,
+  "primaryRecords": 4083,
+  "primaryCsvCells": 705975,
+  "retentionCheckpoints": [
+    {
+      "difficulty": "easy",
+      "checkpoint": "retention-before-resume",
+      "unchangedRecords": 868
+    },
+    {
+      "difficulty": "easy",
+      "checkpoint": "persisted-gap",
+      "unchangedRecords": 1397
+    },
+    {
+      "difficulty": "medium",
+      "checkpoint": "retention-before-resume",
+      "unchangedRecords": 746
+    },
+    {
+      "difficulty": "medium",
+      "checkpoint": "persisted-gap",
+      "unchangedRecords": 1384
+    },
+    {
+      "difficulty": "hard",
+      "checkpoint": "retention-before-resume",
+      "unchangedRecords": 1259
+    }
+  ],
+  "protectedRuntimeDiff": [],
+  "historicalStudyTreesUnchanged": true,
+  "coldSourceExactReplays": 3,
+  "plotVisuallyInspected": true
+}

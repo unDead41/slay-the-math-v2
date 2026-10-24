@@ -1,0 +1,35 @@
+{"completed":50,"last":"route:STM-007:avoid-elite:0","status":"DEFEAT"}
+{"completed":100,"last":"route:STM-013:health-recovery:0","status":"DEFEAT"}
+{"completed":150,"last":"predict:STM-019:low:0","status":"DEFEAT"}
+{"completed":200,"last":"predict:STM-025:low:0","status":"DEFEAT"}
+{"completed":250,"last":"route:STM-032:seek-reward:0","status":"DEFEAT"}
+{"completed":300,"last":"route:STM-038:avoid-elite:0","status":"DEFEAT"}
+{"completed":350,"last":"predict:STM-044:low:0","status":"DEFEAT"}
+{"completed":400,"last":"route:STM-051:uniform-visible-v1:0","status":"DEFEAT"}
+{"completed":450,"last":"route:STM-057:seek-reward:0","status":"DEFEAT"}
+{"completed":500,"last":"route:STM-063:seek-shop:0","status":"VICTORY"}
+{"completed":550,"last":"predict:STM-069:low:0","status":"DEFEAT"}
+{"completed":600,"last":"route:STM-076:uniform-visible-v1:0","status":"DEFEAT"}
+{"completed":650,"last":"route:STM-082:seek-reward:0","status":"DEFEAT"}
+{"completed":700,"last":"route:STM-088:seek-shop:0","status":"DEFEAT"}
+{"completed":750,"last":"predict:STM-094:high:0","status":"DEFEAT"}
+{"completed":800,"last":"predict:STM-100:skip:0","status":"DEFEAT"}
+{"completed":850,"last":"matched:entry-efc09f3240f21b5096436c3c:median","status":"VICTORY"}
+{"completed":900,"last":"matched:entry-26e6da00153567e3bfcca604:easiest","status":"STAGE_CLEARED"}
+{"completed":950,"last":"matched:entry-0f4d0ab619333d7d262309b0:hardest","status":"STAGE_CLEARED"}
+{"completed":1000,"last":"matched:entry-64f06b2caaa9c84b76475867:hardest","status":"STAGE_CLEARED"}
+{"completed":1050,"last":"matched:entry-70eeb172fb8608aa863e1c28:median","status":"STAGE_CLEARED"}
+{"completed":1100,"last":"matched:entry-511919f2ee91e1d928f0ee36:hardest","status":"STAGE_CLEARED"}
+{"completed":1150,"last":"matched:entry-b32314e63564d1349b8105c9:median","status":"STAGE_CLEARED"}
+{"completed":1200,"last":"matched:entry-63a7b2fa5d2fcfcb804aac5d:median","status":"DEFEAT"}
+{"completed":1250,"last":"matched:entry-97df09a254323e5e1204d4eb:easiest","status":"DEFEAT"}
+Error: ENOSPC: no space left on device, write
+    at Object.writeFileSync (node:fs:2483:20)
+    at Object.appendFileSync (node:fs:2565:6)
+    at Journal.append (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/storage.cjs:30:6)
+    at onResult (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/experiments.cjs:70:29)
+    at Worker.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/experiments.cjs:54:146)
+    at Worker.emit (node:events:509:28)
+    at MessagePort.<anonymous> (node:internal/worker:350:14)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:856:20)
+    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)

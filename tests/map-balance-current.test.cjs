@@ -18,7 +18,7 @@ test('current worker captures real Master entries for all three bound profiles',
  for(const difficulty of ['easy','medium','hard']){
   const result=runTask({id:'entry:'+difficulty,seed:'STM-001',runSeed:2822299500,policy:'uniform-visible-v1',predictProfile:'feedback',options:{runtimeBuild:'master',difficulty,telemetry:true,captureCheckpoints:true,stopAtEntry:1}});
   assert.equal(result.status,'ENTRY_CAPTURED',result.error);
-  assert.equal(result.difficulty,difficulty);assert.equal(result.runtimeIdentity.version,'master-1.4.0-candidate.4');
+  assert.equal(result.difficulty,difficulty);assert.deepEqual(result.runtimeIdentity,loadMaster({difficulty}).provenance);
   const state=result.checkpoints[0].state;
   assert.equal(state.balanceState.difficulty,difficulty);assert.equal(state.economyState.difficulty,difficulty);
   assert.ok(loadMaster({difficulty}).E.validate(state));assert.equal(result.entryStateHash,hash(state));
@@ -28,7 +28,7 @@ test('Master runtime choice is preserved by fixed campaign tasks and context',()
  const config={...defaults,runtimeBuild:'master',difficulty:'easy',postRunBossGrant:0};
  const tasks=buildCampaignTasks(['STM-001'],config);assert.ok(tasks.every(t=>t.options.runtimeBuild==='master'));
  const context=makeContext(['STM-001'],config);assert.equal(context.runtimeIdentity.difficulty,'easy');
- assert.equal(context.runtimeIdentity.version,'master-1.4.0-candidate.4');
+ assert.deepEqual(context.runtimeIdentity,loadMaster({difficulty:'easy'}).provenance);
  assert.ok(context.sourceHashes['dist/balance-data.js']);assert.ok(context.sourceHashes['modules/map/data/seed-registry.json']);assert.equal(context.difficultyReadiness.find(x=>x.difficulty==='easy').status,'IMPLEMENTED');
 });
 test('current worker rejects a captured entry from a different difficulty',()=>{
@@ -36,6 +36,13 @@ test('current worker rejects a captured entry from a different difficulty',()=>{
  const first=runTask({...base,options}),entry=first.checkpoints[0];
  const result=runTask({...base,id:'wrong-profile',options:{runtimeBuild:'master',difficulty:'hard',initialState:entry.state,initialClock:entry.clock,initialRngStates:entry.policyRngStates,stopAfterStage:1}});
  assert.equal(result.status,'INVALID_POLICY_OR_ENGINE');assert.equal(result.campaignWon,null);assert.match(result.error,/captured/i);
+});
+test('versioned regression protocol fingerprints its actual runner and schedule',()=>{
+ const config={...require('../tools/balance/map-regression/config.json'),difficulty:'easy'};
+ const context=makeContext(['STM-001'],config),{sha}=require('../tools/balance/map/source-audit.cjs'),fs=require('node:fs');
+ for(const file of config.additionalProtocolFiles)assert.equal(context.protocolHashes[file],sha(fs.readFileSync(require('node:path').resolve(__dirname,'..',file))));
+ assert.equal(buildCampaignTasks(['STM-001'],config).length,8);
+ assert.equal(config.matchedEntriesPerStage,1);
 });
 test('current feedback settles two wrong attempts without a third attempt or loop',()=>{
  const r=runTask({id:'two-attempt-flow',seed:'STM-001',runSeed:2822299500,policy:'health-recovery',predictProfile:'feedback',options:{runtimeBuild:'master',difficulty:'medium',telemetry:true,stopAfterStage:1}});

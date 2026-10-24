@@ -1,0 +1,61 @@
+{
+  "contextId": "ed5ba20114c9c0abb30c3628f29d268cd57d2bb643befcc56f476407c5b31077",
+  "campaignPlanned": 800,
+  "campaignReturned": 800,
+  "matchedPlanned": 600,
+  "matchedReturned": 600,
+  "entryStates": 200,
+  "stage1Entries": 100,
+  "stage2Entries": 100,
+  "evaluationComplete": true,
+  "budgetExhausted": false,
+  "workersUsed": 1,
+  "wallBudgetSeconds": 7200,
+  "elapsedSeconds": 4.268717477,
+  "runtimeIdentity": {
+    "version": "master-1.5.0-candidate.5",
+    "difficulty": "easy",
+    "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+    "engineHash": "710ec84957a00f028d5051d91ce4329a18a8913dbbc4250561a80a037194ef17",
+    "source": "integrated working tree",
+    "pupilCalibration": false
+  },
+  "sourceMainCommit": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+  "postRunBossGrant": 0,
+  "predictAttemptLimit": 2,
+  "seedCount": 100,
+  "mapCount": 200,
+  "structuralStageRoutes": 5500,
+  "forcedEliteMaps": 46,
+  "noEarlyRestMaps": 62,
+  "errors": 0,
+  "censored": 21,
+  "invalidStates": 0,
+  "completeMatchedTriplets": 200,
+  "incompleteMatchedTriplets": 0,
+  "matchedEntriesRequested": 200,
+  "legacyCompatibility": {
+    "status": "NEEDS_NEW_REFERENCE",
+    "checked": 0,
+    "mismatches": [],
+    "sameRuntime": false
+  },
+  "actualEngineCalls": 741739,
+  "studentPlaytests": 0,
+  "fullDifficultyProfilesImplemented": [
+    "easy"
+  ],
+  "scoreStatus": "PROVISIONAL",
+  "resourceInterpretation": "observed actual visits, including prefixes; recovery access differs from healing; survivor Stage 2 bank is conditional",
+  "oracleDisclosure": "high/low Predict use canonical keys as a synthetic knowledge model; route/combat and feedback baseline do not",
+  "rankingInterpretation": "paired same-entry bundled route comparison; different future RNG and rewards remain part of the route; no causal per-room attribution",
+  "fullRouteCoverage": {
+    "structural": 5500,
+    "campaignPlans": 702,
+    "campaignStarted": 702,
+    "campaignTenNodesVisited": 702,
+    "matchedPlanned": 600,
+    "matchedTenNodesVisited": 594,
+    "allBatchesTenNodesVisited": 1120
+  }
+}

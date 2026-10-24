@@ -2,7 +2,7 @@
 
 This is a developer-only recheck of all100 catalogue seeds against main990541d57c6df96cefb21eddc7a365d1d989a74d/game2.37.0 and the canonical `master-1.4.0-candidate.4` binding. It does not tune production numbers or show CP to players. The retained v1.3 measurements describe their old runtime, not this build.
 
-The existing cohort was measured on2.37.0. Current branch2.37.1 changes only package-version metadata among its30 pinned input files;29 runtime files are byte-identical. Existing data retain their original contexts. Restore the exact source before verification or exact replay:
+The existing cohort was measured on2.37.0. Its original publication branch2.37.1 changed only package-version metadata among its30 pinned input files;29 runtime files were byte-identical. The branch now includes2.40.0; use the separate ../map-regression runner/cohort for that runtime. Existing data retain their original contexts. Restore the exact source before verification or exact replay:
 
 ```bash
 python3 reports/map-balance/validation-v1.4/restore-source.py /tmp/stm-map-v14-source

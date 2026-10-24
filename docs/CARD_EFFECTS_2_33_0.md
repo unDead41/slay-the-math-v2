@@ -1,5 +1,7 @@
 # Card effects — 2.33.0
 
+Current branch follow-up: [2.38.0-card-tuning.1](CARD_TUNING_2_38_0.md). The v1 values and main integration below remain their historical release record.
+
 Ijamm explicitly approved applying every proposal from the 40-card audit on 24 October 2026, initially with publication to a new feature branch only. Base main: 264a60e / 2.32.0. Delivery branch: balance/card-effects-20261024, feature version 2.33.0. Ijamm's later instruction “okay push ke main” authorizes integration with current main as game 2.34.0. [Main integration and fresh verification](CARD_EFFECTS_MAIN_2_34_0.md).
 
 ## Current card rules

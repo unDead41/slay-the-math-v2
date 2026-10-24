@@ -138,3 +138,22 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. After a canonical bank Predict, Artifact or Mystery result, reporting is observational: freeze actual source/language/opened-help flags and preserve pending Continue/claim ownership, attempts, resources, clocks and RNG. No report button during an active unanswered challenge, and no report reward. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).
+
+
+## Education reports main publication — 2.38.0
+
+DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.
+
+
+## Card tuning follow-up — 2.38.0-card-tuning.1
+
+DISAHKAN: Ijamm authorizes updating the assistant branch only after the 40-card audit. Last Page becomes Draw 2 +1 empty-Hand at 1 Energy; Recall costs 0 and retains Exhaust; ordinary Mana Barrier becomes 7X. Master Mana Barrier and both growth Passives retain their numbers. New ordinary marker `card-effects-2` preserves unmarked and `card-effects-1` runs, pending payments and opened offers. Master candidate.5 uses separate save keys. Actual AI choice commits are observed after policy ranking. [Current owner and verification](../CARD_TUNING_2_38_0.md). Numerical tuning is a playtest candidate, not verified pupil balance.
+
+
+## Card tuning main publication — 2.40.0
+
+DISAHKAN: Ijamm now authorizes publishing the completed card follow-up to main and updating the version. Integrate bb5f93b with current main ade5d3a /2.39.0 as2.40.0, preserving education reports/hints, status explanations/readiness and Dev Settings. Three approved card values and AI actual-choice accounting retain their feature owner; ordinary v0/v1 rules/payments/offers and Master candidate.5 keys remain separated. [Fresh combined-tree evidence and limits](../CARD_TUNING_MAIN_2_40_0.md).

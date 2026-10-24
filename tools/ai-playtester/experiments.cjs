@@ -26,7 +26,7 @@ function sourceIdentity(x){
 function meter(){const m={decisions:0,searchNodes:0,maxDepth:0,maxHorizonTurns:0,sampledReveals:0,truncatedRollouts:0,energySpent:0,focusSpent:0,cards:{},trace:[],choiceDecisions:[]};Object.defineProperty(m,'lastResolvedPlay',{value:0,writable:true});return m;}
 function decision(agent,r,m){const a=agent.decide(r);m.decisions++;m.searchNodes+=a.searchNodes;m.maxDepth=Math.max(m.maxDepth,a.depth);m.maxHorizonTurns=Math.max(m.maxHorizonTurns,a.horizonTurns);m.sampledReveals+=a.sampledReveals;m.truncatedRollouts+=a.truncatedRollouts;m.trace.push({turn:r.battle.turn,enemy:r.battle.enemyId,...a});if(m.trace.length>30)m.trace.shift();return a;}
 function choiceDecision(m,r,d){m.choiceDecisions.push({turn:r.battle.turn,...d});if(m.choiceDecisions.length>30)m.choiceDecisions.shift();}
-function resolveChoice(x,r,agent,m){const kind=x.E.cardChoice(r).kind,value=agent.choose(r);x.E.chooseCardOption(r,value);choiceDecision(m,r,{kind,value});}
+function resolveChoice(x,r,agent,m,tracker){const kind=x.E.cardChoice(r).kind,value=agent.choose(r);tracker.capture(r,()=>x.E.chooseCardOption(r,value));choiceDecision(m,r,{kind,value});}
 function paid(r,m){
  // cardAction replaces the battle object. The campaign-wide commit ordinal survives copies.
  const tx=r.battle.cardCombat.receipts.at(-1),ordinal=r.stats.cardsPlayed;
@@ -49,10 +49,10 @@ function combat(x,o,seed,mask,agent){
   r=D.create(x,{seed,enemy:o.enemy,deck});
   while(r.scene==='battle'&&r.battle.turn<=100&&plays<500&&work++<3000){
    if(r.battle.turn!==lastTurn){lastTurn=r.battle.turn;tracker.capture(r,()=>predictCombat(x,r,o.predict,seed));}
-   if(x.E.cardChoice(r)){tracker.capture(r,()=>resolveChoice(x,r,agent,m));paid(r,m);continue;}
+   if(x.E.cardChoice(r)){resolveChoice(x,r,agent,m,tracker);paid(r,m);continue;}
    const a=decision(agent,r,m);
    if(a.kind==='endTurn')tracker.capture(r,()=>x.E.endTurn(r));
-   else{if(!!r.battle.boostArmed!==a.focus)x.E.armFocus(r);tracker.capture(r,()=>x.E.playCard(r,a.uid));while(x.E.cardChoice(r)){if(work++>=3000)throw Object.assign(Error('Card choice limit'),{censored:true});tracker.capture(r,()=>resolveChoice(x,r,agent,m));}paid(r,m);plays++;}
+   else{if(!!r.battle.boostArmed!==a.focus)x.E.armFocus(r);tracker.capture(r,()=>x.E.playCard(r,a.uid));while(x.E.cardChoice(r)){if(work++>=3000)throw Object.assign(Error('Card choice limit'),{censored:true});resolveChoice(x,r,agent,m,tracker);}paid(r,m);plays++;}
   }
   const status=r.scene==='battle'?'BENCHMARK_LIMIT_CENSORED':r.scene==='defeat'?'LOSS':'WIN';finishEffects(m,tracker);
   return {status,utility:status==='BENCHMARK_LIMIT_CENSORED'?null:100*(status==='WIN')+20*(status==='LOSS'?0:r.hp/r.maxHp)-Math.min(10,r.battle.turn/2),final:D.snapshot(r),playerTurns:r.battle.turn,committedCardPlays:r.stats.cardsPlayed,validFinal:x.E.validate(r),ai:m,syntheticOracleUsed:PROFILES[o.predict].oracle};

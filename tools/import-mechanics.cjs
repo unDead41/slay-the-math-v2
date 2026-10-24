@@ -2,6 +2,7 @@
  * Original modules remain under modules/mechanics/source. No runtime fetches. */
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const project=path.resolve(__dirname,'..'),source=path.join(project,'modules/mechanics/source');
+require('./build-status-variants.cjs')(project);
 require('./import-cards.cjs')(project);
 require('./build_music_catalog.cjs').buildCatalog(project);
 const read=id=>fs.readFileSync(path.join(source,id),'utf8');
@@ -51,10 +52,11 @@ const css=['STM_SHARED/rich-text.css','QUESTION_BANK/rich_text/renderer.css','QU
 fs.writeFileSync(path.join(project,'dist/mechanics-source.css'),css);
 for(const id of ['QUESTION_BANK/question-bank-form4-120.json','QUESTION_BANK/rich_text/glossary.json','QUESTION_BANK/learning/foundations.json','ARTIFACT/artifact_catalog.json','ARTIFACT/rich_text/artifact_richtext.json','ARTIFACT/rich_text/glossary.json','STM_SHARED/registry.json'])sourceHashes[id]=hash(read(id));
 const localization=require('./build-question-language.cjs')(project);
+require('./build-question-feedback.cjs')(project);
 const practice=require('./build-education-practice.cjs')(project,registry);
 require('./build-master-balance.cjs')(project);
 require('./sync-game-entrypoints.cjs')(project);
-const audit={sourceZip:'QUESTION_BANK_HARMONIZED_v1_6.zip',sha256:'58bdc02a9e7df6a37a30f7012a17600b0f47bd0d9886411cd5640188c08efa58',artifactSourceZip:'INTEGRATION.zip',artifactPackage:'3.5',questionPackage:'1.6.0',bankVersion:bank.bankVersion,supplierRegistryId,hostRegistryId:registry.registryId,overrides,sourceHashes,practice,output:{'dist/mechanics.js':hash(out),'dist/mechanics-source.css':hash(css),'dist/education-practice.js':hash(fs.readFileSync(path.join(project,'dist/education-practice.js')))},counts:{artifacts:31,questions:120,glossary:Object.keys(registry.entries).length,foundations:data.foundations.modules.length,practiceChecks:data.foundations.modules.reduce((n,m)=>n+m.checks.length,0)},omitted:'Duplicate PNG/4K sheets, PDF previews and demo hosts. The reviewed icon registry maps all 31 artifact identities to versioned painted WebP derivatives; original verified art remains preserved; the game engine owns effects, rewards and save commits. Education Practice has its own storage key and uses the same active bank.'};
+const audit={sourceZip:'QUESTION_BANK_HARMONIZED_v1_6.zip',sha256:'58bdc02a9e7df6a37a30f7012a17600b0f47bd0d9886411cd5640188c08efa58',artifactSourceZip:'INTEGRATION.zip',artifactPackage:'3.5',questionPackage:'1.6.0',bankVersion:bank.bankVersion,contentRevision:bank.contentRevision||null,supplierRegistryId,hostRegistryId:registry.registryId,overrides,sourceHashes,practice,output:{'dist/mechanics.js':hash(out),'dist/mechanics-source.css':hash(css),'dist/education-practice.js':hash(fs.readFileSync(path.join(project,'dist/education-practice.js')))},counts:{artifacts:31,questions:120,glossary:Object.keys(registry.entries).length,foundations:data.foundations.modules.length,practiceChecks:data.foundations.modules.reduce((n,m)=>n+m.checks.length,0)},omitted:'Duplicate PNG/4K sheets, PDF previews and demo hosts. The reviewed icon registry maps all 31 artifact identities to versioned painted WebP derivatives; original verified art remains preserved; the game engine owns effects, rewards and save commits. Education Practice has its own storage key and uses the same active bank.'};
 audit.localization=localization;
 fs.writeFileSync(path.join(project,'modules/mechanics/integration-audit.json'),JSON.stringify(audit,null,2)+'\n');
 console.log(JSON.stringify({modules:modules.size,bytes:out.length,registryId:registry.registryId,overrides:overrides.map(x=>x.id)}));

@@ -1,0 +1,42 @@
+{
+  "oldSource": "990541d57c6df96cefb21eddc7a365d1d989a74d",
+  "newSource": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+  "pairedCampaigns": 2400,
+  "inputParity": [
+    {
+      "difficulty": "easy",
+      "profileEqual": true,
+      "referenceStarterBeforeArtifactEqual": true,
+      "referenceNewRunEqual": true,
+      "enemyTemplatesEqual": true
+    },
+    {
+      "difficulty": "medium",
+      "profileEqual": true,
+      "referenceStarterBeforeArtifactEqual": true,
+      "referenceNewRunEqual": true,
+      "enemyTemplatesEqual": true
+    },
+    {
+      "difficulty": "hard",
+      "profileEqual": true,
+      "referenceStarterBeforeArtifactEqual": true,
+      "referenceNewRunEqual": true,
+      "enemyTemplatesEqual": true
+    }
+  ],
+  "inputHashes": {
+    "reports/map-balance/v1.4/easy/manifest.json": "c6296b4c37b470efafa07ac5b891832c32fd5c9ddf6c87146691c132ea35548b",
+    "reports/map-balance/v1.5/easy/manifest.json": "ababcb5b9ea48e7da2e30edfb477fb517950a3eae4331f953eb08078e49e0e52",
+    "reports/map-balance/v1.5/easy/context.json": "14363037bf59e2bff6374931688671e3da101a82b467537d78800652072f0fcc",
+    "reports/map-balance/v1.4/medium/manifest.json": "68ef199f615df62841c0af4c09decfd096f0926324c6f45e8b5443b105c39842",
+    "reports/map-balance/v1.5/medium/manifest.json": "176b23c3238b72d1b9b6cb0d36dca806c7f032776b5330d6f914a218e61de6d5",
+    "reports/map-balance/v1.5/medium/context.json": "14e8140b9488d7d05eb6944dbffd96b0b3f0deb1536c26dc7e7e4865db44ae57",
+    "reports/map-balance/v1.4/hard/manifest.json": "fb941383336750e44844584f75e9921cd95412d30256c708cd27dc71d7ce205a",
+    "reports/map-balance/v1.5/hard/manifest.json": "9e050e44b87feea3b81e64a640a655b1a51d2bcabad8ddd756022739862b34c7",
+    "reports/map-balance/v1.5/hard/context.json": "0c9e588331afa3b53c198cba5685b52f4f7fdcb596f6ca3e07c96d62b54ff59b",
+    "reports/map-balance/validation-v1.5/compare-runtime-cohorts.py": "0c78661f02e536cb76cfba57e348f5833c9974fc34b688a3bafd92d0d513938f"
+  },
+  "causalAttribution": false,
+  "pupilCalibration": false
+}

@@ -41,7 +41,7 @@ test('game cards: closing precommit Recall costs nothing, restores controls, the
   assert.equal(state().battle.cardChoice.committed,false);assert.equal(d.querySelector('[data-action=end-turn]').disabled,true);
   click('#dialog [data-action=close]');assert.equal(state().battle.cardChoice,null);assert.equal(state().battle.energy,before.battle.energy);assert.equal(state().stats.cardsPlayed,before.stats.cardsPlayed);assert.equal(d.querySelector('[data-action=end-turn]').disabled,false);
   click('[data-action=play][data-id="'+r.battle.hand[0].uid+'"]');click('[data-action=card-option][data-value="'+target.uid+'"]');
-  assert.equal(state().battle.energy,before.battle.energy-1);assert.ok(state().battle.hand.some(c=>c.uid===target.uid));assert.ok(state().battle.exhaust.some(c=>c.uid===r.battle.hand[0].uid));assert.equal(d.getElementById('dialog').open,false);assert.ok(E.restore(state()));
+  assert.equal(state().battle.energy,before.battle.energy);assert.equal(state().battle.cardCombat.receipts.at(-1).energy,0);assert.equal(state().stats.cardsPlayed,before.stats.cardsPlayed+1);assert.ok(state().battle.hand.some(c=>c.uid===target.uid));assert.ok(state().battle.exhaust.some(c=>c.uid===r.battle.hand[0].uid));assert.equal(d.getElementById('dialog').open,false);assert.ok(E.restore(state()));
  }finally{dom.window.close();}
 });
 test('game cards: committed Read Ahead survives close/reload and the UI takes and orders the exact candidates',()=>{

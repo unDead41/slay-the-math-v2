@@ -1,16 +1,49 @@
 # Changelog SOR — Slay the Math
 
+## Map regression v1.5 —24 October2026
+
+Pin main2.40.0/Master candidate.5 after publishing primaryv1.4. Add a separate fixed100-seed N1 regression and same-entry rank replays, canonical runtime identity assertions and explicit versioned runner/config hashes. Preserve every historical cohort/source and all upstream production content. [Owner handoff](../MAP_BALANCE_V1_5_HANDOFF.md). CP is developer-only; pupil targets remain unmeasured.
+
 ## Map audit v1.4 —24 October2026
 
 - Recheck current main2.37.0 and Master candidate.4; retain all old measurements as history. Full profiles are now integrated and the actual two-attempt game flow is used.
 - Add runtime-aware workers/provenance, fix artifact affordability and final-boss Gold observations, and run a fixed three-profile matrix with same-entry rank replays. No production tuning or player-facing map CP.
 - [Current handoff](../MAP_BALANCE_V1_4_HANDOFF.md), source hashes and raw/derived results expose censoring, coverage and conditional populations; pupil targets remain unmeasured.
+## Game2.40.0 — Three-card tuning and corrected AI observation on main
+
+Integrate the reviewed card follow-up with2.39.0: Last Page2+1 empty-Hand, Recall0 Energy +Exhaust, ordinary Mana Barrier7X; preserve old ordinary rules/choices/offers and Master candidate.5 isolation. Actual AI choice commits are observed separately from hypothetical rankings. Keep all current education reports/clearer hints, icon explanations/readiness and Settings-only Dev controls; regenerate package-derived release/cache/launchers. [Main scope, audit and fresh verification](../CARD_TUNING_MAIN_2_40_0.md).
+
+## Game2.39.0 — Six status-icon improvements on main
+
+After education2.38.0, integrate icon81533b3: run-aware units/duration, complete ten-status BM/English explanations, Normal/Large preference, three distinct Block-family silhouettes, inline comparison summaries, and named pending/local SVG fallback controls with a bounded priority manifest. Preserve education reports/Google triage, reviewed hints, Dev Settings, numerical gameplay/saves and original artwork. [Fresh main integration evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+## Game2.38.0 — Education reports and clearer hints on main
+
+Integrate education-report6bfb483 with main2.37.1 while retaining Settings-only Developer access. Add Result-only reports, private question/category Issues triage, and source-reviewed staged English/BM help for all120 questions. Preserve source identities, original answers/full solutions, gameplay, saves and artwork. [Fresh integration checks and receiver update](../education/MAIN_2_38_0.md).
+
+## 2.38.0-icons.1 — 24 October 2026 — Explained statuses, branch only
+
+Apply the six approved follow-ups on codex/icon-clarity-audit: clear units/percentage/duration, complete shared BM/English status labels/details and VFX names, readable Normal/Large status sizing, three distinct transparent Block-family variants, brief comparison effects and real slow/error image handling. Preserve current/archived rule owners and original card/artifact art. Expose fifteen critical icons to Publish Handler. [Scope/source/export limits](../STATUS_ICON_POLISH_2_38_0.md); [fresh branch audit](../audits/icon-clarity-audit/LATEST.md).
+
+## 2.38.0-card-tuning.1 — 24 October 2026 — Assistant branch candidate
+
+- Tune Last Page to Draw 2 +1 empty at 1 Energy, Recall to 0 Energy with Exhaust, and ordinary Mana Barrier to 7X. Preserve Master Mana Barrier and growth bonuses.
+- Keep ordinary v0/v1 definitions, pending paid/unpaid choices and Shop metadata under their original rules; introduce marker2 and separate Master candidate.5 storage.
+- Exclude hypothetical AI card-choice ranking from actual Block/effect telemetry. Preserve existing main question, icon and developer-tool updates.
+- Branch-only authorization and evidence: [owner](../CARD_TUNING_2_38_0.md), [audit](../audits/card-effects/LATEST.md).
 
 ## Master SOR 1.2.0 — 24 October 2026
 
 - Require main's Master SOR and relevant latest audit/handoff before branch work; put the first-read instruction at the start of AGENTS.md.
 - Require scoped before/after issue, risk and improvement review for every coherent branch update; distinguish evidence from assumptions/proposals, retain open findings and preserve explicit fix/push boundaries.
 - Update the report format/index and add the [main documentation audit](../audits/main/LATEST.md), including two observed stale AGENTS statements. No runtime change, game-version bump or background/CI enforcement.
+
+## Game 2.37.0-report.4 — 24 October 2026, education-report only
+
+- Add Result-only bilingual issue reports for Predict, Artifact and Mystery with actual context, shared local feedback and opt-in delivery.
+- Add private Google Issues grouping, distinct device/active report counts, developer status/notes/fixed version and replay-safe reopening; preserve player review ticks.
+- Review all 120 bilingual question/hint sequences against focused supplied textbook/DSKP pages; refine 66 Hint/53 More Hint texts and 63 pre-answer reference visuals, retaining all original facts/answers/full solutions and source identities.
+- Fix inherited solved SVG accessible titles, retain proper MathML and refresh actual tutorial references. No main merge, live receiver deployment, gameplay retuning or artwork replacement. [Owner guide/evidence](../education/FEEDBACK_CLARITY.md).
 
 ## 2.37.0 — 24 October 2026 — Functional icon clarity on main
 
@@ -418,7 +451,7 @@ Pilih Question language / Bahasa soalan untuk menukar keseluruhan 120 soalan, Pe
 
 ## Game 2.18.0 — 22 October 2026
 
-Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
+Integrate the supplied 40-card mechanics/Focus/Passive package and bilingual presentation; preserve legacy cards/saves. Correct native MathML layout across all 120 questions; Shop uses full-background art and internal panel scroll. [Scope and verification](../CARDS_AND_DISPLAY_2_18_0.md).
 
 
 ## Game 2.19.0 — 22 October 2026 (Malaysia)

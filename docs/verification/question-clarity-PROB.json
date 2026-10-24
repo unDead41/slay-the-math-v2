@@ -1,0 +1,3610 @@
+{
+  "topicCode": "PROB",
+  "sourceReview": [
+    {
+      "file": "02-Mathematics-Form-4-KSSM.pdf",
+      "pdfPages": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        265,
+        266,
+        267,
+        268,
+        271,
+        272,
+        274,
+        275,
+        276
+      ],
+      "notes": [
+        "Read the focused pages cited by all 40 harmonization records using pdftotext -f/-l on the supplied PDF, not web summaries. No claim of whole-book reading.",
+        "Pages 253–254 support ordered outcomes/sample spaces; 255–256 support replacement and dependence; 257–261 support outcome tables, independent multiplication and successive draws with updated counts. Pages 262 and 265–268 support exclusivity and addition with overlap; 271–272 support complement/application strategies; 274–276 provide mixed applications.",
+        "The authored gate questions retain explicit independence. Card marks/counts are local teaching data and do not establish game mechanics."
+      ]
+    },
+    {
+      "file": "04-Matematik-Tingkatan-4-KSSM.pdf",
+      "pdfPages": [
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        257,
+        258,
+        259,
+        260,
+        263,
+        264,
+        266,
+        267,
+        268
+      ],
+      "notes": [
+        "Read all 19 distinct cited BM pages using pdftotext -f/-l; also rendered and visually inspected PDF page 250 (printed 249), including the independent multiplication rule and three-event extension.",
+        "Used school terms kesudahan, pasangan tertib, ruang sampel, peristiwa bersandar/tak bersandar, saling eksklusif, persilangan, kesatuan, pelengkap and dengan/tanpa pemulangan.",
+        "The source uses A/G for angka/gambar; retain the bank’s H/T bindings with H = muka gambar and T = muka angka. G/S gold/silver bindings stay unchanged. No whole-book review claim."
+      ]
+    },
+    {
+      "file": "03-DSKP-KSSM-MATEMATIK-TG-4-dan-5.pdf",
+      "pdfPages": [
+        82,
+        83,
+        84
+      ],
+      "notes": [
+        "Read supplied PDF pages 82–84 (printed 68–70); also rendered and inspected PDF page 83 to confirm standards 9.3.1–9.3.3 and their representation requirements.",
+        "9.1.1 covers describing/listing combined events; 9.2.1–9.2.3 cover dependence, formulae and representations including more than two events; 9.3 covers exclusivity/addition; 9.4.1 covers applications. PROB-001 counting supports 9.1.1; PROB-038 inverse count is enrichment rather than a separately named mandatory task.",
+        "Audit snapshot: education-report at 990541d57c6df96cefb21eddc7a365d1d989a74d, game 2.37.0. Read root AGENTS.md, MASTER_SOR_PROJECT.md and relevant Math SOR. No repository content was edited, committed or pushed. All IDs/seeds/choices/bindings/correct keys/facts and full worked solutions remain unchanged.",
+        "MODEL.zip was unavailable and not used. Per-item checks cover the proposed text and Hint-only references, not a claim that current runtime visuals are free of the reported answer disclosures."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "PROB-001",
+      "findings": [
+        "The prompt defines the four-faced die and H/T clearly. The old next step asks pupils to build a grid already filled in Hint."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An outcome records both results in order."
+          },
+          {
+            "id": "nextStep",
+            "text": "Read one row for H and one row for T. Each cell pairs that coin result with a die number."
+          }
+        ],
+        "hint": "An outcome records both results in order. Read one row for H and one row for T. Each cell pairs that coin result with a die number.",
+        "moreHint": "Each of the 2 coin results can be paired with 4 die numbers. Use 2 × 4 to count the pairs."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Satu kesudahan mencatat kedua-dua keputusan mengikut tertib."
+          },
+          {
+            "id": "nextStep",
+            "text": "Baca satu baris untuk H dan satu baris untuk T. Setiap petak memadankan keputusan duit syiling itu dengan satu nombor dadu."
+          }
+        ],
+        "hint": "Satu kesudahan mencatat kedua-dua keputusan mengikut tertib. Baca satu baris untuk H dan satu baris untuk T. Setiap petak memadankan keputusan duit syiling itu dengan satu nombor dadu.",
+        "moreHint": "Setiap satu daripada 2 keputusan duit syiling boleh dipadankan dengan 4 nombor dadu. Gunakan 2 × 4 untuk mengira bilangan pasangan."
+      },
+      "rationale": "Use the displayed grid; More Hint adds the unevaluated 2 × 4 count.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-002",
+      "findings": [
+        "Prompt and both stages are clear; retain them. More Hint demonstrates two starting pairs and leaves the others for the pupil."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An ordered pair records the first die before the second."
+          },
+          {
+            "id": "nextStep",
+            "text": "Try each possible first number and find the second number needed to make a total of 5."
+          }
+        ],
+        "hint": "An ordered pair records the first die before the second. Try each possible first number and find the second number needed to make a total of 5.",
+        "moreHint": "For a first number of 1, the second must be 4. For a first number of 2, the second must be 3. Continue with 3, 4, 5 and 6, keeping only second numbers from 1 to 6."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Pasangan tertib mencatat dadu pertama sebelum dadu kedua."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cuba setiap nombor pertama yang mungkin dan cari nombor kedua yang diperlukan supaya hasil tambahnya ialah 5."
+          }
+        ],
+        "hint": "Pasangan tertib mencatat dadu pertama sebelum dadu kedua. Cuba setiap nombor pertama yang mungkin dan cari nombor kedua yang diperlukan supaya hasil tambahnya ialah 5.",
+        "moreHint": "Jika nombor pertama ialah 1, nombor kedua mestilah 4. Jika nombor pertama ialah 2, nombor kedua mestilah 3. Teruskan dengan 3, 4, 5 dan 6, dan terima hanya nombor kedua antara 1 hingga 6."
+      },
+      "rationale": "Distinguish die order, retain reverse pairs, and reject second values outside 1 to 6 without giving the full correct list.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-003",
+      "findings": [
+        "The prompt clearly requires Heads and even together. Use the filled table instead of requesting another list."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Both conditions must hold in the same outcome."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use the table to find pairs with H and an even number. Divide the number of matching pairs by the total number of pairs."
+          }
+        ],
+        "hint": "Both conditions must hold in the same outcome. Use the table to find pairs with H and an even number. Divide the number of matching pairs by the total number of pairs.",
+        "moreHint": "The matching pairs are (H,2) and (H,4). The total number of equally likely pairs is 2 × 4. Put the matching count over that total and simplify."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Kedua-dua syarat mesti dipenuhi dalam kesudahan yang sama."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan jadual untuk mencari pasangan dengan H dan nombor genap. Bahagikan bilangan pasangan yang memenuhi syarat dengan jumlah pasangan."
+          }
+        ],
+        "hint": "Kedua-dua syarat mesti dipenuhi dalam kesudahan yang sama. Gunakan jadual untuk mencari pasangan dengan H dan nombor genap. Bahagikan bilangan pasangan yang memenuhi syarat dengan jumlah pasangan.",
+        "moreHint": "Pasangan yang memenuhi syarat ialah (H,2) dan (H,4). Jumlah pasangan yang sama boleh jadi ialah 2 × 4. Letakkan bilangan pasangan yang memenuhi syarat di atas jumlah itu, kemudian permudahkan."
+      },
+      "rationale": "More Hint supplies matching pairs and an unevaluated total, leaving the probability and simplification to the pupil.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-004",
+      "findings": [
+        "The prompt is clear. Shorten the order instruction and link each position to its toss."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Exactly one Head means one toss gives Heads and the other gives Tails."
+          },
+          {
+            "id": "nextStep",
+            "text": "Read the first toss before the second toss in each outcome. Count different orders separately."
+          }
+        ],
+        "hint": "Exactly one Head means one toss gives Heads and the other gives Tails. Read the first toss before the second toss in each outcome. Count different orders separately.",
+        "moreHint": "Write HH, HT, TH and TT, where H is Heads and T is Tails. Remove the outcomes with no Heads or two Heads, then divide the number left by the total number of outcomes."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tepat satu muka gambar bermaksud satu lambungan menghasilkan muka gambar dan satu lagi menghasilkan muka angka."
+          },
+          {
+            "id": "nextStep",
+            "text": "Baca lambungan pertama sebelum lambungan kedua dalam setiap kesudahan. Kira tertib yang berbeza secara berasingan."
+          }
+        ],
+        "hint": "Tepat satu muka gambar bermaksud satu lambungan menghasilkan muka gambar dan satu lagi menghasilkan muka angka. Baca lambungan pertama sebelum lambungan kedua dalam setiap kesudahan. Kira tertib yang berbeza secara berasingan.",
+        "moreHint": "Tulis HH, HT, TH dan TT, dengan H mewakili muka gambar dan T mewakili muka angka. Singkirkan kesudahan tanpa muka gambar atau dengan dua muka gambar, kemudian bahagikan bilangan yang tinggal dengan jumlah kesudahan."
+      },
+      "rationale": "More Hint adds the sample space and an exclusion/counting action without evaluating the fraction.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-005",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The two accepted totals correctly form separate cases."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Find the ordered die pairs for each accepted total."
+          },
+          {
+            "id": "nextStep",
+            "text": "These two totals cannot occur on the same roll, so their matching outcome counts can be added."
+          }
+        ],
+        "hint": "Find the ordered die pairs for each accepted total. These two totals cannot occur on the same roll, so their matching outcome counts can be added.",
+        "moreHint": "A total of 2 comes from (1,1), and a total of 12 comes from (6,6). Count these pairs out of 6 × 6 equally likely ordered pairs, then simplify."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Cari pasangan tertib dadu bagi setiap jumlah yang diterima."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kedua-dua jumlah ini tidak boleh berlaku pada lontaran yang sama, maka bilangan kesudahannya boleh ditambah."
+          }
+        ],
+        "hint": "Cari pasangan tertib dadu bagi setiap jumlah yang diterima. Kedua-dua jumlah ini tidak boleh berlaku pada lontaran yang sama, maka bilangan kesudahannya boleh ditambah.",
+        "moreHint": "Jumlah 2 diperoleh daripada (1,1), dan jumlah 12 daripada (6,6). Kira pasangan ini daripada 6 × 6 pasangan tertib yang sama boleh jadi, kemudian permudahkan."
+      },
+      "rationale": "More Hint identifies the extreme pairs and the 6 × 6 sample-space setup without evaluating the probability.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-006",
+      "findings": [
+        "Simplify inclusive or to in A, in B, or in both. The effective visual preselects union outcomes."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A ∪ B accepts a number in A, in B, or in both."
+          },
+          {
+            "id": "nextStep",
+            "text": "List both sets and combine them, writing any shared number only once."
+          }
+        ],
+        "hint": "A ∪ B accepts a number in A, in B, or in both. List both sets and combine them, writing any shared number only once.",
+        "moreHint": "A = {2,4,6} and B = {5,6}. Merge these lists without repeating 6. Divide the number of different entries by 6."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "A ∪ B merangkumi nombor dalam A, dalam B atau dalam kedua-duanya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Senaraikan kedua-dua set dan gabungkannya, dengan menulis nombor yang dikongsi sekali sahaja."
+          }
+        ],
+        "hint": "A ∪ B merangkumi nombor dalam A, dalam B atau dalam kedua-duanya. Senaraikan kedua-dua set dan gabungkannya, dengan menulis nombor yang dikongsi sekali sahaja.",
+        "moreHint": "A = {2,4,6} dan B = {5,6}. Gabungkan senarai ini tanpa mengulang 6. Bahagikan bilangan nombor berbeza dengan 6."
+      },
+      "rationale": "Keep event membership as reference; More Hint identifies the shared 6 and the denominator.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-006].learning.visual.solution.headers[3], rows[*][3] -> selectSupportVisual(PROB-006)",
+          "problem": "The effective Hint includes the completed Accepted by or? column.",
+          "proposedCorrection": "Use the given event membership in Hint; keep completed union selections in the unchanged solution visual."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Event membership",
+          "ms": "Keahlian peristiwa"
+        },
+        "caption": {
+          "en": "Combine the event lists without counting a shared face twice.",
+          "ms": "Gabungkan senarai peristiwa tanpa mengira muka yang dikongsi dua kali."
+        },
+        "headers": {
+          "en": [
+            "Event",
+            "Faces"
+          ],
+          "ms": [
+            "Peristiwa",
+            "Muka dadu"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All die faces",
+              "{1,2,3,4,5,6}"
+            ],
+            [
+              "A: even",
+              "{2,4,6}"
+            ],
+            [
+              "B: greater than 4",
+              "{5,6}"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua muka dadu",
+              "{1,2,3,4,5,6}"
+            ],
+            [
+              "A: genap",
+              "{2,4,6}"
+            ],
+            [
+              "B: melebihi 4",
+              "{5,6}"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-007",
+      "findings": [
+        "The prompt is clear. Existing More Hint largely repeats the two tests without an explicit action."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "An accepted pair must meet both conditions in the question."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check the coin entry and the die entry separately. Both must pass."
+          }
+        ],
+        "hint": "An accepted pair must meet both conditions in the question. Check the coin entry and the die entry separately. Both must pass.",
+        "moreHint": "First reject every pair that begins with T. Among the remaining H pairs, reject a die number equal to 2 or less than 2. Check which offered pair passes both tests."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Pasangan yang diterima mesti memenuhi kedua-dua syarat dalam soalan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak keputusan duit syiling dan nombor dadu secara berasingan. Kedua-duanya mesti memenuhi syarat."
+          }
+        ],
+        "hint": "Pasangan yang diterima mesti memenuhi kedua-dua syarat dalam soalan. Semak keputusan duit syiling dan nombor dadu secara berasingan. Kedua-duanya mesti memenuhi syarat.",
+        "moreHint": "Tolak dahulu setiap pasangan yang bermula dengan T. Antara pasangan H yang tinggal, tolak nombor dadu yang sama dengan 2 atau kurang daripada 2. Semak pasangan yang diberi untuk mencari yang memenuhi kedua-dua syarat."
+      },
+      "rationale": "Give a concrete elimination sequence using T and the boundary 2 without naming the winning pair.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-008",
+      "findings": [
+        "The prompt clearly states randomness and no replacement. Name blue/total counts explicitly. The visual reveals the final probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Without replacement means the first counter stays out."
+          },
+          {
+            "id": "nextStep",
+            "text": "For each draw, use the blue count over the total count. After a first blue, update both counts before multiplying the two fractions."
+          }
+        ],
+        "hint": "Without replacement means the first counter stays out. For each draw, use the blue count over the total count. After a first blue, update both counts before multiplying the two fractions.",
+        "moreHint": "Use (2/5) × (1/4). After the first blue is kept out, 1 blue counter remains among 4 counters. Multiply and simplify."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tanpa pemulangan bermaksud pembilang pertama tidak dikembalikan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bagi setiap pemilihan, gunakan bilangan biru sebagai pengangka dan jumlah pembilang sebagai penyebut. Selepas biru pertama dipilih, kemas kini kedua-dua bilangan sebelum mendarabkan dua pecahan."
+          }
+        ],
+        "hint": "Tanpa pemulangan bermaksud pembilang pertama tidak dikembalikan. Bagi setiap pemilihan, gunakan bilangan biru sebagai pengangka dan jumlah pembilang sebagai penyebut. Selepas biru pertama dipilih, kemas kini kedua-dua bilangan sebelum mendarabkan dua pecahan.",
+        "moreHint": "Gunakan (2/5) × (1/4). Selepas biru pertama tidak dikembalikan, tinggal 1 pembilang biru daripada 4 pembilang. Darab dan permudahkan."
+      },
+      "rationale": "More Hint gives the two draw fractions but leaves their product and simplification unresolved.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-008].learning.visual.solution.rows[2][3] -> selectSupportVisual(PROB-008).rows[2][3]",
+          "problem": "The copied combined-result row reveals the evaluated target 1/10.",
+          "proposedCorrection": "Exclude only the combined-result row from Hint. Retain all original colour counts and both filled draw-stage counts/fractions; keep the full solution visual unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Counts for the required draws",
+          "ms": "Bilangan bagi pemilihan diperlukan"
+        },
+        "caption": {
+          "en": "Use the bag at each stated stage, then multiply the two draw probabilities.",
+          "ms": "Gunakan kandungan beg pada setiap peringkat yang dinyatakan, kemudian darabkan dua kebarangkalian pemilihan."
+        },
+        "headers": {
+          "en": [
+            "Required draw",
+            "Red",
+            "Blue",
+            "Total",
+            "Probability setup"
+          ],
+          "ms": [
+            "Pemilihan yang diperlukan",
+            "Merah",
+            "Biru",
+            "Jumlah",
+            "Bentuk pengiraan kebarangkalian"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "First blue",
+              "3",
+              "2",
+              "5",
+              "2/5"
+            ],
+            [
+              "Blue after first blue is kept out",
+              "3",
+              "1",
+              "4",
+              "1/4"
+            ]
+          ],
+          "ms": [
+            [
+              "Biru pertama",
+              "3",
+              "2",
+              "5",
+              "2/5"
+            ],
+            [
+              "Biru selepas biru pertama tidak dikembalikan",
+              "3",
+              "1",
+              "4",
+              "1/4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-009",
+      "findings": [
+        "Prompt and both stages are clear; retain them. The filled table supplies restored counts/chances without an independence verdict."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Events are independent if learning the first result leaves the chance of the second event unchanged."
+          },
+          {
+            "id": "nextStep",
+            "text": "Compare the second-red chance after each possible first colour."
+          }
+        ],
+        "hint": "Events are independent if learning the first result leaves the chance of the second event unchanged. Compare the second-red chance after each possible first colour.",
+        "moreHint": "The starting red fraction is 3/5. Work out the red fraction after a red counter is returned, and after a blue counter is returned. Compare each fraction with the starting fraction."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Peristiwa adalah tak bersandar jika mengetahui keputusan pertama tidak mengubah peluang peristiwa kedua."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bandingkan peluang merah kedua selepas setiap warna pertama yang mungkin."
+          }
+        ],
+        "hint": "Peristiwa adalah tak bersandar jika mengetahui keputusan pertama tidak mengubah peluang peristiwa kedua. Bandingkan peluang merah kedua selepas setiap warna pertama yang mungkin.",
+        "moreHint": "Pecahan merah awal ialah 3/5. Tentukan pecahan merah selepas pembilang merah dikembalikan, dan selepas pembilang biru dikembalikan. Bandingkan setiap pecahan dengan pecahan awal."
+      },
+      "rationale": "More Hint supplies the starting 3/5 and asks the pupil to reconstruct both restored bags before deciding.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-010",
+      "findings": [
+        "Prompt and both stages are clear; retain them. The filled table supplies counts without a dependence label."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Compare the second-red chance before knowing the first result with its chance after the first result is red."
+          },
+          {
+            "id": "nextStep",
+            "text": "Without replacement, update both the red count and the total."
+          }
+        ],
+        "hint": "Compare the second-red chance before knowing the first result with its chance after the first result is red. Without replacement, update both the red count and the total.",
+        "moreHint": "The starting red fraction is 3/5. After a first red is kept out, 2 red counters remain among 4. Compare 2/4 with 3/5 before deciding."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bandingkan peluang merah kedua sebelum keputusan pertama diketahui dengan peluangnya selepas keputusan pertama ialah merah."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tanpa pemulangan, kemas kini bilangan merah dan jumlah pembilang."
+          }
+        ],
+        "hint": "Bandingkan peluang merah kedua sebelum keputusan pertama diketahui dengan peluangnya selepas keputusan pertama ialah merah. Tanpa pemulangan, kemas kini bilangan merah dan jumlah pembilang.",
+        "moreHint": "Pecahan merah awal ialah 3/5. Selepas merah pertama tidak dikembalikan, tinggal 2 pembilang merah daripada 4. Bandingkan 2/4 dengan 3/5 sebelum membuat keputusan."
+      },
+      "rationale": "More Hint supplies the starting and after-red fractions but leaves the comparison/classification unanswered.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-011",
+      "findings": [
+        "Replace the brief concept The order matters with the effect of replacement. The visual reveals the final product."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Returning the counter and mixing restore the original colour counts."
+          },
+          {
+            "id": "nextStep",
+            "text": "Find the first-red chance and the second-blue chance, then multiply for this fixed order."
+          }
+        ],
+        "hint": "Returning the counter and mixing restore the original colour counts. Find the first-red chance and the second-blue chance, then multiply for this fixed order.",
+        "moreHint": "The first-red fraction is 3/5 and the second-blue fraction is 2/5. Calculate (3/5) × (2/5)."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Memulangkan pembilang dan menggaul memulihkan bilangan asal setiap warna."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari peluang merah pada pemilihan pertama dan biru pada pemilihan kedua, kemudian darabkan bagi tertib tetap ini."
+          }
+        ],
+        "hint": "Memulangkan pembilang dan menggaul memulihkan bilangan asal setiap warna. Cari peluang merah pada pemilihan pertama dan biru pada pemilihan kedua, kemudian darabkan bagi tertib tetap ini.",
+        "moreHint": "Pecahan merah pertama ialah 3/5 dan pecahan biru kedua ialah 2/5. Hitung (3/5) × (2/5)."
+      },
+      "rationale": "More Hint substitutes red-first and blue-second fractions without evaluating the product.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-011].learning.visual.solution.rows[2][3] -> selectSupportVisual(PROB-011).rows[2][3]",
+          "problem": "The copied combined-result row reveals the evaluated target 6/25.",
+          "proposedCorrection": "Exclude only the combined-result row from Hint. Retain all original colour counts and both filled draw-stage counts/fractions; keep the full solution visual unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Counts for the required draws",
+          "ms": "Bilangan bagi pemilihan diperlukan"
+        },
+        "caption": {
+          "en": "Use the bag at each stated stage, then multiply the two draw probabilities.",
+          "ms": "Gunakan kandungan beg pada setiap peringkat yang dinyatakan, kemudian darabkan dua kebarangkalian pemilihan."
+        },
+        "headers": {
+          "en": [
+            "Required draw",
+            "Red",
+            "Blue",
+            "Total",
+            "Probability setup"
+          ],
+          "ms": [
+            "Pemilihan yang diperlukan",
+            "Merah",
+            "Biru",
+            "Jumlah",
+            "Bentuk pengiraan kebarangkalian"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "First red",
+              "3",
+              "2",
+              "5",
+              "3/5"
+            ],
+            [
+              "Blue after return and mixing",
+              "3",
+              "2",
+              "5",
+              "2/5"
+            ]
+          ],
+          "ms": [
+            [
+              "Merah pertama",
+              "3",
+              "2",
+              "5",
+              "3/5"
+            ],
+            [
+              "Biru selepas pemulangan dan penggaulan",
+              "3",
+              "2",
+              "5",
+              "2/5"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-012",
+      "findings": [
+        "State the different effects on red, blue and total counts directly. The visual reveals the final product."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Without replacement, the first red stays out while the blue count stays the same."
+          },
+          {
+            "id": "nextStep",
+            "text": "Multiply the first-red chance by the blue chance from the counters that remain."
+          }
+        ],
+        "hint": "Without replacement, the first red stays out while the blue count stays the same. Multiply the first-red chance by the blue chance from the counters that remain.",
+        "moreHint": "Use (3/5) × (2/4). A red counter has left the bag, leaving 2 blue counters among 4 counters."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tanpa pemulangan, merah pertama tidak dikembalikan manakala bilangan biru kekal."
+          },
+          {
+            "id": "nextStep",
+            "text": "Darabkan peluang merah pada pemilihan pertama dengan peluang biru daripada pembilang yang tinggal."
+          }
+        ],
+        "hint": "Tanpa pemulangan, merah pertama tidak dikembalikan manakala bilangan biru kekal. Darabkan peluang merah pada pemilihan pertama dengan peluang biru daripada pembilang yang tinggal.",
+        "moreHint": "Gunakan (3/5) × (2/4). Satu pembilang merah telah dikeluarkan daripada beg, meninggalkan 2 pembilang biru daripada 4."
+      },
+      "rationale": "More Hint gives 3/5 × 2/4 without evaluating it.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-012].learning.visual.solution.rows[2][3] -> selectSupportVisual(PROB-012).rows[2][3]",
+          "problem": "The copied combined-result row reveals the evaluated target 3/10.",
+          "proposedCorrection": "Exclude only the combined-result row from Hint. Retain all original colour counts and both filled draw-stage counts/fractions; keep the full solution visual unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Counts for the required draws",
+          "ms": "Bilangan bagi pemilihan diperlukan"
+        },
+        "caption": {
+          "en": "Use the bag at each stated stage, then multiply the two draw probabilities.",
+          "ms": "Gunakan kandungan beg pada setiap peringkat yang dinyatakan, kemudian darabkan dua kebarangkalian pemilihan."
+        },
+        "headers": {
+          "en": [
+            "Required draw",
+            "Red",
+            "Blue",
+            "Total",
+            "Probability setup"
+          ],
+          "ms": [
+            "Pemilihan yang diperlukan",
+            "Merah",
+            "Biru",
+            "Jumlah",
+            "Bentuk pengiraan kebarangkalian"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "First red",
+              "3",
+              "2",
+              "5",
+              "3/5"
+            ],
+            [
+              "Blue after first red is kept out",
+              "2",
+              "2",
+              "4",
+              "2/4"
+            ]
+          ],
+          "ms": [
+            [
+              "Merah pertama",
+              "3",
+              "2",
+              "5",
+              "3/5"
+            ],
+            [
+              "Biru selepas merah pertama tidak dikembalikan",
+              "2",
+              "2",
+              "4",
+              "2/4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-013",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual includes the final either-order probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "One of each colour can occur as red then blue or blue then red."
+          },
+          {
+            "id": "nextStep",
+            "text": "Work out both probabilities using the updated bag, then add them because the two orders are separate outcomes."
+          }
+        ],
+        "hint": "One of each colour can occur as red then blue or blue then red. Work out both probabilities using the updated bag, then add them because the two orders are separate outcomes.",
+        "moreHint": "Calculate (3/5) × (2/4) for red then blue and (2/5) × (3/4) for blue then red. Add these two probabilities."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Satu daripada setiap warna boleh berlaku sebagai merah diikuti biru atau biru diikuti merah."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tentukan kedua-dua kebarangkalian menggunakan kandungan beg yang dikemas kini, kemudian tambahkannya kerana kedua-dua tertib ialah kesudahan berasingan."
+          }
+        ],
+        "hint": "Satu daripada setiap warna boleh berlaku sebagai merah diikuti biru atau biru diikuti merah. Tentukan kedua-dua kebarangkalian menggunakan kandungan beg yang dikemas kini, kemudian tambahkannya kerana kedua-dua tertib ialah kesudahan berasingan.",
+        "moreHint": "Hitung (3/5) × (2/4) untuk merah diikuti biru dan (2/5) × (3/4) untuk biru diikuti merah. Tambah kedua-dua kebarangkalian."
+      },
+      "rationale": "Separate the two possible orders; More Hint supplies each unevaluated product and directs addition.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-013].learning.visual.solution.headers[3], rows[*][3], rows[2] -> selectSupportVisual(PROB-013)",
+          "problem": "The copied aggregate row reveals the evaluated target 3/5; per-order products are also already evaluated.",
+          "proposedCorrection": "For Hint retain the two route rows and actual successive fractions, omit the evaluated-product column and aggregate row, and preserve the complete solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Two routes from the given bag",
+          "ms": "Dua laluan daripada beg diberi"
+        },
+        "caption": {
+          "en": "The bag starts with 3 red and 2 blue counters. Multiply within each row, then add the two route probabilities.",
+          "ms": "Beg pada awalnya mengandungi 3 pembilang merah dan 2 pembilang biru. Darab dalam setiap baris, kemudian tambah dua kebarangkalian laluan."
+        },
+        "headers": {
+          "en": [
+            "Order",
+            "First-draw chance",
+            "Second-draw chance"
+          ],
+          "ms": [
+            "Tertib",
+            "Peluang pemilihan pertama",
+            "Peluang pemilihan kedua"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Red then blue",
+              "3/5",
+              "2/4"
+            ],
+            [
+              "Blue then red",
+              "2/5",
+              "3/4"
+            ]
+          ],
+          "ms": [
+            [
+              "Merah diikuti biru",
+              "3/5",
+              "2/4"
+            ],
+            [
+              "Biru diikuti merah",
+              "2/5",
+              "3/4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-014",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual includes the final same-colour probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Same colour means red-red or blue-blue."
+          },
+          {
+            "id": "nextStep",
+            "text": "Find each probability using the bag remaining after the first draw, then add the two separate cases."
+          }
+        ],
+        "hint": "Same colour means red-red or blue-blue. Find each probability using the bag remaining after the first draw, then add the two separate cases.",
+        "moreHint": "For red-red, use (3/5) × (2/4). For blue-blue, use (2/5) × (1/4). Add the products."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Warna sama bermaksud merah-merah atau biru-biru."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari setiap kebarangkalian menggunakan kandungan beg yang tinggal selepas pemilihan pertama, kemudian tambah kedua-dua kes berasingan."
+          }
+        ],
+        "hint": "Warna sama bermaksud merah-merah atau biru-biru. Cari setiap kebarangkalian menggunakan kandungan beg yang tinggal selepas pemilihan pertama, kemudian tambah kedua-dua kes berasingan.",
+        "moreHint": "Bagi merah-merah, gunakan (3/5) × (2/4). Bagi biru-biru, gunakan (2/5) × (1/4). Tambah hasil darabnya."
+      },
+      "rationale": "Separate red-red and blue-blue; More Hint substitutes updated counts and leaves products and sum unresolved.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-014].learning.visual.solution.headers[3], rows[*][3], rows[2] -> selectSupportVisual(PROB-014)",
+          "problem": "The copied aggregate row reveals the evaluated target 2/5; per-order products are also already evaluated.",
+          "proposedCorrection": "For Hint retain the two route rows and actual successive fractions, omit the evaluated-product column and aggregate row, and preserve the complete solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Two routes from the given bag",
+          "ms": "Dua laluan daripada beg diberi"
+        },
+        "caption": {
+          "en": "The bag starts with 3 red and 2 blue counters. Multiply within each row, then add the two route probabilities.",
+          "ms": "Beg pada awalnya mengandungi 3 pembilang merah dan 2 pembilang biru. Darab dalam setiap baris, kemudian tambah dua kebarangkalian laluan."
+        },
+        "headers": {
+          "en": [
+            "Order",
+            "First-draw chance",
+            "Second-draw chance"
+          ],
+          "ms": [
+            "Tertib",
+            "Peluang pemilihan pertama",
+            "Peluang pemilihan kedua"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Red then red",
+              "3/5",
+              "2/4"
+            ],
+            [
+              "Blue then blue",
+              "2/5",
+              "1/4"
+            ]
+          ],
+          "ms": [
+            [
+              "Merah diikuti merah",
+              "3/5",
+              "2/4"
+            ],
+            [
+              "Biru diikuti biru",
+              "2/5",
+              "1/4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-015",
+      "findings": [
+        "Define the two Hint factors and make numerator/denominator multiplication explicit. The visual reveals the final probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "For independent events, the probability that both occur is the product of their individual probabilities."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use the chance that Gate 1 opens and the chance that Gate 2 opens as the two factors."
+          }
+        ],
+        "hint": "For independent events, the probability that both occur is the product of their individual probabilities. Use the chance that Gate 1 opens and the chance that Gate 2 opens as the two factors.",
+        "moreHint": "Use (3/4) × (2/3). Multiply 3 by 2 for the numerator and 4 by 3 for the denominator, then simplify."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bagi peristiwa tak bersandar, kebarangkalian kedua-duanya berlaku ialah hasil darab kebarangkalian masing-masing."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan peluang Pintu 1 terbuka dan peluang Pintu 2 terbuka sebagai dua faktor."
+          }
+        ],
+        "hint": "Bagi peristiwa tak bersandar, kebarangkalian kedua-duanya berlaku ialah hasil darab kebarangkalian masing-masing. Gunakan peluang Pintu 1 terbuka dan peluang Pintu 2 terbuka sebagai dua faktor.",
+        "moreHint": "Gunakan (3/4) × (2/3). Darab 3 dengan 2 untuk pengangka dan 4 dengan 3 untuk penyebut, kemudian permudahkan."
+      },
+      "rationale": "Use independent multiplication and avoid suggesting a common-denominator operation.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-015].learning.visual.solution.rows[2][1] -> selectSupportVisual(PROB-015).rows[2][1]",
+          "problem": "The effective Hint copies (3/4) × (2/3) = 1/2, directly revealing the requested probability.",
+          "proposedCorrection": "Use only the two given-event rows in Hint; preserve the complete Both open row in the solution visual."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Separate gate chances",
+          "ms": "Peluang setiap pintu"
+        },
+        "caption": {
+          "en": "The gates are independent. Use the two opening chances as factors.",
+          "ms": "Kedua-dua pintu adalah tak bersandar. Gunakan dua peluang terbuka sebagai faktor."
+        },
+        "headers": {
+          "en": [
+            "Given event",
+            "Probability"
+          ],
+          "ms": [
+            "Peristiwa diberi",
+            "Kebarangkalian"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Gate 1 opens",
+              "3/4"
+            ],
+            [
+              "Gate 2 opens",
+              "2/3"
+            ]
+          ],
+          "ms": [
+            [
+              "Pintu 1 terbuka",
+              "3/4"
+            ],
+            [
+              "Pintu 2 terbuka",
+              "2/3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-016",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual prelabels exactly-one cases."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Exactly one means Gate 1 opens and Gate 2 stays shut, or the reverse."
+          },
+          {
+            "id": "nextStep",
+            "text": "Find each shutting chance by subtracting the opening chance from 1, then calculate the two cases."
+          }
+        ],
+        "hint": "Exactly one means Gate 1 opens and Gate 2 stays shut, or the reverse. Find each shutting chance by subtracting the opening chance from 1, then calculate the two cases.",
+        "moreHint": "The shutting chances are 1/4 for Gate 1 and 1/3 for Gate 2. Calculate [(3/4) × (1/3)] + [(1/4) × (2/3)]."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tepat satu bermaksud Pintu 1 terbuka dan Pintu 2 kekal tertutup, atau sebaliknya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari peluang setiap pintu tertutup dengan menolak peluang terbuka daripada 1, kemudian hitung kedua-dua kes."
+          }
+        ],
+        "hint": "Tepat satu bermaksud Pintu 1 terbuka dan Pintu 2 kekal tertutup, atau sebaliknya. Cari peluang setiap pintu tertutup dengan menolak peluang terbuka daripada 1, kemudian hitung kedua-dua kes.",
+        "moreHint": "Peluang tertutup ialah 1/4 bagi Pintu 1 dan 1/3 bagi Pintu 2. Hitung [(3/4) × (1/3)] + [(1/4) × (2/3)]."
+      },
+      "rationale": "Reference the opening chances and unevaluated shutting complements; More Hint supplies the two products to add.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-016].learning.visual.solution.headers[2:4], rows[*][2:4] -> selectSupportVisual(PROB-016)",
+          "problem": "The effective Hint displays evaluated case probabilities and completed Exactly one open? decisions.",
+          "proposedCorrection": "Project only the given opening chances and unevaluated shutting complements in Hint; retain all four completed cases in the unchanged solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Opening and shutting chances",
+          "ms": "Peluang terbuka dan tertutup"
+        },
+        "caption": {
+          "en": "Shutting is the complement of opening. Build the two one-open cases using these chances.",
+          "ms": "Tertutup ialah pelengkap terbuka. Bina dua kes dengan satu pintu terbuka menggunakan peluang ini."
+        },
+        "headers": {
+          "en": [
+            "Gate",
+            "Opens",
+            "Shuts: setup"
+          ],
+          "ms": [
+            "Pintu",
+            "Terbuka",
+            "Tertutup: susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Gate 1",
+              "3/4",
+              "1 − 3/4"
+            ],
+            [
+              "Gate 2",
+              "2/3",
+              "1 − 2/3"
+            ]
+          ],
+          "ms": [
+            [
+              "Pintu 1",
+              "3/4",
+              "1 − 3/4"
+            ],
+            [
+              "Pintu 2",
+              "2/3",
+              "1 − 2/3"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-017",
+      "findings": [
+        "First Hint is clear. Make More Hint add a fraction-multiplication setup. The visual states Equal: independent."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "For independent events, P(A ∩ B) = P(A) × P(B)."
+          },
+          {
+            "id": "nextStep",
+            "text": "Calculate the product of the separate probabilities and compare it with the given probability of both."
+          }
+        ],
+        "hint": "For independent events, P(A ∩ B) = P(A) × P(B). Calculate the product of the separate probabilities and compare it with the given probability of both.",
+        "moreHint": "Write the product as (1 × 1)/(2 × 3). Calculate it and compare the fraction with the given 1/6. Decide whether the two values match."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bagi peristiwa tak bersandar, P(A ∩ B) = P(A) × P(B)."
+          },
+          {
+            "id": "nextStep",
+            "text": "Hitung hasil darab kebarangkalian berasingan dan bandingkan dengan kebarangkalian kedua-duanya berlaku yang diberi."
+          }
+        ],
+        "hint": "Bagi peristiwa tak bersandar, P(A ∩ B) = P(A) × P(B). Hitung hasil darab kebarangkalian berasingan dan bandingkan dengan kebarangkalian kedua-duanya berlaku yang diberi.",
+        "moreHint": "Tulis hasil darab sebagai (1 × 1)/(2 × 3). Hitung dan bandingkan pecahan itu dengan 1/6 yang diberi. Tentukan sama ada kedua-dua nilainya sama."
+      },
+      "rationale": "Teach the criterion but leave arithmetic and the independence verdict for the pupil.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-017].learning.visual.solution.rows[1][1], rows[2][1] -> selectSupportVisual(PROB-017)",
+          "problem": "The product is evaluated and the Comparison row explicitly states Equal: independent.",
+          "proposedCorrection": "Use the three given probabilities and unevaluated product in Hint. Do not project the completed comparison; retain the worked solution unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Values for the relationship test",
+          "ms": "Nilai untuk ujian hubungan"
+        },
+        "caption": {
+          "en": "Compare the given intersection with the product of the separate probabilities.",
+          "ms": "Bandingkan persilangan yang diberi dengan hasil darab kebarangkalian berasingan."
+        },
+        "headers": {
+          "en": [
+            "Quantity",
+            "Given value or setup"
+          ],
+          "ms": [
+            "Kuantiti",
+            "Nilai diberi atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "P(A)",
+              "1/2"
+            ],
+            [
+              "P(B)",
+              "1/3"
+            ],
+            [
+              "Given P(A ∩ B)",
+              "1/6"
+            ],
+            [
+              "Product to calculate",
+              "(1/2) × (1/3)"
+            ]
+          ],
+          "ms": [
+            [
+              "P(A)",
+              "1/2"
+            ],
+            [
+              "P(B)",
+              "1/3"
+            ],
+            [
+              "P(A ∩ B) yang diberi",
+              "1/6"
+            ],
+            [
+              "Hasil darab untuk dihitung",
+              "(1/2) × (1/3)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-018",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual states Different: dependent."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Independence needs P(A ∩ B) to equal P(A) × P(B)."
+          },
+          {
+            "id": "nextStep",
+            "text": "Mutually exclusive events instead have no shared outcomes. Use the given intersection to test each claim."
+          }
+        ],
+        "hint": "Independence needs P(A ∩ B) to equal P(A) × P(B). Mutually exclusive events instead have no shared outcomes. Use the given intersection to test each claim.",
+        "moreHint": "Calculate (1/2) × (1/3) and compare it with 1/4. Also check whether a positive intersection can describe events that cannot occur together."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sifat tak bersandar memerlukan P(A ∩ B) sama dengan P(A) × P(B)."
+          },
+          {
+            "id": "nextStep",
+            "text": "Peristiwa saling eksklusif pula tiada kesudahan yang dikongsi. Gunakan persilangan yang diberi untuk menguji setiap dakwaan."
+          }
+        ],
+        "hint": "Sifat tak bersandar memerlukan P(A ∩ B) sama dengan P(A) × P(B). Peristiwa saling eksklusif pula tiada kesudahan yang dikongsi. Gunakan persilangan yang diberi untuk menguji setiap dakwaan.",
+        "moreHint": "Hitung (1/2) × (1/3) dan bandingkan dengan 1/4. Semak juga sama ada persilangan positif boleh menerangkan peristiwa yang tidak boleh berlaku serentak."
+      },
+      "rationale": "More Hint separates the product comparison and positive-overlap check without stating a conclusion.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-018].learning.visual.solution.rows[1][1], rows[2][1] -> selectSupportVisual(PROB-018)",
+          "problem": "The product is evaluated and the Comparison row explicitly states Different: dependent.",
+          "proposedCorrection": "Use the three given probabilities and unevaluated product in Hint. Do not project the completed comparison; retain the worked solution unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Values for the relationship test",
+          "ms": "Nilai untuk ujian hubungan"
+        },
+        "caption": {
+          "en": "Compare the given intersection with the product of the separate probabilities.",
+          "ms": "Bandingkan persilangan yang diberi dengan hasil darab kebarangkalian berasingan."
+        },
+        "headers": {
+          "en": [
+            "Quantity",
+            "Given value or setup"
+          ],
+          "ms": [
+            "Kuantiti",
+            "Nilai diberi atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "P(A)",
+              "1/2"
+            ],
+            [
+              "P(B)",
+              "1/3"
+            ],
+            [
+              "Given P(A ∩ B)",
+              "1/4"
+            ],
+            [
+              "Product to calculate",
+              "(1/2) × (1/3)"
+            ]
+          ],
+          "ms": [
+            [
+              "P(A)",
+              "1/2"
+            ],
+            [
+              "P(B)",
+              "1/3"
+            ],
+            [
+              "P(A ∩ B) yang diberi",
+              "1/4"
+            ],
+            [
+              "Hasil darab untuk dihitung",
+              "(1/2) × (1/3)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-019",
+      "findings": [
+        "Put the independence concept before event listing. The visual includes completed probabilities and a verdict."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Independence compares the probability of both events with the product of their separate probabilities."
+          },
+          {
+            "id": "nextStep",
+            "text": "List A and B from the die faces, find their shared faces, and write each probability as a count over 6."
+          }
+        ],
+        "hint": "Independence compares the probability of both events with the product of their separate probabilities. List A and B from the die faces, find their shared faces, and write each probability as a count over 6.",
+        "moreHint": "A = {2,4,6}, B = {4,5,6} and A ∩ B = {4,6}. Compare 2/6 with (3/6) × (3/6)."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sifat tak bersandar membandingkan kebarangkalian kedua-dua peristiwa berlaku dengan hasil darab kebarangkalian berasingan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Senaraikan A dan B daripada muka dadu, cari muka yang dikongsi, dan tulis setiap kebarangkalian sebagai bilangan muka itu dibahagi dengan 6."
+          }
+        ],
+        "hint": "Sifat tak bersandar membandingkan kebarangkalian kedua-dua peristiwa berlaku dengan hasil darab kebarangkalian berasingan. Senaraikan A dan B daripada muka dadu, cari muka yang dikongsi, dan tulis setiap kebarangkalian sebagai bilangan muka itu dibahagi dengan 6.",
+        "moreHint": "A = {2,4,6}, B = {4,5,6} dan A ∩ B = {4,6}. Bandingkan 2/6 dengan (3/6) × (3/6)."
+      },
+      "rationale": "More Hint supplies sets and an unevaluated comparison, leaving arithmetic and classification unresolved.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-019].learning.visual.solution.rows[3:6] -> selectSupportVisual(PROB-019)",
+          "problem": "The effective Hint evaluates both diagnostic probabilities and states Different: dependent.",
+          "proposedCorrection": "Retain filled event lists and an unsimplified intersection fraction, leave the product unevaluated and omit the Decision row only from Hint."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Event faces and comparison setup",
+          "ms": "Muka peristiwa dan susunan perbandingan"
+        },
+        "caption": {
+          "en": "All six die faces are equally likely. Compare the intersection probability with the product.",
+          "ms": "Kesemua enam muka dadu sama boleh jadi. Bandingkan kebarangkalian persilangan dengan hasil darab."
+        },
+        "headers": {
+          "en": [
+            "Quantity",
+            "Faces or setup"
+          ],
+          "ms": [
+            "Kuantiti",
+            "Muka atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All die faces",
+              "{1,2,3,4,5,6}"
+            ],
+            [
+              "A: even",
+              "{2,4,6}"
+            ],
+            [
+              "B: greater than 3",
+              "{4,5,6}"
+            ],
+            [
+              "A ∩ B",
+              "{4,6}"
+            ],
+            [
+              "Intersection fraction",
+              "2/6"
+            ],
+            [
+              "Product to calculate",
+              "(3/6) × (3/6)"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua muka dadu",
+              "{1,2,3,4,5,6}"
+            ],
+            [
+              "A: genap",
+              "{2,4,6}"
+            ],
+            [
+              "B: melebihi 3",
+              "{4,5,6}"
+            ],
+            [
+              "A ∩ B",
+              "{4,6}"
+            ],
+            [
+              "Pecahan persilangan",
+              "2/6"
+            ],
+            [
+              "Hasil darab untuk dihitung",
+              "(3/6) × (3/6)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-020",
+      "findings": [
+        "The prompt defines H/T clearly. Demonstrate one numerical bag check in More Hint. The visual completes Changed/Unchanged for all options."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "For each experiment, ask whether learning the first result changes the next Heads chance."
+          },
+          {
+            "id": "nextStep",
+            "text": "In a bag without replacement, remove the first counter before recalculating."
+          }
+        ],
+        "hint": "For each experiment, ask whether learning the first result changes the next Heads chance. In a bag without replacement, remove the first counter before recalculating.",
+        "moreHint": "For the bag with 3 H and 2 T counters, compare 3/5 with 2/4 after a first H is kept out. Repeat this check for the other bags. For the coin, use the stated rule about its tosses."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bagi setiap eksperimen, fikirkan sama ada mengetahui keputusan pertama mengubah peluang muka gambar seterusnya."
+          },
+          {
+            "id": "nextStep",
+            "text": "Bagi beg tanpa pemulangan, keluarkan pembilang pertama sebelum mengira semula."
+          }
+        ],
+        "hint": "Bagi setiap eksperimen, fikirkan sama ada mengetahui keputusan pertama mengubah peluang muka gambar seterusnya. Bagi beg tanpa pemulangan, keluarkan pembilang pertama sebelum mengira semula.",
+        "moreHint": "Bagi beg dengan 3 pembilang H dan 2 pembilang T, bandingkan 3/5 dengan 2/4 selepas H pertama tidak dikembalikan. Ulang semakan ini bagi beg yang lain. Bagi duit syiling, gunakan peraturan lambungan yang dinyatakan."
+      },
+      "rationale": "Use one setup the pupil can apply to other experiments instead of a completed decision table.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-020].learning.visual.solution.headers[3], rows[*][3] -> selectSupportVisual(PROB-020)",
+          "problem": "The Changed? column completes the independence test for every offered experiment, including Unchanged on the correct one.",
+          "proposedCorrection": "Keep bag counts and unevaluated after-H fractions in Hint without option letters or changed/unchanged decisions; preserve the full solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Information for each experiment",
+          "ms": "Maklumat bagi setiap eksperimen"
+        },
+        "caption": {
+          "en": "Compare each next Heads chance with its starting chance.",
+          "ms": "Bandingkan setiap peluang muka gambar seterusnya dengan peluang awal."
+        },
+        "headers": {
+          "en": [
+            "Experiment",
+            "Starting chance",
+            "After first H: setup"
+          ],
+          "ms": [
+            "Eksperimen",
+            "Peluang awal",
+            "Selepas H pertama: susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Bag: 3 H and 2 T, no return",
+              "3/5",
+              "(3 − 1)/(5 − 1)"
+            ],
+            [
+              "Bag: 2 H and 1 T, no return",
+              "2/3",
+              "(2 − 1)/(3 − 1)"
+            ],
+            [
+              "Bag: 1 H and 1 T, no return",
+              "1/2",
+              "(1 − 1)/(2 − 1)"
+            ],
+            [
+              "Two fair coin tosses as described",
+              "1/2",
+              "Use the stated toss rule"
+            ]
+          ],
+          "ms": [
+            [
+              "Beg: 3 H dan 2 T, tanpa pemulangan",
+              "3/5",
+              "(3 − 1)/(5 − 1)"
+            ],
+            [
+              "Beg: 2 H dan 1 T, tanpa pemulangan",
+              "2/3",
+              "(2 − 1)/(3 − 1)"
+            ],
+            [
+              "Beg: 1 H dan 1 T, tanpa pemulangan",
+              "1/2",
+              "(1 − 1)/(2 − 1)"
+            ],
+            [
+              "Dua lambungan duit syiling adil seperti dinyatakan",
+              "1/2",
+              "Gunakan peraturan lambungan yang diberi"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-021",
+      "findings": [
+        "First Hint is clear. Existing More Hint repeats the category rule; add an operational table test."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Mutually exclusive means both events cannot happen in the same selection."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check whether the stated category rule allows the selected card to belong to both events."
+          }
+        ],
+        "hint": "Mutually exclusive means both events cannot happen in the same selection. Check whether the stated category rule allows the selected card to belong to both events.",
+        "moreHint": "Use the category rows in the table. Look for a row with Yes under both Attack and Guard; such a row would represent a shared outcome."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Saling eksklusif bermaksud kedua-dua peristiwa tidak boleh berlaku dalam pemilihan yang sama."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak sama ada peraturan kategori membenarkan kad yang dipilih tergolong dalam kedua-dua peristiwa."
+          }
+        ],
+        "hint": "Saling eksklusif bermaksud kedua-dua peristiwa tidak boleh berlaku dalam pemilihan yang sama. Semak sama ada peraturan kategori membenarkan kad yang dipilih tergolong dalam kedua-dua peristiwa.",
+        "moreHint": "Gunakan baris kategori dalam jadual. Cari baris dengan Ya di bawah Serangan dan Pertahanan; baris sedemikian akan mewakili kesudahan yang dikongsi."
+      },
+      "rationale": "Looking for a row with two Yes entries tests shared outcomes without stating the final conclusion.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-022",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The table has membership and counts without an exclusivity verdict."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Two events are mutually exclusive only if they have no shared outcome."
+          },
+          {
+            "id": "nextStep",
+            "text": "Check whether a card with a Fire mark also belongs to the Attack group."
+          }
+        ],
+        "hint": "Two events are mutually exclusive only if they have no shared outcome. Check whether a card with a Fire mark also belongs to the Attack group.",
+        "moreHint": "The 3 Fire-marked cards are included among the 8 Attack cards. Use that stated membership to check whether the intersection is empty."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Dua peristiwa saling eksklusif hanya jika tiada kesudahan yang dikongsi."
+          },
+          {
+            "id": "nextStep",
+            "text": "Semak sama ada kad bertanda Api juga tergolong dalam kumpulan Serangan."
+          }
+        ],
+        "hint": "Dua peristiwa saling eksklusif hanya jika tiada kesudahan yang dikongsi. Semak sama ada kad bertanda Api juga tergolong dalam kumpulan Serangan.",
+        "moreHint": "Tiga kad bertanda Api termasuk dalam 8 kad Serangan. Gunakan keahlian yang dinyatakan itu untuk menyemak sama ada persilangannya kosong."
+      },
+      "rationale": "More Hint uses the stated 3 Fire cards among 8 Attack cards, leaving the intersection/classification for the pupil.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-023",
+      "findings": [
+        "The prompt and subset explanation are clear. Use the filled table instead of asking for a new sketch."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "When one group is entirely inside another, taking their union adds no new members to the larger group."
+          },
+          {
+            "id": "nextStep",
+            "text": "Use the groups in the table to count each card in Attack or Fire once."
+          }
+        ],
+        "hint": "When one group is entirely inside another, taking their union adds no new members to the larger group. Use the groups in the table to count each card in Attack or Fire once.",
+        "moreHint": "The 3 Fire-marked cards are already counted among the 8 Attack cards. Use the number of different cards in either group over the full total of 12."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Apabila satu kumpulan berada sepenuhnya dalam kumpulan lain, kesatuannya tidak menambah ahli baharu kepada kumpulan yang lebih besar."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gunakan kumpulan dalam jadual untuk mengira setiap kad dalam Serangan atau Api sekali sahaja."
+          }
+        ],
+        "hint": "Apabila satu kumpulan berada sepenuhnya dalam kumpulan lain, kesatuannya tidak menambah ahli baharu kepada kumpulan yang lebih besar. Gunakan kumpulan dalam jadual untuk mengira setiap kad dalam Serangan atau Api sekali sahaja.",
+        "moreHint": "Tiga kad bertanda Api sudah dikira dalam 8 kad Serangan. Gunakan bilangan kad berbeza dalam mana-mana kumpulan sebagai pengangka dengan jumlah 12 sebagai penyebut."
+      },
+      "rationale": "More Hint adds actual membership and total 12 while leaving the probability to be formed and simplified.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-024",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The effective visual preselects accepted categories."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The two accepted categories do not overlap."
+          },
+          {
+            "id": "nextStep",
+            "text": "Add their card counts and divide by the total number of cards."
+          }
+        ],
+        "hint": "The two accepted categories do not overlap. Add their card counts and divide by the total number of cards.",
+        "moreHint": "Use (8 + 2)/12. The 2 Skill cards do not satisfy either accepted category."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Dua kategori yang diterima tidak bertindih."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tambah bilangan kadnya dan bahagikan dengan jumlah kad."
+          }
+        ],
+        "hint": "Dua kategori yang diterima tidak bertindih. Tambah bilangan kadnya dan bahagikan dengan jumlah kad.",
+        "moreHint": "Gunakan (8 + 2)/12. Dua kad Kemahiran tidak memenuhi mana-mana kategori yang diterima."
+      },
+      "rationale": "Keep supplied counts visible; More Hint adds the unevaluated (8 + 2)/12 setup.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-024].learning.visual.solution.headers[2], rows[*][2] -> selectSupportVisual(PROB-024)",
+          "problem": "The effective Hint includes the completed Accepted? selection column.",
+          "proposedCorrection": "Show the supplied category counts and total in Hint; keep acceptance decisions in the unchanged solution visual."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given category counts",
+          "ms": "Bilangan kategori diberi"
+        },
+        "caption": {
+          "en": "Each card has exactly one category. Use the counts required by the question.",
+          "ms": "Setiap kad mempunyai tepat satu kategori. Gunakan bilangan yang diperlukan oleh soalan."
+        },
+        "headers": {
+          "en": [
+            "Category",
+            "Cards"
+          ],
+          "ms": [
+            "Kategori",
+            "Kad"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Attack",
+              "8"
+            ],
+            [
+              "Guard",
+              "2"
+            ],
+            [
+              "Skill",
+              "2"
+            ],
+            [
+              "Total",
+              "12"
+            ]
+          ],
+          "ms": [
+            [
+              "Serangan",
+              "8"
+            ],
+            [
+              "Pertahanan",
+              "2"
+            ],
+            [
+              "Kemahiran",
+              "2"
+            ],
+            [
+              "Jumlah",
+              "12"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-025",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual already marks accepted regions."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Adding the two marked-group counts counts shared cards twice."
+          },
+          {
+            "id": "nextStep",
+            "text": "Subtract the shared count once so that each accepted card is counted once."
+          }
+        ],
+        "hint": "Adding the two marked-group counts counts shared cards twice. Subtract the shared count once so that each accepted card is counted once.",
+        "moreHint": "Calculate (9 + 8 − 3)/20. The 3 cards with both marks are included in each of the counts 9 and 8."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Menambah bilangan dua kumpulan bertanda mengira kad yang dikongsi dua kali."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tolak bilangan dikongsi sekali supaya setiap kad yang diterima dikira sekali sahaja."
+          }
+        ],
+        "hint": "Menambah bilangan dua kumpulan bertanda mengira kad yang dikongsi dua kali. Tolak bilangan dikongsi sekali supaya setiap kad yang diterima dikira sekali sahaja.",
+        "moreHint": "Hitung (9 + 8 − 3)/20. Tiga kad dengan kedua-dua tanda termasuk dalam setiap bilangan 9 dan 8."
+      },
+      "rationale": "Reference given counts 9, 8, overlap 3 and total 20; More Hint gives unevaluated inclusion-exclusion.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-025].learning.visual.solution.rows[*][1:3] -> selectSupportVisual(PROB-025)",
+          "problem": "The effective Hint has completed accepted-region decisions.",
+          "proposedCorrection": "Project the four supplied counts only in Hint, with no accepted flags or solved target region; retain all region calculations in the unchanged solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given mark counts",
+          "ms": "Bilangan tanda diberi"
+        },
+        "caption": {
+          "en": "The both-marks count is included in each separate marked-group count.",
+          "ms": "Bilangan kedua-dua tanda termasuk dalam setiap bilangan kumpulan bertanda yang berasingan."
+        },
+        "headers": {
+          "en": [
+            "Given group",
+            "Cards"
+          ],
+          "ms": [
+            "Kumpulan diberi",
+            "Kad"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Red mark",
+              "9"
+            ],
+            [
+              "Rune mark",
+              "8"
+            ],
+            [
+              "Both marks",
+              "3"
+            ],
+            [
+              "Total",
+              "20"
+            ]
+          ],
+          "ms": [
+            [
+              "Tanda merah",
+              "9"
+            ],
+            [
+              "Tanda rune",
+              "8"
+            ],
+            [
+              "Kedua-dua tanda",
+              "3"
+            ],
+            [
+              "Jumlah",
+              "20"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-026",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual solves the neither-region count and labels it accepted."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Neither mark means outside both marked groups."
+          },
+          {
+            "id": "nextStep",
+            "text": "First count the union, taking care with the overlap. Subtract that count from the total, then form a probability."
+          }
+        ],
+        "hint": "Neither mark means outside both marked groups. First count the union, taking care with the overlap. Subtract that count from the total, then form a probability.",
+        "moreHint": "Use [20 − (9 + 8 − 3)]/20. The inner brackets count cards with at least one mark; subtracting from 20 counts cards with neither."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tiada satu pun daripada dua tanda bermaksud di luar kedua-dua kumpulan bertanda."
+          },
+          {
+            "id": "nextStep",
+            "text": "Kira kesatuan dahulu dengan mengambil kira pertindihan. Tolak bilangan itu daripada jumlah, kemudian bentuk kebarangkalian."
+          }
+        ],
+        "hint": "Tiada satu pun daripada dua tanda bermaksud di luar kedua-dua kumpulan bertanda. Kira kesatuan dahulu dengan mengambil kira pertindihan. Tolak bilangan itu daripada jumlah, kemudian bentuk kebarangkalian.",
+        "moreHint": "Gunakan [20 − (9 + 8 − 3)]/20. Kurungan dalam mengira kad dengan sekurang-kurangnya satu tanda; menolaknya daripada 20 mengira kad tanpa mana-mana tanda itu."
+      },
+      "rationale": "Keep given counts visible; More Hint adds the complement-of-union setup without evaluating the final fraction.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-026].learning.visual.solution.rows[*][1:3] -> selectSupportVisual(PROB-026)",
+          "problem": "The effective Hint has completed accepted-region decisions. It also solves the requested neither-region count.",
+          "proposedCorrection": "Project the four supplied counts only in Hint, with no accepted flags or solved target region; retain all region calculations in the unchanged solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given mark counts",
+          "ms": "Bilangan tanda diberi"
+        },
+        "caption": {
+          "en": "The both-marks count is included in each separate marked-group count.",
+          "ms": "Bilangan kedua-dua tanda termasuk dalam setiap bilangan kumpulan bertanda yang berasingan."
+        },
+        "headers": {
+          "en": [
+            "Given group",
+            "Cards"
+          ],
+          "ms": [
+            "Kumpulan diberi",
+            "Kad"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Red mark",
+              "9"
+            ],
+            [
+              "Rune mark",
+              "8"
+            ],
+            [
+              "Both marks",
+              "3"
+            ],
+            [
+              "Total",
+              "20"
+            ]
+          ],
+          "ms": [
+            [
+              "Tanda merah",
+              "9"
+            ],
+            [
+              "Tanda rune",
+              "8"
+            ],
+            [
+              "Kedua-dua tanda",
+              "3"
+            ],
+            [
+              "Jumlah",
+              "20"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-027",
+      "findings": [
+        "Replace make the intersection the subject with add then subtract. The visual displays target 3/10."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The addition rule is P(A ∪ B) = P(A) + P(B) − P(A ∩ B)."
+          },
+          {
+            "id": "nextStep",
+            "text": "To find the overlap, add the two separate probabilities and subtract the union probability. Write the fractions with a common denominator."
+          }
+        ],
+        "hint": "The addition rule is P(A ∪ B) = P(A) + P(B) − P(A ∩ B). To find the overlap, add the two separate probabilities and subtract the union probability. Write the fractions with a common denominator.",
+        "moreHint": "Calculate P(A ∩ B) = 3/5 + 1/2 − 4/5. Convert all three fractions to tenths before combining them."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Rumus penambahan ialah P(A ∪ B) = P(A) + P(B) − P(A ∩ B)."
+          },
+          {
+            "id": "nextStep",
+            "text": "Untuk mencari pertindihan, tambah dua kebarangkalian berasingan dan tolak kebarangkalian kesatuan. Tulis pecahan dengan penyebut sepunya."
+          }
+        ],
+        "hint": "Rumus penambahan ialah P(A ∪ B) = P(A) + P(B) − P(A ∩ B). Untuk mencari pertindihan, tambah dua kebarangkalian berasingan dan tolak kebarangkalian kesatuan. Tulis pecahan dengan penyebut sepunya.",
+        "moreHint": "Hitung P(A ∩ B) = 3/5 + 1/2 − 4/5. Tukarkan ketiga-tiga pecahan kepada persepuluh sebelum menggabungkannya."
+      },
+      "rationale": "This is the same rearrangement in simpler language; More Hint substitutes fractions and specifies denominator 10.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-027].learning.visual.solution.rows[2][1] -> selectSupportVisual(PROB-027).rows[2][1]",
+          "problem": "The effective Hint directly states the requested intersection probability 3/10.",
+          "proposedCorrection": "Use the three given probabilities and an unevaluated overlap expression in Hint; preserve the tenths arithmetic and result in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given probabilities and overlap setup",
+          "ms": "Kebarangkalian diberi dan susunan pertindihan"
+        },
+        "caption": {
+          "en": "Subtract the union from the sum of the two separate probabilities.",
+          "ms": "Tolak kesatuan daripada hasil tambah dua kebarangkalian berasingan."
+        },
+        "headers": {
+          "en": [
+            "Quantity",
+            "Given value or setup"
+          ],
+          "ms": [
+            "Kuantiti",
+            "Nilai diberi atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "P(A)",
+              "3/5"
+            ],
+            [
+              "P(B)",
+              "1/2"
+            ],
+            [
+              "P(A ∪ B)",
+              "4/5"
+            ],
+            [
+              "Overlap to calculate",
+              "3/5 + 1/2 − 4/5"
+            ]
+          ],
+          "ms": [
+            [
+              "P(A)",
+              "3/5"
+            ],
+            [
+              "P(B)",
+              "1/2"
+            ],
+            [
+              "P(A ∪ B)",
+              "4/5"
+            ],
+            [
+              "Pertindihan untuk dihitung",
+              "3/5 + 1/2 − 4/5"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-028",
+      "findings": [
+        "Make union addition explicit in Hint and numerator addition explicit in More Hint. The visual displays the evaluated target."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Mutually exclusive events have no overlap."
+          },
+          {
+            "id": "nextStep",
+            "text": "Add the two event probabilities because no outcome is counted in both."
+          }
+        ],
+        "hint": "Mutually exclusive events have no overlap. Add the two event probabilities because no outcome is counted in both.",
+        "moreHint": "Use 2/7 + 3/7. Keep the denominator 7 and add 2 and 3 in the numerator."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Peristiwa saling eksklusif tiada pertindihan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tambah dua kebarangkalian peristiwa kerana tiada kesudahan yang dikira dalam kedua-duanya."
+          }
+        ],
+        "hint": "Peristiwa saling eksklusif tiada pertindihan. Tambah dua kebarangkalian peristiwa kerana tiada kesudahan yang dikira dalam kedua-duanya.",
+        "moreHint": "Gunakan 2/7 + 3/7. Kekalkan penyebut 7 dan tambah 2 dan 3 pada pengangka."
+      },
+      "rationale": "Move from no overlap to adding given fractions, retaining denominator 7 and leaving the numerator unevaluated.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-028].learning.visual.solution.rows[1][1] -> selectSupportVisual(PROB-028).rows[1][1]",
+          "problem": "The effective Hint evaluates P(A) + P(B) as the requested answer 5/7.",
+          "proposedCorrection": "Show the given fractions and unevaluated sum only in Hint; retain the solution result."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Mutually exclusive event values",
+          "ms": "Nilai peristiwa saling eksklusif"
+        },
+        "caption": {
+          "en": "There is no overlap. Add the two probabilities to find the union.",
+          "ms": "Tiada pertindihan. Tambah dua kebarangkalian untuk mencari kesatuan."
+        },
+        "headers": {
+          "en": [
+            "Quantity",
+            "Given value or setup"
+          ],
+          "ms": [
+            "Kuantiti",
+            "Nilai diberi atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "P(A)",
+              "2/7"
+            ],
+            [
+              "P(B)",
+              "3/7"
+            ],
+            [
+              "P(A ∩ B)",
+              "0"
+            ],
+            [
+              "Union to calculate",
+              "2/7 + 3/7"
+            ]
+          ],
+          "ms": [
+            [
+              "P(A)",
+              "2/7"
+            ],
+            [
+              "P(B)",
+              "3/7"
+            ],
+            [
+              "P(A ∩ B)",
+              "0"
+            ],
+            [
+              "Kesatuan untuk dihitung",
+              "2/7 + 3/7"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-029",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual concludes Different: dependent."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Mutual exclusivity and independence describe different relationships."
+          },
+          {
+            "id": "nextStep",
+            "text": "Find the intersection probability from mutual exclusivity, then compare it with P(A) × P(B)."
+          }
+        ],
+        "hint": "Mutual exclusivity and independence describe different relationships. Find the intersection probability from mutual exclusivity, then compare it with P(A) × P(B).",
+        "moreHint": "The intersection probability is 0. Separately calculate (2/7) × (3/7), then check whether it equals 0."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sifat saling eksklusif dan tak bersandar menerangkan hubungan berbeza."
+          },
+          {
+            "id": "nextStep",
+            "text": "Cari kebarangkalian persilangan daripada sifat saling eksklusif, kemudian bandingkan dengan P(A) × P(B)."
+          }
+        ],
+        "hint": "Sifat saling eksklusif dan tak bersandar menerangkan hubungan berbeza. Cari kebarangkalian persilangan daripada sifat saling eksklusif, kemudian bandingkan dengan P(A) × P(B).",
+        "moreHint": "Kebarangkalian persilangan ialah 0. Hitung (2/7) × (3/7) secara berasingan, kemudian semak sama ada sama dengan 0."
+      },
+      "rationale": "Compare zero intersection with the unevaluated product, keeping exclusivity distinct from independence.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-029].learning.visual.solution.rows[1][1], rows[2][1] -> selectSupportVisual(PROB-029)",
+          "problem": "The effective Hint evaluates the product and explicitly concludes Different: dependent.",
+          "proposedCorrection": "Keep given probabilities, zero intersection and unevaluated product in Hint; preserve the completed comparison in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Values for the independence comparison",
+          "ms": "Nilai untuk perbandingan tak bersandar"
+        },
+        "caption": {
+          "en": "Use the zero intersection from mutual exclusivity, then compare it with the product.",
+          "ms": "Gunakan persilangan sifar daripada sifat saling eksklusif, kemudian bandingkan dengan hasil darab."
+        },
+        "headers": {
+          "en": [
+            "Quantity",
+            "Given value or setup"
+          ],
+          "ms": [
+            "Kuantiti",
+            "Nilai diberi atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "P(A)",
+              "2/7"
+            ],
+            [
+              "P(B)",
+              "3/7"
+            ],
+            [
+              "P(A ∩ B)",
+              "0"
+            ],
+            [
+              "Product to calculate",
+              "(2/7) × (3/7)"
+            ]
+          ],
+          "ms": [
+            [
+              "P(A)",
+              "2/7"
+            ],
+            [
+              "P(B)",
+              "3/7"
+            ],
+            [
+              "P(A ∩ B)",
+              "0"
+            ],
+            [
+              "Hasil darab untuk dihitung",
+              "(2/7) × (3/7)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-030",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual preselects union rows."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "List the multiples of each number in the stated range."
+          },
+          {
+            "id": "nextStep",
+            "text": "Combine the lists without repeating a shared number, then divide the count by the total number of selections."
+          }
+        ],
+        "hint": "List the multiples of each number in the stated range. Combine the lists without repeating a shared number, then divide the count by the total number of selections.",
+        "moreHint": "A = {3,6,9,12} and B = {4,8,12}. Make one combined list with 12 appearing once, then divide its size by 12."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Senaraikan gandaan setiap nombor dalam julat yang dinyatakan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gabungkan senarai tanpa mengulang nombor yang dikongsi, kemudian bahagikan bilangannya dengan jumlah pilihan."
+          }
+        ],
+        "hint": "Senaraikan gandaan setiap nombor dalam julat yang dinyatakan. Gabungkan senarai tanpa mengulang nombor yang dikongsi, kemudian bahagikan bilangannya dengan jumlah pilihan.",
+        "moreHint": "A = {3,6,9,12} dan B = {4,8,12}. Bina satu senarai gabungan dengan 12 muncul sekali, kemudian bahagikan saiznya dengan 12."
+      },
+      "rationale": "More Hint identifies shared 12 and asks for the count over all 12 choices without evaluating it.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-030].learning.visual.solution.headers[3], rows[*][3] -> selectSupportVisual(PROB-030)",
+          "problem": "The effective Hint includes all completed Accepted by or? selections.",
+          "proposedCorrection": "Keep the separate filled event lists in Hint without the union-selection column; retain full selections in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "The two lists of multiples",
+          "ms": "Dua senarai gandaan"
+        },
+        "caption": {
+          "en": "Use numbers 1 to 12 and count each shared number only once.",
+          "ms": "Gunakan nombor 1 hingga 12 dan kira setiap nombor yang dikongsi sekali sahaja."
+        },
+        "headers": {
+          "en": [
+            "Event or range",
+            "Numbers"
+          ],
+          "ms": [
+            "Peristiwa atau julat",
+            "Nombor"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Possible numbers",
+              "1 to 12, including 1 and 12"
+            ],
+            [
+              "A: multiples of 3",
+              "{3,6,9,12}"
+            ],
+            [
+              "B: multiples of 4",
+              "{4,8,12}"
+            ]
+          ],
+          "ms": [
+            [
+              "Nombor yang mungkin",
+              "1 hingga 12, termasuk 1 dan 12"
+            ],
+            [
+              "A: gandaan 3",
+              "{3,6,9,12}"
+            ],
+            [
+              "B: gandaan 4",
+              "{4,8,12}"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-031",
+      "findings": [
+        "The prompt defines prime clearly. Retain text stages. The visual preselects union rows."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "List the prime faces and even faces."
+          },
+          {
+            "id": "nextStep",
+            "text": "Combine them without repeats, remembering that a number can be both prime and even."
+          }
+        ],
+        "hint": "List the prime faces and even faces. Combine them without repeats, remembering that a number can be both prime and even.",
+        "moreHint": "The prime faces are {2,3,5} and the even faces are {2,4,6}. Write the shared 2 once in their union, then divide the count by 6."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Senaraikan muka bernombor perdana dan muka bernombor genap."
+          },
+          {
+            "id": "nextStep",
+            "text": "Gabungkan tanpa pengulangan, dengan mengingati bahawa sesuatu nombor boleh menjadi perdana dan genap serentak."
+          }
+        ],
+        "hint": "Senaraikan muka bernombor perdana dan muka bernombor genap. Gabungkan tanpa pengulangan, dengan mengingati bahawa sesuatu nombor boleh menjadi perdana dan genap serentak.",
+        "moreHint": "Muka bernombor perdana ialah {2,3,5} dan muka bernombor genap ialah {2,4,6}. Tulis 2 yang dikongsi sekali dalam kesatuan, kemudian bahagikan bilangannya dengan 6."
+      },
+      "rationale": "More Hint singles out shared 2 without stating the union count or final probability.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-031].learning.visual.solution.headers[3], rows[*][3] -> selectSupportVisual(PROB-031)",
+          "problem": "The effective Hint includes all completed Accepted by or? decisions.",
+          "proposedCorrection": "Show separate filled prime/even lists in Hint; keep union acceptance decisions in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Prime and even die faces",
+          "ms": "Muka dadu perdana dan genap"
+        },
+        "caption": {
+          "en": "Count a shared face only once in the union.",
+          "ms": "Kira muka yang dikongsi sekali sahaja dalam kesatuan."
+        },
+        "headers": {
+          "en": [
+            "Event",
+            "Faces"
+          ],
+          "ms": [
+            "Peristiwa",
+            "Muka dadu"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "All die faces",
+              "{1,2,3,4,5,6}"
+            ],
+            [
+              "A: prime",
+              "{2,3,5}"
+            ],
+            [
+              "B: even",
+              "{2,4,6}"
+            ]
+          ],
+          "ms": [
+            [
+              "Semua muka dadu",
+              "{1,2,3,4,5,6}"
+            ],
+            [
+              "A: perdana",
+              "{2,3,5}"
+            ],
+            [
+              "B: genap",
+              "{2,4,6}"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-032",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual has a completed Accepted column."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "The two accepted label groups do not overlap."
+          },
+          {
+            "id": "nextStep",
+            "text": "Add their counts and divide by the number of cards in the collection."
+          }
+        ],
+        "hint": "The two accepted label groups do not overlap. Add their counts and divide by the number of cards in the collection.",
+        "moreHint": "Use (4 + 3)/10. The Neutral cards are outside both accepted groups."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Dua kumpulan label yang diterima tidak bertindih."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tambah bilangannya dan bahagikan dengan bilangan kad dalam koleksi."
+          }
+        ],
+        "hint": "Dua kumpulan label yang diterima tidak bertindih. Tambah bilangannya dan bahagikan dengan bilangan kad dalam koleksi.",
+        "moreHint": "Gunakan (4 + 3)/10. Kad Neutral berada di luar kedua-dua kumpulan yang diterima."
+      },
+      "rationale": "Keep Fire 4, Ice 3 and Neutral 3 visible; More Hint gives the unevaluated sum over 10.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-032].learning.visual.solution.headers[2], rows[*][2] -> selectSupportVisual(PROB-032)",
+          "problem": "The effective Hint marks the accepted label groups.",
+          "proposedCorrection": "Keep supplied counts and total in Hint; reserve Accepted? decisions for the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given printed-label counts",
+          "ms": "Bilangan label bercetak diberi"
+        },
+        "caption": {
+          "en": "Each card has one printed label. Use the two groups asked for.",
+          "ms": "Setiap kad mempunyai satu label bercetak. Gunakan dua kumpulan yang ditanya."
+        },
+        "headers": {
+          "en": [
+            "Label",
+            "Cards"
+          ],
+          "ms": [
+            "Label",
+            "Kad"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Fire",
+              "4"
+            ],
+            [
+              "Ice",
+              "3"
+            ],
+            [
+              "Neutral",
+              "3"
+            ],
+            [
+              "Total",
+              "10"
+            ]
+          ],
+          "ms": [
+            [
+              "Api",
+              "4"
+            ],
+            [
+              "Ais",
+              "3"
+            ],
+            [
+              "Neutral",
+              "3"
+            ],
+            [
+              "Jumlah",
+              "10"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-033",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual includes completed Qualifies decisions."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "At least one Head includes one, two or three Heads."
+          },
+          {
+            "id": "nextStep",
+            "text": "Its complement is no Heads. Find the no-Head probability and subtract it from 1."
+          }
+        ],
+        "hint": "At least one Head includes one, two or three Heads. Its complement is no Heads. Find the no-Head probability and subtract it from 1.",
+        "moreHint": "The only no-Head sequence is TTT, where T means Tails. Its probability is (1/2) × (1/2) × (1/2). Subtract that product from 1."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sekurang-kurangnya satu muka gambar merangkumi satu, dua atau tiga muka gambar."
+          },
+          {
+            "id": "nextStep",
+            "text": "Pelengkapnya ialah tiada muka gambar. Cari kebarangkalian tiada muka gambar dan tolak daripada 1."
+          }
+        ],
+        "hint": "Sekurang-kurangnya satu muka gambar merangkumi satu, dua atau tiga muka gambar. Pelengkapnya ialah tiada muka gambar. Cari kebarangkalian tiada muka gambar dan tolak daripada 1.",
+        "moreHint": "Satu-satunya jujukan tanpa muka gambar ialah TTT, dengan T bermaksud muka angka. Kebarangkaliannya ialah (1/2) × (1/2) × (1/2). Tolak hasil darab itu daripada 1."
+      },
+      "rationale": "Keep eight sequences filled but unclassified; More Hint identifies the complementary sequence and its unevaluated product.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-033].learning.visual.solution.headers[3], rows[*][3] -> selectSupportVisual(PROB-033)",
+          "problem": "The effective Hint fills the Qualifies? column, preselecting all required sequences.",
+          "proposedCorrection": "Keep all eight H/T sequence rows fully filled in Hint, omit only Qualifies?, and retain classified outcomes in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "All three-toss sequences",
+          "ms": "Semua jujukan tiga lambungan"
+        },
+        "caption": {
+          "en": "H means Heads and T means Tails. Read each row in toss order, then apply the question’s condition.",
+          "ms": "H mewakili muka gambar dan T mewakili muka angka. Baca setiap baris mengikut tertib lambungan, kemudian gunakan syarat soalan."
+        },
+        "headers": {
+          "en": [
+            "First toss",
+            "Second toss",
+            "Third toss"
+          ],
+          "ms": [
+            "Lambungan pertama",
+            "Lambungan kedua",
+            "Lambungan ketiga"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "H",
+              "H",
+              "H"
+            ],
+            [
+              "H",
+              "H",
+              "T"
+            ],
+            [
+              "H",
+              "T",
+              "H"
+            ],
+            [
+              "H",
+              "T",
+              "T"
+            ],
+            [
+              "T",
+              "H",
+              "H"
+            ],
+            [
+              "T",
+              "H",
+              "T"
+            ],
+            [
+              "T",
+              "T",
+              "H"
+            ],
+            [
+              "T",
+              "T",
+              "T"
+            ]
+          ],
+          "ms": [
+            [
+              "H",
+              "H",
+              "H"
+            ],
+            [
+              "H",
+              "H",
+              "T"
+            ],
+            [
+              "H",
+              "T",
+              "H"
+            ],
+            [
+              "H",
+              "T",
+              "T"
+            ],
+            [
+              "T",
+              "H",
+              "H"
+            ],
+            [
+              "T",
+              "H",
+              "T"
+            ],
+            [
+              "T",
+              "T",
+              "H"
+            ],
+            [
+              "T",
+              "T",
+              "T"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-034",
+      "findings": [
+        "Say divide rather than only compare the sequence counts. The visual includes completed Qualifies decisions."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Exactly two Heads means one Tail among the three results."
+          },
+          {
+            "id": "nextStep",
+            "text": "List the possible positions of that Tail. Divide the number of matching sequences by the total number of sequences."
+          }
+        ],
+        "hint": "Exactly two Heads means one Tail among the three results. List the possible positions of that Tail. Divide the number of matching sequences by the total number of sequences.",
+        "moreHint": "The accepted sequences are HHT, HTH and THH, where H means Heads and T means Tails. Divide their count by 2 × 2 × 2."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Tepat dua muka gambar bermaksud satu muka angka dalam tiga keputusan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Senaraikan kedudukan muka angka yang mungkin. Bahagikan bilangan jujukan yang memenuhi syarat dengan jumlah jujukan."
+          }
+        ],
+        "hint": "Tepat dua muka gambar bermaksud satu muka angka dalam tiga keputusan. Senaraikan kedudukan muka angka yang mungkin. Bahagikan bilangan jujukan yang memenuhi syarat dengan jumlah jujukan.",
+        "moreHint": "Jujukan diterima ialah HHT, HTH dan THH, dengan H bermaksud muka gambar dan T bermaksud muka angka. Bahagikan bilangannya dengan 2 × 2 × 2."
+      },
+      "rationale": "Hint uses one Tail; More Hint lists the accepted sequences and the unevaluated total without stating the fraction.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-034].learning.visual.solution.headers[3], rows[*][3] -> selectSupportVisual(PROB-034)",
+          "problem": "The effective Hint fills the Qualifies? column, preselecting all required sequences.",
+          "proposedCorrection": "Keep all eight H/T sequence rows fully filled in Hint, omit only Qualifies?, and retain classified outcomes in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "All three-toss sequences",
+          "ms": "Semua jujukan tiga lambungan"
+        },
+        "caption": {
+          "en": "H means Heads and T means Tails. Read each row in toss order, then apply the question’s condition.",
+          "ms": "H mewakili muka gambar dan T mewakili muka angka. Baca setiap baris mengikut tertib lambungan, kemudian gunakan syarat soalan."
+        },
+        "headers": {
+          "en": [
+            "First toss",
+            "Second toss",
+            "Third toss"
+          ],
+          "ms": [
+            "Lambungan pertama",
+            "Lambungan kedua",
+            "Lambungan ketiga"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "H",
+              "H",
+              "H"
+            ],
+            [
+              "H",
+              "H",
+              "T"
+            ],
+            [
+              "H",
+              "T",
+              "H"
+            ],
+            [
+              "H",
+              "T",
+              "T"
+            ],
+            [
+              "T",
+              "H",
+              "H"
+            ],
+            [
+              "T",
+              "H",
+              "T"
+            ],
+            [
+              "T",
+              "T",
+              "H"
+            ],
+            [
+              "T",
+              "T",
+              "T"
+            ]
+          ],
+          "ms": [
+            [
+              "H",
+              "H",
+              "H"
+            ],
+            [
+              "H",
+              "H",
+              "T"
+            ],
+            [
+              "H",
+              "T",
+              "H"
+            ],
+            [
+              "H",
+              "T",
+              "T"
+            ],
+            [
+              "T",
+              "H",
+              "H"
+            ],
+            [
+              "T",
+              "H",
+              "T"
+            ],
+            [
+              "T",
+              "T",
+              "H"
+            ],
+            [
+              "T",
+              "T",
+              "T"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-035",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual includes the final all-gold probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "For an all-gold result, reduce the gold count and the total by one after each successful draw."
+          },
+          {
+            "id": "nextStep",
+            "text": "Multiply the three successive gold fractions."
+          }
+        ],
+        "hint": "For an all-gold result, reduce the gold count and the total by one after each successful draw. Multiply the three successive gold fractions.",
+        "moreHint": "Calculate (4/6) × (3/5) × (2/4). Each fraction uses the bag remaining after the earlier gold draws."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Bagi keputusan semuanya emas, kurangkan bilangan emas dan jumlah pembilang sebanyak satu selepas setiap pemilihan emas."
+          },
+          {
+            "id": "nextStep",
+            "text": "Darabkan tiga pecahan emas berturutan."
+          }
+        ],
+        "hint": "Bagi keputusan semuanya emas, kurangkan bilangan emas dan jumlah pembilang sebanyak satu selepas setiap pemilihan emas. Darabkan tiga pecahan emas berturutan.",
+        "moreHint": "Hitung (4/6) × (3/5) × (2/4). Setiap pecahan menggunakan kandungan beg yang tinggal selepas pemilihan emas sebelumnya."
+      },
+      "rationale": "Keep the three successive fractions; More Hint gives their unevaluated product.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-035].learning.visual.solution.rows[3][3] -> selectSupportVisual(PROB-035).rows[3][3]",
+          "problem": "The effective Hint reveals the evaluated All three gold probability 1/5.",
+          "proposedCorrection": "Omit only the final combined-result row from Hint, retaining three filled draw stages; keep the original solution unchanged."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Successive gold-draw counts",
+          "ms": "Bilangan pemilihan emas berturutan"
+        },
+        "caption": {
+          "en": "The bag starts with 4 gold and 2 silver counters. Each gold draw kept out reduces gold and total by one.",
+          "ms": "Beg pada awalnya mengandungi 4 pembilang emas dan 2 pembilang perak. Setiap emas yang tidak dikembalikan mengurangkan bilangan emas dan jumlah sebanyak satu."
+        },
+        "headers": {
+          "en": [
+            "Required draw",
+            "Gold",
+            "Silver",
+            "Total",
+            "Probability setup"
+          ],
+          "ms": [
+            "Pemilihan yang diperlukan",
+            "Emas",
+            "Perak",
+            "Jumlah",
+            "Bentuk pengiraan kebarangkalian"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "First gold",
+              "4",
+              "2",
+              "6",
+              "4/6"
+            ],
+            [
+              "Gold after one gold",
+              "3",
+              "2",
+              "5",
+              "3/5"
+            ],
+            [
+              "Gold after two golds",
+              "2",
+              "2",
+              "4",
+              "2/4"
+            ]
+          ],
+          "ms": [
+            [
+              "Emas pertama",
+              "4",
+              "2",
+              "6",
+              "4/6"
+            ],
+            [
+              "Emas selepas satu emas",
+              "3",
+              "2",
+              "5",
+              "3/5"
+            ],
+            [
+              "Emas selepas dua emas",
+              "2",
+              "2",
+              "4",
+              "2/4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-036",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual has intermediate per-order values but no final exactly-two probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Replacement keeps the colour fractions unchanged."
+          },
+          {
+            "id": "nextStep",
+            "text": "Exactly two gold draws also require one silver draw. Find one such order’s probability, then include all possible positions of the silver draw."
+          }
+        ],
+        "hint": "Replacement keeps the colour fractions unchanged. Exactly two gold draws also require one silver draw. Find one such order’s probability, then include all possible positions of the silver draw.",
+        "moreHint": "One order has probability (2/3) × (2/3) × (1/3). The silver draw can occur in 3 positions, so calculate 3 × (2/3) × (2/3) × (1/3)."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Pemulangan mengekalkan pecahan warna."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tepat dua pemilihan emas juga memerlukan satu pemilihan perak. Cari kebarangkalian satu tertib sedemikian, kemudian sertakan semua kedudukan pemilihan perak yang mungkin."
+          }
+        ],
+        "hint": "Pemulangan mengekalkan pecahan warna. Tepat dua pemilihan emas juga memerlukan satu pemilihan perak. Cari kebarangkalian satu tertib sedemikian, kemudian sertakan semua kedudukan pemilihan perak yang mungkin.",
+        "moreHint": "Kebarangkalian satu tertib ialah (2/3) × (2/3) × (1/3). Pemilihan perak boleh berlaku pada 3 kedudukan, maka hitung 3 × (2/3) × (2/3) × (1/3)."
+      },
+      "rationale": "More Hint supplies the three-position multiplier and an unevaluated product using unchanged replacement fractions.",
+      "visualFindings": [],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      }
+    },
+    {
+      "id": "PROB-037",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual includes the final failure probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "At least one failure is the complement of all three gates opening."
+          },
+          {
+            "id": "nextStep",
+            "text": "Multiply the independent opening chances, then subtract that product from 1."
+          }
+        ],
+        "hint": "At least one failure is the complement of all three gates opening. Multiply the independent opening chances, then subtract that product from 1.",
+        "moreHint": "Use 1 − [(4/5) × (4/5) × (4/5)]. This counts one failure, two failures or three failures together."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sekurang-kurangnya satu kegagalan ialah pelengkap ketiga-tiga pintu terbuka."
+          },
+          {
+            "id": "nextStep",
+            "text": "Darab peluang terbuka yang tak bersandar, kemudian tolak hasil darab itu daripada 1."
+          }
+        ],
+        "hint": "Sekurang-kurangnya satu kegagalan ialah pelengkap ketiga-tiga pintu terbuka. Darab peluang terbuka yang tak bersandar, kemudian tolak hasil darab itu daripada 1.",
+        "moreHint": "Gunakan 1 − [(4/5) × (4/5) × (4/5)]. Ini mengira satu, dua atau tiga kegagalan bersama-sama."
+      },
+      "rationale": "Reference all three supplied 4/5 chances; More Hint gives one minus their unevaluated product.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-037].learning.visual.solution.rows[0:2][1] -> selectSupportVisual(PROB-037)",
+          "problem": "The effective Hint gives the evaluated all-open result and exact target 61/125.",
+          "proposedCorrection": "Reference the three supplied 4/5 chances in Hint; leave evaluated combined results in the unchanged solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given opening chances",
+          "ms": "Peluang terbuka diberi"
+        },
+        "caption": {
+          "en": "The three gates are independent. Use the all-open case to find the complement.",
+          "ms": "Ketiga-tiga pintu adalah tak bersandar. Gunakan kes semua terbuka untuk mencari pelengkap."
+        },
+        "headers": {
+          "en": [
+            "Gate",
+            "Opening probability"
+          ],
+          "ms": [
+            "Pintu",
+            "Kebarangkalian terbuka"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Gate 1",
+              "4/5"
+            ],
+            [
+              "Gate 2",
+              "4/5"
+            ],
+            [
+              "Gate 3",
+              "4/5"
+            ]
+          ],
+          "ms": [
+            [
+              "Pintu 1",
+              "4/5"
+            ],
+            [
+              "Pintu 2",
+              "4/5"
+            ],
+            [
+              "Pintu 3",
+              "4/5"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-038",
+      "findings": [
+        "Prompt and stages are clear; retain them. The visual reveals x = 4 and its check. This is enrichment rather than a named mandatory DSKP task."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "If the first draw is Fire-marked, the next draw has one fewer Fire card and one fewer card in total."
+          },
+          {
+            "id": "nextStep",
+            "text": "Write the two successive fractions using x, then set their product equal to the given probability."
+          }
+        ],
+        "hint": "If the first draw is Fire-marked, the next draw has one fewer Fire card and one fewer card in total. Write the two successive fractions using x, then set their product equal to the given probability.",
+        "moreHint": "Use (x/8) × ((x − 1)/7) = 3/14. Multiplying by 56 gives x(x − 1) = 12. Look for a whole-number count from 0 to 8 whose product with one less than itself is 12."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Jika pemilihan pertama bertanda Api, bilangan kad Api dan jumlah kad bagi pemilihan seterusnya masing-masing berkurang satu."
+          },
+          {
+            "id": "nextStep",
+            "text": "Tulis dua pecahan berturutan menggunakan x, kemudian samakan hasil darabnya dengan kebarangkalian yang diberi."
+          }
+        ],
+        "hint": "Jika pemilihan pertama bertanda Api, bilangan kad Api dan jumlah kad bagi pemilihan seterusnya masing-masing berkurang satu. Tulis dua pecahan berturutan menggunakan x, kemudian samakan hasil darabnya dengan kebarangkalian yang diberi.",
+        "moreHint": "Gunakan (x/8) × ((x − 1)/7) = 3/14. Mendarab dengan 56 memberikan x(x − 1) = 12. Cari bilangan bulat daripada 0 hingga 8 yang hasil darabnya dengan nombor kurang satu daripadanya ialah 12."
+      },
+      "rationale": "Use two stages x/8 and (x − 1)/7; More Hint clears fractions and asks for a valid whole-number count without solving it.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-038].learning.visual.solution.rows[2:4] -> selectSupportVisual(PROB-038)",
+          "problem": "The effective Hint reveals Valid card count x = 4 and substitutes it into the Check row.",
+          "proposedCorrection": "Reference total, unknown count, successive fractions and given product equation in Hint; preserve the solved count and check only in the unchanged solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Unknown Fire count at each draw",
+          "ms": "Bilangan Api yang tidak diketahui bagi setiap pemilihan"
+        },
+        "caption": {
+          "en": "Keep x as a card count. The first Fire card stays out before the second draw.",
+          "ms": "Kekalkan x sebagai bilangan kad. Kad Api pertama tidak dikembalikan sebelum pemilihan kedua."
+        },
+        "headers": {
+          "en": [
+            "Quantity or draw",
+            "Given value or setup"
+          ],
+          "ms": [
+            "Kuantiti atau pemilihan",
+            "Nilai diberi atau susunan pengiraan"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Total cards at the start",
+              "8"
+            ],
+            [
+              "Fire-marked cards at the start",
+              "x"
+            ],
+            [
+              "First Fire probability",
+              "x/8"
+            ],
+            [
+              "Fire after a first Fire",
+              "(x − 1)/7"
+            ],
+            [
+              "Given probability of both Fire",
+              "3/14"
+            ],
+            [
+              "Equation to use",
+              "(x/8) × ((x − 1)/7) = 3/14"
+            ]
+          ],
+          "ms": [
+            [
+              "Jumlah kad pada awal",
+              "8"
+            ],
+            [
+              "Kad bertanda Api pada awal",
+              "x"
+            ],
+            [
+              "Kebarangkalian Api pertama",
+              "x/8"
+            ],
+            [
+              "Api selepas Api pertama",
+              "(x − 1)/7"
+            ],
+            [
+              "Kebarangkalian kedua-duanya Api yang diberi",
+              "3/14"
+            ],
+            [
+              "Persamaan untuk digunakan",
+              "(x/8) × ((x − 1)/7) = 3/14"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-039",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual displays both evaluated probabilities from the correct option."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Calculate the two-red probability separately for each bag."
+          },
+          {
+            "id": "nextStep",
+            "text": "Returning the first red restores its bag; keeping it out changes the next red fraction. Compare the two products using a common denominator."
+          }
+        ],
+        "hint": "Calculate the two-red probability separately for each bag. Returning the first red restores its bag; keeping it out changes the next red fraction. Compare the two products using a common denominator.",
+        "moreHint": "Bag A uses (2/3) × (2/3). Bag B uses (2/3) × (1/2). Calculate both products and express them with a common denominator before comparing."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Hitung kebarangkalian dua merah secara berasingan bagi setiap beg."
+          },
+          {
+            "id": "nextStep",
+            "text": "Memulangkan merah pertama memulihkan kandungan beg; tidak memulangkannya mengubah pecahan merah seterusnya. Bandingkan dua hasil darab menggunakan penyebut sepunya."
+          }
+        ],
+        "hint": "Hitung kebarangkalian dua merah secara berasingan bagi setiap beg. Memulangkan merah pertama memulihkan kandungan beg; tidak memulangkannya mengubah pecahan merah seterusnya. Bandingkan dua hasil darab menggunakan penyebut sepunya.",
+        "moreHint": "Beg A menggunakan (2/3) × (2/3). Beg B menggunakan (2/3) × (1/2). Hitung kedua-dua hasil darab dan ungkapkan dengan penyebut sepunya sebelum membandingkan."
+      },
+      "rationale": "Keep replacement rules and successive fractions, with multiplication/comparison left to the pupil.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-039].learning.visual.solution.headers[4], rows[*][4] -> selectSupportVisual(PROB-039)",
+          "problem": "The effective Hint gives both evaluated two-red probabilities requested in the correct option.",
+          "proposedCorrection": "Keep rules and successive fractions in Hint, omit the evaluated Two-red chance column and retain the full comparison in the solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Draw rules and successive chances",
+          "ms": "Peraturan pemilihan dan peluang berturutan"
+        },
+        "caption": {
+          "en": "Each bag starts with 2 red and 1 blue. Multiply within each row before comparing.",
+          "ms": "Setiap beg pada awalnya mengandungi 2 merah dan 1 biru. Darab dalam setiap baris sebelum membandingkan."
+        },
+        "headers": {
+          "en": [
+            "Bag",
+            "Rule",
+            "First-red chance",
+            "Second-red chance after first red"
+          ],
+          "ms": [
+            "Beg",
+            "Peraturan",
+            "Peluang merah pertama",
+            "Peluang merah kedua selepas merah pertama"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "A",
+              "Return and mix",
+              "2/3",
+              "2/3"
+            ],
+            [
+              "B",
+              "Keep first counter out",
+              "2/3",
+              "1/2"
+            ]
+          ],
+          "ms": [
+            [
+              "A",
+              "Pulangkan dan gaul",
+              "2/3",
+              "2/3"
+            ],
+            [
+              "B",
+              "Jangan pulangkan pembilang pertama",
+              "2/3",
+              "1/2"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "PROB-040",
+      "findings": [
+        "Prompt and text stages are clear; retain them. The visual reveals the final complement probability."
+      ],
+      "english": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "At least one Attack is the complement of no Attack."
+          },
+          {
+            "id": "nextStep",
+            "text": "Since every card is Attack or Guard, no Attack means two Guard cards. Calculate that probability without replacement, then subtract it from 1."
+          }
+        ],
+        "hint": "At least one Attack is the complement of no Attack. Since every card is Attack or Guard, no Attack means two Guard cards. Calculate that probability without replacement, then subtract it from 1.",
+        "moreHint": "Use 1 − [(3/5) × (2/4)]. The inner product is the probability of Guard followed by Guard, with the first card kept out."
+      },
+      "malay": {
+        "hintSteps": [
+          {
+            "id": "concept",
+            "text": "Sekurang-kurangnya satu Serangan ialah pelengkap tiada Serangan."
+          },
+          {
+            "id": "nextStep",
+            "text": "Oleh sebab setiap kad ialah Serangan atau Pertahanan, tiada Serangan bermaksud dua kad Pertahanan. Hitung kebarangkalian itu tanpa pemulangan, kemudian tolak daripada 1."
+          }
+        ],
+        "hint": "Sekurang-kurangnya satu Serangan ialah pelengkap tiada Serangan. Oleh sebab setiap kad ialah Serangan atau Pertahanan, tiada Serangan bermaksud dua kad Pertahanan. Hitung kebarangkalian itu tanpa pemulangan, kemudian tolak daripada 1.",
+        "moreHint": "Gunakan 1 − [(3/5) × (2/4)]. Hasil darab di dalam ialah kebarangkalian Pertahanan diikuti Pertahanan, dengan kad pertama tidak dikembalikan."
+      },
+      "rationale": "Reference given card counts; More Hint supplies one minus the unevaluated Guard-Guard product.",
+      "visualFindings": [
+        {
+          "path": "questions[id=PROB-040].learning.visual.solution.rows[1][3] -> selectSupportVisual(PROB-040).rows[1][3]",
+          "problem": "The effective Hint directly gives 1 − 3/10 = 7/10 for the requested at-least-one-Attack event.",
+          "proposedCorrection": "Reference supplied category counts, total, draw count and no-replacement rule in Hint; preserve the evaluated complement in the unchanged solution."
+        }
+      ],
+      "checks": {
+        "preservesMeaning": true,
+        "moreHintAddsSpecificStep": true,
+        "noFinalAnswerDisclosure": true
+      },
+      "hintReference": {
+        "title": {
+          "en": "Given card counts",
+          "ms": "Bilangan kad diberi"
+        },
+        "caption": {
+          "en": "The first card is not returned. Use the no-Attack case to find the complement.",
+          "ms": "Kad pertama tidak dikembalikan. Gunakan kes tiada Serangan untuk mencari pelengkap."
+        },
+        "headers": {
+          "en": [
+            "Category or rule",
+            "Given value"
+          ],
+          "ms": [
+            "Kategori atau peraturan",
+            "Nilai diberi"
+          ]
+        },
+        "rows": {
+          "en": [
+            [
+              "Attack cards",
+              "2"
+            ],
+            [
+              "Guard cards",
+              "3"
+            ],
+            [
+              "Total cards",
+              "5"
+            ],
+            [
+              "Cards drawn",
+              "2"
+            ],
+            [
+              "Replacement rule",
+              "Keep the first card out"
+            ]
+          ],
+          "ms": [
+            [
+              "Kad Serangan",
+              "2"
+            ],
+            [
+              "Kad Pertahanan",
+              "3"
+            ],
+            [
+              "Jumlah kad",
+              "5"
+            ],
+            [
+              "Kad dipilih",
+              "2"
+            ],
+            [
+              "Peraturan pemulangan",
+              "Kad pertama tidak dikembalikan"
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "rootReview": {
+    "sharedLabelNormalization": {
+      "Required draw": "Pemilihan yang diperlukan",
+      "Probability setup": "Bentuk pengiraan kebarangkalian",
+      "Given P(A ∩ B)": "P(A ∩ B) yang diberi",
+      "Keep first counter out": "Jangan pulangkan pembilang pertama"
+    },
+    "reason": "Retain equivalent source-reviewed BM labels shared with existing full-solution visuals; avoid incidental solution wording changes."
+  }
+}

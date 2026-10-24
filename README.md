@@ -1,4 +1,10 @@
-# Slay the Math — 2.36.0
+# Slay the Math — 2.40.0
+
+Version **2.40.0** integrates the approved three-card tuning: Last Page draws 2 +1 empty-Hand, Recall costs 0 with Exhaust, and ordinary Mana Barrier gives 7 Block per Energy. AI choice telemetry observes only actual actions. Current education reports, clearer hints, status explanations and Settings-only Developer access are retained. Prior ordinary saves keep their original rules; start a New Run for the new values. [Changes, compatibility and fresh main checks](docs/CARD_TUNING_MAIN_2_40_0.md).
+
+Version **2.39.0** integrates all six status-icon improvements while retaining the2.38 education reports/Google Issues/clearer hints and Settings-only Dev access. Statuses show actual units/duration and BM explanations, offer Normal/Large display, use distinct Block-family pictures, and retain usable fallback controls during slow/failed image loads. [Main integration and fresh verification](docs/STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+Version **2.38.0** integrates in-game question reports, private Google issue triage and source-reviewed English/BM hints for all120 items. Settings-only Developer access is retained. [Main release, actual checks and Google receiver update](docs/education/MAIN_2_38_0.md).
 
 Version **2.36.0** integrates clearer in-game Question / Help / Result tabs, two
 answers per game question, the simpler Learning Report and all120 review ticks/

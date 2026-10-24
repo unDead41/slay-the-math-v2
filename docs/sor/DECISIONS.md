@@ -8,6 +8,14 @@
 
 **BOUNDARY:** publish this documentation-policy update through the established main workflow. It does not authorize unrelated fixes, merge other branches, audit every current game module, change game version/mechanics or create a background monitor/CI enforcement. [Audit, evidence and follow-up](../audits/main/LATEST.md).
 
+## DEC-20261024-EDUCATION-REPORTS-CLARITY — Finished-result reports and private issue triage
+
+**DISAHKAN:** Ijamm selects Report a problem after in-game results and grouping comments in the existing private Google Sheet by question/category with developer statuses Baharu → Sedang disemak → Selesai. He also requests reviewing all120 English/BM prompts, Hint and More Hint for clear meaning and progressively more concrete help without stating the final answer. Publish to education-report only; earlier main authorization does not authorize this new preview on main.
+
+**DITERUSKAN:** shared comment owner/consent/outbox, actual closed-record context, local scroll/focus return, private retry-safe issue board and honest device counts. Preserve existing player Reviewed ticks, identities, questions/choices/answers/full solutions, game policy/RNG/resources and original assets. Apply source-reviewed scaffolding and remove target-bearing reference columns/accessible names. Keep stable bankVersion1.6 plus explicit compatible contentRevision.
+
+**PERLU_VERIFIKASI:** physical-device/classroom understanding, live Google deployment/account/quota and the unavailable MODEL.zip reference. Source inconsistencies are recorded explicitly. [Implementation, source audit, checks and owner update](../education/FEEDBACK_CLARITY.md).
+
 ## DEC-20261024-MASTER-SOR — Shared project and branch compatibility guidance
 
 **DISAHKAN:** Ijamm defines this chat as Master Audit — Branch Compatibility: verify actual GitHub main/branch SHAs, distinguish merge/remaining changes from current module compatibility, prioritize main for merged modules, test relevant scope and report VALID, PERLU UPDATE, CONFLICT or BELUM DISAHKAN with evidence and limits. Audit alone does not authorize code changes, merge or push. Ijamm then requests a reusable project SOR, asks for it to be installed, and asks to push it to GitHub.
@@ -709,6 +717,42 @@ Publication authorization: Ijamm subsequently requests pushing this Settings-onl
 
 DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `8a44068` into current main. This supersedes its earlier branch-only boundary. Retain current main release metadata and all education/icon/audit updates. Fresh combined-tree checks are recorded in `docs/audits/dev-tools/LATEST.md`.
 
+
+## 24 October 2026 — Three-card audit follow-up
+
+- **DISAHKAN:** “okay update dekat branch kamu dulu ni please!!” authorizes implementing the three audit recommendations and confirmed AI observation fix on the assistant branch only. Do not update main under the earlier 2.34.0 approval.
+- **DITERUSKAN / PLAYTEST:** Last Page 1 Energy, Draw 2 +1 empty; Recall 0 Energy + Exhaust; ordinary Mana Barrier 7X. Preserve Master Mana Barrier bonuses and growth Passive numbers. Version 2.38.0-card-tuning.1, ordinary marker2 and separate Master candidate.5. Preserve all prior ordinary definitions and pending payment semantics. [Owner](../CARD_TUNING_2_38_0.md).
+- **BELUM DISAHKAN:** Universal card balance, exhaustive combinations and pupil win rates; seeded AI evidence remains policy-dependent.
+
 ## Release metadata correction — 2.37.1
 
 24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.
+
+
+## DEC-20261024-EDUCATION-REPORT4-MAIN — Publish reviewed reports and guidance
+
+**DISAHKAN:** Ijamm explicitly requests pushing the completed education-report update to main. Merge feature6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0 with main37558d5a53d62e457c076b2444a1b71e8b42e50b as game2.38.0. This supersedes the previous branch-only boundary for these two report features and the120-item clarity pass. Keep Master SOR1.2.0, current Dev Settings placement, original assets and game/save/answer identities.
+
+**IMPLEMENTED:** Resolve generated release/launcher conflicts by rebuilding from package.json; retain both append-only SOR histories. Follow existing consent/local queue and preserve original report context on player ticks. Copy/deploy the same Code.gs remains an owner action. Fresh main checks and limits: [release](../education/MAIN_2_38_0.md).
+
+## DEC-20261024-ICON-EXPLANATION — All six follow-ups, branch only
+
+- DISAHKAN: Ijamm says “nice saya nak semua ni dulu please!!! update dekat dalam branch kamu”, selecting all six proposed improvements. This is new branch-only authorization; earlier approval of the completed 2.37.0 main release does not authorize this preview on main.
+- IMPLEMENTED: shared BM/English status text/units/timing and VFX names, Normal/Large readable labels, three generated shield-family variants, brief comparison effects and real slow/error image handling with a bounded Publish Handler icon API. Preserve canonical effects, archived saves and original card/artifact art. Version 2.38.0-icons.1 on codex/icon-clarity-audit, current main 6376a22 / Master SOR 1.2.0.
+- PERLU_VERIFIKASI: actual pupil recognition and physical Windows/mobile behavior, future Publish Handler integration and live public service/deployment. Native/export dimensions and resampling limits are explicit. [Scope](../STATUS_ICON_POLISH_2_38_0.md), [audit](../audits/icon-clarity-audit/LATEST.md).
+
+
+## DEC-20261024-STATUS-POLISH-MAIN — Publish the six icon improvements after education
+
+**DISAHKAN:** Ijamm requests publishing codex/icon-clarity-audit81533b38b8c7be1d897c3acc282f749df9beaeab to main after the education publication. Use maincb1bbcf688d9556b55bc8fe5522b5b652309640c (2.38.0) as first parent and the icon feature as second parent; publish2.39.0. This supersedes the earlier icon branch-only boundary.
+
+**IMPLEMENTED:** Merge status presentation and readiness with the existing game report controller. Preserve all education scripts/generated owners, current Dev Settings access and both script-check/test sets. Regenerate launchers and all tutorial screenshots from the combined UI. Three approved runtime pictures are added while original V1/card/artifact art stays intact. Historical932/947 test runs remain separate from fresh combined verification. [Audit, validation and limits](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+
+## DEC-20261024-CARD-TUNING-MAIN — Publish the three-card follow-up
+
+**DISAHKAN:** “okay then push dekat main then update the version!!” supersedes the card follow-up's earlier assistant-branch-only boundary. Merge feature bb5f93b180616add5c7e16bb85fc91d9621d37df with current main ade5d3a21e55b9d2911bfa935c8095c95801bd8c as2.40.0. Preserve current education/report/Google, icon/readiness, Dev Settings and both decision histories. Keep exact approved card values, archived ordinary rules and separate Master candidate.5; no extra balance change. [Main release and fresh checks](../CARD_TUNING_MAIN_2_40_0.md).
+
+## DEC-20261024-MAP-REGRESSION-15
+
+DISAHKAN: Ijamm meminta recheck skop Map dan push balance/map untuk Master. DITERUSKAN: pin current mainb730cad/game2.40.0/candidate.5, preserve publishedv1.4 and all upstream production sources, and run a separate predeclared100-seed N1 regression (2,400 campaigns, at most1,800 same-entry rank replays). Version/protocol/source/context remain explicit; no outcome-driven resampling, pooled old/new CP, production numerical tuning or player UI CP. Pilot confidence is limited; Master owns pupil90/70/50 validation and cross-domain decisions. See MAP-BAL-18 and handoffv1.5.

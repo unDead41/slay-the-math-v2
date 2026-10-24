@@ -6,6 +6,31 @@
  const icons=(typeof module!=='undefined'&&module.exports?require('./icon-assets.js'):root.DCIconAssets)?.status||Object.freeze({strength:'assets/status-strength.svg',agility:'assets/status-agility.svg',defense:'assets/status-defense.svg',block:'assets/status-block.svg',weak:'assets/status-weak.svg',vulnerable:'assets/status-vulnerable.svg',thorns:'assets/status-thorns.svg','next-draw':'assets/status-next-draw.svg','next-block':'assets/status-next-block.svg','retain-block':'assets/status-retain-block.svg'});
  const number=n=>Number.isSafeInteger(n),positive=n=>number(n)&&n>0;
  const plural=(n,one,many)=>n===1?one:many;
+ const names=Object.freeze({strength:['Strength','Kekuatan'],agility:['Agility','Ketangkasan'],defense:['Defense','Pertahanan'],block:['Block','Blok'],weak:['Weak','Lemah'],vulnerable:['Vulnerable','Terdedah'],thorns:['Thorns','Duri'],'next-draw':['Next Draw','Tarikan Seterusnya'],'next-block':['Next Block','Blok Seterusnya'],'retain-block':['Retain Block','Simpan Blok']});
+ const words=Object.freeze({all:['All statuses','Semua status'],title:['Statuses','Status'],help:['Compare every active status here. Select one for its exact effect and duration.','Bandingkan semua status di sini. Pilih satu untuk melihat kesan dan tempohnya.'],empty:['No active statuses.','Tiada status aktif.'],buff:['Buff','Kesan baik'],debuff:['Debuff','Kesan buruk'],queued:['Next turn','Giliran berikutnya'],close:['Close status panel','Tutup panel status'],size:['Status display size','Saiz paparan status'],normal:['Normal','Biasa'],large:['Large','Besar'],sizeHelp:['Changes status pictures and labels. Your cards and arena keep their size.','Mengubah saiz gambar dan label status. Saiz kad dan arena dikekalkan.']});
+ const isBM=lang=>/^(bm|ms)(-|$)/i.test(lang);
+ function name(id,lang='en'){return names[id]?.[isBM(lang)?1:0]||id;}
+ function text(key,lang='en'){return words[key]?.[isBM(lang)?1:0]||key;}
+ function presentation(id,value,who,rules,run,lang){
+  const bm=isBM(lang),b=run.battle,s=b.cardCombat,player=who==='player',n=Math.abs(value),sign=value>0?'+':'−',turn=b.turn+1,select=(en,ms)=>bm?ms:en;
+  let measure='',summary='',timing=select('This combat','Pertarungan ini'),descriptionMS='';
+  if(id==='strength'){measure=select('Attack damage','Kerosakan Serangan');summary=sign+n+' '+measure;descriptionMS=(value>0?'Tambah ':'Kurangkan ')+n+' kerosakan pada pukulan Serangan yang menggunakan Kekuatan. Pratonton kad menunjukkan kerosakan sebenar setiap pukulan. Kekal sepanjang pertarungan ini.';}
+  if(id==='agility'){measure=select('Block per Defend','Blok setiap Pertahanan');summary=sign+n+' '+measure;descriptionMS='Kad Pertahanan memberi '+n+' Blok '+(value>0?'tambahan':'lebih sedikit')+'. Kekal sepanjang pertarungan ini.';}
+  if(id==='defense'){measure=select('Damage per hit','Kerosakan setiap pukulan');summary=select('Reduce incoming damage by ','Kurangkan kerosakan diterima sebanyak ')+value;descriptionMS='Kurangkan '+value+' kerosakan Serangan setiap pukulan sebelum Blok digunakan. Kekal sepanjang pertarungan ini.';}
+  if(id==='block'){measure=select('Damage absorbed','Kerosakan diserap');summary=select('Absorb up to ','Serap sehingga ')+value+select(' damage',' kerosakan');timing=select(player?'Until your next turn':'Replaced by next intent',player?'Sehingga giliran anda berikutnya':'Diganti oleh niat berikutnya');descriptionMS='Serap sehingga '+value+' kerosakan sebelum HP berkurang. Blok yang digunakan akan hilang. '+(player?'Baki Blok tamat pada awal giliran anda berikutnya, kecuali Blok yang disimpan.':'Blok musuh diganti mengikut niat giliran berikutnya.');}
+  if(id==='weak'||id==='vulnerable'){
+   const weak=id==='weak',st=s?.statuses?.[player?'self':'enemy']||{};
+   if(rules.effectsVersion){const percent=weak?rules.status_definitions.weak.reduction_percent:rules.status_definitions.vulnerable.bonus_percent;measure=select(value+' attack '+plural(value,'phase','phases'),value+' fasa serangan');summary=(weak?'−':'+')+percent+'% '+select(weak?'outgoing Attack damage':'incoming Attack damage',weak?'kerosakan Serangan diberi':'kerosakan Serangan diterima');timing=select('One duration ends after the '+(weak?(player?'player':'enemy'):(player?'enemy':'player'))+' attack phase','Satu tempoh tamat selepas fasa serangan '+(weak?(player?'pemain':'musuh'):(player?'musuh':'pemain')));descriptionMS=value+' fasa serangan berbaki. '+(weak?'Setiap pukulan Serangan memberi '+percent+'% kurang kerosakan.':'Setiap pukulan Serangan yang diterima memberi '+percent+'% lebih kerosakan.')+' '+timing+'. Tindanan menambah tempoh, bukan peratus. Gabung Lemah dan Terdedah, kemudian bundar ke bawah sekali.';}
+   else{const amount=rules.status_definitions[id].amount_per_hit;measure=select(value+' '+plural(value,'stack','stacks'),value+' tindanan');summary=(weak?'−':'+')+amount+' '+select(weak?'outgoing damage per hit':'incoming damage per hit',weak?'kerosakan diberi setiap pukulan':'kerosakan diterima setiap pukulan');timing=select('One stack used per Attack hit','Satu tindanan digunakan setiap pukulan Serangan');descriptionMS=value+' tindanan. Setiap pukulan Serangan '+(weak?'memberi '+amount+' kurang kerosakan, sehingga minimum 0':'yang diterima memberi '+amount+' kerosakan tambahan')+' dan menggunakan satu tindanan.'+(positive(st[id+'Until'])?' Baki tindanan tamat '+(player?'sebelum':'selepas')+' fasa musuh pada giliran '+st[id+'Until']+'.':'');}
+  }
+  if(id==='thorns'){measure=select('Return damage per hit','Kerosakan balas setiap pukulan');summary=select('Return ','Balas ')+value+select(' damage when hit',' kerosakan apabila diserang');timing=select('Ends after the next enemy phase','Tamat selepas fasa musuh berikutnya');descriptionMS='Selagi anda hidup, setiap pukulan Serangan musuh dibalas dengan '+value+' kerosakan HP tetap, termasuk pukulan yang diserap sepenuhnya. Abaikan Pertahanan dan Blok musuh. Boss yang masih bermeterai kekal sekurang-kurangnya 1 HP. '+timing+'.';}
+  if(id==='next-draw'){measure=select(value+' extra '+plural(value,'card','cards'),value+' kad tambahan');summary=select('Draw ','Tarik ')+measure;timing=select('Start of turn ','Awal giliran ')+turn;descriptionMS='Tarik '+value+' kad tambahan pada giliran '+turn+', selepas tarikan biasa. Tarikan berhenti apabila Tangan mencapai '+C.HAND_LIMIT+' kad atau tiada kad berbaki. Kesan ini berlaku sekali sahaja.';}
+  if(id==='next-block'){measure=value+' '+select('Block to gain','Blok akan diterima');summary=select('Gain ','Dapat ')+value+' '+select('Block','Blok');timing=select('Start of turn ','Awal giliran ')+turn;descriptionMS='Dapat '+value+' Blok pada awal giliran '+turn+', selepas Blok disimpan. Ketangkasan sudah termasuk dalam nilai ini. Kesan ini berlaku sekali sahaja.';}
+  if(id==='retain-block'){measure=select('Cap: ','Had: ')+value+' '+select('Block','Blok');summary=select('Keep up to ','Simpan sehingga ')+value+' '+select('unused Block','baki Blok');timing=select('Start of turn ','Awal giliran ')+turn;descriptionMS='Simpan sehingga '+value+' baki Blok pada awal giliran '+turn+'. '+(s?.emberCarry?'Bara Terakhir menyimpan '+s.emberCarry+' baki Blok kecemasan sekali sahaja. ':'')+'Ini ialah had simpanan, bukan Blok tambahan. Gunakan had tertinggi, bukan jumlah had. Blok yang telah digunakan tidak diberi semula.';}
+  let inlineMeasure={strength:select('Attack damage','Kerosakan'),agility:select('Block / Defend','Blok'),defense:select('Per hit','Setiap pukulan'),block:select('Damage absorbed','Kerosakan diserap'),thorns:select('Return damage','Kerosakan balas'),'next-draw':select(value+' '+plural(value,'card','cards'),value+' kad'),'next-block':value+' '+select('Block','Blok'),'retain-block':select('Cap: ','Had: ')+value,weak:rules.effectsVersion?select(value+' '+plural(value,'phase','phases'),value+' fasa'):select(value+' '+plural(value,'stack','stacks'),value+' tindanan'),vulnerable:rules.effectsVersion?select(value+' '+plural(value,'phase','phases'),value+' fasa'):select(value+' '+plural(value,'stack','stacks'),value+' tindanan')}[id]||measure;
+  if(id==='weak'||id==='vulnerable'){const weak=id==='weak',effect=rules.status_definitions[id];inlineMeasure=(weak?'−':'+')+(rules.effectsVersion?(weak?effect.reduction_percent:effect.bonus_percent)+'%':effect.amount_per_hit+'/'+select('hit','pukulan'))+' · '+inlineMeasure;}
+  return {measure,inlineMeasure,summary,timing,descriptionMS};
+ }
  function expiry(status,id,who){
   const until=status[id+'Until'];
   if(!positive(until))return '';
@@ -21,17 +46,14 @@
   if(!b||!['player','enemy'].includes(who))return [];
   const rules=CC?.definitionData(run)||data;
   const out=[],player=who==='player',s=b.cardCombat,status=s?.statuses?.[player?'self':'enemy']||{};
-  const bm=/^(bm|ms)(-|$)/i.test(lang);
+  const bm=isBM(lang);
   const add=(id,label,value,kind,description)=>{
-   if(bm&&rules.effectsVersion){
-    if(id==='weak'){label='Lemah';description=value+' fasa serangan berbaki. Setiap pukulan Serangan memberi '+rules.status_definitions.weak.reduction_percent+'% kurang kerosakan. Satu tempoh tamat selepas fasa '+(player?'pemain':'musuh')+'. Gabung dengan Terdedah dan bundar ke bawah sekali.';}
-    if(id==='vulnerable'){label='Terdedah';description=value+' fasa serangan berbaki. Setiap pukulan Serangan yang diterima memberi '+rules.status_definitions.vulnerable.bonus_percent+'% lebih kerosakan. Satu tempoh tamat selepas fasa '+(player?'musuh':'pemain')+'. Tindanan menambah tempoh, bukan peratus.';}
-    if(id==='retain-block'){label='Simpan Blok';description='Simpan sehingga '+value+' baki Blok pada awal giliran berikutnya. '+(s?.emberCarry?'Bara Terakhir: '+s.emberCarry+' baki Blok kecemasan disimpan sekali. ':'')+'Gunakan had tertinggi, bukan jumlah had. Blok yang telah digunakan tidak diberi semula.';}
-   }
-   if(number(value)&&value!==0)out.push({id,label,value,kind,icon:icons[id],description});
+   if(!number(value)||value===0)return;
+   const p=presentation(id,value,who,rules,run,lang);
+   out.push({id,label:name(id,lang),value,kind,icon:icons[id],description:bm?p.descriptionMS:description,measure:p.measure,inlineMeasure:p.inlineMeasure,summary:p.summary,timing:p.timing});
   };
   if(player){
-   if(number(b.strength)&&b.strength!==0)add('strength','Strength',b.strength,b.strength>0?'buff':'debuff','Attack hits deal '+Math.abs(b.strength)+' '+(b.strength>0?'extra':'less')+' damage. Lasts this combat.');
+   if(number(b.strength)&&b.strength!==0)add('strength','Strength',b.strength,b.strength>0?'buff':'debuff','Attack cards deal '+Math.abs(b.strength)+' '+(b.strength>0?'extra':'less')+' damage on hits that use Strength. The card preview shows the final damage for each hit. Lasts this combat.');
    if(number(b.agility)&&b.agility!==0)add('agility','Agility',b.agility,b.agility>0?'buff':'debuff','Defend cards grant '+Math.abs(b.agility)+' '+(b.agility>0?'extra':'less')+' Block. Lasts this combat.');
   }
   const defense=player?b.defense:b.enemyDefense,block=player?b.block:b.enemyBlock;
@@ -51,5 +73,5 @@
   }
   return out;
  }
- const api={view};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.DCCombatStatus=api;
+ const api={view,name,text};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.DCCombatStatus=api;
 })(typeof window!=='undefined'?window:globalThis);

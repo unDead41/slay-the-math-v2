@@ -1,0 +1,9 @@
+# Main2.40.0 integration record
+
+User explicitly authorizes main and version update. Read current Master SOR1.2.0 and owners at mainade5d3a /2.39.0; integrate featurebb5f93b. Reused isolated worktree on integrate/card-tuning-main-20261024 after removing only ignored, reproducible build outputs to recover space. Git merge has exact ordered main/feature parents; eight observed content conflicts were metadata/documentation, with numerical/resolver/AI sources clean. Preserve both histories and the current main script graph.
+
+Fresh focused55/55, full991/991 (255.148s), production/portable304023003bytes and syntax passed. Native cases: card10, effects/original4, Master3, reports6/18 viewports, zero-network portable, and production/static-subpath Dev passed. Actual16 tutorial screenshots captured and88 source hashes matched final build; menu2.40.0 visually verified. Exact-source preservation covers ten feature runtime/config paths,21 current-main education/status/Dev owners, full old ordinary archives, package commands and entry graph.
+
+Initial browser attempts crashed because /tmp had no available space; final sequential writable-profile runs passed. No production code was changed for this environment issue. No new blocking finding; old DOC001/DOC002 and negative Last Page playtest limits remain explicit. Publishing approved values does not prove universal or pupil balance. Main/ref lease and exact tree comparison are required before/after publication.
+
+Published/read back main9f8e1fa26e4841f619c570532088d99f2df65c04, tree98f0894fca783a112a355108ad82efbfae73a3ba exactly equal local tested content; parentsade5d3a/bb5f93b. Exact-SHA lease, no force. Remote package2.40.0 and effects2 values read back correctly. Pages run40082791788 observed in progress; no hosted-success claim. Final receipt is documentation-only and requires no repeated runtime suite.

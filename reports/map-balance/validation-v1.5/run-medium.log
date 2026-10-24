@@ -1,0 +1,25 @@
+{"completed":50,"last":"route:STM-007:avoid-elite:0","status":"DEFEAT"}
+{"completed":100,"last":"route:STM-013:seek-shop:0","status":"VICTORY"}
+{"completed":150,"last":"predict:STM-019:high:0","status":"VICTORY"}
+{"completed":200,"last":"predict:STM-025:low:0","status":"DEFEAT"}
+{"completed":250,"last":"route:STM-032:seek-reward:0","status":"DEFEAT"}
+{"completed":300,"last":"route:STM-038:seek-shop:0","status":"VICTORY"}
+{"completed":350,"last":"predict:STM-044:high:0","status":"VICTORY"}
+{"completed":400,"last":"predict:STM-050:low:0","status":"VICTORY"}
+{"completed":450,"last":"route:STM-057:avoid-elite:0","status":"VICTORY"}
+{"completed":500,"last":"route:STM-063:seek-reward:0","status":"VICTORY"}
+{"completed":550,"last":"predict:STM-069:high:0","status":"DEFEAT"}
+{"completed":600,"last":"predict:STM-075:low:0","status":"VICTORY"}
+{"completed":650,"last":"route:STM-082:seek-reward:0","status":"DEFEAT"}
+{"completed":700,"last":"route:STM-088:health-recovery:0","status":"VICTORY"}
+{"completed":750,"last":"predict:STM-094:high:0","status":"VICTORY"}
+Error: ENOSPC: no space left on device, write
+    at Object.writeFileSync (node:fs:2483:20)
+    at Object.appendFileSync (node:fs:2565:6)
+    at Journal.append (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/storage.cjs:30:6)
+    at onResult (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/experiments.cjs:70:29)
+    at Worker.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/balance/map-advanced/experiments.cjs:54:146)
+    at Worker.emit (node:events:509:28)
+    at MessagePort.<anonymous> (node:internal/worker:350:14)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:856:20)
+    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)

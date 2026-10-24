@@ -1,0 +1,275 @@
+{
+  "sourceMainCommit": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+  "measuredGameVersion": "2.40.0",
+  "contextIds": {
+    "easy": "ed5ba20114c9c0abb30c3628f29d268cd57d2bb643befcc56f476407c5b31077",
+    "medium": "d03697b3a0a8d575693f987a88497a34ecb82d4fb4a72fbeb736019fa4675d99",
+    "hard": "557d495370f608db2fbed369ba0ef34bf91629ef4f587758ec4a2e299d2bc5fa"
+  },
+  "archive": "current-source-b730cad.tar.gz",
+  "archiveSha256": "528e092cb8a76aa566bcfcf29664741c2ae5e40b062fc9374d7bf00ca2633a5e",
+  "archiveBytes": 2023606,
+  "files": {
+    "AGENTS.md": {
+      "sha256": "2d552b81d351009082d7c2346905a526b8d1d7027830ee0e773b0ca3786b5d24",
+      "bytes": 7604
+    },
+    "MASTER_SOR_PROJECT.md": {
+      "sha256": "464310ac6f8cd36c29e56e5cbdbd4d9c1050be6aa893db1321863b24c8eb6b95",
+      "bytes": 18037
+    },
+    "dist/artifact-data.js": {
+      "sha256": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+      "bytes": 24924
+    },
+    "dist/artifacts.js": {
+      "sha256": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d",
+      "bytes": 19032
+    },
+    "dist/balance-config.js": {
+      "sha256": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
+      "bytes": 329
+    },
+    "dist/balance-data.js": {
+      "sha256": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d",
+      "bytes": 125510
+    },
+    "dist/balance.js": {
+      "sha256": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+      "bytes": 2303
+    },
+    "dist/card-combat.js": {
+      "sha256": "24db816bf336a3227d436de5e625aedc12f52af8b79cee4a043af418d2b5f97f",
+      "bytes": 51954
+    },
+    "dist/card-data.js": {
+      "sha256": "ef00192fe6fed2851aeb37c69b2bd9fd2a3c3205893597e8d390287e2aa14a35",
+      "bytes": 294926
+    },
+    "dist/card-flow.js": {
+      "sha256": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+      "bytes": 1104
+    },
+    "dist/card-kit.js": {
+      "sha256": "24e93578a61462b01639a8a90a5599ee426930aff3c746b3e4b26361776db402",
+      "bytes": 9855
+    },
+    "dist/combat-log.js": {
+      "sha256": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+      "bytes": 2628
+    },
+    "dist/combat-predict.js": {
+      "sha256": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a",
+      "bytes": 7254
+    },
+    "dist/config.js": {
+      "sha256": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+      "bytes": 5390
+    },
+    "dist/economy-data.js": {
+      "sha256": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+      "bytes": 4045
+    },
+    "dist/economy.js": {
+      "sha256": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+      "bytes": 12354
+    },
+    "dist/education.js": {
+      "sha256": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
+      "bytes": 20810
+    },
+    "dist/engine.js": {
+      "sha256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
+      "bytes": 43539
+    },
+    "dist/map-rng.js": {
+      "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+      "bytes": 12295
+    },
+    "dist/map.js": {
+      "sha256": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+      "bytes": 7437
+    },
+    "dist/math.js": {
+      "sha256": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+      "bytes": 3672
+    },
+    "dist/mechanics.js": {
+      "sha256": "a37ebd533fe9235061df9c411305c39a2fb28df3139977353eab73b343c57596",
+      "bytes": 4902569
+    },
+    "dist/mystery-data.js": {
+      "sha256": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+      "bytes": 34505
+    },
+    "dist/mystery.js": {
+      "sha256": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
+      "bytes": 19229
+    },
+    "dist/question-data.js": {
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+      "bytes": 266
+    },
+    "dist/rich-text-data.js": {
+      "sha256": "301785fe92eccb0bdc22d82835b053f8311a5d4003fdb42f56c1dab4a49257ad",
+      "bytes": 26296
+    },
+    "dist/rich-text.js": {
+      "sha256": "d5c83dad9022cf357e48af974b11f756dc7e71477a891d3bd28f84494dc479e8",
+      "bytes": 5700
+    },
+    "modules/map/data/seed-registry.json": {
+      "sha256": "5d0a3abc9832e6d092a53ba043236d54bd0dbc16ed9aaacd3c22c7a516848aa1",
+      "bytes": 1582
+    },
+    "modules/map/src/map-rng.js": {
+      "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+      "bytes": 12295
+    },
+    "package.json": {
+      "sha256": "5711a9cd92fe747d1ed5908e03722da3bca748412bfdcf4389d0f4d4ae3f2e8c",
+      "bytes": 8569
+    },
+    "reports/map-balance/base-2800f9a/context.json": {
+      "sha256": "41ae90066195546a008e9aff28d0b45be14f68f5fc001cb8fe7191f52b9e5c3b",
+      "bytes": 5924
+    },
+    "reports/map-balance/base-2800f9a/maps.json": {
+      "sha256": "dd60c000749117d198ef4bf6aa336b59ed7ddddcfd944e6cd558d41e32de1af7",
+      "bytes": 999140
+    },
+    "reports/map-balance/base-2800f9a/routes.json": {
+      "sha256": "c228aba0c8206c973d004fae1b37db36163edd267257824781ab1d37503ef7fc",
+      "bytes": 8384704
+    },
+    "reports/map-balance/base-2800f9a/seeds.json": {
+      "sha256": "a7c361885a3942e64caea08bc6ed1a25dfa1ca57f752e052a014df3e11ab65f6",
+      "bytes": 355729
+    },
+    "reports/map-balance/base-2800f9a/trials.json": {
+      "sha256": "994f242007f5a51743aca6642984c4509335850f2aafe315946e504d9d7e347c",
+      "bytes": 10549368
+    },
+    "reports/map-balance/validation-v1.5/create-source-snapshot.py": {
+      "sha256": "e53adc5504e78c7290ad574790ae860b206381a0a16ee3852befe95b88cc54fc",
+      "bytes": 4047
+    },
+    "tools/balance/map-advanced/check.cjs": {
+      "sha256": "4170dd6a825160dc1906f8114be64831b8b3a7b5866ba303c4899368c1ccb1fe",
+      "bytes": 4268
+    },
+    "tools/balance/map-advanced/config.json": {
+      "sha256": "c19fe62188b315d2c02b59f4ab8ba2f8fdb1d0ba1c3139cfe471fd18f11f3772",
+      "bytes": 773
+    },
+    "tools/balance/map-advanced/experiments.cjs": {
+      "sha256": "7702e7e95732585281526e95409ba2b443dd5c5e6c683e6d595a2fb488b918dd",
+      "bytes": 11368
+    },
+    "tools/balance/map-advanced/question-policy.cjs": {
+      "sha256": "02abed3bce27fe52e12d0c013b14fd800228a3d2be2112071943db7a194025b9",
+      "bytes": 1143
+    },
+    "tools/balance/map-advanced/report.cjs": {
+      "sha256": "db948100d2814e849af50f113d69db15417ed186f00872dbd19232ee7a25313e",
+      "bytes": 24761
+    },
+    "tools/balance/map-advanced/route-policy.cjs": {
+      "sha256": "11ce54c3aa9ffcdfa87e4bb701c87c2f73c57e7c3846e2756a14a34b2c559774",
+      "bytes": 1800
+    },
+    "tools/balance/map-advanced/runtime.cjs": {
+      "sha256": "f47671705a1fee699196310ba317cfe28b4ee91b0ae7bb54480e1f8e477e09a9",
+      "bytes": 1981
+    },
+    "tools/balance/map-advanced/scenarios.cjs": {
+      "sha256": "2b63d11c760d074c50069d36ee0b2af9684d9991aa3d1977d9ae310a88e51385",
+      "bytes": 860
+    },
+    "tools/balance/map-advanced/storage.cjs": {
+      "sha256": "a5781d5232d5df5ec4f1a4046410a2a372b7796e32cbb71c3f6b3022c3073c55",
+      "bytes": 2418
+    },
+    "tools/balance/map-advanced/telemetry.cjs": {
+      "sha256": "0de789a7787e27ff6f71cc5de957577c61099db724cdd5eb9e5c26e7cf7fe906",
+      "bytes": 4861
+    },
+    "tools/balance/map-advanced/worker.cjs": {
+      "sha256": "4002a0ccd3fef1629a22a854c20a22e7c2e9e0e0c0e755256676cb510870a03e",
+      "bytes": 1107
+    },
+    "tools/balance/map-recheck/config.json": {
+      "sha256": "2a38ca20cfd62fef461548c451cb72767b97d724a4bd9091af43ca2751096e21",
+      "bytes": 876
+    },
+    "tools/balance/map-recheck/run.cjs": {
+      "sha256": "dd4fb8cb703885c043733d763e8699165590e1806da65705e22eb0e1c6aaf12a",
+      "bytes": 3493
+    },
+    "tools/balance/map-regression/config.json": {
+      "sha256": "18fddaf1cfe9f780545f22ef0fbdce3ec6620c97e1d0fef19912736dec815654",
+      "bytes": 1133
+    },
+    "tools/balance/map-regression/run.cjs": {
+      "sha256": "42116614136ec1d51c70463a44d63cdcbb324952be2449a60f62ef9e3517032c",
+      "bytes": 2262
+    },
+    "tools/balance/map/audit.cjs": {
+      "sha256": "4187aa9a3d6d50e768f6456402fa52305befbcfaef02685517b0089276c70f5f",
+      "bytes": 13977
+    },
+    "tools/balance/map/config.json": {
+      "sha256": "9677b7ca5aa64f620220303e6734b47d7a5f83d5ae50c08187dba412cb1aa9fa",
+      "bytes": 878
+    },
+    "tools/balance/map/export.cjs": {
+      "sha256": "e125ba4fbef6a6d7b033cdfd6b15888fd7e8d422b3c6797b7b57de228f01a541",
+      "bytes": 2283
+    },
+    "tools/balance/map/inputs/balance-v1.2-reference.json": {
+      "sha256": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f",
+      "bytes": 82471
+    },
+    "tools/balance/map/inputs/provenance.json": {
+      "sha256": "afcf03e9ecb3427642c32be4cf59d9e833143248e683c19436a23317899b2ad0",
+      "bytes": 443
+    },
+    "tools/balance/map/policy.cjs": {
+      "sha256": "9f98eb17a7d253c520122b9833d1beeecadcd147de8b97e303e74e8c93076051",
+      "bytes": 1383
+    },
+    "tools/balance/map/replay.cjs": {
+      "sha256": "b747c2a6ef428c8b246273fc28478cb502726d3c20ad8e9b7e1f804ec1df518c",
+      "bytes": 22561
+    },
+    "tools/balance/map/score.cjs": {
+      "sha256": "0c3cbfc58000d11750134a288d4a4f365122ecb0dd2c9c0f581af411be36b512",
+      "bytes": 1284
+    },
+    "tools/balance/map/source-audit.cjs": {
+      "sha256": "13e6d3b52a00822b427cd0085b560b4df6f88a21d55fbe9adfed850429d5cd34",
+      "bytes": 4846
+    },
+    "tools/balance/map/structure.cjs": {
+      "sha256": "89ae7f11cf3c7369b0a7bb349bea73d84532b42d7c945c2291d2172175327ca4",
+      "bytes": 6484
+    },
+    "tools/balance/master/config.json": {
+      "sha256": "d5c9e2ba51ab23117673ee10174b6f19f8e8777c7463bb0a426c1cd232252c92",
+      "bytes": 860
+    },
+    "tools/balance/master/loader.cjs": {
+      "sha256": "98717d5a96d97c5fd8cf5110d621e28addf64d02cd149ba040ed60c118c28c0b",
+      "bytes": 1820
+    },
+    "tools/cards/legacy-runtime.cjs": {
+      "sha256": "d2917a515e95133daa96943f0517c462680d99d5c070cbf258d025587d1c52cc",
+      "bytes": 979
+    },
+    "tools/verify-map-advanced.py": {
+      "sha256": "f37bcef301038943e59f6c3a1092488997c55bb2718915d43497afc4cfdb1cc6",
+      "bytes": 21998
+    }
+  },
+  "scope": "Exact source/protocol/reference/analysis plus ordinary audit dependencies. Source-only replay, not a complete player asset distribution."
+}

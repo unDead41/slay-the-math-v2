@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/verify-map-advanced.py", line 341, in <module>
+    result = verify(pathlib.Path(args.out).resolve())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tools/verify-map-advanced.py", line 152, in verify
+    assert len(records) == index["records"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

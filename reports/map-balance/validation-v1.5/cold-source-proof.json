@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "contextsIdentical": 3,
+  "fullTrialReplays": 3,
+  "exactMatches": 3,
+  "additionalUniqueScoredCampaigns": 0,
+  "cases": [
+    {
+      "difficulty": "easy",
+      "contextId": "ed5ba20114c9c0abb30c3628f29d268cd57d2bb643befcc56f476407c5b31077",
+      "taskId": "route:STM-001:uniform-visible-v1:0",
+      "status": "VICTORY",
+      "traceHash": "089b95fdc2a02ec25ae3ddfbfba35cceca2ea1b2fb4fd5d9c84135409464cc8a",
+      "entryStateHash": "ad5a952baec376c92481a4645cbb330b35df12b9ed52df44c3285b90e3ea05f1",
+      "runtimeIdentity": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "easy",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "710ec84957a00f028d5051d91ce4329a18a8913dbbc4250561a80a037194ef17",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "difficulty": "medium",
+      "contextId": "d03697b3a0a8d575693f987a88497a34ecb82d4fb4a72fbeb736019fa4675d99",
+      "taskId": "route:STM-001:uniform-visible-v1:0",
+      "status": "VICTORY",
+      "traceHash": "750f6c97f46795379503c57512a4864eb326103e2003ab1b81732063862c0a2a",
+      "entryStateHash": "3be300dd27418887aa3c7f59d9ca6ab4d073ba2f9453fb2315e15d68a26514c5",
+      "runtimeIdentity": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "medium",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "710ec84957a00f028d5051d91ce4329a18a8913dbbc4250561a80a037194ef17",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "difficulty": "hard",
+      "contextId": "557d495370f608db2fbed369ba0ef34bf91629ef4f587758ec4a2e299d2bc5fa",
+      "taskId": "route:STM-001:uniform-visible-v1:0",
+      "status": "DEFEAT",
+      "traceHash": "1fd21d959015757deb356430d5dd915aa5906c48a1b363b4e27ba3aeb14b6be1",
+      "entryStateHash": "1a67bcdabeda0332e34dd126417c8590456c7e8a2469034d929d94db06ca4ebe",
+      "runtimeIdentity": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "hard",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "710ec84957a00f028d5051d91ce4329a18a8913dbbc4250561a80a037194ef17",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    }
+  ]
+}

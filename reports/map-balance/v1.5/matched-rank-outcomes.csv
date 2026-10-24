@@ -1,0 +1,13 @@
+difficulty,stage,challengerRank,controlRank,entryPairs,resolvedPairs,winDeltaSum,interpretation
+easy,1,median,easiest,100,100,0,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+easy,1,hardest,easiest,100,100,0,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+easy,2,median,easiest,100,100,-1,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+easy,2,hardest,easiest,100,100,-10,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+medium,1,median,easiest,100,100,0,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+medium,1,hardest,easiest,100,100,-12,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+medium,2,median,easiest,95,95,-13,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+medium,2,hardest,easiest,95,95,-24,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+hard,1,median,easiest,100,100,-20,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+hard,1,hardest,easiest,100,100,-42,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+hard,2,median,easiest,66,66,-11,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed
+hard,2,hardest,easiest,66,66,-21,Actual identical entry state/RNG within each pair; conditional Stage2; N1 per seed

@@ -1,5 +1,7 @@
 # Map Balance v1.4 — handoff kepada Master
 
+**Rekod sejarah candidate.4/game2.37.0.** [Regresi candidate.5/game2.40.0](MAP_BALANCE_V1_5_HANDOFF.md) mempunyai konteks dan hasil berasingan. Data di bawah tidak dilabel semula. Terbitan kandungan asal8606616a475f21cc95bc5e4fc202c8914498bd78 telah disahkan pada balance/map.
+
 24 Oktober 2026, Asia/Kuala_Lumpur. Repository `unDead41/slay-the-math-v2`; branch penerbitan `balance/map`.
 
 **VALID untuk integriti eksperimen dan keserasian runtime yang dinyatakan.** CP masih PROVISIONAL; scope yang censored atau tiada entry kekal tidak mempunyai skor. Kelulusan balance akhir dan sasaran murid 90%/70%/50% ialah **BELUM DISAHKAN**.

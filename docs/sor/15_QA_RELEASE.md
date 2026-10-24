@@ -140,7 +140,7 @@ The explicit request to apply the supplied 40-card package supersedes the earlie
 
 ## Combat and Predict — 2.19.0
 
-Build/portable/syntax and all 398 Node/jsdom tests passed with zero skips. Browser measurements cover 320x568,390x844,540x390,844x390,1280x720,1363x936,2048x1033 and2560x1080, local Hint/More Hint scrolling, native math, 4-to-1 Read Ahead geometry and complete reward selection. Later small-layout/header refinements received targeted DOM and browser checks. Implementation evidence does not establish classroom comprehension or playtested balance; the user must pull/restart the local Windows checkout. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
+Build/portable/syntax and all 398 Node/jsdom tests passed with zero skips. Browser measurements cover 320x568,390x844,540x390,844x390,1280x720,1363x936,2048x1033 and 2560x1080, local Hint/More Hint scrolling, native math, 4-to-1 Read Ahead geometry and complete reward selection. Later small-layout/header refinements received targeted DOM and browser checks. Implementation evidence does not establish classroom comprehension or playtested balance; the user must pull/restart the local Windows checkout. See [Combat and Predict 2.19.0](../COMBAT_AND_PREDICT_2_19_0.md).
 
 
 ## Passive and supplied audio — 2.20.0
@@ -159,7 +159,7 @@ Check the 26 new output hashes, post-MP3 LUFS/TP/decode and duration; assert all
 
 ## Education analytics branch — 2.25.0-analytics.1
 
-Release only to education-analytics for review; do not merge or update main without Ijamm's next instruction. Verify hand-counted evidence, all120 curriculum mappings, help order, sparse denominators, Review separation, current-run filters, Retry/reload idempotence and genuine New Run/reset separation. Exercise corrupt/quota/capacity recovery, concurrent storage writes, exactACK/newer edits/conflicts, offline/reopen/backoff and real SQLite response-loss replay. Test actual Main Menu/Settings/Practice BM/English report, keyboard focus/selection/disclosures, local scroll, exports and Dev isolation. Run full regression/build/production/portable checks; record actual results and limits in the verification document. [Feature guide](../EDUCATION_ANALYTICS_2_25_0.md).
+Release only to education-analytics for review; do not merge or update main without Ijamm's next instruction. Verify hand-counted evidence, all 120 curriculum mappings, help order, sparse denominators, Review separation, current-run filters, Retry/reload idempotence and genuine New Run/reset separation. Exercise corrupt/quota/capacity recovery, concurrent storage writes, exactACK/newer edits/conflicts, offline/reopen/backoff and real SQLite response-loss replay. Test actual Main Menu/Settings/Practice BM/English report, keyboard focus/selection/disclosures, local scroll, exports and Dev isolation. Run full regression/build/production/portable checks; record actual results and limits in the verification document. [Feature guide](../EDUCATION_ANALYTICS_2_25_0.md).
 
 Production preflight must reject private SQLite/DB files under dist, remove stale output on failure, and preserve the source data. The final full regression passed 555 tests; final display/build guards were verified with 10 host and 3 release tests, a clean production build and 65 resource hashes. See the verification document for scope and actual limits.
 
@@ -180,12 +180,12 @@ Publish only education-report. Verify all three shared report views, BM/English,
 
 ## Practice workspace preview — 2.31.0-report.2
 
-Publish only education-report. Verify all120 question-to-mark/comment bindings, independent mark/comment/answer semantics, stale-tab mark merge, reload/edit/untick/delete, corrupt/quota recovery and maximum comments against the unchanged strict Google validator. Exercise real Question/Feedback navigation, BM/English, local list scroll and drawer keyboard/focus at desktop/phone/short landscape, actual all120 Hint/wrong/More Hint/solution flows and portable zero-network boot. Native Google services are simulated; verify offline mark/comment delivery and untick/edit updating one existing row with exact ACKs. Run the full serial suite, syntax, production/resource/preservation and current developer isolation checks. Preserve the original bank, assets, combat and live receiver bytes. Actual evidence: docs/education/PRACTICE_WORKSPACE_VERIFICATION.md.
+Publish only education-report. Verify all 120 question-to-mark/comment bindings, independent mark/comment/answer semantics, stale-tab mark merge, reload/edit/untick/delete, corrupt/quota recovery and maximum comments against the unchanged strict Google validator. Exercise real Question/Feedback navigation, BM/English, local list scroll and drawer keyboard/focus at desktop/phone/short landscape, actual all 120 Hint/wrong/More Hint/solution flows and portable zero-network boot. Native Google services are simulated; verify offline mark/comment delivery and untick/edit updating one existing row with exact ACKs. Run the full serial suite, syntax, production/resource/preservation and current developer isolation checks. Preserve the original bank, assets, combat and live receiver bytes. Actual evidence: docs/education/PRACTICE_WORKSPACE_VERIFICATION.md.
 
 
 ## In-game question workspace — 24 October 2026
 
-For 2.31.0-report.3 verify all120 policy replays, honest help snapshots, second-correct acceptance, two-wrong/third-answer lock, legacy pending upgrades, all relevant continuation/reward gates, timed retry/expiry and strict sender/receiver validation. Inspect actual desktop/portrait/landscape English/BM tabs, keyboard/focus, local scrolling, art geometry and reload before/after failure. Run the complete serial Node/jsdom suite, production/syntax/resource/preservation checks and native game/offline/collection regressions. Record actual results and service/device limitations in [verification](../education/GAME_QUESTIONS_VERIFICATION.md); publish education-report only.
+For 2.31.0-report.3 verify all 120 policy replays, honest help snapshots, second-correct acceptance, two-wrong/third-answer lock, legacy pending upgrades, all relevant continuation/reward gates, timed retry/expiry and strict sender/receiver validation. Inspect actual desktop/portrait/landscape English/BM tabs, keyboard/focus, local scrolling, art geometry and reload before/after failure. Run the complete serial Node/jsdom suite, production/syntax/resource/preservation checks and native game/offline/collection regressions. Record actual results and service/device limitations in [verification](../education/GAME_QUESTIONS_VERIFICATION.md); publish education-report only.
 
 
 ## Education main integration — 2.36.0, 24 October 2026
@@ -197,3 +197,26 @@ tutorial exercises/text, AI attempt termination and developer collection routes
 with the versioned question policy. Run fresh combined-tree tests and record
 actual results in [the main release](../education/MAIN_2_36_0.md). Earlier reports
 remain historical evidence; live Google and pupil/device validation are separate.
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. For this branch verify the real Result-only report UI in all three consumers/English/BM, native keyboard/focus/scroll/art geometry, actual context snapshots and byte-identical pending saves, old comments/ticks, consent/offline/reconnect/exact ACK, private owner guard and retry-safe issue triage. Check all 120 staged hints and safe references in EN/BM against frozen facts/full solutions, actual MathML/accessibility, production/portable/tutorial and the complete serial suite. No live Google/pupil/model claim follows simulated services. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).
+
+
+## Education reports main publication — 2.38.0
+
+DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.
+
+## Explained status branch — 2.38.0-icons.1
+
+Before branch publication verify current versus archived rules, signed values, all ten complete BM/English presentations, shared VFX names, actual phase expiry/queued grants, Normal/Large persistence with unchanged gameplay/card geometry, 12px phone labels/44px controls, three source/runtime/export hashes and transparent padding. Exercise actual delayed and 404 image requests, semantic fallback decode, dynamic renders, production Dev and zero-network portable output. Recapture real tutorial UI and run final syntax/regression/build checks. Record initial/final findings under docs/audits/icon-clarity-audit/LATEST.md per Master SOR 1.2.0. Human recognition/physical device checks remain separate. Main push is not authorized.
+
+
+## Status explanations main integration — 2.39.0
+
+DISAHKAN: Ijamm now requests publishing all six improvements from icon81533b3 after education main2.38.0. This supersedes the icon preview's branch-only boundary. Preserve current education source/report/Google owners and Settings-only Dev controls. Integrate actual units/timing, ten bilingual explanations, Normal/Large status display, three approved Block-family variants, comparison summaries and bounded icon readiness/fallbacks. Preserve numerical rules, saves/RNG, original card/artifact/model/audio assets and Publish Handler ownership. [Current main audit and fresh evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).
+
+
+## Card tuning main publication — 2.40.0
+
+DISAHKAN: Ijamm now authorizes publishing the completed card follow-up to main and updating the version. Integrate bb5f93b with current main ade5d3a /2.39.0 as2.40.0, preserving education reports/hints, status explanations/readiness and Dev Settings. Three approved card values and AI actual-choice accounting retain their feature owner; ordinary v0/v1 rules/payments/offers and Master candidate.5 keys remain separated. [Fresh combined-tree evidence and limits](../CARD_TUNING_MAIN_2_40_0.md).

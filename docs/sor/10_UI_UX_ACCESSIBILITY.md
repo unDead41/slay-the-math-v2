@@ -248,3 +248,21 @@ Use role-based icon sizing from ICO-16, visible status names/counters and an All
 ## Functional icon clarity on main — 2.37.0
 
 Ijamm now authorizes main publication; the earlier preview-only boundary above is historical. Keep the current main's percentage/duration and BM status descriptions in both inline and comparison/detail surfaces. Preserve main's question retry focus/continuation and run-aware card display helpers when resolving shared app handlers. Recapture tutorial images from the merged UI rather than using the older small-icon screenshots as current evidence. [Combined release and actual checks](../ICON_CLARITY_MAIN_2_37_0.md).
+
+## Reports and hint clarity — 2.37.0-report.4 branch preview
+
+DISAHKAN: Ijamm selects in-game reports, private Google issue triage and the all 120 bilingual clarity pass for education-report only. Add one Report a problem / Laporkan masalah action in the finished Result view for actual game consumers. Use a small ink native dialog with local scrolling, bilingual labels, filled read-only context, categories/comment, explicit Save and return-to-result focus. Do not add a new player CSV/setup view. Hint references and accessible names must not inherit the computed solution target. [Contract and actual verification](../education/FEEDBACK_CLARITY.md).
+
+
+## Education reports main publication — 2.38.0
+
+DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558d5. This supersedes the report4 branch-only boundary. Retain current Settings-only Dev access and all numerical/card/save/RNG/artwork owners; merge the Result report, private Issues receiver and reviewed bilingual hint sources. Fresh combined-tree evidence and manual Google receiver update: [main release](../education/MAIN_2_38_0.md). Earlier preview test reports remain historical evidence.
+
+## Explained status preview — 2.38.0-icons.1
+
+Ijamm approves six follow-up changes on the icon branch only. Use ICO-20–24: shared BM/English names/full explanations, visible unit/percentage/duration distinctions, readable phone labels, stored Normal/Large status size, brief comparison effects, three distinct shield-family silhouettes and usable pending/fallback states. The size preference writes UI settings only. Preserve native focus/Escape/local scrolling and existing card/arena sizes. [Scope and checks](../STATUS_ICON_POLISH_2_38_0.md).
+
+
+## Status explanations main integration — 2.39.0
+
+DISAHKAN: Ijamm now requests publishing all six improvements from icon81533b3 after education main2.38.0. This supersedes the icon preview's branch-only boundary. Preserve current education source/report/Google owners and Settings-only Dev controls. Integrate actual units/timing, ten bilingual explanations, Normal/Large status display, three approved Block-family variants, comparison summaries and bounded icon readiness/fallbacks. Preserve numerical rules, saves/RNG, original card/artifact/model/audio assets and Publish Handler ownership. [Current main audit and fresh evidence](../STATUS_ICON_POLISH_MAIN_2_39_0.md).

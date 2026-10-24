@@ -1,0 +1,65 @@
+✔ current integrity gate rejects records executed under another runtime identity (4.148359ms)
+✖ current worker captures real Master entries for all three bound profiles (230.966335ms)
+✖ Master runtime choice is preserved by fixed campaign tasks and context (51.944836ms)
+✔ current worker rejects a captured entry from a different difficulty (198.316877ms)
+✔ current feedback settles two wrong attempts without a third attempt or loop (832.894951ms)
+✔ artifact affordability observes the same Master quote used by a purchase (61.068783ms)
+✔ current report does not deduct a legacy Gold grant which Master never awards (0.713446ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 5
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1806.545245
+
+✖ failing tests:
+
+test at tests/map-balance-current.test.cjs:17:1
+✖ current worker captures real Master entries for all three bound profiles (230.966335ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'master-1.5.0-candidate.5'
+  - 'master-1.4.0-candidate.4'
+              ^
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tests/map-balance-current.test.cjs:21:53)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'master-1.5.0-candidate.5',
+    expected: 'master-1.4.0-candidate.4',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/map-balance-current.test.cjs:27:1
+✖ Master runtime choice is preserved by fixed campaign tasks and context (51.944836ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'master-1.5.0-candidate.5'
+  - 'master-1.4.0-candidate.4'
+              ^
+  
+      at TestContext.<anonymous> (/workspace/scratch/3151b9eb82f6/slay-the-math-map-recheck/tests/map-balance-current.test.cjs:31:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'master-1.5.0-candidate.5',
+    expected: 'master-1.4.0-candidate.4',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

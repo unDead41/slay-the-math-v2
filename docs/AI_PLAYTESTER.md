@@ -1,6 +1,8 @@
 # AI Playtester
 
-Versi game semasa: **2.34.0**, dengan card balance candidate.4. Anggaran incoming AI menggunakan resolver sebenar; semua hit Weak/Vulnerable dalam satu fasa dikreditkan kepada sumber durasi tersebut. Last Ember menerima kredit retention apabila cap emergency paling besar. Metadata versi dijana daripada package.json untuk semua entrypoint. [Integrasi semasa](CARD_EFFECTS_MAIN_2_34_0.md), [release AI asal 2.33.0](AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).
+Current main integration: [game2.40.0](CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
+
+Current game: **2.40.0**, Master candidate.5. Choice ranking runs outside the actual-action observation boundary; only the resulting choice commit can affect telemetry. Five regressions match reported Block use against actual enemy-turn logs. Earlier reports retain their original source and may include the former card-comparison choice-observation defect. [Current changes and verification](CARD_TUNING_2_38_0.md).
 
 24 Oktober 2026 (Malaysia). Ijamm kini membenarkan penerbitan ke **main**, menggantikan had branch ai sahaja. Gabungan AI `807be67` dengan main `d5533ad` mengekalkan game 2.32.1, tutorial, animasi tempur serta muzik menu terkini. Semua nilai gameplay dikekalkan. [Rekod integrasi main](AI_PLAYTESTER_MAIN_2026_10_24.md).
 

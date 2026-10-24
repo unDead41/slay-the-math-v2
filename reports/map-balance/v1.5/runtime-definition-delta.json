@@ -1,0 +1,120 @@
+{
+  "oldIdentity": {
+    "version": "master-1.4.0-candidate.4",
+    "difficulty": "medium",
+    "definitionHash": "49a62f950a6208243e2f4afa237d9b19bb6995247688d869f3c28dc6c1b3f194",
+    "engineHash": "d73ee204a4bf0613208eb75ee63249ace7c41c1e08040f13864ce4f35d79ca93",
+    "source": "integrated working tree",
+    "pupilCalibration": false
+  },
+  "newIdentity": {
+    "version": "master-1.5.0-candidate.5",
+    "difficulty": "medium",
+    "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+    "engineHash": "710ec84957a00f028d5051d91ce4329a18a8913dbbc4250561a80a037194ef17",
+    "source": "integrated working tree",
+    "pupilCalibration": false
+  },
+  "changedCards": [
+    {
+      "cardId": "stm.defend.mana_barrier",
+      "name": "Mana Barrier",
+      "changes": [
+        {
+          "path": ".mechanic_notes.bm",
+          "old": "X ialah baki Tenaga ketika kad dimainkan. Anda perlu sekurang-kurangnya 1 Tenaga. Tambah Ketangkasan sekali pada jumlah Blok. Fokus menambah 3 sekali pada jumlah itu, bukannya 3 bagi setiap Tenaga.",
+          "new": "Guna semua baki Tenaga, sekurang-kurangnya 1. Dapat 7 Blok bagi setiap Tenaga. Tambah Kelincahan sekali. Bonus Fokus dan naik taraf ditambah sekali, bukan bagi setiap Tenaga."
+        },
+        {
+          "path": ".mechanic_notes.en",
+          "old": "X is the Energy left when you play. You need at least 1 Energy. Add Agility once to the total Block. Focus adds 3 once to the total, not 3 for every Energy.",
+          "new": "Use all remaining Energy, at least 1. Gain 7 Block per Energy. Add Agility once. Focus and upgrade add their displayed bonus once, not once per Energy."
+        },
+        {
+          "path": ".mechanic_notes_bm",
+          "old": "X ialah baki Tenaga ketika kad dimainkan. Anda perlu sekurang-kurangnya 1 Tenaga. Tambah Ketangkasan sekali pada jumlah Blok. Fokus menambah 3 sekali pada jumlah itu, bukannya 3 bagi setiap Tenaga.",
+          "new": "Guna semua baki Tenaga, sekurang-kurangnya 1. Dapat 7 Blok bagi setiap Tenaga. Tambah Kelincahan sekali. Bonus Fokus dan naik taraf ditambah sekali, bukan bagi setiap Tenaga."
+        }
+      ]
+    },
+    {
+      "cardId": "stm.skill.last_page",
+      "name": "Last Page",
+      "changes": [
+        {
+          "path": ".mechanic_notes.bm",
+          "old": "Semak sama ada tangan kosong sebaik sahaja kad ini dikeluarkan, sebelum mengambil kad atau menerima kesan Pasif. Biasa mengambil 1 kad, atau 3 jika tangan kosong. Fokus mengambil 2 kad, atau 4 jika tangan kosong. Semak syarat tangan kosong sekali sahaja.",
+          "new": "Kos 1 Tenaga. Ambil 2 kad, tambah 1 jika Tangan kosong selepas kad ini dimainkan. Fokus dan naik taraf masing-masing menambah satu ambilan utama. Semua ambilan mengikut had Tangan."
+        },
+        {
+          "path": ".mechanic_notes.en",
+          "old": "Check whether your hand is empty just after this card leaves it, before drawing or Passive effects. Normal draws 1 card, or 3 with an empty hand. Focus draws 2, or 4 with an empty hand. Check the empty-hand rule only once.",
+          "new": "Costs 1 Energy. Draw 2 cards, plus 1 if your Hand is empty after playing this card. Focus and upgrade each add one main draw. All draws respect the Hand limit."
+        },
+        {
+          "path": ".mechanic_notes_bm",
+          "old": "Semak sama ada tangan kosong sebaik sahaja kad ini dikeluarkan, sebelum mengambil kad atau menerima kesan Pasif. Biasa mengambil 1 kad, atau 3 jika tangan kosong. Fokus mengambil 2 kad, atau 4 jika tangan kosong. Semak syarat tangan kosong sekali sahaja.",
+          "new": "Kos 1 Tenaga. Ambil 2 kad, tambah 1 jika Tangan kosong selepas kad ini dimainkan. Fokus dan naik taraf masing-masing menambah satu ambilan utama. Semua ambilan mengikut had Tangan."
+        },
+        {
+          "path": ".text.en[1].text",
+          "old": " cards: ",
+          "new": " "
+        },
+        {
+          "path": ".text.en[3].text",
+          "old": ". If your ",
+          "new": " cards. If your "
+        },
+        {
+          "path": ".text.en[5].text",
+          "old": " was empty after playing this card, ",
+          "new": " is empty after playing this card, "
+        },
+        {
+          "path": ".text.en[9].text",
+          "old": " more.",
+          "new": " more card."
+        },
+        {
+          "path": ".values.draw.base",
+          "old": 1,
+          "new": 2
+        },
+        {
+          "path": ".values.emptyBonus.base",
+          "old": 2,
+          "new": 1
+        }
+      ]
+    },
+    {
+      "cardId": "stm.skill.recall",
+      "name": "Recall",
+      "changes": [
+        {
+          "path": ".energy.amount",
+          "old": 1,
+          "new": 0
+        },
+        {
+          "path": ".mechanic_notes.bm",
+          "old": "Mesti ada kad yang boleh dipilih dalam Timbunan Buangan. Kad Panggil Semula sendiri tidak boleh dipilih dan akan disingkir. Fokus membolehkan anda mengambil 1 kad tambahan dari Timbunan Ambilan. Ia tidak mengambil kad kedua dari Timbunan Buangan.",
+          "new": "Kos 0 Tenaga. Pilih satu kad sebenar dari Timbunan Buangan dan kembalikan ke Tangan, kemudian Habis Guna Recall. Kad yang sedang dimainkan tidak boleh mengambil dirinya sendiri. Fokus dan naik taraf menambah ambilan biasa jika ada ruang dan kad."
+        },
+        {
+          "path": ".mechanic_notes.en",
+          "old": "You need an available card in the Discard Pile. Recall itself cannot be chosen and is then set aside. Focus draws 1 extra card from the Draw Pile. It does not return a second discarded card.",
+          "new": "Costs 0 Energy. Choose one real card from your Discard Pile and return it to your Hand, then Exhaust Recall. The card being played cannot return itself. Focus and upgrade add ordinary draws when space and cards are available."
+        },
+        {
+          "path": ".mechanic_notes_bm",
+          "old": "Mesti ada kad yang boleh dipilih dalam Timbunan Buangan. Kad Panggil Semula sendiri tidak boleh dipilih dan akan disingkir. Fokus membolehkan anda mengambil 1 kad tambahan dari Timbunan Ambilan. Ia tidak mengambil kad kedua dari Timbunan Buangan.",
+          "new": "Kos 0 Tenaga. Pilih satu kad sebenar dari Timbunan Buangan dan kembalikan ke Tangan, kemudian Habis Guna Recall. Kad yang sedang dimainkan tidak boleh mengambil dirinya sendiri. Fokus dan naik taraf menambah ambilan biasa jika ada ruang dan kad."
+        }
+      ]
+    }
+  ],
+  "artifactsEqual": true,
+  "scope": "Read actual canonical bindings only; engine resolver changes are separately pinned by source hashes. This is not a new simulation or card power test."
+}

@@ -46,3 +46,6 @@ Read [Deep Validation Report](deep/REPORT.md) with raw paired results and record
 
 
 Closing compatibility: branch now derives from main2.37.0 `6376a22`; economy/Combat/policy owners are byte-identical to measured2.36.0. Read [current audit](../audits/balance-economy/LATEST.md), [verification](recheck-20261024/VERIFICATION.md) and publication receipt for exact tested/published revisions. The12 bounded skip/Boss states are included for Master/Combat; seven ordinary Energy-band price changes remain decisions, not an automatic retune.
+
+
+Published current implementation: `21e99df47a5b201acfab1710ff49f0e30241d363`. [Verified publication receipt](../audits/balance-economy/PUBLICATION.md).

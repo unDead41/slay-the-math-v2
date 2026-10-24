@@ -33,3 +33,10 @@ After pulling main, stop the old server and run `npm.cmd start` from the project
 ## Actual combined menu
 
 ![Main menu with the actual2.40.0 version](../dist/assets/tutorial-menu.webp)
+
+
+## Publication receipt
+
+Published merge: `9f8e1fa26e4841f619c570532088d99f2df65c04`, exact tree `98f0894fca783a112a355108ad82efbfae73a3ba`. Ordered parents are main `ade5d3a21e55b9d2911bfa935c8095c95801bd8c` and feature `bb5f93b180616add5c7e16bb85fc91d9621d37df`. Main was moved with the exact expected prior SHA and no force; ref readback matched, remote package.json says2.40.0 and the effects owner sayscard-effects-2 /2+1 /0 /7X. The remote tree exactly equals the verified local tree.
+
+GitHub Pages workflow40082791788 was observed in progress after this push; that is separate from verified repository publication and local production success. This subsequent receipt commit changes documentation only, with the tested runtime unchanged.

@@ -458,6 +458,17 @@ Add a main-push/manual Pages workflow that builds and checks the current product
 - Main Menu/Settings/Practice Learning Report includes Google /exec configuration and opt-in delivery with offline pending records, current-destination consent/receipts and exact confirmed upserts. Ship one copyable Apps Script receiver and BM owner setup.
 - Regenerate package/version/cache entrypoints; retain all main QA commands and add Google build/QA. Live Google authorization/deployment remains an explicit owner step. [Main integration](../GOOGLE_SHEETS_MAIN_2_30_0.md).
 
+## Production Dev password — 24 October 2026
+
+Branch 2.31.1-dev.1: add password-gated production Dev in main menu and Settings, static Hub/sandbox build copies, session relock and relative paths for Netlify/Pages. Preserve player saves and local development mode. No main update.
+
+## Extended developer sandbox — 24 October 2026
+
+2.31.1-dev.2 on dev-tools: add all-node map clicks/teleport, God ON/OFF, insert normal/upgraded card copies into deck and combat zones, one-click eligible fixtures for all 15 Mystery events, and a current feature guide. Retain production password and player-storage isolation.
+
+## Developer diagnostics — 24 October 2026
+
+2.31.1-dev.3: implement exact-question fixtures, validated status editor, explicit profile-aware player-save transfer/import, local HTML reports with optional user-selected screenshot, and Low HP/Full Hand/Empty Draw/Three Active Passives scenarios. Preserve existing dev and production password workflows.
 
 ## 2.32.1 — New Main Menu music
 
@@ -486,3 +497,7 @@ Published developer strategy/simulation AI on main 2.31.0 base, preserving the t
 
 - Increase the minor version after Ijamm questions the unchanged 2.32.1 number for the new AI features. Regenerate shared release/cache metadata and normal, file, production and offline entrypoints from package.json.
 - Retain the already integrated AI behavior, game rules, artwork, current menu music and save keys. [Release checks](../AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).
+
+## Main integration — 2.35.0, 24 October 2026
+
+DISAHKAN: Ijamm now authorizes publishing the complete production/password/extended diagnostics Dev update to main. This supersedes the branch-only publication boundaries above. Merge with main 2.34.0, preserve AI/local-only backend and card effects. The status editor follows the current percentage/duration Weak/Vulnerable rules. Production ships the static password-gated Hub; AI Playtester remains local-dev-server-only.

@@ -1,0 +1,35 @@
+{
+  "branch": "dev-tools",
+  "version": "2.31.1-dev.3",
+  "base": "f65b9a40220c339a859631e6e97e756d3a6a8a98",
+  "mainUpdated": false,
+  "checks": {
+    "syntax": "npm run check passed",
+    "productionBuild": "passed",
+    "nodeTests": "20 passed, zero skips",
+    "questions": "120 IDs x 3 consumers = 360 real-engine fixtures; original bank reference restored",
+    "status": "all supported native target/status pairs, removal, expiry and invalid-input rejection",
+    "presets": "all four validate; Passives activated through actual card play",
+    "import": "valid cloned save independent; corrupt/oversize rejected",
+    "report": "escaped notes/state and PNG-only data; no active markup",
+    "productionBrowser": [
+      "password and prior map/God/card/event tools",
+      "exact questions in Predict/Artifact/Mystery and BM language selection",
+      "enemy Vulnerable edit",
+      "four scenario buttons",
+      "real saved run copied through production UI and imported, sandbox mutated, source save bytes preserved",
+      "HTML report download",
+      "screen capture pipeline tested with explicitly synthetic MediaStream, screenshot embedded, tracks stopped",
+      "capture cancellation handled without report",
+      "static project subpath and actual --prod server",
+      "Easy balance profile propagated through Hub URL and sandbox; copied candidate save imported successfully"
+    ],
+    "developmentBrowser": "Hub and toggle suites passed"
+  },
+  "limits": [
+    "Native browser screen/window chooser on the physical user device is not automated; user chooses source each time.",
+    "Unsupported status expiry/target combinations are rejected.",
+    "Profile-specific imports require matching game definitions.",
+    "No hosted deployment or main merge."
+  ]
+}

@@ -1,6 +1,6 @@
 # 20 — Developer Tools
 
-Version: 1.0.0 · Game: 2.21.0 · Date: 2026-10-23 (Malaysia)
+Version: 1.1.0 · Game: 2.35.0 · Date: 2026-10-24 (Malaysia)
 
 DISAHKAN: Ijamm requested implementation from main v2.20.0 of the previously supplied Developer Tools SOR, including separate development and production commands. This domain owns developer access, sandbox fixtures and diagnostic controls. Existing card/combat/event/motion owners still own gameplay.
 
@@ -78,6 +78,27 @@ DISAHKAN: developer-only branch work, no merge/push to main. Start at the game m
 
 DISAHKAN, 23 October 2026: Ijamm now authorizes publishing the developer toggle to main over v2.23.0. This supersedes the earlier branch-only restriction. Keep production free of developer controls; use npm start dev to see the main-menu and Settings toggle.
 
+## Production password access — current branch contract, 24 October 2026
+
+DISAHKAN: Ijamm requests Dev access in production using password `demo41`, published to dev-tools only. This supersedes older production-exclusion statements above for this branch.
+
+`npm run build:prod` first builds the original player dist and validates private-data exclusion, then augments only release-prod with a static access gate, menu/Settings controls and an isolated Developer Hub. dist and the portable HTML remain player-only. `npm run start:prod` serves this output; uploading release-prod to Netlify or Pages includes the gate and Hub. Relative URLs work at the host root and a repository subpath.
+
+Production defaults OFF. Enabling via the main menu or Settings opens a masked password dialog. Incorrect entries retain OFF with an error; Cancel/Escape retain OFF. The correct password enables the Hub for the tab session. OFF clears authorization, requiring a fresh password; the Hub also offers Dev OFF / Return to Game. Direct Hub navigation prompts before creating its sandbox iframe. A directly loaded sandbox still rejects diagnostic mutations until unlocked.
+
+Player mode continues using real player storage. Only preview frames replace storage with memory; the production gate captures its dedicated native session key before isolation. Preview combat/card/motion changes never overwrite the player run. The pre-existing developer server remains password-free for local development.
+
+This is deliberately a client-side convenience lock for a static public game. The password, session flag, source and tools are inspectable/bypassable in browser developer tools. It is not secure server authentication. No private data belongs in the game bundle. No server/database/auth service is required or provisioned.
+
+Relevant checks: npm run check; node --test tests/dev-tools.test.cjs tests/release-build.test.cjs; npm run build:prod; npm run test:prod-dev-browser; npm run test:dev-browser. Hosted deployment is separate and main must remain unchanged until requested.
+
+## Extended sandbox tools — 24 October 2026
+
+DISAHKAN: add arbitrary map-node access across both stages, God Mode preventing HP loss, direct card insertion with copies/upgrade/Hand-or-draw, and one-click access to all 15 Mystery events. Ship only to dev-tools. These use the production renderer inside the isolated Hub preview, not the durable player run. Teleport uses a valid synthetic route prefix and preserves inventory; pending questions/choices must be finished. Card/Hand limits and Passive rules stay authoritative. Auto event fixtures satisfy prerequisites explicitly. God Mode is runtime-only, carries no save field and is unsuitable for balance evidence. [Current feature catalogue and limitations](../DEV_FEATURES.md).
+
+## Exact questions, status editor and bug reproduction — 24 October 2026
+
+DISAHKAN: Ijamm authorizes the five recommendations in the current feature guide, branch-only. Add exact-ID/consumer/language fixtures; validated native buff/debuff values and expiry; explicit one-way player-save copy/import; local HTML bug reports with optional user-selected screen capture; and four built-in real-engine scenarios. Preserve random sampling, authored question contents, profile-specific saves, native status caps/expiry and existing God/map/card tools. Unsupported status/expiry combinations are rejected rather than inventing new mechanics. The screenshot permission picker is browser-owned. No capture, report upload or player import occurs automatically. See docs/DEV_FEATURES.md.
 ## AI Playtester — branch ai, 24 October 2026
 
 DISAHKAN: Ijamm authorizes publishing the previously local strategy/simulation AI to ai and improving it, superseding no-push for this branch only. Main remains unchanged. Base main 6dc3ce3 / game 2.31.0 retains the illustrated tutorial.
@@ -93,3 +114,7 @@ DISAHKAN: Ijamm selects improvements 1–3 and requests implementation on ai. Sc
 DISAHKAN: Ijamm now explicitly requests pushing this completed AI update to main. This supersedes the two earlier ai-only publication boundaries. Integrate ai `807be67` with main `d5533ad`, retaining game 2.32.1, current combat presentation and menu music. AI remains available through `npm run start:dev` and `/__dev/ai/`; production/player routes and gameplay profiles retain their existing owners. Historical branch evidence is not evidence for the merged tree. [Main integration and fresh checks](../AI_PLAYTESTER_MAIN_2026_10_24.md).
 
 Release follow-up: Ijamm asks why the new AI feature did not increase the version. Release **2.33.0** identifies the added AI capabilities; generated metadata and launchers use the package version. Earlier 2.32.1 references above record the initial merge, not the current release. [Release-specific verification](../AI_PLAYTESTER_MAIN_2026_10_24.md#release-version-2330).
+
+## Main integration — 2.35.0, 24 October 2026
+
+DISAHKAN: Ijamm now authorizes publishing the complete production/password/extended diagnostics Dev update to main. This supersedes the branch-only publication boundaries above. Merge with main 2.34.0, preserve AI/local-only backend and card effects. The status editor follows the current percentage/duration Weak/Vulnerable rules. Production ships the static password-gated Hub; AI Playtester remains local-dev-server-only.

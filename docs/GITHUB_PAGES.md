@@ -31,3 +31,11 @@ Friends do not install Node.js and the owner's PC need not stay on. Saves and le
 ## First hosted attempt
 
 Run https://github.com/unDead41/slay-the-math-v2/actions/runs/39954703122 failed before any build step. GitHub check annotation: "The job was not started because your account is locked due to a billing issue." The local production/subpath browser checks passed, but this is not a live deployment. Resolve the account restriction, enable the Pages source, then rerun the workflow. No billing changes were made.
+
+## Production Dev branch update — 24 October 2026
+
+On dev-tools / 2.31.1-dev.1, the production build intentionally includes a password-gated static Developer Hub. This supersedes the older developer-exclusion description for this branch only. Player storage stays separate from memory-only previews. The gate is a client-side convenience lock, not secure authentication; see SOR 20. This feature has not been published to main or a live site.
+
+## Main release 2.35.0
+
+Ijamm has authorized the production Dev password, extended sandbox and diagnostics integration into main. The production build now intentionally includes the static gated Hub; earlier production-exclusion/branch-only statements are historical. AI Playtester still needs the local dev server and is not included in the static Hub.

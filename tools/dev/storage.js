@@ -2,8 +2,8 @@
 (function(){'use strict';
  const key='slay-the-math.dev-enabled.v1';
  let nativeSession,enabled=false;try{nativeSession=window.sessionStorage;enabled=nativeSession.getItem(key)==='on';}catch{}
- if(location.pathname==='/__dev/sandbox/')enabled=true;
- window.STMDevMode={get:()=>enabled,set(value){enabled=!!value;try{nativeSession?.setItem(key,enabled?'on':'off');}catch{}return enabled;}};
+ if(location.pathname.endsWith('/__dev/sandbox/'))enabled=true;
+ if(!window.STMDevMode)window.STMDevMode={get:()=>enabled,set(value){enabled=!!value;try{nativeSession?.setItem(key,enabled?'on':'off');}catch{}return enabled;}};
  function memory(){const values=new Map();return {get length(){return values.size;},key:i=>[...values.keys()][i]??null,getItem:k=>values.get(String(k))??null,setItem:(k,v)=>values.set(String(k),String(v)),removeItem:k=>values.delete(String(k)),clear:()=>values.clear()};}
  // Own properties are inherited by same-origin generated practice documents via
  // their own bootstrap below. Only the developer toggle uses a native session key.

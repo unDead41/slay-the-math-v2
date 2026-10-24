@@ -1,0 +1,32 @@
+{
+  "branch": "dev-tools",
+  "version": "2.31.1-dev.2",
+  "base": "5fb61b9db8921780781f121ef9f0f515eab093b0",
+  "mainUpdated": false,
+  "checks": {
+    "syntax": "npm run check passed",
+    "productionBuild": "passed",
+    "nodeTests": "15 passed, zero skips",
+    "nodeCoverage": [
+      "every node for both stages at seeds 7,18,42; original preview unchanged",
+      "all 40 cards in normal/upgraded state added to a physical combat hand/deck",
+      "52-card collection deck and capacity/Hand rejections",
+      "all 15 auto event fixtures start their real questions",
+      "nine lethal enemy turns survive with God ON; OFF permits defeat; property replacement recovery"
+    ],
+    "productionBrowser": [
+      "password wrong/Cancel/Settings unlock/session persistence",
+      "all map nodes enabled and deep node clicked",
+      "cross-stage Boss teleport",
+      "all 15 Mystery intros selected through UI",
+      "upgraded card inserted into live combat Hand",
+      "lethal enemy turn with God ON and OFF",
+      "card inspector and motion step",
+      "relock and direct-route mutation rejection",
+      "player/history sentinels unchanged",
+      "static /slay-the-math-v2/ hosting and actual --prod server"
+    ],
+    "developmentBrowser": "existing Hub/card/motion/presets/storage and toggle browser suites passed"
+  },
+  "scope": "Production renderer in isolated Dev preview. No durable player-run mutations or main deployment. Pending questions and choices must finish before teleport/card insertion. God tests are diagnostics, not balance evidence."
+}

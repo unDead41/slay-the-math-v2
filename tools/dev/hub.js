@@ -9,6 +9,7 @@
  function fillIntents(){option($('intent'),[{id:'',label:'Normal behavior'},...(catalog.enemies[val('enemy')]?.patterns||[]).map((p,i)=>({id:String(i),label:p.label}))],x=>x.id,x=>x.label);}
  function fillCards(){const q=val('cardSearch').toLowerCase();option($('card'),catalog.cards.filter(c=>(!val('category')||c.category===val('category'))&&(c.id+' '+c.name).toLowerCase().includes(q)),c=>c.id,c=>c.name+' · '+c.id);cardStates();}
  function cardStates(){const card=catalog.cards.find(c=>c.id===val('card'));for(const o of $('cardState').options)o.disabled=!card?.focus_eligible&&['focus','both'].includes(o.value);if($('cardState').selectedOptions[0]?.disabled)$('cardState').value='base';}
+ function fillNodes(){option($('mapNode'),api.mapNodes(number('stage'),number('seed')),n=>n.id,n=>'Level '+(n.depth+1)+' · '+n.label+' · '+n.name+' · '+n.id);}
  function fillAnimations(){const a=catalog.actors[val('actor')];option($('animation'),Object.keys(a.animations),x=>x,x=>x);$('frame').max=a.animations[val('animation')].frames.length-1;}
  function setup(){const deck=val('deck').split(/[\n,]/).map(x=>x.trim()).filter(Boolean).map(id=>({key:id.replace(/\+$/,''),upgraded:id.endsWith('+')}));return {kind:val('kind'),seed:number('seed'),stage:number('stage'),mode:val('mode'),enemy:val('enemy'),intent:val('intent'),elite:$('elite').checked,event:val('event'),hp:number('hp'),gold:number('gold'),enemyHp:val('enemyHp'),energy:number('energy'),focus:number('focus'),visit:number('visit'),deck,artifacts:[...$('artifacts').selectedOptions].map(o=>o.value)};}
  function assign(o){$('search').value='';fillEnemies();if(o.enemy!==undefined)$('enemy').value=o.enemy;fillIntents();for(const id of ['kind','seed','stage','mode','enemy','intent','event','hp','gold','enemyHp','energy','focus','visit'])if(o[id]!==undefined)$(id).value=o[id];$('elite').checked=!!o.elite;$('deck').value=(o.deck||[]).map(c=>typeof c==='string'?c:c.key+(c.upgraded?'+':'')).join('\n');for(const opt of $('artifacts').options)opt.selected=(o.artifacts||[]).includes(opt.value);}
@@ -17,12 +18,28 @@
  function presetList(){option($('preset'),presets,p=>p.name,p=>p.name);}
  function savePresets(next){if(!storageOK)throw Error('Preset storage is unavailable or unreadable. Export your setup instead.');localStorage.setItem(KEY,JSON.stringify(next));presets=next;presetList();}
  function details(){return {version:catalog.version,setup:lastSetup,current:api.snapshot(),logs};}
- frame.addEventListener('load',()=>{api=frame.contentWindow.STMDevApi;if(!api){status('Game adapter failed to load. Check developer server output.',true);return;}catalog=api.catalog();$('hp').max=catalog.maxHp;fillEnemies();fillCards();option($('artifacts'),catalog.artifacts,a=>a.id,a=>a.name+' · '+a.id);option($('actor'),Object.entries(catalog.actors),x=>x[0],x=>x[1].name);fillAnimations();status('Ready · v'+catalog.version+' · sandbox progress is temporary.');record('ready',{version:catalog.version});});
+ frame.addEventListener('load',()=>{api=frame.contentWindow.STMDevApi;if(!api){status('Game adapter failed to load. Check developer server output.',true);return;}catalog=api.catalog();$('hp').max=catalog.maxHp;fillEnemies();fillCards();option($('artifacts'),catalog.artifacts,a=>a.id,a=>a.name+' · '+a.id);option($('actor'),Object.entries(catalog.actors),x=>x[0],x=>x[1].name);fillAnimations();fillNodes();option($('questionId'),api.questions(),q=>q.id,q=>q.id+' · '+q.topicCode);status('Ready · v'+catalog.version+' · sandbox progress is temporary.');record('ready',{version:catalog.version});});
  document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('.panel').forEach(x=>x.hidden=x.id!==b.dataset.tab);}));
  const on=(id,fn)=>$(id).addEventListener('click',()=>safely($(id).textContent,fn));
  on('launch',()=>{const o=setup(),result=api.launch(o);lastSetup=o;return {scene:result.run.scene,valid:result.valid};});
  on('restart',()=>api.restart());on('back',()=>api.home());on('refill',()=>api.command('refill'));on('turn',()=>api.command('turn'));on('draw',()=>api.command('draw'));on('forceWin',()=>api.command('win'));on('forceLose',()=>api.command('lose'));
  on('reset',()=>{assign({kind:'combat',seed:7,stage:0,mode:'learn',enemy:Object.keys(catalog.enemies)[0],intent:'',event:catalog.events[0].id,hp:30,gold:500,enemyHp:'',energy:3,focus:0,visit:1,deck:[],artifacts:[]});api.home();lastSetup=null;});
+ on('godMode',()=>{const result=api.godMode(!api.snapshot().godMode);$('godMode').setAttribute('aria-checked',String(result.godMode));$('godMode').textContent='God Mode: '+(result.godMode?'ON':'OFF');return result;});
+ $('freeMap').addEventListener('change',()=>safely('Free map',()=>api.freeMap($('freeMap').checked)));
+ on('refreshNodes',()=>{fillNodes();return api.mapNodes(number('stage'),number('seed'));});
+ $('stage').addEventListener('change',()=>{if(api)fillNodes();});
+ on('teleport',()=>api.teleport(number('stage'),val('mapNode'),number('seed')));on('returnMap',()=>api.returnMap());
+ on('openEvent',()=>api.openEvent(val('event'),setup()));
+ on('addCard',()=>api.addCards(val('card'),number('addCount'),$('addUpgraded').checked,val('addDestination')));
+ on('openQuestion',()=>api.question(val('questionId'),val('questionContext'),val('questionLanguage'),setup()));
+ on('applyStatus',()=>api.setStatus(val('statusTarget'),val('statusId'),number('statusValue'),val('statusDuration')));
+ on('loadScenario',()=>api.scenario(val('scenarioId'),setup()));
+ on('loadPlayerCopy',()=>{if(!window.STMDevAccess)throw Error('Copy the player run from production, or import an exported save.');const data=window.STMDevAccess.copiedSave();const result=api.loadPlayerRun(data.content);window.STMDevAccess.clearCopy();return result;});
+ $('importPlayerSave').addEventListener('change',()=>safely('Import player save',async()=>{const input=$('importPlayerSave'),file=input.files[0];input.value='';if(!file)return;if(file.size>2000000)throw Error('Save exceeds 2 MB.');return api.loadPlayerRun(await file.text());}));
+ function reportData(){const current=api.snapshot();return {...details(),current,note:val('bugNote'),capturedAt:new Date().toISOString(),location:location.origin+location.pathname,viewport:{width:innerWidth,height:innerHeight},summary:{seed:current.run?.seed,stage:current.run?.stage,node:current.run?.route?.active,deck:current.run?.deck}};}
+ function exportReport(data,image){const url=URL.createObjectURL(new Blob([window.STMDevReport.html(data,image)],{type:'text/html'})),a=document.createElement('a');a.href=url;a.download='stm-bug-report-'+Date.now()+'.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);return {downloaded:true,screenshot:!!image};}
+ on('plainReport',()=>exportReport(reportData(),null));
+ on('captureReport',async()=>{const data=reportData(),image=await window.STMDevReport.screenshot();return exportReport(data,image);});
  on('compare',()=>api.cards(val('card'),val('language'),setup()));
  on('testCard',()=>api.testCard(val('card'),val('cardState'),setup()));
  on('openMotion',()=>api.motion(motion()));on('applyMotion',()=>api.motion(motion()));

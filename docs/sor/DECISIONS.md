@@ -561,6 +561,17 @@ DISAHKAN: Ijamm requests GitHub Pages to let friends play the latest game easily
 - **DITERUSKAN:** retain current artwork/card/question/rules, existing native Tutorial controls and Learn entry. Enlarge example screenshots, preserve focus, support natural scrolling and storage failure. Timed Mystery keeps its deadline and warns before prolonged guide use. Publishing the feature branch is delivery; main integration remains separate.
 - **PERLU_VERIFIKASI:** physical devices, classroom comprehension and future screenshots after UI changes. MODEL.zip failed to arrive and is not used; the three uploaded PDFs are not modified. [Scope and verification](../TUTORIAL_2_31_0.md).
 
+## Production Dev password — 24 October 2026
+
+DISAHKAN: Ijamm requests production Dev ON/OFF with password demo41, branch dev-tools only. Build a static password dialog and Hub using existing adapters; preserve player storage and isolate previews. Supersedes production exclusion on this feature branch. Client-side gate is not server authentication. Main publication is not authorized.
+
+## Extended developer sandbox — 24 October 2026
+
+DISAHKAN: Ijamm requests free map access, invulnerable HP, immediate card insertion and access to all 15 Mystery events in the production Dev sandbox. Keep source mechanics, saves and normal progression unchanged. Current branch only; no main publication. Suggestions in docs/DEV_FEATURES.md remain CADANGAN.
+
+## Developer diagnostics — 24 October 2026
+
+DISAHKAN: apply the five previously proposed developer features on dev-tools only. Include 120 exact question IDs in three contexts with language selection, supported native status edits, explicit copied player-save import, local bug report/screenshot export and four built-in scenarios. Keep main unchanged and player data isolated.
 
 ## DEC-20261024-MENU-MUSIC — New opening menu track, branch only
 
@@ -610,3 +621,7 @@ DISAHKAN: Ijamm quotes and selects the first three proposed AI improvements and 
 - DISAHKAN: Ijamm says “okay push ke main”, superseding CARD-EFFECTS' earlier branch-only boundary.
 - DITERUSKAN: integrate feature `a9c49f0` with current main `c54ce92` / 2.33.0 as **2.34.0**. Preserve the supplied menu recording, AI developer tool, original artwork, combat presentation, questions, existing saves and both branches' decision histories. AI incoming estimates, duration-source support accounting and Last Ember retention attribution follow the current rules; historical numeric reports keep their original provenance.
 - Verification covers the merged tree, including active/archived cards and production/developer separation. Synthetic checks do not establish pupil win rates, physical-device behavior or hosted deployment. [Integration record](../CARD_EFFECTS_MAIN_2_34_0.md).
+
+## Main integration — 2.35.0, 24 October 2026
+
+DISAHKAN: Ijamm now authorizes publishing the complete production/password/extended diagnostics Dev update to main. This supersedes the branch-only publication boundaries above. Merge with main 2.34.0, preserve AI/local-only backend and card effects. The status editor follows the current percentage/duration Weak/Vulnerable rules. Production ships the static password-gated Hub; AI Playtester remains local-dev-server-only.

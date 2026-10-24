@@ -1,0 +1,37 @@
+{
+  "version": "2.35.0",
+  "mainParent": "5283cd616a73c3e81943cccceb3b5499b1231f88",
+  "devParent": "7335e9565ffddecf999a72e00c125514188badf4",
+  "authorizedMain": true,
+  "integration": [
+    "preserve v2.34.0 card effects and v2.33 AI/backend routes",
+    "merge production password gate, free map, God mode, deck insertion, events, exact questions, native statuses, player copy, reports, presets",
+    "adapt Weak/Vulnerable expiry to current percentage-duration engine",
+    "keep AI Hub link on local dev; omit server-only AI link from static production"
+  ],
+  "checks": {
+    "devReleaseNode": {
+      "passed": 20,
+      "skipped": 0
+    },
+    "cardEffectsAndAiRoutes": {
+      "passed": 36,
+      "note": "AI server routing/job tests and card-effects tests; no full AI simulation suite claim"
+    },
+    "cardExplanationDom": {
+      "passed": 7,
+      "skipped": 0
+    },
+    "syntax": "npm run check passed, including check:ai",
+    "productionBuild": "passed",
+    "browser": [
+      "production/static subpath/password/extended diagnostics/copy/screenshot pipeline passed",
+      "local dev Hub and toggle passed"
+    ]
+  },
+  "limits": [
+    "Static password is a UI convenience lock, not secure server authentication.",
+    "Capture pipeline test uses an explicit synthetic MediaStream; physical browser chooser remains user-owned.",
+    "No remote CI success or live hosting success claimed."
+  ]
+}

@@ -1,3 +1,67 @@
+# Combat animation — live integration 2.44.0
+
+| Field | Current record |
+| --- | --- |
+| Date | 24 October 2026 UTC / 25 October 2026 Malaysia |
+| Repository | unDead41/slay-the-math-v2 |
+| Reviewed main / base | `f59e9e915e4107627c48a13240bb959fcb2e1a61`, game 2.43.0 |
+| Reviewed main tree | `fb1db4ee736d37c6b3b053840d7cfc75439e4840` |
+| Local integration branch | combat-animation-live, created clean on that exact main |
+| Publication targets | combat-animation, then main, continuing Ijamm's combat main instruction |
+| Master SOR read | 1.2.0 from current main before changes; AGENTS, domain owners and prior audit read |
+| Current scope | Apply the reviewed Shield V3 / Passive V10 / stat-barrier V9 fields to actual combat |
+| Compatibility | **VALID within the tested integration scope**, with the explicit limits below |
+| Publication identity | Exact resulting commit/ref is verified after publication and identified in the handoff |
+
+Ijamm now requests “saya nak semua VFX diapply dalam game saya ni please”. This supersedes the runtime preview-only boundary in the historical audit below. The existing main-push instruction applies to this continuation of the same combat work; no hosted Site deployment or unrelated mechanics change is performed. [Runtime contract and release](../../COMBAT_VFX_LIVE_2_44_0.md), [exact fresh evidence and commands](live-vfx/README.md).
+
+## Before-change review
+
+Main contains the approved preview but its production `status-vfx.js` still uses the older SVG presentation. The approved painters do not receive actual combat receipts and do not render on enemies. Existing stable actor canvases, canonical status projection, card-motion labels/SFX, save/RNG and bilingual owners must be retained. The old combat-animation publication is already an ancestor of this main; basing the integration on pinned current main avoids replacing newer language, balance, education and icon work.
+
+The separate older local checkout has unrelated uncommitted SOR edits. Those edits are preserved; this task uses a fresh checkout. The initial new branch was clean. Final changes are limited to presentation integration, its tests/QA helper, generated release/resource entrypoints, package version/check script and related owner/audit documentation.
+
+## Confirmed problems and final actions
+
+| ID / category | Priority / confidence | Evidence and impact | Final action / status |
+| --- | --- | --- | --- |
+| LIVE-001 / MASALAH DISAHKAN | P2 / high | Main's reviewed V10 fields were standalone; actual battle did not use them. | RESOLVED: read-only receipt/status adapter plus persistent front/back compositor for each eligible actor. All ten real Passive triggers and both-actor native pixels verified. |
+| LIVE-002 / MASALAH DISAHKAN | P2 / high | A log-only restore loses a previously triggered Passive once its old entry is trimmed. A new failing test reproduces this without mutating the save. | RESOLVED for presence: project existing engine trigger counters. Preserve observed live order; deterministic fallback and irrecoverable historical-order limit are documented, not hidden as exact reconstruction. |
+| LIVE-003 / MASALAH DISAHKAN | P2 / high | Targeted tests/native review expose disappearing Shield during action lead, positive replacement Block incorrectly expiring, existing Shield re-forming on top-up, and Thorns fading before its queued expiry. | RESOLVED: retain pending-impact material, expire only when Block is gone, pulse existing shield, and keep Thorns formed until the queued retraction. Relevant regression tests pass. |
+| LIVE-004 / MASALAH DISAHKAN | P2 / high | Last-frame diagnostics could remain playing after scheduling stopped; a Canvas-less environment attempted unsupported contexts. | RESOLVED: publish final empty diagnostics and retain readable badges/labels without old decorative floor effects when Canvas 2D is absent. Scheduler/DOM tests pass. |
+| ENV-001 / MASALAH DISAHKAN, environment | P2 / high | Initial 1,073-test run: three missing report-fixture failures and two unresolved `sharp` imports. Root storage constraints led to sparse reports and an incomplete dependency search path. | RESOLVED: restore tracked reports and use installed test dependencies. All five cases pass in the recorded targeted rechecks; retain the initial 1,068/5 result rather than claiming an all-green first full run. |
+
+## Risks and improvements
+
+| ID / category | Priority / confidence | State, basis and limit |
+| --- | --- | --- |
+| Previous RISK-001 / RISIKO BERPOTENSI | P2 / high | CLOSED for the implemented integration: actual statuses/receipts, canvas retention, player/enemy ownership and canonical save/RNG have fresh tests. This does not certify all devices or the whole game's resource bootstrap. |
+| Previous RISK-002 / RISIKO BERPOTENSI | P2 / medium | OPEN: host CPU draw timing is not physical-device FPS/GPU/memory. Native 390px rendering is checked; real phone/Windows hardware remains unverified. |
+| LIVE-RISK-001 / RISIKO BERPOTENSI | P3 / high | OPEN: the bounded existing log cannot reconstruct exact order among several already-trimmed first triggers on a fresh Continue. Presence is correct; live-session order is retained; no save-schema change is introduced. |
+| Previous IMP-002 / PENAMBAHBAIKAN, proposal | P3 / medium | OPEN: human recognition of all ten ornaments at gameplay scale remains useful and is not inferred from automated ID/pixel checks. |
+| LIVE-IMP-001 / PENAMBAHBAIKAN, implemented | P2 / high | Earlier draw-cost adaptation, approximately 0.8/0.4 MP Full/Low buffers, fixed stat lanes, fading-effect crowd budgets and no idle RAF reduce cost while retaining motif identity. Native host samples and their limits are recorded. |
+
+Tiada isu tambahan ditemui dalam skop yang disemak. No engine, card/stat numerical rules, save schema, RNG, original assets/icons, language bank, AI, economy, education or map owner is modified.
+
+## Fresh final checks
+
+- Initial project suite: **1,068 PASS / 5 environment failures / 0 skipped** out of 1,073; all five failing cases subsequently pass after environment repair.
+- Final relevant regression after the last runtime corrections: **104 PASS / 0 FAIL**. Report-dependent/status-explanation recovery: **16 PASS / 0 FAIL**. Final resource checks: **14 PASS / 0 FAIL**. Final portable boot: **1 PASS / 0 FAIL**.
+- `npm run check`, final changed-file syntax checks and `npm run build:prod` pass. Required scripts/styles, final content hashes, portable embedding and source/production resource bytes are checked.
+- Approved painter modules are byte-identical to preview sources. Preview rebuild and 60-loop/1,440-triple/11,580-sample contracts still pass. Original source art/icons and numerical owner files are preserved in the final Git diff.
+- Native production-module harness: all ten real-trigger Passive cases have correct IDs and nonempty front/back pixels; three layers follow actual receipt order `[4,0,1]`; 390px Low has no document overflow; body-only buffers have zero floor alpha for both actors. Dialog/Motion Off pause, resume and an actual keyboard Rune Guard action are observed. [Exact observations and runtime hashes](live-vfx/native-browser.json), [final screenshot](live-vfx/native-runtime.jpg).
+- Final diff, whitespace, repository links, build outputs, guarded/non-forced branch publication and actual remote main are reviewed before/after publication. Do not substitute the historical preview screenshot or test counts below for this new code.
+
+## Limits and handoff
+
+Native QA uses unchanged production game modules in a local fixture shell; the managed HTTP host lacks secure-context Web Crypto, so native full resource/bootstrap/cache/offline acceptance is **BELUM DISAHKAN**. Production code is not modified to compensate. Brief native hit/expiry selector samples timed out; their exact phases/queue order are verified by deterministic compositor and real receipt tests, not called native visual passes. Physical hardware performance and final human recognition remain open. MODEL.zip was unavailable and not read; mathematics PDFs are outside scope.
+
+Version **2.44.0** includes live combat integration. The release contract gives normal production build/start instructions and a no-schema-migration rollback. Publish only after fresh checks and current-head review; use a non-forced fast-forward and verify both actual remote refs. The resulting full SHA is part of the final handoff, not a self-referential value guessed inside this commit.
+
+---
+
+The following is the archived preview-only publication audit. Its scope and no-runtime statements describe that earlier snapshot and are superseded above.
+
 # Combat animation — V10 preview branch audit
 
 ## Main publication addendum — 25 October 2026

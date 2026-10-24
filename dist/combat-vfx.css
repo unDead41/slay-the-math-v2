@@ -1,0 +1,9 @@
+/* The actor bitmaps and their original floor pivots retain their dimensions. */
+.combat-layout .fighter-anchor{isolation:isolate}
+.combat-layout .fighter-anchor>.fighter-art,.combat-layout .fighter-anchor>.actor-animation{position:absolute;inset:0;z-index:2}
+.combat-layout .fighter-anchor>.combat-vfx-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none!important;contain:strict;z-index:1}
+.combat-layout .fighter-anchor>.combat-vfx-canvas[data-vfx-layer=front]{z-index:3}
+.combat-layout .status-vfx{z-index:4}
+.reduce-motion .combat-vfx-canvas{display:none}
+@media(prefers-reduced-motion:reduce){.combat-vfx-canvas{display:none}}
+@media(forced-colors:active){.combat-vfx-canvas{display:none}}

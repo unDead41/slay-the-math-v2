@@ -1,6 +1,8 @@
 # Slay the Math — Set of Rules
 
-Current V10 preview publication, 25 October 2026: Ijamm now authorizes publishing the completed `combat-animation` preview to main. [Current handoff](docs/audits/combat-animation/LATEST.md), [open/edit the standalone preview](previews/combat-vfx/README.md). This supersedes the earlier branch-only boundary below. Production combat integration is still separate; game runtime and release version remain 2.43.0.
+Current live combat VFX, game 2.44.0: Ijamm now requests applying all approved effects in the actual game. [Runtime behaviour and limits](docs/COMBAT_VFX_LIVE_2_44_0.md), [SOR 11 MOT-30–32](docs/sor/11_ANIMATION_VFX_AUDIO.md), [fresh audit/evidence](docs/audits/combat-animation/LATEST.md). This supersedes the preview-only runtime boundary in the historical records below. Preserve original artwork/icons and numerical/save/RNG owners.
+
+Historical V10 preview publication, 25 October 2026: Ijamm now authorizes publishing the completed `combat-animation` preview to main. [Current handoff](docs/audits/combat-animation/LATEST.md), [open/edit the standalone preview](previews/combat-vfx/README.md). This supersedes the earlier branch-only boundary below. Production combat integration is still separate; game runtime and release version remain 2.43.0.
 
 Branch preview publication, 25 October 2026: [Combat VFX V10 audit and handoff](docs/audits/combat-animation/LATEST.md), [preview and sources](previews/combat-vfx/README.md). Ijamm authorizes pushing the completed V10 preview to `combat-animation` only. Its branch now uses current main 2.43.0; these visuals remain standalone and are not installed in the production game.
 

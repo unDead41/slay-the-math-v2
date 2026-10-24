@@ -1,5 +1,12 @@
 # Changelog SOR — Slay the Math
 
+## Live combat VFX — game 2.44.0, 25 October 2026
+
+- Install the approved Shield V3, ten Passive V10 ornaments and stat/barrier V9 fields in actual combat, with shared actor-neutral rendering for the enemy's existing eligible statuses.
+- Drive gain/hit/break/expiry from committed values/receipts. Preserve existing Shield material on Block top-up/replacement; queue Thorns impact before expiry. Recover already-triggered Passive presence from counters when the bounded log is trimmed.
+- Retain canvas/clock/layer order through UI updates, reserve the floor for Passive, separate stat lanes and bound textures, pixel buffers and RAF work. Adapt crowding during expiry as well as active effects.
+- Preserve original art/icons, engine/card mechanics, bilingual explanations, RNG and save schema. Regenerate release/resource/portable/production outputs; record actual tests, environment recovery and native module-harness evidence in the current audit.
+
 ## Combat VFX V10 preview on main — 25 October 2026
 
 - Ijamm now authorizes main publication of the completed `combat-animation` / e1775c6 preview. Supersede the previous branch-only boundary for these finished files.

@@ -1,0 +1,48 @@
+✖ all reviewed runtime derivatives decode with checked hashes, alpha padding and a common canvas (1.177157ms)
+✔ one resolver serves host aliases, source artifact UI and portable embeds without confusing icon meanings (1.440374ms)
+✔ regenerating the supplier card adapter restores all selected originals and portrait frames (28.161052ms)
+✔ only the three approved status variants change the published UI, map, status and topic mappings (0.866898ms)
+✔ restored card, frame and artifact bytes match the original source conversion manifests (29.962711ms)
+✔ reimport scope cannot replace approved cards or artifacts and preserves unrelated aliases (1.708899ms)
+✔ the original owned artifact appears in the live HUD and source Codex online and offline (4181.650462ms)
+✔ live boss seals, enemy intent, status details and card art keep the same save and numeric meaning online and offline (4157.596819ms)
+✔ Sound, Save and topic icon states survive rerendering without changing settings semantics or adding game actions (466.145673ms)
+✔ current integrity gate rejects records executed under another runtime identity (1.91515ms)
+✔ current worker captures real Master entries for all three bound profiles (979.480041ms)
+✔ Master runtime choice is preserved by fixed campaign tasks and context (134.787153ms)
+✔ current worker rejects a captured entry from a different difficulty (4.660714ms)
+✔ versioned regression protocol fingerprints its actual runner and schedule (39.805277ms)
+✔ current feedback settles two wrong attempts without a third attempt or loop (905.940701ms)
+✔ artifact affordability observes the same Master quote used by a purchase (88.742996ms)
+✔ current report does not deduct a legacy Gold grant which Master never awards (0.727087ms)
+✔ Master artifact affordability telemetry uses the actual profile quote at a tight Gold boundary (387.617037ms)
+✔ Purse purchase reports gross Gold earned and gross charge, including room and Shop totals (269.349361ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 18
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9556.680819
+
+✖ failing tests:
+
+test at tests/icon-package.test.cjs:18:1
+✖ all reviewed runtime derivatives decode with checked hashes, alpha padding and a common canvas (1.177157ms)
+  Error: Cannot find module 'sharp'
+  Require stack:
+  - /dev/shm/stm-vfx-runtime-0a6170ee0c25/tests/icon-package.test.cjs
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+      at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+      at Module._load (node:internal/modules/cjs/loader:1294:5)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+      at Module.require (node:internal/modules/cjs/loader:1617:12)
+      at require (node:internal/modules/helpers:153:16)
+      at TestContext.<anonymous> (/dev/shm/stm-vfx-runtime-0a6170ee0c25/tests/icon-package.test.cjs:19:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [ '/dev/shm/stm-vfx-runtime-0a6170ee0c25/tests/icon-package.test.cjs' ]
+  }

@@ -1,5 +1,12 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-COMBAT-LIVE — Apply the approved fields to actual combat
+
+- **DISAHKAN:** Ijamm requests “saya nak semua VFX diapply dalam game saya ni please” after the completed preview was pushed to main. Integrate all reviewed effects; this supersedes their earlier preview-only boundary. Continue the authorized combat main update, without a separate hosted deployment.
+- **DITERUSKAN implementation:** read-only actual-status/receipt projection, persistent front/back canvases, trigger-ordered Passive V10, Passive-only floor, Shield V3 lifecycle and V9 nonoverlapping stat/barrier effects for each eligible actor. Preserve every original asset/icon and all gameplay/save/RNG owners.
+- **DITERUSKAN limits:** existing counters restore trimmed-log Passive presence, with deterministic fallback ordering when first-trigger history is no longer saved. Adaptive quality counts fading effects and keeps every primary motif. Physical-device FPS and final human recognition remain separate acceptance work.
+- Owner: [SOR 11 MOT-30–32](11_ANIMATION_VFX_AUDIO.md), [runtime contract](../COMBAT_VFX_LIVE_2_44_0.md), [audit/evidence](../audits/combat-animation/LATEST.md).
+
 ## DEC-20261025-COMBAT-V10-MAIN — Publish the completed preview to main
 
 **DISAHKAN:** Ijamm now says “okay push ke main please” after the verified `combat-animation` publication `e1775c673d3b663273ce8ab2d9d9e4df28d27fc6`. Publish that completed standalone V10 HTML, gallery, editable sources and audit on current main `2aea9057eba8ce0c23c5fdd203dfe12637c1d871`. This supersedes DEC-20261025-COMBAT-V10-BRANCH's main-publication restriction for this completed preview. It does not represent an implementation of these preview effects in live combat. Preserve production runtime/build/assets/version and current language/balance owners. [Current publication audit](../audits/combat-animation/LATEST.md).

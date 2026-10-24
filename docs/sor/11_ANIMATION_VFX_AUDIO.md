@@ -1,6 +1,16 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.8.1. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.9.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+
+## Integrasi combat sebenar — 2.44.0, 25 Oktober 2026
+
+**MOT-30 (DISAHKAN):** Ijamm kini meminta semua VFX yang telah siap digunakan dalam game sebenar. Ini menggantikan batas preview-only dalam rekod sejarah di bawah. Sambungkan Shield V3, sepuluh Passive V10 dan stat/barrier V9 kepada nilai, trigger serta receipt sebenar; kekalkan artwork, ikon, mekanik, RNG dan save asal. Arahan main terdahulu diteruskan untuk pembetulan integrasi ini; bukan deployment Site baharu. [Kontrak runtime dan batas](../COMBAT_VFX_LIVE_2_44_0.md).
+
+**MOT-31 (DITERUSKAN implementasi):** Dua canvas stabil bagi setiap watak melukis depan/belakang tanpa mengulang jam apabila UI dikemas kini. Passive ikut first-trigger receipt, circle bersama 1/2/3 dan ornamen unik V10. Counter engine memulihkan kehadiran Passive jika log lama dipotong; urutan tepat antara beberapa trigger lama yang telah hilang tidak boleh dibina semula daripada schema save sedia ada. Body buffer berasingan dipudarkan sebelum kaki; lantai khas untuk Passive. Musuh menerima hanya status yang benar-benar dimiliki melalui pemilik mekanik semasa.
+
+**MOT-32 (DITERUSKAN lifecycle dan bajet):** Shield gain/active/hit/break/expiry berbeza; tambahan Block pada shield sedia ada memberi sheen, manakala Block positif yang lebih kecil tidak mematikan barrier. Thorns hit mendahului retraction jika tamat pada tindakan sama. Weak chain pecah; Vulnerable terurai. Motion/dialog/visibility cancellation, finite lifecycle queues, fixed stat lanes, bounded buffers dan pelarasan Low selepas dua belas frame mahal melindungi kejelasan serta kos render. Nilai bajet ialah pilihan implementation, bukan jaminan FPS peranti fizikal.
+
+**Semakan:** trigger engine kesemua sepuluh Passive, hasil save/RNG bebas, ownership pemain/musuh, permukaan canvas kekal, lifecycle, pause dan laluan partikel. Ujian regresi dan native browser menggunakan build yang dikenal pasti; [audit semasa](../audits/combat-animation/LATEST.md) membezakan keputusan sebenar, kegagalan persekitaran yang diuji semula dan had resource-bootstrap/telefon fizikal. Reka bentuk serta endpoint painter kekal sama dengan preview; ini tidak mengubah numerical balancing atau memperkenalkan Passive musuh.
 
 ## Penerbitan main — 25 Oktober 2026
 

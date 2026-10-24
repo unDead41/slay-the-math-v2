@@ -1,0 +1,15 @@
+✔ the last expiry frame clears diagnostics and stops scheduling (113.879523ms)
+✔ unrelated combat rerenders retain clock, first-trigger order and removed-slot compaction (48.89406ms)
+✔ player and enemy use three disjoint stat channels even with mixed signs (13.09842ms)
+✔ Thorns impact finishes before expiry and queued lifecycle ends without new RAF work (83.934345ms)
+✔ an existing shield stays visible while its impact waits for the enemy action lead (19.493487ms)
+✔ dialog, Motion Off, pagehide and destroy stop work; restoring motion resumes the same field (22.451943ms)
+✔ sustained expensive rendering lowers quality within the first twenty frames (13.290169ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 689.575781

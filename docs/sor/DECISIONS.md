@@ -1,5 +1,12 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-AI-EXPERIENCE — Current-source AI and portable simulation data
+
+- **DISAHKAN:** Ijamm requests reading latest main, improving efficiency/intelligence/accuracy with available simulations, a Markdown data-saving instruction for balancing owners, and publishing the result to the assistant's branch first. No main push for this update.
+- **DITERUSKAN:** Main2.45.0/6c49f39 base, balance/master2.46.0-ai.1, sampled-turn-search-4. Reuse exact incoming projections; make Search/Burning Page/Read Ahead account for public composition and actual remaining payments. Preserve gameplay numerical owners and bounded simulation/observation rules.
+- **DITERUSKAN:** Offline source-bound small acquisition priors from fresh Combat factorial replay; training93, heldout701/702, exact runtime/difficulty/policy compatibility and safe fallback. Frozen OFF/ON terminal nonregression gate before default activation; no tuning on those validation outcomes. Map/Economy standardized exports remain diagnostic, not fitted route/economy learners.
+- **PERLU_VERIFIKASI:** Generalization, additional enemy/seed/deck coverage, physical-device performance and pupil90/70/50. [Evidence](../balance/master/AI_DATA_2026_10_25.md), [data handoff](../balance/SIMULATION_DATA_HANDOFF.md).
+
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
 - **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.

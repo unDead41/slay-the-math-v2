@@ -1,6 +1,6 @@
 {
   "name": "duel-cube-math",
-  "version": "2.45.0",
+  "version": "2.46.0-ai.1",
   "private": true,
   "description": "Developer sandbox for scenes, card states and actor motion",
   "scripts": {
@@ -59,9 +59,9 @@
     "test:tutorial-browser": "node tests/tutorial-browser.cjs",
     "capture:tutorial": "node tools/capture-tutorial.cjs",
     "ai:playtest": "node tools/ai-playtester/cli.cjs",
-    "test:ai": "node --test tests/ai-playtester-agent.test.cjs tests/ai-playtester-strategy.test.cjs tests/ai-playtester-effects.test.cjs tests/ai-playtester-deck.test.cjs tests/ai-playtester-acquisition.test.cjs tests/ai-playtester.test.cjs tests/ai-playtester-server.test.cjs",
+    "test:ai": "node --test tests/ai-playtester-agent.test.cjs tests/ai-playtester-strategy.test.cjs tests/ai-playtester-effects.test.cjs tests/ai-playtester-deck.test.cjs tests/ai-playtester-acquisition.test.cjs tests/ai-playtester.test.cjs tests/ai-playtester-server.test.cjs tests/ai-experience-data.test.cjs tests/ai-experience-policy.test.cjs tests/ai-choice-efficiency.test.cjs",
     "test:ai-browser": "node tests/ai-playtester-browser.cjs",
-    "check:ai": "node --check tools/ai-playtester/agent.cjs && node --check tools/ai-playtester/experiments.cjs && node --check tools/ai-playtester/report.cjs && node --check tools/ai-playtester/worker.cjs && node --check tools/ai-playtester/cli.cjs && node --check tools/dev/playtester/server.cjs && node --check tools/dev/playtester/app.js && node --check tools/ai-playtester/effects.cjs && node --check tools/ai-playtester/deck-policy.cjs && node --check tools/ai-playtester/artifact-policy.cjs",
+    "check:ai": "node --check tools/ai-playtester/agent.cjs && node --check tools/ai-playtester/choice-policy.cjs && node --check tools/ai-playtester/experience.cjs && node --check tools/ai-playtester/experience-data.cjs && node --check tools/ai-playtester/experience-cli.cjs && node --check tools/ai-playtester/experiments.cjs && node --check tools/ai-playtester/report.cjs && node --check tools/ai-playtester/worker.cjs && node --check tools/ai-playtester/cli.cjs && node --check tools/dev/playtester/server.cjs && node --check tools/dev/playtester/app.js && node --check tools/ai-playtester/effects.cjs && node --check tools/ai-playtester/deck-policy.cjs && node --check tools/ai-playtester/artifact-policy.cjs",
     "test:prod-dev-browser": "node tests/production-dev-browser.cjs",
     "test:report-browser": "node tests/learning-report-browser.cjs",
     "test:practice-workspace-browser": "node tests/education-workspace-browser.cjs",
@@ -70,6 +70,7 @@
     "test:icon-clarity": "node --test --test-concurrency=1 tests/icon-clarity-ui.test.cjs tests/combat-status.test.cjs tests/status-explanation.test.cjs tests/icon-readiness.test.cjs",
     "test:icon-clarity-browser": "node tests/icon-clarity-browser.cjs",
     "test:status-explanation-browser": "node tests/status-explanation-browser.cjs",
-    "audit:language": "node tools/audit-game-language.cjs"
+    "audit:language": "node tools/audit-game-language.cjs",
+    "ai:data": "node tools/ai-playtester/experience-cli.cjs"
   }
 }

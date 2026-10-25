@@ -1,0 +1,1503 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-acquisition-priors",
+  "trainingPolicy": "sampled-turn-search-4",
+  "policySignature": "30a326f3aa5c7a10742171505365dcccb4b23a0aa24016311655a610612a65e3",
+  "trainingSeeds": [
+    93
+  ],
+  "validationSeeds": [
+    701,
+    702
+  ],
+  "inputDigest": "42bf8b286187f7826819548e253819e86fb8f29fee178277601ce141bcd7ee89",
+  "source": {
+    "branch": "balance/master",
+    "commit": "e5254da0000bcc24d16029f1b0d66f5139ae2489"
+  },
+  "summary": {
+    "singleContexts": 480,
+    "pairContexts": 48,
+    "excluded": 0
+  },
+  "profiles": {
+    "f37e9a8ce6f9da7f9d80618753573272c594bd1d161d5832ac09ab3980cb1eef": {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "easy",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d"
+      },
+      "cards": {
+        "stm.attack.rune_strike:false": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.rune_strike:true": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.weak_point:false": {
+          "contexts": 2,
+          "meanDelta": -2.2142857142857153,
+          "adjustment": -0.0316326530612245
+        },
+        "stm.attack.weak_point:true": {
+          "contexts": 2,
+          "meanDelta": -1.25,
+          "adjustment": -0.017857142857142856
+        },
+        "stm.attack.scout_strike:false": {
+          "contexts": 2,
+          "meanDelta": -3.000000000000007,
+          "adjustment": -0.04285714285714296
+        },
+        "stm.attack.scout_strike:true": {
+          "contexts": 2,
+          "meanDelta": -6.107142857142854,
+          "adjustment": -0.08724489795918364
+        },
+        "stm.attack.return_strike:false": {
+          "contexts": 2,
+          "meanDelta": -0.2857142857142847,
+          "adjustment": -0.00408163265306121
+        },
+        "stm.attack.return_strike:true": {
+          "contexts": 2,
+          "meanDelta": -0.6785714285714306,
+          "adjustment": -0.009693877551020438
+        },
+        "stm.attack.sure_hit:false": {
+          "contexts": 2,
+          "meanDelta": 1.249999999999993,
+          "adjustment": 0.017857142857142756
+        },
+        "stm.attack.sure_hit:true": {
+          "contexts": 2,
+          "meanDelta": 0.1071428571428612,
+          "adjustment": 0.0015306122448980172
+        },
+        "stm.attack.twin_shot:false": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.twin_shot:true": {
+          "contexts": 2,
+          "meanDelta": -1.9642857142857082,
+          "adjustment": -0.02806122448979583
+        },
+        "stm.attack.shield_shot:false": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.shield_shot:true": {
+          "contexts": 2,
+          "meanDelta": -0.3928571428571459,
+          "adjustment": -0.0056122448979592275
+        },
+        "stm.attack.crack_shot:false": {
+          "contexts": 2,
+          "meanDelta": 0.9285714285714235,
+          "adjustment": 0.013265306122448906
+        },
+        "stm.attack.crack_shot:true": {
+          "contexts": 2,
+          "meanDelta": -1.5,
+          "adjustment": -0.02142857142857143
+        },
+        "stm.attack.rune_sweep:false": {
+          "contexts": 2,
+          "meanDelta": 2.464285714285708,
+          "adjustment": 0.03520408163265298
+        },
+        "stm.attack.rune_sweep:true": {
+          "contexts": 2,
+          "meanDelta": -1.1428571428571388,
+          "adjustment": -0.01632653061224484
+        },
+        "stm.attack.fate_storm:false": {
+          "contexts": 2,
+          "meanDelta": 2.714285714285708,
+          "adjustment": 0.03877551020408154
+        },
+        "stm.attack.fate_storm:true": {
+          "contexts": 2,
+          "meanDelta": 1.6785714285714377,
+          "adjustment": 0.023979591836734822
+        },
+        "stm.defend.rune_guard:false": {
+          "contexts": 2,
+          "meanDelta": -0.75,
+          "adjustment": -0.010714285714285714
+        },
+        "stm.defend.rune_guard:true": {
+          "contexts": 2,
+          "meanDelta": -1.2857142857142776,
+          "adjustment": -0.018367346938775394
+        },
+        "stm.defend.flash_ward:false": {
+          "contexts": 2,
+          "meanDelta": -0.0714285714285765,
+          "adjustment": -0.0010204081632653786
+        },
+        "stm.defend.flash_ward:true": {
+          "contexts": 2,
+          "meanDelta": -3.392857142857139,
+          "adjustment": -0.04846938775510198
+        },
+        "stm.defend.tower_shield:false": {
+          "contexts": 2,
+          "meanDelta": 1.9642857142857153,
+          "adjustment": 0.028061224489795932
+        },
+        "stm.defend.tower_shield:true": {
+          "contexts": 2,
+          "meanDelta": -1.6428571428571317,
+          "adjustment": -0.02346938775510188
+        },
+        "stm.defend.ember_wall:false": {
+          "contexts": 2,
+          "meanDelta": 2.464285714285708,
+          "adjustment": 0.03520408163265298
+        },
+        "stm.defend.ember_wall:true": {
+          "contexts": 2,
+          "meanDelta": -1.8214285714285694,
+          "adjustment": -0.026020408163265278
+        },
+        "stm.defend.foreseen_guard:false": {
+          "contexts": 2,
+          "meanDelta": -0.7500000000000071,
+          "adjustment": -0.010714285714285815
+        },
+        "stm.defend.foreseen_guard:true": {
+          "contexts": 2,
+          "meanDelta": -1.1428571428571388,
+          "adjustment": -0.01632653061224484
+        },
+        "stm.defend.layered_shield:false": {
+          "contexts": 2,
+          "meanDelta": 2.0357142857142776,
+          "adjustment": 0.02908163265306111
+        },
+        "stm.defend.layered_shield:true": {
+          "contexts": 2,
+          "meanDelta": 0.035714285714291805,
+          "adjustment": 0.0005102040816327401
+        },
+        "stm.defend.burning_pages:false": {
+          "contexts": 2,
+          "meanDelta": -0.3571428571428612,
+          "adjustment": -0.005102040816326589
+        },
+        "stm.defend.burning_pages:true": {
+          "contexts": 2,
+          "meanDelta": -2.714285714285708,
+          "adjustment": -0.03877551020408154
+        },
+        "stm.defend.cinder_guard:false": {
+          "contexts": 2,
+          "meanDelta": -1.3214285714285765,
+          "adjustment": -0.018877551020408233
+        },
+        "stm.defend.cinder_guard:true": {
+          "contexts": 2,
+          "meanDelta": -1.2857142857142776,
+          "adjustment": -0.018367346938775394
+        },
+        "stm.defend.hold_the_line:false": {
+          "contexts": 2,
+          "meanDelta": 4.535714285714285,
+          "adjustment": 0.06479591836734692
+        },
+        "stm.defend.hold_the_line:true": {
+          "contexts": 2,
+          "meanDelta": -3.642857142857139,
+          "adjustment": -0.052040816326530556
+        },
+        "stm.defend.mana_barrier:false": {
+          "contexts": 2,
+          "meanDelta": 1.0714285714285623,
+          "adjustment": 0.015306122448979461
+        },
+        "stm.defend.mana_barrier:true": {
+          "contexts": 2,
+          "meanDelta": -2.5357142857142847,
+          "adjustment": -0.03622448979591835
+        },
+        "stm.skill.quick_study:false": {
+          "contexts": 2,
+          "meanDelta": -0.6785714285714377,
+          "adjustment": -0.009693877551020538
+        },
+        "stm.skill.quick_study:true": {
+          "contexts": 2,
+          "meanDelta": -3.392857142857139,
+          "adjustment": -0.04846938775510198
+        },
+        "stm.skill.deep_study:false": {
+          "contexts": 2,
+          "meanDelta": 1.4642857142857082,
+          "adjustment": 0.02091836734693869
+        },
+        "stm.skill.deep_study:true": {
+          "contexts": 2,
+          "meanDelta": -6,
+          "adjustment": -0.08571428571428572
+        },
+        "stm.skill.mana_reading:false": {
+          "contexts": 2,
+          "meanDelta": -1.4285714285714306,
+          "adjustment": -0.020408163265306152
+        },
+        "stm.skill.mana_reading:true": {
+          "contexts": 2,
+          "meanDelta": -2.1785714285714164,
+          "adjustment": -0.03112244897959166
+        },
+        "stm.skill.read_ahead:false": {
+          "contexts": 2,
+          "meanDelta": -2.6785714285714377,
+          "adjustment": -0.03826530612244911
+        },
+        "stm.skill.read_ahead:true": {
+          "contexts": 2,
+          "meanDelta": -6.285714285714285,
+          "adjustment": -0.08979591836734692
+        },
+        "stm.skill.burning_page:false": {
+          "contexts": 2,
+          "meanDelta": -1.6785714285714306,
+          "adjustment": -0.023979591836734725
+        },
+        "stm.skill.burning_page:true": {
+          "contexts": 2,
+          "meanDelta": -4.607142857142854,
+          "adjustment": -0.0658163265306122
+        },
+        "stm.skill.clear_choice:false": {
+          "contexts": 2,
+          "meanDelta": -1.6785714285714306,
+          "adjustment": -0.023979591836734725
+        },
+        "stm.skill.clear_choice:true": {
+          "contexts": 2,
+          "meanDelta": -5.285714285714285,
+          "adjustment": -0.07551020408163264
+        },
+        "stm.skill.card_search:false": {
+          "contexts": 2,
+          "meanDelta": -4.178571428571431,
+          "adjustment": -0.05969387755102044
+        },
+        "stm.skill.card_search:true": {
+          "contexts": 2,
+          "meanDelta": -8.928571428571416,
+          "adjustment": -0.1275510204081631
+        },
+        "stm.skill.recall:false": {
+          "contexts": 2,
+          "meanDelta": -0.035714285714291805,
+          "adjustment": -0.0005102040816327401
+        },
+        "stm.skill.recall:true": {
+          "contexts": 2,
+          "meanDelta": -1.357142857142847,
+          "adjustment": -0.01938775510204067
+        },
+        "stm.skill.next_chapter:false": {
+          "contexts": 2,
+          "meanDelta": 2.2142857142857153,
+          "adjustment": 0.0316326530612245
+        },
+        "stm.skill.next_chapter:true": {
+          "contexts": 2,
+          "meanDelta": -2.4285714285714235,
+          "adjustment": -0.03469387755102034
+        },
+        "stm.skill.last_page:false": {
+          "contexts": 2,
+          "meanDelta": -0.6785714285714377,
+          "adjustment": -0.009693877551020538
+        },
+        "stm.skill.last_page:true": {
+          "contexts": 2,
+          "meanDelta": -3.392857142857139,
+          "adjustment": -0.04846938775510198
+        },
+        "stm.passive.blazing_spirit:false": {
+          "contexts": 2,
+          "meanDelta": 6.1785714285714235,
+          "adjustment": 0.0882653061224489
+        },
+        "stm.passive.blazing_spirit:true": {
+          "contexts": 2,
+          "meanDelta": 2.607142857142861,
+          "adjustment": 0.03724489795918373
+        },
+        "stm.passive.growing_flame:false": {
+          "contexts": 2,
+          "meanDelta": 5.321428571428562,
+          "adjustment": 0.07602040816326518
+        },
+        "stm.passive.growing_flame:true": {
+          "contexts": 2,
+          "meanDelta": 2.892857142857146,
+          "adjustment": 0.04132653061224494
+        },
+        "stm.passive.swift_step:false": {
+          "contexts": 2,
+          "meanDelta": 1.249999999999993,
+          "adjustment": 0.017857142857142756
+        },
+        "stm.passive.swift_step:true": {
+          "contexts": 2,
+          "meanDelta": 0.9285714285714306,
+          "adjustment": 0.013265306122449009
+        },
+        "stm.passive.battle_rhythm:false": {
+          "contexts": 2,
+          "meanDelta": 2.5714285714285623,
+          "adjustment": 0.03673469387755089
+        },
+        "stm.passive.battle_rhythm:true": {
+          "contexts": 2,
+          "meanDelta": -0.1785714285714235,
+          "adjustment": -0.0025510204081631927
+        },
+        "stm.passive.rune_armor:false": {
+          "contexts": 2,
+          "meanDelta": 1.2857142857142776,
+          "adjustment": 0.018367346938775394
+        },
+        "stm.passive.rune_armor:true": {
+          "contexts": 2,
+          "meanDelta": -2.3214285714285694,
+          "adjustment": -0.033163265306122416
+        },
+        "stm.passive.lasting_shield:false": {
+          "contexts": 2,
+          "meanDelta": 1.8928571428571388,
+          "adjustment": 0.027040816326530555
+        },
+        "stm.passive.lasting_shield:true": {
+          "contexts": 2,
+          "meanDelta": -1.5714285714285694,
+          "adjustment": -0.022448979591836705
+        },
+        "stm.passive.grimoire_ward:false": {
+          "contexts": 2,
+          "meanDelta": 0.9642857142857011,
+          "adjustment": 0.013775510204081446
+        },
+        "stm.passive.grimoire_ward:true": {
+          "contexts": 2,
+          "meanDelta": -1.9642857142857082,
+          "adjustment": -0.02806122448979583
+        },
+        "stm.passive.ember_core:false": {
+          "contexts": 2,
+          "meanDelta": 2.214285714285708,
+          "adjustment": 0.031632653061224404
+        },
+        "stm.passive.ember_core:true": {
+          "contexts": 2,
+          "meanDelta": -0.8928571428571388,
+          "adjustment": -0.01275510204081627
+        },
+        "stm.passive.clear_mind:false": {
+          "contexts": 2,
+          "meanDelta": 3.464285714285708,
+          "adjustment": 0.04948979591836726
+        },
+        "stm.passive.clear_mind:true": {
+          "contexts": 2,
+          "meanDelta": -0.4642857142857082,
+          "adjustment": -0.006632653061224403
+        },
+        "stm.passive.last_ember:false": {
+          "contexts": 2,
+          "meanDelta": -0.9642857142857153,
+          "adjustment": -0.013775510204081647
+        },
+        "stm.passive.last_ember:true": {
+          "contexts": 2,
+          "meanDelta": -4.571428571428562,
+          "adjustment": -0.06530612244897946
+        }
+      },
+      "pairs": {
+        "stm.attack.fate_storm:false|stm.attack.weak_point:false": {
+          "cards": [
+            "stm.attack.fate_storm",
+            "stm.attack.weak_point"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 3.7142857142857224,
+          "adjustment": 0.053061224489796034
+        },
+        "stm.attack.fate_storm:true|stm.attack.weak_point:true": {
+          "cards": [
+            "stm.attack.fate_storm",
+            "stm.attack.weak_point"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": -0.3214285714285765,
+          "adjustment": -0.004591836734693951
+        },
+        "stm.defend.tower_shield:false|stm.passive.lasting_shield:false": {
+          "cards": [
+            "stm.defend.tower_shield",
+            "stm.passive.lasting_shield"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 2.4285714285714306,
+          "adjustment": 0.034693877551020436
+        },
+        "stm.defend.tower_shield:true|stm.passive.lasting_shield:true": {
+          "cards": [
+            "stm.defend.tower_shield",
+            "stm.passive.lasting_shield"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": -0.1071428571428612,
+          "adjustment": -0.0015306122448980172
+        },
+        "stm.skill.deep_study:false|stm.skill.recall:false": {
+          "cards": [
+            "stm.skill.deep_study",
+            "stm.skill.recall"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 6.214285714285722,
+          "adjustment": 0.08877551020408174
+        },
+        "stm.skill.deep_study:true|stm.skill.recall:true": {
+          "cards": [
+            "stm.skill.deep_study",
+            "stm.skill.recall"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": -4.035714285714285,
+          "adjustment": -0.05765306122448978
+        },
+        "stm.attack.shield_shot:false|stm.passive.swift_step:false": {
+          "cards": [
+            "stm.attack.shield_shot",
+            "stm.passive.swift_step"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": -0.5357142857142847,
+          "adjustment": -0.007653061224489782
+        },
+        "stm.attack.shield_shot:true|stm.passive.swift_step:true": {
+          "cards": [
+            "stm.attack.shield_shot",
+            "stm.passive.swift_step"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": 0.1428571428571459,
+          "adjustment": 0.002040816326530656
+        }
+      }
+    },
+    "0d6315fee071bf0aa5b1f91b625a2a71dfc7c8c3141cb5fd8f405889eed4fd18": {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "medium",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d"
+      },
+      "cards": {
+        "stm.attack.rune_strike:false": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.rune_strike:true": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.weak_point:false": {
+          "contexts": 2,
+          "meanDelta": -2.5576923076923066,
+          "adjustment": -0.03653846153846152
+        },
+        "stm.attack.weak_point:true": {
+          "contexts": 2,
+          "meanDelta": -0.8653846153846132,
+          "adjustment": -0.01236263736263733
+        },
+        "stm.attack.scout_strike:false": {
+          "contexts": 2,
+          "meanDelta": 0.3076923076923066,
+          "adjustment": 0.00439560439560438
+        },
+        "stm.attack.scout_strike:true": {
+          "contexts": 2,
+          "meanDelta": -2.1346153846153797,
+          "adjustment": -0.030494505494505424
+        },
+        "stm.attack.return_strike:false": {
+          "contexts": 2,
+          "meanDelta": -1.5192307692307665,
+          "adjustment": -0.021703296703296664
+        },
+        "stm.attack.return_strike:true": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.sure_hit:false": {
+          "contexts": 2,
+          "meanDelta": -0.019230769230766498,
+          "adjustment": -0.0002747252747252357
+        },
+        "stm.attack.sure_hit:true": {
+          "contexts": 2,
+          "meanDelta": 0.8653846153846203,
+          "adjustment": 0.012362637362637433
+        },
+        "stm.attack.twin_shot:false": {
+          "contexts": 2,
+          "meanDelta": -3.2692307692307665,
+          "adjustment": -0.04670329670329666
+        },
+        "stm.attack.twin_shot:true": {
+          "contexts": 2,
+          "meanDelta": -1.4807692307692264,
+          "adjustment": -0.02115384615384609
+        },
+        "stm.attack.shield_shot:false": {
+          "contexts": 2,
+          "meanDelta": 1.5769230769230802,
+          "adjustment": 0.022527472527472576
+        },
+        "stm.attack.shield_shot:true": {
+          "contexts": 2,
+          "meanDelta": 0.25,
+          "adjustment": 0.0035714285714285718
+        },
+        "stm.attack.crack_shot:false": {
+          "contexts": 2,
+          "meanDelta": -3.7692307692307665,
+          "adjustment": -0.05384615384615381
+        },
+        "stm.attack.crack_shot:true": {
+          "contexts": 2,
+          "meanDelta": -1.4807692307692264,
+          "adjustment": -0.02115384615384609
+        },
+        "stm.attack.rune_sweep:false": {
+          "contexts": 2,
+          "meanDelta": 2.21153846153846,
+          "adjustment": 0.03159340659340657
+        },
+        "stm.attack.rune_sweep:true": {
+          "contexts": 2,
+          "meanDelta": 0.1346153846153868,
+          "adjustment": 0.0019230769230769544
+        },
+        "stm.attack.fate_storm:false": {
+          "contexts": 2,
+          "meanDelta": -0.1923076923076934,
+          "adjustment": -0.0027472527472527626
+        },
+        "stm.attack.fate_storm:true": {
+          "contexts": 2,
+          "meanDelta": -1.3461538461538467,
+          "adjustment": -0.01923076923076924
+        },
+        "stm.defend.rune_guard:false": {
+          "contexts": 2,
+          "meanDelta": 0.3846153846153868,
+          "adjustment": 0.005494505494505525
+        },
+        "stm.defend.rune_guard:true": {
+          "contexts": 2,
+          "meanDelta": -2.0576923076923066,
+          "adjustment": -0.029395604395604378
+        },
+        "stm.defend.flash_ward:false": {
+          "contexts": 2,
+          "meanDelta": -1.4230769230769198,
+          "adjustment": -0.02032967032967028
+        },
+        "stm.defend.flash_ward:true": {
+          "contexts": 2,
+          "meanDelta": -4.480769230769226,
+          "adjustment": -0.06401098901098895
+        },
+        "stm.defend.tower_shield:false": {
+          "contexts": 2,
+          "meanDelta": -0.0769230769230731,
+          "adjustment": -0.0010989010989010443
+        },
+        "stm.defend.tower_shield:true": {
+          "contexts": 2,
+          "meanDelta": -3.1346153846153797,
+          "adjustment": -0.04478021978021971
+        },
+        "stm.defend.ember_wall:false": {
+          "contexts": 2,
+          "meanDelta": 1.923076923076927,
+          "adjustment": 0.027472527472527524
+        },
+        "stm.defend.ember_wall:true": {
+          "contexts": 2,
+          "meanDelta": 53.17307692307693,
+          "adjustment": 0.25
+        },
+        "stm.defend.foreseen_guard:false": {
+          "contexts": 2,
+          "meanDelta": 0.2307692307692335,
+          "adjustment": 0.0032967032967033357
+        },
+        "stm.defend.foreseen_guard:true": {
+          "contexts": 2,
+          "meanDelta": -1.5961538461538467,
+          "adjustment": -0.022802197802197808
+        },
+        "stm.defend.layered_shield:false": {
+          "contexts": 2,
+          "meanDelta": 0.0769230769230802,
+          "adjustment": 0.0010989010989011457
+        },
+        "stm.defend.layered_shield:true": {
+          "contexts": 2,
+          "meanDelta": -2.21153846153846,
+          "adjustment": -0.03159340659340657
+        },
+        "stm.defend.burning_pages:false": {
+          "contexts": 2,
+          "meanDelta": 0.0769230769230802,
+          "adjustment": 0.0010989010989011457
+        },
+        "stm.defend.burning_pages:true": {
+          "contexts": 2,
+          "meanDelta": -3.28846153846154,
+          "adjustment": -0.046978021978022
+        },
+        "stm.defend.cinder_guard:false": {
+          "contexts": 2,
+          "meanDelta": 2.07692307692308,
+          "adjustment": 0.029670329670329714
+        },
+        "stm.defend.cinder_guard:true": {
+          "contexts": 2,
+          "meanDelta": -1.5961538461538467,
+          "adjustment": -0.022802197802197808
+        },
+        "stm.defend.hold_the_line:false": {
+          "contexts": 2,
+          "meanDelta": 2.53846153846154,
+          "adjustment": 0.03626373626373629
+        },
+        "stm.defend.hold_the_line:true": {
+          "contexts": 2,
+          "meanDelta": 49.01923076923077,
+          "adjustment": 0.25
+        },
+        "stm.defend.mana_barrier:false": {
+          "contexts": 2,
+          "meanDelta": -2.076923076923073,
+          "adjustment": -0.029670329670329617
+        },
+        "stm.defend.mana_barrier:true": {
+          "contexts": 2,
+          "meanDelta": -4.826923076923073,
+          "adjustment": -0.0689560439560439
+        },
+        "stm.skill.quick_study:false": {
+          "contexts": 2,
+          "meanDelta": -2.6923076923076934,
+          "adjustment": -0.03846153846153848
+        },
+        "stm.skill.quick_study:true": {
+          "contexts": 2,
+          "meanDelta": -58.21153846153846,
+          "adjustment": -0.25
+        },
+        "stm.skill.deep_study:false": {
+          "contexts": 2,
+          "meanDelta": 0.7692307692307665,
+          "adjustment": 0.01098901098901095
+        },
+        "stm.skill.deep_study:true": {
+          "contexts": 2,
+          "meanDelta": -4.71153846153846,
+          "adjustment": -0.06730769230769228
+        },
+        "stm.skill.mana_reading:false": {
+          "contexts": 2,
+          "meanDelta": -0.3461538461538467,
+          "adjustment": -0.0049450549450549535
+        },
+        "stm.skill.mana_reading:true": {
+          "contexts": 2,
+          "meanDelta": -2.4807692307692264,
+          "adjustment": -0.035439560439560376
+        },
+        "stm.skill.read_ahead:false": {
+          "contexts": 2,
+          "meanDelta": 0.3269230769230802,
+          "adjustment": 0.004670329670329717
+        },
+        "stm.skill.read_ahead:true": {
+          "contexts": 2,
+          "meanDelta": -2.7307692307692264,
+          "adjustment": -0.03901098901098895
+        },
+        "stm.skill.burning_page:false": {
+          "contexts": 2,
+          "meanDelta": -0.5384615384615401,
+          "adjustment": -0.007692307692307715
+        },
+        "stm.skill.burning_page:true": {
+          "contexts": 2,
+          "meanDelta": -5.442307692307693,
+          "adjustment": -0.07774725274725276
+        },
+        "stm.skill.clear_choice:false": {
+          "contexts": 2,
+          "meanDelta": -0.6923076923076934,
+          "adjustment": -0.009890109890109907
+        },
+        "stm.skill.clear_choice:true": {
+          "contexts": 2,
+          "meanDelta": -4.67307692307692,
+          "adjustment": -0.06675824175824172
+        },
+        "stm.skill.card_search:false": {
+          "contexts": 2,
+          "meanDelta": -2.2307692307692335,
+          "adjustment": -0.03186813186813191
+        },
+        "stm.skill.card_search:true": {
+          "contexts": 2,
+          "meanDelta": -5.28846153846154,
+          "adjustment": -0.07554945054945057
+        },
+        "stm.skill.recall:false": {
+          "contexts": 2,
+          "meanDelta": -0.9615384615384599,
+          "adjustment": -0.013736263736263713
+        },
+        "stm.skill.recall:true": {
+          "contexts": 2,
+          "meanDelta": -1.6923076923076934,
+          "adjustment": -0.024175824175824194
+        },
+        "stm.skill.next_chapter:false": {
+          "contexts": 2,
+          "meanDelta": -1.21153846153846,
+          "adjustment": -0.017307692307692284
+        },
+        "stm.skill.next_chapter:true": {
+          "contexts": 2,
+          "meanDelta": -4.942307692307693,
+          "adjustment": -0.07060439560439562
+        },
+        "stm.skill.last_page:false": {
+          "contexts": 2,
+          "meanDelta": -2.6923076923076934,
+          "adjustment": -0.03846153846153848
+        },
+        "stm.skill.last_page:true": {
+          "contexts": 2,
+          "meanDelta": -58.21153846153846,
+          "adjustment": -0.25
+        },
+        "stm.passive.blazing_spirit:false": {
+          "contexts": 2,
+          "meanDelta": 56.17307692307693,
+          "adjustment": 0.25
+        },
+        "stm.passive.blazing_spirit:true": {
+          "contexts": 2,
+          "meanDelta": 56.32692307692308,
+          "adjustment": 0.25
+        },
+        "stm.passive.growing_flame:false": {
+          "contexts": 2,
+          "meanDelta": 52.59615384615385,
+          "adjustment": 0.25
+        },
+        "stm.passive.growing_flame:true": {
+          "contexts": 2,
+          "meanDelta": 50.65384615384615,
+          "adjustment": 0.25
+        },
+        "stm.passive.swift_step:false": {
+          "contexts": 2,
+          "meanDelta": 50.38461538461538,
+          "adjustment": 0.25
+        },
+        "stm.passive.swift_step:true": {
+          "contexts": 2,
+          "meanDelta": 50.5,
+          "adjustment": 0.25
+        },
+        "stm.passive.battle_rhythm:false": {
+          "contexts": 2,
+          "meanDelta": 1.4807692307692335,
+          "adjustment": 0.021153846153846193
+        },
+        "stm.passive.battle_rhythm:true": {
+          "contexts": 2,
+          "meanDelta": 52.807692307692314,
+          "adjustment": 0.25
+        },
+        "stm.passive.rune_armor:false": {
+          "contexts": 2,
+          "meanDelta": -1.5192307692307665,
+          "adjustment": -0.021703296703296664
+        },
+        "stm.passive.rune_armor:true": {
+          "contexts": 2,
+          "meanDelta": -4.2692307692307665,
+          "adjustment": -0.060989010989010946
+        },
+        "stm.passive.lasting_shield:false": {
+          "contexts": 2,
+          "meanDelta": -0.5384615384615401,
+          "adjustment": -0.007692307692307715
+        },
+        "stm.passive.lasting_shield:true": {
+          "contexts": 2,
+          "meanDelta": -3.4423076923076934,
+          "adjustment": -0.04917582417582419
+        },
+        "stm.passive.grimoire_ward:false": {
+          "contexts": 2,
+          "meanDelta": 0.3846153846153868,
+          "adjustment": 0.005494505494505525
+        },
+        "stm.passive.grimoire_ward:true": {
+          "contexts": 2,
+          "meanDelta": -2.5192307692307665,
+          "adjustment": -0.03598901098901095
+        },
+        "stm.passive.ember_core:false": {
+          "contexts": 2,
+          "meanDelta": 1.3846153846153868,
+          "adjustment": 0.019780219780219814
+        },
+        "stm.passive.ember_core:true": {
+          "contexts": 2,
+          "meanDelta": 0.2692307692307736,
+          "adjustment": 0.003846153846153909
+        },
+        "stm.passive.clear_mind:false": {
+          "contexts": 2,
+          "meanDelta": 0.4807692307692335,
+          "adjustment": 0.006868131868131907
+        },
+        "stm.passive.clear_mind:true": {
+          "contexts": 2,
+          "meanDelta": -3.28846153846154,
+          "adjustment": -0.046978021978022
+        },
+        "stm.passive.last_ember:false": {
+          "contexts": 2,
+          "meanDelta": -0.0576923076923066,
+          "adjustment": -0.0008241758241758086
+        },
+        "stm.passive.last_ember:true": {
+          "contexts": 2,
+          "meanDelta": -4.365384615384613,
+          "adjustment": -0.06236263736263733
+        }
+      },
+      "pairs": {
+        "stm.attack.fate_storm:false|stm.attack.weak_point:false": {
+          "cards": [
+            "stm.attack.fate_storm",
+            "stm.attack.weak_point"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": -48.05769230769231,
+          "adjustment": -0.25
+        },
+        "stm.attack.fate_storm:true|stm.attack.weak_point:true": {
+          "cards": [
+            "stm.attack.fate_storm",
+            "stm.attack.weak_point"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": 56.01923076923077,
+          "adjustment": 0.25
+        },
+        "stm.defend.tower_shield:false|stm.passive.lasting_shield:false": {
+          "cards": [
+            "stm.defend.tower_shield",
+            "stm.passive.lasting_shield"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 0.1153846153846132,
+          "adjustment": 0.0016483516483516171
+        },
+        "stm.defend.tower_shield:true|stm.passive.lasting_shield:true": {
+          "cards": [
+            "stm.defend.tower_shield",
+            "stm.passive.lasting_shield"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": 53.09615384615385,
+          "adjustment": 0.25
+        },
+        "stm.skill.deep_study:false|stm.skill.recall:false": {
+          "cards": [
+            "stm.skill.deep_study",
+            "stm.skill.recall"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": -53.30769230769231,
+          "adjustment": -0.25
+        },
+        "stm.skill.deep_study:true|stm.skill.recall:true": {
+          "cards": [
+            "stm.skill.deep_study",
+            "stm.skill.recall"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": -0.7692307692307736,
+          "adjustment": -0.01098901098901105
+        },
+        "stm.attack.shield_shot:false|stm.passive.swift_step:false": {
+          "cards": [
+            "stm.attack.shield_shot",
+            "stm.passive.swift_step"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": -1.3846153846153868,
+          "adjustment": -0.019780219780219814
+        },
+        "stm.attack.shield_shot:true|stm.passive.swift_step:true": {
+          "cards": [
+            "stm.attack.shield_shot",
+            "stm.passive.swift_step"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": 0.5,
+          "adjustment": 0.0071428571428571435
+        }
+      }
+    },
+    "b153825e1d8ccdb4ee95eb234537e151f97a730813627d129e3920a4829f0aa6": {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "hard",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d"
+      },
+      "cards": {
+        "stm.attack.rune_strike:false": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.rune_strike:true": {
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.attack.weak_point:false": {
+          "contexts": 2,
+          "meanDelta": -2,
+          "adjustment": -0.028571428571428574
+        },
+        "stm.attack.weak_point:true": {
+          "contexts": 2,
+          "meanDelta": -1.8333333333333357,
+          "adjustment": -0.026190476190476226
+        },
+        "stm.attack.scout_strike:false": {
+          "contexts": 2,
+          "meanDelta": -2.9166666666666714,
+          "adjustment": -0.041666666666666734
+        },
+        "stm.attack.scout_strike:true": {
+          "contexts": 2,
+          "meanDelta": -54.5,
+          "adjustment": -0.25
+        },
+        "stm.attack.return_strike:false": {
+          "contexts": 2,
+          "meanDelta": -1.9166666666666714,
+          "adjustment": -0.02738095238095245
+        },
+        "stm.attack.return_strike:true": {
+          "contexts": 2,
+          "meanDelta": 0.25,
+          "adjustment": 0.0035714285714285718
+        },
+        "stm.attack.sure_hit:false": {
+          "contexts": 2,
+          "meanDelta": -0.25,
+          "adjustment": -0.0035714285714285718
+        },
+        "stm.attack.sure_hit:true": {
+          "contexts": 2,
+          "meanDelta": 2.25,
+          "adjustment": 0.03214285714285715
+        },
+        "stm.attack.twin_shot:false": {
+          "contexts": 2,
+          "meanDelta": -52.333333333333336,
+          "adjustment": -0.25
+        },
+        "stm.attack.twin_shot:true": {
+          "contexts": 2,
+          "meanDelta": -2.5,
+          "adjustment": -0.03571428571428571
+        },
+        "stm.attack.shield_shot:false": {
+          "contexts": 2,
+          "meanDelta": -0.5833333333333357,
+          "adjustment": -0.008333333333333368
+        },
+        "stm.attack.shield_shot:true": {
+          "contexts": 2,
+          "meanDelta": 0.25,
+          "adjustment": 0.0035714285714285718
+        },
+        "stm.attack.crack_shot:false": {
+          "contexts": 2,
+          "meanDelta": -53.083333333333336,
+          "adjustment": -0.25
+        },
+        "stm.attack.crack_shot:true": {
+          "contexts": 2,
+          "meanDelta": -2.25,
+          "adjustment": -0.03214285714285715
+        },
+        "stm.attack.rune_sweep:false": {
+          "contexts": 2,
+          "meanDelta": 2,
+          "adjustment": 0.028571428571428574
+        },
+        "stm.attack.rune_sweep:true": {
+          "contexts": 2,
+          "meanDelta": 0.8333333333333357,
+          "adjustment": 0.011904761904761937
+        },
+        "stm.attack.fate_storm:false": {
+          "contexts": 2,
+          "meanDelta": -1.8333333333333357,
+          "adjustment": -0.026190476190476226
+        },
+        "stm.attack.fate_storm:true": {
+          "contexts": 2,
+          "meanDelta": 0.5833333333333357,
+          "adjustment": 0.008333333333333368
+        },
+        "stm.defend.rune_guard:false": {
+          "contexts": 2,
+          "meanDelta": -1.0833333333333357,
+          "adjustment": -0.01547619047619051
+        },
+        "stm.defend.rune_guard:true": {
+          "contexts": 2,
+          "meanDelta": -3.3333333333333357,
+          "adjustment": -0.04761904761904766
+        },
+        "stm.defend.flash_ward:false": {
+          "contexts": 2,
+          "meanDelta": -3.25,
+          "adjustment": -0.04642857142857143
+        },
+        "stm.defend.flash_ward:true": {
+          "contexts": 2,
+          "meanDelta": -5,
+          "adjustment": -0.07142857142857142
+        },
+        "stm.defend.tower_shield:false": {
+          "contexts": 2,
+          "meanDelta": -0.5833333333333357,
+          "adjustment": -0.008333333333333368
+        },
+        "stm.defend.tower_shield:true": {
+          "contexts": 2,
+          "meanDelta": -2.1666666666666643,
+          "adjustment": -0.03095238095238092
+        },
+        "stm.defend.ember_wall:false": {
+          "contexts": 2,
+          "meanDelta": 1.25,
+          "adjustment": 0.017857142857142856
+        },
+        "stm.defend.ember_wall:true": {
+          "contexts": 2,
+          "meanDelta": 1.1666666666666643,
+          "adjustment": 0.016666666666666632
+        },
+        "stm.defend.foreseen_guard:false": {
+          "contexts": 2,
+          "meanDelta": -0.9166666666666714,
+          "adjustment": -0.013095238095238163
+        },
+        "stm.defend.foreseen_guard:true": {
+          "contexts": 2,
+          "meanDelta": -1.1666666666666643,
+          "adjustment": -0.016666666666666632
+        },
+        "stm.defend.layered_shield:false": {
+          "contexts": 2,
+          "meanDelta": -0.5833333333333357,
+          "adjustment": -0.008333333333333368
+        },
+        "stm.defend.layered_shield:true": {
+          "contexts": 2,
+          "meanDelta": -2.6666666666666643,
+          "adjustment": -0.038095238095238064
+        },
+        "stm.defend.burning_pages:false": {
+          "contexts": 2,
+          "meanDelta": -0.75,
+          "adjustment": -0.010714285714285714
+        },
+        "stm.defend.burning_pages:true": {
+          "contexts": 2,
+          "meanDelta": -1.3333333333333357,
+          "adjustment": -0.019047619047619084
+        },
+        "stm.defend.cinder_guard:false": {
+          "contexts": 2,
+          "meanDelta": 1.75,
+          "adjustment": 0.024999999999999998
+        },
+        "stm.defend.cinder_guard:true": {
+          "contexts": 2,
+          "meanDelta": -3.3333333333333357,
+          "adjustment": -0.04761904761904766
+        },
+        "stm.defend.hold_the_line:false": {
+          "contexts": 2,
+          "meanDelta": 2.9166666666666643,
+          "adjustment": 0.04166666666666663
+        },
+        "stm.defend.hold_the_line:true": {
+          "contexts": 2,
+          "meanDelta": 1.1666666666666643,
+          "adjustment": 0.016666666666666632
+        },
+        "stm.defend.mana_barrier:false": {
+          "contexts": 2,
+          "meanDelta": -53.583333333333336,
+          "adjustment": -0.25
+        },
+        "stm.defend.mana_barrier:true": {
+          "contexts": 2,
+          "meanDelta": -55.5,
+          "adjustment": -0.25
+        },
+        "stm.skill.quick_study:false": {
+          "contexts": 2,
+          "meanDelta": -53.583333333333336,
+          "adjustment": -0.25
+        },
+        "stm.skill.quick_study:true": {
+          "contexts": 2,
+          "meanDelta": -55.5,
+          "adjustment": -0.25
+        },
+        "stm.skill.deep_study:false": {
+          "contexts": 2,
+          "meanDelta": -52.333333333333336,
+          "adjustment": -0.25
+        },
+        "stm.skill.deep_study:true": {
+          "contexts": 2,
+          "meanDelta": -53.25,
+          "adjustment": -0.25
+        },
+        "stm.skill.mana_reading:false": {
+          "contexts": 2,
+          "meanDelta": -0.25,
+          "adjustment": -0.0035714285714285718
+        },
+        "stm.skill.mana_reading:true": {
+          "contexts": 2,
+          "meanDelta": -54.25,
+          "adjustment": -0.25
+        },
+        "stm.skill.read_ahead:false": {
+          "contexts": 2,
+          "meanDelta": -2.4166666666666714,
+          "adjustment": -0.03452380952380959
+        },
+        "stm.skill.read_ahead:true": {
+          "contexts": 2,
+          "meanDelta": -4.333333333333336,
+          "adjustment": -0.06190476190476194
+        },
+        "stm.skill.burning_page:false": {
+          "contexts": 2,
+          "meanDelta": -53.083333333333336,
+          "adjustment": -0.25
+        },
+        "stm.skill.burning_page:true": {
+          "contexts": 2,
+          "meanDelta": -4.833333333333336,
+          "adjustment": -0.06904761904761908
+        },
+        "stm.skill.clear_choice:false": {
+          "contexts": 2,
+          "meanDelta": -53.583333333333336,
+          "adjustment": -0.25
+        },
+        "stm.skill.clear_choice:true": {
+          "contexts": 2,
+          "meanDelta": -4,
+          "adjustment": -0.05714285714285715
+        },
+        "stm.skill.card_search:false": {
+          "contexts": 2,
+          "meanDelta": -53.083333333333336,
+          "adjustment": -0.25
+        },
+        "stm.skill.card_search:true": {
+          "contexts": 2,
+          "meanDelta": -55,
+          "adjustment": -0.25
+        },
+        "stm.skill.recall:false": {
+          "contexts": 2,
+          "meanDelta": -0.9166666666666714,
+          "adjustment": -0.013095238095238163
+        },
+        "stm.skill.recall:true": {
+          "contexts": 2,
+          "meanDelta": -2.5833333333333357,
+          "adjustment": -0.03690476190476194
+        },
+        "stm.skill.next_chapter:false": {
+          "contexts": 2,
+          "meanDelta": -0.9166666666666714,
+          "adjustment": -0.013095238095238163
+        },
+        "stm.skill.next_chapter:true": {
+          "contexts": 2,
+          "meanDelta": -54.5,
+          "adjustment": -0.25
+        },
+        "stm.skill.last_page:false": {
+          "contexts": 2,
+          "meanDelta": -53.583333333333336,
+          "adjustment": -0.25
+        },
+        "stm.skill.last_page:true": {
+          "contexts": 2,
+          "meanDelta": -55.5,
+          "adjustment": -0.25
+        },
+        "stm.passive.blazing_spirit:false": {
+          "contexts": 2,
+          "meanDelta": 3.9166666666666643,
+          "adjustment": 0.05595238095238092
+        },
+        "stm.passive.blazing_spirit:true": {
+          "contexts": 2,
+          "meanDelta": 4.583333333333336,
+          "adjustment": 0.06547619047619051
+        },
+        "stm.passive.growing_flame:false": {
+          "contexts": 2,
+          "meanDelta": 2.0833333333333286,
+          "adjustment": 0.029761904761904694
+        },
+        "stm.passive.growing_flame:true": {
+          "contexts": 2,
+          "meanDelta": 0.8333333333333357,
+          "adjustment": 0.011904761904761937
+        },
+        "stm.passive.swift_step:false": {
+          "contexts": 2,
+          "meanDelta": -0.75,
+          "adjustment": -0.010714285714285714
+        },
+        "stm.passive.swift_step:true": {
+          "contexts": 2,
+          "meanDelta": -1.8333333333333357,
+          "adjustment": -0.026190476190476226
+        },
+        "stm.passive.battle_rhythm:false": {
+          "contexts": 2,
+          "meanDelta": 2.3333333333333286,
+          "adjustment": 0.033333333333333263
+        },
+        "stm.passive.battle_rhythm:true": {
+          "contexts": 2,
+          "meanDelta": 0.75,
+          "adjustment": 0.010714285714285714
+        },
+        "stm.passive.rune_armor:false": {
+          "contexts": 2,
+          "meanDelta": -1.3333333333333357,
+          "adjustment": -0.019047619047619084
+        },
+        "stm.passive.rune_armor:true": {
+          "contexts": 2,
+          "meanDelta": -2.75,
+          "adjustment": -0.03928571428571429
+        },
+        "stm.passive.lasting_shield:false": {
+          "contexts": 2,
+          "meanDelta": 0.0833333333333286,
+          "adjustment": 0.0011904761904761227
+        },
+        "stm.passive.lasting_shield:true": {
+          "contexts": 2,
+          "meanDelta": -1.6666666666666643,
+          "adjustment": -0.023809523809523777
+        },
+        "stm.passive.grimoire_ward:false": {
+          "contexts": 2,
+          "meanDelta": -1.0833333333333357,
+          "adjustment": -0.01547619047619051
+        },
+        "stm.passive.grimoire_ward:true": {
+          "contexts": 2,
+          "meanDelta": -2.5,
+          "adjustment": -0.03571428571428571
+        },
+        "stm.passive.ember_core:false": {
+          "contexts": 2,
+          "meanDelta": 0.5833333333333286,
+          "adjustment": 0.008333333333333266
+        },
+        "stm.passive.ember_core:true": {
+          "contexts": 2,
+          "meanDelta": -0.6666666666666643,
+          "adjustment": -0.00952380952380949
+        },
+        "stm.passive.clear_mind:false": {
+          "contexts": 2,
+          "meanDelta": -1.75,
+          "adjustment": -0.024999999999999998
+        },
+        "stm.passive.clear_mind:true": {
+          "contexts": 2,
+          "meanDelta": -4.166666666666664,
+          "adjustment": -0.059523809523809486
+        },
+        "stm.passive.last_ember:false": {
+          "contexts": 2,
+          "meanDelta": -0.8333333333333357,
+          "adjustment": -0.011904761904761937
+        },
+        "stm.passive.last_ember:true": {
+          "contexts": 2,
+          "meanDelta": -3.5,
+          "adjustment": -0.049999999999999996
+        }
+      },
+      "pairs": {
+        "stm.attack.fate_storm:false|stm.attack.weak_point:false": {
+          "cards": [
+            "stm.attack.fate_storm",
+            "stm.attack.weak_point"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 1.4166666666666714,
+          "adjustment": 0.020238095238095305
+        },
+        "stm.attack.fate_storm:true|stm.attack.weak_point:true": {
+          "cards": [
+            "stm.attack.fate_storm",
+            "stm.attack.weak_point"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": 2,
+          "adjustment": 0.028571428571428574
+        },
+        "stm.defend.tower_shield:false|stm.passive.lasting_shield:false": {
+          "cards": [
+            "stm.defend.tower_shield",
+            "stm.passive.lasting_shield"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 1.0833333333333357,
+          "adjustment": 0.01547619047619051
+        },
+        "stm.defend.tower_shield:true|stm.passive.lasting_shield:true": {
+          "cards": [
+            "stm.defend.tower_shield",
+            "stm.passive.lasting_shield"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": 49.58333333333333,
+          "adjustment": 0.25
+        },
+        "stm.skill.deep_study:false|stm.skill.recall:false": {
+          "cards": [
+            "stm.skill.deep_study",
+            "stm.skill.recall"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": 0,
+          "adjustment": 0
+        },
+        "stm.skill.deep_study:true|stm.skill.recall:true": {
+          "cards": [
+            "stm.skill.deep_study",
+            "stm.skill.recall"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": -4.25,
+          "adjustment": -0.060714285714285714
+        },
+        "stm.attack.shield_shot:false|stm.passive.swift_step:false": {
+          "cards": [
+            "stm.attack.shield_shot",
+            "stm.passive.swift_step"
+          ],
+          "upgraded": false,
+          "contexts": 2,
+          "meanDelta": -51,
+          "adjustment": -0.25
+        },
+        "stm.attack.shield_shot:true|stm.passive.swift_step:true": {
+          "cards": [
+            "stm.attack.shield_shot",
+            "stm.passive.swift_step"
+          ],
+          "upgraded": true,
+          "contexts": 2,
+          "meanDelta": -0.25,
+          "adjustment": -0.0035714285714285718
+        }
+      }
+    }
+  },
+  "interpretation": "Small contextual acquisition priors, not universal card power or pupil calibration.",
+  "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+}

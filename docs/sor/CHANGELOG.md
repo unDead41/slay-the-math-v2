@@ -1,5 +1,13 @@
 # Changelog SOR — Slay the Math
 
+## AI experience and efficiency — branch2.46.0-ai.1,25 October2026
+
+- Base the AI refresh on actual main2.45.0; publish balance/master only at Ijamm's request.
+- Reuse exact threat projections and improve payment-aware Search, Burning Page and visible-card selection without reading hidden draw order.
+- Add immutable source-bound simulation bundles, validator/trainer and owner instructions for Combat/Map/Economy. Replay old recipes instead of reusing stale labels.
+- Add conservative, exact-runtime acquisition priors with explicit experience:on/off/status/model metadata, fixed heldout activation gate and safe missing/stale/corrupt fallback. Keep schema3 and earlier CSV positions, numerical game profiles, saves/RNG and current art/language/VFX/motion.
+- Record actual coverage, measurements, validation outcomes and remaining limits in [AI data handoff](../balance/master/AI_DATA_2026_10_25.md).
+
 ## Approved Alyssa V5 motion — game 2.45.0, 25 October 2026
 
 - Apply all five approved 15-slot clips to actual combat, preserving source bytes/timing and right-facing identity. Idle uses eight unique drawings with repeated breath/blink exposures; Kena Attack has fifteen unique poses.

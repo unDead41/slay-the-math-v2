@@ -1,6 +1,6 @@
-# 23 — Master balancing, branch2.42.0-balance.1
+# 23 — Master balancing, branch2.46.0-ai.1
 
-Current refresh publication target is **balance/master only**, following Ijamm’s latest request to update the three-source balance integration and AI before main. Current numerical binding is candidate.5; earlier publication approvals below refer to their recorded releases. [Current source review and checks](../balance/master/REFRESH_2026_10_24.md).
+Current refresh publication target is **balance/master only**, following Ijamm’s latest request to read latest main2.45.0 and improve AI using simulation data. Current numerical binding is candidate.5; earlier publication approvals below refer to their recorded releases. [Current source review and checks](../balance/master/AI_DATA_2026_10_25.md). The three-source2.42 refresh below is historical.
 
 Current main integration: [game2.40.0](../CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 

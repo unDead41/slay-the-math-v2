@@ -1,0 +1,37 @@
+# AI experience and efficiency refresh
+
+25 October2026, Asia/Kuala_Lumpur. Main6c49f3980c3a832635d4d01a6c50a8df98ac4aad /2.45.0; Master SOR1.2.0. User requests read current main, improve AI efficiency/intelligence/accuracy using balancing simulations, specify reusable data files for specialist branches and publish balance/master only. No main publication is authorized.
+
+## Existing evidence and constraints
+
+The integrated prior release retains192 reports/403 AI outcomes and84 Map records (one censor). Combat/Map/Economy heads are pinned3a62324/364a844/2e54f2b. Six of the old AI cohort's45 source files differ from current main. Old labels are historical; use their scenarios as a replay curriculum, not as fresh labels. Main's language update has corrected the two old AGENTS topic/MC contradictions. Ordinary Spool and human recovery/rate questions retain their existing owners.
+
+Keep all player numbers, Mastercandidate.5, save keys/RNG, questions, original assets, current BM/BI/VFX/motion and production behavior unchanged. AI stays Node developer-only, dependency-free in production. Keep schema3 and existing CSV column positions. New metadata may be appended. Legacy Map/Economy defaults remain unchanged. Branch prerelease2.46.0-ai.1 uses the shared version generator. Never infer pupil90/70/50 or universal CP.
+
+## Approach and builder choices
+
+The user delegates implementation and requests execution/push, not a new model-selection discussion. Continue the existing native Node AI. A cloud LLM would add cost, latency and different infrastructure; treating stale simulation totals as training targets would hide source drift. Use (1) exact safe projection reuse, (2) public-information choice scoring, and (3) small, source-gated empirical acquisition priors. These are builder choices within the authorized scope, not additional user decisions. Implement natively with TDD and one fresh final reviewer.
+
+### 1. Portable experience contract
+
+Create docs/balance/SIMULATION_DATA_HANDOFF.md and tools/ai-playtester/experience-data.cjs. A directory contains manifest.json, observations.jsonl and summary.json; hashes bind actual bytes. Required common fields: schemaVersion1, domain combat/map/economy, source branch/SHA, runtime identity/hash, policy/version/options, fixed train/validation seeds, scenario ID, status, public features, action/choice and outcome. Observations retain invalid/censored states with null unknown utility, including fixed planned/returned counts. Do not replace unfavorable records, mix sources, expose canonical answer keys or claim observational correlations as causal effects.
+
+The first trainer consumes only complete paired single-card/factorial combat cases, based on real engine outcomes. Map/Economy export examples record actual room HP/resources and gross Gold/checkout spending; these are retained for diagnostics until a separately validated learner uses them. A validator rejects malformed/nonfinite/duplicate/missing cases and source/runtime mismatches. Output must be fresh, not overwrite historical evidence. Export/import does not alter runtime or player files.
+
+### 2. Faster, more accurate combat choices
+
+Reuse one baseline incoming-damage projection per candidate pass; avoid a second projection when a plan changes neither immediate Block nor enemy Weak. Do not compute a Focus plan for a definition that cannot use Focus. Keep actual engine planning, three sampled worlds/three-turn horizon, six roots plus End Turn,14 transitions/rollout,300 total transitions and four choice continuations. Validate final simulated states. Preserve actual costs, live run/RNG immutability, hidden-order independence and observation boundaries.
+
+Card-choice reasoning must account for the remaining Energy after pre-choice payment and use actual legal plans. Card Search estimates useful categories from inferred public deck composition, not the live draw order. Burning Page may replace an unplayable/low-value revealed card when remaining public composition offers a better expected choice and replacements remain. Read Ahead/Clear Choice favor usable cards; future reorder preserves every remaining revealed UID. Passive replacement retains its existing legal behavior. Include revealed choice-zone cards in the public known set for sampled worlds. Actual and hypothetical choice decisions share the same policy; no unmetered extra gameplay simulation is introduced.
+
+### 3. Conservative empirical acquisition guidance
+
+Replay the existing single-card/pair curriculum on the current runtime with the new agent and guidance OFF, across easy/medium/hard. Use training seed93; predeclare validation seeds701/702 and keep them out of training. Store complete raw reports and normalized paired cases. Train one model per exact runtime fingerprint (difficulty, definitionHash, engineHash and binding version); both intermediate and expert deck acquisitions may consume it, beginner combat remains its seeded baseline.
+
+Card priors derive mean paired replacement utility; pair priors derive full four-cell interaction. Normalize by20 utility units, shrink with n/(n+5), clamp each adjustment to0.25 support units. Apply to deck quality as a small per-card/unique-pair adjustment, never a legality/affordability/lethal override or measured CP. Never multiply pair bonuses by duplicate copies. Exclude incomplete/invalid/censored cells from fitting but retain them in summaries. Model provenance includes source hashes, input bundle digest, baseline agent and train seeds. Policy compatibility separately binds agent.cjs/choice-policy.cjs/experiments.cjs hashes, excluding model bytes to avoid circularity. Fit intermediate single-card cells once per scenario and full pair interaction once; do not count reused pair cells as independent single-card examples. Missing/invalid/stale/unsupported model falls back to the existing heuristic with an explicit status; it never crashes a game/job or guesses compatibility. No runtime file learns or writes itself during play.
+
+Expose experience:on/off as an optional developer experiment/CLI option (default on with safe fallback) and report applied model/status. Append metadata without reordering old CSV fields. Include new modules/model bytes in the source fingerprint. Compare OFF/ON on predeclared paired six intermediate campaigns (three tiers x seeds701/702); invalid/censor counts must not increase and all six comparisons must complete, total wins must not decrease, and total utility (100 per victory +20*final.hp/final.maxHp for each terminal run; defeats normally contribute0) must not decrease before enabling the bundled model. Preserve and report all comparisons, including losses. Report small-sample limits; do not claim optimality or universal win improvement.
+
+## Validation and delivery
+
+Initial focused28/28 passed. Capture pre-change reference behavior before editing AI. Regress actual Search lethal category, Burning Page replacement/limit, post-payment selection, hidden-order/revealed-card behavior and incoming-projection call reduction. Verify dataset hash/source/count and fitting arithmetic independently. Run relevant focused checks per task; final full suite once after source/model changes, syntax/build, real AI panel and production exclusion checks. Fresh final reviewer then one Important/Critical RED-to-GREEN fix pass with a green suite; no re-review. Audit source heads again and expected-head non-forced push to balance/master only. Keep historical files and qualified findings.

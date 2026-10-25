@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-25",
+  "version": "2.46.0-ai.1",
+  "node": "v24.22.1",
+  "chromium": "153.0.8010.0",
+  "checks": {
+    "nodeSuite": {
+      "command": "npm test",
+      "tests": 1107,
+      "pass": 1107,
+      "fail": 0,
+      "skipped": 0,
+      "exitCode": 0
+    },
+    "syntax": {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    "build": {
+      "command": "npm run build:prod",
+      "exitCode": 0
+    },
+    "aiBrowser": {
+      "status": "PASS",
+      "encounters": 4,
+      "sourceHash": "a07e86c203167242ae7b79def6b82da170938390830a54d8f95c080ea4f35e8b",
+      "reportHistory": true,
+      "staleRefreshGuard": true,
+      "selectedHistorySurvivesReload": true,
+      "previousReportImmutable": true,
+      "downloads": true,
+      "cancellation": true,
+      "playerStorageUnchanged": true,
+      "viewports": [
+        1440,
+        750,
+        390
+      ],
+      "errors": []
+    },
+    "masterBrowser": {
+      "checks": [
+        "easy: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+        "medium: real menu, gift question, route, battle, Predict, reload, valid save and original art",
+        "hard: real menu, gift question, route, battle, Predict, reload, valid save and original art"
+      ],
+      "errors": []
+    },
+    "productionBrowser": {
+      "command": "node tests/production-dev-browser.cjs",
+      "exitCode": 0,
+      "result": "PASS production/static subpath: wrong password, Cancel, Settings unlock, reload, Hub combat/cards/motion, God ON/OFF, every map node, all 15 events, upgraded card insertion, OFF/relock, direct-route gating, player copy isolation, exact question contexts, native status edits, four scenarios, HTML/screenshot reports, capture cancellation and real --prod server."
+    }
+  },
+  "status": "PASS",
+  "protectedDiff": [
+    "dist/asset-manifest.json",
+    "dist/index.html",
+    "dist/release.js"
+  ],
+  "profiles": [
+    {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "easy",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+    },
+    {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "medium",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+    },
+    {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "hard",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+    }
+  ],
+  "production": {
+    "files": 741,
+    "aiExcluded": true,
+    "offlineBytes": 306783572,
+    "offlineSha256": "d0d8a68b8d1b0195b0c0f0a30d10234ee951ebe0bc066e397af770f549c2ed74"
+  },
+  "sourceHash": "a07e86c203167242ae7b79def6b82da170938390830a54d8f95c080ea4f35e8b",
+  "sources": {
+    "dist/artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "dist/artifacts.js": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d",
+    "dist/balance-data.js": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d",
+    "dist/balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "dist/card-combat.js": "58e94628c12cadfe29eef0eada0c8626fb92f47644abf6569d4a9045c2623cec",
+    "dist/card-data.js": "b0a59ae12fa10e407ed9f6048cdbb2b64a04aba778e1bbb7b7af8f8eba9e8f7c",
+    "dist/card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "dist/card-kit.js": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12",
+    "dist/combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "dist/combat-predict.js": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a",
+    "dist/config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "dist/economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "dist/economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "dist/education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
+    "dist/engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
+    "dist/map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "dist/map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "dist/math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "dist/mechanics.js": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907",
+    "dist/mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "dist/mystery.js": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
+    "dist/question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "dist/rich-text-data.js": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df",
+    "dist/rich-text.js": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226",
+    "tools/ai-playtester/agent.cjs": "de95c11d94cc0c6b7754ac6017e2061cb99aeb1362fae509b31291c1812cfd4f",
+    "tools/ai-playtester/artifact-policy.cjs": "b4ebd09a6cbf7d4298d7131a4c09dae128ae4b3032a08947446c109a51028da4",
+    "tools/ai-playtester/choice-policy.cjs": "e12e1da700132193ef938861670a018da3026b853c65f146855fe92bb37b849f",
+    "tools/ai-playtester/deck-policy.cjs": "3b02a5773aada502cd327fc1d445644877b8a83eb756cee2a98aed6fde738c99",
+    "tools/ai-playtester/effects.cjs": "048a3f4fa815ea7beb1826a03fd4f296c1a10eb8a42558f59b4970eab8647283",
+    "tools/ai-playtester/experience-data.cjs": "ebae6279f8d4d53e6d3eeba6e6c211dbac31231004eaf2d9616f91f4c84ae6c5",
+    "tools/ai-playtester/experience-model.json": "fcab002a3db982e3a314fa9c3fdf08b9e32957ff78dbd5140962f0b3b29454bc",
+    "tools/ai-playtester/experience.cjs": "d6d55bbe8ccfc7acc0945ffe301a25a9f2aa7ee1659c9de14d1889da8ad96024",
+    "tools/ai-playtester/experiments.cjs": "1b3a042aad67c54f3992cbbd4147319e84ae68fe5ba253f321a94fc324a9ed03",
+    "tools/ai-playtester/report.cjs": "e1bf1517f4c545c1de5af1f400e9995d47a4ebfb6b6ce850b814361b88a8e24b",
+    "tools/ai-playtester/worker.cjs": "de134c1a7e7c6510d85014dbfcaba720bcabea2a7a28b2ea5ccdfe015f524ecb",
+    "tools/balance/candidate.cjs": "ba67f6c69621d2297d134e6371312e88a9d96927ade32fa2848ef3a3b7ff3154",
+    "tools/balance/combat.cjs": "9aabe52146a87e7330754bb7290128e454ee59b9220c119481ef52e2e5d74ab8",
+    "tools/balance/deep.cjs": "5f0ab6f67f1b41cf378812fb982ba5ac4128ea4d1f9f0fd9200fe400ff1a7a37",
+    "tools/balance/map-advanced/question-policy.cjs": "02abed3bce27fe52e12d0c013b14fd800228a3d2be2112071943db7a194025b9",
+    "tools/balance/map-advanced/route-policy.cjs": "11ce54c3aa9ffcdfa87e4bb701c87c2f73c57e7c3846e2756a14a34b2c559774",
+    "tools/balance/map-advanced/scenarios.cjs": "2b63d11c760d074c50069d36ee0b2af9684d9991aa3d1977d9ae310a88e51385",
+    "tools/balance/map-advanced/telemetry.cjs": "6c73f23652969a4ad3e0c66eeaaefb258c3e8f705419382864f12735a5a3503f",
+    "tools/balance/map/config.json": "9677b7ca5aa64f620220303e6734b47d7a5f83d5ae50c08187dba412cb1aa9fa",
+    "tools/balance/map/policy.cjs": "9f98eb17a7d253c520122b9833d1beeecadcd147de8b97e303e74e8c93076051",
+    "tools/balance/map/replay.cjs": "1739e6dc8188423d2aeb719ffca3ab3081029e69ffd571636ef486d7f8c16c16",
+    "tools/balance/map/structure.cjs": "89ae7f11cf3c7369b0a7bb349bea73d84532b42d7c945c2291d2172175327ca4",
+    "tools/balance/master/config.json": "d5c9e2ba51ab23117673ee10174b6f19f8e8777c7463bb0a426c1cd232252c92",
+    "tools/balance/master/loader.cjs": "98717d5a96d97c5fd8cf5110d621e28addf64d02cd149ba040ed60c118c28c0b",
+    "tools/balance/specs/balance-spec.v1.2.json": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f"
+  },
+  "smoke": {
+    "seed": 703,
+    "rows": 2,
+    "invalid": 0,
+    "censored": 0,
+    "status": "NOT_USED_IN_CARD_MODE"
+  },
+  "boundary": [
+    {
+      "mode": "player",
+      "checks": [
+        {
+          "route": "/__dev/ai/",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "POST",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "mode": "production",
+      "checks": [
+        {
+          "route": "/__dev/ai/",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "POST",
+          "status": 404
+        }
+      ]
+    }
+  ],
+  "review": {
+    "reviewer": "fresh gpt-6-astra/high",
+    "base": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+    "head": "c329fe7769ce94f88efa4c6e9491cec25c89e634",
+    "importantFixed": 2,
+    "regressionsRedToGreen": 3,
+    "dataTests": 13,
+    "fullSuiteAfterFix": 1107,
+    "reReview": false,
+    "deferredMinors": 2
+  },
+  "unchangedProductionChecks": "Master/production browser checks from the reviewed source remain valid: fix changes only developer data imports; final protected-source, artifacts and endpoints rechecked."
+}

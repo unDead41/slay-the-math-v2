@@ -2,6 +2,8 @@
 
 Version: 1.1.0 · Game: 2.35.0 · Date: 2026-10-24 (Malaysia)
 
+AI follow-up,25 October2026: branch-only2.46.0-ai.1 from main2.45.0 uses sampled-turn-search-4, payment-aware public card choices and cached exact threat projections. Optional experience:on/off controls small runtime/policy-gated acquisition priors. Missing/stale/corrupt data falls back with explicit metadata. Report schema3/history/CSV positions and player/production isolation remain supported. The offline trainer consumes complete source-bound Combat factorials; Map/Economy exchange is diagnostic only. Read [AI evidence](../balance/master/AI_DATA_2026_10_25.md) and [simulation handoff](../balance/SIMULATION_DATA_HANDOFF.md). No main push is authorized for this follow-up.
+
 DISAHKAN: Ijamm requested implementation from main v2.20.0 of the previously supplied Developer Tools SOR, including separate development and production commands. This domain owns developer access, sandbox fixtures and diagnostic controls. Existing card/combat/event/motion owners still own gameplay.
 
 ## Commands

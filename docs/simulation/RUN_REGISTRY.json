@@ -594,14 +594,14 @@
       "runId": "SE-JOURNEY-20261026-509BE90-03",
       "kind": "FULL_BROWSER_CAMPAIGN",
       "owner": "Simulation & Evidence / root",
-      "status": "RUNNING",
+      "status": "CENSORED_HARNESS_AND_BUDGET",
       "sourceBranch": "main",
       "sourceCommit": "509be90a3f211004c29379c96469f4e3a70cc0a4",
       "sourceTree": "d1e837c632b432c01aa23ee14b061eba0c0ac1f1",
       "identityHash": "bc9f55a17997dff5166b7d7371cbc61eeaee959075472d40ba97599adcc44f13",
       "caseManifestSHA256": "c8a8d326dbb38d5a1a7204e15ec1f3f0943b43a93727115cebe3edc64be505de",
       "planned": 3,
-      "returned": 0,
+      "returned": 3,
       "plannedAt": "2026-10-25T17:36:33.212Z",
       "cases": [
         {
@@ -690,7 +690,71 @@
       },
       "trainingEligible": false,
       "coordination": "User explicitly requests complete Stage1-to-Stage2-final-Boss journeys. Three fresh whole-browser integration campaigns; no owner numeric cohort repeated; no retuning/training/main publication.",
-      "startedAt": "2026-10-25T17:38:20.404Z"
+      "startedAt": "2026-10-25T17:38:20.404Z",
+      "completeCampaigns": 0,
+      "finalBossReached": 0,
+      "finishedAt": "2026-10-25T17:51:23.575Z",
+      "outcomes": [
+        {
+          "caseId": "J1",
+          "seed": 2157504611,
+          "status": "CENSORED_BUDGET",
+          "reachedFinalBoss": false,
+          "rooms": 18
+        },
+        {
+          "caseId": "J2",
+          "seed": 3023302934,
+          "status": "ERROR",
+          "reachedFinalBoss": false,
+          "rooms": 9
+        },
+        {
+          "caseId": "J3",
+          "seed": 2036691708,
+          "status": "ERROR",
+          "reachedFinalBoss": false,
+          "rooms": 9
+        }
+      ],
+      "counts": {
+        "screenshots": 54,
+        "videos": 0,
+        "recordedAPICalls": 650,
+        "validAPIStates": 650,
+        "legalRoomEntries": 36,
+        "fullReplayExact": 649,
+        "fullReplayChecked": 650,
+        "clockOnlyReplayDifferences": 1
+      },
+      "endObservedMain": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+      "artifact": {
+        "libraryFileId": "libfile_a96a4e9c72ac8191baeeb7050c1eea6c",
+        "url": "https://chatgpt.com/library?file_id=libfile_a96a4e9c72ac8191baeeb7050c1eea6c&account_id=personal",
+        "sha256": "ceab68bc77aacc7d73e48b833ee9c594b237c9cf2323dd5d4a2b53c6af9bb979",
+        "bytes": 69641048
+      },
+      "resume": {
+        "caseId": "J1",
+        "seed": 2157504611,
+        "path": "raw/J1-final.json",
+        "sourceCommit": "509be90a3f211004c29379c96469f4e3a70cc0a4",
+        "stage": 2,
+        "level": 8,
+        "hp": 63,
+        "maxHp": 70,
+        "gold": 152,
+        "deckCount": 17
+      },
+      "executionNotes": [
+        "HARNESS-01 saved-state/scene race fixed before resuming from exact retained state.",
+        "HARNESS-02 Rest Upgrade requires selecting panel before button; fixed. J2/J3 retained at Stage1 room9.",
+        "No campaign reached Stage2 final boss within collection budget. Goal remains incomplete; do not mark PASS.",
+        "Each resume imported saved run into a fresh browser context; external profile storage was not retained.",
+        "649 of650 replays fully equal; one differs only in finished timestamp by5ms, all other fields equal.",
+        "Bookkeeping, archive verification and durable saving completed after collection stopped; case time caps applied per segment.",
+        "Seeds are consumed/reserved even for harness errors or censored runs; future new batches must not silently reuse them."
+      ]
     }
   ]
 }

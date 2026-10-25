@@ -1,0 +1,423 @@
+{
+  "schema": "map-four-agent-operating-protocol-1.0.0",
+  "reportId": "map-four-agent-protocol-v1",
+  "reportKind": "PROTOCOL_ONLY",
+  "createdAtUtc": "2026-10-25T09:19:48.601229+00:00",
+  "masterSorVersion": "1.2.0",
+  "repository": "unDead41/slay-the-math-v2",
+  "publicationBranch": "balance/map",
+  "inspectedMain": {
+    "sha": "2b81a2cd80532324a76581563874a9ecd797cc42",
+    "gameVersion": "2.47.0"
+  },
+  "inspectedMapHead": "364a844879b8cd9463c4771eac15291a3fd22075",
+  "gitRelationshipBeforeChange": {
+    "mergeBase": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+    "mapCommitsNotInMain": 3,
+    "mainCommitsNotInMap": 22
+  },
+  "latestMeasuredMapCohort": {
+    "id": "v1.5",
+    "sourceMainSha": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+    "gameVersion": "2.40.0",
+    "balanceVersion": "master-1.5.0-candidate.5",
+    "campaigns": 2400,
+    "matchedStageReplays": 1683,
+    "records": 4083,
+    "easySkipCensored": 21,
+    "missingMatchedRankScores": 117,
+    "sourceLabelUnchanged": true
+  },
+  "balanceOnInspectedMain": "NOT_REMEASURED",
+  "newNumericalSimulations": 0,
+  "newCombatPowerValues": 0,
+  "workflow": {
+    "status": "DOCUMENTED_OPERATING_PROTOCOL",
+    "maxLlmSubagents": 4,
+    "parentRole": "single_coordinator_and_publisher",
+    "workerScope": "analysis_of_disjoint_seed_subsets_over_one_canonical_simulation_cohort",
+    "centralNodeQueueAlreadyExists": true,
+    "proposedAggregateNodeWorkerCap": 4,
+    "actualNodeWorkersRunThisUpdate": 0,
+    "crossAgentAutomaticSchedulerImplemented": false,
+    "assignmentCoordination": "manual_parent_ledger; reassign_only_unstarted_analysis_batches",
+    "oneWriterPerJournal": true,
+    "sameFullSimulationContextRetainedForAnalysisSubsets": true,
+    "initialAllocationExampleOnly": true,
+    "actualSpeedup": null
+  },
+  "agents": [
+    {
+      "agentId": "A",
+      "initialSeedKeys": [
+        "STM-001",
+        "STM-005",
+        "STM-009",
+        "STM-013",
+        "STM-017",
+        "STM-021",
+        "STM-025",
+        "STM-029",
+        "STM-033",
+        "STM-037",
+        "STM-041",
+        "STM-045",
+        "STM-049",
+        "STM-053",
+        "STM-057",
+        "STM-061",
+        "STM-065",
+        "STM-069",
+        "STM-073",
+        "STM-077",
+        "STM-081",
+        "STM-085",
+        "STM-089",
+        "STM-093",
+        "STM-097"
+      ],
+      "initialSeedCount": 25,
+      "targetAnalysisLoadShare": 0.25,
+      "initialAnalysisBatches": [
+        [
+          "STM-001",
+          "STM-005",
+          "STM-009",
+          "STM-013",
+          "STM-017"
+        ],
+        [
+          "STM-021",
+          "STM-025",
+          "STM-029",
+          "STM-033",
+          "STM-037"
+        ],
+        [
+          "STM-041",
+          "STM-045",
+          "STM-049",
+          "STM-053",
+          "STM-057"
+        ],
+        [
+          "STM-061",
+          "STM-065",
+          "STM-069",
+          "STM-073",
+          "STM-077"
+        ],
+        [
+          "STM-081",
+          "STM-085",
+          "STM-089",
+          "STM-093",
+          "STM-097"
+        ]
+      ],
+      "sameScopeForAll": [
+        "structure_and_routes",
+        "combat_elite_recovery_mystery",
+        "shop_reward_deck_boss_entry",
+        "predict_difficulty",
+        "evidence_findings"
+      ],
+      "actualAnalysisSeconds": null,
+      "assignedNewSimulationCases": 0
+    },
+    {
+      "agentId": "B",
+      "initialSeedKeys": [
+        "STM-002",
+        "STM-006",
+        "STM-010",
+        "STM-014",
+        "STM-018",
+        "STM-022",
+        "STM-026",
+        "STM-030",
+        "STM-034",
+        "STM-038",
+        "STM-042",
+        "STM-046",
+        "STM-050",
+        "STM-054",
+        "STM-058",
+        "STM-062",
+        "STM-066",
+        "STM-070",
+        "STM-074",
+        "STM-078",
+        "STM-082",
+        "STM-086",
+        "STM-090",
+        "STM-094",
+        "STM-098"
+      ],
+      "initialSeedCount": 25,
+      "targetAnalysisLoadShare": 0.25,
+      "initialAnalysisBatches": [
+        [
+          "STM-002",
+          "STM-006",
+          "STM-010",
+          "STM-014",
+          "STM-018"
+        ],
+        [
+          "STM-022",
+          "STM-026",
+          "STM-030",
+          "STM-034",
+          "STM-038"
+        ],
+        [
+          "STM-042",
+          "STM-046",
+          "STM-050",
+          "STM-054",
+          "STM-058"
+        ],
+        [
+          "STM-062",
+          "STM-066",
+          "STM-070",
+          "STM-074",
+          "STM-078"
+        ],
+        [
+          "STM-082",
+          "STM-086",
+          "STM-090",
+          "STM-094",
+          "STM-098"
+        ]
+      ],
+      "sameScopeForAll": [
+        "structure_and_routes",
+        "combat_elite_recovery_mystery",
+        "shop_reward_deck_boss_entry",
+        "predict_difficulty",
+        "evidence_findings"
+      ],
+      "actualAnalysisSeconds": null,
+      "assignedNewSimulationCases": 0
+    },
+    {
+      "agentId": "C",
+      "initialSeedKeys": [
+        "STM-003",
+        "STM-007",
+        "STM-011",
+        "STM-015",
+        "STM-019",
+        "STM-023",
+        "STM-027",
+        "STM-031",
+        "STM-035",
+        "STM-039",
+        "STM-043",
+        "STM-047",
+        "STM-051",
+        "STM-055",
+        "STM-059",
+        "STM-063",
+        "STM-067",
+        "STM-071",
+        "STM-075",
+        "STM-079",
+        "STM-083",
+        "STM-087",
+        "STM-091",
+        "STM-095",
+        "STM-099"
+      ],
+      "initialSeedCount": 25,
+      "targetAnalysisLoadShare": 0.25,
+      "initialAnalysisBatches": [
+        [
+          "STM-003",
+          "STM-007",
+          "STM-011",
+          "STM-015",
+          "STM-019"
+        ],
+        [
+          "STM-023",
+          "STM-027",
+          "STM-031",
+          "STM-035",
+          "STM-039"
+        ],
+        [
+          "STM-043",
+          "STM-047",
+          "STM-051",
+          "STM-055",
+          "STM-059"
+        ],
+        [
+          "STM-063",
+          "STM-067",
+          "STM-071",
+          "STM-075",
+          "STM-079"
+        ],
+        [
+          "STM-083",
+          "STM-087",
+          "STM-091",
+          "STM-095",
+          "STM-099"
+        ]
+      ],
+      "sameScopeForAll": [
+        "structure_and_routes",
+        "combat_elite_recovery_mystery",
+        "shop_reward_deck_boss_entry",
+        "predict_difficulty",
+        "evidence_findings"
+      ],
+      "actualAnalysisSeconds": null,
+      "assignedNewSimulationCases": 0
+    },
+    {
+      "agentId": "D",
+      "initialSeedKeys": [
+        "STM-004",
+        "STM-008",
+        "STM-012",
+        "STM-016",
+        "STM-020",
+        "STM-024",
+        "STM-028",
+        "STM-032",
+        "STM-036",
+        "STM-040",
+        "STM-044",
+        "STM-048",
+        "STM-052",
+        "STM-056",
+        "STM-060",
+        "STM-064",
+        "STM-068",
+        "STM-072",
+        "STM-076",
+        "STM-080",
+        "STM-084",
+        "STM-088",
+        "STM-092",
+        "STM-096",
+        "STM-100"
+      ],
+      "initialSeedCount": 25,
+      "targetAnalysisLoadShare": 0.25,
+      "initialAnalysisBatches": [
+        [
+          "STM-004",
+          "STM-008",
+          "STM-012",
+          "STM-016",
+          "STM-020"
+        ],
+        [
+          "STM-024",
+          "STM-028",
+          "STM-032",
+          "STM-036",
+          "STM-040"
+        ],
+        [
+          "STM-044",
+          "STM-048",
+          "STM-052",
+          "STM-056",
+          "STM-060"
+        ],
+        [
+          "STM-064",
+          "STM-068",
+          "STM-072",
+          "STM-076",
+          "STM-080"
+        ],
+        [
+          "STM-084",
+          "STM-088",
+          "STM-092",
+          "STM-096",
+          "STM-100"
+        ]
+      ],
+      "sameScopeForAll": [
+        "structure_and_routes",
+        "combat_elite_recovery_mystery",
+        "shop_reward_deck_boss_entry",
+        "predict_difficulty",
+        "evidence_findings"
+      ],
+      "actualAnalysisSeconds": null,
+      "assignedNewSimulationCases": 0
+    }
+  ],
+  "reviewAreasCompleted": [
+    "load_and_resources",
+    "integrity_and_resume",
+    "risk_based_verification",
+    "master_handoff_and_publication"
+  ],
+  "audit": {
+    "documentationStatus": "VALID_STATIC_REVIEW",
+    "performanceStatus": "UNMEASURED",
+    "numericBalanceStatus": "NOT_REMEASURED",
+    "findings": [
+      {
+        "id": "MAP-PAR-01",
+        "category": "CONFIRMED_LIMITATION",
+        "priority": "P1",
+        "confidence": "HIGH",
+        "evidence": "runExperiments uses registry.seeds.slice(0,seedLimit); repeated --seed-limit 25 selects the same prefix",
+        "action": "Central collector keeps full cohort; seed lists above scope analysis only. Separate collectors require a tested shard adapter."
+      },
+      {
+        "id": "MAP-PAR-02",
+        "category": "POTENTIAL_RISK",
+        "priority": "P1",
+        "confidence": "HIGH",
+        "evidence": "Four independent Node pools multiply concurrency and shared disk use; prior cohort suffered ENOSPC",
+        "action": "One aggregate resource budget, single journal writer, isolated findings directories and disk monitoring."
+      },
+      {
+        "id": "MAP-PAR-03",
+        "category": "VERIFICATION_REQUIREMENT",
+        "priority": "P1",
+        "confidence": "HIGH",
+        "evidence": "checkFiles returns the stored quality gate after integrity checks",
+        "action": "Require independent raw recomputation and separate integrity/score statuses."
+      }
+    ],
+    "runtimeChanged": false,
+    "mainWritten": false,
+    "measuredDataChanged": false
+  },
+  "protocolPath": "docs/MAP_FOUR_AGENT_PROTOCOL.md",
+  "publicationReceipt": {
+    "status": "PENDING_REMOTE_VERIFICATION"
+  },
+  "staticValidation": {
+    "status": "PASS",
+    "fourAgents": true,
+    "all100SeedsUnique": true,
+    "equalInitial25Seeds": true,
+    "batchContentsMatch": true,
+    "newRelativeLinksChecked": [
+      "reports/map-balance/four-agent-protocol-v1/summary.json",
+      "MASTER_SOR_PROJECT.md",
+      "tools/verify-map-advanced.py",
+      "docs/MAP_BALANCE_V1_5_HANDOFF.md"
+    ],
+    "noNewMeasurementClaim": true,
+    "gameTestsRun": false,
+    "reason": "Documentation/protocol only; runtime, numerical input and historical datasets unchanged"
+  }
+}

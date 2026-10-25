@@ -113,3 +113,6 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 AI Playtester on main, release 2.33.0: [operator guide](docs/AI_PLAYTESTER.md), [developer owner](docs/sor/20_DEVELOPER_TOOLS.md), [main integration and release verification](docs/AI_PLAYTESTER_MAIN_2026_10_24.md), [historical strategy verification](docs/verification/ai-strategy.json), [original baseline](docs/verification/ai-branch.json). No automatic tuning or pupil win-rate claim.
 
 Regresi Map semasa2.40.0/candidate.5: [handoffv1.5](docs/MAP_BALANCE_V1_5_HANDOFF.md), SOR Map/MAP-BAL-18 dan tools/balance/map-regression. Primaryv1.4 kekal bukti candidate.4.
+
+
+Proses Map maksimumempat subagent: [protokol operasi](docs/MAP_FOUR_AGENT_PROTOCOL.md), MAP-BAL-19 dan reports/map-balance/four-agent-protocol-v1/summary.json. Kemas kini dokumentasi sahaja; bukan pengukuran numerik2.47.

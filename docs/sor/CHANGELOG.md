@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## Protokol empat agen Map —25 Oktober2026
+
+Dokumentasikan maksimum4 subagent dengan skop analisis sama, agihan awal25 seed/agen, batc kecil dan satu collector/publisher. Rekod batas CLI seedLimit, cap Node bersama, pengesahan bebas dan pelan berstruktur untuk Master.0 simulasi/CP baharu; data2.40 dikekalkan dan balance main2.47 belum diukur. [Protokol](../MAP_FOUR_AGENT_PROTOCOL.md).
+
 ## Map regression v1.5 —24 October2026
 
 Pin main2.40.0/Master candidate.5 after publishing primaryv1.4. Add a separate fixed100-seed N1 regression and same-entry rank replays, canonical runtime identity assertions and explicit versioned runner/config hashes. Preserve every historical cohort/source and all upstream production content. [Owner handoff](../MAP_BALANCE_V1_5_HANDOFF.md). CP is developer-only; pupil targets remain unmeasured.
@@ -611,3 +615,4 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 ## Release metadata correction — 2.37.1
 
 24 October 2026: Ijamm requests correcting the unchanged version after the Settings-only merge. Base main `1ece105903ee34c81c38a338ead01db65a834523`; Master SOR 1.2.0. Confirmed P2 metadata issue: the merged UI still displayed 2.37.0. Use package.json 2.37.1 and regenerate release.js, cache URLs and all entrypoints. Gameplay, saves and assets are unchanged. Existing DOC-001/DOC-002 findings remain open outside scope. Verification: release metadata tests and production build; no additional issue found in this metadata-only diff. Live deployment and physical devices are not verified. Main publication remains authorized.
+

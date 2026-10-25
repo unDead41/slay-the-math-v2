@@ -1,3 +1,22 @@
+# Audit balance/map — protokol empat agen
+
+25 Oktober2026, Asia/Kuala_Lumpur; Master SOR1.2.0. **VALID bagi semakan statik dokumentasi/protokol; prestasi empat agen dan balance main2.47 BELUM DISAHKAN.**
+
+Main diperiksa2b81a2cd80532324a76581563874a9ecd797cc42/game2.47.0; Map sebelum perubahan364a844879b8cd9463c4771eac15291a3fd22075. Merge baseb730cad; ketika semakan Map mempunyai3 commit sendiri dan22 commit main belum diintegrasi. Kemas kini ini tidak merge main atau mengubah runtime lama/data. Main AGENTS/governance/visi/design, audit dokumentasi main dan owner Map dibaca; DOC001/DOC002 sudah diperbetul pada main mengikut addendum2.43, bukan penemuan terbuka baharu di sini.
+
+Empat subagent read-only menyemak beban, integriti/resume, pengesahan dan handoff. [Protokol operasi](../../MAP_FOUR_AGENT_PROTOCOL.md), [pelan/hasil semakan berstruktur](../../../reports/map-balance/four-agent-protocol-v1/summary.json).
+
+| Kategori | Keutamaan / keyakinan | Bukti dan tindakan |
+| --- | --- | --- |
+| MASALAH DISAHKAN — batas CLI | P1/tinggi | seedLimit memilih prefix; empat panggilan25 akan mengulang seed sama. Agihan25 ialah analisis; collector pusat kekal cohort penuh. Tiada dakwaan shard selector sudah dibina. |
+| RISIKO BERPOTENSI | P1/tinggi | Pool berasingan boleh menggandakan worker dan ruang/RAM; kejadian ENOSPC sejarah membuktikan kepentingan kapasiti. Guna cap keseluruhan, satu penulis journal dan direktori findings berasingan. |
+| RISIKO BERPOTENSI | P1/tinggi | PASS checker manifest membaca quality gate tersimpan; pengiraan raw bebas tetap wajib. Jangan pool CP/versi atau menukar censor kepada loss. |
+| PENAMBAHBAIKAN | P2/cadangan operasi | Empat agen skop sama, batc analisis kecil dan satu penyelaras. Masa sebenar/speedup belum diukur; tiada janji4×. |
+
+Semakan yang sepadan: ketepatan agihan100 seed, tiada overlap, formatJSON, pautan baharu, status0 simulasi dan diff dokumentasi sahaja. Suite game/campaign tidak diulang kerana tiada kod/input gameplay berubah. Tiada isu tambahan ditemui dalam skop dokumentasi yang disemak. Had: tiada benchmark, simulasi2.47, visual/model atau playtest murid. Penerbitan hanya balance/map; ref dan diff remote disahkan dalam receipt laporan.
+
+## Rekod audit pengukuran v1.5 —24 Oktober2026
+
 # Audit semasa balance/map —v1.5
 
 24 Oktober2026; Master SOR1.2.0. **VALID untuk integriti engine/data dan sumber yang diperiksa; CP PROVISIONAL dan balance murid BELUM DISAHKAN.**
@@ -20,3 +39,4 @@ Main diperiksa `b730cad0cb27b53ffbdf687d8fc9edaed143ef43`/2.40.0; sumber ini dii
 Had: tiada pupil/device/hosting/new visual/model validation, semua RNG/deck/polisi atau77,384 route pairs melalui engine. CP bukan kuasa kad dan kekal di luar UI pemain. Main documentation DOC001/DOC002 kekal milik audit main; isu Combat forced-Spool sensitivity dan Economy gross flows tidak digabung senyap. Penerbitan hanya balance/map; receipt remote dalam PUBLICATION.json.
 
 Penerbitan disahkan: contentd13c7758b7580bbb10d352fbb9388f1f87df1032/tree547d05fb051229697d6273f07281e757b8ea0943, ordered parents8606616+b730cad. Expected-head update tanpa force, remote ref compare dan native tree/ancestry readback PASS; main tidak berubah. Resit susulan dokumentasi sahaja.
+

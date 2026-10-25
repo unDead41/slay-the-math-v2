@@ -1,7 +1,7 @@
-# SOR Map Balance & Combat Power — v1.5
+# SOR Map Balance & Combat Power — v1.5.1
 
-Tarikh semakan: 24 Oktober 2026. Pemilik domain: Map. Penyatuan dan keputusan balance akhir: Master.
-Kod semakan semasa: `b730cad0cb27b53ffbdf687d8fc9edaed143ef43` (game 2.40.0), branch `balance/map`. Baseline sejarah: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (2.24.0).
+Tarikh semakan dokumen: 25 Oktober 2026. Pengukuran numerik terakhir kekal 24 Oktober 2026. Pemilik domain: Map. Penyatuan dan keputusan balance akhir: Master.
+Kod pengukuran terakhir: `b730cad0cb27b53ffbdf687d8fc9edaed143ef43` (game 2.40.0), branch `balance/map`. Baseline sejarah: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (2.24.0).
 
 ## Status dan keutamaan
 
@@ -248,3 +248,15 @@ Bandingkan kedua-dua versi hanya melalui task/runSeed/repetition0 yang sama apab
 2,400 campaign +1,683 matched replay =4,083 rekod,0 error/invalid. Verifier bebas PASS semua profile; Easy21 skip censored dan CP unresolved null; Medium/Hard0 censor. Stage2 entry banks100/95/66;5 Medium dan34 Hard seed tanpa entry,117 rank CP null. All200 graph/5,500 route struktur kekal; unique ten-node engine coverage1120/974/731 per profile bukan victory count. N1 dan source2.40.0/candidate.5 mesti kekal dalam konteks; target murid belum diukur.
 
 Source65-file archive dan3 exact full-trial cold replays memelihara runtime.999 root tests, syntax/map/PNG dan production checks PASS; protected source diff terhadap pinned main kosong. Source snapshots, raw/CSV/JSON, paired runtime comparison, limit/repair proofs dan cadangan Master berada dalam handoffv1.5.
+
+
+
+## MAP-BAL-19 — Maksimum empat subagent dan satu collector kanonik
+
+DISAHKAN: Ijamm meminta maksimum empat subagent dengan beban kerja sekitar setara dan laporan ke balance/map untuk Master. [Protokol empat agen](../../../docs/MAP_FOUR_AGENT_PROTOCOL.md) menetapkan empat skop analisis sama, agihan awal25 seed/agen merentas semua difficulty/polisi dan batc kecil yang boleh diserah semula hanya sebelum bermula.25% ialah sasaran beban, bukan prestasi yang telah diukur.
+
+Penyelaras menjalankan satu collector kanonik dan satu pemilik setiap journal; had operasi cadangan maksimum4 worker Node keseluruhan mengikut CPU/RAM. Empat agen menganalisis subset hasil stabil, tidak menjalankan empat collector penuh. --seed-limit25 memilih prefix sama; ia bukan shard selector. Pengagih automatik merentas agen/adapter shard belum dibina.
+
+Penggabungan/pengesahan bebas dan push menjadi tugas penyelaras sahaja. Gunakan global context/difficulty/task identity, retained loss/censor/error, matched entry/RNG dan actual coverage; jangan puratakan CP empat agen. Data/context lama tidak dilabel semula.
+
+Semakan25 Oktober memeriksa main2b81a2c/game2.47.0 dan Map364a844. Kemas kini ini dokumentasi sahaja:0 simulasi/CP baharu. Datasetv1.5 tetap game2.40.0; balance2.47 dan keuntungan kelajuan belum diukur. Versi dokumen1.5.1 berasingan daripada versi game/dataset.

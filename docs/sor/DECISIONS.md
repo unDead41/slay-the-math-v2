@@ -756,3 +756,11 @@ DISAHKAN: Ijamm authorizes merging the Settings-only Developer controls update `
 ## DEC-20261024-MAP-REGRESSION-15
 
 DISAHKAN: Ijamm meminta recheck skop Map dan push balance/map untuk Master. DITERUSKAN: pin current mainb730cad/game2.40.0/candidate.5, preserve publishedv1.4 and all upstream production sources, and run a separate predeclared100-seed N1 regression (2,400 campaigns, at most1,800 same-entry rank replays). Version/protocol/source/context remain explicit; no outcome-driven resampling, pooled old/new CP, production numerical tuning or player UI CP. Pilot confidence is limited; Master owns pupil90/70/50 validation and cross-domain decisions. See MAP-BAL-18 and handoffv1.5.
+
+
+
+## DEC-20261025-MAP-FOUR-AGENTS — Agihan analisis map yang setara
+
+DISAHKAN: Ijamm meminta maksimum4 subagent, beban sekitar setara, proses lebih cepat dan laporan ke balance/map untuk Master. DITERUSKAN sebagai protokol operasi: empat agen skop sama atas subset seed dan satu penyelaras/collector/publisher; agihan awal25 seed, batc kecil dan cap Node global dicadangkan untuk dinilai. Gunakan protokol MAP-BAL-19 dan docs/MAP_FOUR_AGENT_PROTOCOL.md.
+
+Tiada scheduler merentas agen, benchmark kelajuan atau penalaan numerik baharu dilaksanakan dalam set perubahan ini. Main diperiksa2.47; data2.40 kekal sejarah dengan source/context asal. Pengesahan bebas, matched entry/RNG, loss/censor, kelengkapan case dan CP pembangunan sahaja wajib dikekalkan. Jangan menggunakan empat seedLimit25 sebagai empat shard atau purata CP agen.

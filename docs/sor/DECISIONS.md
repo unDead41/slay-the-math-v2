@@ -1,5 +1,35 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-TUTORIAL-MAIN — Publish the completed illustrated tutorial
+
+- **DISAHKAN:** Ijamm now requests “okay push tutorial ni ke main”. This authorizes
+  main publication of PR20's completed tutorial and supersedes the prior
+  feature-branch-only boundary for this update.
+- **DITERUSKAN:** promote2.46.0-tutorial.1 to2.46.0 with generated release/cache
+  metadata. Main remains6c49f3980c3a832635d4d01a6c50a8df98ac4aad /2.45.0.
+  Preserve all tutorial runtime/media bytes and the existing numerical, save,
+  question, language, VFX and art owners.
+- **Publication repair:** PR CI's two failures are missing historical balance
+  Git objects with checkout fetch-depth1, not balance assertions. Fetch full
+  history for the existing tests; retain their pinned SHA and assertions.
+  [Main release, audit and actual checks](../TUTORIAL_MAIN_2_46_0.md).
+
+## DEC-20261025-TUTORIAL-REFRESH — Current-game illustrated learning path
+
+- **DISAHKAN:** Ijamm requests updating the complete tutorial from current main,
+  adding/removing/improving content as findings justify, and many actual-game
+  snapshots or short recordings with simple Form1-level game instructions.
+- **DITERUSKAN implementation:** ten-chapter Basics route,23-chapter reference,
+  manually stepped English/BM real UI captures, isolated full-turn practice,
+  canonical Basics, smaller instructions, optional detail and direct practice.
+  Preserve original chapter IDs, existing progress, actual engine/evaluator,
+  current numerical/language owners and player records. No AI screenshot mockups.
+- **PERLU_VERIFIKASI:** classroom comprehension and physical-device performance.
+  Form4 mathematical scope remains unchanged. The new work is prepared on
+  tutorial-visual-refresh; no new main merge/deployment is inferred from the
+  previous tutorial's completed publication. [Guide](../TUTORIAL_VISUAL_REFRESH.md),
+  [audit and actual checks](../audits/tutorial-visual-refresh/LATEST.md).
+
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
 - **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.

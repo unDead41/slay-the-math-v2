@@ -111,3 +111,69 @@ dialog[data-kind="help"] .dialog-head .eyebrow{display:none}
  .tutorial-footer .btn{padding:6px 8px;font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.tutorial-shell *{scroll-behavior:auto!important}}
+/* One picture/action at a time; no automatic motion or hidden essential rules. */
+.tutorial-top{gap:12px;flex-wrap:wrap;padding-bottom:10px}
+.tutorial-top progress{width:135px}
+.tutorial-route{display:flex;gap:6px;flex-wrap:wrap}
+.tutorial-route [aria-pressed="true"]{background:var(--tutorial-gold);color:#10232a;border-color:var(--tutorial-gold);font-weight:700}
+.tutorial-nav-group{margin:18px 8px 8px;font-size:12px;line-height:1.4;color:var(--tutorial-gold);font-weight:700}
+.tutorial-nav-group:first-child{margin-top:0}
+.tutorial-jump{margin:-6px 0 14px}
+.tutorial-jump .btn{border-color:#bce4dd;color:#bce4dd}
+.tutorial-image-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;border-bottom:1px solid #e5c27638;font-size:12px;color:var(--tutorial-gold);font-weight:700}
+.tutorial-image-heading .btn{font-size:12px;padding:8px 12px}
+.tutorial-figure figcaption{display:block;padding:14px 16px;min-height:74px}
+.tutorial-figure figcaption strong{display:block;font-size:17px;font-weight:600;line-height:1.5;color:var(--tutorial-ink)}
+.tutorial-figure figcaption small{display:block;font-size:12px;margin-top:6px}
+.tutorial-picture-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-top:1px solid #e5c27638}
+.tutorial-picture-nav>.btn{font-size:13px;padding:8px;flex:0 1 100px}
+.tutorial-picture-dots{display:flex;gap:4px;justify-content:center}
+.tutorial-picture-dots .btn{min-width:44px;width:44px;padding:6px}
+.tutorial-picture-dots [aria-pressed="true"]{background:var(--tutorial-gold);color:#10232a;border-color:var(--tutorial-gold)}
+.tutorial-image-scroll{max-height:500px}
+.tutorial-figure img{max-height:500px;min-height:120px}
+.tutorial-extra{padding:12px 16px;border:1px solid #e5c27655;border-radius:8px;margin:16px 0;color:var(--tutorial-muted)}
+.tutorial-extra summary{min-height:44px;cursor:pointer;display:flex;align-items:center;color:var(--tutorial-gold);font-weight:600}
+.tutorial-extra summary::before{content:'＋';margin-right:8px}
+.tutorial-extra[open] summary::before{content:'−'}
+.tutorial-extra p{font-size:15px;line-height:1.7}
+.tutorial-turn-steps{display:flex;list-style:none;gap:6px;padding:0;flex-wrap:wrap}
+.tutorial-turn-steps li{padding:6px 10px;border:1px solid #6e8d8d55;border-radius:6px;font-size:14px}
+.tutorial-turn-steps [aria-current="step"]{border-color:var(--tutorial-gold);color:var(--tutorial-gold)}
+.tutorial-question [hidden]{display:none!important}
+.tutorial-question-tabs{display:flex;gap:6px;margin:16px 0}
+.tutorial-question-tabs .btn{flex:1;padding:10px 6px}
+.tutorial-question-tabs [aria-selected="true"]{background:var(--tutorial-gold);color:#10232a;border-color:var(--tutorial-gold)}
+.tutorial-foundation{padding:16px;border:1px solid #e5c27677;border-radius:8px;margin:16px 0;background:#0b1f29}
+.tutorial-foundation h5{font-size:17px;color:var(--tutorial-gold);line-height:1.5;margin:16px 0 8px}
+.tutorial-foundation-check{border-top:1px solid #709c9c44;padding:16px 0}
+.tutorial-intent{padding:10px 12px;border:1px solid #e5c27666;border-radius:6px;color:#ffe2ac;font-size:15px}
+.tutorial-outcome{font-size:15px}
+.tutorial-outcome ul{margin:6px 0;padding-left:20px}
+@media(max-width:820px){
+ .tutorial-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+ .tutorial-top>div:first-child{min-width:0}
+ .tutorial-route{grid-row:2;grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr}
+ .tutorial-language{grid-column:2;grid-row:1;flex-wrap:nowrap}
+ .tutorial-route .btn,.tutorial-language .btn{font-size:12px;padding:7px 8px}
+ .tutorial-top progress{display:none}
+ .tutorial-toc{max-height:62px;padding:6px 0}
+ .tutorial-toc button{min-height:44px}
+ .tutorial-nav-group{display:none}
+ .tutorial-content{padding:16px 4px}
+ .tutorial-picture-nav{flex-wrap:wrap;justify-content:center;gap:6px}
+ .tutorial-picture-dots{order:-1;width:100%}
+ .tutorial-picture-nav>.btn{flex:1;max-width:none}
+ .tutorial-figure figcaption strong{font-size:16px}
+ .tutorial-image-heading{padding:6px 10px}
+ .tutorial-question-tabs .btn{font-size:13px}
+}
+@media(max-height:500px) and (orientation:landscape){
+ .tutorial-top{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:6px;padding-bottom:5px}
+ .tutorial-top>div:first-child{display:none}
+ .tutorial-route{display:flex;flex-wrap:nowrap}
+ .tutorial-route .btn,.tutorial-language .btn{min-height:44px;padding:5px 8px;font-size:12px}
+ .tutorial-toc{max-height:none;padding:6px}
+ .tutorial-content{padding:10px}
+ .tutorial-figure img{max-height:300px}
+}

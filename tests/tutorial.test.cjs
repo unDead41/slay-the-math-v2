@@ -68,9 +68,31 @@ test('every practical chapter works with each loaded Master profile and its own 
   for(const [id,action]of [['cards','play'],['piles','play'],['passive','play'],['rest','heal']]){c.select(id);const result=c.act(id,action);assert.equal(result.complete,true,difficulty+' '+id);assert.ok(x.E.validate(result.run));}
   c.select('focus');const before=c.exercise().run;c.act('focus','arm');const card=c.exercise().run.battle.hand.find(c=>c.key==='stm.attack.rune_strike'),plan=x.E.cardPlan(c.exercise().run,card);const after=c.act('focus','play');assert.equal(after.run.battle.hp,before.battle.hp-plan.damageEvents[0].hpLost);assert.ok(x.E.validate(after.run));
   c.select('combat');c.act('combat','play');assert.ok(c.act('combat','end-turn').complete);
+  c.select('first-turn');c.act('first-turn','play');c.act('first-turn','play');assert.ok(c.act('first-turn','end-turn').complete);assert.ok(x.E.validate(c.exercise().run));
   c.select('map');assert.ok(c.act('map','enter',x.E.availableNodes(c.exercise().run)[0].id).complete);
   c.select('rewards');assert.ok(c.act('rewards','skip').complete);
   c.select('shop');assert.ok(c.act('shop','buy','0').complete);
   for(const id of ['predict','boss']){c.select(id);for(let i=0;i<(id==='boss'?2:1);i++){const q=x.Q.currentConsumer(c.exercise().run).question;c.act(id,'select',q.correctChoiceId);const v=c.act(id,'check');assert.ok(x.E.validate(v.run));if(id==='boss'&&i===0)c.act(id,'next-predict');}assert.equal(c.exercise().complete,true);}
+ }
+});
+
+test('old tutorial progress survives the two routes and new chapters',()=>{
+ const old={version:1,chapter:'rewards',language:'ms',completed:['welcome','cards','rewards']},s=storage({[T.storageKey]:JSON.stringify(old)}),c=course({storage:s});
+ assert.equal(c.progress().chapter,'rewards');assert.equal(c.progress().route,'all');assert.deepEqual(c.progress().completed,old.completed);
+ c.route('basics');assert.equal(c.progress().chapter,'welcome');assert.deepEqual(c.progress().completed,old.completed);
+ c.select('reporting');assert.equal(c.progress().route,'all');assert.equal(c.progress().chapter,'reporting');
+ assert.throws(()=>c.route('invalid'));assert.deepEqual(c.progress().completed,old.completed);
+});
+test('full-turn practice protects, attacks and resolves the enemy once in order',()=>{
+ const c=course();c.select('first-turn');const initial=c.exercise();assert.throws(()=>c.act('first-turn','end-turn'));
+ const guarded=c.act('first-turn','play');assert.equal(guarded.step,1);assert.equal(guarded.run.battle.block,6);assert.equal(guarded.run.battle.energy,2);
+ assert.throws(()=>c.act('first-turn','end-turn'));const attacked=c.act('first-turn','play');assert.equal(attacked.step,2);assert.equal(attacked.run.battle.hp,initial.run.battle.hp-6);assert.equal(attacked.run.battle.block,6);assert.equal(attacked.run.battle.energy,1);
+ assert.throws(()=>c.act('first-turn','play'));const ended=c.act('first-turn','end-turn');assert.equal(ended.run.hp,initial.run.hp);assert.equal(ended.run.battle.turn,2);assert.equal(ended.complete,true);assert.ok(E.validate(ended.run));assert.deepEqual(c.act('first-turn','end-turn'),ended);
+});
+test('two wrong practice answers award neither completion nor Focus or a boss seal',()=>{
+ for(const id of ['predict','boss']){const c=course();c.select(id);const q=Q.currentConsumer(c.exercise().run).question,wrong=q.choices.filter(a=>a.id!==q.correctChoiceId);
+  for(const a of wrong.slice(0,2)){c.act(id,'select',a.id);c.act(id,'check');}
+  const x=c.exercise();assert.equal(x.complete,false);assert.equal(x.run.battle.focus,0);assert.equal(x.run.battle.seals,0);assert.equal(c.progress().completed.includes(id),false);assert.ok(E.validate(x.run));
+  const next=c.replay();assert.equal(Q.consumerRecord(next.run).attempts.length,0);
  }
 });

@@ -1,4 +1,11 @@
-# Slay the Math — 2.42.0
+# Slay the Math — 2.46.0
+
+Version **2.46.0** publishes the illustrated tutorial on the main2.45.0 game. Tutorial now offers **Basics / Asas
+(10 chapters)** and a **23-chapter** full guide, manual English/BM real-game picture
+steps and12 isolated engine-backed practice chapters, including one complete turn.
+Original chapter progress is kept. Open **Main Menu → Tutorial**.
+[Guide, compatibility and actual checks](docs/TUTORIAL_VISUAL_REFRESH.md).
+[Main release and verification](docs/TUTORIAL_MAIN_2_46_0.md).
 
 Version **2.42.0** integrates the reviewed Master Balance/AI refresh: current-runtime map/economy observations, actual-cost artifact choices, frozen-offer Mystery/transform decisions and canonical next-combat buff valuation. Current numerical card/profile values, saves and original artwork are preserved. [Main release, source parity, verification and limits](docs/balance/master/MAIN_RELEASE_2_42_0.md).
 
@@ -16,7 +23,7 @@ music, combat presentation and production Developer Hub are retained.
 
 Version 2.34.0 integrates the approved card balance: percentage Vulnerable/Weak phases, Last Ember emergency Block carry, revised growth/draw/Passive cards and search fallback. Start a New Run for these values; prior ordinary saves retain their original rules. The current menu music, combat presentation and developer AI Playtester are included, with AI status calculations aligned to the new rules. [Card changes](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md), [AI setup](docs/AI_PLAYTESTER.md).
 
-**Tutorial** now opens a complete English/BM field guide: 17 chapters, 16 real game screenshots and 11 safe, replayable practice chapters using the actual engine. Progress resumes independently of your run and Learning Report. Open Main Menu → Tutorial or the in-game Tutorial control. [How to use, scope and verification](docs/TUTORIAL_2_31_0.md).
+The original2.31.0 tutorial is documented as [historical implementation](docs/TUTORIAL_2_31_0.md); the current illustrated guide above supersedes its chapter/media counts.
 
 Combat feedback now prioritizes important status changes, combines matching Passive/stat labels, separates shield depletion from expiry, and offers Settings → Combat Effects → Low / Full. All ten Passive motifs keep their original icons; visual motion and synthesized SFX use shared cancelable timing. [2.32.0 scope, actual checks and remaining production/offline limits](docs/COMBAT_MOTION_MAIN_2_32_0.md).
 

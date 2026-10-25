@@ -35,3 +35,36 @@ test('Predict practice keeps support, wrong answers and successful retry inside 
   b.click('[data-tutorial-action=moreHint]');b.click('[data-tutorial-action=choose][data-value="'+q.correctChoiceId+'"]');b.click('[data-tutorial-action=check]');assert.ok(b.d.querySelector('[data-tutorial-complete]'));assert.deepEqual(b.snapshot(),before);
  }finally{b.close();}
 });
+
+test('beginner route, manual pictures and BM images preserve host records and old progress',()=>{
+ const b=boot();try{
+  const old={version:1,chapter:'cards',language:'en',completed:['welcome','cards']};b.w.localStorage.setItem('slay-the-math.tutorial.v1',JSON.stringify(old));const before=b.snapshot();b.click('[data-action=help]');
+  assert.equal(b.d.querySelectorAll('[data-tutorial-action=chapter]').length,23);
+  const first=b.d.querySelector('.tutorial-figure').dataset.shot;b.click('[data-tutorial-action=picture][data-value="1"]');const second=b.d.querySelector('.tutorial-figure').dataset.shot;assert.notEqual(second,first);
+  b.click('[data-tutorial-action=language][data-value=ms]');assert.equal(b.d.querySelector('.tutorial-figure').dataset.shot,second.replace('-en.webp','-ms.webp'));
+  b.click('[data-tutorial-action=route][data-value=basics]');assert.equal(b.d.querySelectorAll('[data-tutorial-action=chapter]').length,10);
+  assert.deepEqual(JSON.parse(b.w.localStorage.getItem('slay-the-math.tutorial.v1')).completed,old.completed);assert.deepEqual(b.snapshot(),before);
+ }finally{b.close();}
+});
+test('Basics opens canonical bilingual support inside practice and cannot award independent Focus',()=>{
+ const b=boot();try{
+  const before=b.snapshot();b.click('[data-action=help]');b.click('[data-tutorial-action=chapter][data-value=predict]');b.click('[data-tutorial-action=question-tab][data-value=help]');b.click('[data-tutorial-action=foundation]');
+  const panel=b.d.querySelector('[data-tutorial-foundation]');assert.ok(panel);const source=b.w.STMMechanics.data.foundations.modules.find(m=>m.id===panel.dataset.tutorialFoundation);assert.ok(panel.textContent.includes(source.cards[0].text));
+  b.click('[data-tutorial-action=foundation-check]');assert.ok(b.d.querySelector('.tutorial-foundation-check [role=status]').textContent);
+  b.click('[data-tutorial-action=language][data-value=ms]');assert.equal(b.d.querySelector('[data-tutorial]').lang,'ms');assert.ok(b.d.querySelector('[data-tutorial-foundation]'));
+  const c=b.w.DCTutorialCore.create();c.select('predict');const q=b.w.DCEducation.currentConsumer(c.exercise().run).question;
+  b.click('[data-tutorial-action=question-tab][data-value=question]');b.click('[data-tutorial-action=choose][data-value="'+q.correctChoiceId+'"]');b.click('[data-tutorial-action=check]');
+  assert.ok(b.d.querySelector('[data-tutorial-complete]'));assert.match(b.d.querySelector('.tutorial-solution').textContent,/Focus.*0/);assert.deepEqual(b.snapshot(),before);
+ }finally{b.close();}
+});
+test('full-turn UI gives real incremental feedback and completes only after End Turn',()=>{
+ const b=boot();try{
+  const before=b.snapshot();b.click('[data-action=help]');b.click('[data-tutorial-action=chapter][data-value=cards]');b.click('[data-tutorial-action=route][data-value=all]');b.click('[data-tutorial-action=chapter][data-value=first-turn]');
+  b.click('[data-tutorial-action=play]');assert.match(b.d.querySelector('.tutorial-outcome').textContent,/Block: 0 → 6/);assert.equal(b.d.querySelector('[data-tutorial-complete]'),null);
+  b.click('[data-tutorial-action=play]');assert.match(b.d.querySelector('.tutorial-outcome').textContent,/Enemy HP: 30 → 24/);assert.equal(b.d.querySelector('[data-tutorial-complete]'),null);
+  b.click('[data-tutorial-action=end-turn]');assert.ok(b.d.querySelector('[data-tutorial-complete]'));assert.deepEqual(b.snapshot(),before);
+ }finally{b.close();}
+});
+test('reward practice teaches Deck growth and Gold rather than an already finished enemy',()=>{
+ const b=boot();try{b.click('[data-action=help]');b.click('[data-tutorial-action=route][data-value=all]');b.click('[data-tutorial-action=chapter][data-value=rewards]');assert.doesNotMatch(b.d.querySelector('.tutorial-metrics').textContent,/Enemy HP/);assert.match(b.d.querySelector('.tutorial-metrics').textContent,/Gold/);b.click('[data-tutorial-action=take]');assert.match(b.d.querySelector('.tutorial-outcome').textContent,/Deck: 12 → 13/);}finally{b.close();}
+});

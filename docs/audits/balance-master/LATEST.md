@@ -2,6 +2,8 @@
 
 25 October 2026. Master SOR1.2.0; main6c49f3980c3a832635d4d01a6c50a8df98ac4aad/game2.45.0. Work branch balance/master, candidate2.46.0-ai.1. **Branch publication only; no main push.** [Current handoff, source registry, raw evidence and limitations](../../balance/master/AI_DATA_2026_10_25.md).
 
+Published code d059a3c008db36eb8a0876359c8222f2fab1a602 has the exact tested tree; expected-head update, API readback and native fetch confirm the branch/version and unchanged main. [Publication record](../../balance/master/PUBLICATION_2_46_0_AI_1.md).
+
 ## Current confirmed findings
 
 | ID | Priority / status | Evidence and action |

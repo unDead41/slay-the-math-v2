@@ -69,4 +69,4 @@
 - [x] Record dataset coverage, source eligibility, actual tactical improvements, projection/time measurements and heldout outcomes without overstated learning/accuracy claims.
 - [x] Generate2.46.0-ai.1 metadata, run final whole Node suite, full syntax, build/production and actual AI-browser/export/history/cancel/isolation checks; preserve original runtime/art/source bytes except expected generated metadata.
 - [x] Fresh strongest-model whole-branch review; grade findings, one RED/GREEN fix pass for Important/Critical and green suite, record rulings/minors. No re-review.
-- [ ] Refresh source/main refs and scoped diff; push exact tested tree to balance/master with expected old SHA, no force; read back branch/tree/parents/version, main unchanged by this task. Retain branch/worktree for user review.
+- [x] Refresh source/main refs and scoped diff; push exact tested tree to balance/master with expected old SHA, no force; read back branch/tree/parents/version, main unchanged by this task. Retain branch/worktree for user review.

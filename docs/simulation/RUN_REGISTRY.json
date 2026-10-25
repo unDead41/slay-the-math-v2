@@ -565,18 +565,18 @@
       ],
       "coordination": "User authorizes broad integration checks in ten-case batches; no numerical owner cohorts repeated. Prior ten-case source-bound evidence reused. Remote claims checked; unpublished cross-chat work not observable.",
       "startedAt": "2026-10-25T16:59:49.777Z",
-      "finishedAt": "2026-10-25T17:17:20.750Z",
       "pass": 8,
       "fail": 2,
       "error": 0,
       "missing": 0,
-      "censored": 0,
-      "assessment": "PERLU UPDATE: confirmed menu keyboard-focus issue in two configurations; other eight broad integration cases pass. Prior four cold-restart offline failures remain OPEN.",
+      "finishedAt": "2026-10-25T17:17:51.265Z",
+      "mainAtEnd": "509be90a3f211004c29379c96469f4e3a70cc0a4",
+      "sourceDrift": "Main moved at final readback; this immutable batch proves only b3dc750, not the new main. New-source compatibility/regression NOT_RUN.",
+      "assessment": "PERLU UPDATE on tested b3dc750: menu keyboard focus fails in two configurations; eight cases pass. Latest main509be90 remains unverified by this batch.",
       "outputPath": "https://chatgpt.com/library?file_id=libfile_d93b80ef12188191aac0531234de82f0&account_id=personal",
       "outputLibraryFileId": "libfile_d93b80ef12188191aac0531234de82f0",
       "archiveBytes": 30702431,
       "archiveSHA256": "17e08aaae2931a852aee24007a353e27c1466d6f86bfc73127100f6de0d361c1",
-      "evidenceIndex": "ZIP/evidence-index.json",
       "coverageMatrix": "ZIP/coverage.json",
       "evidence": {
         "screenshots": 60,
@@ -584,13 +584,11 @@
         "passedChecks": 69,
         "failedChecks": 2,
         "runtimeFilesHashVerified": 811,
+        "recomputedTransitions": 8,
         "uniqueNewSeeds": 10,
-        "overlapWithPreviousSeeds": 0,
-        "recomputedTransitions": 8
+        "priorSeedOverlap": 0
       },
-      "attemptHistory": "Original incomplete harness attempts retained; only incomplete cases resumed serially. Final negative focus findings remain FAIL; no duplicate collector or nested agent used.",
-      "actualGeneratedModuleState": "Practice Learning rngState/session stored in ZIP/raw/privileged/G1-practice-learning-session.json; Tutorial uses authored fixtures. Parent seed does not imply every module internal seed.",
-      "wallTimeSecondsAtRegistryUpdate": 1482
+      "attemptHistory": "Incomplete harness attempts preserved and serially resumed; final focus failures retained. No concurrent collectors/subagents used for this batch."
     }
   ]
 }

@@ -200,6 +200,22 @@ Shared Learning Report adds a collapsed Collection link / Pautan pengumpulan fie
 
 Ijamm requests completing the full illustrated in-game tutorial, including self-captured screenshots. Replace the old four-page help with 17 English/BM chapters, genuine player-UI screenshots and isolated actual-engine exercises. Keep existing Tutorial entry/focus, native modal semantics, responsive scrolling and image enlargement. Only tutorial progress/language persist; never capture its examples into player saves/history/reports/collection. Timed Mystery deadlines continue and show a warning. Current owner and evidence: [Tutorial 2.31.0](../TUTORIAL_2_31_0.md).
 
+### Current refresh — 2.46.0-tutorial.1
+
+**UX-TUT-01:** Ijamm requests a fresh current-main tutorial with many actual-game
+snapshots and instructions readable by a Form 1 pupil. Offer a default ten-chapter
+Basics route plus the full23-chapter reference, manual numbered picture steps,
+short action/result captions, zoom/fallback and a direct practice shortcut.
+Capture the actual selected English/BM game UI; never invent a screenshot.
+
+**UX-TUT-02:** Keep the original chapter IDs/progress key and add route selection
+compatibly. Keep12 engine-backed practice chapters, including one ordered full
+turn, scoped canonical Basics and the real two-attempt/Focus/seal policy. No
+exercise writes a player save, question history, report or sharing queue. Keep
+timed-Mystery warnings, keyboard/focus,44px controls and short-landscape scroll.
+Rule details can be collapsed; essential actions remain visible. Evidence and
+honest pupil/device limits: [current illustrated guide](../TUTORIAL_VISUAL_REFRESH.md).
+
 ## Learning journal preview — 2.31.0-report.1
 
 On education-report only, the real host and generated Practice use the same Overview, Details and Sharing views. A labelled source select retains Game/Practice/Review separation. Primary evidence and chapter tracks lead; SK/SP, session detail and searchable question records live under Details. Sharing shows consent/status and a disclosed JSON recovery action. No Google URL form, CSV download/import or duplicate native comment-file sharing appears in the player's flow. Comments/exit open this same Sharing view, preserving comment text and return focus. Native 44px controls, keyboard focus and bounded dialog scroll keep artwork geometry unchanged. The existing ink/navy/gold visual system and settings-owned BM/English selection remain canonical. See DEC-20261023-LEARNING-REPORT and docs/LEARNING_REPORT_PREVIEW.md.

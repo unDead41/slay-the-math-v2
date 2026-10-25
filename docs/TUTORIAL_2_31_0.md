@@ -1,6 +1,9 @@
 # Complete player tutorial — 2.31.0
 
-Current integration: [Education main 2.36.0](education/MAIN_2_36_0.md). The original
+Current tutorial: [illustrated refresh from main2.45.0](TUTORIAL_VISUAL_REFRESH.md).
+The seventeen-chapter counts and commands below describe the historical release.
+
+Historical integration: [Education main 2.36.0](education/MAIN_2_36_0.md). The original
 implementation evidence below is historical. The current guide explains two
 answers, first-wrong Hint/More Hint, failed review/Replay without chapter credit,
 the simpler report and developer-only connection setup. All16 actual UI captures

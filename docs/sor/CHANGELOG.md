@@ -1,5 +1,13 @@
 # Changelog SOR — Slay the Math
 
+## 2.46.0-tutorial.1 — 25 October2026
+
+Refresh from main2.45.0: ten-chapter beginner route,23 complete reference chapters,
+localized actual-game picture sequences, direct practice access, ordered full-turn
+practice and canonical Basics in the isolated two-attempt question workspace.
+Preserve old chapter progress and all player/game/learning owners. Scope and
+fresh verification: [illustrated tutorial](../TUTORIAL_VISUAL_REFRESH.md).
+
 ## Approved Alyssa V5 motion — game 2.45.0, 25 October 2026
 
 - Apply all five approved 15-slot clips to actual combat, preserving source bytes/timing and right-facing identity. Idle uses eight unique drawings with repeated breath/blink exposures; Kena Attack has fifteen unique poses.

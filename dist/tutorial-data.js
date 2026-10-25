@@ -1,200 +1,299 @@
-/* Player instructions. Amounts belong to the loaded engine, not this guide. */
+/* Short bilingual player lessons. Numerical and mathematical rules stay with their owners. */
 (function(root){'use strict';
- const lesson=(id,image,exercise,en,ms)=>({id,image,exercise,en:{title:en[0],lead:en[1],steps:en[2],tip:en[3]},ms:{title:ms[0],lead:ms[1],steps:ms[2],tip:ms[3]}});
+ const frame=(shot,en,ms)=>({shot,en,ms});
+ const lesson=(id,group,exercise,en,ms,frames,details={en:[],ms:[]})=>({id,group,exercise,image:frames[0].shot,frames,en:{title:en[0],lead:en[1],steps:en[2],tip:en[3]},ms:{title:ms[0],lead:ms[1],steps:ms[2],tip:ms[3]},details});
  const chapters=[
- lesson('welcome','menu',null,
-  ['Your dungeon journey','Build a deck, plan each turn and use maths to help Alyssa clear two stages.',[
-   'Choose connected rooms on the map. Win battles to earn Gold and card choices.',
-   'Your HP, deck and owned artifacts carry between rooms. Each battle starts a new hand and combat resources.',
-   'Defeat the boss of Sigil Keep, then the boss of Deck Tower. If your HP reaches zero, the run ends.'
-  ],'Read any chapter in any order. The Try it panels are separate practice examples.'],
-  ['Perjalanan dungeon','Bina deck, rancang giliran dan gunakan matematik untuk membantu Alyssa menamatkan dua stage.',[
-   'Pilih bilik yang bersambung pada map. Menangi pertempuran untuk mendapat Gold dan pilihan kad.',
-   'HP, deck dan artifak yang dimiliki dibawa ke bilik seterusnya. Tangan kad dan sumber tempur bermula semula pada pertempuran baharu.',
-   'Kalahkan boss Sigil Keep, kemudian boss Deck Tower. Run tamat jika HP menjadi sifar.'
-  ],'Baca bab mengikut keperluan. Panel Cuba sendiri menggunakan contoh latihan yang berasingan.']),
- lesson('start','master',null,
-  ['Start or continue','New Run starts a fresh journey. Continue returns to your saved journey.',[
-   'Choose Learn for a gentler introduction or Challenge for the artifact journey. Easy, Medium and Hard are separate balance playtest profiles.',
-   'In Challenge, meet the Dungeon Master. Select an offered artifact, then choose Claim & Choose Artifact.',
-   'Answer the trial correctly and continue to receive the artifact. Two wrong answers end the trial: review the solution and continue without the artifact. Hint, More Hint and Basics can help.'
-  ],'Learn does not start with the Dungeon Master. Starting a replacement run asks before replacing that profile’s save.'],
-  ['Mula atau sambung','New Run memulakan perjalanan baharu. Continue menyambung perjalanan yang disimpan.',[
-   'Pilih Learn untuk pengenalan yang lebih mudah atau Challenge untuk perjalanan dengan artifak. Easy, Medium dan Hard ialah profil ujian imbangan yang berasingan.',
-   'Dalam Challenge, jumpa Dungeon Master. Pilih satu artifak yang ditawarkan, kemudian tekan Claim & Choose Artifact.',
-   'Jawab soalan percubaan dengan betul dan teruskan untuk menerima artifak. Dua jawapan salah menamatkan percubaan: semak penyelesaian dan teruskan tanpa artifak. Hint, More Hint dan Basics boleh membantu.'
-  ],'Learn tidak bermula dengan Dungeon Master. Game meminta pengesahan sebelum menggantikan save profil tersebut.']),
- lesson('map','map','map',
-  ['Choose your next room','Follow the paths from the bottom of the map towards the boss.',[
-   'Only glowing, connected rooms can be entered. Selecting a room icon enters it immediately. Scroll up to inspect later floors.',
-   'Battle is a normal fight. Elite is a stronger fight with better rewards. Boss ends a stage.',
-   'Shop spends Gold, Rest offers recovery or an upgrade, and Mystery has its own choices. Use the legend on the left.'
-  ],'Plan with your current HP, Gold and deck. A route with more rewards may also carry more risk.'],
-  ['Pilih bilik seterusnya','Ikut laluan dari bahagian bawah map menuju boss.',[
-   'Hanya bilik bercahaya yang bersambung boleh dimasuki. Tekan ikon bilik untuk terus masuk. Skrol ke atas untuk melihat tingkat seterusnya.',
-   'Battle ialah pertempuran biasa. Elite lebih kuat dan memberi ganjaran lebih baik. Boss menamatkan stage.',
-   'Shop menggunakan Gold, Rest memberi pilihan pemulihan atau naik taraf, dan Mystery mempunyai pilihan sendiri. Rujuk petunjuk di sebelah kiri.'
-  ],'Rancang berdasarkan HP, Gold dan deck semasa. Laluan dengan lebih banyak ganjaran juga boleh lebih berisiko.']),
- lesson('combat','combat','block',
-  ['Read the enemy’s intent','Prepare for the move shown above the enemy before pressing End Turn.',[
-   'HP is your health. Block absorbs incoming damage. Ordinary leftover Block resets at the start of your next turn unless an effect keeps some.',
-   'A normal turn begins with {energy} Energy and draws {hand} cards. Card and artifact effects may change what you receive.',
-   'Use defense before End Turn. The enemy then acts, unused hand cards go to Discard, and the next turn begins if both sides are alive.'
-  ],'Block and Defense are different. Defense reduces incoming damage; Block absorbs the damage that remains.'],
-  ['Baca tindakan musuh','Bersedia untuk tindakan yang dipaparkan di atas musuh sebelum menekan End Turn.',[
-   'HP ialah kesihatan anda. Block menyerap kerosakan masuk. Baki Block biasa direset pada awal giliran seterusnya kecuali kesan tertentu mengekalkannya.',
-   'Giliran biasa bermula dengan {energy} Energy dan mengambil {hand} kad. Kesan kad atau artifak boleh mengubah jumlah yang diterima.',
-   'Gunakan kad pertahanan sebelum End Turn. Musuh kemudian bertindak, baki kad di tangan masuk ke Discard, dan giliran baharu bermula jika kedua-duanya masih hidup.'
-  ],'Block dan Defense berbeza. Defense mengurangkan kerosakan masuk; Block menyerap baki kerosakan.']),
- lesson('cards','cards','attack',
-  ['Read and play a card','Read the cost and effect before selecting a card in your hand.',[
-   'The cost shows how much Energy a card needs. X uses the available Energy according to that card’s effect. A card you cannot afford cannot be played.',
-   'Red Attack cards deal damage, blue Defend cards protect, green Skill cards provide other effects, and purple Passive cards stay active.',
-   'There is one enemy per battle. Multi-hit cards hit that same enemy; enemy Block, Defense and boss seals can reduce actual damage.'
-  ],'Selecting a normal combat card can play it immediately. Cards needing a target or extra choice open their own choice panel.'],
-  ['Baca dan mainkan kad','Baca kos dan kesan sebelum memilih kad di tangan.',[
-   'Kos menunjukkan Energy yang diperlukan. X menggunakan Energy yang tersedia mengikut kesan kad itu. Kad tidak boleh dimainkan jika Energy tidak cukup.',
-   'Attack merah memberi kerosakan, Defend biru melindungi, Skill hijau memberi kesan lain, dan Passive ungu kekal aktif.',
-   'Setiap pertempuran mempunyai satu musuh. Serangan berbilang hit mengenai musuh yang sama; Block, Defense dan seal boss boleh mengurangkan kerosakan sebenar.'
-  ],'Menekan kad tempur biasa boleh terus memainkannya. Kad yang memerlukan sasaran atau pilihan tambahan membuka panel pilihan sendiri.']),
- lesson('piles','combat','draw',
-  ['Hand, Draw, Discard and Exhaust','Your run deck stays yours even when cards move during a battle.',[
-   'Hand contains playable cards. Draw holds cards waiting to be drawn. Used cards usually move to Discard.',
-   'When another draw is needed and Draw is empty, Discard is shuffled into Draw. Cards in Hand, Active or Exhaust are not included.',
-   'Exhaust removes a card for the current battle. It does not delete it from the run deck. Hand holds at most {handLimit} cards; excess draws stay in the pile.'
-  ],'Open a pile to inspect its cards. The display sorts cards and does not reveal the hidden Draw order.'],
-  ['Hand, Draw, Discard dan Exhaust','Kad masih milik deck run walaupun bergerak antara timbunan semasa pertempuran.',[
-   'Hand mengandungi kad yang boleh dimainkan. Draw menyimpan kad yang menunggu untuk diambil. Kad yang digunakan biasanya masuk ke Discard.',
-   'Apabila Draw kosong dan satu lagi kad perlu diambil, Discard dikocok semula ke Draw. Kad dalam Hand, Active atau Exhaust tidak disertakan.',
-   'Exhaust mengetepikan kad untuk pertempuran semasa. Kad itu tidak dipadam daripada deck run. Hand memuatkan paling banyak {handLimit} kad; lebihan ambilan kekal dalam timbunan.'
-  ],'Buka timbunan untuk melihat kad. Paparan disusun dan tidak mendedahkan urutan sebenar Draw.']),
- lesson('predict','predict','predict',
-  ['Predict, Hint and More Hint','Predict opens a maths question from the shared 120-question bank.',[
-   'Choose an answer, then check it. An independent correct first answer earns 1 Focus up to the cap of {focusCap}. A helped or retried answer is recorded separately.',
-   'Use Question, Help and Result. You have two attempts: the first incorrect answer unlocks Hint and More Hint even if Hint was not opened. The second incorrect answer locks answers and reveals the solution. Basics and worked steps support your review.',
-   'Predict is optional and can be used once per turn. Closing it ends that turn’s attempt without a reward. A question already opened will not be repeated in the same run.'
-  ],'Pink terms explain maths, green terms explain the game, and purple calculations explain values. Hover, keyboard-focus or tap a highlighted term.'],
-  ['Predict, Hint dan More Hint','Predict membuka soalan matematik daripada bank bersama yang mempunyai 120 soalan.',[
-   'Pilih jawapan, kemudian semak. Jawapan pertama yang betul secara kendiri memberi 1 Focus sehingga had {focusCap}. Jawapan dengan bantuan atau cubaan semula direkodkan secara berasingan.',
-   'Gunakan Soalan, Bantuan dan Keputusan. Anda mempunyai dua cubaan: jawapan salah pertama membuka Hint dan More Hint walaupun Hint belum dibuka. Jawapan salah kedua mengunci jawapan dan memaparkan penyelesaian. Basics dan jalan kerja membantu semakan anda.',
-   'Predict ialah pilihan dan boleh digunakan sekali setiap giliran. Menutupnya menamatkan cubaan giliran itu tanpa ganjaran. Soalan yang sudah dibuka tidak diulang dalam run yang sama.'
-  ],'Istilah merah jambu menerangkan matematik, hijau menerangkan game, dan pengiraan ungu menerangkan nilai. Letakkan penuding, fokus papan kekunci atau tekan istilah yang disorot.']),
- lesson('focus','focus','focus',
-  ['Arm and spend Focus','Focus is a separate resource. It does not give extra Energy.',[
-   'After earning Focus, press the Focus control to arm it. Inspect the changed card effect before playing.',
-   'The next eligible Attack, Defend or Skill card spends 1 Focus and receives its printed Focus effect. Different cards have different bonuses.',
-   'Use Focus at most once per turn. Passive cards never spend it. Focus stock resets for a new battle; plan to use it where it helps.'
-  ],'This practice starts with 1 example Focus. Earn your own Focus through Predict in a real run.'],
-  ['Aktifkan dan gunakan Focus','Focus ialah sumber berasingan. Ia tidak memberi Energy tambahan.',[
-   'Selepas mendapat Focus, tekan kawalan Focus untuk mengaktifkannya. Lihat perubahan kesan kad sebelum bermain.',
-   'Kad Attack, Defend atau Skill seterusnya yang layak menggunakan 1 Focus dan menerima kesan Focus yang tertulis. Bonus berbeza mengikut kad.',
-   'Gunakan Focus paling banyak sekali setiap giliran. Passive tidak menggunakannya. Stok Focus direset pada pertempuran baharu; gunakan apabila bermanfaat.'
-  ],'Latihan ini bermula dengan 1 Focus contoh. Dalam run sebenar, dapatkan Focus sendiri melalui Predict.']),
- lesson('passive','passive','passive',
-  ['Passives, buffs and debuffs','A Passive must be played before its ongoing effect can help you.',[
-   'Up to {passiveLimit} different Passives can be active. Playing another when full asks which one to replace; the replaced card goes to Discard.',
-   'Some Passives help immediately. Others wait for a condition. Read their counter and description; a visible card does not mean its trigger has happened.',
-   'Strength helps Attack damage, Agility helps Block from Defend cards, and Defense reduces incoming damage. Read status badges for conditions and duration.',
-   'Vulnerable adds 50% to Attack damage for the affected attack phase. Weak reduces Attack damage by 25%. Every hit is affected; stacks extend duration. Unused Last Ember emergency Block survives the next player-turn reset once.'
-  ],'Auras and animations show status feedback. The current numbers and descriptions determine the actual effect.'],
-  ['Passive, buff dan debuff','Kad Passive perlu dimainkan dahulu sebelum kesan berterusannya membantu.',[
-   'Paling banyak {passiveLimit} Passive yang berbeza boleh aktif. Jika penuh, game meminta anda memilih satu untuk diganti; kad lama masuk ke Discard.',
-   'Sesetengah Passive memberi kesan segera. Yang lain menunggu syarat. Baca kaunter dan penerangan; kad yang kelihatan belum tentu sudah mencetuskan kesannya.',
-   'Strength membantu kerosakan Attack, Agility membantu Block daripada Defend, dan Defense mengurangkan kerosakan masuk. Baca lencana status untuk syarat dan tempoh kesan.',
-   'Terdedah menambah 50% kerosakan Serangan pada fasa serangan yang terlibat. Lemah mengurangkan kerosakan Serangan sebanyak 25%. Setiap pukulan terlibat; tindanan memanjangkan tempoh. Baki Blok kecemasan Bara Terakhir disimpan sekali pada awal giliran pemain berikutnya.'
-  ],'Aura dan animasi memberi maklum balas status. Nilai serta penerangan semasa menentukan kesan sebenar.']),
- lesson('rewards','rewards','reward',
-  ['Choose rewards for your deck','After a battle, review your card choices before adding one.',[
-   'Choose one offered card or Skip. Taking every card can make important cards harder to draw.',
-   'An Elite card reward is upgraded. In Challenge, eligible encounters can also offer artifacts; complete any required trial before moving on.',
-   'Compare cost, role, Focus effect and synergy with your existing cards. Read an artifact’s trigger as well as its reward.'
-  ],'Gold and reward amounts depend on the current mode/profile. These pictures show examples, not guaranteed offers.'],
-  ['Pilih ganjaran untuk deck','Selepas pertempuran, semak pilihan kad sebelum menambah satu.',[
-   'Pilih satu kad yang ditawarkan atau Skip. Mengambil semua kad boleh menyukarkan kad penting untuk muncul.',
-   'Ganjaran kad Elite sudah dinaik taraf. Dalam Challenge, pertemuan tertentu juga menawarkan artifak; selesaikan percubaan yang diperlukan sebelum bergerak.',
-   'Bandingkan kos, peranan, kesan Focus dan gabungan dengan kad sedia ada. Baca syarat pencetus artifak bersama ganjarannya.'
-  ],'Jumlah Gold dan ganjaran bergantung pada mode atau profil semasa. Gambar ini ialah contoh, bukan tawaran yang dijamin.']),
- lesson('shop','shop','shop',
-  ['Use the Shop','Spend Gold on a useful improvement, or leave and keep your Gold.',[
-   'Buy Cards shows six cards, including one sale at 60% off. Buy Artifacts has a separate stock. Read the displayed price and effect.',
-   'Select a card or artifact, then confirm its Buy button. A purchased offer becomes Sold; reopening the Shop does not refresh the stock.',
-   'Remove Card is a paid service. Select a card, check the cost and confirm; minimum deck size and service limits still apply. Use Leave to continue.'
-  ],'The practice below buys one real example card with example Gold. Your own Gold and inventory are untouched.'],
-  ['Gunakan Shop','Belanjakan Gold untuk penambahbaikan yang berguna, atau keluar dan simpan Gold.',[
-   'Buy Cards memaparkan enam kad, termasuk satu jualan dengan diskaun 60%. Buy Artifacts mempunyai stok berasingan. Baca harga dan kesan yang dipaparkan.',
-   'Pilih kad atau artifak, kemudian sahkan dengan butang Buy. Tawaran yang dibeli menjadi Sold; membuka semula Shop tidak menukar stok.',
-   'Remove Card ialah perkhidmatan berbayar. Pilih kad, semak kos dan sahkan; had minimum deck dan had perkhidmatan masih terpakai. Tekan Leave untuk teruskan.'
-  ],'Latihan di bawah membeli satu kad contoh dengan Gold contoh. Gold dan inventori anda sendiri tidak berubah.']),
- lesson('rest','rest','rest',
-  ['Rest or upgrade','A Rest site offers a choice for the next part of your journey.',[
-   'Rest restores the displayed HP, up to your maximum. Check your HP before choosing.',
-   'Upgrade strengthens one eligible card for the rest of this run. Select an unupgraded card and compare its improved effect.',
-   'You use one Rest-site action and then return to the map. Decide whether recovery or a stronger card matters more right now.'
-  ],'The supplied background includes decorative words. The live buttons show which actions are actually available.'],
-  ['Pulih atau naik taraf','Rest memberi pilihan untuk bahagian perjalanan seterusnya.',[
-   'Rest memulihkan HP mengikut jumlah yang dipaparkan, sehingga HP maksimum. Semak HP sebelum memilih.',
-   'Upgrade menguatkan satu kad yang layak untuk baki run ini. Pilih kad yang belum dinaik taraf dan bandingkan kesannya.',
-   'Anda menggunakan satu tindakan di Rest sebelum kembali ke map. Tentukan sama ada pemulihan atau kad lebih kuat lebih diperlukan sekarang.'
-  ],'Latar asal mengandungi perkataan hiasan. Butang langsung menunjukkan tindakan yang benar-benar tersedia.']),
- lesson('mystery','mystery',null,
-  ['Read a Mystery before committing','Mystery rooms have event-specific choices, costs and consequences.',[
-   'Read the introduction and each option before choosing. Some choices use HP or Gold, change your deck, or lead to a battle.',
-   'A timed challenge allows two attempts. The first wrong answer unlocks both hints; a second wrong answer or time up ends it. The same deadline continues during retries and Help.',
-   'Review the outcome and claim any required reward or target before leaving. Refreshing does not give a fresh question or restart the deadline.'
-  ],'A timed Mystery keeps running while other panels are open. Finish it before spending time in this guide.'],
-  ['Baca Mystery sebelum memilih','Bilik Mystery mempunyai pilihan, kos dan akibat mengikut event.',[
-   'Baca pengenalan dan setiap pilihan dahulu. Sesetengah pilihan menggunakan HP atau Gold, mengubah deck atau membawa kepada pertempuran.',
-   'Cabaran bermasa membenarkan dua cubaan. Jawapan salah pertama membuka kedua-dua petunjuk; salah kedua atau masa tamat menamatkannya. Had masa yang sama terus berjalan semasa cuba semula dan Bantuan.',
-   'Semak keputusan dan tuntut ganjaran atau pilih sasaran yang diperlukan sebelum keluar. Refresh tidak memberi soalan baharu atau memulakan masa semula.'
-  ],'Masa Mystery terus berjalan apabila panel lain dibuka. Selesaikannya sebelum meluangkan masa dalam panduan ini.']),
- lesson('boss','boss','boss',
-  ['Open the boss seals','Bosses have seals as well as HP. Read their intent every turn.',[
-   'Unopened seals reduce your attack damage. A correct Predict answer opens one waiting seal; a guided correct answer can also open it.',
-   'Predict is still once per turn. To open the next seal, finish the turn and answer the next Predict. Skipping or a wrong unfinished answer does not open a seal.',
-   'After the first boss, use the stage-clear action to enter Deck Tower. The second boss is the final battle.'
-  ],'The exercise below lets you open both seals using the real question and combat rules.'],
-  ['Buka seal boss','Boss mempunyai seal selain HP. Baca tindakannya setiap giliran.',[
-   'Seal yang belum dibuka mengurangkan kerosakan serangan anda. Jawapan Predict yang betul membuka satu seal yang menunggu; jawapan betul dengan bantuan juga boleh membukanya.',
-   'Predict masih sekali setiap giliran. Untuk seal seterusnya, tamatkan giliran dan jawab Predict baharu. Melangkau atau meninggalkan jawapan salah tidak membuka seal.',
-   'Selepas boss pertama, gunakan tindakan Stage Clear untuk memasuki Deck Tower. Boss kedua ialah pertempuran terakhir.'
-  ],'Latihan di bawah membolehkan anda membuka kedua-dua seal menggunakan soalan dan peraturan tempur sebenar.']),
- lesson('learning','learning',null,
-  ['Practise maths and read your report','Education Practice is available from the Main Menu without starting a run.',[
-   'Explore Probability, Sets and Logical Reasoning. Learning selects unseen questions; Review lets you revisit a chosen question.',
-   'Use Hint, More Hint, Basics, diagrams and worked solutions. Settings changes the language of questions, hints and solutions between BM and English.',
-   'Learning Report has Overview, Details and Sharing. Tick Reviewed and add a comment to help improve any question. Sharing starts off and needs the organiser’s connection and your consent.',
-   'After a game question finishes, use Report a problem in Result to comment on that question, Hint or More Hint. The game fills its ID, language and opened help automatically. Save the report; sharing follows your existing consent.'
-  ],'Tutorial exercises are practice examples and never count towards your real Learning Report or question history.'],
-  ['Latih matematik dan baca laporan','Education Practice boleh dibuka dari Main Menu tanpa memulakan run.',[
-   'Terokai Kebarangkalian, Set dan Penaakulan Logik. Learning memilih soalan belum dilihat; Review membolehkan anda mengulang soalan pilihan.',
-   'Gunakan Hint, More Hint, Basics, rajah dan jalan kerja. Settings menukar bahasa soalan, petunjuk dan jalan kerja antara BM dengan English.',
-   'Laporan Pembelajaran mempunyai Ringkasan, Perincian dan Perkongsian. Tandakan Sudah disemak dan tambah komen untuk menambah baik soalan. Perkongsian bermula dalam keadaan tutup dan memerlukan sambungan pengendali serta persetujuan anda.',
-   'Selepas soalan dalam game selesai, gunakan Laporkan masalah dalam Keputusan untuk memberi komen tentang soalan, Petunjuk atau Petunjuk Lanjut. ID, bahasa dan bantuan yang dibuka diisi secara automatik. Simpan laporan; perkongsian mengikut persetujuan sedia ada anda.'
-  ],'Latihan tutorial ialah contoh dan tidak dikira dalam Learning Report atau sejarah soalan sebenar.']),
- lesson('settings','settings',null,
-  ['Save, sound and controls','Your current run saves automatically in this browser and profile.',[
-   'Use Settings → Export Save for a backup. Import Save lets you restore a compatible file after checking it. Another device or browser needs that exported file.',
-   'Music, Sound FX and Voice have their own controls. Motion Off and your device’s Reduced Motion setting reduce effects.',
-   'Use click/tap or Tab and Enter/Space. In battle, number keys play hand positions (0 is the tenth); E ends the turn, R opens Predict. Escape closes an open dialog.'
-  ],'New Run resets that run’s seen-question list. Lifetime learning history is separate. Clearing browser data can remove local saves.'],
-  ['Simpanan, bunyi dan kawalan','Run semasa disimpan secara automatik dalam browser dan profil ini.',[
-   'Gunakan Settings → Export Save untuk salinan sandaran. Import Save memulihkan fail yang serasi selepas disemak. Peranti atau browser lain memerlukan fail eksport itu.',
-   'Music, Sound FX dan Voice mempunyai kawalan masing-masing. Motion Off dan tetapan Reduced Motion peranti mengurangkan kesan.',
-   'Gunakan klik atau sentuhan, atau Tab dan Enter/Space. Dalam pertempuran, kekunci nombor memainkan kedudukan kad (0 untuk kad kesepuluh); E menamatkan giliran, R membuka Predict. Escape menutup dialog terbuka.'
-  ],'New Run mereset senarai soalan yang dilihat dalam run itu. Sejarah pembelajaran sepanjang masa berasingan. Memadam data browser boleh memadam save setempat.']),
- lesson('ready','results',null,
-  ['Ready for your own run','You can return to this guide whenever you need a reminder.',[
-   'Before End Turn: read intent, check your HP and Block, and use your Energy deliberately.',
-   'Before taking a reward: ask whether it helps your deck. Before choosing a path: check HP, Gold and recovery options.',
-   'Use Predict and its help to build understanding. A wrong answer is a chance to improve your reasoning.'
-  ],'Return to the game to continue your existing run, or choose New Run from the Main Menu when you are ready.'],
-  ['Sedia untuk run sendiri','Anda boleh kembali ke panduan ini apabila memerlukan peringatan.',[
-   'Sebelum End Turn: baca intent, semak HP dan Block, serta gunakan Energy dengan tujuan.',
-   'Sebelum mengambil ganjaran: fikir sama ada ia membantu deck. Sebelum memilih laluan: semak HP, Gold dan peluang pemulihan.',
-   'Gunakan Predict dan bantuannya untuk memahami konsep. Jawapan salah ialah peluang untuk membaiki penaakulan.'
-  ],'Kembali ke game untuk menyambung run sedia ada, atau pilih New Run dari Main Menu apabila bersedia.'])
+ lesson('welcome','start',null,
+  ['Your first dungeon journey','Help Alyssa reach the end of two stages.',[
+   'Choose a room on the map. Play cards to beat its enemy.',
+   'Keep your HP above zero. Beat the boss of Sigil Keep, then the boss of Deck Tower.',
+   'Start with the Basics route. Look at each picture, then try the practice.'
+  ],'There is no rush in this guide. You can repeat every example.'],
+  ['Jom kenal game ini','Bantu Alyssa menamatkan dua stage.',[
+   'Pilih bilik pada map. Mainkan kad untuk mengalahkan musuh.',
+   'Pastikan HP melebihi sifar. Kalahkan boss Sigil Keep, kemudian boss Deck Tower.',
+   'Mulakan dengan laluan Asas. Lihat setiap gambar, kemudian cuba latihan.'
+  ],'Baca ikut masa sendiri. Setiap contoh boleh diulang.'],
+  [frame('menu','Open Tutorial from the Main Menu.','Buka Tutorial dari Menu utama.'),frame('map','Your journey follows connected rooms.','Perjalanan anda melalui bilik yang bersambung.'),frame('combat','Cards help Alyssa win each battle.','Kad membantu Alyssa memenangi pertempuran.')]),
+ lesson('loading','start',null,
+  ['Wait for the game to be ready','The opening screen prepares the game files.',[
+   'Wait until Enter Game is available, then press it.',
+   'If a download fails, use the Retry control shown on the screen.',
+   'Some later rooms and Practice prepare more files when needed. Wait for their ready message.'
+  ],'Use the same game address and browser to return to local progress.'],
+  ['Tunggu game bersedia','Skrin awal menyediakan fail game.',[
+   'Tunggu sehingga butang Masuk permainan tersedia, kemudian tekan.',
+   'Jika muat turun gagal, gunakan butang Cuba lagi yang dipaparkan.',
+   'Sesetengah bilik dan Latihan menyediakan fail tambahan apabila diperlukan. Tunggu sehingga siap.'
+  ],'Gunakan alamat game dan browser yang sama untuk menyambung rekod setempat.'],
+  [frame('loading','Enter when the game is ready.','Masuk apabila game sudah bersedia.'),frame('menu','The Main Menu appears after entry.','Menu utama muncul selepas anda masuk.')]),
+ lesson('start','start',null,
+  ['Start or continue','Choose whether to begin again or continue your saved run.',[
+   'New Run starts a fresh journey. Continue opens your saved journey.',
+   'Choose Learn for your first try. Challenge begins with an Artifact trial.',
+   'If a save already exists, read the replacement message before starting again.'
+  ],'Easy, Medium and Hard are separate balance playtest profiles. Use the values shown in your selected game.'],
+  ['Mula atau sambung','Pilih sama ada mahu bermula semula atau menyambung permainan.',[
+   'Permainan baharu memulakan perjalanan baharu. Sambung membuka perjalanan yang disimpan.',
+   'Pilih Learn untuk cubaan pertama. Challenge bermula dengan soalan percubaan Artifact.',
+   'Jika sudah ada save, baca mesej penggantian sebelum bermula semula.'
+  ],'Easy, Medium dan Hard ialah profil ujian imbangan berasingan. Rujuk nilai yang dipaparkan dalam game anda.'],
+  [frame('menu','Choose New Run or Continue.','Pilih Permainan baharu atau Sambung.'),frame('modes','Choose Learn for an introduction.','Pilih Learn untuk pengenalan.')]),
+ lesson('artifact','start',null,
+  ['Claim an Artifact','An Artifact gives the effect written in its description.',[
+   'In Challenge, choose one offer from the Dungeon Master. Read its effect.',
+   'Press the claim button. Answer the trial question, using help if needed.',
+   'A correct answer lets you receive it. After two wrong answers, review the solution and continue without it.'
+  ],'A picture of an Artifact is an offer. You own it only after the claim is completed.'],
+  ['Tuntut Artifact','Artifact memberi kesan seperti yang tertulis pada penerangannya.',[
+   'Dalam Challenge, pilih satu tawaran Dungeon Master. Baca kesannya.',
+   'Tekan butang tuntut. Jawab soalan percubaan. Gunakan bantuan jika perlu.',
+   'Jawapan betul membolehkan anda menerimanya. Selepas dua jawapan salah, semak penyelesaian dan teruskan tanpa Artifact itu.'
+  ],'Gambar Artifact ialah tawaran. Artifact menjadi milik anda selepas tuntutan selesai.'],
+  [frame('master','Choose an offer and read its effect.','Pilih tawaran dan baca kesannya.'),frame('artifact-question','Answer before claiming.','Jawab sebelum menerima Artifact.'),frame('artifact-result','Read Result, then Continue.','Baca Keputusan, kemudian Teruskan.')]),
+ lesson('map','start','map',
+  ['Choose your next room','Follow the connected paths upwards to the boss.',[
+   'Find a glowing room connected to your position.',
+   'Press its icon once to enter immediately.',
+   'Check HP before choosing Battle or Elite. Rest can help you recover.'
+  ],'Use the map legend to identify Shop, Rest, Mystery, Battle, Elite and Boss.'],
+  ['Pilih bilik seterusnya','Ikut laluan bersambung ke atas menuju boss.',[
+   'Cari bilik bercahaya yang bersambung dengan kedudukan anda.',
+   'Tekan ikonnya sekali untuk terus masuk.',
+   'Semak HP sebelum memilih Battle atau Elite. Rest boleh membantu pemulihan.'
+  ],'Rujuk petunjuk map untuk mengenal pasti Shop, Rest, Mystery, Battle, Elite dan Boss.'],
+  [frame('map','Only connected glowing rooms are available.','Hanya bilik bercahaya yang bersambung boleh dimasuki.'),frame('combat','Entering Battle opens the fight.','Memasuki Battle membuka pertempuran.')]),
+ lesson('combat','battle','block',
+  ['Read the enemy’s intent','Look above the enemy before you act.',[
+   'The intent shows what the enemy plans to do after End Turn.',
+   'HP is your health. Block absorbs incoming damage.',
+   'Play a Defend card, then press End Turn. Watch the HP and Block values.'
+  ],'Try this below: protect Alyssa before allowing the enemy to act.'],
+  ['Baca tindakan musuh','Lihat di atas musuh sebelum bertindak.',[
+   'Paparan tindakan musuh menunjukkan rancangannya selepas Tamat giliran.',
+   'HP ialah kesihatan anda. Block menyerap kerosakan masuk.',
+   'Mainkan kad Defend, kemudian tekan Tamat giliran. Perhatikan nilai HP dan Block.'
+  ],'Cuba di bawah: lindungi Alyssa sebelum memberi giliran kepada musuh.'],
+  [frame('intent','Read the damage above the enemy.','Baca kerosakan yang tertera di atas musuh.'),frame('block','After a Defend card, check the Block value.','Selepas kad Defend dimainkan, semak nilai Block.'),frame('turn','After End Turn, a new turn begins.','Selepas Tamat giliran, giliran baharu bermula.')],
+  {en:['Defense reduces damage from each hit. Block absorbs the damage that remains.','Ordinary leftover Block resets at the next player turn unless an effect retains it.','A normal turn starts with {energy} Energy and draws {hand} cards. Effects can change these amounts.'],ms:['Defense mengurangkan kerosakan setiap pukulan. Block menyerap baki kerosakan.','Baki Block biasa direset pada giliran pemain seterusnya kecuali disimpan oleh kesan tertentu.','Giliran biasa bermula dengan {energy} Energy dan mengambil {hand} kad. Kesan tertentu boleh mengubah jumlah ini.']}),
+ lesson('cards','battle','attack',
+  ['Read and play a card','Energy pays the cost shown on a card.',[
+   'Read the cost at the top left. Then read the effect below the artwork.',
+   'Press an affordable card in Hand to play it. Check the changed values.',
+   'Attack deals damage. Defend gives protection. Skill has other effects. Passive stays active.'
+  ],'A normal card can play immediately. Read it before pressing it.'],
+  ['Baca dan mainkan kad','Energy membayar kos yang tertera pada kad.',[
+   'Baca kos di kiri atas. Kemudian baca kesan di bawah gambar kad.',
+   'Tekan kad dalam Hand jika Energy mencukupi. Semak nilai yang berubah.',
+   'Attack memberi kerosakan. Defend melindungi. Skill memberi kesan lain. Passive kekal aktif.'
+  ],'Kad biasa boleh terus dimainkan apabila ditekan. Baca dahulu sebelum menekannya.'],
+  [frame('card','Find the cost, type and effect.','Cari kos, jenis dan kesan kad.'),frame('attack','After playing Attack, enemy HP and your Energy decrease.','Selepas Attack dimainkan, HP musuh dan Energy anda berkurang.')],
+  {en:['X uses available Energy according to that card’s effect.','There is one enemy per battle. Multi-hit cards hit that same enemy. Actual damage can be reduced by Block, Defense or boss seals.'],ms:['X menggunakan Energy yang tersedia mengikut kesan kad tersebut.','Setiap pertempuran mempunyai satu musuh. Serangan berbilang pukulan mengenai musuh yang sama. Block, Defense atau seal boss boleh mengurangkan kerosakan sebenar.']}),
+ lesson('first-turn','battle','turn',
+  ['Try one full turn','Practise three actions in order.',[
+   'Read the intent. Play the Defend card to gain Block.',
+   'Play the Attack card. Watch enemy HP and your remaining Energy.',
+   'Press End Turn. Check Alyssa’s HP and the new turn number.'
+  ],'This is a safe example. Replay it until you can explain all three actions.'],
+  ['Cuba satu giliran penuh','Latih tiga tindakan mengikut turutan.',[
+   'Baca tindakan musuh. Mainkan kad Defend untuk mendapat Block.',
+   'Mainkan kad Attack. Perhatikan HP musuh dan baki Energy.',
+   'Tekan Tamat giliran. Semak HP Alyssa dan nombor giliran baharu.'
+  ],'Ini contoh yang selamat. Ulang sehingga anda boleh menerangkan ketiga-tiga tindakan.'],
+  [frame('intent','1. Read the intent.','1. Baca tindakan musuh.'),frame('block','2. Protect with a Defend card.','2. Lindungi diri dengan kad Defend.'),frame('attack-block','3. Attack while keeping Block.','3. Serang sambil mengekalkan Block.'),frame('turn','4. End the turn and check HP.','4. Tamatkan giliran dan semak HP.')]),
+ lesson('piles','battle','draw',
+  ['Where do used cards go?','Cards move between piles during a battle.',[
+   'Hand holds cards you can play. Draw Pile holds cards waiting to be taken.',
+   'Used cards usually enter Discard. When Draw Pile runs out, Discard is shuffled back into it.',
+   'Exhaust sets a card aside until this battle ends. Open a pile to see its cards.'
+  ],'Exhaust does not delete a card from your run deck.'],
+  ['Ke mana kad terpakai pergi?','Kad bergerak antara timbunan semasa pertempuran.',[
+   'Hand memegang kad yang boleh dimainkan. Draw Pile menyimpan kad yang menunggu untuk diambil.',
+   'Kad terpakai biasanya masuk ke Discard. Apabila Draw Pile kosong, Discard dikocok semula ke dalamnya.',
+   'Exhaust mengetepikan kad sehingga pertempuran ini tamat. Buka timbunan untuk melihat kad di dalamnya.'
+  ],'Exhaust tidak memadam kad daripada Deck permainan anda.'],
+  [frame('resources','Find Hand, Draw Pile, Discard and Exhaust.','Cari Hand, Draw Pile, Discard dan Exhaust.'),frame('draw','Open Draw Pile to inspect the cards.','Buka Draw Pile untuk melihat kad.'),frame('exhaust','An Exhaust card waits here until the battle ends.','Kad Exhaust menunggu di sini sehingga pertempuran tamat.')],
+  {en:['Hand holds at most {handLimit} cards. Excess draws stay in the pile.','The pile view sorts cards; it does not reveal the hidden Draw order. Hand, Active and Exhaust are not included in a Discard reshuffle.'],ms:['Hand memuatkan paling banyak {handLimit} kad. Lebihan ambilan kekal dalam timbunan.','Paparan timbunan menyusun kad; ia tidak menunjukkan urutan tersembunyi Draw Pile. Hand, Active dan Exhaust tidak dikocok bersama Discard.']}),
+ lesson('predict','battle','predict',
+  ['Answer a Predict question','Predict is an optional maths question, once per turn.',[
+   'Open Predict. Read Question, choose an answer, then press Check answer.',
+   'Need help? Open Help. Use Hint, More Hint when unlocked, or Basics.',
+   'After answering, read Result. Use Show steps to understand the solution.'
+  ],'A correct first answer without help earns 1 Focus, up to {focusCap}. A guided answer is still useful practice.'],
+  ['Jawab soalan Predict','Predict ialah soalan matematik pilihan, sekali setiap giliran.',[
+   'Buka Predict. Baca Soalan, pilih jawapan, kemudian tekan Semak jawapan.',
+   'Perlukan bantuan? Buka Bantuan. Gunakan Petunjuk, Petunjuk Lanjut apabila dibuka, atau Asas.',
+   'Selepas menjawab, baca Keputusan. Gunakan Tunjukkan langkah untuk memahami penyelesaian.'
+  ],'Jawapan pertama yang betul tanpa bantuan memberi 1 Focus, sehingga had {focusCap}. Jawapan berbantu juga berguna untuk belajar.'],
+  [frame('predict','Read, select, then Check answer.','Baca, pilih, kemudian Semak jawapan.'),frame('help','Open Help for Hint and Basics.','Buka Bantuan untuk Petunjuk dan Asas.'),frame('retry','After one wrong answer, both hints unlock.','Selepas satu jawapan salah, kedua-dua petunjuk dibuka.'),frame('predict-result','Result explains the answer.','Keputusan menerangkan jawapan.')],
+  {en:['You have two attempts. A first wrong answer unlocks Hint and More Hint; a second wrong answer locks input and reveals the solution.','Closing Predict ends that turn’s attempt without a reward. An opened question is not repeated in the same run.','The bank contains 120 Form 4 questions: Probability, Sets and Logical Reasoning. The guide uses the same evaluator.'],ms:['Anda mempunyai dua cubaan. Salah pertama membuka Petunjuk dan Petunjuk Lanjut; salah kedua mengunci jawapan dan memaparkan penyelesaian.','Menutup Predict menamatkan cubaan giliran itu tanpa ganjaran. Soalan yang sudah dibuka tidak diulang dalam permainan yang sama.','Bank mengandungi 120 soalan Tingkatan 4: Kebarangkalian, Set dan Penaakulan Logik. Panduan menggunakan penilai jawapan yang sama.']}),
+ lesson('focus','battle','focus',
+  ['Use your Focus bonus','Focus is separate from Energy.',[
+   'After earning Focus, press the Focus control to arm it.',
+   'Read the changed effect on an eligible Attack, Defend or Skill card.',
+   'Play it. One Focus is spent and that card receives its Focus bonus.'
+  ],'You can use Focus once per turn. Passive cards do not spend it.'],
+  ['Gunakan bonus Focus','Focus berasingan daripada Energy.',[
+   'Selepas mendapat Focus, tekan kawalan Focus untuk mengaktifkannya.',
+   'Baca perubahan kesan pada kad Attack, Defend atau Skill yang layak.',
+   'Mainkan kad itu. Satu Focus digunakan dan kad menerima bonus Focus.'
+  ],'Focus boleh digunakan sekali setiap giliran. Kad Passive tidak menggunakannya.'],
+  [frame('focus','Find your Focus stock.','Cari jumlah Focus anda.'),frame('focus-armed','Arm Focus and compare the card.','Aktifkan Focus dan bandingkan kad.'),frame('focus-hit','Play the card and check the result.','Mainkan kad dan semak hasilnya.')],
+  {en:['Focus resets for a new battle. Different cards have different printed Focus effects.','This exercise starts with 1 example Focus. In a real run, Predict and certain actual effects can grant Focus.'],ms:['Focus direset pada pertempuran baharu. Bonus Focus berbeza mengikut kesan yang tertera pada kad.','Latihan ini bermula dengan 1 Focus contoh. Dalam permainan sebenar, Predict dan kesan tertentu boleh memberi Focus.']}),
+ lesson('passive','battle','passive',
+  ['Play a Passive first','A Passive helps only after it has been played.',[
+   'Play the purple Passive card. Find its icon beside Alyssa.',
+   'Open the icon to read its condition and trigger count.',
+   'You can keep {passiveLimit} different Passives active. If full, choose one to replace or cancel.'
+  ],'A visible aura shows feedback. Read the actual condition and numbers to know what happened.'],
+  ['Mainkan Passive dahulu','Passive membantu selepas kad itu dimainkan.',[
+   'Mainkan kad Passive ungu. Cari ikonnya di sebelah Alyssa.',
+   'Buka ikon untuk membaca syarat dan bilangan kesan dicetuskan.',
+   'Anda boleh mengaktifkan {passiveLimit} Passive berbeza. Jika penuh, pilih satu untuk diganti atau batalkan.'
+  ],'Aura memberi maklum balas visual. Baca syarat dan nilai sebenar untuk mengetahui kesannya.'],
+  [frame('passive','The Passive is now active beside Alyssa.','Passive kini aktif di sebelah Alyssa.'),frame('passive-detail','Read when its effect triggers.','Baca bila kesannya dicetuskan.')],
+  {en:['The replaced Passive goes to Discard and its ongoing effect stops. Effects already resolved stay.','Some Passives act immediately; others wait for a condition. Their trigger counter is evidence of an actual trigger.'],ms:['Passive yang diganti masuk ke Discard dan kesan berterusannya berhenti. Kesan yang sudah berlaku kekal.','Sesetengah Passive bertindak serta-merta; yang lain menunggu syarat. Kaunter menunjukkan kesan yang benar-benar dicetuskan.']}),
+ lesson('statuses','battle',null,
+  ['Understand status icons','Press a status icon to read its effect.',[
+   'Strength helps Attack damage. Agility helps Block from Defend cards. Defense reduces damage received.',
+   'Weak reduces Attack damage. Vulnerable makes the affected actor take more Attack damage.',
+   'Check the number and duration in the detail panel. Statuses can affect Alyssa or the enemy.'
+  ],'Defend is a card type. Defense is a damage-reducing attribute. They are different.'],
+  ['Fahami ikon status','Tekan ikon status untuk membaca kesannya.',[
+   'Strength membantu kerosakan Attack. Agility membantu Block daripada kad Defend. Defense mengurangkan kerosakan diterima.',
+   'Weak mengurangkan kerosakan Attack. Vulnerable menyebabkan watak menerima lebih banyak kerosakan Attack.',
+   'Semak nilai dan tempoh dalam panel penerangan. Status boleh melibatkan Alyssa atau musuh.'
+  ],'Defend ialah jenis kad. Defense ialah sifat yang mengurangkan kerosakan. Kedua-duanya berbeza.'],
+  [frame('statuses','Find status icons near the actor.','Cari ikon status berhampiran watak.'),frame('status-detail','Read the current effect and duration.','Baca kesan dan tempoh semasa.')],
+  {en:['Current rules: Vulnerable adds 50% to Attack damage; Weak reduces it by 25%. Stacks extend duration across attack phases. Every hit in the affected phase is modified.','Last Ember’s unused emergency Block survives the next player-turn reset once. Older saves can use their original rules; their detail panels remain authoritative.'],ms:['Peraturan semasa: Vulnerable menambah 50% kerosakan Attack; Weak mengurangkannya sebanyak 25%. Tindanan memanjangkan tempoh mengikut fasa serangan. Setiap pukulan dalam fasa terlibat menerima kesan.','Baki Block kecemasan Last Ember disimpan sekali pada giliran pemain berikutnya. Save lama boleh menggunakan peraturan asal; rujuk panel penerangannya.']}),
+ lesson('rewards','journey','reward',
+  ['Choose a useful reward','You do not need to take every card.',[
+   'Read the offered cards. Compare their cost and effect with your Deck.',
+   'Select one card, then use the take button. Or choose Skip.',
+   'Continue when all required rewards or trials are finished.'
+  ],'A smaller Deck can help important cards appear more often.'],
+  ['Pilih ganjaran yang berguna','Anda tidak perlu mengambil setiap kad.',[
+   'Baca kad yang ditawarkan. Bandingkan kos dan kesannya dengan Deck anda.',
+   'Pilih satu kad, kemudian tekan butang ambil. Atau pilih Langkau.',
+   'Teruskan selepas semua ganjaran atau percubaan yang diperlukan selesai.'
+  ],'Deck yang lebih kecil boleh membantu kad penting muncul lebih kerap.'],
+  [frame('rewards','Compare the card choices before taking one.','Bandingkan pilihan kad sebelum mengambil satu.'),frame('reward-taken','Check the Deck after taking a card.','Semak Deck selepas mengambil kad.')],
+  {en:['An Elite card reward is upgraded. Eligible Challenge encounters can also offer Artifacts. Amounts and offers follow the active profile.'],ms:['Ganjaran kad Elite sudah dinaik taraf. Pertemuan Challenge yang layak juga boleh menawarkan Artifact. Jumlah dan tawaran mengikut profil aktif.']}),
+ lesson('shop','journey','shop',
+  ['Spend Gold in the Shop','Buy only what helps your plan.',[
+   'Choose Buy Cards or Buy Artifacts. Read the price and effect.',
+   'Select an offer, then confirm Buy. Check that Gold decreases and the offer becomes Sold.',
+   'Remove Card is a paid service with its own confirmation. Press Leave when finished.'
+  ],'Reopening the Shop does not change its stock. Keeping your Gold is also a choice.'],
+  ['Belanjakan Gold di Shop','Beli perkara yang membantu rancangan anda.',[
+   'Pilih Beli Kad atau Beli Artifact. Baca harga dan kesannya.',
+   'Pilih tawaran, kemudian sahkan Beli. Semak Gold berkurang dan tawaran menjadi Terjual.',
+   'Buang Kad ialah perkhidmatan berbayar dengan pengesahan sendiri. Tekan Keluar apabila selesai.'
+  ],'Membuka semula Shop tidak menukar stok. Menyimpan Gold juga satu pilihan.'],
+  [frame('shop','Choose a card and inspect its price.','Pilih kad dan semak harganya.'),frame('shop-bought','A bought offer becomes Sold.','Tawaran yang dibeli menjadi Terjual.'),frame('shop-artifacts','Artifacts have a separate tab.','Artifact mempunyai tab berasingan.'),frame('shop-remove','Check the removal price before confirming.','Semak harga membuang kad sebelum mengesahkan.')]),
+ lesson('rest','journey','rest',
+  ['Recover or upgrade','Choose one action at a Rest site.',[
+   'If HP is low, read the recovery amount and choose Rest.',
+   'Or choose Upgrade, then select an eligible card. Compare its improved effect.',
+   'Confirm your choice. Return to the map after that one action.'
+  ],'Choose based on what you need now: more HP or a stronger card.'],
+  ['Pulih atau naik taraf','Pilih satu tindakan di Rest.',[
+   'Jika HP rendah, baca jumlah pemulihan dan pilih Rest.',
+   'Atau pilih Naik taraf, kemudian pilih kad yang layak. Bandingkan kesan baharunya.',
+   'Sahkan pilihan. Kembali ke map selepas satu tindakan itu.'
+  ],'Pilih mengikut keperluan sekarang: lebih HP atau kad yang lebih kuat.'],
+  [frame('rest','Compare recovery with Upgrade.','Bandingkan pemulihan dengan Naik taraf.'),frame('rest-upgrade','Choose a card to upgrade.','Pilih kad untuk dinaik taraf.')]),
+ lesson('mystery','journey',null,
+  ['Read before choosing Mystery','A Mystery has its own costs and outcomes.',[
+   'Read every choice. Some spend HP or Gold, change your Deck, or start a battle.',
+   'If a timer starts, it continues while Help or other panels are open.',
+   'Finish the question, read the outcome and claim any required reward before leaving.'
+  ],'Refreshing does not give a new question or restart the timer.'],
+  ['Baca pilihan Mystery dahulu','Mystery mempunyai kos dan hasilnya sendiri.',[
+   'Baca setiap pilihan. Ada yang menggunakan HP atau Gold, mengubah Deck atau memulakan pertempuran.',
+   'Jika masa mula dikira, ia terus berjalan semasa Bantuan atau panel lain dibuka.',
+   'Selesaikan soalan, baca hasilnya dan tuntut ganjaran yang diperlukan sebelum keluar.'
+  ],'Refresh tidak memberi soalan baharu atau memulakan masa semula.'],
+  [frame('mystery','Read the choice and consequence first.','Baca pilihan dan akibatnya dahulu.'),frame('mystery-question','Watch the live timer while answering.','Perhatikan masa semasa menjawab.')],
+  {en:['A timed question allows two attempts. The first wrong answer unlocks both hints; a second wrong answer or time up ends it.'],ms:['Soalan bermasa memberi dua cubaan. Salah pertama membuka kedua-dua petunjuk; salah kedua atau masa tamat menamatkannya.']}),
+ lesson('boss','journey','boss',
+  ['Open the boss seals','A boss has HP and protective seals.',[
+   'Find the closed seals. They reduce your Attack damage.',
+   'Answer Predict correctly to open one waiting seal. Helped correct answers can also open it.',
+   'End the turn before using Predict again. Open the next seal, then keep fighting.'
+  ],'After the first boss, continue to Deck Tower. Its boss is the final battle.'],
+  ['Buka seal boss','Boss mempunyai HP dan seal perlindungan.',[
+   'Cari seal yang tertutup. Seal mengurangkan kerosakan Attack anda.',
+   'Jawab Predict dengan betul untuk membuka satu seal. Jawapan betul dengan bantuan juga boleh membukanya.',
+   'Tamatkan giliran sebelum menggunakan Predict lagi. Buka seal seterusnya, kemudian teruskan pertempuran.'
+  ],'Selepas boss pertama, teruskan ke Deck Tower. Boss di sana ialah pertempuran terakhir.'],
+  [frame('boss','Closed seals protect the boss.','Seal tertutup melindungi boss.'),frame('boss-open','A correct Predict opens one seal.','Predict yang betul membuka satu seal.')]),
+ lesson('collection','more',null,
+  ['Look up a card or Artifact','Use Card Collection to read before planning your Deck.',[
+   'Open Card Collection from the Main Menu.',
+   'Choose a card to read its cost, effect and upgrade.',
+   'Use the Artifacts tab to read discovered Artifacts and their conditions.'
+  ],'Collection is a reference. Looking at a card does not add it to your run.'],
+  ['Semak kad atau Artifact','Gunakan Koleksi Kad untuk membaca sebelum merancang Deck.',[
+   'Buka Koleksi Kad dari Menu utama.',
+   'Pilih kad untuk membaca kos, kesan dan naik tarafnya.',
+   'Gunakan tab Artifact untuk membaca Artifact yang ditemui serta syaratnya.'
+  ],'Koleksi ialah rujukan. Melihat kad tidak menambahkannya ke dalam permainan anda.'],
+  [frame('collection','Select a card to inspect it.','Pilih kad untuk melihat penerangannya.'),frame('collection-artifacts','Switch to Artifacts for their effects.','Tukar ke Artifact untuk membaca kesannya.')]),
+ lesson('learning','more',null,
+  ['Practise maths without a run','Open Education Practice from the Main Menu.',[
+   'Choose Learning for unseen questions. Review lets you revisit a selected question.',
+   'Read the question and given information. Use Hint, More Hint, diagrams or Basics when needed.',
+   'After answering, read the explanation and steps. Change English/BM using the language control.'
+  ],'These are Form 4 maths topics. The tutorial explains game controls; Basics can help you revise earlier ideas.'],
+  ['Latih matematik tanpa bermain','Buka Latihan Pendidikan dari Menu utama.',[
+   'Pilih Learning untuk soalan belum dilihat. Review membolehkan anda mengulang soalan pilihan.',
+   'Baca soalan dan maklumat diberi. Gunakan Petunjuk, Petunjuk Lanjut, rajah atau Asas apabila perlu.',
+   'Selepas menjawab, baca penerangan dan jalan kerja. Tukar English/BM melalui kawalan bahasa.'
+  ],'Topik matematik ini pada aras Tingkatan 4. Tutorial menerangkan kawalan game; Asas membantu mengulang konsep awal.'],
+  [frame('learning','Choose Learning or Review.','Pilih Learning atau Review.'),frame('learning-help','Use help to understand the method.','Gunakan bantuan untuk memahami kaedah.')]),
+ lesson('reporting','more',null,
+  ['Read your report or report a problem','The Learning Report helps you choose what to practise next.',[
+   'Open Learning Report. Overview shows your local practice; Details lists question records.',
+   'If a game question is unclear, finish it and press Report a problem in Result.',
+   'Tick a category, write what was unclear and save. Sharing is optional and follows your saved consent.'
+  ],'Tutorial exercises do not count in your real Learning Report. Saved on this device does not mean sent.'],
+  ['Baca laporan atau laporkan masalah','Laporan Pembelajaran membantu memilih perkara untuk diulang kaji.',[
+   'Buka Laporan Pembelajaran. Ringkasan menunjukkan latihan setempat; Perincian menyenaraikan rekod soalan.',
+   'Jika soalan game kurang jelas, selesaikannya dan tekan Laporkan masalah dalam Keputusan.',
+   'Tandakan kategori, tulis bahagian yang kurang jelas dan simpan. Perkongsian ialah pilihan mengikut persetujuan anda.'
+  ],'Latihan tutorial tidak dikira dalam Laporan Pembelajaran sebenar. Disimpan pada peranti belum bermaksud sudah dihantar.'],
+  [frame('report','Check your report and revision suggestions.','Semak laporan dan cadangan ulang kaji.'),frame('report-problem','Tell us which part was unclear.','Nyatakan bahagian yang kurang jelas.')]),
+ lesson('settings','more',null,
+  ['Save, language and sound','Your run saves in this browser and profile.',[
+   'Open Settings to change Game language between English and BM.',
+   'Export Save creates a backup. Import Save restores a compatible file after checking it.',
+   'Use Game Motion, Combat Effects and Status size for a clearer display. Music, Sound FX and Voice have separate sound controls.'
+  ],'Use the same browser to continue. Clearing browser data can remove local progress.'],
+  ['Simpanan, bahasa dan bunyi','Permainan disimpan dalam browser dan profil ini.',[
+   'Buka Tetapan untuk menukar Bahasa permainan antara English dengan BM.',
+   'Eksport Simpanan menghasilkan sandaran. Import Simpanan memulihkan fail serasi selepas disemak.',
+   'Gunakan Gerakan permainan, Kesan tempur dan Saiz status untuk paparan lebih jelas. Music, Sound FX dan Voice mempunyai kawalan berasingan.'
+  ],'Gunakan browser yang sama untuk menyambung. Memadam data browser boleh memadam rekod setempat.'],
+  [frame('settings','Language, save and display controls are in Settings.','Bahasa, simpanan dan kawalan paparan ada dalam Tetapan.'),frame('sound','Adjust Music, Sound FX and Voice separately.','Laraskan Music, Sound FX dan Voice secara berasingan.')],
+  {en:['Keyboard: Tab moves focus; Enter/Space activates a button. In battle, number keys play hand positions, 0 selects the tenth, E ends the turn and R opens Predict. Escape closes a dialog.','Your device’s Reduced Motion setting also reduces effects. A different browser/device needs an exported save. Lifetime learning records are separate from a run.'],ms:['Papan kekunci: Tab mengalihkan fokus; Enter/Space menekan butang. Dalam pertempuran, nombor memainkan kedudukan kad, 0 untuk kad kesepuluh, E menamatkan giliran dan R membuka Predict. Escape menutup dialog.','Tetapan Reduced Motion peranti turut mengurangkan kesan. Browser atau peranti lain memerlukan fail eksport save. Rekod pembelajaran sepanjang masa berasingan daripada permainan.']}),
+ lesson('ready','more',null,
+  ['Ready for your own run','Before each End Turn, do these three checks.',[
+   'Read the enemy’s intent. Do you need Block?',
+   'Check Energy and choose useful cards. Use Predict or Focus when it helps.',
+   'Check HP and your next route after the battle. Return to this guide whenever needed.'
+  ],'You can now return to your game. A wrong answer is a chance to learn.'],
+  ['Sedia untuk permainan sendiri','Sebelum Tamat giliran, buat tiga semakan ini.',[
+   'Baca tindakan musuh. Adakah anda memerlukan Block?',
+   'Semak Energy dan pilih kad yang berguna. Gunakan Predict atau Focus apabila membantu.',
+   'Semak HP dan laluan seterusnya selepas pertempuran. Kembali ke panduan ini bila-bila masa.'
+  ],'Anda kini boleh kembali ke game. Jawapan salah ialah peluang untuk belajar.'],
+  [frame('combat','Read intent, check resources, then act.','Baca tindakan musuh, semak sumber, kemudian bertindak.'),frame('results','Complete both stages to finish the journey.','Lengkapkan kedua-dua stage untuk menamatkan perjalanan.')])
  ];
- const legacyStatus={en:'Vulnerable adds 2 damage to one incoming Attack hit. Weak removes 2 damage from one outgoing Attack hit. Each hit uses one stack. Last Ember Block follows the original turn reset unless another effect retains it.',ms:'Terdedah menambah 2 kerosakan pada satu pukulan Serangan yang diterima. Lemah mengurangkan 2 kerosakan pada satu pukulan Serangan yang diberi. Setiap pukulan menggunakan satu tindanan. Blok Bara Terakhir mengikut tetapan semula giliran asal kecuali disimpan oleh kesan lain.'};
- function content(id,language='en',legacyRules=false){const text=chapters.find(ch=>ch.id===id)[language];return legacyRules&&id==='passive'?{...text,steps:[...text.steps.slice(0,-1),legacyStatus[language]]}:text;}
- const api={chapters,content};if(typeof module!=='undefined')module.exports=api;else root.DCTutorialData=api;
+ const paths={basics:['welcome','start','map','combat','cards','first-turn','predict','focus','boss','ready'],all:chapters.map(ch=>ch.id)};
+ const groups={start:{en:'Start here',ms:'Mula di sini'},battle:{en:'Your turn',ms:'Giliran anda'},journey:{en:'Between battles',ms:'Antara pertempuran'},more:{en:'Look up when needed',ms:'Rujuk bila perlu'}};
+ const legacyStatus={en:'Older rules: Vulnerable adds 2 damage to one incoming Attack hit; Weak removes 2 from one outgoing Attack hit. Each hit uses a stack. Last Ember uses the original Block reset unless another effect retains it.',ms:'Peraturan lama: Vulnerable menambah 2 kerosakan pada satu pukulan Attack diterima; Weak mengurangkan 2 pada satu pukulan Attack diberi. Setiap pukulan menggunakan satu tindanan. Last Ember mengikut reset Block asal kecuali disimpan oleh kesan lain.'};
+ function content(id,language='en',legacyRules=false){const ch=chapters.find(ch=>ch.id===id),text=ch[language],details=ch.details[language]||[];return {...text,details:legacyRules&&id==='statuses'?[legacyStatus[language]]:details};}
+ const mediaFile=(shot,language='en')=>'tutorial-shot-'+shot+'-'+(language==='ms'?'ms':'en')+'.webp';
+ const api={chapters,content,paths,groups,mediaFile};if(typeof module!=='undefined')module.exports=api;else root.DCTutorialData=api;
 })(globalThis);

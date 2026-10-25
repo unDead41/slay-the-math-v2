@@ -1,5 +1,21 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-TUTORIAL-REFRESH — Current-game illustrated learning path
+
+- **DISAHKAN:** Ijamm requests updating the complete tutorial from current main,
+  adding/removing/improving content as findings justify, and many actual-game
+  snapshots or short recordings with simple Form1-level game instructions.
+- **DITERUSKAN implementation:** ten-chapter Basics route,23-chapter reference,
+  manually stepped English/BM real UI captures, isolated full-turn practice,
+  canonical Basics, smaller instructions, optional detail and direct practice.
+  Preserve original chapter IDs, existing progress, actual engine/evaluator,
+  current numerical/language owners and player records. No AI screenshot mockups.
+- **PERLU_VERIFIKASI:** classroom comprehension and physical-device performance.
+  Form4 mathematical scope remains unchanged. The new work is prepared on
+  tutorial-visual-refresh; no new main merge/deployment is inferred from the
+  previous tutorial's completed publication. [Guide](../TUTORIAL_VISUAL_REFRESH.md),
+  [audit and actual checks](../audits/tutorial-visual-refresh/LATEST.md).
+
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
 - **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.

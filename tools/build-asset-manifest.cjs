@@ -25,7 +25,7 @@ function build(root,{write=true,output=null}={}){
   if(!/\.(?:js|css|svg|png|webp|jpg|mp3|ogg|woff2?)$/i.test(url)||['sw.js'].includes(url))continue;
   if(/^assets\/ground-alyssa-(standing|attack|defend|skill|damage)\.webp$/.test(url))continue;
   if(/\.(mp3|ogg)$/.test(url)&&!activeAudio.has(url))continue;
-  let pack=url==='education-practice.js'?'practice':core.has(url)||scriptSet.has(url)||!url.startsWith('assets/')&&/\.css$/.test(url)?'core':actorPacks.get(url)||/^assets\/tutorial\//.test(url)&&'tutorial'||/^assets\/menu-/.test(url)&&'menu'||activeAudio.has(url)&&'audio'||'common';
+  let pack=url==='education-practice.js'?'practice':core.has(url)||scriptSet.has(url)||!url.startsWith('assets/')&&/\.css$/.test(url)?'core':actorPacks.get(url)||/^assets\/tutorial(?:\/|-shot-)/.test(url)&&'tutorial'||/^assets\/menu-/.test(url)&&'menu'||activeAudio.has(url)&&'audio'||'common';
   const bytes=fs.readFileSync(path.join(dir,item.name));entries.push({url,bytes:bytes.length,sha256:hash(bytes),pack,kind:/\.(mp3|ogg)$/.test(url)?'audio':/\.(webp|png|jpg|svg)$/.test(url)?'image':'code',required:pack==='core'&&!/\.(mp3|ogg)$/.test(url)&&!functionalIcons.has(url)});
  }}walk(dist);entries.sort((a,b)=>a.url.localeCompare(b.url));
  const out={schemaVersion:1,gameVersion:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,manifestId:contentId(entries),entries,scripts,styles:[...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m=>m[1].split('?')[0]),actors,menuAudio:music.assets.menu.srcs[0]};

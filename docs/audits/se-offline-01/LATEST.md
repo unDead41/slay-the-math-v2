@@ -18,3 +18,9 @@ Semakan khusus55/55 lulus. RED awal:24/26 dengan fungsi startup belum wujud dan 
 Hasil batch asal4FAIL tidak diubah. Ralat persediaan harness menggunakan hash JSON reserialized dikekalkan; kontrak asal ialah hash fail berformat, kini diperiksa tepat tanpa melonggarkan padanan save. Partial startup dan full offline installation ialah dua tahap berbeza. `trainingEligible=false`; tiada balancing, fitting atau model activation.
 
 CI-247-01 dan QA-248-PRELOAD-01 kekal inherited P2/open; fresh PASS tidak membuktikan counter/CI lama telah dibaiki. Had GPU/temp-space terdahulu kekal sejarah, tiada claim GPU fix. Profil tmpfs membuktikan restart browser sahaja. Public Pages, OS reboot, peranti fizikal/browser lain dan human audio tidak diuji. Tiada isu tambahan ditemui dalam skop yang disemak selain yang direkodkan di atas. Tiada main push/deployment.
+
+## Penerbitan branch
+
+VERIFIED implementation `ada427a88796a4f4f3f6d689d260a8be2a7cf8ff`, tree `8ce7d361353638000f05e54fd4e8439248e4db6a`, tepat sama dengan tree candidate yang diuji. Parents850dec8 danB3DC750 mengekalkan branch terdahulu/main2.49.1. Ref feature dikemas kini tanpa force dengan expected-head850dec8. [Bukti](../../verification/se-offline-01/publication.json).
+
+Readback main terakhir09a5aa49645a37ee011317f1b784f0dd9affdf02 ialah receipt/documentation sahaja di atas code509be90/2.50.0. Perubahan itu oleh writer lain; task ini tidak menulis main. Status gabungan2.50.0 kekal BELUM DISAHKAN dan hendaklah diuji selepas integrasi pemilik. Receipt/audit/handoff tambahan tidak menukar source runtime yang diuji.

@@ -62,3 +62,7 @@ Runner asal dalam ZIP menggunakan path environment asal dan versi collector akhi
 Replay tempatan A1–A4 candidate production telah lulus4/4, menggunakan keempat-empat save/seed asal. A1/A3 menyimpan766/766entry candidate, A2/A4 masing-masing341/339entry ketika ditutup; resit startup319fail termasuk canonical manifest. Hasil ini bukan rerun bebas oleh Simulation & Evidence. [Bukti replay](verification/se-offline-01/replay/report.json), [asal/pemeliharaan](verification/se-offline-01/origin-and-preservation.json), [audit](audits/se-offline-01/LATEST.md).
 
 Chromium/Linux, software graphics dan profil filesystem tmpfs digunakan. Ini membuktikan CacheStorage merentas proses browser; bukan OS reboot, peranti fizikal, semua browser atau GitHub Pages awam. Audio manusia, latihan AI dan seluruh audit matematik di luar skop. MODEL.zip dan Matematik Tingkatan4 KSSM.pdf yang gagal dilampirkan tidak digunakan. Main tidak diubah; Simulation perlu menerima/menolak hasil replay sendiri sebelum menutup finding dalam registry.
+
+## SHA untuk replay pemilik
+
+Implementation terbitan yang mengandungi source dan bukti diuji ialah `ada427a88796a4f4f3f6d689d260a8be2a7cf8ff`. Receipt dokumentasi boleh menambah commit selepasnya tanpa menukar runnable bytes. Sahkan [publication.json](verification/se-offline-01/publication.json) dan pin SHA sebenar runner anda. Main readback09a5aa4 ialah metadata sahaja selepas code2.50.0/509be90; tiada integrasi2.50.0 didakwa oleh branch ini.

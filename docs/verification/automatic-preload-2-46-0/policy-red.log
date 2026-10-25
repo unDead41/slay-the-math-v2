@@ -1,0 +1,67 @@
+✖ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (1.096597ms)
+✖ whole-file startup never rounds below75 percent and tolerates an older manifest (0.185168ms)
+✖ retained progress does not call evicted online-only bytes ready (35.142007ms)
+✖ incremental background queue promotes room resources without occupying foreground capacity (1.85868ms)
+✖ hidden/offline/manual pause stops new speculative work and resumes the same queue (0.901914ms)
+✖ a failed background file stays retryable and saved files are not downloaded twice (0.684448ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.010566
+
+✖ failing tests:
+
+test at tests/background-download.test.cjs:12:1
+✖ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (1.096597ms)
+  TypeError [Error]: R.startupPlan is not a function
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:14:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/background-download.test.cjs:16:1
+✖ whole-file startup never rounds below75 percent and tolerates an older manifest (0.185168ms)
+  TypeError [Error]: R.startupPlan is not a function
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:17:136)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/background-download.test.cjs:19:1
+✖ retained progress does not call evicted online-only bytes ready (35.142007ms)
+  TypeError [Error]: m.progress is not a function
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:20:242)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/background-download.test.cjs:22:1
+✖ incremental background queue promotes room resources without occupying foreground capacity (1.85868ms)
+  TypeError [Error]: R.createBackgroundQueue is not a function
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:23:40)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/background-download.test.cjs:25:1
+✖ hidden/offline/manual pause stops new speculative work and resumes the same queue (0.901914ms)
+  TypeError [Error]: R.createBackgroundQueue is not a function
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:26:72)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/background-download.test.cjs:28:1
+✖ a failed background file stays retryable and saved files are not downloaded twice (0.684448ms)
+  TypeError [Error]: R.createBackgroundQueue is not a function
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:29:44)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

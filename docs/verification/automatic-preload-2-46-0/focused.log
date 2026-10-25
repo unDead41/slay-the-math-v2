@@ -1,0 +1,36 @@
+✔ the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets (1284.939398ms)
+✔ the actual startup package prioritizes the hero and Stage1 while deferring late packs (257.357475ms)
+✔ concurrent requests share bytes and a verified disk hit avoids another download (54.583919ms)
+✔ a corrupt cached response is rejected and replaced without clearing unrelated data (8.299351ms)
+✔ transient HTTP failures retry twice but missing assets fail once and never become ready (13.348728ms)
+✔ a stalled response has a bounded failure and a loading budget cancels outstanding work (36.683381ms)
+✔ foreground work precedes queued boss downloads and background concurrency stays bounded (21.4356ms)
+✔ cache quota failure keeps downloads usable online and rejects URLs outside this manifest (14.499166ms)
+✔ an update reuses unchanged verified bytes and replaces changed bytes within the same project (5.035516ms)
+✔ cache denial still reuses verified bytes for sequential consumers without repeating SHA work (3.634812ms)
+✔ a verified disk read is retained privately and consumers cannot mutate later responses (5.106854ms)
+✔ the compressed byte budget evicts background entries before a foreground resource (8.908195ms)
+✔ oversized verified assets remain usable without exceeding the session budget (6.245304ms)
+✔ wrong-hash bytes never enter the trusted session cache, and a retry can populate it (5.882379ms)
+✔ verified session reuse is isolated by manifest and still obeys pause and destroy (6.658235ms)
+✔ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (2.530522ms)
+✔ whole-file startup never rounds below75 percent and tolerates an older manifest (0.304277ms)
+✔ retained progress does not call evicted online-only bytes ready (40.175238ms)
+✔ incremental background queue promotes room resources without occupying foreground capacity (31.150577ms)
+✔ hidden/offline/manual pause stops new speculative work and resumes the same queue (51.977362ms)
+✔ a failed background file stays retryable and saved files are not downloaded twice (12.195626ms)
+✔ resume during cancellation retries the unwinding download without another reconnect (19.867263ms)
+✔ disk eviction after memory eviction is reconciled and automatic admission repairs it (9.715789ms)
+✔ cache read access loss removes historical persistence even if later writes succeed (3.756084ms)
+✔ explicit storage retry can restore persistent preparation after quota is freed (4.69168ms)
+✔ a foreground recovery clears a stale background-failed status without a separate retry (7.485107ms)
+✔ automatic availability polling does not retry a failed file until an explicit retry (37.10264ms)
+✔ a recovery audit waits for a fresh snapshot if an older cache audit is already running (7.776455ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1688.091905

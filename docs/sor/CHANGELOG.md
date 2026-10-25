@@ -711,3 +711,7 @@ Review follow-up for2.42.0-balance.1: canonical ME08 queued buffs, explicit gros
 - Publish the reviewed balance/master refresh after explicit user authorization. Preserve main2.41 startup/resource handling, current cards/profiles, saves, education, original art/audio and Settings-only Dev access.
 - Integrate canonical quotes/gross Gold, explicit Master map diagnostics, actual-cost artifact choices, frozen Mystery/transform decisions and canonical queued buffs.
 - Promote prerelease2.42.0-balance.1 to release2.42.0 with generated launchers/cache metadata. Preserve original measurement/source labels; record fresh merged-tree validation in [the main release](../balance/master/MAIN_RELEASE_2_42_0.md).
+
+## 2.46.0 work-branch candidate —25 October2026
+
+Automatic remaining resource downloads after entry; prepare at least75% of important build bytes plus all hard-core files before Enter. Shared incremental foreground-aware scheduler, combat/menu1/2 limits, visibility/offline/manual pause, reconnect/cancellation recovery, retention-aware progress and explicit online storage fallback. Existing V5/VFX/numerical/data/save owners preserved. [Current scoped evidence](../audits/hosted-readiness/LATEST.md); main deployment not implied by this entry.

@@ -1,3 +1,52 @@
+# Automatic startup and background downloads — 2.46.0
+
+25 October2026, Asia/Kuala_Lumpur. Master SOR1.2.0; base main6c49f3980c3a832635d4d01a6c50a8df98ac4aad (2.45.0), work branchfix/automatic-background-preload. User requests diagnosis of published downloads,75% important package before entry and appropriate performance improvements. This new scope is implemented on the work branch; no main publication is claimed. Main's V5/Alyssa/VFX and numerical/data/save owners remain unchanged.
+
+Status: **VALID in this tested work-branch scope**. Final whole suite **1,094/1,094**, zero failed/skipped; syntax, production/portable builds and all seven native families pass. [Structured evidence](../../verification/automatic-preload-2-46-0/integration.json). [Design](../../superpowers/specs/2026-10-25-automatic-preload-design.md), [plan](../../superpowers/plans/2026-10-25-automatic-preload.md). The historical2.41.0 tests below are not evidence for this release.
+
+## Confirmed findings and changes
+
+| ID | Priority/confidence | Evidence and resolution |
+| --- | --- | --- |
+| BG-01 | P2/high/fixed | Published2.45 menu showed339/679 resources,93.9/218MB,0 pending. The actual code queued only menu/current-stage assets and required a manual full-download button. Enter now starts an incremental automatic queue for remaining registered game resources; Practice remains on demand. Current run gets priority over later packs. |
+| BG-02 | P2/high/implemented requirement | Old native Enter had16,941,364 important bytes verified versus74,853,606 target bytes. New build metadata defines an important early-game package; whole files and all hard-core files must finish until at least75% of its bytes are verified. Boss/Stage2/Practice packs are excluded from this target. Functional icons retain semantic fallback and do not become hard blockers. |
+| BG-03 | P2/high/fixed | A real-cache/HTTP unit case verified8 bytes with only4 retained after online memory eviction. Historical verified counts used to imply all were ready. Separate available/verified counts now describe actual session/disk retention. Cache denial offers explicit online continuation after essential runtime/visual readiness, without claiming75% cached. |
+| BG-04 | P2/high/fixed | A real HTTP cancellation/resume regression stalled when reconnect occurred before cancelled work finished unwinding. Retry epochs now carry that retry through completion. Scene/Practice retry, network return and visible-page return resume eligible queued work; failed files stay explicitly retryable. |
+
+## Performance and behavior
+
+Use the same verified downloader, not a second transport. Incremental scheduling holds only one speculative transfer in combat/two on the menu, reserving foreground manager capacity. Current-room requests keep their existing priority and entry/decode deadline. New speculative work stops while hidden/offline or explicitly paused. Initial files are downloaded without decoding every texture; existing current-frame preparation, persistent canvases,32MiB compressed session cache,96MiB estimated decoded texture cache and adaptive VFX remain intact. Progress UI refreshes once per second and scheduler storage checks avoid rescanning every asset.
+
+Current source678 files/production679 entries match exact bytes and SHA. The production important package is99,818,305 bytes; the chosen whole-file gate is75,102,629 bytes (75.24%); all hard-required core files are included. Native production passed actual75% gate, complete automatic remaining downloads, cold/warm cache, foreground Practice120 while background is paused, offline/hidden resume, online cache-denial and required/optional failure recovery. Actual files exceed the exact threshold when a whole file crosses it or independent soft-icon warming completes.75% means minimum important-package bytes, not75% of the entire218MiB catalogue or a time promise.
+
+## Review fix pass
+
+One fresh read-only review of6c49..0d6a350 reported0Critical/1Important/1Minor. Important BG-05: historical persistent membership survived disk/session eviction and read-access loss. The root fix pass reopens the current cache namespace and reconciles stored keys at boot, entry, recovery, queue settlement and every5 visible seconds; read loss invalidates persistence, explicit storage recovery can retry after quota is freed, and old snapshots cannot satisfy newer explicit recovery. The actual namespace-deletion browser regression failed before the fix and passes on the final byte-parity-checked production build. Periodic metadata checks do not rehash every stored Blob or spin failed downloads.
+
+The reportedMinor stale background-failed marker is re-gradedImportant/P2 for the requested truthful download status: a successfully recovered room must not still show a failed download. Background failures are now reconciled against current availability. Root verified both and adjacent cancellation/snapshot cases RED→GREEN; focused policy/manager checks pass28/28. No second independent review or deferred minor is claimed.
+
+Reviewer set-asides: root verifies final suite/native/build/hash/publication separately; real namespace loss is exercised while physical eviction/quota heuristics and every worker lifecycle are not; physical-device/classroom/audio and multi-version/live behavior remain unmeasured; unchanged domain/art owners are preserved rather than re-audited. No additional numerical or art changes are inferred.
+
+## Final verification and limits
+
+Final `npm test` passes1,094/1,094, zero failed/skipped,397621ms. Focused policy/manager checks pass28/28. Native production9 cases pass, plus recovery4/4, strict verified images through17 Tutorial chapters/31 Codex icons,30/30 persistent-canvas commands with exact independent engine/RNG outcome, all75 V5 exposures and7 viewport bounds/portable offline, full production Developer Hub and3-viewport boot. All678 source and679 production manifest entries match exact bytes/hash; all678 frozen source inputs are unchanged after the suite. [Logs, native receipts and review](../../verification/automatic-preload-2-46-0/integration.json).
+
+The first whole suite passed1,092/1,094 with two environment failures: `balance loader isolates data and keeps player defaults unchanged` and `Spool does not mistake rejected Draw Pile candidates for hand discard` required pinned Git2800f9a, absent from the depth1 clone. Fetching that exact history object made current-main and candidate balance files each10/10 without modifying balance. The complete fresh rerun then passed1,094/1,094. Keep the initial log as failed evidence; do not label it a product fix or omit those failures.
+
+A native failed-atlas harness initially waited only for normalEnter; it now selects the intentionally exposed online recovery and retains all poster/geometry/save assertions. One overlapping build attempt had source/production readiness files from different revisions; a serialized rebuild and explicit runtime parity check preceded the accepted final production run. Focused policy/manager checks and a native failure proved the new behavior before implementation. One earlier native run reached the cache-denial assertion and failed because the test read the numeric counter instead of its separate mode label; this was a harness selector correction, not a product failure.
+
+180 seconds is a bounded recovery deadline, not an internet-speed guarantee. Browsers must permit storage to retain the whole package; session-only mode has a32MiB cap and only prepares currently needed resources. Explicit full download can be requested; it still cannot promise persistence after a quota error. Downloads require an open/active page; no closed-tab downloader is claimed. Cache namespaces/active old-client updates and physical-device FPS/RAM/audio remain field checks. Never force a mid-combat reload or touch player saves.
+
+All original art/audio, V5 clip geometry/timing, VFX painters/quality, card/math/balance/question-bank/save/RNG owners compare identically to main6c49. Historical VIS-241-01 was observed on the old2.41 framing; V5 now owns actor framing. No new framegeometry or artwork change is made here. DOC-001/002 were corrected by main's2.43 language integration; the older open statements below remain historical. MODEL.zip is unavailable and was not used. The textbook PDFs are available but no new mathematical-content review is needed or claimed.
+
+## Publication
+
+Work branch candidate only until a concrete verified publication is requested. Main and Pages2.45.0 remain separate from the local2.46.0 result. Final source/ref readback is recorded after an authorized push.
+
+---
+
+## Historical2.41.0 integration audit
+
 # Main integration — hosted resources/runtime 2.41.0
 
 24 October2026, Asia/Kuala_Lumpur. Master SOR1.2.0. Inputs: main `b730cad0cb27b53ffbdf687d8fc9edaed143ef43` (2.40.0), feature `61ca12635ae2bd23f04400b7cc6399a9836adfd8`; local integration `cf9b594e5193a5e62507062ff4376cf799d1b0b8` plus the root review-fix pass. Ijamm now requests publishing this completed update; the prior feature-only boundary is superseded for this release.

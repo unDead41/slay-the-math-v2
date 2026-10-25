@@ -1,0 +1,9 @@
+AssertionError [ERR_ASSERTION]: Enter must wait for75% of important bytes: 16941364 < 74853606
+    at /workspace/scratch/0829a1232d36/game/tests/automatic-preload-browser.cjs:13:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

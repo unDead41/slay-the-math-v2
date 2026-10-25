@@ -1,0 +1,40 @@
+✔ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (2.169459ms)
+✔ whole-file startup never rounds below75 percent and tolerates an older manifest (0.273902ms)
+✔ retained progress does not call evicted online-only bytes ready (46.530358ms)
+✔ incremental background queue promotes room resources without occupying foreground capacity (33.7643ms)
+✔ hidden/offline/manual pause stops new speculative work and resumes the same queue (43.576045ms)
+✔ a failed background file stays retryable and saved files are not downloaded twice (23.583286ms)
+✔ resume during cancellation retries the unwinding download without another reconnect (18.604006ms)
+✔ disk eviction after memory eviction is reconciled and automatic admission repairs it (10.512031ms)
+✔ cache read access loss removes historical persistence even if later writes succeed (4.821002ms)
+✔ explicit storage retry can restore persistent preparation after quota is freed (5.210588ms)
+✔ a foreground recovery clears a stale background-failed status without a separate retry (7.737553ms)
+✔ automatic availability polling does not retry a failed file until an explicit retry (35.637996ms)
+✖ a recovery audit waits for a fresh snapshot if an older cache audit is already running (7.596311ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 343.469878
+
+✖ failing tests:
+
+test at tests/background-download.test.cjs:53:1
+✖ a recovery audit waits for a fresh snapshot if an older cache audit is already running (7.596311ms)
+  AssertionError [ERR_ASSERTION]: A recovery boundary must not reuse an audit started before eviction
+
+  true !== false
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:54:571)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

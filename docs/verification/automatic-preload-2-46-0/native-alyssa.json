@@ -1,0 +1,110 @@
+{
+  "version": "2.46.0",
+  "sourceSha256": "4d6d7b3d8b6711679e9dc060e62be351a889459ffbda38e7c06a9c945a8b2302",
+  "checks": [
+    "All 75 exposures rendered by actual production actor canvases; real current-package cards and damage/blocked hits match the independent engine outcome, RNG and save. Existing hero/enemy canvases survive rerenders.",
+    "Dialog pause, Motion Off and OS Reduced Motion retain the approved V5 Idle fallback without advancing.",
+    "Both stages, both bosses and phone/FHD/UWHD/4K floor registration; all 75 projected alpha bounds are checked against the native canvas and horizontal viewport.",
+    "Real verified V5 posters remain visible with Canvas unavailable and hero atlases deliberately failed.",
+    "Fresh portable game embeds all five V5 atlases/posters and animates offline without HTTP requests."
+  ],
+  "clips": {
+    "idle": {
+      "frameSlots": 15,
+      "nonemptyDistinctRenderedSamples": 8
+    },
+    "attack": {
+      "frameSlots": 15,
+      "nonemptyDistinctRenderedSamples": 15
+    },
+    "defend": {
+      "frameSlots": 15,
+      "nonemptyDistinctRenderedSamples": 15
+    },
+    "skill": {
+      "frameSlots": 15,
+      "nonemptyDistinctRenderedSamples": 15
+    },
+    "damaged": {
+      "frameSlots": 15,
+      "nonemptyDistinctRenderedSamples": 15
+    }
+  },
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 900,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 59.32150216461329
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 61.50284624782327
+    },
+    {
+      "width": 3440,
+      "height": 1440,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 67.27936023046243
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 80.51997996311354
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 53.31623736577518
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 37.67482708537155
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "floorAligned": true,
+      "horizontalOverflow": false,
+      "all75BoundsFit": true,
+      "topClearance": 20.317253584989572
+    }
+  ],
+  "errors": [],
+  "legacyRequests": [],
+  "texture": {
+    "bytes": 53600256,
+    "budgetBytes": 100663296,
+    "overBudgetBytes": 0,
+    "entries": 2,
+    "pending": 0,
+    "owners": 2,
+    "loads": 2,
+    "hits": 2
+  },
+  "runtimeHashes": {
+    "animation-data.js": "fefb0232aa93f2afe84fd3d55f52dfc09e004c57766e44fa1bbafb2d3d0a4452",
+    "animation.js": "d46f19bce7916f79a811bbdfcdd768d199586c15322b8cc08b008e8bc6b1670f",
+    "combat-vfx.js": "0e0b140727c80b98ac2b650b85f3cad1e5a03c6d804608347fd35da867735f07",
+    "asset-manifest.json": "61c30cc8e82c6064ddd81816bc268430afdde50513c6f4ecbf4b96851d3e3b9c"
+  },
+  "passed": true
+}

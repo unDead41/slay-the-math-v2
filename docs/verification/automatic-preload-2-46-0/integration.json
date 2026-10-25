@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Kuala_Lumpur",
+  "version": "2.46.0",
+  "masterSOR": "1.2.0",
+  "branch": "fix/automatic-background-preload",
+  "mainInput": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+  "reviewedHead": "0d6a35021cf6dfc0d1e8f82ca857457e73c6067a",
+  "localFixHead": "5a4a1bee8820971b77a3143a0dd34eb10e3f03a1",
+  "fullSuite": {
+    "tests": 1094,
+    "passed": 1094,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 397621.096297
+  },
+  "command": "DOM_QA_MODULE=<jsdom26> NODE_PATH=<QA dependencies> npm test",
+  "focused": {
+    "passed": 28,
+    "failed": 0
+  },
+  "frozenInputs": {
+    "count": 678,
+    "changed": []
+  },
+  "builds": [
+    {
+      "directory": "dist",
+      "manifestId": "10baca5e04ccaf724bede423",
+      "entries": 678,
+      "importantBytes": 99811988,
+      "targetBytes": 74858991,
+      "selectedBytes": 75096312,
+      "selectedRatio": 0.7523776803243314,
+      "allBytesAndHashesMatch": true
+    },
+    {
+      "directory": "release-prod",
+      "manifestId": "956b0f490d2bc2f01c2f16a1",
+      "entries": 679,
+      "importantBytes": 99818305,
+      "targetBytes": 74863729,
+      "selectedBytes": 75102629,
+      "selectedRatio": 0.7523933510992799,
+      "allBytesAndHashesMatch": true
+    }
+  ],
+  "native": {
+    "production": {
+      "checks": [
+        "75% important bytes +100% hard core; no early Practice/Boss",
+        "paused speculative work leaves foreground Practice120 usable",
+        "offline/hidden pause and reconnect/visible resume without user retry",
+        "remaining resources complete automatically without full-download click",
+        "real CacheStorage namespace eviction reconciles counts and is repaired automatically on resume",
+        "warm visit reuses verified persistent assets",
+        "storage denial discloses online continuation without a false75% cache claim",
+        "hard core failure has truthful recovery and safe online eligibility",
+        "optional startup failure has truthful recovery and safe online eligibility"
+      ],
+      "errors": [],
+      "automaticFullDownload": true,
+      "actualNamespaceEviction": true
+    },
+    "otherSuites": [
+      {
+        "name": "recovery",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "verified",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "runtime",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "alyssa",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "production-dev",
+        "code": 0,
+        "signal": null
+      },
+      {
+        "name": "viewport",
+        "code": 0,
+        "signal": null
+      }
+    ],
+    "verifiedImages": {
+      "tutorialChapters": 17,
+      "rawRequests": [],
+      "errors": []
+    },
+    "runtime": {
+      "retained": 30,
+      "commands": 30,
+      "errors": []
+    },
+    "alyssa": {
+      "clips": {
+        "idle": {
+          "frameSlots": 15,
+          "nonemptyDistinctRenderedSamples": 8
+        },
+        "attack": {
+          "frameSlots": 15,
+          "nonemptyDistinctRenderedSamples": 15
+        },
+        "defend": {
+          "frameSlots": 15,
+          "nonemptyDistinctRenderedSamples": 15
+        },
+        "skill": {
+          "frameSlots": 15,
+          "nonemptyDistinctRenderedSamples": 15
+        },
+        "damaged": {
+          "frameSlots": 15,
+          "nonemptyDistinctRenderedSamples": 15
+        }
+      },
+      "viewports": 7,
+      "checks": [
+        "All 75 exposures rendered by actual production actor canvases; real current-package cards and damage/blocked hits match the independent engine outcome, RNG and save. Existing hero/enemy canvases survive rerenders.",
+        "Dialog pause, Motion Off and OS Reduced Motion retain the approved V5 Idle fallback without advancing.",
+        "Both stages, both bosses and phone/FHD/UWHD/4K floor registration; all 75 projected alpha bounds are checked against the native canvas and horizontal viewport.",
+        "Real verified V5 posters remain visible with Canvas unavailable and hero atlases deliberately failed.",
+        "Fresh portable game embeds all five V5 atlases/posters and animates offline without HTTP requests."
+      ],
+      "errors": []
+    }
+  },
+  "protected": {
+    "base": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+    "paths": [
+      "dist/engine.js",
+      "dist/config.js",
+      "dist/math.js",
+      "dist/map.js",
+      "dist/map-rng.js",
+      "dist/card-data.js",
+      "dist/card-combat.js",
+      "dist/education.js",
+      "dist/combat-vfx.js",
+      "dist/combat-vfx-passive.js",
+      "dist/combat-vfx-orbits.js",
+      "dist/combat-vfx-shield.js",
+      "dist/status-vfx.js",
+      "dist/animation-data.js",
+      "dist/animation.js",
+      "dist/assets",
+      "modules/mechanics/source",
+      "tools/balance/master/config.json",
+      "tools/ai-playtester"
+    ],
+    "differentFiles": []
+  },
+  "review": {
+    "freshReviews": 1,
+    "critical": 0,
+    "importantReported": 1,
+    "minorReported": 1,
+    "rootRegradedImportant": 1,
+    "fixedInOneRootPass": 2,
+    "deferredMinors": 0,
+    "secondReview": false,
+    "evidence": "review.md"
+  },
+  "initialWholeSuite": {
+    "passed": 1092,
+    "failed": 2,
+    "skipped": 0,
+    "cause": "Depth1 clone lacked pinned Git2800f9a source; exact historical object fetched; current-main and candidate balance files10/10; final complete rerun1094/1094",
+    "log": "full-suite-shallow-history.log"
+  },
+  "limits": [
+    "Physical FPS/RAM/audio/classroom not measured",
+    "180 seconds is recovery, not a bandwidth guarantee",
+    "No closed-tab download; hidden/offline/manual pause new speculative work",
+    "Cache retention is an audited snapshot, not permanent offline storage; older active manifests may need reload",
+    "No new question/balance/aesthetic audit; preserved exact owners",
+    "MODEL.zip unavailable; PDFs available but unchanged math content not reread"
+  ],
+  "publication": {
+    "status": "pending work-branch push",
+    "mainChanged": false,
+    "force": false
+  }
+}

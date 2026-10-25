@@ -377,3 +377,9 @@ Rujukan API primer, disemak 24 Oktober 2026:
 - [MDN: draggable](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable) — kawalan seretan native elemen HTML.
 
 **Semakan sebenar Master:** baca main GitHub, pin SHA, audit sumber berkaitan, kira saiz/fail runtime daripada Git tree, semak registry audio dan rujuk dokumentasi API. Catatan ini merekod fasa penyediaan SOR dahulu, ketika tiada pembaikan atau penerbitan dibuat. Pelaksanaan branch kemudian dikawal oleh pindaan 1.2.0 di atas dan rekod candidate berasingan. Ujian dalam Bahagian 7–8 ialah syarat pelaksana, bukan ujian yang sudah lulus.
+
+## Pindaan25 Oktober2026 — automatic startup candidate2.46.0
+
+DISAHKAN: Ijamm requests checking why published background downloads stop, preparing75% of important resources before entry and applying appropriate performance improvements. Use the existing verified manager and actual build bytes. The important early-game package includes current code/UI, hero, Stage1 and shared card/scene artwork; Boss/Stage2/Practice payloads remain outside its startup target. Complete all hard-core resources and whole files reaching at least75%; do not decode all prefetched textures.
+
+Remaining registered game resources start automatically after Enter, except lazy Practice. Prioritize the actual run, keep one speculative transfer during combat/two otherwise, and stop new speculative work while hidden/offline/explicitly paused. Resume/retry without restarting successful downloads. Report verified versus retained bytes separately; quota-denied browsers get explicit online continuation only after essential runtime/visual preparation.180 seconds remains recovery, not a speed guarantee. Preserve all main2.45 V5/VFX/game/save owners. [Current audit](../audits/hosted-readiness/LATEST.md) distinguishes work-branch verification from main deployment.

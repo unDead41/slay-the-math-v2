@@ -1,0 +1,39 @@
+✔ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (1.75467ms)
+✔ whole-file startup never rounds below75 percent and tolerates an older manifest (0.221593ms)
+✔ retained progress does not call evicted online-only bytes ready (33.068731ms)
+✔ incremental background queue promotes room resources without occupying foreground capacity (44.484263ms)
+✔ hidden/offline/manual pause stops new speculative work and resumes the same queue (41.581106ms)
+✔ a failed background file stays retryable and saved files are not downloaded twice (11.341079ms)
+✔ resume during cancellation retries the unwinding download without another reconnect (16.524787ms)
+✔ disk eviction after memory eviction is reconciled and automatic admission repairs it (8.948299ms)
+✔ cache read access loss removes historical persistence even if later writes succeed (3.49671ms)
+✔ explicit storage retry can restore persistent preparation after quota is freed (3.630812ms)
+✔ a foreground recovery clears a stale background-failed status without a separate retry (6.082019ms)
+✖ automatic availability polling does not retry a failed file until an explicit retry (31.02659ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 279.772081
+
+✖ failing tests:
+
+test at tests/background-download.test.cjs:49:1
+✖ automatic availability polling does not retry a failed file until an explicit retry (31.02659ms)
+  AssertionError [ERR_ASSERTION]: Availability polling must not spin failed transfers
+
+  2 !== 1
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:50:226)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -8,3 +8,9 @@ test('the manifest defers Practice and boss art, includes current menu audio, an
  const copy=JSON.parse(JSON.stringify(out));copy.entries[0].sha256='a'.repeat(64);assert.notEqual(build.contentId(copy.entries),out.manifestId);
  for(const e of out.entries)assert.equal(e.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'dist',e.url))).digest('hex'));
 });
+
+test('the actual startup package prioritizes the hero and Stage1 while deferring late packs',()=>{
+ const m=require('../tools/build-asset-manifest.cjs')(path.resolve(__dirname,'..'),{write:false});assert.ok(m.startup?.urls?.length,'Build must publish the important package');
+ const selected=new Set(m.startup.urls);assert.ok(selected.has(m.actors.mc_01.idle));assert.ok(selected.has(m.actors.wisp.idle));assert.equal(m.entries.some(e=>selected.has(e.url)&&['boss1','boss2','stage2','practice'].includes(e.pack)),false);
+ const p=require('../dist/asset-readiness.js').startupPlan(m);assert.ok(p.selectedBytes>=Math.ceil(p.totalBytes*.75));assert.ok(m.entries.filter(e=>e.pack==='core'&&e.required).every(e=>p.beforeMenu.includes(e.url)));
+});

@@ -1,5 +1,19 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-VFX-BODY-PLACEMENT — Fit effects to the installed actors
+
+- **DISAHKAN:** Ijamm supplies an actual combat screenshot and requests fixing
+  VFX placement relative to the models. Continue the combat-branch boundary;
+  no new main publication or deployment is authorized.
+- **DITERUSKAN:** calibrate all thirteen visible-body axes, floating bottoms and
+  body proportions in the registered source coordinates; use the same display
+  projection as the actor. Centre Passive at the boots on the arena floor.
+- Preserve all current main 2.49.0 art/icons, actor geometry and 75 source holds,
+  unique painters, fast reactions, numerical/save/RNG, tutorial/preload/AI and
+  language owners. [MOT-39](11_ANIMATION_VFX_AUDIO.md),
+  [actual scoped checks and remaining limits](../audits/combat-animation/LATEST.md).
+
+
 ## DEC-20261025-ICON-COMBAT-MAIN — Publish both completed follow-ups
 
 - **DISAHKAN:** Ijamm now requests publishing the completed icon and combat

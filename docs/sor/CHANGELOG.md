@@ -1,5 +1,16 @@
 # Changelog SOR — Slay the Math
 
+## Body-aligned VFX — branch 2.49.1-combat.1, 25 October 2026
+
+- Reproduce left-shifted body materials, floating-body placement and unequal-axis
+  resizing before correcting the compositor. Use current main 2.49.0 as the base.
+- Fit Shield/stat/barrier fields to each visible body, including wider/shorter
+  creatures. Centre Passive seals between the registered boots on the same floor.
+- Preserve model positions, original pixels/75 exposure timings, motifs, masks,
+  fast lifecycle logic and gameplay/save/RNG. Add source-grid references, actual
+  production placement/pixel checks and scoped audit evidence. Combat branch only.
+
+
 ## 2.49.0 — 25 October 2026
 
 Combine the approved icon-loading and combat-continuity follow-ups with current

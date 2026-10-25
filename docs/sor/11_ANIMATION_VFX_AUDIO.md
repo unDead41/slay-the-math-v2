@@ -1,5 +1,30 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
+## Body placement — branch 2.49.1-combat.1, 25 Oktober 2026
+
+**MOT-39 (DISAHKAN):** Ijamm's actual combat screenshot shows materials displaced
+from Alyssa and Prism Guard. Fix VFX positioning on the combat branch first;
+the earlier main publication applies only to its completed set. Preserve actor
+positions, source atlases, all 75 MC exposure holds, icons and fast lifecycle timing.
+
+**DITERUSKAN implementation:** VFX uses a calibrated visible-body axis relative
+to each of the thirteen registered Idle projections. Boot/atlas registration is
+not assumed to be the body centre. Body-space effects have fitting headroom,
+width adjustments for stocky creatures and separate vertical offsets for floating
+models. Read both displayed canvas axes so CSS resizing uses the actor's actual
+projection. No per-frame image/pixel analysis is added to production.
+
+Passive seals use the same centred boot axis on the original arena ground line,
+independent of a floating body's bottom. Keep the existing Passive scale and
+floor-only ownership. All other material effects share the body's transform and
+retain the above-floor mask. Actor metadata still owns an explicit body height.
+
+Recheck body placement when actor art/registration changes. The source-grid
+references, complete affected-actor matrix checks, desktop/phone/landscape/4K
+screenshots and limits are in the [current audit](../audits/combat-animation/LATEST.md).
+The previous main 2.49.0 integration and its carried P2 findings follow as history.
+
+
 ## Main integration authorization — 2.49.0
 
 Ijamm now requests publishing the completed icon-loading and combat-continuity
@@ -25,7 +50,7 @@ P2/open; the current preload PASS does not establish a counter fix. MODEL.zip
 remains unavailable and unread; physical-device and human-recognition limits remain.
 
 
-Versi: 2.11.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.12.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
 
 ## Combat continuity — branch 2.45.1-combat.1, 25 Oktober 2026
 

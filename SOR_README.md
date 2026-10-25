@@ -1,5 +1,12 @@
 # Slay the Math — Set of Rules
 
+Current body-placement correction **2.49.1-combat.1** is a combat-branch candidate
+based on main **2.49.0 / d77b3e0**. [MOT-39](docs/sor/11_ANIMATION_VFX_AUDIO.md)
+and [actual source/native audit](docs/audits/combat-animation/LATEST.md) cover
+materials aligned to the visible body and Passive circles centred at the boots.
+The previous main integration below does not publish this new correction.
+
+
 ## Main integration authorization — 2.49.0
 
 Ijamm now requests publishing the completed icon-loading and combat-continuity

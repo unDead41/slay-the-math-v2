@@ -221,6 +221,339 @@
       },
       "attemptHistory": "Interrupted setup and Boss comparator attempts retained in ZIP raw/. Brief duplicate startup was interrupted before any accepted outcome; final accepted collection used one collector/browser serially.",
       "runtimeKind": "Exact committed dist over local HTTP project subpath; not public hosted deployment or production-build verification"
+    },
+    {
+      "runId": "SE-BREADTH-20261026-B3DC750-02",
+      "kind": "BROWSER_INTEGRATION_BREADTH",
+      "owner": "Simulation & Evidence / root",
+      "status": "PLANNED",
+      "sourceBranch": "main",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+      "identityHash": "33a10bcbfc788c7380ff8313b19776771799a02637ed65690e0048db1bc515e2",
+      "caseManifestPath": "ZIP/manifest.json",
+      "caseManifestSHA256": "5854da5ea9767317ef49c421994b2bc90ce26a96add460dc1eaaa484e98e3cbc",
+      "fixturesSHA256": "ad6ef7f97e3c847c1bb863ef9a2304601acb96cd546d68ba4c23a6c730aafa8d",
+      "plannedAt": "2026-10-25T16:56:14.458Z",
+      "planned": 10,
+      "returned": 0,
+      "budget": {
+        "workers": 1,
+        "browserProcesses": 1,
+        "cases": 10,
+        "wallTimeMinutes": 25,
+        "maxCaseSeconds": 150,
+        "maxArtifactMiB": 120,
+        "maxVideos": 0
+      },
+      "cases": [
+        {
+          "caseId": "D1",
+          "kind": "menu",
+          "seed": 1063508381,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": false,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "2a4f77a68bcf5da1be2c6501ad6bf927a91ad1fe1fc22900220226301fb79dab"
+            }
+          ]
+        },
+        {
+          "caseId": "D2",
+          "kind": "menu",
+          "seed": 2892755364,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": false,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "6a8b5ac98b735b5b8215218d9d46d559baf4de96b70898961e257f9e905e7f40"
+            }
+          ]
+        },
+        {
+          "caseId": "E1",
+          "kind": "predict-focus",
+          "seed": 2176669282,
+          "language": "en",
+          "viewport": {
+            "width": 1366,
+            "height": 900
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": true,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "1c08057e4bd3072b3ca5838cad7573cbb418b25dcffd896fd66b7e899a4008c0"
+            }
+          ]
+        },
+        {
+          "caseId": "E2",
+          "kind": "passive-swap",
+          "seed": 3776995370,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": false,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "40cb4746afe8bba78b3c934f4cb6a7ba6447ed7d23939f741dacdfca479b541d"
+            }
+          ]
+        },
+        {
+          "caseId": "F1",
+          "kind": "rest-reward",
+          "seed": 1980879109,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "mode": "learn",
+          "actualDifficulty": "medium",
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": false,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "reward",
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "reward",
+              "entryHash": "9397d5a60d058566723e81d508fe33e7a313979fe10b16b7dd60ce86c201ec58"
+            },
+            {
+              "phase": "initial",
+              "entryHash": "ec161cc5ab021a4c6149a5228accd505d8466bb02b6d92d9ca4354a7cbb4eebb"
+            }
+          ]
+        },
+        {
+          "caseId": "F2",
+          "kind": "mystery",
+          "seed": 4024640000,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": true,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "c5ed89c4ad00e6bd6000921720403d7c6d0727180ff5e24aca0fb805ccc1ff59"
+            }
+          ]
+        },
+        {
+          "caseId": "G1",
+          "kind": "practice",
+          "seed": 1455122994,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": true,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "5134a6dcac05ef2b74c77194040a2657dd6ec9ae07e51a1aa7d9b3a0b05d9962"
+            }
+          ]
+        },
+        {
+          "caseId": "G2",
+          "kind": "tutorial",
+          "seed": 1748064690,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": true,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "e5aacc9b6ffd733583bbbf60ac45806ebba7b1a92eed881b0475c8df5c765790"
+            }
+          ]
+        },
+        {
+          "caseId": "H1",
+          "kind": "save-import-export",
+          "seed": 4284401217,
+          "language": "en",
+          "viewport": {
+            "width": 1366,
+            "height": 900
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": false,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "initial",
+              "entryHash": "e775dba19ae9b98d654ab6bce53a4de8ec8b41be4cd316f7a8ce11ab64cb920a"
+            }
+          ]
+        },
+        {
+          "caseId": "H2",
+          "kind": "endgame",
+          "seed": 1948195433,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "mode": "learn",
+          "actualDifficulty": null,
+          "maxSeconds": 150,
+          "fixtureInjected": true,
+          "oracleAnswers": false,
+          "trainingEligible": false,
+          "split": "diagnostic",
+          "phases": [
+            "victory",
+            "initial"
+          ],
+          "entries": [
+            {
+              "phase": "victory",
+              "entryHash": "e8765a665ae8c397f6ed15c6e8a34ca2f8881f90fe1558361474a89d802dc8f8"
+            },
+            {
+              "phase": "initial",
+              "entryHash": "328b8801b4e9380a851785c5fbbc82e53ca5c498b288e54fa20e388ba9c07b49"
+            }
+          ]
+        }
+      ],
+      "trainingEligible": false,
+      "ownerRefsObserved": [
+        {
+          "branch": "ai",
+          "commit": "807be6763cac1bc97134f86031d42e5dc720d6d1"
+        },
+        {
+          "branch": "balance/combat",
+          "commit": "3a62324ba05de14bd27774a565a5a048e7aa404a"
+        },
+        {
+          "branch": "balance/economy",
+          "commit": "2e54f2b2107289925d936cb65d1ab86fd823ff96"
+        },
+        {
+          "branch": "balance/map",
+          "commit": "8ca19526ec6a69d1183bae96803e461a77e3acfc"
+        },
+        {
+          "branch": "balance/master",
+          "commit": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91"
+        },
+        {
+          "branch": "combat-animation",
+          "commit": "4e10e3d41ec439c15b75aceb754d1c7b352d3755"
+        },
+        {
+          "branch": "education",
+          "commit": "db220d194e140e48e2d176c5776ab494b20e80e8"
+        },
+        {
+          "branch": "tutorial",
+          "commit": "30154c9e354ce03ed18f4f0b507d394de0506d61"
+        }
+      ],
+      "coordination": "User authorizes broad integration checks in ten-case batches; no numerical owner cohorts repeated. Prior ten-case source-bound evidence reused. Remote claims checked; unpublished cross-chat work not observable."
     }
   ]
 }

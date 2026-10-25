@@ -1,5 +1,12 @@
 # Changelog SOR — Slay the Math
 
+## Approved Alyssa V5 motion — game 2.45.0, 25 October 2026
+
+- Apply all five approved 15-slot clips to actual combat, preserving source bytes/timing and right-facing identity. Idle uses eight unique drawings with repeated breath/blink exposures; Kena Attack has fifteen unique poses.
+- Generate matching failure/Motion Off posters, retire the previous six-frame Skill scale correction, and read current VFX body height from actor registration.
+- Bound model height using the actual floor line and the complete pose set so overhead Attack is not clipped; retain a fixed scale throughout each clip and the existing actor size ratios.
+- Preserve gameplay, saves/RNG, enemy/boss art and the existing persistent controller/texture cache. Refresh release/resource/portable/production outputs and actual tutorial images; record focused source/player/native-browser evidence and limits in the Alyssa audit.
+
 ## Live combat VFX — game 2.44.0, 25 October 2026
 
 - Install the approved Shield V3, ten Passive V10 ornaments and stat/barrier V9 fields in actual combat, with shared actor-neutral rendering for the enemy's existing eligible statuses.

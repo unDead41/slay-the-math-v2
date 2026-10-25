@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "uniqueScopedTests": 64,
+  "skipped": 0,
+  "details": [
+    {
+      "files": [
+        "animation.test.cjs",
+        "enemy-motion.test.cjs",
+        "boss-motion.test.cjs",
+        "texture-cache.test.cjs",
+        "live-vfx.test.cjs",
+        "live-vfx-ui.test.cjs",
+        "asset-readiness.test.cjs",
+        "asset-manifest.test.cjs",
+        "release-build.test.cjs"
+      ],
+      "testsPassed": 53
+    },
+    {
+      "files": [
+        "live-vfx-renderer.test.cjs"
+      ],
+      "testsPassed": 11,
+      "rerunAfter": "Correct the new test fixture to include the existing actors map."
+    }
+  ],
+  "finalGeneratedResourceAndReleaseChecks": "PASS after tutorial capture and final production build",
+  "syntaxCheck": "npm run check: PASS",
+  "environment": "jsdom 26.1.0 installed in an isolated QA directory; no game dependency added",
+  "earlierAttempts": "The initial environment lacked jsdom. The first size-owner test stub omitted actors; no production code correction was needed for that stub error."
+}

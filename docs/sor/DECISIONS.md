@@ -1,5 +1,11 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
+
+- **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.
+- **DITERUSKAN:** Byte-preserved five atlases, 15 exposure slots per clip, same-family posters, fixed source projection and layout headroom for the tallest pose. Retire the obsolete six-frame Skill scale array and let the actor registry own its VFX body height. Preserve enemy/boss artwork, IDs, gameplay, saves/RNG, bilingual owners and current VFX behavior.
+- **PERLU_VERIFIKASI:** Physical-device FPS/memory and residual original drawing/proportion differences. The failed MODEL.zip attachment is not read. Source and verification: [2.45.0 release](../ALYSSA_MOTION_V5_2_45_0.md), [audit](../audits/alyssa-motion/LATEST.md).
+
 ## DEC-20261025-COMBAT-LIVE — Apply the approved fields to actual combat
 
 - **DISAHKAN:** Ijamm requests “saya nak semua VFX diapply dalam game saya ni please” after the completed preview was pushed to main. Integrate all reviewed effects; this supersedes their earlier preview-only boundary. Continue the authorized combat main update, without a separate hosted deployment.

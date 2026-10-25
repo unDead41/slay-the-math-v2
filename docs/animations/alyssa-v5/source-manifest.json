@@ -1,0 +1,4947 @@
+{
+  "version": 5,
+  "frameCount": 15,
+  "frameSize": [
+    1024,
+    1024
+  ],
+  "pivot": [
+    278.4828079766546,
+    852.5656470744907
+  ],
+  "viewBounds": [
+    68,
+    156,
+    936,
+    869
+  ],
+  "rig": false,
+  "localWarps": false,
+  "runtimeFrameSize": [
+    640,
+    640
+  ],
+  "direction": "right",
+  "actions": {
+    "idle": {
+      "frameCount": 15,
+      "frames": [
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            0,
+            0,
+            443,
+            443
+          ],
+          "features": {
+            "foot": [
+              167.0,
+              401.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              238.03673469387755,
+              113.47755102040816
+            ],
+            "faceBox": [
+              227,
+              101,
+              249,
+              124
+            ],
+            "bootRuns": [
+              [
+                149,
+                184
+              ],
+              [
+                235,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            144.57686391902024,
+            252.01091049784316
+          ],
+          "poseKey": "I0",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            234,
+            347,
+            758,
+            855
+          ],
+          "sha256": "026d51e6f2f9af2393a64a8d8d9315adff6e9101d81f5d9836c3257af674d076",
+          "durationMs": 85
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            443,
+            0,
+            887,
+            443
+          ],
+          "features": {
+            "foot": [
+              168.0,
+              401.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              239.87878787878788,
+              112.64015151515152
+            ],
+            "faceBox": [
+              229,
+              102,
+              251,
+              123
+            ],
+            "bootRuns": [
+              [
+                150,
+                185
+              ],
+              [
+                236,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            141.81812634988313,
+            252.01091049784316
+          ],
+          "poseKey": "I1",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            234,
+            344,
+            757,
+            855
+          ],
+          "sha256": "c02e4aecb322661a2c50e5197a109bf97e8eadf7d4adc03e4ac548e935395727",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            887,
+            0,
+            1330,
+            443
+          ],
+          "features": {
+            "foot": [
+              168.0,
+              401.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              240.3345864661654,
+              112.44736842105263
+            ],
+            "faceBox": [
+              230,
+              98,
+              251,
+              123
+            ],
+            "bootRuns": [
+              [
+                151,
+                185
+              ],
+              [
+                236,
+                290
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            141.13550290705388,
+            252.01091049784316
+          ],
+          "poseKey": "I2",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            232,
+            344,
+            758,
+            855
+          ],
+          "sha256": "7053d760cb6cb79818331d59be4ae3c115d03aaee23aabbb21890ebf8f5497c3",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            1330,
+            0,
+            1774,
+            443
+          ],
+          "features": {
+            "foot": [
+              169.0,
+              401.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              242.3245283018868,
+              112.29433962264152
+            ],
+            "faceBox": [
+              232,
+              99,
+              254,
+              123
+            ],
+            "bootRuns": [
+              [
+                152,
+                186
+              ],
+              [
+                237,
+                291
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            138.15528097449896,
+            252.01091049784316
+          ],
+          "poseKey": "I3",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            231,
+            343,
+            755,
+            855
+          ],
+          "sha256": "ab31b9c144eb3ad3f5a99aeb95db2247ffa4f36d42a4e4ac35f3e1805a421f8d",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            0,
+            443,
+            443,
+            887
+          ],
+          "features": {
+            "foot": [
+              166.0,
+              399.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              238.64864864864865,
+              109.72200772200772
+            ],
+            "faceBox": [
+              228,
+              100,
+              250,
+              120
+            ],
+            "bootRuns": [
+              [
+                149,
+                183
+              ],
+              [
+                235,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            143.66043543045384,
+            255.00619596705337
+          ],
+          "poseKey": "I4",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            231,
+            341,
+            758,
+            855
+          ],
+          "sha256": "2507376363575513ed17926e1397ad7b81ccda27a8675f9f3a1c77c5b6816a2d",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            443,
+            443,
+            887,
+            887
+          ],
+          "features": {
+            "foot": [
+              167.0,
+              399.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              239.59786476868328,
+              107.60142348754448
+            ],
+            "faceBox": [
+              229,
+              93,
+              251,
+              119
+            ],
+            "bootRuns": [
+              [
+                149,
+                184
+              ],
+              [
+                235,
+                290
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            142.23884880471394,
+            255.00619596705337
+          ],
+          "poseKey": "I5",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            231,
+            339,
+            759,
+            855
+          ],
+          "sha256": "7108730a367f2643bf29822ff148936653db7d897980cce8e01f8e2935b88270",
+          "durationMs": 100
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            887,
+            443,
+            1330,
+            887
+          ],
+          "features": {
+            "foot": [
+              166.5,
+              399.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              239.35099337748343,
+              110.44370860927152
+            ],
+            "faceBox": [
+              229,
+              97,
+              252,
+              123
+            ],
+            "bootRuns": [
+              [
+                149,
+                184
+              ],
+              [
+                236,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            142.60857395012624,
+            255.00619596705337
+          ],
+          "poseKey": "I6",
+          "eyeState": "half",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            230,
+            341,
+            759,
+            855
+          ],
+          "sha256": "ecaac0cd68f9b76650ed74ec59bf58916064b561abfcc312111553ef29857e8a",
+          "durationMs": 40
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            1330,
+            443,
+            1774,
+            887
+          ],
+          "features": {
+            "foot": [
+              168.0,
+              399.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              242.35142857142858,
+              109.35142857142857
+            ],
+            "faceBox": [
+              231,
+              96,
+              256,
+              122
+            ],
+            "bootRuns": [
+              [
+                151,
+                185
+              ],
+              [
+                236,
+                290
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            138.1149939812608,
+            255.00619596705337
+          ],
+          "poseKey": "I7",
+          "eyeState": "closed",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            229,
+            341,
+            755,
+            855
+          ],
+          "sha256": "2d82aaf7d8aabf967982f78a77f933d313b6bb7d80f357d0e51f0b064c40ea37",
+          "durationMs": 45
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            887,
+            443,
+            1330,
+            887
+          ],
+          "features": {
+            "foot": [
+              166.5,
+              399.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              239.35099337748343,
+              110.44370860927152
+            ],
+            "faceBox": [
+              229,
+              97,
+              252,
+              123
+            ],
+            "bootRuns": [
+              [
+                149,
+                184
+              ],
+              [
+                236,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            142.60857395012624,
+            255.00619596705337
+          ],
+          "poseKey": "I6",
+          "eyeState": "half",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            230,
+            341,
+            759,
+            855
+          ],
+          "sha256": "ecaac0cd68f9b76650ed74ec59bf58916064b561abfcc312111553ef29857e8a",
+          "durationMs": 40
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            443,
+            443,
+            887,
+            887
+          ],
+          "features": {
+            "foot": [
+              167.0,
+              399.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              239.59786476868328,
+              107.60142348754448
+            ],
+            "faceBox": [
+              229,
+              93,
+              251,
+              119
+            ],
+            "bootRuns": [
+              [
+                149,
+                184
+              ],
+              [
+                235,
+                290
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            142.23884880471394,
+            255.00619596705337
+          ],
+          "poseKey": "I5",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            231,
+            339,
+            759,
+            855
+          ],
+          "sha256": "7108730a367f2643bf29822ff148936653db7d897980cce8e01f8e2935b88270",
+          "durationMs": 100
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            0,
+            443,
+            443,
+            887
+          ],
+          "features": {
+            "foot": [
+              166.0,
+              399.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              238.64864864864865,
+              109.72200772200772
+            ],
+            "faceBox": [
+              228,
+              100,
+              250,
+              120
+            ],
+            "bootRuns": [
+              [
+                149,
+                183
+              ],
+              [
+                235,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            143.66043543045384,
+            255.00619596705337
+          ],
+          "poseKey": "I4",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            231,
+            341,
+            758,
+            855
+          ],
+          "sha256": "2507376363575513ed17926e1397ad7b81ccda27a8675f9f3a1c77c5b6816a2d",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            1330,
+            0,
+            1774,
+            443
+          ],
+          "features": {
+            "foot": [
+              169.0,
+              401.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              242.3245283018868,
+              112.29433962264152
+            ],
+            "faceBox": [
+              232,
+              99,
+              254,
+              123
+            ],
+            "bootRuns": [
+              [
+                152,
+                186
+              ],
+              [
+                237,
+                291
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            138.15528097449896,
+            252.01091049784316
+          ],
+          "poseKey": "I3",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            231,
+            343,
+            755,
+            855
+          ],
+          "sha256": "ab31b9c144eb3ad3f5a99aeb95db2247ffa4f36d42a4e4ac35f3e1805a421f8d",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            887,
+            0,
+            1330,
+            443
+          ],
+          "features": {
+            "foot": [
+              168.0,
+              401.0
+            ],
+            "bootWidth": 34,
+            "face": [
+              240.3345864661654,
+              112.44736842105263
+            ],
+            "faceBox": [
+              230,
+              98,
+              251,
+              123
+            ],
+            "bootRuns": [
+              [
+                151,
+                185
+              ],
+              [
+                236,
+                290
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            141.13550290705388,
+            252.01091049784316
+          ],
+          "poseKey": "I2",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            232,
+            344,
+            758,
+            855
+          ],
+          "sha256": "7053d760cb6cb79818331d59be4ae3c115d03aaee23aabbb21890ebf8f5497c3",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            443,
+            0,
+            887,
+            443
+          ],
+          "features": {
+            "foot": [
+              168.0,
+              401.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              239.87878787878788,
+              112.64015151515152
+            ],
+            "faceBox": [
+              229,
+              102,
+              251,
+              123
+            ],
+            "bootRuns": [
+              [
+                150,
+                185
+              ],
+              [
+                236,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            141.81812634988313,
+            252.01091049784316
+          ],
+          "poseKey": "I1",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            234,
+            344,
+            757,
+            855
+          ],
+          "sha256": "c02e4aecb322661a2c50e5197a109bf97e8eadf7d4adc03e4ac548e935395727",
+          "durationMs": 135
+        },
+        {
+          "source": "idle-eight.png",
+          "sourceRect": [
+            0,
+            0,
+            443,
+            443
+          ],
+          "features": {
+            "foot": [
+              167.0,
+              401.0
+            ],
+            "bootWidth": 35,
+            "face": [
+              238.03673469387755,
+              113.47755102040816
+            ],
+            "faceBox": [
+              227,
+              101,
+              249,
+              124
+            ],
+            "bootRuns": [
+              [
+                149,
+                184
+              ],
+              [
+                235,
+                289
+              ]
+            ]
+          },
+          "finalMatrix": [
+            1.497642734605106,
+            144.57686391902024,
+            252.01091049784316
+          ],
+          "poseKey": "I0",
+          "eyeState": "open",
+          "sourceVersion": 5,
+          "constantSourceScale": true,
+          "bounds": [
+            234,
+            347,
+            758,
+            855
+          ],
+          "sha256": "026d51e6f2f9af2393a64a8d8d9315adff6e9101d81f5d9836c3257af674d076",
+          "durationMs": 85
+        }
+      ],
+      "durationMs": 1575,
+      "uniqueDrawnPoses": 8,
+      "exposureOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "constantSourceScale": 1.497642734605106,
+      "loopSeamIdentical": true,
+      "label": "Idle",
+      "description": "Loop nafas yang lebih rapat, kedua-dua tangan relaks dan kelipan mata pendek.",
+      "durations": [
+        85,
+        135,
+        135,
+        135,
+        135,
+        100,
+        40,
+        45,
+        40,
+        100,
+        135,
+        135,
+        135,
+        135,
+        85
+      ],
+      "atlas": "atlases/idle.webp",
+      "rects": [
+        [
+          16,
+          16,
+          640,
+          640
+        ],
+        [
+          672,
+          16,
+          640,
+          640
+        ],
+        [
+          1328,
+          16,
+          640,
+          640
+        ],
+        [
+          1984,
+          16,
+          640,
+          640
+        ],
+        [
+          2640,
+          16,
+          640,
+          640
+        ],
+        [
+          16,
+          672,
+          640,
+          640
+        ],
+        [
+          672,
+          672,
+          640,
+          640
+        ],
+        [
+          1328,
+          672,
+          640,
+          640
+        ],
+        [
+          1984,
+          672,
+          640,
+          640
+        ],
+        [
+          2640,
+          672,
+          640,
+          640
+        ],
+        [
+          16,
+          1328,
+          640,
+          640
+        ],
+        [
+          672,
+          1328,
+          640,
+          640
+        ],
+        [
+          1328,
+          1328,
+          640,
+          640
+        ],
+        [
+          1984,
+          1328,
+          640,
+          640
+        ],
+        [
+          2640,
+          1328,
+          640,
+          640
+        ]
+      ],
+      "hashes": [
+        "026d51e6f2f9af2393a64a8d8d9315adff6e9101d81f5d9836c3257af674d076",
+        "c02e4aecb322661a2c50e5197a109bf97e8eadf7d4adc03e4ac548e935395727",
+        "7053d760cb6cb79818331d59be4ae3c115d03aaee23aabbb21890ebf8f5497c3",
+        "ab31b9c144eb3ad3f5a99aeb95db2247ffa4f36d42a4e4ac35f3e1805a421f8d",
+        "2507376363575513ed17926e1397ad7b81ccda27a8675f9f3a1c77c5b6816a2d",
+        "7108730a367f2643bf29822ff148936653db7d897980cce8e01f8e2935b88270",
+        "ecaac0cd68f9b76650ed74ec59bf58916064b561abfcc312111553ef29857e8a",
+        "2d82aaf7d8aabf967982f78a77f933d313b6bb7d80f357d0e51f0b064c40ea37",
+        "ecaac0cd68f9b76650ed74ec59bf58916064b561abfcc312111553ef29857e8a",
+        "7108730a367f2643bf29822ff148936653db7d897980cce8e01f8e2935b88270",
+        "2507376363575513ed17926e1397ad7b81ccda27a8675f9f3a1c77c5b6816a2d",
+        "ab31b9c144eb3ad3f5a99aeb95db2247ffa4f36d42a4e4ac35f3e1805a421f8d",
+        "7053d760cb6cb79818331d59be4ae3c115d03aaee23aabbb21890ebf8f5497c3",
+        "c02e4aecb322661a2c50e5197a109bf97e8eadf7d4adc03e4ac548e935395727",
+        "026d51e6f2f9af2393a64a8d8d9315adff6e9101d81f5d9836c3257af674d076"
+      ],
+      "comparison": {
+        "atlas": "atlases/idle_before.webp",
+        "rects": [
+          [
+            16,
+            16,
+            640,
+            640
+          ],
+          [
+            672,
+            16,
+            640,
+            640
+          ],
+          [
+            1328,
+            16,
+            640,
+            640
+          ],
+          [
+            1984,
+            16,
+            640,
+            640
+          ],
+          [
+            2640,
+            16,
+            640,
+            640
+          ],
+          [
+            16,
+            672,
+            640,
+            640
+          ],
+          [
+            672,
+            672,
+            640,
+            640
+          ],
+          [
+            1328,
+            672,
+            640,
+            640
+          ],
+          [
+            1984,
+            672,
+            640,
+            640
+          ],
+          [
+            2640,
+            672,
+            640,
+            640
+          ],
+          [
+            16,
+            1328,
+            640,
+            640
+          ],
+          [
+            672,
+            1328,
+            640,
+            640
+          ],
+          [
+            1328,
+            1328,
+            640,
+            640
+          ],
+          [
+            1984,
+            1328,
+            640,
+            640
+          ],
+          [
+            2640,
+            1328,
+            640,
+            640
+          ]
+        ],
+        "hashes": [
+          "b16d2816b9a23ad4878ecba14b26a7f30d396c3845b3188d9f4bb032fb73e785",
+          "ee77df436357dc12342237801317b4af2cef6911461b06301decbc584f3b3fb6",
+          "2fb7a8b2efd47e3e44ac52b730de1edf64e83224d550a5487176f8d20000f9aa",
+          "724c9e68805946b17f7936d772736a942ac26a816d50f522ae5b527e9e937024",
+          "4c0c14a91d53dc6c5895639a46ecdef11164950d22bc4deba7940f62e97f2d8a",
+          "d8540523d1092855268f7c179b9fcff3e5f13b5e6fb196cfc7aed6607ee25893",
+          "7faf223850e4bcaa2afeef240835c317d146ccee64c96b8ab9046b5e65e59900",
+          "543a2910676212a4be2c4765fe3ac13f9b0754f4eb9e50bcef71285fe2dc4281",
+          "7faf223850e4bcaa2afeef240835c317d146ccee64c96b8ab9046b5e65e59900",
+          "d8540523d1092855268f7c179b9fcff3e5f13b5e6fb196cfc7aed6607ee25893",
+          "ee4b97e8396ab81b27ff4c2a0497cb1ba8e8298ed73a7df17333c0534455eecb",
+          "93afd0fe863281b66cdf9188859963250f45a692b386f568bf8879e419b48afa",
+          "47c12110d0a91cc3c4a4053168ed04160af1108b1e98fdd8fa8761413852b112",
+          "eeb8d4fa26d12b8743c11d7994a33b1f6a5a55111e008c253cba6fd5317ce2ea",
+          "10d4f713f09edc18f5760e31b4eab8d082f657a8c7dd4d486aab5f25c9440fc6"
+        ]
+      }
+    },
+    "attack": {
+      "frameCount": 15,
+      "frames": [
+        {
+          "source": "attack-key-0.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              430.0,
+              769.0
+            ],
+            "bootWidth": 38,
+            "face": [
+              533.719646799117,
+              394.97792494481234
+            ],
+            "faceBox": [
+              520,
+              383,
+              548,
+              408
+            ],
+            "bootRuns": [
+              [
+                411,
+                449
+              ],
+              [
+                552,
+                614
+              ]
+            ]
+          },
+          "poseKey": "K0",
+          "matrix": [
+            1.1421958922337898,
+            -91.14423366052961,
+            -28.34864112778439
+          ],
+          "targetFace": [
+            518.468154517891,
+            422.7935222672064
+          ],
+          "finalMatrix": [
+            1.1421958922337898,
+            -212.66142568387497,
+            -25.782994053293663
+          ],
+          "sha256": "8b88ed2c640284ede5b9d85977e0a0fa10bacdb9a3e1123996b4b71a71f3e212",
+          "bounds": [
+            138,
+            346,
+            656,
+            855
+          ],
+          "durationMs": 75,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_lift.png",
+          "sourceRect": [
+            0,
+            0,
+            724,
+            724
+          ],
+          "features": {
+            "foot": [
+              263.5,
+              643.0
+            ],
+            "bootWidth": 43,
+            "face": [
+              404.515625,
+              290.65625
+            ],
+            "faceBox": [
+              391,
+              272,
+              419,
+              306
+            ],
+            "bootRuns": [
+              [
+                242,
+                285
+              ],
+              [
+                449,
+                520
+              ]
+            ]
+          },
+          "poseKey": "L0",
+          "matrix": [
+            1.2045872175499717,
+            64.59126817558246,
+            75.45041911536816
+          ],
+          "targetFace": [
+            551.8656193498202,
+            425.5712225663771
+          ],
+          "finalMatrix": [
+            1.2045872175499717,
+            -56.9259238477629,
+            78.01606618985889
+          ],
+          "sha256": "ac4bf2d056bf7681fcbd3d3885af76564632da9e61de830e9d379af6e50ef793",
+          "bounds": [
+            140,
+            232,
+            733,
+            855
+          ],
+          "durationMs": 65,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_lift.png",
+          "sourceRect": [
+            724,
+            0,
+            1448,
+            724
+          ],
+          "features": {
+            "foot": [
+              247.0,
+              643.0
+            ],
+            "bootWidth": 43,
+            "face": [
+              401.71159029649596,
+              289.1725067385445
+            ],
+            "faceBox": [
+              389,
+              278,
+              415,
+              301
+            ],
+            "bootRuns": [
+              [
+                225,
+                268
+              ],
+              [
+                465,
+                536
+              ]
+            ]
+          },
+          "poseKey": "L1",
+          "matrix": [
+            1.1786780139774589,
+            92.84578523295946,
+            92.11003701249399
+          ],
+          "targetFace": [
+            566.3344046753599,
+            432.95131295196495
+          ],
+          "finalMatrix": [
+            1.1786780139774589,
+            -28.671406790385902,
+            94.67568408698472
+          ],
+          "sha256": "852be2b7dbf847b6b4bdc114b34ca1e831d066bfcd6b46b11b5d2c33dc485f48",
+          "bounds": [
+            153,
+            174,
+            618,
+            855
+          ],
+          "durationMs": 65,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_lift.png",
+          "sourceRect": [
+            1448,
+            0,
+            2172,
+            724
+          ],
+          "features": {
+            "foot": [
+              245.0,
+              643.0
+            ],
+            "bootWidth": 43,
+            "face": [
+              428.352,
+              279.608
+            ],
+            "faceBox": [
+              415,
+              268,
+              443,
+              290
+            ],
+            "bootRuns": [
+              [
+                223,
+                266
+              ],
+              [
+                478,
+                548
+              ]
+            ]
+          },
+          "poseKey": "L2",
+          "matrix": [
+            1.1186149456892756,
+            107.93933830612747,
+            130.73058992179585
+          ],
+          "targetFace": [
+            587.1002875220199,
+            443.5042776560828
+          ],
+          "finalMatrix": [
+            1.1186149456892756,
+            -13.577853717217891,
+            133.29623699628658
+          ],
+          "sha256": "e579ce876b5689f41a12d40eadf57af7f5cf67dbe1b0a4602bae8280533fef24",
+          "bounds": [
+            168,
+            202,
+            610,
+            854
+          ],
+          "durationMs": 65,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack-key-1.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              363.0,
+              769.0
+            ],
+            "bootWidth": 40,
+            "face": [
+              540.8724832214765,
+              423.8758389261745
+            ],
+            "faceBox": [
+              528,
+              414,
+              555,
+              433
+            ],
+            "bootRuns": [
+              [
+                342,
+                382
+              ],
+              [
+                596,
+                665
+              ]
+            ]
+          },
+          "poseKey": "K1",
+          "matrix": [
+            1.1421958922337898,
+            -14.617108880865715,
+            -28.34864112778439
+          ],
+          "targetFace": [
+            603.1652196769942,
+            455.8006009108436
+          ],
+          "finalMatrix": [
+            1.1421958922337898,
+            -136.13430090421107,
+            -25.782994053293663
+          ],
+          "sha256": "cf5e8af1672bdb3b6cb53bf48cdbf6ff3fcf3a9099378acc46294a9306f9169f",
+          "bounds": [
+            178,
+            221,
+            650,
+            854
+          ],
+          "durationMs": 65,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_strike_0.png",
+          "sourceRect": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "features": {
+            "foot": [
+              591.0,
+              1140.0
+            ],
+            "bootWidth": 63,
+            "face": [
+              779.0720524017468,
+              561.1200873362445
+            ],
+            "faceBox": [
+              762,
+              545,
+              801,
+              575
+            ],
+            "bootRuns": [
+              [
+                559,
+                622
+              ],
+              [
+                943,
+                1062
+              ]
+            ]
+          },
+          "poseKey": "S0",
+          "matrix": [
+            0.6389752856464295,
+            40.365606182960164,
+            121.5681743630704
+          ],
+          "targetFace": [
+            538.1733934055164,
+            480.1100424506967
+          ],
+          "finalMatrix": [
+            0.6389752856464295,
+            -81.1515858403852,
+            124.13382143756112
+          ],
+          "sha256": "14d5cba77b6dd05a3c4722d874955db0d1ec0e7051d9bdfdc5d0446108ff3f18",
+          "bounds": [
+            219,
+            156,
+            598,
+            853
+          ],
+          "durationMs": 35,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_strike.png",
+          "sourceRect": [
+            724,
+            0,
+            1448,
+            724
+          ],
+          "features": {
+            "foot": [
+              201.5,
+              656.0
+            ],
+            "bootWidth": 33,
+            "face": [
+              360.5925925925926,
+              371.8114478114478
+            ],
+            "faceBox": [
+              347,
+              361,
+              372,
+              384
+            ],
+            "bootRuns": [
+              [
+                185,
+                218
+              ],
+              [
+                403,
+                468
+              ]
+            ]
+          },
+          "poseKey": "S1",
+          "matrix": [
+            1.1714340006106456,
+            181.9560488769549,
+            81.5392955994165
+          ],
+          "targetFace": [
+            604.3664722082603,
+            517.0918673820171
+          ],
+          "finalMatrix": [
+            1.1714340006106456,
+            60.438856853609536,
+            84.10494267390723
+          ],
+          "sha256": "61c97071257b189ee668f6b3ae4be852095898c0f8ab59afb5f496efe9873c30",
+          "bounds": [
+            226,
+            252,
+            698,
+            854
+          ],
+          "durationMs": 30,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_strike.png",
+          "sourceRect": [
+            1448,
+            0,
+            2172,
+            724
+          ],
+          "features": {
+            "foot": [
+              88.5,
+              649.0
+            ],
+            "bootWidth": 33,
+            "face": [
+              304.01880877742946,
+              404.6081504702194
+            ],
+            "faceBox": [
+              292,
+              389,
+              315,
+              417
+            ],
+            "bootRuns": [
+              [
+                72,
+                105
+              ],
+              [
+                360,
+                427
+              ]
+            ]
+          },
+          "poseKey": "S2",
+          "matrix": [
+            1.2238508877471612,
+            273.68919643437624,
+            55.72077385209241
+          ],
+          "targetFace": [
+            645.7628854484677,
+            550.9008179948074
+          ],
+          "finalMatrix": [
+            1.2238508877471612,
+            152.17200441103088,
+            58.28642092658313
+          ],
+          "sha256": "eed6f5e8af38e0aed6703bfdaecd1bc64b3ca74d3251c3290e97e868b9cc6f91",
+          "bounds": [
+            206,
+            441,
+            903,
+            854
+          ],
+          "durationMs": 30,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack-key-2.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              251.0,
+              757.0
+            ],
+            "bootWidth": 37,
+            "face": [
+              469.33159268929506,
+              508.08616187989554
+            ],
+            "faceBox": [
+              457,
+              491,
+              482,
+              522
+            ],
+            "bootRuns": [
+              [
+                232,
+                269
+              ],
+              [
+                560,
+                619
+              ]
+            ]
+          },
+          "poseKey": "K2",
+          "matrix": [
+            1.1421958922337898,
+            113.30883104931877,
+            -14.642290420978838
+          ],
+          "targetFace": [
+            649.3774483145737,
+            565.6916365790702
+          ],
+          "finalMatrix": [
+            1.1421958922337898,
+            -8.20836097402659,
+            -12.076643346488112
+          ],
+          "sha256": "8f96c801f334f435d2d831c59682ff9d7ba685bf1c15ffaec95e49dc5fd0255e",
+          "bounds": [
+            233,
+            400,
+            936,
+            869
+          ],
+          "durationMs": 40,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_recovery.png",
+          "sourceRect": [
+            0,
+            0,
+            724,
+            724
+          ],
+          "features": {
+            "foot": [
+              157.0,
+              594.0
+            ],
+            "bootWidth": 42,
+            "face": [
+              439.32882011605415,
+              309.742746615087
+            ],
+            "faceBox": [
+              426,
+              292,
+              454,
+              325
+            ],
+            "bootRuns": [
+              [
+                135,
+                177
+              ],
+              [
+                469,
+                541
+              ]
+            ]
+          },
+          "poseKey": "R0",
+          "matrix": [
+            1.0460838057337132,
+            224.62603649616224,
+            228.62621939417443
+          ],
+          "targetFace": [
+            684.2008006116661,
+            552.6430905716979
+          ],
+          "finalMatrix": [
+            1.0460838057337132,
+            103.10884447281688,
+            231.19186646866515
+          ],
+          "sha256": "9a5a4f2e5cad9f0425b9a54896354854188b34ac01bb7bb5eb5292e07a6fea96",
+          "bounds": [
+            197,
+            479,
+            839,
+            854
+          ],
+          "durationMs": 45,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack-key-3.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              318.0,
+              766.0
+            ],
+            "bootWidth": 40,
+            "face": [
+              589.5919282511211,
+              483.5560538116592
+            ],
+            "faceBox": [
+              577,
+              470,
+              604,
+              497
+            ],
+            "bootRuns": [
+              [
+                297,
+                337
+              ],
+              [
+                618,
+                685
+              ]
+            ]
+          },
+          "poseKey": "K3",
+          "matrix": [
+            1.1421958922337898,
+            36.78170626965482,
+            -24.922053451083002
+          ],
+          "targetFace": [
+            710.2111848122846,
+            527.3936848773756
+          ],
+          "finalMatrix": [
+            1.1421958922337898,
+            -84.73548575369054,
+            -22.356406376592275
+          ],
+          "sha256": "9e0983e7a5062e6723d540cc83edb61e11c4332daff991aad7ce789e03245b0e",
+          "bounds": [
+            132,
+            437,
+            870,
+            859
+          ],
+          "durationMs": 65,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_recovery.png",
+          "sourceRect": [
+            724,
+            0,
+            1448,
+            724
+          ],
+          "features": {
+            "foot": [
+              186.5,
+              597.0
+            ],
+            "bootWidth": 42,
+            "face": [
+              397.4117647058824,
+              264.5476673427992
+            ],
+            "faceBox": [
+              384,
+              250,
+              413,
+              279
+            ],
+            "bootRuns": [
+              [
+                165,
+                207
+              ],
+              [
+                433,
+                504
+              ]
+            ]
+          },
+          "poseKey": "R1",
+          "matrix": [
+            1.074045321659156,
+            217.69054751056743,
+            208.79494296948394
+          ],
+          "targetFace": [
+            644.5287941652297,
+            492.93112743486006
+          ],
+          "finalMatrix": [
+            1.074045321659156,
+            96.17335548722207,
+            211.36059004397467
+          ],
+          "sha256": "754a79d35d1f2941fb1abe8229ae27fa0ea91529af283d145bb0198ee4b138ba",
+          "bounds": [
+            224,
+            421,
+            793,
+            854
+          ],
+          "durationMs": 75,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack-key-4.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              402.5,
+              769.0
+            ],
+            "bootWidth": 39,
+            "face": [
+              565.7709359605911,
+              427.6773399014778
+            ],
+            "faceBox": [
+              553,
+              415,
+              579,
+              441
+            ],
+            "bootRuns": [
+              [
+                382,
+                421
+              ],
+              [
+                608,
+                676
+              ]
+            ]
+          },
+          "poseKey": "K4",
+          "matrix": [
+            1.1421958922337898,
+            -59.73384662410041,
+            -28.34864112778439
+          ],
+          "targetFace": [
+            586.4873923753535,
+            460.14265970915784
+          ],
+          "finalMatrix": [
+            1.1421958922337898,
+            -181.25103864744577,
+            -25.782994053293663
+          ],
+          "sha256": "2c9dcc443f8c566a340fc9289d11e8a8d56896a3897080778b3032b51acce1fe",
+          "bounds": [
+            158,
+            382,
+            752,
+            854
+          ],
+          "durationMs": 80,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack_recovery.png",
+          "sourceRect": [
+            1448,
+            0,
+            2172,
+            724
+          ],
+          "features": {
+            "foot": [
+              231.0,
+              599.0
+            ],
+            "bootWidth": 40,
+            "face": [
+              358.2152641878669,
+              260.6594911937378
+            ],
+            "faceBox": [
+              346,
+              243,
+              372,
+              276
+            ],
+            "bootRuns": [
+              [
+                211,
+                251
+              ],
+              [
+                388,
+                459
+              ]
+            ]
+          },
+          "poseKey": "R2",
+          "matrix": [
+            1.208550209890667,
+            112.84109034080345,
+            126.07842427549042
+          ],
+          "targetFace": [
+            545.7622230610908,
+            441.0985070676767
+          ],
+          "finalMatrix": [
+            1.208550209890667,
+            -8.676101682541912,
+            128.64407134998115
+          ],
+          "sha256": "a3355412f213f25a915e7e72b62d4e7557ebb369cc092f51734c46a9bfc3c51f",
+          "bounds": [
+            164,
+            362,
+            703,
+            855
+          ],
+          "durationMs": 80,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        },
+        {
+          "source": "attack-key-5.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              435.5,
+              769.0
+            ],
+            "bootWidth": 38,
+            "face": [
+              537.6103603603603,
+              400.8445945945946
+            ],
+            "faceBox": [
+              524,
+              388,
+              552,
+              414
+            ],
+            "bootRuns": [
+              [
+                417,
+                455
+              ],
+              [
+                551,
+                615
+              ]
+            ]
+          },
+          "poseKey": "K5",
+          "matrix": [
+            1.1421958922337898,
+            -97.42631106781545,
+            -28.34864112778439
+          ],
+          "targetFace": [
+            516.6300341581157,
+            429.4944082422803
+          ],
+          "finalMatrix": [
+            1.1421958922337898,
+            -218.9435030911608,
+            -25.782994053293663
+          ],
+          "sha256": "3ec718442db11428e2c69ef77bbef5b460af34e02b64a101ca2ec7d13df4c528",
+          "bounds": [
+            142,
+            354,
+            660,
+            855
+          ],
+          "durationMs": 90,
+          "sourceVersion": 4,
+          "bytePreserved": true
+        }
+      ],
+      "durationMs": 905,
+      "artworkPreserved": true,
+      "label": "Attack",
+      "description": "Gerakan Attack yang telah diluluskan dikekalkan.",
+      "durations": [
+        75,
+        65,
+        65,
+        65,
+        65,
+        35,
+        30,
+        30,
+        40,
+        45,
+        65,
+        75,
+        80,
+        80,
+        90
+      ],
+      "atlas": "atlases/attack.webp",
+      "rects": [
+        [
+          16,
+          16,
+          640,
+          640
+        ],
+        [
+          672,
+          16,
+          640,
+          640
+        ],
+        [
+          1328,
+          16,
+          640,
+          640
+        ],
+        [
+          1984,
+          16,
+          640,
+          640
+        ],
+        [
+          2640,
+          16,
+          640,
+          640
+        ],
+        [
+          16,
+          672,
+          640,
+          640
+        ],
+        [
+          672,
+          672,
+          640,
+          640
+        ],
+        [
+          1328,
+          672,
+          640,
+          640
+        ],
+        [
+          1984,
+          672,
+          640,
+          640
+        ],
+        [
+          2640,
+          672,
+          640,
+          640
+        ],
+        [
+          16,
+          1328,
+          640,
+          640
+        ],
+        [
+          672,
+          1328,
+          640,
+          640
+        ],
+        [
+          1328,
+          1328,
+          640,
+          640
+        ],
+        [
+          1984,
+          1328,
+          640,
+          640
+        ],
+        [
+          2640,
+          1328,
+          640,
+          640
+        ]
+      ],
+      "hashes": [
+        "8b88ed2c640284ede5b9d85977e0a0fa10bacdb9a3e1123996b4b71a71f3e212",
+        "ac4bf2d056bf7681fcbd3d3885af76564632da9e61de830e9d379af6e50ef793",
+        "852be2b7dbf847b6b4bdc114b34ca1e831d066bfcd6b46b11b5d2c33dc485f48",
+        "e579ce876b5689f41a12d40eadf57af7f5cf67dbe1b0a4602bae8280533fef24",
+        "cf5e8af1672bdb3b6cb53bf48cdbf6ff3fcf3a9099378acc46294a9306f9169f",
+        "14d5cba77b6dd05a3c4722d874955db0d1ec0e7051d9bdfdc5d0446108ff3f18",
+        "61c97071257b189ee668f6b3ae4be852095898c0f8ab59afb5f496efe9873c30",
+        "eed6f5e8af38e0aed6703bfdaecd1bc64b3ca74d3251c3290e97e868b9cc6f91",
+        "8f96c801f334f435d2d831c59682ff9d7ba685bf1c15ffaec95e49dc5fd0255e",
+        "9a5a4f2e5cad9f0425b9a54896354854188b34ac01bb7bb5eb5292e07a6fea96",
+        "9e0983e7a5062e6723d540cc83edb61e11c4332daff991aad7ce789e03245b0e",
+        "754a79d35d1f2941fb1abe8229ae27fa0ea91529af283d145bb0198ee4b138ba",
+        "2c9dcc443f8c566a340fc9289d11e8a8d56896a3897080778b3032b51acce1fe",
+        "a3355412f213f25a915e7e72b62d4e7557ebb369cc092f51734c46a9bfc3c51f",
+        "3ec718442db11428e2c69ef77bbef5b460af34e02b64a101ca2ec7d13df4c528"
+      ]
+    },
+    "damaged": {
+      "frameCount": 15,
+      "frames": [
+        {
+          "source": "damage-key-0.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              435.0,
+              769.0
+            ],
+            "bootWidth": 40,
+            "face": [
+              541.565815324165,
+              346.9371316306483
+            ],
+            "faceBox": [
+              527,
+              327,
+              557,
+              363
+            ],
+            "bootRuns": [
+              [
+                415,
+                455
+              ],
+              [
+                545,
+                614
+              ]
+            ]
+          },
+          "poseKey": "K0",
+          "finalMatrix": [
+            1.012186832220788,
+            -161.81846403938823,
+            74.19397309670467
+          ],
+          "originalKey": true,
+          "targetFace": [
+            386.3473230126467,
+            425.35916934169717
+          ],
+          "bounds": [
+            124,
+            352,
+            607,
+            854
+          ],
+          "sha256": "b9f04b9ab81d5ab4097790e27cb2d471e36767dc47cb06dca1c147aa4d538431",
+          "durationMs": 70
+        },
+        {
+          "source": "damage-contact.png",
+          "sourceRect": [
+            0,
+            0,
+            724,
+            724
+          ],
+          "features": {
+            "foot": [
+              272.0,
+              627.0
+            ],
+            "bootWidth": 48,
+            "face": [
+              419.96557659208264,
+              194.18932874354562
+            ],
+            "faceBox": [
+              405,
+              178,
+              436,
+              210
+            ],
+            "bootRuns": [
+              [
+                248,
+                296
+              ],
+              [
+                405,
+                481
+              ]
+            ]
+          },
+          "poseKey": "A0",
+          "finalMatrix": [
+            0.9861976082293065,
+            -13.762941461716764,
+            234.2197467147156
+          ],
+          "originalKey": false,
+          "targetFace": [
+            400.40610571203683,
+            425.72879826525474
+          ],
+          "bounds": [
+            128,
+            353,
+            639,
+            854
+          ],
+          "sha256": "23e5452528f191f80208721f0cba674939dba4617f2a64c34117875c163a6fb4",
+          "durationMs": 40
+        },
+        {
+          "source": "damage-contact.png",
+          "sourceRect": [
+            724,
+            0,
+            1448,
+            724
+          ],
+          "features": {
+            "foot": [
+              266.5,
+              626.0
+            ],
+            "bootWidth": 47,
+            "face": [
+              396.9175911251981,
+              202.7622820919176
+            ],
+            "faceBox": [
+              382,
+              184,
+              414,
+              219
+            ],
+            "bootRuns": [
+              [
+                243,
+                290
+              ],
+              [
+                400,
+                477
+              ]
+            ]
+          },
+          "poseKey": "A1",
+          "finalMatrix": [
+            1.0060484693053218,
+            -13.629109093213629,
+            222.77930528935929
+          ],
+          "originalKey": false,
+          "targetFace": [
+            385.68922589864746,
+            426.76798882078685
+          ],
+          "bounds": [
+            102,
+            351,
+            642,
+            854
+          ],
+          "sha256": "04108ff1aadaad62d47939eaaf556ab9378e9977476642efdd7c2cb892caa467",
+          "durationMs": 35
+        },
+        {
+          "source": "damage-contact.png",
+          "sourceRect": [
+            1448,
+            0,
+            2172,
+            724
+          ],
+          "features": {
+            "foot": [
+              266.5,
+              627.0
+            ],
+            "bootWidth": 47,
+            "face": [
+              407.20212765957444,
+              228.5516717325228
+            ],
+            "faceBox": [
+              390,
+              212,
+              426,
+              245
+            ],
+            "bootRuns": [
+              [
+                243,
+                290
+              ],
+              [
+                403,
+                478
+              ]
+            ]
+          },
+          "poseKey": "A2",
+          "finalMatrix": [
+            1.064613452472935,
+            -29.236677107382548,
+            185.05301237396054
+          ],
+          "originalKey": false,
+          "targetFace": [
+            404.27618587460177,
+            428.3721966855824
+          ],
+          "bounds": [
+            120,
+            348,
+            687,
+            854
+          ],
+          "sha256": "ca62a1d333f952d18e362c7eba0f3449ccc2d5ab9f3e22029d39bfe4c2d41878",
+          "durationMs": 30
+        },
+        {
+          "source": "damage-key-1.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              421.5,
+              768.0
+            ],
+            "bootWidth": 43,
+            "face": [
+              519.8564814814815,
+              350.9537037037037
+            ],
+            "faceBox": [
+              505,
+              329,
+              537,
+              368
+            ],
+            "bootRuns": [
+              [
+                400,
+                443
+              ],
+              [
+                543,
+                617
+              ]
+            ]
+          },
+          "poseKey": "K1",
+          "finalMatrix": [
+            1.012186832220788,
+            -148.15394180440757,
+            75.20615992892544
+          ],
+          "originalKey": true,
+          "targetFace": [
+            378.037943395778,
+            430.43687753693035
+          ],
+          "bounds": [
+            147,
+            362,
+            635,
+            854
+          ],
+          "sha256": "128f3e685bc0dc87a74355db9964a84d180da1003a3c6df3aac787d9a37a3d3c",
+          "durationMs": 45
+        },
+        {
+          "source": "damage-recoil.png",
+          "sourceRect": [
+            0,
+            0,
+            724,
+            724
+          ],
+          "features": {
+            "foot": [
+              262.0,
+              628.0
+            ],
+            "bootWidth": 50,
+            "face": [
+              374.8535564853556,
+              227.2887029288703
+            ],
+            "faceBox": [
+              356,
+              209,
+              394,
+              245
+            ],
+            "bootRuns": [
+              [
+                237,
+                287
+              ],
+              [
+                394,
+                476
+              ]
+            ]
+          },
+          "poseKey": "B0",
+          "finalMatrix": [
+            1.0386429474489973,
+            -17.64164425498268,
+            200.29787607652042
+          ],
+          "originalKey": false,
+          "targetFace": [
+            371.69735851470625,
+            436.3696844084218
+          ],
+          "bounds": [
+            109,
+            363,
+            652,
+            854
+          ],
+          "sha256": "a4c98a0cddbe6dcd2c9490339e509965b9d5797966b5bc3303b7e50f50a2b93f",
+          "durationMs": 35
+        },
+        {
+          "source": "damage-recoil.png",
+          "sourceRect": [
+            724,
+            0,
+            1448,
+            724
+          ],
+          "features": {
+            "foot": [
+              268.0,
+              628.0
+            ],
+            "bootWidth": 50,
+            "face": [
+              348.33374689826303,
+              231.24069478908189
+            ],
+            "faceBox": [
+              331,
+              211,
+              364,
+              250
+            ],
+            "bootRuns": [
+              [
+                243,
+                293
+              ],
+              [
+                405,
+                487
+              ]
+            ]
+          },
+          "poseKey": "B1",
+          "finalMatrix": [
+            1.0211169851557256,
+            -19.176544045079822,
+            211.30418039669507
+          ],
+          "originalKey": false,
+          "targetFace": [
+            336.51296141567207,
+            447.4279815050376
+          ],
+          "bounds": [
+            91,
+            389,
+            650,
+            854
+          ],
+          "sha256": "1d55093a132c5694b0a5a33514e0430c1319a0eb50e1d51347a2ee9ac5dbecb8",
+          "durationMs": 35
+        },
+        {
+          "source": "damage-recoil.png",
+          "sourceRect": [
+            1448,
+            0,
+            2172,
+            724
+          ],
+          "features": {
+            "foot": [
+              282.0,
+              628.0
+            ],
+            "bootWidth": 50,
+            "face": [
+              337.92464878671774,
+              259.04342273307793
+            ],
+            "faceBox": [
+              321,
+              234,
+              353,
+              276
+            ],
+            "bootRuns": [
+              [
+                257,
+                307
+              ],
+              [
+                421,
+                503
+              ]
+            ]
+          },
+          "poseKey": "B2",
+          "finalMatrix": [
+            1.0632249971506575,
+            -45.346641219830815,
+            184.8603488638778
+          ],
+          "originalKey": false,
+          "targetFace": [
+            313.943292523564,
+            460.2817912611511
+          ],
+          "bounds": [
+            68,
+            388,
+            662,
+            854
+          ],
+          "sha256": "bed56c443316d38dcb3abdbf6f87063843da4c6599d183f1acee5c6f2177de8a",
+          "durationMs": 40
+        },
+        {
+          "source": "damage-key-2.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              401.0,
+              769.0
+            ],
+            "bootWidth": 44,
+            "face": [
+              417.77127659574467,
+              392.6223404255319
+            ],
+            "faceBox": [
+              607,
+              503,
+              670,
+              564
+            ],
+            "bootRuns": [
+              [
+                379,
+                423
+              ],
+              [
+                556,
+                622
+              ]
+            ],
+            "faceOverride": "Face landmark checked in source; automatic detector selected sword glow."
+          },
+          "poseKey": "K2",
+          "finalMatrix": [
+            1.012186832220788,
+            -127.4041117438814,
+            74.19397309670467
+          ],
+          "originalKey": true,
+          "targetFace": [
+            295.4584733064001,
+            471.60113611113565
+          ],
+          "bounds": [
+            89,
+            400,
+            593,
+            854
+          ],
+          "sha256": "bcdd26904b7bf25a01648b43d97cfd4ffd0bde6c2cc99744f24a117118cadf55",
+          "durationMs": 65
+        },
+        {
+          "source": "damage-recovery.png",
+          "sourceRect": [
+            0,
+            0,
+            724,
+            724
+          ],
+          "features": {
+            "foot": [
+              311.0,
+              623.0
+            ],
+            "bootWidth": 41,
+            "face": [
+              354.94117647058823,
+              283.33613445378154
+            ],
+            "faceBox": [
+              341,
+              268,
+              370,
+              297
+            ],
+            "bootRuns": [
+              [
+                290,
+                331
+              ],
+              [
+                451,
+                522
+              ]
+            ]
+          },
+          "poseKey": "C0",
+          "finalMatrix": [
+            1.0885656415054707,
+            -36.061106531546784,
+            174.3892524165824
+          ],
+          "originalKey": false,
+          "targetFace": [
+            350.31566292986554,
+            482.81923337994346
+          ],
+          "bounds": [
+            134,
+            398,
+            663,
+            855
+          ],
+          "sha256": "47ea04bb491cc85edd7b2884c400a276bf818b4317fc2429615025f2417523ad",
+          "durationMs": 70
+        },
+        {
+          "source": "damage-key-3.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              427.0,
+              769.0
+            ],
+            "bootWidth": 49,
+            "face": [
+              606.4460784313726,
+              410.12418300653593
+            ],
+            "faceBox": [
+              591,
+              391,
+              624,
+              426
+            ],
+            "bootRuns": [
+              [
+                400,
+                449
+              ],
+              [
+                592,
+                666
+              ]
+            ]
+          },
+          "poseKey": "K3",
+          "finalMatrix": [
+            1.012186832220788,
+            -153.7209693816219,
+            74.19397309670467
+          ],
+          "originalKey": true,
+          "targetFace": [
+            460.11576565854875,
+            489.31627071122904
+          ],
+          "bounds": [
+            144,
+            395,
+            653,
+            854
+          ],
+          "sha256": "44d7c764d5a05a8f52240a273e19335298b9c46a7a0f4e90aec3735ce1297482",
+          "durationMs": 80
+        },
+        {
+          "source": "damage-recovery.png",
+          "sourceRect": [
+            724,
+            0,
+            1448,
+            724
+          ],
+          "features": {
+            "foot": [
+              258.0,
+              624.0
+            ],
+            "bootWidth": 41,
+            "face": [
+              418.2625,
+              298.2
+            ],
+            "faceBox": [
+              404,
+              285,
+              434,
+              312
+            ],
+            "bootRuns": [
+              [
+                237,
+                278
+              ],
+              [
+                407,
+                480
+              ]
+            ]
+          },
+          "poseKey": "C1",
+          "finalMatrix": [
+            1.1400093222725183,
+            -19.723124525248238,
+            141.19982997643933
+          ],
+          "originalKey": false,
+          "targetFace": [
+            457.10002463176085,
+            481.1506098781042
+          ],
+          "bounds": [
+            205,
+            406,
+            661,
+            854
+          ],
+          "sha256": "0bf3f42718fb419c3aac67e6681ddac888202802f5c819367d11989694eda5b5",
+          "durationMs": 90
+        },
+        {
+          "source": "damage-key-4.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              448.5,
+              768.0
+            ],
+            "bootWidth": 48,
+            "face": [
+              617.4152139461173,
+              385.9889064976228
+            ],
+            "faceBox": [
+              602,
+              363,
+              633,
+              403
+            ],
+            "bootRuns": [
+              [
+                424,
+                472
+              ],
+              [
+                587,
+                663
+              ]
+            ]
+          },
+          "poseKey": "K4",
+          "finalMatrix": [
+            1.012186832220788,
+            -175.48298627436884,
+            75.20615992892544
+          ],
+          "originalKey": true,
+          "targetFace": [
+            449.4565632946718,
+            465.8990484691202
+          ],
+          "bounds": [
+            141,
+            388,
+            628,
+            854
+          ],
+          "sha256": "5cae65bf553b4d3dd0d6bddc565f8744f3c096b808fa2027cf1c71bc6d7a7f1a",
+          "durationMs": 100
+        },
+        {
+          "source": "damage-recovery.png",
+          "sourceRect": [
+            1448,
+            0,
+            2172,
+            724
+          ],
+          "features": {
+            "foot": [
+              295.5,
+              624.0
+            ],
+            "bootWidth": 41,
+            "face": [
+              396.202,
+              279.578
+            ],
+            "faceBox": [
+              383,
+              263,
+              412,
+              295
+            ],
+            "bootRuns": [
+              [
+                275,
+                316
+              ],
+              [
+                414,
+                483
+              ]
+            ]
+          },
+          "poseKey": "C2",
+          "finalMatrix": [
+            1.169757759200524,
+            -43.1806098671002,
+            122.63680533336378
+          ],
+          "originalKey": false,
+          "targetFace": [
+            420.27975384366573,
+            449.6753401351278
+          ],
+          "bounds": [
+            201,
+            378,
+            659,
+            854
+          ],
+          "sha256": "6d84d90e2464dd34f5698bdfd9b55a7cc64a61d25d898ec67ca89454a322e668",
+          "durationMs": 110
+        },
+        {
+          "source": "damage-key-5.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "features": {
+            "foot": [
+              449.5,
+              769.0
+            ],
+            "bootWidth": 43,
+            "face": [
+              548.9819277108434,
+              351.5261044176707
+            ],
+            "faceBox": [
+              535,
+              335,
+              564,
+              366
+            ],
+            "bootRuns": [
+              [
+                428,
+                471
+              ],
+              [
+                562,
+                635
+              ]
+            ]
+          },
+          "poseKey": "K5",
+          "finalMatrix": [
+            1.012186832220788,
+            -176.49517310658962,
+            74.19397309670467
+          ],
+          "originalKey": true,
+          "targetFace": [
+            379.17710524951065,
+            430.00406717014073
+          ],
+          "bounds": [
+            130,
+            355,
+            611,
+            854
+          ],
+          "sha256": "0b71b2a132ffb5586d64a6d702a0a5120e7a7e98d2c0af2e6d7d27e9f174e0e2",
+          "durationMs": 130
+        }
+      ],
+      "durationMs": 975,
+      "originalKeys": 6,
+      "newDrawnInbetweens": 9,
+      "keySlots": [
+        1,
+        5,
+        9,
+        11,
+        13,
+        15
+      ],
+      "label": "Kena Attack",
+      "description": "Hentaman, recoil dan pemulihan dalam 15 frame.",
+      "durations": [
+        70,
+        40,
+        35,
+        30,
+        45,
+        35,
+        35,
+        40,
+        65,
+        70,
+        80,
+        90,
+        100,
+        110,
+        130
+      ],
+      "atlas": "atlases/damaged.webp",
+      "rects": [
+        [
+          16,
+          16,
+          640,
+          640
+        ],
+        [
+          672,
+          16,
+          640,
+          640
+        ],
+        [
+          1328,
+          16,
+          640,
+          640
+        ],
+        [
+          1984,
+          16,
+          640,
+          640
+        ],
+        [
+          2640,
+          16,
+          640,
+          640
+        ],
+        [
+          16,
+          672,
+          640,
+          640
+        ],
+        [
+          672,
+          672,
+          640,
+          640
+        ],
+        [
+          1328,
+          672,
+          640,
+          640
+        ],
+        [
+          1984,
+          672,
+          640,
+          640
+        ],
+        [
+          2640,
+          672,
+          640,
+          640
+        ],
+        [
+          16,
+          1328,
+          640,
+          640
+        ],
+        [
+          672,
+          1328,
+          640,
+          640
+        ],
+        [
+          1328,
+          1328,
+          640,
+          640
+        ],
+        [
+          1984,
+          1328,
+          640,
+          640
+        ],
+        [
+          2640,
+          1328,
+          640,
+          640
+        ]
+      ],
+      "hashes": [
+        "b9f04b9ab81d5ab4097790e27cb2d471e36767dc47cb06dca1c147aa4d538431",
+        "23e5452528f191f80208721f0cba674939dba4617f2a64c34117875c163a6fb4",
+        "04108ff1aadaad62d47939eaaf556ab9378e9977476642efdd7c2cb892caa467",
+        "ca62a1d333f952d18e362c7eba0f3449ccc2d5ab9f3e22029d39bfe4c2d41878",
+        "128f3e685bc0dc87a74355db9964a84d180da1003a3c6df3aac787d9a37a3d3c",
+        "a4c98a0cddbe6dcd2c9490339e509965b9d5797966b5bc3303b7e50f50a2b93f",
+        "1d55093a132c5694b0a5a33514e0430c1319a0eb50e1d51347a2ee9ac5dbecb8",
+        "bed56c443316d38dcb3abdbf6f87063843da4c6599d183f1acee5c6f2177de8a",
+        "bcdd26904b7bf25a01648b43d97cfd4ffd0bde6c2cc99744f24a117118cadf55",
+        "47ea04bb491cc85edd7b2884c400a276bf818b4317fc2429615025f2417523ad",
+        "44d7c764d5a05a8f52240a273e19335298b9c46a7a0f4e90aec3735ce1297482",
+        "0bf3f42718fb419c3aac67e6681ddac888202802f5c819367d11989694eda5b5",
+        "5cae65bf553b4d3dd0d6bddc565f8744f3c096b808fa2027cf1c71bc6d7a7f1a",
+        "6d84d90e2464dd34f5698bdfd9b55a7cc64a61d25d898ec67ca89454a322e668",
+        "0b71b2a132ffb5586d64a6d702a0a5120e7a7e98d2c0af2e6d7d27e9f174e0e2"
+      ]
+    },
+    "defend": {
+      "frameCount": 15,
+      "frames": [
+        {
+          "source": "v4/defend_01.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.978653837523111,
+            5.944539266089958,
+            18.19900482466611
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 1,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 74.0,
+          "modelUnitAfter": 72.42038397671021,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 74,
+            "crown": 376,
+            "chin": 450,
+            "roiX": [
+              409,
+              461
+            ],
+            "face": [
+              449.4340239050943,
+              435.65652365614767
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            178,
+            384,
+            671,
+            855
+          ],
+          "sha256": "e09d60db1db4ebbb459f832ab997ef428e5741d2b070a6881b9379ebc3d170c0",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/defend_02.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9919703588049796,
+            2.236117027034292,
+            6.845796241208524
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 2,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 88.0,
+          "modelUnitAfter": 87.29339157483821,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 88,
+            "crown": 356,
+            "chin": 444,
+            "roiX": [
+              415,
+              467
+            ],
+            "face": [
+              455.4549090983956,
+              428.5655612760845
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            129,
+            357,
+            702,
+            855
+          ],
+          "sha256": "26923f77f34f0f4e6b05a3326c99ff45e4ded9ee5471654caf8bd671ffda92ff",
+          "durationMs": 70
+        },
+        {
+          "source": "v4/defend_03.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9952006899065176,
+            1.336525351183692,
+            4.091726915360995
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 3,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 86.0,
+          "modelUnitAfter": 85.58725933196051,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 86,
+            "crown": 358,
+            "chin": 444,
+            "roiX": [
+              423,
+              475
+            ],
+            "face": [
+              462.59863098908176,
+              428.37194369276017
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            179,
+            358,
+            703,
+            855
+          ],
+          "sha256": "676ebc3f6be3273e09ac407cdc00cf389101a657684b4d47017fb5e2b81aa15e",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/defend_04.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9827792016419757,
+            4.795696282342359,
+            14.681861095248278
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 4,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 83.0,
+          "modelUnitAfter": 81.570673736284,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 83,
+            "crown": 388,
+            "chin": 471,
+            "roiX": [
+              426,
+              478
+            ],
+            "face": [
+              465.52451210996185,
+              451.2130155001731
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            197,
+            395,
+            671,
+            854
+          ],
+          "sha256": "4e9f9960c4142f86ad9cba538eb648ffb6047d3e9dab377810090768b14d509a",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/defend_05.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9616957431113206,
+            10.667077015818567,
+            32.656893560004505
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 5,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 91.0,
+          "modelUnitAfter": 87.51431262313017,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 91,
+            "crown": 393,
+            "chin": 484,
+            "roiX": [
+              426,
+              478
+            ],
+            "face": [
+              465.9345326409114,
+              467.61616298937076
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            181,
+            400,
+            669,
+            855
+          ],
+          "sha256": "96563c2668f8ce74c6798a310f39d8de1d7ae8b6b951c8eede9a6f1c3d364308",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/defend_06.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9531090603906315,
+            13.058320531080682,
+            39.97760426999214
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 6,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 92.0,
+          "modelUnitAfter": 87.6860335559381,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 92,
+            "crown": 405,
+            "chin": 497,
+            "roiX": [
+              426,
+              478
+            ],
+            "face": [
+              466.0935980025029,
+              482.1045538085323
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            174,
+            420,
+            657,
+            855
+          ],
+          "sha256": "0cbdedcb8ab677e6499f606ce2d6b85750d61b8e9c29f0612b2c04b17d953bad",
+          "durationMs": 70
+        },
+        {
+          "source": "v4/defend_07.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.962225757879209,
+            10.519477014987883,
+            32.20502117646061
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 7,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 87.0,
+          "modelUnitAfter": 83.71364093549118,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 87,
+            "crown": 421,
+            "chin": 508,
+            "roiX": [
+              425,
+              477
+            ],
+            "face": [
+              464.53678357412855,
+              494.45709789384523
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            174,
+            425,
+            664,
+            855
+          ],
+          "sha256": "65b8cf2ea31da5aa4d18a393ba75cdd2be89eefe49c45942cbf14451ac7b55d4",
+          "durationMs": 60
+        },
+        {
+          "source": "v4/defend_08.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.97771557003402,
+            6.205830631085219,
+            18.99893945363192
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 8,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 90.0,
+          "modelUnitAfter": 87.99440130306179,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 90,
+            "crown": 417,
+            "chin": 507,
+            "roiX": [
+              423,
+              475
+            ],
+            "face": [
+              463.05310775456485,
+              494.6323560916753
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            180,
+            412,
+            699,
+            856
+          ],
+          "sha256": "ae3d582cc5373483d1f3637cec805e0772d2f111bba3c3451a7fd32b07187584",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/defend_09.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9862038723316614,
+            3.8419843722833495,
+            11.76210451267938
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 9,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 85.0,
+          "modelUnitAfter": 83.82732914819123,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 85,
+            "crown": 421,
+            "chin": 506,
+            "roiX": [
+              423,
+              475
+            ],
+            "face": [
+              462.9370729008459,
+              492.0126986724581
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            190,
+            422,
+            670,
+            855
+          ],
+          "sha256": "c23527bf080402848b493fc4b8cc2a465332dde7b70231bb1949f92974d77412",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/defend_10.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9850341809082824,
+            4.167723324332135,
+            12.759343237929956
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 10,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 87.0,
+          "modelUnitAfter": 85.69797373902057,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 87,
+            "crown": 417,
+            "chin": 504,
+            "roiX": [
+              426,
+              478
+            ],
+            "face": [
+              466.18886594850994,
+              490.1685172572179
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            190,
+            419,
+            676,
+            855
+          ],
+          "sha256": "afa05ac1d432164025ed5647a106ac9f8f7cf3ee6e46acb7f2dbf6bd6ea079ba",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/defend_11.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9717224108897041,
+            7.874822418245266,
+            24.108501057525974
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 11,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 87.0,
+          "modelUnitAfter": 84.53984974740426,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 87,
+            "crown": 414,
+            "chin": 501,
+            "roiX": [
+              432,
+              484
+            ],
+            "face": [
+              471.8001142115854,
+              487.8440008644842
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            187,
+            425,
+            688,
+            855
+          ],
+          "sha256": "bfa3c077d47fbf5318cb2e6e270337b7dd61049fcc27125546fcd50b49950953",
+          "durationMs": 80
+        },
+        {
+          "source": "v4/defend_12.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9504492378145887,
+            13.79903539077678,
+            42.24527762563941
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 12,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 97.0,
+          "modelUnitAfter": 92.1935760680151,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 97,
+            "crown": 393,
+            "chin": 490,
+            "roiX": [
+              440,
+              492
+            ],
+            "face": [
+              480.24974129182476,
+              472.562660875491
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            177,
+            414,
+            700,
+            855
+          ],
+          "sha256": "db02a339d4f9bc4d513b90fac9f544abff25050fc3a4c278beaea6605e581a16",
+          "durationMs": 85
+        },
+        {
+          "source": "v4/defend_13.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.94,
+            16.708968478599292,
+            51.153938824469485
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 13,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 92.0,
+          "modelUnitAfter": 86.47999999999999,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 92,
+            "crown": 387,
+            "chin": 479,
+            "roiX": [
+              435,
+              487
+            ],
+            "face": [
+              474.8015278460176,
+              463.90680425187225
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            193,
+            413,
+            687,
+            855
+          ],
+          "sha256": "bc91f34633ba2af6622d498e7efd3ecaec8ad057ce110b4b5a89b078a99cd148",
+          "durationMs": 80
+        },
+        {
+          "source": "v4/defend_14.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9449729241190077,
+            15.324094606083186,
+            46.914194555095314
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 14,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 89.0,
+          "modelUnitAfter": 84.10259024659169,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 89,
+            "crown": 380,
+            "chin": 469,
+            "roiX": [
+              427,
+              479
+            ],
+            "face": [
+              466.8427579548969,
+              455.70690541726026
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            184,
+            404,
+            700,
+            855
+          ],
+          "sha256": "9fe44be312b8c75d2a017f4bb673996a1bd0307a9d2d93b8753ff4e4b7be385c",
+          "durationMs": 85
+        },
+        {
+          "source": "v4/defend_15.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9610734655464049,
+            10.840370619437143,
+            33.18742603479673
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 15,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 94.0,
+          "modelUnitAfter": 90.34090576136207,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 94,
+            "crown": 363,
+            "chin": 457,
+            "roiX": [
+              412,
+              464
+            ],
+            "face": [
+              452.05059596764715,
+              441.9220416538179
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            164,
+            381,
+            716,
+            855
+          ],
+          "sha256": "325fa429099139b661ca55e0f48b051b0d6d4701622e719e666cdda88501ef6b",
+          "durationMs": 100
+        }
+      ],
+      "durationMs": 1115,
+      "artworkPreserved": true,
+      "samePoseOrder": true,
+      "scaleMeasurement": "hair-crown to face-chin, regularized across adjacent poses",
+      "modelUnitCvBeforePercent": 5.8573254712877265,
+      "modelUnitCvAfterPercent": 5.083986210537454,
+      "scales": [
+        0.978653837523111,
+        0.9919703588049796,
+        0.9952006899065176,
+        0.9827792016419757,
+        0.9616957431113206,
+        0.9531090603906315,
+        0.962225757879209,
+        0.97771557003402,
+        0.9862038723316614,
+        0.9850341809082824,
+        0.9717224108897041,
+        0.9504492378145887,
+        0.94,
+        0.9449729241190077,
+        0.9610734655464049
+      ],
+      "label": "Defend",
+      "description": "Urutan guard yang sama dengan skala model diselaraskan.",
+      "durations": [
+        75,
+        70,
+        65,
+        65,
+        75,
+        70,
+        60,
+        65,
+        65,
+        75,
+        80,
+        85,
+        80,
+        85,
+        100
+      ],
+      "atlas": "atlases/defend.webp",
+      "rects": [
+        [
+          16,
+          16,
+          640,
+          640
+        ],
+        [
+          672,
+          16,
+          640,
+          640
+        ],
+        [
+          1328,
+          16,
+          640,
+          640
+        ],
+        [
+          1984,
+          16,
+          640,
+          640
+        ],
+        [
+          2640,
+          16,
+          640,
+          640
+        ],
+        [
+          16,
+          672,
+          640,
+          640
+        ],
+        [
+          672,
+          672,
+          640,
+          640
+        ],
+        [
+          1328,
+          672,
+          640,
+          640
+        ],
+        [
+          1984,
+          672,
+          640,
+          640
+        ],
+        [
+          2640,
+          672,
+          640,
+          640
+        ],
+        [
+          16,
+          1328,
+          640,
+          640
+        ],
+        [
+          672,
+          1328,
+          640,
+          640
+        ],
+        [
+          1328,
+          1328,
+          640,
+          640
+        ],
+        [
+          1984,
+          1328,
+          640,
+          640
+        ],
+        [
+          2640,
+          1328,
+          640,
+          640
+        ]
+      ],
+      "hashes": [
+        "e09d60db1db4ebbb459f832ab997ef428e5741d2b070a6881b9379ebc3d170c0",
+        "26923f77f34f0f4e6b05a3326c99ff45e4ded9ee5471654caf8bd671ffda92ff",
+        "676ebc3f6be3273e09ac407cdc00cf389101a657684b4d47017fb5e2b81aa15e",
+        "4e9f9960c4142f86ad9cba538eb648ffb6047d3e9dab377810090768b14d509a",
+        "96563c2668f8ce74c6798a310f39d8de1d7ae8b6b951c8eede9a6f1c3d364308",
+        "0cbdedcb8ab677e6499f606ce2d6b85750d61b8e9c29f0612b2c04b17d953bad",
+        "65b8cf2ea31da5aa4d18a393ba75cdd2be89eefe49c45942cbf14451ac7b55d4",
+        "ae3d582cc5373483d1f3637cec805e0772d2f111bba3c3451a7fd32b07187584",
+        "c23527bf080402848b493fc4b8cc2a465332dde7b70231bb1949f92974d77412",
+        "afa05ac1d432164025ed5647a106ac9f8f7cf3ee6e46acb7f2dbf6bd6ea079ba",
+        "bfa3c077d47fbf5318cb2e6e270337b7dd61049fcc27125546fcd50b49950953",
+        "db02a339d4f9bc4d513b90fac9f544abff25050fc3a4c278beaea6605e581a16",
+        "bc91f34633ba2af6622d498e7efd3ecaec8ad057ce110b4b5a89b078a99cd148",
+        "9fe44be312b8c75d2a017f4bb673996a1bd0307a9d2d93b8753ff4e4b7be385c",
+        "325fa429099139b661ca55e0f48b051b0d6d4701622e719e666cdda88501ef6b"
+      ],
+      "comparison": {
+        "atlas": "atlases/defend_before.webp",
+        "rects": [
+          [
+            16,
+            16,
+            640,
+            640
+          ],
+          [
+            672,
+            16,
+            640,
+            640
+          ],
+          [
+            1328,
+            16,
+            640,
+            640
+          ],
+          [
+            1984,
+            16,
+            640,
+            640
+          ],
+          [
+            2640,
+            16,
+            640,
+            640
+          ],
+          [
+            16,
+            672,
+            640,
+            640
+          ],
+          [
+            672,
+            672,
+            640,
+            640
+          ],
+          [
+            1328,
+            672,
+            640,
+            640
+          ],
+          [
+            1984,
+            672,
+            640,
+            640
+          ],
+          [
+            2640,
+            672,
+            640,
+            640
+          ],
+          [
+            16,
+            1328,
+            640,
+            640
+          ],
+          [
+            672,
+            1328,
+            640,
+            640
+          ],
+          [
+            1328,
+            1328,
+            640,
+            640
+          ],
+          [
+            1984,
+            1328,
+            640,
+            640
+          ],
+          [
+            2640,
+            1328,
+            640,
+            640
+          ]
+        ],
+        "hashes": [
+          "78105e56e39f7ab78f0f14e633f0f0216074c02f884f1586b76a17dc408f9606",
+          "2c6a5f0ceb371eb48418d1e193d4c2cd0baff57aa7006b0d85beaa9442e7dbd7",
+          "f560ee59a4dda657c4d3a824c32f28ef7613b0c77f8e4edfd8cbfec063c2bfa9",
+          "cf989e66fc643911359e018c38756ea41d58457a86d2c26da29fb64a93ad1a8a",
+          "df2b3ac1776dc75bb6613356c71b8f71f918bcacb5369835e0355429784a68f4",
+          "d7e72755e0c995e3abdb7e4b0ba35d07233e9fd646cb619744e8b4339143ef9c",
+          "204a56bb70fcbad194ce98683e016dd5af46a5e97fa065949c3ae6dfa0eb4efe",
+          "cda8f7746698ec3b542653ec477d460b97e2e5af87325d6a37d8e67fbcaa9621",
+          "69e1f992f5ba3699bfe764f7ebd9114183819cb0a1853dec07ca0a3c38f60adc",
+          "44a5cd35598783b075b084f948d4090d0ff55aada5774515c8bb7355be80aa74",
+          "5ed730275b85bf1a28b656244dd5446bd6bb21621aa5b5f408b811ea10b169a9",
+          "0c69369e4fa120134ac59af90bd1ddb95caa25bfc51a0b0d297a28b5b5e3f67a",
+          "c62feda2362771ea40b7506655733f02d0c4cd0d92c06a2e16e7b9deb8c0cd99",
+          "fce55a7388f64e3851258945f74f8a51f62058064f37b2e1fc44f97ce4ded9fa",
+          "f2f1066118c68a07e394a82ad720c3527d9f6ed257a7b57391334e44e9c3d2db"
+        ]
+      }
+    },
+    "skill": {
+      "frameCount": 15,
+      "frames": [
+        {
+          "source": "v4/skill_01.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.999158990136843,
+            0.2342067882280372,
+            0.7170161181785187
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 1,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 86.0,
+          "modelUnitAfter": 85.92767315176849,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 86,
+            "crown": 360,
+            "chin": 446,
+            "roiX": [
+              373,
+              425
+            ],
+            "face": [
+              412.60753167757093,
+              429.11535685887634
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            139,
+            358,
+            664,
+            855
+          ],
+          "sha256": "d0111d548650ea55624ba6edcea6b7ab852752955a3595d0efabb52e90bcbbf9",
+          "durationMs": 80
+        },
+        {
+          "source": "v4/skill_02.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9965130183644318,
+            0.9710644372360472,
+            2.972880754465029
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 2,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 87.0,
+          "modelUnitAfter": 86.69663259770557,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 87,
+            "crown": 361,
+            "chin": 448,
+            "roiX": [
+              370,
+              422
+            ],
+            "face": [
+              409.6457888141035,
+              430.3771267107127
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            135,
+            361,
+            659,
+            855
+          ],
+          "sha256": "1a85ac308dbf20412f29e7a2122e9e6b37479d9b5a7b3847d6d5dacd282d4c16",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/skill_03.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9919276326422867,
+            2.2480155287950954,
+            6.882223099751861
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 3,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 86.0,
+          "modelUnitAfter": 85.30577640723665,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 86,
+            "crown": 362,
+            "chin": 448,
+            "roiX": [
+              368,
+              420
+            ],
+            "face": [
+              408.16963647396074,
+              431.352630046744
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            135,
+            363,
+            656,
+            855
+          ],
+          "sha256": "bda88c940b13adfdd57671746a431e57c8b5ea4e6ebbcb2cff96e524c229d3e4",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/skill_04.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9890096238894427,
+            3.0606307999875435,
+            9.370017120289317
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 4,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 87.0,
+          "modelUnitAfter": 86.04383727838152,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 87,
+            "crown": 361,
+            "chin": 448,
+            "roiX": [
+              367,
+              419
+            ],
+            "face": [
+              407.45272974439706,
+              432.4197828837266
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            132,
+            364,
+            654,
+            855
+          ],
+          "sha256": "9146231a36a6fad784a33f0fad95ed5c09b27ce76a5e0f36bf62203ea59ebff9",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/skill_05.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9863588007420446,
+            3.798839473524469,
+            11.630017872230784
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 5,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 87.0,
+          "modelUnitAfter": 85.81321566455789,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 87,
+            "crown": 360,
+            "chin": 447,
+            "roiX": [
+              368,
+              420
+            ],
+            "face": [
+              407.8898032662196,
+              430.19646709651
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            133,
+            364,
+            655,
+            855
+          ],
+          "sha256": "0e00b2265ab77a48f2a1dc7e64fbf18b71c586a21d9dca3b06065fcb4f77d93c",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/skill_06.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9757682894537891,
+            6.748114794986319,
+            20.659123981552032
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 6,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 85.0,
+          "modelUnitAfter": 82.94030460357207,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 85,
+            "crown": 357,
+            "chin": 442,
+            "roiX": [
+              369,
+              421
+            ],
+            "face": [
+              409.1022806159895,
+              426.7118817967754
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            134,
+            356,
+            668,
+            857
+          ],
+          "sha256": "21c9f7ca4ed52b585b5f28022ce31aded9076cf6fac29d713f37b86ab54b1502",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/skill_07.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9523810268119711,
+            13.26106536636731,
+            40.59830068907466
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 7,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 90.0,
+          "modelUnitAfter": 85.7142924130774,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 90,
+            "crown": 348,
+            "chin": 438,
+            "roiX": [
+              371,
+              423
+            ],
+            "face": [
+              411.13441829698183,
+              422.4064206648785
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            140,
+            354,
+            661,
+            855
+          ],
+          "sha256": "d3b00b0e0dffdabcf218cdbba97c9b6b75c0f4157e8401585bcaff968ca0e9ec",
+          "durationMs": 60
+        },
+        {
+          "source": "v4/skill_08.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.94,
+            16.708968478599292,
+            51.153938824469485
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 8,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 94.0,
+          "modelUnitAfter": 88.36,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 94,
+            "crown": 339,
+            "chin": 433,
+            "roiX": [
+              375,
+              427
+            ],
+            "face": [
+              415.2745116855848,
+              416.08008750146394
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            137,
+            325,
+            692,
+            855
+          ],
+          "sha256": "67aa466ec51505d7c2d279ca21ba2739bb76ed076edba793999357d8545dd9b3",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/skill_09.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.94,
+            16.708968478599292,
+            51.153938824469485
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 9,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 94.0,
+          "modelUnitAfter": 88.36,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 94,
+            "crown": 337,
+            "chin": 431,
+            "roiX": [
+              377,
+              429
+            ],
+            "face": [
+              416.817183020987,
+              414.3269353342994
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            142,
+            335,
+            893,
+            855
+          ],
+          "sha256": "a77d658c386292eb761a8eede780285d0f8d8b1e3fd777e08b323cd17d254f2f",
+          "durationMs": 65
+        },
+        {
+          "source": "v4/skill_10.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.94,
+            16.708968478599292,
+            51.153938824469485
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 10,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 90.0,
+          "modelUnitAfter": 84.6,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 90,
+            "crown": 336,
+            "chin": 426,
+            "roiX": [
+              379,
+              431
+            ],
+            "face": [
+              418.6620039972794,
+              413.0961377630697
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            137,
+            338,
+            877,
+            855
+          ],
+          "sha256": "f0d5f0689984009184bbe6f9e2c0e3089a0d6f0bef4b17ec2cb320a635708ae0",
+          "durationMs": 75
+        },
+        {
+          "source": "v4/skill_11.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9437137945710942,
+            15.674740538192518,
+            47.98768515286282
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 11,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 96.0,
+          "modelUnitAfter": 90.59652427882504,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 96,
+            "crown": 336,
+            "chin": 432,
+            "roiX": [
+              384,
+              436
+            ],
+            "face": [
+              423.6072641459808,
+              414.2365633375747
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            97,
+            337,
+            897,
+            855
+          ],
+          "sha256": "8448130d6a5fc05a20337fb61317b4983c71c3820ab24ade6bb22d49e85b4639",
+          "durationMs": 80
+        },
+        {
+          "source": "v4/skill_12.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9581315608768286,
+            11.659640492620394,
+            35.69559289304554
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 12,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 90.0,
+          "modelUnitAfter": 86.23184047891458,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 90,
+            "crown": 346,
+            "chin": 436,
+            "roiX": [
+              388,
+              440
+            ],
+            "face": [
+              427.98337882536543,
+              421.8632283502832
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            95,
+            354,
+            731,
+            855
+          ],
+          "sha256": "59a4766f4980040da12fdbb3cd9398717a9ea0b6e4f7948743871eaeedac85e6",
+          "durationMs": 80
+        },
+        {
+          "source": "v4/skill_13.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9726613592402031,
+            7.613341445053252,
+            23.307985949513256
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 13,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 89.0,
+          "modelUnitAfter": 86.56686097237808,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 89,
+            "crown": 352,
+            "chin": 441,
+            "roiX": [
+              390,
+              442
+            ],
+            "face": [
+              429.6561258407876,
+              427.1220180086141
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            133,
+            364,
+            672,
+            856
+          ],
+          "sha256": "304fcf1bfa9b6699fd3d3679e8a7a66084aa460cdb0443f69180c704e2f26b2f",
+          "durationMs": 85
+        },
+        {
+          "source": "v4/skill_14.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9889512211275344,
+            3.0768949651173507,
+            9.41980930878658
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 14,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 86.0,
+          "modelUnitAfter": 85.04980501696797,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 86,
+            "crown": 356,
+            "chin": 442,
+            "roiX": [
+              388,
+              440
+            ],
+            "face": [
+              428.04222517507833,
+              426.9211559242833
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            111,
+            359,
+            681,
+            855
+          ],
+          "sha256": "f493ffc878a4c894f2b2a4ea881624355db9a508f434edc810b23f1d14e64fc4",
+          "durationMs": 85
+        },
+        {
+          "source": "v4/skill_15.png",
+          "sourceRect": [
+            0,
+            0,
+            1024,
+            1024
+          ],
+          "finalMatrix": [
+            0.9978557490470191,
+            0.5971370263927317,
+            1.828114701218233
+          ],
+          "sourceVersion": 4,
+          "sourceFrame": 15,
+          "approvedPoseOrder": true,
+          "modelUnitBefore": 86.0,
+          "modelUnitAfter": 85.81559441804364,
+          "targetModelUnit": 86,
+          "sourceModelUnit": {
+            "height": 86,
+            "crown": 354,
+            "chin": 440,
+            "roiX": [
+              377,
+              429
+            ],
+            "face": [
+              416.9223633981933,
+              427.79707891316525
+            ]
+          },
+          "uniformScaleOnly": true,
+          "bounds": [
+            109,
+            353,
+            673,
+            856
+          ],
+          "sha256": "f9cc4a3fed940f5ce45eaab863bad4c2c53d093b7e80bd2d28d8750f4ebc8c77",
+          "durationMs": 100
+        }
+      ],
+      "durationMs": 1140,
+      "artworkPreserved": true,
+      "samePoseOrder": true,
+      "scaleMeasurement": "hair-crown to face-chin, regularized across adjacent poses",
+      "modelUnitCvBeforePercent": 3.7404203637863196,
+      "modelUnitCvAfterPercent": 2.005815289432163,
+      "scales": [
+        0.999158990136843,
+        0.9965130183644318,
+        0.9919276326422867,
+        0.9890096238894427,
+        0.9863588007420446,
+        0.9757682894537891,
+        0.9523810268119711,
+        0.94,
+        0.94,
+        0.94,
+        0.9437137945710942,
+        0.9581315608768286,
+        0.9726613592402031,
+        0.9889512211275344,
+        0.9978557490470191
+      ],
+      "label": "Skill",
+      "description": "Urutan mantera yang sama dengan skala model diselaraskan.",
+      "durations": [
+        80,
+        75,
+        75,
+        75,
+        75,
+        65,
+        60,
+        65,
+        65,
+        75,
+        80,
+        80,
+        85,
+        85,
+        100
+      ],
+      "atlas": "atlases/skill.webp",
+      "rects": [
+        [
+          16,
+          16,
+          640,
+          640
+        ],
+        [
+          672,
+          16,
+          640,
+          640
+        ],
+        [
+          1328,
+          16,
+          640,
+          640
+        ],
+        [
+          1984,
+          16,
+          640,
+          640
+        ],
+        [
+          2640,
+          16,
+          640,
+          640
+        ],
+        [
+          16,
+          672,
+          640,
+          640
+        ],
+        [
+          672,
+          672,
+          640,
+          640
+        ],
+        [
+          1328,
+          672,
+          640,
+          640
+        ],
+        [
+          1984,
+          672,
+          640,
+          640
+        ],
+        [
+          2640,
+          672,
+          640,
+          640
+        ],
+        [
+          16,
+          1328,
+          640,
+          640
+        ],
+        [
+          672,
+          1328,
+          640,
+          640
+        ],
+        [
+          1328,
+          1328,
+          640,
+          640
+        ],
+        [
+          1984,
+          1328,
+          640,
+          640
+        ],
+        [
+          2640,
+          1328,
+          640,
+          640
+        ]
+      ],
+      "hashes": [
+        "d0111d548650ea55624ba6edcea6b7ab852752955a3595d0efabb52e90bcbbf9",
+        "1a85ac308dbf20412f29e7a2122e9e6b37479d9b5a7b3847d6d5dacd282d4c16",
+        "bda88c940b13adfdd57671746a431e57c8b5ea4e6ebbcb2cff96e524c229d3e4",
+        "9146231a36a6fad784a33f0fad95ed5c09b27ce76a5e0f36bf62203ea59ebff9",
+        "0e00b2265ab77a48f2a1dc7e64fbf18b71c586a21d9dca3b06065fcb4f77d93c",
+        "21c9f7ca4ed52b585b5f28022ce31aded9076cf6fac29d713f37b86ab54b1502",
+        "d3b00b0e0dffdabcf218cdbba97c9b6b75c0f4157e8401585bcaff968ca0e9ec",
+        "67aa466ec51505d7c2d279ca21ba2739bb76ed076edba793999357d8545dd9b3",
+        "a77d658c386292eb761a8eede780285d0f8d8b1e3fd777e08b323cd17d254f2f",
+        "f0d5f0689984009184bbe6f9e2c0e3089a0d6f0bef4b17ec2cb320a635708ae0",
+        "8448130d6a5fc05a20337fb61317b4983c71c3820ab24ade6bb22d49e85b4639",
+        "59a4766f4980040da12fdbb3cd9398717a9ea0b6e4f7948743871eaeedac85e6",
+        "304fcf1bfa9b6699fd3d3679e8a7a66084aa460cdb0443f69180c704e2f26b2f",
+        "f493ffc878a4c894f2b2a4ea881624355db9a508f434edc810b23f1d14e64fc4",
+        "f9cc4a3fed940f5ce45eaab863bad4c2c53d093b7e80bd2d28d8750f4ebc8c77"
+      ],
+      "comparison": {
+        "atlas": "atlases/skill_before.webp",
+        "rects": [
+          [
+            16,
+            16,
+            640,
+            640
+          ],
+          [
+            672,
+            16,
+            640,
+            640
+          ],
+          [
+            1328,
+            16,
+            640,
+            640
+          ],
+          [
+            1984,
+            16,
+            640,
+            640
+          ],
+          [
+            2640,
+            16,
+            640,
+            640
+          ],
+          [
+            16,
+            672,
+            640,
+            640
+          ],
+          [
+            672,
+            672,
+            640,
+            640
+          ],
+          [
+            1328,
+            672,
+            640,
+            640
+          ],
+          [
+            1984,
+            672,
+            640,
+            640
+          ],
+          [
+            2640,
+            672,
+            640,
+            640
+          ],
+          [
+            16,
+            1328,
+            640,
+            640
+          ],
+          [
+            672,
+            1328,
+            640,
+            640
+          ],
+          [
+            1328,
+            1328,
+            640,
+            640
+          ],
+          [
+            1984,
+            1328,
+            640,
+            640
+          ],
+          [
+            2640,
+            1328,
+            640,
+            640
+          ]
+        ],
+        "hashes": [
+          "aaaec2b921bbcf188c84eff92558494fbecace8f9afe20a77bba4a5c5539a4f7",
+          "42f4d5c29f42ddec4a7f782502621755a50c21f1beff43119d9c595f4178929b",
+          "97a842a183cb51057b6026fbb3731032ab8e2b8468da9b25fa332add22e7548e",
+          "455ff5f7945ca01a2d59313c182541d758d44847defb73fdf1f0db3e82cefb3b",
+          "337c7861e24ecad0e3c6e025af0d42d74cb4024950cdb5763bf21059864b750a",
+          "d01b2db259bc2741e64839e0c759d0fc4efb2641dee50d58d44d81450f82058c",
+          "0826dfb2d0651233d280533cac54ae87c0042a41e862381b523ee9edcfa0ed36",
+          "4f6119081ddd6d17f123d8b6aa64ef2c31f353eaf46fd1896ad13e5e65cd6210",
+          "fc9e6a08437c4bc0e984c15a566d0ef48e9acd0329f57ef019a099f6a3089e21",
+          "3eac7ed067473af02fe3a31f1c33b17b46de0d4539d69236758e4f49cee377c5",
+          "9daefb7c0db11c60dd0781359e07cae2d65347527e155d5ea9811417f2d92a86",
+          "ad849ccf42f923a8e35148b9f8aa7ff9c35c374f57621ba4020e6bcb5a1f304f",
+          "64b1312c9dd371496e2d5928531403074577f67bc9cce864fb319a90cc42ba0a",
+          "52869d7914f97568aaf569c70055d3cf96597d82d7d51b29edc91feee4df50b1",
+          "d0afae0e971adbf9b90d1d3058f366585230fe3caccd9e4ea73a6dd107012155"
+        ]
+      }
+    }
+  },
+  "sources": {
+    "idle-eight.png": {
+      "size": [
+        1774,
+        887
+      ],
+      "sha256": "1819873fa2e1591c1e06986cd56612c59e3b5f9c71072a0fb9d43974f8b51728",
+      "prompt": "prompts/idle-eight-consistent.txt",
+      "mode": "built-in imagegen"
+    },
+    "damage-contact.png": {
+      "size": [
+        2172,
+        724
+      ],
+      "sha256": "8746ca348c9650ae2ca9b862a8fa1886ea5630e4449153337964a505ccc2c45a",
+      "prompt": "prompts/damage_contact.txt",
+      "mode": "built-in imagegen"
+    },
+    "damage-recoil.png": {
+      "size": [
+        2172,
+        724
+      ],
+      "sha256": "328321fb11a137ac3e49b5e1bb225df8e62d0cd02717098168cac71bf4b4255c",
+      "prompt": "prompts/damage_recoil.txt",
+      "mode": "built-in imagegen"
+    },
+    "damage-recovery.png": {
+      "size": [
+        2172,
+        724
+      ],
+      "sha256": "8f25aadcb45a03628b68a4548e880ce60979e7f895f8499cfe187a5a9575a058",
+      "prompt": "prompts/damage_recovery.txt",
+      "mode": "built-in imagegen"
+    }
+  }
+}

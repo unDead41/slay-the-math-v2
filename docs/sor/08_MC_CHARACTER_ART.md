@@ -1,6 +1,21 @@
 # 08 — MC pengembara dungeon dan model sheet
 
-Versi: 2.1.0. Nama dan gelaran terkini DISAHKAN oleh Ijamm; sheet asal kekal rujukan seni.
+## Current Alyssa motion — V5 / game 2.45.0, 25 October 2026
+
+**CHR-10 (DISAHKAN):** Ijamm approves the completed V5 review and requests applying
+it to the game with a direct main push. Use its right-facing Idle, Attack,
+Damaged, Defend and Skill, 15 exposure slots each. Idle reuses eight drawings for
+its symmetrical breath/blink loop; the other clips contain fifteen unique poses.
+Preserve the exact approved atlases, original weapon sides, `mc_01`, name and
+both-stage support. No rig or new redraw is introduced by integration.
+
+**CHR-11:** V5's baked registration supersedes the historical six-frame Skill
+calibration below. Use one source scale/pivot and layout-based headroom for all
+poses; update the same-family fallback posters and VFX body measurement. Small
+source drawing/proportion variations remain; do not call them perfect anatomical
+consistency. [Source, registration and release](../ALYSSA_MOTION_V5_2_45_0.md).
+
+Versi: 2.2.0. Nama dan gelaran terkini DISAHKAN oleh Ijamm; sheet asal kekal rujukan seni.
 
 ## Keutamaan sumber
 

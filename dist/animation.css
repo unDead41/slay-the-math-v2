@@ -3,6 +3,10 @@
 .combat-layout .fighter-anchor[data-animation-ready='true']>.actor-animation{display:block}
 .combat-layout .fighter-anchor[data-animation-ready='true']>.fighter-art{visibility:hidden;animation:none!important}
 /* Posters and animated frames now use the same right-facing art and scale. */
+/* Reserve the artifact rail and floor-panel inset for the tallest V5 pose.
+   0.92 < 1200/(1.7*maximum hero rise). Apply the same proportional cap to
+   all actors; never resize a model in response to its current animation. */
+.combat-layout .fighter-anchor{--motion-top-gap:min(54px,calc(var(--ground-y) * .25));max-height:max(1px,calc((var(--ground-y) - var(--motion-top-gap)) * .92 * var(--figure-scale,1)))}
 .combat-layout .player .fighter-art{animation:none!important}
 .combat-layout .enemy:has(.actor-animation) .fighter-art{animation:none!important}
 /* Keep the supplied wide hero cells inside the phone arena. */

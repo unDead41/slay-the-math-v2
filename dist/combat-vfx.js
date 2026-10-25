@@ -1,7 +1,7 @@
 /* Live, read-only compositor for the reviewed Shield V3 / Passive V10 / stat V9 fields. */
 (function(root){'use strict';
  const attributes=['strength','agility','defense'],barriers=['thorns','weak','vulnerable'];
- // Visible idle alpha heights in the unchanged, floor-registered 1600x1200 posters.
+ // Legacy idle alpha-height fallbacks; newer actor registries own their size.
  const bodyHeight={mc_01:539,wisp:999,beetle:998,bat:1000,knight:999,shard:999,weaver:947,shade:936,mimic:675,golem:812,reaper:957,sentinel:832,dealer:836};
  const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>{x=clamp(x);return x*x*x*(x*(x*6-15)+10);};
  function create(options={}){
@@ -69,7 +69,7 @@
    for(const c of [...actor.canvases,actor.body])if(c.width!==width||c.height!==height){c.width=width;c.height=height;}
    const element=actor.canvases[0].closest('.combatant'),id=actor.role==='player'?'mc_01':element?.dataset.enemy;
    const spec=actor.role==='player'?root.DCAnimationData?.hero:root.DCAnimationData?.actors[id],foot=spec?.floorPivot||root.DCAnimationData?.floorPivot||[800,1100];
-   actor.geometry={width:r.width,height:r.height,ratio,footX:r.width*foot[0]/1600,footY:r.height*foot[1]/1200,unit:r.width/1600,scale:(bodyHeight[id]||900)/350};
+   actor.geometry={width:r.width,height:r.height,ratio,footX:r.width*foot[0]/1600,footY:r.height*foot[1]/1200,unit:r.width/1600,scale:(spec?.bodyHeight||bodyHeight[id]||900)/350};
    return true;
   }
   function field(actor,id){if(!actor.fields.has(id))actor.fields.set(id,id==='block'?S.create():A.create());return actor.fields.get(id);}

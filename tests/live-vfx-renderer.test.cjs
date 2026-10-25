@@ -8,7 +8,7 @@ function boot(){
  w.CanvasRenderingContext2D=function(){};
  w.requestAnimationFrame=fn=>{pending.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>pending.delete(id);
  w.HTMLCanvasElement.prototype.getBoundingClientRect=()=>({width:640,height:480});
- w.HTMLCanvasElement.prototype.getContext=function(){return this.ctx||(this.ctx={canvas:this,clearRect(){},setTransform(){},scale(){},save(){},restore(){},fillRect(){},drawImage(){},createLinearGradient(){return{addColorStop(){}};}});};
+ w.HTMLCanvasElement.prototype.getContext=function(){return this.ctx||(this.ctx={canvas:this,clearRect(){},setTransform(){},scale(x,y){calls.push({id:'transform',x,y});},save(){},restore(){},fillRect(){},drawImage(){},createLinearGradient(){return{addColorStop(){}};}});};
  w.STMPassiveField={create(){const p=P.create();return {...p,paint(ctx,t,opts){calls.push({id:'passive',time:t,...opts});}};}};
  w.STMAuraField={...A,create(){return {paint(ctx,time,id,opts){calls.push({id,time,...opts});return A.stateAt(time,id,opts);},destroy(){}};}};
  w.STMShieldField={create(){return {paint(ctx,time,event,opts){calls.push({id:'block',event,time,...opts});return S.stateAt(time,event,opts);}};}};
@@ -18,6 +18,13 @@ function boot(){
 }
 function state(values={},passives=[]){return {identity:'battle-1',seq:1,actors:{player:{values,equipped:passives.map(p=>p.source),passives},enemy:{values:{},equipped:[],passives:[]}}};}
 const front=f=>f.d.querySelector('.player [data-vfx-layer=front]');
+
+test('new model registration owns VFX body size instead of the retired poster measurement',()=>{
+ const f=boot();try{
+  f.w.DCAnimationData={hero:{bodyHeight:700},actors:{}};f.v.mount(state({block:5}));f.advance(100);
+  assert.ok(f.calls.some(c=>c.id==='transform'&&c.x===2&&c.y===2),'registry height must control the material coordinate system');
+ }finally{f.close();}
+});
 
 test('a browser without Canvas 2D retains the existing status fallback',()=>{
  const f=boot();let unsupported;try{

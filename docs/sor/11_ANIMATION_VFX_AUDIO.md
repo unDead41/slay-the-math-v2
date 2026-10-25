@@ -1,6 +1,27 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.9.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+Versi: 2.10.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+
+## Alyssa V5 dalam game — 2.45.0, 25 Oktober 2026
+
+**MOT-33 (DISAHKAN):** Ijamm approves the V5 HTML and authorizes integration plus
+direct main publication. All five right-facing clips have fifteen exposure
+slots. Preserve their source timing; Idle loops and other motions return to
+Idle. Idle has eight unique drawings with repeated exposures for exhale/blink.
+No rig, morph, extra source drawing or gameplay/RNG change is introduced.
+
+**MOT-34 (DITERUSKAN registration):** Copy the approved atlases unchanged and
+generate five matching posters. Use a fixed common source projection and the
+actual floor-based layout cap for the tallest overhead pose, without per-action
+or per-frame camera fitting. The retired six-frame Skill scale correction is
+not applied again. Existing enemy/boss source registrations remain unchanged.
+
+**MOT-35:** Actor registration owns the current Idle body height used by the live
+VFX compositor. Preserve the existing painters, persistent controllers, memory
+budget, modal/hidden/reduced-motion cancellation and outcome-driven triggers.
+Verify native production playback, all 75 pose bounds, fallback and portable
+offline behavior. [Release](../ALYSSA_MOTION_V5_2_45_0.md) and
+[audit/evidence](../audits/alyssa-motion/LATEST.md) own actual results and limits.
 
 ## Integrasi combat sebenar — 2.44.0, 25 Oktober 2026
 

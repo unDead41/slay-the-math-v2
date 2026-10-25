@@ -30,9 +30,9 @@ test('Stage 2 resolved intents choose Attack, Defend and Skill independently of 
  assert.equal(S.intentAction(1,'dealer',{label:'Dark Veil',block:4}),'defend');
 });
 
-test('the accepted Stage 1 registry and all Alyssa frames/pivots/scales remain unchanged',()=>{
+test('the Alyssa V5 import preserves all accepted enemy and boss registries',()=>{
  const hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
  const stage1=Object.fromEntries(Object.keys(D.actors).filter(k=>D.actors[k].stage===0&&k!=='sentinel').sort().map(k=>[k,D.actors[k]]));
  assert.equal(hash(stage1),'c3a0a87e67123d41807b5e88746a6e33d323bb0cb076a847ccb419cb7c17be7c');
- assert.equal(hash(D.hero),'3a19d059c43b9c9004cef55c12c4f4ae17d4b9394a402cac28ac082c9852f556');
+ const audit=require('../docs/animations/alyssa-v5/import-audit.json');assert.equal(hash(D.actors),audit.untouched_actors_sha256);
 });

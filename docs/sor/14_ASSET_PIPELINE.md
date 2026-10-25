@@ -1,5 +1,23 @@
 # 14 — Pipeline aset, penamaan dan penerimaan
 
+## Approved Alyssa V5 — game 2.45.0
+
+Ijamm approves the V5 review and authorizes direct main integration. Import the
+exact reviewed ZIP using `tools/import-alyssa-v5.py`; reject a different source
+hash. Copy the five lossless 640px-cell atlases byte-for-byte, verify all 75
+native frame hashes, alpha padding and projected bounds, and generate matching
+1600×1200 fallback posters. Preserve enemy/boss assets and registries. Source
+manifest, compact review sheets and reproducible import audit are retained in
+`docs/animations/alyssa-v5/`; duplicate native PNGs, HTML review and video are
+not shipped as gameplay assets. Existing source history remains in Git.
+
+The single projection converts the V5 rear-boot pivot to its HTML ground-shadow
+centre; V5's baked model normalization replaces the old Skill scale array. The
+hero registry owns its measured poster body height for VFX. No local deformation,
+mirroring, rig or new native-resolution claim is introduced. These current rules
+supersede the historical six-frame hero import/calibration below, not enemy or
+boss import ownership. [Source contract](../ALYSSA_MOTION_V5_2_45_0.md).
+
 Status: CADANGAN. Digunakan bagi kad, ikon, MC, musuh, background, VFX dan audio.
 
 ## Aliran aset

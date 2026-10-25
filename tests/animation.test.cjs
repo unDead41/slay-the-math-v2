@@ -71,19 +71,21 @@ test('Alyssa animation spans both stages while enemy IDs remain stage scoped',()
  assert.equal(S.supports(2,'mc_01'),false);assert.equal(S.supports(1,'beetle'),false);
  assert.equal(S.spec(0,'mc_01').facing,'right');
 });
-test('all six Skill body silhouettes keep the same crown-to-floor size, independently of fire effects',async()=>{
- const clip=D.hero.animations.skill,crowns=[322,329,360,349,341,335];
- const heights=crowns.map((c,i)=>(clip.pivots[i][1]-c)*(clip.scales?.[i]||1));
- assert.ok(Math.max(...heights)-Math.min(...heights)<1,JSON.stringify(heights));
- const f=fixture({spec:D.hero});await flush();f.player.play('skill');await flush();await f.step(0);
- for(let i=0;i<6;i++){
-  if(i)await f.step(clip.durationsMs[i-1]);
-  assert.equal(f.player.snapshot().frame,i);
-  const draw=f.draws.at(-1),scale=D.hero.drawScale*clip.scales[i];
-  assert.ok(Math.abs(draw[6]+clip.pivots[i][1]*scale-D.floorPivot[1])<.000001);
-  assert.ok(Math.abs(draw[7]-1024*scale)<.000001);
+test('all approved V5 poses use one projection and source timing, without applying the retired six-frame Skill correction',async()=>{
+ const source=require('../docs/animations/alyssa-v5/source-manifest.json');
+ for(const [action,clip]of Object.entries(D.hero.animations)){
+  assert.equal(clip.frames.length,15);assert.equal(clip.scales,undefined);assert.deepEqual(clip.durationsMs,source.actions[action].durations);
+  const f=fixture({spec:D.hero});await flush();f.player.play(action);await flush();await f.step(0);
+  for(let i=0;i<15;i++){
+   assert.equal(f.player.snapshot().frame,i,action+' frame '+i);const draw=f.draws.at(-1),scale=D.hero.drawScale;
+   assert.deepEqual(draw.slice(1,5),source.actions[action].rects[i]);
+   assert.ok(Math.abs(draw[6]+clip.pivots[i][1]*scale-D.floorPivot[1])<.000001);
+   assert.ok(Math.abs(draw[5]+clip.pivots[i][0]*scale-D.floorPivot[0])<.000001);
+   assert.ok(Math.abs(draw[7]-640*scale)<.000001);
+   await f.step(clip.durationsMs[i]-1);assert.equal(f.player.snapshot().frame,i,'hold must last until the exact source boundary');await f.step(1);
+  }
+  assert.equal(f.player.snapshot().action,'idle');assert.equal(f.player.snapshot().frame,0);f.player.destroy();
  }
- f.player.destroy();
 });
 
 test('repeated unchanged configuration preserves an active animation clock',async()=>{

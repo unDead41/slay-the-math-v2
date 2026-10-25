@@ -1,0 +1,43 @@
+✖ Alyssa Idle rear boot stays at the accepted Attack root instead of stepping forward on return (1.711812ms)
+✖ Alyssa breath continues while a slower blink occurs every second Idle cycle (0.854834ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.89954
+
+✖ failing tests:
+
+test at tests/animation.test.cjs:95:1
+✖ Alyssa Idle rear boot stays at the accepted Attack root instead of stepping forward on return (1.711812ms)
+  AssertionError [ERR_ASSERTION]: Idle rear boot must share the action root
+      at TestContext.<anonymous> (/workspace/scratch/cb3a4a5fc644/game-idle-alignment/tests/animation.test.cjs:101:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/animation.test.cjs:109:1
+✖ Alyssa breath continues while a slower blink occurs every second Idle cycle (0.854834ms)
+  AssertionError [ERR_ASSERTION]: first breath peak keeps eyes open
+
+  7 !== 5
+
+      at TestContext.<anonymous> (/workspace/scratch/cb3a4a5fc644/game-idle-alignment/tests/animation.test.cjs:112:27)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 7,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

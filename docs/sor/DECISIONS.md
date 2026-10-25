@@ -1,5 +1,19 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-IDLE-ROOT-BLINK — Correct the confirmed Idle defects
+
+- **DISAHKAN:** Ijamm requests slower eyelid motion and aligned Idle/action
+  placement; previous direct-main authorization continues for this same feature.
+- **DITERUSKAN:** fix only Alyssa's measured116.2-native-px Idle root error with
+  a constant clip pivot. Blink280ms every3460ms while breathing continues.
+  Preserve all atlas bytes and all four action clips; regenerate the Idle poster.
+- **Not established:** enemy placement report does not reproduce in current
+  source/live samples or12-actor continuity checks. Keep the accepted pivots;
+  expose all motions in a hosted review and retain that limitation explicitly.
+- **Verification:** meaningful RED/GREEN, production/native/offline tests and
+  full-suite historical-input failure/recovery are retained, with inherited P2s.
+  [Current audit](../audits/alyssa-motion/LATEST.md).
+
 ## DEC-20261025-ICON-COMBAT-MAIN — Publish both completed follow-ups
 
 - **DISAHKAN:** Ijamm now requests publishing the completed icon and combat

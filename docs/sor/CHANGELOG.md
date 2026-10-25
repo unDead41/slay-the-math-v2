@@ -1,5 +1,14 @@
 # Changelog SOR — Slay the Math
 
+## 2.49.1 — 25 October 2026
+
+Slow Alyssa's Idle blink to280ms every3460ms and correct its constant resting
+root to match accepted actions, including the static fallback. Keep all approved
+source atlas bytes, action/enemy/boss registrations and2.49 gameplay/VFX/loader
+features. Add a hosted five-action review for Alyssa and all12 enemies/bosses.
+Current enemy placement report remains unconfirmed; native continuity is checked
+without inventing offsets. [Evidence, failed/passing checks and limits](../audits/alyssa-motion/LATEST.md).
+
 ## 2.49.0 — 25 October 2026
 
 Combine the approved icon-loading and combat-continuity follow-ups with current

@@ -1,0 +1,27 @@
+{
+  "version": "2.49.1",
+  "base": "d77b3e0ce87d573de89e84a9b2374df97ad625b9",
+  "fullNodeRun": {
+    "tests": 1150,
+    "pass": 1148,
+    "fail": 2,
+    "skipped": 0,
+    "status": "FAILED historical inputs absent"
+  },
+  "targetedRecovery": {
+    "file": "tests/balance-combat.test.cjs",
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "fetchedCommit": "2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7"
+  },
+  "uniqueTestsVerifiedAcrossRuns": 1150,
+  "nativeGame": "alyssa-browser.json",
+  "nativePreview": "preview-native.json",
+  "enemyPlacementStatus": "not reproduced; no offset applied",
+  "runtimeHashes": {
+    "animation.js": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9",
+    "animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
+    "motion-preview.html": "5992158080d8910b4007a2b02851db78e73905c6a1dae41f23a65c3cb34fe787"
+  }
+}

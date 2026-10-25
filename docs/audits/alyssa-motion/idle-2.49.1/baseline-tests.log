@@ -1,0 +1,31 @@
+✔ only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames (1.160956ms)
+✔ idle advances at source FPS; non-looping Attack completes once and returns to idle (1.450521ms)
+✔ every frame uses the same floor registration and source rectangles, without per-pose recentering (0.476938ms)
+✔ pause freezes the exact frame and resumes without counting hidden time (0.629617ms)
+✔ Motion Off uses the supplied idle frame, schedules no animation, and never replays an action (0.317177ms)
+✔ a late action load cannot replace a newer reaction or revive a destroyed actor (0.274853ms)
+✔ missing action textures recover to idle and a missing idle leaves the original image fallback (0.300662ms)
+✔ variable frame durations keep windup and recovery timing and finish exactly at the source total (0.499542ms)
+✔ actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor (0.35906ms)
+✔ Alyssa animation spans both stages while enemy IDs remain stage scoped (0.196316ms)
+✔ all approved V5 poses use one projection and source timing, without applying the retired six-frame Skill correction (5.116484ms)
+✔ repeated unchanged configuration preserves an active animation clock (0.153551ms)
+✔ every canonical Normal and Elite encounter in both stages has all five source motions (3.037067ms)
+✔ Stage 2 loading and failure posters use the same left-facing source for every reaction (1.710713ms)
+✔ Stage 2 resolved intents choose Attack, Defend and Skill independently of damage/RNG (0.768025ms)
+✔ the Alyssa V5 import preserves all accepted enemy and boss registries (2.271466ms)
+✔ decoded cache evicts by pixel bytes rather than number of textures (1.078311ms)
+✔ active clips survive pressure and idle is preferred ahead of unrelated textures (0.448955ms)
+✔ one released owner cannot unpin a clip still used by another actor (0.267963ms)
+✔ oversized unowned images can be displayed without staying in the cache (0.236045ms)
+✔ active-only oversize is reported and released immediately when its owner exits (0.248013ms)
+✔ concurrent requests decode one image and a failed decode never poisons retry (0.687654ms)
+✔ a forgotten late load cannot replace or inflate a newer same-path entry (8.722307ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 103.784411

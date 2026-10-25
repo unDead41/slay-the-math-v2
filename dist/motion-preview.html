@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ms">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alyssa — Motion Review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10151e;color:#f1e5c9;font:16px system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:28px 18px}h1{font-size:clamp(24px,5vw,36px);margin:0 0 8px}p{color:#c0c6cf;line-height:1.5}button,select{font:inherit;color:inherit;background:#212b39;border:1px solid #69717c;border-radius:8px;padding:10px 14px;cursor:pointer}button[aria-pressed=true]{border-color:#e8bf65;background:#4b3b22}button:focus-visible,select:focus-visible{outline:3px solid #f1c968;outline-offset:3px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.stage{display:grid;grid-template-columns:1fr 1fr;gap:16px}.model{min-width:0;background:radial-gradient(ellipse at 50% 80%,#303d4e,#171e29 65%);border:1px solid #3c4655;border-radius:14px;overflow:hidden;position:relative}.model:after{content:'';position:absolute;left:12%;right:12%;top:91.67%;border-top:1px solid #d2af6066;pointer-events:none}.model.boss:after{top:83.33%}.model{aspect-ratio:4/3}.model h2{font-size:17px;position:absolute;left:18px;top:0;z-index:1}.model canvas{position:absolute;left:50%;top:var(--figure-foot,91.6666667%);height:calc(60% * var(--figure-scale,1));width:auto;display:block;transform:translate(-50%,calc(-1 * var(--figure-foot,91.6666667%)))}.status{font-size:14px;min-height:24px;color:#b9c2d0}label{display:flex;align-items:center;gap:8px}a{color:#e8c67e}@media(max-width:600px){main{padding:20px 12px}.stage{grid-template-columns:1fr;gap:12px}}
+</style>
+<main>
+<h1>Alyssa — Motion Review</h1>
+<p>Idle dengan kelipan lebih perlahan dan posisi yang diselaraskan. Pilih aksi untuk bandingkan gerakan Alyssa dengan musuh.</p>
+<div class="controls" id="actions" aria-label="Aksi">
+<button data-action="idle" aria-pressed="true">Idle</button><button data-action="attack" aria-pressed="false">Attack</button><button data-action="defend" aria-pressed="false">Defend</button><button data-action="skill" aria-pressed="false">Skill</button><button data-action="damaged" aria-pressed="false">Kena Attack</button>
+</div>
+<div class="controls"><label>Musuh <select id="enemy"></select></label><button id="pause" aria-pressed="false">Pause</button><label><input type="checkbox" id="cycle">Mainkan semua aksi</label></div>
+<div class="stage"><section class="model"><h2>Alyssa</h2><canvas style="--figure-scale:1.7" id="hero" width="1600" height="1200" aria-label="Animasi Alyssa"></canvas></section><section class="model" id="enemy-model"><h2 id="enemy-name">Musuh</h2><canvas id="enemy-canvas" width="1600" height="1200" aria-label="Animasi musuh"></canvas></section></div>
+<p class="status" id="status" aria-live="polite">Memuatkan motion…</p>
+<p><a href="index.html">Buka game</a></p>
+</main>
+<script src="animation-data.js"></script><script src="animation.js"></script>
+<script>
+'use strict';
+const $=s=>document.querySelector(s),D=DCAnimationData,A=DCActorAnimation,actions=['idle','attack','defend','skill','damaged'];
+let hero,enemy,action='idle',paused=false,timer=null;
+for(const [id,spec]of Object.entries(D.actors))$('#enemy').add(new Option(spec.name,id));
+$('#enemy').value='knight';
+function stop(){clearTimeout(timer);timer=null;}
+function schedule(){stop();if(!$('#cycle').checked||paused||document.hidden)return;const c=D.hero.animations[action],ms=c.durationsMs.reduce((a,b)=>a+b,0);timer=setTimeout(()=>play(actions[(actions.indexOf(action)+1)%actions.length]),action==='idle'?3460:ms+600);}
+function play(next){action=next;hero?.play(next);enemy?.play(next);for(const b of $('#actions').querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.action===next));$('#status').textContent=next==='idle'?'Idle · kelipan 0.28 saat, sela 3.46 saat':$('#actions [data-action="'+next+'"]').textContent+' → Idle';schedule();}
+function mountEnemy(){enemy?.destroy();const s=D.actors[$('#enemy').value];enemy=A.create({canvas:$('#enemy-canvas'),spec:s,paused:paused||document.hidden});$('#enemy-canvas').style.setProperty('--figure-scale',s.figureScale??D.figureScale);$('#enemy-canvas').style.setProperty('--figure-foot',100*(s.floorPivot||D.floorPivot)[1]/D.canvas[1]+'%');$('#enemy-name').textContent=s.name;$('#enemy-model').classList.toggle('boss',s.type==='boss');enemy.play(action);}
+hero=A.create({canvas:$('#hero'),spec:D.hero});mountEnemy();play('idle');
+$('#actions').addEventListener('click',e=>{if(e.target.dataset.action)play(e.target.dataset.action);});$('#enemy').addEventListener('change',mountEnemy);$('#cycle').addEventListener('change',schedule);
+$('#pause').addEventListener('click',()=>{paused=!paused;hero.configure({paused:paused||document.hidden});enemy.configure({paused:paused||document.hidden});$('#pause').textContent=paused?'Sambung':'Pause';$('#pause').setAttribute('aria-pressed',String(paused));schedule();});
+document.addEventListener('visibilitychange',()=>{hero.configure({paused:paused||document.hidden});enemy.configure({paused:paused||document.hidden});schedule();});
+window.addEventListener('pagehide',()=>{stop();hero.destroy();enemy.destroy();});
+</script>
+</html>

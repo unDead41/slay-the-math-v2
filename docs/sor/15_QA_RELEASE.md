@@ -1,5 +1,17 @@
 # 15 — QA, bukti semakan dan release
 
+## Idle follow-up — 2.49.1
+
+Fresh root/blink RED→GREEN regressions,25 scoped tests,19 identical reimport
+outputs, syntax and production/portable builds pass. The full Node run executes
+1150 tests:1148 pass and2 fail solely for unavailable historical Git inputs;
+fetching that commit and rerunning its file passes10/10, including both failures.
+Retain the failed full log; do not label that initial command PASS. Native game
+checks75 exposures, seven viewports, exact engine/save/RNG and fallbacks/offline.
+Native preview measures3460ms blink cadence and all12 enemy/boss action/Idle
+returns. Enemy subjective placement remains unconfirmed; inherited P2 findings
+remain open. [Commands, actual records and protected boundary](../audits/alyssa-motion/LATEST.md).
+
 ## Main integration authorization — 2.49.0
 
 Ijamm now requests publishing the completed icon-loading and combat-continuity

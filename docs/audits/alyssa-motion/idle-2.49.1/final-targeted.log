@@ -1,0 +1,42 @@
+✔ only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames (1.138192ms)
+✔ idle advances at source FPS; non-looping Attack completes once and returns to idle (1.492956ms)
+✔ every frame uses the same floor registration and source rectangles, without per-pose recentering (0.397268ms)
+✔ pause freezes the exact frame and resumes without counting hidden time (4.559408ms)
+✔ Motion Off uses the supplied idle frame, schedules no animation, and never replays an action (0.75121ms)
+✔ a late action load cannot replace a newer reaction or revive a destroyed actor (0.303125ms)
+✔ missing action textures recover to idle and a missing idle leaves the original image fallback (1.375198ms)
+✔ variable frame durations keep windup and recovery timing and finish exactly at the source total (4.053257ms)
+✔ actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor (0.414875ms)
+✔ Alyssa animation spans both stages while enemy IDs remain stage scoped (0.241122ms)
+✔ all approved V5 poses retain source rasters and action holds, with a fixed corrected Idle projection (8.76875ms)
+✔ repeated unchanged configuration preserves an active animation clock (0.205639ms)
+✔ Alyssa Idle rear boot stays at the accepted Attack root instead of stepping forward on return (0.187652ms)
+✔ Alyssa breath continues while a slower blink occurs every second Idle cycle (0.397378ms)
+✔ the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets (960.753302ms)
+✔ the actual startup package prioritizes the hero and Stage1 while deferring late packs (259.347999ms)
+✔ both bosses use all sixty left-facing source cells, original variable holds, and a floor registration that preserves translucent VFX (6.837705ms)
+✔ every canonical Normal and Elite encounter in both stages has all five source motions (3.114915ms)
+✔ Stage 2 loading and failure posters use the same left-facing source for every reaction (1.989983ms)
+✔ Stage 2 resolved intents choose Attack, Defend and Skill independently of damage/RNG (0.860525ms)
+✔ the Alyssa V5 import preserves all accepted enemy and boss registries (1.411042ms)
+✔ the actual game mounts independent front/back VFX canvases on both original actors (396.506788ms)
+✔ committed card updates keep the VFX surfaces and exact engine result (355.322543ms)
+✔ Canvas-less live combat keeps readable status badges without old decorative floor effects (123.852308ms)
+✔ release build replaces cached script and stylesheet URLs when their content changes, including within the same version (8.346074ms)
+✔ release build derives menu metadata from package.json and updates every launcher together (5.412841ms)
+✔ production refuses a private database in the public tree and removes stale output before failing (3.202637ms)
+✔ decoded cache evicts by pixel bytes rather than number of textures (1.15002ms)
+✔ active clips survive pressure and idle is preferred ahead of unrelated textures (0.449386ms)
+✔ one released owner cannot unpin a clip still used by another actor (0.276055ms)
+✔ oversized unowned images can be displayed without staying in the cache (0.281103ms)
+✔ active-only oversize is reported and released immediately when its owner exits (0.406001ms)
+✔ concurrent requests decode one image and a failed decode never poisons retry (0.755897ms)
+✔ a forgotten late load cannot replace or inflate a newer same-path entry (6.728461ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1637.228819

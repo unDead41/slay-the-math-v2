@@ -1,128 +1,87 @@
-# Alyssa V5 — main integration audit / 2.45.0
+# Idle motion correction — 2.49.1
 
 | Field | Reviewed record |
 | --- | --- |
 | Date | 25 October 2026, Asia/Kuala_Lumpur |
-| Repository / publication target | unDead41/slay-the-math-v2 / main |
-| Main base / local source SHA | `702be96cfc776a81057e6e53d950e5c5af931e88`, game 2.44.0 |
-| Main base tree | `aeb860424e1dd84e2c4f716b9b0495e9f1a1c477` |
-| Isolated working branch | `codex/alyssa-motion-v5`, based on that main |
-| Master SOR read | 1.2.0 from current main, followed by AGENTS, governance, decisions, design, animation/art/asset/QA/runtime owners and relevant prior audits |
-| User authorization | Approved V5 review, apply all five motions in game, push directly to main |
-| Final compatibility | **VALID within the verified motion integration scope**, subject to the limits below |
-| Publication | Non-forced update guarded by the reviewed main head; resulting commit/ref is read back and identified in the final handoff |
+| Repository / target | unDead41/slay-the-math-v2 / main |
+| Pinned main base | `d77b3e0ce87d573de89e84a9b2374df97ad625b9`, 2.49.0 |
+| Base tree | `6d32f0d6aa606c4a26e1c472232a080ae700f066` |
+| Isolated working branch | `fix/idle-registration`; fresh checkout, older dirty V5 checkout preserved |
+| Authorization | Slow the Idle blink and correct reported Idle/action positioning; preceding same-feature direct-main publication authorization continues |
+| Initial review | Current Master SOR 1.2.0, AGENTS, governance, MC/animation/design/QA/runtime owners and latest Alyssa/combat audits read before changes |
+| Final scope | Confirmed Alyssa defects resolved; enemy position report remains unconfirmed, with the exact limits below |
 
-## Before and after review
+## Initial findings and final actions
 
-Main still used five six-frame Alyssa clips, with six-element Skill scale
-correction and the old matching posters. V5 was approved separately and had not
-been installed. No existing Alyssa-specific current audit folder was present;
-the older 2.8/2.9 motion documents and current 2.44 live-VFX audit were read as
-history, not presented as new verification. Latest main, not an old animation
-branch, owns the language, balance, resource loader and persistent controllers.
-
-The approved pack supplies 75 exposure slots / 68 unique native rasters. Its five
-atlases are copied unchanged. One shared projection replaces the prior hero
-registry, retaining `mc_01`, name, facing, figure-size ratio and both stages.
-Enemy/boss registries and all their source image bytes remain unchanged.
-Five matching posters, a model-owned VFX body height, source provenance, an
-importer and source/player/native checks complete the integration. Release,
-resource, portable, production and tutorial outputs are regenerated.
-
-Two unrelated untracked temporary files were present immediately after clone
-under music and map-report directories. They are preserved and excluded from
-the change. No user save or unrelated module is altered.
-
-## Findings and actions
-
-| ID / category | Priority / confidence | Evidence and impact | Final action |
+| ID / category | Priority / confidence | Evidence | Action |
 | --- | --- | --- | --- |
-| AM-001 / MASALAH DISAHKAN | P2 / high | Main's hero registry still has six exposures per action, while the newly approved V5 review has fifteen. Installing only the pictures would retain incorrect source rectangles, timing and old posters. | RESOLVED: exact V5 atlas import, all 75 rectangles/holds, common projection and five same-source fallback posters. Source hashes and native playback verified. |
-| AM-002 / MASALAH DISAHKAN | P2 / high | Native desktop review of the integration exposed the overhead Attack being clipped. The compact/status UI's actual ground inset is 190px in the reviewed desktop state; assuming the older 96px inset still leaves the highest pose above the theatre. | RESOLVED: common proportional actor height cap reads actual `--ground-y`. It uses the complete pose set, not current-frame bounds. Seven viewport checks show every source alpha bound inside the arena and horizontal viewport, with fixed floor/aspect ratio. |
-| AM-003 / MASALAH DISAHKAN | P2 / high | The live VFX fallback table measures the old Idle poster at 539px; the new registered poster measures 558px. Retaining the old value would size materials against the replaced model. | RESOLVED: importer records hero `bodyHeight`; compositor reads that registry measurement and retains legacy fallbacks for other actors. Ownership regression and live compositor checks pass. |
-| AM-R01 / RISIKO BERPOTENSI | P2 / high | Applying the old six-frame Skill `scales` array to V5 would apply normalization twice and misalign the fifteen-pose clip. | PREVENTED: new hero registry has no per-frame scales. Source-driven tests advance every exact hold boundary and check one projection for all five clips. |
-| AM-R02 / RISIKO BERPOTENSI | P2 / medium | Automated viewports/texture accounting do not measure physical Windows/phone GPU, FPS or every crowded artifact/status presentation. | OPEN acceptance limit: check target devices. No physical-performance guarantee is made. |
-| AM-R03 / RISIKO BERPOTENSI | P3 / high | Approved AI-authored source drawings retain small proportion/detail variations at high zoom. | Retain the approved bytes and record this limit; no unrequested redraw or claim of perfect anatomy. |
-| AM-I01 / PENAMBAHBAIKAN | P2 / high | Source-gated import, matching fallbacks, measured VFX units and a byte-identical isolated re-import make the approved result reproducible. | IMPLEMENTED within this integration. |
-| AM-I02 / PENAMBAHBAIKAN | P3 / medium | A short physical-device review of crowded combat would complement native browser evidence. | PROPOSAL only; not an extra gameplay change or a release certification. |
+| AM-004 / MASALAH DISAHKAN | P2 / high | V5's replacement Idle has its annotated rear boot at native x394.683, while the retained original root is x278.483. The common pivot therefore puts Idle 125.496 canvas px ahead of the accepted action root. Live game canvas geometry itself does not move. | RESOLVED: one fixed Idle-only source pivot `[284.17700037379564,532.8535294215567]` and matching poster. All 15 source cells, proportions and breathing offsets remain. The four action clips remain byte-identical as registry objects. |
+| AM-005 / MASALAH DISAHKAN | P2 / high | Blink exposures total125ms and repeat every1575ms. This reproduces the reported fast/frequent blink. | RESOLVED: 85/110/85ms closing/closed/opening, 280ms total, on every second1730ms breathing loop:3460ms steady cadence. The intervening peak uses the original open-eye pose5. No rig, morph or new raster. Pause and unchanged configuration retain the clock. |
+| AM-U01 / LAPORAN BELUM DIREPRODUKSI | P2 / medium | Ijamm also reports enemy Idle too far forward. Current first-frame contacts and native Knight game sampling show stable geometry; production preview checks all12 enemies/bosses across all four actions and exact pixel-identical Idle returns. These checks do not prove every enemy stance is subjectively correctly placed. The optional direction clarification received no answer. | OPEN clarification limit: retain accepted enemy art/pivots instead of assigning unsupported offsets. Hosted review exposes every enemy and five actions for precise follow-up. Do not claim an enemy offset was fixed. |
+| AM-R04 / RISIKO BERPOTENSI | P2 / high | Atlas reimport or poster failure could restore the incorrect Idle registration or faster blink. | PREVENTED: the source-gated importer reproduces all19 outputs identically, records source versus effective holds, and produces the corrected Idle poster. Native Canvas-unavailable/failed-atlas fallbacks pass. |
 
-No additional issue was found in the final reviewed scope. Existing 2.44 VFX
-receipt/history limits, numerical balance, question content and unrelated
-documentation findings remain with their existing owners.
+[Registration measurements](idle-2.49.1/registration-summary.json) include actual
+before/after game canvas and footprint measurements. [Before](idle-2.49.1/before-idle.jpg)
+and [after](idle-2.49.1/after-idle.jpg) use the same native fixture/viewport.
+The original [2.45.0 audit](2.45.0.md) remains history; its referenced import data
+now describe the current reproducible importer result.
 
 ## Actual verification
 
-- [Import audit](../../animations/alyssa-v5/import-audit.json): exact approved ZIP
-  hash, all 75 native RGBA hashes, five byte-identical runtime atlases, sixteen-pixel
-  alpha padding, every projected canvas bound, same-source posters and unchanged
-  enemy/boss registry hash. Source resolution is explicit; no native-4K claim.
-- [Isolated reproduction](import-reproduction.json): re-importing into a temporary
-  fixture produces nineteen files byte-identical to this integration, preserving
-  the original baseline audit and every other actor.
-- [Unit/source/lifecycle checks](unit-validation.json): **64 unique scoped tests
-  pass**, zero skipped. Nine files contribute 53 passing tests; the final renderer
-  rerun contributes 11. Coverage includes exact exposure boundaries, fixed floor,
-  source rectangles, all enemy/boss compatibility, texture budgeting, stale loads,
-  VFX ownership/lifecycle, retained UI, resource integrity and release/cache URLs.
-- `npm run check`: PASS. Importer and new browser-test syntax also parse. Four
-  final generated-resource/release tests pass after tutorial capture/build.
-- `npm run build:prod`: PASS. The fresh portable output is 306,783,562 bytes;
-  production has the same current animation registry and source atlas hashes.
-- [Native production browser evidence](browser-validation.json): all five actual
-  clips render every source exposure; current Rune Strike/Rune Guard/Quick Study
-  actions and HP-loss/fully-blocked reactions match an independent engine clone,
-  including exact save/RNG/card state. Actor canvases survive those rerenders.
-  Dialog pause, Motion Off, OS reduction, both stages and both bosses pass.
-- All 75 projected bounds fit at 1366×900, 1920×1080, 3440×1440, 3840×2160,
-  390×844, 320×740 and 844×390. Native visual review confirms the overhead sword
-  is complete on desktop. Floor alignment and canvas aspect ratios are checked.
-- Real production bootstrap/fetch/decode paths are exercised. Canvas-unavailable
-  and deliberately failed-atlas cases display the verified V5 poster. Fresh
-  portable playback animates without HTTP requests. No browser exceptions or
-  retired hero requests are recorded.
-- The existing tutorial capture tool regenerates all sixteen actual-UI images
-  with isolated fixtures and records runtime input hashes in
-  [its manifest](../../tutorial/screenshots.json). Only changed image bytes are
-  included in the diff; these are player guide assets, not personal records.
+- Baseline:23 motion/cache/enemy tests pass. Two new regressions fail against
+  the original product for the expected root/blink defects, then pass after the
+  change. [RED](idle-2.49.1/red-tests.log), [GREEN25/25](idle-2.49.1/green-tests.log).
+- `npm test` executed the complete Node suite:1150 tests,1148 pass,2 fail,
+  zero skipped. The failures are **balance loader isolates data and keeps player
+  defaults unchanged** and **Spool does not mistake rejected Draw Pile candidates
+  for hand discard**, both because this shallow checkout lacked historical
+  commit `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7`. Fetch that exact commit;
+  rerun `tests/balance-combat.test.cjs`:10/10 pass, including both failures.
+  Only terminal trailing whitespace is normalized in committed logs; results and
+  failure records are retained. This is1150 unique tests verified across the full run and targeted recovery,
+  not a claim that the initial full command was green.
+  [Full run log](idle-2.49.1/full-suite.log), [history fetch](idle-2.49.1/history-fetch.log),
+  [recovery](idle-2.49.1/history-rerun.log). No product/test bypass resolves them.
+- Final affected-boundary rerun:34/34 pass, zero skipped, covering motion,
+  enemy/boss compatibility, retained UI, cache, manifest and release outputs.
+  [Final targeted log](idle-2.49.1/final-targeted.log).
+- `npm run check`, importer reproduction19/19, production and portable builds
+  pass. [Build](idle-2.49.1/final-build.log), [reimport](idle-2.49.1/import-reproduction.json).
+- [Actual production-game browser](idle-2.49.1/alyssa-browser.json): all75
+  exposure slots /68 distinct source poses, real Attack/Defend/Skill and damaged/
+  blocked reactions, exact independent engine/save/RNG outcomes, stable retained
+  canvases, modal pause, Motion Off, reduced motion, both stages/bosses, actual
+  no-Canvas/failed-atlas fallback and fresh portable offline playback pass.
+  All75 alpha bounds fit seven phone/desktop/UWHD/4K viewports with fixed floor.
+- [Production preview browser](idle-2.49.1/preview-native.json): observed eye
+  closure times2540/6000ms give3460ms spacing; 20ms sampling measures280/300ms
+  closure spans. Pause freezes pixels. All12 enemies/bosses keep canvas geometry
+  and return to identical Idle0 pixels after each action. Desktop and phone
+  review show no horizontal overflow. This verifies continuity, not universal
+  visual acceptance of the enemy stance.
+- Final production HTML uses all five existing motions with an enemy selector,
+  pause and optional auto cycle. Preview-only layout applies fixed actor scale
+  ratios. Its final style and added browser runner were checked natively after
+  the full Node run; core game/player inputs did not change afterward.
 
-Environment/harness failures were not counted as passes: the first environment
-lacked jsdom, then the new VFX test stub lacked the existing actors map. Install
-jsdom 26.1.0 only in the isolated QA directory and correct the stub; the final
-renderer run passes. Earlier browser attempts exposed the real clipping issue
-and assumptions about Idle's initial loop phase, paused-clock target latency,
-query-string request matching and waiting for the loader to reveal fallbacks.
-Those checks were corrected without weakening source ordering, frame coverage,
-engine equality or pose bounds. The final production report passes all checks.
+The first exploratory preview harness failed because an unqualified action
+selector matched the button and both canvas datasets. Qualifying it as a button
+fixes the harness; both final native reports pass. No product failure is hidden
+by this adjustment. The native player harness adopts current main's atomic
+clock pause and waits through the sparse blink without dropping exposure order.
 
-## Commands and final diff boundary
+## Protected boundary and limits
 
-```sh
-python3 tools/import-alyssa-v5.py /path/to/ALYSSA_15_Frame_Sprites_v5.zip
-npm run build:prod
-npm run check
-node --test --test-concurrency=1 tests/animation.test.cjs tests/enemy-motion.test.cjs tests/boss-motion.test.cjs tests/texture-cache.test.cjs tests/live-vfx.test.cjs tests/live-vfx-renderer.test.cjs tests/live-vfx-ui.test.cjs tests/asset-readiness.test.cjs tests/asset-manifest.test.cjs tests/release-build.test.cjs
-node --test tests/live-vfx-renderer.test.cjs
-node tools/capture-tutorial.cjs
-node --test tests/asset-manifest.test.cjs tests/release-build.test.cjs
-npm run test:alyssa-browser
-git diff --check
-```
+All five approved atlas bytes, four action registry objects, all enemy/boss
+registries/assets, game geometry/CSS,2.49 VFX/loader fixes, all98 tutorial images,
+23 chapters/12 practice steps, numerical rules, save and RNG remain unchanged.
+Only the Idle poster changes. Source manifest provenance remains immutable;
+current import audit separately records effective presentation holds/pivot.
+`data-source-frame` belongs to the retained actor canvas alongside its logical
+frame. No new game-side timer, random generator or image editing is introduced.
 
-The actual environment used explicit `NODE_PATH`, `BROWSER_QA_MODULE`,
-`SHARP_QA_MODULE` and `QA_CHROMIUM_EXECUTABLE` paths to installed QA dependencies.
-The large full-game suite is NOT_RUN: this update changes presentation/assets,
-not mathematical evaluation or numerical/save rules. The checks above target
-actual affected boundaries instead of claiming historical game-wide counts.
-
-Final diff is limited to Alyssa assets/registration, shared pose headroom, the
-VFX model-measurement read, importer/tests, generated release/resource/entry
-files, tutorial pictures and these owner/source/audit documents. The complete
-main tree is retained as the publication base. Source art is not mirrored or
-redrawn during integration; original enemy/boss/card/artifact/audio pixels,
-gameplay, language and save owners are preserved.
-
-MODEL.zip was not available and was not read. Retry that upload if needed for a
-later model task. The attached mathematics PDFs are unrelated to this change.
-Hosted deployment and physical-device performance are outside this verification.
-The resulting main commit/ref is verified after the guarded publication and
-reported in the handoff; no force push or history rewrite is used.
+CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open. Lost historical Passive
+trigger order and physical-device performance/recognition limits remain with
+their owners. No physical FPS or perfect-anatomy guarantee is made. This scope
+does not repair or relabel those findings. Publication/deployment are verified
+separately against the actual resulting main ref and Pages run.

@@ -12,8 +12,11 @@
 - **Verification:** scoped VALID. Preserve 175 focused checks on 7a and 23 fresh
   checks/native groups on final 20b separately; real full 98 plus menu 20 captures
   retain 78 original records. Both initial native failures and all REDs remain.
-- **Publication:** PENDING actual expected-head ref/tree/version readback and
-  exact-head Pages verification. [Integration report](../ONLINE_OFFLINE_MAIN_2_51_0.md).
+- **Publication:** VERIFIED at `338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b`, game 2.51.0,
+  exact tree `b94729255bbbd2dfdcabf8cddf4308ed560a13d2`, parents main 09a5/offline e941/protocol e057.
+  The expected-head force-false update and actual readback pass; exact-code Pages
+  run 40225058693 completes successfully. [Actual receipt](../verification/online-main-20261026/publication.json);
+  [integration report](../ONLINE_OFFLINE_MAIN_2_51_0.md).
 
 
 ## DEC-20261025-ALL-CANDIDATES-MAIN — Publish the three reviewed candidates

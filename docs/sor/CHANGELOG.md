@@ -1,6 +1,6 @@
 # Changelog SOR — Slay the Math
 
-## 2.51.0 — 26 October 2026, Asia/Kuala_Lumpur — main candidate
+## 2.51.0 — 26 October 2026, Asia/Kuala_Lumpur — main publication
 
 - Prepare the authorized Online/Offline Settings and release-bound retained
   startup/full installation with current main 2.50.0 education and presentation.
@@ -8,7 +8,8 @@
   collector or relabelling original outcomes. Preserve historical branches.
 - Scoped audit/build/native checks pass with carried P2 limits; preserve the
   two initial native failures, unit REDs and both real capture batches. Main
-  publication remains pending in [the current report](../ONLINE_OFFLINE_MAIN_2_51_0.md).
+  publication is VERIFIED at `338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b`; exact-code Pages
+  run 40225058693 is SUCCESS. [Actual receipt](../verification/online-main-20261026/publication.json).
 
 
 ## 2.50.0 — combined combat, education and Master Map protocol

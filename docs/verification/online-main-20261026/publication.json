@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "observedUTC": "2026-10-25T19:16:45.987Z",
+  "gameVersion": "2.51.0",
+  "sourcePublication": {
+    "observedUTC": "2026-10-25T19:14:11.772Z",
+    "from": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+    "to": "338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b",
+    "tree": "b94729255bbbd2dfdcabf8cddf4308ed560a13d2",
+    "version": "2.51.0",
+    "parents": [
+      "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+      "e9411eba938dc819f12382fe636aa02ec5059271",
+      "e0574af7a4b705a90a31e4d4c360ebf95d15df3e"
+    ],
+    "expectedSHA": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+    "force": false,
+    "toolResult": {
+      "success": true
+    },
+    "actualMainSHA": "338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b",
+    "featureAncestryVerified": "Both exact pinned source heads are direct parents in the actual GitHub commit; baseline main is first parent.",
+    "localFinalSHA": "e1e0f37f258084c109f4e8657b1be39dc2ed3b06",
+    "localFinalTree": "b94729255bbbd2dfdcabf8cddf4308ed560a13d2",
+    "refTreeVersionReadback": "PASS"
+  },
+  "codePages": {
+    "id": 40225058693,
+    "name": "Publish game to GitHub Pages",
+    "headSHA": "338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40225058693"
+  },
+  "publicBrowser": "NOT_RUN",
+  "retainedSourceRefs": {
+    "balance/combat": "3a62324ba05de14bd27774a565a5a048e7aa404a",
+    "balance/economy": "2e54f2b2107289925d936cb65d1ab86fd823ff96",
+    "balance/map": "8ca19526ec6a69d1183bae96803e461a77e3acfc",
+    "balance/master": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91",
+    "fix/online-offline-readiness": "e9411eba938dc819f12382fe636aa02ec5059271",
+    "codex/master-map-simulation-protocol": "e0574af7a4b705a90a31e4d4c360ebf95d15df3e"
+  },
+  "branchCountObserved": 38,
+  "localRunnableQA": {
+    "sha": "20b835855e00b8279c75d4b516b5da9f98624708",
+    "tree": "ae67c4324438fda926052d36253cd6748954ce51"
+  },
+  "localReviewedFinal": {
+    "sha": "e1e0f37f258084c109f4e8657b1be39dc2ed3b06",
+    "tree": "b94729255bbbd2dfdcabf8cddf4308ed560a13d2",
+    "remoteSourceSHA": "338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b",
+    "sameTree": true
+  },
+  "verification": {
+    "firstFocused175": "PASS at local7a; historical failed native commands retained",
+    "finalFocused23": "PASS at local20b",
+    "fullOffline14": "PASS",
+    "startupOriginalSaveReplay": "A2/A4 PASS; originalA1/A3 NOT_RUN fresh",
+    "storage4": "PASS",
+    "preload9": "PASS",
+    "portable": "3canonical+4radioStates+3EnterActions PASS; artifact reclaimed after all consumers closed",
+    "fullSuiteRepeat": "NOT_RUN"
+  },
+  "closedEvidence": {
+    "indexSHA256": "9d81997bae2e8a65283169ff5fbe69304ae791c9c0bea6a2acd96ae8d3e5aa67",
+    "originalFiles": 152,
+    "qaEvidenceSHA256": "9b630de05e21986dcfde7d0877bc1323266dea33ce741d4014faefeda963b866",
+    "indexModifiedByReceipt": false,
+    "privateInputsCopied": false
+  },
+  "receipt": {
+    "docsOnly": true,
+    "parent": "338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b",
+    "canonicalRuntimeTestConfigDrift": [],
+    "ownFinalSHAAndPages": "Verified separately after the follow-up; no self-referential status commit loop"
+  },
+  "knownLimits": [
+    "CI-247-01 P2/open",
+    "QA-248-PRELOAD-01 P2/open",
+    "D1/D2 source-bound unresolved",
+    "Public browser/live services/physical devices/OS reboot NOT_RUN"
+  ]
+}

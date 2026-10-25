@@ -1,6 +1,6 @@
 # Online/Offline main integration — 2.51.0
 
-26 Oktober 2026, Asia/Kuala_Lumpur. **VALID dalam skop yang diuji, dengan penemuan P2 dan had di bawah dikekalkan. Penerbitan main dan Pages masih PENDING sehingga ref sebenar disahkan.** Ijamm meminta senarai yang belum masuk dan menerbitkannya; hanya dua pakej semasa dipilih. Semua command gagal, RED dan hasil lulus kemudian kekal berasingan.
+26 Oktober 2026, Asia/Kuala_Lumpur. **VALID dalam skop yang diuji, dengan penemuan P2 dan had di bawah dikekalkan. Penerbitan main VERIFIED pada `338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b`; exact-code Pages run 40225058693 SUCCESS.** Ijamm meminta senarai yang belum masuk dan menerbitkannya; hanya dua pakej semasa dipilih. Semua command gagal, RED dan hasil lulus kemudian kekal berasingan.
 
 ## Snapshot dan perkara yang diterbitkan
 
@@ -69,7 +69,7 @@ Pemilik capture sebenar dijalankan sekali untuk **98 gambar** pada 603: 49 EN / 
 | Online preload | **9/9 PASS**; bukan bukti membaiki finding counter lama |
 | Portable dan keyboard | **3/3 canonical checks PASS**, empat keadaan radio keyboard dan tiga tindakan Enter FAQ/ask; 0 HTTP, 0 browser errors, save tepat |
 | Suite Node besar / kempen balance / 75-pose matrix | NOT_RUN semula; pemilik/source yang tidak berubah dibuktikan secara berasingan |
-| Pages / public browser / live services | PENDING publication workflow; public-browser, real Google/provider API, peranti fizikal dan OS reboot NOT_RUN |
+| Pages / public browser / live services | Source Pages run 40225058693 SUCCESS pada exact 338e1f82; receipt-head workflow disahkan berasingan selepas follow-up. Public-browser, real Google/provider API, peranti fizikal dan OS reboot NOT_RUN |
 
 Portable akhir ialah 312,186,494 bytes, SHA-256 `7dfc9bd13e40e7db253bd9b6cc50318e8713e0a991daa34797fa127fb918875d`. Selepas semua portable consumers selesai dan hash dipadankan, fail generated ignored itu dibuang mengikut kebenaran root untuk menyediakan headroom; source dan semua hasil/hash kekal. Production manifest akhir `afd18ff1cbcc0308b2bbaa60`, SHA-256 `b9fd17f3116886a74169a3e26fcabfbf92217dba0dd9c723ece7ec2e73a70bc7`.
 
@@ -84,3 +84,9 @@ Tekanan ruang/memori diperhatikan pada Target/Page crash awal, tetapi tiada coun
 - MODEL.zip, lampiran textbook/DSKP baharu, live Google/pet provider, human audio/recognition, Windows/physical devices, pupil outcomes dan universal performance tidak disahkan. Tiada matematik atau balancing baharu dicipta.
 
 Bukti raw/indeks dan batas disimpan di [direktori verifikasi](verification/online-main-20261026/). Main memerlukan fresh ref, `expected_sha` dan `force:false`; jika head bergerak, hentikan write dan audit delta. Selepas source publication, satu receipt dokumentasi merekod ref/tree/parents/version sebenar; Pages disemak berasingan. Jika rollback kemudian dibenarkan, gunakan corrective commit biasa yang disemak dengan lease baharu, mengekalkan shared history dan save; jangan reset shared main.
+
+## Actual source publication
+
+The expected-head non-forced update moves main from `09a5aa49645a37ee011317f1b784f0dd9affdf02` to `338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b`, exact tree `b94729255bbbd2dfdcabf8cddf4308ed560a13d2`, version 2.51.0. API readback verifies the three ordered parents and both pinned source ancestries. All six retained source/specialist refs remain unchanged at the observation timestamp. Local reviewed e1e0 and published source share the same tree; local test checkpoints remain distinguished from GitHub commits.
+
+[Exact-code Pages run 40225058693](https://github.com/unDead41/slay-the-math-v2/actions/runs/40225058693) completed successfully. [Publication metadata](verification/online-main-20261026/publication.json) records actual times, refs, parents, hashes and limits. This single receipt closes current PENDING clauses using observed facts; it adds documentation only and leaves the 152-row closed evidence index and all original QA bytes unchanged. The final receipt head and its Pages run are verified afterward without another status commit loop. No public-browser or live-service success is inferred from the workflow.

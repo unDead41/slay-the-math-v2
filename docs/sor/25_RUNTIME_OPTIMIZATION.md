@@ -9,7 +9,10 @@ VFX/Idle, numerical, save/RNG, language, AI and original-asset owners. This
 supersedes the relevant branch-only boundaries below; their source pins and
 original test outcomes remain history. Combined scoped compatibility is **VALID with carried P2 findings**: 175 focused
 checks on 7a, 23 fresh final checks on 20b and the stated native groups pass.
-Publication remains **PENDING** until actual expected-head ref readback.
+Main publication is **VERIFIED** at `338e1f82d89a8fa54882ea08ab6d0e1ebe7d5a2b`, game 2.51.0,
+with exact reviewed tree `b94729255bbbd2dfdcabf8cddf4308ed560a13d2`.
+[Actual ref/parents/version and exact-code Pages SUCCESS](../verification/online-main-20261026/publication.json).
+This documentation receipt preserves the verified runnable/test/configuration bytes.
 No simulation campaign, collector or model update is included. [Current scope,
 evidence and limits](../ONLINE_OFFLINE_MAIN_2_51_0.md).
 

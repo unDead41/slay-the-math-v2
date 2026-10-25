@@ -1,6 +1,6 @@
 # Slay the Math — Set of Rules
 
-Current authorized main candidate: [Online/Offline integration 2.51.0](docs/ONLINE_OFFLINE_MAIN_2_51_0.md). Scoped QA is VALID with carried P2 limits; publication readback is pending. Earlier release records remain history.
+Current main release: [Online/Offline integration 2.51.0](docs/ONLINE_OFFLINE_MAIN_2_51_0.md), scoped VALID with carried P2 limits. Source publication and exact-code Pages are VERIFIED in [the actual receipt](docs/verification/online-main-20261026/publication.json). Earlier release records remain history.
 
 
 ## Current main integration authorization — 2.50.0

@@ -589,6 +589,107 @@
         "priorSeedOverlap": 0
       },
       "attemptHistory": "Incomplete harness attempts preserved and serially resumed; final focus failures retained. No concurrent collectors/subagents used for this batch."
+    },
+    {
+      "runId": "SE-JOURNEY-20261026-509BE90-03",
+      "kind": "FULL_BROWSER_CAMPAIGN",
+      "owner": "Simulation & Evidence / root",
+      "status": "PLANNED",
+      "sourceBranch": "main",
+      "sourceCommit": "509be90a3f211004c29379c96469f4e3a70cc0a4",
+      "sourceTree": "d1e837c632b432c01aa23ee14b061eba0c0ac1f1",
+      "identityHash": "bc9f55a17997dff5166b7d7371cbc61eeaee959075472d40ba97599adcc44f13",
+      "caseManifestSHA256": "c8a8d326dbb38d5a1a7204e15ec1f3f0943b43a93727115cebe3edc64be505de",
+      "planned": 3,
+      "returned": 0,
+      "plannedAt": "2026-10-25T17:36:33.212Z",
+      "cases": [
+        {
+          "caseId": "J1",
+          "seed": 2157504611,
+          "mode": "challenge",
+          "difficulty": "easy",
+          "skill": "expert",
+          "oracleAnswers": true,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "initialPath": "raw/J1-initial.json",
+          "initialSHA256": "4fa80c74ab0b7e27c8070bf4970bc3ef0ead1e5bd0d12fe7ae4eebbb3341b7ae",
+          "initialHp": 70,
+          "initialGold": 100,
+          "initialDeckCount": 12,
+          "initialState": "Canonical newRun only; no HP/deck/Gold changes, no node skips",
+          "maxActions": 1400,
+          "maxCombatTurns": 100,
+          "maxSeconds": 220
+        },
+        {
+          "caseId": "J2",
+          "seed": 3023302934,
+          "mode": "challenge",
+          "difficulty": "easy",
+          "skill": "expert",
+          "oracleAnswers": true,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "initialPath": "raw/J2-initial.json",
+          "initialSHA256": "481194935f57c7c4b91fcfdd4bd9af03f6c44c9359074b27079537e5aa4916b7",
+          "initialHp": 70,
+          "initialGold": 100,
+          "initialDeckCount": 12,
+          "initialState": "Canonical newRun only; no HP/deck/Gold changes, no node skips",
+          "maxActions": 1400,
+          "maxCombatTurns": 100,
+          "maxSeconds": 220
+        },
+        {
+          "caseId": "J3",
+          "seed": 2036691708,
+          "mode": "challenge",
+          "difficulty": "easy",
+          "skill": "expert",
+          "oracleAnswers": true,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "initialPath": "raw/J3-initial.json",
+          "initialSHA256": "b763aaf23526d1752355f8e73062d3afa81353900de9b32ea90f745520733a7b",
+          "initialHp": 70,
+          "initialGold": 100,
+          "initialDeckCount": 12,
+          "initialState": "Canonical newRun only; no HP/deck/Gold changes, no node skips",
+          "maxActions": 1400,
+          "maxCombatTurns": 100,
+          "maxSeconds": 220
+        }
+      ],
+      "budget": {
+        "workers": 1,
+        "browserProcesses": 1,
+        "plannedRuns": 3,
+        "totalMinutes": 25,
+        "maxScreenshots": 80,
+        "maxVideos": 0,
+        "maxArtifactMiB": 160
+      },
+      "policy": {
+        "combat": "sampled-turn-search-4/expert",
+        "route": "health-recovery",
+        "acquisition": "existing deck-policy.cjs with experience=false",
+        "answers": "Canonical correct keys for diagnostic coverage; synthetic oracle, not pupil ability",
+        "clock": "Real browser wall clock",
+        "stop": "Natural victory/defeat, action/turn/time/global budget; retain failures/censor, never force win"
+      },
+      "trainingEligible": false,
+      "coordination": "User explicitly requests complete Stage1-to-Stage2-final-Boss journeys. Three fresh whole-browser integration campaigns; no owner numeric cohort repeated; no retuning/training/main publication."
     }
   ]
 }

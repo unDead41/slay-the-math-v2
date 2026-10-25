@@ -1,0 +1,615 @@
+{
+  "status": "PASS",
+  "scenarios": 24,
+  "allActionsAndTransitionCountsEqual": true,
+  "beforeProjections": 14628,
+  "afterProjections": 4302,
+  "reduction": 0.7059064807219032,
+  "medianDecisionMsBefore": 30.379838500000005,
+  "medianDecisionMsAfter": 19.812926500000003,
+  "baselineMain": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+  "baselineAgentSha256": "913691a22bc60016a4675f2c99944d050630505a92519be54f403d0db79f4f54",
+  "rows": [
+    {
+      "seed": 10,
+      "enemy": "wisp",
+      "skill": "intermediate",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 1.2907920000000104,
+        "searchNodes": 0
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.19184799999999314,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 10,
+      "enemy": "wisp",
+      "skill": "expert",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 837,
+        "elapsedMs": 82.64837699999998,
+        "searchNodes": 126
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 277,
+        "elapsedMs": 55.856089,
+        "searchNodes": 126
+      }
+    },
+    {
+      "seed": 10,
+      "enemy": "golem",
+      "skill": "intermediate",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.12102199999992536,
+        "searchNodes": 0
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.0699650000000247,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 10,
+      "enemy": "golem",
+      "skill": "expert",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 972,
+        "elapsedMs": 68.50405799999999,
+        "searchNodes": 141
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 281,
+        "elapsedMs": 79.63649999999984,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 10,
+      "enemy": "dealer",
+      "skill": "intermediate",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.09005600000000413,
+        "searchNodes": 0
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.055673000000069806,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 10,
+      "enemy": "dealer",
+      "skill": "expert",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 1812,
+        "elapsedMs": 71.6684029999999,
+        "searchNodes": 141
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 481,
+        "elapsedMs": 52.74016299999994,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 42,
+      "enemy": "wisp",
+      "skill": "intermediate",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.17958999999996195,
+        "searchNodes": 0
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 1,
+        "elapsedMs": 0.03811700000005658,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 42,
+      "enemy": "wisp",
+      "skill": "expert",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 837,
+        "elapsedMs": 70.66600500000004,
+        "searchNodes": 116
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 305,
+        "elapsedMs": 38.598237000000154,
+        "searchNodes": 116
+      }
+    },
+    {
+      "seed": 42,
+      "enemy": "golem",
+      "skill": "intermediate",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.07923900000014328,
+        "searchNodes": 0
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 1,
+        "elapsedMs": 0.03367000000025655,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 42,
+      "enemy": "golem",
+      "skill": "expert",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 972,
+        "elapsedMs": 76.31224500000008,
+        "searchNodes": 141
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 315,
+        "elapsedMs": 55.35988299999963,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 42,
+      "enemy": "dealer",
+      "skill": "intermediate",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.13650500000039756,
+        "searchNodes": 0
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 1,
+        "elapsedMs": 0.06069099999967875,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 42,
+      "enemy": "dealer",
+      "skill": "expert",
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 1812,
+        "elapsedMs": 67.00363100000004,
+        "searchNodes": 141
+      },
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c1",
+          "focus": false
+        },
+        "projections": 555,
+        "elapsedMs": 67.84159200000022,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 101,
+      "enemy": "wisp",
+      "skill": "intermediate",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 1.0276159999998526,
+        "searchNodes": 0
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 5.219252000000324,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 101,
+      "enemy": "wisp",
+      "skill": "expert",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 277,
+        "elapsedMs": 53.69793299999992,
+        "searchNodes": 126
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 837,
+        "elapsedMs": 55.540424999999686,
+        "searchNodes": 126
+      }
+    },
+    {
+      "seed": 101,
+      "enemy": "golem",
+      "skill": "intermediate",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.04694100000006074,
+        "searchNodes": 0
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.13361099999974613,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 101,
+      "enemy": "golem",
+      "skill": "expert",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 281,
+        "elapsedMs": 154.17383999999993,
+        "searchNodes": 141
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 972,
+        "elapsedMs": 86.83637700000008,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 101,
+      "enemy": "dealer",
+      "skill": "intermediate",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.049074000000018714,
+        "searchNodes": 0
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.08362600000009479,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 101,
+      "enemy": "dealer",
+      "skill": "expert",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 481,
+        "elapsedMs": 54.040058000000045,
+        "searchNodes": 141
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c10",
+          "focus": false
+        },
+        "projections": 1812,
+        "elapsedMs": 62.93240499999956,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 513,
+      "enemy": "wisp",
+      "skill": "intermediate",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.04585899999983667,
+        "searchNodes": 0
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.10748100000000704,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 513,
+      "enemy": "wisp",
+      "skill": "expert",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 277,
+        "elapsedMs": 47.64727099999982,
+        "searchNodes": 126
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 837,
+        "elapsedMs": 56.97396200000003,
+        "searchNodes": 126
+      }
+    },
+    {
+      "seed": 513,
+      "enemy": "golem",
+      "skill": "intermediate",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.04524799999944662,
+        "searchNodes": 0
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.07925900000009278,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 513,
+      "enemy": "golem",
+      "skill": "expert",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 276,
+        "elapsedMs": 55.455557000000226,
+        "searchNodes": 141
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 972,
+        "elapsedMs": 58.57401899999968,
+        "searchNodes": 141
+      }
+    },
+    {
+      "seed": 513,
+      "enemy": "dealer",
+      "skill": "intermediate",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 3,
+        "elapsedMs": 0.044756999999663094,
+        "searchNodes": 0
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 12,
+        "elapsedMs": 0.07991000000038184,
+        "searchNodes": 0
+      }
+    },
+    {
+      "seed": 513,
+      "enemy": "dealer",
+      "skill": "expert",
+      "after": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 466,
+        "elapsedMs": 48.95529799999986,
+        "searchNodes": 141
+      },
+      "before": {
+        "action": {
+          "kind": "play",
+          "uid": "c12",
+          "focus": false
+        },
+        "projections": 1812,
+        "elapsedMs": 57.60831599999983,
+        "searchNodes": 141
+      }
+    }
+  ],
+  "interpretation": "Local paired decision microbenchmark; not a physical-device, global FPS or pupil-performance claim."
+}

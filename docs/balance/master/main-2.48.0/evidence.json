@@ -1,0 +1,2535 @@
+{
+  "status": "VALID_WITH_CARRIED_P2",
+  "releaseRecommendation": "Proceed with scoped AI integration; preserve initial candidate FAIL and reproduced baseline FAIL. This is not an all-green CI claim and no race fix is claimed.",
+  "repository": "unDead41/slay-the-math-v2",
+  "dateUTC": "2026-10-25T09:22:11.612312+00:00",
+  "gameVersion": "2.48.0",
+  "sorVersion": "1.2.0",
+  "candidateSHA": "b2af6c7f0bab227be7da48b63bc48d3b41faf32b",
+  "candidateTree": "09486f7440a37fcb014fdd59094c0ad612d4084b",
+  "mainSHA": "2b81a2cd80532324a76581563874a9ecd797cc42",
+  "featureSHA": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91",
+  "closingMainReadback": "2b81a2cd80532324a76581563874a9ecd797cc42",
+  "runnablePathsUnchangedAfterTests": true,
+  "runnablePathScope": [
+    "dist",
+    "modules",
+    "integrations",
+    "tools",
+    "tests",
+    "package.json",
+    "server.cjs",
+    "build-portable.cjs",
+    ".github"
+  ],
+  "workingTreeCleanAtQAReleaseBeforePublisherDocs": true,
+  "publisherDocsEditedDuringEvidenceAssembly": [
+    "docs/balance/master/MAIN_RELEASE_2_48_0.md",
+    "docs/sor/20_DEVELOPER_TOOLS.md"
+  ],
+  "environment": {
+    "candidateSHA": "b2af6c7f0bab227be7da48b63bc48d3b41faf32b",
+    "candidateTree": "09486f7440a37fcb014fdd59094c0ad612d4084b",
+    "mainSHA": "2b81a2cd80532324a76581563874a9ecd797cc42",
+    "featureSHA": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91",
+    "sorVersion": "1.2.0",
+    "gameVersion": "2.48.0",
+    "node": {
+      "exitCode": 0,
+      "stdout": "v24.22.1",
+      "stderr": ""
+    },
+    "npm": {
+      "exitCode": 0,
+      "stdout": "11.9.0",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm."
+    },
+    "chromium": {
+      "exitCode": 0,
+      "stdout": "Chromium 153.0.8010.0",
+      "stderr": ""
+    },
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "shallow": "false",
+    "historicalFixture": {
+      "exitCode": 0,
+      "stdout": "commit",
+      "stderr": ""
+    },
+    "dependencies": {
+      "jsdom": "26.1.0",
+      "playwright": "1.62.1",
+      "sharp": "0.35.5"
+    }
+  },
+  "commands": [
+    {
+      "label": "node-suite",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "start": "2026-10-25T09:01:20Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/node-suite-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/node-suite-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/node-suite-report.json"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 400.869,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/node-suite.log"
+    },
+    {
+      "label": "syntax",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "start": "2026-10-25T09:08:16Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/syntax-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/syntax-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/syntax-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 5.947,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/syntax.log"
+    },
+    {
+      "label": "maps",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:maps"
+      ],
+      "start": "2026-10-25T09:08:23Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/maps-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/maps-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/maps-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 0.795,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/maps.log"
+    },
+    {
+      "label": "production-build",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "build:prod"
+      ],
+      "start": "2026-10-25T09:08:24Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-build-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-build-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-build-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 4.819,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-build.log"
+    },
+    {
+      "label": "guarded-data",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "tools/ai-playtester/experience-cli.cjs",
+        "validate",
+        "reports/ai-playtester/data-20261025/review-guarded/exchange"
+      ],
+      "start": "2026-10-25T09:02:32Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/guarded-data-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/guarded-data-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/guarded-data-report.json"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 0.073,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/guarded-data.log"
+    },
+    {
+      "label": "independent-fit",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "python3",
+        "docs/balance/master/ai-data-20261025/verify-fit.py"
+      ],
+      "start": "2026-10-25T09:02:32Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/independent-fit-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/independent-fit-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/independent-fit-report.json"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 3.306,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/independent-fit.log"
+    },
+    {
+      "label": "ai-browser",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:ai-browser"
+      ],
+      "start": "2026-10-25T09:04:20Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/ai-browser-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/ai-browser-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/ai-browser-report.json"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 4.14,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/ai-browser.log"
+    },
+    {
+      "label": "master-browser",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:balance-master-browser"
+      ],
+      "start": "2026-10-25T09:04:20Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/master-browser-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/master-browser-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/master-browser-report.json"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 28.996,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/master-browser.log",
+      "overrides": {
+        "QA_CHROMIUM_MODULE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/chromium-module.cjs"
+      }
+    },
+    {
+      "label": "identity-boundaries",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/identity-boundaries.cjs",
+        "/workspace/scratch/e7745ff161c8/release-integration",
+        "2b81a2cd80532324a76581563874a9ecd797cc42"
+      ],
+      "start": "2026-10-25T09:08:46Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/identity-boundaries-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/identity-boundaries-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/identity-boundaries-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 1.486,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/identity-boundaries.log"
+    },
+    {
+      "label": "projection-benchmark",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/run-projection-benchmark.cjs",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/projection-benchmark-result.json"
+      ],
+      "start": "2026-10-25T09:08:48Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/projection-benchmark-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/projection-benchmark-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/projection-benchmark-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 4.013,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/projection-benchmark.log"
+    },
+    {
+      "label": "fixed-gate",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "docs/balance/master/ai-data-20261025/calibrate.cjs",
+        "validation",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/gate-replay"
+      ],
+      "start": "2026-10-25T09:09:22Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/fixed-gate-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/fixed-gate-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/fixed-gate-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 21.322,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/fixed-gate.log"
+    },
+    {
+      "label": "production-dev-browser",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:prod-dev-browser"
+      ],
+      "start": "2026-10-25T09:09:22Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-dev-browser-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-dev-browser-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-dev-browser-report.json"
+      },
+      "overrides": {},
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 57.574,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/production-dev-browser.log"
+    },
+    {
+      "label": "tutorial-browser",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:tutorial-browser"
+      ],
+      "start": "2026-10-25T09:09:22Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/tutorial-browser-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/tutorial-browser-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/tutorial-browser-report.json"
+      },
+      "overrides": {
+        "TUTORIAL_QA_PROD": "1",
+        "TUTORIAL_QA_OFFLINE": "1"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 104.613,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/tutorial-browser.log"
+    },
+    {
+      "label": "preload-browser",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:preload-browser"
+      ],
+      "start": "2026-10-25T09:09:22Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-browser-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-browser-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-browser-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_SCREENSHOT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-startup.png"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 1,
+      "elapsedSeconds": 19.658,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-browser.log"
+    },
+    {
+      "label": "preload-candidate-diagnostic",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-diagnostic.cjs"
+      ],
+      "start": "2026-10-25T09:12:04Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-diagnostic-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-diagnostic-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-diagnostic-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_DIAGNOSTIC_SOURCE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate.executed.cjs"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 33.21,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-diagnostic.log"
+    },
+    {
+      "label": "preload-baseline-diagnostic",
+      "cwd": "/workspace/scratch/e7745ff161c8/preload-main-baseline",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-diagnostic.cjs"
+      ],
+      "start": "2026-10-25T09:13:21Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-diagnostic-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-diagnostic-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-diagnostic-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_DIAGNOSTIC_SOURCE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline.executed.cjs"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 28.109,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-diagnostic.log"
+    },
+    {
+      "label": "preload-candidate-original-rerun",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "npm",
+        "run",
+        "test:preload-browser"
+      ],
+      "start": "2026-10-25T09:14:56Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-original-rerun-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-original-rerun-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-original-rerun-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 28.508,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-original-rerun.log"
+    },
+    {
+      "label": "preload-candidate-boundary-1",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-boundary-probe.cjs"
+      ],
+      "start": "2026-10-25T09:16:06Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-1-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-1-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-1-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_DIAGNOSTIC_SOURCE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-1.executed.cjs"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 11.087,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-1.log"
+    },
+    {
+      "label": "preload-baseline-boundary-1",
+      "cwd": "/workspace/scratch/e7745ff161c8/preload-main-baseline",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-boundary-probe.cjs"
+      ],
+      "start": "2026-10-25T09:16:17Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-boundary-1-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-boundary-1-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-boundary-1-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_DIAGNOSTIC_SOURCE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-boundary-1.executed.cjs"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 1,
+      "elapsedSeconds": 10.888,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-baseline-boundary-1.log"
+    },
+    {
+      "label": "preload-candidate-boundary-2",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-boundary-probe.cjs"
+      ],
+      "start": "2026-10-25T09:16:28Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-2-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-2-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-2-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_DIAGNOSTIC_SOURCE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-2.executed.cjs"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 10.838,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-2.log"
+    },
+    {
+      "label": "preload-candidate-boundary-3",
+      "cwd": "/workspace/scratch/e7745ff161c8/release-integration",
+      "command": [
+        "node",
+        "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-boundary-probe.cjs"
+      ],
+      "start": "2026-10-25T09:16:39Z",
+      "environment": {
+        "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+        "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+        "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+        "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+        "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+        "QA_DISABLE_GPU": "1",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-3-artifacts",
+        "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-3-screenshots",
+        "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-3-report.json"
+      },
+      "overrides": {
+        "QA_DIST": "release-prod",
+        "QA_DIAGNOSTIC_SOURCE": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-3.executed.cjs"
+      },
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "exitCode": 0,
+      "elapsedSeconds": 10.165,
+      "log": "/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-candidate-boundary-3.log"
+    }
+  ],
+  "checks": {
+    "fullNode": {
+      "tests": 1130,
+      "pass": 1130,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "mapModule": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    "mapValidation": {
+      "seeds": 100,
+      "maps": 200,
+      "uniqueLayouts": 200,
+      "pngs": 12,
+      "pngHashes": "passed"
+    },
+    "syntax": "PASS",
+    "productionBuild": "PASS",
+    "identityAndBoundaries": {
+      "status": "PASS",
+      "candidateSHA": "b2af6c7f0bab227be7da48b63bc48d3b41faf32b",
+      "candidateTree": "09486f7440a37fcb014fdd59094c0ad612d4084b",
+      "base": "2b81a2cd80532324a76581563874a9ecd797cc42",
+      "version": "2.48.0",
+      "protectedDiff": [
+        "dist/asset-manifest.json",
+        "dist/index.html",
+        "dist/release.js"
+      ],
+      "sourceParity": [
+        {
+          "file": "dist/artifact-data.js",
+          "sha256": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da"
+        },
+        {
+          "file": "dist/artifacts.js",
+          "sha256": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d"
+        },
+        {
+          "file": "dist/balance-data.js",
+          "sha256": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d"
+        },
+        {
+          "file": "dist/balance.js",
+          "sha256": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f"
+        },
+        {
+          "file": "dist/card-combat.js",
+          "sha256": "58e94628c12cadfe29eef0eada0c8626fb92f47644abf6569d4a9045c2623cec"
+        },
+        {
+          "file": "dist/card-data.js",
+          "sha256": "b0a59ae12fa10e407ed9f6048cdbb2b64a04aba778e1bbb7b7af8f8eba9e8f7c"
+        },
+        {
+          "file": "dist/card-flow.js",
+          "sha256": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb"
+        },
+        {
+          "file": "dist/card-kit.js",
+          "sha256": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12"
+        },
+        {
+          "file": "dist/combat-log.js",
+          "sha256": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9"
+        },
+        {
+          "file": "dist/combat-predict.js",
+          "sha256": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a"
+        },
+        {
+          "file": "dist/config.js",
+          "sha256": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74"
+        },
+        {
+          "file": "dist/economy-data.js",
+          "sha256": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102"
+        },
+        {
+          "file": "dist/economy.js",
+          "sha256": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d"
+        },
+        {
+          "file": "dist/education.js",
+          "sha256": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed"
+        },
+        {
+          "file": "dist/engine.js",
+          "sha256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc"
+        },
+        {
+          "file": "dist/map-rng.js",
+          "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c"
+        },
+        {
+          "file": "dist/map.js",
+          "sha256": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09"
+        },
+        {
+          "file": "dist/math.js",
+          "sha256": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9"
+        },
+        {
+          "file": "dist/mechanics.js",
+          "sha256": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907"
+        },
+        {
+          "file": "dist/mystery-data.js",
+          "sha256": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b"
+        },
+        {
+          "file": "dist/mystery.js",
+          "sha256": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec"
+        },
+        {
+          "file": "dist/question-data.js",
+          "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+        },
+        {
+          "file": "dist/rich-text-data.js",
+          "sha256": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df"
+        },
+        {
+          "file": "dist/rich-text.js",
+          "sha256": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226"
+        },
+        {
+          "file": "tools/ai-playtester/agent.cjs",
+          "sha256": "de95c11d94cc0c6b7754ac6017e2061cb99aeb1362fae509b31291c1812cfd4f"
+        },
+        {
+          "file": "tools/ai-playtester/artifact-policy.cjs",
+          "sha256": "b4ebd09a6cbf7d4298d7131a4c09dae128ae4b3032a08947446c109a51028da4"
+        },
+        {
+          "file": "tools/ai-playtester/choice-policy.cjs",
+          "sha256": "e12e1da700132193ef938861670a018da3026b853c65f146855fe92bb37b849f"
+        },
+        {
+          "file": "tools/ai-playtester/deck-policy.cjs",
+          "sha256": "3b02a5773aada502cd327fc1d445644877b8a83eb756cee2a98aed6fde738c99"
+        },
+        {
+          "file": "tools/ai-playtester/effects.cjs",
+          "sha256": "048a3f4fa815ea7beb1826a03fd4f296c1a10eb8a42558f59b4970eab8647283"
+        },
+        {
+          "file": "tools/ai-playtester/experience-data.cjs",
+          "sha256": "ebae6279f8d4d53e6d3eeba6e6c211dbac31231004eaf2d9616f91f4c84ae6c5"
+        },
+        {
+          "file": "tools/ai-playtester/experience-model.json",
+          "sha256": "fcab002a3db982e3a314fa9c3fdf08b9e32957ff78dbd5140962f0b3b29454bc"
+        },
+        {
+          "file": "tools/ai-playtester/experience.cjs",
+          "sha256": "d6d55bbe8ccfc7acc0945ffe301a25a9f2aa7ee1659c9de14d1889da8ad96024"
+        },
+        {
+          "file": "tools/ai-playtester/experiments.cjs",
+          "sha256": "1b3a042aad67c54f3992cbbd4147319e84ae68fe5ba253f321a94fc324a9ed03"
+        },
+        {
+          "file": "tools/ai-playtester/report.cjs",
+          "sha256": "e1bf1517f4c545c1de5af1f400e9995d47a4ebfb6b6ce850b814361b88a8e24b"
+        },
+        {
+          "file": "tools/ai-playtester/worker.cjs",
+          "sha256": "de134c1a7e7c6510d85014dbfcaba720bcabea2a7a28b2ea5ccdfe015f524ecb"
+        },
+        {
+          "file": "tools/balance/candidate.cjs",
+          "sha256": "ba67f6c69621d2297d134e6371312e88a9d96927ade32fa2848ef3a3b7ff3154"
+        },
+        {
+          "file": "tools/balance/combat.cjs",
+          "sha256": "9aabe52146a87e7330754bb7290128e454ee59b9220c119481ef52e2e5d74ab8"
+        },
+        {
+          "file": "tools/balance/deep.cjs",
+          "sha256": "5f0ab6f67f1b41cf378812fb982ba5ac4128ea4d1f9f0fd9200fe400ff1a7a37"
+        },
+        {
+          "file": "tools/balance/map-advanced/question-policy.cjs",
+          "sha256": "02abed3bce27fe52e12d0c013b14fd800228a3d2be2112071943db7a194025b9"
+        },
+        {
+          "file": "tools/balance/map-advanced/route-policy.cjs",
+          "sha256": "11ce54c3aa9ffcdfa87e4bb701c87c2f73c57e7c3846e2756a14a34b2c559774"
+        },
+        {
+          "file": "tools/balance/map-advanced/scenarios.cjs",
+          "sha256": "2b63d11c760d074c50069d36ee0b2af9684d9991aa3d1977d9ae310a88e51385"
+        },
+        {
+          "file": "tools/balance/map-advanced/telemetry.cjs",
+          "sha256": "6c73f23652969a4ad3e0c66eeaaefb258c3e8f705419382864f12735a5a3503f"
+        },
+        {
+          "file": "tools/balance/map/config.json",
+          "sha256": "9677b7ca5aa64f620220303e6734b47d7a5f83d5ae50c08187dba412cb1aa9fa"
+        },
+        {
+          "file": "tools/balance/map/policy.cjs",
+          "sha256": "9f98eb17a7d253c520122b9833d1beeecadcd147de8b97e303e74e8c93076051"
+        },
+        {
+          "file": "tools/balance/map/replay.cjs",
+          "sha256": "1739e6dc8188423d2aeb719ffca3ab3081029e69ffd571636ef486d7f8c16c16"
+        },
+        {
+          "file": "tools/balance/map/structure.cjs",
+          "sha256": "89ae7f11cf3c7369b0a7bb349bea73d84532b42d7c945c2291d2172175327ca4"
+        },
+        {
+          "file": "tools/balance/master/config.json",
+          "sha256": "d5c9e2ba51ab23117673ee10174b6f19f8e8777c7463bb0a426c1cd232252c92"
+        },
+        {
+          "file": "tools/balance/master/loader.cjs",
+          "sha256": "98717d5a96d97c5fd8cf5110d621e28addf64d02cd149ba040ed60c118c28c0b"
+        },
+        {
+          "file": "tools/balance/specs/balance-spec.v1.2.json",
+          "sha256": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f"
+        }
+      ],
+      "profiles": [
+        {
+          "runtime": {
+            "version": "master-1.5.0-candidate.5",
+            "difficulty": "easy",
+            "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+            "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+            "source": "integrated working tree",
+            "pupilCalibration": false
+          },
+          "status": "READY",
+          "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+          "fallbacks": [
+            "DISABLED",
+            "MISSING_MODEL",
+            "INVALID_MODEL",
+            "STALE_RUNTIME"
+          ]
+        },
+        {
+          "runtime": {
+            "version": "master-1.5.0-candidate.5",
+            "difficulty": "medium",
+            "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+            "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+            "source": "integrated working tree",
+            "pupilCalibration": false
+          },
+          "status": "READY",
+          "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+          "fallbacks": [
+            "DISABLED",
+            "MISSING_MODEL",
+            "INVALID_MODEL",
+            "STALE_RUNTIME"
+          ]
+        },
+        {
+          "runtime": {
+            "version": "master-1.5.0-candidate.5",
+            "difficulty": "hard",
+            "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+            "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+            "source": "integrated working tree",
+            "pupilCalibration": false
+          },
+          "status": "READY",
+          "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+          "fallbacks": [
+            "DISABLED",
+            "MISSING_MODEL",
+            "INVALID_MODEL",
+            "STALE_RUNTIME"
+          ]
+        }
+      ],
+      "tutorialCounts": {
+        "chapters": 23,
+        "practices": 12,
+        "media": 98
+      },
+      "production": {
+        "files": 823,
+        "aiExcluded": true,
+        "offlineBytes": 312112645,
+        "offlineSha256": "a6feafd7d6d9241962ad477548c2ae290da8a4dd9b55e51d008c53a5147b404a"
+      },
+      "sourceHash": "a07e86c203167242ae7b79def6b82da170938390830a54d8f95c080ea4f35e8b",
+      "smoke": {
+        "seed": 703,
+        "rows": 2,
+        "invalid": 0,
+        "censored": 0,
+        "status": "NOT_USED_IN_CARD_MODE"
+      },
+      "boundary": [
+        {
+          "mode": "player",
+          "checks": [
+            {
+              "route": "/__dev/ai/",
+              "method": "GET",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/",
+              "method": "POST",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/catalog",
+              "method": "GET",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/catalog",
+              "method": "POST",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/jobs",
+              "method": "GET",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/jobs",
+              "method": "POST",
+              "status": 404
+            }
+          ]
+        },
+        {
+          "mode": "production",
+          "checks": [
+            {
+              "route": "/__dev/ai/",
+              "method": "GET",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/",
+              "method": "POST",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/catalog",
+              "method": "GET",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/catalog",
+              "method": "POST",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/jobs",
+              "method": "GET",
+              "status": 404
+            },
+            {
+              "route": "/__dev/ai/jobs",
+              "method": "POST",
+              "status": 404
+            }
+          ]
+        }
+      ]
+    },
+    "guardedData": {
+      "status": "PASS",
+      "coverage": "PREDECLARED_COHORT",
+      "observations": 528,
+      "complete": 528,
+      "censored": 0,
+      "invalid": 0,
+      "cells": 1152
+    },
+    "independentFit": {
+      "status": "PASS",
+      "reports": 528,
+      "outcomes": 1152,
+      "observations": 528,
+      "profiles": 3,
+      "entries": 264,
+      "arithmetic": "independent Python recomputation",
+      "rawSourceHashes": "all matched capsule",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+    },
+    "projectionBenchmark": {
+      "status": "PASS",
+      "scenarios": 24,
+      "allActionsAndTransitionCountsEqual": true,
+      "beforeProjections": 14628,
+      "afterProjections": 4302,
+      "reduction": 0.7059064807219032,
+      "medianDecisionMsBefore": 23.906518999999932,
+      "medianDecisionMsAfter": 18.617845999999986,
+      "baselineMain": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+      "baselineAgentSha256": "913691a22bc60016a4675f2c99944d050630505a92519be54f403d0db79f4f54",
+      "rows": [
+        {
+          "seed": 10,
+          "enemy": "wisp",
+          "skill": "intermediate",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.3988470000000177,
+            "searchNodes": 0
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.14561800000001313,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 10,
+          "enemy": "wisp",
+          "skill": "expert",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 837,
+            "elapsedMs": 63.08112100000005,
+            "searchNodes": 126
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 277,
+            "elapsedMs": 43.922015999999985,
+            "searchNodes": 126
+          }
+        },
+        {
+          "seed": 10,
+          "enemy": "golem",
+          "skill": "intermediate",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.11049499999990076,
+            "searchNodes": 0
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.06629899999995814,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 10,
+          "enemy": "golem",
+          "skill": "expert",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 972,
+            "elapsedMs": 65.2466310000001,
+            "searchNodes": 141
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 281,
+            "elapsedMs": 59.39097199999992,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 10,
+          "enemy": "dealer",
+          "skill": "intermediate",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.09204799999997704,
+            "searchNodes": 0
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.05522300000006908,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 10,
+          "enemy": "dealer",
+          "skill": "expert",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 1812,
+            "elapsedMs": 57.412540000000035,
+            "searchNodes": 141
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 481,
+            "elapsedMs": 43.31976500000019,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 42,
+          "enemy": "wisp",
+          "skill": "intermediate",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.08827199999996083,
+            "searchNodes": 0
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 1,
+            "elapsedMs": 0.03489199999989978,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 42,
+          "enemy": "wisp",
+          "skill": "expert",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 837,
+            "elapsedMs": 52.13473399999998,
+            "searchNodes": 116
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 305,
+            "elapsedMs": 37.09007399999996,
+            "searchNodes": 116
+          }
+        },
+        {
+          "seed": 42,
+          "enemy": "golem",
+          "skill": "intermediate",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.08524800000009236,
+            "searchNodes": 0
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 1,
+            "elapsedMs": 0.033140000000003056,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 42,
+          "enemy": "golem",
+          "skill": "expert",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 972,
+            "elapsedMs": 63.58568700000001,
+            "searchNodes": 141
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 315,
+            "elapsedMs": 45.439745999999786,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 42,
+          "enemy": "dealer",
+          "skill": "intermediate",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.07678499999997257,
+            "searchNodes": 0
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 1,
+            "elapsedMs": 0.032839000000194574,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 42,
+          "enemy": "dealer",
+          "skill": "expert",
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 1812,
+            "elapsedMs": 63.451736999999866,
+            "searchNodes": 141
+          },
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c1",
+              "focus": false
+            },
+            "projections": 555,
+            "elapsedMs": 45.08152000000018,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 101,
+          "enemy": "wisp",
+          "skill": "intermediate",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.045478000000002794,
+            "searchNodes": 0
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.07831699999997,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 101,
+          "enemy": "wisp",
+          "skill": "expert",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 277,
+            "elapsedMs": 42.8676989999999,
+            "searchNodes": 126
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 837,
+            "elapsedMs": 47.414190999999846,
+            "searchNodes": 126
+          }
+        },
+        {
+          "seed": 101,
+          "enemy": "golem",
+          "skill": "intermediate",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.044376000000283966,
+            "searchNodes": 0
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.07847700000002078,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 101,
+          "enemy": "golem",
+          "skill": "expert",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 281,
+            "elapsedMs": 55.31464099999994,
+            "searchNodes": 141
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 972,
+            "elapsedMs": 74.71861399999989,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 101,
+          "enemy": "dealer",
+          "skill": "intermediate",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.049543999999968946,
+            "searchNodes": 0
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.0844560000000456,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 101,
+          "enemy": "dealer",
+          "skill": "expert",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 481,
+            "elapsedMs": 58.09987899999987,
+            "searchNodes": 141
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c10",
+              "focus": false
+            },
+            "projections": 1812,
+            "elapsedMs": 55.68603699999994,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 513,
+          "enemy": "wisp",
+          "skill": "intermediate",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.13586300000042684,
+            "searchNodes": 0
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.16171200000007957,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 513,
+          "enemy": "wisp",
+          "skill": "expert",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 277,
+            "elapsedMs": 48.65880299999981,
+            "searchNodes": 126
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 837,
+            "elapsedMs": 55.1280670000001,
+            "searchNodes": 126
+          }
+        },
+        {
+          "seed": 513,
+          "enemy": "golem",
+          "skill": "intermediate",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.04833200000030047,
+            "searchNodes": 0
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.08265400000027512,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 513,
+          "enemy": "golem",
+          "skill": "expert",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 276,
+            "elapsedMs": 51.68048100000033,
+            "searchNodes": 141
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 972,
+            "elapsedMs": 56.261609000000135,
+            "searchNodes": 141
+          }
+        },
+        {
+          "seed": 513,
+          "enemy": "dealer",
+          "skill": "intermediate",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 3,
+            "elapsedMs": 0.04629900000009002,
+            "searchNodes": 0
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 12,
+            "elapsedMs": 0.08785200000011173,
+            "searchNodes": 0
+          }
+        },
+        {
+          "seed": 513,
+          "enemy": "dealer",
+          "skill": "expert",
+          "after": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 466,
+            "elapsedMs": 49.0599400000001,
+            "searchNodes": 141
+          },
+          "before": {
+            "action": {
+              "kind": "play",
+              "uid": "c12",
+              "focus": false
+            },
+            "projections": 1812,
+            "elapsedMs": 58.41786200000024,
+            "searchNodes": 141
+          }
+        }
+      ],
+      "interpretation": "Local paired decision microbenchmark; not a physical-device, global FPS or pupil-performance claim."
+    },
+    "fixed12CampaignGate": {
+      "passed": true,
+      "off": {
+        "wins": 6,
+        "utility": 670.0410256410256,
+        "invalid": 0,
+        "censored": 0
+      },
+      "on": {
+        "wins": 6,
+        "utility": 677.3743589743589,
+        "invalid": 0,
+        "censored": 0
+      },
+      "pairs": [
+        {
+          "difficulty": "easy",
+          "seed": 701,
+          "matchedEntry": true,
+          "off": {
+            "status": "VICTORY",
+            "hp": 68,
+            "maxHp": 75,
+            "utility": 118.13333333333333
+          },
+          "on": {
+            "status": "VICTORY",
+            "hp": 68,
+            "maxHp": 75,
+            "utility": 118.13333333333333
+          },
+          "guidance": {
+            "status": "READY",
+            "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+          },
+          "traceChanged": false
+        },
+        {
+          "difficulty": "easy",
+          "seed": 702,
+          "matchedEntry": true,
+          "off": {
+            "status": "VICTORY",
+            "hp": 61,
+            "maxHp": 75,
+            "utility": 116.26666666666667
+          },
+          "on": {
+            "status": "VICTORY",
+            "hp": 61,
+            "maxHp": 75,
+            "utility": 116.26666666666667
+          },
+          "guidance": {
+            "status": "READY",
+            "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+          },
+          "traceChanged": false
+        },
+        {
+          "difficulty": "medium",
+          "seed": 701,
+          "matchedEntry": true,
+          "off": {
+            "status": "VICTORY",
+            "hp": 53,
+            "maxHp": 70,
+            "utility": 115.14285714285714
+          },
+          "on": {
+            "status": "VICTORY",
+            "hp": 53,
+            "maxHp": 70,
+            "utility": 115.14285714285714
+          },
+          "guidance": {
+            "status": "READY",
+            "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+          },
+          "traceChanged": false
+        },
+        {
+          "difficulty": "medium",
+          "seed": 702,
+          "matchedEntry": true,
+          "off": {
+            "status": "VICTORY",
+            "hp": 17,
+            "maxHp": 70,
+            "utility": 104.85714285714286
+          },
+          "on": {
+            "status": "VICTORY",
+            "hp": 17,
+            "maxHp": 70,
+            "utility": 104.85714285714286
+          },
+          "guidance": {
+            "status": "READY",
+            "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+          },
+          "traceChanged": false
+        },
+        {
+          "difficulty": "hard",
+          "seed": 701,
+          "matchedEntry": true,
+          "off": {
+            "status": "VICTORY",
+            "hp": 27,
+            "maxHp": 65,
+            "utility": 108.3076923076923
+          },
+          "on": {
+            "status": "VICTORY",
+            "hp": 27,
+            "maxHp": 65,
+            "utility": 108.3076923076923
+          },
+          "guidance": {
+            "status": "READY",
+            "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+          },
+          "traceChanged": false
+        },
+        {
+          "difficulty": "hard",
+          "seed": 702,
+          "matchedEntry": true,
+          "off": {
+            "status": "VICTORY",
+            "hp": 22,
+            "maxHp": 60,
+            "utility": 107.33333333333333
+          },
+          "on": {
+            "status": "VICTORY",
+            "hp": 44,
+            "maxHp": 60,
+            "utility": 114.66666666666667
+          },
+          "guidance": {
+            "status": "READY",
+            "id": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+          },
+          "traceChanged": true
+        }
+      ],
+      "interpretation": "Fixed small synthetic nonregression gate; not pupil rates or proof of universal improvement."
+    },
+    "aiBrowser": {
+      "status": "PASS",
+      "encounters": 4,
+      "widths": [
+        1440,
+        750,
+        390
+      ],
+      "historyReloadExportsCancellationPlayerSentinels": true,
+      "errors": []
+    },
+    "masterBrowser": {
+      "status": "PASS",
+      "difficulties": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "realMenuGiftRouteBattlePredictReloadSaveArt": true,
+      "errors": []
+    },
+    "productionDeveloperBrowser": {
+      "status": "PASS",
+      "staticSubpathAndRealProdServer": true,
+      "guardedAccessPlayerIsolation": true
+    },
+    "tutorial": {
+      "status": "PASS",
+      "chapters": 23,
+      "localizedMedia": 98,
+      "practices": 12,
+      "production": true,
+      "portableZeroNetwork": true,
+      "keyboardLanguageStorageFailureAndMediaFallback": true,
+      "errors": []
+    },
+    "preloadOriginalRerun": {
+      "status": "PASS",
+      "checks": [
+        "75% important bytes +100% hard core; no early Practice/Boss",
+        "paused speculative work leaves foreground Practice120 usable",
+        "offline/hidden pause and reconnect/visible resume without user retry",
+        "remaining resources complete automatically without full-download click",
+        "real CacheStorage namespace eviction reconciles counts and is repaired automatically on resume",
+        "warm visit reuses verified persistent assets",
+        "storage denial discloses online continuation without a false75% cache claim",
+        "hard core failure has truthful recovery and safe online eligibility",
+        "optional startup failure has truthful recovery and safe online eligibility"
+      ],
+      "errors": [],
+      "complete": {
+        "q": {
+          "queued": 0,
+          "active": 0,
+          "failed": 0,
+          "paused": false,
+          "online": false
+        },
+        "p": {
+          "verifiedFiles": 760,
+          "totalFiles": 760,
+          "verifiedBytes": 231321240,
+          "loadedBytes": 231321240,
+          "totalBytes": 231321240,
+          "availableFiles": 760,
+          "availableBytes": 231321240,
+          "cacheMode": "persistent"
+        },
+        "stats": {
+          "requests": 761,
+          "cacheHits": 1,
+          "memoryHits": 211,
+          "hashes": 762,
+          "bytes": 232563684,
+          "maxActive": 4,
+          "cacheMode": "persistent",
+          "verifiedFiles": 761,
+          "totalFiles": 761,
+          "verifiedBytes": 232563684,
+          "loadedBytes": 232563684,
+          "totalBytes": 232563684,
+          "availableFiles": 761,
+          "availableBytes": 232563684,
+          "active": 0,
+          "queued": 0,
+          "memoryBytes": 33489830,
+          "memoryEntries": 126,
+          "memoryBudgetBytes": 33554432
+        }
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "QA-248-PRELOAD-01",
+      "priority": "P2",
+      "status": "OPEN_INHERITED_NONBLOCKING_FOR_AI",
+      "confidence": "high for inherited failure and cached bytes; asynchronous settling is the supported cause, not a patched runtime",
+      "firstCandidateFailure": {
+        "log": "preload-browser.log",
+        "command": "QA_DIST=release-prod npm run test:preload-browser",
+        "exitCode": 1,
+        "available": 759,
+        "expected": 760,
+        "queueFailed": 0
+      },
+      "baselineFailure": {
+        "SHA": "2b81a2cd80532324a76581563874a9ecd797cc42",
+        "log": "preload-baseline-boundary-1.log",
+        "available": 758,
+        "expected": 760,
+        "verified": 760,
+        "managerActive": 0,
+        "managerQueued": 0,
+        "missingAtSnapshot": [
+          "assets/ground-rune_bat-defend.webp",
+          "assets/ground-rune_bat-skill.webp"
+        ],
+        "bothAlreadyInPersistentCache": true,
+        "allAvailableOnNextInspectionBeforeExplicitReconcile": true
+      },
+      "candidateRepeat": {
+        "originalUnchangedWholePreloadSuite": "PASS all9 checks,760/760",
+        "diagnosticFullSuite": "PASS",
+        "boundaryOnlyProbes": "3/3 PASS"
+      },
+      "cause": "The test treats background queue-empty as completion while bootstrap idle/periodic CacheStorage reconciliation can still update retained-file counts. The baseline next inspection automatically restores full availability with no source change or extra asset fetch.",
+      "userImpact": "A brief cached-file undercount/readiness snapshot is supported. No missing downloaded bytes, blocked tested player flow, save loss or RNG mutation was demonstrated. Evidence does not establish P0/P1 missing-resource impact.",
+      "followup": "Hosted-readiness/QA owner should use an explicit bounded settled-retention condition, preserving the complete availability assertion. No arbitrary sleep, runtime fix or assertion relaxation was made here."
+    },
+    {
+      "id": "CI-247-01",
+      "priority": "P2",
+      "status": "INHERITED_NOT_RUN",
+      "evidence": "Pinned main docs/HOSTED_PRELOAD_MAIN_2_47_0.md and tests/icon-package-browser.cjs; historical DOMContentLoaded/DCRelease/raw icon path assumptions. The historical icon/whole PR browser matrix was not rerun or migrated."
+    },
+    {
+      "id": "AIDATA-R5/R6",
+      "priority": "P3",
+      "status": "DEFERRED_UNCHANGED",
+      "evidence": "Generic Map/Economy useful fields and summary.json semantic agreement remain deferred. Current fitting uses validated Combat observations and recomputed manifest counts."
+    }
+  ],
+  "preloadTriage": {
+    "manifestComparison": {
+      "baselineVersion": "2.47.0",
+      "candidateVersion": "2.48.0",
+      "baselineManifestId": "dc2a2dad3275507d6158f1de",
+      "candidateManifestId": "597a4d0228fd006fa98228be",
+      "baselineCount": 761,
+      "candidateCount": 761,
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "url": "release.js",
+          "baseline": {
+            "url": "release.js",
+            "bytes": 174,
+            "sha256": "cfd8035d322625e3a9509bda5bc49202f808ece2fab7102c5dabae581cafcf16",
+            "pack": "core",
+            "kind": "code",
+            "required": true
+          },
+          "candidate": {
+            "url": "release.js",
+            "bytes": 174,
+            "sha256": "58cc86ea9ae92729c46b68a9b46885745c9bbe6719485c6d99e22d5bebf46c60",
+            "pack": "core",
+            "kind": "code",
+            "required": true
+          }
+        }
+      ],
+      "sameStartupPlan": true
+    },
+    "boundedProbes": {
+      "status": "DIAGNOSTIC_COLLECTION_COMPLETE",
+      "failedKinds": [
+        "baseline"
+      ],
+      "samples": [
+        {
+          "kind": "candidate",
+          "attempt": 1,
+          "label": "preload-candidate-boundary-1",
+          "exitCode": 0,
+          "diagnostic": {
+            "complete": {
+              "q": {
+                "queued": 0,
+                "active": 0,
+                "failed": 0,
+                "paused": false,
+                "online": false
+              },
+              "p": {
+                "verifiedFiles": 760,
+                "totalFiles": 760,
+                "verifiedBytes": 231321240,
+                "loadedBytes": 231321240,
+                "totalBytes": 231321240,
+                "availableFiles": 760,
+                "availableBytes": 231321240,
+                "cacheMode": "persistent"
+              },
+              "stats": {
+                "requests": 761,
+                "cacheHits": 1,
+                "memoryHits": 211,
+                "hashes": 762,
+                "bytes": 232563684,
+                "maxActive": 4,
+                "cacheMode": "persistent",
+                "verifiedFiles": 761,
+                "totalFiles": 761,
+                "verifiedBytes": 232563684,
+                "loadedBytes": 232563684,
+                "totalBytes": 232563684,
+                "availableFiles": 761,
+                "availableBytes": 232563684,
+                "active": 0,
+                "queued": 0,
+                "memoryBytes": 33489830,
+                "memoryEntries": 126,
+                "memoryBudgetBytes": 33554432
+              },
+              "missing": []
+            },
+            "inspection": {
+              "before": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                }
+              },
+              "cache": [],
+              "afterReconcile": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                },
+                "missing": []
+              }
+            }
+          }
+        },
+        {
+          "kind": "baseline",
+          "attempt": 1,
+          "label": "preload-baseline-boundary-1",
+          "exitCode": 1,
+          "diagnostic": {
+            "complete": {
+              "q": {
+                "queued": 0,
+                "active": 0,
+                "failed": 0,
+                "paused": false,
+                "online": false
+              },
+              "p": {
+                "verifiedFiles": 760,
+                "totalFiles": 760,
+                "verifiedBytes": 231321240,
+                "loadedBytes": 231321240,
+                "totalBytes": 231321240,
+                "availableFiles": 758,
+                "availableBytes": 230814136,
+                "cacheMode": "persistent"
+              },
+              "stats": {
+                "requests": 761,
+                "cacheHits": 1,
+                "memoryHits": 211,
+                "hashes": 762,
+                "bytes": 232563684,
+                "maxActive": 4,
+                "cacheMode": "persistent",
+                "verifiedFiles": 761,
+                "totalFiles": 761,
+                "verifiedBytes": 232563684,
+                "loadedBytes": 232563684,
+                "totalBytes": 232563684,
+                "availableFiles": 759,
+                "availableBytes": 232056580,
+                "active": 0,
+                "queued": 0,
+                "memoryBytes": 33489830,
+                "memoryEntries": 126,
+                "memoryBudgetBytes": 33554432
+              },
+              "missing": [
+                {
+                  "url": "assets/ground-rune_bat-defend.webp",
+                  "bytes": 245068,
+                  "sha256": "4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe",
+                  "pack": "stage1",
+                  "kind": "image",
+                  "required": false
+                },
+                {
+                  "url": "assets/ground-rune_bat-skill.webp",
+                  "bytes": 262036,
+                  "sha256": "c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725",
+                  "pack": "stage1",
+                  "kind": "image",
+                  "required": false
+                }
+              ]
+            },
+            "inspection": {
+              "before": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                }
+              },
+              "cache": [
+                {
+                  "entry": {
+                    "url": "assets/ground-rune_bat-defend.webp",
+                    "bytes": 245068,
+                    "sha256": "4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe",
+                    "pack": "stage1",
+                    "kind": "image",
+                    "required": false
+                  },
+                  "inPersistentCache": true
+                },
+                {
+                  "entry": {
+                    "url": "assets/ground-rune_bat-skill.webp",
+                    "bytes": 262036,
+                    "sha256": "c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725",
+                    "pack": "stage1",
+                    "kind": "image",
+                    "required": false
+                  },
+                  "inPersistentCache": true
+                }
+              ],
+              "afterReconcile": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                },
+                "missing": []
+              }
+            }
+          }
+        },
+        {
+          "kind": "candidate",
+          "attempt": 2,
+          "label": "preload-candidate-boundary-2",
+          "exitCode": 0,
+          "diagnostic": {
+            "complete": {
+              "q": {
+                "queued": 0,
+                "active": 0,
+                "failed": 0,
+                "paused": false,
+                "online": false
+              },
+              "p": {
+                "verifiedFiles": 760,
+                "totalFiles": 760,
+                "verifiedBytes": 231321240,
+                "loadedBytes": 231321240,
+                "totalBytes": 231321240,
+                "availableFiles": 760,
+                "availableBytes": 231321240,
+                "cacheMode": "persistent"
+              },
+              "stats": {
+                "requests": 761,
+                "cacheHits": 1,
+                "memoryHits": 211,
+                "hashes": 762,
+                "bytes": 232563684,
+                "maxActive": 4,
+                "cacheMode": "persistent",
+                "verifiedFiles": 761,
+                "totalFiles": 761,
+                "verifiedBytes": 232563684,
+                "loadedBytes": 232563684,
+                "totalBytes": 232563684,
+                "availableFiles": 761,
+                "availableBytes": 232563684,
+                "active": 0,
+                "queued": 0,
+                "memoryBytes": 33489830,
+                "memoryEntries": 126,
+                "memoryBudgetBytes": 33554432
+              },
+              "missing": []
+            },
+            "inspection": {
+              "before": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                }
+              },
+              "cache": [],
+              "afterReconcile": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                },
+                "missing": []
+              }
+            }
+          }
+        },
+        {
+          "kind": "candidate",
+          "attempt": 3,
+          "label": "preload-candidate-boundary-3",
+          "exitCode": 0,
+          "diagnostic": {
+            "complete": {
+              "q": {
+                "queued": 0,
+                "active": 0,
+                "failed": 0,
+                "paused": false,
+                "online": false
+              },
+              "p": {
+                "verifiedFiles": 760,
+                "totalFiles": 760,
+                "verifiedBytes": 231321240,
+                "loadedBytes": 231321240,
+                "totalBytes": 231321240,
+                "availableFiles": 760,
+                "availableBytes": 231321240,
+                "cacheMode": "persistent"
+              },
+              "stats": {
+                "requests": 761,
+                "cacheHits": 1,
+                "memoryHits": 211,
+                "hashes": 762,
+                "bytes": 232563684,
+                "maxActive": 4,
+                "cacheMode": "persistent",
+                "verifiedFiles": 761,
+                "totalFiles": 761,
+                "verifiedBytes": 232563684,
+                "loadedBytes": 232563684,
+                "totalBytes": 232563684,
+                "availableFiles": 761,
+                "availableBytes": 232563684,
+                "active": 0,
+                "queued": 0,
+                "memoryBytes": 33489830,
+                "memoryEntries": 126,
+                "memoryBudgetBytes": 33554432
+              },
+              "missing": []
+            },
+            "inspection": {
+              "before": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                }
+              },
+              "cache": [],
+              "afterReconcile": {
+                "q": {
+                  "queued": 0,
+                  "active": 0,
+                  "failed": 0,
+                  "paused": false,
+                  "online": false
+                },
+                "stats": {
+                  "requests": 761,
+                  "cacheHits": 1,
+                  "memoryHits": 211,
+                  "hashes": 762,
+                  "bytes": 232563684,
+                  "maxActive": 4,
+                  "cacheMode": "persistent",
+                  "verifiedFiles": 761,
+                  "totalFiles": 761,
+                  "verifiedBytes": 232563684,
+                  "loadedBytes": 232563684,
+                  "totalBytes": 232563684,
+                  "availableFiles": 761,
+                  "availableBytes": 232563684,
+                  "active": 0,
+                  "queued": 0,
+                  "memoryBytes": 33489830,
+                  "memoryEntries": 126,
+                  "memoryBudgetBytes": 33554432
+                },
+                "missing": []
+              }
+            }
+          }
+        }
+      ],
+      "limits": "At most three first-boundary probes per snapshot; no runtime or assertion changes. Does not erase the original failed whole-suite run."
+    }
+  },
+  "screenshots": [
+    "ai-browser-artifacts/ai-390.png",
+    "ai-browser-artifacts/ai-750.png",
+    "ai-browser-artifacts/ai-desktop.png",
+    "master-browser-screenshots/master-easy.png",
+    "master-browser-screenshots/master-hard.png",
+    "master-browser-screenshots/master-medium.png",
+    "tutorial-browser-screenshots/first-turn-desktop-ms.png",
+    "tutorial-browser-screenshots/first-turn-phone-ms.png",
+    "tutorial-browser-screenshots/tutorial-compact-landscape.png",
+    "tutorial-browser-screenshots/tutorial-desktop.png",
+    "tutorial-browser-screenshots/tutorial-landscape.png",
+    "tutorial-browser-screenshots/tutorial-narrow-landscape.png",
+    "tutorial-browser-screenshots/tutorial-portrait.png",
+    "tutorial-browser-screenshots/tutorial-small-landscape.png",
+    "preload-startup.png"
+  ],
+  "visuallyInspected": [
+    "ai-browser-artifacts/ai-desktop.png",
+    "ai-browser-artifacts/ai-390.png",
+    "master-browser-screenshots/master-hard.png",
+    "tutorial-browser-screenshots/first-turn-phone-ms.png"
+  ],
+  "notRunOrNotEstablished": [
+    "Historical icon/entire PR browser matrix or remote CI status",
+    "Physical Windows/mobile performance, global FPS or general decision-speed gain",
+    "Live Google deployment/delivery or hosted Pages deployment",
+    "Real pupil comprehension/win-rate targets, exhaustive independent decks/seeds/enemies or universal balance/optimality",
+    "MODEL.zip visual reference matching; attachment unavailable",
+    "New full training corpus; frozen data revalidated, only the fixed12-campaign gate replayed"
+  ],
+  "limits": [
+    "Ordinary Spool and Hard Stage2 recovery were not retuned.",
+    "Projection reduction and model gains apply to declared synthetic cases and this local environment.",
+    "Prior1107 branch tests remain historical; fresh combined candidate1130 results are separate.",
+    "No source, numerical owner, test assertion, ref or main publication was changed by QA.",
+    "After documentation/evidence commits, test reuse requires identical runnable bytes to tested candidate. Root owns publication GO."
+  ]
+}

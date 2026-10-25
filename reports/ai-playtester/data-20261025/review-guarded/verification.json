@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "phase": "before",
+      "reports": 66,
+      "groups": 66,
+      "cells": 150,
+      "coverage": "PREDECLARED_COHORT"
+    },
+    {
+      "phase": "train",
+      "reports": 528,
+      "groups": 528,
+      "cells": 1152,
+      "coverage": "PREDECLARED_COHORT"
+    },
+    {
+      "phase": "after",
+      "reports": 66,
+      "groups": 66,
+      "cells": 150,
+      "coverage": "PREDECLARED_COHORT"
+    },
+    {
+      "phase": "validation",
+      "reports": 12,
+      "groups": 12,
+      "cells": 12,
+      "coverage": "PREDECLARED_COHORT"
+    }
+  ],
+  "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+  "modelUnchanged": true,
+  "interpretation": "Strict importer revalidates all frozen raw reports against their schedules; no simulation labels, seeds, fitting parameters or model bytes changed."
+}

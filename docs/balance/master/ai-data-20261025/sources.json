@@ -1,0 +1,37 @@
+{
+  "masterSor": "1.2.0",
+  "mainVersion": "2.45.0",
+  "branchVersion": "2.46.0-ai.1",
+  "publicationTarget": "balance/master",
+  "mainPublicationAuthorized": false,
+  "refs": {
+    "main": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+    "balance/master": "b281dc69e752f84424b81d0d051644b9da154dd9",
+    "balance/combat": "3a62324ba05de14bd27774a565a5a048e7aa404a",
+    "balance/map": "364a844879b8cd9463c4771eac15291a3fd22075",
+    "balance/economy": "2e54f2b2107289925d936cb65d1ab86fd823ff96"
+  },
+  "eligibility": {
+    "main": "Current runtime baseline.",
+    "combat": "Historical labels need current replay; recipes only reused.",
+    "map": "Owner diagnostics reviewed; no route model fit.",
+    "economy": "Owner diagnostics reviewed; no economy model fit."
+  },
+  "training": {
+    "seedPlan": {
+      "train": [
+        93
+      ],
+      "validation": [
+        701,
+        702
+      ]
+    },
+    "reports": 528,
+    "outcomes": 1152,
+    "singleContexts": 480,
+    "pairContexts": 48,
+    "profiles": 3,
+    "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6"
+  }
+}

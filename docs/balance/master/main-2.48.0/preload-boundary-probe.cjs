@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{createRequire}=require('node:module');
+const source=path.join(process.cwd(),'tests/automatic-preload-browser.cjs'),original=fs.readFileSync(source,'utf8');
+const cutoff=original.indexOf("\n\n await p.locator('#resource-download-pause').click();const repairedFile=");
+const tail=original.indexOf('\n }finally{await browser?.close();server.closeAllConnections();');assert.ok(cutoff>0&&tail>cutoff);
+let code=original.slice(0,cutoff)+"\n console.log('BOUNDARY_REPORT '+JSON.stringify(report));"+original.slice(tail);
+const snapshot='stats:m.stats()};});';assert.equal(code.split(snapshot).length,2);
+code=code.replace(snapshot,"stats:m.stats(),missing:m.manifest.entries.filter(e=>e.pack!=='practice'&&!m.available(e.url))};});");
+const needle='assert.equal(complete.q.failed,0);';assert.equal(code.split(needle).length,2);
+const diagnostic=`console.log('BOUNDARY_DIAGNOSTIC '+JSON.stringify({complete,inspection:await p.evaluate(async missing=>{const m=STMHosted.manager,c=await caches.open(m.cacheName),before={q:STMHosted.downloads(),stats:m.stats()},cache=await Promise.all(missing.map(async e=>({entry:e,inPersistentCache:!!await c.match(new URL(e.url,m.base).href)})));await m.reconcile({retryStorage:true});return {before,cache,afterReconcile:{q:STMHosted.downloads(),stats:m.stats(),missing:m.manifest.entries.filter(e=>e.pack!=='practice'&&!m.available(e.url)).map(e=>e.url)}};},complete.missing)}));`;
+code=code.replace(needle,diagnostic+needle);
+const out=process.env.QA_DIAGNOSTIC_SOURCE||'/tmp/stm-preload-boundary-executed.cjs';fs.writeFileSync(out,code);
+new Function('require','module','exports','__dirname','__filename',code)(createRequire(source),module,exports,path.dirname(source),source);

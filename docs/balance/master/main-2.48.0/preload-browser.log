@@ -1,0 +1,20 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.48.0 test:preload-browser
+> node tests/automatic-preload-browser.cjs
+
+PASS 75% important bytes +100% hard core; no early Practice/Boss
+PASS paused speculative work leaves foreground Practice120 usable
+PASS offline/hidden pause and reconnect/visible resume without user retry
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+759 !== 760
+
+    at /workspace/scratch/e7745ff161c8/release-integration/tests/automatic-preload-browser.cjs:24:236 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 759,
+  expected: 760,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

@@ -1,6 +1,21 @@
+## Main publication addendum — 2.48.0, 25 October 2026
+
+Ijamm now explicitly requests publishing the completed `balance/master` AI update
+to `main`. This supersedes the original branch-only boundary for feature
+`39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91`. Integrate it with current main
+`2b81a2cd80532324a76581563874a9ecd797cc42` / 2.47.0 as **2.48.0**.
+The original experiment, source capsules, reports and branch publication below
+remain historical evidence with their original SHAs and measured limitations.
+Current numerical candidate.5, player saves/RNG, language, approved Alyssa V5,
+live VFX, automatic downloads and the 23-chapter / 98-image / 12-practice tutorial
+retain their existing owners. The two deferred P3 data validations remain deferred.
+[Current main integration and fresh evidence](balance/master/MAIN_RELEASE_2_48_0.md).
+
 # AI Playtester
 
-Current main release: **2.42.0**, integrating the reviewed artifact/Mystery acquisitions and current-source Map/economy observations. [Main publication, validation and limits](balance/master/MAIN_RELEASE_2_42_0.md).
+Current AI review branch: **balance/master, 2.46.0-ai.1**, based on main **2.45.0 /6c49f39**. Ijamm authorizes this AI refresh on the branch only. [Current evidence, data and limits](balance/master/AI_DATA_2026_10_25.md). Earlier main-publication permissions below apply to their named releases.
+
+Previous balance integration: **2.42.0**, with reviewed artifact/Mystery acquisitions and current-source Map/economy observations. [Main publication, validation and limits](balance/master/MAIN_RELEASE_2_42_0.md).
 
 Earlier main integration: [game2.40.0](CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 
@@ -10,7 +25,7 @@ Rekod integrasi AI terdahulu, 24 Oktober 2026 (Malaysia): Ijamm membenarkan pene
 
 ## Buka alat
 
-Dalam checkout main atau branch ai:
+Dalam checkout branch semasa:
 
 ```powershell
 npm.cmd run start:dev
@@ -69,7 +84,19 @@ Draw mengira actual cards moved to Hand, termasuk Recall, delayed dan Passive; r
 
 Output-per-Energy dipisahkan untuk damage, absorbed Block, mitigasi dan cards-to-Hand; kos sifar memberi null/Unmeasured. Jangan campurkan semua unit menjadi satu CP. UI menunjukkan 20 sumber teratas mengikut plays; JSON menyimpan semua. Data lama yang tiada support telemetry dipaparkan Unmeasured.
 
-Eksport JSON **schema 3**, agent **sampled-turn-search-3**, mengekalkan konfigurasi, runtime, source SHA256/per-file hashes, binding identity, keputusan sebenar, telemetry dan penjelasan. CSV menambah total Block/mitigation/draw/Passive sambil mengekalkan source/job/config identity. Alat tidak menala stat secara automatik. Sasaran murid Easy 90%, Medium 70%, Hard 50% belum diukur; kombinasi tidak diuji secara exhaustive.
+Eksport JSON **schema 3**, agent **sampled-turn-search-4**, mengekalkan konfigurasi, runtime, source SHA256/per-file hashes, binding identity, keputusan sebenar, telemetry dan penjelasan. CSV mengekalkan semua posisi lama dan menambah experience/status/model ID selepas route. Alat tidak menala stat secara automatik. Sasaran murid Easy 90%, Medium 70%, Hard 50% belum diukur; kombinasi tidak diuji secara exhaustive.
+
+## Experience daripada simulasi
+
+AI menggunakan prior kecil untuk menilai acquisition kad, berdasarkan replay Combat semasa bagi 40 kad dan empat pasangan terpilih, Base/Upgraded dan tiga difficulty. Ini bukan latihan LLM. Data lama digunakan sebagai resipi eksperimen sahaja; label direplay pada enjin dan polisi semasa. Kad tunggal menggunakan delta replacement, manakala synergy menggunakan empat sel factorial yang lengkap. Seed latihan93 dipisahkan daripada seed pengesahan701/702. Data invalid/censored disimpan dan tidak diberi skor rekaan.
+
+Setiap prior dibahagi20, dikecilkan dengan n/(n+5), dihadkan kepada ±0.25 dan dipuratakan mengikut saiz deck. Setiap pasangan terpakai sekali walaupun deck mempunyai banyak salinan. Kos/legality dan harga sebenar engine kekal menentukan tindakan. Model ini hanya membantu reward, Shop, upgrade, removal dan pilihan deck; card-mode combat melaporkan NOT_USED_IN_CARD_MODE.
+
+Pilihan CLI `--experience=on` ialah default dengan fallback; `--experience=off` memberikan perbandingan heuristic asal. READY bermaksud runtime/difficulty/polisi tepat. Model hilang, rosak atau lama memberi MISSING_MODEL, INVALID_MODEL, STALE_RUNTIME atau STALE_POLICY dan pelarasan sifar; DISABLED bermaksud dimatikan secara sengaja. Sumber laporan merangkumi model, tetapi signature keserasian polisi mengecualikan model untuk mengelakkan hash berpusing. Tiada pembelajaran atau penulisan model daripada save pemain.
+
+Combat, Map dan Economy perlu mengikuti [kontrak penghantaran simulasi](balance/SIMULATION_DATA_HANDOFF.md): manifest, JSONL, summary, raw dan SHA sumber dalam direktori baharu. `npm run ai:data -- validate PATH` menyemak bundle; `train PATH NEW_MODEL.json` menghasilkan calon tanpa mengaktifkannya. Learner semasa hanya fit Combat factorial; envelope Map/Economy disemak dan disimpan untuk diagnostik.
+
+Eksport Combat memerlukan `schedule.json` yang ditetapkan sebelum simulasi. Import menolak difficulty yang tidak sepadan dengan provenance, laporan kosong dan seed/skill/mask atau laporan penuh yang hilang. Manifest baharu menyimpan jangkaan ID/kiraan untuk semakan semula; CLI menamakan liputan PREDECLARED_COHORT, DECLARED_REPORT_OPTIONS atau LEGACY_NO_COHORT_PLAN dengan jelas. Bundle lama kekal boleh dibaca, dengan batas liputan asalnya.
 
 ## CLI
 
@@ -82,7 +109,7 @@ Gunakan prefix output baharu: fail existing tidak ditulis ganti. Output .json da
 
 ## Bukti dan had
 
-Pakej lokal sesi terdahulu telah dibersihkan oleh penyelenggaraan workspace dan tidak ditemui dalam carian pemulihan. Kod dipulihkan daripada rekod sesi ke atas main semasa; raw/log lama tidak direka semula. Lihat [pengesahan semasa](verification/ai-branch.json) untuk ujian yang dijalankan semula. Bukti ini merekodkan penerbitan branch ai terdahulu. Penerbitan main kini dibenarkan dan direkodkan berasingan dalam rekod integrasi di atas. Latihan ML, player advisor, physical-device testing dan pengesahan kadar menang murid kekal di luar hasil ini.
+Pakej lokal sesi terdahulu telah dibersihkan oleh penyelenggaraan workspace dan tidak ditemui dalam carian pemulihan. Kod dipulihkan daripada rekod sesi ke atas main semasa; raw/log lama tidak direka semula. Lihat [pengesahan semasa](verification/ai-branch.json) untuk ujian yang dijalankan semula. Bukti ini merekodkan penerbitan branch ai terdahulu. Penerbitan main kini dibenarkan dan direkodkan berasingan dalam rekod integrasi di atas. Latihan LLM, player advisor, physical-device testing dan pengesahan kadar menang murid kekal di luar hasil ini.
 
 Hentikan job sebelum mengedit atau membina semula sumber game. Restart server selepas mengubah kod. Job menggunakan sumber semasa; menyunting fail ketika eksperimen berjalan bukan aliran kerja snapshot yang disokong.
 

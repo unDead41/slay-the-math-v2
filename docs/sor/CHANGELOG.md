@@ -1,5 +1,15 @@
 # Changelog SOR — Slay the Math
 
+## 2.48.0 — 25 October 2026
+
+Publish the completed source-bound AI experience and efficiency update from
+`balance/master` with current main 2.47.0. Preserve automatic downloads, the
+23-chapter / 98-image / 12-practice tutorial, language, approved motion/VFX and
+all player numerical/save/RNG/assets. Retain main and feature histories; combine
+package scripts and regenerate shared release/cache metadata. Historical training
+and heldout results keep their source identities and measured limits.
+[Main release and fresh combined verification](../balance/master/MAIN_RELEASE_2_48_0.md).
+
 ## 2.47.0 — 25 October 2026
 
 Ijamm authorizes main publication of automatic preload/downloads. Integrate the verified preload feature with the newly published illustrated tutorial 2.46.0; regenerate version/cache metadata without replacing its 23 chapters or 98 English/BM images. Prepare at least 75% of important-package bytes before entry and download remaining game resources automatically with current-run priority, bounded speculative concurrency and truthful cache recovery. Preserve Practice on demand, art/audio/V5/VFX, mathematical/balance/save/RNG owners and the current CI history correction. [Combined release and verification](../HOSTED_PRELOAD_MAIN_2_47_0.md).
@@ -19,6 +29,14 @@ localized actual-game picture sequences, direct practice access, ordered full-tu
 practice and canonical Basics in the isolated two-attempt question workspace.
 Preserve old chapter progress and all player/game/learning owners. Scope and
 fresh verification: [illustrated tutorial](../TUTORIAL_VISUAL_REFRESH.md).
+
+## AI experience and efficiency — branch2.46.0-ai.1,25 October2026
+
+- Base the AI refresh on actual main2.45.0; publish balance/master only at Ijamm's request.
+- Reuse exact threat projections and improve payment-aware Search, Burning Page and visible-card selection without reading hidden draw order.
+- Add immutable source-bound simulation bundles, validator/trainer and owner instructions for Combat/Map/Economy. Replay old recipes instead of reusing stale labels.
+- Add conservative, exact-runtime acquisition priors with explicit experience:on/off/status/model metadata, fixed heldout activation gate and safe missing/stale/corrupt fallback. Keep schema3 and earlier CSV positions, numerical game profiles, saves/RNG and current art/language/VFX/motion.
+- Record actual coverage, measurements, validation outcomes and remaining limits in [AI data handoff](../balance/master/AI_DATA_2026_10_25.md).
 
 ## Approved Alyssa V5 motion — game 2.45.0, 25 October 2026
 

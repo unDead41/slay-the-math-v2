@@ -1,6 +1,19 @@
-# 23 — Master balancing, branch2.42.0-balance.1
+## Main publication addendum — 2.48.0, 25 October 2026
 
-Current refresh publication target is **balance/master only**, following Ijamm’s latest request to update the three-source balance integration and AI before main. Current numerical binding is candidate.5; earlier publication approvals below refer to their recorded releases. [Current source review and checks](../balance/master/REFRESH_2026_10_24.md).
+Ijamm now explicitly requests publishing the completed `balance/master` AI update
+to `main`. This supersedes the original branch-only boundary for feature
+`39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91`. Integrate it with current main
+`2b81a2cd80532324a76581563874a9ecd797cc42` / 2.47.0 as **2.48.0**.
+The original experiment, source capsules, reports and branch publication below
+remain historical evidence with their original SHAs and measured limitations.
+Current numerical candidate.5, player saves/RNG, language, approved Alyssa V5,
+live VFX, automatic downloads and the 23-chapter / 98-image / 12-practice tutorial
+retain their existing owners. The two deferred P3 data validations remain deferred.
+[Current main integration and fresh evidence](../balance/master/MAIN_RELEASE_2_48_0.md).
+
+# 23 — Master balancing, branch2.46.0-ai.1
+
+Current refresh publication target is **balance/master only**, following Ijamm’s latest request to read latest main2.45.0 and improve AI using simulation data. Current numerical binding is candidate.5; earlier publication approvals below refer to their recorded releases. [Current source review and checks](../balance/master/AI_DATA_2026_10_25.md). The three-source2.42 refresh below is historical.
 
 Current main integration: [game2.40.0](../CARD_TUNING_MAIN_2_40_0.md). Ijamm now authorizes main publication of the completed card follow-up; earlier branch-only statements below are historical.
 

@@ -1,0 +1,32 @@
+{
+  "baselineVersion": "2.47.0",
+  "candidateVersion": "2.48.0",
+  "baselineManifestId": "dc2a2dad3275507d6158f1de",
+  "candidateManifestId": "597a4d0228fd006fa98228be",
+  "baselineCount": 761,
+  "candidateCount": 761,
+  "added": [],
+  "removed": [],
+  "changed": [
+    {
+      "url": "release.js",
+      "baseline": {
+        "url": "release.js",
+        "bytes": 174,
+        "sha256": "cfd8035d322625e3a9509bda5bc49202f808ece2fab7102c5dabae581cafcf16",
+        "pack": "core",
+        "kind": "code",
+        "required": true
+      },
+      "candidate": {
+        "url": "release.js",
+        "bytes": 174,
+        "sha256": "58cc86ea9ae92729c46b68a9b46885745c9bbe6719485c6d99e22d5bebf46c60",
+        "pack": "core",
+        "kind": "code",
+        "required": true
+      }
+    }
+  ],
+  "sameStartupPlan": true
+}

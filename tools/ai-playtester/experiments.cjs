@@ -8,9 +8,9 @@ const {createDeckPolicy}=require('./deck-policy.cjs');
 const DIFFICULTIES=['easy','medium','hard'],REFERENCE='stm.attack.rune_strike';
 function normalizeOptions(input={}){
  if(!input||typeof input!=='object'||Array.isArray(input))throw Error('Expected an options object.');
- if(Object.keys(input).some(k=>!['mode','difficulty','skill','predict','route','seed','seeds','enemy','cards','upgraded'].includes(k)))throw Error('Unknown experiment option.');
- const o={mode:'campaign',difficulty:'medium',skill:'all',predict:'feedback',route:'health-recovery',seed:20,seeds:2,enemy:'wisp',cards:[REFERENCE],upgraded:false,...input};
- for(const [value,allowed,label]of [[o.mode,['campaign','cards'],'mode'],[o.difficulty,[...DIFFICULTIES,...(o.mode==='campaign'?['all']:[])],'difficulty'],[o.skill,[...SKILLS,'all'],'skill'],[o.predict,Object.keys(PROFILES),'Predict profile'],[o.route,POLICIES,'route policy']])if(!allowed.includes(value))throw Error('Invalid '+label);
+ if(Object.keys(input).some(k=>!['mode','difficulty','skill','predict','route','seed','seeds','enemy','cards','upgraded','experience'].includes(k)))throw Error('Unknown experiment option.');
+ const o={mode:'campaign',difficulty:'medium',skill:'all',predict:'feedback',route:'health-recovery',seed:20,seeds:2,enemy:'wisp',cards:[REFERENCE],upgraded:false,experience:'on',...input};
+ for(const [value,allowed,label]of [[o.mode,['campaign','cards'],'mode'],[o.difficulty,[...DIFFICULTIES,...(o.mode==='campaign'?['all']:[])],'difficulty'],[o.skill,[...SKILLS,'all'],'skill'],[o.predict,Object.keys(PROFILES),'Predict profile'],[o.route,POLICIES,'route policy'],[o.experience,['on','off'],'experience']])if(!allowed.includes(value))throw Error('Invalid '+label);
  if(!Number.isSafeInteger(o.seeds)||o.seeds<1||o.seeds>20||!Number.isSafeInteger(o.seed)||o.seed<0||o.seed+o.seeds-1>4294967295)throw Error('Use 1..20 seeds within uint32 range.');
  if(typeof o.upgraded!=='boolean')throw Error('Invalid upgrade flag.');
  const C=require('../../dist/config.js'),data=require('../../dist/card-data.js');
@@ -19,7 +19,8 @@ function normalizeOptions(input={}){
  return o;
 }
 function sourceIdentity(x){
- const files=new Set([...x.sourceFiles,'dist/balance.js','dist/balance-data.js','tools/balance/master/config.json','tools/balance/master/loader.cjs','tools/balance/combat.cjs','tools/balance/deep.cjs','tools/balance/candidate.cjs','tools/balance/specs/balance-spec.v1.2.json',...['replay.cjs','policy.cjs','config.json','structure.cjs'].map(p=>'tools/balance/map/'+p),...['route-policy.cjs','question-policy.cjs','scenarios.cjs','telemetry.cjs'].map(p=>'tools/balance/map-advanced/'+p),...['agent.cjs','experiments.cjs','effects.cjs','deck-policy.cjs','artifact-policy.cjs','report.cjs','worker.cjs'].map(p=>'tools/ai-playtester/'+p)]);
+ const files=new Set([...x.sourceFiles,'dist/balance.js','dist/balance-data.js','tools/balance/master/config.json','tools/balance/master/loader.cjs','tools/balance/combat.cjs','tools/balance/deep.cjs','tools/balance/candidate.cjs','tools/balance/specs/balance-spec.v1.2.json',...['replay.cjs','policy.cjs','config.json','structure.cjs'].map(p=>'tools/balance/map/'+p),...['route-policy.cjs','question-policy.cjs','scenarios.cjs','telemetry.cjs'].map(p=>'tools/balance/map-advanced/'+p),...['agent.cjs','choice-policy.cjs','experience.cjs','experience-data.cjs','experiments.cjs','effects.cjs','deck-policy.cjs','artifact-policy.cjs','report.cjs','worker.cjs'].map(p=>'tools/ai-playtester/'+p)]);
+ if(fs.existsSync(path.join(ROOT,'tools/ai-playtester/experience-model.json')))files.add('tools/ai-playtester/experience-model.json');
  const sources=Object.fromEntries([...files].sort().map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,p))).digest('hex')]));
  return {sourceHash:crypto.createHash('sha256').update(JSON.stringify(sources)).digest('hex'),sources};
 }
@@ -65,13 +66,13 @@ function experiment(input={},callbacks={}){
   for(const skill of skills){const agent=createAgent(x,{skill});
    for(let n=0;n<options.seeds;n++)for(let mask=0;mask<masks;mask++){
     const seed=options.seed+n;let result;
-    if(options.mode==='campaign'){const ai=meter(),tracker=createEffectsTracker(x);ai.deckDecisions=[];try{result=createReplay(x).runCampaign({runSeed:seed,difficulty,predictProfile:options.predict,routePolicy:options.route,mode:'challenge',telemetry:true,combatAgent:r=>decision(agent,r,ai),combatChoice:r=>agent.choose(r),onCombatChoice:(r,d)=>choiceDecision(ai,r,d),onCombatPlay:r=>paid(r,ai),observeAction:(r,fn)=>tracker.capture(r,fn),deckPolicy:createDeckPolicy(x),onDeckDecision:d=>{ai.deckDecisions.push(d);if(ai.deckDecisions.length>30)ai.deckDecisions.shift();},agentVersion:agent.version});finishEffects(ai,tracker);result.ai=ai;}finally{tracker.dispose();}}
+    if(options.mode==='campaign'){const ai=meter(),tracker=createEffectsTracker(x),deckPolicy=createDeckPolicy(x,{experience:options.experience==='on'});ai.deckDecisions=[];ai.experience=deckPolicy.experience;try{result=createReplay(x).runCampaign({runSeed:seed,difficulty,predictProfile:options.predict,routePolicy:options.route,mode:'challenge',telemetry:true,combatAgent:r=>decision(agent,r,ai),combatChoice:r=>agent.choose(r),onCombatChoice:(r,d)=>choiceDecision(ai,r,d),onCombatPlay:r=>paid(r,ai),observeAction:(r,fn)=>tracker.capture(r,fn),deckPolicy,onDeckDecision:d=>{ai.deckDecisions.push(d);if(ai.deckDecisions.length>30)ai.deckDecisions.shift();},agentVersion:agent.version});finishEffects(ai,tracker);result.ai=ai;}finally{tracker.dispose();}}
     else result=combat(x,options,seed,mask,agent);
     if(result.validFinal===false)result={...result,status:'INVALID_POLICY_OR_ENGINE',utility:null,error:'Engine rejected final combat state.'};
     const row={...result,...(result.rooms?{playerTurns:result.rooms.reduce((n,r)=>n+(r.playerTurns||0),0)}:{}),seed,difficulty,skill,...(options.mode==='cards'?{mask}:{}),provenance:x.provenance};rows.push(row);callbacks.onRow?.(row);callbacks.onProgress?.({completed:rows.length,total});
    }
   }
  }
- return {schemaVersion:3,agentVersion:VERSION,jobStatus:'completed',options,...identity,rows,total,summary:summarize(rows,options),runtime:process.version,pupilWinRatesMeasured:false,interpretation:'Synthetic AI playtests; shared route and mechanic-aware deck acquisition heuristics. Contextual card measurements and actual support units, no exhaustive combinations or pupil win-rate validation.'};
+ return {schemaVersion:3,agentVersion:VERSION,jobStatus:'completed',experience:{requested:options.experience,byDifficulty:Object.fromEntries(rows.map(r=>[r.difficulty,r.ai?.experience||{status:'NOT_USED_IN_CARD_MODE',id:null}]))},options,...identity,rows,total,summary:summarize(rows,options),runtime:process.version,pupilWinRatesMeasured:false,interpretation:'Synthetic AI playtests; shared route and mechanic-aware deck acquisition heuristics. Contextual card measurements and actual support units, no exhaustive combinations or pupil win-rate validation.'};
 }
 module.exports={normalizeOptions,experiment,DIFFICULTIES,combat};

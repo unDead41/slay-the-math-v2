@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "branch": "balance/master",
+    "commit": "e5254da0000bcc24d16029f1b0d66f5139ae2489"
+  },
+  "seedPlan": {
+    "train": [
+      93
+    ],
+    "validation": [
+      701,
+      702
+    ]
+  },
+  "summary": {
+    "observations": 528,
+    "complete": 528,
+    "censored": 0,
+    "invalid": 0,
+    "cells": 1152
+  },
+  "files": {
+    "observations.jsonl": {
+      "sha256": "42bf8b286187f7826819548e253819e86fb8f29fee178277601ce141bcd7ee89",
+      "bytes": 515138
+    },
+    "summary.json": {
+      "sha256": "01e766c062747c84d29be15185905bb8bbb0bcb311153644acb39d1814d1456b",
+      "bytes": 95
+    }
+  }
+}

@@ -1,6 +1,7 @@
 'use strict';
 // Transparent acquisition heuristics, deliberately separate from measured card power.
-function createDeckPolicy(x){
+function createDeckPolicy(x,{experience=true,model}={}){
+ const evidence=require('./experience.cjs').createExperience(x,{enabled:experience,model});
  const artifacts=require('./artifact-policy.cjs').createArtifactPolicy(x);
  const cache=new Map(),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
  function profile(c){
@@ -36,7 +37,7 @@ function createDeckPolicy(x){
    }
    total+=value/(1+.24*p.cost);
   }
-  return total/n-14*Math.max(0,.22-guard)-12*Math.max(0,.3-attack)-Math.max(0,n-18)*.035;
+  return evidence.deckAdjustment(deck)+total/n-14*Math.max(0,.22-guard)-12*Math.max(0,.3-attack)-Math.max(0,n-18)*.035;
  }
  function marginal(run,c){return quality([...run.deck,c])-quality(run.deck);}
  function reward(run,keys,upgraded=false,{allowSkip=true}={}){
@@ -87,6 +88,6 @@ function createDeckPolicy(x){
   const reserve=run.hp<run.maxHp*.4?20:0,eligible=choices.filter(c=>run.gold-c.price>=reserve||c.gain>=.25).sort((a,b)=>b.gain/Math.max(1,b.price)-a.gain/Math.max(1,a.price)||a.kind.localeCompare(b.kind)||(a.index||0)-(b.index||0));
   return eligible[0]||{kind:'leave',reason:reserve?'Keep Gold for recovery; no purchase justifies the cost.':'Leave: no affordable positive marginal improvement.'};
  }
- return {reward,shop,camp,upgrade,remove,transform,mystery,artifact:artifacts.choose};
+ return {reward,shop,camp,upgrade,remove,transform,mystery,artifact:artifacts.choose,experience:{status:evidence.status,id:evidence.id}};
 }
 module.exports={createDeckPolicy};

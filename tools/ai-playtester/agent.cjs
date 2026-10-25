@@ -1,9 +1,9 @@
 'use strict';
-const VERSION='sampled-turn-search-3',SKILLS=['beginner','intermediate','expert'];
+const {publicPool,chooseChoice}=require('./choice-policy.cjs');
+const VERSION='sampled-turn-search-4',SKILLS=['beginner','intermediate','expert'];
 const LIMITS=Object.freeze({turns:3,samples:3,width:6,playsPerTurn:3,perRollout:14,nodes:300,choices:4}),copy=v=>JSON.parse(JSON.stringify(v));
 function planningWorld(run,sample=0){
- const b=run.battle,known=new Set(['hand','discard','exhaust','active','resolving'].flatMap(k=>(b[k]||[]).map(c=>c.uid))),pool=run.deck.filter(c=>!known.has(c.uid)).sort((a,b)=>a.uid.localeCompare(b.uid));
- if(pool.length!==b.draw.length)throw Error('Cannot reconstruct unknown draw pool from public deck and zones.');
+ const b=run.battle,pool=publicPool(run);
  let seed=(0x51a7e001^run.seed^Math.imul(b.turn,2654435761)^Math.imul(sample+1,2246822519))>>>0;
  const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
  const r=copy({...run,checkpoint:null,rng:seed,calculationState:undefined,battle:{...b,draw:[],log:[],combatLog:undefined},...(run.artifactState?{artifactState:{...run.artifactState,rng:(seed^0x6a09e667)>>>0}}:{})});
@@ -15,12 +15,13 @@ function incoming(x,r){
  for(let i=0;i<(it.hits||1);i++)total+=x.CC.enemyDamage(projected,it.damage||0).amount;
  return Math.max(0,total-b.block);
 }
-function immediate(x,r,c,p){
- const damage=p.damageEvents.reduce((n,e)=>n+e.hpLost,0),after={...r,battle:{...r.battle,cardCombat:{...r.battle.cardCombat,statuses:copy(r.battle.cardCombat.statuses)}}};
+function immediate(x,r,c,p,baseIncoming=incoming(x,r)){
+ const damage=p.damageEvents.reduce((n,e)=>n+e.hpLost,0);let after=null;
+ const modified=()=>after??=( {...r,battle:{...r.battle,cardCombat:{...r.battle.cardCombat,statuses:copy(r.battle.cardCombat.statuses)}}});
  let draw=0,selection=0,delayed=0,support=0;
  for(const a of p.actions){
-  if(a.op==='grant_block'&&!a.timing)after.battle.block+=a.value;
-  if(a.op==='apply_status'&&a.status==='weak'&&a.target!=='self')after.battle.cardCombat.statuses.enemy.weak=Math.min(3,after.battle.cardCombat.statuses.enemy.weak+a.value);
+  if(a.op==='grant_block'&&!a.timing&&a.value)modified().battle.block+=a.value;
+  if(a.op==='apply_status'&&a.status==='weak'&&a.target!=='self'&&a.value){const state=modified().battle.cardCombat;state.statuses.enemy.weak=Math.min(3,state.statuses.enemy.weak+a.value);}
   if(a.op==='apply_status'&&a.status==='vulnerable')support+=1.3*a.value;
   if(a.op==='apply_status'&&a.status==='thorns')support+=a.value*Math.min(r.battle.currentIntent.hits||1,2)*.6;
   if(a.op==='draw')a.timing?delayed+=a.value*.8:draw+=a.value;
@@ -32,32 +33,27 @@ function immediate(x,r,c,p){
   for(const a of p.passive.effects){const v=p.values[a.value]||0;
    if(a.op==='add_attribute')support+=v*({strength:1.2+attack*4,agility:.8+guard*4,defense:4}[a.attribute]||0);
    if(a.op==='draw')support+=v*2.8;
-   if(a.op==='grant_block')support+=v*(p.card.name==='Grimoire Ward'?skills*3:.4);
+   if(a.op==='grant_block')support+=v*(p.card.id==='stm.passive.grimoire_ward'?skills*3:.4);
    if(a.op==='retain_block')support+=v*guard*1.5;
    if(a.op==='fixed_hp_damage')support+=v*.9;
    if(a.op==='gain_focus')support+=v*.7;
   }
  }
- const mitigation=Math.max(0,incoming(x,r)-incoming(x,after)),needed=Number(r.hp<=incoming(x,r))*1.2;
+ const mitigation=after?Math.max(0,baseIncoming-incoming(x,after)):0,needed=Number(r.hp<=baseIncoming)*1.2;
  return damage+(1.5+needed)*mitigation+Math.min(draw,x.C.HAND_LIMIT-p.context.handAfterPlay)*(r.battle.energy>p.payEnergy?2.1:.4)+selection*(r.battle.energy>p.payEnergy?3:1)+delayed+support-.15*p.payEnergy-.7*p.payFocus+(damage>=r.battle.hp?1000:0);
 }
 function candidates(x,r){
- const out=[];
- for(const c of r.battle.hand)for(const focus of [false,true]){
-  if(focus&&(!r.battle.focus||r.battle.boostUsed))continue;
-  const projected={...r,battle:{...r.battle,boostArmed:focus}},p=x.E.cardPlan(projected,c);
-  if(p?.legal&&(!focus||p.focused))out.push({uid:c.uid,focus,p,merit:immediate(x,projected,c,p)});
+ const out=[];let baseline;
+ const projections=[false,true].map(focus=>({...r,battle:{...r.battle,boostArmed:focus}}));
+ for(const c of r.battle.hand){
+  const plain=x.E.cardPlan(projections[0],c),focusAllowed=r.battle.focus&&!r.battle.boostUsed&&plain?.card.focus_eligible!==false;
+  for(const focus of focusAllowed?[false,true]:[false]){const p=focus?x.E.cardPlan(projections[1],c):plain;
+   if(p?.legal&&(!focus||p.focused)){baseline??=incoming(x,r);out.push({uid:c.uid,focus,p,merit:immediate(x,projections[Number(focus)],c,p,baseline)});}
+  }
  }
  return out.sort((a,b)=>b.merit-a.merit||Number(a.focus)-Number(b.focus)||a.uid.localeCompare(b.uid));
 }
-function choice(x,r){
- const ch=x.E.cardChoice(r),rank=c=>{const v={...r,battle:{...r.battle,cardChoice:null,hand:[...r.battle.hand.filter(v=>v.uid!==c.uid),c]}},p=x.E.cardPlan(v,c);return p?immediate(x,v,c,p):0;};
- if(ch.kind==='card_search')return incoming(x,r)>0?'defend':'attack';
- if(ch.kind==='burning_page')return 'take';
- const sorted=ch.candidates.slice().sort((a,b)=>rank(b)-rank(a)||a.uid.localeCompare(b.uid));
- if(['passive_swap','passive_trim'].includes(ch.kind))return sorted.at(-1).uid;
- return ch.kind==='read_ahead'?{take:sorted[0].uid,order:sorted.slice(1).map(c=>c.uid)}:sorted[0].uid;
-}
+function choice(x,r){return chooseChoice(x,r,{immediate,incoming});}
 function value(x,root,r){
  if(r.hp<=0||r.scene==='defeat')return -10000+(root.battle.hp-r.battle.hp);
  if(r.battle.hp<=0||r.scene!=='battle')return 10000+2*r.hp;

@@ -1,0 +1,16 @@
+PASS 75% important bytes +100% hard core; no early Practice/Boss
+PASS paused speculative work leaves foreground Practice120 usable
+PASS offline/hidden pause and reconnect/visible resume without user retry
+BOUNDARY_DIAGNOSTIC {"complete":{"q":{"queued":0,"active":0,"failed":0,"paused":false,"online":false},"p":{"verifiedFiles":760,"totalFiles":760,"verifiedBytes":231321240,"loadedBytes":231321240,"totalBytes":231321240,"availableFiles":758,"availableBytes":230814136,"cacheMode":"persistent"},"stats":{"requests":761,"cacheHits":1,"memoryHits":211,"hashes":762,"bytes":232563684,"maxActive":4,"cacheMode":"persistent","verifiedFiles":761,"totalFiles":761,"verifiedBytes":232563684,"loadedBytes":232563684,"totalBytes":232563684,"availableFiles":759,"availableBytes":232056580,"active":0,"queued":0,"memoryBytes":33489830,"memoryEntries":126,"memoryBudgetBytes":33554432},"missing":[{"url":"assets/ground-rune_bat-defend.webp","bytes":245068,"sha256":"4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe","pack":"stage1","kind":"image","required":false},{"url":"assets/ground-rune_bat-skill.webp","bytes":262036,"sha256":"c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725","pack":"stage1","kind":"image","required":false}]},"inspection":{"before":{"q":{"queued":0,"active":0,"failed":0,"paused":false,"online":false},"stats":{"requests":761,"cacheHits":1,"memoryHits":211,"hashes":762,"bytes":232563684,"maxActive":4,"cacheMode":"persistent","verifiedFiles":761,"totalFiles":761,"verifiedBytes":232563684,"loadedBytes":232563684,"totalBytes":232563684,"availableFiles":761,"availableBytes":232563684,"active":0,"queued":0,"memoryBytes":33489830,"memoryEntries":126,"memoryBudgetBytes":33554432}},"cache":[{"entry":{"url":"assets/ground-rune_bat-defend.webp","bytes":245068,"sha256":"4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe","pack":"stage1","kind":"image","required":false},"inPersistentCache":true},{"entry":{"url":"assets/ground-rune_bat-skill.webp","bytes":262036,"sha256":"c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725","pack":"stage1","kind":"image","required":false},"inPersistentCache":true}],"afterReconcile":{"q":{"queued":0,"active":0,"failed":0,"paused":false,"online":false},"stats":{"requests":761,"cacheHits":1,"memoryHits":211,"hashes":762,"bytes":232563684,"maxActive":4,"cacheMode":"persistent","verifiedFiles":761,"totalFiles":761,"verifiedBytes":232563684,"loadedBytes":232563684,"totalBytes":232563684,"availableFiles":761,"availableBytes":232563684,"active":0,"queued":0,"memoryBytes":33489830,"memoryEntries":126,"memoryBudgetBytes":33554432},"missing":[]}}}
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+758 !== 760
+
+    at eval (eval at <anonymous> (/workspace/scratch/e7745ff161c8/qa-ai-main-20261025/preload-boundary-probe.cjs:13:1), <anonymous>:26:882) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 758,
+  expected: 760,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

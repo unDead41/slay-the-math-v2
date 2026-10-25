@@ -1,0 +1,22 @@
+{
+  "phase": "validation",
+  "source": {
+    "branch": "balance/master",
+    "commit": "e5254da0000bcc24d16029f1b0d66f5139ae2489"
+  },
+  "seedPlan": {
+    "train": [
+      93
+    ],
+    "validation": [
+      701,
+      702
+    ]
+  },
+  "policySignature": "30a326f3aa5c7a10742171505365dcccb4b23a0aa24016311655a610612a65e3",
+  "modelRule": "delta/20 * n/(n+5), clamp +/-0.25; unique pairs once / deck length",
+  "validationUtility": "100*VICTORY +20*final.hp/final.maxHp",
+  "validationRule": "Six terminal matched entries; no extra invalid/censors; total wins and utility nondecreasing.",
+  "plannedJobs": 12,
+  "plannedRows": 12
+}

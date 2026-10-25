@@ -6,7 +6,7 @@ test('strict options reject invalid numbers, unknown fields and non-string enemy
  assert.equal(normalizeOptions({seed:4294967295,seeds:1}).seed,4294967295);assert.throws(()=>normalizeOptions({seed:4294967295,seeds:2}));
 });
 test('actual campaign uses selected AI with real receipts and terminal outcome',()=>{
- const r=experiment({mode:'campaign',seed:20,seeds:1,difficulty:'easy',skill:'intermediate',predict:'feedback'});assert.equal(r.rows.length,1);assert.ok(['VICTORY','DEFEAT'].includes(r.rows[0].status),JSON.stringify(r.rows[0]));assert.equal(r.rows[0].policyVersion,'sampled-turn-search-3/intermediate');assert.ok(r.rows[0].ai.decisions>0);assert.ok(r.rows[0].ai.energySpent>0);assert.equal(r.summary.invalid,0);assert.equal(r.pupilWinRatesMeasured,false);assert.match(r.sourceHash,/^[a-f0-9]{64}$/);
+ const r=experiment({mode:'campaign',seed:20,seeds:1,difficulty:'easy',skill:'intermediate',predict:'feedback'});assert.equal(r.rows.length,1);assert.ok(['VICTORY','DEFEAT'].includes(r.rows[0].status),JSON.stringify(r.rows[0]));assert.equal(r.rows[0].policyVersion,'sampled-turn-search-4/intermediate');assert.ok(r.rows[0].ai.decisions>0);assert.ok(r.rows[0].ai.energySpent>0);assert.equal(r.summary.invalid,0);assert.equal(r.pupilWinRatesMeasured,false);assert.match(r.sourceHash,/^[a-f0-9]{64}$/);
  const cards=Object.values(r.rows[0].ai.cards);assert.equal(cards.reduce((n,c)=>n+c.plays,0),r.rows[0].committedCardPlays);assert.equal(cards.reduce((n,c)=>n+c.energySpent,0),r.rows[0].ai.energySpent);assert.equal(cards.reduce((n,c)=>n+c.focusSpent,0),r.rows[0].ai.focusSpent);
 });
 test('paired self-control has zero total, individual and interaction deltas',()=>{

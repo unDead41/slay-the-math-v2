@@ -1,0 +1,501 @@
+{
+  "status": "DIAGNOSTIC_COLLECTION_COMPLETE",
+  "failedKinds": [
+    "baseline"
+  ],
+  "samples": [
+    {
+      "kind": "candidate",
+      "attempt": 1,
+      "label": "preload-candidate-boundary-1",
+      "exitCode": 0,
+      "diagnostic": {
+        "complete": {
+          "q": {
+            "queued": 0,
+            "active": 0,
+            "failed": 0,
+            "paused": false,
+            "online": false
+          },
+          "p": {
+            "verifiedFiles": 760,
+            "totalFiles": 760,
+            "verifiedBytes": 231321240,
+            "loadedBytes": 231321240,
+            "totalBytes": 231321240,
+            "availableFiles": 760,
+            "availableBytes": 231321240,
+            "cacheMode": "persistent"
+          },
+          "stats": {
+            "requests": 761,
+            "cacheHits": 1,
+            "memoryHits": 211,
+            "hashes": 762,
+            "bytes": 232563684,
+            "maxActive": 4,
+            "cacheMode": "persistent",
+            "verifiedFiles": 761,
+            "totalFiles": 761,
+            "verifiedBytes": 232563684,
+            "loadedBytes": 232563684,
+            "totalBytes": 232563684,
+            "availableFiles": 761,
+            "availableBytes": 232563684,
+            "active": 0,
+            "queued": 0,
+            "memoryBytes": 33489830,
+            "memoryEntries": 126,
+            "memoryBudgetBytes": 33554432
+          },
+          "missing": []
+        },
+        "inspection": {
+          "before": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            }
+          },
+          "cache": [],
+          "afterReconcile": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            },
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "kind": "baseline",
+      "attempt": 1,
+      "label": "preload-baseline-boundary-1",
+      "exitCode": 1,
+      "diagnostic": {
+        "complete": {
+          "q": {
+            "queued": 0,
+            "active": 0,
+            "failed": 0,
+            "paused": false,
+            "online": false
+          },
+          "p": {
+            "verifiedFiles": 760,
+            "totalFiles": 760,
+            "verifiedBytes": 231321240,
+            "loadedBytes": 231321240,
+            "totalBytes": 231321240,
+            "availableFiles": 758,
+            "availableBytes": 230814136,
+            "cacheMode": "persistent"
+          },
+          "stats": {
+            "requests": 761,
+            "cacheHits": 1,
+            "memoryHits": 211,
+            "hashes": 762,
+            "bytes": 232563684,
+            "maxActive": 4,
+            "cacheMode": "persistent",
+            "verifiedFiles": 761,
+            "totalFiles": 761,
+            "verifiedBytes": 232563684,
+            "loadedBytes": 232563684,
+            "totalBytes": 232563684,
+            "availableFiles": 759,
+            "availableBytes": 232056580,
+            "active": 0,
+            "queued": 0,
+            "memoryBytes": 33489830,
+            "memoryEntries": 126,
+            "memoryBudgetBytes": 33554432
+          },
+          "missing": [
+            {
+              "url": "assets/ground-rune_bat-defend.webp",
+              "bytes": 245068,
+              "sha256": "4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe",
+              "pack": "stage1",
+              "kind": "image",
+              "required": false
+            },
+            {
+              "url": "assets/ground-rune_bat-skill.webp",
+              "bytes": 262036,
+              "sha256": "c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725",
+              "pack": "stage1",
+              "kind": "image",
+              "required": false
+            }
+          ]
+        },
+        "inspection": {
+          "before": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            }
+          },
+          "cache": [
+            {
+              "entry": {
+                "url": "assets/ground-rune_bat-defend.webp",
+                "bytes": 245068,
+                "sha256": "4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe",
+                "pack": "stage1",
+                "kind": "image",
+                "required": false
+              },
+              "inPersistentCache": true
+            },
+            {
+              "entry": {
+                "url": "assets/ground-rune_bat-skill.webp",
+                "bytes": 262036,
+                "sha256": "c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725",
+                "pack": "stage1",
+                "kind": "image",
+                "required": false
+              },
+              "inPersistentCache": true
+            }
+          ],
+          "afterReconcile": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            },
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "kind": "candidate",
+      "attempt": 2,
+      "label": "preload-candidate-boundary-2",
+      "exitCode": 0,
+      "diagnostic": {
+        "complete": {
+          "q": {
+            "queued": 0,
+            "active": 0,
+            "failed": 0,
+            "paused": false,
+            "online": false
+          },
+          "p": {
+            "verifiedFiles": 760,
+            "totalFiles": 760,
+            "verifiedBytes": 231321240,
+            "loadedBytes": 231321240,
+            "totalBytes": 231321240,
+            "availableFiles": 760,
+            "availableBytes": 231321240,
+            "cacheMode": "persistent"
+          },
+          "stats": {
+            "requests": 761,
+            "cacheHits": 1,
+            "memoryHits": 211,
+            "hashes": 762,
+            "bytes": 232563684,
+            "maxActive": 4,
+            "cacheMode": "persistent",
+            "verifiedFiles": 761,
+            "totalFiles": 761,
+            "verifiedBytes": 232563684,
+            "loadedBytes": 232563684,
+            "totalBytes": 232563684,
+            "availableFiles": 761,
+            "availableBytes": 232563684,
+            "active": 0,
+            "queued": 0,
+            "memoryBytes": 33489830,
+            "memoryEntries": 126,
+            "memoryBudgetBytes": 33554432
+          },
+          "missing": []
+        },
+        "inspection": {
+          "before": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            }
+          },
+          "cache": [],
+          "afterReconcile": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            },
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "kind": "candidate",
+      "attempt": 3,
+      "label": "preload-candidate-boundary-3",
+      "exitCode": 0,
+      "diagnostic": {
+        "complete": {
+          "q": {
+            "queued": 0,
+            "active": 0,
+            "failed": 0,
+            "paused": false,
+            "online": false
+          },
+          "p": {
+            "verifiedFiles": 760,
+            "totalFiles": 760,
+            "verifiedBytes": 231321240,
+            "loadedBytes": 231321240,
+            "totalBytes": 231321240,
+            "availableFiles": 760,
+            "availableBytes": 231321240,
+            "cacheMode": "persistent"
+          },
+          "stats": {
+            "requests": 761,
+            "cacheHits": 1,
+            "memoryHits": 211,
+            "hashes": 762,
+            "bytes": 232563684,
+            "maxActive": 4,
+            "cacheMode": "persistent",
+            "verifiedFiles": 761,
+            "totalFiles": 761,
+            "verifiedBytes": 232563684,
+            "loadedBytes": 232563684,
+            "totalBytes": 232563684,
+            "availableFiles": 761,
+            "availableBytes": 232563684,
+            "active": 0,
+            "queued": 0,
+            "memoryBytes": 33489830,
+            "memoryEntries": 126,
+            "memoryBudgetBytes": 33554432
+          },
+          "missing": []
+        },
+        "inspection": {
+          "before": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            }
+          },
+          "cache": [],
+          "afterReconcile": {
+            "q": {
+              "queued": 0,
+              "active": 0,
+              "failed": 0,
+              "paused": false,
+              "online": false
+            },
+            "stats": {
+              "requests": 761,
+              "cacheHits": 1,
+              "memoryHits": 211,
+              "hashes": 762,
+              "bytes": 232563684,
+              "maxActive": 4,
+              "cacheMode": "persistent",
+              "verifiedFiles": 761,
+              "totalFiles": 761,
+              "verifiedBytes": 232563684,
+              "loadedBytes": 232563684,
+              "totalBytes": 232563684,
+              "availableFiles": 761,
+              "availableBytes": 232563684,
+              "active": 0,
+              "queued": 0,
+              "memoryBytes": 33489830,
+              "memoryEntries": 126,
+              "memoryBudgetBytes": 33554432
+            },
+            "missing": []
+          }
+        }
+      }
+    }
+  ],
+  "limits": "At most three first-boundary probes per snapshot; no runtime or assertion changes. Does not erase the original failed whole-suite run."
+}

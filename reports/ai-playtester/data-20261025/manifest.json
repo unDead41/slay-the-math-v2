@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Frozen AI reference/training/validation evidence; model calibration is synthetic and source-bound.",
+  "files": {
+    "after/comparison.json": {
+      "sha256": "b3ef4374f874a1b95897e13b2ea208ed6d7baa7a0fb1015e2000cee75fbbdebe",
+      "bytes": 61745
+    },
+    "after/protocol.json": {
+      "sha256": "5b3698b1a3f7d2f9323e8729aa7fe05962ef17b9819d02b7bc67c538657b1911",
+      "bytes": 627
+    },
+    "after/raw.jsonl.gz": {
+      "sha256": "c07bdaeb737fa760d73d25a5f7d680688f51a4d2bc085ebb45b88894d01a46a9",
+      "bytes": 325944
+    },
+    "after/schedule.json": {
+      "sha256": "58cb9a003b89143b7478bb75c3f861afb101bd77187a64e9384c8120b72c9a02",
+      "bytes": 17666
+    },
+    "after/source-capsule.json.gz": {
+      "sha256": "b16675471cd1f4df7900c692307160addf70faf3be27459f3cd219a4f474768e",
+      "bytes": 823255
+    },
+    "after/summary.json": {
+      "sha256": "6324593d3c8f0a1a5bcb3ccde11e78c69548da087943acb1790226f6b2b7b412",
+      "bytes": 4664
+    },
+    "before/raw.jsonl.gz": {
+      "sha256": "8765ca9d34227d081cdf547e18a902ac4381e1e381f7cd602b01110ca31d8a14",
+      "bytes": 308787
+    },
+    "before/schedule.json": {
+      "sha256": "89f75d311ee97f35206dff4669b91be1e6b90d971de9f60c84d51546419669c5",
+      "bytes": 16016
+    },
+    "before/summary.json": {
+      "sha256": "bd212805bbb853e7c064701eaee6b38dc62cbafd4e0f00fac1e8feb972b44e5d",
+      "bytes": 795803
+    },
+    "review-guarded/exchange/manifest.json": {
+      "sha256": "e5d24d124c5b87d2feb5510bee88e2bf60889d41023111b2eca2904410f09722",
+      "bytes": 63210
+    },
+    "review-guarded/exchange/observations.jsonl": {
+      "sha256": "42bf8b286187f7826819548e253819e86fb8f29fee178277601ce141bcd7ee89",
+      "bytes": 515138
+    },
+    "review-guarded/exchange/summary.json": {
+      "sha256": "01e766c062747c84d29be15185905bb8bbb0bcb311153644acb39d1814d1456b",
+      "bytes": 95
+    },
+    "review-guarded/verification.json": {
+      "sha256": "f7a2ab05b518d30e132f77a0a40b63d45209ad84c46fb9d5995c2631d127df64",
+      "bytes": 875
+    },
+    "train/candidate-model.json": {
+      "sha256": "fcab002a3db982e3a314fa9c3fdf08b9e32957ff78dbd5140962f0b3b29454bc",
+      "bytes": 48370
+    },
+    "train/exchange/manifest.json": {
+      "sha256": "8dc0359417b8e9b2ec145d5bc88328336d58667774f3b7a1a8450b756f4f674b",
+      "bytes": 642
+    },
+    "train/exchange/observations.jsonl": {
+      "sha256": "42bf8b286187f7826819548e253819e86fb8f29fee178277601ce141bcd7ee89",
+      "bytes": 515138
+    },
+    "train/exchange/summary.json": {
+      "sha256": "01e766c062747c84d29be15185905bb8bbb0bcb311153644acb39d1814d1456b",
+      "bytes": 95
+    },
+    "train/independent-verification.json": {
+      "sha256": "986bd80483252f98c57d2b93f0e585e459e5fbf75523b65dfb1c96b61e7ca81b",
+      "bytes": 296
+    },
+    "train/protocol.json": {
+      "sha256": "3ed6ba1afff06726ba665277df26534a19d1b5ee48670aad4069f303224e6c56",
+      "bytes": 629
+    },
+    "train/raw.jsonl.gz": {
+      "sha256": "265dd603028ff65160eb292508c085f9db7698a022b85929c9d7378d4f119735",
+      "bytes": 2308687
+    },
+    "train/schedule.json": {
+      "sha256": "806f87a00d25e2b1caecd7c54df40a26bb173dfcdd9e72fcc63632a53ef8bab6",
+      "bytes": 159247
+    },
+    "train/source-capsule.json.gz": {
+      "sha256": "9b7ae2c29784ed1751116da6d398f72a3054b58e4c290e8c020994a46285f279",
+      "bytes": 817062
+    },
+    "train/summary.json": {
+      "sha256": "6a06543ecdc74781a88c50af5a28b9ae3d80c64159914fff647adf975a1ab7c7",
+      "bytes": 37155
+    },
+    "validation/gate.json": {
+      "sha256": "8fa76293103f330cc3e6a41ce578cccfa97487ce636e395fe735789ac95334d4",
+      "bytes": 3428
+    },
+    "validation/protocol.json": {
+      "sha256": "6ad3a403eef20515050ef084e424d00b0bf1f9629db89aea58025e7f27ccc0e5",
+      "bytes": 631
+    },
+    "validation/raw.jsonl.gz": {
+      "sha256": "dc23011146c979466e27b9c5b598d4d77776b8cbbc9574a3d163585201f870b4",
+      "bytes": 113972
+    },
+    "validation/schedule.json": {
+      "sha256": "acbe007213af088f91eb8b6e399ad48385467982e5acb53d1c173ce95e948058",
+      "bytes": 2453
+    },
+    "validation/source-capsule.json.gz": {
+      "sha256": "b16675471cd1f4df7900c692307160addf70faf3be27459f3cd219a4f474768e",
+      "bytes": 823255
+    },
+    "validation/summary.json": {
+      "sha256": "f1e38e440ffb407cb73dab2fa5b3aeb0ef6bd3f77dae2c3d4cd748e487c03ec3",
+      "bytes": 919
+    }
+  }
+}

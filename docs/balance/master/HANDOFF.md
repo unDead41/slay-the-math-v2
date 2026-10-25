@@ -1,3 +1,16 @@
+## Main publication addendum — 2.48.0, 25 October 2026
+
+Ijamm now explicitly requests publishing the completed `balance/master` AI update
+to `main`. This supersedes the original branch-only boundary for feature
+`39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91`. Integrate it with current main
+`2b81a2cd80532324a76581563874a9ecd797cc42` / 2.47.0 as **2.48.0**.
+The original experiment, source capsules, reports and branch publication below
+remain historical evidence with their original SHAs and measured limitations.
+Current numerical candidate.5, player saves/RNG, language, approved Alyssa V5,
+live VFX, automatic downloads and the 23-chapter / 98-image / 12-practice tutorial
+retain their existing owners. The two deferred P3 data validations remain deferred.
+[Current main integration and fresh evidence](MAIN_RELEASE_2_48_0.md).
+
 Current main release: [2.42.0 — reviewed Balance + AI refresh](MAIN_RELEASE_2_42_0.md). Ijamm's new instruction authorizes main publication; original branch-only and study records below remain historical.
 
 Current branch refresh: [2.42.0-balance.1 — three-source review and AI](REFRESH_2026_10_24.md). The candidate.2 results below remain historical; current candidate.5/source-specific results are recorded separately.

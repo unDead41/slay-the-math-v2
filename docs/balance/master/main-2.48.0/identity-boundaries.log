@@ -1,0 +1,357 @@
+{
+  "status": "PASS",
+  "candidateSHA": "b2af6c7f0bab227be7da48b63bc48d3b41faf32b",
+  "candidateTree": "09486f7440a37fcb014fdd59094c0ad612d4084b",
+  "base": "2b81a2cd80532324a76581563874a9ecd797cc42",
+  "version": "2.48.0",
+  "protectedDiff": [
+    "dist/asset-manifest.json",
+    "dist/index.html",
+    "dist/release.js"
+  ],
+  "sourceParity": [
+    {
+      "file": "dist/artifact-data.js",
+      "sha256": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da"
+    },
+    {
+      "file": "dist/artifacts.js",
+      "sha256": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d"
+    },
+    {
+      "file": "dist/balance-data.js",
+      "sha256": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d"
+    },
+    {
+      "file": "dist/balance.js",
+      "sha256": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f"
+    },
+    {
+      "file": "dist/card-combat.js",
+      "sha256": "58e94628c12cadfe29eef0eada0c8626fb92f47644abf6569d4a9045c2623cec"
+    },
+    {
+      "file": "dist/card-data.js",
+      "sha256": "b0a59ae12fa10e407ed9f6048cdbb2b64a04aba778e1bbb7b7af8f8eba9e8f7c"
+    },
+    {
+      "file": "dist/card-flow.js",
+      "sha256": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb"
+    },
+    {
+      "file": "dist/card-kit.js",
+      "sha256": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12"
+    },
+    {
+      "file": "dist/combat-log.js",
+      "sha256": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9"
+    },
+    {
+      "file": "dist/combat-predict.js",
+      "sha256": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a"
+    },
+    {
+      "file": "dist/config.js",
+      "sha256": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74"
+    },
+    {
+      "file": "dist/economy-data.js",
+      "sha256": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102"
+    },
+    {
+      "file": "dist/economy.js",
+      "sha256": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d"
+    },
+    {
+      "file": "dist/education.js",
+      "sha256": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed"
+    },
+    {
+      "file": "dist/engine.js",
+      "sha256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc"
+    },
+    {
+      "file": "dist/map-rng.js",
+      "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c"
+    },
+    {
+      "file": "dist/map.js",
+      "sha256": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09"
+    },
+    {
+      "file": "dist/math.js",
+      "sha256": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9"
+    },
+    {
+      "file": "dist/mechanics.js",
+      "sha256": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907"
+    },
+    {
+      "file": "dist/mystery-data.js",
+      "sha256": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b"
+    },
+    {
+      "file": "dist/mystery.js",
+      "sha256": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec"
+    },
+    {
+      "file": "dist/question-data.js",
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+    },
+    {
+      "file": "dist/rich-text-data.js",
+      "sha256": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df"
+    },
+    {
+      "file": "dist/rich-text.js",
+      "sha256": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226"
+    },
+    {
+      "file": "tools/ai-playtester/agent.cjs",
+      "sha256": "de95c11d94cc0c6b7754ac6017e2061cb99aeb1362fae509b31291c1812cfd4f"
+    },
+    {
+      "file": "tools/ai-playtester/artifact-policy.cjs",
+      "sha256": "b4ebd09a6cbf7d4298d7131a4c09dae128ae4b3032a08947446c109a51028da4"
+    },
+    {
+      "file": "tools/ai-playtester/choice-policy.cjs",
+      "sha256": "e12e1da700132193ef938861670a018da3026b853c65f146855fe92bb37b849f"
+    },
+    {
+      "file": "tools/ai-playtester/deck-policy.cjs",
+      "sha256": "3b02a5773aada502cd327fc1d445644877b8a83eb756cee2a98aed6fde738c99"
+    },
+    {
+      "file": "tools/ai-playtester/effects.cjs",
+      "sha256": "048a3f4fa815ea7beb1826a03fd4f296c1a10eb8a42558f59b4970eab8647283"
+    },
+    {
+      "file": "tools/ai-playtester/experience-data.cjs",
+      "sha256": "ebae6279f8d4d53e6d3eeba6e6c211dbac31231004eaf2d9616f91f4c84ae6c5"
+    },
+    {
+      "file": "tools/ai-playtester/experience-model.json",
+      "sha256": "fcab002a3db982e3a314fa9c3fdf08b9e32957ff78dbd5140962f0b3b29454bc"
+    },
+    {
+      "file": "tools/ai-playtester/experience.cjs",
+      "sha256": "d6d55bbe8ccfc7acc0945ffe301a25a9f2aa7ee1659c9de14d1889da8ad96024"
+    },
+    {
+      "file": "tools/ai-playtester/experiments.cjs",
+      "sha256": "1b3a042aad67c54f3992cbbd4147319e84ae68fe5ba253f321a94fc324a9ed03"
+    },
+    {
+      "file": "tools/ai-playtester/report.cjs",
+      "sha256": "e1bf1517f4c545c1de5af1f400e9995d47a4ebfb6b6ce850b814361b88a8e24b"
+    },
+    {
+      "file": "tools/ai-playtester/worker.cjs",
+      "sha256": "de134c1a7e7c6510d85014dbfcaba720bcabea2a7a28b2ea5ccdfe015f524ecb"
+    },
+    {
+      "file": "tools/balance/candidate.cjs",
+      "sha256": "ba67f6c69621d2297d134e6371312e88a9d96927ade32fa2848ef3a3b7ff3154"
+    },
+    {
+      "file": "tools/balance/combat.cjs",
+      "sha256": "9aabe52146a87e7330754bb7290128e454ee59b9220c119481ef52e2e5d74ab8"
+    },
+    {
+      "file": "tools/balance/deep.cjs",
+      "sha256": "5f0ab6f67f1b41cf378812fb982ba5ac4128ea4d1f9f0fd9200fe400ff1a7a37"
+    },
+    {
+      "file": "tools/balance/map-advanced/question-policy.cjs",
+      "sha256": "02abed3bce27fe52e12d0c013b14fd800228a3d2be2112071943db7a194025b9"
+    },
+    {
+      "file": "tools/balance/map-advanced/route-policy.cjs",
+      "sha256": "11ce54c3aa9ffcdfa87e4bb701c87c2f73c57e7c3846e2756a14a34b2c559774"
+    },
+    {
+      "file": "tools/balance/map-advanced/scenarios.cjs",
+      "sha256": "2b63d11c760d074c50069d36ee0b2af9684d9991aa3d1977d9ae310a88e51385"
+    },
+    {
+      "file": "tools/balance/map-advanced/telemetry.cjs",
+      "sha256": "6c73f23652969a4ad3e0c66eeaaefb258c3e8f705419382864f12735a5a3503f"
+    },
+    {
+      "file": "tools/balance/map/config.json",
+      "sha256": "9677b7ca5aa64f620220303e6734b47d7a5f83d5ae50c08187dba412cb1aa9fa"
+    },
+    {
+      "file": "tools/balance/map/policy.cjs",
+      "sha256": "9f98eb17a7d253c520122b9833d1beeecadcd147de8b97e303e74e8c93076051"
+    },
+    {
+      "file": "tools/balance/map/replay.cjs",
+      "sha256": "1739e6dc8188423d2aeb719ffca3ab3081029e69ffd571636ef486d7f8c16c16"
+    },
+    {
+      "file": "tools/balance/map/structure.cjs",
+      "sha256": "89ae7f11cf3c7369b0a7bb349bea73d84532b42d7c945c2291d2172175327ca4"
+    },
+    {
+      "file": "tools/balance/master/config.json",
+      "sha256": "d5c9e2ba51ab23117673ee10174b6f19f8e8777c7463bb0a426c1cd232252c92"
+    },
+    {
+      "file": "tools/balance/master/loader.cjs",
+      "sha256": "98717d5a96d97c5fd8cf5110d621e28addf64d02cd149ba040ed60c118c28c0b"
+    },
+    {
+      "file": "tools/balance/specs/balance-spec.v1.2.json",
+      "sha256": "90c7b23a224159d6fc9f6e038801f3414d4ff4328ed663be85e10bed6e7a796f"
+    }
+  ],
+  "profiles": [
+    {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "easy",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+      "fallbacks": [
+        "DISABLED",
+        "MISSING_MODEL",
+        "INVALID_MODEL",
+        "STALE_RUNTIME"
+      ]
+    },
+    {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "medium",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+      "fallbacks": [
+        "DISABLED",
+        "MISSING_MODEL",
+        "INVALID_MODEL",
+        "STALE_RUNTIME"
+      ]
+    },
+    {
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "hard",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      },
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+      "fallbacks": [
+        "DISABLED",
+        "MISSING_MODEL",
+        "INVALID_MODEL",
+        "STALE_RUNTIME"
+      ]
+    }
+  ],
+  "tutorialCounts": {
+    "chapters": 23,
+    "practices": 12,
+    "media": 98
+  },
+  "production": {
+    "files": 823,
+    "aiExcluded": true,
+    "offlineBytes": 312112645,
+    "offlineSha256": "a6feafd7d6d9241962ad477548c2ae290da8a4dd9b55e51d008c53a5147b404a"
+  },
+  "sourceHash": "a07e86c203167242ae7b79def6b82da170938390830a54d8f95c080ea4f35e8b",
+  "smoke": {
+    "seed": 703,
+    "rows": 2,
+    "invalid": 0,
+    "censored": 0,
+    "status": "NOT_USED_IN_CARD_MODE"
+  },
+  "boundary": [
+    {
+      "mode": "player",
+      "checks": [
+        {
+          "route": "/__dev/ai/",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "POST",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "mode": "production",
+      "checks": [
+        {
+          "route": "/__dev/ai/",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/catalog",
+          "method": "POST",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "GET",
+          "status": 404
+        },
+        {
+          "route": "/__dev/ai/jobs",
+          "method": "POST",
+          "status": 404
+        }
+      ]
+    }
+  ]
+}

@@ -76,3 +76,7 @@ For the integrated candidate, read `docs/sor/23_MASTER_BALANCE.md` and `docs/bal
 ## Single-enemy correction — 2.29.0
 
 Ijamm explicitly requests replacing AoE/random-enemy card effects and rebalancing the affected scope only. Read `docs/balance/master/SINGLE_TARGET_2_29_0.md`. `tools/cards/single-target.cjs` adapts archived supplier data before runtime generation: Rune Sweep is one hit and Fate Storm is three hits on the same enemy, without target RNG. Preserve IDs/artwork and the two cards' historical ordinary-mode receipts; do not delete old HP/RNG evidence. Master candidate.3 uses a separate identity/save key. Other card values, enemy profiles, economy, map and question rules remain under their existing owners.
+
+## Map balancing — four workers and reusable skill
+
+For seed/route balancing read [.agents/skills/slay-map-balance/SKILL.md](.agents/skills/slay-map-balance/SKILL.md) after the current-main Master SOR and required project/owner/audit packet. Use at most four equally scoped seed analysts; the parent owns the canonical collector, verification and authorized publication to balance/map. See [agent/skill handoff](docs/MAP_AGENT_SKILL_HANDOFF.md). In Work enforce this through session tools; project TOML does not configure the cloud orchestrator. This workflow neither authorizes main publication nor treats archived measurements as current balance.

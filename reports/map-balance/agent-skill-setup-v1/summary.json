@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "map-agent-skill-setup-1.0.0",
+  "reportKind": "AGENT_SKILL_SETUP",
+  "date": "2026-10-25",
+  "timezone": "Asia/Kuala_Lumpur",
+  "status": "CONFIGURATION_AND_WORKFLOW_VALIDATION",
+  "repository": "unDead41/slay-the-math-v2",
+  "branch": "balance/map",
+  "masterSorVersion": "1.2.0",
+  "inspectedMain": {
+    "sha": "68d61e75ecb241c5100fc894ee57231f00f3932f",
+    "gameVersion": "2.48.0",
+    "treeSha": "93b9cca88b1bf6502eccf5dcc2c14a6b3b97a58d",
+    "closingShaBeforePublication": "68d61e75ecb241c5100fc894ee57231f00f3932f"
+  },
+  "branchBefore": {
+    "sha": "280278ea1d67af0579a7c66f2103d885938207cc",
+    "treeSha": "9a2b86073082cd659e3a3240f508b3821440759e",
+    "mergeBaseSha": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+    "aheadMainBeforeUpdate": 5,
+    "behindMainBeforeUpdate": 26,
+    "compareFilesReturned": 300,
+    "fullRuntimeDiffAudit": false
+  },
+  "measurement": {
+    "newEngineRecords": 0,
+    "newCombatPowerValues": 0,
+    "completedSeedAnalyses": 0,
+    "measuredRuntimeSourceSha": null,
+    "newNumericalCohort": false,
+    "latestMainBalance": "NOT_REMEASURED",
+    "historicalCohort": "v1.5",
+    "historicalGameVersion": "2.40.0",
+    "historicalSourceSha": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+    "pupilTargetsValidated": false
+  },
+  "workflow": {
+    "maxSpawnedAgents": 4,
+    "primaryExcludedFromCap": true,
+    "profileNames": [
+      "map_balance_a",
+      "map_balance_b",
+      "map_balance_c",
+      "map_balance_d"
+    ],
+    "sameAnalysisScope": true,
+    "initialRegistrySeedCount": 100,
+    "initialSeedsPerWorker": [
+      25,
+      25,
+      25,
+      25
+    ],
+    "batchSizeExample": 5,
+    "allSelectedConditionsPerOwnedSeed": true,
+    "reassignOnlyUnstartedBatches": true,
+    "collectorOwner": "parent",
+    "journalWriters": 1,
+    "aggregateNodeWorkerCeiling": 4,
+    "actualNodeWorkersRun": 0,
+    "modelAndEffort": "INHERIT_PARENT",
+    "workersCanSpawn": false,
+    "workersCanCollect": false,
+    "workersCanPublish": false,
+    "crossAgentSchedulerImplemented": false,
+    "collectorShardAdapterImplemented": false,
+    "backgroundDaemonInstalled": false
+  },
+  "host": {
+    "projectConfig": "Codex .codex/config.toml",
+    "capKey": "agents.max_concurrent_threads_per_session",
+    "customProfiles": "Standalone .codex/agents/*.toml with name/description/developer_instructions",
+    "chatgptWork": "Parent dispatches actual session tools with explicit profile packet and cap; project TOML does not configure Work automatically",
+    "nativeLoaderEndToEndTested": false,
+    "separateReadonlySandboxClaimed": false
+  },
+  "skill": {
+    "name": "slay-map-balance",
+    "repoPath": ".agents/skills/slay-map-balance",
+    "userSkillsCommit": "1314851cdec9d1e5790b5725af9e3b8b13a326c0",
+    "userSkillsPush": "SUCCEEDED",
+    "files": 4,
+    "scope": "Map only",
+    "duplicateDiscoveryWarning": "Select one copy if a host discovers both identical skill names."
+  },
+  "validation": {
+    "staticStatus": "PASS",
+    "behavioralTasks": 4,
+    "behavioralTasksPassed": 4,
+    "allTaskContextsFresh": true,
+    "returnOnly": true,
+    "syntheticScenariosAreGameEvidence": false,
+    "forwardResults": "forward-tests.json",
+    "newNumericalSimulationTests": 0,
+    "gameSuiteRun": false,
+    "gameSuiteOmissionReason": "Instruction/config-only diff; no game/runtime/input/assets changed",
+    "nativeCodexLoaderTested": false,
+    "staticResults": {
+      "status": "PASS",
+      "tomlProfiles": 4,
+      "profileScopeEquality": "PASS",
+      "projectCap": 4,
+      "inheritedModelAndPermissions": true,
+      "skillMetadata": "PASS",
+      "mirroredSkillFiles": 4,
+      "seedCount": 100,
+      "uniqueSeeds": 100,
+      "initialSeedsPerWorker": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "linksChecked": 242,
+      "forwardTasks": 4,
+      "completedSeedAnalyses": 0,
+      "newSimulationRecords": 0,
+      "nativeCodexCliAvailable": false,
+      "changedFileCount": 19,
+      "protectedGameChanges": 0,
+      "existingAgInstructionsPreserved": true
+    }
+  },
+  "performance": {
+    "activeSeconds": null,
+    "elapsedSeconds": null,
+    "speedup": null,
+    "benchmarkRun": false
+  },
+  "limitations": [
+    "No new current-main engine measurements or repeated route ranking",
+    "No new collector scheduler/shard selector",
+    "Native Codex loader/config enforcement not exercised: CLI unavailable",
+    "Instruction profiles do not create a separate security sandbox",
+    "Historical N1, censor, missing Stage2 bank and net-Shop observer limitations remain open",
+    "No visual/model, pupil playtest or speedup benchmark; PDFs not used and MODEL.zip unavailable"
+  ],
+  "audit": {
+    "preflight": "PASS_SCOPED",
+    "final": "PASS_SCOPED",
+    "mainNumericalBalance": "BELUM_DISAHKAN",
+    "mainIntegrated": false,
+    "mainWritten": false,
+    "findings": [
+      {
+        "category": "MASALAH DISAHKAN",
+        "priority": "P2",
+        "status": "RESOLVED_FOR_SETUP",
+        "evidence": "Previously no project agent/skill files at inspected Map tree; package now supplied"
+      },
+      {
+        "category": "RISIKO BERPOTENSI",
+        "priority": "P1",
+        "status": "OPEN",
+        "evidence": "Archived2.40 balance does not establish2.48 balance"
+      },
+      {
+        "category": "PENAMBAHBAIKAN",
+        "priority": "P2",
+        "status": "IMPLEMENTED",
+        "evidence": "Four identical-scope profiles and one reusable Map skill; benchmark unmeasured"
+      }
+    ]
+  },
+  "publicationReceipt": {
+    "status": "READY_FOR_EXPECTED_HEAD_PUBLICATION",
+    "expectedPreviousSha": "280278ea1d67af0579a7c66f2103d885938207cc",
+    "force": false,
+    "mainPush": false
+  },
+  "changedFiles": [
+    ".agents/skills/slay-map-balance/SKILL.md",
+    ".agents/skills/slay-map-balance/agents/openai.yaml",
+    ".agents/skills/slay-map-balance/references/verification.md",
+    ".agents/skills/slay-map-balance/references/worker-contract.md",
+    ".codex/agents/map_balance_a.toml",
+    ".codex/agents/map_balance_b.toml",
+    ".codex/agents/map_balance_c.toml",
+    ".codex/agents/map_balance_d.toml",
+    ".codex/config.toml",
+    "AGENTS.md",
+    "SOR_README.md",
+    "docs/MAP_AGENT_SKILL_HANDOFF.md",
+    "docs/MAP_FOUR_AGENT_PROTOCOL.md",
+    "docs/audits/balance-map/LATEST.md",
+    "docs/sor/CHANGELOG.md",
+    "docs/sor/DECISIONS.md",
+    "modules/map/SOR/04_MAP_COMBAT_POWER.md",
+    "reports/map-balance/agent-skill-setup-v1/forward-tests.json",
+    "reports/map-balance/agent-skill-setup-v1/summary.json"
+  ]
+}

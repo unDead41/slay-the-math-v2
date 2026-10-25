@@ -1,8 +1,10 @@
 # Protokol empat subagent — Map Balancing
 
-Versi protokol: 1.0.0. Tarikh: 25 Oktober 2026, Asia/Kuala_Lumpur.
+Versi protokol: 1.1.0. Tarikh: 25 Oktober 2026, Asia/Kuala_Lumpur.
 
-**Status: protokol operasi didokumenkan.** Empat semakan statik telah dibuat; tiada simulasi, CP atau penalaan numerik baharu dalam kemas kini ini. Pengagih tugas automatik merentas agen belum dilaksanakan. Protokol ini digunakan melalui penyelarasan dalam sesi kerja.
+**Status: protokol dengan empat profil agen dan skill boleh guna semula.** Lihat [pakej dan semakan penggunaan](MAP_AGENT_SKILL_HANDOFF.md). Native Codex config tersedia; Work menggunakan alat subagent sesi. Pengagih automatik merentas agen/shard collector belum dilaksanakan. Tiada simulasi, CP atau penalaan numerik baharu daripada pakej ini.
+
+Snapshot perenggan asal di bawah ialah semakan protokol1.0; snapshot pakej1.1 ialah main68d61e7/game2.48.0 dan Map280278e. Kedua-duanya bukan pengukuran numerik main semasa.
 
 Main diperiksa: `2b81a2cd80532324a76581563874a9ecd797cc42`, game2.47.0, Master SOR1.2.0. Branch Map sebelum kemas kini: `364a844879b8cd9463c4771eac15291a3fd22075`. Pengukuran terakhir v1.5 kekal pada game2.40.0/candidate.5, sumber `b730cad0cb27b53ffbdf687d8fc9edaed143ef43`. **Balance numerik main2.47 belum diukur oleh laporan ini.**
 

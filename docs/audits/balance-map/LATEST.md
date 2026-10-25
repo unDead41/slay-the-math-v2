@@ -1,3 +1,25 @@
+# Audit balance/map — pakej agen dan skill
+
+25 Oktober2026, Asia/Kuala_Lumpur. Master SOR1.2.0. **VALID dalam skop konfigurasi/arahan dan empat tugasan setup; numerical balance2.48 BELUM DISAHKAN.**
+
+Main diperiksa68d61e75ecb241c5100fc894ee57231f00f3932f/game2.48.0; Map sebelum perubahan280278ea1d67af0579a7c66f2103d885938207cc. Merge baseb730cad; ahead5/behind26 sebelum set ini. GitHub compare memulangkan300 fail: tiada dakwaan pemeriksaan penuh diff gameplay. Master SOR semasa, AGENTS, governance/visi/design/keputusan, audit main dan owner/audit Map dibaca. Main tiada .codex/.agents sedia ada. DOC001/DOC002 main telah diselesaikan mengikut addendum2.43.
+
+[Handoff pakej](../../MAP_AGENT_SKILL_HANDOFF.md), [ringkasan](../../../reports/map-balance/agent-skill-setup-v1/summary.json), [empat tugasan setup](../../../reports/map-balance/agent-skill-setup-v1/forward-tests.json).
+
+| Kategori | Keutamaan/keyakinan | Bukti, kesan dan tindakan |
+| --- | --- | --- |
+| MASALAH DISAHKAN — jurang pakej | Selesai/P2/tinggi | Pada280278e hanya protokol/plan; tiada profil atau skill projek. Kini empat standalone TOML dan skill dengan kontrak/verifikasi tersedia. |
+| RISIKO BERPOTENSI — host | Dinyatakan/P2/tinggi | Project config tidak mengkonfigurasi orchestrator Work; parent mengawal cap4 melalui alat sesi. Native Codex loader tiada untuk diuji. Tiada dakwaan read-only sandbox/daemon. |
+| RISIKO BERPOTENSI — provenance | Terbuka/P1/tinggi | Pengukuran2.40 tidak membuktikan balance2.48. Empat tugasan menguji pelaporan, bukan cohort baharu. Runtime source/context kekal null dalam tugasan setup. |
+| RISIKO BERPOTENSI — operasi | Dinyatakan/P1/tinggi | Empat seedLimit25 masih prefix sama; tiada adapter/scheduler koleksi baharu. Satu parent collector dan satu penulis journal wajib; jangan puratakan CP atau rerun hanya hasil gagal. |
+| PENAMBAHBAIKAN | Dilaksanakan/P2/tinggi | Profil berskop sama, parent-only collector/publisher, batch kecil, metadata skill dan output fields boleh guna semula. Keuntungan kelajuan belum diukur. |
+
+Semakan sebenar: empat TOML parse dan cap4; skill metadata validator PASS; empat forward task return-only PASS (agihan, provenance, resume, CP/missing entry). Semakan akhir memeriksa semua link baharu, seed100 tanpa overlap/25 setiap worker, profile scope equality, mirrored skill bytes, diff/whitespace dan had fail. Hasil rinci dalam summary.0 simulasi/CP baharu; suite game/build/browser tidak dijalankan kerana kod/input/aset game tidak berubah.
+
+Tiada isu tambahan ditemui dalam skop pakej yang disemak. Had: native loader/config enforcement pada Codex sebenar, numerical2.48, benchmark, screenshot/model, cohort ulangan dan murid90/70/50 belum diuji. Kekalkan isu N1, censor/missing bank dan net Shop observation dalam audit sejarah di bawah; pakej ini tidak menutupnya. Penerbitan hanya balance/map, dengan expected-head/non-force dan readback; main tidak ditulis.
+
+## Rekod audit protokol1.0 terdahulu
+
 # Audit balance/map — protokol empat agen
 
 25 Oktober2026, Asia/Kuala_Lumpur; Master SOR1.2.0. **VALID bagi semakan statik dokumentasi/protokol; prestasi empat agen dan balance main2.47 BELUM DISAHKAN.**

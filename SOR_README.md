@@ -116,3 +116,5 @@ Regresi Map semasa2.40.0/candidate.5: [handoffv1.5](docs/MAP_BALANCE_V1_5_HANDOF
 
 
 Proses Map maksimumempat subagent: [protokol operasi](docs/MAP_FOUR_AGENT_PROTOCOL.md), MAP-BAL-19 dan reports/map-balance/four-agent-protocol-v1/summary.json. Kemas kini dokumentasi sahaja; bukan pengukuran numerik2.47.
+
+Pakej Map maksimum4 agen dan skill: [handoff penggunaan/semakan](docs/MAP_AGENT_SKILL_HANDOFF.md), [skill](.agents/skills/slay-map-balance/SKILL.md), MAP-BAL-20. Konfigurasi/prosedur sahaja; tiada pengukuran numerik2.48 baharu.

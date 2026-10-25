@@ -764,3 +764,9 @@ DISAHKAN: Ijamm meminta recheck skop Map dan push balance/map untuk Master. DITE
 DISAHKAN: Ijamm meminta maksimum4 subagent, beban sekitar setara, proses lebih cepat dan laporan ke balance/map untuk Master. DITERUSKAN sebagai protokol operasi: empat agen skop sama atas subset seed dan satu penyelaras/collector/publisher; agihan awal25 seed, batc kecil dan cap Node global dicadangkan untuk dinilai. Gunakan protokol MAP-BAL-19 dan docs/MAP_FOUR_AGENT_PROTOCOL.md.
 
 Tiada scheduler merentas agen, benchmark kelajuan atau penalaan numerik baharu dilaksanakan dalam set perubahan ini. Main diperiksa2.47; data2.40 kekal sejarah dengan source/context asal. Pengesahan bebas, matched entry/RNG, loss/censor, kelengkapan case dan CP pembangunan sahaja wajib dikekalkan. Jangan menggunakan empat seedLimit25 sebagai empat shard atau purata CP agen.
+
+## DEC-20261025-MAP-AGENT-SKILL — Pakej empat agen dan skill khusus
+
+DISAHKAN: Ijamm meminta agen dalam protokol empat worker serta skill penting untuk skop Map diwujudkan. DITERUSKAN: empat standalone profile Codex, cap4 spawned threads, model/effort diwarisi dan satu skill slay-map-balance dengan kontrak/verifikasi. Parent sesi Work mengawal delegation secara nyata; profil bukan scheduler, daemon, sandbox atau collector shard adapter.
+
+Dokumen pemilik MAP-BAL-20 dan docs/MAP_AGENT_SKILL_HANDOFF.md. Empat tugasan setup disemak berasingan;0 simulasi/CP/gameplay baharu. Main68d61e7/game2.48.0 diperiksa tetapi tidak diintegrasi ke source Map2.40. Hanya balance/map diterbitkan; tiada autorisasi main baharu.

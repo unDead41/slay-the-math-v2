@@ -1,0 +1,4 @@
+# Project-scoped Codex cap; the primary agent is excluded.
+# ChatGPT Work uses session subagent tools and must enforce the same cap.
+[agents]
+max_concurrent_threads_per_session = 4

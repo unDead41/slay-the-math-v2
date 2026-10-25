@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "map-agent-skill-forward-tests-1.0.0",
+  "reportKind": "AGENT_SKILL_SETUP",
+  "tests": [
+    {
+      "worker": "A",
+      "taskName": "map_balance_a_setup",
+      "mode": "SETUP_VALIDATION",
+      "status": "PASS",
+      "freshContext": true,
+      "returnOnly": true,
+      "firstBatch": [
+        "STM-001",
+        "STM-005",
+        "STM-009",
+        "STM-013",
+        "STM-017"
+      ],
+      "runtimeSourceSha": null,
+      "cohortContextIds": [],
+      "completedSeedAnalysis": [],
+      "expectedGameplayCases": null,
+      "inspectedGameplayCases": null,
+      "newSimulationRecords": 0,
+      "activeSeconds": null,
+      "elapsedSeconds": null,
+      "task": "Prepare first batch, allocation and collection readiness",
+      "observed": {
+        "initialAllocationCount": 25,
+        "all25IdsReturned": true,
+        "prefixLimitNotShard": true,
+        "inputPacketRequired": true
+      }
+    },
+    {
+      "worker": "B",
+      "taskName": "map_balance_b_setup",
+      "mode": "SETUP_VALIDATION",
+      "status": "PASS",
+      "freshContext": true,
+      "returnOnly": true,
+      "firstBatch": [
+        "STM-002",
+        "STM-006",
+        "STM-010",
+        "STM-014",
+        "STM-018"
+      ],
+      "runtimeSourceSha": null,
+      "cohortContextIds": [],
+      "completedSeedAnalysis": [],
+      "expectedGameplayCases": null,
+      "inspectedGameplayCases": null,
+      "newSimulationRecords": 0,
+      "activeSeconds": null,
+      "elapsedSeconds": null,
+      "task": "Assess provenance of an archived cohort against current target",
+      "observed": {
+        "targetGameVersion": "2.48.0",
+        "archivedGameVersion": "2.40.0",
+        "archivedSourceSha": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+        "currentMeasurementClaimRejected": true,
+        "seedFindingsClaimed": false
+      }
+    },
+    {
+      "worker": "C",
+      "taskName": "map_balance_c_setup",
+      "mode": "SETUP_VALIDATION",
+      "status": "PASS",
+      "freshContext": true,
+      "returnOnly": true,
+      "firstBatch": [
+        "STM-003",
+        "STM-007",
+        "STM-011",
+        "STM-015",
+        "STM-019"
+      ],
+      "runtimeSourceSha": null,
+      "cohortContextIds": [],
+      "completedSeedAnalysis": [],
+      "expectedGameplayCases": null,
+      "inspectedGameplayCases": null,
+      "newSimulationRecords": 0,
+      "activeSeconds": null,
+      "elapsedSeconds": null,
+      "task": "Prepare interrupted-collection continuation",
+      "inputKind": "SYNTHETIC_PLANNING_NOT_GAME_EVIDENCE",
+      "observed": {
+        "retainedCompleteIds": [
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ],
+        "missingCompleteIds": [
+          "t5"
+        ],
+        "retainedOutcomes": [
+          "win",
+          "loss",
+          "censored",
+          "engine-error"
+        ],
+        "quarantineBeforeRepair": true,
+        "outcomeRerunsRejected": true,
+        "singleParentCollector": true,
+        "cp": null
+      }
+    },
+    {
+      "worker": "D",
+      "taskName": "map_balance_d_setup",
+      "mode": "SETUP_VALIDATION",
+      "status": "PASS",
+      "freshContext": true,
+      "returnOnly": true,
+      "firstBatch": [
+        "STM-004",
+        "STM-008",
+        "STM-012",
+        "STM-016",
+        "STM-020"
+      ],
+      "runtimeSourceSha": null,
+      "cohortContextIds": [],
+      "completedSeedAnalysis": [],
+      "expectedGameplayCases": null,
+      "inspectedGameplayCases": null,
+      "newSimulationRecords": 0,
+      "activeSeconds": null,
+      "elapsedSeconds": null,
+      "task": "Assess missing Stage2 and merge readiness",
+      "inputKind": "SYNTHETIC_PLANNING_NOT_GAME_EVIDENCE",
+      "observed": {
+        "missingEntryCp": null,
+        "noSyntheticHealthyEntry": true,
+        "noStage2LossInvented": true,
+        "meanWorkerCpMergeRejected": true,
+        "storedGateInsufficient": true,
+        "independentRawRequired": true,
+        "noMeasuredRankingClaimed": true
+      }
+    }
+  ],
+  "assessment": "Parent reviewed actual return-only responses against supplied artifacts; these are workflow checks, not 100 completed seed analyses or engine measurements."
+}

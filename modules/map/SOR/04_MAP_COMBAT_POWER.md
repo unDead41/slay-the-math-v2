@@ -1,4 +1,4 @@
-# SOR Map Balance & Combat Power — v1.5.1
+# SOR Map Balance & Combat Power — v1.5.2
 
 Tarikh semakan dokumen: 25 Oktober 2026. Pengukuran numerik terakhir kekal 24 Oktober 2026. Pemilik domain: Map. Penyatuan dan keputusan balance akhir: Master.
 Kod pengukuran terakhir: `b730cad0cb27b53ffbdf687d8fc9edaed143ef43` (game 2.40.0), branch `balance/map`. Baseline sejarah: `2800f9aeba5ed594e6ef3f991bcf4dfa498a5de7` (2.24.0).
@@ -260,3 +260,9 @@ Penyelaras menjalankan satu collector kanonik dan satu pemilik setiap journal; h
 Penggabungan/pengesahan bebas dan push menjadi tugas penyelaras sahaja. Gunakan global context/difficulty/task identity, retained loss/censor/error, matched entry/RNG dan actual coverage; jangan puratakan CP empat agen. Data/context lama tidak dilabel semula.
 
 Semakan25 Oktober memeriksa main2b81a2c/game2.47.0 dan Map364a844. Kemas kini ini dokumentasi sahaja:0 simulasi/CP baharu. Datasetv1.5 tetap game2.40.0; balance2.47 dan keuntungan kelajuan belum diukur. Versi dokumen1.5.1 berasingan daripada versi game/dataset.
+
+## MAP-BAL-20 — Profil agen dan skill Map yang boleh diguna semula
+
+DISAHKAN: Ijamm meminta mewujudkan agen dan skill penting untuk skop Map selepas protokol MAP-BAL-19. Empat profil .codex/agents/map_balance_a..d.toml berkongsi skop dan cap projek4; .agents/skills/slay-map-balance menetapkan kontrak input/output, sumber sebenar, satu collector, resume/integriti dan handoff. Model/effort diwarisi. Dalam Work, parent menggunakan subagent tools sesi dan mengawal cap; TOML tidak memasang orchestrator atau sandbox baharu.
+
+Gunakan [handoff pakej](../../../docs/MAP_AGENT_SKILL_HANDOFF.md). Kemas kini ini setup/config/prosedur sahaja, bukan scheduler automatik atau pengukuran baharu. Snapshot main68d61e7/game2.48.0; data2.40 kekal dengan konteks asal. Nilai CP tidak dipaparkan pada UI; stat/harga dan target murid kekal milik domain/Master.

@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## Pakej agen dan skill Map —25 Oktober2026
+
+Tambah empat profil Codex berskop sama, cap4 dan skill slay-map-balance dengan kontrak worker/verifikasi. Empat tugasan setup menguji agihan, provenance, resume dan batas CP.0 simulasi/CP baharu; source pengukuran2.40 kekal dan main2.48 belum diukur. [Handoff](../MAP_AGENT_SKILL_HANDOFF.md).
+
 ## Protokol empat agen Map —25 Oktober2026
 
 Dokumentasikan maksimum4 subagent dengan skop analisis sama, agihan awal25 seed/agen, batc kecil dan satu collector/publisher. Rekod batas CLI seedLimit, cap Node bersama, pengesahan bebas dan pelan berstruktur untuk Master.0 simulasi/CP baharu; data2.40 dikekalkan dan balance main2.47 belum diukur. [Protokol](../MAP_FOUR_AGENT_PROTOCOL.md).

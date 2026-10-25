@@ -16,10 +16,13 @@ passes **14/14** with the setup-only atomic-clock helper at `ee694d2`. Product,
 Node-test/helper, configuration and generated inputs are unchanged between those
 checkpoints; the single non-imported native helper delta has its own fresh replay.
 [Exact commands, retained failures, hashes and limits](../../../verification/icon-combat-main-20261025/evidence.json).
-Publication remains **PENDING** until the authorized remote ref/tree/version
-readback. CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open; the current
-preload PASS does not establish a counter fix. MODEL.zip remains unavailable
-and unread; physical-device and human-recognition limits remain.
+Publication is **VERIFIED** as main integration
+`aedfdb4d5eef4fe64ff1ef6fbd969e673aa2dba5`, game2.49.0.
+[Actual ref/tree/version, feature ancestry and Pages readback](../../../verification/icon-combat-main-20261025/publication.json).
+Pages run40188472242 completed successfully for that exact integration; public
+browser inspection is NOT_RUN. CI-247-01 and QA-248-PRELOAD-01 remain inherited
+P2/open; the current preload PASS does not establish a counter fix. MODEL.zip
+remains unavailable and unread; physical-device and human-recognition limits remain.
 
 
 Base: main `6c49f3980c3a832635d4d01a6c50a8df98ac4aad` / 2.45.0.

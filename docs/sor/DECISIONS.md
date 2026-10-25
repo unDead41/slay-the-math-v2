@@ -19,9 +19,14 @@
   continuity14/14 uses a setup-only atomic-clock helper; retain its initial
   10-check/clock setup FAIL and both genuine product RED→GREEN records. Full
   Node-tested756 and final-nativeee694d2 identities stay separate in the evidence.
-- **PERLU_VERIFIKASI:** final publication/readback, physical devices, MODEL.zip
-  comparison, general human recognition and live services. Inherited CI-247-01
-  and QA-248-PRELOAD-01 remain P2/open; neither is presented as fixed.
+- **DITERUSKAN publication:** the expected-head, non-forced main update publishes
+  `aedfdb4d5eef4fe64ff1ef6fbd969e673aa2dba5`, tree
+  `e4635f1562a25146a48293dbf2999f8acab4bf48`, version2.49.0. API/native reads
+  confirm both feature ancestries and unchanged feature refs. Pages run40188472242
+  completes successfully for that exact SHA. [Publication receipt](../verification/icon-combat-main-20261025/publication.json).
+- **PERLU_VERIFIKASI:** public-browser inspection, physical devices, MODEL.zip
+  comparison, general human recognition and other live services. CI-247-01 and
+  QA-248-PRELOAD-01 remain inherited P2/open; neither is presented as fixed.
   [Release and fresh evidence](../ICON_COMBAT_MAIN_2_49_0.md).
 
 

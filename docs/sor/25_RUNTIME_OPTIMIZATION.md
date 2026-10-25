@@ -1,5 +1,15 @@
 # Runtime performance — approved scope
 
+## Online/Offline mode — branch candidate 2.49.0-offline.1
+
+**DISAHKAN:** Ijamm requests one Online/Offline Settings preference shared with pet AI, complete verified player resources before offline Ready, and browser-process restart tests. Work stays on `fix/online-offline-readiness`; no main merge/push/deployment. Base main is `d77b3e0ce87d573de89e84a9b2374df97ad625b9` (2.49.0). Main subsequently advanced to 2.49.1; retain its Idle changes when Master integrates and rebuild shared generated outputs.
+
+**DITERUSKAN:** `STMPlayMode` owns the sole preference. Default Online preserves the existing important-package loading, but pet API calls require an explicit Online choice. Browser connection hints and actual request outcomes are separate. Offline blocks/aborts API requests and uses packaged BM/English FAQ; no provider/backend/key is added. This adapter is the published contract for the external pet owner, not a claim that a missing live pet service is complete.
+
+Offline Ready requires every current-release player runtime file, shell HTML/worker, canonical manifest, bank/Practice, BM/BI, all registered media/Tutorial/VFX/audio and local pet help in retained CacheStorage, complete hash/length checks, a matching receipt and compatible active worker. Session hits and historical completion counts do not qualify. Cache identities include shell changes; pinned navigation cannot mix releases. Show true remaining files/bytes, failure, Pause/Retry/Resume and quota/persistence limits. Full offline installation can exceed three minutes; keep the existing Online entry timeout. Developer/server/private files and API responses are excluded.
+
+[Owner audit and evidence](../ONLINE_OFFLINE_READINESS.md), [Master audit](../audits/online-offline-readiness/LATEST.md), [pet integration contract](../pet-ai/PLAY_MODE_HANDOFF.md). Browser-cache offline and the embedded standalone portable file are separate formats. Preserve original art/voices, gameplay/save/RNG, bank and main 2.49 combat continuity. Physical-device/other-browser durability and a live external pet API remain unmeasured.
+
 ## Main integration authorization — 2.49.0
 
 Ijamm now requests publishing the completed icon-loading and combat-continuity

@@ -1,0 +1,80 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (40.942472ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (24.762956ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (19.8147ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (13.03484ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.470941ms)
+✔ failed persistence of a verified response cannot create an offline receipt (4.997791ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (1.013253ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (11.542587ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (360.5972ms)
+✔ eviction during completion receipt storage cannot leave a false Ready result (9.575181ms)
+✔ denied storage protection stays disclosed after reopening a complete retained installation (8.13159ms)
+✔ Pause keeps completed files and Resume finishes without refetching their bytes (7.896588ms)
+✔ changing only the worker changes the release cache identity (425.694325ms)
+✖ the release build rejects server-only folders before they can enter a player package (203.748773ms)
+✖ eviction while the worker confirms capability cannot be reported as Ready (15.631683ms)
+✖ a warm completion never refers to an orphaned cache after its namespace is replaced (8.934197ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 13
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1238.339726
+
+✖ failing tests:
+
+test at tests/offline-install.test.cjs:61:1
+✖ the release build rejects server-only folders before they can enter a player package (203.748773ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:63:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /server.only|backend|player package/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:65:1
+✖ eviction while the worker confirms capability cannot be reported as Ready (15.631683ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:66:192)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:68:1
+✖ a warm completion never refers to an orphaned cache after its namespace is replaced (8.934197ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'runtime'
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:69:268)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'runtime',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,14 @@
+PASS cache-denied: no false offline readiness; explicit failure and recovery remain available
+PASS quota: no false offline readiness; explicit failure and recovery remain available
+AssertionError [ERR_ASSERTION]: A failed Offline start needs access to the same Settings
+
+0 !== 1
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-storage-browser.cjs:15:12 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 1,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

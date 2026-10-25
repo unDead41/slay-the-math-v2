@@ -1468,7 +1468,54 @@
     "Resume background downloads": "Sambung muat turun latar",
     "Pause background downloads": "Jeda muat turun latar",
     "Download all resources": "Muat turun semua fail",
-    "Remaining resources download automatically while this game is open.": "Fail yang berbaki dimuat turun secara automatik semasa game ini dibuka."
+    "Remaining resources download automatically while this game is open.": "Fail yang berbaki dimuat turun secara automatik semasa game ini dibuka.",
+    "Play mode": "Mod permainan",
+    "Your choice is separate from the internet connection.": "Pilihan anda berasingan daripada sambungan internet.",
+    "Offline game": "Game offline",
+    "Offline download progress": "Kemajuan muat turun offline",
+    "Prepare offline / Retry / Resume": "Sediakan offline / Cuba lagi / Sambung",
+    "Pause download": "Jeda muat turun",
+    "Resume download": "Sambung muat turun",
+    "Pet help": "Bantuan pet",
+    "Local FAQ works offline. Free chat needs Online and an available API.": "FAQ tempatan boleh digunakan offline. Chat bebas memerlukan Online dan API yang boleh dicapai.",
+    "Your question": "Soalan anda",
+    "Ask for help": "Minta bantuan",
+    "Preparing help…": "Bantuan sedang disediakan…",
+    "Local FAQ": "FAQ tempatan",
+    "Online reply": "Jawapan Online",
+    "Offline preparation has not started.": "Persediaan offline belum bermula.",
+    "Verifying saved offline files…": "Fail offline yang disimpan sedang disahkan…",
+    "Downloading the complete offline game…": "Keseluruhan game offline sedang dimuat turun…",
+    "Offline download paused.": "Muat turun offline dijeda.",
+    "Offline preparation is incomplete.": "Persediaan offline belum lengkap.",
+    "Ready to play offline": "Sedia dimainkan offline",
+    "Offline preparation needs another try.": "Persediaan offline perlu dicuba lagi.",
+    "Not enough browser storage. Free space, then Resume.": "Ruang storan browser tidak cukup. Kosongkan ruang, kemudian tekan Sambung.",
+    "The offline worker is unavailable. Reload after your run, then Retry.": "Fungsi offline tidak tersedia. Muat semula selepas tamat permainan, kemudian Cuba lagi.",
+    "Offline browser storage is unavailable. Nothing is marked ready.": "Storan offline browser tidak tersedia. Game belum ditandakan sedia.",
+    "The browser reports no network. Internet/API access is not confirmed.": "Browser melaporkan tiada rangkaian. Akses internet/API belum disahkan.",
+    "Internet/API availability is checked when a request is made.": "Akses internet/API diperiksa apabila permintaan dibuat.",
+    "This mode choice could not be saved on the browser.": "Pilihan mod ini tidak dapat disimpan pada browser.",
+    "Standalone portable file: resources are embedded. This is separate from a browser offline installation.": "Fail portable tersendiri: sumber sudah disertakan. Ini berasingan daripada pemasangan offline browser.",
+    "Verified": "Disahkan",
+    "Remaining": "Baki",
+    "The browser may clear saved files under storage pressure. Recheck before leaving the internet.": "Browser mungkin memadam fail apabila ruang storan sempit. Semak semula sebelum memutuskan internet.",
+    "Persistent storage protection was granted. Clearing browser data still removes the game.": "Perlindungan storan diberikan. Memadam data browser tetap akan membuang game.",
+    "Pet API is off. Local FAQ is available.": "API pet dimatikan. FAQ tempatan tersedia.",
+    "The last pet API request succeeded.": "Permintaan API pet terakhir berjaya.",
+    "Online chat is unavailable. Local FAQ is available.": "Chat Online tidak tersedia. FAQ tempatan tersedia.",
+    "Online chat is not confirmed. Local FAQ is available.": "Chat Online belum disahkan. FAQ tempatan tersedia.",
+    "Continue with current resources": "Teruskan dengan sumber semasa",
+    "Browser storage unavailable": "Storan browser tidak tersedia",
+    "Preparing the complete offline game": "Keseluruhan game offline sedang disediakan",
+    "Keep this page open until every file has been saved and verified.": "Biarkan halaman ini terbuka sehingga semua fail disimpan dan disahkan.",
+    "Complete offline preparation can take longer than 3 minutes.": "Persediaan offline lengkap boleh mengambil masa lebih daripada 3 minit.",
+    "Offline preparation is incomplete. Reconnect and Retry.": "Persediaan offline belum lengkap. Sambung internet dan Cuba lagi.",
+    "All files for this release have been saved and verified.": "Semua fail untuk versi ini telah disimpan dan disahkan.",
+    "Browser storage is unavailable. Only current resources are retained.": "Storan browser tidak tersedia. Hanya sumber semasa disimpan.",
+    "Network unavailable: downloads resume when connected.": "Rangkaian tidak tersedia: muat turun disambung apabila bersambung.",
+    "Cached game resources are ready. Offline preparation is checked in Settings.": "Sumber game dalam cache sudah tersedia. Semak persediaan offline dalam Tetapan.",
+    "Select Online here to allow pet API requests.": "Pilih Online di sini untuk membenarkan permintaan API pet."
   },
   "templates": [
     {
@@ -2081,6 +2128,14 @@
     {
       "pattern": "^(\\d+) / (\\d+) resources cached · ([\\d.]+) / ([\\d.]+) MB · (\\d+) pending$",
       "ms": "$1 / $2 fail dalam cache · $3 / $4 MB · $5 menunggu"
+    },
+    {
+      "pattern": "^Offline · (\\d+)%$",
+      "ms": "Offline · $1%"
+    },
+    {
+      "pattern": "^(\\d+) / (\\d+) resources verified · ([\\d.]+) / ([\\d.]+) MB$",
+      "ms": "$1 / $2 sumber disahkan · $3 / $4 MB"
     }
   ],
   "artifactTemplates": {

@@ -1,0 +1,459 @@
+{
+  "version": "2.49.0-offline.1",
+  "checks": [
+    "one Settings preference; explicit Online makes a real failing API request and falls back locally without changing the preference",
+    "only a real successful QA API response changes availability to available",
+    "actual file404, truthful remaining/failure display, Pause/Resume, retained-byte reuse and verified full installation including Practice/shell/manifest",
+    "Offline blocks the configured API even while the browser reports a network",
+    "complete browser-process close/reopen with the same profile, stopped server, disabled HTTP cache and network: original URL reopens through the installed worker",
+    "offline BM/English Settings and packaged pet FAQ, phone input/layout, and unchanged mode ownership",
+    "all120 Education Practice questions and local renderer open offline",
+    "all23 Tutorial chapters and all98 actual English/BM picture steps decode offline without changing the run",
+    "both stages and both bosses: decoded original actors, actual VFX pixels, Predict UI and real card actions with exact battle/RNG/deck/stats equality",
+    "real Stage2 Shop and its pictures/cards open offline",
+    "actual Mystery introduction and question screens in both stages work offline",
+    "every registered MP3 decodes from offline storage; a real muted Web Audio source plays/ends, distinct from human audition",
+    "actual cache file eviction revokes readiness even with an older completion marker",
+    "corrupt bootstrap is rejected before execution with clear offline recovery HTML"
+  ],
+  "errors": [],
+  "profile": "/dev/shm/stm-offline-0829a1232d36/stm-offline-restart-dGHxiV",
+  "stageFixtures": [
+    {
+      "stage": 1,
+      "enemy": "wisp",
+      "boss": false,
+      "actors": 2,
+      "vfxPixels": true
+    },
+    {
+      "stage": 1,
+      "enemy": "sentinel",
+      "boss": true,
+      "actors": 2,
+      "vfxPixels": true
+    },
+    {
+      "stage": 2,
+      "enemy": "weaver",
+      "boss": false,
+      "actors": 2,
+      "vfxPixels": true
+    },
+    {
+      "stage": 2,
+      "enemy": "dealer",
+      "boss": true,
+      "actors": 2,
+      "vfxPixels": true
+    }
+  ],
+  "browserVersion": "153.0.8010.0",
+  "sharedMemory": "normal /dev/shm; TMPDIR in task-owned RAM; software graphics, matching Tutorial QA",
+  "installation": {
+    "phase": "ready",
+    "ready": true,
+    "errorCode": null,
+    "error": null,
+    "currentFile": null,
+    "persistence": false,
+    "workerReady": true,
+    "lastVerifiedAt": 1792944554270,
+    "protocol": "stm-offline-v1",
+    "releaseId": "322382b69186e695e4e4e987",
+    "manifestId": "322382b69186e695e4e4e987",
+    "cacheName": "stm-assets-%2Fslay-the-math-v2%2F-322382b69186e695e4e4e987",
+    "verifiedFiles": 769,
+    "totalFiles": 769,
+    "verifiedBytes": 232929606,
+    "totalBytes": 232929606,
+    "remainingBytes": 0,
+    "remainingFiles": [],
+    "percent": 100,
+    "failures": []
+  },
+  "cold": {
+    "newBrowserProcess": true,
+    "serverStopped": true,
+    "networkEmulationOffline": true,
+    "networkRoutesBlocked": true,
+    "uncachedNetworkProbeRejected": true,
+    "navigatorOnLine": true,
+    "httpCacheDisabled": true,
+    "serviceWorkerNavigation": true,
+    "url": "http://127.0.0.1:42709/slay-the-math-v2/?stm-release=322382b69186e695e4e4e987",
+    "installation": {
+      "phase": "ready",
+      "ready": true,
+      "errorCode": null,
+      "error": null,
+      "currentFile": null,
+      "persistence": false,
+      "workerReady": true,
+      "lastVerifiedAt": 1792944560984,
+      "protocol": "stm-offline-v1",
+      "releaseId": "322382b69186e695e4e4e987",
+      "manifestId": "322382b69186e695e4e4e987",
+      "cacheName": "stm-assets-%2Fslay-the-math-v2%2F-322382b69186e695e4e4e987",
+      "verifiedFiles": 769,
+      "totalFiles": 769,
+      "verifiedBytes": 232929606,
+      "totalBytes": 232929606,
+      "remainingBytes": 0,
+      "remainingFiles": [],
+      "percent": 100,
+      "failures": []
+    }
+  },
+  "tutorial": {
+    "chapters": 23,
+    "pictureExposures": 114,
+    "uniquePictures": 98
+  },
+  "audio": {
+    "decoded": 85,
+    "played": true,
+    "tracks": [
+      {
+        "id": "vo_alyssa_question_01",
+        "duration": 11.128163265306123
+      },
+      {
+        "id": "vo_alyssa_question_02",
+        "duration": 10.501224489795918
+      },
+      {
+        "id": "vo_alyssa_question_03",
+        "duration": 9.926530612244898
+      },
+      {
+        "id": "bgm_boss_stage_1",
+        "duration": 139.17349206349206
+      },
+      {
+        "id": "bgm_boss_stage_2",
+        "duration": 174.89349206349206
+      },
+      {
+        "id": "bgm_combat_stage_1",
+        "duration": 154.77349206349206
+      },
+      {
+        "id": "bgm_combat_stage_2",
+        "duration": 149.97349206349207
+      },
+      {
+        "id": "vo_dm_01",
+        "duration": 11.96408163265306
+      },
+      {
+        "id": "vo_dm_02",
+        "duration": 12.747755102040816
+      },
+      {
+        "id": "vo_dm_03",
+        "duration": 11.885714285714286
+      },
+      {
+        "id": "vo_dm_04",
+        "duration": 12.93061224489796
+      },
+      {
+        "id": "voice_alyssa_mystery_me08_entry",
+        "duration": 10.736326530612246
+      },
+      {
+        "id": "voice_alyssa_mystery_me06_entry",
+        "duration": 10.971428571428572
+      },
+      {
+        "id": "voice_alyssa_mystery_me09_entry",
+        "duration": 10.893061224489795
+      },
+      {
+        "id": "voice_alyssa_mystery_me10_entry",
+        "duration": 11.781224489795918
+      },
+      {
+        "id": "voice_alyssa_mystery_me11_entry",
+        "duration": 11.859591836734694
+      },
+      {
+        "id": "voice_alyssa_mystery_me04_entry",
+        "duration": 11.781224489795918
+      },
+      {
+        "id": "voice_alyssa_mystery_me15_entry",
+        "duration": 12.408163265306122
+      },
+      {
+        "id": "voice_alyssa_mystery_me13_entry",
+        "duration": 10.501224489795918
+      },
+      {
+        "id": "voice_alyssa_mystery_me02_entry",
+        "duration": 12.173061224489796
+      },
+      {
+        "id": "voice_alyssa_mystery_me12_entry",
+        "duration": 12.329795918367347
+      },
+      {
+        "id": "voice_alyssa_mystery_me05_entry",
+        "duration": 11.206530612244897
+      },
+      {
+        "id": "voice_alyssa_mystery_me07_entry",
+        "duration": 10.65795918367347
+      },
+      {
+        "id": "voice_alyssa_mystery_me14_entry",
+        "duration": 12.09469387755102
+      },
+      {
+        "id": "voice_alyssa_mystery_me01_entry",
+        "duration": 12.66938775510204
+      },
+      {
+        "id": "voice_alyssa_mystery_me03_entry",
+        "duration": 11.128163265306123
+      },
+      {
+        "id": "vo_alyssa_hint_01",
+        "duration": 10.187755102040816
+      },
+      {
+        "id": "vo_alyssa_hint_02",
+        "duration": 10.579591836734695
+      },
+      {
+        "id": "vo_alyssa_hint_03",
+        "duration": 11.128163265306123
+      },
+      {
+        "id": "vo_alyssa_hint_04",
+        "duration": 10.344489795918367
+      },
+      {
+        "id": "vo_alyssa_more_hint_01",
+        "duration": 10.344489795918367
+      },
+      {
+        "id": "vo_alyssa_more_hint_02",
+        "duration": 11.781224489795918
+      },
+      {
+        "id": "vo_alyssa_more_hint_03",
+        "duration": 11.546122448979592
+      },
+      {
+        "id": "vo_alyssa_more_hint_04",
+        "duration": 10.81469387755102
+      },
+      {
+        "id": "vo_alyssa_run_defeat_01",
+        "duration": 9.299591836734693
+      },
+      {
+        "id": "vo_alyssa_run_defeat_02",
+        "duration": 9.142857142857142
+      },
+      {
+        "id": "vo_alyssa_run_defeat_03",
+        "duration": 10.187755102040816
+      },
+      {
+        "id": "vo_alyssa_run_defeat_04",
+        "duration": 9.142857142857142
+      },
+      {
+        "id": "bgm_shop",
+        "duration": 64.41349206349206
+      },
+      {
+        "id": "vo_shop_01",
+        "duration": 12.434285714285714
+      },
+      {
+        "id": "vo_shop_02",
+        "duration": 10.997551020408164
+      },
+      {
+        "id": "vo_shop_03",
+        "duration": 17.293061224489797
+      },
+      {
+        "id": "vo_alyssa_rest_01",
+        "duration": 11.206530612244897
+      },
+      {
+        "id": "vo_alyssa_rest_02",
+        "duration": 9.37795918367347
+      },
+      {
+        "id": "vo_alyssa_rest_03",
+        "duration": 9.221224489795919
+      },
+      {
+        "id": "vo_alyssa_rest_04",
+        "duration": 10.893061224489795
+      },
+      {
+        "id": "bgm_rest",
+        "duration": 180.01349206349207
+      },
+      {
+        "id": "vo_alyssa_reward_card_01",
+        "duration": 9.221224489795919
+      },
+      {
+        "id": "vo_alyssa_reward_card_02",
+        "duration": 8.333061224489796
+      },
+      {
+        "id": "vo_alyssa_reward_card_03",
+        "duration": 9.613061224489796
+      },
+      {
+        "id": "vo_alyssa_reward_card_04",
+        "duration": 9.691428571428572
+      },
+      {
+        "id": "vo_alyssa_reward_card_05",
+        "duration": 9.37795918367347
+      },
+      {
+        "id": "vo_alyssa_reward_card_06",
+        "duration": 8.568163265306122
+      },
+      {
+        "id": "vo_alyssa_reward_card_07",
+        "duration": 11.284897959183674
+      },
+      {
+        "id": "vo_alyssa_reward_card_08",
+        "duration": 9.37795918367347
+      },
+      {
+        "id": "bgm_defeat",
+        "duration": 8.493492063492063
+      },
+      {
+        "id": "bgm_map",
+        "duration": 167.13349206349207
+      },
+      {
+        "id": "menu",
+        "duration": 199.57349206349207
+      },
+      {
+        "id": "mystery",
+        "duration": 63.15789115646258
+      },
+      {
+        "id": "vo_alyssa_question_04",
+        "duration": 8.751020408163265
+      },
+      {
+        "id": "vo_alyssa_question_05",
+        "duration": 9.95265306122449
+      },
+      {
+        "id": "vo_alyssa_question_06",
+        "duration": 9.717551020408163
+      },
+      {
+        "id": "vo_alyssa_question_07",
+        "duration": 9.874285714285714
+      },
+      {
+        "id": "vo_alyssa_hint_05",
+        "duration": 8.594285714285714
+      },
+      {
+        "id": "vo_alyssa_hint_06",
+        "duration": 9.482448979591837
+      },
+      {
+        "id": "vo_alyssa_hint_07",
+        "duration": 8.933877551020409
+      },
+      {
+        "id": "vo_alyssa_hint_08",
+        "duration": 8.594285714285714
+      },
+      {
+        "id": "vo_alyssa_more_hint_05",
+        "duration": 8.594285714285714
+      },
+      {
+        "id": "vo_alyssa_more_hint_06",
+        "duration": 11.154285714285715
+      },
+      {
+        "id": "vo_alyssa_more_hint_07",
+        "duration": 9.639183673469388
+      },
+      {
+        "id": "vo_alyssa_more_hint_08",
+        "duration": 9.95265306122449
+      },
+      {
+        "id": "vo_alyssa_correct_01",
+        "duration": 8.045714285714286
+      },
+      {
+        "id": "vo_alyssa_correct_02",
+        "duration": 8.933877551020409
+      },
+      {
+        "id": "vo_alyssa_correct_03",
+        "duration": 8.202448979591837
+      },
+      {
+        "id": "vo_alyssa_correct_04",
+        "duration": 8.855510204081632
+      },
+      {
+        "id": "vo_alyssa_correct_05",
+        "duration": 9.247346938775511
+      },
+      {
+        "id": "vo_alyssa_wrong_01",
+        "duration": 9.168979591836734
+      },
+      {
+        "id": "vo_alyssa_wrong_02",
+        "duration": 10.448979591836734
+      },
+      {
+        "id": "vo_alyssa_wrong_03",
+        "duration": 9.874285714285714
+      },
+      {
+        "id": "vo_alyssa_wrong_04",
+        "duration": 9.874285714285714
+      },
+      {
+        "id": "vo_alyssa_wrong_05",
+        "duration": 9.404081632653062
+      },
+      {
+        "id": "vo_alyssa_wrong_06",
+        "duration": 9.795918367346939
+      },
+      {
+        "id": "vo_alyssa_wrong_07",
+        "duration": 10.762448979591836
+      },
+      {
+        "id": "vo_alyssa_wrong_08",
+        "duration": 9.795918367346939
+      },
+      {
+        "id": "vo_alyssa_wrong_09",
+        "duration": 8.359183673469389
+      }
+    ]
+  }
+}

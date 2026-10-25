@@ -1,2 +1,2 @@
 /* Generated from package.json and current runtime contents. */
-(function(root){root.DCRelease=Object.freeze({"version":"2.49.0","build":"32cfe7c2e70ad508"});})(globalThis);
+(function(root){root.DCRelease=Object.freeze({"version":"2.49.0-offline.1","build":"18c7df4cb702601a"});})(globalThis);

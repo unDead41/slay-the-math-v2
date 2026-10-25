@@ -1,0 +1,60 @@
+{
+  "verifiedAtUTC": "2026-10-25T16:16:13.887972+00:00",
+  "base": "d77b3e0ce87d573de89e84a9b2374df97ad625b9",
+  "currentMain": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "implementationCheckpoint": "0c3d1a2aba9e05881da21799dc7b33533be78584",
+  "candidateVersion": "2.49.0-offline.1",
+  "manifestId": "322382b69186e695e4e4e987",
+  "offlineFiles": 769,
+  "offlineBytes": 232929606,
+  "node": {
+    "command": "DOM_QA_MODULE=<qa-deps>/jsdom/lib/api.js NODE_PATH=<qa-deps>:<runtime modules> TMPDIR=<task RAM directory> npm test",
+    "tests": 1182,
+    "pass": 1182,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 408366.788454,
+    "log": "full-suite-final.log",
+    "logSHA256": "7b5848a578a232dcbdcfc28ef46d7f27f55bd841561753d5c96897f7d5c076b2"
+  },
+  "reports": {
+    "native-reviewed/report.json": {
+      "checks": 14,
+      "errors": 0,
+      "sha256": "1ebbef80bdabcd66f44fd64202e00dde30c894802f9d61599b1629eb5303dddb"
+    },
+    "native-storage.json": {
+      "checks": 4,
+      "errors": 0,
+      "sha256": "7ba241de6e45d191e1397ac67c4d2fb6dc71dcc54c821ebd0baf663973d3f68c"
+    },
+    "portable-reviewed.json": {
+      "checks": 3,
+      "errors": 0,
+      "sha256": "7a5772265e04500aeabaadd7162e1a387de3980121661e6a3c4f673ebaf68057"
+    },
+    "online-reviewed.json": {
+      "checks": 9,
+      "errors": 0,
+      "sha256": "a2589601cf52409928ed0301e4e3f7a95a4bfb37436bc6319c698a3bf1d56ca3"
+    },
+    "continuity/report.json": {
+      "checks": 14,
+      "errors": 0,
+      "sha256": "5688e2078793c4df5a5be1e31d59428c7bd10beb5129a94fd36126eb02d08c29"
+    }
+  },
+  "syntax": "syntax-reviewed.log",
+  "build": "review-build.log",
+  "sourceHashesStillMatchTestedProduction": true,
+  "review": {
+    "freshReviewers": 1,
+    "critical": 0,
+    "important": 2,
+    "minor": 0,
+    "importantResolvedByRootREDGREEN": 2,
+    "finalFullSuitePassed": true,
+    "secondReview": false
+  },
+  "publication": "Feature branch only; remote proof follows separately. Main write/merge/deploy prohibited."
+}

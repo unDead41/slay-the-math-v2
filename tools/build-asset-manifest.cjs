@@ -4,6 +4,7 @@ const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
 const contentId=entries=>hash(JSON.stringify(entries.map(e=>[e.url,e.sha256]).sort((a,b)=>a[0].localeCompare(b[0])))).slice(0,24);
 function build(root,{write=true,output=null}={}){
  const dist=output||path.join(root,'dist'),html=fs.readFileSync(path.join(dist,'index.html'),'utf8');
+ for(const name of fs.readdirSync(dist))if(/^(?:api|backend|server|private|tools|node_modules|\.env(?:\..*)?)$/i.test(name))throw Error('Server-only path cannot enter the player package: '+name);
  const read=name=>{const vm=require('node:vm'),context={module:{exports:{}}};vm.runInNewContext(fs.readFileSync(path.join(dist,name),'utf8'),context);return context.module.exports;};
  const animation=read('animation-data.js'),icons=read('icon-assets.js'),music=read('music-data.js').assets;
  const actors={},actorPacks=new Map();
@@ -33,7 +34,10 @@ function build(root,{write=true,output=null}={}){
  const rank=e=>e.required?0:functionalIcons.has(e.url)?5:e.pack==='hero'?1:initialActors.has(e.url)||e.url===music.assets.menu.srcs[0]?2:e.pack==='stage1'?4:3;
  important.sort((a,b)=>rank(a)-rank(b)||a.url.localeCompare(b.url));
  const startup={ratio:.75,urls:important.map(e=>e.url)};
- const out={schemaVersion:1,gameVersion:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,manifestId:contentId(entries),entries,scripts,startup,styles:[...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m=>m[1].split('?')[0]),actors,menuAudio:music.assets.menu.srcs[0]};
+ const shell=['index.html','sw.js'].map(url=>{const bytes=fs.readFileSync(path.join(dist,url));return {url,bytes:bytes.length,sha256:hash(bytes),pack:'shell',kind:'code',required:true};});
+ const offlineFiles=[...entries,...shell].sort((a,b)=>a.url.localeCompare(b.url)),releaseId=contentId(offlineFiles);
+ const offline={schemaVersion:1,releaseId,files:offlineFiles};
+ const out={schemaVersion:1,gameVersion:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,manifestId:releaseId,offline,entries,scripts,startup,styles:[...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m=>m[1].split('?')[0]),actors,menuAudio:music.assets.menu.srcs[0]};
  if(write)fs.writeFileSync(path.join(dist,'asset-manifest.json'),JSON.stringify(out));return out;
 }
 build.contentId=contentId;module.exports=build;if(require.main===module){const out=build(path.resolve(__dirname,'..'));console.log('Resource manifest: '+out.entries.length+' files; '+out.manifestId);}

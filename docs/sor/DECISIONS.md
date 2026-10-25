@@ -1,5 +1,13 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-PLAY-MODE-OFFLINE — One preference and a complete player installation
+
+- **DISAHKAN:** Ijamm authorizes this update on its own branch only. No main merge, push or deployment.
+- **DITERUSKAN:** Settings owns one Online/Offline preference; explicit Online gates every pet API request, separately from network hints. Offline uses local bilingual FAQ, with a transport contract for the external pet owner and no embedded provider key/backend.
+- **DITERUSKAN:** Offline Ready requires the exact complete release on retained CacheStorage, including HTML/worker/manifest, lazy Practice and all registered player media. Verify actual retained bytes and capability; fail closed on missing/corrupt files, quota, worker or package failure. Exclude developer/server/private files; disclose storage eviction and support real progress/Retry/Resume.
+- **Acceptance:** close/restart the browser process without server/network, exercise both stages and player screens; distinguish the standalone portable file. Preserve core game/save/RNG and original resources. Current main advanced after the recorded base; Master must retain its newer Idle change during integration.
+- [Owner record](../ONLINE_OFFLINE_READINESS.md), [audit/evidence](../audits/online-offline-readiness/LATEST.md), [pet handoff](../pet-ai/PLAY_MODE_HANDOFF.md).
+
 ## DEC-20261025-ICON-COMBAT-MAIN — Publish both completed follow-ups
 
 - **DISAHKAN:** Ijamm now requests publishing the completed icon and combat

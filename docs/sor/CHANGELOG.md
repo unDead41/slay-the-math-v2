@@ -1,5 +1,9 @@
 # Changelog SOR — Slay the Math
 
+## 2.49.0-offline.1 — branch candidate, 25 October 2026
+
+Add one shared Online/Offline Settings preference and a permission-gated pet adapter with local BM/English FAQ. Online keeps the 75% important-package gate and background downloads. Offline installs and verifies the complete release in retained browser storage, including HTML/worker/canonical manifest and lazy player media, with truthful progress, quota/worker failure and Retry/Resume. Cold navigation reconstructs/pins complete releases across a browser-process restart. Standalone portable delivery is reported separately. Main is untouched; Master retains the subsequent 2.49.1 Idle change when integrating. [Scope, evidence and remaining limits](../audits/online-offline-readiness/LATEST.md).
+
 ## 2.49.0 — 25 October 2026
 
 Combine the approved icon-loading and combat-continuity follow-ups with current

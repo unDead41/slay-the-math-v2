@@ -1,0 +1,42 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (39.359132ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (20.803256ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (17.30912ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (11.442304ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.446316ms)
+✔ failed persistence of a verified response cannot create an offline receipt (5.659094ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (0.993996ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (8.878366ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (680.065902ms)
+✔ eviction during completion receipt storage cannot leave a false Ready result (10.40983ms)
+✔ denied storage protection stays disclosed after reopening a complete retained installation (9.851501ms)
+✔ Pause keeps completed files and Resume finishes without refetching their bytes (6.827001ms)
+✔ changing only the worker changes the release cache identity (397.412588ms)
+✖ the release build rejects server-only folders before they can enter a player package (191.122464ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1494.130557
+
+✖ failing tests:
+
+test at tests/offline-install.test.cjs:61:1
+✖ the release build rejects server-only folders before they can enter a player package (191.122464ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:63:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /server.only|backend|player package/i,
+    operator: 'throws',
+    diff: 'simple'
+  }

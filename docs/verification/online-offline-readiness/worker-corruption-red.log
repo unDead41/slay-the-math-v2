@@ -1,0 +1,31 @@
+✔ a restarted worker reconstructs a complete release from persistent metadata (18.069775ms)
+✖ corrupt bootstrap bytes must produce recovery HTML before any game script executes (4.214316ms)
+✔ a missing file cannot be hidden by a completed installation marker (4.80263ms)
+✔ pinned requests reject other releases/hashes and never intercept API or developer paths (2.15458ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 117.797122
+
+✖ failing tests:
+
+test at tests/service-worker-offline.test.cjs:17:1
+✖ corrupt bootstrap bytes must produce recovery HTML before any game script executes (4.214316ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/service-worker-offline.test.cjs:18:107)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

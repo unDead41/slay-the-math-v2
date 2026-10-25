@@ -1,0 +1,38 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (59.656876ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (26.236503ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (34.273185ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (14.939833ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (5.370311ms)
+✔ failed persistence of a verified response cannot create an offline receipt (7.407402ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (0.832966ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (16.280684ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (824.695833ms)
+✔ eviction during completion receipt storage cannot leave a false Ready result (10.722875ms)
+✔ denied storage protection stays disclosed after reopening a complete retained installation (7.9005ms)
+✔ Pause keeps completed files and Resume finishes without refetching their bytes (7.42924ms)
+✔ changing only the worker changes the release cache identity (457.912049ms)
+✔ the release build rejects server-only folders before they can enter a player package (1.477538ms)
+✔ eviction while the worker confirms capability cannot be reported as Ready (15.797436ms)
+✔ a warm completion never refers to an orphaned cache after its namespace is replaced (13.342735ms)
+✔ one Settings mode group controls pet permission and begins offline preparation without changing saves (95.384078ms)
+✔ a connection hint cannot grant pet API permission without an explicit Online choice (3.267966ms)
+✔ choosing Offline aborts an active API request and rejects a late successful response (0.624281ms)
+✔ a corrupt preference fails closed and denied storage never re-enables API use (0.370038ms)
+✔ a real cross-tab preference event cancels work without changing the game save (0.637681ms)
+✔ pet API failures return local help while keeping Online as the player preference (1.345238ms)
+✔ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (0.677001ms)
+✔ only an actual successful request establishes pet API availability (0.573835ms)
+✔ an Offline choice before the transport microtask prevents the API call entirely (0.462107ms)
+✔ a pet request timeout aborts work without silently changing the selected mode (21.583398ms)
+✔ a restarted worker reconstructs a complete release from persistent metadata (22.044333ms)
+✔ corrupt bootstrap bytes must produce recovery HTML before any game script executes (6.825731ms)
+✔ a missing file cannot be hidden by a completed installation marker (8.078023ms)
+✔ pinned requests reject other releases/hashes and never intercept API or developer paths (2.347539ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1631.870683

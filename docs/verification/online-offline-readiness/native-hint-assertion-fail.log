@@ -1,0 +1,15 @@
+PASS one Settings preference; explicit Online makes a real failing API request and falls back locally without changing the preference
+PASS actual file404, truthful remaining/failure display, Pause/Resume, retained-byte reuse and verified full installation including Practice/shell/manifest
+PASS Offline blocks the configured API even while the browser reports a network
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+true !== false
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-restart-browser.cjs:33:309 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

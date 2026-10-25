@@ -1,0 +1,13 @@
+{"profile":"/tmp/stm-offline-shell-bcg9kk","serverStopped":true,"newBrowserProcess":true,"networkOffline":true,"httpCacheDisabled":true,"navigationStatus":null,"error":"page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:46471/game/\", waiting until \"load\"\u001b[22m\n"}
+AssertionError [ERR_ASSERTION]: Cold offline navigation must load verified cached HTML after full asset preparation: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "http://127.0.0.1:46471/game/", waiting until "load"[22m
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-shell-baseline-browser.cjs:19:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

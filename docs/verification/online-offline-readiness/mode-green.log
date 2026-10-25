@@ -1,0 +1,15 @@
+✔ a connection hint cannot grant pet API permission without an explicit Online choice (2.951807ms)
+✔ choosing Offline aborts an active API request and rejects a late successful response (0.641224ms)
+✔ a corrupt preference fails closed and denied storage never re-enables API use (0.29941ms)
+✔ a real cross-tab preference event cancels work without changing the game save (0.46573ms)
+✔ pet API failures return local help while keeping Online as the player preference (1.050168ms)
+✔ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (0.563658ms)
+✔ only an actual successful request establishes pet API availability (0.4986ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 88.419788

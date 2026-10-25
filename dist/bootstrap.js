@@ -8,12 +8,13 @@ let currentRun=null,pendingEntry=false,permitEntry=null,retryAction=null,panelOw
 let downloadTimer=null,downloadAllRunning=false,needsReload=false,entered=false,codeReady=false,downloadPaused=false,manualFull=false,downloadSettling=false,startup,backgroundQueue;
 let bootGeneration=0,manager,manifest,sceneToken=0,sceneKey='',opening=null,backgroundKey='',startAt,bootTimer,interval,activeSceneTimer;
 const byId=id=>doc.getElementById(id),gate=()=>byId('resource-loader');
+const offlineChosen=()=>host.STMPlayMode?.snapshot().mode==='offline';
 function message(title,detail){byId('resource-title').textContent=title;byId('resource-detail').textContent=detail;}
 function progress(p){byId('resource-progress').value=p.totalBytes?Math.min(99,p.loadedBytes/p.totalBytes*100):0;byId('resource-count').textContent=p.verifiedFiles+' / '+p.totalFiles+' files · '+(p.loadedBytes/1048576).toFixed(1)+' / '+(p.totalBytes/1048576).toFixed(1)+' MB';}
-function controls({retry=false,enter=false,online=false}={}){byId('resource-retry').hidden=!retry;byId('resource-enter').hidden=!enter;byId('resource-online').hidden=!online;}
+function controls({retry=false,enter=false,online=false,settings=codeReady}={}){byId('resource-retry').hidden=!retry;byId('resource-enter').hidden=!enter;byId('resource-online').hidden=!online;const button=byId('resource-settings');if(button)button.hidden=!settings;}
 function endClock(){host.clearTimeout(bootTimer);host.clearInterval(interval);}
 function invalidateVisuals(){for(const [url,v]of visuals)if(!v.ready){visuals.delete(url);if(v.url)host.URL.revokeObjectURL(v.url);}}
-function failure(error,token){if(token!==undefined&&token!==bootGeneration)return;bootGeneration++;endClock();manager?.pause();invalidateVisuals();needsReload=!!error.reload;byId('resource-retry').textContent=needsReload?'Reload Game':'Retry Resources';message('Resources need another try',error.message||'Check your connection, then try again.');controls({retry:true,online:codeReady&&!needsReload});byId('resource-online').textContent='Continue online';byId('resource-progress').removeAttribute('value');}
+function failure(error,token){if(token!==undefined&&token!==bootGeneration)return;bootGeneration++;endClock();manager?.pause();invalidateVisuals();needsReload=!!error.reload;byId('resource-retry').textContent=needsReload?'Reload Game':'Retry Resources';message('Resources need another try',error.message||'Check your connection, then try again.');controls({retry:true,online:codeReady&&!needsReload&&!offlineChosen()});byId('resource-online').textContent='Continue with current resources';byId('resource-progress').removeAttribute('value');}
 function deadline(work,timeoutMs=MAX_WAIT,onTimeout=()=>{}){let timer;return Promise.race([Promise.resolve().then(work),new Promise((_resolve,reject)=>{timer=host.setTimeout(()=>{onTimeout();reject(Error('Loading time limit reached. Retry when your connection is ready.'));},timeoutMs);})]).finally(()=>host.clearTimeout(timer));}
 async function execute(url,plain=false){
  const absolute=new URL(url,base).href;if(loaded.has(absolute))return;let source=absolute;
@@ -67,8 +68,18 @@ async function styles(){
  }
  const icon=doc.querySelector('[data-stm-icon]');if(icon)icon.href=assetURL(icon.dataset.stmIcon);
 }
-async function worker(){if(!host.navigator.serviceWorker||base.protocol!=='https:'&&base.hostname!=='localhost'&&base.hostname!=='127.0.0.1')return;
- try{await host.navigator.serviceWorker.register(new URL('sw.js',base),{scope:base.pathname});const registration=await Promise.race([host.navigator.serviceWorker.ready,new Promise(r=>host.setTimeout(()=>r(null),1500))]);const target=host.navigator.serviceWorker.controller||registration?.active;if(target)target.postMessage({type:'STM_RESOURCES',cacheName:manager.cacheName,base:base.href,entries:manifest.entries.map(e=>({url:e.url,sha256:e.sha256}))});}catch(_){}
+async function worker(required=false){if(!host.navigator.serviceWorker||base.protocol!=='https:'&&base.hostname!=='localhost'&&base.hostname!=='127.0.0.1')return false;
+ try{let registration=await host.navigator.serviceWorker.getRegistration?.(base.href);
+  if(!registration?.active||!required&&!new URL(host.location.href).searchParams.has('stm-release'))try{registration=await host.navigator.serviceWorker.register(new URL('sw.js',base),{scope:base.pathname});}catch(error){if(!registration?.active)throw error;}
+  if(!registration?.active)registration=await Promise.race([host.navigator.serviceWorker.ready,new Promise(r=>host.setTimeout(()=>r(null),1500))]);
+  const until=Date.now()+(required?4000:0);
+  do{const target=registration?.active||host.navigator.serviceWorker.controller;
+   if(target){target.postMessage({type:'STM_RESOURCES',cacheName:manager.cacheName,base:base.href,entries:manifest.entries.map(e=>({url:e.url,sha256:e.sha256}))});
+    if(!required)return true;if(host.MessageChannel){const capable=await new Promise(resolve=>{const channel=new host.MessageChannel(),timer=host.setTimeout(()=>{channel.port1.close();resolve(false);},250);channel.port1.onmessage=e=>{host.clearTimeout(timer);channel.port1.close();resolve(e.data?.protocol==='stm-offline-v1');};target.postMessage({type:'STM_OFFLINE_CAPS'},[channel.port2]);});if(capable)return true;}
+   }
+   if(!required||Date.now()>=until)break;await new Promise(r=>host.setTimeout(r,100));registration=await host.navigator.serviceWorker.getRegistration(base.href);
+  }while(Date.now()<until);
+ }catch(_){}return false;
 }
 async function runtime(plain=false){for(const script of doc.querySelectorAll(plain?'script[type="application/stm-runtime"],script[type="application/stm-practice"]':'script[type="application/stm-runtime"]'))await execute(script.getAttribute('src'),plain);}
 function validateEntrypoint(){
@@ -83,8 +94,9 @@ async function boot(){
  interval=host.setInterval(()=>{byId('resource-time').textContent=Math.max(0,180-Math.floor((Date.now()-startAt)/1000))+' seconds remaining';},1000);
  bootTimer=host.setTimeout(()=>failure(Error('The 3-minute loading limit was reached. Your progress is safe. Check your connection and retry.'),token),MAX_WAIT);
  try{
-  if(!manifest){const response=await host.fetch(new URL('asset-manifest.json',base),{cache:'no-store',signal:host.AbortSignal.timeout(MAX_WAIT)});if(!response.ok)throw Error('The download list could not load. Please reload and retry.');manifest=await response.json();manager=host.STMAssetReadiness.create({host,base:base.href,manifest});api.manager=manager;startup=host.STMAssetReadiness.startupPlan(manifest);
-   backgroundQueue=host.STMAssetReadiness.createBackgroundQueue({manager,canRun:priority=>entered&&!downloadPaused&&!doc.hidden&&host.navigator.onLine!==false&&(manager.cacheMode==='persistent'||priority<85||manualFull),limit:()=>!doc.body.classList.contains('home-active')&&currentRun?.scene==='battle'?1:2,onChange:()=>{
+  if(!manifest){const manifestURL=new URL('asset-manifest.json',base),pinned=new URL(host.location.href).searchParams.get('stm-release');if(pinned)manifestURL.searchParams.set('stm-release',pinned);const response=await host.fetch(manifestURL,{cache:'no-store',signal:host.AbortSignal.timeout(MAX_WAIT)});if(!response.ok)throw Error('The download list could not load. Please reload and retry.');manifest=await response.json();if(pinned&&manifest.offline?.releaseId!==pinned)throw Error('The installed offline release does not match this page. Open the game address again.');manager=host.STMAssetReadiness.create({host,base:base.href,manifest});api.manager=manager;startup=host.STMAssetReadiness.startupPlan(manifest);
+   if(manifest.offline&&host.STMOfflineInstall){api.offline=host.STMOfflineInstall.create({host,base:base.href,manifest,manager,ensureWorker:()=>worker(true)});api.offline.subscribe(s=>{if(entered)downloadStatus();else if(codeReady&&offlineChosen()){byId('resource-progress').value=s.percent;byId('resource-count').textContent=s.verifiedFiles+' / '+s.totalFiles+' files · '+(s.verifiedBytes/1048576).toFixed(1)+' / '+(s.totalBytes/1048576).toFixed(1)+' MB';}});}
+   backgroundQueue=host.STMAssetReadiness.createBackgroundQueue({manager,canRun:priority=>entered&&!offlineChosen()&&!['checking','downloading'].includes(api.offline?.phase)&&!downloadPaused&&!doc.hidden&&host.navigator.onLine!==false&&(manager.cacheMode==='persistent'||priority<85||manualFull),limit:()=>!doc.body.classList.contains('home-active')&&currentRun?.scene==='battle'?1:2,onChange:()=>{
     if(!entered||!backgroundQueue)return;const q=backgroundQueue.stats();
     if(!q.active&&!q.queued&&!downloadSettling){downloadSettling=true;manager.reconcile().then(()=>{if(entered){automatic();downloadStatus();}}).finally(()=>{downloadSettling=false;});}
     else if(!q.active)downloadStatus();
@@ -94,7 +106,8 @@ async function boot(){
   const required=manifest.entries.filter(e=>e.pack==='core'&&e.required),startupProgress=()=>progress(manager.progress(startup.urls));await manager.prepare(required.map(e=>e.url),{onProgress:startupProgress,timeoutMs:Math.max(1,MAX_WAIT-(Date.now()-startAt))});
   if(token!==bootGeneration)return;message('Preparing images','Checking the first screen before opening it.');await Promise.all(required.filter(e=>e.kind==='image').map(e=>decode(e.url)));
   if(token!==bootGeneration)return;await styles();if(token!==bootGeneration)return;await runtime();if(token!==bootGeneration)return;codeReady=true;
-  if(manager.cacheMode!=='persistent'){endClock();startupProgress();message('Online mode','Browser storage is unavailable. Essential files are ready; other files load when needed.');byId('resource-online').textContent='Continue online';byId('resource-time').textContent='The 75% package has not been saved on this browser.';controls({online:true,retry:true});return;}
+  if(offlineChosen()){if(!api.offline){const error=Error('This release has no complete offline package. Reload Game, then retry.');error.reload=true;throw error;}endClock();message('Preparing the complete offline game','Keep this page open until every file has been saved and verified.');byId('resource-time').textContent='Complete offline preparation can take longer than 3 minutes.';const s=await api.offline.install();if(token!==bootGeneration)return;if(!s.ready)throw Error(s.error||'Offline preparation is incomplete. Reconnect and Retry.');message('Ready to play offline','All files for this release have been saved and verified.');controls({enter:true});return;}
+  if(manager.cacheMode!=='persistent'){endClock();startupProgress();message('Browser storage unavailable','Browser storage is unavailable. Essential files are ready; other files load when needed.');byId('resource-online').textContent='Continue with current resources';byId('resource-time').textContent='The 75% package has not been saved on this browser.';controls({online:true,retry:true});return;}
   message('Preparing important resources','Preparing 75% of the important package. The rest downloads while you play.');
   await manager.prepare(startup.beforeMenu,{onProgress:startupProgress,timeoutMs:Math.max(1,MAX_WAIT-(Date.now()-startAt))});if(token!==bootGeneration)return;
   if(manager.cacheMode!=='persistent')throw Error('Browser storage filled up. Retry or continue online with essential files.');
@@ -104,7 +117,7 @@ async function boot(){
  }catch(error){failure(error,token);}
 }
 function later(url,priority){backgroundQueue?.enqueue(url,priority);}
-function automatic(all=false){if(!manager||manager.cacheMode!=='persistent'&&!all)return;const important=new Set(startup.urls);for(const e of manifest.entries){if(!all&&e.pack==='practice')continue;later(e.url,important.has(e.url)?80:e.pack==='boss2'?99:e.pack==='stage2'?96:e.pack==='boss1'?95:90);}}
+function automatic(all=false){if(!manager||offlineChosen()||manager.cacheMode!=='persistent'&&!all)return;const important=new Set(startup.urls);for(const e of manifest.entries){if(!all&&e.pack==='practice')continue;later(e.url,important.has(e.url)?80:e.pack==='boss2'?99:e.pack==='stage2'?96:e.pack==='boss1'?95:90);}}
 function background(run){if(!manager||!entered||!run)return;const key=String(run.seed)+':'+run.stage;if(backgroundKey===key){backgroundQueue.pump();return;}backgroundKey=key;
  const map=host.DCEngine.getMap(run),actors=new Map();
  for(const node of map.nodes)if(node.enemyId&&node.type!=='boss'&&node.depth>=run.depth){const a=manifest.actors[node.enemyId];if(a)actors.set(node.enemyId,Math.min(actors.get(node.enemyId)??99,node.depth));}
@@ -157,23 +170,26 @@ function prepareEntry(event){
   finishPanel(owner);permitEntry=target;target.click();
  }).catch(()=>{pendingEntry=false;failPanel(owner,'This room is not ready. Your position is unchanged. Retry resources.',()=>target.click());});
 }
-const api=host.STMHosted={scene,practice,audio,assetURL,imageURL,imageElement,paintImages,prepareImage:decode,manager:null,downloads:()=>({...backgroundQueue?.stats(),paused:downloadPaused,online:manager?.cacheMode!=='persistent'})};
+const api=host.STMHosted={scene,practice,audio,assetURL,imageURL,imageElement,paintImages,prepareImage:decode,manager:null,offline:null,downloads:()=>({...backgroundQueue?.stats(),paused:downloadPaused,online:manager?.cacheMode!=='persistent',storageMode:manager?.cacheMode,mode:host.STMPlayMode?.snapshot().mode||'online',connectionHint:host.navigator.onLine===false?'disconnected':'unknown'})};
 function downloadStatus(){if(!manager)return;const stats=manager.stats(),q=backgroundQueue?.stats()||{active:0,queued:0,failed:0},percent=Math.floor(stats.availableBytes/stats.totalBytes*100),online=stats.cacheMode!=='persistent';
+ if(offlineChosen()&&api.offline){const s=api.offline.snapshot();byId('resource-downloads').querySelector('summary').textContent='Offline · '+s.percent+'%';byId('resource-download-status').textContent=s.verifiedFiles+' / '+s.totalFiles+' resources verified · '+(s.verifiedBytes/1048576).toFixed(1)+' / '+(s.totalBytes/1048576).toFixed(1)+' MB';byId('resource-download-mode').textContent=host.STMPlayModeUI?.offlineText(s)||s.phase;byId('resource-download-all').disabled=s.ready;byId('resource-download-all').textContent='Prepare offline / Retry / Resume';byId('resource-download-pause').textContent=s.phase==='paused'?'Resume download':'Pause download';return;}
  byId('resource-downloads').querySelector('summary').textContent='Downloads · '+percent+'%';
  byId('resource-download-status').textContent=stats.availableFiles+' / '+manifest.entries.length+' resources cached · '+(stats.availableBytes/1048576).toFixed(1)+' / '+(stats.totalBytes/1048576).toFixed(1)+' MB · '+(q.queued+q.active)+' pending';
- byId('resource-download-mode').textContent=online?'Online mode: only current resources are retained.':host.navigator.onLine===false?'Offline: downloads resume when connected.':downloadPaused?'Background downloads paused.':q.failed?'Some downloads failed. Retry remaining resources.':q.active||q.queued?'Downloading automatically in the background…':'Game resources are ready. Practice loads when opened.';
+ byId('resource-download-mode').textContent=online?'Browser storage is unavailable. Only current resources are retained.':host.navigator.onLine===false?'Network unavailable: downloads resume when connected.':downloadPaused?'Background downloads paused.':q.failed?'Some downloads failed. Retry remaining resources.':q.active||q.queued?'Downloading automatically in the background…':'Cached game resources are ready. Offline preparation is checked in Settings.';
  byId('resource-download-pause').textContent=downloadPaused?'Resume background downloads':'Pause background downloads';
  if(downloadAllRunning&&!q.active&&!q.queued){downloadAllRunning=false;byId('resource-download-all').disabled=false;}
  byId('resource-download-all').textContent=q.failed?'Retry remaining resources':'Download all resources';
 }
-function startDownloadStatus(){if(downloadTimer)host.clearInterval(downloadTimer);let ticks=0;downloadStatus();downloadTimer=host.setInterval(()=>{if(doc.hidden)return;if(++ticks%5){downloadStatus();return;}manager.reconcile().then(()=>{if(entered){automatic();downloadStatus();}});},1000);}
+function startDownloadStatus(){if(downloadTimer)host.clearInterval(downloadTimer);let ticks=0;downloadStatus();downloadTimer=host.setInterval(()=>{if(doc.hidden)return;if(++ticks%5){downloadStatus();return;}manager.reconcile().then(()=>api.offline?.reconcile()).then(()=>{if(entered){automatic();downloadStatus();}});},1000);}
 async function resumeBackground(){if(!manager||!entered)return;manager.resume();await manager.reconcile({retryStorage:true});if(!entered)return;backgroundQueue.retry();backgroundKey='';background(currentRun);automatic(manualFull);backgroundQueue.pump();downloadStatus();}
 function enter(){host.DCAudio?.unlock();gate().hidden=true;entered=true;if(manager){byId('resource-downloads').hidden=false;startDownloadStatus();resumeBackground();}doc.querySelector('[data-action="new"]')?.focus();}
 function start(){
  host.DCGameLanguage?.install(doc);
  doc.addEventListener('click',prepareEntry,{capture:true});
- byId('resource-download-all').addEventListener('click',async()=>{if(downloadAllRunning||!manager)return;downloadAllRunning=true;manualFull=true;downloadPaused=false;byId('resource-download-all').disabled=true;manager.resume();await manager.reconcile({retryStorage:true});backgroundQueue.retry();automatic(true);downloadStatus();});
- byId('resource-download-pause').addEventListener('click',()=>{downloadPaused=!downloadPaused;if(downloadPaused)backgroundQueue?.pump();else resumeBackground();downloadStatus();});
+ byId('resource-download-all').addEventListener('click',async()=>{if(offlineChosen()&&api.offline){api.offline.install();return;}if(downloadAllRunning||!manager)return;downloadAllRunning=true;manualFull=true;downloadPaused=false;byId('resource-download-all').disabled=true;manager.resume();await manager.reconcile({retryStorage:true});backgroundQueue.retry();automatic(true);downloadStatus();});
+ byId('resource-download-pause').addEventListener('click',()=>{if(offlineChosen()&&api.offline){if(api.offline.phase==='paused')api.offline.install();else api.offline.pause();return;}downloadPaused=!downloadPaused;if(downloadPaused)backgroundQueue?.pump();else resumeBackground();downloadStatus();});
+ host.addEventListener('stm-play-mode-change',()=>{backgroundQueue?.pump();if(entered){if(!offlineChosen())resumeBackground();downloadStatus();}else if(codeReady)boot();});
+ doc.addEventListener('visibilitychange',()=>{if(!doc.hidden&&api.offline?.ready)api.offline.audit();});
  host.addEventListener('online',resumeBackground);host.addEventListener('offline',()=>{backgroundQueue?.pump();if(entered)downloadStatus();});doc.addEventListener('visibilitychange',()=>{if(!doc.hidden)resumeBackground();});
  host.addEventListener('pagehide',()=>{host.clearInterval(downloadTimer);downloadTimer=null;});host.addEventListener('pageshow',event=>{if(event.persisted&&manager&&!gate().hidden)downloadStatus();else if(event.persisted&&manager)startDownloadStatus();});
  byId('resource-enter').addEventListener('click',enter);byId('resource-online').addEventListener('click',enter);byId('resource-retry').addEventListener('click',()=>{if(needsReload){host.location.reload();return;}sceneKey='';boot();});byId('resource-audio').addEventListener('click',()=>host.DCAudio?.unlock());byId('resource-scene').querySelector('button').addEventListener('click',()=>{if(retryAction){const retry=retryAction;retryAction=null;retry();}else retryScene();});

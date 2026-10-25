@@ -1,0 +1,24 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (42.800892ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (34.434543ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (22.994042ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (23.914726ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.41686ms)
+✔ failed persistence of a verified response cannot create an offline receipt (6.83672ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (1.358393ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (32.784862ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (776.057427ms)
+✔ a connection hint cannot grant pet API permission without an explicit Online choice (9.292772ms)
+✔ choosing Offline aborts an active API request and rejects a late successful response (0.501404ms)
+✔ a corrupt preference fails closed and denied storage never re-enables API use (0.252449ms)
+✔ a real cross-tab preference event cancels work without changing the game save (0.490727ms)
+✔ pet API failures return local help while keeping Online as the player preference (1.030239ms)
+✔ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (5.861603ms)
+✔ only an actual successful request establishes pet API availability (0.549306ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1130.223344

@@ -1,0 +1,28 @@
+✖ one Settings mode group controls pet permission and begins offline preparation without changing saves (88.81153ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 588.589278
+
+✖ failing tests:
+
+test at tests/play-mode-ui.test.cjs:4:1
+✖ one Settings mode group controls pet permission and begins offline preparation without changing saves (88.81153ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /Preparing/. Input:
+  
+  'Preparing help…'
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode-ui.test.cjs:14:383)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Preparing help…',
+    expected: /Preparing/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }

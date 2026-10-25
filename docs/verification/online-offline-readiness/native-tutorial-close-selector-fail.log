@@ -1,0 +1,17 @@
+PASS one Settings preference; explicit Online makes a real failing API request and falls back locally without changing the preference
+PASS only a real successful QA API response changes availability to available
+PASS actual file404, truthful remaining/failure display, Pause/Resume, retained-byte reuse and verified full installation including Practice/shell/manifest
+PASS Offline blocks the configured API even while the browser reports a network
+PASS complete browser-process close/reopen with the same profile, stopped server, disabled HTTP cache and network: original URL reopens through the installed worker
+PASS offline BM/English Settings and packaged pet FAQ, phone input/layout, and unchanged mode ownership
+PASS all120 Education Practice questions and local renderer open offline
+locator.click: Error: strict mode violation: locator('[data-tutorial-action=close]') resolved to 2 elements:
+    1) <button class="btn" type="button" data-value="" data-tutorial-action="close">Return to game</button> aka getByRole('button', { name: 'Return to game' }).first()
+    2) <button class="btn" type="button" data-value="" data-tutorial-action="close">Return to game</button> aka getByRole('button', { name: 'Return to game' }).nth(1)
+
+Call log:
+[2m  - waiting for locator('[data-tutorial-action=close]')[22m
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-restart-browser.cjs:40:241 {
+  log: [ "  - waiting for locator('[data-tutorial-action=close]')" ]
+}

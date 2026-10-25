@@ -205,6 +205,28 @@
     "Pages publication and deployment recorded separately after exact ref/tree readback"
   ],
   "publication": {
-    "status": "Awaiting authorized main update; no deployment inferred from local tests"
+    "status": "Published to main and successfully deployed through GitHub Pages",
+    "sourceSHA": "2edef4e174a882c93586d566efd55bce427de28e",
+    "testedTree": "79fdc746d3702197265e4fde2f113bb7a866e922",
+    "orderedParents": [
+      "65ccce765d1fcd43be8bd8033327764777b6993c",
+      "82db6d57ce2f4b251601e260c0e6d861922a19a1"
+    ],
+    "nonForcedExpectedHeadUpdate": true,
+    "remoteRefTreeParentsVersionReadback": "PASS",
+    "packageVersion": "2.47.0",
+    "pages": {
+      "run": 40177861005,
+      "url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40177861005",
+      "headSHA": "2edef4e174a882c93586d566efd55bce427de28e",
+      "status": "completed",
+      "conclusion": "success",
+      "buildJob": 121122355923,
+      "buildSyntaxUpload": "success",
+      "deployJob": 121122498078,
+      "publishGame": "success"
+    },
+    "gameURL": "https://undead41.github.io/slay-the-math-v2/",
+    "receipt": "The following documentation-only receipt leaves every tested runtime byte unchanged; final ref and Pages readback are reported separately."
   }
 }

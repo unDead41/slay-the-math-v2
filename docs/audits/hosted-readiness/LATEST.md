@@ -12,6 +12,12 @@ Main's `fetch-depth: 0` change resolves the earlier CI-BG-01 input prerequisite.
 
 Inherited CI-247-01, **P2/high, confirmed harness prerequisite**: job121116533995 fails `tests/icon-package-browser.cjs:25` with `DCRelease is not defined`. The harness reads the deferred runtime immediately after DOMContentLoaded, without waiting for or entering through the existing loader. It also expects raw icon paths, predating verified object URLs. Preserve this historical failure rather than infer a game failure or silently skip it. The current release uses explicit native readiness/background and verified-image tests for these actual behaviors. Broader migration of the historical icon/CI browser matrix remains a separate follow-up; the Pages build/deploy workflow does not run this PR-only harness.
 
+## Main publication and Pages receipt
+
+Published combined source: [`2edef4e174a882c93586d566efd55bce427de28e`](https://github.com/unDead41/slay-the-math-v2/commit/2edef4e174a882c93586d566efd55bce427de28e), exact tested tree `79fdc746d3702197265e4fde2f113bb7a866e922`. Ordered parents are main65ccce765d1fcd43be8bd8033327764777b6993c and feature82db6d57ce2f4b251601e260c0e6d861922a19a1. Every uploaded Git blob SHA and the created remote tree match the committed local source/evidence snapshot. Main was updated without force, with expected head65ccce7, and commit/tree/parents/main ref/package2.47.0 were read back. The feature branch was not moved.
+
+GitHub Pages [run40177861005](https://github.com/unDead41/slay-the-math-v2/actions/runs/40177861005) completed **success** at that exact source SHA. Build job121122355923 reports successful production build, runtime syntax and artifact upload; deploy job121122498078 reports successful Publish game. [The existing game URL](https://undead41.github.io/slay-the-math-v2/) is unchanged. This proves the observed hosted deployment, not physical-device FPS, classroom connectivity or live Google delivery. The following documentation-only receipt does not change the tested runtime; its final ref/tree and Pages result are checked separately in the terminal handoff.
+
 ---
 
 # Historical automatic startup and background downloads — feature 2.46.0

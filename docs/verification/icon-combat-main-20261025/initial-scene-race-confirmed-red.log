@@ -1,0 +1,31 @@
+bootstrapSHA256 0bb56c1ddea2189527e335e48694db849e5b6b1502729559f38d009b01196ff1
+{"case":"current image after initial actor success","panelHidden":true,"retryHidden":false,"scenePreparing":false}
+✖ current image retry survives the success of an older initial actor preload (70.637899ms)
+✔ obsolete removed image cannot raise a retry after initial actor success (19.528286ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 356.084857
+
+✖ failing tests:
+
+test at ../qa-presentation-main-20261025/initial-scene-race.test.cjs:27:1
+✖ current image retry survives the success of an older initial actor preload (70.637899ms)
+  AssertionError [ERR_ASSERTION]: older successful actor preload must not erase a current image retry
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/workspace/scratch/e7745ff161c8/qa-presentation-main-20261025/initial-scene-race.test.cjs:35:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,30 @@
+{
+  "label": "preload-browser",
+  "cwd": "/workspace/scratch/e7745ff161c8/icon-combat-main-20261025",
+  "command": [
+    "npm",
+    "run",
+    "test:preload-browser"
+  ],
+  "start": "2026-10-25T10:56:49Z",
+  "environment": {
+    "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "QA_DISABLE_GPU": "1",
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "QA_OUTPUT": "/workspace/scratch/e7745ff161c8/qa-presentation-main-20261025/preload-browser-artifacts",
+    "QA_SCREENSHOTS": "/workspace/scratch/e7745ff161c8/qa-presentation-main-20261025/preload-browser-screenshots",
+    "QA_REPORT": "/workspace/scratch/e7745ff161c8/qa-presentation-main-20261025/preload-browser-report.json"
+  },
+  "overrides": {
+    "QA_DIST": "release-prod",
+    "QA_SCREENSHOT": "/workspace/scratch/e7745ff161c8/qa-presentation-main-20261025/preload-startup.png"
+  },
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "exitCode": 0,
+  "elapsedSeconds": 33.839,
+  "log": "/workspace/scratch/e7745ff161c8/qa-presentation-main-20261025/preload-browser.log"
+}

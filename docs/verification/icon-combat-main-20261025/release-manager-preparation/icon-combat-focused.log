@@ -1,0 +1,56 @@
+✔ combat image refresh reports a current failure without blanking the room and ignores obsolete failures (486.543876ms)
+bootstrapSHA256 a44edd71439423c9c7aacccff6c0a948dbada3b9385d0ef2d216a4063d233e44
+{"case":"current image after initial actor success","initialGateHeld":true,"panelHidden":false,"retryHidden":false,"scenePreparing":false}
+✔ current image retry survives the success of an older initial actor preload (78.822594ms)
+✔ a failed current image removed before actor settlement cannot resurrect its notice (17.034528ms)
+✔ obsolete removed image cannot raise a retry after initial actor success (11.629483ms)
+✔ a visible icon overtakes queued warming while two background transfers remain held (97.320638ms)
+✔ foreground promotion during an existing decode does not fetch bytes again with session retention disabled (19.644222ms)
+iconReadinessSHA256 f809819218b626e45d26cf141f459b080f73a6f00bf118bc99aad2e26b4fd539
+✔ portable map legend keeps all six semantic glyphs when an embedded bitmap fails (115.516733ms)
+✔ slow and failed status images retain their usable named control and receive a local semantic fallback once (60.675447ms)
+✔ a changed icon source can load normally after a prior failure without affecting card/artifact art (10.684552ms)
+✔ the Publish Handler integration exposes a bounded critical-icon list, with no cards, artifacts, sounds or questions (1.186924ms)
+✔ failed registered utility and map meanings never collapse to the unknown-resource symbol (0.508504ms)
+✔ actual failed buttons keep names and receive distinct Sword, Rest, Coin and seal-state glyphs (17.497415ms)
+✔ a map legend without an explicit semantic attribute uses the verified original source identity (8.686008ms)
+✔ an unrelated committed action cannot cancel a Shield formation already on screen (250.621523ms)
+✔ replacing the transient readout host cannot cancel the next actual Shield impact (32.193609ms)
+✔ adding a second Passive keeps the first seal visible throughout its new layer transition (49.437802ms)
+✔ the first live Passive seal finishes its introduction within 600ms (14.238435ms)
+✔ Shield and every barrier finish forming within 600ms on each actor (12.314784ms)
+✔ a fresh hit interrupts formation and repeated hits do not build an obsolete queue (38.925869ms)
+✔ Thorns hit and retraction both finish within one second while retaining their order (38.169843ms)
+✔ a formed Weak chain continues its orbit without jumping at the active-loop boundary (27.935668ms)
+✔ new model registration owns VFX body size instead of the retired poster measurement (10.220745ms)
+✔ a browser without Canvas 2D retains the existing status fallback (7.47626ms)
+✔ the last expiry frame clears diagnostics and stops scheduling (20.646288ms)
+✔ unrelated combat rerenders retain clock, first-trigger order and removed-slot compaction (30.51192ms)
+✔ player and enemy use three disjoint stat channels even with mixed signs (9.680663ms)
+✔ Thorns impact finishes before expiry and queued lifecycle ends without new RAF work (18.264739ms)
+✔ adding Block to an existing shield keeps its material continuously formed (10.638373ms)
+✔ expiring effects still count towards the crowded-scene budget (8.168641ms)
+✔ an existing shield stays visible while its impact waits for the enemy action lead (10.015376ms)
+✔ dialog, Motion Off, pagehide and destroy stop work; restoring motion resumes the same field (15.565641ms)
+✔ sustained expensive rendering lowers quality within the first twenty frames (11.558977ms)
+✔ real Passive attributes and card Block produce actual signed hero changes (19.272413ms)
+✔ Block impact follows the enemy receipt even when a queued shield refills to the same value (2.66721ms)
+✔ ordinary Block expiry never fabricates a blocked hit or a debuff (0.68519ms)
+✔ player debuff gains and clears differ from enemy statuses and pending future grants (0.872421ms)
+✔ Continue, unchanged renders and different battles cannot replay historical effects (1.146053ms)
+✔ status projection, cues and unchanged queue grants leave all saved data and RNG untouched (1.298862ms)
+✔ decorative effects respect motion/dialog policy and late completion cannot remove a replacement aura (300.929974ms)
+✔ resize, pagehide, scene exit and destruction clean transient presentation without mutating the run (14.758437ms)
+✔ a crowded committed interval keeps new debuffs ahead of buffs and summarizes every remaining status (5.302832ms)
+✔ only an exactly explained Passive delta loses its duplicate status label (29.216443ms)
+✔ partial absorption, exact depletion, depletion with HP loss and ordinary expiry have separate presentations (2.84035ms)
+✔ one action emits one delayed SFX; a new action or dialog cancels it, while Motion Off retains sound (513.76407ms)
+✔ Low keeps every active aura and exact delta while reducing particles and removing continuous embers (51.149506ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4531.867822

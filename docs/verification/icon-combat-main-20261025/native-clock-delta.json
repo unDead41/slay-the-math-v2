@@ -1,0 +1,14 @@
+{
+  "testedNodeInputCommit": "7568565cdf16a99b620e4dd77092166aa32ec56f",
+  "changedPaths": [
+    "tests/combat-continuity-browser.cjs"
+  ],
+  "nonNativeOrDocsDelta": [],
+  "NodeTestDirectImportsOfChangedNativeScript": [],
+  "nativeScriptSHA256": "b10c9472cf60bad89906bd0cbaaad14eec661dc8553dec60cf2f7033f63a8654",
+  "runtimeAndGeneratedDiff": "",
+  "NodeTestsAndHelpersDiff": "",
+  "postActionAssertionsAndTimingsUnchanged": true,
+  "setup": "setFixedTime(T),pauseAt(T),setSystemTime(T),runFor(50)",
+  "reason": "Remove cross-process50msdeadline without changing product or action checks"
+}

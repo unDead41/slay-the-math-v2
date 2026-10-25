@@ -1,0 +1,24 @@
+READ-ONLY FOCUSED RECHECK REQUESTED BY ROOT
+cwd: /workspace/scratch/e7745ff161c8/icon-combat-main-20261025/modules/map
+command: node --test test/map-rng.test.cjs test/browser-global.test.cjs
+exitCode: 0
+✔ browser-global API reproduces all exported maps without CommonJS (126.622388ms)
+✔ ES module API reproduces all 200 saved maps (49.843698ms)
+✔ all original 50 seeds preserve their saved map snapshots in both stages (12.659211ms)
+✔ confirmed quotas and mandatory levels hold for every path count in both stages (31.393327ms)
+✔ 100 seeds are unique, reproducible, and include expanding and merging maps (79.25839ms)
+✔ validator detects broken guarantees, counts, and disconnected rooms (2.145227ms)
+✔ invalid seed and options fail clearly (0.513533ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 281.297259
+
+command: node tools/validate.cjs
+exitCode: 0
+{"seeds":100,"maps":200,"uniqueLayouts":200,"pngs":12,"pngHashes":"passed","sorFiles":4,"htmlFiles":0}
+

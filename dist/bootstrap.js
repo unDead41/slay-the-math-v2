@@ -4,7 +4,7 @@ if(!host.document?.currentScript||!host.STMAssetReadiness)return;
 const doc=host.document,base=new URL('.',doc.baseURI),MAX_WAIT=180000,loaded=new Set(),visuals=new Map();
 const imageJobs=new WeakMap();
 const EMPTY='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
-let currentRun=null,pendingEntry=false,permitEntry=null,retryAction=null,panelOwner=0;
+let currentRun=null,pendingEntry=false,permitEntry=null,retryAction=null,panelOwner=0,scenePreparation=null;
 let downloadTimer=null,downloadAllRunning=false,needsReload=false,entered=false,codeReady=false,downloadPaused=false,manualFull=false,downloadSettling=false,startup,backgroundQueue;
 let bootGeneration=0,manager,manifest,sceneToken=0,sceneKey='',opening=null,backgroundKey='',startAt,bootTimer,interval,activeSceneTimer;
 const byId=id=>doc.getElementById(id),gate=()=>byId('resource-loader');
@@ -24,22 +24,23 @@ function assetKey(url){const u=new URL(url,base);return manifest?.entries.find(e
 function assetURL(url){const key=assetKey(url);return key?visuals.get(key)?.url||EMPTY:EMPTY;}
 function decode(url,{priority=0}={}){
  const key=assetKey(url);if(!key)return Promise.reject(Error('Unknown image resource'));
- if(visuals.has(key)){const saved=visuals.get(key);visuals.delete(key);visuals.set(key,saved);return saved.promise;}
- const record={url:null,ready:false};
- record.promise=(async()=>{const response=await manager.fetchAsset(key,{priority});const objectURL=host.URL.createObjectURL(await response.blob());record.url=objectURL;const image=new host.Image();image.src=objectURL;await image.decode();if(!image.naturalWidth)throw Error('An image could not be prepared.');if(visuals.get(key)!==record){host.URL.revokeObjectURL(objectURL);throw Error('Image preparation was cancelled');}record.ready=true;return objectURL;})().catch(error=>{if(visuals.get(key)===record)visuals.delete(key);if(record.url)host.URL.revokeObjectURL(record.url);throw error;});
+ if(visuals.has(key)){const saved=visuals.get(key);if(saved.fetching&&priority<saved.priority){saved.priority=priority;manager.fetchAsset(key,{priority}).catch(()=>{});}visuals.delete(key);visuals.set(key,saved);return saved.promise;}
+ const record={url:null,ready:false,fetching:true,priority};
+ record.promise=(async()=>{const response=await manager.fetchAsset(key,{priority});record.fetching=false;const objectURL=host.URL.createObjectURL(await response.blob());record.url=objectURL;const image=new host.Image();image.src=objectURL;await image.decode();if(!image.naturalWidth)throw Error('An image could not be prepared.');if(visuals.get(key)!==record){host.URL.revokeObjectURL(objectURL);throw Error('Image preparation was cancelled');}record.ready=true;return objectURL;})().catch(error=>{if(visuals.get(key)===record)visuals.delete(key);if(record.url)host.URL.revokeObjectURL(record.url);throw error;});
  visuals.set(key,record);return record.promise;
 }
 function visibleImages(root){return [...root.querySelectorAll('img[data-stm-asset]')].filter(img=>!img.matches('.menu-ambience,.menu-backdrop')||img.classList.contains('active'));}
 function imageElement(img){
  const key=img.dataset.stmAsset;if(!key||!manager)return Promise.resolve();
  const current=imageJobs.get(img);if(current?.key===key)return current.promise;
+ const saved=visuals.get(key);if(saved?.ready&&img.getAttribute('src')===saved.url&&img.complete&&img.naturalWidth){if(img.dataset.stmImageState!=='ready'){img.dataset.stmImageState='ready';host.DCIconReadiness?.install(doc).refreshImage(img);}return Promise.resolve();}
  const job={key,promise:null};imageJobs.set(img,job);
  const owns=()=>imageJobs.get(img)===job&&img.dataset.stmAsset===key;
  const refresh=()=>host.DCIconReadiness?.install(doc).refreshImage(img);
  img.dataset.stmImageState='pending';refresh();
  job.promise=(async()=>{
   try{const url=await decode(key);if(!img.isConnected||!owns())return;img.loading='eager';if(img.getAttribute('src')!==url)img.src=url;await img.decode();if(!img.isConnected||!owns())return;img.dataset.stmImageState='ready';refresh();}
-  catch(error){if(img.isConnected&&owns()){img.dataset.stmImageState='failed';img.dispatchEvent(new host.Event('error'));}throw error;}
+  catch(error){if(!img.isConnected||!owns())return;img.dataset.stmImageState='failed';img.dispatchEvent(new host.Event('error'));throw error;}
   finally{if(imageJobs.get(img)===job)imageJobs.delete(img);}
  })();return job.promise;
 }
@@ -114,16 +115,22 @@ function background(run){if(!manager||!entered||!run)return;const key=String(run
 }
 function claimPanel(title,blocking=false){const owner=++panelOwner;retryAction=null;host.clearTimeout(activeSceneTimer);const panel=byId('resource-scene');panel.hidden=false;panel.querySelector('strong').textContent=title;panel.querySelector('button').hidden=true;doc.body.classList.toggle('scene-preparing',blocking);return owner;}
 function finishPanel(owner){if(owner!==panelOwner)return;byId('resource-scene').hidden=true;doc.body.classList.remove('scene-preparing');}
-function failPanel(owner,text,retry){if(owner!==panelOwner)return;host.clearTimeout(activeSceneTimer);const panel=byId('resource-scene');panel.querySelector('strong').textContent=text;panel.querySelector('button').hidden=false;doc.body.classList.remove('scene-preparing');retryAction=retry;}
+function failPanel(owner,text,retry,blocking=false){if(owner!==panelOwner)return;host.clearTimeout(activeSceneTimer);const panel=byId('resource-scene');panel.querySelector('strong').textContent=text;panel.querySelector('button').hidden=false;doc.body.classList.toggle('scene-preparing',blocking);retryAction=retry;}
+function failedSceneImages(){return visibleImages(doc).some(img=>img.dataset.stmImageState==='failed');}
+function failSceneImage(owner,preparing){if(owner!==panelOwner||!failedSceneImages())return;const next=++panelOwner;if(preparing)preparing.imageOwner=next;byId('resource-scene').hidden=false;failPanel(next,'Some artwork could not load. Retry resources.',retryScene,!!preparing?.pending);}
 function scene(run,home){
- currentRun=run;if(!manager)return;const urls=visibleImages(doc).map(img=>img.dataset.stmAsset);
- const key=(home?'home':run?run.seed+':'+run.stage+':'+run.scene+':'+(run.route?.active||''):'practice')+':'+urls.join(',');
- if(key===sceneKey)return;sceneKey=key;const token=++sceneToken,owner=++panelOwner;retryAction=null;host.clearTimeout(activeSceneTimer);byId('resource-scene').hidden=true;doc.body.classList.remove('scene-preparing');
+ currentRun=run;if(!manager)return;
+ // A new hand/status/poster is a refresh inside the same room. Only actual
+ // navigation may hide the arena while its initial resources are prepared.
+ const key=home?'home':run?[run.seed,run.started,run.stage,run.scene,run.depth,run.route?.active||'',run.battle?.enemyId||''].join(':'):'practice';
+ if(key===sceneKey){const token=sceneToken,owner=panelOwner,preparing=scenePreparation;paintImages().then(()=>{if(token===sceneToken&&owner===panelOwner&&!preparing?.pending&&preparing?.imageOwner===owner&&!failedSceneImages())finishPanel(owner);}).catch(()=>{if(token===sceneToken&&owner===panelOwner)failSceneImage(owner,preparing);});return;}
+ sceneKey=key;const token=++sceneToken,owner=++panelOwner;retryAction=null;host.clearTimeout(activeSceneTimer);byId('resource-scene').hidden=true;doc.body.classList.remove('scene-preparing');
+ const preparing=scenePreparation={token,owner,pending:true,imageOwner:null};
  background(run);const actorIds=!home&&run?.scene==='battle'?['mc_01',run.battle.enemyId]:[];
  for(const id of actorIds){const actor=manifest.actors[id];if(actor)for(const f of actor.files)manager.fetchAsset(f,{priority:10}).catch(()=>{});}
  if(!home&&run){const panel=byId('resource-scene');doc.body.classList.add('scene-preparing');panel.hidden=false;panel.querySelector('strong').textContent='Preparing this room…';panel.querySelector('button').hidden=true;}
  activeSceneTimer=host.setTimeout(()=>{failPanel(owner,'Some artwork is taking longer. You can retry.',retryScene);},15000);
- Promise.all([paintImages(),...actorIds.map(id=>host.DCActorAnimation.preload(run.stage,id))]).then(()=>new Promise(r=>host.requestAnimationFrame(()=>host.requestAnimationFrame(r)))).then(()=>{if(token!==sceneToken||owner!==panelOwner)return;host.clearTimeout(activeSceneTimer);finishPanel(owner);pruneVisuals();}).catch(()=>failPanel(owner,'Some artwork could not load. Retry resources.',retryScene));
+ Promise.all([paintImages(),...actorIds.map(id=>host.DCActorAnimation.preload(run.stage,id))]).then(()=>new Promise(r=>host.requestAnimationFrame(()=>host.requestAnimationFrame(r)))).then(()=>{if(token!==sceneToken)return;preparing.pending=false;const current=preparing.imageOwner===panelOwner?preparing.imageOwner:owner;if(current!==panelOwner)return;host.clearTimeout(activeSceneTimer);if(failedSceneImages()){byId('resource-scene').hidden=false;failPanel(current,'Some artwork could not load. Retry resources.',retryScene);}else finishPanel(current);pruneVisuals();}).catch(()=>{if(token!==sceneToken)return;preparing.pending=false;failPanel(preparing.imageOwner===panelOwner?preparing.imageOwner:owner,'Some artwork could not load. Retry resources.',retryScene);});
 }
 function retryScene(){manager.resume();backgroundQueue?.retry();invalidateVisuals();if(currentRun?.scene==='battle')for(const id of ['mc_01',currentRun.battle.enemyId])host.DCActorAnimation.forgetPreload(currentRun.stage,id);sceneKey='';doc.dispatchEvent(new host.CustomEvent('stm-retry-resources'));}
 async function practice(){

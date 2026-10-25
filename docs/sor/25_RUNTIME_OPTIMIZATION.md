@@ -1,5 +1,42 @@
 # Runtime performance — approved scope
 
+## Main integration authorization — 2.49.0
+
+Ijamm now requests publishing the completed icon-loading and combat-continuity
+updates to `main`, continuing the preceding main-publication instruction. This
+supersedes their 2.45.1 branch-only boundaries below for this combined release.
+Current main 2.48.0, automatic downloads, the 23-chapter / 98-image / 12-practice
+tutorial, AI/model, approved V5 art, numerical/save/RNG and language owners remain
+protected. Original source SHAs, failed/passing records and branch limits below
+remain history. [Pinned integration, required adaptations and fresh evidence](../ICON_COMBAT_MAIN_2_49_0.md).
+
+Combined scope status is **VALID with inherited P2 findings carried**. Fresh
+Node verification passes **1148/1148** on `7568565`; final native continuity
+passes **14/14** with the setup-only atomic-clock helper at `ee694d2`. Product,
+Node-test/helper, configuration and generated inputs are unchanged between those
+checkpoints; the single non-imported native helper delta has its own fresh replay.
+[Exact commands, retained failures, hashes and limits](../verification/icon-combat-main-20261025/evidence.json).
+Publication remains **PENDING** until the authorized remote ref/tree/version
+readback. CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open; the current
+preload PASS does not establish a counter fix. MODEL.zip remains unavailable
+and unread; physical-device and human-recognition limits remain.
+
+
+## Combat refresh correction — branch 2.45.1-combat.1
+
+The current main 2.45.0 loader included the visible image list in its room key.
+Playing/drawing cards therefore re-entered the blocking room gate and briefly
+hid the retained combat canvases. Within the same run/stage/scene/room, prepare
+new images through the verified bridge without hiding the game. Reuse already
+decoded current-source images; retain source/key ownership, explicit retry,
+initial-navigation gates and their timeouts. This is the authorized combat
+flicker fix, not a new background-download or loading-percentage policy.
+[Evidence and publication boundary](../audits/combat-animation/LATEST.md).
+
+## Image-priority boundary — 2.45.1-icons.1
+
+Ijamm authorizes the focused icon follow-up on `codex/icon-clarity-audit` only. A shared pending image preparation forwards a more urgent consumer priority to the existing loader job, without new fetch/hash/decode work. Once transfer finishes, a still-pending decode or ready image does not refetch. Keep existing concurrency, verification, cancellation and memory-budget owners. Regress with two held background transfers and with session retention disabled during decode. [Audit and scope](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 24 October 2026. Ijamm explicitly approves recommendations 1–3 from the performance assessment: retain combat canvases/controllers, reuse already-verified resources, and replace count-only texture caching with memory budgeting. Publication remains feature-branch only.
 
 Preserve the existing engine, exact seed/RNG/save progression, card/education/balance owners, original artwork/audio, fixed actor geometry and clip durations. Presentation never decides gameplay. Current main cb1bbcf688d9556b55bc8fe5522b5b652309640c (2.38.0), including Settings-only developer entry, education reports and clarified bilingual hints, stays intact.

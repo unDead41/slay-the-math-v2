@@ -1,5 +1,31 @@
 # 15 — QA, bukti semakan dan release
 
+## Main integration authorization — 2.49.0
+
+Ijamm now requests publishing the completed icon-loading and combat-continuity
+updates to `main`, continuing the preceding main-publication instruction. This
+supersedes their 2.45.1 branch-only boundaries below for this combined release.
+Current main 2.48.0, automatic downloads, the 23-chapter / 98-image / 12-practice
+tutorial, AI/model, approved V5 art, numerical/save/RNG and language owners remain
+protected. Original source SHAs, failed/passing records and branch limits below
+remain history. [Pinned integration, required adaptations and fresh evidence](../ICON_COMBAT_MAIN_2_49_0.md).
+
+Combined scope status is **VALID with inherited P2 findings carried**. Fresh
+Node verification passes **1148/1148** on `7568565`; final native continuity
+passes **14/14** with the setup-only atomic-clock helper at `ee694d2`. Product,
+Node-test/helper, configuration and generated inputs are unchanged between those
+checkpoints; the single non-imported native helper delta has its own fresh replay.
+[Exact commands, retained failures, hashes and limits](../verification/icon-combat-main-20261025/evidence.json).
+Publication remains **PENDING** until the authorized remote ref/tree/version
+readback. CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open; the current
+preload PASS does not establish a counter fix. MODEL.zip remains unavailable
+and unread; physical-device and human-recognition limits remain.
+
+
+## Icon loading follow-up — 2.45.1-icons.1
+
+For the assistant-branch update, reproduce the pending-priority and generic-fallback defects before fixing them. Exercise the complete bootstrap/verified loader/DOM path, two held background requests, no duplicate fetch/decode, decode with session retention disabled, 43 UI/six map meanings, source replacement, and unchanged ten status glyphs. Native production cases must cover real held HTTP responses, actual functional-image404s, BM/English and Normal/Large switching, named enabled controls, decoded glyphs and exact saved-game equality. Preserve original art, current motion/VFX and all numerical/question/RNG owners. Record full/syntax/build/resource checks, initial/final audit and physical-device/human limits; publish `codex/icon-clarity-audit` only. [Evidence owner](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 Status: CADANGAN. Pakej ini belum menjalankan ujian runtime game.
 
 ## Prinsip semakan

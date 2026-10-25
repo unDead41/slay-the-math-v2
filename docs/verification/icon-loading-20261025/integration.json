@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-25 Asia/Kuala_Lumpur",
+  "version": "2.45.1-icons.1",
+  "masterSOR": "1.2.0",
+  "baseMain": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+  "originalRemoteFeature": "81533b38b8c7be1d897c3acc282f749df9beaeab",
+  "branch": "codex/icon-clarity-audit",
+  "publication": "Branch only; actual guarded ref, commit and tree are read back after publication and recorded in the user handoff.",
+  "fullSuite": {
+    "tests": 1085,
+    "pass": 1085,
+    "fail": 0,
+    "skipped": 0,
+    "command": "NODE_PATH=<QA dependencies> DOM_QA_MODULE=<jsdom> IMAGE_QA_MODULE=<sharp> SHARP_QA_MODULE=<sharp> npm test",
+    "durationMs": 477655.226437,
+    "logSHA256": "a7759f93ac9195a597c34017746ae206d608809b6e53940574c3a9eb3a60053a",
+    "runtimeStillMatchesFrozenSnapshot": true
+  },
+  "redBeforeFix": {
+    "priority": {
+      "tests": 2,
+      "pass": 1,
+      "fail": 1,
+      "log": "priority-before.log"
+    },
+    "fallback": {
+      "tests": 6,
+      "pass": 3,
+      "fail": 3,
+      "log": "fallback-before.log"
+    }
+  },
+  "focused": {
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "skipped": 0,
+    "note": "Observed before the final full run; the same cases are also in full-tests.log."
+  },
+  "nativeProduction": {
+    "version": "2.45.1-icons.1",
+    "checks": [
+      "Actual visible Weak overtakes two held background status requests; one verified transfer, named enabled button, identical saved game.",
+      "Real BM/Large combat survives functional-image 404s with decoded semantic fallbacks and identical saved game. Settings Normal/English then Large/BM switching is exercised under the same failures.",
+      "Real BM/Large map survives functional-image 404s with decoded semantic fallbacks and identical saved game.",
+      "Actual standalone file boots with embedded resources; a forced failed utility icon decodes its local fallback with zero HTTP requests.",
+      "All registered fallback meanings decode natively at 28/44/64px; diagnostic sheets contain at most20 meanings and100px padding/gaps."
+    ],
+    "errors": [],
+    "gallery": [
+      {
+        "file": "fallback-gallery-1.png",
+        "keys": [
+          "strength",
+          "agility",
+          "defense",
+          "block",
+          "weak",
+          "vulnerable",
+          "thorns",
+          "next-draw",
+          "next-block",
+          "retain-block",
+          "heart",
+          "bolt",
+          "focus",
+          "predict",
+          "hand",
+          "drawPile",
+          "discard",
+          "exhaust",
+          "sword",
+          "shield"
+        ]
+      },
+      {
+        "file": "fallback-gallery-2.png",
+        "keys": [
+          "book",
+          "cards",
+          "settings",
+          "volume",
+          "filter",
+          "star",
+          "map",
+          "chance",
+          "search",
+          "clock",
+          "flame",
+          "arrow",
+          "check",
+          "close",
+          "moon",
+          "orb",
+          "leaf",
+          "balance",
+          "elite",
+          "crown"
+        ]
+      },
+      {
+        "file": "fallback-gallery-3.png",
+        "keys": [
+          "coin",
+          "bossSealClosed",
+          "bossSealOpen",
+          "muted",
+          "intentAttackBlock",
+          "skill",
+          "save",
+          "exportSave",
+          "importSave",
+          "topicProbability",
+          "topicSets",
+          "topicLogic",
+          "rest",
+          "battle",
+          "boss",
+          "shop",
+          "camp",
+          "event"
+        ]
+      }
+    ]
+  },
+  "otherImageConsumers": {
+    "tutorialChapters": 17,
+    "checks": [
+      "worker blocked + disk cache denied + raw URLs rejected",
+      "real passive/pose/reset and exact engine save",
+      "Artifact HUD and all31 Codex icons decoded from verified blobs",
+      "all Tutorial chapters/screenshots/card previews use verified blobs with unchanged game save"
+    ],
+    "rawRequests": [],
+    "errors": [],
+    "cache": {
+      "requests": 395,
+      "cacheHits": 0,
+      "memoryHits": 139,
+      "hashes": 395,
+      "bytes": 117451592,
+      "maxActive": 4,
+      "cacheMode": "online",
+      "active": 0,
+      "queued": 0,
+      "memoryBytes": 32705274,
+      "memoryEntries": 82,
+      "memoryBudgetBytes": 33554432,
+      "verifiedFiles": 376,
+      "verifiedBytes": 101044874
+    }
+  },
+  "sourceResources": 678,
+  "productionResources": 679,
+  "allResourceHashesVerified": true,
+  "productionApp": "Exact unchanged instrumentApp(source app, controls) projection",
+  "protectedOwners": [
+    "dist/assets",
+    "modules",
+    "references",
+    "source-art",
+    "reports",
+    "dist/engine.js",
+    "dist/card-combat.js",
+    "dist/card-data.js",
+    "dist/combat-status.js",
+    "dist/status-vfx.js",
+    "dist/combat-vfx.js",
+    "dist/animation.js",
+    "dist/animation-data.js",
+    "dist/asset-readiness.js",
+    "dist/app.js",
+    "dist/game-language.js",
+    "dist/question-language.js",
+    "dist/audio.js",
+    "dist/dom-patch.js"
+  ],
+  "protectedOwnerChanges": [],
+  "originalStatusGlyphsUnchanged": 10,
+  "registeredUIFallbacks": 43,
+  "registeredMapFallbacks": 6,
+  "genericRegisteredUIFallbacks": 0,
+  "status": "VALID within the recorded icon/loading scope",
+  "limits": [
+    "Human/pupil glance recognition and physical-device performance unmeasured.",
+    "Diagnostic sheets render real fallback SVGs; they are not game screenshots or replacement4K artwork.",
+    "No new mathematical/balance/audio/model review; MODEL.zip unavailable.",
+    "No main push, Pages deployment or live Google verification."
+  ]
+}

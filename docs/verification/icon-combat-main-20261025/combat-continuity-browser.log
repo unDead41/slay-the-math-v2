@@ -1,0 +1,13 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.49.0 test:combat-continuity-browser
+> node tests/combat-continuity-browser.cjs
+
+clock.pauseAt: Error: Cannot fast-forward to the past
+    at ClockController._innerFastForwardTo (<anonymous>:202:13)
+    at ClockController.pauseAt (<anonymous>:133:16)
+    at async <anonymous>:337:30
+    at enter (/workspace/scratch/e7745ff161c8/icon-combat-main-20261025/tests/combat-continuity-browser.cjs:26:16)
+    at async /workspace/scratch/e7745ff161c8/icon-combat-main-20261025/tests/combat-continuity-browser.cjs:54:2 {
+  log: []
+}

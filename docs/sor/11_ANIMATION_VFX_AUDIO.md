@@ -1,6 +1,58 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
-Versi: 2.10.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+## Main integration authorization — 2.49.0
+
+Ijamm now requests publishing the completed icon-loading and combat-continuity
+updates to `main`, continuing the preceding main-publication instruction. This
+supersedes their 2.45.1 branch-only boundaries below for this combined release.
+Current main 2.48.0, automatic downloads, the 23-chapter / 98-image / 12-practice
+tutorial, AI/model, approved V5 art, numerical/save/RNG and language owners remain
+protected. Original source SHAs, failed/passing records and branch limits below
+remain history. [Pinned integration, required adaptations and fresh evidence](../ICON_COMBAT_MAIN_2_49_0.md).
+
+Combined scope status is **VALID with inherited P2 findings carried**. Fresh
+Node verification passes **1148/1148** on `7568565`; final native continuity
+passes **14/14** with the setup-only atomic-clock helper at `ee694d2`. Product,
+Node-test/helper, configuration and generated inputs are unchanged between those
+checkpoints; the single non-imported native helper delta has its own fresh replay.
+[Exact commands, retained failures, hashes and limits](../verification/icon-combat-main-20261025/evidence.json).
+Publication remains **PENDING** until the authorized remote ref/tree/version
+readback. CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open; the current
+preload PASS does not establish a counter fix. MODEL.zip remains unavailable
+and unread; physical-device and human-recognition limits remain.
+
+
+Versi: 2.11.0. Dungeon dan keperluan cue room mengikut arahan terkini; timing/audio treatment ialah cadangan.
+
+## Combat continuity — branch 2.45.1-combat.1, 25 Oktober 2026
+
+**MOT-36 (DISAHKAN):** Ijamm requests troubleshooting intermittent VFX, combat
+flicker and compatibility with the updated MC motion, then faster formation/hit
+effects. Update the combat branch first; no main merge or deployment is authorized.
+The approved V5 atlases, all 75 exposure timings, fixed projection and posters
+remain unchanged. [Current findings and evidence](../audits/combat-animation/LATEST.md).
+
+**MOT-37 (DITERUSKAN implementation):** A hand/status/poster refresh inside the
+same run/stage/room keeps the arena visible. Prepare its new images through the
+existing verified loader without restarting the full room gate. Initial room
+entry, missing-resource recovery and explicit retry retain their existing gates.
+Replacing detached status labels must not cancel the persistent field canvases.
+Ordinary capture/mount/no-op actions retain material lifecycles; dialogs, scene
+exit, hidden pages, Motion Off and explicit cancellation still stop them.
+
+**MOT-38 (DITERUSKAN timing):** Shared player/enemy one-shots skip the preview's
+quiet lead. Shield forms in 0.38s, other barriers in 0.48s, impact in 0.28s,
+break in 0.58s and expiry in 0.45–0.58s. Cue lead is 40ms for a played card or
+60ms for an enemy action. Stat response is 0.42s; Passive intro is 0.45s with
+0.35s layer transitions. Adding layers never restarts the existing seal's global
+intro. The default standalone Passive preview timing remains unchanged.
+
+New same-status reactions supersede obsolete queued actions; an existing
+formation survives a Block top-up. Only the hit/expiry chain belonging to the
+same receipt is sequenced, preserving Thorns impact before retraction. Transfer
+the completed material's orbit phase into its steady loop. Preserve unique
+motifs, stat lanes, Passive-only floor, adaptive budgets and read-only gameplay
+ownership. These are presentation timings, not a change to combat turn duration.
 
 ## Alyssa V5 dalam game — 2.45.0, 25 Oktober 2026
 

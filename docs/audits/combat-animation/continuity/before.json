@@ -1,0 +1,130 @@
+{
+  "version": "2.45.0",
+  "checks": [
+    {
+      "name": "1366: another card retains Shield formation",
+      "passed": false
+    },
+    {
+      "name": "1366: enemy impact starts within 150ms",
+      "passed": false
+    },
+    {
+      "name": "1366: no room-loader flash during cards/End Turn",
+      "passed": false
+    },
+    {
+      "name": "1366: no obsolete hit queue after one second",
+      "passed": true
+    },
+    {
+      "name": "1366: same actor/VFX canvases and no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "390: another card retains Shield formation",
+      "passed": false
+    },
+    {
+      "name": "390: enemy impact starts within 150ms",
+      "passed": false
+    },
+    {
+      "name": "390: no room-loader flash during cards/End Turn",
+      "passed": false
+    },
+    {
+      "name": "390: no obsolete hit queue after one second",
+      "passed": false
+    },
+    {
+      "name": "390: same actor/VFX canvases and no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "second Passive never dims the existing circle",
+      "passed": false
+    },
+    {
+      "name": "dialog stops all VFX surfaces",
+      "passed": true
+    },
+    {
+      "name": "Motion Off retains readable statuses and stops VFX",
+      "passed": true
+    },
+    {
+      "name": "no uncaught browser exception",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "width": 1366,
+      "flashes": 5,
+      "sameSurfaces": true,
+      "events": [],
+      "actor": "attack",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "flashes": 5,
+      "sameSurfaces": true,
+      "events": [
+        {
+          "id": "block",
+          "event": "hit"
+        }
+      ],
+      "actor": "attack",
+      "overflow": false
+    },
+    {
+      "passive": {
+        "entrances": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0.000026372936535420884,
+          0.000026372936535420884,
+          0.00020656211297228935,
+          0.00020656211297228935,
+          0.0006823938862465241,
+          0.0006823938862465241,
+          0.0015829559735739422,
+          0.0015829559735739422,
+          0.0030249728083167815,
+          0.0030249728083167815
+        ],
+        "layers": [
+          {
+            "id": 4,
+            "radius": 72
+          },
+          {
+            "id": 0,
+            "radius": 117
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:44263/"
+}

@@ -1,5 +1,34 @@
 # Slay the Math — Set of Rules
 
+## Main integration authorization — 2.49.0
+
+Ijamm now requests publishing the completed icon-loading and combat-continuity
+updates to `main`, continuing the preceding main-publication instruction. This
+supersedes their 2.45.1 branch-only boundaries below for this combined release.
+Current main 2.48.0, automatic downloads, the 23-chapter / 98-image / 12-practice
+tutorial, AI/model, approved V5 art, numerical/save/RNG and language owners remain
+protected. Original source SHAs, failed/passing records and branch limits below
+remain history. [Pinned integration, required adaptations and fresh evidence](docs/ICON_COMBAT_MAIN_2_49_0.md).
+
+Combined scope status is **VALID with inherited P2 findings carried**. Fresh
+Node verification passes **1148/1148** on `7568565`; final native continuity
+passes **14/14** with the setup-only atomic-clock helper at `ee694d2`. Product,
+Node-test/helper, configuration and generated inputs are unchanged between those
+checkpoints; the single non-imported native helper delta has its own fresh replay.
+[Exact commands, retained failures, hashes and limits](docs/verification/icon-combat-main-20261025/evidence.json).
+Publication remains **PENDING** until the authorized remote ref/tree/version
+readback. CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open; the current
+preload PASS does not establish a counter fix. MODEL.zip remains unavailable
+and unread; physical-device and human-recognition limits remain.
+
+
+Current combat continuity candidate **2.45.1-combat.1**, based on main **2.45.0**:
+[MOT-36–38](docs/sor/11_ANIMATION_VFX_AUDIO.md),
+[actual before/after findings and checks](docs/audits/combat-animation/LATEST.md).
+Ijamm requests fixing intermittent VFX/flicker and faster formation/hit effects
+on the combat branch first. Keep the approved V5 MC motion and original icons;
+no main merge or hosted deployment is part of this update.
+
 Current live combat VFX, game 2.44.0: Ijamm now requests applying all approved effects in the actual game. [Runtime behaviour and limits](docs/COMBAT_VFX_LIVE_2_44_0.md), [SOR 11 MOT-30–32](docs/sor/11_ANIMATION_VFX_AUDIO.md), [fresh audit/evidence](docs/audits/combat-animation/LATEST.md). This supersedes the preview-only runtime boundary in the historical records below. Preserve original artwork/icons and numerical/save/RNG owners.
 
 Historical V10 preview publication, 25 October 2026: Ijamm now authorizes publishing the completed `combat-animation` preview to main. [Current handoff](docs/audits/combat-animation/LATEST.md), [open/edit the standalone preview](previews/combat-vfx/README.md). This supersedes the earlier branch-only boundary below. Production combat integration is still separate; game runtime and release version remain 2.43.0.

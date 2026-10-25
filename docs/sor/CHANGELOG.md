@@ -1,5 +1,37 @@
 # Changelog SOR — Slay the Math
 
+## 2.49.0 — 25 October 2026
+
+Combine the approved icon-loading and combat-continuity follow-ups with current
+main 2.48.0. Forward foreground image priority, retain distinct semantic SVG
+fallbacks, preserve same-room visibility and live material continuity, and apply
+the reviewed shorter game-only timing. Protect current automatic downloads,
+23/98/12 tutorial, AI/model, V5 art and every numerical/save/RNG/language owner.
+Correct the confirmed initial-preparation/retry ownership race and portable
+semantic identity gap with meaningful regressions. Adapt historical harnesses
+to current loader contracts; retain original branch RED/PASS data and inherited
+P2 limitations. [Combined release](../ICON_COMBAT_MAIN_2_49_0.md).
+
+
+## Combat continuity — branch 2.45.1-combat.1, 25 October 2026
+
+- Reproduce actual card/End Turn loader flashes, interrupted Shield lifecycles
+  and second-Passive dimming on the current 2.45.0 game before fixing them.
+- Keep verified image refreshes inside one room nonblocking. Separate transient
+  label cancellation from material lifecycle ownership, including detached hosts.
+- Shorten complete material/Passive introductions, prioritize current impacts,
+  bound old same-status queues and preserve the active-loop phase after formation.
+- Retain all approved Alyssa/enemy atlases, registration, timing, original icons
+  and numerical/save/RNG owners. Branch-only update; evidence and remaining
+  physical-device/history limits are in the combat audit.
+
+## Icon loading follow-up — 2.45.1-icons.1, 25 October 2026
+
+- Promote a queued shared image preparation when it becomes visible; reuse its verified transfer/decode and avoid refetching during decode.
+- Give every registered UI/map meaning a local semantic fallback; retain original-source identity behind Blob URLs, named controls and all ten existing status glyphs.
+- Add real bootstrap/loader/DOM and native delay/404 regressions, actual BM/English and Normal/Large switches, diagnostic glyph sheets and initial/final audit evidence.
+- Preserve all original art and newer main motion/VFX, numerical, question and save/RNG owners. Publish the icon branch only; human/device validation remains open.
+
 ## 2.48.0 — 25 October 2026
 
 Publish the completed source-bound AI experience and efficiency update from

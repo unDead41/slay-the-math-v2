@@ -1,5 +1,49 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-ICON-COMBAT-MAIN — Publish both completed follow-ups
+
+- **DISAHKAN:** Ijamm now requests publishing the completed icon and combat
+  updates to main, continuing the preceding push-to-main instruction. This
+  supersedes only their 2.45.1 feature-branch-only boundaries.
+- **DITERUSKAN:** combine pinned main `68d61e75ecb241c5100fc894ee57231f00f3932f`
+  / 2.48.0, icon `e71efe1baa603314dd22da5890e8d53c3fdbbcdd` and combat
+  `2837a553c7b68e7aab5dd4a134a5b352aea2dd81` as 2.49.0. Keep current
+  preload/tutorial/AI/V5, numerical, archived/current saves/RNG, language and assets.
+- **Required integration corrections:** preserve the initial decoded-actor gate
+  while a newer image retry owns its notice; recover registered semantic identity
+  from portable embedded bytes. Retain clean RED and GREEN regressions. Adapt
+  old test fixtures to actual loader APIs/online entry and forward native Passive
+  timing options without weakening behavior assertions.
+- **DITERUSKAN verification:** fresh Node 1148/1148, syntax, direct map7/7 and
+  validator200maps, production/portable and scoped native checks pass. Final
+  continuity14/14 uses a setup-only atomic-clock helper; retain its initial
+  10-check/clock setup FAIL and both genuine product RED→GREEN records. Full
+  Node-tested756 and final-nativeee694d2 identities stay separate in the evidence.
+- **PERLU_VERIFIKASI:** final publication/readback, physical devices, MODEL.zip
+  comparison, general human recognition and live services. Inherited CI-247-01
+  and QA-248-PRELOAD-01 remain P2/open; neither is presented as fixed.
+  [Release and fresh evidence](../ICON_COMBAT_MAIN_2_49_0.md).
+
+
+## DEC-20261025-COMBAT-CONTINUITY — Troubleshoot flicker and shorten VFX
+
+- **DISAHKAN:** Ijamm reports intermittent combat VFX/flicker, asks to check the
+  updated MC motion and speed up formation/hit effects, with the update on the
+  branch first. No main publication is authorized for this change.
+- **DITERUSKAN:** Stable room loading through hand/status refreshes; persistent
+  material events independent of action labels; fast complete one-shots, current
+  reaction priority, continuous Passive layers and material-to-loop phase.
+- Preserve approved V5 source pixels/timing, original card/artifact/UI icons,
+  numerical mechanics, RNG and saves. Owner: [MOT-36–38](11_ANIMATION_VFX_AUDIO.md);
+  [before/after audit](../audits/combat-animation/LATEST.md). Physical-device FPS
+  and the prior irrecoverable trimmed-log ordering limit remain separate.
+
+## DEC-20261025-ICON-LOADING — Latest-main follow-up, branch only
+
+- **DISAHKAN:** Ijamm says to implement the appropriate recommendations and push the assistant branch first. Publish `codex/icon-clarity-audit` only; this new set has no main publication authorization.
+- **DITERUSKAN:** Base on main `6c49f3980c3a832635d4d01a6c50a8df98ac4aad` /2.45.0. Forward pending image priorities, complete registered UI/map fallbacks and original-source identity, and add actual bootstrap/native regressions. Preserve original assets, ten status glyphs, V5/live VFX, bilingual/numerical/question/save/RNG owners and loader budgets.
+- **PERLU_VERIFIKASI:** Human recognition and physical-device performance remain field checks. Current DOC-001/002 and the broad verified-icon integration are already resolved; do not reopen their historical snapshots. [Scope/audit](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 ## DEC-20261025-AI-EXPERIENCE-MAIN — Publish the completed AI update
 
 - **DISAHKAN:** Ijamm now requests pushing the completed `balance/master` AI update

@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "candidateSHA": "7568565cdf16a99b620e4dd77092166aa32ec56f",
+  "candidateTree": "d92a38a2f4c61cd9bda12e8744fefe9e541fb257",
+  "base": "68d61e75ecb241c5100fc894ee57231f00f3932f",
+  "gameVersion": "2.49.0",
+  "protectedOwners": [
+    "dist/assets",
+    "modules",
+    "references",
+    "source-art",
+    "reports",
+    "integrations",
+    "tools/ai-playtester",
+    "tools/balance",
+    "dist/engine.js",
+    "dist/config.js",
+    "dist/card-combat.js",
+    "dist/card-data.js",
+    "dist/app.js",
+    "dist/game-language.js",
+    "dist/question-language.js",
+    "dist/tutorial-data.js",
+    "dist/tutorial-core.js",
+    "dist/tutorial.js",
+    "dist/tutorial.css",
+    "dist/animation.js",
+    "dist/animation-data.js",
+    "dist/animation.css",
+    "dist/asset-readiness.js",
+    "dist/audio.js",
+    "dist/audio-presentation.js",
+    "dist/dom-patch.js"
+  ],
+  "protectedOwnerChanges": [],
+  "originalAssetFilesPreserved": 708,
+  "protectedChanges": [
+    "dist/asset-manifest.json",
+    "dist/bootstrap.js",
+    "dist/combat-vfx-passive.js",
+    "dist/combat-vfx.js",
+    "dist/icon-readiness.js",
+    "dist/index.html",
+    "dist/release.js",
+    "dist/status-vfx.js"
+  ],
+  "manifests": [
+    {
+      "dir": "dist",
+      "version": "2.49.0",
+      "id": "4fdcd87829dbfa5fc3b8c3f8",
+      "entries": 760,
+      "allHashesMatch": true
+    },
+    {
+      "dir": "release-prod",
+      "version": "2.49.0",
+      "id": "4d9ada6701bc5b7ef6befda2",
+      "entries": 761,
+      "allHashesMatch": true
+    }
+  ],
+  "tutorialScope": {
+    "chapters": 23,
+    "practice": 12,
+    "media": 98
+  },
+  "heroExposureCounts": {
+    "idle": 15,
+    "attack": 15,
+    "damaged": 15,
+    "defend": 15,
+    "skill": 15
+  },
+  "unchangedAISourceHashes": 49,
+  "models": [
+    {
+      "difficulty": "easy",
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "easy",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "difficulty": "medium",
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "medium",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    },
+    {
+      "difficulty": "hard",
+      "status": "READY",
+      "modelId": "9cca16330efe6b55cec5a10e9458490509a81a05e715546ebad10db12abec6b6",
+      "runtime": {
+        "version": "master-1.5.0-candidate.5",
+        "difficulty": "hard",
+        "definitionHash": "fab0fec8c7580cb3fb7e79277505f8aca9c30f6e8c2739c83d8ccecd8a88bea7",
+        "engineHash": "a19f2b2d81e8b08c8e0e553ac271e4ff0004bd9c1e4585ac32142a3195ad728d",
+        "source": "integrated working tree",
+        "pupilCalibration": false
+      }
+    }
+  ],
+  "production": {
+    "files": 823,
+    "aiExcluded": true,
+    "offlineBytes": 312119608,
+    "offlineSha256": "7e6535b7d31971df6e6c1c2f89e2781b7b3649b8c1977554516065c36148619a"
+  },
+  "workingTreeStatus": ""
+}

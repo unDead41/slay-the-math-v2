@@ -1,0 +1,17 @@
+diff --git a/tests/combat-continuity-browser.cjs b/tests/combat-continuity-browser.cjs
+index e969648..96831aa 100644
+--- a/tests/combat-continuity-browser.cjs
++++ b/tests/combat-continuity-browser.cjs
+@@ -23,7 +23,11 @@ async function enter(p,r){
+  });
+  await p.locator('[data-action=continue]').click();await p.waitForFunction(()=>!document.body.classList.contains('scene-preparing')&&document.querySelector('.player [data-animation-ready=true]'));
+  await p.evaluate(()=>{__continuity.flashes=0;__continuity.shield=[];__continuity.passive=[];__continuity.surfaces=[...document.querySelectorAll('.actor-animation,.combat-vfx-canvas')];});
+- await p.clock.pauseAt(await p.evaluate(()=>Date.now()+50));
++ const pauseTime=await p.evaluate(()=>Date.now());
++ await p.clock.setFixedTime(pauseTime);
++ await p.clock.pauseAt(pauseTime);
++ await p.clock.setSystemTime(pauseTime);
++ await p.clock.runFor(50);
+ }
+ async function command(p,action,key){
+  const expected=await p.evaluate(({action,key})=>{const r=JSON.parse(localStorage.getItem('duel-cube-math.v1')),x=DCEngine.clone(r);if(action==='play'){const c=r.battle.hand.find(c=>c.key===key);DCEngine.playCard(x,c.uid);return {run:x,uid:c.uid};}DCEngine.endTurn(x);return {run:x};},{action,key});

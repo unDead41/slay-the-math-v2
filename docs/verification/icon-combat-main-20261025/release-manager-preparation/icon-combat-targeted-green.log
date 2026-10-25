@@ -1,0 +1,21 @@
+bootstrapSHA256 a44edd71439423c9c7aacccff6c0a948dbada3b9385d0ef2d216a4063d233e44
+{"case":"current image after initial actor success","initialGateHeld":true,"panelHidden":false,"retryHidden":false,"scenePreparing":false}
+✔ current image retry survives the success of an older initial actor preload (97.249955ms)
+✔ a failed current image removed before actor settlement cannot resurrect its notice (24.272996ms)
+✔ obsolete removed image cannot raise a retry after initial actor success (15.469521ms)
+iconReadinessSHA256 f809819218b626e45d26cf141f459b080f73a6f00bf118bc99aad2e26b4fd539
+✔ portable map legend keeps all six semantic glyphs when an embedded bitmap fails (146.29763ms)
+✔ slow and failed status images retain their usable named control and receive a local semantic fallback once (70.205418ms)
+✔ a changed icon source can load normally after a prior failure without affecting card/artifact art (15.204379ms)
+✔ the Publish Handler integration exposes a bounded critical-icon list, with no cards, artifacts, sounds or questions (1.275313ms)
+✔ failed registered utility and map meanings never collapse to the unknown-resource symbol (0.601252ms)
+✔ actual failed buttons keep names and receive distinct Sword, Rest, Coin and seal-state glyphs (22.695045ms)
+✔ a map legend without an explicit semantic attribute uses the verified original source identity (11.935723ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 608.048743

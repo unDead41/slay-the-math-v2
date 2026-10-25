@@ -1,0 +1,35 @@
+✔ concurrent requests share bytes and a verified disk hit avoids another download (57.095775ms)
+✔ a corrupt cached response is rejected and replaced without clearing unrelated data (8.946873ms)
+✔ transient HTTP failures retry twice but missing assets fail once and never become ready (13.629295ms)
+✔ a stalled response has a bounded failure and a loading budget cancels outstanding work (37.140609ms)
+✔ foreground work precedes queued boss downloads and background concurrency stays bounded (18.31452ms)
+✔ cache quota failure keeps downloads usable online and rejects URLs outside this manifest (5.243535ms)
+✔ an update reuses unchanged verified bytes and replaces changed bytes within the same project (5.439119ms)
+✔ cache denial still reuses verified bytes for sequential consumers without repeating SHA work (3.886163ms)
+✔ a verified disk read is retained privately and consumers cannot mutate later responses (3.834576ms)
+✔ the compressed byte budget evicts background entries before a foreground resource (5.331047ms)
+✔ oversized verified assets remain usable without exceeding the session budget (3.057558ms)
+✔ wrong-hash bytes never enter the trusted session cache, and a retry can populate it (3.767515ms)
+✔ verified session reuse is isolated by manifest and still obeys pause and destroy (4.18344ms)
+✔ slow and failed status images retain their usable named control and receive a local semantic fallback once (60.123409ms)
+✔ a changed icon source can load normally after a prior failure without affecting card/artifact art (11.721547ms)
+✔ the Publish Handler integration exposes a bounded critical-icon list, with no cards, artifacts, sounds or questions (1.22412ms)
+✔ new model registration owns VFX body size instead of the retired poster measurement (77.811147ms)
+✔ a browser without Canvas 2D retains the existing status fallback (11.523829ms)
+✔ the last expiry frame clears diagnostics and stops scheduling (81.310298ms)
+✔ unrelated combat rerenders retain clock, first-trigger order and removed-slot compaction (36.512795ms)
+✔ player and enemy use three disjoint stat channels even with mixed signs (11.024618ms)
+✔ Thorns impact finishes before expiry and queued lifecycle ends without new RAF work (52.369509ms)
+✔ adding Block to an existing shield keeps its material continuously formed (44.480616ms)
+✔ expiring effects still count towards the crowded-scene budget (18.448811ms)
+✔ an existing shield stays visible while its impact waits for the enemy action lead (24.26642ms)
+✔ dialog, Motion Off, pagehide and destroy stop work; restoring motion resumes the same field (37.193068ms)
+✔ sustained expensive rendering lowers quality within the first twenty frames (13.249804ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1506.267578

@@ -1,5 +1,37 @@
 # 06 — Ikon, emblem dan simbol matematik
 
+## Main integration authorization — 2.49.0
+
+Ijamm now requests publishing the completed icon-loading and combat-continuity
+updates to `main`, continuing the preceding main-publication instruction. This
+supersedes their 2.45.1 branch-only boundaries below for this combined release.
+Current main 2.48.0, automatic downloads, the 23-chapter / 98-image / 12-practice
+tutorial, AI/model, approved V5 art, numerical/save/RNG and language owners remain
+protected. Original source SHAs, failed/passing records and branch limits below
+remain history. [Pinned integration, required adaptations and fresh evidence](../ICON_COMBAT_MAIN_2_49_0.md).
+
+Combined scope status is **VALID with inherited P2 findings carried**. Fresh
+Node verification passes **1148/1148** on `7568565`; final native continuity
+passes **14/14** with the setup-only atomic-clock helper at `ee694d2`. Product,
+Node-test/helper, configuration and generated inputs are unchanged between those
+checkpoints; the single non-imported native helper delta has its own fresh replay.
+[Exact commands, retained failures, hashes and limits](../verification/icon-combat-main-20261025/evidence.json).
+Publication remains **PENDING** until the authorized remote ref/tree/version
+readback. CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open; the current
+preload PASS does not establish a counter fix. MODEL.zip remains unavailable
+and unread; physical-device and human-recognition limits remain.
+
+
+## Current follow-up — 2.45.1-icons.1, branch only
+
+**ICO-25:** Foreground use promotes existing queued image preparation through the shared verified loader. Keep one transfer/decode owner; do not fetch completed bytes again merely because decoding is pending.
+
+**ICO-26:** Registered UI/map meanings require semantic local SVG fallbacks. Keep all ten existing status glyphs and named usable controls. Distinguish Defend/Block, Focus/Predict, Tutorial/Skill, pile actions and open/closed Boss Seals; Rest/Camp may share their actual meaning. Unknown keys remain warnings.
+
+**ICO-27:** For images without semantic attributes, derive fallback meaning from the original registered asset identity, including `data-stm-asset`; never infer meaning from a Blob URL. Source replacement resets ownership. Keep card/artifact illustrations and original painted files under ICO-14.
+
+Ijamm authorizes fixes/tests/SOR and publication on `codex/icon-clarity-audit` only. Main base 2.45.0 retains all newer motion, VFX, language and balance owners. [Scope, actual checks and limits](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 Versi: 2.3.0. Rujukan visual ialah [konsep kad](../../references/card_concepts_v001.jpeg), [sheet MC](../../references/mc_dungeon_concept_v001.jpeg) dan arahan Focus terkini Ijamm.
 
 ## Peranan

@@ -1,0 +1,13 @@
+bootstrapSHA256 a44edd71439423c9c7aacccff6c0a948dbada3b9385d0ef2d216a4063d233e44
+{"case":"current image after initial actor success","initialGateHeld":true,"panelHidden":false,"retryHidden":false,"scenePreparing":false}
+✔ current image retry survives the success of an older initial actor preload (135.283448ms)
+✔ a failed current image removed before actor settlement cannot resurrect its notice (19.493504ms)
+✔ obsolete removed image cannot raise a retry after initial actor success (14.857687ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 473.321589

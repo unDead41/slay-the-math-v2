@@ -73,3 +73,7 @@ Ukur masa hujung ke hujung: penyediaan, collection, analisis, verification dan p
 Empat subagent menyemak agihan beban, integriti/resume, strategi pengesahan dan handoff. Kesemuanya read-only, tanpa simulasi atau pengubahsuaian gameplay. Protokol, pelan awal dan audit didokumenkan untuk penggunaan sesi akan datang; Markdown ini tidak memasang daemon atau menghidupkan subagent latar secara automatik.
 
 Data v1.5 kekal4,083 records pada2.40, dengan21 Easy skip censored dan117 rank CP null. N1 dan target murid90/70/50 masih memerlukan penilaian Master. [Handoff pengukuran](MAP_BALANCE_V1_5_HANDOFF.md) dan semua data sejarah dikekalkan. CP hanya rujukan pembangunan, bukan kuasa kad atau UI pemain.
+
+## Resit penerbitan
+
+Kandungan protokol diterbitkan pada `cd00417b0a85230ebd5d512ced4a9f191d626d3b`, tree `e6ce198b2f1253b5f641902c75228ee92f7e8bdb`, branch [balance/map](https://github.com/unDead41/slay-the-math-v2/tree/balance/map). Diff remote mengesahkan hanya7 fail Markdown/JSON yang disenaraikan berubah. Expected-head update tanpa force dan remote ref readback PASS. Tiada kod/data runtime, cohort sejarah atau main diubah. Commit resit susulan hanya melengkapkan rekod penerbitan ini.

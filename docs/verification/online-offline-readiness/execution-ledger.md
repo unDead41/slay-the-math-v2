@@ -24,3 +24,4 @@ Final: fixed R1 Offline gate recovery — native review-gate-red→green, same S
 Final: fixed R2 retained same-key replacement — three installer RED→GREEN cases including warm audit/install and post-receipt corruption; focused36/36, suite1182/1182.
 Task 2: complete implementation/verification (commits39777a9..0c3d1a2; npm test →1182/1182,0fail/skip,408366.788454ms; fresh restart14/14, Online9/9, portable3/3; publication remains the authorized final handoff step).
 Final review: all Important findings fixed in one root pass; no Critical or deferred Minors; no second reviewer.
+Publication: feature implementation177c71124c1b5979614b683e7b874d618b1ae6de, exact verified treea2caae484b060052e61d14e2b50f0cf553cba3c9; main stillb3dc75005a89d6ce0248ddc125d6e0900351589a. Metadata-only receipt follows, with final ref readback. No main push/merge/deployment.

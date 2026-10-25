@@ -60,3 +60,7 @@ Inherited **CI-247-01 P2/open** and **QA-248-PRELOAD-01 P2/open** remain open. T
 - Before integration, preserve main2.49.1's later Idle changes, resolve owner metadata and rebuild/retest the combined release. This branch alone is not a main deployment.
 
 Final independent review and both root fixes are closed by RED/GREEN and the complete1182-test suite. [Machine-readable exact evidence](../../verification/online-offline-readiness/evidence.json), [review/rulings](../../verification/online-offline-readiness/final-review.md), and the execution ledger retain the decisions and limits. Feature-branch publication/ref/tree proof follows in `publication.json`; no main integration is implied.
+
+## Feature-branch publication
+
+**VERIFIED:** `fix/online-offline-readiness` implementation commit `177c71124c1b5979614b683e7b874d618b1ae6de`, tree `a2caae484b060052e61d14e2b50f0cf553cba3c9`, exactly equals the local verified tree. Parent is recorded base `d77b3e0ce87d573de89e84a9b2374df97ad625b9`. Main remained `b3dc75005a89d6ce0248ddc125d6e0900351589a`; no main ref/merge/deploy action occurred. [Branch for Master](https://github.com/unDead41/slay-the-math-v2/tree/fix/online-offline-readiness), [readback/tree proof](../../verification/online-offline-readiness/publication.json). This receipt/audit/ledger follow-up changes only documentation; the immutable implementation tree carries all tested source and evidence.

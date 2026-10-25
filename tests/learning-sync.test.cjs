@@ -76,11 +76,11 @@ test('an inherited same-origin srcdoc folio delivers through its HTTP document b
  const endpoint=await receiver(t,(body,res)=>res.end(JSON.stringify({acknowledged:body.entries.map(e=>({id:e.id,revision:e.revision}))}))),origin=new URL(endpoint).origin;
  const host={location:{href:'about:srcdoc',origin:'null'},origin,document:{baseURI:origin+'/practice/'},crypto:webcrypto},sync=client(disk(),{online:true,fetch,endpoint:'/api/education',host});sync.enqueue(entry());sync.setEnabled(true);await sync.flush();assert.equal(sync.status().pending,0);assert.equal(sync.status().state,'received');
 });
-test('automatic failed delivery stops after five attempts until an online event restarts it',async t=>{
- let batches=0;const endpoint=await receiver(t,(_body,res)=>{batches++;res.writeHead(503);res.end('{}');}),time=clock(),sync=client(disk(),{online:true,fetch,endpoint,host:time.host,now:time.now});t.after(()=>sync.stop());sync.enqueue(entry());sync.setEnabled(true);sync.start();await sync.flush();
+test('automatic failed delivery keeps a capped retry and recovers while the network stays online',async t=>{
+ let batches=0,working=false;const endpoint=await receiver(t,(body,res)=>{batches++;if(!working){res.writeHead(503);res.end('{}');}else res.end(JSON.stringify({acknowledged:body.entries.map(e=>({id:e.id,revision:e.revision}))}));}),time=clock(),sync=client(disk(),{online:true,fetch,endpoint,host:time.host,now:time.now});t.after(()=>sync.stop());sync.enqueue(entry());sync.setEnabled(true);sync.start();await sync.flush();
  for(const elapsed of [1000,2000,5000,15000]){await time.advance(elapsed);for(let i=0;i<2000&&sync.status().sending;i++)await new Promise(resolve=>setTimeout(resolve,1));assert.equal(sync.status().sending,false);}
- assert.equal(batches,5);assert.equal(sync.status().pending,1);assert.equal(time.jobs,0);await time.advance(600000);assert.equal(batches,5);
- time.dispatch('online');await sync.flush();assert.equal(batches,6);assert.equal(time.jobs,1);
+ assert.equal(batches,5);assert.equal(sync.status().pending,1);assert.equal(time.jobs,1);await time.advance(60000);await sync.flush();assert.equal(batches,6);assert.equal(time.jobs,1);
+ working=true;await time.advance(60000);await sync.flush();assert.equal(batches,7);assert.equal(sync.status().pending,0);assert.equal(time.jobs,0);
 });
 test('a conflict response retries the latest edit once without replacing a newer local revision',async t=>{
  let reply,observed,batches=0;const received=new Promise(resolve=>observed=resolve),endpoint=await receiver(t,(body,res)=>{batches++;if(batches===1){reply=()=>{res.writeHead(409);res.end(JSON.stringify({conflicts:[{id:body.entries[0].id,revision:1}]}));};observed();return;}res.end(JSON.stringify({acknowledged:body.entries.map(e=>({id:e.id,revision:e.revision}))}));}),storage=disk(),sync=client(storage,{online:true,fetch,endpoint});sync.enqueue(entry('Sent revision one.'));sync.setEnabled(true);const pending=sync.flush();await received;sync.enqueue(entry('Newer revision two.'));reply();await pending;

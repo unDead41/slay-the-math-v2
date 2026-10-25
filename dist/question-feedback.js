@@ -13,6 +13,22 @@ const QUESTION_FEEDBACK_CATEGORIES=Object.freeze([
 ]);
 const feedbackCategoryIds=new Set(QUESTION_FEEDBACK_CATEGORIES.map(c=>c.id));
 const gameplayFeedbackSources=new Set(['predict','artifact','mystery']);
+const validProvenance=value=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).length===2&&['gameVersion','contentRevision'].every(key=>typeof value[key]==='string'&&/^[A-Za-z0-9][A-Za-z0-9._+-]{0,99}$/.test(value[key]));
+/** Shared delivery copy for the isolated folio and the in-game report. */
+function questionFeedbackDeliveryText(status={},language='en'){
+ const text=(en,ms)=>language==='ms'?ms:en;
+ if(status.dev)return text('Your comments stay in this temporary developer session. Collection is disabled.','Komen anda kekal dalam sesi pembangun sementara ini. Pengumpulan dinyahaktifkan.');
+ if(status.collectionDisabled)return text('Your comments stay on this device. Collection is unavailable in this preview.','Komen anda kekal pada peranti ini. Pengumpulan tidak tersedia dalam pratonton ini.');
+ if(status.queueError)return text('Your report is saved here but could not be queued. Try saving again, or open Learning Report → Sharing for a backup.','Laporan disimpan di sini tetapi belum dapat dimasukkan ke giliran. Cuba simpan semula, atau buka Laporan Pembelajaran → Perkongsian untuk sandaran.');
+ if(status.state==='save-error')return text('Your comments are kept here. Open Sharing settings to retry or download a backup.','Komen anda dikekalkan di sini. Buka Tetapan perkongsian untuk mencuba lagi atau memuat turun sandaran.');
+ if(!status.enabled)return text('Your comments are saved on this device. Sharing is off. Open Sharing settings to choose whether to send them.','Komen anda disimpan pada peranti ini. Perkongsian dijeda. Buka Tetapan perkongsian untuk memilih sama ada mahu menghantarnya.');
+ if(status.state==='received'&&status.pending===0&&status.lastReceivedAt)return text('The collector acknowledged the latest queued records and comments. Your comments are also kept on this device.','Pelayan telah mengesahkan penerimaan rekod dan komen terkini dalam giliran. Komen anda juga disimpan pada peranti ini.');
+ if(status.state==='sending')return text('Sending queued records and comments. They stay on this device while we wait for acknowledgement.','Rekod dan komen sedang dihantar. Semuanya kekal pada peranti ini sementara menunggu pengesahan penerimaan.');
+ if(status.state==='offline')return text('Your comments are saved on this device. Waiting for a connection. Keep the game open or reopen it to retry.','Komen anda disimpan pada peranti ini. Menunggu sambungan. Biarkan permainan terbuka atau buka semula untuk mencuba lagi.');
+ if(status.state==='unavailable')return text('The collector is unavailable. Your comments stay here. We will retry while the game is active; open Sharing settings to retry now.','Pelayan tidak tersedia. Komen anda kekal di sini. Kami akan mencuba semula semasa permainan aktif; buka Tetapan perkongsian untuk mencuba sekarang.');
+ if(status.error)return text('Your comments stay here. Open Sharing settings to retry or download a backup.','Komen anda kekal di sini. Buka Tetapan perkongsian untuk mencuba lagi atau memuat turun sandaran.');
+ return text('Your comments are saved on this device. Sharing is enabled; queued records are waiting for the collector.','Komen anda disimpan pada peranti ini. Perkongsian aktif; rekod dalam giliran menunggu pelayan.');
+}
 /** Opening then hiding worked steps still counts as having opened that help. */
 function questionFeedbackSupport(record){
  return {hintUsed:record?.hintState?.hintUsed===true,moreHintViewed:record?.hintState?.moreHintViewed===true,stepsViewed:record?.stepsViewed===true||(record?.events||[]).some(event=>event.type==='STEPS_TOGGLED')};
@@ -30,7 +46,7 @@ function feedbackParse(raw){
    !/^(PROB|SET|LOGIC)-\d{3}$/.test(entry.questionId)||typeof entry.comment!=='string'||entry.comment.length>2000||
    !Array.isArray(entry.categories)||entry.categories.some(id=>!feedbackCategoryIds.has(id))||
    typeof entry.question!=='string'||entry.question.length>8000||typeof entry.topic!=='string'||entry.topic.length>200||
-   (entry.reviewed!==undefined&&typeof entry.reviewed!=='boolean')||!['Easy','Medium','Hard'].includes(entry.difficulty)||!entry.context||!['learn','review','gameplay'].includes(entry.context.mode)||
+   (entry.reviewed!==undefined&&typeof entry.reviewed!=='boolean')||(entry.provenance!==undefined&&!validProvenance(entry.provenance))||!['Easy','Medium','Hard'].includes(entry.difficulty)||!entry.context||!['learn','review','gameplay'].includes(entry.context.mode)||
    (entry.context.mode==='gameplay'?!gameplayFeedbackSources.has(entry.context.source):entry.context.source!==undefined)||
    !['pending','correct','revealed'].includes(entry.context.status)||
    (entry.context.mode==='gameplay'&&!['correct','revealed'].includes(entry.context.status))||
@@ -42,11 +58,14 @@ function feedbackParse(raw){
  }
  return records;
 }
-function createQuestionFeedbackStore({storage,bankVersion,questionIds,now=()=>new Date().toISOString()}){
+function createQuestionFeedbackStore({storage,bankVersion,questionIds,provenance,now=()=>new Date().toISOString()}){
+ if(provenance!==undefined&&!validProvenance(provenance))throw Error('Invalid feedback provenance');
+ const currentProvenance=provenance?{...provenance}:undefined;
  const known=new Set(questionIds),dirty=new Map();let records=new Map(),error='';
  try{if(!storage)throw Error('Storage unavailable');records=feedbackParse(storage.getItem(QUESTION_FEEDBACK_KEY));}
  catch(e){error=e instanceof SyntaxError||e.message.startsWith('Invalid feedback')?feedbackReadError:feedbackWriteError;}
- function list(){return [...records.values()].sort((a,b)=>a.questionId.localeCompare(b.questionId)||a.bankVersion.localeCompare(b.bankVersion)).map(e=>({...e,categories:e.categories.slice(),context:{...e.context}}));}
+ function cloneEntry(e){return {...e,categories:e.categories.slice(),context:{...e.context},...(e.provenance?{provenance:{...e.provenance}}:{})};}
+ function list(){return [...records.values()].sort((a,b)=>a.questionId.localeCompare(b.questionId)||a.bankVersion.localeCompare(b.bankVersion)).map(cloneEntry);}
  function flush(){
   try{
    if(!storage)throw Error('Storage unavailable');
@@ -58,7 +77,7 @@ function createQuestionFeedbackStore({storage,bankVersion,questionIds,now=()=>ne
    records=latest;dirty.clear();error='';return true;
   }catch{error=feedbackWriteError;return false;}
  }
- function get(questionId){const value=records.get(feedbackIdentity(bankVersion,questionId));return value?{...value,categories:value.categories.slice(),context:{...value.context}}:null;}
+ function get(questionId){const value=records.get(feedbackIdentity(bankVersion,questionId));return value?cloneEntry(value):null;}
  function save(question,categories,comment,context={},options={}){
   if(!known.has(question.id))throw Error('Unknown question');
   if(typeof comment!=='string'||comment.length>2000)throw Error('Keep your comment within 2,000 characters.');
@@ -67,7 +86,8 @@ function createQuestionFeedbackStore({storage,bankVersion,questionIds,now=()=>ne
   if(context.mode==='gameplay'&&(!gameplayFeedbackSources.has(context.source)||!['correct','revealed'].includes(context.status)))throw Error('Report a finished game question.');
   const id=feedbackIdentity(bankVersion,question.id),previous=records.get(id),text=comment.trim(),chosen=[...new Set(categories)],reviewed=options.reviewed??previous?.reviewed??false;
   if(!text&&!chosen.length&&!reviewed){records.delete(id);dirty.set(id,null);flush();return null;}
-  const timestamp=now(),entry={id,questionId:question.id,bankVersion,topic:question.topic||question.topicCode,difficulty:question.difficulty,
+  const version=options.preserveProvenance?previous?.provenance:currentProvenance;
+  const timestamp=now(),entry={id,questionId:question.id,bankVersion,...(version?{provenance:{...version}}:{}),topic:question.topic||question.topicCode,difficulty:question.difficulty,
    question:question.prompt||question.themedRichText?.prompt?.map(s=>s.text||'').join('')||'',
    categories:chosen,comment:text,reviewed,createdAt:previous?.createdAt||timestamp,updatedAt:timestamp,
    context:{mode:context.mode==='gameplay'?'gameplay':context.mode==='learn'?'learn':'review',...(context.mode==='gameplay'?{source:context.source}:{}),language:context.language==='ms'?'ms':'en',status:['correct','revealed'].includes(context.status)?context.status:'pending',
@@ -78,7 +98,7 @@ function createQuestionFeedbackStore({storage,bankVersion,questionIds,now=()=>ne
   if(typeof value!=='boolean')throw Error('Choose a valid review state.');
   flush();const previous=get(question.id);
   const original=previous?{...question,prompt:previous.question,topic:previous.topic,difficulty:previous.difficulty}:question;
-  return save(original,previous?.categories||[],previous?.comment||'',previous?.context??context??{},{reviewed:value});
+  return save(original,previous?.categories||[],previous?.comment||'',previous?.context??context??{},{reviewed:value,preserveProvenance:!!previous});
  }
  function exportData(){flush();return {schemaVersion:1,game:'Slay the Math',purpose:'Question improvements',exportedAt:now(),comments:list()};}
  return {get,list,save,setReviewed,flush,exportData,get error(){return error;}};
@@ -91,5 +111,5 @@ function questionFeedbackCSV(report){
  return '\uFEFF'+rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
 }
 
-const api={QUESTION_FEEDBACK_KEY,QUESTION_FEEDBACK_CATEGORIES,questionFeedbackSupport,createQuestionFeedbackStore,questionFeedbackCSV};if(typeof module!=="undefined")module.exports=api;else root.DCQuestionFeedback=api;
+const api={QUESTION_FEEDBACK_KEY,QUESTION_FEEDBACK_CATEGORIES,questionFeedbackDeliveryText,questionFeedbackSupport,createQuestionFeedbackStore,questionFeedbackCSV};if(typeof module!=="undefined")module.exports=api;else root.DCQuestionFeedback=api;
 })(globalThis);

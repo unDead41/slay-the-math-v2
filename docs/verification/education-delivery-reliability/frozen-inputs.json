@@ -1,0 +1,3057 @@
+{
+  "base": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+  "files": [
+    {
+      "path": "dist/analytics-ui.js",
+      "sha256": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1"
+    },
+    {
+      "path": "dist/analytics.css",
+      "sha256": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237"
+    },
+    {
+      "path": "dist/animation-data.js",
+      "sha256": "fefb0232aa93f2afe84fd3d55f52dfc09e004c57766e44fa1bbafb2d3d0a4452"
+    },
+    {
+      "path": "dist/animation.css",
+      "sha256": "1aa05e00d9d6da2910098779401f12966109e81b4b6d91ecb22fccb565b15241"
+    },
+    {
+      "path": "dist/animation.js",
+      "sha256": "d46f19bce7916f79a811bbdfcdd768d199586c15322b8cc08b008e8bc6b1670f"
+    },
+    {
+      "path": "dist/app.js",
+      "sha256": "1cef0d97ba04cba05b4ce85ed7b6b64c2b00e9ffdcb0a44a09de96b4800241e1"
+    },
+    {
+      "path": "dist/artifact-data.js",
+      "sha256": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da"
+    },
+    {
+      "path": "dist/artifact-ui.js",
+      "sha256": "4c8c8d1190f6e1394db36cc5ffb94d0fd9cf3f52bcba8664718005633b0d4556"
+    },
+    {
+      "path": "dist/artifacts.css",
+      "sha256": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297"
+    },
+    {
+      "path": "dist/artifacts.js",
+      "sha256": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d"
+    },
+    {
+      "path": "dist/asset-manifest.json",
+      "sha256": "735aa245213a133854bbc62523fa40407731202aafc4034945c1ec097244d4be"
+    },
+    {
+      "path": "dist/asset-readiness.js",
+      "sha256": "1840770a06d6e94879d505869406f3db89862c4d72a428b00cfe4e6009a11d5c"
+    },
+    {
+      "path": "dist/assets/alyssa-back.webp",
+      "sha256": "f231d843ce80766e5a708bebe8dd90dfba27c329262ad7dc756538efa07b5cc7"
+    },
+    {
+      "path": "dist/assets/alyssa-front.webp",
+      "sha256": "c5892e3bde3131e4ae94eeb97e0771be532e1227245503b8ad5748112795de2d"
+    },
+    {
+      "path": "dist/assets/alyssa-left.webp",
+      "sha256": "319fad5e1d0feccc118bfc6a9619751831eb29444883b33f1e769e2ed8716022"
+    },
+    {
+      "path": "dist/assets/alyssa-right-attack.webp",
+      "sha256": "74002ca38275fb2293a1d2eab88f72bd3c6d06ad8b7975722b278608086b5f04"
+    },
+    {
+      "path": "dist/assets/alyssa-right-damaged.webp",
+      "sha256": "35616b8e956fc62df30edc9d73507ddf947e5135ee693dfc32f0c5051b659e4f"
+    },
+    {
+      "path": "dist/assets/alyssa-right-defend.webp",
+      "sha256": "7ef16fcb7bdda910476b073db2e977abde7ca7c9461d8f8036da49b8a5a7135d"
+    },
+    {
+      "path": "dist/assets/alyssa-right-idle.webp",
+      "sha256": "4b35ec134e3e7a6aa87eb2b3e92785ffa341307507e86d55c117bc6ead5d54bd"
+    },
+    {
+      "path": "dist/assets/alyssa-right-skill.webp",
+      "sha256": "3ef6e5a58e61d3cbd43efee86c49def55e0e54adde1700f97f563f21bafebc19"
+    },
+    {
+      "path": "dist/assets/alyssa-right.webp",
+      "sha256": "f02664625f7f12b1fa73f31fb973f456b046312b774f0d0160e71fc1c3a62c7c"
+    },
+    {
+      "path": "dist/assets/arena-1.webp",
+      "sha256": "9aac04ede3700e3e8bfc8cdcc636154ab21959c5e780a538d4d4c395fea0bb01"
+    },
+    {
+      "path": "dist/assets/arena-2.webp",
+      "sha256": "5e4081bb02a1e081ac4e6664e98e04b6a70c20001d2d737133fed4acfb48e2d6"
+    },
+    {
+      "path": "dist/assets/arena-boss-1.webp",
+      "sha256": "3dae6a6301fb9a24ba4a58859dd0182cfae51da90854a82815890f3871ce69fb"
+    },
+    {
+      "path": "dist/assets/arena-boss-2.webp",
+      "sha256": "42ab5fd82c477b5fa5fffce70888e32798045c373ed56a4f454cd593c551e8d1"
+    },
+    {
+      "path": "dist/assets/arena-elite-1.webp",
+      "sha256": "6bb07fe8ea93124ec5667e34522c69ecb09094d3d531a30a48df1de0717998a4"
+    },
+    {
+      "path": "dist/assets/arena-elite-2.webp",
+      "sha256": "c4d4a7bd24e3ee0d3cd896622ae870e621bfd98dd65e95c0a758b70237912c55"
+    },
+    {
+      "path": "dist/assets/arena-normal-1.webp",
+      "sha256": "5e8a66f752ab9c017b67e4c73410071667930112b15f0746ad2e2b922fabf065"
+    },
+    {
+      "path": "dist/assets/arena-normal-2.webp",
+      "sha256": "eb5ae1118b9934fa22d653b4e865aacffd5413cc7505613ac103ed9d75dfc18f"
+    },
+    {
+      "path": "dist/assets/artifact-assets.json",
+      "sha256": "16278a9ab73e7e7d377c4c38c6e8d146e1b0387d7d4ed1feca9c0fcd3ff3be05"
+    },
+    {
+      "path": "dist/assets/artifact-b01_gatekeeper_core.webp",
+      "sha256": "903648bbfad3b2f743d300e3841490d1fee3475ef611c4388093f3c86359e7e8"
+    },
+    {
+      "path": "dist/assets/artifact-b02_sovereign_grimoire_clasp.webp",
+      "sha256": "913bd5623aa3bb80f042716ce0d2b33ad25ae73adcea3f239609a5d97af60bfe"
+    },
+    {
+      "path": "dist/assets/artifact-b03_decklords_hourglass.webp",
+      "sha256": "2cc085f19f232f318a8284567c39a06590659ec9e1a5010955d6c8f17aad51a0"
+    },
+    {
+      "path": "dist/assets/artifact-e01_copper_abacus.webp",
+      "sha256": "07d4d8c36deebc3d55421ff63560db6a392a51e91b3963b467db095f16484609"
+    },
+    {
+      "path": "dist/assets/artifact-e02_twin_sigil_medallion.webp",
+      "sha256": "e28f46d7ab6d6945a91138160ff52d05c90135fea545111c3efdf9fd167f4b44"
+    },
+    {
+      "path": "dist/assets/artifact-e03_chance_die.webp",
+      "sha256": "9960ba318228c149bedbf4d6dfbeab882075509be9c84e3a8cb7a5b90951f067"
+    },
+    {
+      "path": "dist/assets/artifact-e04_ember_balance.webp",
+      "sha256": "72ff9ec9eb3a793c4846b3c5dd7bbd4532acbce87f9d832eaa8087f95734efde"
+    },
+    {
+      "path": "dist/assets/artifact-e05_chainbreaker_clasp.webp",
+      "sha256": "2344866fdc67ad7e504ab2fa772bd9617a4454c180b47928732cc5fb66dd98e6"
+    },
+    {
+      "path": "dist/assets/artifact-e06_ashen_phoenix_feather.webp",
+      "sha256": "8c29fa12ccff4be9effe8c1a4339f9ca830adecc884c9834544c2ae9ccf72ac4"
+    },
+    {
+      "path": "dist/assets/artifact-e07_runesmith_tongs.webp",
+      "sha256": "02cb44e09d040d771f4b8fcec62af783a51b1554619d2d25aeddc80a7e30d40a"
+    },
+    {
+      "path": "dist/assets/artifact-e08_sentinel_crest.webp",
+      "sha256": "d37b2b64f71f031887f37b3af06e1d3461ce367387efe50fa91efd87a6760039"
+    },
+    {
+      "path": "dist/assets/artifact-e09_mirror_knights_brooch.webp",
+      "sha256": "01aa415647360d2f3f0b9070e4fe176ebc2819cedbb79beefbf733b1844d609f"
+    },
+    {
+      "path": "dist/assets/artifact-e10_rune_bats_bell.webp",
+      "sha256": "1e3731d7b3b9ce1e4b0a6c49d1115ea936c2c4c705c80abb3f8b01468f6fa941"
+    },
+    {
+      "path": "dist/assets/artifact-e11_scholars_satchel.webp",
+      "sha256": "9cf93a5ca0fef0c942e88adf71ee0180c3f2a4dac0d60aab23466d491b966513"
+    },
+    {
+      "path": "dist/assets/artifact-e12_lantern_keepers_flask.webp",
+      "sha256": "10dfbc4732d949f8b2db7174a1d48c47374f6b2fc258dcfed2521a4caddf241b"
+    },
+    {
+      "path": "dist/assets/artifact-e13_chain_weavers_spool.webp",
+      "sha256": "04fa5a148799b9de088357c236e8fb16e9d9967bedc7fe25a42856b04da3ed78"
+    },
+    {
+      "path": "dist/assets/artifact-e14_brams_contract.webp",
+      "sha256": "59b40d8762b35f3e44b0d2cb6c21d61fc19ea05b3a91864bd2a3ced4007f0dcb"
+    },
+    {
+      "path": "dist/assets/artifact-e15_crimson_sword_charm.webp",
+      "sha256": "42f80457eb577924d7a226ae1db48f32fb7971262daafb0c13763eff84f4852b"
+    },
+    {
+      "path": "dist/assets/artifact-e16_guardians_armlet.webp",
+      "sha256": "2c8d7b02cfc50f44724fbeac3cbef201f749b4b4983f2ff5e3fede02c9ed9f4a"
+    },
+    {
+      "path": "dist/assets/artifact-s01_emberheart_pendant.webp",
+      "sha256": "ccc89bce02b0e16e339f8adbfc6bb00e1366ea1653c6a0f3ed71f2331aa936f1"
+    },
+    {
+      "path": "dist/assets/artifact-s02_cinder_whetstone.webp",
+      "sha256": "1efac7742b5376a180198dbea0c6ce7ad2e4d074d830d1ffd9f922d58b8600cd"
+    },
+    {
+      "path": "dist/assets/artifact-s03_prism_buckler.webp",
+      "sha256": "edc6b02e55c4f5e921c913d4b9a968044dfdba911230b220d473fadd1fe24bb0"
+    },
+    {
+      "path": "dist/assets/artifact-s04_clairvoyance_lens.webp",
+      "sha256": "54184d0e5fb44c55a4b383f2c3c80619e4d52c3e8c9a2e52be4f8013a913a2e8"
+    },
+    {
+      "path": "dist/assets/artifact-s05_scholars_bookmark.webp",
+      "sha256": "4e0215cac91e872bf83684a68736acee1f612793a5fdf9ca52e305a5e0fb22ab"
+    },
+    {
+      "path": "dist/assets/artifact-s06_merchants_seal.webp",
+      "sha256": "450e73cdad29a06a2813a6900ac322492e1af4c04ee8a49bfd4225185c611392"
+    },
+    {
+      "path": "dist/assets/artifact-s07_bronze_guard_pin.webp",
+      "sha256": "93f53f69c0d37b4bb2b9f73e95fbc5b02581590a95c1dedd0013ad18d7843b8a"
+    },
+    {
+      "path": "dist/assets/artifact-s08_travelers_ration.webp",
+      "sha256": "cf6f13670f52f9e21051b0e9a399bc8da02e2f700e3a5b63680c746c5493ae0f"
+    },
+    {
+      "path": "dist/assets/artifact-s09_copper_purse.webp",
+      "sha256": "44de1c0a9fedc66479056f541b0006036875b6e0ef9c1ee589a2d2268fbc39d9"
+    },
+    {
+      "path": "dist/assets/artifact-s10_ember_quill.webp",
+      "sha256": "2b6e4c6cc59501ce2aecf42f6566077e0bba187ee1302709ea643df4370382e7"
+    },
+    {
+      "path": "dist/assets/artifact-s11_scribes_pebble.webp",
+      "sha256": "42b57b9efeac5c3a1c432f48e5b559f6ead3faaf26bc0d599f0ffd9f767f32d9"
+    },
+    {
+      "path": "dist/assets/artifact-s12_initiates_ring.webp",
+      "sha256": "464d25a59a9b451b1bead3542dfcf56dbea347e1ed99f459fe2d16d6e8cd6fdb"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/correct_01.mp3",
+      "sha256": "06538b7b51d0499b806fdc5c3f9b1219e7ea74f36f9f8de9a3e9e4332e25f8c5"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/correct_02.mp3",
+      "sha256": "7eaba0ad1be75ca2c93b53dd244d40b12963ed343f5b40e1a2b98bca7b8468f0"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/correct_03.mp3",
+      "sha256": "0c44a02c59f5a3e089c1a7db796caa3fe7e455b4b48c64cd6fa125277d3f9721"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/correct_04.mp3",
+      "sha256": "a7e8ec32742250f36e1570b41e45065e86c2d39f3581364167cb8e1844ed5d3f"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/correct_05.mp3",
+      "sha256": "bdcc9cced78af65184b45564e71b0175b7072ea89f842a23baa529d1cdfc6f71"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_01.mp3",
+      "sha256": "1ec9a5b352c8a077af3d6126fd7914bef55e7ee9592016d855f3a3c6a83ae2b5"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_02.mp3",
+      "sha256": "f4323004121fad5a221c6634793ecd7a2ce00d03a5f8c80acf2ed1254a14c551"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_03.mp3",
+      "sha256": "1f284d731f1c8b513935e9b2d00b9ac8b9f3f594a13ce580bc673314417f3fb7"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_04.mp3",
+      "sha256": "a1f8ba12a2cccfe2fb6f5fced2d8588934719924953d5bb4820924926bedddc3"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_05.mp3",
+      "sha256": "c08ae68f19aed136629fd0cc3423ab469d41050c997d06705840f0c49c187b3b"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_06.mp3",
+      "sha256": "e5de89db09cc332abb0ed57f261128d3a1c526e0834196495f2cbbead45b42ec"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_07.mp3",
+      "sha256": "6bfaac771bea0da0da3d2eeb970b8d328c17185e3f5414224f850b3d940bfab7"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/hint_08.mp3",
+      "sha256": "b1d6902bce5c36a0f42cbed0279863959425572697b5bbc47e81a83badc8ef02"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_01.mp3",
+      "sha256": "056e124d30ffb13db27920f3696abff1e3ee34033449de3bf5f37285861d3440"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_02.mp3",
+      "sha256": "e324e0be1f1d2d51ca82fab2f8aa6905af7bb0c9dae43f168c21ee70c2a48e74"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_03.mp3",
+      "sha256": "f0c982d11cb79a69273ce8650572cc5b29bfed962836f9927ecafcd8dc0f2ba7"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_04.mp3",
+      "sha256": "af1cb649b495bd05acebcd8104f2ed7902021edecd2957b8c5693bed82c0453a"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_05.mp3",
+      "sha256": "3e0624b6e54d1b4d38cecee2391604dd7fe7568088b1892c58a86f90f4a4c172"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_06.mp3",
+      "sha256": "0c4bbe9607a1d0cf8082ed19830bf2309566c65f8c6626e7cb8f0224490f36ea"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_07.mp3",
+      "sha256": "8e8f6e0b78cf8e5eee0d62ba87122094291433021259b95306419e2081785e89"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/more_hint_08.mp3",
+      "sha256": "d044e65e2e6b925e2ef05722f311f98aa7bcce4f3e20d44ab9cb0ca38e437d30"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_01.mp3",
+      "sha256": "966523f3b563cd61506703296deddc4df6a77254e6c46a62ddf51acc2a228506"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_02.mp3",
+      "sha256": "8ac95fcbea27dbe72ffd016798fcbb60886065fd0201e6ed9476f5ce2e3aaeab"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_03.mp3",
+      "sha256": "4e3a11688443714a7f7769df26002b75b914c92dd3c3242719866c38c6218524"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_04.mp3",
+      "sha256": "dccc1e4f22a945091adba4a9b4f13663eee271f266627238708e5e19735e4ba7"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_05.mp3",
+      "sha256": "36ad5c1aff2c3c66a3d0c85b3dbcfcd59d8d8eefc1641958f5e5fff205c1b9b1"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_06.mp3",
+      "sha256": "2fdfee608051fd2817a40ce52384030ff425988260c3b698286c06c0b4754151"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/question_07.mp3",
+      "sha256": "41faedf32fec776efe616cf55d7adeabcef9882534c6610c4266cbada597a0bd"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/rest_01.mp3",
+      "sha256": "78f67bc2139929d31455aae4391119813b1254e2921fd63895442298cb6c7dfc"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/rest_02.mp3",
+      "sha256": "723a4c7947071eab8b8a1db1e11a2b47ab59d89bbf8ea510d3390a422777adbd"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/rest_03.mp3",
+      "sha256": "f4e21207ee47664a10d28bcf95cb2a61c865c2a90b0a0c71aa63e839a3e569f9"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/rest_04.mp3",
+      "sha256": "507e3eeca6aeb47dfa71e00e21849fb5cde1b1df1b691417509625ed212113d8"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_01.mp3",
+      "sha256": "814aacb463d6e92717392e4a61b91b08941ffc2bb0c81fc330b2114a62a14c47"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_02.mp3",
+      "sha256": "34341d72272a12481a13ee90c67d46975d3a03fa5563cab9d5e1e74ae74a4ac5"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_03.mp3",
+      "sha256": "dd14859eca01a19d8a7693d8b5dbadd945022dd1a166f5c48945feaf451bf0b9"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_04.mp3",
+      "sha256": "4e6e7cf8b06959285e4998306155cff4b4f29abb43f0478893dcf4dce483c0f0"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_05.mp3",
+      "sha256": "1401b0e7739d2407b092e8136d53bf598d8eb9ed4c9e849da17f392b2b9ac21f"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_06.mp3",
+      "sha256": "2e9c88af3909fd50a7fabc586c4ea2f06705fdecb8b412d1170608fa876f6732"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_07.mp3",
+      "sha256": "402dfdbf013bab7be86aa737f00885488d2e18c6f1bbf8b613d002913e5d9b02"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/reward_card_08.mp3",
+      "sha256": "72094071ec48454e9a7af55b1460e743b8c55cfc5331031b6f0a394bc702f7bc"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/run_defeat_01.mp3",
+      "sha256": "7739ca2199a9cb1ac3dcded01cd0a26b20ae318467aa3bad62136ddcb9f0e056"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/run_defeat_02.mp3",
+      "sha256": "e0bc5e820e748265514193d3184b035d0b9ae4fa85025cc321a431b08be7b2cc"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/run_defeat_03.mp3",
+      "sha256": "c523b0238eb0ab8f6f7bb31547726b577570bde1e5b775cc19ea4a2f6ce9eb1c"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/run_defeat_04.mp3",
+      "sha256": "ee5d62f33c6bcf12b5d0eb8859c55d465cfb38fed4241fa86d180d9917d9b0e3"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_01.mp3",
+      "sha256": "81d9e815fce4596513f0e3f4be73124b9d71b9bff33ab60ac542f21f792a459b"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_02.mp3",
+      "sha256": "06e691c3e5cf5a9bcb2300fbcfc87f74ff6bce146fef65ab8f4c931e21e114b6"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_03.mp3",
+      "sha256": "dfb30f1733949b7830ee57085c4a6fd663b327632a7cbe36a32c3fd6d0db4138"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_04.mp3",
+      "sha256": "6391a1b446f183ed109cf469fe74c7e068011600f950ab1bfd9358439811c90f"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_05.mp3",
+      "sha256": "718b376415e3dd5bfa46250ab43d254ad39ae8b18d1f6deae338e88e06bebbb9"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_06.mp3",
+      "sha256": "4a0f6dbd5a45604fa42fe0d78d0a72e68a9ea92751be1bf8761d66e686d56e46"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_07.mp3",
+      "sha256": "a1efca50b0ade07f28fa9cde171cf69ac054661f6606ec431fe68f17f12a5e71"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_08.mp3",
+      "sha256": "a7dd9cb061bd77bf9e507734df430d32bedc997fcf9efe43b2c61e82e0accf46"
+    },
+    {
+      "path": "dist/assets/audio/voice/alyssa/wrong_09.mp3",
+      "sha256": "f7c66c7630a09de3ceabc3503d847c1740b8d2afdebb7072761112f5f8c3bb43"
+    },
+    {
+      "path": "dist/assets/audio/voice/dungeon_master/meet_01.mp3",
+      "sha256": "9219d33d85e3edae2819917348ae9c882bdfe8f8157459d72bb1d7d8bcbc6ca1"
+    },
+    {
+      "path": "dist/assets/audio/voice/dungeon_master/meet_02.mp3",
+      "sha256": "f6deafc503406e002684e723338e8dd035e7e008abeaebaacc3acaf331464a24"
+    },
+    {
+      "path": "dist/assets/audio/voice/dungeon_master/meet_03.mp3",
+      "sha256": "2ea36af4317e0f69a85549265f03f6a0beffffc7631208aa7bf840efd1410519"
+    },
+    {
+      "path": "dist/assets/audio/voice/dungeon_master/meet_04.mp3",
+      "sha256": "281eb3416f3a1dc97555765b81fca892b434f7980402f635cee8e296d6180c55"
+    },
+    {
+      "path": "dist/assets/audio/voice/merchant/meet_01.mp3",
+      "sha256": "f40f0639de888d46ec57c1cf1877f11167d9dabb12781284eb7beb251f12256f"
+    },
+    {
+      "path": "dist/assets/audio/voice/merchant/meet_02.mp3",
+      "sha256": "b841c3d9a6efd5f4c83ed6bd20a18e769f21469eeab3462a59de7e472c50e88a"
+    },
+    {
+      "path": "dist/assets/audio/voice/merchant/meet_03.mp3",
+      "sha256": "d319517ba1bee9909c6761af89300a59cc3e7ecfe4d740c1a88e2861d48be5d3"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me01_suspicious_chest_entry.mp3",
+      "sha256": "e5da276bb6478d62268892e16e2fa75cb3e84ce331fe240e48218fcc6f4efb26"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me02_ember_shrine_entry.mp3",
+      "sha256": "3684972cf9593e22359e5da67c031f959cb500122a91b6db4350118d6806ee2b"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me03_whispering_grimoire_entry.mp3",
+      "sha256": "9751a174ffe5d6b3e2f0886820af214ca3639683e1b9957a2ca4bafb83c9357f"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me04_cracked_mirror_entry.mp3",
+      "sha256": "85852236fcece9c7a616cc153066caabb9b0f48a5ecfb10ded9da8fa3b97e03e"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me05_forgotten_fountain_entry.mp3",
+      "sha256": "ddad06a49a3b35dd0232f5e53560c8bfab08397b4d5d139ded8ae6ba93b575e6"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me06_bound_collector_entry.mp3",
+      "sha256": "fdd66f2b2fa8e6e362c7d29b2e6136da236bc4462232cabebcfe62db19a21d54"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me07_lost_scholar_entry.mp3",
+      "sha256": "283cc69bc842eeb4e0101a1e3e758d9e7d2b7d44285b8f7c0cc97aeee905c5c8"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me08_blind_oracle_entry.mp3",
+      "sha256": "e0da8b8c2ca305bbd6b13be0a3b2e3386417049770c415dab7e33915519f4176"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me09_broken_forge_entry.mp3",
+      "sha256": "a3ea6e71b4726a3c2b29fcb7e8c2040a56e476b3c0cfd14ead087121c937adce"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me10_burning_archive_entry.mp3",
+      "sha256": "446c02a15f102903205cf91edf032848f7f1108536549167eece89ce279988f8"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me11_cinder_garden_entry.mp3",
+      "sha256": "c331c5eda9180b2350044b56f2f59a886d9829fb2e9cec77955bde346332914a"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me12_fallen_adventurer_entry.mp3",
+      "sha256": "d2430b6372f5581265e2820e039c5a276aa9a2af797041ac35b67d63c04914d5"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me13_echo_chamber_entry.mp3",
+      "sha256": "d17b17b405a834b9ea3cfeac80fbce99f74e1bb07684159227a21fb25ee9a97b"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me14_shattered_hourglass_entry.mp3",
+      "sha256": "d04de27f5c38e8896cc8f0190a7284d945b9c38e31183059bc5e7ea36a7c6d7d"
+    },
+    {
+      "path": "dist/assets/audio/voice/mystery/me15_dungeon_masters_bargain_entry.mp3",
+      "sha256": "6e77e7ae71aeadfab061503855ca766db3011a8c730eae5f0d5abc02f7171060"
+    },
+    {
+      "path": "dist/assets/beetle.svg",
+      "sha256": "61f6ed7dffcf7e3b7a00770499a5ab44c207b0377ee74faa2562aa002fa8c9e0"
+    },
+    {
+      "path": "dist/assets/card-assets.json",
+      "sha256": "13d143664589f22b29b83e7f58d30432b3234bf261c77342b74281411d92da50"
+    },
+    {
+      "path": "dist/assets/card-filter.webp",
+      "sha256": "ac81d10d8864c8f85ef9105c56013929818da7b895dc8750191f9450af5037bb"
+    },
+    {
+      "path": "dist/assets/card-guard.webp",
+      "sha256": "af363addb495d71a9f0b6e196638dd131648b1fcdfa71bd582f9b0308bee5acf"
+    },
+    {
+      "path": "dist/assets/card-strike.webp",
+      "sha256": "09bb335b8f408e4b3aa67d448945dfded45377d4f188f4ddf143f8be6e439b33"
+    },
+    {
+      "path": "dist/assets/cards-01_blazing_spirit_a01.webp",
+      "sha256": "1845a2ccf7354af0c66b13a96e0acb16db80335691bfbd36b403ac76b3f56872"
+    },
+    {
+      "path": "dist/assets/cards-01_quick_study_b01.webp",
+      "sha256": "f6f69da326e59c928f3d97fbe940d4ec0d83e8cc15b4699a41da8cdbefdd7025"
+    },
+    {
+      "path": "dist/assets/cards-01_rune_guard_c01.webp",
+      "sha256": "8d8b6cc9764381442403540f1e9d91286316c8a5a15a09c100cd940f14055cf2"
+    },
+    {
+      "path": "dist/assets/cards-01_rune_strike_b01.webp",
+      "sha256": "937201a2d904aee26b33913093b9c9914863eee99794f4ac4ed31db58a8ad673"
+    },
+    {
+      "path": "dist/assets/cards-02_deep_study_c02.webp",
+      "sha256": "0344dcd0952006a48917e9e8fe26702891f839c2c3209ed70a63afb40f2c29c6"
+    },
+    {
+      "path": "dist/assets/cards-02_flash_ward_b02.webp",
+      "sha256": "05561e75aaa0bb51903b8829947025ed4624e183125106d162a83ee6591468ae"
+    },
+    {
+      "path": "dist/assets/cards-02_growing_flame_b02.webp",
+      "sha256": "9a16a190a0705a4b21b793d75c8a4194a51fcaf8f95771bfa4cce6bb859d9d4f"
+    },
+    {
+      "path": "dist/assets/cards-02_weak_point_a02.webp",
+      "sha256": "78a901ed001ffa0581c67c451fcaa3985eb29fc97d8f98d5261e597c3f9eec65"
+    },
+    {
+      "path": "dist/assets/cards-03_mana_reading_b03.webp",
+      "sha256": "287acf3a3f58d4eedb6030219e1d276617325c1bac4ae8355ad8c25d3695eb17"
+    },
+    {
+      "path": "dist/assets/cards-03_scout_strike_b03.webp",
+      "sha256": "31c6fc0c18f06cfe5778a4d963f8ce2bc2fafd33fdcfcccdf083b08aaa653528"
+    },
+    {
+      "path": "dist/assets/cards-03_swift_step_c03.webp",
+      "sha256": "a9aecee27389d8b9887fdc2804c27fc22ec73b1341836957e1418dfeb3b2db92"
+    },
+    {
+      "path": "dist/assets/cards-03_tower_shield_b03.webp",
+      "sha256": "b3c09fffc5c4d0331865b07f9b1b418e2828b8eb5dc03c77ebf29ccf18628c80"
+    },
+    {
+      "path": "dist/assets/cards-04_battle_rhythm_c04.webp",
+      "sha256": "e942602bd08b8150381a13ead7997d7013cc7f4d18f99e08f16bf409cb99d913"
+    },
+    {
+      "path": "dist/assets/cards-04_ember_wall_a04.webp",
+      "sha256": "7a373b1f6170c9130e1824c60c2d92a6a2824352bcb9b80b39f3c33ecd246288"
+    },
+    {
+      "path": "dist/assets/cards-04_read_ahead_a04.webp",
+      "sha256": "239e690dfa6defd56f0e2512cfea7cc4ae4a02f16371acfa73ded182f9a150a7"
+    },
+    {
+      "path": "dist/assets/cards-04_return_strike_b04.webp",
+      "sha256": "27c767c57a0ca9acd37a38bfcfdb078c0b36b387a03dea4bbc469986a7f2eb67"
+    },
+    {
+      "path": "dist/assets/cards-05_burning_page_a05.webp",
+      "sha256": "b3c6f51f6765fab514e60f21e4a11219a11dd6e30f811cebc11419d7b7645d8c"
+    },
+    {
+      "path": "dist/assets/cards-05_foreseen_guard_b05.webp",
+      "sha256": "d79fb5a65fbb7296dbf20425fce57679ddb3df8d9b4819e04a3ea404a10f13c3"
+    },
+    {
+      "path": "dist/assets/cards-05_rune_armor_b05.webp",
+      "sha256": "7c0f69bf3d6f3d58401bbb4fe6389d645d2b287c67edba79b6c2b0bbe5466faa"
+    },
+    {
+      "path": "dist/assets/cards-05_sure_hit_c05.webp",
+      "sha256": "23b18c34105d906ad759af30c7aae4c4569b70462e89c059ad91be3a86407834"
+    },
+    {
+      "path": "dist/assets/cards-06_clear_choice_a06.webp",
+      "sha256": "337be1fbc737ea7a98d5b149c2aa1d27409b8641faf3d28c6087dc1ebc242d9e"
+    },
+    {
+      "path": "dist/assets/cards-06_lasting_shield_b06.webp",
+      "sha256": "bc0f01bbc383dceb17e922760312ea4e14aac57020b52ce27c3b2e83d2db1dd6"
+    },
+    {
+      "path": "dist/assets/cards-06_layered_shield_a06.webp",
+      "sha256": "13f6ee1b63460c52ecc2b06826ac9b6472226270d4dbb979b6c6424a015a6876"
+    },
+    {
+      "path": "dist/assets/cards-06_twin_shot_c06.webp",
+      "sha256": "17b1342339941080162b0f33674b660def97a4cd705fa2f335979c7451d7871a"
+    },
+    {
+      "path": "dist/assets/cards-07_burning_pages_b07.webp",
+      "sha256": "e77d920fa4957759f66a470444adc90e8fff5ec888646c0c051638119a065c3b"
+    },
+    {
+      "path": "dist/assets/cards-07_card_search_b07.webp",
+      "sha256": "f8df7086d86af1a6aae3208e632a87417b1d39ad54cd47b0bda930bad0d50a8f"
+    },
+    {
+      "path": "dist/assets/cards-07_grimoire_ward_c07.webp",
+      "sha256": "0c6c592009df2aec3dfa98729f827cc7933969813c387bf99b281cf7eaa16997"
+    },
+    {
+      "path": "dist/assets/cards-07_shield_shot_b07.webp",
+      "sha256": "b7948bcb5fa05a3ae6b96181b7dfce931a9fa6947270e99f9262304bbda9b864"
+    },
+    {
+      "path": "dist/assets/cards-08_cinder_guard_c08.webp",
+      "sha256": "92c8b57bfe431d0a41dead31546fa0315b75ebbcf744940caf6c2400843b810d"
+    },
+    {
+      "path": "dist/assets/cards-08_crack_shot_c08.webp",
+      "sha256": "3a81fbe379eab7f44662c9fc46dfe359bf657cfe5ab4bb9c19794970aa9346cc"
+    },
+    {
+      "path": "dist/assets/cards-08_ember_core_a08.webp",
+      "sha256": "140f9af1a32b8cf0ecf22336a5f47b6d484a791a8081dd9867013e47d2fb6622"
+    },
+    {
+      "path": "dist/assets/cards-08_recall_b08.webp",
+      "sha256": "f24d5618867e0b2b3c68b27e040c827c7a87ed25e51c77f9bba4061177cee5e1"
+    },
+    {
+      "path": "dist/assets/cards-09_clear_mind_b09.webp",
+      "sha256": "867abac503755ff60fcde27c1e4320a95d7bb4b60773bd20e24b5f6bd76fd55b"
+    },
+    {
+      "path": "dist/assets/cards-09_hold_the_line_b09.webp",
+      "sha256": "78d990e322187ab84c8207376387c6c3d603ad2916b8a91717d12b6e1fc7402d"
+    },
+    {
+      "path": "dist/assets/cards-09_next_chapter_b09.webp",
+      "sha256": "4a06c969d1cda6c704d2c8c8b30c576fe6f09108c632c8989af21ec18844ad99"
+    },
+    {
+      "path": "dist/assets/cards-09_rune_sweep_c09.webp",
+      "sha256": "3de63f87cd1bb94d9f1f4c9ec2aff0995d0601cdb7b294f1985f2bf0c7417edf"
+    },
+    {
+      "path": "dist/assets/cards-10_fate_storm_a10.webp",
+      "sha256": "3165a39440f46f98558acc3646a0564a733806eda62029a2081714d463c44026"
+    },
+    {
+      "path": "dist/assets/cards-10_last_ember_c10.webp",
+      "sha256": "8b97d3ba20cbe2026b9511a93383e131dcdf16c483b0da08ba05dc6f97313eee"
+    },
+    {
+      "path": "dist/assets/cards-10_last_page_c10.webp",
+      "sha256": "74e9456b4b8f4572b4f5c81e55b861d643ef7ff73cf261bc502433d98b50dd54"
+    },
+    {
+      "path": "dist/assets/cards-10_mana_barrier_b10.webp",
+      "sha256": "ad3d478af30113dee984b19638d5d34213f753f538c22e7afed2a65b6d1fb516"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_attack_focus.webp",
+      "sha256": "96a7fe2f0e8101dcf02d239a410eb623515f24ad10c27be9f6ce556109ce8ddf"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_attack_normal.webp",
+      "sha256": "c8fdbc1c198c301a122600e070c2fc98768d7de81ae097db6241039ddb5ae900"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_defend_focus.webp",
+      "sha256": "3e2fd3ab51963a7f2aaa3e80650b754d09ad308ce7bf157ad43a4d8c38a6efd3"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_defend_normal.webp",
+      "sha256": "d9b0b3aae8f9d3a57aec243b1ccf98675aeae837dba8eb40018833241799bac3"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_passive_normal.webp",
+      "sha256": "fc0440a20ec34683ee5aa1d94b76baf7f20e1714ddea3f98a258b2b7ae89e066"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_skill_focus.webp",
+      "sha256": "b26b410183024e3bde1e88d5d45282ef63530c856f129e6b3a49ca20d3852ab2"
+    },
+    {
+      "path": "dist/assets/cards-card_frame_skill_normal.webp",
+      "sha256": "e39136c955890d55b4b2ece92c50a48ddcfdb572f6161ac2ae6d89f377116b2c"
+    },
+    {
+      "path": "dist/assets/dealer.svg",
+      "sha256": "448d6b44ae60c968f5ee7adb264a49474717ec546cca9d1d1119340cf0f83d49"
+    },
+    {
+      "path": "dist/assets/dungeon-master-art.json",
+      "sha256": "aff2f3e6ba62aa8e811854521b882ab0a87b5a1fefe6705ede748933df906e26"
+    },
+    {
+      "path": "dist/assets/dungeon-master-entity-2-4-1.json",
+      "sha256": "ff94dfd01bfd8fc87f974539e88a527548644fb5ef305cfa27d327985dd9693a"
+    },
+    {
+      "path": "dist/assets/dungeon-master-png-2-4-2.json",
+      "sha256": "848b4d0bc6663feb2fa0ec9e56b4f0808f27f75eab51a8e55a1d6174a2d57832"
+    },
+    {
+      "path": "dist/assets/dungeon-master-stone-2-4-3.json",
+      "sha256": "cdf4ddba433f1590b75bbb84c92611b34366b544b2658df4d9e1bd289e2e7073"
+    },
+    {
+      "path": "dist/assets/dungeon-master.webp",
+      "sha256": "76d91054d6a84bff8b765dbf3142e7e944701d16ee3f64d385da861193d6d265"
+    },
+    {
+      "path": "dist/assets/ember-mirror-attack.webp",
+      "sha256": "77ee73bdc0aeca802a1fba31d1643c6e214044b84ab0e1345fc6e010709d7473"
+    },
+    {
+      "path": "dist/assets/ember-mirror-back.webp",
+      "sha256": "58cee1b8286fce075b308f15a116201786296a0bf1528dde0d4a02f734f5bd03"
+    },
+    {
+      "path": "dist/assets/ember-mirror-damage.webp",
+      "sha256": "b78b8730dc45c7e93b4f2d50fb9fbd4aabf2fa043e99aefbbe8bc15196402062"
+    },
+    {
+      "path": "dist/assets/ember-mirror-defend.webp",
+      "sha256": "9c6278364d74314984c1e5bf5a28ff1410fb5907d27cd8f41c796d17333cdac0"
+    },
+    {
+      "path": "dist/assets/ember-mirror-front.webp",
+      "sha256": "7ab5b2fb84967ca0b3f7a77cb0fa3ca123a8c15d4397b0696d7b52d381e0dda5"
+    },
+    {
+      "path": "dist/assets/ember-mirror-left.webp",
+      "sha256": "0eac1c0c96972ab0db56092f9f1f2cd4f68fe6b7b0999610f8e8b83cedadf864"
+    },
+    {
+      "path": "dist/assets/ember-mirror-right.webp",
+      "sha256": "b668cf6b2f97557070c085dad09f831e105c80524a15d697d61118da6ed79b6d"
+    },
+    {
+      "path": "dist/assets/ember-mirror-skill.webp",
+      "sha256": "55d236059a2ee1575a9ac7415ba1fc4363a37774146323ac05e74dd94ca6ef7c"
+    },
+    {
+      "path": "dist/assets/ground-alyssa-attack.webp",
+      "sha256": "ea1b4461f93e1fa52e5c4697a72cc53029bf23797fe9e7db049a0e353f4aa789"
+    },
+    {
+      "path": "dist/assets/ground-alyssa-damage.webp",
+      "sha256": "8c94d8e33b4bc0beb8628e859a0eb42f4c1d719631e640739182a32d573cceab"
+    },
+    {
+      "path": "dist/assets/ground-alyssa-defend.webp",
+      "sha256": "8e9278524451ccfb07fbd838ec16c0f09445cf6c961f3bd809f1902f5e23f3ac"
+    },
+    {
+      "path": "dist/assets/ground-alyssa-skill.webp",
+      "sha256": "9571ebbadcf08ee51112a692a877a4b460e2b71e6aab9288c15539c6e98d5a75"
+    },
+    {
+      "path": "dist/assets/ground-alyssa-standing.webp",
+      "sha256": "45caec797a482360ed260b9092274d19879948c9ead9556970a3ad110dfa983c"
+    },
+    {
+      "path": "dist/assets/ground-ember_mirror-attack.webp",
+      "sha256": "22e7f5b0ea0c99dd491e5cb835939d1e294da3827c7aac667ed68d51118a5fa8"
+    },
+    {
+      "path": "dist/assets/ground-ember_mirror-damage.webp",
+      "sha256": "1b1eb5abd56dd86451d226d16ddacaf5f06774ec3cc8708f1807b6250579990c"
+    },
+    {
+      "path": "dist/assets/ground-ember_mirror-defend.webp",
+      "sha256": "d496f1cfb6aa5c1136277e80a1e0f796bbd8c419ec01e5a9b0a5bbb23281d035"
+    },
+    {
+      "path": "dist/assets/ground-ember_mirror-skill.webp",
+      "sha256": "f533f40cd3b130447856e8dc9f746aaa9a217d148ff6bf92e67bbb8aecb2b0d9"
+    },
+    {
+      "path": "dist/assets/ground-ember_mirror-standing.webp",
+      "sha256": "f78863c6f09e358491072b5b5724db2cc4d7d4e3066f7be73366a0ed638dab04"
+    },
+    {
+      "path": "dist/assets/ground-mirror_knight-attack.webp",
+      "sha256": "43f025f3c14047c3ecc38e44c613cb3e6e7f6dfd40e6b202b912dfa3956474e5"
+    },
+    {
+      "path": "dist/assets/ground-mirror_knight-damage.webp",
+      "sha256": "3f9e292dfce6754b9ce52dae24857cb596802e6b8d88fe8f7a65d06faec8f580"
+    },
+    {
+      "path": "dist/assets/ground-mirror_knight-defend.webp",
+      "sha256": "64acc5c8049107a8b30e30eb872444924b1c56174f89dd8583db1bdda2d9dde6"
+    },
+    {
+      "path": "dist/assets/ground-mirror_knight-skill.webp",
+      "sha256": "bdbcbedf0475a56089f6acc3b59799be1866830e3de30a10a1b62ae4061134e8"
+    },
+    {
+      "path": "dist/assets/ground-mirror_knight-standing.webp",
+      "sha256": "910d75cba8c9d076fb5cf4e122cb59e70e95ddcbde1fcbae8f355f5b466e1f5a"
+    },
+    {
+      "path": "dist/assets/ground-polished_shard_beast-attack.webp",
+      "sha256": "d417d4ad332e4bf66c4937863345656eee32aa652fb48333f627eef820d64244"
+    },
+    {
+      "path": "dist/assets/ground-polished_shard_beast-damage.webp",
+      "sha256": "2984bca745b140b96800cc3622b21fb42f5a7fb1f4a3529f6422c88de84a2e09"
+    },
+    {
+      "path": "dist/assets/ground-polished_shard_beast-defend.webp",
+      "sha256": "89abf2bf2ab65310534e3027991defa888bcd2a57ca320af90e33a3f0f9113be"
+    },
+    {
+      "path": "dist/assets/ground-polished_shard_beast-skill.webp",
+      "sha256": "3d8fc500781b4c56e786e4604911c8ddcd61068062879b4a999654490e5f8840"
+    },
+    {
+      "path": "dist/assets/ground-polished_shard_beast-standing.webp",
+      "sha256": "1273302472f1994257acfc54491850d971e27952f1086e478a05ff04167ca900"
+    },
+    {
+      "path": "dist/assets/ground-prism_guard-attack.webp",
+      "sha256": "cb4c1a4bc9e695b67d6aa4bdf2c1b353e7ef9952fd8b703f470b53c833e80d7c"
+    },
+    {
+      "path": "dist/assets/ground-prism_guard-damage.webp",
+      "sha256": "8798425e291975f95e5ebca289e9e1ca6d973128185d8ce075d8aba12d2a9fe9"
+    },
+    {
+      "path": "dist/assets/ground-prism_guard-defend.webp",
+      "sha256": "c23a21adfd471bbb4df64a6dd657d9faf25d250f72b51449ed7a52369a39e5d6"
+    },
+    {
+      "path": "dist/assets/ground-prism_guard-skill.webp",
+      "sha256": "9717f82f05f8f4f227780faf33d8b423966b7c631b90aff2f7031b7ddced2b90"
+    },
+    {
+      "path": "dist/assets/ground-prism_guard-standing.webp",
+      "sha256": "31a9f61f39c4565f82fa43b6ae13dcc9ed9bc3a0b902e32ecb8f259dedb72a9e"
+    },
+    {
+      "path": "dist/assets/ground-rune_bat-attack.webp",
+      "sha256": "f80443a35f7bf0b9f94345c37788aa2827f7e577c0398b480f9a57357e399b82"
+    },
+    {
+      "path": "dist/assets/ground-rune_bat-damage.webp",
+      "sha256": "ec966b3964620b39da0241348f884e63365dcbae30a727c281d9822dfa5f0bb7"
+    },
+    {
+      "path": "dist/assets/ground-rune_bat-defend.webp",
+      "sha256": "4c0e777b96da98a5935245c60d947b075d854f964c86571b2c2327f748ed7afe"
+    },
+    {
+      "path": "dist/assets/ground-rune_bat-skill.webp",
+      "sha256": "c295cd13166f757e65dd6e0b00a16efff63a403f7978289fa9e4080d3ddc5725"
+    },
+    {
+      "path": "dist/assets/ground-rune_bat-standing.webp",
+      "sha256": "29adc02a713d0265c8c49f7a9cfb4d3ac66e8475fc2d52bbfbde7c62511c5034"
+    },
+    {
+      "path": "dist/assets/ground-s1_twin_sigil_guardian.webp",
+      "sha256": "36503a599bbe68a6ca186fbb6dbc22df8639e82e4fd503c16ab199cc4c90fc82"
+    },
+    {
+      "path": "dist/assets/ground-s2_card_mimic.webp",
+      "sha256": "a41685c80b92b586fe14847b4be8feb498554010452f8c25d0dbcc14aa0c2c5a"
+    },
+    {
+      "path": "dist/assets/ground-s2_chain_golem.webp",
+      "sha256": "27b701307c00afbdfc0f85f080593b6fb98f1fa41d3c909714808b67c716dc2b"
+    },
+    {
+      "path": "dist/assets/ground-s2_chain_weaver.webp",
+      "sha256": "63ef24c2fae3f8dc580b2773ac7c6dd812e14700b8361e45a70004d4f1629d36"
+    },
+    {
+      "path": "dist/assets/ground-s2_deck_guard.webp",
+      "sha256": "e9e97f2721aabbfccc64e4a042b801963fb29319f060d693e9105d3becbff968"
+    },
+    {
+      "path": "dist/assets/ground-s2_deck_lord.webp",
+      "sha256": "d3bbabfc61ead6ffaa3906d4335ef719dcefd7fefe518d67451b28b7e633a8f5"
+    },
+    {
+      "path": "dist/assets/ground-s2_rune_reaper.webp",
+      "sha256": "c3849b3d20ca853c79f223cfb7dc258d4cc66c1dbe4d2fcf042851ededbd7140"
+    },
+    {
+      "path": "dist/assets/grounding-assets.json",
+      "sha256": "30452d7727d750d495086e442891dc7fbc94d7aac90b386e1bf69c6f9ec73cd0"
+    },
+    {
+      "path": "dist/assets/hero-attack.webp",
+      "sha256": "6edc47b91ce909d028f40dd9d363016f31558f8ff9605468ac9df1ce79fb6b87"
+    },
+    {
+      "path": "dist/assets/hero-crimson.webp",
+      "sha256": "c4d44b529c7228680b69b8b983658079032c590fde06a4ea1c2bcd8f74939315"
+    },
+    {
+      "path": "dist/assets/hero-damage.webp",
+      "sha256": "8753f97887d403e82f9b3bfc4edbdedadb36d55d86eefc72c11824ec9da9b412"
+    },
+    {
+      "path": "dist/assets/hero-defend.webp",
+      "sha256": "459f475d0c5474f09f7ce1c0e2e65e50c936eeff2cc14cc2d4f9d1ec65a24e61"
+    },
+    {
+      "path": "dist/assets/hero-skill.webp",
+      "sha256": "8dc5da6517d8aeee013769bfe2a5f06c8cfe10688ce22718edad8ca2e7cf2048"
+    },
+    {
+      "path": "dist/assets/hero-standing.webp",
+      "sha256": "2df3759411e4bda2b6f4af51241a5d37dfc546d60ad0e155234143e071d4f1cd"
+    },
+    {
+      "path": "dist/assets/hero.svg",
+      "sha256": "63d0d1fcf40cb0d0303a560260054df28d8916da011d96dc71b108a49a3244bb"
+    },
+    {
+      "path": "dist/assets/hud-icons-2-3-2.json",
+      "sha256": "c7fe89d455c1fcb401fed81c26ee1bbd37c1292edf1e2b1ddb793c534bde54ed"
+    },
+    {
+      "path": "dist/assets/icon-focus.svg",
+      "sha256": "f3b843fe6cb5f888f84d479049a9e5ee3f1c833a8f1dd4b329748917fdbb9804"
+    },
+    {
+      "path": "dist/assets/icon-package.json",
+      "sha256": "795f04a126555ce0e54bb27b33029bee0869404c28146c1c732097259ce85fc7"
+    },
+    {
+      "path": "dist/assets/knight.svg",
+      "sha256": "a3ee03d5f648388f6454612649a8240a127162b92a71e3512b1477ac03ba0324"
+    },
+    {
+      "path": "dist/assets/map-atlas-art.json",
+      "sha256": "deefff6d4a71b8eb1f11b7137058fe584e6c4ca14dd79c5bb2af9ed37af709b9"
+    },
+    {
+      "path": "dist/assets/map-battle.webp",
+      "sha256": "b528bb530ede02ab5e6ab72d3b4a8c76a824050496ec71e323ff70b29b6ef1e2"
+    },
+    {
+      "path": "dist/assets/map-boss.webp",
+      "sha256": "773850008c52e0a7965ee544b9a048d756e13d7b6dce7331c3bbcf96c577c00d"
+    },
+    {
+      "path": "dist/assets/map-camp.webp",
+      "sha256": "b592ec6b4238393335711f0e4147ff833becb6969802e22c3af69ac4b251ead6"
+    },
+    {
+      "path": "dist/assets/map-dungeon-parchment-v2.webp",
+      "sha256": "68edc6d5bf43328d3236967b037d57e1dffe16bfd09d20a7ffb5f61569b1153c"
+    },
+    {
+      "path": "dist/assets/map-elite.webp",
+      "sha256": "519c9608d14e332e43f721f1780495a5b737504b60822d8e844b11ed2127b9a0"
+    },
+    {
+      "path": "dist/assets/map-event.webp",
+      "sha256": "de36b9c650bcfaa89eeb9f5b75bafb5fac7ec78e228a644a5330374054058207"
+    },
+    {
+      "path": "dist/assets/map-shop.webp",
+      "sha256": "d008c44267d78a5c9bcfe360f156b339f5c341d33053f11bb5df74d5e7c03a23"
+    },
+    {
+      "path": "dist/assets/math-artifacts.webp",
+      "sha256": "02ea99550f3512902d0bed05f2b170bc0a537bda15c88e6de008d6b47b350604"
+    },
+    {
+      "path": "dist/assets/math-emblem.svg",
+      "sha256": "2630fcfbb33c630e38ce74063fa43451a708608753b46c368658407bad32f520"
+    },
+    {
+      "path": "dist/assets/menu-archive.webp",
+      "sha256": "c051f7c32397d7d63bc7e2d7f6d6bd43604c06734715246fe6d677d97e1ddc08"
+    },
+    {
+      "path": "dist/assets/menu-art.json",
+      "sha256": "e848bd7bda2f53dcbd56c38ba24bca15c38de4bac31ab8b710b4a40bda83a1d3"
+    },
+    {
+      "path": "dist/assets/menu-campfire.webp",
+      "sha256": "97c4c761582be507bb9656e6782fe4d29151e0d9729e297f5a6a2aca89045294"
+    },
+    {
+      "path": "dist/assets/menu-corridor.webp",
+      "sha256": "45b8642584f7d5da5eb8d574401a082d485c249186fab94ae188dc85c18c4620"
+    },
+    {
+      "path": "dist/assets/menu-door.webp",
+      "sha256": "23f23744f31e58cea7dbe43336f30b13cf33a897c14cf6258d2a5e67d7a0f991"
+    },
+    {
+      "path": "dist/assets/menu-map.webp",
+      "sha256": "59b2922c50473f418704f5ac63cfc879ceb2fe0c960263d7813abe8256782bce"
+    },
+    {
+      "path": "dist/assets/motion-alyssa-attack.webp",
+      "sha256": "5823a2569a5c3063ea76198e09c7e4b3be99f0cac82385d7836bc0486a6564dd"
+    },
+    {
+      "path": "dist/assets/motion-alyssa-damaged.webp",
+      "sha256": "1b609e0a1d36b330f7677ba93640bd384e66aa7469be5b33c89413a14b4a4986"
+    },
+    {
+      "path": "dist/assets/motion-alyssa-defend.webp",
+      "sha256": "cfdf2fad732bc16f152740ab4d4f7e95c030a5a8f8550b7cce029b4101ac553a"
+    },
+    {
+      "path": "dist/assets/motion-alyssa-idle.webp",
+      "sha256": "27c5706bcd032f0184f68f8519cfb0c720c3d5c3ff5d6b525feccf171fa8dd75"
+    },
+    {
+      "path": "dist/assets/motion-alyssa-skill.webp",
+      "sha256": "3800df37014e002394861f9198a41395d5efa332266bfcf54e4efc51e9cea24e"
+    },
+    {
+      "path": "dist/assets/motion-s1-ember_mirror-attack.webp",
+      "sha256": "f0ba5f2fbe31a1722019d5bd7f2f2986b55bb7f31e1f5e5961ac8d1ac7b616ef"
+    },
+    {
+      "path": "dist/assets/motion-s1-ember_mirror-damaged.webp",
+      "sha256": "1a0e193123a99f27e38cbc66982b45b8d37773054e0927ed480277323552bc0b"
+    },
+    {
+      "path": "dist/assets/motion-s1-ember_mirror-defend.webp",
+      "sha256": "4c8c18a764137e2bb8ccb53fb345b1a52a05ddc23e5b668b5fceb27cfadff606"
+    },
+    {
+      "path": "dist/assets/motion-s1-ember_mirror-idle.webp",
+      "sha256": "284e662bbd3cc2ebbe6fc31d3d735c26b1e35d45acfbfbf99bc411fdc88b42bf"
+    },
+    {
+      "path": "dist/assets/motion-s1-ember_mirror-skill.webp",
+      "sha256": "47f0e817684935732aa9c1cb207f5713d4d9bdc0b2ff0e04b0fc8fcb91dd7fdb"
+    },
+    {
+      "path": "dist/assets/motion-s1-mirror_knight-attack.webp",
+      "sha256": "1e124d433f7612ed59f0bcaa696476cfb782dd45e453611636eca915c11e1bc2"
+    },
+    {
+      "path": "dist/assets/motion-s1-mirror_knight-damaged.webp",
+      "sha256": "406f603f3ce110e6570543a5b0ed4c648fd2f4152a955c687bab508640b5084e"
+    },
+    {
+      "path": "dist/assets/motion-s1-mirror_knight-defend.webp",
+      "sha256": "8d42d1a167ee0da5241111db55c23488c9f89fbabaefcc8ee5f1e6941acf5a87"
+    },
+    {
+      "path": "dist/assets/motion-s1-mirror_knight-idle.webp",
+      "sha256": "5e5ead3b42677abecd71ca4e4adfa2c316605ffb2d74f0bff848d74c17d05b82"
+    },
+    {
+      "path": "dist/assets/motion-s1-mirror_knight-skill.webp",
+      "sha256": "eabf2e64b8f10e94793e1d42579f3ddf25a75db2f669757f5e9151620b9c5a0a"
+    },
+    {
+      "path": "dist/assets/motion-s1-prism_guard-attack.webp",
+      "sha256": "8da71cc0d4ab4588325608dba91817386fa46b0f60bb01db0662d6a45f9a3f7c"
+    },
+    {
+      "path": "dist/assets/motion-s1-prism_guard-damaged.webp",
+      "sha256": "61e7734034366c75d71d9160cf7eb4880e311515f4437171ff2927873955f57a"
+    },
+    {
+      "path": "dist/assets/motion-s1-prism_guard-defend.webp",
+      "sha256": "350c34c4014fad484f087b7718a96718f20f4e34321fb966d6c14b2a4148d510"
+    },
+    {
+      "path": "dist/assets/motion-s1-prism_guard-idle.webp",
+      "sha256": "b5f66a57888a574d69cea3a53e0d9e70b1bec1dc5d9b4a17939c4e8eab2232b8"
+    },
+    {
+      "path": "dist/assets/motion-s1-prism_guard-skill.webp",
+      "sha256": "6f9cfd15189f5323c9ffb99ab5eb5f6ccf93606efc90a588059f7ee9a31643a7"
+    },
+    {
+      "path": "dist/assets/motion-s1-rune_bat-attack.webp",
+      "sha256": "900af4935fddec371d346fa708ff6e76ccbf89a64d25fbfa2f8396bf2990c224"
+    },
+    {
+      "path": "dist/assets/motion-s1-rune_bat-damaged.webp",
+      "sha256": "14c782d9528791d10166f796bb1f203d23854abf1fdf0e9523c60290c0219b1e"
+    },
+    {
+      "path": "dist/assets/motion-s1-rune_bat-defend.webp",
+      "sha256": "e202c4f6f745d933f0b06977f13a4bd82f28ed3e43f3b9ad529a8269bacb223e"
+    },
+    {
+      "path": "dist/assets/motion-s1-rune_bat-idle.webp",
+      "sha256": "2daa12560d672d140446857675439bcdc5704af40ba1c06034c0b768e6e27177"
+    },
+    {
+      "path": "dist/assets/motion-s1-rune_bat-skill.webp",
+      "sha256": "1c84d72a1e2a5c2e317ff24d9846c3a2a411717900411c25642865d3e7f3d90d"
+    },
+    {
+      "path": "dist/assets/motion-s1-shard_beast-attack.webp",
+      "sha256": "c7f5a7e606ac0bc2faf312e2cf28447bf35f92ffc8db2b24984288f360430281"
+    },
+    {
+      "path": "dist/assets/motion-s1-shard_beast-damaged.webp",
+      "sha256": "4943cda1ec4f481bee8a85b7c0545d91226d7643ef6910e6094390546ef0d239"
+    },
+    {
+      "path": "dist/assets/motion-s1-shard_beast-defend.webp",
+      "sha256": "c607e6edc6503e64357acd3a4ec13cf9dcb26cf7476b6132c97ea4a2a4728850"
+    },
+    {
+      "path": "dist/assets/motion-s1-shard_beast-idle.webp",
+      "sha256": "085ff86eaf0c91bb05c23eeecf918ec3583237819735903013b3bf0d8811536b"
+    },
+    {
+      "path": "dist/assets/motion-s1-shard_beast-skill.webp",
+      "sha256": "f6dec91acf8ff1518eb7c4cead88e468b859a6c84297c41102698e9e7ba5303d"
+    },
+    {
+      "path": "dist/assets/motion-s1-twin_sigil_guardian-attack.webp",
+      "sha256": "ea43b79a882ce9e5fc94ec2a1b9b2d0d733ce8c662e61d3c70e009ce0d2472a7"
+    },
+    {
+      "path": "dist/assets/motion-s1-twin_sigil_guardian-damaged.webp",
+      "sha256": "2ba5326a6616da4edb52deaa6bf716ce90b63ee521db4d32e2e82159efae2b4f"
+    },
+    {
+      "path": "dist/assets/motion-s1-twin_sigil_guardian-defend.webp",
+      "sha256": "2ce0fd7561bce1b0c13641591f24c2c73ee6c19c5feb0276bffe5917a68f3169"
+    },
+    {
+      "path": "dist/assets/motion-s1-twin_sigil_guardian-idle.webp",
+      "sha256": "61d5eb970fb784933f20489d473d3cf9f68cd1e5ece1fd030ec5da314e2ebc26"
+    },
+    {
+      "path": "dist/assets/motion-s1-twin_sigil_guardian-skill.webp",
+      "sha256": "0298e0ae75d375407b9b4c9c44b838e0085ce7e67c25d43104bbe5316f1fd985"
+    },
+    {
+      "path": "dist/assets/motion-s2-card_mimic-attack.webp",
+      "sha256": "4bd8cecb39db6c13fc2f02fbe9b3114d44b54518311c262c1de2aefa29f98b86"
+    },
+    {
+      "path": "dist/assets/motion-s2-card_mimic-damaged.webp",
+      "sha256": "5ef14afb81a1a1b905b26da233b7f8c1798a8441d4a9803fc21e50ac7f887fef"
+    },
+    {
+      "path": "dist/assets/motion-s2-card_mimic-defend.webp",
+      "sha256": "2a8db742d2481da299d9daaf8342d806658864dc386a41e33ea0a9cb6bd041cd"
+    },
+    {
+      "path": "dist/assets/motion-s2-card_mimic-idle.webp",
+      "sha256": "57b3a8645fb674ab9d4002f3cbaa5473a710540f8fa14a2acfa699f02cfe490a"
+    },
+    {
+      "path": "dist/assets/motion-s2-card_mimic-skill.webp",
+      "sha256": "443ee55040257075ffe263d51365c697ac62ef1df48f796254a44d4a2c7a49cf"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_golem-attack.webp",
+      "sha256": "389723395984457d830e8f730ead528845497f5b0d2b74d5a2a929d504dc2cd5"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_golem-damaged.webp",
+      "sha256": "e57ffeb17678b275d33513af09199430303034457a29bfed51e46b5cd1917874"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_golem-defend.webp",
+      "sha256": "c53d8701e7ec60c31704cafc0769ab86dfaeadd4b520f5aa6f764702b1cff31f"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_golem-idle.webp",
+      "sha256": "da82e56b60290dd3fce7b88ba68dc51e3702fc84cc8e691f3c9950c5a684ed53"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_golem-skill.webp",
+      "sha256": "9d9a0c1eefcf1f92ca22cb0bf26947be083dbe4ba16f0b4519497661d0553277"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_weaver-attack.webp",
+      "sha256": "cb8092f3c694f04d4c6d727ff4a27110d72aa4c7970cb46d2fe6caf58cae232a"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_weaver-damaged.webp",
+      "sha256": "bbb987bbddb68aee17006e91a20dcf135c74bb51044b818da3590c8f86429cf4"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_weaver-defend.webp",
+      "sha256": "5c63fc7a9184a27c9dadd81feceb282946c25bb8c2730f96fcb67d0ad624449a"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_weaver-idle.webp",
+      "sha256": "76eca613ff14f6c0cde8fe404306c549058440cb1e4c2362b3848fcdf1c3982f"
+    },
+    {
+      "path": "dist/assets/motion-s2-chain_weaver-skill.webp",
+      "sha256": "d7d42a77ca10a3c3f5667a81a84abbab8834d2877d79ab77c3b3005ee037292d"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_guard-attack.webp",
+      "sha256": "ab2df45f89b522d93d90e973cf6766f5132b11b7f22d07058548ada92225a545"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_guard-damaged.webp",
+      "sha256": "2bb572301c067f0fb4dba4da9c6928ea21447c9f00448df3b3c905fa74359168"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_guard-defend.webp",
+      "sha256": "3adb5c031b6c07a5be37da7ff56a423f860172ed83517a1ae7f5006b9641c263"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_guard-idle.webp",
+      "sha256": "7b4739017f5b7c1f27c73c63a4c415d4143a8c40ce24c3e507ce195774ac8879"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_guard-skill.webp",
+      "sha256": "03d4939436ade87e08efadba37ed272dd8eeffffc167da285f78d35882d8a2c1"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_lord-attack.webp",
+      "sha256": "6e20b3cb1d3074873593f15e3ddcf37f8ec011aa7f438bb1f512b9f138f73092"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_lord-damaged.webp",
+      "sha256": "f9ff132568fc254bbf6012b738981547eb2f7f9d187e3f0cba169d97b713485a"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_lord-defend.webp",
+      "sha256": "78474e43edcc44b3f6de6d728707f3a6a1dadaff4495158a0ba4bf45ce1bc0fc"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_lord-idle.webp",
+      "sha256": "d0c2be24d58937a187c6114b51489e6754a7bec88cf83c7e4324c3d7fdf7ad67"
+    },
+    {
+      "path": "dist/assets/motion-s2-deck_lord-skill.webp",
+      "sha256": "05e4bcd02b0d37f75fb3b70faba9ca9802cfd43e26ae33c6ee7bcc5a05ee8b5a"
+    },
+    {
+      "path": "dist/assets/motion-s2-rune_reaper-attack.webp",
+      "sha256": "5836eb84a0425a15f8e1ff8942273a300642979246af2d39a063c9fa31d2360e"
+    },
+    {
+      "path": "dist/assets/motion-s2-rune_reaper-damaged.webp",
+      "sha256": "411eeff741ce7501699b636ebc0ea311895ff717bd5ec98f5be3d38b1be5e709"
+    },
+    {
+      "path": "dist/assets/motion-s2-rune_reaper-defend.webp",
+      "sha256": "b55e2e37514e76768abb935e2a54612f9e0a7e4b80342357ff7f0b8688dc9157"
+    },
+    {
+      "path": "dist/assets/motion-s2-rune_reaper-idle.webp",
+      "sha256": "15031c2e77305cc9cd9cafcc115ac66de2b8ac38b42d4cb99f6eb880152f2406"
+    },
+    {
+      "path": "dist/assets/motion-s2-rune_reaper-skill.webp",
+      "sha256": "912987baef788381a7725354e8296e0b44f1d270efac7f56e2580c8d57bfcc7e"
+    },
+    {
+      "path": "dist/assets/music/audio-pack-3.json",
+      "sha256": "21cd58dc1c3adb87fd2f9d1382e868fd2d02cea929635b42f582cdc834c7320b"
+    },
+    {
+      "path": "dist/assets/music/audio-pack-4.json",
+      "sha256": "720688dccd62ace2e126661c2b041fbcd4ea5d6e13772f3b0447b1d3ab235b90"
+    },
+    {
+      "path": "dist/assets/music/audio-pack-5.json",
+      "sha256": "e92ad2403fcf7e40c8892d6c1de094a70178db5fad896f486455d97220ecd376"
+    },
+    {
+      "path": "dist/assets/music/defeat.mp3",
+      "sha256": "3177d108a8767e5a37b3616e0ff09e34aa9f9d32bc40e2f79b838a248ec51f22"
+    },
+    {
+      "path": "dist/assets/music/map.mp3",
+      "sha256": "f8664c52dc80302b09e7d1f04e8b99214b24d2607d580bbe4ba0b9fb83e1c91c"
+    },
+    {
+      "path": "dist/assets/music/menu.mp3",
+      "sha256": "9076c4dbde9bcdc7f9c75a75d7c4f5cc3a74d50e92de9878b87c5ef167e5308c"
+    },
+    {
+      "path": "dist/assets/music/menu.ogg",
+      "sha256": "e338141359636f17799f5940055c47b69ed5c1681528c40186dcecad120611df"
+    },
+    {
+      "path": "dist/assets/music/menu_ancient_stone_keep.mp3",
+      "sha256": "9b3f06a390e3e6fecea9734e3352a5877f4eda64a4fd66829725caa121515681"
+    },
+    {
+      "path": "dist/assets/music/mystery.mp3",
+      "sha256": "20f709f90f735c8e0c0aa9ef7ea775b5914ca317d92a819c5b099808c6bafb67"
+    },
+    {
+      "path": "dist/assets/music/mystery.ogg",
+      "sha256": "bcbcc773d68766c163ddd37253203335e1006d5543d5dfe47e4d1f4a7d569cab"
+    },
+    {
+      "path": "dist/assets/music/rest.mp3",
+      "sha256": "a672a9418c6f568d52d28b57acc196144e02e6396f74ad60fa4b232b893e67be"
+    },
+    {
+      "path": "dist/assets/music/rest.ogg",
+      "sha256": "b6d11f2f50498f9e6f4c241764285a38fa55d87d7af4bd0b5298eda416dab4e8"
+    },
+    {
+      "path": "dist/assets/music/scores.json",
+      "sha256": "a595ac6ebb926c2fcd2f6284af3d99486bc08081849cd02be522b84cc30dc98b"
+    },
+    {
+      "path": "dist/assets/music/shop.mp3",
+      "sha256": "ff21a7aa740e33312c696738791de27a5a05f91b0692d19af81cdcc147dd833b"
+    },
+    {
+      "path": "dist/assets/music/shop.ogg",
+      "sha256": "6690bda219ef5650374b8e2dd9b774bbf029eb5fdc00ebc4e7ea17660331ffaa"
+    },
+    {
+      "path": "dist/assets/music/stage1_boss.mp3",
+      "sha256": "5e107c84d4450a93be183bc872b9eee36e23e3c5cf101ec10299495dbc6d7987"
+    },
+    {
+      "path": "dist/assets/music/stage1_boss.ogg",
+      "sha256": "b25c6aaa25ab53f65082a348fc3f862c2e1b73c5267a63f9fba226bd1843ab2a"
+    },
+    {
+      "path": "dist/assets/music/stage1_combat.mp3",
+      "sha256": "39d2798b7b4a3bb79151deec2b3f4915d41853dbef2efd49262141bdfbf8c742"
+    },
+    {
+      "path": "dist/assets/music/stage1_dungeon.mp3",
+      "sha256": "b836fdfe4db5de3d6ed42050b2c2a52ac72dfbd1b8b3818f8b3128ede55f7dae"
+    },
+    {
+      "path": "dist/assets/music/stage1_dungeon.ogg",
+      "sha256": "3da160c0edddc661befdc858b769cd8a821dea031348356110f3756f7e6cfc4b"
+    },
+    {
+      "path": "dist/assets/music/stage1_elite.mp3",
+      "sha256": "b836fdfe4db5de3d6ed42050b2c2a52ac72dfbd1b8b3818f8b3128ede55f7dae"
+    },
+    {
+      "path": "dist/assets/music/stage1_elite.ogg",
+      "sha256": "397f0b4eee5a2c58b3e45afc1480d9cb5a84b4652ed3cbbfe455e69730e53ae0"
+    },
+    {
+      "path": "dist/assets/music/stage2_boss.mp3",
+      "sha256": "ff972eb0cdce2dc743ce9054ef3bae48e4b51aeb42cac4cb474f7f35dc8c789e"
+    },
+    {
+      "path": "dist/assets/music/stage2_boss.ogg",
+      "sha256": "7c8a1732104599d86afdf2ffcb8e876196407e556ce4d147175ca83e38747483"
+    },
+    {
+      "path": "dist/assets/music/stage2_combat.mp3",
+      "sha256": "244d6ea3bbb695489ede4ecedf643ee6bfcabaf589ca01a71b669043c54cc888"
+    },
+    {
+      "path": "dist/assets/music/stage2_dungeon.mp3",
+      "sha256": "74afc4b90232e681cf9fedd5fd7381f49ec18589a6474427c893a4969925700e"
+    },
+    {
+      "path": "dist/assets/music/stage2_dungeon.ogg",
+      "sha256": "a74f55926ad6f52e5c6b2cc5c843baeed4c0d1c916a5e21870aed0cb456ff368"
+    },
+    {
+      "path": "dist/assets/music/stage2_elite.mp3",
+      "sha256": "91d5e0cdaf7f8d0c6819d05688055a70887621e100bc1d8974680d209e07525c"
+    },
+    {
+      "path": "dist/assets/music/stage2_elite.ogg",
+      "sha256": "4c9576350521d96c8ad51f0d5689445b421bc80004bda674f150388482c9b630"
+    },
+    {
+      "path": "dist/assets/music/user-track-import.json",
+      "sha256": "7116c02943d316efcbddd7a5e5110aabccb8c416c885ab250f85dc979f2e1dc9"
+    },
+    {
+      "path": "dist/assets/mystery-art.json",
+      "sha256": "8ea0d545ddde1d2f6b8dd1aaa0923a870b406aa08d60cf123cd642ee4535e194"
+    },
+    {
+      "path": "dist/assets/mystery-me01-small.webp",
+      "sha256": "f466f8e8a2af4009adfd82862ea03034882a049b825880293b4eda0802ce934f"
+    },
+    {
+      "path": "dist/assets/mystery-me01.webp",
+      "sha256": "c472a366d391f7c137bd42ed8413320816158938cddbefc58fc77060e4c93e41"
+    },
+    {
+      "path": "dist/assets/mystery-me02-small.webp",
+      "sha256": "4445b121678360d6c9dcb5718dae7c879e421fb399b7035b2625e617f1ff8ba4"
+    },
+    {
+      "path": "dist/assets/mystery-me02.webp",
+      "sha256": "978b1d09fb3477beb574564b96166043b5136168e90dfd058a794e6e20bc7d3d"
+    },
+    {
+      "path": "dist/assets/mystery-me03-small.webp",
+      "sha256": "a6a6b3b94ce007fbc3fd9b564a0668c7ca1b77d4e220fdc98f6de00c9e03300b"
+    },
+    {
+      "path": "dist/assets/mystery-me03.webp",
+      "sha256": "cf4ac1c57da2f15a8629d81396577574c2d5ebbf46472958feba46ece13ac23f"
+    },
+    {
+      "path": "dist/assets/mystery-me04-small.webp",
+      "sha256": "d4bec45248996d20467004e9aa9784f06be9e93a23986dca34a3abe9e5399183"
+    },
+    {
+      "path": "dist/assets/mystery-me04.webp",
+      "sha256": "dc8a1b04e23beb1d1b09e797222c694abb8f5ea2c2571a764e8806e58e96e3c5"
+    },
+    {
+      "path": "dist/assets/mystery-me05-small.webp",
+      "sha256": "17c6fbfe73554cf7b7786a02b90e25f063dac153da67b070b49cc43d9d528ed4"
+    },
+    {
+      "path": "dist/assets/mystery-me05.webp",
+      "sha256": "05bd0335d4d1bdc88f91a9ad540a3d480788ee8a1ee31f9a3a9b95eab4100777"
+    },
+    {
+      "path": "dist/assets/mystery-me06-small.webp",
+      "sha256": "7b62a73f9de9bcab673ee2340422a555ed5ac53635b5b843398877662ef48d6a"
+    },
+    {
+      "path": "dist/assets/mystery-me06.webp",
+      "sha256": "aecde5e403b26ddcd89af82e6b7d89739de7bd82467b11fdd4c3502a55a95d01"
+    },
+    {
+      "path": "dist/assets/mystery-me07-small.webp",
+      "sha256": "2fc4c9216d086d1b3a78686b54e7f50baeb2fb86f4236db7f048b296bbb29751"
+    },
+    {
+      "path": "dist/assets/mystery-me07.webp",
+      "sha256": "a5361cf4a025679b0fca96917d83f3eece4c28ad64836e0468ce16487b7647db"
+    },
+    {
+      "path": "dist/assets/mystery-me08-small.webp",
+      "sha256": "1ee0373efa507e8347d3091c7b25660f7204d8d3b546b8c090964497c747c1ba"
+    },
+    {
+      "path": "dist/assets/mystery-me08.webp",
+      "sha256": "6edede47c628af0eb50f24b1d2ec69623f3e20afc45d8408b020a9a9f97e27a4"
+    },
+    {
+      "path": "dist/assets/mystery-me09-small.webp",
+      "sha256": "831c678efd79ed5333604d900aae871909db01caecb7dbcbb6733149b9c0ec1d"
+    },
+    {
+      "path": "dist/assets/mystery-me09.webp",
+      "sha256": "c87256cd8f8a2a14fbcd35c6b81207fb9869672f051b93fc24886f57e76a81d4"
+    },
+    {
+      "path": "dist/assets/mystery-me10-small.webp",
+      "sha256": "5ee450677c1dd37baf94c5e30ae7ec341113adcae4889c928383f3228fce6dfb"
+    },
+    {
+      "path": "dist/assets/mystery-me10.webp",
+      "sha256": "14a571888a92cecaf3f4db35806d0f0e2dc803c390084d3fe61fff6b82d6f0d2"
+    },
+    {
+      "path": "dist/assets/mystery-me11-small.webp",
+      "sha256": "d342727a646eb87ef2e416c2123f4d70f61a7b66397232920d999e30eb944c6e"
+    },
+    {
+      "path": "dist/assets/mystery-me11.webp",
+      "sha256": "45598391efa5e7ec361b741b4c06d70f1598caf18e81920acab3f2e2e05b86ab"
+    },
+    {
+      "path": "dist/assets/mystery-me12-small.webp",
+      "sha256": "1965ef830123ec8f466da9bf79ba38690ba8c69298f8af06c755605f2310e040"
+    },
+    {
+      "path": "dist/assets/mystery-me12.webp",
+      "sha256": "5fbcb978c21022904c573af5513fdd11aa3a7b41e35e2a0d2398fe1947a5c706"
+    },
+    {
+      "path": "dist/assets/mystery-me13-small.webp",
+      "sha256": "8fe558834eac659df3b77a13c7e357a7478740fbd39b45ba1b7c3a07f6d7f422"
+    },
+    {
+      "path": "dist/assets/mystery-me13.webp",
+      "sha256": "a28cc4c2dafee5895ee146f2eaac5bdef451454d7f38914ffbf2c2936e19088e"
+    },
+    {
+      "path": "dist/assets/mystery-me14-small.webp",
+      "sha256": "d59610d8cbb4b892a5d115efedafae21d70c4c4a32a0c46a2603bc2401431b53"
+    },
+    {
+      "path": "dist/assets/mystery-me14.webp",
+      "sha256": "37c2b0ec28ff163a5084657b78b59bdcc9711090745cc4b1db311e007e9902f4"
+    },
+    {
+      "path": "dist/assets/mystery-me15-small.webp",
+      "sha256": "ba39ad934824d22dec4a9b46e24f0ab127c56f537af2d502ba695f85291f348c"
+    },
+    {
+      "path": "dist/assets/mystery-me15.webp",
+      "sha256": "d5d687d48dfd3c182c500beb6bd260138b03b92368a14476a4707a95b325cb48"
+    },
+    {
+      "path": "dist/assets/poster-s1-twin_sigil_guardian-attack.webp",
+      "sha256": "11124f1b0e61c64f614c4bb65117f40370f4de823c46f228c1ec2ad80c2a2731"
+    },
+    {
+      "path": "dist/assets/poster-s1-twin_sigil_guardian-damaged.webp",
+      "sha256": "b21c8f280617afce2dc7da5e83b8740f925f1f08f49f0848ac2b50690e0c3417"
+    },
+    {
+      "path": "dist/assets/poster-s1-twin_sigil_guardian-defend.webp",
+      "sha256": "fd4c229ac87fff49760b4611aca06c250149e3e3336d5510d323be5938e7f40c"
+    },
+    {
+      "path": "dist/assets/poster-s1-twin_sigil_guardian-idle.webp",
+      "sha256": "24e057aa9e1e057b5d50d121409cd896f9277737575ceae7a686f2c95cb9514f"
+    },
+    {
+      "path": "dist/assets/poster-s1-twin_sigil_guardian-skill.webp",
+      "sha256": "2e6d173709935be22b91dcac247ce4af6fa65c400c31c51ea4badfbc93310fd8"
+    },
+    {
+      "path": "dist/assets/poster-s2-card_mimic-attack.webp",
+      "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1"
+    },
+    {
+      "path": "dist/assets/poster-s2-card_mimic-damaged.webp",
+      "sha256": "e179fb02c66e046bc30b5a460ce3ab9c11df68656ad8a9057b6ad3312aa6d79f"
+    },
+    {
+      "path": "dist/assets/poster-s2-card_mimic-defend.webp",
+      "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1"
+    },
+    {
+      "path": "dist/assets/poster-s2-card_mimic-idle.webp",
+      "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1"
+    },
+    {
+      "path": "dist/assets/poster-s2-card_mimic-skill.webp",
+      "sha256": "5111861ab57821e3200b0f9e401cead29d4e93a1b8abc1fff41a305059593ac1"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_golem-attack.webp",
+      "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_golem-damaged.webp",
+      "sha256": "dab5b5a5d14623e4e1f6586bde8c7411ab8d3b49cbc70eea1b7d7f52d92db5ea"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_golem-defend.webp",
+      "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_golem-idle.webp",
+      "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_golem-skill.webp",
+      "sha256": "17e6206c0978ec271f8e3bf86b7d01621dc360dcd791cfcf75aa973764d5c4c8"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_weaver-attack.webp",
+      "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_weaver-damaged.webp",
+      "sha256": "5673718e18cc9ab96756dd1d1d459dd53f287bcfe2475861fe7ee33266898d1a"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_weaver-defend.webp",
+      "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_weaver-idle.webp",
+      "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68"
+    },
+    {
+      "path": "dist/assets/poster-s2-chain_weaver-skill.webp",
+      "sha256": "d9853f577dc8fe99cc2c046839794b5df28c946860a985725cb182b752badb68"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_guard-attack.webp",
+      "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_guard-damaged.webp",
+      "sha256": "1cc9f5f76e64ee51aabb45f967666bdf22d98d71fe5a364b5df02e43db9eba3a"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_guard-defend.webp",
+      "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_guard-idle.webp",
+      "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_guard-skill.webp",
+      "sha256": "075793372fa32d058986186acd5e9202e922b0b2ef7998acc837e8e0272d54d1"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_lord-attack.webp",
+      "sha256": "05589a08aa23e8ac9e025ab08abae5d829d771cf9dcf8c21fe3e961525fd31a1"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_lord-damaged.webp",
+      "sha256": "420dd80bb1f55ab70f917be1edf57d2afe7b314ad885c4dc9aca216d8cb177e0"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_lord-defend.webp",
+      "sha256": "5417e390e85cdf360483c9ee389fec9f9cef6bd5d6347dc4b5e7771e8af6ac85"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_lord-idle.webp",
+      "sha256": "3511ef776833a4de693ece3f2b3221af4d0c30812c6495f4dbcd97b9ff522259"
+    },
+    {
+      "path": "dist/assets/poster-s2-deck_lord-skill.webp",
+      "sha256": "c228f9ba92f72f7522d74eb61dad3d0be2a9a1a5c993c8cd273c5b1f3887b2db"
+    },
+    {
+      "path": "dist/assets/poster-s2-rune_reaper-attack.webp",
+      "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a"
+    },
+    {
+      "path": "dist/assets/poster-s2-rune_reaper-damaged.webp",
+      "sha256": "bcc808d7266a2adf299814322ff338f326450da44f821230c7cf05be4e3534f7"
+    },
+    {
+      "path": "dist/assets/poster-s2-rune_reaper-defend.webp",
+      "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a"
+    },
+    {
+      "path": "dist/assets/poster-s2-rune_reaper-idle.webp",
+      "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a"
+    },
+    {
+      "path": "dist/assets/poster-s2-rune_reaper-skill.webp",
+      "sha256": "989007c2e4a40d678ac95a42ffeeaba564cce812380fd0ab614eaee61fb0370a"
+    },
+    {
+      "path": "dist/assets/s1_bram_the_trader.webp",
+      "sha256": "3b64aeff032d15a8167d99c71f3503afad6eaaaa9e4982fb217d4710467557c5"
+    },
+    {
+      "path": "dist/assets/s1_ember_mirror.webp",
+      "sha256": "a414e92a75c87c48ab20bf7a428bbcef9973b738a02e1fa3629801800155c74a"
+    },
+    {
+      "path": "dist/assets/s1_lantern_keeper.webp",
+      "sha256": "544f28c2fc75eba01a5f4ea140db807b844f59cf42d1096d33f90df325816292"
+    },
+    {
+      "path": "dist/assets/s1_lost_scout.webp",
+      "sha256": "17c051a4f337037e394a09408b6d2fa955a538f08f8a4a8624ae18a36c746159"
+    },
+    {
+      "path": "dist/assets/s1_mirror_knight.webp",
+      "sha256": "e4911f5cfdc339f1e34bd03bc4e4ca46d755d4048edc0cf16d68c644d907666f"
+    },
+    {
+      "path": "dist/assets/s1_prism_guard.webp",
+      "sha256": "9c91bd0cf949c59c98de2d75c17a75c2dab417b0602b97c46ee79d387eca973f"
+    },
+    {
+      "path": "dist/assets/s1_rune_bat.webp",
+      "sha256": "6fbb893f9e8edc4b4b119bbd42d3655e65ab840f35f0ed5c8d92a8a54df83bfc"
+    },
+    {
+      "path": "dist/assets/s1_rune_smith.webp",
+      "sha256": "293cd568f2724e390ae9647d42b9151650d70246401aed3094c2dc08127cccb2"
+    },
+    {
+      "path": "dist/assets/s1_shard_beast.webp",
+      "sha256": "51e8ba989f2fc2b3fd806886f889971020e944ecddc7fc044fd1020eb1e549e3"
+    },
+    {
+      "path": "dist/assets/s1_twin_sigil_guardian.webp",
+      "sha256": "1debd94526bbcd22d046c5a47c7ebcb386199bb3258cf070c8f1de63620a1a86"
+    },
+    {
+      "path": "dist/assets/s2_card_mimic.webp",
+      "sha256": "da162d41e7cb47885433594ece28a7ffd481d012f767aa7dd38b8156a5ba4989"
+    },
+    {
+      "path": "dist/assets/s2_card_seer.webp",
+      "sha256": "9d1a9c4f4b9856c9ea6d4f4b8bdf88abc8cb33ef88ceefe7ec156fbd98291b06"
+    },
+    {
+      "path": "dist/assets/s2_chain_breaker.webp",
+      "sha256": "069c81f49cb46d2ddc96a57ffaa075d5e36e92feca271cce6987de05ce9c4d3c"
+    },
+    {
+      "path": "dist/assets/s2_chain_golem.webp",
+      "sha256": "ae3c1342d6f12cab0ee75ab23ec58568d04d1eff21adb32b31f3bb6d7a8daae0"
+    },
+    {
+      "path": "dist/assets/s2_chain_weaver.webp",
+      "sha256": "dac8d4328d9c27b90893b3d860cd0ce933adc2f7f994a61b3d1acca90e904501"
+    },
+    {
+      "path": "dist/assets/s2_deck_guard.webp",
+      "sha256": "89f50a0f78d7f8f96eb6653b1c3143c3e9ba54ff6ccb0f9de045e9988c474c9c"
+    },
+    {
+      "path": "dist/assets/s2_deck_lord.webp",
+      "sha256": "d80469bde10f08da2d2caab62d0372844d75c04faed41d9e53da564de19743d1"
+    },
+    {
+      "path": "dist/assets/s2_lost_scholar.webp",
+      "sha256": "e6b7066caee6b83279441eb6ed32f1a1c85451c2c295ef3e89dce93ae0f5c3d9"
+    },
+    {
+      "path": "dist/assets/s2_rune_reaper.webp",
+      "sha256": "9dc21b34dc97ee27b788ea5b407498858a274955f36aef9849dbfc48a4c6e8d5"
+    },
+    {
+      "path": "dist/assets/s2_veil_the_trader.webp",
+      "sha256": "3c2b67eea5ca171412c042ffcd9d375f35158c346d1a94e740e6e77116181d1c"
+    },
+    {
+      "path": "dist/assets/scene-assets.json",
+      "sha256": "c18f2b0b383004bf88f82f8f01d26419117f00621ee6f56dac999b0c30fe20de"
+    },
+    {
+      "path": "dist/assets/sentinel.svg",
+      "sha256": "47a811f3a6680b4d2a58a2a7d471554bb9ac48d9ca2f1df0a7a4e3f9e0692291"
+    },
+    {
+      "path": "dist/assets/situation-art.json",
+      "sha256": "964ed32a3e2df1a89b7f3079fc61d85bc2e3894eb79929f07592e827136b19bf"
+    },
+    {
+      "path": "dist/assets/situation-defeat.webp",
+      "sha256": "30ebb9ee43e735d2ad2a70a6731441689944f604b0f48f0a0d2a1141e21e7487"
+    },
+    {
+      "path": "dist/assets/situation-rest.webp",
+      "sha256": "a816616910bf53018564c3029853692780e5a54f77e1f47cb49c76c99193474f"
+    },
+    {
+      "path": "dist/assets/situation-reward.webp",
+      "sha256": "d2c4b8b1f96c707d27122697bee8064d1e67da9f2c86576d96e14fa452345c2c"
+    },
+    {
+      "path": "dist/assets/situation-shop.webp",
+      "sha256": "fe9597f7af3cd9eb739adc1f949791af27409a966518c789b7a691838be7d5c4"
+    },
+    {
+      "path": "dist/assets/source-assets.json",
+      "sha256": "01da201dc7b29481f7c612a4a9de91b87c23d95723cabd897475a6e20d9ac743"
+    },
+    {
+      "path": "dist/assets/status-agility.svg",
+      "sha256": "fe657761dbd020ea6e86b290951f51f94b2eae0bd2eb58ddbd766a72083945f2"
+    },
+    {
+      "path": "dist/assets/status-block.svg",
+      "sha256": "a0f3705c55d1d4dd337e4fe95a0f39fa713423c11370faa4164177bf47e4b5aa"
+    },
+    {
+      "path": "dist/assets/status-defense.svg",
+      "sha256": "7051f625dc13818fef42ff1e7dc971ee12c3310f550db7b49d6ecaf20969a9b0"
+    },
+    {
+      "path": "dist/assets/status-icons.json",
+      "sha256": "25df1ebd4a26cf118426ab02045820b08e24ccd218c3c32c8b1b7a59d5cf9a35"
+    },
+    {
+      "path": "dist/assets/status-next-block.svg",
+      "sha256": "ef39b7247b2355cc00a40ff6081a8be6c0f8ecf8cc56b9d9c581bed53c94a364"
+    },
+    {
+      "path": "dist/assets/status-next-draw.svg",
+      "sha256": "a0c561ecb2908f30c3fb774646d2c1c6dc096f2ecfc070d4c78ea8b942e47c22"
+    },
+    {
+      "path": "dist/assets/status-retain-block.svg",
+      "sha256": "85895a58ec557d324861c9639cc17be88ef4bb5aba94640dd596fe54662d6ab9"
+    },
+    {
+      "path": "dist/assets/status-strength.svg",
+      "sha256": "3bad880aa97fd53d38a7f6058dd2c194a3462bd6663deea9bc6680fb81ffe2cc"
+    },
+    {
+      "path": "dist/assets/status-thorns.svg",
+      "sha256": "0bf593f49ceec95acb5e0e1de27a0ef50d298322fb4b57f9245db7824bbeac4c"
+    },
+    {
+      "path": "dist/assets/status-vulnerable.svg",
+      "sha256": "0f2591d2a7a1549d20ce3cbb049b53c2475a17baa21d36e37a652cf9f7ac6a46"
+    },
+    {
+      "path": "dist/assets/status-weak.svg",
+      "sha256": "9b2915c4cbe517ed4806a4e3aa5c93cb446553feaaa3daab763482cd4dcd2706"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_b01_gatekeeper_core_v1.webp",
+      "sha256": "daddf3c45462be6d6b2705ee625a54fe50f3bd0098b493e1f420e27bca10b7a1"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_b02_sovereign_grimoire_clasp_v1.webp",
+      "sha256": "c1ba2fc640ed36e5035021a2c24b2433fe82d67c1dabd44437f6d8bc269f6b22"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_b03_decklords_hourglass_v1.webp",
+      "sha256": "ae7ee3605da699ac67e3136ea87bc5e1442f98f6cea0d5e9d160298a9e373b9d"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e01_copper_abacus_v1.webp",
+      "sha256": "78c2eb14451506ff8865358d5a5a19c9a6a2ff4aafba270d99fd8077352d082b"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e02_twin_sigil_medallion_v1.webp",
+      "sha256": "9e5dc98598e1e5cf5e408934a685a09f94e6918362be4893cdccf6082478285c"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e03_chance_die_v1.webp",
+      "sha256": "de87446c7e9aafd29136aedfd01c621113bdf4f508d948568a95994c7e6fe450"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e04_ember_balance_v1.webp",
+      "sha256": "0e3c80432bc23d43b57393d8aa87751be6eed744924ab326f10f1ad056c39eba"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e05_chainbreaker_clasp_v1.webp",
+      "sha256": "57d6b736ee8cbfcbb03cc783052c9b5894f5a18e38c2821d5dc82f5eac221906"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e06_ashen_phoenix_feather_v1.webp",
+      "sha256": "7a470e78b881f1d98445173d8f8440e34135aebd8cc24894dd87dcdc9291a5d9"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e07_runesmith_tongs_v1.webp",
+      "sha256": "7236b6a5b0ff7c189069db1f2e62622347188a2b161fb87106387abfbe02eeae"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e08_sentinel_crest_v1.webp",
+      "sha256": "7ef1a6cec5dc0466c89deb290b04b3e6294476ad1497d9790b2460db0961a7a3"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e09_mirror_knights_brooch_v1.webp",
+      "sha256": "ba52283562df6af8927f68ba6ef9765c177530fd4346da6f288ac53deaa2f605"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e10_rune_bats_bell_v1.webp",
+      "sha256": "ce5e44bacb7077ebc7bb9ccd0654d81cd7d4f988be611e58480b04e956b9df64"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e11_scholars_satchel_v1.webp",
+      "sha256": "d5aae22b026cbce4f53d188fd945aac56f92f4982efad120f57d29e3f805a70d"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e12_lantern_keepers_flask_v1.webp",
+      "sha256": "81579fa444b81430d8c2727d67a51dbc7ad54010e5ed3ea19b14a703794e7abd"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e13_chain_weavers_spool_v1.webp",
+      "sha256": "f089cc13658aa4b404f66f95ece7896ecd40fbaff97ee5ec2769e0aebe920179"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e14_brams_contract_v1.webp",
+      "sha256": "c81651c1d9cff3ecf05d417c09e55af186e2535cb562d83b2afd9cfd5b909440"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e15_crimson_sword_charm_v1.webp",
+      "sha256": "e3cf2267ba13846f5bcf574bff15d5bdfc661f92050e2aa32ffb73fb7ca022bb"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_e16_guardians_armlet_v1.webp",
+      "sha256": "c8217cd9a6d5c03bc6c65fc8df351b2ea4b1a591d4dc22e2241103708314cac4"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s01_emberheart_pendant_v1.webp",
+      "sha256": "86374025de4f5ebd9a7a72062883a89ba7493331fa6b0a8c56e3cf58c06266da"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s02_cinder_whetstone_v1.webp",
+      "sha256": "0d602c59b8c913857115f0607e501e9a66385eda037053a21ddfc86133cb33f3"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s03_prism_buckler_v1.webp",
+      "sha256": "8d0630a7ee5af0213f6bf9761da33681c34e0702c21bf2d807fddadbdfbc9f39"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s04_clairvoyance_lens_v1.webp",
+      "sha256": "5b3fd2b27002bf4ea6252492f14c8fac0cde593ae3eb465283412a4c19ff6128"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s05_scholars_bookmark_v1.webp",
+      "sha256": "06c12d8193f86136a6e0a4b71e1ed12532a26a43d843b57a785eeb93cf5505a1"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s06_merchants_seal_v1.webp",
+      "sha256": "5265664e41037a9845bc74272c9800f565ecc82f987e1e2ea4d6e01511936f07"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s07_bronze_guard_pin_v1.webp",
+      "sha256": "8a119dc05e09001235a840b733847a76cfaef4db365f601ee1b87a9d990b2f58"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s08_travelers_ration_v1.webp",
+      "sha256": "d4f32a82c4238ac5008d4cfbf593b3460995f85420c0c2ce99668ed2f5afc074"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s09_copper_purse_v1.webp",
+      "sha256": "10fc5052583ea0a32ab4ce9f76c122e5ed99c588cd5d7f197c4b2135d5e61398"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s10_ember_quill_v1.webp",
+      "sha256": "56a675c2cf34d6987326f3fec719d929a7d48ba40b61fa7186d2fb85610e9f8d"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s11_scribes_pebble_v1.webp",
+      "sha256": "b7911d765bd8cfddce25c54fae8fcb72b644a2360614d9ceb4491b5503975da4"
+    },
+    {
+      "path": "dist/assets/stm_icon_artifact_s12_initiates_ring_v1.webp",
+      "sha256": "bc1449348f1665a805be33b46ef68cf111cdd5b3484da5efca0f7d44af0a8a2f"
+    },
+    {
+      "path": "dist/assets/stm_icon_map_battle_v1.webp",
+      "sha256": "dce12c9f09355668d35f103364287bb557c517e54fa7bad21b7e31fb5e059796"
+    },
+    {
+      "path": "dist/assets/stm_icon_map_boss_v1.webp",
+      "sha256": "a00f1ab5710b8c41c7acf531795f454f8e68bbaf27ba07aebb4cbf3ce38802df"
+    },
+    {
+      "path": "dist/assets/stm_icon_map_camp_v1.webp",
+      "sha256": "cb60783cdac5e90910322eff84b41f3e6acf5d0c4adff88c3392c443f307f999"
+    },
+    {
+      "path": "dist/assets/stm_icon_map_elite_v1.webp",
+      "sha256": "0b8dbc89b41a9a2629fba439668e3c1a6f6a2ca4b889e5438224f8abb3267321"
+    },
+    {
+      "path": "dist/assets/stm_icon_map_event_v1.webp",
+      "sha256": "8714828fcd8ac8f8f5f47094e9684837c8bd46dea163d8426bc52ad096ffe57b"
+    },
+    {
+      "path": "dist/assets/stm_icon_map_shop_v1.webp",
+      "sha256": "dce2a912094066aeef416c347c52b78fb025c9e863110ebf07a57d336c97e1a4"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_boss_seal_locked_v1.webp",
+      "sha256": "2a8c4fc07566217d2689af358e891792964a798448074daf02c34220b7abd7a8"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_boss_seal_open_v1.webp",
+      "sha256": "6ba62cfa649e57df1584c855f1f6b3aa849283a115dba8289f93a54e144b4949"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_category_skill_v1.webp",
+      "sha256": "d9803f1bd25a44edc77248dfdc80ef99e38050daec03e86f0bf48374fa5f16f5"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_export_v1.webp",
+      "sha256": "aa9175ce100272ea584a0ae9b149700d8209a2574a17a8cd7e3cd5da462c0860"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_import_v1.webp",
+      "sha256": "b4858ae9e8a4a56ed973f2b9986a9cddca430aec14b3fdf11c1300c22fbb496b"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_intent_attack_block_v1.webp",
+      "sha256": "5dc1675a7287614bde7e1df9f36b5fe9e2c15f1447a06c8045da36169f9e2176"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_save_v1.webp",
+      "sha256": "ffb6fede6cfda0f54405e7173b08ea0e017285d0bc75f3a83cfa4de43a7829e1"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_sound_muted_v1.webp",
+      "sha256": "1ffd2e55d649e406a7f1b1fbac95da280de40f93dbb12a5e1f0db3f991f2d2f8"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_topic_logic_v1.webp",
+      "sha256": "979810abbb442c349074ca90b0d60cfb8caf2d11f65ec38e8f8719496a96d0c9"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_topic_probability_v1.webp",
+      "sha256": "a682d0afc22bb57656efd8d7dd76f81f4bf908117788f2ce2c74bacd351b57a1"
+    },
+    {
+      "path": "dist/assets/stm_icon_proposed_topic_sets_v1.webp",
+      "sha256": "f1d43fce9177950e43a0490019fd0843fc0b1e4233b961f91e7e2200446a4045"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_agility_v1.webp",
+      "sha256": "de8ab706659eadaf0ff71f4741f878d92535518394a4dcc59a8b59c38322340b"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_block_v1.webp",
+      "sha256": "530445e693f08288ce19616d241cad35ae196e4e5ae5f295cdca9c1a22c5d553"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_block_v2.webp",
+      "sha256": "97723db3249b273c5d4e5e2a13e18271e3b0d4114b08fadea0c847386b534ac4"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_defense_v1.webp",
+      "sha256": "df333eea2d8dbcd49d120f432c566f4751a0e5fa516749542ea5d63998819166"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_next_block_v1.webp",
+      "sha256": "dbee288a0266973ef9812a77310f8b8425a401ecf55178614d0646dcf5de1ece"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_next_block_v2.webp",
+      "sha256": "2889a5d91665d214e673f2bd83d838d1331e3ad2b924765881cd130f0dba074a"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_next_draw_v1.webp",
+      "sha256": "51204f9a46ccd371d9ef6a4310dd84df37ea32f0472726a44941d8bd995f5961"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_retain_block_v1.webp",
+      "sha256": "0074c24060c2de129ef957f1da50bc8a958ade05308d10f72cb43c05754a50b6"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_retain_block_v2.webp",
+      "sha256": "b55474faa53d2f782aa9e9871154908d45732ae3719c04a1f2c302bfd3e6a9bf"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_strength_v1.webp",
+      "sha256": "a7ec1f6432d21b26ddeaf234fe22a6f025c7cb0a28815f1a4e86145c8f818875"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_thorns_v1.webp",
+      "sha256": "44dc9d5d5e6d6b1bf3f3ece61b3a33f47c6c05de28c3ad16fd95be120d214916"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_vulnerable_v1.webp",
+      "sha256": "f28f9639af7a590ecb5c21297259f1f21cee7c9858e738db64629c1ca464f74a"
+    },
+    {
+      "path": "dist/assets/stm_icon_status_weak_v1.webp",
+      "sha256": "3cef6e3e6571c6e52b17017ca9c62e24bb9a82827ec4989b578680cc9c932de5"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_crack_shot_v1.webp",
+      "sha256": "018f943d5ffd7e50e8dc7c5dbfc07ba54dc2e8d244775bed8bc487d81f209ac2"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_fate_storm_v1.webp",
+      "sha256": "8488cf796b4f15203ed5a82241c4cea7a74c5d818792ac48f6ffe395e711d198"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_return_strike_v1.webp",
+      "sha256": "86fcf3573db9fc706b471a4a061c363fec4aa4250b3872ad92aa064a0a55d986"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_rune_strike_v1.webp",
+      "sha256": "ff123fd67bad4a36a5e4165283ce8e0bc5a1fc4e13f1c820ab6b11d81d47bc3d"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_rune_sweep_v1.webp",
+      "sha256": "5f768b34bb505bb41e56bbd40a9aaa7dd72b935337ee41b7dca74335b555bc0b"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_scout_strike_v1.webp",
+      "sha256": "1d44a8b35c2f9e7658c1a70034c5fa24424f80cb79c01babdf85fc5ab576307e"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_shield_shot_v1.webp",
+      "sha256": "04e267c28a1143c2fb307b48cbd7a5b3780b79cb1547060c4f0a39182b9eb69b"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_sure_hit_v1.webp",
+      "sha256": "24def97bad5eb878df1318ca274e172e2810c255dc762da55c2526b3692d36ca"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_twin_shot_v1.webp",
+      "sha256": "9d24748620184ad8038063a2fd3ad887e3eda4f2f867e17f4b333d0a1e1fdf3e"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_attack_weak_point_v1.webp",
+      "sha256": "55d63b49a91a310c728952580bc2b8cd19515526c576c1fe79aa86297e59553d"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_burning_pages_v1.webp",
+      "sha256": "2ba983d20089fb98686c84ca258ffe27cfa87f5cdf89a5c207829ebfab8ee751"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_cinder_guard_v1.webp",
+      "sha256": "510b13bd8b5b30d3c32afd4f01d3ce686b8cbb40fe46137168bcf99b460ae91e"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_ember_wall_v1.webp",
+      "sha256": "a594cb02934699118dd37edafff9b56af3aa86fe8e434ef3c33e9781dd81177c"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_flash_ward_v1.webp",
+      "sha256": "e4dc9931f75ed401def22e044cd1fb960713897fccadc6344cb1eedf063c4370"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_foreseen_guard_v1.webp",
+      "sha256": "13e64b009b9e65629f5c77f1bca94ed8607d8aaf9e30deaef1c47cf3409ec51d"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_hold_the_line_v1.webp",
+      "sha256": "54aebea1707762466f1715c3dc04e2a8e944ca5762cc531e9d0fe260a0e00ffd"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_layered_shield_v1.webp",
+      "sha256": "e662d5db1eb6690783dfb8f3ee85d23e53115f1efeeb0545d7376a981cda0d38"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_mana_barrier_v1.webp",
+      "sha256": "302fdca6e90faa144e4f1dd9c33ba73fc70f155e7999ff3c506870c56569b6a1"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_rune_guard_v1.webp",
+      "sha256": "406739a3517fa988f4b18cd103e40f278b91f21c479eac457f9e2c26576694ba"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_defend_tower_shield_v1.webp",
+      "sha256": "b4965125ffac3e76ea4d6e228f8862aacdf2baa03ab350c0e113eda49b07db9f"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_battle_rhythm_v1.webp",
+      "sha256": "62d0cf629d5cfec0d5b0f33e177f52ca1dad9ac57e29ea6a529394926a54dcd1"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_blazing_spirit_v1.webp",
+      "sha256": "00b2ddea1bceaff52839d4cb30eb1587c8d8f9f562d6a2abb0aa9bdd6dd33657"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_clear_mind_v1.webp",
+      "sha256": "581b7b4a91c535f1fc59a8d207424bf36ea7a557f5a75fdd519cac90ecd1ada9"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_ember_core_v1.webp",
+      "sha256": "260dde0355d5969c8407d91e7f01072028920cc1704cda8e30bff9669563e978"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_grimoire_ward_v1.webp",
+      "sha256": "10f73e28d9dc67cd44c645662934bc96a144500fd8c68edc56067a520ce6c6f1"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_growing_flame_v1.webp",
+      "sha256": "b16fcf509a3014885aefa0d6c48b10c01b866aba330d509ac2afe57fecceaa65"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_last_ember_v1.webp",
+      "sha256": "e2d776568789b5f908591ffbb1c5efdaaf53dcf9e62dec422f5a92490ffa642e"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_lasting_shield_v1.webp",
+      "sha256": "3a94e27c474fe4685551709bc2bfba1678bedcfb33707a767f234c99369ea572"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_rune_armor_v1.webp",
+      "sha256": "e20c40a050af1caaf57abc9114134ca22b680d27d25d61b9208c2c9d5b925ace"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_passive_swift_step_v1.webp",
+      "sha256": "ad9b04ab114ecf8e1008b340c6d666cbff841f8fe81dfe06f43bc94784d2af34"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_burning_page_v1.webp",
+      "sha256": "4cf8ef71656ae5ec8fd065d6fc9411cf0e2d4048e436023a15d6c88563e59860"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_card_search_v1.webp",
+      "sha256": "40b185e94409628d7da6ed01d4148979b12817de95b5d72bf40975927e65e640"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_clear_choice_v1.webp",
+      "sha256": "16be62d44af6c31b3e2bb4c9dd90c87365a1b9f5295adb9f71be46cc8efd9fea"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_deep_study_v1.webp",
+      "sha256": "86cd015dd0013232a98202bb6525fc8a587be76434ffff14ac4bc0f16bafea02"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_last_page_v1.webp",
+      "sha256": "e27a8f5024934b0a4f7a428046733ce755bc62d4a73c6ae83669b1418e7981d1"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_mana_reading_v1.webp",
+      "sha256": "945379bda2e04070950eca7b1dcb527910aa3829e0363bdd2a59ea3a5c2191d3"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_next_chapter_v1.webp",
+      "sha256": "6f9f9823d0a8cd8aca3261d84669857d0c2c0b243d8a174f04514dcc69b5fd19"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_quick_study_v1.webp",
+      "sha256": "077a5bdb0c9b67940a8ef0b5fbbe1b188fd76b138a76a6e775df2fc9ad2b04b6"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_read_ahead_v1.webp",
+      "sha256": "47a91f13f729bb6708966283bdb8185de2ee86fb4bfb220a4cea8fc67a86ddac"
+    },
+    {
+      "path": "dist/assets/stm_icon_stm_skill_recall_v1.webp",
+      "sha256": "3afa269a44f6e58e401e3a16f3f0c6b632b31b77a9760b1b0c660fd77b6bb17e"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_arrow_v1.webp",
+      "sha256": "f0bbeb4dd130a880863caa8456b004be968ed31daedc92d9656440d33a0f6717"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_balance_v1.webp",
+      "sha256": "19e9d378a531742eba35dbe0afeefba0a680b0415f9a423c9dca8ceaef43e536"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_bolt_v1.webp",
+      "sha256": "1a1ebc9fab300e3b3ac9ebb399f95c23c4b05f8301fc7af1505501710aea14f7"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_book_v1.webp",
+      "sha256": "3ef8614b6b30fa12f36181807f0b7342ba661c90a58faa6a9d3ac8c6d3e2ebaa"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_cards_v1.webp",
+      "sha256": "7dd03eb6804536a61b9e309bbb3bc43bd5447597b23c9e9cfaf97d1d7e565bf1"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_chance_v1.webp",
+      "sha256": "6806e318656d33f2dce14493c1cc8dcd7e0c5199a5f1bc698ac0147d4dddb71c"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_check_v1.webp",
+      "sha256": "fb740723ddfdeeed7c264ce78290f935bdc5b8907e7530546af81a3ed2a65857"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_clock_v1.webp",
+      "sha256": "231da5922805c3b20358ba22c6825ceff619c3c580a483104a0dd60605a4d731"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_close_v1.webp",
+      "sha256": "720d89b9e611e13ec0d0fc0a89372164e0387d38868ffc0e80306efdaece1f3d"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_coin_v1.webp",
+      "sha256": "64501d8e5aa0ae63606ebaab8880eed2ee1715b16dfef252bbebc7c81b6d0c17"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_crown_v1.webp",
+      "sha256": "9ad08686a88b7210a5a21b44cff767501f25114920562d2214e7d386bfdc7ec2"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_discard_v1.webp",
+      "sha256": "a59c7f4a4a8db0c82dcbd117b4aaf095b5b269e279007d6bdae6d4d1d7edbeef"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_drawpile_v1.webp",
+      "sha256": "dcb26249af000957a96f61102e88e3b22597f2031133f432251dbc6bc612192e"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_elite_v1.webp",
+      "sha256": "e688ff7bf4d5052d0fce5e0ef51c113affd9e2932b007e6b0a7e7f4c3d189d4a"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_exhaust_v1.webp",
+      "sha256": "3c01455ed5ed347218a6b3c066bf65438f424ae617e3b70cb8777e0cb9e67040"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_filter_v1.webp",
+      "sha256": "0da13e908bc0b6d66e438d50bf888c10a717f8e8d2701786af1367b82ce9cad0"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_flame_v1.webp",
+      "sha256": "249f0e903d76060ac29ba6b1ce90d2c985b53681e72d7ea16435e0f9399febe4"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_focus_v1.webp",
+      "sha256": "65020af2398f2ca82297634ecb4a6b7d53ef2efc6dcbc2852b129cd956c6d6aa"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_hand_v1.webp",
+      "sha256": "3b35d461197c437557627bbbb369cd05094722ad6d8fb1fd2a17625fcd4beff9"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_heart_v1.webp",
+      "sha256": "701db82c939c7bc076b8bc178190d02c69a8cd78644b2e0341f483ea007a884a"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_leaf_v1.webp",
+      "sha256": "6095936e3baa66b43e8802029b7285ad006e273bae45aeac82ba78b263cfd038"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_map_v1.webp",
+      "sha256": "ba8915c7b2f494ad19de95c98b7393638584a0d6c4dd7879c20850b32b8e2fcb"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_moon_v1.webp",
+      "sha256": "2bb1262750595186cf72adf7b5530d733832822fd49a06c24a94964d818b580c"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_orb_v1.webp",
+      "sha256": "270c6e094b447aba582b4427a46be69863476bd5d79b94a26afd604740d207bd"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_predict_v1.webp",
+      "sha256": "9ac9e0e881f83eedf9dbc08dec3d1b3ad5a44806dc16ef2d280383282c9fbdfb"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_search_v1.webp",
+      "sha256": "76a7d15651500bc9155fc36f5f9cf2ea648ca739799c15fade337e385d8892ab"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_settings_v1.webp",
+      "sha256": "e59644502991d7afe357a43e8957ba10865a6aebd1a42ced8eb1cc7cb3e3cb86"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_shield_v1.webp",
+      "sha256": "54ff61b538f22d1726413dec8b0d3fc996f7852f6f88e4b57f5966749a7bcb86"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_star_v1.webp",
+      "sha256": "f527f6166c1349dd90a061e847239ab58ab2cdb9d5e011943a762818151243f8"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_sword_v1.webp",
+      "sha256": "9143f9c5776e694e8841a39dd402ee6d4cc0b80ac441a472c45b95dada8d0947"
+    },
+    {
+      "path": "dist/assets/stm_icon_ui_volume_v1.webp",
+      "sha256": "358f7ba41288c7fcbbe102abeec61bd53064b4d6a3644118b14841c188745f35"
+    },
+    {
+      "path": "dist/assets/tower.svg",
+      "sha256": "578e5a9a81a0b3428336bdfade305078cdd1806b3283ba2389edd772ae84a2a9"
+    },
+    {
+      "path": "dist/assets/tutorial-boss.webp",
+      "sha256": "e81c0401799e8079bf8b2c7243dfc043cc718bbf91a8252a6d5c24951a4ece71"
+    },
+    {
+      "path": "dist/assets/tutorial-cards.webp",
+      "sha256": "e9e1cc0cb8e2b1fddd4e41a8b8f4279159c2e136d2a3b9af901bdbe6bcb89519"
+    },
+    {
+      "path": "dist/assets/tutorial-combat.webp",
+      "sha256": "334646666bc19510c587e963d7dea0ff43f3fbcaa5bd7fda51f339e6312a380b"
+    },
+    {
+      "path": "dist/assets/tutorial-focus.webp",
+      "sha256": "c52866b72c608c4fb33580cee71d4c9202f9b023f403f3b666372b8daec0b5bc"
+    },
+    {
+      "path": "dist/assets/tutorial-learning.webp",
+      "sha256": "f0884a169e65c062865489b4a4bf98d698dc86e590ec05eec0cd7c4821d6dc09"
+    },
+    {
+      "path": "dist/assets/tutorial-map.webp",
+      "sha256": "b830a2314e6a588b2990482cdb927251a6eb5a1d2d3d38d276f8a5597ab30d43"
+    },
+    {
+      "path": "dist/assets/tutorial-master.webp",
+      "sha256": "8433dcc245b629c81e92adc4afd0fa46860c550fa65add4203255fb6aca3cd16"
+    },
+    {
+      "path": "dist/assets/tutorial-menu.webp",
+      "sha256": "1fa71d984d6a015827ab093bce4daae7a7a3948de13277191a62b39ac852ccea"
+    },
+    {
+      "path": "dist/assets/tutorial-mystery.webp",
+      "sha256": "1fc76b21e865c27a14d4dd7df2c555c4b9c2a77813ab492dffdc8c0b7827c6a9"
+    },
+    {
+      "path": "dist/assets/tutorial-passive.webp",
+      "sha256": "4fba8aea02eda3e21d959bac4989e22675baf19ad5188776b72d39de1cf2476d"
+    },
+    {
+      "path": "dist/assets/tutorial-predict.webp",
+      "sha256": "af89b40747037ae6977636d41f7f67b1d9d175fadf8ccead7c91f20fa09f8425"
+    },
+    {
+      "path": "dist/assets/tutorial-rest.webp",
+      "sha256": "2f6a21fbefaebc37194bd66af42d0ebe7c0b7c3ea2b97eb44d909331c2aadff3"
+    },
+    {
+      "path": "dist/assets/tutorial-results.webp",
+      "sha256": "07cb30890292b5caf00b67acad07bcebcfcd3a3b2dfc16471ac3153e86c32953"
+    },
+    {
+      "path": "dist/assets/tutorial-rewards.webp",
+      "sha256": "5d0f805638e699ebad6842758866efb70993aa2a637302af977416cd815dc3ca"
+    },
+    {
+      "path": "dist/assets/tutorial-settings.webp",
+      "sha256": "d5963a6eda3c5f44b8775d2a12ff194f0c4012950450ca763643c492c85a387a"
+    },
+    {
+      "path": "dist/assets/tutorial-shop.webp",
+      "sha256": "2057c958d5f1bad25f7ae98a5df9bfe9378677b16c7a8d816439f3618352e14e"
+    },
+    {
+      "path": "dist/assets/ui-card_collection.webp",
+      "sha256": "65538f46244c04d04a899fbb326a9cbe4a12a30f8a79086283032368e1824df7"
+    },
+    {
+      "path": "dist/assets/ui-close.webp",
+      "sha256": "72dbb2f208eeb8fb7f8c07a071c1cb67afeb7f93ee9f5fe3016f2d6bf6c25f70"
+    },
+    {
+      "path": "dist/assets/ui-discard.webp",
+      "sha256": "6076aee0b8a70db2ab0da2b10ee0f4bd666d67e9b964a1169895e4872f2dac8c"
+    },
+    {
+      "path": "dist/assets/ui-draw_pile.webp",
+      "sha256": "55964a927b58d6d59c18063a73c3529b1aa75a8a89011637121977057982836e"
+    },
+    {
+      "path": "dist/assets/ui-energy.webp",
+      "sha256": "5d61ec303029ea0b3b934788fb9f6e28e9ce1f47729c46631979aab316eccbd6"
+    },
+    {
+      "path": "dist/assets/ui-exhaust.webp",
+      "sha256": "531b99ba23ecc9e6eacb7526f8c83fbdfb41c615b9dbf0fdc32290f846e1ff02"
+    },
+    {
+      "path": "dist/assets/ui-focus.webp",
+      "sha256": "c5fc2e7f7aa8936829f6a2ef5a597edba8f23180d4063e3f348d3322dc934c3e"
+    },
+    {
+      "path": "dist/assets/ui-health.webp",
+      "sha256": "01e3d4bd4780b3e68b641ba550a8406034fe79e8b18de56fc6f2be3f4e046865"
+    },
+    {
+      "path": "dist/assets/ui-money.webp",
+      "sha256": "f11ad5d93a99d863f2c8faaf9136ace40a2a5a9b7a9a6cca69d6079f33e8fe62"
+    },
+    {
+      "path": "dist/assets/ui-on_hand.webp",
+      "sha256": "00c641d605d77647becd1c1c618d772bcdd964c780c47852654f09f37726f9ef"
+    },
+    {
+      "path": "dist/assets/ui-predict.png",
+      "sha256": "ecca4394ebc2657237a25773afcf2612292d2451a36c80941b2e5f4ff2ec6ba6"
+    },
+    {
+      "path": "dist/assets/ui-settings.webp",
+      "sha256": "ce04b759cff206429b42a67e339caff56d6397208d8a30986851afda3623f1be"
+    },
+    {
+      "path": "dist/assets/ui-sound.webp",
+      "sha256": "db3932315b43fa14eba706e74838ee1b50a02f834e15fd7f3347d20a9c5cdc32"
+    },
+    {
+      "path": "dist/assets/ui-tutorial.webp",
+      "sha256": "890e5be0e705e2fd7549a5bd18bb2c0ee0d7f15fa8b9c3a81dd46964166084e5"
+    },
+    {
+      "path": "dist/assets/voice/dungeon_master/meet_01.mp3",
+      "sha256": "1a094eb469ea0dbfc5094a968880fc6c66f2f994c9c0658a09f701f227e6eeb2"
+    },
+    {
+      "path": "dist/assets/voice/dungeon_master/meet_02.mp3",
+      "sha256": "edab46421f92fa657a952d4632f3ccd7516b2f3baaad73f80e9f9079cc2c68d8"
+    },
+    {
+      "path": "dist/assets/voice/dungeon_master/meet_03.mp3",
+      "sha256": "476d847e8bca0e93af24ae2f13fdc15d1b3c4a9fe1b9d62d0c0712a0efe1f885"
+    },
+    {
+      "path": "dist/assets/voice/dungeon_master/meet_04.mp3",
+      "sha256": "f4e14039417c3247e415011e84af3bc033db48cc4767a368ef7fed5fa241920c"
+    },
+    {
+      "path": "dist/assets/voice/merchant/meet_01.mp3",
+      "sha256": "fdbda526fc3ed6d924e65433c78a4fa6fc1057ee60f3941f953803086f320dc9"
+    },
+    {
+      "path": "dist/assets/voice/merchant/meet_02.mp3",
+      "sha256": "8a2c292cab15b2add800b64e9d73c9a3dd108727e82c97094143f5a40f0a4dea"
+    },
+    {
+      "path": "dist/assets/voice/merchant/meet_03.mp3",
+      "sha256": "61e1e34fc39176960253ed014ce4a9b740784ba71b123338e050cb2dd5bccf6b"
+    },
+    {
+      "path": "dist/assets/wisp.svg",
+      "sha256": "828e993f010fa583b17869fcc6a46b659aa725f700014adc54e10b9b56491b53"
+    },
+    {
+      "path": "dist/audio-presentation.js",
+      "sha256": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777"
+    },
+    {
+      "path": "dist/audio.js",
+      "sha256": "a5c60c8e4cf4baf66851bbac7c9e7204468fafb8e9c1c181ced40e6656f7fcf0"
+    },
+    {
+      "path": "dist/balance-config.js",
+      "sha256": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22"
+    },
+    {
+      "path": "dist/balance-data.js",
+      "sha256": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d"
+    },
+    {
+      "path": "dist/balance.js",
+      "sha256": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f"
+    },
+    {
+      "path": "dist/boot.css",
+      "sha256": "8ce0b3215f81b6eae17417329336b7d2cdc5e060891bdd6519c32e08c47852a9"
+    },
+    {
+      "path": "dist/bootstrap.js",
+      "sha256": "39e591b667535c53a5757428c93878305c614a0e8acd62ba1900148742fafac8"
+    },
+    {
+      "path": "dist/card-assets.js",
+      "sha256": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528"
+    },
+    {
+      "path": "dist/card-combat.js",
+      "sha256": "58e94628c12cadfe29eef0eada0c8626fb92f47644abf6569d4a9045c2623cec"
+    },
+    {
+      "path": "dist/card-data.js",
+      "sha256": "b0a59ae12fa10e407ed9f6048cdbb2b64a04aba778e1bbb7b7af8f8eba9e8f7c"
+    },
+    {
+      "path": "dist/card-flow.js",
+      "sha256": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb"
+    },
+    {
+      "path": "dist/card-kit.js",
+      "sha256": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12"
+    },
+    {
+      "path": "dist/card-motion.css",
+      "sha256": "5103374cd9ee1c5e7844f76d1a7e941b1ec5a99960d81830bdcc466857b49603"
+    },
+    {
+      "path": "dist/card-motion.js",
+      "sha256": "439970ffbc28b2a0b339332d3bf4677e59a3282cee900976065a777fb5760af4"
+    },
+    {
+      "path": "dist/card-ui.js",
+      "sha256": "0e3f4d3520c5d2b1e8ac614f336e4a7af9db2a9e90142e20813f1d723f9e2d9a"
+    },
+    {
+      "path": "dist/cards.css",
+      "sha256": "983579dd64d3737e62291c882f187a42f563ec483ed24f568b53da13d4b9cb68"
+    },
+    {
+      "path": "dist/combat-compact.css",
+      "sha256": "1a3b4cb712415ab5dd7fb7147f27d7dabaf6ab3f2b482af2064262bb5489f758"
+    },
+    {
+      "path": "dist/combat-log.js",
+      "sha256": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9"
+    },
+    {
+      "path": "dist/combat-predict.js",
+      "sha256": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a"
+    },
+    {
+      "path": "dist/combat-status.js",
+      "sha256": "20a4e7979596cc6370cd35367bcfee0d91521c480d877f0b5f4008d493983353"
+    },
+    {
+      "path": "dist/combat-vfx-orbits.js",
+      "sha256": "bc9a78cac142543235205b18e01a96a31b0dbacd55e1be330270032eaf9ab110"
+    },
+    {
+      "path": "dist/combat-vfx-passive.js",
+      "sha256": "d5e485d99a65e189412ad933e1800b835d68fdf556cdc8810ea787cc076d91da"
+    },
+    {
+      "path": "dist/combat-vfx-shield.js",
+      "sha256": "4d71a8f6dc33c86e523d148ea8145140cdd49aae06707ea5c74b238a02e24b6f"
+    },
+    {
+      "path": "dist/combat-vfx.css",
+      "sha256": "6784bcefcd727397f93bb4bb0903271ea2f18886da47068fbceff9c655e877d5"
+    },
+    {
+      "path": "dist/combat-vfx.js",
+      "sha256": "0e0b140727c80b98ac2b650b85f3cad1e5a03c6d804608347fd35da867735f07"
+    },
+    {
+      "path": "dist/combat.css",
+      "sha256": "860b7e946ecc4f2d7a686671ff319d6a290d0ef6b4b6479f6bf94a66ab05862f"
+    },
+    {
+      "path": "dist/config.js",
+      "sha256": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74"
+    },
+    {
+      "path": "dist/crimson.css",
+      "sha256": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335"
+    },
+    {
+      "path": "dist/dom-patch.js",
+      "sha256": "e724bf3ba21b0c8d9f65a03f6c4f2d846ee1441af8896fed9259d017fe986937"
+    },
+    {
+      "path": "dist/dungeon-2-3.css",
+      "sha256": "ce7aed65f6d0a5f9f16063b3d0b6b76440da2f152b84258016db41fb0cdb10cc"
+    },
+    {
+      "path": "dist/dungeon.css",
+      "sha256": "e303c1a5a6be561ef78c5962d56f2b25db612032cfce4c5ab14d19bbf9abd543"
+    },
+    {
+      "path": "dist/economy-data.js",
+      "sha256": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102"
+    },
+    {
+      "path": "dist/economy.js",
+      "sha256": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d"
+    },
+    {
+      "path": "dist/education-practice.css",
+      "sha256": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609"
+    },
+    {
+      "path": "dist/education-practice.js",
+      "sha256": "511c34cea2b5b900a6dfe034159f23af6ab0f430247dc3f27260ccb33828d88c"
+    },
+    {
+      "path": "dist/education.css",
+      "sha256": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec"
+    },
+    {
+      "path": "dist/education.js",
+      "sha256": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed"
+    },
+    {
+      "path": "dist/engine.js",
+      "sha256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc"
+    },
+    {
+      "path": "dist/game-language.js",
+      "sha256": "c46a62b7a01693472772718dd171b39e59ce470421202d612710febd8082a561"
+    },
+    {
+      "path": "dist/hand.css",
+      "sha256": "cd52cf1c7c42978b56ae978bdec07aa04c1dce2243ee47503ae80ca8f310d476"
+    },
+    {
+      "path": "dist/hand.js",
+      "sha256": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2"
+    },
+    {
+      "path": "dist/icon-assets.js",
+      "sha256": "0b97b47759ff7dbaf556174bbec8b68f632ba6ca34520a891c30eaacfd7ed28a"
+    },
+    {
+      "path": "dist/icon-clarity.css",
+      "sha256": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd"
+    },
+    {
+      "path": "dist/icon-package.css",
+      "sha256": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f"
+    },
+    {
+      "path": "dist/icon-readiness.js",
+      "sha256": "418ccc860df0d51f4b81600cdb1fc1228fa773d56afc1d8eb0e076be6205e285"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "24450e9f96694742b4a40e767a2be306221ee4a0ff1a31b85951242ca697d2b7"
+    },
+    {
+      "path": "dist/input-guard.css",
+      "sha256": "95ed26e45472e41d41107f9504ee14249a1385207c428e69e9d18ea416300048"
+    },
+    {
+      "path": "dist/input-guard.js",
+      "sha256": "eae325489eeecc73c1dbd939c44beda6d2b58a9aa0eb66a9cade2c1c15ecae08"
+    },
+    {
+      "path": "dist/journey.css",
+      "sha256": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf"
+    },
+    {
+      "path": "dist/learning-analytics.js",
+      "sha256": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812"
+    },
+    {
+      "path": "dist/learning-collection-config.js",
+      "sha256": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2"
+    },
+    {
+      "path": "dist/learning-curriculum.js",
+      "sha256": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047"
+    },
+    {
+      "path": "dist/learning-delivery.js",
+      "sha256": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275"
+    },
+    {
+      "path": "dist/learning-google.js",
+      "sha256": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf"
+    },
+    {
+      "path": "dist/learning-sync.js",
+      "sha256": "138d78a2c818dc46b02f59ba0b6d65abe68e3f0a58c2a40510061577e35f53fc"
+    },
+    {
+      "path": "dist/map-rng.js",
+      "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c"
+    },
+    {
+      "path": "dist/map.css",
+      "sha256": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0"
+    },
+    {
+      "path": "dist/map.js",
+      "sha256": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09"
+    },
+    {
+      "path": "dist/math.js",
+      "sha256": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9"
+    },
+    {
+      "path": "dist/mechanics-host.css",
+      "sha256": "138a24eaffb062b7c82eac66457c72ffdadbc817be26c88e58b001e52c84c2a7"
+    },
+    {
+      "path": "dist/mechanics-host.js",
+      "sha256": "a73ce88b6b8c97ea8e2426d1afe4bbadb69c08eb3d287d72a2993ff22ac55f80"
+    },
+    {
+      "path": "dist/mechanics-source.css",
+      "sha256": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6"
+    },
+    {
+      "path": "dist/mechanics.js",
+      "sha256": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907"
+    },
+    {
+      "path": "dist/music-data.js",
+      "sha256": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3"
+    },
+    {
+      "path": "dist/music.css",
+      "sha256": "969fed6d068de80695aab6866031fed020adcdc3e0ff4f0df54d1337e500d92c"
+    },
+    {
+      "path": "dist/mystery-data.js",
+      "sha256": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b"
+    },
+    {
+      "path": "dist/mystery-ui.js",
+      "sha256": "a5b9eed608ff4f5afeaf4ad5fa05afae37e9c20c20bdf55129accdfca03719f8"
+    },
+    {
+      "path": "dist/mystery.css",
+      "sha256": "ac1fe38ebd6ac50cc7c1cbdf08602a7f383ba7c90354dfeae66e6418ee213c61"
+    },
+    {
+      "path": "dist/mystery.js",
+      "sha256": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec"
+    },
+    {
+      "path": "dist/passive-music.css",
+      "sha256": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1"
+    },
+    {
+      "path": "dist/question-data.js",
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+    },
+    {
+      "path": "dist/question-feedback.js",
+      "sha256": "84b8b99361124851a0e2ccd2b75699142055c598e92de0f74990b457ec247809"
+    },
+    {
+      "path": "dist/question-language.js",
+      "sha256": "750f0c85df6263006b2fc0f9da96626a6aa9bd9604e14107ecc6264d5d571b06"
+    },
+    {
+      "path": "dist/question-report.css",
+      "sha256": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796"
+    },
+    {
+      "path": "dist/question-report.js",
+      "sha256": "693311453cc89af0cbd0be19d06279d67c880141e7f1a159b839cd5b925e973e"
+    },
+    {
+      "path": "dist/release.js",
+      "sha256": "806dcdec7234f3b3ae2b99e916559961c7f006b3ad64d6861c828f5838287d76"
+    },
+    {
+      "path": "dist/rich-text-data.js",
+      "sha256": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df"
+    },
+    {
+      "path": "dist/rich-text.css",
+      "sha256": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610"
+    },
+    {
+      "path": "dist/rich-text.js",
+      "sha256": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226"
+    },
+    {
+      "path": "dist/scene.css",
+      "sha256": "1e865966d0bc0601d47767a7b7cdda79729dc9b93b6e306a37da9b389bbdb8f7"
+    },
+    {
+      "path": "dist/shop.css",
+      "sha256": "bb7f039dfff9fa10ff1270ea1bf8f8822134ea49dac91c1aedc1acb7e6119ee2"
+    },
+    {
+      "path": "dist/status-vfx.css",
+      "sha256": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee"
+    },
+    {
+      "path": "dist/status-vfx.js",
+      "sha256": "174318ecc1f077c7eb22d3ecf7f4a7ad42f5cbb83631da99b796627058496009"
+    },
+    {
+      "path": "dist/style.css",
+      "sha256": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292"
+    },
+    {
+      "path": "dist/sw.js",
+      "sha256": "95c9bc9fb8d27731e6e9818bd12fe574269647635b9216601e1a5bd54a2f5667"
+    },
+    {
+      "path": "dist/tutorial-core.js",
+      "sha256": "177f18c30942ea8885084e3a3c6eea7e3b811708e7118f825381cd9b507ab3bc"
+    },
+    {
+      "path": "dist/tutorial-data.js",
+      "sha256": "537460decb20a65b1f7df589b5b09d2c82c813e72edd251992d910b1e9430602"
+    },
+    {
+      "path": "dist/tutorial.css",
+      "sha256": "e8bec001a3d6c2b24baf9d01ed83ab59b1bba875f0c3adbf2ebf1cd399c2d7db"
+    },
+    {
+      "path": "dist/tutorial.js",
+      "sha256": "bbbee7bef6a961f3df53f724693815f37279cfc04541c7245e0bef5d4d79caf6"
+    },
+    {
+      "path": "dist/visuals.js",
+      "sha256": "0be6597746e629a7849043a7f276f64b50dee0eb77fca4470fcb3404bdff5a92"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/harmonization/HARMONIZATION_REPORT.md",
+      "sha256": "d99a2000dc298a1cf27e97eb56d8e6a6563dbcb7d66caa1e7f004a1dc8c31dca"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/harmonization/SOURCE_DISCREPANCIES.md",
+      "sha256": "bc0e7375dfc1fe81e266635582a8322f584f8f278c03bd6d2ffb8817fd8ef025"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/harmonization/TEACHING_TERMS.md",
+      "sha256": "2a74d55a963e5eafd4bcfea154bd916443faaad807cf74964f5170ee631534d9"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/harmonization/source-registry.json",
+      "sha256": "5f9c8a3f8e817d9b0f61aab163d4442e95d260ec90afe1438b5b7592e4841907"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/integration/index.mjs",
+      "sha256": "e7de461cdab2df0ef10c779e7eebeb7189b07fb3e6c3d087a5c9ffcb4f0d1a47"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/analytics-practice.css",
+      "sha256": "b0b3f4e852162aaf5dbfc7af5e3c0aa4af5b7a584b812aa00fe0badcb53e6750"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/foundations.json",
+      "sha256": "e7c0f903c4654a3dbfe08d0ed8e8bfdd0d40fb84124e171e0c5fc71df4bbfb67"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/learning.css",
+      "sha256": "462d97a1fdfd47f31f88efcefd282de0e8275b3f6ea1a2d74f7d0e0e89e9c06a"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/practice-workspace.css",
+      "sha256": "cbf079861978f8382a699055fe9d2925f824e67d981453ca7f912ea3109dd902"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/preview.css",
+      "sha256": "fe7b5fa1d9b5f69d29c6209b1d2d05aa3ba9b1a141cedeeca3401b68a66e9bac"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/preview.html",
+      "sha256": "393c9356542eae3bf84afd2074b0e26b260bb30caa6b2d1bc978740fc17b1f6e"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/preview.mjs",
+      "sha256": "fff07e7812943019ad6eddf1be7891bd296d6611f3e7497f1d2d5659172a3e05"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback-ui.mjs",
+      "sha256": "4ba2c7d641d00eddd4b577a2fb1ba1afb33915c12b812a8183f3ef1e2ebf9019"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback.css",
+      "sha256": "c5be240859aca13bcae7316a670ccb4b2aa523ac05e03d70137f0f4afb86b95a"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback.mjs",
+      "sha256": "35f968f05a6f4f5bba696b80b7489d836248b2350f38fa35ba150aa915b20edb"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/session.mjs",
+      "sha256": "7a35c3dd4d26fc796b97f5e6f221d56bec5b099c2b9bf1e28618120e51b28e07"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/support-visual.mjs",
+      "sha256": "06f9f5a826fc8c4fe66c615a23f7834f2dc8ba66517bd15d17ec21563f01076f"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/visual-renderer.mjs",
+      "sha256": "acf63116a41621f04469643a8d3614bc307bbcdf447848a4ab73b8aedefa1ba1"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/localization/interface.ms.json",
+      "sha256": "67a4366d5309e816ab9d5b714043b7abbcb07cf84b4aca0f571d17c6468b7c02"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/localization/logic.ms.json",
+      "sha256": "66d9052ad0cad6a7deb3e945ef10eceeefbb67b10b4d961cc2d97d98ada3f0d8"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/localization/prob.ms.json",
+      "sha256": "571b132c308b8bef10974125d6d86e3e22c3495824c2e15bb76f61fac8d021c4"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/localization/runtime.mjs",
+      "sha256": "44bac923956270117f7e12ccdcfa60fade48e0f3b2740853609191465e9a11f7"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/localization/set.ms.json",
+      "sha256": "44791197c5dd6238644f74bbaea111551281bef2a60e6e508076ff68d4a14871"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/localization/support.ms.json",
+      "sha256": "4d2c71f7fd35bc3d0ba7086eaf7a35f6342a4472eb3367b8f35b214eaa93bb66"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/more-hint-state.mjs",
+      "sha256": "1a1f50ab3fad250e9d21c37eae381d0fa84ade0369dfa3c1cbbb670f7b50b82c"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/question-bank-form4-120.json",
+      "sha256": "7c674b850ba38e40a6108213a8eb28d0f33c72bb65070cb7dcd3ff3ee69fa00d"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/rich_text/glossary.json",
+      "sha256": "064c5d85d8fbf16f67f4f9fcc3fb121715ac5f510b0a14e15f774c4dd63fe6b4"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/rich_text/renderer.css",
+      "sha256": "7f24d77f44b37f413b25fe7b3d16d056d3c0d7cbca3b003842e91ddc46923454"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/rich_text/renderer.mjs",
+      "sha256": "f88195e427b391a37181908f560113302f132e2e23d014c382a6a42b404136a1"
+    },
+    {
+      "path": "package.json",
+      "sha256": "8f06762ccd7f6c9385a334d477f3cab9307476838762cfd76e1c4d146eaebbca"
+    },
+    {
+      "path": "tools/analytics/collector.cjs",
+      "sha256": "41e69224c87d5946ffee47b02dd347c7e3eb426594843ed87bb6d4bce30490d3"
+    },
+    {
+      "path": "tools/build-education-practice.cjs",
+      "sha256": "e502fcdcbd015bf84ebcdc4a75760ed206d446fcb8250bc18af39990ee91ecae"
+    },
+    {
+      "path": "tools/build-question-feedback.cjs",
+      "sha256": "d68f9c1ada5c4c5071d48f024ef4a95b17c9c5cbb0a195b1d3ec5a01445fd0eb"
+    },
+    {
+      "path": "tools/dev/collection.js",
+      "sha256": "283e15fa4488797c4a39e20b6b6d69194a350fbf2f869f2b153e01fb7a3eaf49"
+    },
+    {
+      "path": "tools/google-sheets/receiver.gs",
+      "sha256": "3620103b4fd1ad7bde26b2d051e8a3e75c250e61a62f4f3144c2cbd15a687ccd"
+    }
+  ]
+}

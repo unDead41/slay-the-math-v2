@@ -1,5 +1,12 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-EDUCATION-DELIVERY — Current audit follow-up
+
+- **DISAHKAN:** Ijamm requests implementing the feasible relevant recommendations and updating the assistant branch. Publish only `codex/education-delivery-reliability`; no main update or live Google deployment.
+- **DITERUSKAN:** capped continuing retry with page/consent lifecycle, truthful shared BM/English report delivery messages and Sharing navigation, optional actual game/content provenance with legacy preservation, private appended Sheet diagnostics and the existing Pages origin.
+- **PERLU_VERIFIKASI:** actual owner `/exec` configuration, deployment/Sheet receipt and physical pupil/device understanding. Never fabricate a URL or stamp old reports with current versions.
+- Owner: [SOR13](13_TECH_ARCHITECTURE_DATA.md), [audit](../audits/education-delivery-reliability/LATEST.md).
+
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
 - **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.

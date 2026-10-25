@@ -711,3 +711,8 @@ Review follow-up for2.42.0-balance.1: canonical ME08 queued buffs, explicit gros
 - Publish the reviewed balance/master refresh after explicit user authorization. Preserve main2.41 startup/resource handling, current cards/profiles, saves, education, original art/audio and Settings-only Dev access.
 - Integrate canonical quotes/gross Gold, explicit Master map diagnostics, actual-cost artifact choices, frozen Mystery/transform decisions and canonical queued buffs.
 - Promote prerelease2.42.0-balance.1 to release2.42.0 with generated launchers/cache metadata. Preserve original measurement/source labels; record fresh merged-tree validation in [the main release](../balance/master/MAIN_RELEASE_2_42_0.md).
+
+
+## 25 October 2026 — Education delivery follow-up branch
+
+Record the authorized retry/report/provenance improvements on main2.45.0; keep main untouched and the Google destination owner-configured. See DEC-20261025-EDUCATION-DELIVERY, SOR13 and the [scoped audit](../audits/education-delivery-reliability/LATEST.md). No numerical or educational-content rule changes.

@@ -1,8 +1,8 @@
 /** Accessible comments; sharing and JSON recovery use the common Learning Report. */
 export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,onChange=()=>{},onUpdate=()=>{},getDelivery=()=>null,onOpenSharing=()=>{}}){
- const node=id=>document.getElementById(id),feedbackOrigin=window.origin||location.origin;let disk=null;
+ const node=id=>document.getElementById(id),feedbackOrigin=window.origin||location.origin,queueErrors=new Set();let disk=null;
  try{disk=globalThis.localStorage;}catch{}
- const store=createQuestionFeedbackStore({storage:disk,bankVersion:bank.bankVersion,questionIds:bank.questions.map(q=>q.id)});
+ const gameVersion=globalThis.DCRelease?.version,store=createQuestionFeedbackStore({storage:disk,bankVersion:bank.bankVersion,questionIds:bank.questions.map(q=>q.id),...(gameVersion&&bank.contentRevision?{provenance:{gameVersion,contentRevision:bank.contentRevision}}:{})});
  let renderedId=null,exitReturnFocus=null,closingForGame=false;
  const form=node('question-feedback-form'),text=node('feedback-comment'),dialog=node('feedback-exit-dialog');
  for(const category of QUESTION_FEEDBACK_CATEGORIES){
@@ -14,16 +14,9 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
  function deliveryCopy(english,malay){return globalThis.DCQuestionLanguage?.language()==='ms'?malay:english;}
  function deliveryText(){
   if(store.error)return store.error;
-  const status=getDelivery();
-  if(status?.dev)return deliveryCopy('Your comments stay in this temporary developer session. Collection is disabled.','Komen anda kekal dalam sesi pembangun sementara ini. Pengumpulan dinyahaktifkan.');
-  if(!status?.enabled)return status?.lastReceivedAt?deliveryCopy('Sharing is off. Your current comments are saved on this device. The collector previously acknowledged shared records.','Perkongsian dijeda. Komen semasa anda disimpan pada peranti ini. Pelayan pernah mengesahkan penerimaan rekod yang dikongsi.'):deliveryCopy('Your comments are saved on this device. Sharing is off. Open Sharing settings to choose whether to send them.','Komen anda disimpan pada peranti ini. Perkongsian dijeda. Buka Tetapan perkongsian untuk memilih sama ada mahu menghantarnya.');
-  if(status.error)return deliveryCopy('Your comments stay here. Open Sharing settings to retry or download a backup.','Komen anda kekal di sini. Buka Tetapan perkongsian untuk mencuba lagi atau memuat turun sandaran.');
-  if(status.state==='received'&&status.pending===0&&status.lastReceivedAt)return deliveryCopy('The collector acknowledged the latest queued learning records and comments. Your comments are also kept on this device.','Pelayan telah mengesahkan penerimaan rekod pembelajaran dan komen terkini dalam giliran. Komen anda juga disimpan pada peranti ini.');
-  if(status.state==='sending')return deliveryCopy('Sending queued records and comments. They remain on this device while we wait for the collector to acknowledge them.','Rekod dan komen sedang dihantar. Semuanya kekal pada peranti ini sementara menunggu pengesahan penerimaan pelayan.');
-  if(status.state==='offline')return deliveryCopy('Your comments are saved on this device. Sharing is enabled; queued records and comments are waiting for a connection. Keep the game open or reopen it to retry.','Komen anda disimpan pada peranti ini. Perkongsian aktif; rekod dan komen menunggu sambungan. Biarkan permainan terbuka atau buka semula untuk mencuba lagi.');
-  if(status.state==='unavailable')return deliveryCopy('Your comments are saved on this device. The collector is unavailable; queued records and comments have not been acknowledged. Keep the game open or reopen it to retry.','Komen anda disimpan pada peranti ini. Pelayan tidak tersedia; penerimaan rekod dan komen belum disahkan. Biarkan permainan terbuka atau buka semula untuk mencuba lagi.');
-  return deliveryCopy('Your comments are saved on this device. Sharing is enabled; queued records and comments are waiting for the collector. Keep the game open or reopen it to retry.','Komen anda disimpan pada peranti ini. Perkongsian aktif; rekod dan komen menunggu pelayan. Biarkan permainan terbuka atau buka semula untuk mencuba lagi.');
+  return questionFeedbackDeliveryText({...getDelivery(),queueError:queueErrors.size>0},globalThis.DCQuestionLanguage?.language()||'en');
  }
+ function publish(entry){const result=onChange(entry);if(result==null||result.error||result.entry===null)queueErrors.add(entry.id);else queueErrors.delete(entry.id);return result;}
  function controls(){
   const entries=store.list().filter(e=>e.bankVersion===bank.bankVersion),count=entries.filter(e=>e.comment||e.categories.length).length,reviewed=entries.filter(e=>e.reviewed).length;
   node('feedback-count').textContent=deliveryCopy(count+' '+(count===1?'question has':'questions have')+' feedback · '+reviewed+' / '+bank.questions.length+' reviewed',count+' soalan mempunyai maklum balas · '+reviewed+' / '+bank.questions.length+' disemak');
@@ -56,9 +49,10 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
    const reviewed=node('feedback-reviewed').checked,unchanged=previous&&previous.reviewed===reviewed&&previous.comment===text.value.trim()&&JSON.stringify(previous.categories)===JSON.stringify(categories)&&(!explicit||JSON.stringify(previous.context)===JSON.stringify(context));
    if(!unchanged){
     const saved=store.save(question,categories,text.value,context,{reviewed});
-    if(saved)onChange(saved);
-    else if(previous)onChange({id:previous.id,questionId:question.id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
+    if(saved)publish(saved);
+    else if(previous)publish({id:previous.id,questionId:question.id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
    }
+   else if(explicit&&previous&&queueErrors.has(previous.id))publish(previous);
    announce(store.error?deliveryCopy('Comment kept for this open page. Open Sharing settings to download a backup.','Komen dikekalkan pada halaman terbuka ini. Buka Tetapan perkongsian untuk memuat turun sandaran.'):reviewed||categories.length||text.value.trim()?deliveryCopy('Saved on this device. Open Sharing settings to choose whether to send it.','Disimpan pada peranti ini. Buka Tetapan perkongsian untuk memilih sama ada mahu menghantarnya.'):'This question has no comment.');
    controls();onUpdate();return true;
   }catch(e){announce(e.message);return false;}
@@ -96,13 +90,13 @@ export function attachQuestionFeedback({bank,root,getQuestion,getRecord,getMode,
  });
  window.addEventListener('pagehide',()=>store.flush());
  // A reopened folio resumes delivery of saved comments without needing an edit.
- for(const comment of store.list())onChange(comment);
+ for(const comment of store.list())publish(comment);
  function setReviewed(id,value){
   const current=id===getQuestion().id,question=current?getQuestion():bank.questions.find(q=>q.id===id);if(!question)return;
   store.flush();const previous=store.get(id),record=current?getRecord():null;
   const context=current?{mode:getMode(),language:globalThis.DCQuestionLanguage?.language()||'en',status:record?.status||'pending',...questionFeedbackSupport(record)}:undefined;
   const saved=store.setReviewed(question,value,context);
-  if(saved)onChange(saved);else if(previous)onChange({id:previous.id,questionId:id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
+  if(saved)publish(saved);else if(previous)publish({id:previous.id,questionId:id,bankVersion:bank.bankVersion,deleted:true,updatedAt:new Date().toISOString()});
   if(current){renderedId=null;render();}else controls();onUpdate();
  }
  return {render,requestExit,setReviewed,get:id=>store.get(id),list:()=>store.list(),refreshDelivery:controls,exportData:()=>store.exportData(),get error(){return store.error;}};

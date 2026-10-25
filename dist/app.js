@@ -49,7 +49,7 @@ function showQuestionReport(button){
  const active=Q.currentConsumer(run),record=Q.consumerRecord(run);
  if(!active?.question||button.dataset.questionId!==active.question.id||button.dataset.source!==active.consumer)throw Error('Report the current finished question.');
  if(!questionReporter){let storage;try{storage=localStorage;}catch(_){}
-  questionReporter=window.DCQuestionReport.create({document,storage,bank:window.STMMechanics.data.bank,enqueue:entry=>analyticsSync?.enqueue({id:entry.id,kind:'question-feedback',payload:entry}),getDelivery:()=>({...learningDeliveryStatus(),dev:!!window.STMDevMode})});
+  questionReporter=window.DCQuestionReport.create({document,storage,bank:window.STMMechanics.data.bank,enqueue:entry=>analyticsSync?.enqueue({id:entry.id,kind:'question-feedback',payload:entry}),getDelivery:()=>({...learningDeliveryStatus(),dev:!!window.STMDevMode}),onOpenSharing:()=>{analyticsView='sharing';showAnalytics();LUI.selectView($('#dialog .learning-report'),'sharing');$('#dialog [data-analytics-action=share]')?.focus({preventScroll:true});}});
  }
  const language=QL.language();questionReporter.open({question:QL.question(active.question,language),record,source:active.consumer,language,focus:button});
 }

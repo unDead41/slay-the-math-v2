@@ -46,6 +46,7 @@
   let enabled=false,enabledDirty=false,identity=null,entries=new Map(),dirty=new Set(),receiptDirty=new Map(),lastReceivedAt=null,storageError='',securityError='',networkError='',corrupt=false,receiverAvailable=false,sending=false,started=false,timer=null,inflight=null,abort=null,failures=0,generation=0;
   function isDev(){try{if(host.STMDevMode||host.parent&&host.parent!==host&&host.parent.STMDevMode)return true;}catch{}return false;}
   function isOnline(){try{return typeof options.online==='function'?options.online():options.online===undefined?!(host.navigator&&host.navigator.onLine===false):!!options.online;}catch{return false;}}
+  function isVisible(){return host.document?.visibilityState!=='hidden';}
   function timestamp(){const value=now();return new Date(typeof value==='string'?Date.parse(value):value).toISOString();}
   function journalAvailable(){return !!storage&&typeof storage.key==='function'&&Number.isSafeInteger(storage.length)&&storage.length>=0;}
   function mergeEntry(id,value){
@@ -96,7 +97,7 @@
   }
   function changed(){if(typeof options.onchange==='function')try{options.onchange(status());}catch{}}
   function clearRetry(){if(timer!==null){cancel(timer);timer=null;}}
-  function schedule(wait){clearRetry();if(!started||!enabled||isDev()||!isOnline()||!pending().length)return;timer=delay(()=>{timer=null;flush();},wait);}
+  function schedule(wait){clearRetry();if(!started||!enabled||isDev()||!isOnline()||!isVisible()||!pending().length)return;timer=delay(()=>{timer=null;flush();},wait);}
   function enqueue(input){
    const value=normalize(input);mergeLatest();const previous=entries.get(value.id);
    if(previous&&previous.kind===value.kind&&previous.signature===value.signature){if(dirty.size||storageError)persist();return {changed:false,entry:copy({id:previous.id,kind:previous.kind,revision:previous.revision,payload:previous.payload}),error:storageError||(pending().length>MAX_PENDING?capacityMessage:'')};}
@@ -122,12 +123,12 @@
    if(!/^https?:\/\//.test(endpoint)&&!endpoint.startsWith('/'))throw Error('Receiver address is invalid.');return endpoint.replace(/\/$/,'');
   }
   async function request(url,init,token){
-   if(!enabled||isDev()||!isOnline()||token!==generation)throw Error('Delivery paused.');
+   if(!enabled||isDev()||!isOnline()||!isVisible()||token!==generation)throw Error('Delivery paused.');
    const controller=new (host.AbortController||root.AbortController)();abort=controller;const timeout=delay(()=>controller.abort(),10000);
    try{const response=await fetcher(url,{credentials:'same-origin',redirect:'error',cache:'no-store',...init,signal:controller.signal});if(!response||(!response.ok&&response.status!==409))throw Error('Receiver unavailable.');const data=await response.json();if(!enabled||isDev()||token!==generation)throw Error('Delivery paused.');if(response.status===409)throw Object.assign(Error('Receiver revision conflict.'),{status:409,body:data});return data;}finally{cancel(timeout);if(abort===controller)abort=null;}
   }
   async function deliver(token){
-   mergeLatest();if(!enabled||isDev()||!isOnline()||!pending().length)return status();
+   mergeLatest();if(!enabled||isDev()||!isOnline()||!isVisible()||!pending().length)return status();
    if(typeof fetcher!=='function'){networkError='This browser cannot contact the receiver.';changed();return status();}
    if(!persist()||!ensureIdentity()){changed();return status();}
    sending=true;networkError='';changed();let success=false;
@@ -154,15 +155,16 @@
     mergeLatest();const previous=new Map(),receivedAt=timestamp();for(const receipt of reply.acknowledged){const current=entries.get(receipt.id),sent=batch.find(e=>e.id===receipt.id);if(current&&current.revision===receipt.revision&&current.signature===canonical(sent.payload)){previous.set(current.id,current.acknowledgedRevision);current.acknowledgedRevision=receipt.revision;receiptDirty.set(current.id,{schemaVersion:1,id:current.id,revision:current.revision,kind:current.kind,signature:current.signature,receivedAt});}}
     const previousTime=lastReceivedAt;lastReceivedAt=receivedAt;if(!persist()){for(const [id,revision] of previous){receiptDirty.delete(id);const value=entries.get(id);if(value&&value.revision===reply.acknowledged.find(e=>e.id===id).revision)value.acknowledgedRevision=revision;}lastReceivedAt=previousTime;}else{success=true;failures=0;networkError='';}
    }catch(error){if(token===generation&&enabled&&!isDev()){networkError=error.message==='The receiver must be on the game origin.'?error.message:'The receiver is unavailable. Pending entries remain on this device.';failures++;}}
-   finally{sending=false;changed();if(token===generation&&started){if(success&&pending().length)schedule(250);else if(!success&&failures<RETRY_DELAYS.length)schedule(RETRY_DELAYS[Math.max(0,failures-1)]);}}
+   finally{sending=false;changed();if(token===generation&&started){if(success&&pending().length)schedule(250);else if(!success&&failures)schedule(RETRY_DELAYS[Math.min(RETRY_DELAYS.length-1,failures-1)]);}}
    return status();
   }
   function flush(){if(inflight)return inflight;clearRetry();const promise=deliver(generation);inflight=promise;promise.finally(()=>{if(inflight===promise)inflight=null;});return promise;}
   function online(){failures=0;networkError='';clearRetry();if(started)flush();}
   function offline(){clearRetry();if(abort)abort.abort();changed();}
+  function visibilityChanged(){if(isVisible())online();else offline();}
   function storageChanged(event){if(!event||event.key===null||event.key===STORAGE_KEY||typeof event.key==='string'&&(event.key.startsWith(ENTRY_PREFIX)||event.key.startsWith(RECEIPT_PREFIX))){mergeLatest();changed();if(started)schedule(0);}}
-  function start(){if(started)return status();started=true;failures=0;if(host.addEventListener){host.addEventListener('online',online);host.addEventListener('offline',offline);host.addEventListener('storage',storageChanged);}flush();return status();}
-  function stop(){started=false;generation++;clearRetry();if(abort)abort.abort();if(host.removeEventListener){host.removeEventListener('online',online);host.removeEventListener('offline',offline);host.removeEventListener('storage',storageChanged);}return status();}
+  function start(){if(started)return status();started=true;failures=0;if(host.addEventListener){host.addEventListener('online',online);host.addEventListener('offline',offline);host.addEventListener('storage',storageChanged);}host.document?.addEventListener?.('visibilitychange',visibilityChanged);flush();return status();}
+  function stop(){started=false;generation++;clearRetry();if(abort)abort.abort();if(host.removeEventListener){host.removeEventListener('online',online);host.removeEventListener('offline',offline);host.removeEventListener('storage',storageChanged);}host.document?.removeEventListener?.('visibilitychange',visibilityChanged);return status();}
   mergeLatest();return {enqueue,setEnabled,status,flush,start,stop};
  }
  return {STORAGE_KEY,createClient};

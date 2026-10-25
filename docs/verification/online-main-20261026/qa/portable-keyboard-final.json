@@ -1,0 +1,29 @@
+{
+  "label": "portable-keyboard-final",
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "command": [
+    "node",
+    "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-final.cjs"
+  ],
+  "start": "2026-10-25T18:41:00Z",
+  "environment": {
+    "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "QA_DISABLE_GPU": "1",
+    "NODE_OPTIONS": "--max-old-space-size=1792",
+    "QA_OUTPUT": "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-final-artifacts",
+    "QA_SCREENSHOTS": "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-final-screenshots",
+    "QA_REPORT": "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-final-report.json",
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/qa/tmp"
+  },
+  "overrides": {
+    "DEBUG": "pw:browser"
+  },
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "exitCode": 0,
+  "elapsedSeconds": 9.111,
+  "log": "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-final.log"
+}

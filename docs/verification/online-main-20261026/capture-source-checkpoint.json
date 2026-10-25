@@ -1,0 +1,30 @@
+{
+  "observedAt": "2026-10-25T18:04:32.150197+00:00",
+  "sha": "6033478c0d6279258ed153dae4e0e19ef83bff1d",
+  "tree": "11675d86b21bab796171174b6a84db24a68aec24",
+  "status": "",
+  "appSHA256": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+  "playModeSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+  "protectedMainGroupsExact": [
+    "dist/engine.js",
+    "dist/config.js",
+    "dist/animation.js",
+    "dist/animation-data.js",
+    "dist/combat-vfx.js",
+    "dist/learning-google.js",
+    "dist/learning-sync.js",
+    "dist/question-feedback.js",
+    "dist/question-report.js",
+    "dist/analytics-ui.js",
+    "modules/feedback",
+    "tools/google-sheets",
+    "tools/balance",
+    "tools/ai",
+    "dist/tutorial-data.js",
+    "dist/tutorial.js",
+    "dist/tutorial-core.js"
+  ],
+  "registrySnapshotExact": true,
+  "capturePrerequisite": "PASS canonical owner import; portable/prod NOT_RUN",
+  "captureStatus": "PENDING; exclusive audit slot released now"
+}

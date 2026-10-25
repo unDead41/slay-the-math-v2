@@ -1,0 +1,32 @@
+{
+  "repository": "unDead41/slay-the-math-v2",
+  "branch": "fix/online-offline-readiness",
+  "branchURL": "https://github.com/unDead41/slay-the-math-v2/tree/fix/online-offline-readiness",
+  "baseSHA": "d77b3e0ce87d573de89e84a9b2374df97ad625b9",
+  "candidateVersion": "2.49.0-offline.1",
+  "localVerifiedCheckpoint": "6ce46f169bd579540a686b03b2ed45040b51205f",
+  "localVerifiedTree": "a2caae484b060052e61d14e2b50f0cf553cba3c9",
+  "remoteImplementationCommit": "177c71124c1b5979614b683e7b874d618b1ae6de",
+  "remoteImplementationTree": "a2caae484b060052e61d14e2b50f0cf553cba3c9",
+  "implementationParent": [
+    "d77b3e0ce87d573de89e84a9b2374df97ad625b9"
+  ],
+  "remoteTreeExactlyEqualsVerifiedLocalTree": true,
+  "branchRefReadbackVerified": true,
+  "mainBeforePublication": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "mainAfterPublication": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "mainUnchangedByPublication": true,
+  "mainPushMergeDeploy": false,
+  "verification": "evidence.json",
+  "offlineReleaseId": "322382b69186e695e4e4e987",
+  "tests": {
+    "node": "1182/1182, 0 failures/skips",
+    "nativeColdRestart": "14/14",
+    "onlinePreload": "9/9",
+    "portable": "3/3",
+    "storageRecovery": "4/4",
+    "priorContinuityRegression": "14/14; unchanged gameplay/actor code"
+  },
+  "metadataFollowup": "This publication receipt, audit and execution-log update are a metadata-only follow-up. The implementation commit above is the immutable tested tree. Final branch ref is verified again after that follow-up.",
+  "integrationBoundary": "Base is main2.49.0; current main2.49.1 Idle updates must be retained/regenerated/retested by Master. This branch does not publish the public game or claim a live external pet/backend."
+}

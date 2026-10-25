@@ -1,0 +1,23 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),http=require('node:http'),assert=require('node:assert/strict');
+const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright'),root=path.resolve(__dirname,'..'),dist=path.join(root,'release-prod'),report={checks:[],errors:[]};let omitOffline=false;
+const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.svg':'image/svg+xml','.mp3':'audio/mpeg','.ogg':'audio/ogg'};
+const server=http.createServer((q,r)=>{const name=new URL(q.url,'http://localhost').pathname.replace(/^\/game\//,'')||'index.html',file=path.resolve(dist,name);if(!file.startsWith(dist+'/')){r.writeHead(403);r.end();return;}fs.readFile(file,(e,b)=>{if(!e&&name==='asset-manifest.json'&&omitOffline){const m=JSON.parse(b);delete m.offline;b=Buffer.from(JSON.stringify(m));}r.writeHead(e?404:200,{'content-type':types[path.extname(file)]||'application/octet-stream','cache-control':'no-store'});r.end(e?'missing':b);});});
+(async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const url='http://127.0.0.1:'+server.address().port+'/game/';
+ try{for(const kind of ['cache-denied','quota','worker-denied','missing-definition']){
+  const profile=fs.mkdtempSync(path.join(process.env.QA_PROFILE_ROOT||os.tmpdir(),'stm-offline-fault-'));let context;
+  try{omitOffline=kind==='missing-definition';context=await chromium.launchPersistentContext(profile,{headless:true,executablePath:process.env.QA_CHROMIUM_EXECUTABLE||'/tmp/chromium',serviceWorkers:kind==='worker-denied'?'block':'allow',ignoreDefaultArgs:['--disable-dev-shm-usage'],args:['--no-sandbox'],viewport:{width:390,height:844}});const p=context.pages()[0];p.on('pageerror',e=>report.errors.push(e.message));
+   await context.addInitScript(kind=>{if(kind==='cache-denied')Object.defineProperty(window,'caches',{value:{open:async()=>{throw Error('Offline storage denied');},keys:async()=>[]}});if(kind==='quota')navigator.storage.estimate=async()=>({quota:1,usage:1});if(['worker-denied','missing-definition'].includes(kind))localStorage.setItem('slay-the-math.play-mode.v1',JSON.stringify({version:1,mode:'offline',chosen:true}));},kind);
+   await p.goto(url);await p.waitForFunction(()=>['resource-enter','resource-online','resource-retry'].some(id=>!document.getElementById(id).hidden),null,{timeout:120000});
+   if(['worker-denied','missing-definition'].includes(kind)){
+    assert.equal(await p.locator('#resource-enter').isVisible(),false,'Offline must not enter through the75% Online gate');assert.equal(await p.locator('#resource-online').isVisible(),false);assert.equal(await p.locator('#resource-retry').isVisible(),true);assert.equal(await p.evaluate(()=>STMPlayMode.snapshot().mode),'offline');
+    if(kind==='worker-denied')assert.equal(await p.evaluate(()=>STMHosted.offline.snapshot().errorCode),'worker');
+    assert.equal(await p.locator('#resource-settings').count(),1,'A failed Offline start needs access to the same Settings');await p.locator('#resource-settings').click();assert.equal(await p.locator('[name=stm-play-mode]').count(),2);await p.locator('[data-stm-mode=online]').click();await p.keyboard.press('Escape');await p.locator('#resource-enter').waitFor({state:'visible',timeout:120000});assert.equal(await p.evaluate(()=>STMPlayMode.snapshot().mode),'online');assert.equal(await p.evaluate(()=>STMHosted.offline?.ready||false),false);
+   }else{
+    await p.locator(kind==='cache-denied'?'#resource-online':'#resource-enter').click();await p.locator('[data-action=saves]:visible').first().click();await p.locator('[data-stm-mode=offline]').click();const expected=kind==='quota'?'quota':'storage';await p.waitForFunction(code=>STMHosted.offline.snapshot().errorCode===code,expected);const s=await p.evaluate(()=>STMHosted.offline.snapshot());assert.equal(s.ready,false);assert.ok(s.remainingFiles.length>0);assert.ok(s.percent<100);assert.equal(await p.locator('[data-stm-offline=resume]').isEnabled(),true);assert.ok((await p.locator('#stm-offline-status').textContent()).length>15);
+   }
+   report.checks.push(kind+': no false offline readiness; explicit failure and recovery remain available');console.log('PASS '+report.checks.at(-1));
+  }finally{await context?.close();fs.rmSync(profile,{recursive:true,force:true});}
+ }}finally{server.closeAllConnections();await new Promise(r=>server.close(r));}
+ assert.deepEqual(report.errors,[]);const file=process.env.QA_REPORT||path.join(root,'docs/verification/online-offline-readiness/native-storage.json');fs.writeFileSync(file,JSON.stringify(report,null,2)+'\n');
+})().catch(e=>{console.error(e);process.exitCode=1;});

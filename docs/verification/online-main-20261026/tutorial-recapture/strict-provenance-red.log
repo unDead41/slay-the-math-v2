@@ -1,0 +1,57 @@
+✖ capture provenance binds the exact app source and rejects unrelated runtime edits (4.164065ms)
+✖ every pictured step has real bilingual capture provenance and optional verified bytes (6.888573ms)
+✔ boss picture result shows an actual changed seal state in both languages (0.32527ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 140.36513
+
+✖ failing tests:
+
+test at tests/tutorial-media.test.cjs:5:1
+✖ capture provenance binds the exact app source and rejects unrelated runtime edits (4.164065ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe'
+  - '79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013'
+  
+      at TestContext.<anonymous> (/dev/shm/stm-online-main-20261026/tests/tutorial-media.test.cjs:7:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe',
+    expected: '79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/tutorial-media.test.cjs:10:1
+✖ every pictured step has real bilingual capture provenance and optional verified bytes (6.888573ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013'
+  - '0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe'
+  
+      at TestContext.<anonymous> (/dev/shm/stm-online-main-20261026/tests/tutorial-media.test.cjs:14:426)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013',
+    expected: '0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

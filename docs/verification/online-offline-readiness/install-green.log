@@ -1,0 +1,17 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (42.218522ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (23.654454ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (20.807226ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (15.37753ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.388801ms)
+✔ failed persistence of a verified response cannot create an offline receipt (4.742423ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (1.159125ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (11.336974ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (487.600311ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 698.362226

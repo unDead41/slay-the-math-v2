@@ -1,0 +1,50 @@
+{
+  "observedAt": "2026-10-25T18:40:33.445916+00:00",
+  "path": "/dev/shm/stm-online-main-20261026",
+  "sha": "20b835855e00b8279c75d4b516b5da9f98624708",
+  "tree": "ae67c4324438fda926052d36253cd6748954ce51",
+  "status": "",
+  "trackedFiles": 3500,
+  "deltaFromKeyboardSourceCheckpoint": [
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "docs/tutorial/screenshots.json"
+  ],
+  "allSourceAncestors": {
+    "09a5aa49645a37ee011317f1b784f0dd9affdf02": true,
+    "e9411eba938dc819f12382fe636aa02ec5059271": true,
+    "e0574af7a4b705a90a31e4d4c360ebf95d15df3e": true
+  },
+  "buildArtifacts": {
+    "dist": {
+      "entries": 765,
+      "manifestId": "0dd87ad5219414aa692f41b5",
+      "version": "2.51.0",
+      "sha256": "7dfb639b99ee631dd53e932ad9bc88b156283ae78549734dbeebc5c3af84df8c",
+      "allHashesMatch": true
+    },
+    "release-prod": {
+      "entries": 766,
+      "manifestId": "afd18ff1cbcc0308b2bbaa60",
+      "version": "2.51.0",
+      "sha256": "b9fd17f3116886a74169a3e26fcabfbf92217dba0dd9c723ece7ec2e73a70bc7",
+      "allHashesMatch": true
+    },
+    "portable": {
+      "bytes": 312186494,
+      "sha256": "7dfc9bd13e40e7db253bd9b6cc50318e8713e0a991daa34797fa127fb918875d"
+    },
+    "sourceAppSHA256": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+    "sourceModeSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+    "sourceUI_SHA256": "9d926586e8ea6b3c881f351548bc7a83823f39f688bfe87c35e0bce4ad7b98bf",
+    "captureManifestSHA256": "bf81a0a0c1d353e829e561be1de5252fe70cfa0f61c3816d1287a2cf3c4f813a",
+    "menuCaptureRuntimeInputCount": 107,
+    "changedMenuCaptureRuntimeInputs": [],
+    "deduplicatedAssets": 589,
+    "reclaimedAllocatedBytes": 244953088
+  },
+  "captureHistory": "Actual full98 on603, then actualmenu20 onff3d; final98unique20new+78retained originalrecords. Source app+engine exact across both; index/UI/release differ honestly by snapshot."
+}

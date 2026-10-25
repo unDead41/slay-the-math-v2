@@ -2,6 +2,11 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),D=require('../dist/tutorial-data.js'),manifest=require('../dist/asset-manifest.json'),captures=require('../docs/tutorial/screenshots.json');
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+test('capture provenance binds the exact app source and rejects unrelated runtime edits',()=>{
+ const source=fs.readFileSync(path.join(root,'dist/app.js'),'utf8'),expected=Object.values(captures.runtimeSnapshots)[0]['app.js'];
+ assert.equal(hash(Buffer.from(source)),expected);
+ const altered=source.replace('function showStats(){','function showStats(){/* unrelated runtime change */');assert.notEqual(altered,source);assert.notEqual(hash(Buffer.from(altered)),expected);
+});
 test('every pictured step has real bilingual capture provenance and optional verified bytes',()=>{
  const shots=[...new Set(D.chapters.flatMap(c=>c.frames.map(f=>f.shot)))];assert.equal(captures.version,2);assert.equal(captures.images.length,shots.length*2);
  for(const shot of shots)for(const language of ['en','ms']){

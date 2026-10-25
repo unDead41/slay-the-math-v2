@@ -1,0 +1,587 @@
+{
+  "kind": "BOUNDED_NATIVE_SETTINGS_EVENT_DIAGNOSTIC",
+  "candidateSHA": "7a830e50c468c43442162b25823616c9cda62846",
+  "observations": [
+    {
+      "action": "focused initially selected Online",
+      "checked": "online",
+      "snapshot": {
+        "mode": "online",
+        "explicit": false,
+        "persisted": false,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "answer": ""
+    },
+    {
+      "action": "after Space",
+      "checked": "online",
+      "snapshot": {
+        "mode": "online",
+        "explicit": false,
+        "persisted": false,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "answer": ""
+    },
+    {
+      "action": "after Space +two animation frames",
+      "checked": "online",
+      "snapshot": {
+        "mode": "online",
+        "explicit": false,
+        "persisted": false,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "answer": ""
+    },
+    {
+      "action": "after Enter on Online",
+      "checked": "online",
+      "snapshot": {
+        "mode": "online",
+        "explicit": false,
+        "persisted": false,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "answer": ""
+    },
+    {
+      "action": "after ArrowRight",
+      "checked": "offline",
+      "snapshot": {
+        "mode": "offline",
+        "explicit": true,
+        "persisted": true,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "answer": "Local FAQ works offline. Free chat needs Online and an available API.",
+      "answerSource": "local"
+    },
+    {
+      "action": "after ArrowLeft",
+      "checked": "online",
+      "snapshot": {
+        "mode": "online",
+        "explicit": true,
+        "persisted": true,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": true
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "answer": "Local FAQ works offline. Free chat needs Online and an available API.",
+      "answerSource": "local"
+    },
+    {
+      "action": "after real mouse click Online",
+      "checked": "online",
+      "snapshot": {
+        "mode": "online",
+        "explicit": true,
+        "persisted": true,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": true
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "answer": "Local FAQ works offline. Free chat needs Online and an available API.",
+      "answerSource": "local"
+    },
+    {
+      "action": "after real mouse click Offline",
+      "checked": "offline",
+      "snapshot": {
+        "mode": "offline",
+        "explicit": true,
+        "persisted": true,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "answer": "Local FAQ works offline. Free chat needs Online and an available API.",
+      "answerSource": "local"
+    },
+    {
+      "action": "Enter on local Focus FAQ",
+      "checked": "offline",
+      "snapshot": {
+        "mode": "offline",
+        "explicit": true,
+        "persisted": true,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "value": "",
+        "name": ""
+      },
+      "answer": "Local FAQ: Check the Focus preview before playing an eligible card. Passive cards do not use Focus. The Tutorial shows how to practise.",
+      "answerSource": "local"
+    },
+    {
+      "action": "Enter submits local Block question",
+      "checked": "offline",
+      "snapshot": {
+        "mode": "offline",
+        "explicit": true,
+        "persisted": true,
+        "connectionHint": "disconnected",
+        "petAPIAllowed": false
+      },
+      "active": {
+        "tag": "INPUT",
+        "id": "stm-pet-question",
+        "value": "Block",
+        "name": ""
+      },
+      "answer": "Local FAQ: Block protects you against incoming damage. Read the current value and open the status details for its effect and duration.",
+      "answerSource": "local"
+    }
+  ],
+  "events": [
+    {
+      "type": "keydown",
+      "key": " ",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4860.5,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": " ",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4861.5,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keydown",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4917.10000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4917.79999999702,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keydown",
+      "key": "ArrowRight",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4933.39999999851,
+      "defaultPrevented": false
+    },
+    {
+      "type": "click",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4933.79999999702,
+      "defaultPrevented": false
+    },
+    {
+      "type": "input",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4934.69999999553,
+      "defaultPrevented": false
+    },
+    {
+      "type": "change",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4934.79999999702,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": "ArrowRight",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4937.79999999702,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keydown",
+      "key": "ArrowLeft",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4946.79999999702,
+      "defaultPrevented": false
+    },
+    {
+      "type": "click",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4947.10000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "input",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4947.60000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "change",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4947.60000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": "ArrowLeft",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 4948.60000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "click",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "online",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 5076.89999999851,
+      "defaultPrevented": false
+    },
+    {
+      "type": "click",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 5117,
+      "defaultPrevented": false
+    },
+    {
+      "type": "input",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 5117.5,
+      "defaultPrevented": false
+    },
+    {
+      "type": "change",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "",
+        "type": "radio",
+        "value": "offline",
+        "name": "stm-play-mode"
+      },
+      "checked": true,
+      "time": 5117.5,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keydown",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "SUMMARY",
+        "id": ""
+      },
+      "time": 5125.69999999553,
+      "defaultPrevented": false
+    },
+    {
+      "type": "click",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "SUMMARY",
+        "id": ""
+      },
+      "time": 5125.69999999553,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "SUMMARY",
+        "id": ""
+      },
+      "time": 5127.29999999702,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keydown",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "BUTTON",
+        "id": "",
+        "type": "button",
+        "value": "",
+        "name": ""
+      },
+      "time": 5153.10000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "click",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "BUTTON",
+        "id": "",
+        "type": "button",
+        "value": "",
+        "name": ""
+      },
+      "time": 5153.19999999553,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "BUTTON",
+        "id": "",
+        "type": "button",
+        "value": "",
+        "name": ""
+      },
+      "time": 5160,
+      "defaultPrevented": false
+    },
+    {
+      "type": "input",
+      "key": null,
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "stm-pet-question",
+        "type": "text",
+        "value": "Block",
+        "name": ""
+      },
+      "checked": false,
+      "time": 5209.69999999553,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keydown",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "stm-pet-question",
+        "type": "text",
+        "value": "Block",
+        "name": ""
+      },
+      "checked": false,
+      "time": 5212.10000000149,
+      "defaultPrevented": false
+    },
+    {
+      "type": "keyup",
+      "key": "Enter",
+      "trusted": true,
+      "target": {
+        "tag": "INPUT",
+        "id": "stm-pet-question",
+        "type": "text",
+        "value": "Block",
+        "name": ""
+      },
+      "checked": false,
+      "time": 5217.10000000149,
+      "defaultPrevented": false
+    }
+  ],
+  "requests": [],
+  "errors": [],
+  "diagnosticOnly": true
+}

@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: one Settings mode group controls pet permission and begins offline preparation without changing saves
+ok 1 - one Settings mode group controls pet permission and begins offline preparation without changing saves
+  ---
+  duration_ms: 79.664322
+  type: 'test'
+  ...
+# Subtest: Space and Enter explicitly activate the focused mode radio, including the checked default
+ok 2 - Space and Enter explicitly activate the focused mode radio, including the checked default
+  ---
+  duration_ms: 43.795587
+  type: 'test'
+  ...
+# Subtest: mode keyboard activation ignores repeats, composition, disabled controls and unrelated typing
+ok 3 - mode keyboard activation ignores repeats, composition, disabled controls and unrelated typing
+  ---
+  duration_ms: 13.851826
+  type: 'test'
+  ...
+# Subtest: a connection hint cannot grant pet API permission without an explicit Online choice
+ok 4 - a connection hint cannot grant pet API permission without an explicit Online choice
+  ---
+  duration_ms: 2.555316
+  type: 'test'
+  ...
+# Subtest: choosing Offline aborts an active API request and rejects a late successful response
+ok 5 - choosing Offline aborts an active API request and rejects a late successful response
+  ---
+  duration_ms: 0.534749
+  type: 'test'
+  ...
+# Subtest: a corrupt preference fails closed and denied storage never re-enables API use
+ok 6 - a corrupt preference fails closed and denied storage never re-enables API use
+  ---
+  duration_ms: 0.30379
+  type: 'test'
+  ...
+# Subtest: a real cross-tab preference event cancels work without changing the game save
+ok 7 - a real cross-tab preference event cancels work without changing the game save
+  ---
+  duration_ms: 0.471874
+  type: 'test'
+  ...
+# Subtest: pet API failures return local help while keeping Online as the player preference
+ok 8 - pet API failures return local help while keeping Online as the player preference
+  ---
+  duration_ms: 1.113304
+  type: 'test'
+  ...
+# Subtest: Offline pet help uses bilingual packaged FAQ and never invokes a configured transport
+ok 9 - Offline pet help uses bilingual packaged FAQ and never invokes a configured transport
+  ---
+  duration_ms: 0.537383
+  type: 'test'
+  ...
+# Subtest: only an actual successful request establishes pet API availability
+ok 10 - only an actual successful request establishes pet API availability
+  ---
+  duration_ms: 0.801793
+  type: 'test'
+  ...
+# Subtest: an Offline choice before the transport microtask prevents the API call entirely
+ok 11 - an Offline choice before the transport microtask prevents the API call entirely
+  ---
+  duration_ms: 0.413776
+  type: 'test'
+  ...
+# Subtest: a pet request timeout aborts work without silently changing the selected mode
+ok 12 - a pet request timeout aborts work without silently changing the selected mode
+  ---
+  duration_ms: 20.812437
+  type: 'test'
+  ...
+# Subtest: cross-tab localStorage.clear revokes pet permission and rejects an in-flight late answer
+ok 13 - cross-tab localStorage.clear revokes pet permission and rejects an in-flight late answer
+  ---
+  duration_ms: 3.724084
+  type: 'test'
+  ...
+# Subtest: cross-tab localStorage.clear before the transport microtask prevents the API call
+ok 14 - cross-tab localStorage.clear before the transport microtask prevents the API call
+  ---
+  duration_ms: 1.006552
+  type: 'test'
+  ...
+# Subtest: unrelated storage changes and another storage-area clear keep local pet consent and work
+ok 15 - unrelated storage changes and another storage-area clear keep local pet consent and work
+  ---
+  duration_ms: 0.79983
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 545.435381

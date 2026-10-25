@@ -1,0 +1,12 @@
+{"profile":"/tmp/stm-offline-shell-fmkF9G","serverStopped":true,"newBrowserProcess":true,"networkOffline":true,"httpCacheDisabled":true,"navigationStatus":200,"error":null}
+locator.waitFor: Page crashed
+Call log:
+[2m  - waiting for locator('#resource-enter') to be visible[22m
+[2m    6 × locator resolved to hidden <button hidden="" id="resource-enter">Enter Game</button>[22m
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-shell-baseline-browser.cjs:20:40 {
+  log: [
+    "  - waiting for locator('#resource-enter') to be visible",
+    '    6 × locator resolved to hidden <button hidden="" id="resource-enter">Enter Game</button>'
+  ]
+}

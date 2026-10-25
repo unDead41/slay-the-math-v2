@@ -1,4 +1,33 @@
 # SOR — First Load, Audio Readiness & No Select/Drag
+
+## Current main integration authorization — 2.51.0
+
+Ijamm now requests listing the changes still pending and publishing them to main.
+This authorizes the combined Online/Offline feature e941 and immutable registry
+snapshot e057 with main 09a5 / 2.50.0 as 2.51.0, preserving current education,
+VFX/Idle, numerical, save/RNG, language, AI and original-asset owners. This
+supersedes the relevant branch-only boundaries below; their source pins and
+original test outcomes remain history. Combined scoped compatibility is **VALID with carried P2 findings**: 175 focused
+checks on 7a, 23 fresh final checks on 20b and the stated native groups pass.
+Publication remains **PENDING** until actual expected-head ref readback.
+No simulation campaign, collector or model update is included. [Current scope,
+evidence and limits](../ONLINE_OFFLINE_MAIN_2_51_0.md).
+
+
+## SE-OFFLINE-01 — current candidate2.49.1-offline.2
+
+DISAHKAN: Ijamm requests fixing the four batch cold-restart failures on the feature branch only. This supersedes the earlier pending-main2.49.1 compatibility note: its Idle changes are now preserved in this branch. Persist and verify release-bound startup shell/manifest/runtime before Online Enter; cold workers reconstruct the launch receipt even for the original partial-startup cases. A launch receipt never grants full offline Ready or pet API permission. Complete installation retains its all-file verification/receipt contract. Preserve the original batch's seeds/saves and immutable FAIL evidence; regression replays are not new independent samples or AI training data. [Audit](../audits/se-offline-01/LATEST.md), [Simulation handoff](../SE_OFFLINE_01_HANDOFF.md).
+
+## Online/Offline mode — branch candidate 2.49.0-offline.1
+
+**DISAHKAN:** Ijamm requests one Online/Offline Settings preference shared with pet AI, complete verified player resources before offline Ready, and browser-process restart tests. Work stays on `fix/online-offline-readiness`; no main merge/push/deployment. Base main is `d77b3e0ce87d573de89e84a9b2374df97ad625b9` (2.49.0). Main subsequently advanced to 2.49.1; retain its Idle changes when Master integrates and rebuild shared generated outputs.
+
+**DITERUSKAN:** `STMPlayMode` owns the sole preference. Default Online preserves the existing important-package loading, but pet API calls require an explicit Online choice. Browser connection hints and actual request outcomes are separate. Offline blocks/aborts API requests and uses packaged BM/English FAQ; no provider/backend/key is added. This adapter is the published contract for the external pet owner, not a claim that a missing live pet service is complete.
+
+Offline Ready requires every current-release player runtime file, shell HTML/worker, canonical manifest, bank/Practice, BM/BI, all registered media/Tutorial/VFX/audio and local pet help in retained CacheStorage, complete hash/length checks, a matching receipt and compatible active worker. Session hits and historical completion counts do not qualify. Cache identities include shell changes; pinned navigation cannot mix releases. Show true remaining files/bytes, failure, Pause/Retry/Resume and quota/persistence limits. Full offline installation can exceed three minutes; keep the existing Online entry timeout. Developer/server/private files and API responses are excluded.
+
+[Owner audit and evidence](../ONLINE_OFFLINE_READINESS.md), [Master audit](../audits/online-offline-readiness/LATEST.md), [pet integration contract](../pet-ai/PLAY_MODE_HANDOFF.md). Browser-cache offline and the embedded standalone portable file are separate formats. Preserve original art/voices, gameplay/save/RNG, bank and main 2.49 combat continuity. Physical-device/other-browser durability and a live external pet API remain unmeasured.
+
 ## Implementation Plan · v1.3.0
 
 > Untuk pelaksana: gunakan aliran executing-plans untuk melaksanakan tugasan secara berurutan apabila Ijamm mengarahkan pelaksanaan dalam chat tersebut. Dokumen ini ialah arahan dan kriteria penerimaan; ia tidak membuktikan ciri sudah dibina.

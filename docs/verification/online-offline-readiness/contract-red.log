@@ -1,0 +1,310 @@
+✖ all historical/session-ready counters still cannot produce complete offline readiness (41.374207ms)
+✖ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (2.433678ms)
+✖ missing and same-length corrupted disk files revoke readiness despite a completion receipt (0.932913ms)
+✖ Retry resumes only missing files and never reports an HTTP failure as completed (0.814955ms)
+✖ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.076578ms)
+✖ failed persistence of a verified response cannot create an offline receipt (0.806933ms)
+✖ an incompatible worker prevents offline readiness even when all payloads could be cached (0.951971ms)
+✖ a receipt and manifest from another release cannot satisfy the current installation (0.663838ms)
+✖ the build declares every player resource plus shell while keeping developer/API paths out (797.637138ms)
+✖ a connection hint cannot grant pet API permission without an explicit Online choice (1.577091ms)
+✖ choosing Offline aborts an active API request and rejects a late successful response (0.468524ms)
+✖ a corrupt preference fails closed and denied storage never re-enables API use (0.258829ms)
+✖ a real cross-tab preference event cancels work without changing the game save (0.2862ms)
+✖ pet API failures return local help while keeping Online as the player preference (0.272971ms)
+✖ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (0.258008ms)
+✖ only an actual successful request establishes pet API availability (0.230937ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 0
+ℹ fail 16
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 941.598533
+
+✖ failing tests:
+
+test at tests/offline-install.test.cjs:15:1
+✖ all historical/session-ready counters still cannot produce complete offline readiness (41.374207ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:16:91)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:18:1
+✖ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (2.433678ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:19:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:22:1
+✖ missing and same-length corrupted disk files revoke readiness despite a completion receipt (0.932913ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:23:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:26:1
+✖ Retry resumes only missing files and never reports an HTTP failure as completed (0.814955ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:27:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:30:1
+✖ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.076578ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:31:102)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:34:1
+✖ failed persistence of a verified response cannot create an offline receipt (0.806933ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:35:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:37:1
+✖ an incompatible worker prevents offline readiness even when all payloads could be cached (0.951971ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:38:29)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:40:1
+✖ a receipt and manifest from another release cannot satisfy the current installation (0.663838ms)
+  AssertionError [ERR_ASSERTION]: Persistent complete-install verifier must exist
+      at implementation (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:5:95)
+      at Object.create (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:13:87)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:41:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:43:1
+✖ the build declares every player resource plus shell while keeping developer/API paths out (797.637138ms)
+  AssertionError [ERR_ASSERTION]: A release must publish its complete offline package
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:44:118)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:5:1
+✖ a connection hint cannot grant pet API permission without an explicit Online choice (1.577091ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:6:37)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:12:1
+✖ choosing Offline aborts an active API request and rejects a late successful response (0.468524ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:13:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:18:1
+✖ a corrupt preference fails closed and denied storage never re-enables API use (0.258829ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:19:36)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:22:1
+✖ a real cross-tab preference event cancels work without changing the game save (0.2862ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:23:36)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:27:1
+✖ pet API failures return local help while keeping Online as the player preference (0.272971ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:28:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:32:1
+✖ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (0.258008ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:33:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/play-mode.test.cjs:37:1
+✖ only an actual successful request establishes pet API availability (0.230937ms)
+  AssertionError [ERR_ASSERTION]: play-mode must provide the shared player contract
+      at load (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:3:79)
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/play-mode.test.cjs:38:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,5 +1,16 @@
 # Changelog SOR — Slay the Math
 
+## 2.51.0 — 26 October 2026, Asia/Kuala_Lumpur — main candidate
+
+- Prepare the authorized Online/Offline Settings and release-bound retained
+  startup/full installation with current main 2.50.0 education and presentation.
+- Retain the approved immutable simulation registry e057 without executing a
+  collector or relabelling original outcomes. Preserve historical branches.
+- Scoped audit/build/native checks pass with carried P2 limits; preserve the
+  two initial native failures, unit REDs and both real capture batches. Main
+  publication remains pending in [the current report](../ONLINE_OFFLINE_MAIN_2_51_0.md).
+
+
 ## 2.50.0 — combined combat, education and Master Map protocol
 
 Integrate the three explicitly authorized candidates with main 2.49.1. Keep
@@ -9,6 +20,13 @@ pilot snapshot. Real tutorial recapture and final affected/native checks pass;
 the original full Node failures remain recorded. Scoped status VALID with
 carried P2 findings; **publication VERIFIED** at runtime commit `509be90a`. [Results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md); [actual ref/tree/Pages receipt](../verification/all-main-20261025/publication.json).
 
+## 2.49.1-offline.2 — branch only,26October2026
+
+Fix SE-OFFLINE-01 from the pilot's4cold-restart failures. Preserve main2.49.1 Idle/artwork and the offline contract; save a verified startup shell/manifest/runtime receipt before Online Enter, reconstruct it after a browser-process restart, and keep partial launch distinct from full offline readiness. Add original-seed/save A1–A4 regression and Simulation handoff; no numerical/save/RNG/AI-data changes or main deployment. [Audit](../audits/se-offline-01/LATEST.md).
+
+## 2.49.0-offline.1 — branch candidate, 25 October 2026
+
+Add one shared Online/Offline Settings preference and a permission-gated pet adapter with local BM/English FAQ. Online keeps the 75% important-package gate and background downloads. Offline installs and verifies the complete release in retained browser storage, including HTML/worker/canonical manifest and lazy player media, with truthful progress, quota/worker failure and Retry/Resume. Cold navigation reconstructs/pins complete releases across a browser-process restart. Standalone portable delivery is reported separately. Main is untouched; Master retains the subsequent 2.49.1 Idle change when integrating. [Scope, evidence and remaining limits](../audits/online-offline-readiness/LATEST.md).
 
 ## 2.49.1 — 25 October 2026
 

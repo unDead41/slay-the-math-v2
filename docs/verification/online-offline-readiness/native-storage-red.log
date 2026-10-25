@@ -1,0 +1,15 @@
+PASS cache-denied: no false offline readiness; explicit failure and recovery remain available
+PASS quota: no false offline readiness; explicit failure and recovery remain available
+PASS worker-denied: no false offline readiness; explicit failure and recovery remain available
+AssertionError [ERR_ASSERTION]: Offline must not enter through the75% Online gate
+
+true !== false
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-storage-browser.cjs:13:12 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

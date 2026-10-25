@@ -1,0 +1,187 @@
+{
+  "checkedAtUTC": "2026-10-25T18:20:05.927992+00:00",
+  "status": "VALID for static preservation and capture equivalence; final runtime QA/publication gate remains pending",
+  "main": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+  "offline": "e9411eba938dc819f12382fe636aa02ec5059271",
+  "protocol": "e0574af7a4b705a90a31e4d4c360ebf95d15df3e",
+  "head": "7a830e50c468c43442162b25823616c9cda62846",
+  "tree": "df7acbeda6d80f34a4b40dc89dc6ce2d6a95bf22",
+  "worktreeStatus": "",
+  "ancestry": {
+    "09a5aa49645a37ee011317f1b784f0dd9affdf02": true,
+    "e9411eba938dc819f12382fe636aa02ec5059271": true,
+    "e0574af7a4b705a90a31e4d4c360ebf95d15df3e": true
+  },
+  "mainAppExceptTwoSettingsHooksPreserved": true,
+  "appSHA256": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+  "mainProtectedOwners": [
+    {
+      "path": "dist/learning-sync.js",
+      "sameAsMain": true,
+      "sha256": "c1818c27a885d1a6d80d0fe32637a5a0353e9a06f1d6d066b32c1a61b3701ed1"
+    },
+    {
+      "path": "dist/question-report.js",
+      "sameAsMain": true,
+      "sha256": "55fac113b1bcd00de0a0617a94974fcaa06da7e8b0237ec7abd9c10794490cf5"
+    },
+    {
+      "path": "dist/question-feedback.js",
+      "sameAsMain": true,
+      "sha256": "0ccf98888b95be71016e5e6d8de2dfb9e30d3ecc6372c5ed50cae988241cd6bf"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback.mjs",
+      "sameAsMain": true,
+      "sha256": "de4a276a3e33593e7c9e485e00e853b63d32d3201410cc2c60d86a1f11e23155"
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback-ui.mjs",
+      "sameAsMain": true,
+      "sha256": "4ba2c7d641d00eddd4b577a2fb1ba1afb33915c12b812a8183f3ef1e2ebf9019"
+    },
+    {
+      "path": "integrations/google-sheets/Code.gs",
+      "sameAsMain": true,
+      "sha256": "56479d1afe3d1a0db03ea7d5ddfe0bfba353e4cc619d0eb9e9fd54c146c11620"
+    },
+    {
+      "path": "dist/combat-vfx.js",
+      "sameAsMain": true,
+      "sha256": "3e43efea0ac11fe263211db28d50667518f4cfaacd55d2d0b9be4496740b33a2"
+    },
+    {
+      "path": "dist/animation.js",
+      "sameAsMain": true,
+      "sha256": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9"
+    },
+    {
+      "path": "dist/animation-data.js",
+      "sameAsMain": true,
+      "sha256": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a"
+    },
+    {
+      "path": "dist/audio.js",
+      "sameAsMain": true,
+      "sha256": "a5c60c8e4cf4baf66851bbac7c9e7204468fafb8e9c1c181ced40e6656f7fcf0"
+    },
+    {
+      "path": "dist/engine.js",
+      "sameAsMain": true,
+      "sha256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc"
+    },
+    {
+      "path": "dist/question-data.js",
+      "sameAsMain": true,
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+    },
+    {
+      "path": "dist/balance-config.js",
+      "sameAsMain": true,
+      "sha256": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22"
+    },
+    {
+      "path": "dist/balance-data.js",
+      "sameAsMain": true,
+      "sha256": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d"
+    },
+    {
+      "path": "tools/ai-playtester/agent.cjs",
+      "sameAsMain": true,
+      "sha256": "de95c11d94cc0c6b7754ac6017e2061cb99aeb1362fae509b31291c1812cfd4f"
+    },
+    {
+      "path": "tools/ai-playtester/experience-data.cjs",
+      "sameAsMain": true,
+      "sha256": "ebae6279f8d4d53e6d3eeba6e6c211dbac31231004eaf2d9616f91f4c84ae6c5"
+    }
+  ],
+  "nonTutorialAssetCount": 610,
+  "nonTutorialAssetBlobDrift": [],
+  "mainScriptsLostOrChanged": [],
+  "mainCheckExactPrefixRetained": true,
+  "newFeatureCommandsPreserved": true,
+  "practiceOnlyGeneratedVersionChange": true,
+  "featureSourceExact": {
+    "dist/bootstrap.js": true,
+    "dist/sw.js": true,
+    "dist/offline-install.js": true,
+    "dist/pet-help.js": true,
+    "dist/play-mode-ui.js": true,
+    "dist/play-mode.css": true,
+    "tools/build-asset-manifest.cjs": true
+  },
+  "reviewedModeFixSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+  "strictTutorialTestSHA256": "550a6c79f90641cc7dcc128a6b6f716094d0171271d9f500d955808d6c2b624e",
+  "capture107RuntimeDrift": [],
+  "deltaFromCaptureSource603": [
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-loading-en.webp",
+    "dist/assets/tutorial-shot-loading-ms.webp",
+    "dist/assets/tutorial-shot-menu-en.webp",
+    "dist/assets/tutorial-shot-menu-ms.webp",
+    "dist/assets/tutorial-shot-passive-detail-en.webp",
+    "dist/assets/tutorial-shot-passive-detail-ms.webp",
+    "dist/assets/tutorial-shot-passive-en.webp",
+    "dist/assets/tutorial-shot-passive-ms.webp",
+    "dist/assets/tutorial-shot-retry-en.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "docs/tutorial/screenshots.json"
+  ],
+  "registryByteExactProtocol": true,
+  "mainHistories": {
+    "MASTER_SOR_PROJECT.md": {
+      "allMainLinesRetainedInOrder": true,
+      "mainLines": 207,
+      "candidateLines": 207
+    },
+    "AGENTS.md": {
+      "allMainLinesRetainedInOrder": true,
+      "mainLines": 97,
+      "candidateLines": 110
+    },
+    "docs/sor/DECISIONS.md": {
+      "allMainLinesRetainedInOrder": true,
+      "mainLines": 1042,
+      "candidateLines": 1069
+    },
+    "docs/sor/CHANGELOG.md": {
+      "allMainLinesRetainedInOrder": true,
+      "mainLines": 825,
+      "candidateLines": 842
+    }
+  },
+  "buildFileParity": {
+    "source": {
+      "manifestId": "279c6dc72f55dfaa10467bcd",
+      "releaseIdMatches": true,
+      "normalEntries": 765,
+      "offlineDeclaredFiles": 767,
+      "offlineTotalIncludingCanonicalManifest": 768,
+      "manifestSHA256": "ed4120f120a4eec2ea8be94139a23d8b6bf39d9aacb79c7881d5208dd1916b41",
+      "fileHashOrLengthErrors": []
+    },
+    "production": {
+      "manifestId": "6e162d1ee91a7681073bb989",
+      "releaseIdMatches": true,
+      "normalEntries": 766,
+      "offlineDeclaredFiles": 768,
+      "offlineTotalIncludingCanonicalManifest": 769,
+      "manifestSHA256": "8334ba5005d54a09c657406769a467a9b46d4e85958f64ae09c14c7e27107512",
+      "fileHashOrLengthErrors": []
+    }
+  },
+  "inheritedOpen": [
+    "CI-247-01 P2",
+    "QA-248-PRELOAD-01 P2; no counter fix inferred"
+  ],
+  "petScope": "Local FAQ plus permission/adapter contract only; live configured AI backend NOT_RUN/unconfigured",
+  "optionalP3": "Bilingual offline preparation explanation and scroll note in existing Tutorial; no incorrect existing loading/Settings step found",
+  "limits": [
+    "No additional browser, simulation, training or full-suite run by auditor",
+    "Current final QA results reviewed separately when supplied",
+    "Public Pages and physical-device acceptance are distinct"
+  ]
+}

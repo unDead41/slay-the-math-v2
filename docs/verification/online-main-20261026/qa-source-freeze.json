@@ -1,0 +1,57 @@
+{
+  "observedAt": "2026-10-25T18:16:01.765794+00:00",
+  "sha": "7a830e50c468c43442162b25823616c9cda62846",
+  "tree": "df7acbeda6d80f34a4b40dc89dc6ce2d6a95bf22",
+  "status": "",
+  "path": "/dev/shm/stm-online-main-20261026",
+  "deltaFromSourceFreeze": [
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-loading-en.webp",
+    "dist/assets/tutorial-shot-loading-ms.webp",
+    "dist/assets/tutorial-shot-menu-en.webp",
+    "dist/assets/tutorial-shot-menu-ms.webp",
+    "dist/assets/tutorial-shot-passive-detail-en.webp",
+    "dist/assets/tutorial-shot-passive-detail-ms.webp",
+    "dist/assets/tutorial-shot-passive-en.webp",
+    "dist/assets/tutorial-shot-passive-ms.webp",
+    "dist/assets/tutorial-shot-retry-en.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "docs/tutorial/screenshots.json"
+  ],
+  "unexpectedSourceDelta": [],
+  "allThreeAncestors": {
+    "09a5aa49645a37ee011317f1b784f0dd9affdf02": true,
+    "e9411eba938dc819f12382fe636aa02ec5059271": true,
+    "e0574af7a4b705a90a31e4d4c360ebf95d15df3e": true
+  },
+  "buildArtifacts": {
+    "dist": {
+      "entries": 765,
+      "manifestId": "279c6dc72f55dfaa10467bcd",
+      "version": "2.51.0",
+      "sha256": "ed4120f120a4eec2ea8be94139a23d8b6bf39d9aacb79c7881d5208dd1916b41",
+      "allHashesMatch": true
+    },
+    "release-prod": {
+      "entries": 766,
+      "manifestId": "6e162d1ee91a7681073bb989",
+      "version": "2.51.0",
+      "sha256": "8334ba5005d54a09c657406769a467a9b46d4e85958f64ae09c14c7e27107512",
+      "allHashesMatch": true
+    },
+    "portable": {
+      "bytes": 312186262,
+      "sha256": "66328f3238466836f75fb38ab53f93ea40c3de81a2b065a8690c27d11776f025"
+    },
+    "captureRuntimeInputsUnchanged": 107,
+    "changedCaptureRuntimeInputs": [],
+    "deduplicatedAssets": 589,
+    "reclaimedAllocatedBytes": 244953088,
+    "sourceAppSHA256": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+    "sourceModeSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+    "captureManifestSHA256": "403f5b101e4bc15d2e909a8f1c62a28171e92c5e55f504473d14e0d2646f024f"
+  },
+  "trackedFiles": 3500
+}

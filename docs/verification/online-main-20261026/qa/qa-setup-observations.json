@@ -1,0 +1,10 @@
+{
+  "category": "EXTERNAL_EVIDENCE_PROOF_SETUP_ONLY",
+  "notProductFailures": true,
+  "observations": [
+    "First equivalence probe expected all16 named outputs byte-identical with main; generated Practice differs only fallback2.50→2.51. Explicit full-byte fallback normalization then matches main.",
+    "First app proof removed the optional expression but left a split string join. The complete exact two hook byte sequences, including quote/join delimiters, now normalize to raw main79df bytes; no repository/capture assertion changed. Diagnostic diff is retained.",
+    "A read-only registry object lookup used an unresolved SHA literal. The actual unique e057 prefix was resolved locally to e0574af7a4b705a90a31e4d4c360ebf95d15df3e, whose exact registry blob is verified. No refs or source changed."
+  ],
+  "finalSuccessfulProof": "input-equivalence.json and registry-metadata.json"
+}

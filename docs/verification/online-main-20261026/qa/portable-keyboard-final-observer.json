@@ -1,0 +1,9 @@
+{
+  "initialObserverPath": "portable-keyboard-observation.cjs",
+  "initialObserverSHA256": "df7fe824a2c520858a07c5e37412248f64d1686b988d1b54a9aa6463a46dd39e",
+  "finalObserverPath": "portable-keyboard-final.cjs",
+  "finalObserverSHA256": "5296ba9cd4187d8e45b6b8dc2f39d3eb8bd9e2a69edd5248942b559f53178926",
+  "onlyObserverDelta": "Write full partial report on any failure. Every action and behavior assertion from initial observer is unchanged.",
+  "firstFailurePreserved": "portable-keyboard.{json,log}; no initial observer JSON report was emitted by its original catch path.",
+  "runtimeAndCanonicalRepositoryMutation": false
+}

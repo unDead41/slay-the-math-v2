@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "kind": "SCOPED_COMBINED_ONLINE_OFFLINE_MAIN_QA",
+  "generatedUTC": "2026-10-25T18:54:35.776863+00:00",
+  "qaWindowClosed": true,
+  "recommendation": "VALID_WITH_CARRIED_P2_AND_EXPLICIT_LIMITS",
+  "releaseAuthority": "Root final GO required; Release Manager sole main writer. QA performs no main/ref writes.",
+  "version": "2.51.0",
+  "mainReadSHA": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+  "featureSHA": "e9411eba938dc819f12382fe636aa02ec5059271",
+  "protocolSHA": "e0574af7a4b705a90a31e4d4c360ebf95d15df3e",
+  "firstFocusedCandidate": {
+    "SHA": "7a830e50c468c43442162b25823616c9cda62846",
+    "tree": "df7acbeda6d80f34a4b40dc89dc6ce2d6a95bf22"
+  },
+  "finalTestedCandidate": {
+    "SHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+    "tree": "ae67c4324438fda926052d36253cd6748954ce51"
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "jsdom": "26.1.0",
+    "playwright": "1.62.1",
+    "chromium": "153.0.8010.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "focusedNodeHeapMiB": 1792,
+    "tinyVMHeapMiB": 512,
+    "browser": "Headless software rendering; real separate persistent browser processes on task-owned tmpfs; one owned profile/browser family at a time",
+    "noDependencyInstall": true,
+    "tmpRoot": "/dev/shm/stm-pending-evidence-20261026/qa/tmp"
+  },
+  "commands": [
+    {
+      "label": "play-mode-clear-green",
+      "status": "PASS",
+      "sourceSHA": "cb6a6a2094203210bea1e225c8280e3e881857f4",
+      "runtimeSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+      "testSHA256": "09a4d25cdf3db2e3b2b2c139b1b76dfbe9dc7c77076e9bf2704d0abff39abca2",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "tests/play-mode.test.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.175,
+      "counts": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "metadata": "play-mode-clear-green.json",
+      "log": "play-mode-clear-green.log"
+    },
+    {
+      "label": "play-mode-clear-red",
+      "status": "FAIL_RETAINED",
+      "sourceSHA": "cb6a6a2094203210bea1e225c8280e3e881857f4",
+      "runtimeSHA256": "f29428fe7de2021c7d6a3f219b146f8a0f7e331ce9f6c2d7d4510201548be7d2",
+      "testSHA256": "09a4d25cdf3db2e3b2b2c139b1b76dfbe9dc7c77076e9bf2704d0abff39abca2",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "tests/play-mode.test.cjs"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 0.176,
+      "counts": {
+        "tests": 12,
+        "pass": 10,
+        "fail": 2,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "metadata": "play-mode-clear-red.json",
+      "log": "play-mode-clear-red.log"
+    },
+    {
+      "label": "focused-final",
+      "status": "PASS",
+      "sourceSHA": "7a830e50c468c43442162b25823616c9cda62846",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "tests/offline-install.test.cjs",
+        "tests/service-worker-offline.test.cjs",
+        "tests/play-mode.test.cjs",
+        "tests/play-mode-ui.test.cjs",
+        "tests/asset-readiness.test.cjs",
+        "tests/background-download.test.cjs",
+        "tests/education-delivery-reliability.test.cjs",
+        "tests/education-recovery.test.cjs",
+        "tests/question-report.test.cjs",
+        "tests/question-feedback.test.cjs",
+        "tests/learning-sync.test.cjs",
+        "tests/game-language.test.cjs",
+        "tests/tutorial.test.cjs",
+        "tests/tutorial-ui.test.cjs",
+        "tests/tutorial-media.test.cjs",
+        "tests/asset-manifest.test.cjs",
+        "tests/release-build.test.cjs",
+        "tests/combat-initial-refresh.test.cjs",
+        "tests/combat-image-refresh.test.cjs",
+        "tests/icon-loading-integration.test.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 17.102,
+      "metadata": "focused-final.json",
+      "log": "focused-final.log",
+      "counts": {
+        "tests": 175,
+        "PASS": 175,
+        "FAIL": 0,
+        "SKIP": 0,
+        "CANCEL": 0
+      }
+    },
+    {
+      "label": "syntax-final",
+      "status": "PASS",
+      "sourceSHA": "7a830e50c468c43442162b25823616c9cda62846",
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 7.357,
+      "metadata": "syntax-final.json",
+      "log": "syntax-final.log",
+      "counts": {
+        "count": "package check aggregate PASS; no invented test count"
+      }
+    },
+    {
+      "label": "offline-full",
+      "status": "FAIL_RETAINED",
+      "sourceSHA": "7a830e50c468c43442162b25823616c9cda62846",
+      "command": [
+        "npm",
+        "run",
+        "test:offline-browser"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 77.672,
+      "metadata": "offline-full.json",
+      "log": "offline-full.log",
+      "counts": {
+        "completedChecks": 8,
+        "plannedChecks": 14,
+        "browserErrors": [
+          "Page crashed"
+        ],
+        "remainingChecks": "NOT_RUN after target crash"
+      }
+    },
+    {
+      "label": "portable-keyboard",
+      "status": "FAIL_RETAINED",
+      "sourceSHA": "7a830e50c468c43442162b25823616c9cda62846",
+      "command": [
+        "node",
+        "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-observation.cjs"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 7.619,
+      "metadata": "portable-keyboard.json",
+      "log": "portable-keyboard.log",
+      "counts": {
+        "canonicalPortableChecksCompleted": 0,
+        "failure": "Initial checked Online +Space retained explicit=false; original failing assertion preserved",
+        "partialReport": "NOT_EMITTED by initial observer"
+      }
+    },
+    {
+      "label": "keyboard-events",
+      "status": "PASS",
+      "sourceSHA": "7a830e50c468c43442162b25823616c9cda62846",
+      "command": [
+        "node",
+        "/dev/shm/stm-pending-evidence-20261026/qa/keyboard-event-diagnostic.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 5.854,
+      "metadata": "keyboard-events.json",
+      "log": "keyboard-events.log",
+      "counts": {
+        "kind": "Diagnostic observations, not acceptance-test count",
+        "trustedEventsRecorded": true,
+        "httpRequests": 0,
+        "browserErrors": 0
+      }
+    },
+    {
+      "label": "focused-keyboard-final",
+      "status": "PASS",
+      "sourceSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "tests/play-mode.test.cjs",
+        "tests/play-mode-ui.test.cjs",
+        "tests/tutorial-media.test.cjs",
+        "tests/asset-manifest.test.cjs",
+        "tests/release-build.test.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.994,
+      "metadata": "focused-keyboard-final.json",
+      "log": "focused-keyboard-final.log",
+      "counts": {
+        "tests": 23,
+        "PASS": 23,
+        "FAIL": 0,
+        "SKIP": 0,
+        "CANCEL": 0
+      }
+    },
+    {
+      "label": "portable-keyboard-final",
+      "status": "PASS",
+      "sourceSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+      "command": [
+        "node",
+        "/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-final.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 9.111,
+      "metadata": "portable-keyboard-final.json",
+      "log": "portable-keyboard-final.log",
+      "counts": {
+        "canonicalDerivedPortableChecks": 3,
+        "keyboardStateSnapshots": 4,
+        "keyboardEnterActions": 3,
+        "httpRequests": 0,
+        "browserErrors": 0,
+        "saveBytesUnchanged": true
+      }
+    },
+    {
+      "label": "offline-full-retry",
+      "status": "PASS",
+      "sourceSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+      "command": [
+        "npm",
+        "run",
+        "test:offline-browser"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 105.422,
+      "metadata": "offline-full-retry.json",
+      "log": "offline-full-retry.log",
+      "counts": {
+        "nativeChecks": 14,
+        "PASS": 14,
+        "browserErrors": 0,
+        "verifiedFiles": 769,
+        "verifiedBytes": 232968331,
+        "tutorialChapters": 23,
+        "pictureExposures": 114,
+        "uniquePictures": 98,
+        "decodedMP3": 85,
+        "mutedWebAudioSourcePlayed": true,
+        "stageBossFixtures": 4
+      }
+    },
+    {
+      "label": "se-startup-original",
+      "status": "PASS",
+      "sourceSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+      "command": [
+        "npm",
+        "run",
+        "test:se-offline"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 34.405,
+      "metadata": "se-startup-original.json",
+      "log": "se-startup-original.log",
+      "counts": {
+        "regressionCases": 2,
+        "PASS": 2,
+        "cases": [
+          "A2",
+          "A4"
+        ],
+        "newIndependentSamples": false,
+        "trainingEligible": false,
+        "originalA1A3": "NOT_RUN on final candidate"
+      }
+    },
+    {
+      "label": "native-storage",
+      "status": "PASS",
+      "sourceSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+      "command": [
+        "node",
+        "tests/offline-storage-browser.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 35.955,
+      "metadata": "native-storage.json",
+      "log": "native-storage.log",
+      "counts": {
+        "nativeFaultCases": 4,
+        "PASS": 4,
+        "browserErrors": 0
+      }
+    },
+    {
+      "label": "online-preload",
+      "status": "PASS",
+      "sourceSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+      "command": [
+        "npm",
+        "run",
+        "test:preload-browser"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 46.869,
+      "metadata": "online-preload.json",
+      "log": "online-preload.log",
+      "counts": {
+        "nativeGroups": 9,
+        "PASS": 9,
+        "nonPracticeAvailableFiles": 765,
+        "nonPracticeTotalFiles": 765,
+        "allManagerAvailableFiles": 766,
+        "browserErrors": 0
+      }
+    }
+  ],
+  "inputEquivalence": "input-equivalence.json",
+  "closingSnapshot": "closing-source-snapshot.json",
+  "all3500TrackedBytesUnchangedDuringFinalWindow": true,
+  "productionArtifacts": {
+    "release-prod/asset-manifest.json": {
+      "bytes": 317538,
+      "sha256": "b9fd17f3116886a74169a3e26fcabfbf92217dba0dd9c723ece7ec2e73a70bc7"
+    },
+    "release-prod/index.html": {
+      "bytes": 11503,
+      "sha256": "8281d000a32d6859e9b64f170baa28ffc0caaf9af1206cac95ef45e04eb0847f"
+    }
+  },
+  "portable": {
+    "bytes": 312186494,
+    "sha256": "7dfc9bd13e40e7db253bd9b6cc50318e8713e0a991daa34797fa127fb918875d",
+    "testedPASSBeforeRemoval": true,
+    "localIgnoredArtifactRemovedAfterConsumerClosure": true,
+    "proof": "portable-closure-handoff.json; parent portable-cleanup-after-pass.json",
+    "notSourceMutation": true
+  },
+  "findings": [
+    {
+      "id": "QA-251-PET-CROSS-TAB-CLEAR",
+      "severity": "P2",
+      "status": "FIXED_AND_VERIFIED",
+      "proof": "play-mode-fix-evidence.json; original12tests10PASS2FAIL, identical tests12/12GREEN and fresh final mode tests in23/23.",
+      "scope": "LocalStorage clear revokes pet permission/cancels work, not protection from the storage-clear operation itself deleting records. Google consent is independent."
+    },
+    {
+      "id": "QA-251-KEYBOARD-CHECKED-RADIO",
+      "severity": "P2",
+      "status": "FIXED_AND_VERIFIED",
+      "proof": "portable-keyboard FAIL +keyboard-events diagnostic; root UI RED/GREEN; fresh23/23 and unchanged native portable3+fourkeyboardstates+EnterFAQ/ask pass.",
+      "cause": "Checked native radio Space/Enter emitted no click; focused mode activation now routes through existing click. Native arrows/mouse were already consistent. Input guard was not suppressing the keys."
+    },
+    {
+      "id": "QA-251-NATIVE-TARGET-CRASH",
+      "severity": "ENVIRONMENT_LIMITATION",
+      "status": "ORIGINAL_FAIL_RETAINED_FINAL_CONTROLLED_PASS",
+      "proof": "Original7a canonical14:8completed checks then target crash at first combat import; no recorded process signal or fresh cgroupOOM increment. Final20b14/14 passes after authorized312MB portable/other closed-resource reclaim and keyboard-only source fix.",
+      "causality": "Resource pressure observed, not established as exclusive root cause; no renderer/GPU defect fixed claim.",
+      "memoryEvidence": [
+        "offline-full-memory-after-failure.json",
+        "offline-full-retry-memory-before.json",
+        "offline-full-retry-memory-after.json"
+      ]
+    },
+    {
+      "id": "SE-OFFLINE-01",
+      "status": "SCOPED_PRODUCTION_REGRESSION_PASS",
+      "proof": "Final full-install14 proves launchable complete release; original-byte A2/A4 startup cases prove same-release cold navigation/Continue with exact entire save/RNG while fullReady=false.",
+      "limits": "OriginalA1/A3 not replayed on this combined candidate; original4FAIL remain in immutable registry. Partialstartup A4 screenshot includes truthful missing-image Retry notice; not full offline play readiness."
+    }
+  ],
+  "carriedFindings": [
+    {
+      "id": "CI-247-01",
+      "severity": "P2",
+      "freshStatus": "NOT_RUN",
+      "scope": "Old icon browser readiness harness; no fix/green claim."
+    },
+    {
+      "id": "QA-248-PRELOAD-01",
+      "severity": "P2",
+      "freshStatus": "New preload9/9PASS765/765nonPractice; historical retained-count boundary issue not declared fixed."
+    },
+    {
+      "id": "OWNER-BREADTH-D1-D2",
+      "severity": "P2",
+      "freshStatus": "NOT_RUN",
+      "scope": "Historical menu keyboard focus failures remain on b3dc; new Settings radio fix is a distinct flow."
+    }
+  ],
+  "registryMetadata": "registry-metadata.json",
+  "registryOutcomes": "Originalpilot10:6PASS4FAIL; breadth10:8PASS2FAIL; threejourneys CENSORED_HARNESS_AND_BUDGET,0finalbosscompletion. No RUNNING snapshot or new outcomes invented.",
+  "privacy": "privacy-check.json; all raw original saves stay outside repository/evidence pack.",
+  "screenshots": [
+    "keyboard-events-artifacts/keyboard-state-phone.png",
+    "offline-full-artifacts/installed-settings.png",
+    "offline-full-artifacts/offline-phone-ms.png",
+    "offline-full-retry-artifacts/installed-settings.png",
+    "offline-full-retry-artifacts/offline-phone-ms.png",
+    "portable-keyboard-final-artifacts/keyboard-settings-phone.png",
+    "se-startup-original-artifacts/A2-before.png",
+    "se-startup-original-artifacts/A2-cold.png",
+    "se-startup-original-artifacts/A4-before.png",
+    "se-startup-original-artifacts/A4-cold.png"
+  ],
+  "notRun": [
+    "Full repository1175/owner1189 repeated on final combined candidate; historical results are not relabelled.",
+    "Original fixture full-cache A1/A3 on final candidate; owner historical4/4 remains owner-source proof only.",
+    "Public Pages/browser deployment acceptance, OS reboot, physical devices, hardware graphics/other browser families and human audio audition.",
+    "Live Google account/deployment/Sheet receipt/exec service; existing separate consent owner preserved, no universal Offline network kill switch.",
+    "Live pet provider/backend/key, animated external pet, free-form offline LLM. Local QA endpoints are mocks.",
+    "Native Codex agent loader/automatic shared registry locking; cap3/default1/manual coordination metadata only.",
+    "New owner pilot/breadth/journey campaigns, numerical balance campaigns, AI training or model fitting, universal performance/pupil/win-rate claims.",
+    "Unchanged75pose/fullanimation rerun; source preservation, prior main evidence and selected offline actor/VFX checks used.",
+    "MODEL.zip visual reference matching and newly reading all textbook/evaluator content."
+  ],
+  "producerEvidenceReferences": [
+    "INVENTORY.md",
+    "build",
+    "capture-source-checkpoint.json",
+    "feature-index.html",
+    "historical-adoption-proof.json",
+    "immutable-keyboard-runnable-uploaded.json",
+    "immutable-keyboard-upload-plan.json",
+    "immutable-runnable-upload-plan.json",
+    "immutable-runnable-uploaded.json",
+    "initial-github-branches.json",
+    "instruction-source-record.json",
+    "integration-auditor",
+    "inventory-classified.json",
+    "inventory.json",
+    "keyboard-upload-temp-cleanup.json",
+    "main-package.json",
+    "offline-merge-tree.txt",
+    "old-production-artifact-before-removal.json",
+    "original-replay-input-proof.json",
+    "portable-cleanup-after-pass.json",
+    "prepared-integration-proof.json",
+    "protocol-merge-tree.txt",
+    "qa-keyboard-source-freeze.json",
+    "qa-source-freeze.json",
+    "root-keyboard",
+    "root-registry-review.json",
+    "storage-reclaim-first.json",
+    "storage-reclaim-options.json",
+    "superseded-language-paths.json",
+    "task-owned-portable-cleanup.json",
+    "tmp",
+    "tutorial-recapture",
+    "workspace-isolation.json"
+  ],
+  "captureProvenance": "Actual98 captures49EN49MS, followed by actualmenu20 after keyboard UI correction; final98 catalogue uses20 currentmenu +78 unchanged original records/bitmaps. Strict full RAWapp0ae062... hash, no hook-stripping capture exception. Four menuWebP changed between first7a and final20b.",
+  "noAggregateFullGreenClaim": "175/175 at7a plus final23/23 and distinct native groups. Do not sum overlapping tests or treat historical owner1189 as this release fullsuite. Both first native failures and VM RED retained."
+}

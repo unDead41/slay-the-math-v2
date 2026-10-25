@@ -1,0 +1,30 @@
+{
+  "label": "online-preload",
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "command": [
+    "npm",
+    "run",
+    "test:preload-browser"
+  ],
+  "start": "2026-10-25T18:47:05Z",
+  "environment": {
+    "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "QA_DISABLE_GPU": "1",
+    "NODE_OPTIONS": "--max-old-space-size=1792",
+    "QA_OUTPUT": "/dev/shm/stm-pending-evidence-20261026/qa/online-preload-artifacts",
+    "QA_SCREENSHOTS": "/dev/shm/stm-pending-evidence-20261026/qa/online-preload-screenshots",
+    "QA_REPORT": "/dev/shm/stm-pending-evidence-20261026/qa/online-preload-report.json",
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/qa/tmp"
+  },
+  "overrides": {
+    "QA_DIST": "release-prod"
+  },
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "exitCode": 0,
+  "elapsedSeconds": 46.869,
+  "log": "/dev/shm/stm-pending-evidence-20261026/qa/online-preload.log"
+}

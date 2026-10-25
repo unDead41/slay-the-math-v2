@@ -1,0 +1,35 @@
+/* Deliberate A1–A4 replay: original batch saves stay outside the player build. */
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),http=require('node:http'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const {chromium}=require(process.env.BROWSER_QA_MODULE||'playwright'),root=path.resolve(__dirname,'..'),plan=require('./fixtures/se-offline-pilot.json'),E=require('../dist/engine.js');
+const input=process.env.SE_BATCH_DIR,dist=path.resolve(root,process.env.QA_DIST||'release-prod'),out=path.resolve(process.env.QA_OUTPUT||path.join(root,'docs/verification/se-offline-01/replay'));
+if(!input)throw Error('Set SE_BATCH_DIR to the extracted original batch; never generate replacement saves.');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),report={originalBatch:plan.originalBatch,regressionOf:plan.finding,kind:'BROWSER_INTEGRATION_REGRESSION',trainingEligible:false,newIndependentSamples:false,version:require('../package.json').version,cases:[]};fs.mkdirSync(out,{recursive:true});
+const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png','.mp3':'audio/mpeg','.ogg':'audio/ogg'};
+async function enter(p){await p.locator('#resource-enter').waitFor({state:'visible',timeout:180000});await p.locator('#resource-enter').click();await p.locator('.main-menu-actions [data-action=continue]').waitFor();}
+(async()=>{
+ for(const c of plan.cases.filter(c=>!process.env.SE_CASES||process.env.SE_CASES.split(',').includes(c.caseId))){
+  const bytes=fs.readFileSync(path.join(input,c.savePath));assert.equal(hash(bytes),c.saveFileSHA256);const save=JSON.parse(bytes);assert.equal(hash(bytes),c.originalEntryHash);assert.equal(save.seed,c.seed);assert.ok(E.validate(save));
+  const row={caseId:c.caseId,seed:c.seed,language:c.language,viewport:c.viewport,requestedCache:c.cache,originalSaveSHA256:c.saveFileSHA256,originalEntryHash:c.originalEntryHash,errors:[]};report.cases.push(row);
+  const profile=fs.mkdtempSync(path.join(process.env.QA_PROFILE_ROOT||os.tmpdir(),'stm-se-'+c.caseId+'-'));let context;
+  const server=http.createServer((req,res)=>{const name=new URL(req.url,'http://localhost').pathname.replace(/^\/slay-the-math-v2\//,'')||'index.html',file=path.resolve(dist,name);if(!file.startsWith(dist+'/')){res.writeHead(403);res.end();return;}fs.readFile(file,(e,b)=>{res.writeHead(e?404:200,{'content-type':mime[path.extname(file)]||'application/octet-stream','cache-control':'no-store'});res.end(e?'missing':b);});});
+  const options={headless:true,executablePath:process.env.QA_CHROMIUM_EXECUTABLE||'/tmp/chromium',ignoreDefaultArgs:['--disable-dev-shm-usage'],args:['--no-sandbox','--disable-gpu','--disk-cache-size=1048576'],viewport:c.viewport};
+  const observe=p=>p.on('pageerror',e=>row.errors.push(e.message));
+  try{
+   await new Promise(r=>server.listen(0,'127.0.0.1',r));const url='http://127.0.0.1:'+server.address().port+'/slay-the-math-v2/';context=await chromium.launchPersistentContext(profile,options);let p=context.pages()[0];observe(p);row.browser=context.browser().version();
+   await p.addInitScript(({save,lang})=>{localStorage.setItem('duel-cube-math.v1',JSON.stringify(save));localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:true,sound:false,musicMuted:true,voiceMuted:true}));localStorage.setItem('slay-the-math.question-language.v1',lang);},{save,lang:c.language});
+   await p.goto(url);await enter(p);await p.locator('#resource-download-pause').evaluate(el=>el.click());await p.waitForFunction(()=>STMHosted.downloads().active===0);
+   if(c.cache==='full'){await p.locator('#resource-download-all').evaluate(el=>el.click());await p.waitForFunction(()=>{const m=STMHosted.manager,q=STMHosted.downloads();return !q.active&&!q.queued&&m.progress(m.manifest.entries.map(e=>e.url)).availableFiles===m.manifest.entries.length;},null,{timeout:180000});}
+   row.before=await p.evaluate(async()=>{const m=STMHosted.manager;await m.reconcile({retryStorage:true});return {progress:m.progress(m.manifest.entries.map(e=>e.url)),launch:STMHosted.offline.launchSnapshot(),releaseId:m.manifest.manifestId,fullOfflineReady:STMHosted.offline.ready,save:JSON.parse(localStorage.getItem('duel-cube-math.v1')),mode:STMPlayMode.snapshot()};});
+   assert.deepEqual(row.before.save,save);delete row.before.save;assert.equal(row.before.launch.ready,true);assert.equal(row.before.mode.explicit,false,'Original protocol does not add an Offline choice');assert.equal(row.before.mode.petAPIAllowed,false);
+   if(c.cache==='startup'){assert.ok(row.before.progress.availableFiles<row.before.progress.totalFiles);assert.equal(row.before.fullOfflineReady,false);}else assert.equal(row.before.progress.availableFiles,row.before.progress.totalFiles);
+   await p.screenshot({path:path.join(out,c.caseId+'-before.png')});await context.close();context=null;server.closeAllConnections();await new Promise(r=>server.close(r));
+   context=await chromium.launchPersistentContext(profile,options);await context.setOffline(true);p=context.pages()[0];observe(p);const cdp=await context.newCDPSession(p);await cdp.send('Network.enable');await cdp.send('Network.setCacheDisabled',{cacheDisabled:true});await context.route('**/*',route=>route.abort('internetdisconnected'));
+   const response=await p.goto(url,{waitUntil:'domcontentloaded',timeout:20000});assert.equal(response.status(),200);assert.equal(response.fromServiceWorker(),true);await enter(p);
+   assert.deepEqual(await p.evaluate(()=>JSON.parse(localStorage.getItem('duel-cube-math.v1'))),save);await p.locator('.main-menu-actions [data-action=continue]').click();await p.waitForFunction(()=>!document.body.classList.contains('scene-preparing'));assert.deepEqual(await p.evaluate(()=>JSON.parse(localStorage.getItem('duel-cube-math.v1'))),save,'Exact original save including RNG/deck/Gold after Continue');
+   assert.equal(await p.evaluate(()=>fetch(new URL('api/se-uncached-probe',document.baseURI),{cache:'no-store'}).then(()=>false,()=>true)),true);assert.equal(await p.evaluate(()=>DCQuestionLanguage.language()),c.language);assert.deepEqual(row.errors,[]);
+   row.cold={newBrowserProcess:true,serverStopped:true,networkBlocked:true,httpCacheDisabled:true,serviceWorkerNavigation:true,url:p.url(),saveExact:true,rngExact:true,releaseId:await p.evaluate(()=>STMHosted.manager.manifest.manifestId)};assert.equal(row.cold.releaseId,row.before.releaseId);row.status='PASS';await p.screenshot({path:path.join(out,c.caseId+'-cold.png')});console.log('PASS '+c.caseId+' seed='+c.seed+' '+c.cache+' '+c.language);
+  }catch(error){row.status='FAIL';row.error=error.stack;throw error;}
+  finally{await context?.close();if(server.listening){server.closeAllConnections();await new Promise(r=>server.close(r));}fs.rmSync(profile,{recursive:true,force:true});fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');}
+ }
+})().catch(error=>{console.error(error);process.exitCode=1;});

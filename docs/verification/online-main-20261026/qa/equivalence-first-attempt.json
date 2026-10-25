@@ -1,0 +1,13 @@
+{
+  "status": "EXTERNAL_PROOF_ASSUMPTION_FAILED",
+  "expected": "All16 named outputs byte-identical with main",
+  "actualDifferent": [
+    {
+      "path": "dist/education-practice.js",
+      "mainBlob": "356178b2b4b88bbf6bc08530341186b2f30ab468",
+      "candidateBlob": "f6def3a6f272666c1bd3d99a8e5e1980bab049d6"
+    }
+  ],
+  "notProductTestFailure": true,
+  "action": "Inspect generated metadata delta and bind actual owner source before making preservation claims."
+}

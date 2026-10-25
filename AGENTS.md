@@ -1,5 +1,19 @@
 # Arahan projek — Slay the Math
 
+## Current main integration authorization — 2.51.0
+
+Ijamm now requests listing the changes still pending and publishing them to main.
+This authorizes the combined Online/Offline feature e941 and immutable registry
+snapshot e057 with main 09a5 / 2.50.0 as 2.51.0, preserving current education,
+VFX/Idle, numerical, save/RNG, language, AI and original-asset owners. This
+supersedes the relevant branch-only boundaries below; their source pins and
+original test outcomes remain history. Combined scoped compatibility is **VALID with carried P2 findings**: 175 focused
+checks on 7a, 23 fresh final checks on 20b and the stated native groups pass.
+Publication remains **PENDING** until actual expected-head ref readback.
+No simulation campaign, collector or model update is included. [Current scope,
+evidence and limits](docs/ONLINE_OFFLINE_MAIN_2_51_0.md).
+
+
 ## Current main integration authorization — 2.50.0
 
 The current explicit user request authorizes combining combat, education and

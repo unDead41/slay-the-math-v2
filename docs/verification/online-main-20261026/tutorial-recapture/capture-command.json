@@ -1,0 +1,28 @@
+{
+  "command": [
+    "node",
+    "tools/capture-tutorial.cjs"
+  ],
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "environmentOverrides": {
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "SHARP_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/tmp"
+  },
+  "removedSelectors": [
+    "TUTORIAL_CAPTURE_GROUP",
+    "QA_CHROMIUM_MODULE"
+  ],
+  "startUTC": "2026-10-25T18:05:24.091033+00:00",
+  "sourceSHA": "6033478c0d6279258ed153dae4e0e19ef83bff1d",
+  "tree": "11675d86b21bab796171174b6a84db24a68aec24",
+  "actualFullCapture": true,
+  "petScope": "LocalFAQ and permission/adapter contract only; no liveconfiguredAI backend",
+  "ownerPID": 6,
+  "ownerProcessGroup": 6,
+  "exitCode": 0,
+  "endUTC": "2026-10-25T18:12:19.969998+00:00",
+  "durationSeconds": 415.8791595840012,
+  "pidScope": "PIDs are local to the capture exec invocation, not cross-invocation kill targets"
+}

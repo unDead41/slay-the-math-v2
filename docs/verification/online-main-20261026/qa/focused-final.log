@@ -1,0 +1,1062 @@
+TAP version 13
+# Subtest: the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets
+ok 1 - the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets
+  ---
+  duration_ms: 483.761533
+  type: 'test'
+  ...
+# Subtest: the actual startup package prioritizes the hero and Stage1 while deferring late packs
+ok 2 - the actual startup package prioritizes the hero and Stage1 while deferring late packs
+  ---
+  duration_ms: 200.364782
+  type: 'test'
+  ...
+# Subtest: concurrent requests share bytes and a verified disk hit avoids another download
+ok 3 - concurrent requests share bytes and a verified disk hit avoids another download
+  ---
+  duration_ms: 48.85172
+  type: 'test'
+  ...
+# Subtest: a corrupt cached response is rejected and replaced without clearing unrelated data
+ok 4 - a corrupt cached response is rejected and replaced without clearing unrelated data
+  ---
+  duration_ms: 9.025739
+  type: 'test'
+  ...
+# Subtest: transient HTTP failures retry twice but missing assets fail once and never become ready
+ok 5 - transient HTTP failures retry twice but missing assets fail once and never become ready
+  ---
+  duration_ms: 10.410929
+  type: 'test'
+  ...
+# Subtest: a stalled response has a bounded failure and a loading budget cancels outstanding work
+ok 6 - a stalled response has a bounded failure and a loading budget cancels outstanding work
+  ---
+  duration_ms: 37.146806
+  type: 'test'
+  ...
+# Subtest: foreground work precedes queued boss downloads and background concurrency stays bounded
+ok 7 - foreground work precedes queued boss downloads and background concurrency stays bounded
+  ---
+  duration_ms: 18.342746
+  type: 'test'
+  ...
+# Subtest: cache quota failure keeps downloads usable online and rejects URLs outside this manifest
+ok 8 - cache quota failure keeps downloads usable online and rejects URLs outside this manifest
+  ---
+  duration_ms: 3.224474
+  type: 'test'
+  ...
+# Subtest: an update reuses unchanged verified bytes and replaces changed bytes within the same project
+ok 9 - an update reuses unchanged verified bytes and replaces changed bytes within the same project
+  ---
+  duration_ms: 4.347331
+  type: 'test'
+  ...
+# Subtest: cache denial still reuses verified bytes for sequential consumers without repeating SHA work
+ok 10 - cache denial still reuses verified bytes for sequential consumers without repeating SHA work
+  ---
+  duration_ms: 3.430904
+  type: 'test'
+  ...
+# Subtest: a verified disk read is retained privately and consumers cannot mutate later responses
+ok 11 - a verified disk read is retained privately and consumers cannot mutate later responses
+  ---
+  duration_ms: 1.760254
+  type: 'test'
+  ...
+# Subtest: the compressed byte budget evicts background entries before a foreground resource
+ok 12 - the compressed byte budget evicts background entries before a foreground resource
+  ---
+  duration_ms: 5.561665
+  type: 'test'
+  ...
+# Subtest: oversized verified assets remain usable without exceeding the session budget
+ok 13 - oversized verified assets remain usable without exceeding the session budget
+  ---
+  duration_ms: 4.575844
+  type: 'test'
+  ...
+# Subtest: wrong-hash bytes never enter the trusted session cache, and a retry can populate it
+ok 14 - wrong-hash bytes never enter the trusted session cache, and a retry can populate it
+  ---
+  duration_ms: 2.979325
+  type: 'test'
+  ...
+# Subtest: verified session reuse is isolated by manifest and still obeys pause and destroy
+ok 15 - verified session reuse is isolated by manifest and still obeys pause and destroy
+  ---
+  duration_ms: 3.143813
+  type: 'test'
+  ...
+# Subtest: startup gates75 percent of bytes, not75 percent of files, and includes all hard core
+ok 16 - startup gates75 percent of bytes, not75 percent of files, and includes all hard core
+  ---
+  duration_ms: 1.767936
+  type: 'test'
+  ...
+# Subtest: whole-file startup never rounds below75 percent and tolerates an older manifest
+ok 17 - whole-file startup never rounds below75 percent and tolerates an older manifest
+  ---
+  duration_ms: 0.202344
+  type: 'test'
+  ...
+# Subtest: retained progress does not call evicted online-only bytes ready
+ok 18 - retained progress does not call evicted online-only bytes ready
+  ---
+  duration_ms: 35.909476
+  type: 'test'
+  ...
+# Subtest: incremental background queue promotes room resources without occupying foreground capacity
+ok 19 - incremental background queue promotes room resources without occupying foreground capacity
+  ---
+  duration_ms: 31.34502
+  type: 'test'
+  ...
+# Subtest: hidden/offline/manual pause stops new speculative work and resumes the same queue
+ok 20 - hidden/offline/manual pause stops new speculative work and resumes the same queue
+  ---
+  duration_ms: 40.974306
+  type: 'test'
+  ...
+# Subtest: a failed background file stays retryable and saved files are not downloaded twice
+ok 21 - a failed background file stays retryable and saved files are not downloaded twice
+  ---
+  duration_ms: 11.118804
+  type: 'test'
+  ...
+# Subtest: resume during cancellation retries the unwinding download without another reconnect
+ok 22 - resume during cancellation retries the unwinding download without another reconnect
+  ---
+  duration_ms: 16.882573
+  type: 'test'
+  ...
+# Subtest: disk eviction after memory eviction is reconciled and automatic admission repairs it
+ok 23 - disk eviction after memory eviction is reconciled and automatic admission repairs it
+  ---
+  duration_ms: 10.334596
+  type: 'test'
+  ...
+# Subtest: cache read access loss removes historical persistence even if later writes succeed
+ok 24 - cache read access loss removes historical persistence even if later writes succeed
+  ---
+  duration_ms: 3.490133
+  type: 'test'
+  ...
+# Subtest: explicit storage retry can restore persistent preparation after quota is freed
+ok 25 - explicit storage retry can restore persistent preparation after quota is freed
+  ---
+  duration_ms: 3.698146
+  type: 'test'
+  ...
+# Subtest: a foreground recovery clears a stale background-failed status without a separate retry
+ok 26 - a foreground recovery clears a stale background-failed status without a separate retry
+  ---
+  duration_ms: 7.203462
+  type: 'test'
+  ...
+# Subtest: automatic availability polling does not retry a failed file until an explicit retry
+ok 27 - automatic availability polling does not retry a failed file until an explicit retry
+  ---
+  duration_ms: 36.283349
+  type: 'test'
+  ...
+# Subtest: a recovery audit waits for a fresh snapshot if an older cache audit is already running
+ok 28 - a recovery audit waits for a fresh snapshot if an older cache audit is already running
+  ---
+  duration_ms: 7.843122
+  type: 'test'
+  ...
+# Subtest: combat image refresh reports a current failure without blanking the room and ignores obsolete failures
+ok 29 - combat image refresh reports a current failure without blanking the room and ignores obsolete failures
+  ---
+  duration_ms: 498.438253
+  type: 'test'
+  ...
+# bootstrapSHA256 7f3a4d3f27028221ec16fcfd32d66333aaae5ec983db89e6354de5414d4fc8d1
+# {"case":"current image after initial actor success","initialGateHeld":true,"panelHidden":false,"retryHidden":false,"scenePreparing":false}
+# Subtest: current image retry survives the success of an older initial actor preload
+ok 30 - current image retry survives the success of an older initial actor preload
+  ---
+  duration_ms: 77.425175
+  type: 'test'
+  ...
+# Subtest: a failed current image removed before actor settlement cannot resurrect its notice
+ok 31 - a failed current image removed before actor settlement cannot resurrect its notice
+  ---
+  duration_ms: 22.692712
+  type: 'test'
+  ...
+# Subtest: obsolete removed image cannot raise a retry after initial actor success
+ok 32 - obsolete removed image cannot raise a retry after initial actor success
+  ---
+  duration_ms: 12.089112
+  type: 'test'
+  ...
+# Subtest: a receiver that recovers after repeated failures is retried without another online event
+ok 33 - a receiver that recovers after repeated failures is retried without another online event
+  ---
+  duration_ms: 18.162916
+  type: 'test'
+  ...
+# Subtest: hidden pages pause retries; visibility resumes; disabling consent cancels later sends
+ok 34 - hidden pages pause retries; visibility resumes; disabling consent cancels later sends
+  ---
+  duration_ms: 4.623085
+  type: 'test'
+  ...
+# Subtest: a full real outbox is distinguished from a report successfully queued
+ok 35 - a full real outbox is distinguished from a report successfully queued
+  ---
+  duration_ms: 174.451062
+  type: 'test'
+  ...
+# Subtest: the result popup explains unavailable/storage states and opens existing sharing controls
+ok 36 - the result popup explains unavailable/storage states and opens existing sharing controls
+  ---
+  duration_ms: 34.626645
+  type: 'test'
+  ...
+# Subtest: new game reports carry the actual build/content versions
+ok 37 - new game reports carry the actual build/content versions
+  ---
+  duration_ms: 12.586783
+  type: 'test'
+  ...
+# Subtest: review-only changes preserve historical provenance, including absent legacy provenance
+ok 38 - review-only changes preserve historical provenance, including absent legacy provenance
+  ---
+  duration_ms: 0.754098
+  type: 'test'
+  ...
+# Subtest: current receiver accepts old and versioned feedback, rejects malformed version metadata
+ok 39 - current receiver accepts old and versioned feedback, rejects malformed version metadata
+  ---
+  duration_ms: 4.735282
+  type: 'test'
+  ...
+# Subtest: the Google template accepts this project Pages origin while refusing unrelated origins
+ok 40 - the Google template accepts this project Pages origin while refusing unrelated origins
+  ---
+  duration_ms: 1.235253
+  type: 'test'
+  ...
+# Subtest: reopening a refused report retains actionable delivery instead of acknowledging an unrelated receipt
+ok 41 - reopening a refused report retains actionable delivery instead of acknowledging an unrelated receipt
+  ---
+  duration_ms: 90.995429
+  type: 'test'
+  ...
+# Subtest: reopening retries the original refused payload when queue capacity returns without editing feedback
+ok 42 - reopening retries the original refused payload when queue capacity returns without editing feedback
+  ---
+  duration_ms: 30.733193
+  type: 'test'
+  ...
+# Subtest: feedback backup merges a concurrent persisted comment with this page unsaved edit when writes fail
+ok 43 - feedback backup merges a concurrent persisted comment with this page unsaved edit when writes fail
+  ---
+  duration_ms: 8.22846
+  type: 'test'
+  ...
+# Subtest: feedback backup retains an unsaved deletion while merging a concurrent persisted comment
+ok 44 - feedback backup retains an unsaved deletion while merging a concurrent persisted comment
+  ---
+  duration_ms: 0.526705
+  type: 'test'
+  ...
+# Subtest: stop/start during held status resumes and receives the pending report without an external event
+ok 45 - stop/start during held status resumes and receives the pending report without an external event
+  ---
+  duration_ms: 14.112154
+  type: 'test'
+  ...
+# Subtest: a restarted status request does not send while stop remains paused
+ok 46 - a restarted status request does not send while stop remains paused
+  ---
+  duration_ms: 3.176771
+  type: 'test'
+  ...
+# Subtest: a restarted status request does not send while consent remains paused
+ok 47 - a restarted status request does not send while consent remains paused
+  ---
+  duration_ms: 3.977068
+  type: 'test'
+  ...
+# Subtest: a restarted status request does not send while hidden remains paused
+ok 48 - a restarted status request does not send while hidden remains paused
+  ---
+  duration_ms: 3.324284
+  type: 'test'
+  ...
+# Subtest: stop/start during held batch resumes and receives the pending report without an external event
+ok 49 - stop/start during held batch resumes and receives the pending report without an external event
+  ---
+  duration_ms: 13.190574
+  type: 'test'
+  ...
+# Subtest: a restarted batch request does not send while stop remains paused
+ok 50 - a restarted batch request does not send while stop remains paused
+  ---
+  duration_ms: 1.483367
+  type: 'test'
+  ...
+# Subtest: a restarted batch request does not send while consent remains paused
+ok 51 - a restarted batch request does not send while consent remains paused
+  ---
+  duration_ms: 1.240551
+  type: 'test'
+  ...
+# Subtest: a restarted batch request does not send while hidden remains paused
+ok 52 - a restarted batch request does not send while hidden remains paused
+  ---
+  duration_ms: 1.076844
+  type: 'test'
+  ...
+# Subtest: the offered game JSON backup includes a memory-only report when feedback is corrupt and the real outbox is full
+ok 53 - the offered game JSON backup includes a memory-only report when feedback is corrupt and the real outbox is full
+  ---
+  duration_ms: 3542.108706
+  type: 'test'
+  ...
+# Subtest: loading shell uses the existing language preference before question code loads
+ok 54 - loading shell uses the existing language preference before question code loads
+  ---
+  duration_ms: 63.896219
+  type: 'test'
+  ...
+# Subtest: global UI supports simple BM while preserving established game terms and identity
+ok 55 - global UI supports simple BM while preserving established game terms and identity
+  ---
+  duration_ms: 0.448756
+  type: 'test'
+  ...
+# Subtest: retained combat DOM keeps actors and restores the latest English after language changes
+ok 56 - retained combat DOM keeps actors and restores the latest English after language changes
+  ---
+  duration_ms: 19.678569
+  type: 'test'
+  ...
+# Subtest: all current Artifact descriptions preserve every number and term binding in BM
+ok 57 - all current Artifact descriptions preserve every number and term binding in BM
+  ---
+  duration_ms: 113.18893
+  type: 'test'
+  ...
+# Subtest: current card localization changes presentation only and protects authored BM card names
+ok 58 - current card localization changes presentation only and protects authored BM card names
+  ---
+  duration_ms: 33.499646
+  type: 'test'
+  ...
+# Subtest: generated card presentation preserves punctuation and game words inside a BM card name
+ok 59 - generated card presentation preserves punctuation and game words inside a BM card name
+  ---
+  duration_ms: 16.888828
+  type: 'test'
+  ...
+# Subtest: late UI and explicit tutorial language scopes translate without touching model payloads
+ok 60 - late UI and explicit tutorial language scopes translate without touching model payloads
+  ---
+  duration_ms: 14.060947
+  type: 'test'
+  ...
+# Subtest: Settings language flips preserve question attempts/feedback and Mystery deadline, choices and RNG
+ok 61 - Settings language flips preserve question attempts/feedback and Mystery deadline, choices and RNG
+  ---
+  duration_ms: 967.598707
+  type: 'test'
+  ...
+# Subtest: deck categories say Defend while Defense remains an attribute
+ok 62 - deck categories say Defend while Defense remains an attribute
+  ---
+  duration_ms: 116.949203
+  type: 'test'
+  ...
+# Subtest: composed combat receipts retain every number and become stable BM text
+ok 63 - composed combat receipts retain every number and become stable BM text
+  ---
+  duration_ms: 1.246858
+  type: 'test'
+  ...
+# Subtest: all three Master profiles preserve all 31 current Artifact amounts in BM
+ok 64 - all three Master profiles preserve all 31 current Artifact amounts in BM
+  ---
+  duration_ms: 218.049658
+  type: 'test'
+  ...
+# Subtest: language presentation can return to English without touching user input or IDs
+ok 65 - language presentation can return to English without touching user input or IDs
+  ---
+  duration_ms: 6.980213
+  type: 'test'
+  ...
+# Subtest: authored question labels remain under the question language owner
+ok 66 - authored question labels remain under the question language owner
+  ---
+  duration_ms: 4.195879
+  type: 'test'
+  ...
+# Subtest: literal gameplay errors have BM copy at the shared toast boundary
+ok 67 - literal gameplay errors have BM copy at the shared toast boundary
+  ---
+  duration_ms: 0.997022
+  type: 'test'
+  ...
+# Subtest: six original Predict forms localize their prose without changing frozen mathematical data
+ok 68 - six original Predict forms localize their prose without changing frozen mathematical data
+  ---
+  duration_ms: 0.931032
+  type: 'test'
+  ...
+# Subtest: a visible icon overtakes queued warming while two background transfers remain held
+ok 69 - a visible icon overtakes queued warming while two background transfers remain held
+  ---
+  duration_ms: 85.384141
+  type: 'test'
+  ...
+# Subtest: foreground promotion during an existing decode does not fetch bytes again with session retention disabled
+ok 70 - foreground promotion during an existing decode does not fetch bytes again with session retention disabled
+  ---
+  duration_ms: 18.047863
+  type: 'test'
+  ...
+# Subtest: offline observations persist opt-in and revisions across reopen without changing game saves
+ok 71 - offline observations persist opt-in and revisions across reopen without changing game saves
+  ---
+  duration_ms: 127.450861
+  type: 'test'
+  ...
+# Subtest: two same-origin clients merge different pending entries and fresh same-id edits
+ok 72 - two same-origin clients merge different pending entries and fresh same-id edits
+  ---
+  duration_ms: 2.578564
+  type: 'test'
+  ...
+# Subtest: corrupt and quota-failed storage preserves original bytes and exportable new observations
+ok 73 - corrupt and quota-failed storage preserves original bytes and exportable new observations
+  ---
+  duration_ms: 1.143262
+  type: 'test'
+  ...
+# Subtest: only acknowledged exact revisions leave the pending set and received receipts suppress rerenders
+ok 74 - only acknowledged exact revisions leave the pending set and received receipts suppress rerenders
+  ---
+  duration_ms: 41.359585
+  type: 'test'
+  ...
+# Subtest: a new edit made while a real HTTP batch is outstanding survives the earlier revision acknowledgement
+ok 75 - a new edit made while a real HTTP batch is outstanding survives the earlier revision acknowledgement
+  ---
+  duration_ms: 13.443687
+  type: 'test'
+  ...
+# Subtest: malformed HTTP acknowledgement never discards pending bytes
+ok 76 - malformed HTTP acknowledgement never discards pending bytes
+  ---
+  duration_ms: 6.734713
+  type: 'test'
+  ...
+# Subtest: start retries with bounded backoff, online resumes, and stop cancels owned timers
+ok 77 - start retries with bounded backoff, online resumes, and stop cancels owned timers
+  ---
+  duration_ms: 12.200576
+  type: 'test'
+  ...
+# Subtest: Dev sandbox and unavailable secure randomness never send observations
+ok 78 - Dev sandbox and unavailable secure randomness never send observations
+  ---
+  duration_ms: 1.775774
+  type: 'test'
+  ...
+# Subtest: a full queue refuses one more entry without evicting any unsent evidence
+ok 79 - a full queue refuses one more entry without evicting any unsent evidence
+  ---
+  duration_ms: 73.516487
+  type: 'test'
+  ...
+# Subtest: quota failure while saving an ACK retains the exact revision for idempotent replay
+ok 80 - quota failure while saving an ACK retains the exact revision for idempotent replay
+  ---
+  duration_ms: 8.978363
+  type: 'test'
+  ...
+# Subtest: a browser client refuses a receiver at a different origin before sending capability credentials
+ok 81 - a browser client refuses a receiver at a different origin before sending capability credentials
+  ---
+  duration_ms: 1.55996
+  type: 'test'
+  ...
+# Subtest: an inherited same-origin srcdoc folio delivers through its HTTP document base
+ok 82 - an inherited same-origin srcdoc folio delivers through its HTTP document base
+  ---
+  duration_ms: 8.618842
+  type: 'test'
+  ...
+# Subtest: automatic failed delivery keeps a capped retry and recovers while the network stays online
+ok 83 - automatic failed delivery keeps a capped retry and recovers while the network stays online
+  ---
+  duration_ms: 24.317827
+  type: 'test'
+  ...
+# Subtest: a conflict response retries the latest edit once without replacing a newer local revision
+ok 84 - a conflict response retries the latest edit once without replacing a newer local revision
+  ---
+  duration_ms: 6.076872
+  type: 'test'
+  ...
+# Subtest: interleaved tab writes preserve distinct entries after both return and the game reopens
+ok 85 - interleaved tab writes preserve distinct entries after both return and the game reopens
+  ---
+  duration_ms: 0.674316
+  type: 'test'
+  ...
+# Subtest: an ACK projection interleaved with another tab edit cannot erase the newer pending revision
+ok 86 - an ACK projection interleaved with another tab edit cannot erase the newer pending revision
+  ---
+  duration_ms: 6.257144
+  type: 'test'
+  ...
+# Subtest: a delayed payload journal write cannot replace a higher revision committed by another tab
+ok 87 - a delayed payload journal write cannot replace a higher revision committed by another tab
+  ---
+  duration_ms: 0.56422
+  type: 'test'
+  ...
+# Subtest: old mutable entry and receipt journals remain readable when immutable journaling is introduced
+ok 88 - old mutable entry and receipt journals remain readable when immutable journaling is introduced
+  ---
+  duration_ms: 0.449136
+  type: 'test'
+  ...
+# Subtest: concurrent final-slot admissions remain readable and exportable when the queue temporarily exceeds its bound
+ok 89 - concurrent final-slot admissions remain readable and exportable when the queue temporarily exceeds its bound
+  ---
+  duration_ms: 969.59293
+  type: 'test'
+  ...
+# Subtest: healthy immutable journals remain exportable beside a corrupt aggregate without replacing its bytes
+ok 90 - healthy immutable journals remain exportable beside a corrupt aggregate without replacing its bytes
+  ---
+  duration_ms: 0.974738
+  type: 'test'
+  ...
+# Subtest: all historical/session-ready counters still cannot produce complete offline readiness
+ok 91 - all historical/session-ready counters still cannot produce complete offline readiness
+  ---
+  duration_ms: 41.286825
+  type: 'test'
+  ...
+# Subtest: complete installation includes the exact shell and canonical manifest and reopens from stored bytes
+ok 92 - complete installation includes the exact shell and canonical manifest and reopens from stored bytes
+  ---
+  duration_ms: 34.429607
+  type: 'test'
+  ...
+# Subtest: missing and same-length corrupted disk files revoke readiness despite a completion receipt
+ok 93 - missing and same-length corrupted disk files revoke readiness despite a completion receipt
+  ---
+  duration_ms: 26.273351
+  type: 'test'
+  ...
+# Subtest: Retry resumes only missing files and never reports an HTTP failure as completed
+ok 94 - Retry resumes only missing files and never reports an HTTP failure as completed
+  ---
+  duration_ms: 14.077212
+  type: 'test'
+  ...
+# Subtest: storage quota and denied cache are explicit errors rather than memory-backed readiness
+ok 95 - storage quota and denied cache are explicit errors rather than memory-backed readiness
+  ---
+  duration_ms: 1.734002
+  type: 'test'
+  ...
+# Subtest: failed persistence of a verified response cannot create an offline receipt
+ok 96 - failed persistence of a verified response cannot create an offline receipt
+  ---
+  duration_ms: 4.513618
+  type: 'test'
+  ...
+# Subtest: an incompatible worker prevents offline readiness even when all payloads could be cached
+ok 97 - an incompatible worker prevents offline readiness even when all payloads could be cached
+  ---
+  duration_ms: 0.72352
+  type: 'test'
+  ...
+# Subtest: a receipt and manifest from another release cannot satisfy the current installation
+ok 98 - a receipt and manifest from another release cannot satisfy the current installation
+  ---
+  duration_ms: 11.45947
+  type: 'test'
+  ...
+# Subtest: the build declares every player resource plus shell while keeping developer/API paths out
+ok 99 - the build declares every player resource plus shell while keeping developer/API paths out
+  ---
+  duration_ms: 245.590387
+  type: 'test'
+  ...
+# Subtest: eviction during completion receipt storage cannot leave a false Ready result
+ok 100 - eviction during completion receipt storage cannot leave a false Ready result
+  ---
+  duration_ms: 9.940743
+  type: 'test'
+  ...
+# Subtest: denied storage protection stays disclosed after reopening a complete retained installation
+ok 101 - denied storage protection stays disclosed after reopening a complete retained installation
+  ---
+  duration_ms: 11.767764
+  type: 'test'
+  ...
+# Subtest: Pause keeps completed files and Resume finishes without refetching their bytes
+ok 102 - Pause keeps completed files and Resume finishes without refetching their bytes
+  ---
+  duration_ms: 9.453759
+  type: 'test'
+  ...
+# Subtest: changing only the worker changes the release cache identity
+ok 103 - changing only the worker changes the release cache identity
+  ---
+  duration_ms: 425.018535
+  type: 'test'
+  ...
+# Subtest: the release build rejects server-only folders before they can enter a player package
+ok 104 - the release build rejects server-only folders before they can enter a player package
+  ---
+  duration_ms: 0.815708
+  type: 'test'
+  ...
+# Subtest: eviction while the worker confirms capability cannot be reported as Ready
+ok 105 - eviction while the worker confirms capability cannot be reported as Ready
+  ---
+  duration_ms: 14.263272
+  type: 'test'
+  ...
+# Subtest: a warm completion never refers to an orphaned cache after its namespace is replaced
+ok 106 - a warm completion never refers to an orphaned cache after its namespace is replaced
+  ---
+  duration_ms: 11.833964
+  type: 'test'
+  ...
+# Subtest: same-key corruption after receipt commit cannot produce Ready
+ok 107 - same-key corruption after receipt commit cannot produce Ready
+  ---
+  duration_ms: 7.543912
+  type: 'test'
+  ...
+# Subtest: warm audit rehashes a same-key replacement namespace before Ready
+ok 108 - warm audit rehashes a same-key replacement namespace before Ready
+  ---
+  duration_ms: 9.32837
+  type: 'test'
+  ...
+# Subtest: warm install rehashes a same-key replacement namespace before Ready
+ok 109 - warm install rehashes a same-key replacement namespace before Ready
+  ---
+  duration_ms: 13.978564
+  type: 'test'
+  ...
+# Subtest: a verified startup shell survives without claiming the complete offline package
+ok 110 - a verified startup shell survives without claiming the complete offline package
+  ---
+  duration_ms: 5.21818
+  type: 'test'
+  ...
+# Subtest: startup receipt writes rehash retained bytes and disclose failed storage
+ok 111 - startup receipt writes rehash retained bytes and disclose failed storage
+  ---
+  duration_ms: 4.053966
+  type: 'test'
+  ...
+# Subtest: a worker denial cannot claim a saved startup package
+ok 112 - a worker denial cannot claim a saved startup package
+  ---
+  duration_ms: 0.722609
+  type: 'test'
+  ...
+# Subtest: one Settings mode group controls pet permission and begins offline preparation without changing saves
+ok 113 - one Settings mode group controls pet permission and begins offline preparation without changing saves
+  ---
+  duration_ms: 76.475654
+  type: 'test'
+  ...
+# Subtest: a connection hint cannot grant pet API permission without an explicit Online choice
+ok 114 - a connection hint cannot grant pet API permission without an explicit Online choice
+  ---
+  duration_ms: 2.637693
+  type: 'test'
+  ...
+# Subtest: choosing Offline aborts an active API request and rejects a late successful response
+ok 115 - choosing Offline aborts an active API request and rejects a late successful response
+  ---
+  duration_ms: 0.516618
+  type: 'test'
+  ...
+# Subtest: a corrupt preference fails closed and denied storage never re-enables API use
+ok 116 - a corrupt preference fails closed and denied storage never re-enables API use
+  ---
+  duration_ms: 0.27194
+  type: 'test'
+  ...
+# Subtest: a real cross-tab preference event cancels work without changing the game save
+ok 117 - a real cross-tab preference event cancels work without changing the game save
+  ---
+  duration_ms: 0.466002
+  type: 'test'
+  ...
+# Subtest: pet API failures return local help while keeping Online as the player preference
+ok 118 - pet API failures return local help while keeping Online as the player preference
+  ---
+  duration_ms: 0.978143
+  type: 'test'
+  ...
+# Subtest: Offline pet help uses bilingual packaged FAQ and never invokes a configured transport
+ok 119 - Offline pet help uses bilingual packaged FAQ and never invokes a configured transport
+  ---
+  duration_ms: 0.507515
+  type: 'test'
+  ...
+# Subtest: only an actual successful request establishes pet API availability
+ok 120 - only an actual successful request establishes pet API availability
+  ---
+  duration_ms: 0.526002
+  type: 'test'
+  ...
+# Subtest: an Offline choice before the transport microtask prevents the API call entirely
+ok 121 - an Offline choice before the transport microtask prevents the API call entirely
+  ---
+  duration_ms: 0.371399
+  type: 'test'
+  ...
+# Subtest: a pet request timeout aborts work without silently changing the selected mode
+ok 122 - a pet request timeout aborts work without silently changing the selected mode
+  ---
+  duration_ms: 21.219109
+  type: 'test'
+  ...
+# Subtest: cross-tab localStorage.clear revokes pet permission and rejects an in-flight late answer
+ok 123 - cross-tab localStorage.clear revokes pet permission and rejects an in-flight late answer
+  ---
+  duration_ms: 2.82206
+  type: 'test'
+  ...
+# Subtest: cross-tab localStorage.clear before the transport microtask prevents the API call
+ok 124 - cross-tab localStorage.clear before the transport microtask prevents the API call
+  ---
+  duration_ms: 0.844913
+  type: 'test'
+  ...
+# Subtest: unrelated storage changes and another storage-area clear keep local pet consent and work
+ok 125 - unrelated storage changes and another storage-area clear keep local pet consent and work
+  ---
+  duration_ms: 0.767546
+  type: 'test'
+  ...
+# Subtest: review ticks survive reload, preserve full comments and untick independently of feedback
+ok 126 - review ticks survive reload, preserve full comments and untick independently of feedback
+  ---
+  duration_ms: 2.093243
+  type: 'test'
+  ...
+# Subtest: all120 review-only marks use existing Google feedback validation and never need a new receiver field
+ok 127 - all120 review-only marks use existing Google feedback validation and never need a new receiver field
+  ---
+  duration_ms: 179.507883
+  type: 'test'
+  ...
+# Subtest: review marks remain recoverable when their write fails and reject malformed saved flags
+ok 128 - review marks remain recoverable when their write fails and reject malformed saved flags
+  ---
+  duration_ms: 0.564842
+  type: 'test'
+  ...
+# Subtest: ticking from an older tab merges the latest comment instead of overwriting it
+ok 129 - ticking from an older tab merges the latest comment instead of overwriting it
+  ---
+  duration_ms: 0.84897
+  type: 'test'
+  ...
+# Subtest: comments keep their question/version and survive reopening without touching game or learning saves
+ok 130 - comments keep their question/version and survive reopening without touching game or learning saves
+  ---
+  duration_ms: 0.294164
+  type: 'test'
+  ...
+# Subtest: separate tabs merge different questions and keep in-memory comments through a failed write
+ok 131 - separate tabs merge different questions and keep in-memory comments through a failed write
+  ---
+  duration_ms: 0.353332
+  type: 'test'
+  ...
+# Subtest: unreadable stored comments are preserved while new comments remain exportable
+ok 132 - unreadable stored comments are preserved while new comments remain exportable
+  ---
+  duration_ms: 0.192219
+  type: 'test'
+  ...
+# Subtest: empty comments clear only that question; invalid categories and overlong text cannot enter the report
+ok 133 - empty comments clear only that question; invalid categories and overlong text cannot enter the report
+  ---
+  duration_ms: 0.428306
+  type: 'test'
+  ...
+# Subtest: CSV export quotes multiline comments and neutralizes spreadsheet formulas without changing stored text
+ok 134 - CSV export quotes multiline comments and neutralizes spreadsheet formulas without changing stored text
+  ---
+  duration_ms: 0.505512
+  type: 'test'
+  ...
+# Subtest: predict: finished reports freeze real language/support evidence without mutating the run
+ok 135 - predict: finished reports freeze real language/support evidence without mutating the run
+  ---
+  duration_ms: 91.932641
+  type: 'test'
+  ...
+# Subtest: artifact: finished reports freeze real language/support evidence without mutating the run
+ok 136 - artifact: finished reports freeze real language/support evidence without mutating the run
+  ---
+  duration_ms: 26.658836
+  type: 'test'
+  ...
+# Subtest: mystery: finished reports freeze real language/support evidence without mutating the run
+ok 137 - mystery: finished reports freeze real language/support evidence without mutating the run
+  ---
+  duration_ms: 19.104485
+  type: 'test'
+  ...
+# Subtest: unopened hints remain unused even when first wrong unlocked both; pending/unknown reports are rejected
+ok 138 - unopened hints remain unused even when first wrong unlocked both; pending/unknown reports are rejected
+  ---
+  duration_ms: 2.138314
+  type: 'test'
+  ...
+# Subtest: opened then hidden worked steps remain honest report evidence without changing the record
+ok 139 - opened then hidden worked steps remain honest report evidence without changing the record
+  ---
+  duration_ms: 2.051774
+  type: 'test'
+  ...
+# Subtest: game reports preserve an existing Practice comment and review tick; resaving does not create new bytes
+ok 140 - game reports preserve an existing Practice comment and review tick; resaving does not create new bytes
+  ---
+  duration_ms: 17.537743
+  type: 'test'
+  ...
+# Subtest: empty report is not saved, and a dismissed report cannot change a question or its evidence
+ok 141 - empty report is not saved, and a dismissed report cannot change a question or its evidence
+  ---
+  duration_ms: 24.887726
+  type: 'test'
+  ...
+# Subtest: storage or queue failure is reported honestly and corrupt stored feedback is kept
+ok 142 - storage or queue failure is reported honestly and corrupt stored feedback is kept
+  ---
+  duration_ms: 23.92242
+  type: 'test'
+  ...
+# Subtest: release build replaces cached script and stylesheet URLs when their content changes, including within the same version
+ok 143 - release build replaces cached script and stylesheet URLs when their content changes, including within the same version
+  ---
+  duration_ms: 3.863205
+  type: 'test'
+  ...
+# Subtest: release build derives menu metadata from package.json and updates every launcher together
+ok 144 - release build derives menu metadata from package.json and updates every launcher together
+  ---
+  duration_ms: 2.399919
+  type: 'test'
+  ...
+# Subtest: production refuses a private database in the public tree and removes stale output before failing
+ok 145 - production refuses a private database in the public tree and removes stale output before failing
+  ---
+  duration_ms: 2.169482
+  type: 'test'
+  ...
+# Subtest: a restarted worker reconstructs a complete release from persistent metadata
+ok 146 - a restarted worker reconstructs a complete release from persistent metadata
+  ---
+  duration_ms: 16.519549
+  type: 'test'
+  ...
+# Subtest: corrupt bootstrap bytes must produce recovery HTML before any game script executes
+ok 147 - corrupt bootstrap bytes must produce recovery HTML before any game script executes
+  ---
+  duration_ms: 3.479255
+  type: 'test'
+  ...
+# Subtest: a missing file cannot be hidden by a completed installation marker
+ok 148 - a missing file cannot be hidden by a completed installation marker
+  ---
+  duration_ms: 3.92612
+  type: 'test'
+  ...
+# Subtest: pinned requests reject other releases/hashes and never intercept API or developer paths
+ok 149 - pinned requests reject other releases/hashes and never intercept API or developer paths
+  ---
+  duration_ms: 1.866505
+  type: 'test'
+  ...
+# Subtest: a cold worker may launch a verified startup package without a full-install receipt
+ok 150 - a cold worker may launch a verified startup package without a full-install receipt
+  ---
+  duration_ms: 7.180417
+  type: 'test'
+  ...
+# Subtest: a startup receipt cannot hide a corrupt or missing startup script
+ok 151 - a startup receipt cannot hide a corrupt or missing startup script
+  ---
+  duration_ms: 5.148743
+  type: 'test'
+  ...
+# Subtest: capture provenance binds the exact app source and rejects unrelated runtime edits
+ok 152 - capture provenance binds the exact app source and rejects unrelated runtime edits
+  ---
+  duration_ms: 2.490977
+  type: 'test'
+  ...
+# Subtest: every pictured step has real bilingual capture provenance and optional verified bytes
+ok 153 - every pictured step has real bilingual capture provenance and optional verified bytes
+  ---
+  duration_ms: 31.21102
+  type: 'test'
+  ...
+# Subtest: boss picture result shows an actual changed seal state in both languages
+ok 154 - boss picture result shows an actual changed seal state in both languages
+  ---
+  duration_ms: 0.274254
+  type: 'test'
+  ...
+# Subtest: full tutorial opens from existing entry, practises and closes without changing host records
+ok 155 - full tutorial opens from existing entry, practises and closes without changing host records
+  ---
+  duration_ms: 402.31509
+  type: 'test'
+  ...
+# Subtest: tutorial language and confirmed reset affect only tutorial progress
+ok 156 - tutorial language and confirmed reset affect only tutorial progress
+  ---
+  duration_ms: 384.075639
+  type: 'test'
+  ...
+# Subtest: Predict practice keeps support, wrong answers and successful retry inside the tutorial
+ok 157 - Predict practice keeps support, wrong answers and successful retry inside the tutorial
+  ---
+  duration_ms: 459.029054
+  type: 'test'
+  ...
+# Subtest: beginner route, manual pictures and BM images preserve host records and old progress
+ok 158 - beginner route, manual pictures and BM images preserve host records and old progress
+  ---
+  duration_ms: 194.748944
+  type: 'test'
+  ...
+# Subtest: Basics opens canonical bilingual support inside practice and cannot award independent Focus
+ok 159 - Basics opens canonical bilingual support inside practice and cannot award independent Focus
+  ---
+  duration_ms: 463.3688
+  type: 'test'
+  ...
+# Subtest: full-turn UI gives real incremental feedback and completes only after End Turn
+ok 160 - full-turn UI gives real incremental feedback and completes only after End Turn
+  ---
+  duration_ms: 189.466875
+  type: 'test'
+  ...
+# Subtest: reward practice teaches Deck growth and Gold rather than an already finished enemy
+ok 161 - reward practice teaches Deck growth and Gold rather than an already finished enemy
+  ---
+  duration_ms: 123.085491
+  type: 'test'
+  ...
+# Subtest: a new tutorial inherits the supplied language and then respects its own saved choice
+ok 162 - a new tutorial inherits the supplied language and then respects its own saved choice
+  ---
+  duration_ms: 1.130374
+  type: 'test'
+  ...
+# Subtest: reading progress resumes, resets only its own key and rejects unknown chapters
+ok 163 - reading progress resumes, resets only its own key and rejects unknown chapters
+  ---
+  duration_ms: 0.946657
+  type: 'test'
+  ...
+# Subtest: invalid and unavailable storage keep the course usable without touching other records
+ok 164 - invalid and unavailable storage keep the course usable without touching other records
+  ---
+  duration_ms: 10.236142
+  type: 'test'
+  ...
+# Subtest: Attack and draw lessons commit actual engine effects once and replay safely
+ok 165 - Attack and draw lessons commit actual engine effects once and replay safely
+  ---
+  duration_ms: 4.54351
+  type: 'test'
+  ...
+# Subtest: Block lesson requires playing defense before End Turn and observes the real enemy phase
+ok 166 - Block lesson requires playing defense before End Turn and observes the real enemy phase
+  ---
+  duration_ms: 2.724948
+  type: 'test'
+  ...
+# Subtest: Predict uses canonical wrong/help/retry events without changing any host state
+ok 167 - Predict uses canonical wrong/help/retry events without changing any host state
+  ---
+  duration_ms: 6.781874
+  type: 'test'
+  ...
+# Subtest: Focus and Passive practice use real plans and never allow an out-of-order action
+ok 168 - Focus and Passive practice use real plans and never allow an out-of-order action
+  ---
+  duration_ms: 3.514439
+  type: 'test'
+  ...
+# Subtest: map, rewards, Shop and Rest teach real transactions with reloadable examples
+ok 169 - map, rewards, Shop and Rest teach real transactions with reloadable examples
+  ---
+  duration_ms: 10.084575
+  type: 'test'
+  ...
+# Subtest: boss practice opens two seals across separate turns using actual Predict
+ok 170 - boss practice opens two seals across separate turns using actual Predict
+  ---
+  duration_ms: 4.496419
+  type: 'test'
+  ...
+# Subtest: a completed Predict can show worked steps without repeating its reward
+ok 171 - a completed Predict can show worked steps without repeating its reward
+  ---
+  duration_ms: 2.084283
+  type: 'test'
+  ...
+# Subtest: every practical chapter works with each loaded Master profile and its own amounts
+ok 172 - every practical chapter works with each loaded Master profile and its own amounts
+  ---
+  duration_ms: 451.616383
+  type: 'test'
+  ...
+# Subtest: old tutorial progress survives the two routes and new chapters
+ok 173 - old tutorial progress survives the two routes and new chapters
+  ---
+  duration_ms: 0.373623
+  type: 'test'
+  ...
+# Subtest: full-turn practice protects, attacks and resolves the enemy once in order
+ok 174 - full-turn practice protects, attacks and resolves the enemy once in order
+  ---
+  duration_ms: 3.915053
+  type: 'test'
+  ...
+# Subtest: two wrong practice answers award neither completion nor Focus or a boss seal
+ok 175 - two wrong practice answers award neither completion nor Focus or a boss seal
+  ---
+  duration_ms: 7.12374
+  type: 'test'
+  ...
+1..175
+# tests 175
+# suites 0
+# pass 175
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17047.16627

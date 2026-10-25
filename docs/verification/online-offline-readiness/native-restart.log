@@ -1,0 +1,15 @@
+PASS one Settings preference; explicit Online makes a real failing API request and falls back locally without changing the preference
+PASS only a real successful QA API response changes availability to available
+PASS actual file404, truthful remaining/failure display, Pause/Resume, retained-byte reuse and verified full installation including Practice/shell/manifest
+PASS Offline blocks the configured API even while the browser reports a network
+PASS complete browser-process close/reopen with the same profile, stopped server, disabled HTTP cache and network: original URL reopens through the installed worker
+PASS offline BM/English Settings and packaged pet FAQ, phone input/layout, and unchanged mode ownership
+PASS all120 Education Practice questions and local renderer open offline
+locator.getAttribute: Target crashed 
+Call log:
+[2m  - waiting for locator('.tutorial-figure')[22m
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/offline-restart-browser.cjs:39:674 {
+  log: [ "  - waiting for locator('.tutorial-figure')" ],
+  name: 'Error'
+}

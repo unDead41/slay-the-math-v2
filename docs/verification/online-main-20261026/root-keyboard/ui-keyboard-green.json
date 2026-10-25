@@ -1,0 +1,18 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/play-mode-ui.test.cjs",
+    "tests/play-mode.test.cjs"
+  ],
+  "exitCode": 0,
+  "seconds": 0.6178990780026652,
+  "files": {
+    "dist/play-mode-ui.js": "9d926586e8ea6b3c881f351548bc7a83823f39f688bfe87c35e0bce4ad7b98bf",
+    "tests/play-mode-ui.test.cjs": "799a41be649953fa17810cc203c593e1aa723c265d4548f45cce78e0322f9de3",
+    "dist/app.js": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+    "dist/play-mode.js": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190"
+  }
+}

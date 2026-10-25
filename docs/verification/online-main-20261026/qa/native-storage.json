@@ -1,0 +1,29 @@
+{
+  "label": "native-storage",
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "command": [
+    "node",
+    "tests/offline-storage-browser.cjs"
+  ],
+  "start": "2026-10-25T18:46:29Z",
+  "environment": {
+    "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "QA_DISABLE_GPU": "1",
+    "NODE_OPTIONS": "--max-old-space-size=1792",
+    "QA_OUTPUT": "/dev/shm/stm-pending-evidence-20261026/qa/native-storage-artifacts",
+    "QA_SCREENSHOTS": "/dev/shm/stm-pending-evidence-20261026/qa/native-storage-screenshots",
+    "QA_REPORT": "/dev/shm/stm-pending-evidence-20261026/qa/native-storage-report.json",
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/qa/tmp"
+  },
+  "overrides": {
+    "QA_PROFILE_ROOT": "/dev/shm/stm-pending-evidence-20261026/qa/tmp"
+  },
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "exitCode": 0,
+  "elapsedSeconds": 35.955,
+  "log": "/dev/shm/stm-pending-evidence-20261026/qa/native-storage.log"
+}

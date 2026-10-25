@@ -1,0 +1,65 @@
+{
+  "version": "2.51.0",
+  "checks": [
+    "file URL opens without HTTP; one mode, bilingual local pet FAQ and explicit portable copy without a browser-cache Ready claim",
+    "portable Stage 1 actual actor canvases load from embedded art without changing the run",
+    "portable Stage 2 actual actor canvases load from embedded art without changing the run"
+  ],
+  "httpRequests": [],
+  "errors": [],
+  "keyboard": {
+    "kind": "Settings regression, not owner D1/D2 cohort replay",
+    "states": [
+      {
+        "action": "Space explicitly selects initially checked Online",
+        "selected": "online",
+        "snapshot": {
+          "mode": "online",
+          "explicit": true,
+          "persisted": true,
+          "connectionHint": "disconnected",
+          "petAPIAllowed": true
+        }
+      },
+      {
+        "action": "ArrowRight selects Offline",
+        "selected": "offline",
+        "snapshot": {
+          "mode": "offline",
+          "explicit": true,
+          "persisted": true,
+          "connectionHint": "disconnected",
+          "petAPIAllowed": false
+        }
+      },
+      {
+        "action": "ArrowLeft selects Online",
+        "selected": "online",
+        "snapshot": {
+          "mode": "online",
+          "explicit": true,
+          "persisted": true,
+          "connectionHint": "disconnected",
+          "petAPIAllowed": true
+        }
+      },
+      {
+        "action": "ArrowRight returns to Offline",
+        "selected": "offline",
+        "snapshot": {
+          "mode": "offline",
+          "explicit": true,
+          "persisted": true,
+          "connectionHint": "disconnected",
+          "petAPIAllowed": false
+        }
+      }
+    ],
+    "actions": [
+      "Enter opens local FAQ",
+      "Enter activates Focus FAQ",
+      "Enter submits typed Block question as local FAQ"
+    ],
+    "saveBytesUnchanged": true
+  }
+}

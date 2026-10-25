@@ -1,0 +1,59 @@
+{
+  "finding": "QA-251-PET-CROSS-TAB-CLEAR",
+  "category": "MASALAH DISAHKAN",
+  "severity": "P2",
+  "status": "FIXED_IN_PREPARED_CANDIDATE_PENDING_FINAL_FREEZE",
+  "dateUTC": "2026-10-25T18:03:29.113108+00:00",
+  "mainReadSHA": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+  "offlineSourceSHA": "e9411eba938dc819f12382fe636aa02ec5059271",
+  "preparedCandidateSHA": "cb6a6a2094203210bea1e225c8280e3e881857f4",
+  "preparedTree": "6499855e66758d69c5a331fa575f8a1ec0626e8c",
+  "ownedPaths": [
+    "dist/play-mode.js",
+    "tests/play-mode.test.cjs"
+  ],
+  "beforeRuntimeSHA256": "f29428fe7de2021c7d6a3f219b146f8a0f7e331ce9f6c2d7d4510201548be7d2",
+  "afterRuntimeSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+  "testSHA256RedAndGreen": "09a4d25cdf3db2e3b2b2c139b1b76dfbe9dc7c77076e9bf2704d0abff39abca2",
+  "originalFailure": "key=null clear event was ignored, retaining explicitOnline pet permission; pre-transport request could proceed after clear.",
+  "correction": "Process matching-localStorage clear events through existing parse/change owner. Cancel generation/inflight work, default to unselectedOnline, require explicit fresh Online. Other keys/storageareas remain ignored.",
+  "checks": {
+    "RED": {
+      "log": "play-mode-clear-red.log",
+      "record": "play-mode-clear-red.json",
+      "tests": 12,
+      "pass": 10,
+      "fail": 2,
+      "skip": 0
+    },
+    "GREEN": {
+      "log": "play-mode-clear-green.log",
+      "record": "play-mode-clear-green.json",
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skip": 0
+    },
+    "syntax": {
+      "command": [
+        "node",
+        "--check",
+        "dist/play-mode.js"
+      ],
+      "exitCode": 0,
+      "log": "play-mode-syntax.log"
+    }
+  },
+  "negativeControls": [
+    "Existing9 permission/networkhint/corruptstorage/Offline/cross-tabchange/localFAQ/APIoutcome/timeout cases retain assertions.",
+    "Unrelated storage key and different storage-area clear preserve explicit local pet consent and active work.",
+    "Clear blocks active lateanswer and before-microtask transport; a fresh explicit Online choice permits new work.",
+    "Runtime permission owner does not rewrite cleared storage."
+  ],
+  "limits": [
+    "VM/Node EventTarget and a clear-shaped StorageEvent; native browser clear propagation awaits final scoped QA if selected.",
+    "Actual localStorage.clear itself erases records; this fix does not protect saves from clearing browser data.",
+    "Google learning consent/transport remains the separate EDU owner; no universal network kill-switch claim.",
+    "No browser, build, full suite, external API or main/ref writes during this small source window."
+  ]
+}

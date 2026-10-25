@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets
+ok 1 - the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets
+  ---
+  duration_ms: 772.673149
+  type: 'test'
+  ...
+# Subtest: the actual startup package prioritizes the hero and Stage1 while deferring late packs
+ok 2 - the actual startup package prioritizes the hero and Stage1 while deferring late packs
+  ---
+  duration_ms: 250.323013
+  type: 'test'
+  ...
+# Subtest: one Settings mode group controls pet permission and begins offline preparation without changing saves
+ok 3 - one Settings mode group controls pet permission and begins offline preparation without changing saves
+  ---
+  duration_ms: 80.100206
+  type: 'test'
+  ...
+# Subtest: Space and Enter explicitly activate the focused mode radio, including the checked default
+ok 4 - Space and Enter explicitly activate the focused mode radio, including the checked default
+  ---
+  duration_ms: 38.029469
+  type: 'test'
+  ...
+# Subtest: mode keyboard activation ignores repeats, composition, disabled controls and unrelated typing
+ok 5 - mode keyboard activation ignores repeats, composition, disabled controls and unrelated typing
+  ---
+  duration_ms: 12.206269
+  type: 'test'
+  ...
+# Subtest: a connection hint cannot grant pet API permission without an explicit Online choice
+ok 6 - a connection hint cannot grant pet API permission without an explicit Online choice
+  ---
+  duration_ms: 2.490025
+  type: 'test'
+  ...
+# Subtest: choosing Offline aborts an active API request and rejects a late successful response
+ok 7 - choosing Offline aborts an active API request and rejects a late successful response
+  ---
+  duration_ms: 0.49878
+  type: 'test'
+  ...
+# Subtest: a corrupt preference fails closed and denied storage never re-enables API use
+ok 8 - a corrupt preference fails closed and denied storage never re-enables API use
+  ---
+  duration_ms: 0.302104
+  type: 'test'
+  ...
+# Subtest: a real cross-tab preference event cancels work without changing the game save
+ok 9 - a real cross-tab preference event cancels work without changing the game save
+  ---
+  duration_ms: 0.589266
+  type: 'test'
+  ...
+# Subtest: pet API failures return local help while keeping Online as the player preference
+ok 10 - pet API failures return local help while keeping Online as the player preference
+  ---
+  duration_ms: 1.05691
+  type: 'test'
+  ...
+# Subtest: Offline pet help uses bilingual packaged FAQ and never invokes a configured transport
+ok 11 - Offline pet help uses bilingual packaged FAQ and never invokes a configured transport
+  ---
+  duration_ms: 0.590087
+  type: 'test'
+  ...
+# Subtest: only an actual successful request establishes pet API availability
+ok 12 - only an actual successful request establishes pet API availability
+  ---
+  duration_ms: 0.565871
+  type: 'test'
+  ...
+# Subtest: an Offline choice before the transport microtask prevents the API call entirely
+ok 13 - an Offline choice before the transport microtask prevents the API call entirely
+  ---
+  duration_ms: 3.636119
+  type: 'test'
+  ...
+# Subtest: a pet request timeout aborts work without silently changing the selected mode
+ok 14 - a pet request timeout aborts work without silently changing the selected mode
+  ---
+  duration_ms: 20.280733
+  type: 'test'
+  ...
+# Subtest: cross-tab localStorage.clear revokes pet permission and rejects an in-flight late answer
+ok 15 - cross-tab localStorage.clear revokes pet permission and rejects an in-flight late answer
+  ---
+  duration_ms: 2.922696
+  type: 'test'
+  ...
+# Subtest: cross-tab localStorage.clear before the transport microtask prevents the API call
+ok 16 - cross-tab localStorage.clear before the transport microtask prevents the API call
+  ---
+  duration_ms: 0.853774
+  type: 'test'
+  ...
+# Subtest: unrelated storage changes and another storage-area clear keep local pet consent and work
+ok 17 - unrelated storage changes and another storage-area clear keep local pet consent and work
+  ---
+  duration_ms: 0.761064
+  type: 'test'
+  ...
+# Subtest: release build replaces cached script and stylesheet URLs when their content changes, including within the same version
+ok 18 - release build replaces cached script and stylesheet URLs when their content changes, including within the same version
+  ---
+  duration_ms: 3.465814
+  type: 'test'
+  ...
+# Subtest: release build derives menu metadata from package.json and updates every launcher together
+ok 19 - release build derives menu metadata from package.json and updates every launcher together
+  ---
+  duration_ms: 2.2402
+  type: 'test'
+  ...
+# Subtest: production refuses a private database in the public tree and removes stale output before failing
+ok 20 - production refuses a private database in the public tree and removes stale output before failing
+  ---
+  duration_ms: 1.916572
+  type: 'test'
+  ...
+# Subtest: capture provenance binds the exact app source and rejects unrelated runtime edits
+ok 21 - capture provenance binds the exact app source and rejects unrelated runtime edits
+  ---
+  duration_ms: 1.831395
+  type: 'test'
+  ...
+# Subtest: every pictured step has real bilingual capture provenance and optional verified bytes
+ok 22 - every pictured step has real bilingual capture provenance and optional verified bytes
+  ---
+  duration_ms: 56.569504
+  type: 'test'
+  ...
+# Subtest: boss picture result shows an actual changed seal state in both languages
+ok 23 - boss picture result shows an actual changed seal state in both languages
+  ---
+  duration_ms: 0.363397
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1910.727954

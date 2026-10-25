@@ -1,0 +1,32 @@
+{
+  "phase": "RED",
+  "sourceCandidate": "cb6a6a2094203210bea1e225c8280e3e881857f4",
+  "tree": "6499855e66758d69c5a331fa575f8a1ec0626e8c",
+  "startedUTC": "2026-10-25T18:02:10.268233+00:00",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/play-mode.test.cjs"
+  ],
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "node": "v24.22.1",
+  "environment": {
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/qa/tmp",
+    "NODE_OPTIONS": "--max-old-space-size=512"
+  },
+  "sourceSHA256": "f29428fe7de2021c7d6a3f219b146f8a0f7e331ce9f6c2d7d4510201548be7d2",
+  "testSHA256": "09a4d25cdf3db2e3b2b2c139b1b76dfbe9dc7c77076e9bf2704d0abff39abca2",
+  "exitCode": 1,
+  "elapsedSeconds": 0.176,
+  "counts": {
+    "tests": 12,
+    "pass": 10,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "scope": "New VM tests simulate a localStorage.clear-shaped event and actual erased storage; no browser or live API. Clearing storage itself removes browser records; no save-loss protection claim."
+}

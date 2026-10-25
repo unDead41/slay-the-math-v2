@@ -1,0 +1,139 @@
+{
+  "checkedAtUTC": "2026-10-25T18:41:54.365980+00:00",
+  "status": "VALID for static final preservation/capture equivalence; fresh final native QA remains separate",
+  "head": "20b835855e00b8279c75d4b516b5da9f98624708",
+  "tree": "ae67c4324438fda926052d36253cd6748954ce51",
+  "worktreeStatus": "",
+  "priorPreservationEvidenceSHA256": "506a0decd405d2f9a30dde29803dbfc5cb38dcbbe6c408fe008907beb6d2e506",
+  "priorProofRetained": true,
+  "deltaFrom7a830": [
+    "MAIN-SEKARANG.html",
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "dist/index.html",
+    "dist/play-mode-ui.js",
+    "dist/release.js",
+    "docs/tutorial/screenshots.json",
+    "index.html",
+    "tests/play-mode-ui.test.cjs"
+  ],
+  "deltaFromMenuSourceFF3d": [
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "docs/tutorial/screenshots.json"
+  ],
+  "menu107InputDrift": [],
+  "CLIUnchanged": true,
+  "strictRawAppTestUnchanged": true,
+  "appUnchangedFrom7a830": true,
+  "modePermissionOwnerUnchangedFrom7a830": true,
+  "finalModeUISHA256": "9d926586e8ea6b3c881f351548bc7a83823f39f688bfe87c35e0bce4ad7b98bf",
+  "finalModeUITestSHA256": "799a41be649953fa17810cc203c593e1aa723c265d4548f45cce78e0322f9de3",
+  "newProductCodeScope": "Only scoped mode-radio keyboard activation; shared click path, default/markup/app/render unchanged",
+  "mainProtectedOwners": [
+    {
+      "path": "dist/learning-sync.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/question-report.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/question-feedback.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback.mjs",
+      "sameAsMain": true
+    },
+    {
+      "path": "modules/mechanics/source/QUESTION_BANK/learning/question-feedback-ui.mjs",
+      "sameAsMain": true
+    },
+    {
+      "path": "integrations/google-sheets/Code.gs",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/combat-vfx.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/animation.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/animation-data.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/audio.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/engine.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/question-data.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/balance-config.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "dist/balance-data.js",
+      "sameAsMain": true
+    },
+    {
+      "path": "tools/ai-playtester/agent.cjs",
+      "sameAsMain": true
+    },
+    {
+      "path": "tools/ai-playtester/experience-data.cjs",
+      "sameAsMain": true
+    }
+  ],
+  "registryUnchangedFrom7a830": true,
+  "nonTutorialAssetDeltaFromMain": [],
+  "finalCaptureRecords": 98,
+  "uniqueCaptureKeys": 98,
+  "newMenuRecords": 20,
+  "retainedRecords": 78,
+  "retainedRecordOrBitmapDelta": [],
+  "oldSnapshotsPreserved": true,
+  "rawAppMatchesEveryRecord": true,
+  "engineMatchesEveryRecord": true,
+  "catalogueSHA256": "bf81a0a0c1d353e829e561be1de5252fe70cfa0f61c3816d1287a2cf3c4f813a",
+  "captureBatchScope": "20 current-menu ff3d records +78 original603 records; no relabelling or normalization",
+  "buildFileParity": {
+    "source": {
+      "manifestId": "0dd87ad5219414aa692f41b5",
+      "normalEntries": 765,
+      "offlineFilesIncludingCanonicalManifest": 768,
+      "fileHashOrLengthErrors": [],
+      "manifestSHA256": "7dfb639b99ee631dd53e932ad9bc88b156283ae78549734dbeebc5c3af84df8c"
+    },
+    "production": {
+      "manifestId": "afd18ff1cbcc0308b2bbaa60",
+      "normalEntries": 766,
+      "offlineFilesIncludingCanonicalManifest": 769,
+      "fileHashOrLengthErrors": [],
+      "manifestSHA256": "b9fd17f3116886a74169a3e26fcabfbf92217dba0dd9c723ece7ec2e73a70bc7"
+    }
+  },
+  "openLimits": [
+    "CI-247-01 and QA-248-PRELOAD-01 remain inherited P2/open",
+    "Final native keyboard/portable outcomes are QA-owned and not inferred from screenshots",
+    "No new browser/simulation/training run for this static review",
+    "Public Pages/live AI backend NOT_RUN by auditor"
+  ]
+}

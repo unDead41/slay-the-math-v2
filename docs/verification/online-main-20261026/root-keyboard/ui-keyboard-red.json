@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/play-mode-ui.test.cjs"
+  ],
+  "exitCode": 1,
+  "seconds": 0.4768381519970717,
+  "note": "Before production edit. First new test draft checked defaultPrevented first; final regression checks the user-visible permission outcome, not one implementation technique. Initial log retained."
+}

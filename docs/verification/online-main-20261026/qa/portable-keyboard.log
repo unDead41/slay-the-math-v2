@@ -1,0 +1,24 @@
+2026-10-25T18:24:24.551Z pw:browser <launching> /tmp/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-gpu --user-data-dir=/dev/shm/stm-pending-evidence-20261026/qa/tmp/playwright_chromiumdev_profile-8htRE5 --remote-debugging-pipe --no-startup-window
+2026-10-25T18:24:24.559Z pw:browser <launched> pid=18
+2026-10-25T18:24:24.644Z pw:browser [pid=18][err] [1026/032424.643842:ERROR:../net/base/address_tracker_linux.cc:224] Could not create NETLINK socket: Operation not permitted (1)
+2026-10-25T18:24:24.648Z pw:browser [pid=18][err] [1026/032424.648387:ERROR:../content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 35: No such file or directory (2)
+2026-10-25T18:24:24.669Z pw:browser [pid=18][err] [1026/032424.667994:WARNING:../sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-10-25T18:24:24.680Z pw:browser [pid=18][err] [1026/032424.680210:ERROR:../content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 67: No such file or directory (2)
+2026-10-25T18:24:31.541Z pw:browser [pid=18] <gracefully close start>
+2026-10-25T18:24:31.586Z pw:browser [pid=18] <process did exit: exitCode=0, signal=null>
+2026-10-25T18:24:31.586Z pw:browser [pid=18] starting temporary directories cleanup
+2026-10-25T18:24:31.590Z pw:browser [pid=18] finished temporary directories cleanup
+2026-10-25T18:24:31.590Z pw:browser [pid=18] <gracefully close end>
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+false !== true
+
+    at keyboardState (/dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-observation.cjs:11:324)
+    at async /dev/shm/stm-pending-evidence-20261026/qa/portable-keyboard-observation.cjs:12:84 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

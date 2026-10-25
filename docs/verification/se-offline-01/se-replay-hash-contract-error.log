@@ -1,0 +1,22 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '0f3e5d20dde272c61ffa62a822d7be9b0f0e7255fd2665807cba331ee5f9215e'
+- 'c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac'
+
+    at /workspace/scratch/0829a1232d36/offline-mode/tests/se-offline-regression-browser.cjs:12:139
+    at Object.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/se-offline-regression-browser.cjs:35:3)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '0f3e5d20dde272c61ffa62a822d7be9b0f0e7255fd2665807cba331ee5f9215e',
+  expected: 'c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

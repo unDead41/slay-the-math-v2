@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-10-25T18:34:28.595512+00:00",
+  "command": [
+    "node",
+    "-e",
+    "require('./tools/sync-game-entrypoints.cjs')(process.cwd());require('./tools/build-asset-manifest.cjs')(process.cwd())"
+  ],
+  "exitCode": 0,
+  "sha": "ff3dcb5dbf4de5dd1ec72bf320ea8c209455e4a2",
+  "tree": "ff0907988895735fe08a21fc6b128a6f1dcbdfca",
+  "status": "",
+  "sourceAppSHA256": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+  "sourceModeSHA256": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
+  "sourceUI_SHA256": "9d926586e8ea6b3c881f351548bc7a83823f39f688bfe87c35e0bce4ad7b98bf",
+  "manifestId": "f92f773bc9619b3216634c63",
+  "entries": 765,
+  "purpose": "Minimal owner sync+manifest after scoped keyboard fix; Practice already2.51, no portable/prod before real menu recapture",
+  "captureStatus": "PENDING; auditor exclusive menu20 now"
+}

@@ -1,5 +1,8 @@
 # Slay the Math — 2.50.0
 
+**Calon 2.51.0:** Settings Online/Offline, startup release-bound dan pemasangan browser lengkap, dengan snapshot registry owner yang dikekalkan. QA skop gabungan lulus dengan had yang direkodkan; penerbitan masih pending sehingga ref sebenar disahkan. [Skop, bukti dan had](docs/ONLINE_OFFLINE_MAIN_2_51_0.md). Catatan 2.50.0 dan lebih lama di bawah kekal sejarah.
+
+
 Version **2.50.0** integrates education delivery/recovery, body-aligned combat VFX
 and the Master Map three-agent simulation/evidence protocol while preserving the
 current Idle/blink, numerical, save/RNG and artwork owners. Scoped compatibility

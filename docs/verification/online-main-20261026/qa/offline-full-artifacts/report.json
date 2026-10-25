@@ -1,0 +1,89 @@
+{
+  "version": "2.51.0",
+  "checks": [
+    "one Settings preference; explicit Online makes a real failing API request and falls back locally without changing the preference",
+    "only a real successful QA API response changes availability to available",
+    "actual file404, truthful remaining/failure display, Pause/Resume, retained-byte reuse and verified full installation including Practice/shell/manifest",
+    "Offline blocks the configured API even while the browser reports a network",
+    "complete browser-process close/reopen with the same profile, stopped server, disabled HTTP cache and network: original URL reopens through the installed worker",
+    "offline BM/English Settings and packaged pet FAQ, phone input/layout, and unchanged mode ownership",
+    "all120 Education Practice questions and local renderer open offline",
+    "all23 Tutorial chapters and all98 actual English/BM picture steps decode offline without changing the run"
+  ],
+  "errors": [
+    "Page crashed"
+  ],
+  "profile": "/dev/shm/stm-pending-evidence-20261026/qa/tmp/stm-offline-restart-BtXf6y",
+  "stageFixtures": [
+    {
+      "stage": 1,
+      "enemy": "wisp",
+      "boss": false,
+      "actors": 2,
+      "vfxPixels": true
+    }
+  ],
+  "browserVersion": "153.0.8010.0",
+  "sharedMemory": "normal /dev/shm; TMPDIR in task-owned RAM; software graphics, matching Tutorial QA",
+  "installation": {
+    "phase": "ready",
+    "ready": true,
+    "errorCode": null,
+    "error": null,
+    "currentFile": null,
+    "persistence": false,
+    "workerReady": true,
+    "lastVerifiedAt": 1792952328881,
+    "protocol": "stm-offline-v1",
+    "releaseId": "6e162d1ee91a7681073bb989",
+    "manifestId": "6e162d1ee91a7681073bb989",
+    "cacheName": "stm-assets-%2Fslay-the-math-v2%2F-6e162d1ee91a7681073bb989",
+    "verifiedFiles": 769,
+    "totalFiles": 769,
+    "verifiedBytes": 232968095,
+    "totalBytes": 232968095,
+    "remainingBytes": 0,
+    "remainingFiles": [],
+    "percent": 100,
+    "failures": []
+  },
+  "cold": {
+    "newBrowserProcess": true,
+    "serverStopped": true,
+    "networkEmulationOffline": true,
+    "networkRoutesBlocked": true,
+    "uncachedNetworkProbeRejected": true,
+    "navigatorOnLine": true,
+    "httpCacheDisabled": true,
+    "serviceWorkerNavigation": true,
+    "url": "http://127.0.0.1:45319/slay-the-math-v2/?stm-release=6e162d1ee91a7681073bb989",
+    "installation": {
+      "phase": "ready",
+      "ready": true,
+      "errorCode": null,
+      "error": null,
+      "currentFile": null,
+      "persistence": false,
+      "workerReady": true,
+      "lastVerifiedAt": 1792952335813,
+      "protocol": "stm-offline-v1",
+      "releaseId": "6e162d1ee91a7681073bb989",
+      "manifestId": "6e162d1ee91a7681073bb989",
+      "cacheName": "stm-assets-%2Fslay-the-math-v2%2F-6e162d1ee91a7681073bb989",
+      "verifiedFiles": 769,
+      "totalFiles": 769,
+      "verifiedBytes": 232968095,
+      "totalBytes": 232968095,
+      "remainingBytes": 0,
+      "remainingFiles": [],
+      "percent": 100,
+      "failures": []
+    }
+  },
+  "tutorial": {
+    "chapters": 23,
+    "pictureExposures": 114,
+    "uniquePictures": 98
+  },
+  "failure": "locator.click: Target crashed \nCall log:\n\u001b[2m  - waiting for locator('[data-action=confirm-import]')\u001b[22m\n\n    at importRun (/dev/shm/stm-online-main-20261026/tests/offline-restart-browser.cjs:17:271)\n    at async /dev/shm/stm-online-main-20261026/tests/offline-restart-browser.cjs:42:171"
+}

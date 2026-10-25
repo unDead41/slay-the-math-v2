@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/play-mode-ui.test.cjs"
+  ],
+  "exitCode": 1,
+  "seconds": 0.5109044739947421,
+  "testOnlyEdit": true
+}

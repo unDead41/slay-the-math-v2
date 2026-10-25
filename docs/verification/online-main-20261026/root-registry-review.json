@@ -1,0 +1,41 @@
+{
+  "selectedSource": "e0574af7a4b705a90a31e4d4c360ebf95d15df3e",
+  "oldRunsUnchanged": true,
+  "runCount": 3,
+  "caseSeedCount": 23,
+  "uniqueSeeds": 23,
+  "issues": [],
+  "runs": [
+    {
+      "runId": "SE-PILOT-20261025-B3DC750-01",
+      "status": "COMPLETE",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "trainingEligible": false,
+      "pass": 6,
+      "fail": 4,
+      "completeCampaigns": null,
+      "finalBossReached": null
+    },
+    {
+      "runId": "SE-BREADTH-20261026-B3DC750-02",
+      "status": "COMPLETE",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "trainingEligible": false,
+      "pass": 8,
+      "fail": 2,
+      "completeCampaigns": null,
+      "finalBossReached": null
+    },
+    {
+      "runId": "SE-JOURNEY-20261026-509BE90-03",
+      "status": "CENSORED_HARNESS_AND_BUDGET",
+      "sourceCommit": "509be90a3f211004c29379c96469f4e3a70cc0a4",
+      "trainingEligible": false,
+      "pass": null,
+      "fail": null,
+      "completeCampaigns": 0,
+      "finalBossReached": 0
+    }
+  ],
+  "limits": "Registry metadata/schema/identity only; new breadth/journey archives not independently opened by this review. Owner outcomes preserved, not current2.51 measurements."
+}

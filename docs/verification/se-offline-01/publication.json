@@ -1,0 +1,34 @@
+{
+  "finding": "SE-OFFLINE-01",
+  "branch": "fix/online-offline-readiness",
+  "branchURL": "https://github.com/unDead41/slay-the-math-v2/tree/fix/online-offline-readiness",
+  "version": "2.49.1-offline.2",
+  "originalBatch": "SE-PILOT-20261025-B3DC750-01",
+  "sourceBase": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "previousFeature": "850dec8770b62ff1a51805cead3960ef0ea8e7ca",
+  "localVerifiedCheckpoint": "a6a225a4d2b21c2279820d04a79971fdc3852b81",
+  "localVerifiedTree": "8ce7d361353638000f05e54fd4e8439248e4db6a",
+  "publishedImplementation": "ada427a88796a4f4f3f6d689d260a8be2a7cf8ff",
+  "publishedTree": "8ce7d361353638000f05e54fd4e8439248e4db6a",
+  "parents": [
+    "850dec8770b62ff1a51805cead3960ef0ea8e7ca",
+    "b3dc75005a89d6ce0248ddc125d6e0900351589a"
+  ],
+  "exactTestedTreePublished": true,
+  "featureRefReadbackVerified": true,
+  "mainAtTaskStart": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "mainCodeAdvancedDuringQA": "509be90a3f211004c29379c96469f4e3a70cc0a4",
+  "lastMainReadback": "09a5aa49645a37ee011317f1b784f0dd9affdf02",
+  "lastMainDeltaOnlyDocs": true,
+  "mainWriteByThisTask": false,
+  "combined250Acceptance": "NOT_RUN; preserve latest owners and rerun on the combined SHA",
+  "verification": {
+    "originalInputRegression": "A1-A4 4/4, original seeds and byte-identical saved inputs",
+    "node": "1189/1189, 0 fail/skip",
+    "focused": "55/55",
+    "completeOfflineContract": "14/14 native full-install regression",
+    "sourceManifestId": "b2197b5548fdc2da6b76f215"
+  },
+  "metadataFollowup": "This receipt and final audit/handoff notes are documentation only. The implementation commit above is immutable and is the exact tested source/evidence tree.",
+  "handoff": "docs/SE_OFFLINE_01_HANDOFF.md"
+}

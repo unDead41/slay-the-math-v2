@@ -1,0 +1,26 @@
+{
+  "command": [
+    "node",
+    "tools/capture-tutorial.cjs"
+  ],
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "environmentOverrides": {
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "SHARP_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/tmp",
+    "TUTORIAL_CAPTURE_GROUP": "menu"
+  },
+  "startUTC": "2026-10-25T18:35:30.696122+00:00",
+  "sourceSHA": "ff3dcb5dbf4de5dd1ec72bf320ea8c209455e4a2",
+  "tree": "ff0907988895735fe08a21fc6b128a6f1dcbdfca",
+  "actualMenuCaptureOnly": true,
+  "expectedNewRecords": 20,
+  "expectedRetainedRecords": 78,
+  "petScope": "Local FAQ plus permission/adapter only; no live configured AI backend",
+  "pidScope": "capture exec invocation only",
+  "ownerPID": 6,
+  "exitCode": 0,
+  "endUTC": "2026-10-25T18:36:08.492543+00:00",
+  "durationSeconds": 37.79679153500183
+}

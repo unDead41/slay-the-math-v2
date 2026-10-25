@@ -1,5 +1,8 @@
 # Slay the Math — Set of Rules
 
+Current authorized main candidate: [Online/Offline integration 2.51.0](docs/ONLINE_OFFLINE_MAIN_2_51_0.md). Scoped QA is VALID with carried P2 limits; publication readback is pending. Earlier release records remain history.
+
+
 ## Current main integration authorization — 2.50.0
 
 The current explicit user request authorizes combining combat, education and

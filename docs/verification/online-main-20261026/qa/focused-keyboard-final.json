@@ -1,0 +1,34 @@
+{
+  "label": "focused-keyboard-final",
+  "cwd": "/dev/shm/stm-online-main-20261026",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/play-mode.test.cjs",
+    "tests/play-mode-ui.test.cjs",
+    "tests/tutorial-media.test.cjs",
+    "tests/asset-manifest.test.cjs",
+    "tests/release-build.test.cjs"
+  ],
+  "start": "2026-10-25T18:40:49Z",
+  "environment": {
+    "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "QA_DISABLE_GPU": "1",
+    "NODE_OPTIONS": "--max-old-space-size=1792",
+    "QA_OUTPUT": "/dev/shm/stm-pending-evidence-20261026/qa/focused-keyboard-final-artifacts",
+    "QA_SCREENSHOTS": "/dev/shm/stm-pending-evidence-20261026/qa/focused-keyboard-final-screenshots",
+    "QA_REPORT": "/dev/shm/stm-pending-evidence-20261026/qa/focused-keyboard-final-report.json",
+    "TMPDIR": "/dev/shm/stm-pending-evidence-20261026/qa/tmp"
+  },
+  "overrides": {},
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "exitCode": 0,
+  "elapsedSeconds": 1.994,
+  "log": "/dev/shm/stm-pending-evidence-20261026/qa/focused-keyboard-final.log"
+}

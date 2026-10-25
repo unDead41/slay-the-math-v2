@@ -1,0 +1,97 @@
+{
+  "finding": "SE-OFFLINE-01",
+  "originalBatch": "SE-PILOT-20261025-B3DC750-01",
+  "originalSource": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "zipName": "Slay_the_Math_Batch_10_Bukti_B3DC750.zip",
+  "zipSHA256": "ffef8954438640b2ecc671dfc620b57d3c0d5ee8d85b3b57f1d5d9d566f3c352",
+  "libraryFileId": "libfile_4d7ea09eaf6c8191b202cc4f84036864",
+  "classification": "BROWSER_INTEGRATION_REGRESSION",
+  "trainingEligible": false,
+  "newIndependentSamples": false,
+  "cases": [
+    {
+      "caseId": "A1",
+      "kind": "offline",
+      "cache": "full",
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "seed": 1568180215,
+      "difficulty": "medium",
+      "mode": "learn",
+      "split": "diagnostic",
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "maxSeconds": 150,
+      "expected": "Fresh browser process, persisted profile, browser transport offline: navigation and Continue succeed only if shell+manifest+runtime persist; save remains intact even on navigation failure.",
+      "savePath": "raw/privileged/A1-before-restart.json",
+      "saveFileSHA256": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac",
+      "originalEntryHash": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac"
+    },
+    {
+      "caseId": "A2",
+      "kind": "offline",
+      "cache": "startup",
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "seed": 1235945743,
+      "difficulty": "medium",
+      "mode": "learn",
+      "split": "diagnostic",
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "maxSeconds": 150,
+      "expected": "Fresh browser process, persisted profile, browser transport offline: navigation and Continue succeed only if shell+manifest+runtime persist; save remains intact even on navigation failure.",
+      "savePath": "raw/privileged/A2-before-restart.json",
+      "saveFileSHA256": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984",
+      "originalEntryHash": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984"
+    },
+    {
+      "caseId": "A3",
+      "kind": "offline",
+      "cache": "full",
+      "language": "ms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seed": 905676559,
+      "difficulty": "medium",
+      "mode": "learn",
+      "split": "diagnostic",
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "maxSeconds": 150,
+      "expected": "Fresh browser process, persisted profile, browser transport offline: navigation and Continue succeed only if shell+manifest+runtime persist; save remains intact even on navigation failure.",
+      "savePath": "raw/privileged/A3-before-restart.json",
+      "saveFileSHA256": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1",
+      "originalEntryHash": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1"
+    },
+    {
+      "caseId": "A4",
+      "kind": "offline",
+      "cache": "startup",
+      "language": "ms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seed": 4075897635,
+      "difficulty": "medium",
+      "mode": "learn",
+      "split": "diagnostic",
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "maxSeconds": 150,
+      "expected": "Fresh browser process, persisted profile, browser transport offline: navigation and Continue succeed only if shell+manifest+runtime persist; save remains intact even on navigation failure.",
+      "savePath": "raw/privileged/A4-before-restart.json",
+      "saveFileSHA256": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5",
+      "originalEntryHash": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5"
+    }
+  ]
+}

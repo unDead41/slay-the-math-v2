@@ -1,0 +1,226 @@
+{
+  "originalBatch": "SE-PILOT-20261025-B3DC750-01",
+  "regressionOf": "SE-OFFLINE-01",
+  "kind": "BROWSER_INTEGRATION_REGRESSION",
+  "trainingEligible": false,
+  "newIndependentSamples": false,
+  "version": "2.49.1-offline.2",
+  "cases": [
+    {
+      "caseId": "A1",
+      "seed": 1568180215,
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requestedCache": "full",
+      "originalSaveSHA256": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac",
+      "originalEntryHash": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac",
+      "errors": [],
+      "browser": "153.0.8010.0",
+      "before": {
+        "progress": {
+          "verifiedFiles": 766,
+          "totalFiles": 766,
+          "verifiedBytes": 232607533,
+          "loadedBytes": 232607533,
+          "totalBytes": 232607533,
+          "availableFiles": 766,
+          "availableBytes": 232607533,
+          "cacheMode": "persistent"
+        },
+        "launch": {
+          "ready": true,
+          "phase": "ready",
+          "error": null,
+          "releaseId": "b2197b5548fdc2da6b76f215",
+          "verifiedFiles": 319
+        },
+        "releaseId": "b2197b5548fdc2da6b76f215",
+        "fullOfflineReady": false,
+        "mode": {
+          "mode": "online",
+          "explicit": false,
+          "persisted": false,
+          "connectionHint": "unknown",
+          "petAPIAllowed": false
+        }
+      },
+      "cold": {
+        "newBrowserProcess": true,
+        "serverStopped": true,
+        "networkBlocked": true,
+        "httpCacheDisabled": true,
+        "serviceWorkerNavigation": true,
+        "url": "http://127.0.0.1:37937/slay-the-math-v2/?stm-release=b2197b5548fdc2da6b76f215",
+        "saveExact": true,
+        "rngExact": true,
+        "releaseId": "b2197b5548fdc2da6b76f215"
+      },
+      "status": "PASS"
+    },
+    {
+      "caseId": "A2",
+      "seed": 1235945743,
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requestedCache": "startup",
+      "originalSaveSHA256": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984",
+      "originalEntryHash": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984",
+      "errors": [],
+      "browser": "153.0.8010.0",
+      "before": {
+        "progress": {
+          "verifiedFiles": 341,
+          "totalFiles": 766,
+          "verifiedBytes": 80223273,
+          "loadedBytes": 80223273,
+          "totalBytes": 232607533,
+          "availableFiles": 341,
+          "availableBytes": 80223273,
+          "cacheMode": "persistent"
+        },
+        "launch": {
+          "ready": true,
+          "phase": "ready",
+          "error": null,
+          "releaseId": "b2197b5548fdc2da6b76f215",
+          "verifiedFiles": 319
+        },
+        "releaseId": "b2197b5548fdc2da6b76f215",
+        "fullOfflineReady": false,
+        "mode": {
+          "mode": "online",
+          "explicit": false,
+          "persisted": false,
+          "connectionHint": "unknown",
+          "petAPIAllowed": false
+        }
+      },
+      "cold": {
+        "newBrowserProcess": true,
+        "serverStopped": true,
+        "networkBlocked": true,
+        "httpCacheDisabled": true,
+        "serviceWorkerNavigation": true,
+        "url": "http://127.0.0.1:38093/slay-the-math-v2/?stm-release=b2197b5548fdc2da6b76f215",
+        "saveExact": true,
+        "rngExact": true,
+        "releaseId": "b2197b5548fdc2da6b76f215"
+      },
+      "status": "PASS"
+    },
+    {
+      "caseId": "A3",
+      "seed": 905676559,
+      "language": "ms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requestedCache": "full",
+      "originalSaveSHA256": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1",
+      "originalEntryHash": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1",
+      "errors": [],
+      "browser": "153.0.8010.0",
+      "before": {
+        "progress": {
+          "verifiedFiles": 766,
+          "totalFiles": 766,
+          "verifiedBytes": 232607533,
+          "loadedBytes": 232607533,
+          "totalBytes": 232607533,
+          "availableFiles": 766,
+          "availableBytes": 232607533,
+          "cacheMode": "persistent"
+        },
+        "launch": {
+          "ready": true,
+          "phase": "ready",
+          "error": null,
+          "releaseId": "b2197b5548fdc2da6b76f215",
+          "verifiedFiles": 319
+        },
+        "releaseId": "b2197b5548fdc2da6b76f215",
+        "fullOfflineReady": false,
+        "mode": {
+          "mode": "online",
+          "explicit": false,
+          "persisted": false,
+          "connectionHint": "unknown",
+          "petAPIAllowed": false
+        }
+      },
+      "cold": {
+        "newBrowserProcess": true,
+        "serverStopped": true,
+        "networkBlocked": true,
+        "httpCacheDisabled": true,
+        "serviceWorkerNavigation": true,
+        "url": "http://127.0.0.1:41611/slay-the-math-v2/?stm-release=b2197b5548fdc2da6b76f215",
+        "saveExact": true,
+        "rngExact": true,
+        "releaseId": "b2197b5548fdc2da6b76f215"
+      },
+      "status": "PASS"
+    },
+    {
+      "caseId": "A4",
+      "seed": 4075897635,
+      "language": "ms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requestedCache": "startup",
+      "originalSaveSHA256": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5",
+      "originalEntryHash": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5",
+      "errors": [],
+      "browser": "153.0.8010.0",
+      "before": {
+        "progress": {
+          "verifiedFiles": 339,
+          "totalFiles": 766,
+          "verifiedBytes": 79639443,
+          "loadedBytes": 79639443,
+          "totalBytes": 232607533,
+          "availableFiles": 339,
+          "availableBytes": 79639443,
+          "cacheMode": "persistent"
+        },
+        "launch": {
+          "ready": true,
+          "phase": "ready",
+          "error": null,
+          "releaseId": "b2197b5548fdc2da6b76f215",
+          "verifiedFiles": 319
+        },
+        "releaseId": "b2197b5548fdc2da6b76f215",
+        "fullOfflineReady": false,
+        "mode": {
+          "mode": "online",
+          "explicit": false,
+          "persisted": false,
+          "connectionHint": "unknown",
+          "petAPIAllowed": false
+        }
+      },
+      "cold": {
+        "newBrowserProcess": true,
+        "serverStopped": true,
+        "networkBlocked": true,
+        "httpCacheDisabled": true,
+        "serviceWorkerNavigation": true,
+        "url": "http://127.0.0.1:32893/slay-the-math-v2/?stm-release=b2197b5548fdc2da6b76f215",
+        "saveExact": true,
+        "rngExact": true,
+        "releaseId": "b2197b5548fdc2da6b76f215"
+      },
+      "status": "PASS"
+    }
+  ]
+}

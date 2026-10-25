@@ -1,0 +1,43 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.51.0 test:offline-browser
+> node tests/offline-restart-browser.cjs
+
+2026-10-25T18:43:24.780Z pw:browser <launching> /tmp/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-gpu --user-data-dir=/dev/shm/stm-pending-evidence-20261026/qa/tmp/stm-offline-restart-jKdPA2 --remote-debugging-pipe about:blank
+2026-10-25T18:43:24.784Z pw:browser <launched> pid=31
+2026-10-25T18:43:24.803Z pw:browser [pid=31][err] [1026/034324.802497:ERROR:../net/base/address_tracker_linux.cc:224] Could not create NETLINK socket: Operation not permitted (1)
+2026-10-25T18:43:24.803Z pw:browser [pid=31][err] [1026/034324.803837:ERROR:../content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 47: No such file or directory (2)
+2026-10-25T18:43:24.816Z pw:browser [pid=31][err] [1026/034324.816586:ERROR:../content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 67: No such file or directory (2)
+2026-10-25T18:43:24.817Z pw:browser [pid=31][err] [1026/034324.815912:WARNING:../sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+PASS one Settings preference; explicit Online makes a real failing API request and falls back locally without changing the preference
+PASS only a real successful QA API response changes availability to available
+PASS actual file404, truthful remaining/failure display, Pause/Resume, retained-byte reuse and verified full installation including Practice/shell/manifest
+PASS Offline blocks the configured API even while the browser reports a network
+2026-10-25T18:44:10.649Z pw:browser [pid=31] <gracefully close start>
+2026-10-25T18:44:10.696Z pw:browser [pid=31] <process did exit: exitCode=0, signal=null>
+2026-10-25T18:44:10.697Z pw:browser [pid=31] starting temporary directories cleanup
+2026-10-25T18:44:10.699Z pw:browser [pid=31] finished temporary directories cleanup
+2026-10-25T18:44:10.699Z pw:browser [pid=31] <gracefully close end>
+2026-10-25T18:44:10.701Z pw:browser <launching> /tmp/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --disable-gpu --user-data-dir=/dev/shm/stm-pending-evidence-20261026/qa/tmp/stm-offline-restart-jKdPA2 --remote-debugging-pipe about:blank
+2026-10-25T18:44:10.709Z pw:browser <launched> pid=111
+2026-10-25T18:44:10.777Z pw:browser [pid=111][err] [1026/034410.776355:ERROR:../net/base/address_tracker_linux.cc:224] Could not create NETLINK socket: Operation not permitted (1)
+2026-10-25T18:44:10.778Z pw:browser [pid=111][err] [1026/034410.778482:ERROR:../content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 127: No such file or directory (2)
+2026-10-25T18:44:10.796Z pw:browser [pid=111][err] [1026/034410.796385:ERROR:../content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 147: No such file or directory (2)
+2026-10-25T18:44:10.798Z pw:browser [pid=111][err] [1026/034410.794391:WARNING:../sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+PASS complete browser-process close/reopen with the same profile, stopped server, disabled HTTP cache and network: original URL reopens through the installed worker
+PASS offline BM/English Settings and packaged pet FAQ, phone input/layout, and unchanged mode ownership
+2026-10-25T18:44:17.433Z pw:browser [pid=111][err] [1026/034417.433740:INFO:CONSOLE:342] "Unrecognized feature: 'web-share'.", source: blob:http://127.0.0.1:42383/5a92f8de-37bc-484b-9931-fa6c9a8a860e (342)
+PASS all120 Education Practice questions and local renderer open offline
+PASS all23 Tutorial chapters and all98 actual English/BM picture steps decode offline without changing the run
+PASS both stages and both bosses: decoded original actors, actual VFX pixels, Predict UI and real card actions with exact battle/RNG/deck/stats equality
+PASS real Stage2 Shop and its pictures/cards open offline
+PASS actual Mystery introduction and question screens in both stages work offline
+PASS every registered MP3 decodes from offline storage; a real muted Web Audio source plays/ends, distinct from human audition
+PASS actual cache file eviction revokes readiness even with an older completion marker
+PASS corrupt bootstrap is rejected before execution with clear offline recovery HTML
+{"checks":14,"errors":[],"version":"2.51.0"}
+2026-10-25T18:45:09.545Z pw:browser [pid=111] <gracefully close start>
+2026-10-25T18:45:09.614Z pw:browser [pid=111] <process did exit: exitCode=0, signal=null>
+2026-10-25T18:45:09.614Z pw:browser [pid=111] starting temporary directories cleanup
+2026-10-25T18:45:09.615Z pw:browser [pid=111] finished temporary directories cleanup
+2026-10-25T18:45:09.615Z pw:browser [pid=111] <gracefully close end>

@@ -1,0 +1,37 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (35.786208ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (20.527923ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (16.427414ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (13.377215ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.428579ms)
+✔ failed persistence of a verified response cannot create an offline receipt (5.531753ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (1.072584ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (12.270419ms)
+✖ the build declares every player resource plus shell while keeping developer/API paths out (641.139555ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 850.154297
+
+✖ failing tests:
+
+test at tests/offline-install.test.cjs:43:1
+✖ the build declares every player resource plus shell while keeping developer/API paths out (641.139555ms)
+  AssertionError [ERR_ASSERTION]: A release must publish its complete offline package
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:44:118)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

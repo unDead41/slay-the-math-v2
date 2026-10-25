@@ -1,5 +1,21 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261026-ONLINE-OFFLINE-MAIN — Publish the two current pending packages
+
+- **DISAHKAN:** Ijamm asks to list work still pending and push it to main. Publish
+  offline e941 and registry e057 with main 09a5 / 2.50.0 as 2.51.0 after combined
+  audit and verification. This supersedes their relevant branch-only boundaries.
+- Preserve the four specialist branches, historical/superseded work, all current
+  numerical/save/RNG/education/VFX/Idle/art/language/model owners and append-only
+  histories. Registry outcomes remain tied to their actual source; no campaign,
+  collector or training run is performed.
+- **Verification:** scoped VALID. Preserve 175 focused checks on 7a and 23 fresh
+  checks/native groups on final 20b separately; real full 98 plus menu 20 captures
+  retain 78 original records. Both initial native failures and all REDs remain.
+- **Publication:** PENDING actual expected-head ref/tree/version readback and
+  exact-head Pages verification. [Integration report](../ONLINE_OFFLINE_MAIN_2_51_0.md).
+
+
 ## DEC-20261025-ALL-CANDIDATES-MAIN — Publish the three reviewed candidates
 
 - **DISAHKAN:** Ijamm requests integrating and publishing combat 4e10, education
@@ -24,6 +40,19 @@
   runnable/configuration/test inputs unchanged. [Actual metadata](../verification/all-main-20261025/publication.json);
   [full evidence and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
 
+## DEC-20261026-SE-OFFLINE-01 — Retain launchable releases across browser closure
+
+- DISAHKAN: fix the pilot's A1–A4 cold offline failures on the owner branch only; no main push/merge.
+- DITERUSKAN: preserve current main2.49.1 and the prior offline feature. Add a hash-verified startup receipt for shell/manifest/startup files after the Online75% gate. The worker reconstructs/pins one release after process restart; partial startup never means the complete package is ready or pet API is permitted.
+- DITERUSKAN: reuse original seed/save bytes through an explicit regression runner, keep all historical failures and trainingEligible=false. Simulation owns independent acceptance and registry updates. [Handoff](../SE_OFFLINE_01_HANDOFF.md).
+
+## DEC-20261025-PLAY-MODE-OFFLINE — One preference and a complete player installation
+
+- **DISAHKAN:** Ijamm authorizes this update on its own branch only. No main merge, push or deployment.
+- **DITERUSKAN:** Settings owns one Online/Offline preference; explicit Online gates every pet API request, separately from network hints. Offline uses local bilingual FAQ, with a transport contract for the external pet owner and no embedded provider key/backend.
+- **DITERUSKAN:** Offline Ready requires the exact complete release on retained CacheStorage, including HTML/worker/manifest, lazy Practice and all registered player media. Verify actual retained bytes and capability; fail closed on missing/corrupt files, quota, worker or package failure. Exclude developer/server/private files; disclose storage eviction and support real progress/Retry/Resume.
+- **Acceptance:** close/restart the browser process without server/network, exercise both stages and player screens; distinguish the standalone portable file. Preserve core game/save/RNG and original resources. Current main advanced after the recorded base; Master must retain its newer Idle change during integration.
+- [Owner record](../ONLINE_OFFLINE_READINESS.md), [audit/evidence](../audits/online-offline-readiness/LATEST.md), [pet handoff](../pet-ai/PLAY_MODE_HANDOFF.md).
 
 ## DEC-20261025-IDLE-ROOT-BLINK — Correct the confirmed Idle defects
 

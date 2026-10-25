@@ -1,0 +1,153 @@
+{
+  "dateUTC": "2026-10-25T18:48:56.486078+00:00",
+  "firstFocusedSHA": "7a830e50c468c43442162b25823616c9cda62846",
+  "firstFocusedTree": "df7acbeda6d80f34a4b40dc89dc6ce2d6a95bf22",
+  "finalSHA": "20b835855e00b8279c75d4b516b5da9f98624708",
+  "finalTree": "ae67c4324438fda926052d36253cd6748954ce51",
+  "totalTrackedEach": 3500,
+  "byteIdenticalPaths": 3488,
+  "deltaPaths": [
+    "MAIN-SEKARANG.html",
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "dist/index.html",
+    "dist/play-mode-ui.js",
+    "dist/release.js",
+    "docs/tutorial/screenshots.json",
+    "index.html",
+    "tests/play-mode-ui.test.cjs"
+  ],
+  "runtimeDelta": [
+    "dist/play-mode-ui.js"
+  ],
+  "testDelta": [
+    "tests/play-mode-ui.test.cjs"
+  ],
+  "otherDelta": "Four actual menu captures, capture metadata and release/HTML/manifest generation.",
+  "mainProtectedOwners": [
+    {
+      "path": "dist/engine.js",
+      "mainBlob": "7520d5e08896cd5c155f327fadd687e1a5f1c5ca",
+      "candidateBlob": "7520d5e08896cd5c155f327fadd687e1a5f1c5ca",
+      "same": true,
+      "sha256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc"
+    },
+    {
+      "path": "dist/config.js",
+      "mainBlob": "bf7486c8d5a762e8d26e843731faa2dbaf87cd08",
+      "candidateBlob": "bf7486c8d5a762e8d26e843731faa2dbaf87cd08",
+      "same": true,
+      "sha256": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74"
+    },
+    {
+      "path": "dist/math.js",
+      "mainBlob": "f28a7aaa4f5cf39f129697a7cc9aff201c4f80e9",
+      "candidateBlob": "f28a7aaa4f5cf39f129697a7cc9aff201c4f80e9",
+      "same": true,
+      "sha256": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9"
+    },
+    {
+      "path": "dist/map-rng.js",
+      "mainBlob": "a53cab1b955f025436fca684c0fd14e5c95264ba",
+      "candidateBlob": "a53cab1b955f025436fca684c0fd14e5c95264ba",
+      "same": true,
+      "sha256": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c"
+    },
+    {
+      "path": "dist/question-data.js",
+      "mainBlob": "0c6e4dc757e649d2013d0d39b6f364a60d51232b",
+      "candidateBlob": "0c6e4dc757e649d2013d0d39b6f364a60d51232b",
+      "same": true,
+      "sha256": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66"
+    },
+    {
+      "path": "dist/question-language.js",
+      "mainBlob": "495d266e6b6b39e7eed51063004f9554daf431f3",
+      "candidateBlob": "495d266e6b6b39e7eed51063004f9554daf431f3",
+      "same": true,
+      "sha256": "750f0c85df6263006b2fc0f9da96626a6aa9bd9604e14107ecc6264d5d571b06"
+    },
+    {
+      "path": "dist/card-data.js",
+      "mainBlob": "7da36695f9d1c9c0430a5e27d8c522bcd2c30128",
+      "candidateBlob": "7da36695f9d1c9c0430a5e27d8c522bcd2c30128",
+      "same": true,
+      "sha256": "b0a59ae12fa10e407ed9f6048cdbb2b64a04aba778e1bbb7b7af8f8eba9e8f7c"
+    },
+    {
+      "path": "dist/animation.js",
+      "mainBlob": "ad230e2e3c7a0fe6b70350a779cc48a8f54797c2",
+      "candidateBlob": "ad230e2e3c7a0fe6b70350a779cc48a8f54797c2",
+      "same": true,
+      "sha256": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9"
+    },
+    {
+      "path": "dist/animation-data.js",
+      "mainBlob": "aa8a21810ca4db0a84996191b7161f238f5dae0e",
+      "candidateBlob": "aa8a21810ca4db0a84996191b7161f238f5dae0e",
+      "same": true,
+      "sha256": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a"
+    },
+    {
+      "path": "dist/combat-vfx.js",
+      "mainBlob": "4ce24aa430e84331e9e539067109b500d784384b",
+      "candidateBlob": "4ce24aa430e84331e9e539067109b500d784384b",
+      "same": true,
+      "sha256": "3e43efea0ac11fe263211db28d50667518f4cfaacd55d2d0b9be4496740b33a2"
+    },
+    {
+      "path": "dist/learning-sync.js",
+      "mainBlob": "f8fc7705f628d0136a78613c4063877db2f85d15",
+      "candidateBlob": "f8fc7705f628d0136a78613c4063877db2f85d15",
+      "same": true,
+      "sha256": "c1818c27a885d1a6d80d0fe32637a5a0353e9a06f1d6d066b32c1a61b3701ed1"
+    },
+    {
+      "path": "dist/question-feedback.js",
+      "mainBlob": "c06c6c9677cc6d3ac167bd29ede37d36d3eb2c27",
+      "candidateBlob": "c06c6c9677cc6d3ac167bd29ede37d36d3eb2c27",
+      "same": true,
+      "sha256": "0ccf98888b95be71016e5e6d8de2dfb9e30d3ecc6372c5ed50cae988241cd6bf"
+    },
+    {
+      "path": "dist/question-report.js",
+      "mainBlob": "db3bed00c83319a6719d831741e059a67cd32d0a",
+      "candidateBlob": "db3bed00c83319a6719d831741e059a67cd32d0a",
+      "same": true,
+      "sha256": "55fac113b1bcd00de0a0617a94974fcaa06da7e8b0237ec7abd9c10794490cf5"
+    },
+    {
+      "path": "dist/learning-delivery.js",
+      "mainBlob": "75a8a9b4aeaec3910fb861afef63b0628bb747c2",
+      "candidateBlob": "75a8a9b4aeaec3910fb861afef63b0628bb747c2",
+      "same": true,
+      "sha256": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275"
+    },
+    {
+      "path": "dist/learning-collection-config.js",
+      "mainBlob": "4519d70c3ed9a37e284621fef2ea7704d10a0312",
+      "candidateBlob": "4519d70c3ed9a37e284621fef2ea7704d10a0312",
+      "same": true,
+      "sha256": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2"
+    }
+  ],
+  "generatedPracticePreservation": {
+    "rawBytesEqualMain": false,
+    "onlyDifference": "Fallback release version2.50.0\u21922.51.0; runtime DCRelease remains authoritative.",
+    "normalizedFallbackOnlyEqualMain": true,
+    "candidateSHA256": "93f18870d8fbfe9f3c7db0128dd535fd596f363eeb119b4bbec85fbadb25e581"
+  },
+  "appPreservation": {
+    "mainSHA256": "79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013",
+    "combinedRawSHA256": "0ae062696552ea7ce98ab481828a373dc5ea44e46e190caab625e7494d8f97fe",
+    "twoExactOptionalSettingsHooksOnly": true,
+    "normalizedBytesEqualMain": true,
+    "captureRule": "This normalization is origin/preservation proof only. Current capture test binds RAW combined app SHA and rejects unrelated edits; no capture exception."
+  },
+  "resultsReuse": "175/175 remains first7a focused result. New20b has fresh23/23 UI/mode/media/release/resource results and fresh final native. Do not relabel175 as a repeated final command.",
+  "wholeSuite": "NOT_RUN; prior owner1189 and main1173/1175 retainedFAIL remain historical sources.",
+  "externalProofInitialAttempt": "equivalence-first-attempt.json preserves initial overbroad byte-equality assumption; sole generatedPractice fallback-version delta was inspected and explicitly scoped. No test/assertion/source changed."
+}

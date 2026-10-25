@@ -1,0 +1,26 @@
+✔ the manifest defers Practice and boss art, includes current menu audio, and changes for same-version assets (665.093356ms)
+✔ the actual startup package prioritizes the hero and Stage1 while deferring late packs (267.463847ms)
+✔ all historical/session-ready counters still cannot produce complete offline readiness (81.684799ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (29.32122ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (41.110853ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (34.921638ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.570891ms)
+✔ failed persistence of a verified response cannot create an offline receipt (8.810425ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (1.098982ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (13.632844ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (314.444775ms)
+✔ a connection hint cannot grant pet API permission without an explicit Online choice (2.531126ms)
+✔ choosing Offline aborts an active API request and rejects a late successful response (0.550067ms)
+✔ a corrupt preference fails closed and denied storage never re-enables API use (0.257397ms)
+✔ a real cross-tab preference event cancels work without changing the game save (0.490467ms)
+✔ pet API failures return local help while keeping Online as the player preference (1.183429ms)
+✔ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (0.603347ms)
+✔ only an actual successful request establishes pet API availability (1.418182ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1038.220991

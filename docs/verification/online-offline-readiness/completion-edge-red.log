@@ -1,0 +1,66 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (44.458928ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (36.515285ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (20.019277ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (13.268897ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (1.662068ms)
+✔ failed persistence of a verified response cannot create an offline receipt (6.361724ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (0.980644ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (9.053931ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (734.832149ms)
+✖ eviction during completion receipt storage cannot leave a false Ready result (20.205876ms)
+✖ denied storage protection stays disclosed after reopening a complete retained installation (10.486856ms)
+✔ Pause keeps completed files and Resume finishes without refetching their bytes (7.555269ms)
+✔ changing only the worker changes the release cache identity (451.356562ms)
+✔ a connection hint cannot grant pet API permission without an explicit Online choice (2.477384ms)
+✔ choosing Offline aborts an active API request and rejects a late successful response (0.49926ms)
+✔ a corrupt preference fails closed and denied storage never re-enables API use (0.302114ms)
+✔ a real cross-tab preference event cancels work without changing the game save (0.513252ms)
+✔ pet API failures return local help while keeping Online as the player preference (1.055918ms)
+✔ Offline pet help uses bilingual packaged FAQ and never invokes a configured transport (0.555255ms)
+✔ only an actual successful request establishes pet API availability (0.601944ms)
+✔ an Offline choice before the transport microtask prevents the API call entirely (0.389265ms)
+✔ a pet request timeout aborts work without silently changing the selected mode (20.107058ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 20
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1460.587312
+
+✖ failing tests:
+
+test at tests/offline-install.test.cjs:48:1
+✖ eviction during completion receipt storage cannot leave a false Ready result (20.205876ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:49:219)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:51:1
+✖ denied storage protection stays disclosed after reopening a complete retained installation (10.486856ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'unknown' !== false
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:52:275)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unknown',
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

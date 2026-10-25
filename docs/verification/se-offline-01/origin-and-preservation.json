@@ -1,0 +1,310 @@
+{
+  "finding": "SE-OFFLINE-01",
+  "originalBatch": "SE-PILOT-20261025-B3DC750-01",
+  "originalSource": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "originalRuntimeDigest": "33a10bcbfc788c7380ff8313b19776771799a02637ed65690e0048db1bc515e2",
+  "originalManifestId": "e6f1a66628ebe4a5f035bca1",
+  "zipSHA256": "ffef8954438640b2ecc671dfc620b57d3c0d5ee8d85b3b57f1d5d9d566f3c352",
+  "originalOutcome": {
+    "planned": 10,
+    "attempted": 10,
+    "returned": 10,
+    "pass": 6,
+    "fail": 4,
+    "error": 0,
+    "censored": 0,
+    "missing": 0
+  },
+  "originalLesson": {
+    "id": "SE-OFFLINE-01",
+    "priority": "P1 for complete offline acceptance",
+    "owner": "Publish Handler / Offline",
+    "cases": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "confirmed": "Cold restart navigation timed out20s with browser transport offline; reconnect retains exact save/RNG. Full asset cache760/760 verified in A1/A3.",
+    "sourceCause": "sw.js bypasses navigation and never caches HTML; bootstrap fetches manifest at boot with no-store.",
+    "doNotInfer": "Full asset cache guarantees offline shell/manifest startup.",
+    "action": "Owner should implement release-bound shell/manifest persistence and retest deployed cold start; no code fix made."
+  },
+  "originalCases": [
+    {
+      "schemaVersion": 1,
+      "caseId": "A1",
+      "runId": "SE-PILOT-20261025-B3DC750-01",
+      "kind": "offline",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+      "seed": 1568180215,
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "startedAt": "2026-10-25T15:44:47.054Z",
+      "durationMs": 37585,
+      "status": "FAIL",
+      "classification": "CONFIRMED_PRODUCT_GAP_LOCAL_HTTP",
+      "navigationError": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:40331/slay-the-math-v2/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "cache": {
+        "verifiedFiles": 760,
+        "totalFiles": 760,
+        "verifiedBytes": 232564464,
+        "loadedBytes": 232564464,
+        "totalBytes": 232564464,
+        "availableFiles": 760,
+        "availableBytes": 232564464,
+        "cacheMode": "persistent"
+      },
+      "before": {
+        "path": "raw/privileged/A1-before-restart.json",
+        "sha256": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac",
+        "rng": 1568180215
+      },
+      "after": {
+        "path": "raw/privileged/A1-after-restart-save.json",
+        "sha256": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac",
+        "rng": 1568180215
+      },
+      "saveExact": true,
+      "reconnectSuccess": true,
+      "publicBefore": {
+        "seed": 1568180215,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "publicAfter": {
+        "seed": 1568180215,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "failureScreenshot": null
+    },
+    {
+      "schemaVersion": 1,
+      "caseId": "A2",
+      "runId": "SE-PILOT-20261025-B3DC750-01",
+      "kind": "offline",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+      "seed": 1235945743,
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "startedAt": "2026-10-25T15:45:24.688Z",
+      "durationMs": 32577,
+      "status": "FAIL",
+      "classification": "CONFIRMED_PRODUCT_GAP_LOCAL_HTTP",
+      "navigationError": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:40331/slay-the-math-v2/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "cache": {
+        "verifiedFiles": 331,
+        "totalFiles": 760,
+        "verifiedBytes": 77389008,
+        "loadedBytes": 77389008,
+        "totalBytes": 232564464,
+        "availableFiles": 331,
+        "availableBytes": 77389008,
+        "cacheMode": "persistent"
+      },
+      "before": {
+        "path": "raw/privileged/A2-before-restart.json",
+        "sha256": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984",
+        "rng": 1235945743
+      },
+      "after": {
+        "path": "raw/privileged/A2-after-restart-save.json",
+        "sha256": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984",
+        "rng": 1235945743
+      },
+      "saveExact": true,
+      "reconnectSuccess": true,
+      "publicBefore": {
+        "seed": 1235945743,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "publicAfter": {
+        "seed": 1235945743,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "failureScreenshot": null
+    },
+    {
+      "schemaVersion": 1,
+      "caseId": "A3",
+      "runId": "SE-PILOT-20261025-B3DC750-01",
+      "kind": "offline",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+      "seed": 905676559,
+      "language": "ms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "startedAt": "2026-10-25T15:45:57.285Z",
+      "durationMs": 35667,
+      "status": "FAIL",
+      "classification": "CONFIRMED_PRODUCT_GAP_LOCAL_HTTP",
+      "navigationError": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:40331/slay-the-math-v2/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "cache": {
+        "verifiedFiles": 760,
+        "totalFiles": 760,
+        "verifiedBytes": 232564464,
+        "loadedBytes": 232564464,
+        "totalBytes": 232564464,
+        "availableFiles": 760,
+        "availableBytes": 232564464,
+        "cacheMode": "persistent"
+      },
+      "before": {
+        "path": "raw/privileged/A3-before-restart.json",
+        "sha256": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1",
+        "rng": 905676559
+      },
+      "after": {
+        "path": "raw/privileged/A3-after-restart-save.json",
+        "sha256": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1",
+        "rng": 905676559
+      },
+      "saveExact": true,
+      "reconnectSuccess": true,
+      "publicBefore": {
+        "seed": 905676559,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "publicAfter": {
+        "seed": 905676559,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "failureScreenshot": null
+    },
+    {
+      "schemaVersion": 1,
+      "caseId": "A4",
+      "runId": "SE-PILOT-20261025-B3DC750-01",
+      "kind": "offline",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+      "seed": 4075897635,
+      "language": "ms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "trainingEligible": false,
+      "fixtureInjected": true,
+      "startedAt": "2026-10-25T15:46:32.988Z",
+      "durationMs": 33999,
+      "status": "FAIL",
+      "classification": "CONFIRMED_PRODUCT_GAP_LOCAL_HTTP",
+      "navigationError": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:40331/slay-the-math-v2/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "cache": {
+        "verifiedFiles": 331,
+        "totalFiles": 760,
+        "verifiedBytes": 77389008,
+        "loadedBytes": 77389008,
+        "totalBytes": 232564464,
+        "availableFiles": 331,
+        "availableBytes": 77389008,
+        "cacheMode": "persistent"
+      },
+      "before": {
+        "path": "raw/privileged/A4-before-restart.json",
+        "sha256": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5",
+        "rng": 4075897635
+      },
+      "after": {
+        "path": "raw/privileged/A4-after-restart-save.json",
+        "sha256": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5",
+        "rng": 4075897635
+      },
+      "saveExact": true,
+      "reconnectSuccess": true,
+      "publicBefore": {
+        "seed": 4075897635,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "publicAfter": {
+        "seed": 4075897635,
+        "mode": "learn",
+        "scene": "map",
+        "stage": 0,
+        "hp": 60,
+        "maxHp": 60,
+        "gold": 80,
+        "deckCount": 12
+      },
+      "failureScreenshot": null
+    }
+  ],
+  "protectedRuntimeMatchesCurrentMain": {
+    "engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
+    "config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
+    "education-practice.js": "78c5e6549808e26ee3984fe38bb11016858140622cc867fa7c2e78ab4eb2d8d2",
+    "animation.js": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9",
+    "animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
+    "dom-patch.js": "d051a1ebb429c6de2f2ad4bb2b268b356523a041ab1bba355cf9890c4ec48986",
+    "audio.js": "a5c60c8e4cf4baf66851bbac7c9e7204468fafb8e9c1c181ced40e6656f7fcf0",
+    "music-data.js": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3",
+    "combat-vfx.js": "3a122e9ec49e83264c49f3e014571b118164a9b6db34891742f8a5525f83e9f6",
+    "tutorial.js": "52a7113884506796da7c05dce60102c68b5c03338e9ee8f2ba0338422f5a6937",
+    "tutorial-data.js": "8422ab0d23300d35f5535bb6f96879b3994674c096d1f2ad7b07edfef6bc489b"
+  },
+  "allArtAssetsMatchCurrentMain": true,
+  "trainingEligible": false,
+  "originalBundleModified": false
+}

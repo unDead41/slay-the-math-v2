@@ -1,0 +1,82 @@
+✔ all historical/session-ready counters still cannot produce complete offline readiness (38.871482ms)
+✔ complete installation includes the exact shell and canonical manifest and reopens from stored bytes (19.811803ms)
+✔ missing and same-length corrupted disk files revoke readiness despite a completion receipt (20.329423ms)
+✔ Retry resumes only missing files and never reports an HTTP failure as completed (22.966214ms)
+✔ storage quota and denied cache are explicit errors rather than memory-backed readiness (3.237557ms)
+✔ failed persistence of a verified response cannot create an offline receipt (6.410446ms)
+✔ an incompatible worker prevents offline readiness even when all payloads could be cached (0.723189ms)
+✔ a receipt and manifest from another release cannot satisfy the current installation (9.433409ms)
+✔ the build declares every player resource plus shell while keeping developer/API paths out (853.624564ms)
+✔ eviction during completion receipt storage cannot leave a false Ready result (10.707609ms)
+✔ denied storage protection stays disclosed after reopening a complete retained installation (8.23238ms)
+✔ Pause keeps completed files and Resume finishes without refetching their bytes (8.016666ms)
+✔ changing only the worker changes the release cache identity (426.767935ms)
+✔ the release build rejects server-only folders before they can enter a player package (1.240939ms)
+✔ eviction while the worker confirms capability cannot be reported as Ready (19.268855ms)
+✔ a warm completion never refers to an orphaned cache after its namespace is replaced (17.882917ms)
+✖ same-key corruption after receipt commit cannot produce Ready (8.608007ms)
+✖ warm audit rehashes a same-key replacement namespace before Ready (10.633287ms)
+✖ warm install rehashes a same-key replacement namespace before Ready (16.698894ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 16
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1595.782735
+
+✖ failing tests:
+
+test at tests/offline-install.test.cjs:72:1
+✖ same-key corruption after receipt commit cannot produce Ready (8.608007ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:74:27)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:76:41
+✖ warm audit rehashes a same-key replacement namespace before Ready (10.633287ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:78:30)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/offline-install.test.cjs:76:41
+✖ warm install rehashes a same-key replacement namespace before Ready (16.698894ms)
+  AssertionError [ERR_ASSERTION]: Ready must refer to repaired retained bytes
+  + actual - expected
+  
+  + 'garbage'
+  - 'runtime'
+  
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/offline-mode/tests/offline-install.test.cjs:79:52)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'garbage',
+    expected: 'runtime',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

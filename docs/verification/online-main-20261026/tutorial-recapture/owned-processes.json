@@ -1,0 +1,17 @@
+{
+  "usableForCleanupVerification": false,
+  "reason": "A separate exec invocation has its own PID view; this observation is not proof of capture child identity or closure. Closure evidence uses owner finally and command completion.",
+  "rawObservation": {
+    "observedUTC": "2026-10-25T18:10:41.434696+00:00",
+    "ownerPID": 6,
+    "processes": [
+      {
+        "pid": 6,
+        "ppid": 1,
+        "state": "S",
+        "startTicks": "138",
+        "name": "caas-prefix-tra"
+      }
+    ]
+  }
+}

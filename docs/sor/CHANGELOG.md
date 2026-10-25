@@ -1,8 +1,21 @@
 # Changelog SOR — Slay the Math
 
+## 2.49.1-offline.2 — branch only,26October2026
+
+Fix SE-OFFLINE-01 from the pilot's4cold-restart failures. Preserve main2.49.1 Idle/artwork and the offline contract; save a verified startup shell/manifest/runtime receipt before Online Enter, reconstruct it after a browser-process restart, and keep partial launch distinct from full offline readiness. Add original-seed/save A1–A4 regression and Simulation handoff; no numerical/save/RNG/AI-data changes or main deployment. [Audit](../audits/se-offline-01/LATEST.md).
+
 ## 2.49.0-offline.1 — branch candidate, 25 October 2026
 
 Add one shared Online/Offline Settings preference and a permission-gated pet adapter with local BM/English FAQ. Online keeps the 75% important-package gate and background downloads. Offline installs and verifies the complete release in retained browser storage, including HTML/worker/canonical manifest and lazy player media, with truthful progress, quota/worker failure and Retry/Resume. Cold navigation reconstructs/pins complete releases across a browser-process restart. Standalone portable delivery is reported separately. Main is untouched; Master retains the subsequent 2.49.1 Idle change when integrating. [Scope, evidence and remaining limits](../audits/online-offline-readiness/LATEST.md).
+
+## 2.49.1 — 25 October 2026
+
+Slow Alyssa's Idle blink to280ms every3460ms and correct its constant resting
+root to match accepted actions, including the static fallback. Keep all approved
+source atlas bytes, action/enemy/boss registrations and2.49 gameplay/VFX/loader
+features. Add a hosted five-action review for Alyssa and all12 enemies/bosses.
+Current enemy placement report remains unconfirmed; native continuity is checked
+without inventing offsets. [Evidence, failed/passing checks and limits](../audits/alyssa-motion/LATEST.md).
 
 ## 2.49.0 — 25 October 2026
 

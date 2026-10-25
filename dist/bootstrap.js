@@ -112,7 +112,8 @@ async function boot(){
   await manager.prepare(startup.beforeMenu,{onProgress:startupProgress,timeoutMs:Math.max(1,MAX_WAIT-(Date.now()-startAt))});if(token!==bootGeneration)return;
   if(manager.cacheMode!=='persistent')throw Error('Browser storage filled up. Retry or continue online with essential files.');
   if(Date.now()-startAt>=MAX_WAIT)throw Error('The loading limit was reached. Retry to finish.');
-  endClock();startupProgress();message('Your dungeon is ready','At least 75% of the important package is ready. The rest downloads automatically after Enter.');byId('resource-time').textContent='Verified resources are saved on this browser.';controls({enter:true});
+  if(api.offline){message('Saving game startup','Saving the shell and resource list for this release.');await api.offline.prepareLaunch();if(token!==bootGeneration)return;}
+  endClock();startupProgress();message('Your dungeon is ready','At least 75% of the important package is ready. The rest downloads automatically after Enter.');byId('resource-time').textContent=api.offline&&!api.offline.launchSnapshot().ready?'Startup could not be saved for offline reopening. Retry while connected.':'Verified resources are saved on this browser.';controls({enter:true});
   manager.fetchAsset(manifest.menuAudio,{priority:5}).catch(()=>{byId('resource-online').hidden=false;});
  }catch(error){failure(error,token);}
 }

@@ -1,5 +1,11 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261026-SE-OFFLINE-01 — Retain launchable releases across browser closure
+
+- DISAHKAN: fix the pilot's A1–A4 cold offline failures on the owner branch only; no main push/merge.
+- DITERUSKAN: preserve current main2.49.1 and the prior offline feature. Add a hash-verified startup receipt for shell/manifest/startup files after the Online75% gate. The worker reconstructs/pins one release after process restart; partial startup never means the complete package is ready or pet API is permitted.
+- DITERUSKAN: reuse original seed/save bytes through an explicit regression runner, keep all historical failures and trainingEligible=false. Simulation owns independent acceptance and registry updates. [Handoff](../SE_OFFLINE_01_HANDOFF.md).
+
 ## DEC-20261025-PLAY-MODE-OFFLINE — One preference and a complete player installation
 
 - **DISAHKAN:** Ijamm authorizes this update on its own branch only. No main merge, push or deployment.
@@ -7,6 +13,20 @@
 - **DITERUSKAN:** Offline Ready requires the exact complete release on retained CacheStorage, including HTML/worker/manifest, lazy Practice and all registered player media. Verify actual retained bytes and capability; fail closed on missing/corrupt files, quota, worker or package failure. Exclude developer/server/private files; disclose storage eviction and support real progress/Retry/Resume.
 - **Acceptance:** close/restart the browser process without server/network, exercise both stages and player screens; distinguish the standalone portable file. Preserve core game/save/RNG and original resources. Current main advanced after the recorded base; Master must retain its newer Idle change during integration.
 - [Owner record](../ONLINE_OFFLINE_READINESS.md), [audit/evidence](../audits/online-offline-readiness/LATEST.md), [pet handoff](../pet-ai/PLAY_MODE_HANDOFF.md).
+
+## DEC-20261025-IDLE-ROOT-BLINK — Correct the confirmed Idle defects
+
+- **DISAHKAN:** Ijamm requests slower eyelid motion and aligned Idle/action
+  placement; previous direct-main authorization continues for this same feature.
+- **DITERUSKAN:** fix only Alyssa's measured116.2-native-px Idle root error with
+  a constant clip pivot. Blink280ms every3460ms while breathing continues.
+  Preserve all atlas bytes and all four action clips; regenerate the Idle poster.
+- **Not established:** enemy placement report does not reproduce in current
+  source/live samples or12-actor continuity checks. Keep the accepted pivots;
+  expose all motions in a hosted review and retain that limitation explicitly.
+- **Verification:** meaningful RED/GREEN, production/native/offline tests and
+  full-suite historical-input failure/recovery are retained, with inherited P2s.
+  [Current audit](../audits/alyssa-motion/LATEST.md).
 
 ## DEC-20261025-ICON-COMBAT-MAIN — Publish both completed follow-ups
 

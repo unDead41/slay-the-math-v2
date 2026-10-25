@@ -1,0 +1,33 @@
+✔ only the five Stage 1 non-boss actors use all 25 supplied clips and 128 active frames (1.274937ms)
+✔ idle advances at source FPS; non-looping Attack completes once and returns to idle (1.47011ms)
+✔ every frame uses the same floor registration and source rectangles, without per-pose recentering (0.458139ms)
+✔ pause freezes the exact frame and resumes without counting hidden time (2.575381ms)
+✔ Motion Off uses the supplied idle frame, schedules no animation, and never replays an action (0.386591ms)
+✔ a late action load cannot replace a newer reaction or revive a destroyed actor (0.348333ms)
+✔ missing action textures recover to idle and a missing idle leaves the original image fallback (1.273554ms)
+✔ variable frame durations keep windup and recovery timing and finish exactly at the source total (0.541954ms)
+✔ actor scale and supplied per-frame boot pivots register wide attacks at the same arena floor (0.503106ms)
+✔ Alyssa animation spans both stages while enemy IDs remain stage scoped (0.244518ms)
+✔ all approved V5 poses retain source rasters and action holds, with a fixed corrected Idle projection (4.654116ms)
+✔ repeated unchanged configuration preserves an active animation clock (0.14628ms)
+✔ Alyssa Idle rear boot stays at the accepted Attack root instead of stepping forward on return (0.180061ms)
+✔ Alyssa breath continues while a slower blink occurs every second Idle cycle (0.240291ms)
+✔ every canonical Normal and Elite encounter in both stages has all five source motions (2.609984ms)
+✔ Stage 2 loading and failure posters use the same left-facing source for every reaction (1.902229ms)
+✔ Stage 2 resolved intents choose Attack, Defend and Skill independently of damage/RNG (0.830669ms)
+✔ the Alyssa V5 import preserves all accepted enemy and boss registries (1.2768ms)
+✔ decoded cache evicts by pixel bytes rather than number of textures (1.233905ms)
+✔ active clips survive pressure and idle is preferred ahead of unrelated textures (0.520632ms)
+✔ one released owner cannot unpin a clip still used by another actor (0.313181ms)
+✔ oversized unowned images can be displayed without staying in the cache (0.237446ms)
+✔ active-only oversize is reported and released immediately when its owner exits (0.276736ms)
+✔ concurrent requests decode one image and a failed decode never poisons retry (0.866372ms)
+✔ a forgotten late load cannot replace or inflate a newer same-path entry (4.718683ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 127.710715

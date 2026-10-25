@@ -15,17 +15,17 @@ self.addEventListener('message',event=>{
 async function installed(release){
  const result=[];for(const name of await caches.keys()){
   if(!name.startsWith(prefix))continue;
-  try{const cache=await caches.open(name),saved=await cache.match(receiptURL);if(!saved?.ok)continue;const r=await saved.json();
+  for(const marker of ['complete','launch'])try{const cache=await caches.open(name),saved=await cache.match(marker==='complete'?receiptURL:new URL('.__stm_offline__/launch.json',base).href);if(!saved?.ok)continue;const r=await saved.json();
    if(r.protocol!==protocol||!/^[a-f0-9]{24}$/.test(r.releaseId)||r.manifestId!==r.releaseId||name!==prefix+r.manifestId||release&&r.releaseId!==release)continue;
    const response=await cache.match(new URL('asset-manifest.json',base).href);if(!response?.ok)continue;const bytes=await response.clone().arrayBuffer();if(await hash(bytes)!==r.manifestHash)continue;
    const manifest=JSON.parse(new TextDecoder().decode(bytes)),files=manifest.offline?.files;
    if(manifest.manifestId!==r.manifestId||manifest.offline.releaseId!==r.releaseId||!Array.isArray(files)||!files.every(safeEntry)||JSON.stringify(r.files)!==JSON.stringify(files.map(e=>[e.url,e.bytes,e.sha256])))continue;
    const allowed=new Map(files.map(e=>[new URL(e.url,base).pathname,e]));allowed.set(new URL('asset-manifest.json',base).pathname,{url:'asset-manifest.json',sha256:r.manifestHash,bytes:bytes.byteLength});
-   result.push({cache,allowed,releaseId:r.releaseId,completedAt:r.completedAt||0});
+   let navigationFiles=[...allowed.values()];if(marker==='launch'){const launch=manifest.offline.launch;if(!Array.isArray(launch)||!['index.html',...files.filter(e=>e.required).map(e=>e.url)].every(url=>launch.includes(url))||launch.some(url=>!allowed.has(new URL(url,base).pathname)))continue;navigationFiles=[...new Set([...launch,'asset-manifest.json'])].map(url=>allowed.get(new URL(url,base).pathname));}result.push({cache,allowed,navigationFiles,releaseId:r.releaseId,completedAt:r.completedAt||0});
   }catch(_){}
  }return result.sort((a,b)=>b.completedAt-a.completedAt);
 }
-async function complete(candidate,verify=true){const keys=new Set((await candidate.cache.keys()).map(r=>r.url));for(const e of candidate.allowed.values()){if(!keys.has(new URL(e.url,base).href)||verify&&!await cached(candidate,e))return false;}return true;}
+async function complete(candidate,verify=true){const keys=new Set((await candidate.cache.keys()).map(r=>r.url));for(const e of candidate.navigationFiles){if(!keys.has(new URL(e.url,base).href)||verify&&!await cached(candidate,e))return false;}return true;}
 async function cached(candidate,e){const response=await candidate.cache.match(new URL(e.url,base).href);return await valid(response,e)?response:null;}
 function unavailable(){return new Response('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Offline preparation needed</title><body><h1>Offline preparation needed / Persediaan offline diperlukan</h1><p>The complete game is not available on this browser. Connect to the game address, then use Settings to retry or resume.</p><p>Game belum lengkap pada browser ini. Sambung ke alamat game, kemudian buka Tetapan untuk cuba lagi atau sambung muat turun.</p><a href="./">Try again / Cuba lagi</a></body></html>',{status:503,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}});}
 async function navigation(request,url){

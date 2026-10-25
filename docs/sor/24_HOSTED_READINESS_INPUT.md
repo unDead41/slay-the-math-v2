@@ -1,5 +1,9 @@
 # SOR — First Load, Audio Readiness & No Select/Drag
 
+## SE-OFFLINE-01 — current candidate2.49.1-offline.2
+
+DISAHKAN: Ijamm requests fixing the four batch cold-restart failures on the feature branch only. This supersedes the earlier pending-main2.49.1 compatibility note: its Idle changes are now preserved in this branch. Persist and verify release-bound startup shell/manifest/runtime before Online Enter; cold workers reconstruct the launch receipt even for the original partial-startup cases. A launch receipt never grants full offline Ready or pet API permission. Complete installation retains its all-file verification/receipt contract. Preserve the original batch's seeds/saves and immutable FAIL evidence; regression replays are not new independent samples or AI training data. [Audit](../audits/se-offline-01/LATEST.md), [Simulation handoff](../SE_OFFLINE_01_HANDOFF.md).
+
 ## Online/Offline mode — branch candidate 2.49.0-offline.1
 
 **DISAHKAN:** Ijamm requests one Online/Offline Settings preference shared with pet AI, complete verified player resources before offline Ready, and browser-process restart tests. Work stays on `fix/online-offline-readiness`; no main merge/push/deployment. Base main is `d77b3e0ce87d573de89e84a9b2374df97ad625b9` (2.49.0). Main subsequently advanced to 2.49.1; retain its Idle changes when Master integrates and rebuild shared generated outputs.

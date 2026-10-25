@@ -1,6 +1,6 @@
 /* Complete, release-bound browser installation. Readiness is based on disk bytes. */
 (function(root){'use strict';
-const protocol='stm-offline-v1',receiptPath='.__stm_offline__/complete.json';
+const protocol='stm-offline-v1',receiptPath='.__stm_offline__/complete.json',launchPath='.__stm_offline__/launch.json';
 function create({host=root,base,manifest,manager,ensureWorker=async()=>false}){
  base=new URL('.',base).href;
  const definition=manifest.offline,Encoder=host.TextEncoder||root.TextEncoder;
@@ -9,7 +9,7 @@ function create({host=root,base,manifest,manager,ensureWorker=async()=>false}){
  for(const e of files){const url=new URL(e.url,base);if(url.origin!==new URL(base).origin||!url.href.startsWith(base)||e.url.startsWith('/')||e.url.includes('..')||/^(?:__dev|api|backend|tools)\//.test(e.url)||!Number.isSafeInteger(e.bytes)||e.bytes<0||!/^[a-f0-9]{64}$/.test(e.sha256))throw Error('Unsafe offline package entry.');}
  const cacheName=manager?.cacheName||'stm-assets-'+encodeURIComponent(new URL(base).pathname)+'-'+manifest.manifestId;
  const listeners=new Set(),verified=new Set(),failures=new Map(),normal=new Set(manifest.entries.map(e=>e.url));
- let operation=null,operationKind=null,paused=false,manifestHash=null;
+ let operation=null,operationKind=null,paused=false,manifestHash=null,launchOperation=null,launchState={ready:false,phase:'idle',error:null};
  const state={phase:'idle',ready:false,errorCode:null,error:null,currentFile:null,persistence:'unknown',workerReady:false,lastVerifiedAt:null};
  const absolute=url=>new URL(url,base).href;
  async function digest(bytes){return [...new Uint8Array(await host.crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');}
@@ -25,6 +25,24 @@ function create({host=root,base,manifest,manager,ensureWorker=async()=>false}){
  async function workerReady(){try{state.workerReady=await ensureWorker()===true;}catch(_){state.workerReady=false;}return state.workerReady;}
  async function retained(cache){const keys=new Set((await cache.keys()).map(k=>typeof k==='string'?k:k.url));for(const e of await descriptors())if(!keys.has(absolute(e.url))){verified.delete(e.url);failures.set(e.url,{url:e.url,reason:'File disappeared before offline completion.',code:'missing'});}return verified.size===files.length+1;}
  async function committed(cache){await scan(cache);return verified.size===files.length+1&&await receiptValid(cache)&&await retained(cache);}
+ function prepareLaunch(){
+  if(launchOperation)return launchOperation;
+  launchOperation=(async()=>{
+   launchState={ready:false,phase:'checking',error:null};
+   const all=await descriptors(),byURL=new Map(all.map(e=>[e.url,e]));
+   if(!Array.isArray(definition.launch)||!definition.launch.length)throw Error('This release has no startup package.');
+   const urls=[...new Set([...definition.launch,'asset-manifest.json'])],list=urls.map(url=>byURL.get(url));
+   if(list.some(e=>!e)||!['index.html','sw.js'].every(url=>urls.includes(url)))throw Error('Invalid startup package.');
+   if(!await workerReady())throw Error('An active offline worker is required for saved startup.');
+   let c=await open();
+   for(const e of list){if(await valid(await c.match(absolute(e.url)),e))continue;const response=await responseFor(e);if(!await valid(response,e))throw Error('Startup verification failed: '+e.url);await c.put(absolute(e.url),response.clone());}
+   const receipt={protocol,releaseId:definition.releaseId,manifestId:manifest.manifestId,manifestHash,files:files.map(e=>[e.url,e.bytes,e.sha256]),completedAt:Date.now()};
+   await c.put(absolute(launchPath),new host.Response(JSON.stringify(receipt),{headers:{'content-type':'application/json'}}));
+   c=await open();const saved=await c.match(absolute(launchPath));if(!saved?.ok||JSON.stringify(await saved.json())!==JSON.stringify(receipt))throw Error('Startup receipt was not retained.');
+   for(const e of list)if(!await valid(await c.match(absolute(e.url)),e))throw Error('Startup was not retained: '+e.url);
+   launchState={ready:true,phase:'ready',error:null,releaseId:definition.releaseId,verifiedFiles:list.length};return {...launchState};
+  })().catch(error=>{launchState={ready:false,phase:'error',error:String(error.message||error)};return {...launchState};}).finally(()=>{launchOperation=null;});return launchOperation;
+ }
  function exclusive(kind,work){operationKind=kind;const p=Promise.resolve().then(work).catch(e=>fail(e,e.offlineCode)).finally(()=>{if(operation===p){operation=null;operationKind=null;}});operation=p;return p;}
  function audit(){if(operation)return operation;return exclusive('audit',async()=>{
   Object.assign(state,{phase:'checking',ready:false,error:null,errorCode:null});emit();const worker=await workerReady(),c=await open();await scan(c);
@@ -68,7 +86,7 @@ function create({host=root,base,manifest,manager,ensureWorker=async()=>false}){
   });
  }
  async function reconcile(){if(operation||!state.ready)return snapshot();try{const c=await open(),keys=new Set((await c.keys()).map(x=>typeof x==='string'?x:x.url));for(const e of await descriptors())if(!keys.has(absolute(e.url)))verified.delete(e.url);if(verified.size!==files.length+1||!await receiptValid(c)){state.ready=false;state.phase='partial';emit();}}catch(e){fail(e,e.offlineCode);}return snapshot();}
- return {protocol,cacheName,snapshot,install,audit,reconcile,get phase(){return state.phase;},get ready(){return state.ready;},pause(){paused=true;if(operationKind==='install'){state.ready=false;state.phase='paused';emit();}},subscribe(fn){listeners.add(fn);return ()=>listeners.delete(fn);}};
+ return {protocol,cacheName,snapshot,install,audit,reconcile,prepareLaunch,launchSnapshot:()=>({...launchState}),get phase(){return state.phase;},get ready(){return state.ready;},pause(){paused=true;if(operationKind==='install'){state.ready=false;state.phase='paused';emit();}},subscribe(fn){listeners.add(fn);return ()=>listeners.delete(fn);}};
 }
-const api={create,protocol,receiptPath};if(typeof module!=='undefined')module.exports=api;else root.STMOfflineInstall=api;
+const api={create,protocol,receiptPath,launchPath};if(typeof module!=='undefined')module.exports=api;else root.STMOfflineInstall=api;
 })(typeof window!=='undefined'?window:globalThis);

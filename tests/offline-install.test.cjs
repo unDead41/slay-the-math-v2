@@ -78,3 +78,14 @@ for(const action of ['audit','install'])test('warm '+action+' rehashes a same-ke
  if(action==='audit'){assert.equal(b.snapshot().ready,false);assert.ok(b.snapshot().remainingFiles.includes('a.js'));}
  else{assert.equal(b.snapshot().ready,true);assert.equal(await (await replacement.match(f.base+'a.js')).text(),'runtime','Ready must refer to repaired retained bytes');}
 });
+
+test('a verified startup shell survives without claiming the complete offline package',async t=>{
+ const f=await fixture(t);f.manifest.offline.launch=['a.js','index.html','sw.js'];await f.manager.prepare(['a.js']);const a=f.create();const result=await a.prepareLaunch();assert.equal(result.ready,true);assert.equal(a.ready,false);assert.equal(await f.cache.match(f.base+'.__stm_offline__/complete.json'),undefined);assert.ok(await f.cache.match(f.base+'.__stm_offline__/launch.json'));assert.ok(await f.cache.match(f.base+'asset-manifest.json'));assert.equal(f.calls.includes('voice.mp3'),false,'Startup persistence must not force optional files');
+});
+
+test('startup receipt writes rehash retained bytes and disclose failed storage',async t=>{
+ const f=await fixture(t);f.manifest.offline.launch=['a.js','index.html','sw.js'];await f.manager.prepare(['a.js']);const put=f.cache.put.bind(f.cache);f.cache.put=async(key,r)=>{await put(key,r);if(String(key).endsWith('/launch.json'))await put(f.base+'a.js',new Response('garbage'));};const a=f.create();assert.equal((await a.prepareLaunch()).ready,false);assert.equal(a.ready,false);assert.match(a.launchSnapshot().error,/retained/);
+});
+test('a worker denial cannot claim a saved startup package',async t=>{
+ const f=await fixture(t);f.manifest.offline.launch=['a.js','index.html','sw.js'];const a=implementation().create({...f,ensureWorker:async()=>false});assert.equal((await a.prepareLaunch()).ready,false);assert.equal(a.ready,false);assert.match(a.launchSnapshot().error,/worker/);
+});

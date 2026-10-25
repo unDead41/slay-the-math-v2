@@ -1,5 +1,21 @@
 # 11 — Animasi, VFX, audio dan maklum balas
 
+## Idle follow-up — 2.49.1
+
+**MOT-39 (DISAHKAN):** Ijamm requests a slower blink and correct Idle/action
+placement for Alyssa and enemies. Confirmed Alyssa Idle root and blink defects
+are corrected; the enemy placement report is not reproduced and remains an
+explicit follow-up limit. Prior same-feature direct-main authorization continues.
+
+**MOT-40 (DITERUSKAN):** Keep15 logical Idle slots and the approved original
+rasters. Closing/closed/opening hold85/110/85ms. Blink every second1730ms breath
+(3460ms cadence); reuse the original open pose5 during the skipped blink.
+Source and logical frame are separate renderer-owned values, retained across
+ordinary DOM patches. Pause freezes both; no new timer or RNG. One constant
+Idle-only pivot repairs the annotated rear boot; all action/enemy/boss data,
+2.49 VFX and common arena geometry remain. The source-gated importer owns both
+registry and fallback poster. [Evidence and report limit](../audits/alyssa-motion/LATEST.md).
+
 ## Main integration authorization — 2.49.0
 
 Ijamm now requests publishing the completed icon-loading and combat-continuity

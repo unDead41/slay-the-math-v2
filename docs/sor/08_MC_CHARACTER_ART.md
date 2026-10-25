@@ -1,5 +1,14 @@
 # 08 — MC pengembara dungeon dan model sheet
 
+## Idle follow-up — 2.49.1
+
+**CHR-12 (DISAHKAN):** Slow Alyssa's blink and align Idle with the accepted action
+root. This supersedes only the shared Idle pivot/timing statements below.
+Preserve the approved atlas bytes and all four action clips. A fixed Idle pivot
+repairs the replacement export's rear-boot offset; no per-frame recentering,
+scale change, rig or redraw. Source-gated reimport also produces the matching
+fallback poster. [Current findings and exact limits](../audits/alyssa-motion/LATEST.md).
+
 ## Current Alyssa motion — V5 / game 2.45.0, 25 October 2026
 
 **CHR-10 (DISAHKAN):** Ijamm approves the completed V5 review and requests applying

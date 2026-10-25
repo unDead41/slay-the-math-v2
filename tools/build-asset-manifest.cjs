@@ -38,6 +38,7 @@ function build(root,{write=true,output=null}={}){
  const offlineFiles=[...entries,...shell].sort((a,b)=>a.url.localeCompare(b.url)),releaseId=contentId(offlineFiles);
  const offline={schemaVersion:1,releaseId,files:offlineFiles};
  const out={schemaVersion:1,gameVersion:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,manifestId:releaseId,offline,entries,scripts,startup,styles:[...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m=>m[1].split('?')[0]),actors,menuAudio:music.assets.menu.srcs[0]};
+ offline.launch=[...new Set([...require(path.join(root,'dist/asset-readiness.js')).startupPlan(out).beforeMenu,'index.html','sw.js'])];
  if(write)fs.writeFileSync(path.join(dist,'asset-manifest.json'),JSON.stringify(out));return out;
 }
 build.contentId=contentId;module.exports=build;if(require.main===module){const out=build(path.resolve(__dirname,'..'));console.log('Resource manifest: '+out.entries.length+' files; '+out.manifestId);}

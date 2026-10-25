@@ -8,7 +8,7 @@
   const vfx=node.matches('canvas.combat-vfx-canvas'),canvas=vfx||node.matches('canvas.actor-animation'),host=node.hasAttribute('data-animation-ready')&&[...node.children].some(n=>n.matches('canvas.actor-animation'));
   const oldKey=node.getAttribute('data-stm-asset'),nextKey=next.getAttribute('data-stm-asset');
   const sameImage=node.localName==='img'&&(oldKey||nextKey?oldKey===nextKey:[node.getAttribute('src'),node.getAttribute('data-icon-source')].includes(next.getAttribute('src'))),sameIcon=sameImage&&node.hasAttribute('data-icon-state');
-  const owned=name=>vfx&&(['width','height'].includes(name)||name.startsWith('data-vfx-'))||canvas&&['data-action','data-frame','data-texture'].includes(name)||host&&name==='data-animation-ready'||sameImage&&name==='data-stm-image-state'||sameIcon&&(['data-icon-state','data-icon-source','data-icon-fallback'].includes(name)||name==='src'&&node.dataset.iconFallback==='true');
+  const owned=name=>vfx&&(['width','height'].includes(name)||name.startsWith('data-vfx-'))||canvas&&['data-action','data-frame','data-source-frame','data-texture'].includes(name)||host&&name==='data-animation-ready'||sameImage&&name==='data-stm-image-state'||sameIcon&&(['data-icon-state','data-icon-source','data-icon-fallback'].includes(name)||name==='src'&&node.dataset.iconFallback==='true');
   for(const attr of [...node.attributes])if(!owned(attr.name)&&!next.hasAttribute(attr.name))node.removeAttribute(attr.name);
   for(const attr of next.attributes)if(!owned(attr.name)&&node.getAttribute(attr.name)!==attr.value)node.setAttribute(attr.name,attr.value);
   if(!canvas)children(node,next);

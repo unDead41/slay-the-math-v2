@@ -71,11 +71,13 @@ test('Alyssa animation spans both stages while enemy IDs remain stage scoped',()
  assert.equal(S.supports(2,'mc_01'),false);assert.equal(S.supports(1,'beetle'),false);
  assert.equal(S.spec(0,'mc_01').facing,'right');
 });
-test('all approved V5 poses use one projection and source timing, without applying the retired six-frame Skill correction',async()=>{
+test('all approved V5 poses retain source rasters and action holds, with a fixed corrected Idle projection',async()=>{
  const source=require('../docs/animations/alyssa-v5/source-manifest.json');
  for(const [action,clip]of Object.entries(D.hero.animations)){
-  assert.equal(clip.frames.length,15);assert.equal(clip.scales,undefined);assert.deepEqual(clip.durationsMs,source.actions[action].durations);
+  const holds=source.actions[action].durations.slice();if(action==='idle')holds.splice(6,3,85,110,85);
+  assert.equal(clip.frames.length,15);assert.equal(clip.scales,undefined);assert.deepEqual(clip.durationsMs,holds);
   const f=fixture({spec:D.hero});await flush();f.player.play(action);await flush();await f.step(0);
+  if(action==='idle')await f.step(1730); // The second breath contains the blink.
   for(let i=0;i<15;i++){
    assert.equal(f.player.snapshot().frame,i,action+' frame '+i);const draw=f.draws.at(-1),scale=D.hero.drawScale;
    assert.deepEqual(draw.slice(1,5),source.actions[action].rects[i]);
@@ -90,4 +92,31 @@ test('all approved V5 poses use one projection and source timing, without applyi
 
 test('repeated unchanged configuration preserves an active animation clock',async()=>{
  const f=fixture();await flush();await f.step(0);await f.step(100);f.player.configure({motion:true,paused:false});await f.step(80);assert.equal(f.player.snapshot().frame,1,'Same-encounter UI updates must not restart frame timing');f.player.destroy();
+});
+
+test('Alyssa Idle rear boot stays at the accepted Attack root instead of stepping forward on return',async()=>{
+ const f=fixture({spec:D.hero});await flush();
+ // Independently annotated V5 Idle rear boot: native [394.682800598,852.565647074].
+ // The accepted Attack rear boot is 60 native px behind its two-foot floor anchor.
+ const bootX=394.682800598*.625,bootY=852.565647074*.625;
+ const draw=f.draws.at(-1);
+ assert.ok(Math.abs(draw[5]+bootX*D.hero.drawScale-735.2)<.1,'Idle rear boot must share the action root');
+ assert.ok(Math.abs(draw[6]+bootY*D.hero.drawScale-1100)<.1);
+ f.player.play('attack');await flush();await f.step(0);await f.step(2000);
+ assert.equal(f.player.snapshot().action,'idle');
+ assert.ok(Math.abs(f.draws.at(-1)[5]+bootX*D.hero.drawScale-735.2)<.1,'automatic Idle return must retain the corrected registration');
+ f.player.destroy();
+});
+
+test('Alyssa breath continues while a slower blink occurs every second Idle cycle',async()=>{
+ const f=fixture({spec:D.hero});await flush();await f.step(0);
+ const source=()=>D.hero.animations.idle.frames.findIndex(r=>r.every((n,i)=>n===f.draws.at(-1)[i+1]));
+ await f.step(800);assert.equal(source(),5,'first breath peak keeps eyes open');
+ await f.step(1000);assert.equal(source(),0,'breathing must complete without waiting for a long blink interval');
+ await f.step(655);assert.equal(source(),6,'second breath starts closing the eyelid');
+ await f.step(85);assert.equal(source(),7,'the closed eye is held visibly');
+ f.player.configure({paused:true});await f.step(5000);assert.equal(source(),7,'pause must freeze the eyelid');
+ f.player.configure({paused:false});await f.step(0);await f.step(109);assert.equal(source(),7);
+ await f.step(1);assert.equal(source(),8);await f.step(84);assert.equal(source(),8);
+ await f.step(1);assert.equal(source(),9);f.player.destroy();
 });

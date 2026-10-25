@@ -17,7 +17,7 @@ async function restore(p,run,{clock=true,expectReady=true}={}){
  await p.evaluate(r=>{localStorage.setItem('duel-cube-math.v1',JSON.stringify(r));localStorage.setItem('duel-cube-settings.v1',JSON.stringify({motion:true,sound:false,musicMuted:true,voiceMuted:true}));},run);
  await p.reload();await enter(p);await p.locator('[data-action=continue]:visible').first().click();
  if(expectReady){await ready(p);await p.waitForFunction(()=>!document.body.classList.contains('scene-preparing'));}
- if(clock)await p.clock.pauseAt(await p.evaluate(()=>Date.now()+2000));
+ if(clock){const now=await p.evaluate(()=>Date.now());await p.clock.setFixedTime(now);await p.clock.pauseAt(now);await p.clock.setSystemTime(now);}
 }
 const saved=p=>p.evaluate(()=>JSON.parse(localStorage.getItem('duel-cube-math.v1')));
 async function expectedCard(p,key){return p.evaluate(key=>{const r=JSON.parse(localStorage.getItem('duel-cube-math.v1')),c=r.battle.hand.find(c=>c.key===key),expected=DCEngine.clone(r);DCEngine.playCard(expected,c.uid);return{expected,uid:c.uid};},key);}
@@ -27,7 +27,9 @@ async function collect(p,action){
   const a=await hero(p).getAttribute('data-action'),i=Number(await hero(p).getAttribute('data-frame'));
   if(a!==action){assert.equal(a,'idle');break;}
   if(!seen.has(i)){const value=await pixels(p);assert(value.visible>1000);seen.set(i,value.hash);}
-  if(action==='idle'&&seen.size===15)break;await p.clock.runFor(10);
+  if(action==='idle'&&seen.size===15&&new Set(seen.values()).size>=8)break;
+  if(action==='idle'&&seen.has(i))seen.set(i,(await pixels(p)).hash);
+  await p.clock.runFor(10);
  }
  const order=[...seen.keys()],start=action==='idle'?order[0]:0;
  assert.deepEqual(order,Array.from({length:15},(_,i)=>(start+i)%15),action+' must render every approved exposure in source order');

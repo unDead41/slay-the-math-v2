@@ -29,7 +29,7 @@ def main():
     baseline = json.loads(audit_path.read_text())["previous_hero"] if audit_path.exists() else previous
     audit = {"source": args.archive.name, "source_sha256": source_hash, "source_bytes": args.archive.stat().st_size,
              "asset_version": "alyssa-v5-15", "frame_slots": 75, "facing": "right", "rig": False,
-             "operation": "Byte-preserved approved atlases; one fixed projection, no new poses or local deformation.",
+             "operation": "Byte-preserved approved atlases; fixed per-clip registration, slower sparse Idle blink; no new poses or local deformation.",
              "usage_source": "V5 artwork reviewed and approved by Ijamm for this game; new drawings used built-in imagegen. No separate licence declaration supplied.",
              "previous_hero": baseline, "untouched_actors_sha256": actor_hash, "animations": [], "posters": []}
     with ZipFile(args.archive) as z:
@@ -63,7 +63,16 @@ def main():
             raw = z.read(prefix + str(path))
             sheet = Image.open(io.BytesIO(raw)).convert("RGBA")
             assert sheet.size == (3296, 1984) and max(sheet.size) < 4096
-            rects, holds = src["rects"], src["durations"]
+            rects, holds = src["rects"], src["durations"][:]
+            clip_pivot = pivot[:]
+            if action == "idle":
+                # V5 replaced Idle after the original root was recorded. Its
+                # annotated rear boot is 116.2 native px ahead of Attack's root.
+                # One constant clip offset preserves breathing and foot motion.
+                first = src["frames"][0]
+                matrix, foot = first["finalMatrix"], first["features"]["foot"]
+                clip_pivot[0] += (foot[0] * matrix[0] + matrix[1] - manifest["pivot"][0]) * ratio
+                holds[6:9] = [85, 110, 85]
             assert len(rects) == len(holds) == 15 and all(isinstance(t, int) and t > 0 for t in holds)
             frames = []
             for i, (x, y, w, h) in enumerate(rects):
@@ -71,7 +80,7 @@ def main():
                 cell = sheet.crop((x, y, x + w, y + h))
                 box = list(cell.getchannel("A").point(lambda a: 255 if a > 8 else 0).getbbox())
                 assert min(box[0], box[1], w - box[2], h - box[3]) >= 16
-                bounds = [data["floorPivot"][j % 2] + (box[j] - pivot[j % 2]) * scale for j in range(4)]
+                bounds = [data["floorPivot"][j % 2] + (box[j] - clip_pivot[j % 2]) * scale for j in range(4)]
                 assert bounds[0] >= 0 and bounds[1] >= 0 and bounds[2] <= data["canvas"][0] and bounds[3] <= data["canvas"][1], (action, i, bounds)
                 native_png = Image.open(io.BytesIO(z.read(prefix + f"frames/{action}_{i+1:02d}.png"))).convert("RGBA")
                 assert digest(native_png.tobytes()) == src["hashes"][i]
@@ -79,14 +88,17 @@ def main():
                                "duration_ms": holds[i], "native_rgba_sha256": src["hashes"][i]})
             name = f"motion-alyssa-{action}.webp"
             (ROOT / "dist/assets" / name).write_bytes(raw)
-            clip = {"image": name, "durationsMs": holds, "loop": action == "idle", "frames": rects, "pivots": [pivot[:] for _ in rects]}
+            clip = {"image": name, "durationsMs": holds, "loop": action == "idle", "frames": rects, "pivots": [clip_pivot[:] for _ in rects]}
+            if action == "idle":
+                clip["blink"] = {"everyLoops": 2, "frames": [6, 7, 8], "openFrame": 5}
             hero["animations"][action] = clip
             audit["animations"].append({"action": action, "runtime": name, "source_atlas": str(path), "runtime_sha256": digest(raw),
-                "runtime_bytes": len(raw), "sheet_size": list(sheet.size), "unique_native_rasters": len(set(src["hashes"])), "frames": frames})
+                "runtime_bytes": len(raw), "sheet_size": list(sheet.size), "unique_native_rasters": len(set(src["hashes"])),
+                "source_durations_ms": src["durations"], "source_pivot": clip_pivot, "frames": frames})
             audit["decoded_atlas_bytes"] += sheet.width * sheet.height * 4
             x, y, w, h = rects[0]
             cell = sheet.crop((x,y,x+w,y+h))
-            tx, ty = [data["floorPivot"][j] - pivot[j] * scale for j in range(2)]
+            tx, ty = [data["floorPivot"][j] - clip_pivot[j] * scale for j in range(2)]
             poster = cell.transform(tuple(data["canvas"]), Image.Transform.AFFINE, (1/scale,0,-tx/scale,0,1/scale,-ty/scale), resample=Image.Resampling.BICUBIC)
             output = ROOT / "dist/assets" / f"alyssa-right-{action}.webp"
             poster.save(output, "WEBP", lossless=True, method=4, exact=True)

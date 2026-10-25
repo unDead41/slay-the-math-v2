@@ -1,6 +1,6 @@
 # Online/Offline readiness — branch audit
 
-Task started25 October2026; verification completed26 October2026UTC. Base main `d77b3e0ce87d573de89e84a9b2374df97ad625b9` /2.49.0. Master SOR1.2.0 and current AGENTS/governance/domain/preload/icon-combat audits were read first. Work branch `fix/online-offline-readiness`, isolated worktree. Implementation checkpoint `39777a9fe3ad0431b130fe0a9b7859768757594e`; final evidence/remote publication is recorded separately. No main push, merge or deployment is authorized.
+Task started25 October2026; verification completed25 October2026UTC (26October in Asia/Kuala_Lumpur). Base main `d77b3e0ce87d573de89e84a9b2374df97ad625b9` /2.49.0. Master SOR1.2.0 and current AGENTS/governance/domain/preload/icon-combat audits were read first. Work branch `fix/online-offline-readiness`, isolated worktree. Implementation checkpoint `39777a9fe3ad0431b130fe0a9b7859768757594e`; final evidence/remote publication is recorded separately. No main push, merge or deployment is authorized.
 
 ## Status and current-main boundary
 

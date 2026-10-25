@@ -71,7 +71,7 @@
  function plan(before,run,lang='en',{passives=[],transfers=[],compact=false}={}){
   const after=snapshot(run);if(!before||!after||before.identity!==after.identity||after.seq<before.seq)return {cues:[],passives:[],leadMs:0,sound:null};
   const entries=(run.battle.combatLog?.entries||[]).filter(e=>e.id>before.seq),enemyTurn=entries.some(e=>e.actor==='enemy'&&e.kind==='enemy-turn');
-  const leadMs=enemyTurn?240:transfers.some(t=>t.from==='hand')?180:0;
+  const leadMs=enemyTurn?60:transfers.some(t=>t.from==='hand')?40:0;
   const ordered=passives.map(e=>({...e})).sort((a,b)=>Number(b.motif==='last-ember')-Number(a.motif==='last-ember'));
   let cues=effects(before,run,lang).map(e=>({...e}));
   // A partial shield hit followed by turn-start expiry is not a broken shield.
@@ -128,13 +128,16 @@
   const enabled=()=>!dead&&!pageHidden&&!doc.hidden&&options.motion?.()!==false&&!media?.matches;
   const allowed=()=>enabled()&&!doc.querySelector('#dialog[open]');
   function remove(el){const parent=el.parentElement;el.remove();if(host&&parent===host&&!host.childElementCount){host.remove();host=null;}}
-  function cancelBursts(){generation++;if(frame)win.cancelAnimationFrame(frame);frame=0;if(soundTimer)win.clearTimeout(soundTimer);soundTimer=0;for(const a of animations)a.cancel();animations.clear();host?.querySelectorAll('[data-status-effect],.status-vfx-readout').forEach(el=>el.remove());renderer?.cancelBursts();}
+  // Replaced readouts belong to one action; material lifecycles can span actions.
+  function cancelBursts(visuals=true){generation++;if(frame)win.cancelAnimationFrame(frame);frame=0;if(soundTimer)win.clearTimeout(soundTimer);soundTimer=0;for(const a of animations)a.cancel();animations.clear();host?.querySelectorAll('[data-status-effect],.status-vfx-readout').forEach(el=>el.remove());if(visuals)renderer?.cancelBursts();}
   function cancel(){cancelBursts();host?.remove();host=null;renderer?.cancel();}
   function reset(){cancel();state=null;renderer?.reset();}
   function ensureHost(){
    const anchor=doc.querySelector('.player .fighter-anchor');if(!anchor)return null;
    if(host?.parentElement===anchor)return host;
-   if(host)cancel();host=doc.createElement('div');host.className='status-vfx';host.dataset.quality=quality();host.setAttribute('aria-hidden','true');host.inert=true;anchor.append(host);return host;
+   // DOM patching may remove the previous label host while retaining canvases.
+   // Replacing that detached host must not stop a newly scheduled impact.
+   host?.remove();host=doc.createElement('div');host.className='status-vfx';host.dataset.quality=quality();host.setAttribute('aria-hidden','true');host.inert=true;anchor.append(host);return host;
   }
   function sync(){
    if(!state||!allowed()){cancel();return;}
@@ -148,8 +151,8 @@
     layer.append(el);
    }
   }
-  function mount(run){const next=snapshot(run);if(!renderer||!state||state.identity!==next?.identity||next.seq<state.seq)reset();else cancelBursts();state=next;sync();}
-  function capture(run){cancelBursts();return snapshot(run);}
+  function mount(run){const next=snapshot(run);if(!renderer||!state||state.identity!==next?.identity||next.seq<state.seq)reset();else cancelBursts(false);state=next;sync();}
+  function capture(run){cancelBursts(false);return snapshot(run);}
   function animate(el,frames,timing,done){
    const a=el.animate(frames,{easing:'cubic-bezier(.2,.7,.2,1)',fill:'both',...timing});animations.add(a);
    a.finished.then(()=>{animations.delete(a);done?.();a.cancel();},()=>{animations.delete(a);done?.();});
@@ -177,12 +180,12 @@
    else animate(el,[{opacity:0,transform:'translateY('+(up?12:-8)+'px) scale(.94)'},{offset:.18,opacity:.9,transform:'translateY(0) scale(1)'},{offset:.55,opacity:.65},{opacity:0,transform:'translateY('+(up?-18:18)+'px) scale(1.04)'}],{duration:850,delay},()=>remove(el));
   }
   function play(before,run,lang='en',presentation){
-   cancelBursts();const after=snapshot(run);if(!state||state.identity!==after?.identity||dead||pageHidden||doc.hidden)return;
+   cancelBursts(false);const after=snapshot(run);if(!state||state.identity!==after?.identity||dead||pageHidden||doc.hidden)return;
    const batch=presentation||plan(before,run,lang),token=generation;if(!batch.cues.length&&!batch.sound&&!Object.values(batch.visuals||{}).some(v=>v.length))return;
    renderer?.play(batch);
    // Confirmed native choices close just after act returns. Show only on the
    // next presentation frame; a new action/dialog/scene cancels this generation.
-   frame=win.requestAnimationFrame(()=>{frame=0;if(token!==generation||!audible()||state?.identity!==after.identity){renderer?.cancelBursts();return;}
+   frame=win.requestAnimationFrame(()=>{frame=0;if(token!==generation||!audible()||state?.identity!==after.identity)return;
     if(batch.sound&&options.onSound)soundTimer=win.setTimeout(()=>{soundTimer=0;if(token===generation&&audible())options.onSound(batch.sound);},enabled()?batch.leadMs:0);
     if(allowed()&&batch.cues.length){
      const layer=ensureHost();if(!layer)return;const readout=doc.createElement('div');readout.className='status-vfx-readout';layer.append(readout);batch.cues.forEach((e,i)=>burst(e,i,batch,readout));

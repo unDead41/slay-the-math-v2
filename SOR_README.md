@@ -1,5 +1,12 @@
 # Slay the Math — Set of Rules
 
+Current combat continuity candidate **2.45.1-combat.1**, based on main **2.45.0**:
+[MOT-36–38](docs/sor/11_ANIMATION_VFX_AUDIO.md),
+[actual before/after findings and checks](docs/audits/combat-animation/LATEST.md).
+Ijamm requests fixing intermittent VFX/flicker and faster formation/hit effects
+on the combat branch first. Keep the approved V5 MC motion and original icons;
+no main merge or hosted deployment is part of this update.
+
 Current live combat VFX, game 2.44.0: Ijamm now requests applying all approved effects in the actual game. [Runtime behaviour and limits](docs/COMBAT_VFX_LIVE_2_44_0.md), [SOR 11 MOT-30–32](docs/sor/11_ANIMATION_VFX_AUDIO.md), [fresh audit/evidence](docs/audits/combat-animation/LATEST.md). This supersedes the preview-only runtime boundary in the historical records below. Preserve original artwork/icons and numerical/save/RNG owners.
 
 Historical V10 preview publication, 25 October 2026: Ijamm now authorizes publishing the completed `combat-animation` preview to main. [Current handoff](docs/audits/combat-animation/LATEST.md), [open/edit the standalone preview](previews/combat-vfx/README.md). This supersedes the earlier branch-only boundary below. Production combat integration is still separate; game runtime and release version remain 2.43.0.

@@ -2,22 +2,96 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom');
 const P=require('../dist/combat-vfx-passive.js'),A=require('../dist/combat-vfx-orbits.js'),S=require('../dist/combat-vfx-shield.js');
-function boot(){
- const dom=new JSDOM('<dialog id="dialog"></dialog>'+['player','enemy'].map(role=>'<div class="combatant '+role+'" data-enemy="sentinel">'+['back','front'].map(side=>'<canvas class="combat-vfx-canvas" data-vfx-layer="'+side+'"></canvas>').join('')+'</div>').join(''),{runScripts:'outside-only',pretendToBeVisual:true});
+function boot({status=false}={}){
+ const dom=new JSDOM('<dialog id="dialog"></dialog>'+['player','enemy'].map(role=>'<div class="combatant '+role+'" data-enemy="sentinel"><div class="fighter-anchor">'+['back','front'].map(side=>'<canvas class="combat-vfx-canvas" data-vfx-layer="'+side+'"></canvas>').join('')+'</div></div>').join(''),{runScripts:'outside-only',pretendToBeVisual:true});
  const w=dom.window,d=w.document,pending=new Map(),calls=[];let serial=0,now=100,motion=true,quality='full';
  w.CanvasRenderingContext2D=function(){};
  w.requestAnimationFrame=fn=>{pending.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>pending.delete(id);
  w.HTMLCanvasElement.prototype.getBoundingClientRect=()=>({width:640,height:480});
  w.HTMLCanvasElement.prototype.getContext=function(){return this.ctx||(this.ctx={canvas:this,clearRect(){},setTransform(){},scale(x,y){calls.push({id:'transform',x,y});},save(){},restore(){},fillRect(){},drawImage(){},createLinearGradient(){return{addColorStop(){}};}});};
- w.STMPassiveField={create(){const p=P.create();return {...p,paint(ctx,t,opts){calls.push({id:'passive',time:t,...opts});}};}};
+ w.STMPassiveField={create(options){const p=P.create(options);return {...p,paint(ctx,t,opts){calls.push({id:'passive',time:t,...p.snapshot(t),...opts});}};}};
  w.STMAuraField={...A,create(){return {paint(ctx,time,id,opts){calls.push({id,time,...opts});return A.stateAt(time,id,opts);},destroy(){}};}};
- w.STMShieldField={create(){return {paint(ctx,time,event,opts){calls.push({id:'block',event,time,...opts});return S.stateAt(time,event,opts);}};}};
+ w.STMShieldField={...S,create(){return {paint(ctx,time,event,opts){calls.push({id:'block',event,time,...opts});return S.stateAt(time,event,opts);}};}};
  w.eval(fs.readFileSync(path.join(__dirname,'../dist/combat-vfx.js'),'utf8'));
- const v=w.DCCombatVFX.create({document:d,motion:()=>motion,quality:()=>quality});
+ if(status){w.DCCombatStatus=require('../dist/combat-status.js');w.eval(fs.readFileSync(path.join(__dirname,'../dist/status-vfx.js'),'utf8'));}
+ const v=(status?w.DCStatusVFX:w.DCCombatVFX).create({document:d,motion:()=>motion,quality:()=>quality});
  return {w,d,v,calls,pending,step(ms=20){now+=ms;const fns=[...pending.values()];pending.clear();for(const fn of fns)fn(now);},advance(ms){for(let i=0;i<Math.ceil(ms/20);i++)this.step();},motion(value){motion=value;v.sync();},quality(value){quality=value;v.sync();},close(){v.destroy();w.close();}};
 }
 function state(values={},passives=[]){return {identity:'battle-1',seq:1,actors:{player:{values,equipped:passives.map(p=>p.source),passives},enemy:{values:{},equipped:[],passives:[]}}};}
 const front=f=>f.d.querySelector('.player [data-vfx-layer=front]');
+
+test('an unrelated committed action cannot cancel a Shield formation already on screen',()=>{
+ const E=require('../dist/engine.js'),F=require('../tools/dev/fixtures.js'),f=boot({status:true});
+ const r=F.cardSetup('stm.defend.rune_guard',false,false,{enemyHp:999});try{
+  f.v.mount(r);f.advance(40);const before=f.v.capture(r);E.playCard(r,r.battle.hand[0].uid);f.v.mount(r);f.v.play(before,r);f.advance(100);
+  assert.ok(f.calls.some(c=>c.id==='block'&&c.event==='gain'));
+  const cursor=f.calls.length,unchanged=f.v.capture(r);f.v.mount(r);f.v.play(unchanged,r);f.advance(80);
+  assert.ok(f.calls.slice(cursor).some(c=>c.id==='block'&&c.event==='gain'),'capture/mount/no-op play must retain the current lifecycle');
+ }finally{f.close();}
+});
+
+test('replacing the transient readout host cannot cancel the next actual Shield impact',()=>{
+ const E=require('../dist/engine.js'),F=require('../tools/dev/fixtures.js'),f=boot({status:true});
+ const r=F.cardSetup('stm.defend.rune_guard',false,false,{enemyHp:999});try{
+  f.v.mount(r);f.advance(40);let before=f.v.capture(r);E.playCard(r,r.battle.hand[0].uid);f.v.mount(r);f.v.play(before,r);f.advance(120);
+  assert.ok(f.d.querySelector('.status-vfx'));f.d.querySelector('.status-vfx').remove();
+  r.battle.currentIntent.damage=3;before=f.v.capture(r);E.endTurn(r);f.v.mount(r);f.calls.length=0;f.v.play(before,r);f.advance(200);
+  assert.ok(f.calls.some(c=>c.id==='block'&&['hit','break'].includes(c.event)),'recreating detached labels must not cancel the material compositor');
+ }finally{f.close();}
+});
+
+test('adding a second Passive keeps the first seal visible throughout its new layer transition',()=>{
+ const f=boot(),a={id:4,source:'armor'},b={id:0,source:'blazing'};try{
+  f.v.mount(state());f.v.mount(state({},[a]));f.advance(1500);f.calls.length=0;
+  f.v.mount(state({},[a,b]));f.advance(60);
+  const draws=f.calls.filter(c=>c.id==='passive');assert.ok(draws.length);
+  assert.ok(draws.every(c=>c.entrance>.99&&c.tracks.find(t=>t.id===4).weight>.99),'new ornaments must not restart the entire field introduction');
+ }finally{f.close();}
+});
+
+test('the first live Passive seal finishes its introduction within 600ms',()=>{
+ const f=boot(),a={id:4,source:'armor'};try{
+  f.v.mount(state());f.v.mount(state({},[a]));f.advance(600);
+  const c=f.calls.filter(c=>c.id==='passive').at(-1);assert.ok(c.entrance>.999&&c.tracks[0].weight>.999);
+ }finally{f.close();}
+});
+
+test('Shield and every barrier finish forming within 600ms on each actor',()=>{
+ const f=boot(),s=state({block:6,thorns:3,weak:1,vulnerable:1});s.actors.enemy.values={...s.actors.player.values};try{
+  f.v.mount(state());f.v.mount(s);f.v.play({visuals:Object.fromEntries(['player','enemy'].map(role=>[role,['block','thorns','weak','vulnerable'].map(id=>({id,event:'gain',from:0}))]))});f.advance(600);
+  for(const id of ['block','thorns','weak','vulnerable']){
+   const c=f.calls.filter(c=>id==='block'?c.id===id:c.id.startsWith(id+'-')).at(-1);
+   const s=id==='block'?S.stateAt(c.time,c.event,c):A.stateAt(c.time,c.id,c);
+   assert.ok(s.formation>.999&&s.visibility>.999,id+' must be fully visible before the next ordinary action');
+  }
+ }finally{f.close();}
+});
+
+test('a fresh hit interrupts formation and repeated hits do not build an obsolete queue',()=>{
+ const f=boot();try{
+  f.v.mount(state({block:8}));f.v.play({visuals:{player:[{id:'block',event:'gain',from:0}]}});f.advance(100);f.calls.length=0;
+  for(let i=0;i<5;i++){f.v.play({visuals:{player:[{id:'block',event:'hit'}]}});f.advance(60);}
+  assert.ok(f.calls.some(c=>c.id==='block'&&c.event==='hit'),'impact must not wait behind a formation');
+  f.advance(700);assert.deepEqual(JSON.parse(front(f).dataset.vfxEvents),[],'new commands cannot leave several seconds of queued old impacts');
+ }finally{f.close();}
+});
+
+test('Thorns hit and retraction both finish within one second while retaining their order',()=>{
+ const f=boot();try{
+  f.v.mount(state());f.v.play({visuals:{player:[{id:'thorns',event:'hit'},{id:'thorns',event:'expire'}]}});f.advance(1000);
+  const ids=[...new Set(f.calls.filter(c=>c.id.startsWith('thorns-')).map(c=>c.id))];
+  assert.deepEqual(ids,['thorns-hit','thorns-expire']);assert.equal(f.pending.size,0,'a previous turn must not leave a long lifecycle backlog');
+ }finally{f.close();}
+});
+
+test('a formed Weak chain continues its orbit without jumping at the active-loop boundary',()=>{
+ const f=boot();try{
+  f.v.mount(state({weak:1}));f.v.play({visuals:{player:[{id:'weak',event:'gain',from:0}]}});f.advance(2000);
+  const calls=f.calls.filter(c=>c.id.startsWith('weak-')&&c.front),i=calls.findIndex((c,i)=>i>0&&c.id==='weak-active'&&calls[i-1].id==='weak-gain');assert.ok(i>0);
+  const previous=A.stateAt(calls[i-1].time,calls[i-1].id,calls[i-1]),next=A.stateAt(calls[i].time,calls[i].id,calls[i]);
+  assert.ok(Math.abs(next.p-previous.p)<.05,'the active loop must inherit the formed chain phase');
+ }finally{f.close();}
+});
 
 test('new model registration owns VFX body size instead of the retired poster measurement',()=>{
  const f=boot();try{
@@ -59,10 +133,10 @@ test('player and enemy use three disjoint stat channels even with mixed signs',(
 });
 test('Thorns impact finishes before expiry and queued lifecycle ends without new RAF work',()=>{
  const f=boot();try{
-  f.v.mount(state());f.v.play({visuals:{player:[{id:'thorns',event:'hit'},{id:'thorns',event:'expire'}]}});f.advance(900);
+  f.v.mount(state());f.v.play({visuals:{player:[{id:'thorns',event:'hit'},{id:'thorns',event:'expire'}]}});f.advance(180);
   assert.ok(f.calls.some(c=>c.id==='thorns-hit'));assert.ok(!f.calls.some(c=>c.id==='thorns-expire'));
   assert.ok(f.calls.filter(c=>c.id==='thorns-hit').at(-1).alpha>.5,'hold the shell until the queued retraction begins');
-  f.advance(600);assert.ok(f.calls.some(c=>c.id==='thorns-expire'));f.advance(2200);assert.equal(f.pending.size,0);
+  f.advance(360);assert.ok(f.calls.some(c=>c.id==='thorns-expire'));f.advance(1000);assert.equal(f.pending.size,0);
  }finally{f.close();}
 });
 test('adding Block to an existing shield keeps its material continuously formed',()=>{

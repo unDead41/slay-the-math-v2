@@ -1,5 +1,17 @@
 # Changelog SOR — Slay the Math
 
+## Combat continuity — branch 2.45.1-combat.1, 25 October 2026
+
+- Reproduce actual card/End Turn loader flashes, interrupted Shield lifecycles
+  and second-Passive dimming on the current 2.45.0 game before fixing them.
+- Keep verified image refreshes inside one room nonblocking. Separate transient
+  label cancellation from material lifecycle ownership, including detached hosts.
+- Shorten complete material/Passive introductions, prioritize current impacts,
+  bound old same-status queues and preserve the active-loop phase after formation.
+- Retain all approved Alyssa/enemy atlases, registration, timing, original icons
+  and numerical/save/RNG owners. Branch-only update; evidence and remaining
+  physical-device/history limits are in the combat audit.
+
 ## Approved Alyssa V5 motion — game 2.45.0, 25 October 2026
 
 - Apply all five approved 15-slot clips to actual combat, preserving source bytes/timing and right-facing identity. Idle uses eight unique drawings with repeated breath/blink exposures; Kena Attack has fifteen unique poses.

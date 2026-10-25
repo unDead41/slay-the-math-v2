@@ -18,7 +18,7 @@
    const canvases=[...doc.querySelectorAll('.'+role+' .combat-vfx-canvas')];if(canvases.length!==2)return null;
    let actor=actors.get(role);if(actor&&actor.canvases.every((c,i)=>c===canvases[i]))return actor;
    if(actor)dispose(actor);
-   actor={role,canvases,body:doc.createElement('canvas'),fields:new Map(),passive:null,passiveOrder:[],statOrder:[],rings:new Map(),events:new Map(),values:{},flowKey:'',flows:new Map(),supported:false};
+   actor={role,canvases,body:doc.createElement('canvas'),fields:new Map(),passive:null,passiveOrder:[],statOrder:[],rings:new Map(),events:new Map(),phases:new Map(),values:{},flowKey:'',flows:new Map(),supported:false};
    actors.set(role,actor);return actor;
   }
   function request(){if(!raf&&state&&enabled())raf=win.requestAnimationFrame(tick);}
@@ -32,26 +32,41 @@
     const equipped=view?.equipped||[],order=actor.passiveOrder.filter(p=>equipped.includes(p.source));
     for(const passive of view?.passives||[])if(!order.some(p=>p.id===passive.id))order.push(passive);
     if(order.map(p=>p.id).join()!==actor.passiveOrder.map(p=>p.id).join()){
-     if(!actor.passive){actor.passive=P.create();actor.passive.setSelection([] ,clock,{immediate:true});}
-     actor.passive.setSelection(order.map(p=>p.id),clock,{immediate:first,intro:!first&&order.length>actor.passiveOrder.length});actor.passiveOrder=order;
+     if(!actor.passive){actor.passive=P.create({transitionSeconds:.35,introSeconds:.45});actor.passive.setSelection([] ,clock,{immediate:true});}
+     actor.passive.setSelection(order.map(p=>p.id),clock,{immediate:first,intro:!first&&!actor.passiveOrder.length&&order.length>0});actor.passiveOrder=order;
     }
    }
    sync();
+  }
+  // Traverse the complete approved one-shot geometry in a short combat window.
+  // Offsets skip the preview's quiet lead; steady orbit speed remains unchanged.
+  function timing(id,event){
+   let duration,offset=0,end;
+   if(attributes.includes(id))return {duration:.42,offset:0,speed:1};
+   if(event==='gain'){duration=id==='block'?.38:.48;offset=.18;end=id==='block'?1.5:2.5;}
+   else if(event==='hit'){duration=.28;offset=1.55;end=3.25;}
+   else if(event==='break'){duration=.58;offset=1.55;end=4.45;}
+   else{duration=id==='block'?.45:id==='weak'?.58:.52;offset=id==='block'?1.55:id==='weak'?1.35:1.1;end=id==='block'?3.9:id==='weak'?4.4:4.1;}
+   return {duration,offset,speed:(end-offset)/duration};
   }
   function play(batch){
    if(!state||dead||pageHidden||doc.hidden)return;
    const start=clock+(batch?.leadMs||0)/1000;
    for(const role of ['player','enemy']){
     const actor=actors.get(role);if(!actor)continue;
+    const seen=new Set();
     for(const e of batch?.visuals?.[role]||[]){
-     const list=actor.events.get(e.id)||[],prior=list.at(-1),delay=prior&&prior.start+prior.duration>start?prior.start+prior.duration:start;
-     const duration=attributes.includes(e.id)?.85:e.event==='gain'?1.6:e.event==='hit'?1:e.id==='block'?(e.event==='break'?1.65:1.3):1.7;
-     list.push({...e,start:delay,duration});actor.events.set(e.id,list);
+     const previous=actor.events.get(e.id)||[];
+     // Top-ups retain a formation already in progress. Fresh impacts supersede
+     // old actions; only events from this same receipt are sequenced (Thorns).
+     if(!seen.has(e.id)&&e.event==='gain'&&e.from>0&&previous.some(p=>p.event==='gain'&&clock<p.start+p.duration))continue;
+     const list=seen.has(e.id)?previous:[],prior=list.at(-1),delay=prior?Math.max(start,prior.start+prior.duration):start;
+     list.push({...e,start:delay,...timing(e.id,e.event)});actor.events.set(e.id,list);seen.add(e.id);
     }
    }
    request();
   }
-  function sync(){if(!state||!enabled()){cancel();return;}last=0;request();}
+  function sync(){if(!state||!enabled()){cancel();return;}request();}
   function ringAt(actor,id){const v=actor.rings.get(id);if(!v)return A.ringLayout();const t=ease((clock-v.start)/.72);return Object.fromEntries(Object.keys(v.to).map(k=>[k,v.from[k]+(v.to[k]-v.from[k])*t]));}
   function orderedStats(actor){
    const order=actor.statOrder.filter(id=>actor.values[id]||actor.events.has(id));for(const id of attributes)if((actor.values[id]||actor.events.has(id))&&!order.includes(id))order.push(id);
@@ -61,7 +76,14 @@
    return order;
   }
   function eventAt(actor,id){const list=actor.events.get(id);if(!list)return null;return list.find(e=>clock<e.start+e.duration)||null;}
-  function prune(actor){for(const [id,list]of actor.events){const next=list.filter(e=>clock<e.start+e.duration);if(next.length)actor.events.set(id,next);else actor.events.delete(id);}}
+  function prune(actor){for(const [id,list]of actor.events){
+   const finished=list.filter(e=>clock>=e.start+e.duration).at(-1),next=list.filter(e=>clock<e.start+e.duration);
+   if(finished&&!attributes.includes(id)&&!(id==='block'&&finished.event==='gain'&&finished.from>0)){
+    const sourcePeriod=id==='block'?S.duration(finished.event):A.duration(id+'-'+finished.event),activePeriod=id==='block'?S.duration('active'):A.duration(id+'-active');
+    actor.phases.set(id,(finished.offset+finished.duration*finished.speed)/sourcePeriod*activePeriod-(finished.start+finished.duration));
+   }
+   if(next.length)actor.events.set(id,next);else actor.events.delete(id);
+  }}
   function measure(actor,quality){
    const r=actor.canvases[0].getBoundingClientRect();if(!r.width||!r.height)return false;
    const ratio=Math.min(win.devicePixelRatio||1,quality==='low'?1:1.5,Math.sqrt((quality==='low'?400000:800000)/(r.width*r.height)));
@@ -82,7 +104,7 @@
    if(!A||!P||!S||!body||![body,...contexts].every(c=>typeof c?.setTransform==='function'&&typeof c?.save==='function'))return false;
    actor.supported=true;const g=actor.geometry,ids=stats.map(id=>id+'-'+(eventAt(actor,id)?.event||((actor.values[id]||0)>0?'up':'down'))),key=[profile,ids.join()].join(':');
    if(key!==actor.flowKey){actor.flows=new Map(A.planStatParticles(ids,{quality:profile,actor:actor.role}).map(v=>[v.attribute,v.flow]));actor.flowKey=key;}
-   const keep=new Set(active);for(const [id,f]of actor.fields)if(!keep.has(id)){f.destroy?.();actor.fields.delete(id);}
+   const keep=new Set(active);for(const [id,f]of actor.fields)if(!keep.has(id)){f.destroy?.();actor.fields.delete(id);actor.phases.delete(id);}
    for(let side=0;side<2;side++){
     const ctx=contexts[side],front=side===1;ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
     if(actor.passive&&(actor.passiveOrder.length||actor.passive.snapshot(clock).tracks.some(t=>t.weight>.001))){ctx.save();transform(ctx,g,actor.role);actor.passive.paint(ctx,clock,{quality,front});ctx.restore();}
@@ -90,14 +112,14 @@
     for(const id of active){
      const event=eventAt(actor,id),age=event?clock-event.start:0;body.save();
      if(attributes.includes(id)){
-      const sign=event&&age<0?((event.from||0)>0?'up':'down'):event?.event||((actor.values[id]||0)>0?'up':'down'),alpha=event?(age<0?Number(!!event.from):ease(age/.12)*(actor.values[id]?1:1-ease((age-.45)/.4))):1;
+      const sign=event&&age<0?((event.from||0)>0?'up':'down'):event?.event||((actor.values[id]||0)>0?'up':'down'),alpha=event?(age<0?Number(!!event.from):ease(age/.06)*(actor.values[id]?1:1-ease((age-.16)/.26))):1;
       field(actor,id).paint(body,clock,id+'-'+sign,{quality:profile,front,ring:ringAt(actor,id),flow:actor.flows.get(id),alpha:alpha*(active.length>3?.65:.88)});
      }else{
-      const waiting=event&&age<0,kind=waiting?'active':event?.event||'active',speed=1.8,offset=kind==='hit'||kind==='break'?1.55:kind==='expire'?(id==='block'?1.55:id==='weak'?1.35:1.1):0;
+      const waiting=event&&age<0,kind=waiting?'active':event?.event||'active';
       const continues=event&&actor.events.get(id)?.some(e=>e.start>event.start),refresh=id==='block'&&kind==='gain'&&event.from>0;
-      const time=event&&!waiting?offset+age*speed:clock,alpha=waiting?Number(event.event!=='gain'||!!event.from):event&&kind==='hit'&&!actor.values[id]&&!continues?1-ease((age-.65)/.35):1;
-      if(id==='block')field(actor,id).paint(body,refresh?clock:time,refresh?'active':kind,{loop:refresh||!event,quality,front,alpha:alpha*(active.length>3?.68:.9)*(refresh?1+.08*Math.sin(Math.PI*clamp(age/1.6)):1)});
-      else field(actor,id).paint(body,time,id+'-'+kind,{loop:!event,quality:profile,front,alpha:alpha*(active.length>3?.7:.9)});
+      const steady=clock+(actor.phases.get(id)||0),time=event&&!waiting?event.offset+age*event.speed:steady,alpha=waiting?Number(event.event!=='gain'||!!event.from):event&&kind==='hit'&&!actor.values[id]&&!continues?1-ease((age/event.duration-.65)/.35):1;
+      if(id==='block')field(actor,id).paint(body,refresh?steady:time,refresh?'active':kind,{loop:refresh||waiting||!event,quality,front,alpha:alpha*(active.length>3?.68:.9)*(refresh?1+.08*Math.sin(Math.PI*clamp(age/event.duration)):1)});
+      else field(actor,id).paint(body,time,id+'-'+kind,{loop:waiting||!event,quality:profile,front,alpha:alpha*(active.length>3?.7:.9)});
      }
      body.restore();
     }
@@ -118,7 +140,7 @@
    let active=false;const count=[...actors.values()].reduce((n,a)=>n+new Set([...Object.keys(a.values),...a.events.keys()]).size+Number(a.passiveOrder.length>0),0),profile=quality==='low'?(count>=6?'dense-low':'low'):count>=7?'dense':count>=3?'multi':'full',started=win.performance.now();
    for(const actor of actors.values())active=paintActor(actor,quality,profile)||active;
    frames++;average=average*.9+(win.performance.now()-started)*.1;if(frames>=12&&average>21)slow=true;
-   if(active)request();
+   if(active)request();else{last=0;lastPaint=0;}
   }
   const visibility=()=>sync(),hide=()=>{pageHidden=true;cancel();},show=()=>{pageHidden=false;sync();},resize=()=>{cancelBursts();sync();};
   const bindings=[[doc,'visibilitychange',visibility],[win,'pagehide',hide],[win,'pageshow',show],[win,'resize',resize],[media,'change',sync]];

@@ -1,3 +1,112 @@
+# Combat continuity — branch 2.45.1-combat.1
+
+| Field | Reviewed record |
+| --- | --- |
+| Date | 25 October 2026, Asia/Kuala_Lumpur |
+| Repository / target | unDead41/slay-the-math-v2 / combat-animation only |
+| Current main / isolated work base | `6c49f3980c3a832635d4d01a6c50a8df98ac4aad`, game 2.45.0 |
+| Remote combat branch before update | `702be96cfc776a81057e6e53d950e5c5af931e88`, one ancestor commit behind main |
+| Local working branch | combat-animation-fix, created from the exact current main |
+| Master SOR | 1.2.0, read from main before changes; current AGENTS, governance, decisions, motion/runtime owners and prior VFX/Alyssa audits reviewed |
+| User request | Troubleshoot intermittent VFX/flicker, check updated MC motion, shorten formation/hit timing; update the branch first |
+| Compatibility | VALID for the final scoped checks below, subject to physical-device and historical-order limits |
+| Publication | Branch only, non-forced expected-head update; actual resulting ref/SHA is read back in the handoff |
+
+This update does not merge main or deploy a game. The previous 2.44 live-integration
+and 2.45 MC audits describe their tested snapshots. Their successful isolated
+checks did not establish rapid-action continuity through the production loader
+and transient label-host replacement; the new reproductions below do.
+
+## Confirmed problems and corrections
+
+| ID / category | Priority / confidence | Reproduction / affected owner | Action and final state |
+| --- | --- | --- | --- |
+| CFX-001 / MASALAH DISAHKAN | P2 / high | The production room key includes the list of visible image URLs. Playing/drawing cards changes that list, re-enters `scene-preparing` and hides the entire header/game despite retained canvases. Native main 2.45.0 records five class-mutation flash observations in each desktop/390px sequence. `dist/bootstrap.js`, `dist/boot.css`. | FIXED: room identity follows run/stage/scene/depth/node/enemy; same-room images still use verified preparation without a blocking gate. Current decoded images are reused. Native final sequences record zero flashes. No CSS/actor resize is introduced. |
+| CFX-002 / MASALAH DISAHKAN | P2 / high | Capture, mount and play each clear renderer events. Recreating a detached label host also invokes full renderer cancellation after a new hit has been scheduled. A Rune Guard followed by another card loses formation; an enemy impact can be suppressed. `dist/status-vfx.js`. | FIXED: action labels/SFX retain their cancellation ownership while same-room material lifecycles survive. Replacing detached label DOM does not stop the compositor. Dialog/scene/hidden/Motion Off cleanup remains. Unit reproductions and actual native commands pass. |
+| CFX-003 / MASALAH DISAHKAN | P2 / high | Adding the second Passive restarts the global field introduction, dropping the already visible first seal to zero entrance. Native prior samples include entrance 0 with real Rune Armor -> Blazing Spirit triggers. `dist/combat-vfx.js`. | FIXED: only the first live circle has a global introduction; later layers interpolate their own weights/positions while the base stays visible. Actual receipt order remains `[4,0]`. |
+| CFX-004 / MASALAH DISAHKAN | P2 / high | 1–1.7s one-shots plus 180/240ms leads are slow relative to subsequent commands. Same-status events queue behind old formations; formation completion switches to an unrelated steady clock and can jump the chain orbit. `dist/combat-vfx.js`, `dist/status-vfx.js`. | FIXED: complete source one-shots traverse short windows, current reactions replace obsolete same-status queues, Block top-ups keep existing formation, same-receipt Thorns hit still precedes expiry, and the steady loop inherits the material phase. Both-actor deadlines, ordered retraction and phase continuity pass. |
+| CFX-005 / MASALAH DISAHKAN, review of the new refresh path | P2 / high | A valid same-room image failure originally updated the retry control while its parent panel stayed hidden. A dedicated final RED test reproduces missing recovery; an obsolete removed-image failure must not surface later. `dist/bootstrap.js`. | FIXED before publication: expose nonblocking retry for a current image, ignore detached/current-source-mismatched failures, retain room visibility. Final targeted and native resource checks pass. |
+
+## Timing and preserved ownership
+
+| Presentation | Live combat timing |
+| --- | --- |
+| Card / enemy cue lead | 40ms / 60ms |
+| Shield formation / other barriers | 0.38s / 0.48s |
+| Shield or Thorns hit | 0.28s |
+| Shield break | 0.58s, including the full source fragment fade |
+| Expiry | 0.45–0.58s; same-receipt Thorns hit + expiry stays below one second |
+| Stat response | 0.42s |
+| Passive first intro / layer transition | 0.45s / 0.35s |
+
+These timings do not delay commands or resolve gameplay. Retain all unique
+motifs, fixed stat lanes, Passive-only floor, actor-neutral ownership and existing
+adaptive budgets. Shield/orbit painter bytes remain unchanged. The runtime
+Passive controller gains optional timing parameters; its geometry, motifs and
+default standalone-preview timings remain unchanged. Preview source/HTML bytes
+are preserved, rather than regenerated with game-specific pacing.
+
+The source V5 animation player, registry, all 75 exposure holds, projection,
+posters, CSS and all 626 original asset files are byte-preserved against current
+main. No new hero redraw or numerical/card/education/language/save/RNG change.
+[Actual protected owners](continuity/preservation.json),
+[final build identities and hashes](continuity/build-preservation.json).
+
+## Fresh verification and evidence boundaries
+
+- `npm test`: **1,088 PASS / 0 FAIL / 0 skipped**, including the eight new material
+  regressions. This run predates only the final CFX-005 image-recovery guard/test;
+  do not describe it as a rerun of that final guard.
+- After CFX-005, **74 PASS / 0 FAIL / 0 skipped** across image refresh, live
+  compositor/projection/UI, status VFX, combat persistence, actor/source timing,
+  texture and icon-readiness owners. Final resource tests: **17 PASS / 0 FAIL / 0 skipped**.
+- Final `npm run check` and `npm run build:prod`: PASS. All 678 source and 679
+  production manifest entries match actual SHA-256 bytes; portable output is
+  306,786,217 bytes. No independent hosted deployment is claimed.
+- Actual final production browser: **14/14 continuity checks pass** at 1366px
+  and 390px. Zero room-loader flashes, retained surfaces, immediate impact,
+  preserved live formation, no obsolete queue, continuous second Passive,
+  dialogs/Motion Off and exact independent engine/save/RNG results.
+- The final production Alyssa suite: **PASS**, all five clips / 75 exposures, seven viewport bounds, both-stage/boss support, unchanged engine outcomes, Motion Off/dialog pause, atlas/Canvas fallbacks and portable offline playback. Physical-device FPS and
+  anatomy perfection are not inferred from renderer checks.
+- Final hosted-readiness browser passes cold core, deferred Practice/boss,
+  Practice 120, warm cache, 180-second recovery, native input and unchanged
+  pre-entry save/RNG. Initial navigation still waits for decoded actors.
+- Raw RED logs and native main observations are retained alongside final logs,
+  reports and a final screenshot. [Evidence and exact commands](continuity/README.md).
+
+The intermediate native run after the first fixes still missed enemy impact:
+the detached-label-host path had not yet been corrected. A dedicated RED unit
+then proved that root cause; its correction passes in the final browser. Native
+clock installation was moved before runtime navigation and the fixture arranger
+was corrected to read the engine's replaced battle object. Those harness
+corrections are not counted as product fixes or successful earlier runs.
+
+## Remaining risks and improvements
+
+| ID / category | Priority / confidence | Current state |
+| --- | --- | --- |
+| Prior physical-device risk / RISIKO BERPOTENSI | P2 / medium | OPEN: native Chromium and emulated viewports do not measure the user's Windows machine/phone GPU, FPS or total memory. No physical-performance guarantee. |
+| LIVE-RISK-001 / RISIKO BERPOTENSI | P3 / high | OPEN and unchanged: a fresh Continue cannot reconstruct exact first-trigger order among multiple already-trimmed historical entries. Existing counters preserve presence; live observed order remains stable. No save-schema rewrite. |
+| Prior ornament recognition / PENAMBAHBAIKAN, proposal | P3 / medium | OPEN: human recognition of every motif at actual gameplay size remains useful. This update preserves their approved geometry. |
+| CFX-IMP-001 / PENAMBAHBAIKAN, implemented | P2 / high | Add the actual production continuity regression so future loader/MC/VFX changes are checked together, rather than relying solely on retained canvas identity. |
+
+Tiada isu tambahan ditemui dalam skop yang disemak. The existing approved source
+drawing/proportion variations are preserved; no new atlas or registration fault
+was found in the fresh motion checks. MODEL.zip remains unavailable and was not
+read. The repository contains the actual installed V5 assets, so troubleshooting
+does not depend on that attachment. Mathematics PDFs are outside this scope.
+
+Before publication, review final diff/links, check current main and combat refs,
+then publish only the combat branch using its expected old head. Read back the
+remote commit/tree/ref and confirm main remains unchanged. The resulting SHA is
+reported separately, not guessed self-referentially inside this document.
+
+---
+
+Historical audits follow. Their main-publication permissions and timing values
+apply to those earlier completed sets, not to this branch-only correction.
+
 # Combat animation — live integration 2.44.0
 
 | Field | Current record |

@@ -1,5 +1,16 @@
 # Runtime performance — approved scope
 
+## Combat refresh correction — branch 2.45.1-combat.1
+
+The current main 2.45.0 loader included the visible image list in its room key.
+Playing/drawing cards therefore re-entered the blocking room gate and briefly
+hid the retained combat canvases. Within the same run/stage/scene/room, prepare
+new images through the verified bridge without hiding the game. Reuse already
+decoded current-source images; retain source/key ownership, explicit retry,
+initial-navigation gates and their timeouts. This is the authorized combat
+flicker fix, not a new background-download or loading-percentage policy.
+[Evidence and publication boundary](../audits/combat-animation/LATEST.md).
+
 24 October 2026. Ijamm explicitly approves recommendations 1–3 from the performance assessment: retain combat canvases/controllers, reuse already-verified resources, and replace count-only texture caching with memory budgeting. Publication remains feature-branch only.
 
 Preserve the existing engine, exact seed/RNG/save progression, card/education/balance owners, original artwork/audio, fixed actor geometry and clip durations. Presentation never decides gameplay. Current main cb1bbcf688d9556b55bc8fe5522b5b652309640c (2.38.0), including Settings-only developer entry, education reports and clarified bilingual hints, stays intact.

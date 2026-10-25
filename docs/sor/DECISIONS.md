@@ -1,5 +1,18 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-COMBAT-CONTINUITY — Troubleshoot flicker and shorten VFX
+
+- **DISAHKAN:** Ijamm reports intermittent combat VFX/flicker, asks to check the
+  updated MC motion and speed up formation/hit effects, with the update on the
+  branch first. No main publication is authorized for this change.
+- **DITERUSKAN:** Stable room loading through hand/status refreshes; persistent
+  material events independent of action labels; fast complete one-shots, current
+  reaction priority, continuous Passive layers and material-to-loop phase.
+- Preserve approved V5 source pixels/timing, original card/artifact/UI icons,
+  numerical mechanics, RNG and saves. Owner: [MOT-36–38](11_ANIMATION_VFX_AUDIO.md);
+  [before/after audit](../audits/combat-animation/LATEST.md). Physical-device FPS
+  and the prior irrecoverable trimmed-log ordering limit remain separate.
+
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
 - **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.

@@ -33,13 +33,14 @@ function visibleImages(root){return [...root.querySelectorAll('img[data-stm-asse
 function imageElement(img){
  const key=img.dataset.stmAsset;if(!key||!manager)return Promise.resolve();
  const current=imageJobs.get(img);if(current?.key===key)return current.promise;
+ const saved=visuals.get(key);if(saved?.ready&&img.getAttribute('src')===saved.url&&img.complete&&img.naturalWidth){if(img.dataset.stmImageState!=='ready'){img.dataset.stmImageState='ready';host.DCIconReadiness?.install(doc).refreshImage(img);}return Promise.resolve();}
  const job={key,promise:null};imageJobs.set(img,job);
  const owns=()=>imageJobs.get(img)===job&&img.dataset.stmAsset===key;
  const refresh=()=>host.DCIconReadiness?.install(doc).refreshImage(img);
  img.dataset.stmImageState='pending';refresh();
  job.promise=(async()=>{
   try{const url=await decode(key);if(!img.isConnected||!owns())return;img.loading='eager';if(img.getAttribute('src')!==url)img.src=url;await img.decode();if(!img.isConnected||!owns())return;img.dataset.stmImageState='ready';refresh();}
-  catch(error){if(img.isConnected&&owns()){img.dataset.stmImageState='failed';img.dispatchEvent(new host.Event('error'));}throw error;}
+  catch(error){if(!img.isConnected||!owns())return;img.dataset.stmImageState='failed';img.dispatchEvent(new host.Event('error'));throw error;}
   finally{if(imageJobs.get(img)===job)imageJobs.delete(img);}
  })();return job.promise;
 }
@@ -103,9 +104,12 @@ function claimPanel(title,blocking=false){const owner=++panelOwner;retryAction=n
 function finishPanel(owner){if(owner!==panelOwner)return;byId('resource-scene').hidden=true;doc.body.classList.remove('scene-preparing');}
 function failPanel(owner,text,retry){if(owner!==panelOwner)return;host.clearTimeout(activeSceneTimer);const panel=byId('resource-scene');panel.querySelector('strong').textContent=text;panel.querySelector('button').hidden=false;doc.body.classList.remove('scene-preparing');retryAction=retry;}
 function scene(run,home){
- currentRun=run;if(!manager)return;const urls=visibleImages(doc).map(img=>img.dataset.stmAsset);
- const key=(home?'home':run?run.seed+':'+run.stage+':'+run.scene+':'+(run.route?.active||''):'practice')+':'+urls.join(',');
- if(key===sceneKey)return;sceneKey=key;const token=++sceneToken,owner=++panelOwner;retryAction=null;host.clearTimeout(activeSceneTimer);byId('resource-scene').hidden=true;doc.body.classList.remove('scene-preparing');
+ currentRun=run;if(!manager)return;
+ // A new hand/status/poster is a refresh inside the same room. Only actual
+ // navigation may hide the arena while its initial resources are prepared.
+ const key=home?'home':run?[run.seed,run.started,run.stage,run.scene,run.depth,run.route?.active||'',run.battle?.enemyId||''].join(':'):'practice';
+ if(key===sceneKey){const token=sceneToken,owner=panelOwner;paintImages().catch(()=>{if(token===sceneToken&&owner===panelOwner){byId('resource-scene').hidden=false;failPanel(owner,'Some artwork could not load. Retry resources.',retryScene);}});return;}
+ sceneKey=key;const token=++sceneToken,owner=++panelOwner;retryAction=null;host.clearTimeout(activeSceneTimer);byId('resource-scene').hidden=true;doc.body.classList.remove('scene-preparing');
  background(run);const actorIds=!home&&run?.scene==='battle'?['mc_01',run.battle.enemyId]:[];
  for(const id of actorIds){const actor=manifest.actors[id];if(actor)for(const f of actor.files)manager.fetchAsset(f,{priority:10}).catch(()=>{});}
  if(!home&&run){const panel=byId('resource-scene');doc.body.classList.add('scene-preparing');panel.hidden=false;panel.querySelector('strong').textContent='Preparing this room…';panel.querySelector('button').hidden=true;}

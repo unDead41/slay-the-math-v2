@@ -224,10 +224,11 @@
    else{if(ornament){ctx.globalCompositeOperation='source-over';ctx.strokeStyle='#111b23';ctx.lineWidth=v.width+3;ctx.globalAlpha=v.alpha*.65;ctx.stroke();ctx.globalCompositeOperation='lighter';ctx.strokeStyle=v.color;}if(v.fill){ctx.globalAlpha=v.alpha*(ornament ? .36 : .2);ctx.fill();}ctx.lineWidth=v.width+1.15;ctx.globalAlpha=v.alpha*.22;ctx.stroke();ctx.lineWidth=v.width;ctx.globalAlpha=v.alpha;ctx.stroke();}
   }
  }
- function create(){
+ function create({transitionSeconds=.85,introSeconds=1.15}={}){
+  const transition=Number.isFinite(transitionSeconds)&&transitionSeconds>0?transitionSeconds:.85,introduction=Number.isFinite(introSeconds)&&introSeconds>0?introSeconds:1.15;
   let order=[0,4,6],changes=[],fromLevels=[1,1],toLevels=[1,1],changedAt=0,introAt=-10,revision=0,cacheKey='',cachedFrame=null;
   let surface=null,surfaceKey='',ratio=1;
-  function snapshot(seconds){const u=ease((seconds-changedAt)/.85),intro=ease((seconds-introAt)/1.15);
+  function snapshot(seconds){const u=ease((seconds-changedAt)/transition),intro=ease((seconds-introAt)/introduction);
    return {tracks:changes.map(v=>({...v,slot:mix(v.fromSlot,v.toSlot,u),radius:mix(v.fromRadius,v.toRadius,u),weight:mix(v.fromWeight,v.toWeight,u)})),levels:fromLevels.map((v,i)=>mix(v,toLevels[i],u)),entrance:intro};
   }
   function setSelection(next,seconds,{immediate=false,intro=false}={}){
@@ -237,7 +238,7 @@
    toLevels=[Number(newOrder.length>=2),Number(newOrder.length>=3)];
    changes=target.map(v=>{const prev=prior.get(v.id);prior.delete(v.id);return {id:v.id,fromSlot:immediate?v.slot:prev?.slot??v.slot,toSlot:v.slot,fromRadius:immediate?v.radius:prev?.radius??v.radius,toRadius:v.radius,fromWeight:immediate?1:prev?.weight??0,toWeight:1};});
    if(!immediate)for(const prev of prior.values())changes.push({id:prev.id,fromSlot:prev.slot,toSlot:prev.slot,fromRadius:prev.radius,toRadius:prev.radius,fromWeight:prev.weight,toWeight:0});
-   order=newOrder;changedAt=immediate?seconds-1:seconds;if(intro)introAt=seconds;else if(immediate)introAt=seconds-2;
+   order=newOrder;changedAt=immediate?seconds-transition:seconds;if(intro)introAt=seconds;else if(immediate)introAt=seconds-introduction;
    revision++;cacheKey='';return snapshot(seconds);
   }
   setSelection(order,0,{immediate:true});

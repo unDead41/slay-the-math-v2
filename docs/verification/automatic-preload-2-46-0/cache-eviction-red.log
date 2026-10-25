@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Namespace and session eviction must remove the cached claim
+
+true !== false
+
+    at /workspace/scratch/0829a1232d36/game/tests/automatic-preload-browser.cjs:27:172 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

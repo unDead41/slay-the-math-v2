@@ -28,7 +28,12 @@ function build(root,{write=true,output=null}={}){
   let pack=url==='education-practice.js'?'practice':core.has(url)||scriptSet.has(url)||!url.startsWith('assets/')&&/\.css$/.test(url)?'core':actorPacks.get(url)||/^assets\/tutorial(?:\/|-shot-)/.test(url)&&'tutorial'||/^assets\/menu-/.test(url)&&'menu'||activeAudio.has(url)&&'audio'||'common';
   const bytes=fs.readFileSync(path.join(dir,item.name));entries.push({url,bytes:bytes.length,sha256:hash(bytes),pack,kind:/\.(mp3|ogg)$/.test(url)?'audio':/\.(webp|png|jpg|svg)$/.test(url)?'image':'code',required:pack==='core'&&!/\.(mp3|ogg)$/.test(url)&&!functionalIcons.has(url)});
  }}walk(dist);entries.sort((a,b)=>a.url.localeCompare(b.url));
- const out={schemaVersion:1,gameVersion:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,manifestId:contentId(entries),entries,scripts,styles:[...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m=>m[1].split('?')[0]),actors,menuAudio:music.assets.menu.srcs[0]};
+ const important=entries.filter(e=>['core','hero','stage1','menu'].includes(e.pack)||e.pack==='common'&&/^assets\/(?:cards-|stm_icon_|artifact-|situation-|map-|math-artifacts|arena-(?:elite-1|normal-1))/.test(e.url));
+ const initialActors=new Set(Object.values(actors).filter(a=>a.pack==='stage1').flatMap(a=>[a.idle,a.poster]));
+ const rank=e=>e.required?0:functionalIcons.has(e.url)?5:e.pack==='hero'?1:initialActors.has(e.url)||e.url===music.assets.menu.srcs[0]?2:e.pack==='stage1'?4:3;
+ important.sort((a,b)=>rank(a)-rank(b)||a.url.localeCompare(b.url));
+ const startup={ratio:.75,urls:important.map(e=>e.url)};
+ const out={schemaVersion:1,gameVersion:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,manifestId:contentId(entries),entries,scripts,startup,styles:[...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m=>m[1].split('?')[0]),actors,menuAudio:music.assets.menu.srcs[0]};
  if(write)fs.writeFileSync(path.join(dist,'asset-manifest.json'),JSON.stringify(out));return out;
 }
 build.contentId=contentId;module.exports=build;if(require.main===module){const out=build(path.resolve(__dirname,'..'));console.log('Resource manifest: '+out.entries.length+' files; '+out.manifestId);}

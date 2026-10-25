@@ -1,0 +1,32 @@
+✔ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (1.721575ms)
+✔ whole-file startup never rounds below75 percent and tolerates an older manifest (0.196366ms)
+✔ retained progress does not call evicted online-only bytes ready (37.809421ms)
+✔ incremental background queue promotes room resources without occupying foreground capacity (36.366285ms)
+✔ hidden/offline/manual pause stops new speculative work and resumes the same queue (42.020279ms)
+✔ a failed background file stays retryable and saved files are not downloaded twice (12.211667ms)
+✖ resume during cancellation retries the unwinding download without another reconnect (4012.019606ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4220.017423
+
+✖ failing tests:
+
+test at tests/background-download.test.cjs:32:1
+✖ resume during cancellation retries the unwinding download without another reconnect (4012.019606ms)
+  AssertionError [ERR_ASSERTION]: Expected background work to progress
+      at until (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:6:70)
+      at async TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:33:220)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

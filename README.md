@@ -1,4 +1,6 @@
-# Slay the Math — 2.46.0
+# Slay the Math — 2.47.0
+
+Version **2.47.0** combines automatic resource downloads with the illustrated tutorial below. Before Enter, prepare all essential files and at least **75% of the important early-game package by bytes**. Remaining game resources download automatically with current-room priority and pause/resume controls; Practice prepares on demand. Hidden/offline pages pause new background work, and cache loss has visible recovery. The 180-second limit offers recovery rather than an internet-speed guarantee. [Main release, actual verification and limits](docs/HOSTED_PRELOAD_MAIN_2_47_0.md).
 
 Version **2.46.0** publishes the illustrated tutorial on the main2.45.0 game. Tutorial now offers **Basics / Asas
 (10 chapters)** and a **23-chapter** full guide, manual English/BM real-game picture

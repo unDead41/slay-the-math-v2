@@ -15,3 +15,9 @@ Measure actual duplicate fetch/digest/decode work and native command/frame timin
 ## Main integration authorization
 
 Ijamm subsequently requests publishing this completed update. Release2.41.0 integrates current mainb730cad2.40.0, including the newer card/status/education/Dev owners. Coordinate functional-icon fallbacks and Tutorial images through verified preparation, preserve current-source image/controller metadata, and deduplicate live image decode jobs. [Main release/audit](../RUNTIME_OPTIMIZATION_MAIN_2_41_0.md) supersedes the earlier branch-only publication limit for this release; deferred optimization scope remains deferred.
+
+## Automatic download follow-up —25 October2026
+
+Ijamm requests applying appropriate performance improvements with the75% important-package gate. Use incremental shared-transport scheduling, foreground priority, one/two speculative transfer limits, visibility/network pause-resume and truthful retention counters. These are the additional changes in2.46.0; existing32/96MiB budgets, persistent actor/VFX surfaces, approved V5 artwork/clip registration, adaptive VFX and exact gameplay stay unchanged. Native evidence is required; do not claim physical-device FPS guarantees. [Audit](../audits/hosted-readiness/LATEST.md).
+
+Ijamm subsequently requests publishing this completed follow-up to main. The combined 2.47.0 integrates the feature with main's illustrated tutorial 2.46.0. No additional animation, texture budget, numerical or save-policy optimization is introduced during publication. Preserve both owners and record fresh combined verification separately in [the main release](../HOSTED_PRELOAD_MAIN_2_47_0.md).

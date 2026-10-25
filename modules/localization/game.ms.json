@@ -1450,7 +1450,25 @@
     "Education Practice could not load. Please try again.": "Latihan tidak dapat dimuatkan. Sila cuba lagi.",
     "Some artwork could not load. Reopen this panel to retry.": "Sesetengah gambar tidak dapat dimuatkan. Buka semula panel ini untuk mencuba lagi.",
     "Download cancelled": "Muat turun dibatalkan",
-    "Unknown manifest asset": "Fail game tidak dikenali"
+    "Unknown manifest asset": "Fail game tidak dikenali",
+    "Preparing 75% of the important package. The rest downloads while you play.": "75% daripada pakej penting sedang disediakan. Bakinya dimuat turun semasa anda bermain.",
+    "Preparing important resources": "Fail penting sedang disediakan",
+    "At least 75% of the important package is ready. The rest downloads automatically after Enter.": "Sekurang-kurangnya 75% pakej penting sudah sedia. Bakinya dimuat turun secara automatik selepas anda masuk.",
+    "Online mode": "Mod dalam talian",
+    "Browser storage is unavailable. Essential files are ready; other files load when needed.": "Pelayar tidak boleh menyimpan fail. Fail asas sudah sedia. Fail lain dimuatkan apabila diperlukan.",
+    "The 75% package has not been saved on this browser.": "75% pakej ini belum disimpan dalam pelayar ini.",
+    "Continue online": "Teruskan dalam talian",
+    "Browser storage filled up. Retry or continue online with essential files.": "Ruang simpanan pelayar penuh. Cuba lagi atau teruskan dalam talian dengan fail asas.",
+    "Online mode: only current resources are retained.": "Mod dalam talian: hanya fail semasa disimpan untuk sesi ini.",
+    "Offline: downloads resume when connected.": "Tiada internet. Muat turun bersambung apabila ada sambungan.",
+    "Background downloads paused.": "Muat turun latar dijeda.",
+    "Some downloads failed. Retry remaining resources.": "Sesetengah fail gagal dimuat turun. Cuba semula fail yang berbaki.",
+    "Downloading automatically in the background…": "Fail sedang dimuat turun secara automatik…",
+    "Game resources are ready. Practice loads when opened.": "Fail permainan sudah sedia. Fail Latihan dimuatkan apabila dibuka.",
+    "Resume background downloads": "Sambung muat turun latar",
+    "Pause background downloads": "Jeda muat turun latar",
+    "Download all resources": "Muat turun semua fail",
+    "Remaining resources download automatically while this game is open.": "Fail yang berbaki dimuat turun secara automatik semasa game ini dibuka."
   },
   "templates": [
     {
@@ -2055,6 +2073,14 @@
     {
       "pattern": "^([+−-]?\\d+) (Strength|Agility|Defense) for this combat\\.$",
       "ms": "$1 $2 sepanjang pertarungan ini."
+    },
+    {
+      "pattern": "^Downloads · (\\d+)%$",
+      "ms": "Muat turun · $1%"
+    },
+    {
+      "pattern": "^(\\d+) / (\\d+) resources cached · ([\\d.]+) / ([\\d.]+) MB · (\\d+) pending$",
+      "ms": "$1 / $2 fail dalam cache · $3 / $4 MB · $5 menunggu"
     }
   ],
   "artifactTemplates": {

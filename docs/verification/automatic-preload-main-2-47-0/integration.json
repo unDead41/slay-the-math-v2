@@ -1,0 +1,210 @@
+{
+  "version": "2.47.0",
+  "date": "2026-10-25",
+  "timezone": "Asia/Kuala_Lumpur",
+  "masterSor": "1.2.0",
+  "baseMain": "65ccce765d1fcd43be8bd8033327764777b6993c",
+  "feature": "82db6d57ce2f4b251601e260c0e6d861922a19a1",
+  "mergeBase": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+  "authorization": "Ijamm: push ke main kalau belum",
+  "fullSuite": {
+    "command": "DOM_QA_MODULE=/workspace/scratch/0829a1232d36/qa-deps/node_modules/jsdom/lib/api.js NODE_PATH=/workspace/scratch/0829a1232d36/qa-deps/node_modules:$CODEX_PRIMARY_RUNTIME_NODE_MODULES npm test",
+    "exitCode": 0,
+    "tests": 1103,
+    "pass": 1103,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "durationMs": 389892.172733,
+    "log": "full-suite.log"
+  },
+  "build": {
+    "production": "PASS",
+    "portable": "PASS, 312112645 bytes",
+    "syntax": "PASS",
+    "logs": [
+      "build.log",
+      "syntax.log"
+    ]
+  },
+  "native": [
+    {
+      "name": "production-preload",
+      "file": "automatic-preload-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 28220
+    },
+    {
+      "name": "verified-images",
+      "file": "dynamic-verified-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 9993
+    },
+    {
+      "name": "tutorial",
+      "file": "tutorial-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 77834
+    },
+    {
+      "name": "tutorial-access",
+      "file": "tutorial-access-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 19405
+    },
+    {
+      "name": "recovery",
+      "file": "readiness-recovery-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 24536
+    },
+    {
+      "name": "runtime",
+      "file": "runtime-optimization-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 3097
+    },
+    {
+      "name": "viewport",
+      "file": "readiness-viewport-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 5673
+    },
+    {
+      "name": "production-dev",
+      "file": "production-dev-browser.cjs",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "ms": 50475
+    }
+  ],
+  "productionPreloadChecks": [
+    "75% important bytes +100% hard core; no early Practice/Boss",
+    "paused speculative work leaves foreground Practice120 usable",
+    "offline/hidden pause and reconnect/visible resume without user retry",
+    "remaining resources complete automatically without full-download click",
+    "real CacheStorage namespace eviction reconciles counts and is repaired automatically on resume",
+    "warm visit reuses verified persistent assets",
+    "storage denial discloses online continuation without a false75% cache claim",
+    "hard core failure has truthful recovery and safe online eligibility",
+    "optional startup failure has truthful recovery and safe online eligibility"
+  ],
+  "strictVerifiedImages": {
+    "tutorialChapters": 23,
+    "checks": [
+      "worker blocked + disk cache denied + raw URLs rejected",
+      "real passive/pose/reset and exact engine save",
+      "Artifact HUD and all31 Codex icons decoded from verified blobs",
+      "all Tutorial chapters/screenshots/card previews use verified blobs with unchanged game save"
+    ],
+    "rawRequests": [],
+    "errors": [],
+    "cache": {
+      "requests": 371,
+      "cacheHits": 0,
+      "memoryHits": 131,
+      "hashes": 371,
+      "bytes": 80723216,
+      "maxActive": 4,
+      "cacheMode": "online",
+      "verifiedFiles": 367,
+      "totalFiles": 760,
+      "verifiedBytes": 78659146,
+      "loadedBytes": 78659146,
+      "totalBytes": 232557367,
+      "availableFiles": 88,
+      "availableBytes": 32098122,
+      "active": 0,
+      "queued": 0,
+      "memoryBytes": 32098122,
+      "memoryEntries": 88,
+      "memoryBudgetBytes": 33554432
+    }
+  },
+  "tutorial": {
+    "checks": [
+      "23 chapters, all 12 practical chapters, real maths/steps/seals, image decoding, completion/reload, BM, zoom, Escape/focus, unchanged host records",
+      "portrait: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "small-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "compact-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "narrow-landscape: no page overflow, reachable footer, real Predict via touch-sized controls",
+      "Master Medium resolves a focused practice card with loaded definitions",
+      "storage denial leaves chapters and practice usable with a visible notice",
+      "in-run help warns for a live timed Mystery without extending its deadline",
+      "standalone portable file embeds every tutorial screenshot and completes real card practice without HTTP requests"
+    ],
+    "errors": []
+  },
+  "tutorialAccess": {
+    "checks": [
+      "desktop: old progress kept, BM route/practice shortcut, real Block feedback, unchanged host records, close/focus",
+      "phone: old progress kept, BM route/practice shortcut, real Block feedback, unchanged host records, close/focus",
+      "intentional real media404: visible caption/fallback, complete actual card practice still works"
+    ],
+    "errors": []
+  },
+  "preservation": {
+    "mainRuntimeFiles": 804,
+    "featureRuntimeAndLocalizationIdentical": true,
+    "all760SourceHashesUnchangedAfterNative": true,
+    "receipt": "parity.json"
+  },
+  "manifests": {
+    "dist": {
+      "manifestId": "10de877aa17d03ddcb908826",
+      "files": 760,
+      "importantBytes": 99831989,
+      "targetBytes": 74873992,
+      "selectedBytes": 75116313,
+      "ratio": 0.7524272906152356,
+      "tutorialImages": 98
+    },
+    "release-prod": {
+      "manifestId": "dc2a2dad3275507d6158f1de",
+      "files": 761,
+      "importantBytes": 99838306,
+      "targetBytes": 74878730,
+      "selectedBytes": 75122630,
+      "ratio": 0.7524429551118386,
+      "tutorialImages": 98
+    }
+  },
+  "inheritedCI": {
+    "id": "CI-247-01",
+    "priority": "P2",
+    "run": 40175948204,
+    "job": 121116533995,
+    "status": "Confirmed older harness failure, not a successful full CI run",
+    "engineLearningDOM": "success",
+    "map": "success",
+    "iconBrowser": "fails DCRelease is not defined at DOMContentLoaded before loader entry; also assumes raw icon paths",
+    "followup": "Migrate the historical icon/PR browser harness separately; current release native checks cover actual deferred/verified behavior",
+    "historicalFetchPrerequisite": "Corrected by current main fetch-depth: 0"
+  },
+  "limits": [
+    "Physical-device FPS/RAM unmeasured",
+    "No new mathematics/balance/audio/model quality audit",
+    "Classroom network and live Google delivery unmeasured",
+    "180 seconds is recovery, not guaranteed speed",
+    "Pages publication and deployment recorded separately after exact ref/tree readback"
+  ],
+  "publication": {
+    "status": "Awaiting authorized main update; no deployment inferred from local tests"
+  }
+}

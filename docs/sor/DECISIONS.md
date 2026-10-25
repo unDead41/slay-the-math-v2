@@ -1,5 +1,9 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-PRELOAD-MAIN — Publish automatic downloads with current tutorial
+
+**DISAHKAN:** Ijamm now requests “push ke main kalau belum”. Publish the completed automatic-download feature `82db6d57ce2f4b251601e260c0e6d861922a19a1`, integrated with current main `65ccce765d1fcd43be8bd8033327764777b6993c`. The tutorial already owns 2.46.0, so the combined release is 2.47.0. This supersedes the earlier feature-only boundary for this update. Preserve all 23 tutorial chapters/98 localized screenshots, its full-history CI correction, original art/motion/VFX and numerical/question/save/RNG owners. Rebuild cache metadata and verify the combined source plus actual Pages deployment. [Integration and evidence](../HOSTED_PRELOAD_MAIN_2_47_0.md).
+
 ## DEC-20261025-TUTORIAL-MAIN — Publish the completed illustrated tutorial
 
 - **DISAHKAN:** Ijamm now requests “okay push tutorial ni ke main”. This authorizes
@@ -885,3 +889,7 @@ DISAHKAN: Ijamm requests reading latest main, auditing BM/English and mathematic
 ## DEC-20261024-DUAL-LANGUAGE-MAIN — Publish whole-game BM / English
 
 DISAHKAN: Ijamm’s “push ni kalau tak push lagi please” supersedes the earlier local-only language boundary. Main ee65fa24a7f70157a946608277fa641652fe0057 /2.42.0 explicitly excludes this pending language work. Publish the reviewed language update with current main as2.43.0. Preserve the Balance/AI refresh, numerical owners, archived/current rules, bank, original artwork/audio and save contracts. Keep the earlier1037-test2.41.0 evidence historical; record fresh integration checks and publication read-back in the [release](../DUAL_LANGUAGE_MAIN_2_43_0.md) and [audit](../audits/dual-language-bm-bi/LATEST.md).
+
+## DEC-20261025-AUTOMATIC-PRELOAD —75% important resources and automatic background
+
+DISAHKAN: Ijamm requests diagnosis of published downloads stopping,75% important resources at entry and suitable performance improvements. Implement on fix/automatic-background-preload based on main6c49f3980c3a832635d4d01a6c50a8df98ac4aad2.45.0, candidate2.46.0. DITERUSKAN implementation choice: byte-based early-game package plus100% hard core, bounded incremental automatic remaining downloads, real-run priority, one/two speculative transfers, pause/resume/retry and honest available-versus-verified counts. Practice remains on demand; no whole-game pre-entry requirement, atlas mass-decode, art/gameplay/save/RNG change or closed-tab download promise. Main publication is separate from this candidate. [Spec and audit](../audits/hosted-readiness/LATEST.md).

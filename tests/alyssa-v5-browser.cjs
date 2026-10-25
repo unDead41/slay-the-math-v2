@@ -9,7 +9,7 @@ const report={version:require('../package.json').version,sourceSha256:audit.sour
 const hero=p=>p.locator('.player .actor-animation');
 async function pixels(p){return hero(p).evaluate(c=>{const a=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let hash=2166136261,visible=0;for(let i=0;i<a.length;i+=4){hash=Math.imul(hash^a[i],16777619);hash=Math.imul(hash^a[i+3],16777619);if(a[i+3]>128)visible++;}return {hash:hash>>>0,visible};});}
 async function ready(p,action='idle'){await p.waitForFunction(a=>{const c=document.querySelector('.player .actor-animation');return c?.parentElement.dataset.animationReady==='true'&&c.dataset.action===a;},action);}
-async function enter(p){await p.locator('#resource-enter').waitFor({state:'visible',timeout:120000});await p.locator('#resource-enter').click();}
+async function enter(p){await p.waitForFunction(()=>['resource-enter','resource-online'].some(id=>{const el=document.getElementById(id);return el&&!el.hidden;}),null,{timeout:120000});const normal=await p.locator('#resource-enter').isVisible();await p.locator(normal?'#resource-enter':'#resource-online').click();}
 async function shot(p,id){if(screens){fs.mkdirSync(screens,{recursive:true});await p.screenshot({path:path.join(screens,id+'.jpg'),type:'jpeg',quality:86});}}
 function fixture(card,extra={}){return card?F.cardSetup(card,false,false,{seed:7,enemyHp:999,...extra}):F.create({kind:'combat',seed:7,enemyHp:999,...extra});}
 async function restore(p,run,{clock=true,expectReady=true}={}){

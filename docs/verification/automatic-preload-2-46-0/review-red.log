@@ -1,0 +1,91 @@
+✔ startup gates75 percent of bytes, not75 percent of files, and includes all hard core (1.778341ms)
+✔ whole-file startup never rounds below75 percent and tolerates an older manifest (0.199651ms)
+✔ retained progress does not call evicted online-only bytes ready (32.942453ms)
+✔ incremental background queue promotes room resources without occupying foreground capacity (31.201128ms)
+✔ hidden/offline/manual pause stops new speculative work and resumes the same queue (42.276311ms)
+✔ a failed background file stays retryable and saved files are not downloaded twice (11.952205ms)
+✔ resume during cancellation retries the unwinding download without another reconnect (17.088837ms)
+✖ disk eviction after memory eviction is reconciled and automatic admission repairs it (4.483508ms)
+✖ cache read access loss removes historical persistence even if later writes succeed (3.267264ms)
+✖ explicit storage retry can restore persistent preparation after quota is freed (3.596581ms)
+✖ a foreground recovery clears a stale background-failed status without a separate retry (7.010927ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 7
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.779408
+
+✖ failing tests:
+
+test at tests/background-download.test.cjs:36:1
+✖ disk eviction after memory eviction is reconciled and automatic admission repairs it (4.483508ms)
+  AssertionError [ERR_ASSERTION]: Evicted disk and session bytes must not count as cached
+
+  true !== false
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:37:278)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/background-download.test.cjs:39:1
+✖ cache read access loss removes historical persistence even if later writes succeed (3.267264ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  true !== false
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:40:329)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/background-download.test.cjs:42:1
+✖ explicit storage retry can restore persistent preparation after quota is freed (3.596581ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'online'
+  - 'persistent'
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:43:379)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'online',
+    expected: 'persistent',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/background-download.test.cjs:45:1
+✖ a foreground recovery clears a stale background-failed status without a separate retry (7.010927ms)
+  AssertionError [ERR_ASSERTION]: Successfully recovered room must not still report a failed download
+
+  1 !== 0
+
+      at TestContext.<anonymous> (/workspace/scratch/0829a1232d36/game/tests/background-download.test.cjs:46:204)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

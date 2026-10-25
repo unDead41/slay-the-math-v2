@@ -11,8 +11,8 @@
   if(!record||!sources.has(source)||!['correct','revealed'].includes(record.status))throw Error('Report a finished game question.');
   return {mode:'gameplay',source,language:language==='ms'?'ms':'en',status:record.status,...Feedback.questionFeedbackSupport(record)};
  }
- function create({document,storage,bank,enqueue,getDelivery=()=>({enabled:false})}){
-  const store=Feedback.createQuestionFeedbackStore({storage,bankVersion:bank.bankVersion,questionIds:bank.questions.map(q=>q.id)});
+ function create({document,storage,bank,gameVersion=document.defaultView?.DCRelease?.version,enqueue,getDelivery=()=>({enabled:false}),onOpenSharing}){
+  const store=Feedback.createQuestionFeedbackStore({storage,bankVersion:bank.bankVersion,questionIds:bank.questions.map(q=>q.id),...(gameVersion&&bank.contentRevision?{provenance:{gameVersion,contentRevision:bank.contentRevision}}:{})});
   let dialog=null,active=null,returnFocus=null,queueError=false;
   const node=id=>dialog.querySelector('[data-report="'+id+'"]');
   function ensure(){
@@ -20,6 +20,7 @@
    dialog=document.createElement('dialog');dialog.id='question-report-dialog';dialog.className='question-report-dialog';dialog.setAttribute('aria-labelledby','question-report-title');dialog.setAttribute('aria-describedby','question-report-intro');
    dialog.innerHTML='<form><header><h2 id="question-report-title" data-report="title"></h2><p id="question-report-intro" data-report="intro"></p></header><section class="question-report-context"><h3 data-report="context-label"></h3><p data-report="question-id"></p><p data-report="prompt"></p><dl data-report="context"></dl></section><fieldset><legend data-report="categories-label"></legend><div class="question-report-categories" data-report="categories"></div></fieldset><label class="question-report-comment"><span data-report="comment-label"></span><textarea data-report="comment" rows="4" maxlength="2000"></textarea></label><p class="question-report-count" data-report="count"></p><p class="question-report-status" data-report="status" role="status" aria-live="polite"></p><p class="question-report-delivery" data-report="delivery"></p><footer><button type="submit" class="btn primary" data-report="save"></button><button type="button" class="btn subtle" data-report="back"></button></footer></form>';
    node('title').tabIndex=-1;
+   const sharing=document.createElement('button');sharing.type='button';sharing.className='btn subtle';sharing.dataset.report='sharing';sharing.hidden=true;sharing.addEventListener('click',()=>{close();onOpenSharing?.();});dialog.querySelector('footer').append(sharing);
    dialog.querySelector('form').addEventListener('submit',event=>{event.preventDefault();save();});
    node('back').addEventListener('click',close);
    node('comment').addEventListener('input',()=>{node('count').textContent=node('comment').value.length+' / 2,000';});
@@ -28,7 +29,12 @@
   }
   function delivery(){
    if(!active)return;const c=labels[active.context.language],s=getDelivery()||{};
-   node('delivery').textContent=s.dev?c.dev:s.collectionDisabled?c.local:!s.enabled?c.off:s.state==='received'&&s.pending===0&&s.lastReceivedAt?c.received:c.pending;
+   node('delivery').textContent=Feedback.questionFeedbackDeliveryText({...s,queueError},active.context.language);
+   node('sharing').textContent=active.context.language==='ms'?'Perkongsian dan sandaran':'Sharing and backup';
+   node('sharing').hidden=typeof onOpenSharing!=='function'||!!s.dev||!!s.collectionDisabled||!(queueError||['unavailable','save-error'].includes(s.state));
+  }
+  function publish(saved){
+   queueError=false;try{if(saved){const result=enqueue?.(saved);queueError=result==null||!!result.error||result.entry===null;}}catch{queueError=true;}
   }
   function open({question,record,source,language,focus}){
    const context=contextFrom(record,source,language);
@@ -36,6 +42,7 @@
    ensure();if(dialog.open)close();returnFocus=focus||document.activeElement;
    active={question:copy(question),context:copy(context)};queueError=false;
    store.flush();const previous=store.get(question.id),c=labels[context.language];dialog.lang=context.language;
+   if(previous)publish(previous);
    for(const key of ['title','intro','save','back'])node(key).textContent=c[key];
    node('context-label').textContent=c.context;node('categories-label').textContent=c.categories;node('comment-label').textContent=c.comment;
    node('question-id').textContent=question.id;node('prompt').textContent=question.prompt;
@@ -51,12 +58,12 @@
    store.flush();const before=store.get(active.question.id);
    const unchanged=before&&before.comment===comment&&JSON.stringify(before.categories)===JSON.stringify(categories)&&JSON.stringify(before.context)===JSON.stringify(active.context);
    const saved=unchanged?before:store.save(active.question,categories,comment,active.context);
-   queueError=false;try{if(saved)enqueue?.(saved);}catch{queueError=true;}
-   node('status').textContent=store.error?c.temporary:queueError?c.queueError:c.saved;delivery();return saved;
+   publish(saved);
+   node('status').textContent=store.error?c.temporary:queueError?Feedback.questionFeedbackDeliveryText({queueError:true},active.context.language):c.saved;delivery();return saved;
   }
   function close(){if(dialog?.open)dialog.close();active=null;const focus=returnFocus;returnFocus=null;if(focus?.isConnected)focus.focus({preventScroll:true});}
   function destroy(){close();dialog?.remove();dialog=null;}
-  return {open,save,close,destroy,refresh:delivery,snapshot:()=>active?copy(active.context):null};
+  return {open,save,close,destroy,refresh:delivery,exportData:()=>store.exportData(),snapshot:()=>active?copy(active.context):null};
  }
  return {contextFrom,create};
 });

@@ -1,4 +1,12 @@
-# Slay the Math — 2.47.0
+# Slay the Math — 2.50.0
+
+Version **2.50.0** integrates education delivery/recovery, body-aligned combat VFX
+and the Master Map three-agent simulation/evidence protocol while preserving the
+current Idle/blink, numerical, save/RNG and artwork owners. Scoped compatibility
+is VALID with recorded P2 limits; publication is pending actual main readback.
+[Current integration, actual checks and limits](docs/ALL_CANDIDATES_MAIN_2_50_0.md).
+
+## Earlier release notes — 2.47.0
 
 Version **2.47.0** combines automatic resource downloads with the illustrated tutorial below. Before Enter, prepare all essential files and at least **75% of the important early-game package by bytes**. Remaining game resources download automatically with current-room priority and pause/resume controls; Practice prepares on demand. Hidden/offline pages pause new background work, and cache loss has visible recovery. The 180-second limit offers recovery rather than an internet-speed guarantee. [Main release, actual verification and limits](docs/HOSTED_PRELOAD_MAIN_2_47_0.md).
 

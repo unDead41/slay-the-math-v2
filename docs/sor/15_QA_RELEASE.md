@@ -1,5 +1,16 @@
 # 15 — QA, bukti semakan dan release
 
+## Current main integration authorization — 2.50.0
+
+The current explicit user request authorizes combining combat, education and
+Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
+is VALID with carried P2 findings and explicit limits; original failed commands
+and later focused/native evidence remain separate. Publication is PENDING actual
+main ref readback. This supersedes the relevant earlier branch-only boundary;
+original source pins, histories and current main owners remain. The completed
+owner pilot stays tied to source b3dc, not 2.50. [Scope, results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
 ## Idle follow-up — 2.49.1
 
 Fresh root/blink RED→GREEN regressions,25 scoped tests,19 identical reimport

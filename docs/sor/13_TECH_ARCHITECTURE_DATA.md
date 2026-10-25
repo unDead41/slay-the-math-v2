@@ -1,5 +1,16 @@
 # 13 — Seni bina, kontrak data, RNG dan simpanan
 
+## Current main integration authorization — 2.50.0
+
+The current explicit user request authorizes combining combat, education and
+Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
+is VALID with carried P2 findings and explicit limits; original failed commands
+and later focused/native evidence remain separate. Publication is PENDING actual
+main ref readback. This supersedes the relevant earlier branch-only boundary;
+original source pins, histories and current main owners remain. The completed
+owner pilot stays tied to source b3dc, not 2.50. [Scope, results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
 Current release integration: 2.26.0 combines the analytics preview with main 2.25.1. Existing run/save schema, question owners and newer card-motion hooks remain. `npm run start:analytics:prod` builds `release-prod` and serves it with the same-origin collector; the SQLite database stays outside public files. [Backend/setup contract](../EDUCATION_ANALYTICS_2_26_0.md).
 
 Versi: 2.0.0. Kontrak baharu ialah cadangan. Source code prototaip belum diaudit dalam penyediaan SOR ini. Gunakan teknologi projek sedia ada sebelum mempertimbangkan migrasi.
@@ -253,3 +264,14 @@ DISAHKAN: Ijamm now authorizes publishing education-report6bfb483 into main37558
 ## Whole-game language — 24 October 2026
 
 The approved [SOR 26](26_DUAL_LANGUAGE.md) supersedes earlier English-only presentation clauses. Canonical question IDs/data and numerical owners remain unchanged; both English and simple BM must preserve meaning, bindings and state. Keep formal KSSM/DSKP mathematics terms with short explanations and retained game keywords. Validate language changes without awarding progression, rerolling offers or extending deadlines. See the [local branch audit](../audits/dual-language-bm-bi/LATEST.md) for actual checks and limitations.
+
+
+## Education delivery reliability — 2.45.1-education.1 branch
+
+Ijamm authorizes implementing the relevant current-main audit fixes and publishing only `codex/education-delivery-reliability`, based on main6c49f3980c3a832635d4d01a6c50a8df98ac4aad. Keep gameplay/answers/RNG/save identities and explicit collection consent intact.
+
+`learning-sync.js` retries temporary receiver failure with capped 60-second backoff while the document is visible, online and enabled. Hidden/offline/stop/consent-off cancels owned activity; visible/online resumes. Immutable revisions and exact ACK remain authoritative. `question-feedback.mjs` owns shared BM/English delivery copy. A null/error enqueue result must never be shown as ordinary queued delivery. The game offers the existing Sharing/backup controls; an unsent local report can be saved again.
+
+Newly authored feedback optionally carries `provenance:{gameVersion,contentRevision}`. The real release/active bank supply these values; old entries and review-only ticks retain their original metadata, including absence. Both strict local and generated Google validators accept legacy payloads and validate the exact optional provenance object. No storage key, comment ID, bankVersion or mathematical content changes. Comments append two version columns; Issues append two aggregation columns after the existing developer-note/fixed-version columns. Legacy signatures and human triage/notes remain intact.
+
+The receiver template includes the existing project Pages origin. The public `/exec` default remains unset until the owner supplies the actual URL; do not invent a destination or imply live verification. Deploy the complete regenerated Code.gs to the same owner project/deployment before using provenance-bearing reports. [Branch audit](../audits/education-delivery-reliability/LATEST.md).

@@ -1,0 +1,110 @@
+{
+  "kind": "READ_ONLY_PILOT_STATIC_REVIEW",
+  "reviewedAtUTC": "2026-10-25T16:35:44.511830+00:00",
+  "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+  "zip": {
+    "file": "Slay_the_Math_Batch_10_Bukti_B3DC750.zip",
+    "bytes": 30121890,
+    "sha256": "ffef8954438640b2ecc671dfc620b57d3c0d5ee8d85b3b57f1d5d9d566f3c352"
+  },
+  "finding": {
+    "id": "PILOT-COLD-URL-01",
+    "status": "KNOWN_OPEN",
+    "category": "MASALAH DISAHKAN",
+    "priority": "P2",
+    "confidence": "HIGH for local cold-URL limitation; precise navigation/lifecycle failure not isolated",
+    "scope": "Existing local HTTP project-subpath cold restart; not a new three-branch regression",
+    "notSameAs": "QA-248-PRELOAD-01 retained-count transient"
+  },
+  "observed": {
+    "bundleCounts": {
+      "PASS": 6,
+      "FAIL": 4,
+      "ERROR": 0,
+      "MISSING": 0
+    },
+    "offlineCases": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "fullCacheCases": [
+      "A1",
+      "A3"
+    ],
+    "fullCacheProgress": {
+      "verified": 760,
+      "available": 760,
+      "cacheKeys": 760,
+      "total": 760
+    },
+    "startupCacheCases": [
+      "A2",
+      "A4"
+    ],
+    "startupCacheFiles": 331,
+    "initialServiceWorkerControlled": true,
+    "htmlInAssetCache": false,
+    "manifestInAssetCache": false,
+    "navigation": "All four time out waiting for DOMContentLoaded after fresh persistent-browser launch offline",
+    "networkEvidence": "ERR_ABORTED; no complete request/response or new-page SW lifecycle trace",
+    "reconnect": "All four recover exact saved state and RNG; no save loss demonstrated"
+  },
+  "staticBasis": [
+    {
+      "path": "source/dist/sw.js",
+      "lines": "3,9,13-16",
+      "finding": "Client configuration is in-memory; navigation requests bypass SW caching/interception."
+    },
+    {
+      "path": "source/dist/bootstrap.js",
+      "lines": "70-71,86,93",
+      "finding": "Manifest is fetched with cache:no-store before the new page configures the SW."
+    },
+    {
+      "path": "raw/A1-cache-before.json and raw/A3-cache-before.json",
+      "finding": "All 760 verified asset keys are present, without HTML or manifest."
+    },
+    {
+      "path": "raw/boss-comparator-attempt/collector.cjs",
+      "lines": "12,18-22,33-34",
+      "finding": "Original accepted offline cases use a retained profile/origin, allow SW, close/relaunch browser offline and reconcile before closure; local no-cache headers match server.cjs."
+    }
+  ],
+  "candidateParity": {
+    "dist/sw.js": {
+      "sha256": "95c9bc9fb8d27731e6e9818bd12fe574269647635b9216601e1a5bd54a2f5667",
+      "identicalToZipSource": true
+    },
+    "dist/bootstrap.js": {
+      "sha256": "a44edd71439423c9c7aacccff6c0a948dbada3b9385d0ef2d216a4063d233e44",
+      "identicalToZipSource": true
+    }
+  },
+  "harnessLimits": [
+    "HTTP cache intentionally limited to1MB; local server uses no-cache; source dist served directly, not production builder or public Pages.",
+    "Failure screenshot absent because navigation did not finish; after-restart controller/registration response trace unavailable.",
+    "Offline success branch checks Continue before using the startup gate. This does not invalidate the four earlier navigation timeouts; a future regression must enter through the actual Enter/Online/Retry gate."
+  ],
+  "minimalFocusedCheck": {
+    "status": "IN_PROGRESS_BY_QA; result not inferred here",
+    "scope": "One labelled full-cache A1 regression on final production subpath, preserved profile, actual cold process restart offline.",
+    "record": [
+      "Actual manifest count and CacheStorage keys including shell/manifest membership",
+      "Initial page URL, active SW registration/scope and controller lifecycle",
+      "Navigation/manifest request responses or bounded failure",
+      "Actual startup gate before Continue; exact reconnect save equality"
+    ],
+    "classification": "Regression of an existing case, not a new independent pilot/training sample"
+  },
+  "limits": {
+    "pages": "NOT_RUN",
+    "browserByAuditor": "NOT_RUN",
+    "duplicatePilot": "NOT_RUN",
+    "runtimeEdits": false,
+    "privilegedDataExtractedOrCopied": false,
+    "trainingEligible": false
+  }
+}

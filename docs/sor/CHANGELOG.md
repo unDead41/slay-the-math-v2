@@ -1,5 +1,15 @@
 # Changelog SOR — Slay the Math
 
+## 2.50.0 — combined combat, education and Master Map protocol
+
+Integrate the three explicitly authorized candidates with main 2.49.1. Keep
+current Idle/blink/art, numerical/save/RNG and existing owners. Add recovery
+fixes, aligned body VFX, the three-agent protocol and the completed historical
+pilot snapshot. Real tutorial recapture and final affected/native checks pass;
+the original full Node failures remain recorded. Scoped status VALID with
+carried P2 findings; **publication PENDING**. [Results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
 ## 2.49.1 — 25 October 2026
 
 Slow Alyssa's Idle blink to280ms every3460ms and correct its constant resting
@@ -8,6 +18,17 @@ source atlas bytes, action/enemy/boss registrations and2.49 gameplay/VFX/loader
 features. Add a hosted five-action review for Alyssa and all12 enemies/bosses.
 Current enemy placement report remains unconfirmed; native continuity is checked
 without inventing offsets. [Evidence, failed/passing checks and limits](../audits/alyssa-motion/LATEST.md).
+
+## Body-aligned VFX — branch 2.49.1-combat.1, 25 October 2026
+
+- Reproduce left-shifted body materials, floating-body placement and unequal-axis
+  resizing before correcting the compositor. Use current main 2.49.0 as the base.
+- Fit Shield/stat/barrier fields to each visible body, including wider/shorter
+  creatures. Centre Passive seals between the registered boots on the same floor.
+- Preserve model positions, original pixels/75 exposure timings, motifs, masks,
+  fast lifecycle logic and gameplay/save/RNG. Add source-grid references, actual
+  production placement/pixel checks and scoped audit evidence. Combat branch only.
+
 
 ## 2.49.0 — 25 October 2026
 
@@ -794,3 +815,11 @@ Review follow-up for2.42.0-balance.1: canonical ME08 queued buffs, explicit gros
 ## 2.46.0 work-branch candidate —25 October2026
 
 Automatic remaining resource downloads after entry; prepare at least75% of important build bytes plus all hard-core files before Enter. Shared incremental foreground-aware scheduler, combat/menu1/2 limits, visibility/offline/manual pause, reconnect/cancellation recovery, retention-aware progress and explicit online storage fallback. Existing V5/VFX/numerical/data/save owners preserved. [Current scoped evidence](../audits/hosted-readiness/LATEST.md); main deployment not implied by this entry.
+
+## 25 October 2026 — Education delivery follow-up branch
+
+Record the authorized retry/report/provenance improvements on main2.45.0; keep main untouched and the Google destination owner-configured. See DEC-20261025-EDUCATION-DELIVERY, SOR13 and the [scoped audit](../audits/education-delivery-reliability/LATEST.md). No numerical or educational-content rule changes.
+
+## 25 October 2026 — Map three-agent preparation and simulation reference
+
+Prepare a selective current-main Map package: cap3, three same-scope profiles, registry34/33/33 and default one. Pin historical handoffs; preserve adapted tools and game2.49. Add shared simulation ownership, manual run registration, source/seed/split integrity, learner limits, genuine browser capture metadata and token-saving batching. No new campaign/model, native-host activation or remote publication. [Handoff](../MAP_AGENT_SKILL_HANDOFF.md).

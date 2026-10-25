@@ -3,15 +3,15 @@
    This bundle contains validation metadata, never Google credentials. */
 /* Owner setting: add the exact HTTPS origin of a hosted game here, with no path.
    Local npm start uses port 4173. Deploy a new web-app version after editing. */
-const STM_ALLOWED_GAME_ORIGINS=['http://localhost:4173','http://127.0.0.1:4173'];
+const STM_ALLOWED_GAME_ORIGINS=['http://localhost:4173','http://127.0.0.1:4173','https://undead41.github.io'];
 const STM_MAX_RECORDS=10000,STM_MAX_CLIENTS=1500;
 const STM_ISSUE_STATUSES=['Baharu','Sedang disemak','Selesai'];
 const STM_HEADERS={
  _Clients:['Client ID','Secret SHA256','Created at'],
  _Records:['Key','Client ID','Entry ID','Revision','Kind','Payload SHA256','Received at','Payload 1','Payload 2','Payload 3','Payload 4','Payload 5'],
  Learning:['Key','Client ID','Entry ID','Revision','Question ID','Bank version','Topic','Chapter','Learning standards','Skills','Scope','Session ID','Language','Status','Answered','Wrong attempts','Independent first try','Help on first attempt','Retry success','Revealed','Hint used','More Hint viewed','Basics viewed','Steps viewed','Updated at','Received at'],
- Comments:['Key','Client ID','Entry ID','Revision','Question ID','Bank version','Topic','Difficulty','Categories','Comment','Deleted','Mode','Language','Question','Updated at','Received at','Source','Hint used','More Hint viewed','Steps viewed','Context status','Created at'],
- Issues:['Issue key','Question ID','Category','Topic','Difficulty','Status','Pelapor unik (peranti)','Active reports','Sources','Languages','Bank versions','First reported at','Latest report at','Last received at','Latest comment','Question','Developer notes','Fixed in version'],
+ Comments:['Key','Client ID','Entry ID','Revision','Question ID','Bank version','Topic','Difficulty','Categories','Comment','Deleted','Mode','Language','Question','Updated at','Received at','Source','Hint used','More Hint viewed','Steps viewed','Context status','Created at','Game version','Content revision'],
+ Issues:['Issue key','Question ID','Category','Topic','Difficulty','Status','Pelapor unik (peranti)','Active reports','Sources','Languages','Bank versions','First reported at','Latest report at','Last received at','Latest comment','Question','Developer notes','Fixed in version','Game versions','Content revisions'],
  _IssueReports:['Key','Revision','Question ID','Categories','Evidence SHA256','Active','Metadata SHA256','Comment present']
 };
 const stmExact_=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).length===keys.length&&keys.every(k=>Object.prototype.hasOwnProperty.call(value,k));
@@ -97,17 +97,17 @@ function stmRefreshIssueBoard_(book){
   const prior=reports.get(row[0]);if(prior&&prior.revision>=Number(row[3]))continue;
   const comment=typeof row[9]==='string'?row[9].trim():'',question=typeof row[13]==='string'?row[13].replace(/^\[REVIEWED\]\s*/,''):'',labels=stmIssueList_(row[8]);
   const active=!stmIssueTrue_(row[10])&&(labels.length>0||comment.length>0),issueCategories=active?(labels.length?labels:['other']):[];
-  const metadata={questionId:row[4],bankVersion:row[5],topic:row[6],difficulty:row[7],question,mode:row[11],language:row[12],source:row[16]||row[11],hintUsed:row[17],moreHintViewed:row[18],stepsViewed:row[19],status:row[20]};
-  reports.set(row[0],{key:row[0],revision:Number(row[3]),clientId:row[1],questionId:row[4],bankVersion:row[5],topic:row[6],difficulty:row[7],comment,question,source:metadata.source,language:row[12],createdAt:stmIssueDate_(row[21])||stmIssueDate_(row[14]),updatedAt:stmIssueDate_(row[14]),receivedAt:stmIssueDate_(row[15]),categories:issueCategories,active,hash:DCAnalytics.fingerprint(stmStable_({...metadata,comment})),metadataHash:DCAnalytics.fingerprint(stmStable_(metadata)),hasComment:comment.length>0});
+  const metadata={questionId:row[4],bankVersion:row[5],topic:row[6],difficulty:row[7],question,mode:row[11],language:row[12],source:row[16]||row[11],hintUsed:row[17],moreHintViewed:row[18],stepsViewed:row[19],status:row[20],...(row[22]||row[23]?{provenance:{gameVersion:row[22]||'',contentRevision:row[23]||''}}:{})};
+  reports.set(row[0],{key:row[0],revision:Number(row[3]),clientId:row[1],questionId:row[4],bankVersion:row[5],gameVersion:row[22]||'',contentRevision:row[23]||'',topic:row[6],difficulty:row[7],comment,question,source:metadata.source,language:row[12],createdAt:stmIssueDate_(row[21])||stmIssueDate_(row[14]),updatedAt:stmIssueDate_(row[14]),receivedAt:stmIssueDate_(row[15]),categories:issueCategories,active,hash:DCAnalytics.fingerprint(stmStable_({...metadata,comment})),metadataHash:DCAnalytics.fingerprint(stmStable_(metadata)),hasComment:comment.length>0});
  }
  let nextStateRow=state.getLastRow()+1;const stateWrites=[];
  for(const report of reports.values()){
   const prior=previousReports.get(report.key),removalOnly=!!prior&&prior.hasComment&&!report.hasComment&&prior.metadataHash===report.metadataHash;
   for(const category of report.categories){
    const key=report.questionId+'|'+category;let group=groups.get(key);
-   if(!group){group={key,questionId:report.questionId,category,devices:new Set(),reports:new Set(),topics:new Set(),difficulties:new Set(),sources:new Set(),languages:new Set(),versions:new Set(),first:'',latest:'',received:'',comment:null,question:null,newEvidence:false};groups.set(key,group);}
+   if(!group){group={key,questionId:report.questionId,category,devices:new Set(),reports:new Set(),topics:new Set(),difficulties:new Set(),sources:new Set(),languages:new Set(),versions:new Set(),gameVersions:new Set(),contentRevisions:new Set(),first:'',latest:'',received:'',comment:null,question:null,newEvidence:false};groups.set(key,group);}
    group.devices.add(report.clientId);group.reports.add(report.key);
-   for(const [set,value] of [[group.topics,report.topic],[group.difficulties,report.difficulty],[group.sources,report.source],[group.languages,report.language],[group.versions,report.bankVersion]])if(typeof value==='string'&&value)set.add(value);
+   for(const [set,value] of [[group.topics,report.topic],[group.difficulties,report.difficulty],[group.sources,report.source],[group.languages,report.language],[group.versions,report.bankVersion],[group.gameVersions,report.gameVersion],[group.contentRevisions,report.contentRevision]])if(typeof value==='string'&&value)set.add(value);
    group.first=stmIssueMin_(group.first,report.createdAt);group.latest=stmIssueMax_(group.latest,report.updatedAt);group.received=stmIssueMax_(group.received,report.receivedAt);
    const order=report.updatedAt+'|'+report.receivedAt+'|'+report.key;
    if(report.comment&&(!group.comment||order>group.comment.order))group.comment={order,value:report.comment};
@@ -127,8 +127,9 @@ function stmRefreshIssueBoard_(book){
   // reports, alongside the owner's status, notes and fixed-version record.
   const computed=group?[group.devices.size,group.reports.size,join(group.sources),join(group.languages),join(group.versions),stmIssueMin_(stmIssueDate_(old[11]),group.first),stmIssueMax_(stmIssueDate_(old[12]),group.latest),stmIssueMax_(stmIssueDate_(old[13]),group.received),group.comment?group.comment.value:old[14],group.question?group.question.value:old[15]]:[0,0,...old.slice(8,16)];
   const status=STM_ISSUE_STATUSES.includes(old[5])?old[5]:'Baharu',nextStatus=status==='Selesai'&&group?.newEvidence?'Baharu':status;
-  if(!stored)stmWrite_(issues,nextIssueRow++,[...prefix,nextStatus,...computed,'','']);
-  else{stmIssueWriteComputed_(issues,stored.index,1,prefix,old);stmIssueWriteComputed_(issues,stored.index,7,computed,old);if(nextStatus!==old[5])stmWriteCells_(issues,stored.index,6,[nextStatus]);}
+  const provenance=group?[join(group.gameVersions),join(group.contentRevisions)]:old.slice(18,20);
+  if(!stored)stmWrite_(issues,nextIssueRow++,[...prefix,nextStatus,...computed,'','',...provenance]);
+  else{stmIssueWriteComputed_(issues,stored.index,1,prefix,old);stmIssueWriteComputed_(issues,stored.index,7,computed,old);stmIssueWriteComputed_(issues,stored.index,19,provenance,old);if(nextStatus!==old[5])stmWriteCells_(issues,stored.index,6,[nextStatus]);}
  }
  stmIssueFormat_(issues);
  // Make projections/status durable before remembering their signatures. A
@@ -148,7 +149,7 @@ function stmProjection_(book,key,clientId,entry,receivedAt){
   const r=p.record,events=r.events,attempts=r.attempts,first=attempts[0],help=!!first&&(first.hintUsed||first.moreHintViewed||first.foundationViewed);
   // Canonical attempt snapshots own correctness and support, including their order.
   name='Learning';row=[key,clientId,entry.id,entry.revision,p.questionId,p.bankVersion,p.topicCode,p.chapter,p.curriculumStandards.join(', '),p.skillIds.join(', '),p.scope,p.sessionId,p.language,r.status,attempts.length?1:0,attempts.filter(a=>a.correct===false).length,!!first&&first.correct===true&&!help?1:0,help,r.status==='correct'&&attempts.length>1,r.status==='revealed',!!r.hintState.hintUsed,!!r.hintState.moreHintViewed,!!r.foundationViewed,events.some(e=>e.type==='STEPS_TOGGLED'),p.updatedAt,receivedAt];
- }else{name='Comments';row=[key,clientId,entry.id,entry.revision,p.questionId,p.bankVersion,p.topic||'',p.difficulty||'',(p.categories||[]).join(', '),p.comment||'',p.deleted===true,p.context?.mode||'',p.context?.language||'',p.question||'',p.updatedAt,receivedAt,p.context?.source||p.context?.mode||'',p.context?.hintUsed??'',p.context?.moreHintViewed??'',p.context?.stepsViewed??'',p.context?.status||'',p.createdAt||''];}
+ }else{name='Comments';row=[key,clientId,entry.id,entry.revision,p.questionId,p.bankVersion,p.topic||'',p.difficulty||'',(p.categories||[]).join(', '),p.comment||'',p.deleted===true,p.context?.mode||'',p.context?.language||'',p.question||'',p.updatedAt,receivedAt,p.context?.source||p.context?.mode||'',p.context?.hintUsed??'',p.context?.moreHintViewed??'',p.context?.stepsViewed??'',p.context?.status||'',p.createdAt||'',p.provenance?.gameVersion||'',p.provenance?.contentRevision||''];}
  const sheet=stmEnsureSheet_(book,name,STM_HEADERS[name]),count=sheet.getLastRow()-1,keys=count?sheet.getRange(2,1,count,1).getValues().map(r=>r[0]):[],found=keys.indexOf(key);
  stmWrite_(sheet,found<0?sheet.getLastRow()+1:found+2,row);
 }
@@ -432,7 +433,8 @@ const categories=new Set(['hint-unclear','more-hint-unclear','question-difficult
 function stmValidateFeedback_(payload,questions,versions,topics){
  if(!payload||!questions.has(payload.questionId)||!versions.has(payload.bankVersion)||payload.id!==payload.bankVersion+':'+payload.questionId)return false;
  if(payload.deleted===true)return stmExact_(payload,['id','questionId','bankVersion','deleted','updatedAt'])&&stmDate_(payload.updatedAt);
- const keys=['id','questionId','bankVersion','topic','difficulty','question','categories','comment','createdAt','updatedAt','context'];
+ const keys=['id','questionId','bankVersion','topic','difficulty','question','categories','comment','createdAt','updatedAt','context',...(payload.provenance!==undefined?['provenance']:[])];
+ if(payload.provenance!==undefined&&(!stmExact_(payload.provenance,['gameVersion','contentRevision'])||!['gameVersion','contentRevision'].every(key=>typeof payload.provenance[key]==='string'&&/^[A-Za-z0-9][A-Za-z0-9._+-]{0,99}$/.test(payload.provenance[key]))))return false;
  if(!stmExact_(payload,keys)||!stmDate_(payload.createdAt)||!stmDate_(payload.updatedAt)||payload.updatedAt<payload.createdAt||typeof payload.comment!=='string'||payload.comment.length>2000||typeof payload.question!=='string'||payload.question.length>8000||!Array.isArray(payload.categories)||payload.categories.length>7||new Set(payload.categories).size!==payload.categories.length||payload.categories.some(value=>!categories.has(value)))return false;
  const q=questions.get(payload.questionId),context=payload.context;
  const game=context?.mode==='gameplay',contextKeys=['mode','language','status','hintUsed','moreHintViewed','stepsViewed',...(game?['source']:[])];

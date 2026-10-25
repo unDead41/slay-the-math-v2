@@ -1,0 +1,37 @@
+{
+  "dateUTC": "2026-10-25T16:09:22.549868+00:00",
+  "candidateSHA": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194",
+  "checks": {
+    "cap3": true,
+    "threeProfiles": true,
+    "profileBodiesEqual": true,
+    "registryPartition": true,
+    "unique100": true,
+    "defaultsOne": true,
+    "noCompletedSetup": true,
+    "tenOwnerCases": true,
+    "ownerSourcePreserved": true,
+    "notTraining": true,
+    "snapshotRunning": true
+  },
+  "pass": 11,
+  "fail": 0,
+  "seedCounts": [
+    34,
+    33,
+    33
+  ],
+  "ownerRunID": "SE-PILOT-20261025-B3DC750-01",
+  "ownerSourceSHA": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "ownerStatus": "RUNNING snapshot reference; authoritative registry remains protocol branch",
+  "trainingEligible": false,
+  "caseManifestVerification": {
+    "status": "NOT_RUN",
+    "path": "reports/simulation/SE-PILOT-20261025-B3DC750-01/manifest.json",
+    "declaredSHA256": "4db5e9031352cfd65eb5c76d74d0e3c401420dc173d074304f4b9ce1046822ba",
+    "reason": "Only RUN_REGISTRY committed by owner; actual manifest absent from frozen tree and unavailable to root. No bundle-complete/content-hash claim."
+  },
+  "initialReadObservation": "An initial ad-hoc read assumed the declared manifest was local and raised FileNotFoundError before producing checks. Classified unavailable owner artifact, not a source/runtime failure. No assertions/source/harness were changed.",
+  "newPilotExecutionsByQA": 0,
+  "nativeCodexLoader": "NOT_RUN"
+}

@@ -1,8 +1,18 @@
 /* Live, read-only compositor for the reviewed Shield V3 / Passive V10 / stat V9 fields. */
 (function(root){'use strict';
  const attributes=['strength','agility','defense'],barriers=['thorns','weak','vulnerable'];
- // Legacy idle alpha-height fallbacks; newer actor registries own their size.
- const bodyHeight={mc_01:539,wisp:999,beetle:998,bat:1000,knight:999,shard:999,weaver:947,shade:936,mimic:675,golem:812,reaper:957,sentinel:832,dealer:836};
+ // Body axes relative to the registered floor pivot in the existing 1600x1200
+ // Idle projection. A boot/atlas pivot is not the anatomical body centre.
+ // Heights/bottoms use the visible source silhouette; x excludes long weapons.
+ // Alyssa's 2.49.1 Idle pivot translates the inspected axis by -125.496424 units.
+ const placement={
+  mc_01:{x:14.5035759688681,y:0,height:558},wisp:{x:20,y:-4,height:960},
+  beetle:{x:160,y:-1,height:973},bat:{x:40,y:-121,height:757},
+  knight:{x:200,y:0,height:958},shard:{x:20,y:8,height:807,aspect:1.12},
+  weaver:{x:140,y:-51,height:944},shade:{x:20,y:-3,height:933,aspect:1.1},
+  mimic:{x:-20,y:-3,height:673,aspect:1.55},golem:{x:140,y:-4,height:810,aspect:1.12},
+  reaper:{x:120,y:-5,height:954},sentinel:{x:30,y:1,height:830},dealer:{x:-120,y:0,height:834}
+ };
  const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>{x=clamp(x);return x*x*x*(x*(x*6-15)+10);};
  function create(options={}){
   const doc=options.document||root.document,win=doc.defaultView||root,media=win.matchMedia?.('(prefers-reduced-motion: reduce)');
@@ -91,11 +101,12 @@
    for(const c of [...actor.canvases,actor.body])if(c.width!==width||c.height!==height){c.width=width;c.height=height;}
    const element=actor.canvases[0].closest('.combatant'),id=actor.role==='player'?'mc_01':element?.dataset.enemy;
    const spec=actor.role==='player'?root.DCAnimationData?.hero:root.DCAnimationData?.actors[id],foot=spec?.floorPivot||root.DCAnimationData?.floorPivot||[800,1100];
-   actor.geometry={width:r.width,height:r.height,ratio,footX:r.width*foot[0]/1600,footY:r.height*foot[1]/1200,unit:r.width/1600,scale:(spec?.bodyHeight||bodyHeight[id]||900)/350};
+   const fit=placement[id]||{},bodySize=spec?.bodyHeight||fit.height||900,unitX=r.width/1600,unitY=r.height/1200;
+   actor.geometry={width:r.width,height:r.height,ratio,anchorX:(foot[0]+(fit.x||0))*unitX,footY:foot[1]*unitY,bodyY:(foot[1]+(fit.y||0))*unitY,unitX,unitY,scale:bodySize/300,floorScale:bodySize/350,aspect:fit.aspect||1};
    return true;
   }
   function field(actor,id){if(!actor.fields.has(id))actor.fields.set(id,id==='block'?S.create():A.create());return actor.fields.get(id);}
-  function transform(ctx,g,role){ctx.setTransform(g.ratio*g.unit,0,0,g.ratio*g.unit,g.footX*g.ratio,g.footY*g.ratio);ctx.scale((role==='enemy'?-1:1)*g.scale,g.scale);}
+  function transform(ctx,g,role,floor=false){const scale=floor?g.floorScale:g.scale;ctx.setTransform(g.ratio*g.unitX,0,0,g.ratio*g.unitY,g.anchorX*g.ratio,(floor?g.footY:g.bodyY)*g.ratio);ctx.scale((role==='enemy'?-1:1)*scale*(floor?1:g.aspect),scale);}
   function paintActor(actor,quality,profile){
    prune(actor);const stats=orderedStats(actor),active=[...stats,...['block',...barriers].filter(id=>actor.values[id]||actor.events.has(id))];
    const fading=actor.passive?.snapshot(clock).tracks.some(t=>t.weight>.001),alive=active.length>0||actor.passiveOrder.length>0||fading;
@@ -107,7 +118,7 @@
    const keep=new Set(active);for(const [id,f]of actor.fields)if(!keep.has(id)){f.destroy?.();actor.fields.delete(id);actor.phases.delete(id);}
    for(let side=0;side<2;side++){
     const ctx=contexts[side],front=side===1;ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
-    if(actor.passive&&(actor.passiveOrder.length||actor.passive.snapshot(clock).tracks.some(t=>t.weight>.001))){ctx.save();transform(ctx,g,actor.role);actor.passive.paint(ctx,clock,{quality,front});ctx.restore();}
+    if(actor.passive&&(actor.passiveOrder.length||actor.passive.snapshot(clock).tracks.some(t=>t.weight>.001))){ctx.save();transform(ctx,g,actor.role,true);actor.passive.paint(ctx,clock,{quality,front});ctx.restore();}
     body.setTransform(1,0,0,1,0,0);body.clearRect(0,0,actor.body.width,actor.body.height);body.save();transform(body,g,actor.role);
     for(const id of active){
      const event=eventAt(actor,id),age=event?clock-event.start:0;body.save();
@@ -126,7 +137,7 @@
     body.restore();
     // Body VFX fade above the feet. Only the separate Passive pass owns floor pixels.
     body.setTransform(1,0,0,1,0,0);body.globalCompositeOperation='destination-in';body.globalAlpha=1;
-    const y=g.footY*g.ratio,s=g.scale*g.unit*g.ratio,mask=body.createLinearGradient(0,y-30*s,0,y-5*s);mask.addColorStop(0,'#fff');mask.addColorStop(1,'#fff0');body.fillStyle=mask;body.fillRect(0,0,actor.body.width,actor.body.height);body.globalCompositeOperation='source-over';
+    const y=g.footY*g.ratio,s=g.scale*g.unitY*g.ratio,mask=body.createLinearGradient(0,y-30*s,0,y-5*s);mask.addColorStop(0,'#fff');mask.addColorStop(1,'#fff0');body.fillStyle=mask;body.fillRect(0,0,actor.body.width,actor.body.height);body.globalCompositeOperation='source-over';
     ctx.drawImage(actor.body,0,0);
     if(frames%6===0||!alive){const c=actor.canvases[side];c.dataset.vfxState=alive?'playing':'empty';c.dataset.vfxClock=clock.toFixed(3);c.dataset.vfxQuality=profile;c.dataset.vfxCostMs=average.toFixed(2);c.dataset.vfxFrames=String(frames);c.dataset.vfxEffects=active.join(',');c.dataset.vfxPassives=JSON.stringify(actor.passive?.snapshot(clock).tracks.filter(t=>t.weight>.001).map(t=>({id:t.id,radius:Number(t.radius.toFixed(2))}))||[]);c.dataset.vfxEvents=JSON.stringify([...actor.events.values()].flat().map(e=>({id:e.id,event:e.event})));c.dataset.vfxFloor=actor.passiveOrder.length||fading?'passive':'none';c.dataset.vfxParticles=JSON.stringify([...actor.flows].map(([id,f])=>({id,radius:f.radius,count:f.perRail*2})));}
    }

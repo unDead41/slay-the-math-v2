@@ -1,5 +1,16 @@
 # Arahan projek — Slay the Math
 
+## Current main integration authorization — 2.50.0
+
+The current explicit user request authorizes combining combat, education and
+Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
+is VALID with carried P2 findings and explicit limits; original failed commands
+and later focused/native evidence remain separate. Publication is PENDING actual
+main ref readback. This supersedes the relevant earlier branch-only boundary;
+original source pins, histories and current main owners remain. The completed
+owner pilot stays tied to source b3dc, not 2.50. [Scope, results and limits](docs/ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
 **BACA DAHULU:** Sebelum kerja lain pada mana-mana branch, baca [Master SOR terkini pada main](https://github.com/unDead41/slay-the-math-v2/blob/main/MASTER_SOR_PROJECT.md), kemudian laporan audit/handoff berkaitan, termasuk [audit dokumentasi main](docs/audits/main/LATEST.md) apabila relevan. Ikuti AUD-READ-01 dan AUD-UPDATE-01–06; jika salinan branch lama atau akses terhalang, laporkan batasannya.
 
 Fail ini dibaca bersama [indeks SOR](SOR_README.md). Jika indeks dinamakan semula kepada SOR_README.md, laraskan pautan ini semasa integrasi.
@@ -77,3 +88,10 @@ For the integrated candidate, read `docs/sor/23_MASTER_BALANCE.md` and `docs/bal
 ## Single-enemy correction — 2.29.0
 
 Ijamm explicitly requests replacing AoE/random-enemy card effects and rebalancing the affected scope only. Read `docs/balance/master/SINGLE_TARGET_2_29_0.md`. `tools/cards/single-target.cjs` adapts archived supplier data before runtime generation: Rune Sweep is one hit and Fate Storm is three hits on the same enemy, without target RNG. Preserve IDs/artwork and the two cards' historical ordinary-mode receipts; do not delete old HP/RNG evidence. Master candidate.3 uses a separate identity/save key. Other card values, enemy profiles, economy, map and question rules remain under their existing owners.
+
+
+## Map and simulation coordination — 25 October 2026
+
+Ijamm confirms **maximum three spawned subagents total**, excluding the parent, with no nested agents. This covers Master roles and Map analysts together, not three per group. Default one when sufficient. Current project/user caps override an older installed Map skill. The parent enforces the Work cap; TOML does not configure its orchestrator automatically.
+
+Read [the shared simulation protocol](docs/simulation/SIMULATION_EVIDENCE_PROTOCOL.md) and owner audits before claiming new source/context/cases. Use one collector/journal owner, preserve negative outcomes and train/validation separation, and reuse valid specialist output. [Map uses three profiles](docs/MAP_THREE_AGENT_PROTOCOL.md). Current numerical/tools/assets/save/RNG owners remain unchanged; preparation is not a campaign, training run or remote publication.

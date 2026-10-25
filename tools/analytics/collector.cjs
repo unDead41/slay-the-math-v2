@@ -20,7 +20,8 @@ function databasePath(value){
 function validateFeedback(payload,questions,versions,topics){
  if(!payload||!questions.has(payload.questionId)||!versions.has(payload.bankVersion)||payload.id!==payload.bankVersion+':'+payload.questionId)return false;
  if(payload.deleted===true)return exactKeys(payload,['id','questionId','bankVersion','deleted','updatedAt'])&&date(payload.updatedAt);
- const keys=['id','questionId','bankVersion','topic','difficulty','question','categories','comment','createdAt','updatedAt','context'];
+ const keys=['id','questionId','bankVersion','topic','difficulty','question','categories','comment','createdAt','updatedAt','context',...(payload.provenance!==undefined?['provenance']:[])];
+ if(payload.provenance!==undefined&&(!exactKeys(payload.provenance,['gameVersion','contentRevision'])||!['gameVersion','contentRevision'].every(key=>typeof payload.provenance[key]==='string'&&/^[A-Za-z0-9][A-Za-z0-9._+-]{0,99}$/.test(payload.provenance[key]))))return false;
  if(!exactKeys(payload,keys)||!date(payload.createdAt)||!date(payload.updatedAt)||payload.updatedAt<payload.createdAt||typeof payload.comment!=='string'||payload.comment.length>2000||typeof payload.question!=='string'||payload.question.length>8000||!Array.isArray(payload.categories)||payload.categories.length>7||new Set(payload.categories).size!==payload.categories.length||payload.categories.some(value=>!categories.has(value)))return false;
  const q=questions.get(payload.questionId),context=payload.context;
  const game=context?.mode==='gameplay',contextKeys=['mode','language','status','hintUsed','moreHintViewed','stepsViewed',...(game?['source']:[])];

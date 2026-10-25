@@ -2,16 +2,26 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {JSDOM}=require(process.env.DOM_QA_MODULE||'jsdom');
 const P=require('../dist/combat-vfx-passive.js'),A=require('../dist/combat-vfx-orbits.js'),S=require('../dist/combat-vfx-shield.js');
-function boot({status=false}={}){
+const animation=require('../dist/animation-data.js'),bodyReference=require('./fixtures/vfx-body-reference.json');
+const bodyRef=id=>bodyReference.actors.find(a=>a.actor===id);
+test('body landmarks bind the registered Idle projection as well as the atlas',()=>{
+ for(const ref of bodyReference.actors){
+  const spec=ref.actor==='mc_01'?animation.hero:animation.actors[ref.actor],idle=spec.animations.idle;
+  const projection={canvas:animation.canvas,sourceRect:idle.frames[0],sourcePivot:idle.pivots?.[0]||spec.sourcePivot||animation.sourcePivot,drawScale:(spec.drawScale??animation.drawScale)*(idle.scales?.[0]??1),floor:spec.floorPivot||animation.floorPivot};
+  assert.deepEqual(projection,ref.projection,ref.actor+' registration changed; remeasure the source-body reference');
+  assert.equal(idle.image,ref.source);
+ }
+});
+function boot({status=false,width=640,height=480}={}){
  const dom=new JSDOM('<dialog id="dialog"></dialog>'+['player','enemy'].map(role=>'<div class="combatant '+role+'" data-enemy="sentinel"><div class="fighter-anchor">'+['back','front'].map(side=>'<canvas class="combat-vfx-canvas" data-vfx-layer="'+side+'"></canvas>').join('')+'</div></div>').join(''),{runScripts:'outside-only',pretendToBeVisual:true});
  const w=dom.window,d=w.document,pending=new Map(),calls=[];let serial=0,now=100,motion=true,quality='full';
  w.CanvasRenderingContext2D=function(){};
  w.requestAnimationFrame=fn=>{pending.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>pending.delete(id);
- w.HTMLCanvasElement.prototype.getBoundingClientRect=()=>({width:640,height:480});
- w.HTMLCanvasElement.prototype.getContext=function(){return this.ctx||(this.ctx={canvas:this,clearRect(){},setTransform(){},scale(x,y){calls.push({id:'transform',x,y});},save(){},restore(){},fillRect(){},drawImage(){},createLinearGradient(){return{addColorStop(){}};}});};
- w.STMPassiveField={create(options){const p=P.create(options);return {...p,paint(ctx,t,opts){calls.push({id:'passive',time:t,...p.snapshot(t),...opts});}};}};
- w.STMAuraField={...A,create(){return {paint(ctx,time,id,opts){calls.push({id,time,...opts});return A.stateAt(time,id,opts);},destroy(){}};}};
- w.STMShieldField={...S,create(){return {paint(ctx,time,event,opts){calls.push({id:'block',event,time,...opts});return S.stateAt(time,event,opts);}};}};
+ w.HTMLCanvasElement.prototype.getBoundingClientRect=()=>({width,height});
+ w.HTMLCanvasElement.prototype.getContext=function(){return this.ctx||(this.ctx={canvas:this,matrix:[1,0,0,1,0,0],stack:[],clearRect(){},setTransform(...m){this.matrix=m;},scale(x,y){this.matrix[0]*=x;this.matrix[1]*=x;this.matrix[2]*=y;this.matrix[3]*=y;calls.push({id:'transform',x,y});},save(){this.stack.push([...this.matrix]);},restore(){this.matrix=this.stack.pop()||[1,0,0,1,0,0];},fillRect(){},drawImage(){},createLinearGradient(){return{addColorStop(){}};}});};
+ w.STMPassiveField={create(options){const p=P.create(options);return {...p,paint(ctx,t,opts){calls.push({id:'passive',matrix:[...ctx.matrix],time:t,...p.snapshot(t),...opts});}};}};
+ w.STMAuraField={...A,create(){return {paint(ctx,time,id,opts){calls.push({id,matrix:[...ctx.matrix],time,...opts});return A.stateAt(time,id,opts);},destroy(){}};}};
+ w.STMShieldField={...S,create(){return {paint(ctx,time,event,opts){calls.push({id:'block',matrix:[...ctx.matrix],event,time,...opts});return S.stateAt(time,event,opts);}};}};
  w.eval(fs.readFileSync(path.join(__dirname,'../dist/combat-vfx.js'),'utf8'));
  if(status){w.DCCombatStatus=require('../dist/combat-status.js');w.eval(fs.readFileSync(path.join(__dirname,'../dist/status-vfx.js'),'utf8'));}
  const v=(status?w.DCStatusVFX:w.DCCombatVFX).create({document:d,motion:()=>motion,quality:()=>quality});
@@ -19,6 +29,33 @@ function boot({status=false}={}){
 }
 function state(values={},passives=[]){return {identity:'battle-1',seq:1,actors:{player:{values,equipped:passives.map(p=>p.source),passives},enemy:{values:{},equipped:[],passives:[]}}};}
 const front=f=>f.d.querySelector('.player [data-vfx-layer=front]');
+
+test('live materials center on Alyssa and Prism Guard bodies instead of the left registration pivot',()=>{
+ const f=boot(),s=state({block:6});s.actors.enemy.values={block:8};try{
+  f.w.DCAnimationData=require('../dist/animation-data.js');f.d.querySelector('.enemy').dataset.enemy='beetle';f.v.mount(s);f.advance(80);
+  const positions=[...new Set(f.calls.filter(c=>c.id==='block').map(c=>Math.round(c.matrix[4])))];
+  assert.deepEqual(positions,['mc_01','beetle'].map(id=>Math.round(bodyRef(id).bodyAxisX*640/1600)),'body fields must follow the independently measured current Idle registration');
+ }finally{f.close();}
+});
+
+test('a floating Rune Bat shield follows its visible body above the floor',()=>{
+ const f=boot(),s=state();s.actors.enemy.values={block:5};try{
+  f.w.DCAnimationData=require('../dist/animation-data.js');f.d.querySelector('.enemy').dataset.enemy='bat';f.v.mount(s);f.advance(80);
+  const m=f.calls.find(c=>c.id==='block').matrix,center=m[5]-145*m[3];
+  assert.ok(Math.abs(center-240.2)<8,'actual opaque Idle body spans y222..979, not the ground at y1100');
+ }finally{f.close();}
+});
+
+test('body and Passive transforms use the same source projection as a stretched actor canvas',()=>{
+ const f=boot({height:360}),a={id:4,source:'armor'};try{
+  f.w.DCAnimationData=require('../dist/animation-data.js');f.v.mount(state({block:5},[a]));f.advance(80);
+  const shield=f.calls.find(c=>c.id==='block').matrix,seal=f.calls.find(c=>c.id==='passive').matrix;
+  const axis=bodyRef('mc_01').bodyAxisX*640/1600;
+  assert.ok(Math.abs(shield[4]-axis)<.01);assert.ok(Math.abs(shield[5]-330)<.01);
+  assert.ok(Math.abs(shield[0]/shield[3]-4/3)<.001,'each axis must follow its displayed canvas dimension');
+  assert.ok(Math.abs(seal[4]-axis)<.01&&Math.abs(seal[5]-330)<.01,'the Passive stays centered between the registered boots');
+ }finally{f.close();}
+});
 
 test('an unrelated committed action cannot cancel a Shield formation already on screen',()=>{
  const E=require('../dist/engine.js'),F=require('../tools/dev/fixtures.js'),f=boot({status:true});
@@ -96,7 +133,9 @@ test('a formed Weak chain continues its orbit without jumping at the active-loop
 test('new model registration owns VFX body size instead of the retired poster measurement',()=>{
  const f=boot();try{
   f.w.DCAnimationData={hero:{bodyHeight:700},actors:{}};f.v.mount(state({block:5}));f.advance(100);
-  assert.ok(f.calls.some(c=>c.id==='transform'&&c.x===2&&c.y===2),'registry height must control the material coordinate system');
+  const large=f.calls.filter(c=>c.id==='block').at(-1).matrix[3];
+  f.w.DCAnimationData.hero.bodyHeight=350;f.advance(100);const small=f.calls.filter(c=>c.id==='block').at(-1).matrix[3];
+  assert.ok(Math.abs(large/small-2)<.000001,'doubling registry body height must double the projected material height');
  }finally{f.close();}
 });
 

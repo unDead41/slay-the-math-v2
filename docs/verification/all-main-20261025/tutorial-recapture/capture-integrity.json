@@ -1,0 +1,3974 @@
+{
+  "sourceCommit": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194",
+  "gameVersion": "2.50.0",
+  "initialSourceWorkingTreeDirty": false,
+  "capturedImages": 98,
+  "languageCounts": {
+    "en": 49,
+    "ms": 49
+  },
+  "uniqueShotIds": 49,
+  "uniqueInputDigests": [
+    "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4"
+  ],
+  "imageBytes": 6014066,
+  "manifestSha256": "d7515494afd6e0669029dcd9a23271fcf03755d7752f1c608bd6a060759d9287",
+  "runtimeCoreDelta": [],
+  "issues": [],
+  "groupFailures": 0,
+  "actualChangedPaths": 41,
+  "unexpectedChangedPaths": [],
+  "oldProductionImageMismatches": [],
+  "appSha256": "79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013",
+  "images": [
+    {
+      "id": "loading",
+      "language": "en",
+      "file": "tutorial-shot-loading-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 17730,
+      "sha256": "fb62dbe52007c1f433370059ac2c15349849437020c37e20b0afae92e402d022",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#resource-loader",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "language": "en",
+      "file": "tutorial-shot-menu-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 185556,
+      "sha256": "b036a3f4996a35acad905043db7b01711e881c717f65f8bfc822d8c35b403a41",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "id": "modes",
+      "language": "en",
+      "file": "tutorial-shot-modes-en.webp",
+      "width": 560,
+      "height": 703,
+      "bytes": 33422,
+      "sha256": "0362a5a1d7c114fc54eae9734b4a328a9d38b7a80f22d53fb2cbde9209940ccb",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 440,
+        "y": 148.984375,
+        "width": 560,
+        "height": 702.015625
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "language": "en",
+      "file": "tutorial-shot-settings-en.webp",
+      "width": 560,
+      "height": 856,
+      "bytes": 33602,
+      "sha256": "cebafd84a1682c00dd8a6c8d73d96a3f761ab01d6879d57ec398e80cfc8ce4cb",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 440,
+        "y": 72.859375,
+        "width": 560,
+        "height": 854.28125
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        }
+      ]
+    },
+    {
+      "id": "sound",
+      "language": "en",
+      "file": "tutorial-shot-sound-en.webp",
+      "width": 560,
+      "height": 850,
+      "bytes": 21726,
+      "sha256": "88dff3ae1985721347f44f9836496c09ffcb6b92b790c36a8ee29a338a347ac9",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 440,
+        "y": 75.03125,
+        "width": 560,
+        "height": 849.921875
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        }
+      ]
+    },
+    {
+      "id": "collection",
+      "language": "en",
+      "file": "tutorial-shot-collection-en.webp",
+      "width": 420,
+      "height": 987,
+      "bytes": 48116,
+      "sha256": "9419073d6c484df64be679c4300f28cb57aa3cee62e1ed94a8d78c76f62473eb",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": ".collection-detail",
+      "crop": {
+        "x": 950.515625,
+        "y": 287.578125,
+        "width": 418.671875,
+        "height": 986.140625
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        }
+      ]
+    },
+    {
+      "id": "collection-artifacts",
+      "language": "en",
+      "file": "tutorial-shot-collection-artifacts-en.webp",
+      "width": 1384,
+      "height": 976,
+      "bytes": 60754,
+      "sha256": "88495764b63af532fdc2ffca59d104833dfb20c2961ca7c563570634a9616423",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 28.796875,
+        "y": 12.5,
+        "width": 1382.390625,
+        "height": 975
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "language": "en",
+      "file": "tutorial-shot-report-en.webp",
+      "width": 920,
+      "height": 970,
+      "bytes": 36930,
+      "sha256": "bca8a662090d50492ed5c61966dea8d03a57b79554e6c3120ed1624f88ebd891",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 260,
+        "y": 15,
+        "width": 920,
+        "height": 970
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=analytics]"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "language": "en",
+      "file": "tutorial-shot-learning-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 71780,
+      "sha256": "5e8895e21eb55f8c235db9106ef2c0d40f689039abf1e236a102d9ba20bfe632",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=analytics]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=education-practice]"
+        }
+      ]
+    },
+    {
+      "id": "learning-help",
+      "language": "en",
+      "file": "tutorial-shot-learning-help-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 56170,
+      "sha256": "b855e7163dba33ac7759e75bbe62cdc76dcf33fe3e9476b4a36feb2d12ebb792",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "en"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=analytics]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=education-practice]"
+        },
+        {
+          "frameClick": "#hint-tab"
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "language": "en",
+      "file": "tutorial-shot-map-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 135942,
+      "sha256": "52452fceb124feee4e1fca576fac328234f2577a60a8adab429645390a2aaccb",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "map",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "map",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "140a7c4c4984f08cabedbd3f2be9caefdaee96dc77bead43e520ec4987773539"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "language": "en",
+      "file": "tutorial-shot-combat-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 146534,
+      "sha256": "c123ec1591a6ad98a223b30871ffb1163e57c6e6f897a3fbc722fbc541cd7b29",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "intent",
+      "language": "en",
+      "file": "tutorial-shot-intent-en.webp",
+      "width": 462,
+      "height": 599,
+      "bytes": 29132,
+      "sha256": "29ad56b552eb8b460b95d2b693bc551d4571bb24b059d6a9ca39527820293d12",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".enemy",
+      "crop": {
+        "x": 892.8125,
+        "y": 61,
+        "width": 460.796875,
+        "height": 599
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "language": "en",
+      "file": "tutorial-shot-resources-en.webp",
+      "width": 1440,
+      "height": 340,
+      "bytes": 57630,
+      "sha256": "ce4b8625fa817063e17fecf9279e24a9d2227148521219e2e7af6898941e5a26",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".combat-dock",
+      "crop": {
+        "x": 0,
+        "y": 660,
+        "width": 1440,
+        "height": 340
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "language": "en",
+      "file": "tutorial-shot-card-en.webp",
+      "width": 162,
+      "height": 240,
+      "bytes": 14390,
+      "sha256": "440bdf0e499895c4d4cc32ebc5aa8e88554808a4b19a6d5e6133207165af759b",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": "[data-action=play][data-id=\"c20\"]",
+      "crop": {
+        "x": 486.79254150390625,
+        "y": 706.3505249023438,
+        "width": 160.27142333984375,
+        "height": 239.27264404296875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "block",
+      "language": "en",
+      "file": "tutorial-shot-block-en.webp",
+      "width": 425,
+      "height": 183,
+      "bytes": 5662,
+      "sha256": "4e7de942be10c92c6076eb2c9a1b14cb552e020fdc09adeb1f7df9b24c1cf1a0",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".player .fighter-panel",
+      "crop": {
+        "x": 104.8203125,
+        "y": 479,
+        "width": 423.921875,
+        "height": 183
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        }
+      ]
+    },
+    {
+      "id": "attack-block",
+      "language": "en",
+      "file": "tutorial-shot-attack-block-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 128982,
+      "sha256": "49090b6a5eb4750bbf127e8f0d0776558ebe88dc562b7710dadf8392bbd7eeaa",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        }
+      ]
+    },
+    {
+      "id": "attack",
+      "language": "en",
+      "file": "tutorial-shot-attack-en.webp",
+      "width": 425,
+      "height": 54,
+      "bytes": 2924,
+      "sha256": "8c862a3d5f5a7cffeb161a196e7b367593d724297243f16303d57fc8cf348c47",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".enemy .fighter-panel",
+      "crop": {
+        "x": 911.2421875,
+        "y": 477,
+        "width": 423.921875,
+        "height": 54
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "language": "en",
+      "file": "tutorial-shot-turn-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 151150,
+      "sha256": "2c348bec3e4a020e1b92625698e7162bed0e20a680fe4235d24ae3a86b56db76",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        },
+        {
+          "click": "[data-action=end-turn]"
+        }
+      ]
+    },
+    {
+      "id": "draw",
+      "language": "en",
+      "file": "tutorial-shot-draw-en.webp",
+      "width": 1354,
+      "height": 712,
+      "bytes": 100886,
+      "sha256": "d53bf427aa8990c04c5fb0140e55a7c1c804286dc979877da481642648e4e498",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 144.671875,
+        "width": 1353.59375,
+        "height": 710.640625
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "de0a2a7ab2e64be6be98ad8d81fe2c8bbe271936d19c137c94b79242990e06f6"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        },
+        {
+          "click": "[data-action=end-turn]"
+        },
+        {
+          "click": "[data-action=pile][data-zone=draw]"
+        }
+      ]
+    },
+    {
+      "id": "exhaust",
+      "language": "en",
+      "file": "tutorial-shot-exhaust-en.webp",
+      "width": 1354,
+      "height": 966,
+      "bytes": 75946,
+      "sha256": "632e18c847291859de18287ef9501351329862030c14b6c32bcbbd1354b4bbd1",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "exhaust",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 17.5,
+        "width": 1353.59375,
+        "height": 965
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "2d7c40d7f5d850c332ed2e0efd9d232a78ab8488f88022991f2d98c50394ed99"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c13\"]"
+        },
+        {
+          "click": "[data-action=pile][data-zone=exhaust]"
+        }
+      ]
+    },
+    {
+      "id": "predict",
+      "language": "en",
+      "file": "tutorial-shot-predict-en.webp",
+      "width": 1000,
+      "height": 976,
+      "bytes": 40202,
+      "sha256": "8f12cfaa217e49241f7b06bcf134842abd3c2a0a5afaf3e22a9743f17c7b75db",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 12,
+        "width": 1000,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "d0791504b84f965d8ee8bd7ae4907afe764ae5203ffe9139ed90cc103bebf5cd"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "language": "en",
+      "file": "tutorial-shot-help-en.webp",
+      "width": 1000,
+      "height": 976,
+      "bytes": 40440,
+      "sha256": "1077f198970524df1bdff0779dc1a7a57c2041e6c0208c5e6963caac26492602",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 12,
+        "width": 1000,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "d0791504b84f965d8ee8bd7ae4907afe764ae5203ffe9139ed90cc103bebf5cd"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        }
+      ]
+    },
+    {
+      "id": "retry",
+      "language": "en",
+      "file": "tutorial-shot-retry-en.webp",
+      "width": 1000,
+      "height": 976,
+      "bytes": 35520,
+      "sha256": "45dd19cda2f5ed1ee732f996751f22a46d98b01202ae75d381145a2142f0ff81",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 12,
+        "width": 1000,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "d0791504b84f965d8ee8bd7ae4907afe764ae5203ffe9139ed90cc103bebf5cd"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": false
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-bd7078ab\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=moreHint]"
+        }
+      ]
+    },
+    {
+      "id": "predict-result",
+      "language": "en",
+      "file": "tutorial-shot-predict-result-en.webp",
+      "width": 1000,
+      "height": 910,
+      "bytes": 37544,
+      "sha256": "e6d7a02ad5fbf9bdc46e6c067eafad64be71464738e71f744436db57c893ef79",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 45.078125,
+        "width": 1000,
+        "height": 909.84375
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "d0791504b84f965d8ee8bd7ae4907afe764ae5203ffe9139ed90cc103bebf5cd"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": false
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-bd7078ab\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=moreHint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": true
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-d85585b7\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=result]"
+        }
+      ]
+    },
+    {
+      "id": "report-problem",
+      "language": "en",
+      "file": "tutorial-shot-report-problem-en.webp",
+      "width": 620,
+      "height": 976,
+      "bytes": 42476,
+      "sha256": "08390978d8245747fc09f1f12de87fbb2cb58635c34e7593c9ac187128a105b2",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#question-report-dialog",
+      "crop": {
+        "x": 410,
+        "y": 12,
+        "width": 620,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "d0791504b84f965d8ee8bd7ae4907afe764ae5203ffe9139ed90cc103bebf5cd"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": false
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-bd7078ab\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=moreHint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": true
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-d85585b7\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=result]"
+        },
+        {
+          "click": "[data-action=question-report]"
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "language": "en",
+      "file": "tutorial-shot-focus-en.webp",
+      "width": 1440,
+      "height": 340,
+      "bytes": 57716,
+      "sha256": "6091e357813a2fc1bfe416992558f8210662ac74e0cdcc708091363aa7171b6e",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "focus",
+      "selector": ".combat-dock",
+      "crop": {
+        "x": 0,
+        "y": 660,
+        "width": 1440,
+        "height": 340
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "f442dd97dbb1ab19661d5ace286e63faebd6b835e075cb8eb657a54d9c89237a"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "focus-armed",
+      "language": "en",
+      "file": "tutorial-shot-focus-armed-en.webp",
+      "width": 1440,
+      "height": 340,
+      "bytes": 61986,
+      "sha256": "aae7bf9a3c792d1acd0ee958baba91dca7cbfd4ef647e49a6488a29f7ad1bf71",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "focus",
+      "selector": ".combat-dock",
+      "crop": {
+        "x": 0,
+        "y": 660,
+        "width": 1440,
+        "height": 340
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "f442dd97dbb1ab19661d5ace286e63faebd6b835e075cb8eb657a54d9c89237a"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=focus]"
+        }
+      ]
+    },
+    {
+      "id": "focus-hit",
+      "language": "en",
+      "file": "tutorial-shot-focus-hit-en.webp",
+      "width": 425,
+      "height": 54,
+      "bytes": 2880,
+      "sha256": "b180870af2aa9faaac48fc005b94f049f786b7e3092d8322b402f953aa11d0a3",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "focus",
+      "selector": ".enemy .fighter-panel",
+      "crop": {
+        "x": 911.2421875,
+        "y": 479,
+        "width": 423.921875,
+        "height": 54
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "f442dd97dbb1ab19661d5ace286e63faebd6b835e075cb8eb657a54d9c89237a"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=focus]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        }
+      ]
+    },
+    {
+      "id": "passive",
+      "language": "en",
+      "file": "tutorial-shot-passive-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 143336,
+      "sha256": "4c2759e4d3a76a4ca3b3b79e3a015c2d65563fe9c0e98dd61e00120bfc2b8195",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "passive",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "b4c725a9bb16d06a3099275d86764edca9b2a4d0ad5ea2a124af1cfd02e96a03"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c16\"]"
+        }
+      ]
+    },
+    {
+      "id": "passive-detail",
+      "language": "en",
+      "file": "tutorial-shot-passive-detail-en.webp",
+      "width": 700,
+      "height": 520,
+      "bytes": 34692,
+      "sha256": "e5bf3844fe348d37f3a542a6f1c6cac7c1de36b81917486a25c03d818272f809",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "passive",
+      "selector": "#dialog",
+      "crop": {
+        "x": 370,
+        "y": 250.546875,
+        "width": 700,
+        "height": 518.890625
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "b4c725a9bb16d06a3099275d86764edca9b2a4d0ad5ea2a124af1cfd02e96a03"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c16\"]"
+        },
+        {
+          "click": "[data-action=passive-details]"
+        }
+      ]
+    },
+    {
+      "id": "statuses",
+      "language": "en",
+      "file": "tutorial-shot-statuses-en.webp",
+      "width": 462,
+      "height": 599,
+      "bytes": 43432,
+      "sha256": "57d085e93bd27a566ec3c6de4b8ee002958be9c66cad019e606a8d552b508d5b",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "statuses",
+      "selector": ".player",
+      "crop": {
+        "x": 86.390625,
+        "y": 61,
+        "width": 460.796875,
+        "height": 599
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "f8304755282ca4c259a4abe6618587bb5d0cc2990f746456adba53097d41fc99"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "status-detail",
+      "language": "en",
+      "file": "tutorial-shot-status-detail-en.webp",
+      "width": 700,
+      "height": 394,
+      "bytes": 23428,
+      "sha256": "2b357125624cb0b16cb78d8afa5a11696e59959097f5122c9c1b23474197ef0e",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "statuses",
+      "selector": "#dialog",
+      "crop": {
+        "x": 370,
+        "y": 303.953125,
+        "width": 700,
+        "height": 392.078125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "f8304755282ca4c259a4abe6618587bb5d0cc2990f746456adba53097d41fc99"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": ".status-overview-trigger[data-who=player]"
+        },
+        {
+          "click": "#dialog [data-id=weak]"
+        }
+      ]
+    },
+    {
+      "id": "rewards",
+      "language": "en",
+      "file": "tutorial-shot-rewards-en.webp",
+      "width": 647,
+      "height": 526,
+      "bytes": 43066,
+      "sha256": "52a7104693c8baad8c70af7a9a9ff0a40b68b73ca4cf07681d3461d100e077ef",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rewards",
+      "selector": ".reward-main",
+      "crop": {
+        "x": 706.234375,
+        "y": 297.1875,
+        "width": 646,
+        "height": 524.859375
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "reward",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "fad94b610cde35ee0e409f87bf7aa3ac411763e660fb8d8f44d8c2111d3fc49c"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "reward-taken",
+      "language": "en",
+      "file": "tutorial-shot-reward-taken-en.webp",
+      "width": 1354,
+      "height": 966,
+      "bytes": 151546,
+      "sha256": "62c44b42affcedb250b7357a98037519994576513d1fe42829f50c1a565bad62",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rewards",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 17.5,
+        "width": 1353.59375,
+        "height": 965
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "reward",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "fad94b610cde35ee0e409f87bf7aa3ac411763e660fb8d8f44d8c2111d3fc49c"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-reward]"
+        },
+        {
+          "click": "[data-action=reward]"
+        },
+        {
+          "click": "[data-action=deck]"
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "language": "en",
+      "file": "tutorial-shot-shop-en.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 59724,
+      "sha256": "ca25ed82f6a65d87500ca648f543c16473649955f965e20082681dddeb91ed80",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d7e8cd066cb42a7cb9f9fc62d9e297cfd300b3437a267b5a1921e73695ddcb7e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        }
+      ]
+    },
+    {
+      "id": "shop-bought",
+      "language": "en",
+      "file": "tutorial-shot-shop-bought-en.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 58614,
+      "sha256": "fd6f810f859ff5bfff25ecdd4ff5252d352f90f17b7d30151776d67f216814ab",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d7e8cd066cb42a7cb9f9fc62d9e297cfd300b3437a267b5a1921e73695ddcb7e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        },
+        {
+          "click": "[data-action=buy-card]"
+        }
+      ]
+    },
+    {
+      "id": "shop-artifacts",
+      "language": "en",
+      "file": "tutorial-shot-shop-artifacts-en.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 42594,
+      "sha256": "74e7e1e97054c38ffc1161abcf3878ced53a4706ea072236ecb6b94479e30970",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d7e8cd066cb42a7cb9f9fc62d9e297cfd300b3437a267b5a1921e73695ddcb7e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        },
+        {
+          "click": "[data-action=buy-card]"
+        },
+        {
+          "click": "[data-action=shop-tab][data-id=artifacts]"
+        }
+      ]
+    },
+    {
+      "id": "shop-remove",
+      "language": "en",
+      "file": "tutorial-shot-shop-remove-en.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 22044,
+      "sha256": "e1ef12f8ddfbfc64ad6be6ee3b0fe9397cecb82e3d2036ef5e940677a768ad78",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d7e8cd066cb42a7cb9f9fc62d9e297cfd300b3437a267b5a1921e73695ddcb7e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        },
+        {
+          "click": "[data-action=buy-card]"
+        },
+        {
+          "click": "[data-action=shop-tab][data-id=artifacts]"
+        },
+        {
+          "click": "[data-action=shop-tab][data-id=remove]"
+        }
+      ]
+    },
+    {
+      "id": "rest",
+      "language": "en",
+      "file": "tutorial-shot-rest-en.webp",
+      "width": 535,
+      "height": 682,
+      "bytes": 20166,
+      "sha256": "d42cbdd28a39b0f2b8551be33a6c4bbd8877baf2186b34610c3611dc0a706427",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rest",
+      "selector": ".room-panel",
+      "crop": {
+        "x": 862.15625,
+        "y": 219.21875,
+        "width": 534.65625,
+        "height": 680.796875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "camp",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "4a59a832cf614679c6f634b7e8c8ccbe3f223be295b08b2f2dbbdfc752c3ae4c"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "rest-upgrade",
+      "language": "en",
+      "file": "tutorial-shot-rest-upgrade-en.webp",
+      "width": 1354,
+      "height": 930,
+      "bytes": 166640,
+      "sha256": "21795bb525dcbdade232684e747bff27b62159218807261bb1e803e7d8f5f97e",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rest",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 35.15625,
+        "width": 1353.59375,
+        "height": 929.671875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "camp",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "4a59a832cf614679c6f634b7e8c8ccbe3f223be295b08b2f2dbbdfc752c3ae4c"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-rest][data-value=upgrade]"
+        },
+        {
+          "click": "[data-action=upgrade]"
+        }
+      ]
+    },
+    {
+      "id": "mystery",
+      "language": "en",
+      "file": "tutorial-shot-mystery-en.webp",
+      "width": 739,
+      "height": 750,
+      "bytes": 36044,
+      "sha256": "a8a16fcb313828b1e112fcf0e241648e0284b2620ba3350dfa313d14ca1cb109",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "mystery",
+      "selector": ".mystery-panel",
+      "crop": {
+        "x": 658.125,
+        "y": 207.734375,
+        "width": 738.6875,
+        "height": 749.078125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "event",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "6fbc35acc1b86f1208c2e9e321a79cb03d41ffcfd3e22b2dadd62803ba45fcc8"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "mystery-question",
+      "language": "en",
+      "file": "tutorial-shot-mystery-question-en.webp",
+      "width": 739,
+      "height": 750,
+      "bytes": 39090,
+      "sha256": "c51c489093684d1c0c213af5990333fbee78745c18b59a0a40371272e81726fe",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "mystery",
+      "selector": ".mystery-panel",
+      "crop": {
+        "x": 658.125,
+        "y": 207.734375,
+        "width": 738.6875,
+        "height": 749.078125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "event",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "6fbc35acc1b86f1208c2e9e321a79cb03d41ffcfd3e22b2dadd62803ba45fcc8"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=mystery-start]"
+        }
+      ]
+    },
+    {
+      "id": "boss",
+      "language": "en",
+      "file": "tutorial-shot-boss-en.webp",
+      "width": 232,
+      "height": 62,
+      "bytes": 3846,
+      "sha256": "6c5ceb6ae1031b44a6bd661138e863a49321e29c2b2af6db75f2e1ae48c8303e",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "boss",
+      "selector": ".seals",
+      "crop": {
+        "x": 604.796875,
+        "y": 480,
+        "width": 230.390625,
+        "height": 61.75
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "06b3e08dfbaa198efaf4e758683be95ad53052bf2a2f662a31cb910bbe196fb9"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "boss-open",
+      "language": "en",
+      "file": "tutorial-shot-boss-open-en.webp",
+      "width": 232,
+      "height": 62,
+      "bytes": 3838,
+      "sha256": "b17d4ab4e4f955b6176aa2b13286fd307013a23e06429618272c8e44e74a891d",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "boss",
+      "selector": ".seals",
+      "crop": {
+        "x": 604.796875,
+        "y": 480,
+        "width": 230.390625,
+        "height": 61.75
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "06b3e08dfbaa198efaf4e758683be95ad53052bf2a2f662a31cb910bbe196fb9"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "question": "SET-017",
+          "correct": true
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"SET-017-choice-9400f1b2\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        }
+      ]
+    },
+    {
+      "id": "master",
+      "language": "en",
+      "file": "tutorial-shot-master-en.webp",
+      "width": 756,
+      "height": 857,
+      "bytes": 63138,
+      "sha256": "e2d1517b34db11518d0349df38c204fc5c8f862415178e9188db4b9938b19a8f",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "master",
+      "selector": ".artifact-choice-panel",
+      "crop": {
+        "x": 627.25,
+        "y": 135.59375,
+        "width": 755.140625,
+        "height": 855.875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "master",
+            "seed": 7,
+            "mode": "challenge",
+            "sha256": "4fff6d70e7a209066303cafcabdc78d0fe6f8415e060dbddbd808611c2bb964e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-artifact]"
+        }
+      ]
+    },
+    {
+      "id": "artifact-question",
+      "language": "en",
+      "file": "tutorial-shot-artifact-question-en.webp",
+      "width": 796,
+      "height": 808,
+      "bytes": 40516,
+      "sha256": "40d082399057910d4c88437c6d3ce52fbeb02fc25289c85aac868302c180069c",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "master",
+      "selector": ".education-panel",
+      "crop": {
+        "x": 587.515625,
+        "y": 135.59375,
+        "width": 794.875,
+        "height": 806.8125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "master",
+            "seed": 7,
+            "mode": "challenge",
+            "sha256": "4fff6d70e7a209066303cafcabdc78d0fe6f8415e060dbddbd808611c2bb964e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-artifact]"
+        },
+        {
+          "click": "[data-action=claim-artifact]"
+        }
+      ]
+    },
+    {
+      "id": "artifact-result",
+      "language": "en",
+      "file": "tutorial-shot-artifact-result-en.webp",
+      "width": 796,
+      "height": 808,
+      "bytes": 36284,
+      "sha256": "1fde02fc460f36774367628cf7f4aba4d1b0bfd6510248b5fe22ad5710ee83ae",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "master",
+      "selector": ".education-panel",
+      "crop": {
+        "x": 587.515625,
+        "y": 135.59375,
+        "width": 794.875,
+        "height": 806.8125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "master",
+            "seed": 7,
+            "mode": "challenge",
+            "sha256": "4fff6d70e7a209066303cafcabdc78d0fe6f8415e060dbddbd808611c2bb964e"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-artifact]"
+        },
+        {
+          "click": "[data-action=claim-artifact]"
+        },
+        {
+          "click": "[data-action=education-select][data-id=\"SET-017-choice-9400f1b2\"]"
+        },
+        {
+          "click": "[data-action=education-check]"
+        },
+        {
+          "click": "[data-question-tab=result]"
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "language": "en",
+      "file": "tutorial-shot-results-en.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 157872,
+      "sha256": "5b607493279fc476d2b8d8b2372ce804db4bb24ced122e3b9f7c00a5aaef08e2",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "results",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "victory",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d464265790e845a33c0d534f2f3e464ab29db4b5fe4a763e7a5e7c462369c597"
+          },
+          "language": "en"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "loading",
+      "language": "ms",
+      "file": "tutorial-shot-loading-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 20782,
+      "sha256": "c5b46388bbcd5a0869d22e049e2d7ce848727277dfb704d3193b701db2e4049a",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#resource-loader",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "language": "ms",
+      "file": "tutorial-shot-menu-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 188044,
+      "sha256": "2d61dfec4ce97c45e29a1f1a313ca5919a20b77186e883c252845765d6b8628f",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        }
+      ]
+    },
+    {
+      "id": "modes",
+      "language": "ms",
+      "file": "tutorial-shot-modes-ms.webp",
+      "width": 560,
+      "height": 744,
+      "bytes": 40996,
+      "sha256": "55e2f76d4158a203647e58b56a171e4d055bc1ca731e15fe04a47d88ce3d2f68",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 440,
+        "y": 128.046875,
+        "width": 560,
+        "height": 743.90625
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "language": "ms",
+      "file": "tutorial-shot-settings-ms.webp",
+      "width": 560,
+      "height": 900,
+      "bytes": 38476,
+      "sha256": "c6efcdba2e1aac9e52935a8a6b54b37aa90bbec6c24e399d4c2f8ccfdbcf11c7",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 440,
+        "y": 50.46875,
+        "width": 560,
+        "height": 899.0625
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        }
+      ]
+    },
+    {
+      "id": "sound",
+      "language": "ms",
+      "file": "tutorial-shot-sound-ms.webp",
+      "width": 560,
+      "height": 850,
+      "bytes": 24014,
+      "sha256": "c6b6f2ae359735df9af58175548be2364c3eb45ed16b4b54e104ff2c82417659",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 440,
+        "y": 75.03125,
+        "width": 560,
+        "height": 849.921875
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        }
+      ]
+    },
+    {
+      "id": "collection",
+      "language": "ms",
+      "file": "tutorial-shot-collection-ms.webp",
+      "width": 420,
+      "height": 1031,
+      "bytes": 48908,
+      "sha256": "9f6fdbb79fcc4ae355d8733c4983553490db7ddb16730eb52a5a1b7564562a33",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": ".collection-detail",
+      "crop": {
+        "x": 950.515625,
+        "y": 287.578125,
+        "width": 418.671875,
+        "height": 1029.640625
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        }
+      ]
+    },
+    {
+      "id": "collection-artifacts",
+      "language": "ms",
+      "file": "tutorial-shot-collection-artifacts-ms.webp",
+      "width": 1384,
+      "height": 976,
+      "bytes": 61110,
+      "sha256": "a6896d9f07ec0cdd70f3b17979d9e8ea80a6040c1552081516741b8201050515",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 28.796875,
+        "y": 12.5,
+        "width": 1382.390625,
+        "height": 975
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "language": "ms",
+      "file": "tutorial-shot-report-ms.webp",
+      "width": 920,
+      "height": 970,
+      "bytes": 40262,
+      "sha256": "09de5024b23e333033515c92c55ad6f5eaa289eb2f47ff62036be720c900e623",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": "#dialog",
+      "crop": {
+        "x": 260,
+        "y": 15,
+        "width": 920,
+        "height": 970
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=analytics]"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "language": "ms",
+      "file": "tutorial-shot-learning-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 86960,
+      "sha256": "070fbbea8163e9378a57e2458780ec1a380de64d158c473bde9315598ee54a86",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=analytics]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=education-practice]"
+        }
+      ]
+    },
+    {
+      "id": "learning-help",
+      "language": "ms",
+      "file": "tutorial-shot-learning-help-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 66648,
+      "sha256": "d8f410e7dc3ec9e9531df28372a9044936ce06fc9ad985999ca6356f1dd9a7d8",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "menu",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": "Main Menu",
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=new]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=saves]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=music]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=library]"
+        },
+        {
+          "click": "[data-action=collection-tab][data-kind=artifacts]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=analytics]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        },
+        {
+          "click": "[data-action=education-practice]"
+        },
+        {
+          "frameClick": "#hint-tab"
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "language": "ms",
+      "file": "tutorial-shot-map-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 140148,
+      "sha256": "3fe8d231014dc46629a0ede7051a4926661ae414cd993b03f3ab33d95204f0ef",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "map",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "map",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "43b4c759faec57ce363fc12403a930263f087903e713822d3d29b2a421c6083c"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "language": "ms",
+      "file": "tutorial-shot-combat-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 149888,
+      "sha256": "8cd565df6bacde440df910edb58fac542dc69635d9afa8f08a3adf61ee927547",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "intent",
+      "language": "ms",
+      "file": "tutorial-shot-intent-ms.webp",
+      "width": 462,
+      "height": 599,
+      "bytes": 29214,
+      "sha256": "896e865b3cc046470c290cd9b7e90aa23c5928b0d88ba2094aab00b3b8c9f302",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".enemy",
+      "crop": {
+        "x": 892.8125,
+        "y": 61,
+        "width": 460.796875,
+        "height": 599
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "language": "ms",
+      "file": "tutorial-shot-resources-ms.webp",
+      "width": 1440,
+      "height": 340,
+      "bytes": 59390,
+      "sha256": "7416ad0fe1706ca5b0bb40660d8a1fea352c74f4dc8553f551320946a9cf6db4",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".combat-dock",
+      "crop": {
+        "x": 0,
+        "y": 660,
+        "width": 1440,
+        "height": 340
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "language": "ms",
+      "file": "tutorial-shot-card-ms.webp",
+      "width": 162,
+      "height": 240,
+      "bytes": 14346,
+      "sha256": "d0377a1c80e8fe6fdf727a05022a09e47afd6bc3ce84fc43a9af56adb6c57cd3",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": "[data-action=play][data-id=\"c20\"]",
+      "crop": {
+        "x": 486.79254150390625,
+        "y": 706.3505249023438,
+        "width": 160.27142333984375,
+        "height": 239.27264404296875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "block",
+      "language": "ms",
+      "file": "tutorial-shot-block-ms.webp",
+      "width": 425,
+      "height": 183,
+      "bytes": 5778,
+      "sha256": "66971a027ad97eff95ced3ea7567ad31fd36aeaea9731291b71e45c2260f771e",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".player .fighter-panel",
+      "crop": {
+        "x": 104.8203125,
+        "y": 479,
+        "width": 423.921875,
+        "height": 183
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        }
+      ]
+    },
+    {
+      "id": "attack-block",
+      "language": "ms",
+      "file": "tutorial-shot-attack-block-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 131420,
+      "sha256": "b1b566768a72c2e7b595f8241c70baac5cf3d188739bfaee5afb43ccbecdf69c",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        }
+      ]
+    },
+    {
+      "id": "attack",
+      "language": "ms",
+      "file": "tutorial-shot-attack-ms.webp",
+      "width": 425,
+      "height": 54,
+      "bytes": 2926,
+      "sha256": "92408bef98f0e5e0db81ad98bb42aabfcb153860aa047b63f4fb41b89d7ac6ae",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": ".enemy .fighter-panel",
+      "crop": {
+        "x": 911.2421875,
+        "y": 477,
+        "width": 423.921875,
+        "height": 54
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "language": "ms",
+      "file": "tutorial-shot-turn-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 154382,
+      "sha256": "a46bdbd880fec16d71e11ffd7c276686d7625f35af52f40a6c6f7a66a9a190a0",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        },
+        {
+          "click": "[data-action=end-turn]"
+        }
+      ]
+    },
+    {
+      "id": "draw",
+      "language": "ms",
+      "file": "tutorial-shot-draw-ms.webp",
+      "width": 1354,
+      "height": 712,
+      "bytes": 101418,
+      "sha256": "f772641137b4fa0ee366d34c744833c06255222bf2f4caf2c977f248978627c5",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "combat",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 144.671875,
+        "width": 1353.59375,
+        "height": 710.640625
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "19ea902e5c1180707532ca7e5ce6fb2a03e9ee26244261834e8b090ab40a1396"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c14\"]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        },
+        {
+          "click": "[data-action=end-turn]"
+        },
+        {
+          "click": "[data-action=pile][data-zone=draw]"
+        }
+      ]
+    },
+    {
+      "id": "exhaust",
+      "language": "ms",
+      "file": "tutorial-shot-exhaust-ms.webp",
+      "width": 1354,
+      "height": 966,
+      "bytes": 77674,
+      "sha256": "24b8fce14f6e07b40de6c25f483b366401b052e254f6c8d4a6f250d6dc465d7e",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "exhaust",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 17.5,
+        "width": 1353.59375,
+        "height": 965
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "bc9660ee290933ef94684c99f3222a24057c1e14d5d8d24abb6552e6288ff9a5"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c13\"]"
+        },
+        {
+          "click": "[data-action=pile][data-zone=exhaust]"
+        }
+      ]
+    },
+    {
+      "id": "predict",
+      "language": "ms",
+      "file": "tutorial-shot-predict-ms.webp",
+      "width": 1000,
+      "height": 976,
+      "bytes": 48460,
+      "sha256": "73b70614e2382f013f808ff3c5839b1273ec4587dbe43e6f098c38910620b703",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 12,
+        "width": 1000,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "125444871d03a45574254d18ca361980e43977adbcf81e4384120cc118733913"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "language": "ms",
+      "file": "tutorial-shot-help-ms.webp",
+      "width": 1000,
+      "height": 976,
+      "bytes": 46368,
+      "sha256": "65e596065a83e4269dd242cf8a2a75b802458956056016b842e9a79dffedac08",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 12,
+        "width": 1000,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "125444871d03a45574254d18ca361980e43977adbcf81e4384120cc118733913"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        }
+      ]
+    },
+    {
+      "id": "retry",
+      "language": "ms",
+      "file": "tutorial-shot-retry-ms.webp",
+      "width": 1000,
+      "height": 976,
+      "bytes": 45334,
+      "sha256": "9330ccc71ef7e3c85be1bfb14548970fbf0ccd4602defbe1fa4a6bab5a1070c7",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 12,
+        "width": 1000,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "125444871d03a45574254d18ca361980e43977adbcf81e4384120cc118733913"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": false
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-bd7078ab\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=moreHint]"
+        }
+      ]
+    },
+    {
+      "id": "predict-result",
+      "language": "ms",
+      "file": "tutorial-shot-predict-result-ms.webp",
+      "width": 1000,
+      "height": 928,
+      "bytes": 47266,
+      "sha256": "a64eecfd8754867cc1fa4ccf04383c94765c6d4c913d6a6e6ac4eac8b88d8127",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#dialog",
+      "crop": {
+        "x": 220,
+        "y": 36,
+        "width": 1000,
+        "height": 927.984375
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "125444871d03a45574254d18ca361980e43977adbcf81e4384120cc118733913"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": false
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-bd7078ab\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=moreHint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": true
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-d85585b7\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=result]"
+        }
+      ]
+    },
+    {
+      "id": "report-problem",
+      "language": "ms",
+      "file": "tutorial-shot-report-problem-ms.webp",
+      "width": 620,
+      "height": 976,
+      "bytes": 47922,
+      "sha256": "f2688ae0c2344564edd52195a59632423c2a76213e383489319ce2018ce5f623",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "predict",
+      "selector": "#question-report-dialog",
+      "crop": {
+        "x": 410,
+        "y": 12,
+        "width": 620,
+        "height": 976
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "125444871d03a45574254d18ca361980e43977adbcf81e4384120cc118733913"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=hint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": false
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-bd7078ab\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=help]"
+        },
+        {
+          "click": "[data-action=forecast-support][data-kind=moreHint]"
+        },
+        {
+          "question": "LOGIC-010",
+          "correct": true
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"LOGIC-010-choice-d85585b7\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "[data-question-tab=result]"
+        },
+        {
+          "click": "[data-action=question-report]"
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "language": "ms",
+      "file": "tutorial-shot-focus-ms.webp",
+      "width": 1440,
+      "height": 340,
+      "bytes": 58690,
+      "sha256": "c3631123ed5c980277101aea2199952fc33d02df785d56c37785278e173f3c54",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "focus",
+      "selector": ".combat-dock",
+      "crop": {
+        "x": 0,
+        "y": 660,
+        "width": 1440,
+        "height": 340
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "8e6c089eb786bc4e8c473fabf7ecad31592ff78b3158e611c121ab4f10cd1043"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "focus-armed",
+      "language": "ms",
+      "file": "tutorial-shot-focus-armed-ms.webp",
+      "width": 1440,
+      "height": 340,
+      "bytes": 63176,
+      "sha256": "68cd4a7351be40e5f8a3c7114f57117a13a2b4dbef76dfcc9e540b73b0277501",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "focus",
+      "selector": ".combat-dock",
+      "crop": {
+        "x": 0,
+        "y": 660,
+        "width": 1440,
+        "height": 340
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "8e6c089eb786bc4e8c473fabf7ecad31592ff78b3158e611c121ab4f10cd1043"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=focus]"
+        }
+      ]
+    },
+    {
+      "id": "focus-hit",
+      "language": "ms",
+      "file": "tutorial-shot-focus-hit-ms.webp",
+      "width": 425,
+      "height": 54,
+      "bytes": 2884,
+      "sha256": "4b1f6fb1a9b819b3c03494d3d925587c47461a9bb58aebdd7ef57a58aeb09e42",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "focus",
+      "selector": ".enemy .fighter-panel",
+      "crop": {
+        "x": 911.2421875,
+        "y": 479,
+        "width": 423.921875,
+        "height": 54
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "8e6c089eb786bc4e8c473fabf7ecad31592ff78b3158e611c121ab4f10cd1043"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=focus]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c20\"]"
+        }
+      ]
+    },
+    {
+      "id": "passive",
+      "language": "ms",
+      "file": "tutorial-shot-passive-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 147296,
+      "sha256": "f1541179902e593e0a2ee2c825e7668d5380538398a78a979196bb85e16918d7",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "passive",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "05b5162a32b6ade887f88226b39f36ac64fdcf9e07ce70aa494533ece900f11e"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c16\"]"
+        }
+      ]
+    },
+    {
+      "id": "passive-detail",
+      "language": "ms",
+      "file": "tutorial-shot-passive-detail-ms.webp",
+      "width": 700,
+      "height": 520,
+      "bytes": 39062,
+      "sha256": "5f0b30a6ed3e20a49d6580a4e83cccee9d33c9b0ebab0b2edc5a8a9d1c5f2612",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "passive",
+      "selector": "#dialog",
+      "crop": {
+        "x": 370,
+        "y": 250.546875,
+        "width": 700,
+        "height": 518.890625
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 31042026,
+            "mode": "learn",
+            "sha256": "05b5162a32b6ade887f88226b39f36ac64fdcf9e07ce70aa494533ece900f11e"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=play][data-id=\"c16\"]"
+        },
+        {
+          "click": "[data-action=passive-details]"
+        }
+      ]
+    },
+    {
+      "id": "statuses",
+      "language": "ms",
+      "file": "tutorial-shot-statuses-ms.webp",
+      "width": 462,
+      "height": 599,
+      "bytes": 43342,
+      "sha256": "136592fc5090852c251d5dc84dc02239a523fd552c7c4f5483087e8d8f1ab131",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "statuses",
+      "selector": ".player",
+      "crop": {
+        "x": 86.390625,
+        "y": 61,
+        "width": 460.796875,
+        "height": 599
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "19a7ae1e6dd0ed5adb8fbdd4be1feb5481a2e24339cfe306a8d89eebb996fdab"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "status-detail",
+      "language": "ms",
+      "file": "tutorial-shot-status-detail-ms.webp",
+      "width": 700,
+      "height": 418,
+      "bytes": 27766,
+      "sha256": "39e5638ae0377305a48cef0fefa54e81b3029ee0370c976d5f9f86620ee4f4ce",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "statuses",
+      "selector": "#dialog",
+      "crop": {
+        "x": 370,
+        "y": 291.953125,
+        "width": 700,
+        "height": 416.078125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "19a7ae1e6dd0ed5adb8fbdd4be1feb5481a2e24339cfe306a8d89eebb996fdab"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": ".status-overview-trigger[data-who=player]"
+        },
+        {
+          "click": "#dialog [data-id=weak]"
+        }
+      ]
+    },
+    {
+      "id": "rewards",
+      "language": "ms",
+      "file": "tutorial-shot-rewards-ms.webp",
+      "width": 647,
+      "height": 526,
+      "bytes": 43682,
+      "sha256": "3173616d975b23240ed3ec7e444517a655a70b56514ad5cac72a9a6773874c55",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rewards",
+      "selector": ".reward-main",
+      "crop": {
+        "x": 706.234375,
+        "y": 297.1875,
+        "width": 646,
+        "height": 524.859375
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "reward",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "e6d6701343d95204b937751e4573c0d3fd6b50489060b689c129136a96f92b6f"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "reward-taken",
+      "language": "ms",
+      "file": "tutorial-shot-reward-taken-ms.webp",
+      "width": 1354,
+      "height": 966,
+      "bytes": 154450,
+      "sha256": "4b0a328168fdead155640831d566505e35318e88247a79a102eac2deef30ee95",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rewards",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 17.5,
+        "width": 1353.59375,
+        "height": 965
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "reward",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "e6d6701343d95204b937751e4573c0d3fd6b50489060b689c129136a96f92b6f"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-reward]"
+        },
+        {
+          "click": "[data-action=reward]"
+        },
+        {
+          "click": "[data-action=deck]"
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "language": "ms",
+      "file": "tutorial-shot-shop-ms.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 60316,
+      "sha256": "8a4be053e06b1c8f6fb9bb10b92e5b751fe9208edb1d2e0a3209079f9bea8902",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "08d538471d1c1b764d721e6d58054d74ba4762110ebc1a75bffef5c291265219"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        }
+      ]
+    },
+    {
+      "id": "shop-bought",
+      "language": "ms",
+      "file": "tutorial-shot-shop-bought-ms.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 59930,
+      "sha256": "cefae5dea987a808770f245d3bdd71fa066b8fc955d6c38afa1e918c85a831a0",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "08d538471d1c1b764d721e6d58054d74ba4762110ebc1a75bffef5c291265219"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        },
+        {
+          "click": "[data-action=buy-card]"
+        }
+      ]
+    },
+    {
+      "id": "shop-artifacts",
+      "language": "ms",
+      "file": "tutorial-shot-shop-artifacts-ms.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 46244,
+      "sha256": "67cd2bb5ddafa9c2fb9769232e3fdd5ac048cd5eed0a44462883f0a62578dd93",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "08d538471d1c1b764d721e6d58054d74ba4762110ebc1a75bffef5c291265219"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        },
+        {
+          "click": "[data-action=buy-card]"
+        },
+        {
+          "click": "[data-action=shop-tab][data-id=artifacts]"
+        }
+      ]
+    },
+    {
+      "id": "shop-remove",
+      "language": "ms",
+      "file": "tutorial-shot-shop-remove-ms.webp",
+      "width": 810,
+      "height": 757,
+      "bytes": 24044,
+      "sha256": "5ec3e296cbd88cc6f3e0014deca3f63534eb1633f73d6dc01e2f471c96dbb123",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "shop",
+      "selector": ".shop-counter",
+      "crop": {
+        "x": 599.125,
+        "y": 212.5,
+        "width": 809.203125,
+        "height": 755.828125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "shop",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "08d538471d1c1b764d721e6d58054d74ba4762110ebc1a75bffef5c291265219"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-shop][data-index=\"0\"]"
+        },
+        {
+          "click": "[data-action=buy-card]"
+        },
+        {
+          "click": "[data-action=shop-tab][data-id=artifacts]"
+        },
+        {
+          "click": "[data-action=shop-tab][data-id=remove]"
+        }
+      ]
+    },
+    {
+      "id": "rest",
+      "language": "ms",
+      "file": "tutorial-shot-rest-ms.webp",
+      "width": 535,
+      "height": 682,
+      "bytes": 21882,
+      "sha256": "7dc85e7ea23b8d477e857231601361a1b3b6cf56ddb2d3cac6b5b19e26be4c75",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rest",
+      "selector": ".room-panel",
+      "crop": {
+        "x": 862.15625,
+        "y": 219.21875,
+        "width": 534.65625,
+        "height": 680.796875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "camp",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d967f13934d84d577ccfd700e34288e291f941b8f93857f6eb2107fb97bf944d"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "rest-upgrade",
+      "language": "ms",
+      "file": "tutorial-shot-rest-upgrade-ms.webp",
+      "width": 1354,
+      "height": 930,
+      "bytes": 169544,
+      "sha256": "487d37b48b6000fe31955586654edd13bf53a7c43235879d565c33d23bf2555b",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "rest",
+      "selector": "#dialog",
+      "crop": {
+        "x": 43.203125,
+        "y": 35.15625,
+        "width": 1353.59375,
+        "height": 929.671875
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "camp",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "d967f13934d84d577ccfd700e34288e291f941b8f93857f6eb2107fb97bf944d"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-rest][data-value=upgrade]"
+        },
+        {
+          "click": "[data-action=upgrade]"
+        }
+      ]
+    },
+    {
+      "id": "mystery",
+      "language": "ms",
+      "file": "tutorial-shot-mystery-ms.webp",
+      "width": 739,
+      "height": 750,
+      "bytes": 42406,
+      "sha256": "f8c4f2bc9d1ae74ffa71fafc479df802bccd2d96ddee5927fc2c364e7c72c639",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "mystery",
+      "selector": ".mystery-panel",
+      "crop": {
+        "x": 658.125,
+        "y": 207.734375,
+        "width": 738.6875,
+        "height": 749.078125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "event",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "83098d99815175be30a218c4b76632804930b92e5c57716c283cda5bbb429ef8"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "mystery-question",
+      "language": "ms",
+      "file": "tutorial-shot-mystery-question-ms.webp",
+      "width": 739,
+      "height": 750,
+      "bytes": 44654,
+      "sha256": "10b70258465cbdcc9e54db32a8f32d37f1f3a26b1574dee63767eb6efd52223c",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "mystery",
+      "selector": ".mystery-panel",
+      "crop": {
+        "x": 658.125,
+        "y": 207.734375,
+        "width": 738.6875,
+        "height": 749.078125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "event",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "83098d99815175be30a218c4b76632804930b92e5c57716c283cda5bbb429ef8"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=mystery-start]"
+        }
+      ]
+    },
+    {
+      "id": "boss",
+      "language": "ms",
+      "file": "tutorial-shot-boss-ms.webp",
+      "width": 232,
+      "height": 76,
+      "bytes": 4242,
+      "sha256": "243a680db35f80f23e29f892c4d9678b2b250ca00fd4db3cb85fa92915e206aa",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "boss",
+      "selector": ".seals",
+      "crop": {
+        "x": 604.796875,
+        "y": 480,
+        "width": 230.390625,
+        "height": 75.5
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "c61ea627031e326b49d999ca2677f6f71dfb77c1fc179ade0af457a6827dee8c"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    },
+    {
+      "id": "boss-open",
+      "language": "ms",
+      "file": "tutorial-shot-boss-open-ms.webp",
+      "width": 232,
+      "height": 76,
+      "bytes": 4224,
+      "sha256": "ddb108736886d94b479d9e89363a4812727322d534464f1d7f58735a86d0d6df",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "boss",
+      "selector": ".seals",
+      "crop": {
+        "x": 604.796875,
+        "y": 480,
+        "width": 230.390625,
+        "height": 75.5
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "battle",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "c61ea627031e326b49d999ca2677f6f71dfb77c1fc179ade0af457a6827dee8c"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=forecast]"
+        },
+        {
+          "question": "SET-017",
+          "correct": true
+        },
+        {
+          "click": "[data-question-tab=question]"
+        },
+        {
+          "click": "[data-action=forecast-select][data-id=\"SET-017-choice-9400f1b2\"]"
+        },
+        {
+          "click": "[data-action=forecast-check]"
+        },
+        {
+          "click": "#dialog [data-action=close]"
+        }
+      ]
+    },
+    {
+      "id": "master",
+      "language": "ms",
+      "file": "tutorial-shot-master-ms.webp",
+      "width": 756,
+      "height": 866,
+      "bytes": 68922,
+      "sha256": "df9d1849768f1c1a4460a0c5a5060a3b7711416dce1a41d34481b1c2ccbd234c",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "master",
+      "selector": ".artifact-choice-panel",
+      "crop": {
+        "x": 627.25,
+        "y": 135.59375,
+        "width": 755.140625,
+        "height": 865.25
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "master",
+            "seed": 7,
+            "mode": "challenge",
+            "sha256": "bdb3438f49618e25f6cdffd2a47eaa6664d7a96c9a7aafcb2a2cf3213f4edd8e"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-artifact]"
+        }
+      ]
+    },
+    {
+      "id": "artifact-question",
+      "language": "ms",
+      "file": "tutorial-shot-artifact-question-ms.webp",
+      "width": 796,
+      "height": 808,
+      "bytes": 43128,
+      "sha256": "1f7b38aa30b88aec7dedbe0ecf7896d4d47fc97615e1744d11cf69eca38b73fa",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "master",
+      "selector": ".education-panel",
+      "crop": {
+        "x": 587.515625,
+        "y": 135.59375,
+        "width": 794.875,
+        "height": 806.8125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "master",
+            "seed": 7,
+            "mode": "challenge",
+            "sha256": "bdb3438f49618e25f6cdffd2a47eaa6664d7a96c9a7aafcb2a2cf3213f4edd8e"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-artifact]"
+        },
+        {
+          "click": "[data-action=claim-artifact]"
+        }
+      ]
+    },
+    {
+      "id": "artifact-result",
+      "language": "ms",
+      "file": "tutorial-shot-artifact-result-ms.webp",
+      "width": 796,
+      "height": 808,
+      "bytes": 40988,
+      "sha256": "78f8383e91f0170ad962f7965e8e97ed78bb1b344cbadf33fc67c45cecae7728",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "master",
+      "selector": ".education-panel",
+      "crop": {
+        "x": 587.515625,
+        "y": 135.59375,
+        "width": 794.875,
+        "height": 806.8125
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "master",
+            "seed": 7,
+            "mode": "challenge",
+            "sha256": "bdb3438f49618e25f6cdffd2a47eaa6664d7a96c9a7aafcb2a2cf3213f4edd8e"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        },
+        {
+          "click": "[data-action=select-artifact]"
+        },
+        {
+          "click": "[data-action=claim-artifact]"
+        },
+        {
+          "click": "[data-action=education-select][data-id=\"SET-017-choice-9400f1b2\"]"
+        },
+        {
+          "click": "[data-action=education-check]"
+        },
+        {
+          "click": "[data-question-tab=result]"
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "language": "ms",
+      "file": "tutorial-shot-results-ms.webp",
+      "width": 1440,
+      "height": 1000,
+      "bytes": 161422,
+      "sha256": "8ca84011c3392ff0fa10e88a8ae65929b7b658ce48b0ed0f6c34bfb729ce0cb4",
+      "inputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4",
+      "group": "results",
+      "selector": null,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "actions": [
+        {
+          "setup": {
+            "scene": "victory",
+            "seed": 7,
+            "mode": "learn",
+            "sha256": "eeaa6e74d4ad20ddd74947e912ecac9460f52234a0e2c90ff51e9784d8d6f251"
+          },
+          "language": "ms"
+        },
+        {
+          "click": "[data-action=continue]"
+        }
+      ]
+    }
+  ],
+  "changedPaths": [
+    "dist/assets/tutorial-shot-attack-block-en.webp",
+    "dist/assets/tutorial-shot-attack-block-ms.webp",
+    "dist/assets/tutorial-shot-block-en.webp",
+    "dist/assets/tutorial-shot-block-ms.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-combat-en.webp",
+    "dist/assets/tutorial-shot-combat-ms.webp",
+    "dist/assets/tutorial-shot-draw-en.webp",
+    "dist/assets/tutorial-shot-draw-ms.webp",
+    "dist/assets/tutorial-shot-exhaust-en.webp",
+    "dist/assets/tutorial-shot-exhaust-ms.webp",
+    "dist/assets/tutorial-shot-focus-armed-en.webp",
+    "dist/assets/tutorial-shot-help-en.webp",
+    "dist/assets/tutorial-shot-help-ms.webp",
+    "dist/assets/tutorial-shot-loading-en.webp",
+    "dist/assets/tutorial-shot-loading-ms.webp",
+    "dist/assets/tutorial-shot-menu-en.webp",
+    "dist/assets/tutorial-shot-menu-ms.webp",
+    "dist/assets/tutorial-shot-mystery-question-en.webp",
+    "dist/assets/tutorial-shot-passive-detail-en.webp",
+    "dist/assets/tutorial-shot-passive-detail-ms.webp",
+    "dist/assets/tutorial-shot-passive-en.webp",
+    "dist/assets/tutorial-shot-passive-ms.webp",
+    "dist/assets/tutorial-shot-predict-en.webp",
+    "dist/assets/tutorial-shot-predict-ms.webp",
+    "dist/assets/tutorial-shot-predict-result-en.webp",
+    "dist/assets/tutorial-shot-predict-result-ms.webp",
+    "dist/assets/tutorial-shot-report-problem-en.webp",
+    "dist/assets/tutorial-shot-report-problem-ms.webp",
+    "dist/assets/tutorial-shot-retry-en.webp",
+    "dist/assets/tutorial-shot-retry-ms.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "dist/assets/tutorial-shot-status-detail-en.webp",
+    "dist/assets/tutorial-shot-status-detail-ms.webp",
+    "dist/assets/tutorial-shot-statuses-en.webp",
+    "dist/assets/tutorial-shot-statuses-ms.webp",
+    "dist/assets/tutorial-shot-turn-en.webp",
+    "dist/assets/tutorial-shot-turn-ms.webp",
+    "docs/tutorial/screenshots.json"
+  ]
+}

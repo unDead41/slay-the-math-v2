@@ -130,3 +130,11 @@ test('formula-like report text is inert, notes stay plain text, and duplicated p
  assert.equal(issue()['Active reports'],1);assert.equal(issue()['Pelapor unik (peranti)'],1);assert.equal(issue()['Developer notes'],"'=Internal text");assert.equal(issue()['Latest comment'],"'"+p.comment);
  const notes=sheet('Issues').rows[0].indexOf('Developer notes')+1;assert.ok(sheet('Issues').formats.some(format=>format.format==='@'&&format.col<=notes&&format.col+format.width>notes));
 });
+
+test('version diagnostics append to Comments and Issues without replacing developer notes or old records',()=>{
+ const {batch,rows,issue,edit,c}=setup(),provenance={gameVersion:'2.45.1-education.1',contentRevision:'clarity-2026-10-24.1'};
+ assert.equal(batch([entry()]).status,200);assert.equal(rows('Comments')[0]['Game version'],'');edit('hint-unclear',{Status:'Selesai','Developer notes':'Keep this note','Fixed in version':'2.45.0'});
+ c.Session={getActiveUser:()=>({getEmail:()=> 'owner@example.test'}),getEffectiveUser:()=>({getEmail:()=> 'owner@example.test'})};c.refreshIssueBoard();assert.equal(issue().Status,'Selesai');assert.equal(issue()['Game versions'],'');
+ assert.equal(batch([entry(feedback({provenance,comment:'New report on this build'}),2)]).status,200);assert.equal(rows('Comments')[0]['Game version'],provenance.gameVersion);assert.equal(rows('Comments')[0]['Content revision'],provenance.contentRevision);assert.equal(issue()['Game versions'],provenance.gameVersion);assert.equal(issue()['Content revisions'],provenance.contentRevision);assert.equal(issue()['Developer notes'],'Keep this note');assert.equal(issue()['Fixed in version'],'2.45.0');assert.equal(issue().Status,'Baharu');
+ edit('hint-unclear',{Status:'Selesai'});assert.equal(batch([entry(feedback({provenance,comment:'New report on this build',question:'[REVIEWED] Soalan kebarangkalian',updatedAt:LATER}),3)]).status,200);assert.equal(issue().Status,'Selesai');assert.equal(batch([entry(tombstone(),4)]).status,200);assert.equal(issue()['Active reports'],0);assert.equal(issue()['Game versions'],provenance.gameVersion);assert.equal(issue()['Developer notes'],'Keep this note');
+});

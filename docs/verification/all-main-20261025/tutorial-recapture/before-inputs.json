@@ -1,0 +1,803 @@
+{
+  "sourceCommit": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194",
+  "sourceTree": "d138cc8bfa7b8d5ad9a82e04057b8480a31ee3a8",
+  "status": "",
+  "oldManifestSha256": "64e29ba9153708db21dc760306c4f460f7a2aef807cc005cd9f04a0a2eaaa556",
+  "oldImages": 98,
+  "oldImageInputs": [
+    {
+      "file": "tutorial-shot-loading-en.webp",
+      "sha256": "d82d7df11cc7369170e0be028b6839d8f171a3c7b133ef4eee44aabc53741bb3",
+      "bytes": 16382,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-menu-en.webp",
+      "sha256": "5ca03967a367994211ca6183bcc9171bae0b1196a61d461e251dc97f2010ae00",
+      "bytes": 185702,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-modes-en.webp",
+      "sha256": "0362a5a1d7c114fc54eae9734b4a328a9d38b7a80f22d53fb2cbde9209940ccb",
+      "bytes": 33422,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-settings-en.webp",
+      "sha256": "420fb4c5ee21f7aff38161b2c5c840fe98888193a5a3902584b949bc3834212f",
+      "bytes": 34086,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-sound-en.webp",
+      "sha256": "88dff3ae1985721347f44f9836496c09ffcb6b92b790c36a8ee29a338a347ac9",
+      "bytes": 21726,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-collection-en.webp",
+      "sha256": "9419073d6c484df64be679c4300f28cb57aa3cee62e1ed94a8d78c76f62473eb",
+      "bytes": 48116,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-collection-artifacts-en.webp",
+      "sha256": "d9409da64f82ab7a8f1bdae56be9d30104422a1f65d5baf64ded3a271f0006b7",
+      "bytes": 60680,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-report-en.webp",
+      "sha256": "bca8a662090d50492ed5c61966dea8d03a57b79554e6c3120ed1624f88ebd891",
+      "bytes": 36930,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-learning-en.webp",
+      "sha256": "5e8895e21eb55f8c235db9106ef2c0d40f689039abf1e236a102d9ba20bfe632",
+      "bytes": 71780,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-learning-help-en.webp",
+      "sha256": "b855e7163dba33ac7759e75bbe62cdc76dcf33fe3e9476b4a36feb2d12ebb792",
+      "bytes": 56170,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-map-en.webp",
+      "sha256": "52452fceb124feee4e1fca576fac328234f2577a60a8adab429645390a2aaccb",
+      "bytes": 135942,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-combat-en.webp",
+      "sha256": "06fb1485efdddd3e1f283cd99336a4719f454ea73768667a6c63b631f1b3c12d",
+      "bytes": 147150,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-intent-en.webp",
+      "sha256": "29ad56b552eb8b460b95d2b693bc551d4571bb24b059d6a9ca39527820293d12",
+      "bytes": 29132,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-resources-en.webp",
+      "sha256": "ce4b8625fa817063e17fecf9279e24a9d2227148521219e2e7af6898941e5a26",
+      "bytes": 57630,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-card-en.webp",
+      "sha256": "440bdf0e499895c4d4cc32ebc5aa8e88554808a4b19a6d5e6133207165af759b",
+      "bytes": 14390,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-block-en.webp",
+      "sha256": "074690db42c18707d9d68c1103fc6a7269442d7336b751bc3f764288c68b0bf5",
+      "bytes": 5662,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-attack-block-en.webp",
+      "sha256": "4b4791f02240f55947e6a33cd35d1c499ab80d2598d91d4c73da4514782ea0bd",
+      "bytes": 129432,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-attack-en.webp",
+      "sha256": "8c862a3d5f5a7cffeb161a196e7b367593d724297243f16303d57fc8cf348c47",
+      "bytes": 2924,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-turn-en.webp",
+      "sha256": "c47caef5e37c1958c93c9a561b0005114b599385f068e6b3139cc347a1802e28",
+      "bytes": 151626,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-draw-en.webp",
+      "sha256": "20b2704247b66b1bd1ff6768f6e912945f20359ca754dc1e13720096d03aafa3",
+      "bytes": 100790,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-exhaust-en.webp",
+      "sha256": "3374447e665082d253df923a50a26c9748d26485f6b12641bcae55266f995879",
+      "bytes": 75946,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-predict-en.webp",
+      "sha256": "9c3c8d15ea44dcb038310109a39b410f18e91f23d910d6549bc53e42abd4afbc",
+      "bytes": 40226,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-help-en.webp",
+      "sha256": "56db3993c0db9e74d2ad26c852eaf5bba19aa4ff33fad26f09f213e507cf1ad5",
+      "bytes": 40504,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-retry-en.webp",
+      "sha256": "0f6a5148bacb1c97dc61c3fc1e48d7e085e2817dcc0c6662d974b8d7693d7126",
+      "bytes": 35516,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-predict-result-en.webp",
+      "sha256": "86ed249b2cb95509adc5f8a6627c683942bb28f47f00fbcaba794301f22dda3a",
+      "bytes": 37570,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-report-problem-en.webp",
+      "sha256": "8abfc7bc1d2f6b44eaa613c5be455361da445a5481b827f3f5efbbe549536cb6",
+      "bytes": 41616,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-focus-en.webp",
+      "sha256": "6091e357813a2fc1bfe416992558f8210662ac74e0cdcc708091363aa7171b6e",
+      "bytes": 57716,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-focus-armed-en.webp",
+      "sha256": "ccd92cc344c0be6f122e7b037d5509a7c9c6bcac0f4eccbf55b323ad5d88ec40",
+      "bytes": 61982,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-focus-hit-en.webp",
+      "sha256": "b180870af2aa9faaac48fc005b94f049f786b7e3092d8322b402f953aa11d0a3",
+      "bytes": 2880,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-passive-en.webp",
+      "sha256": "14abe7c59324fe9ba737972bd69b8ca2627fc3d62178e6fc9089bc93cb257190",
+      "bytes": 142754,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-passive-detail-en.webp",
+      "sha256": "36d84f9be1dc85a1ac42ac188837c125fd4b8eb63f436adff3edbffdbc951725",
+      "bytes": 34714,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-statuses-en.webp",
+      "sha256": "5dd8c8ca3aa46f84b888b4259e13ffc2bb278ccd94fc792e58df83fcde63904a",
+      "bytes": 43970,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-status-detail-en.webp",
+      "sha256": "5f115a3e47e6a594f77b7015b3b9c315200b079045b5f28367e74e4c5cf04ea4",
+      "bytes": 23454,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-rewards-en.webp",
+      "sha256": "52a7104693c8baad8c70af7a9a9ff0a40b68b73ca4cf07681d3461d100e077ef",
+      "bytes": 43066,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-reward-taken-en.webp",
+      "sha256": "62c44b42affcedb250b7357a98037519994576513d1fe42829f50c1a565bad62",
+      "bytes": 151546,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-en.webp",
+      "sha256": "ca25ed82f6a65d87500ca648f543c16473649955f965e20082681dddeb91ed80",
+      "bytes": 59724,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-bought-en.webp",
+      "sha256": "fd6f810f859ff5bfff25ecdd4ff5252d352f90f17b7d30151776d67f216814ab",
+      "bytes": 58614,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-artifacts-en.webp",
+      "sha256": "74e7e1e97054c38ffc1161abcf3878ced53a4706ea072236ecb6b94479e30970",
+      "bytes": 42594,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-remove-en.webp",
+      "sha256": "e1ef12f8ddfbfc64ad6be6ee3b0fe9397cecb82e3d2036ef5e940677a768ad78",
+      "bytes": 22044,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-rest-en.webp",
+      "sha256": "d42cbdd28a39b0f2b8551be33a6c4bbd8877baf2186b34610c3611dc0a706427",
+      "bytes": 20166,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-rest-upgrade-en.webp",
+      "sha256": "21795bb525dcbdade232684e747bff27b62159218807261bb1e803e7d8f5f97e",
+      "bytes": 166640,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-mystery-en.webp",
+      "sha256": "a8a16fcb313828b1e112fcf0e241648e0284b2620ba3350dfa313d14ca1cb109",
+      "bytes": 36044,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-mystery-question-en.webp",
+      "sha256": "3f01ccbdab08df3ac7c68f70ce309e22421e3f8ca972288f1d511b29ff0a6d9e",
+      "bytes": 39080,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-master-en.webp",
+      "sha256": "e2d1517b34db11518d0349df38c204fc5c8f862415178e9188db4b9938b19a8f",
+      "bytes": 63138,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-artifact-question-en.webp",
+      "sha256": "40d082399057910d4c88437c6d3ce52fbeb02fc25289c85aac868302c180069c",
+      "bytes": 40516,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-artifact-result-en.webp",
+      "sha256": "1fde02fc460f36774367628cf7f4aba4d1b0bfd6510248b5fe22ad5710ee83ae",
+      "bytes": 36284,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-results-en.webp",
+      "sha256": "5b607493279fc476d2b8d8b2372ce804db4bb24ced122e3b9f7c00a5aaef08e2",
+      "bytes": 157872,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-loading-ms.webp",
+      "sha256": "95d7516c722cef918d413859b5ae0b8a578c8160ea2abb2b358bcc788567c6cb",
+      "bytes": 19784,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-menu-ms.webp",
+      "sha256": "db2e76f7d2e9af58e809da9dcaa5add0472b880661ef9b8ed4311d8189e76a93",
+      "bytes": 188126,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-modes-ms.webp",
+      "sha256": "55e2f76d4158a203647e58b56a171e4d055bc1ca731e15fe04a47d88ce3d2f68",
+      "bytes": 40996,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-settings-ms.webp",
+      "sha256": "ed4a37f31c28779b9b1cd123e57390a392fc50e3b05a286a21281835133a90a5",
+      "bytes": 38962,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-sound-ms.webp",
+      "sha256": "c6b6f2ae359735df9af58175548be2364c3eb45ed16b4b54e104ff2c82417659",
+      "bytes": 24014,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-collection-ms.webp",
+      "sha256": "9f6fdbb79fcc4ae355d8733c4983553490db7ddb16730eb52a5a1b7564562a33",
+      "bytes": 48908,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-collection-artifacts-ms.webp",
+      "sha256": "190f82a553ed0694232c676fdc895268d05ab9cebbbe3113f7f07bedaddf0ad9",
+      "bytes": 61180,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-report-ms.webp",
+      "sha256": "09de5024b23e333033515c92c55ad6f5eaa289eb2f47ff62036be720c900e623",
+      "bytes": 40262,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-learning-ms.webp",
+      "sha256": "070fbbea8163e9378a57e2458780ec1a380de64d158c473bde9315598ee54a86",
+      "bytes": 86960,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-learning-help-ms.webp",
+      "sha256": "d8f410e7dc3ec9e9531df28372a9044936ce06fc9ad985999ca6356f1dd9a7d8",
+      "bytes": 66648,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-map-ms.webp",
+      "sha256": "3fe8d231014dc46629a0ede7051a4926661ae414cd993b03f3ab33d95204f0ef",
+      "bytes": 140148,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-combat-ms.webp",
+      "sha256": "477afe146b9fc49d3051103dde21eeb39b8c7292570d590d4dfc37538781b693",
+      "bytes": 150360,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-intent-ms.webp",
+      "sha256": "896e865b3cc046470c290cd9b7e90aa23c5928b0d88ba2094aab00b3b8c9f302",
+      "bytes": 29214,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-resources-ms.webp",
+      "sha256": "7416ad0fe1706ca5b0bb40660d8a1fea352c74f4dc8553f551320946a9cf6db4",
+      "bytes": 59390,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-card-ms.webp",
+      "sha256": "d0377a1c80e8fe6fdf727a05022a09e47afd6bc3ce84fc43a9af56adb6c57cd3",
+      "bytes": 14346,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-block-ms.webp",
+      "sha256": "e8329ccf6c0bbbd031b8a175d4ab1db2e4223067b9ff04c81e2b6df46db15046",
+      "bytes": 5776,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-attack-block-ms.webp",
+      "sha256": "a8669448d9d85cdb7ba78f07c6005642df381f9551681a59ba7b9a5760ad37c6",
+      "bytes": 131870,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-attack-ms.webp",
+      "sha256": "92408bef98f0e5e0db81ad98bb42aabfcb153860aa047b63f4fb41b89d7ac6ae",
+      "bytes": 2926,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-turn-ms.webp",
+      "sha256": "31316fc723539c2d4f6b60ce91befa72c39e1fbfc340867a7fb5956dcdf359f0",
+      "bytes": 154930,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-draw-ms.webp",
+      "sha256": "a75800a52a2a64e60161b35bbfab42cc9f3d9f0f50e416e29dc23510b0ab200d",
+      "bytes": 101464,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-exhaust-ms.webp",
+      "sha256": "f9cb6555337be92203b9f6ee348f1b9693f724e8d241b388ce04cdc86c1c4f61",
+      "bytes": 77668,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-predict-ms.webp",
+      "sha256": "6ddd2fc8e102c43112184b94c9abba67d00ccedc107639aa8b963b337b5bd51f",
+      "bytes": 48466,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-help-ms.webp",
+      "sha256": "6aaace4150b92849643f294c88bbe00687a3653a007abe5ba24681441fc83515",
+      "bytes": 46366,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-retry-ms.webp",
+      "sha256": "2c10e63917c3d049eaa2fa371741b215d2af6bc63c73d47e6b155ce71c6b4068",
+      "bytes": 45324,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-predict-result-ms.webp",
+      "sha256": "82a42c716342b236e3c5c21e87bf4a3475a034757dea2663e80ff0db6c4939a2",
+      "bytes": 47266,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-report-problem-ms.webp",
+      "sha256": "8e5e0657e1d05e225935a3cca2d8c501e10d399fd7d9777db047e7dc4c0fec18",
+      "bytes": 47750,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-focus-ms.webp",
+      "sha256": "c3631123ed5c980277101aea2199952fc33d02df785d56c37785278e173f3c54",
+      "bytes": 58690,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-focus-armed-ms.webp",
+      "sha256": "68cd4a7351be40e5f8a3c7114f57117a13a2b4dbef76dfcc9e540b73b0277501",
+      "bytes": 63176,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-focus-hit-ms.webp",
+      "sha256": "4b1f6fb1a9b819b3c03494d3d925587c47461a9bb58aebdd7ef57a58aeb09e42",
+      "bytes": 2884,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-passive-ms.webp",
+      "sha256": "bcac9316728dbba2d2131d24e78aea2c9cb297cd120d98e3f42e09f094ce39af",
+      "bytes": 147520,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-passive-detail-ms.webp",
+      "sha256": "007eb7bce48b99ac1af18c1fa78c5a8a9fdf7e61ffc88bb0082073bd8e63d224",
+      "bytes": 39086,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-statuses-ms.webp",
+      "sha256": "aec952863d74da1d7bfe8a4fe55473a8ebb4850b9d6e3acee06e3a4542847f9d",
+      "bytes": 43982,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-status-detail-ms.webp",
+      "sha256": "d5ca371f62059ec6478cd880956abc998b3ac834d8d1250692844fbd455d2db6",
+      "bytes": 27704,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-rewards-ms.webp",
+      "sha256": "3173616d975b23240ed3ec7e444517a655a70b56514ad5cac72a9a6773874c55",
+      "bytes": 43682,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-reward-taken-ms.webp",
+      "sha256": "4b0a328168fdead155640831d566505e35318e88247a79a102eac2deef30ee95",
+      "bytes": 154450,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-ms.webp",
+      "sha256": "8a4be053e06b1c8f6fb9bb10b92e5b751fe9208edb1d2e0a3209079f9bea8902",
+      "bytes": 60316,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-bought-ms.webp",
+      "sha256": "cefae5dea987a808770f245d3bdd71fa066b8fc955d6c38afa1e918c85a831a0",
+      "bytes": 59930,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-artifacts-ms.webp",
+      "sha256": "67cd2bb5ddafa9c2fb9769232e3fdd5ac048cd5eed0a44462883f0a62578dd93",
+      "bytes": 46244,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-shop-remove-ms.webp",
+      "sha256": "5ec3e296cbd88cc6f3e0014deca3f63534eb1633f73d6dc01e2f471c96dbb123",
+      "bytes": 24044,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-rest-ms.webp",
+      "sha256": "7dc85e7ea23b8d477e857231601361a1b3b6cf56ddb2d3cac6b5b19e26be4c75",
+      "bytes": 21882,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-rest-upgrade-ms.webp",
+      "sha256": "487d37b48b6000fe31955586654edd13bf53a7c43235879d565c33d23bf2555b",
+      "bytes": 169544,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-mystery-ms.webp",
+      "sha256": "f8c4f2bc9d1ae74ffa71fafc479df802bccd2d96ddee5927fc2c364e7c72c639",
+      "bytes": 42406,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-mystery-question-ms.webp",
+      "sha256": "10b70258465cbdcc9e54db32a8f32d37f1f3a26b1574dee63767eb6efd52223c",
+      "bytes": 44654,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-master-ms.webp",
+      "sha256": "df9d1849768f1c1a4460a0c5a5060a3b7711416dce1a41d34481b1c2ccbd234c",
+      "bytes": 68922,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-artifact-question-ms.webp",
+      "sha256": "1f7b38aa30b88aec7dedbe0ecf7896d4d47fc97615e1744d11cf69eca38b73fa",
+      "bytes": 43128,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-artifact-result-ms.webp",
+      "sha256": "78f8383e91f0170ad962f7965e8e97ed78bb1b344cbadf33fc67c45cecae7728",
+      "bytes": 40988,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-results-ms.webp",
+      "sha256": "8ca84011c3392ff0fa10e88a8ae65929b7b658ce48b0ed0f6c34bfb729ce0cb4",
+      "bytes": 161422,
+      "inputDigest": "082dd6a77f9320179519de525aa4c54bf4dabc959f5f8a4a8007b8482a59224e"
+    },
+    {
+      "file": "tutorial-shot-boss-en.webp",
+      "sha256": "6c5ceb6ae1031b44a6bd661138e863a49321e29c2b2af6db75f2e1ae48c8303e",
+      "bytes": 3846,
+      "inputDigest": "7e7ef487cec71e257da03bcf3a6a5dcb973fd3a07dddbf7fd8731ae3adc5adf1"
+    },
+    {
+      "file": "tutorial-shot-boss-open-en.webp",
+      "sha256": "b17d4ab4e4f955b6176aa2b13286fd307013a23e06429618272c8e44e74a891d",
+      "bytes": 3838,
+      "inputDigest": "7e7ef487cec71e257da03bcf3a6a5dcb973fd3a07dddbf7fd8731ae3adc5adf1"
+    },
+    {
+      "file": "tutorial-shot-boss-ms.webp",
+      "sha256": "243a680db35f80f23e29f892c4d9678b2b250ca00fd4db3cb85fa92915e206aa",
+      "bytes": 4242,
+      "inputDigest": "7e7ef487cec71e257da03bcf3a6a5dcb973fd3a07dddbf7fd8731ae3adc5adf1"
+    },
+    {
+      "file": "tutorial-shot-boss-open-ms.webp",
+      "sha256": "ddb108736886d94b479d9e89363a4812727322d534464f1d7f58735a86d0d6df",
+      "bytes": 4224,
+      "inputDigest": "7e7ef487cec71e257da03bcf3a6a5dcb973fd3a07dddbf7fd8731ae3adc5adf1"
+    }
+  ],
+  "captureOutputs": [
+    "docs/tutorial/screenshots.json",
+    "dist/assets/tutorial-shot-loading-en.webp",
+    "dist/assets/tutorial-shot-menu-en.webp",
+    "dist/assets/tutorial-shot-modes-en.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-sound-en.webp",
+    "dist/assets/tutorial-shot-collection-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-report-en.webp",
+    "dist/assets/tutorial-shot-learning-en.webp",
+    "dist/assets/tutorial-shot-learning-help-en.webp",
+    "dist/assets/tutorial-shot-map-en.webp",
+    "dist/assets/tutorial-shot-combat-en.webp",
+    "dist/assets/tutorial-shot-intent-en.webp",
+    "dist/assets/tutorial-shot-resources-en.webp",
+    "dist/assets/tutorial-shot-card-en.webp",
+    "dist/assets/tutorial-shot-block-en.webp",
+    "dist/assets/tutorial-shot-attack-block-en.webp",
+    "dist/assets/tutorial-shot-attack-en.webp",
+    "dist/assets/tutorial-shot-turn-en.webp",
+    "dist/assets/tutorial-shot-draw-en.webp",
+    "dist/assets/tutorial-shot-exhaust-en.webp",
+    "dist/assets/tutorial-shot-predict-en.webp",
+    "dist/assets/tutorial-shot-help-en.webp",
+    "dist/assets/tutorial-shot-retry-en.webp",
+    "dist/assets/tutorial-shot-predict-result-en.webp",
+    "dist/assets/tutorial-shot-report-problem-en.webp",
+    "dist/assets/tutorial-shot-focus-en.webp",
+    "dist/assets/tutorial-shot-focus-armed-en.webp",
+    "dist/assets/tutorial-shot-focus-hit-en.webp",
+    "dist/assets/tutorial-shot-passive-en.webp",
+    "dist/assets/tutorial-shot-passive-detail-en.webp",
+    "dist/assets/tutorial-shot-statuses-en.webp",
+    "dist/assets/tutorial-shot-status-detail-en.webp",
+    "dist/assets/tutorial-shot-rewards-en.webp",
+    "dist/assets/tutorial-shot-reward-taken-en.webp",
+    "dist/assets/tutorial-shot-shop-en.webp",
+    "dist/assets/tutorial-shot-shop-bought-en.webp",
+    "dist/assets/tutorial-shot-shop-artifacts-en.webp",
+    "dist/assets/tutorial-shot-shop-remove-en.webp",
+    "dist/assets/tutorial-shot-rest-en.webp",
+    "dist/assets/tutorial-shot-rest-upgrade-en.webp",
+    "dist/assets/tutorial-shot-mystery-en.webp",
+    "dist/assets/tutorial-shot-mystery-question-en.webp",
+    "dist/assets/tutorial-shot-master-en.webp",
+    "dist/assets/tutorial-shot-artifact-question-en.webp",
+    "dist/assets/tutorial-shot-artifact-result-en.webp",
+    "dist/assets/tutorial-shot-results-en.webp",
+    "dist/assets/tutorial-shot-loading-ms.webp",
+    "dist/assets/tutorial-shot-menu-ms.webp",
+    "dist/assets/tutorial-shot-modes-ms.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "dist/assets/tutorial-shot-sound-ms.webp",
+    "dist/assets/tutorial-shot-collection-ms.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-report-ms.webp",
+    "dist/assets/tutorial-shot-learning-ms.webp",
+    "dist/assets/tutorial-shot-learning-help-ms.webp",
+    "dist/assets/tutorial-shot-map-ms.webp",
+    "dist/assets/tutorial-shot-combat-ms.webp",
+    "dist/assets/tutorial-shot-intent-ms.webp",
+    "dist/assets/tutorial-shot-resources-ms.webp",
+    "dist/assets/tutorial-shot-card-ms.webp",
+    "dist/assets/tutorial-shot-block-ms.webp",
+    "dist/assets/tutorial-shot-attack-block-ms.webp",
+    "dist/assets/tutorial-shot-attack-ms.webp",
+    "dist/assets/tutorial-shot-turn-ms.webp",
+    "dist/assets/tutorial-shot-draw-ms.webp",
+    "dist/assets/tutorial-shot-exhaust-ms.webp",
+    "dist/assets/tutorial-shot-predict-ms.webp",
+    "dist/assets/tutorial-shot-help-ms.webp",
+    "dist/assets/tutorial-shot-retry-ms.webp",
+    "dist/assets/tutorial-shot-predict-result-ms.webp",
+    "dist/assets/tutorial-shot-report-problem-ms.webp",
+    "dist/assets/tutorial-shot-focus-ms.webp",
+    "dist/assets/tutorial-shot-focus-armed-ms.webp",
+    "dist/assets/tutorial-shot-focus-hit-ms.webp",
+    "dist/assets/tutorial-shot-passive-ms.webp",
+    "dist/assets/tutorial-shot-passive-detail-ms.webp",
+    "dist/assets/tutorial-shot-statuses-ms.webp",
+    "dist/assets/tutorial-shot-status-detail-ms.webp",
+    "dist/assets/tutorial-shot-rewards-ms.webp",
+    "dist/assets/tutorial-shot-reward-taken-ms.webp",
+    "dist/assets/tutorial-shot-shop-ms.webp",
+    "dist/assets/tutorial-shot-shop-bought-ms.webp",
+    "dist/assets/tutorial-shot-shop-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-shop-remove-ms.webp",
+    "dist/assets/tutorial-shot-rest-ms.webp",
+    "dist/assets/tutorial-shot-rest-upgrade-ms.webp",
+    "dist/assets/tutorial-shot-mystery-ms.webp",
+    "dist/assets/tutorial-shot-mystery-question-ms.webp",
+    "dist/assets/tutorial-shot-master-ms.webp",
+    "dist/assets/tutorial-shot-artifact-question-ms.webp",
+    "dist/assets/tutorial-shot-artifact-result-ms.webp",
+    "dist/assets/tutorial-shot-results-ms.webp",
+    "dist/assets/tutorial-shot-boss-en.webp",
+    "dist/assets/tutorial-shot-boss-open-en.webp",
+    "dist/assets/tutorial-shot-boss-ms.webp",
+    "dist/assets/tutorial-shot-boss-open-ms.webp"
+  ],
+  "runtimeCoreInputs": {
+    "dist/analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
+    "dist/analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
+    "dist/animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
+    "dist/animation.css": "1aa05e00d9d6da2910098779401f12966109e81b4b6d91ecb22fccb565b15241",
+    "dist/animation.js": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9",
+    "dist/app.js": "79df6cc294bd751113802afa9970bc3976a5c5f28432d2d816b7f73335cd3013",
+    "dist/artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
+    "dist/artifact-ui.js": "4c8c8d1190f6e1394db36cc5ffb94d0fd9cf3f52bcba8664718005633b0d4556",
+    "dist/artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
+    "dist/artifacts.js": "38707cf64f96a32d612caa2e1d52dc98896f0c7d5c89a825e09d2f9f08a1c43d",
+    "dist/asset-readiness.js": "ff56f4ed2b241611e3b894a5f0a09070eae75061a9281908901a4a00ece4b760",
+    "dist/audio-presentation.js": "39d5d0a71b3db1b6e5d03d2a74bc614bfd6740ad028417dd140c0a0a41f4c777",
+    "dist/audio.js": "a5c60c8e4cf4baf66851bbac7c9e7204468fafb8e9c1c181ced40e6656f7fcf0",
+    "dist/balance-config.js": "89c4ec591aa9539143b3f7d84bfb3de552ced4de956dc15fdde8791485b5cc22",
+    "dist/balance-data.js": "88da31a6442997a71810c4719147df1bd7c2df9b5a6504245b78e39a50df549d",
+    "dist/balance.js": "e234f43b27bda938ecbecaf41f1d586803401b59c1c39789d1a0db7a3d0c884f",
+    "dist/boot.css": "8ce0b3215f81b6eae17417329336b7d2cdc5e060891bdd6519c32e08c47852a9",
+    "dist/bootstrap.js": "a44edd71439423c9c7aacccff6c0a948dbada3b9385d0ef2d216a4063d233e44",
+    "dist/card-assets.js": "980001daf1852f5342bed45151d8a5797428bc2f6d2292ef845b167999789528",
+    "dist/card-combat.js": "58e94628c12cadfe29eef0eada0c8626fb92f47644abf6569d4a9045c2623cec",
+    "dist/card-data.js": "b0a59ae12fa10e407ed9f6048cdbb2b64a04aba778e1bbb7b7af8f8eba9e8f7c",
+    "dist/card-flow.js": "2bb73b722b41c7e57314b667408181c889f4dd8c57cfde05fbdacbd8b4c820bb",
+    "dist/card-kit.js": "c7f3a45004409a615239016c2f448f752107d200776d9ca3a6382ab1af4dec12",
+    "dist/card-motion.css": "5103374cd9ee1c5e7844f76d1a7e941b1ec5a99960d81830bdcc466857b49603",
+    "dist/card-motion.js": "439970ffbc28b2a0b339332d3bf4677e59a3282cee900976065a777fb5760af4",
+    "dist/card-ui.js": "0e3f4d3520c5d2b1e8ac614f336e4a7af9db2a9e90142e20813f1d723f9e2d9a",
+    "dist/cards.css": "983579dd64d3737e62291c882f187a42f563ec483ed24f568b53da13d4b9cb68",
+    "dist/combat-compact.css": "1a3b4cb712415ab5dd7fb7147f27d7dabaf6ab3f2b482af2064262bb5489f758",
+    "dist/combat-log.js": "7a9ed23117c483cb5de3b7a0a6d4c7ee4083e592b60f924cedcca0d570bba9c9",
+    "dist/combat-predict.js": "b9e7a27e6bf3482d23912c07144fbd6a1b553226250fc8a246d856c67409020a",
+    "dist/combat-status.js": "20a4e7979596cc6370cd35367bcfee0d91521c480d877f0b5f4008d493983353",
+    "dist/combat-vfx-orbits.js": "bc9a78cac142543235205b18e01a96a31b0dbacd55e1be330270032eaf9ab110",
+    "dist/combat-vfx-passive.js": "e508b4537cfab6a2539ae4dc9eae7c9f36a9b76563268ad5374724e1becba4df",
+    "dist/combat-vfx-shield.js": "4d71a8f6dc33c86e523d148ea8145140cdd49aae06707ea5c74b238a02e24b6f",
+    "dist/combat-vfx.css": "6784bcefcd727397f93bb4bb0903271ea2f18886da47068fbceff9c655e877d5",
+    "dist/combat-vfx.js": "3e43efea0ac11fe263211db28d50667518f4cfaacd55d2d0b9be4496740b33a2",
+    "dist/combat.css": "860b7e946ecc4f2d7a686671ff319d6a290d0ef6b4b6479f6bf94a66ab05862f",
+    "dist/config.js": "1f14b591f159d79b7978902a1884fb1f632b94de9b71ce758d0e607b023d0f74",
+    "dist/crimson.css": "b75b5a84a832b581ab8cba98550523be1f87ecbe6f9ed287ff7c95b2206a0335",
+    "dist/dom-patch.js": "d051a1ebb429c6de2f2ad4bb2b268b356523a041ab1bba355cf9890c4ec48986",
+    "dist/dungeon-2-3.css": "ce7aed65f6d0a5f9f16063b3d0b6b76440da2f152b84258016db41fb0cdb10cc",
+    "dist/dungeon.css": "e303c1a5a6be561ef78c5962d56f2b25db612032cfce4c5ab14d19bbf9abd543",
+    "dist/economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
+    "dist/economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
+    "dist/education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
+    "dist/education-practice.js": "fdf8e5d62889e6cab196d24c3e7f7de0f9ec7d6b16dcafe570ee31ed7b30f421",
+    "dist/education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
+    "dist/education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
+    "dist/engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
+    "dist/game-language.js": "01a47e9f3e24e9ed3dfa351824a5ac6ec2b89ba71867c4d5d321341153fb5c98",
+    "dist/hand.css": "cd52cf1c7c42978b56ae978bdec07aa04c1dce2243ee47503ae80ca8f310d476",
+    "dist/hand.js": "26d3503871abd3f268e6ed551507cd0c70195ce4820752b3188d3420463f51a2",
+    "dist/icon-assets.js": "0b97b47759ff7dbaf556174bbec8b68f632ba6ca34520a891c30eaacfd7ed28a",
+    "dist/icon-clarity.css": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd",
+    "dist/icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
+    "dist/icon-readiness.js": "f809819218b626e45d26cf141f459b080f73a6f00bf118bc99aad2e26b4fd539",
+    "dist/index.html": "94f40fcbfb2d03a785b2e060a109e256499b4b5e879f587ba2f345dbcd0e1f48",
+    "dist/input-guard.css": "95ed26e45472e41d41107f9504ee14249a1385207c428e69e9d18ea416300048",
+    "dist/input-guard.js": "eae325489eeecc73c1dbd939c44beda6d2b58a9aa0eb66a9cade2c1c15ecae08",
+    "dist/journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
+    "dist/learning-analytics.js": "b152e578ffa11de4047c6ac5e2708170f11bcf1b06b2ebe8e87cf95d61f64812",
+    "dist/learning-collection-config.js": "a3708de0584d94890922f04ae57160d35694cc7299d9671485843b9d1dcd07f2",
+    "dist/learning-curriculum.js": "d52b96672974820992d4afb981d388e85faa0a8767e8e802b57444a9af239047",
+    "dist/learning-delivery.js": "86fe34109aa2346f6257a273ca4e43adb7dc7ae75004d3da436df2a8038c7275",
+    "dist/learning-google.js": "b8907230d5601d2d1b8918757b716a4b16ee6ad232dd0b7c481d9fd0a2b3feaf",
+    "dist/learning-sync.js": "c1818c27a885d1a6d80d0fe32637a5a0353e9a06f1d6d066b32c1a61b3701ed1",
+    "dist/map-rng.js": "b8aacef3a3b037b4bb196aab92cb4fa52007c92b4d3b43ab85509b6a1ccc026c",
+    "dist/map.css": "f0ecde27e7b99434fda6e73ef94154cd2e0f8c3768582b2063df110da5e980d0",
+    "dist/map.js": "5981b94a4e999fc2b21ce6029e81260564f97c8be93dcbf1f847b493166d3e09",
+    "dist/math.js": "384ca053496c97d959320dfcea9e83cccc2f2af6630e8c810a1a734060f818f9",
+    "dist/mechanics-host.css": "138a24eaffb062b7c82eac66457c72ffdadbc817be26c88e58b001e52c84c2a7",
+    "dist/mechanics-host.js": "a73ce88b6b8c97ea8e2426d1afe4bbadb69c08eb3d287d72a2993ff22ac55f80",
+    "dist/mechanics-source.css": "74b39317681e896a4f50c913421d86c7295a154e4663ead1a4e8e1b4921bf0d6",
+    "dist/mechanics.js": "bf665a4cb25c5ac3ee37ac5b12f185f037926f3fe2bcad6cf20ce66b3c5ec907",
+    "dist/motion-preview.html": "5992158080d8910b4007a2b02851db78e73905c6a1dae41f23a65c3cb34fe787",
+    "dist/music-data.js": "a0e2b57c2da5eff31d35bed4040ea9c540816bc411f5f69d67c3287a65cb78d3",
+    "dist/music.css": "969fed6d068de80695aab6866031fed020adcdc3e0ff4f0df54d1337e500d92c",
+    "dist/mystery-data.js": "2f6630a3699dbc0aba0946e21e13e4a7ba89c83a6360a95f8decf934df8bee9b",
+    "dist/mystery-ui.js": "a5b9eed608ff4f5afeaf4ad5fa05afae37e9c20c20bdf55129accdfca03719f8",
+    "dist/mystery.css": "ac1fe38ebd6ac50cc7c1cbdf08602a7f383ba7c90354dfeae66e6418ee213c61",
+    "dist/mystery.js": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
+    "dist/passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+    "dist/question-data.js": "b2d1715d5a05252273bb9c30ab9216ec68c48ff79a999fab2378d181524a2c66",
+    "dist/question-feedback.js": "0ccf98888b95be71016e5e6d8de2dfb9e30d3ecc6372c5ed50cae988241cd6bf",
+    "dist/question-language.js": "750f0c85df6263006b2fc0f9da96626a6aa9bd9604e14107ecc6264d5d571b06",
+    "dist/question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
+    "dist/question-report.js": "55fac113b1bcd00de0a0617a94974fcaa06da7e8b0237ec7abd9c10794490cf5",
+    "dist/release.js": "bc7f3fcfee66159e644de970f3b3b72e19d6a7d7194d7ee4b27eace7354a6a94",
+    "dist/rich-text-data.js": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df",
+    "dist/rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
+    "dist/rich-text.js": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226",
+    "dist/scene.css": "1e865966d0bc0601d47767a7b7cdda79729dc9b93b6e306a37da9b389bbdb8f7",
+    "dist/shop.css": "bb7f039dfff9fa10ff1270ea1bf8f8822134ea49dac91c1aedc1acb7e6119ee2",
+    "dist/status-vfx.css": "833282ef43ae8ee64114bc9ffd29c565aa5840f69b71312c614553a239b169ee",
+    "dist/status-vfx.js": "a633470813a38fe9b24a4778a95a04628e174e9197530f76a5237a373aa0069e",
+    "dist/style.css": "7b5e0ef26ee2cbf4cbe99a47ad1f5a5473292122e6d93e4577a42294ddc8c292",
+    "dist/sw.js": "95c9bc9fb8d27731e6e9818bd12fe574269647635b9216601e1a5bd54a2f5667",
+    "dist/tutorial-core.js": "5204f5488655ab576c4b0832485594c92a6aa68921108b49fb0cef209ee6de7f",
+    "dist/tutorial-data.js": "8422ab0d23300d35f5535bb6f96879b3994674c096d1f2ad7b07edfef6bc489b",
+    "dist/tutorial.css": "13f5e5c77821ac542626f093bde7300be28377acb5e87e00e4d9c76dca1d2ddf",
+    "dist/tutorial.js": "52a7113884506796da7c05dce60102c68b5c03338e9ee8f2ba0338422f5a6937",
+    "dist/visuals.js": "0be6597746e629a7849043a7f276f64b50dee0eb77fca4470fcb3404bdff5a92"
+  },
+  "freeShmBytes": 1055330304
+}

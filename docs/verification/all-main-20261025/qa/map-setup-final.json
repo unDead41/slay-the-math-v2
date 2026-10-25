@@ -1,0 +1,35 @@
+{
+  "timeUTC": "2026-10-25T16:54:42.099323+00:00",
+  "candidateSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a",
+  "candidateTree": "a51f0084ec70dc1b2fd0ad319eb8b1643c8c25f2",
+  "registrySHA256": "d0ba24e551d051970a6c06a0d020fd2691c0eb55279ec11077c26cd6ad88b9e2",
+  "authoritativeRegistryCommit": "6e3648f54ecbdc0c678594ad930b28626ed901c6",
+  "checks": {
+    "cap3": true,
+    "default1": true,
+    "aggregateNode3": true,
+    "manualRegistry": true,
+    "ownerHistoricalSourceRetained": true,
+    "notTraining": true,
+    "tenUniqueCases": true,
+    "completeSnapshot": true,
+    "ownerSixPassFourFailPreserved": true,
+    "setupProfileInputsUnchangedFrom11PassCheck": true
+  },
+  "seedPartitionReusedFromUnchangedSetup": [
+    34,
+    33,
+    33
+  ],
+  "ownerOutcomeOnly": {
+    "sourceSHA": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+    "PASS": 6,
+    "FAIL": 4,
+    "new250PilotExecutionsByQA": 0
+  },
+  "caseManifestContentVerificationByQA": "NOT_RUN; declared artifact not in candidate. Root separately retrieved/verified known owner archive, manifest, fixtures,32captures and811source blobs; this QA record does not relabel those as our executions.",
+  "nativeCodexLoader": "NOT_RUN",
+  "enforcement": "Project/user cap3 overrides unmodified global skill4. Manual parent coordination, no atomic scheduler/lock claim.",
+  "pass": 10,
+  "fail": 0
+}

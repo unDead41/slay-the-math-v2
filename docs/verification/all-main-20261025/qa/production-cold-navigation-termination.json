@@ -1,0 +1,105 @@
+{
+  "status": "ABORTED_INCONCLUSIVE",
+  "timeUTC": "2026-10-25T16:49:43.959182+00:00",
+  "reason": "Root instructed controlled termination after >5min without final report. Warm screenshot still shows startup gate124/394files,19.9/95.2MB; startup75% prerequisite not proven. Helper layout-based gate may see main menu behind overlay. No cold navigation classification or production regression can be inferred.",
+  "variant": "Strict Cache-Control:no-store, not actual production server no-cache. Combined navigation/boot catch and unbounded context close prevent precise stage attribution.",
+  "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a",
+  "helperSHA256": "4e03e0acf9e6128ce7af11f697dc2270a54bccb832b46ce0acd18770cfbebe16",
+  "warmScreenshotSHA256": "bae5c27752da4a74ba791dd2f08fa40578790c9e84f59808d90a47a9d3259476",
+  "controlledSignal": "SIGTERM",
+  "ownedProcesses": [
+    {
+      "pid": 226856,
+      "ppid": 226854,
+      "command": "node /dev/shm/stm-all-evidence-20261025/qa/production-cold-navigation.cjs "
+    },
+    {
+      "pid": 226938,
+      "ppid": 226856,
+      "command": "/tmp/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autor"
+    },
+    {
+      "pid": 226940,
+      "ppid": 226938,
+      "command": "/tmp/chromium --type=zygote --no-zygote-sandbox --no-sandbox --headless "
+    },
+    {
+      "pid": 226941,
+      "ppid": 226938,
+      "command": "/tmp/chromium --type=zygote --no-sandbox --headless "
+    },
+    {
+      "pid": 226955,
+      "ppid": 226940,
+      "command": "/tmp/chromium --type=gpu-process --no-sandbox --disable-dev-shm-usage --disable-breakpad --headless --ozone-platform=headless --use-angle=swiftshader-webgl --enable-unsafe-swiftshader --gpu-preferences=YAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAASAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAQAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=3,i,12024491452688347940,8154239468856495671,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AutoDeElevate,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=7,i,11669514702235565396,10425689218133152263,4 --trace-process-track-uuid=3190708988185955192 "
+    },
+    {
+      "pid": 226967,
+      "ppid": 226938,
+      "command": "/tmp/chromium --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US@posix --service-sandbox-type=none --no-sandbox --disable-dev-shm-usage --use-angle=swiftshader-webgl --use-gl=angle --mute-audio --headless=old --shared-files --field-trial-handle=3,i,12024491452688347940,8154239468856495671,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AutoDeElevate,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=7,i,11669514702235565396,10425689218133152263,4 --trace-process-track-uuid=3190708989122997041 "
+    },
+    {
+      "pid": 226984,
+      "ppid": 226941,
+      "command": "/tmp/chromium --type=renderer --headless=old --no-sandbox --disable-dev-shm-usage --disable-back-forward-cache --disable-background-timer-throttling --disable-breakpad --force-color-profile=srgb --remote-debugging-pipe --allow-pre-commit-input --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --ozone-platform=headless --disable-gpu-compositing --lang=en-US@posix --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --launch-time-ticks=52226885761 --shared-files --field-trial-handle=3,i,12024491452688347940,8154239468856495671,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AutoDeElevate,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=7,i,11669514702235565396,10425689218133152263,4 --trace-process-track-uuid=319070899"
+    }
+  ],
+  "coldNavigationCalls": "UNKNOWN; no final report emitted",
+  "exactProductionColdNavigation": "NOT_RUN",
+  "repeatProbe": false,
+  "remainingOwnedAfterSIGTERM": [
+    226856,
+    226984,
+    226955,
+    226967,
+    226938,
+    226940,
+    226941
+  ],
+  "forcedSIGKILL": [
+    226856,
+    226984,
+    226955,
+    226967,
+    226938,
+    226940,
+    226941
+  ],
+  "initialCrossNamespaceSignalAttemptEffective": false,
+  "finalTermination": {
+    "method": "write_stdin Ctrl-C to originating exec session79671",
+    "exitCode": 130,
+    "timeUTC": "2026-10-25T16:51:01.695556+00:00"
+  },
+  "ownedProcessReadback": [
+    {
+      "pid": 226856,
+      "procExists": false
+    },
+    {
+      "pid": 226938,
+      "procExists": false
+    },
+    {
+      "pid": 226940,
+      "procExists": false
+    },
+    {
+      "pid": 226941,
+      "procExists": false
+    },
+    {
+      "pid": 226955,
+      "procExists": false
+    },
+    {
+      "pid": 226967,
+      "procExists": false
+    },
+    {
+      "pid": 226984,
+      "procExists": false
+    }
+  ],
+  "cleanupConfirmed": true
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "preparedUTC": "2026-10-25T17:02:14.628922+00:00",
+  "scope": "Explicit local test checkpoints and API publication tree binding; no nonexistent GitHub commit links",
+  "localCheckpoints": [
+    {
+      "sha": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194",
+      "tree": "d138cc8bfa7b8d5ad9a82e04057b8480a31ee3a8",
+      "kind": "LOCAL_ONLY",
+      "scope": "Original full Node1175:1173pass/2fail and first owner builds"
+    },
+    {
+      "sha": "370a4c4010db56f8b80d82eba01f97083d85d7a3",
+      "tree": "bad829020e89df75c174128a5d12622f6bba04ec",
+      "kind": "LOCAL_ONLY",
+      "scope": "42 paths:40 real tutorial WebP+screenshots.json+assetmanifest only"
+    },
+    {
+      "sha": "acb152e30cca5e9b1f7064d7988b2e2860a4710a",
+      "tree": "a51f0084ec70dc1b2fd0ad319eb8b1643c8c25f2",
+      "kind": "LOCAL_ONLY",
+      "scope": "COMPLETE registry refresh; final affected28/native checks"
+    }
+  ],
+  "runnableInputParity": {
+    "canonicalPaths": 603,
+    "fullToNativeDrift": 0,
+    "allowedFullToNativePaths": 43,
+    "qaEvidenceSHA256": "c23b1a2018bfb55154cb3e07511736a828a9d8417109e93bdbdd86946225f989",
+    "qaIndexSHA256": "a7f26ae54516271994432c8322d394c4ba01d60b29ccdf50a9227d93fbb62418"
+  },
+  "expectedApiOrderedParents": [
+    "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+    "4e10e3d41ec439c15b75aceb754d1c7b352d3755",
+    "ef09a6be9fad20cf54e8fc868b253b8ae71c603a",
+    "6e3648f54ecbdc0c678594ad930b28626ed901c6"
+  ],
+  "remoteCommitPolicy": "API author/time produces a different commitSHA; verify exact tree equals reviewed local final tree and record actual ref in separate publication receipt. No main update yet.",
+  "publicationStatusAtPreparation": "PENDING",
+  "tutorialInputDigest": "37fa45285211f55d830ac277e1ce3e3208838d76fb62c6210e62d75298d9a7a4"
+}

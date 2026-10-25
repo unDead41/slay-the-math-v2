@@ -1,0 +1,20 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "tests/live-vfx-renderer.test.cjs",
+    "tests/live-vfx.test.cjs",
+    "tests/live-vfx-ui.test.cjs",
+    "tests/status-vfx.test.cjs"
+  ],
+  "exitCode": 0,
+  "inputs": {
+    "dist/combat-vfx.js": "3e43efea0ac11fe263211db28d50667518f4cfaacd55d2d0b9be4496740b33a2",
+    "tests/fixtures/vfx-body-reference.json": "9f95ed725c4e9ede3e703e3ea980b1164529316312e8239fc3c16f174f06a7bb",
+    "tests/vfx-alignment-browser.cjs": "835d0d7b925b44699b0c9aaf054554d807438e9a5ade64e1ae34b78565846cf0",
+    "tests/live-vfx-renderer.test.cjs": "43f3085f3845777ad83cc4f9f05397359f62f0476c5fcd7ac7b21e17c93dceee",
+    "dist/animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
+    "dist/assets/motion-alyssa-idle.webp": "27c5706bcd032f0184f68f8519cfb0c720c3d5c3ff5d6b525feccf171fa8dd75",
+    "dist/assets/alyssa-right-idle.webp": "b290d3fa015ea40662bae23a210805de4922d9ce209fe6eb911d6b505f6be0c0"
+  }
+}

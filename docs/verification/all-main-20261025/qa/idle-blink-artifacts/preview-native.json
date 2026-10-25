@@ -1,0 +1,362 @@
+{
+  "version": "2.50.0",
+  "blink": {
+    "closed": [
+      {
+        "ms": 2540,
+        "frame": 7
+      },
+      {
+        "ms": 6000,
+        "frame": 7
+      }
+    ],
+    "spansMs": [
+      280,
+      280
+    ],
+    "sourceTransitions": [
+      {
+        "ms": 0,
+        "frame": 0
+      },
+      {
+        "ms": 100,
+        "frame": 1
+      },
+      {
+        "ms": 220,
+        "frame": 2
+      },
+      {
+        "ms": 360,
+        "frame": 3
+      },
+      {
+        "ms": 500,
+        "frame": 4
+      },
+      {
+        "ms": 640,
+        "frame": 5
+      },
+      {
+        "ms": 1000,
+        "frame": 9
+      },
+      {
+        "ms": 1120,
+        "frame": 10
+      },
+      {
+        "ms": 1240,
+        "frame": 11
+      },
+      {
+        "ms": 1380,
+        "frame": 12
+      },
+      {
+        "ms": 1520,
+        "frame": 13
+      },
+      {
+        "ms": 1640,
+        "frame": 14
+      },
+      {
+        "ms": 1740,
+        "frame": 0
+      },
+      {
+        "ms": 1820,
+        "frame": 1
+      },
+      {
+        "ms": 1960,
+        "frame": 2
+      },
+      {
+        "ms": 2100,
+        "frame": 3
+      },
+      {
+        "ms": 2220,
+        "frame": 4
+      },
+      {
+        "ms": 2360,
+        "frame": 5
+      },
+      {
+        "ms": 2460,
+        "frame": 6
+      },
+      {
+        "ms": 2540,
+        "frame": 7
+      },
+      {
+        "ms": 2660,
+        "frame": 8
+      },
+      {
+        "ms": 2740,
+        "frame": 9
+      },
+      {
+        "ms": 2840,
+        "frame": 10
+      },
+      {
+        "ms": 2980,
+        "frame": 11
+      },
+      {
+        "ms": 3120,
+        "frame": 12
+      },
+      {
+        "ms": 3240,
+        "frame": 13
+      },
+      {
+        "ms": 3380,
+        "frame": 14
+      },
+      {
+        "ms": 3480,
+        "frame": 0
+      },
+      {
+        "ms": 3560,
+        "frame": 1
+      },
+      {
+        "ms": 3680,
+        "frame": 2
+      },
+      {
+        "ms": 3820,
+        "frame": 3
+      },
+      {
+        "ms": 3960,
+        "frame": 4
+      },
+      {
+        "ms": 4100,
+        "frame": 5
+      },
+      {
+        "ms": 4480,
+        "frame": 9
+      },
+      {
+        "ms": 4580,
+        "frame": 10
+      },
+      {
+        "ms": 4700,
+        "frame": 11
+      },
+      {
+        "ms": 4840,
+        "frame": 12
+      },
+      {
+        "ms": 4980,
+        "frame": 13
+      },
+      {
+        "ms": 5120,
+        "frame": 14
+      },
+      {
+        "ms": 5200,
+        "frame": 0
+      },
+      {
+        "ms": 5280,
+        "frame": 1
+      },
+      {
+        "ms": 5420,
+        "frame": 2
+      },
+      {
+        "ms": 5560,
+        "frame": 3
+      },
+      {
+        "ms": 5680,
+        "frame": 4
+      },
+      {
+        "ms": 5820,
+        "frame": 5
+      },
+      {
+        "ms": 5920,
+        "frame": 6
+      },
+      {
+        "ms": 6000,
+        "frame": 7
+      },
+      {
+        "ms": 6120,
+        "frame": 8
+      },
+      {
+        "ms": 6200,
+        "frame": 9
+      },
+      {
+        "ms": 6300,
+        "frame": 10
+      }
+    ]
+  },
+  "actors": [
+    {
+      "id": "wisp",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "beetle",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "bat",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "knight",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "shard",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "weaver",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "shade",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "mimic",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "golem",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "reaper",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "sentinel",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    },
+    {
+      "id": "dealer",
+      "actions": [
+        "attack",
+        "defend",
+        "skill",
+        "damaged"
+      ],
+      "canvasPositionStable": true,
+      "exactIdleReturnPixels": true
+    }
+  ],
+  "errors": [],
+  "runtimeHashes": {
+    "animation.js": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9",
+    "animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
+    "motion-preview.html": "5992158080d8910b4007a2b02851db78e73905c6a1dae41f23a65c3cb34fe787"
+  },
+  "passed": true
+}

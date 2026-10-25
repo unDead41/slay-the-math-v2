@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "registryKind": "MANUAL_COORDINATION",
+  "owner": "Master / Simulation & Evidence",
+  "policy": "One parent writer; register exact source/context/case identity before execution; no atomic lock or scheduler implemented.",
+  "maxSpawnedSubagents": 3,
+  "defaultSpawnedSubagents": 1,
+  "maxAggregateNodeWorkers": 3,
+  "runs": [
+    {
+      "runId": "SE-PILOT-20261025-B3DC750-01",
+      "kind": "BROWSER_INTEGRATION",
+      "owner": "Simulation & Evidence / root",
+      "status": "COMPLETE",
+      "sourceBranch": "main",
+      "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+      "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
+      "identityHash": "33a10bcbfc788c7380ff8313b19776771799a02637ed65690e0048db1bc515e2",
+      "caseManifestPath": "ZIP/manifest.json",
+      "caseManifestSHA256": "4db5e9031352cfd65eb5c76d74d0e3c401420dc173d074304f4b9ce1046822ba",
+      "fixturesSHA256": "593c1050f15ccd5c2725fe547622334698b2bf2fa34ec41421f1b14c50727d33",
+      "outputPath": "https://chatgpt.com/library?file_id=libfile_4d7ea09eaf6c8191b202cc4f84036864&account_id=personal",
+      "planned": 10,
+      "returned": 10,
+      "trainingEligible": false,
+      "budget": {
+        "workers": 1,
+        "browserProcesses": 1,
+        "caseCount": 10,
+        "wallTimeMinutes": 25,
+        "maxVideos": 2,
+        "maxVideoSeconds": 15,
+        "maxArtifactMiB": 200
+      },
+      "cases": [
+        {
+          "caseId": "A1",
+          "kind": "offline",
+          "seed": 1568180215,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "cache": "full",
+          "entryHash": "c6b767dfc89d749e97d1d41b290f63744d17edadba06bbbcd066b936b5fe56ac",
+          "status": "FAIL"
+        },
+        {
+          "caseId": "A2",
+          "kind": "offline",
+          "seed": 1235945743,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "cache": "startup",
+          "entryHash": "207758991cd2c05822abcc3c859b80e4a91fc7aff5e46109d9cb1836f1ec1984",
+          "status": "FAIL"
+        },
+        {
+          "caseId": "A3",
+          "kind": "offline",
+          "seed": 905676559,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "cache": "full",
+          "entryHash": "cf68791f71c8f25271486b9fd41514423f06ec174db2cee5b6e116a788ca6fc1",
+          "status": "FAIL"
+        },
+        {
+          "caseId": "A4",
+          "kind": "offline",
+          "seed": 4075897635,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "cache": "startup",
+          "entryHash": "088a62664ea3f4a258a791404d30a75168910d4a77182171a67c3feb110c43d5",
+          "status": "FAIL"
+        },
+        {
+          "caseId": "B1",
+          "kind": "shop",
+          "seed": 2245331980,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "cache": null,
+          "entryHash": "84411f54c3ced13f1d679aa93700e6bdf8926c8d5756eb501a3ff91c32300d2b",
+          "status": "PASS"
+        },
+        {
+          "caseId": "B2",
+          "kind": "shop",
+          "seed": 2480056235,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "cache": null,
+          "entryHash": "573799f049464670aedcbcc314019f065cee57d63621461df0aac128920bd307",
+          "status": "PASS"
+        },
+        {
+          "caseId": "B3",
+          "kind": "boss",
+          "seed": 3804758878,
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "cache": null,
+          "entryHash": "abc444e6074f9eddd6e9ba3e5f918ffee95915157fa9b5071b70391d80fec048",
+          "status": "PASS"
+        },
+        {
+          "caseId": "B4",
+          "kind": "boss",
+          "seed": 559014878,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "cache": null,
+          "entryHash": "01b8674e3818530b1f8e35ea16b1afe69da1e318f52a9d43b9939a3c8187bdbd",
+          "status": "PASS"
+        },
+        {
+          "caseId": "C1",
+          "kind": "vfx",
+          "seed": 1377066153,
+          "language": "en",
+          "viewport": {
+            "width": 1366,
+            "height": 900
+          },
+          "cache": null,
+          "entryHash": "e44ead71eb0beba94a7881ec030d75aff2771c70ca69045d7f550ff02ae40250",
+          "status": "PASS"
+        },
+        {
+          "caseId": "C2",
+          "kind": "vfx",
+          "seed": 1886181081,
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "cache": null,
+          "entryHash": "c47c113aa5c4dc5db7adf8f9aa71b5b06b60cc301aeab65b4e431f11068cb38d",
+          "status": "PASS"
+        }
+      ],
+      "ownerRefsObserved": [
+        {
+          "branch": "ai",
+          "commit": "807be6763cac1bc97134f86031d42e5dc720d6d1"
+        },
+        {
+          "branch": "balance/combat",
+          "commit": "3a62324ba05de14bd27774a565a5a048e7aa404a"
+        },
+        {
+          "branch": "balance/economy",
+          "commit": "2e54f2b2107289925d936cb65d1ab86fd823ff96"
+        },
+        {
+          "branch": "balance/map",
+          "commit": "8ca19526ec6a69d1183bae96803e461a77e3acfc"
+        },
+        {
+          "branch": "balance/master",
+          "commit": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91"
+        },
+        {
+          "branch": "combat-animation",
+          "commit": "4e10e3d41ec439c15b75aceb754d1c7b352d3755"
+        },
+        {
+          "branch": "education",
+          "commit": "db220d194e140e48e2d176c5776ab494b20e80e8"
+        },
+        {
+          "branch": "tutorial",
+          "commit": "30154c9e354ce03ed18f4f0b507d394de0506d61"
+        }
+      ],
+      "coordination": "Single collector; user explicitly authorizes these ten integration cases. No numeric domain campaign claimed or rerun. Remote registry/output snapshot checked; unpushed owner work and cross-chat acknowledgement not observable. This file is not an atomic lock.",
+      "startedAt": "2026-10-25T15:38:06.496Z",
+      "plannedAt": "2026-10-25T15:35:20.715Z",
+      "assessment": "PERLU UPDATE: cold-start offline navigation failed in four configurations; six scoped cases passed",
+      "pass": 6,
+      "fail": 4,
+      "error": 0,
+      "censored": 0,
+      "missing": 0,
+      "finishedAt": "2026-10-25T15:55:04.134Z",
+      "outputLibraryFileId": "libfile_4d7ea09eaf6c8191b202cc4f84036864",
+      "archiveSHA256": "ffef8954438640b2ecc671dfc620b57d3c0d5ee8d85b3b57f1d5d9d566f3c352",
+      "archiveBytes": 30121890,
+      "evidenceIndex": "ZIP/evidence-index.json",
+      "evidence": {
+        "screenshots": 30,
+        "videos": 2,
+        "captureHashesVerified": true,
+        "runtimeFilesHashVerified": 811,
+        "uniqueSeeds": 10
+      },
+      "attemptHistory": "Interrupted setup and Boss comparator attempts retained in ZIP raw/. Brief duplicate startup was interrupted before any accepted outcome; final accepted collection used one collector/browser serially.",
+      "runtimeKind": "Exact committed dist over local HTTP project subpath; not public hosted deployment or production-build verification"
+    }
+  ]
+}

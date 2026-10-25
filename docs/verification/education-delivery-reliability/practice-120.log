@@ -1,0 +1,14 @@
+✔ DOM: all 120 questions switch between authored BM and English, with translated guidance and unchanged answer identities (123849.632998ms)
+✔ DOM: language changes keep selection, learning reservation, open guidance and comments, and restore the preference (2454.520051ms)
+✔ DOM: every question has its own editable persistent comment, unaffected by Hint, review reset or learning reset (18766.399847ms)
+✔ DOM: comments stay inert and their shared settings keep cancellation and saved text (948.513979ms)
+✔ DOM: leaving sharing settings preserves comments without invoking native file sharing (1064.551063ms)
+✔ DOM: comment-only storage failure stays truthful at exit and offers the in-memory comment in shared JSON recovery (2231.180539ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 150124.294967

@@ -49,7 +49,7 @@ function showQuestionReport(button){
  const active=Q.currentConsumer(run),record=Q.consumerRecord(run);
  if(!active?.question||button.dataset.questionId!==active.question.id||button.dataset.source!==active.consumer)throw Error('Report the current finished question.');
  if(!questionReporter){let storage;try{storage=localStorage;}catch(_){}
-  questionReporter=window.DCQuestionReport.create({document,storage,bank:window.STMMechanics.data.bank,enqueue:entry=>analyticsSync?.enqueue({id:entry.id,kind:'question-feedback',payload:entry}),getDelivery:()=>({...learningDeliveryStatus(),dev:!!window.STMDevMode})});
+  questionReporter=window.DCQuestionReport.create({document,storage,bank:window.STMMechanics.data.bank,enqueue:entry=>analyticsSync?.enqueue({id:entry.id,kind:'question-feedback',payload:entry}),getDelivery:()=>({...learningDeliveryStatus(),dev:!!window.STMDevMode}),onOpenSharing:()=>{analyticsView='sharing';showAnalytics();LUI.selectView($('#dialog .learning-report'),'sharing');$('#dialog [data-analytics-action=share]')?.focus({preventScroll:true});}});
  }
  const language=QL.language();questionReporter.open({question:QL.question(active.question,language),record,source:active.consumer,language,focus:button});
 }
@@ -67,6 +67,7 @@ function showAnalytics(){
 function exportAnalytics(){
  if(!analyticsStore)return;
  let comments=[];try{const saved=JSON.parse(localStorage.getItem('slay-the-math.question-feedback.v1')||'null');if(saved?.schemaVersion===1&&Array.isArray(saved.comments))comments=saved.comments;}catch(_){}
+  if(questionReporter)comments=questionReporter.exportData().comments;
  const exported={schemaVersion:1,game:'Slay the Math',exportedAt:new Date().toISOString(),analytics:analyticsStore.exportData(),report:analyticsStore.report({scope:analyticsScope,language:QL.language()}),comments,pendingEntries:analyticsSync?.status().pendingEntries||[],ownerRecovery:run?.educationState?{schemaVersion:1,scope:'gameplay',sessionId:String(run.started)+':'+run.seed,questionIds:Q.runIds(run),session:Q.getSession(run)}:null};
  const text=JSON.stringify(exported,null,2),blob=new Blob([text],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');
  link.href=url;link.download='slay-the-math-learning-backup.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);

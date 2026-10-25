@@ -1,5 +1,16 @@
 # Simulation data handoff for Combat, Map and Economy
 
+## Current main integration authorization — 2.50.0
+
+The current explicit user request authorizes combining combat, education and
+Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
+is VALID with carried P2 findings and explicit limits; original failed commands
+and later focused/native evidence remain separate. Publication is PENDING actual
+main ref readback. This supersedes the relevant earlier branch-only boundary;
+original source pins, histories and current main owners remain. The completed
+owner pilot stays tied to source b3dc, not 2.50. [Scope, results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
 Owner: Master Balance / developer AI.25 October2026. Read Master SOR and current owner audit before exporting. Publish your own branch only unless Ijamm authorizes more. This contract and validator live on balance/master; read that branch's current version when your branch does not yet contain them.
 
 ## Required delivery
@@ -63,3 +74,10 @@ Use the same envelope with domain map/kind room and real recovery/route measurem
 ## Handoff checklist and interpretation
 
 Include command, current source hashes, protocol/version, fixed inputs/seed plan, planned/returned/terminal/invalid/censored totals, raw hashes, numeric/runtime compatibility and a README of confirmed issues/potential risks/improvements. Source drift requires fresh replay, not a changed label. Keep baseline and candidate, training and validation, and human versus synthetic evidence separate. Same seed is a matched scenario, not another independent pupil. No script silently learns from a player's save or changes game numbers.
+
+
+## Shared collection and visual evidence — 25 October 2026
+
+Read [the shared protocol](../simulation/SIMULATION_EVIDENCE_PROTOCOL.md) for ownership, source/case registration, stable-source rechecks and browser/tutorial capture. Maximum three subagents across Master/Map, default one, one collector. Registry coordination is manual, not a global lock.
+
+Schema/fitting support and historical seed plans above remain unchanged. A Map/Economy envelope PASS does not verify every semantic field/planned case or implement a supported learner; reconcile owner raw/context/schedule independently.

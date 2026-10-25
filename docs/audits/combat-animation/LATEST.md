@@ -1,3 +1,123 @@
+# Body-aligned combat VFX — branch 2.49.1-combat.1
+
+## Current main integration authorization — 2.50.0
+
+The current explicit user request authorizes combining combat, education and
+Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
+is VALID with carried P2 findings and explicit limits; original failed commands
+and later focused/native evidence remain separate. Publication is PENDING actual
+main ref readback. This supersedes the relevant earlier branch-only boundary;
+original source pins, histories and current main owners remain. The completed
+owner pilot stays tied to source b3dc, not 2.50. [Scope, results and limits](../../ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
+| Field | Current review |
+| --- | --- |
+| Date | 25 October 2026, Asia/Kuala_Lumpur |
+| Repository / publication target | unDead41/slay-the-math-v2 / combat-animation only |
+| Main used as base | `d77b3e0ce87d573de89e84a9b2374df97ad625b9`, game 2.49.0 |
+| Previous combat ref | `2837a553c7b68e7aab5dd4a134a5b352aea2dd81`; already an ancestor of main, fourteen commits behind |
+| Working branch | combat-vfx-alignment, based on that exact current main |
+| Master SOR | 1.2.0, read first from current main; current AGENTS/governance/decisions, MOT-39 owner, previous VFX/MC and 2.49 integration reports reviewed |
+| Current user request | Fix VFX placement in the supplied actual combat screenshot; continue the branch-first boundary |
+| Compatibility | VALID within the source, dependent-test and native-placement scope below |
+| Publication | Branch-only expected-head/non-forced update; final actual SHA/ref is read back in the handoff |
+
+The previous main publication merged the existing flicker/lifecycle correction.
+It does not authorize this new geometry correction on main. Start from current
+main so its newer preload, icon recovery, illustrated tutorial, language and AI
+owners are retained. No main write or deployment is performed.
+
+## Initial and final findings
+
+| ID / category | Priority / confidence | Reproduction and cause | Correction / final evidence |
+| --- | --- | --- | --- |
+| FIT-001 / MASALAH DISAHKAN | P2 / high | The user's screenshot shows Shield left of Alyssa/Prism Guard. `measure/transform` uses x800, the source floor/atlas pivot, as the body axis. The current registered body axes are approximately x940 and x960. A clean RED test paints both at x320 in a 640px canvas, against source-body x376/x384. | FIXED: calibrated anatomical offsets in the existing 1600x1200 source projection, shared by Shield/stat/barrier fields. Native final maximum horizontal error is below 0.72 CSS px across the recorded cases. No actor or art is moved. |
+| FIT-002 / MASALAH DISAHKAN | P2 / high | Generic ground-based y and old height fallbacks do not fit floating/short/wide creatures. Opaque Rune Bat spans y222..979 above the y1100 floor; the generic sphere is vertically displaced. Canonical Shield headroom also falls below the hero's head. | FIXED: thirteen per-actor body height/bottom references, body headroom and width adjustments for stocky creatures. Keep Passive at the original arena floor. Native checks cover all twelve enemies/bosses plus Alyssa, with body centres/head coverage and no body-only floor pixels. |
+| FIT-003 / MASALAH DISAHKAN | P2 / high | The compositor scales both axes from displayed width. A canvas whose CSS aspect changes therefore disagrees with the actor's separate displayed width/height. A clean RED unequal-axis test reproduces the mismatch. | FIXED: x/y each use their actual displayed canvas projection. Desktop, 390px Low, short landscape and 4K native checks pass without document horizontal overflow. |
+
+Three new reproductions fail against unchanged main before implementation, then
+pass after correction. An intermediate implementation run catches a local
+`height` redeclaration; its raw failure is retained, corrected before production
+build/QA, and not counted as a pass. The existing height-ownership regression is
+updated to assert proportional response to the actual registry height rather
+than freezing the retired `height/350` body tuning.
+
+## Implementation and preservation
+
+Only `dist/combat-vfx.js` changes gameplay presentation. It uses static source
+measurements and no per-frame pixel reads. Body fields share one calibrated
+transform. Passive uses the centred boot axis but the original ground line and
+its existing scale; above-floor masking remains separate. Keep the stable Idle
+body/boot reference through brief action poses, avoiding camera-like resizing or
+chasing extended weapon tips. An explicit actor `bodyHeight` still owns size.
+
+All **708 current main asset files**, sprite/player registries, source timing,
+app/DOM owner, three painters, fast lifecycle/status adapters, loader/icon
+integration, numerical/save/RNG, tutorial, language and AI inputs are unchanged.
+[Preservation/resource identities](alignment/preservation.json). No source
+pixels are redrawn or moved. New regression references come from the actual
+atlas projection and anatomical source-grid inspection, excluding long weapons.
+[Measured source grid](alignment/source-grid.jpg),
+[reference coordinates and source hashes](../../../tests/fixtures/vfx-body-reference.json).
+
+## Fresh verification
+
+- **83 PASS / 0 FAIL / 0 skipped**: compositor/projection/UI, status VFX,
+  persistence, actor/source timing, Stage 1/2 and boss motion, texture budgeting,
+  resource/release owners. [Exact log](alignment/focused.log.gz).
+- Final production placement browser: **16 cases / 32 actor checks pass** across
+  all thirteen identities. Enemy Defense/Vulnerable use the same native body
+  transform as Shield. Maximum relative vertical-centre error against the
+  measured visible-body reference is below 1.81% of its projected height.
+  All body-only surfaces have zero floor alpha; three real Passive triggers
+  draw at the registered boot centre and own floor pixels. Exact saved state/RNG
+  remains unchanged. [Observations](alignment/native.json).
+- Native visual review: actual 2048px/1366px combat, floating Rune Bat, wide Card
+  Mimic, final boss, 390px Low and three Passive seals. [Desktop after fix](alignment/after-desktop.jpg),
+  [phone](alignment/after-phone.jpg), [three Passive seals](alignment/after-passives.jpg).
+- Current production continuity replay **14/14 PASS**: rapid cards/hits retain
+  fields and surfaces, zero room flashes, actual engine equality, second Passive,
+  dialogs and Motion Off. [Exact observations](alignment/continuity.json).
+- Current Alyssa native suite **PASS**: all five clips / 75 exposures, seven pose
+  viewports, both stages/bosses, native outcomes, pause/reduced motion, Canvas/atlas
+  fallback and actual portable zero-network playback. [Report](alignment/alyssa.json).
+- `npm run check`, native-helper syntax and `npm run build:prod`: PASS. All 760
+  source and 761 production manifest SHA256 values match actual bytes. Portable
+  output is 312,120,347 bytes. Final diff/links and scoped preservation are checked.
+
+The large unrelated full-game/AI/map campaigns are NOT_RUN for this geometry-only
+change; current main's 1,148-test evidence remains historical, not a new result.
+The dependent source/UI tests and actual production painters are the fresh
+verification for this candidate. No independent review agent is claimed.
+
+## Carried risks and improvements
+
+| ID / category | Priority / confidence | State |
+| --- | --- | --- |
+| CI-247-01 and QA-248-PRELOAD-01 / inherited MASALAH DISAHKAN | P2 / high | OPEN in main 2.49.0; this geometry change does not touch or establish a fix for the old icon-browser matrix or transient preload completion counter. Their earlier failure/pass records remain intact. |
+| Physical devices / RISIKO BERPOTENSI | P2 / medium | OPEN: Chromium and emulated layouts do not measure physical Windows/phone FPS, GPU or total memory. No performance guarantee follows the matrix/pixel checks. |
+| Future actor-source changes / RISIKO BERPOTENSI | P3 / high | Recalibrate the body reference when a model/registration changes. Source hashes guard this QA fixture; production does not inspect pixels or refit each pose. Long weapon tips may sit outside a body shell. |
+| LIVE-RISK-001 / RISIKO BERPOTENSI | P3 / high | Unchanged: an old trimmed log cannot reconstruct exact historical first-trigger order on Continue; presence/live observed order remain as before. |
+| FIT-IMP-001 / PENAMBAHBAIKAN, implemented | P2 / high | Add actual body-reference/painter-matrix/pixel regressions so retained canvas identity alone cannot certify correct placement. |
+
+Tiada isu tambahan ditemui dalam skop yang disemak. Human motif recognition,
+physical devices and the failed MODEL.zip source comparison remain unverified.
+The installed repository's actual actor atlases were used; the unrelated KSSM
+PDFs were not needed. The user attachment was inspected, not copied into Git or
+used as replacement artwork.
+
+The root disk had no free space before this work. Move only the previous clean,
+task-owned checkout to available memory-backed space, preserve its original path
+as a symlink and retain every tracked byte. No unrelated workspace or user data
+is deleted. Tests/builds and temporary browser profiles use that isolated work
+area. Source/evidence are persisted to the combat branch before handoff.
+
+---
+
+Earlier completion/publication records follow as history. Their main permissions
+and evidence do not publish or validate this new placement correction.
+
 # Combat continuity — branch 2.45.1-combat.1
 
 ## Main integration authorization — 2.49.0

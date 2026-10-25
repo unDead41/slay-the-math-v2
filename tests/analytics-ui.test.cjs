@@ -29,6 +29,11 @@ test('Learning Report is available from Main Menu and Settings without an active
   assert.ok(b.d.querySelector('.learning-report'));
  }finally{b.dom.window.close();}
 });
+
+test('an unqueued game report opens the existing Sharing view without changing gameplay',()=>{
+ const E=require('../dist/engine.js'),Q=require('../dist/education.js'),run=F.questionSetup('PROB-003','artifact'),q=Q.catalog['PROB-003'];E.selectEducation(run,q.correctChoiceId);E.answerEducation(run);const b=boot(run,{}, {throwQueue:true});
+ try{b.click('[data-action=analytics]');assert.equal(b.d.querySelector('.learning-report').dataset.view,'overview');b.click('#dialog [data-action=close]');b.click('[data-action=continue]');const before=JSON.stringify(b.state());b.click('[data-action=question-report]');const dialog=b.d.querySelector('#question-report-dialog');dialog.querySelector('textarea').value='Please clarify the hint';dialog.querySelector('[data-report=save]').click();assert.match(dialog.querySelector('[data-report=status]').textContent,/not be queued/);b.click('#question-report-dialog [data-report=sharing]');assert.equal(dialog.open,false);assert.equal(b.d.querySelector('.learning-report').dataset.view,'sharing');assert.equal(b.d.querySelector('[data-analytics-panel=sharing]').hidden,false);assert.equal(JSON.stringify(b.state()),before);}finally{b.dom.window.close();}
+});
 test('Real Predict wrong/Hint/retry is captured once, survives reload, and report controls preserve gameplay',()=>{
  let b=boot(F.create({kind:'combat'}));try{
   b.click('[data-action=continue]');b.click('[data-action=forecast]');

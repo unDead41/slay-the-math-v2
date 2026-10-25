@@ -1,0 +1,608 @@
+{
+  "schemaVersion": 1,
+  "kind": "FINAL_COMBINED_RISK_BASED_QA",
+  "generatedUTC": "2026-10-25T16:54:42.115852+00:00",
+  "qaWindowClosed": true,
+  "recommendation": "VALID_WITH_CARRIED_P2_AND_EXPLICIT_LIMITS",
+  "releaseAuthority": "Root GO required; Release Manager sole writer. QA performs no main/ref writes.",
+  "version": "2.50.0",
+  "fullNodeCandidate": {
+    "SHA": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194",
+    "tree": "d138cc8bfa7b8d5ad9a82e04057b8480a31ee3a8"
+  },
+  "finalRunnableCandidate": {
+    "SHA": "370a4c4010db56f8b80d82eba01f97083d85d7a3",
+    "tree": "bad829020e89df75c174128a5d12622f6bba04ec"
+  },
+  "finalDocsCandidate": {
+    "SHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a",
+    "tree": "a51f0084ec70dc1b2fd0ad319eb8b1643c8c25f2"
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "jsdom": "26.1.0",
+    "playwright": "1.62.1",
+    "chromium": "153.0.8010.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "TMPDIR": "/dev/shm/stm-all-evidence-20261025/qa/tmp",
+    "defaultHeapMiB": 4096,
+    "mathFocusedHeapMiB": 1792,
+    "browserScheduling": "One owned browser family at a time; other chats browser process presence noted during original full test.",
+    "noDependencyInstall": true
+  },
+  "inputEquivalence": "input-equivalence.json",
+  "closingSnapshot": "closing-source-snapshot.json",
+  "artifacts": {
+    "SLAY-THE-MATH-OFFLINE.html": {
+      "bytes": 312126175,
+      "sha256": "585fed7dc3e6b3cf04e600563fe626d720b3c8869afa39c8f943c51ed9f51803"
+    },
+    "release-prod/asset-manifest.json": {
+      "bytes": 165039,
+      "sha256": "40929d2746443e98cf7c2408a5c0d8fe834e9e408d600d629b6caec2dd5e04ff"
+    },
+    "release-prod/index.html": {
+      "bytes": 11030,
+      "sha256": "007eedfd9d4173a617cf5af8627564011b8d26b8371fc77d8ccaeb427fd5dc4c"
+    }
+  },
+  "commands": [
+    {
+      "label": "syntax",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 7.017,
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "commandRecord": "syntax.json",
+      "log": "syntax.log",
+      "counts": {
+        "count": "All JS syntax checked; no invented test count"
+      },
+      "sourceSHA": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194"
+    },
+    {
+      "label": "full-node",
+      "status": "FAIL",
+      "exitCode": 1,
+      "elapsedSeconds": 413.249,
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "tests/ai-choice-efficiency.test.cjs",
+        "tests/ai-choice-observation.test.cjs",
+        "tests/ai-experience-data.test.cjs",
+        "tests/ai-experience-policy.test.cjs",
+        "tests/ai-playtester-acquisition.test.cjs",
+        "tests/ai-playtester-agent.test.cjs",
+        "tests/ai-playtester-deck.test.cjs",
+        "tests/ai-playtester-effects.test.cjs",
+        "tests/ai-playtester-server.test.cjs",
+        "tests/ai-playtester-strategy.test.cjs",
+        "tests/ai-playtester.test.cjs",
+        "tests/analytics-collector.test.cjs",
+        "tests/analytics-practice.test.cjs",
+        "tests/analytics-ui.test.cjs",
+        "tests/animation.test.cjs",
+        "tests/artifacts.test.cjs",
+        "tests/asset-manifest.test.cjs",
+        "tests/asset-readiness.test.cjs",
+        "tests/audio-alyssa-ui.test.cjs",
+        "tests/audio-alyssa.test.cjs",
+        "tests/audio-pack.test.cjs",
+        "tests/audio-presentation.test.cjs",
+        "tests/audio.test.cjs",
+        "tests/background-download.test.cjs",
+        "tests/balance-combat.test.cjs",
+        "tests/balance-deep.test.cjs",
+        "tests/balance-master-ui.test.cjs",
+        "tests/balance-master.test.cjs",
+        "tests/boss-motion.test.cjs",
+        "tests/campaign.test.cjs",
+        "tests/card-combat.test.cjs",
+        "tests/card-effects-ai-integration.test.cjs",
+        "tests/card-effects-explanations.test.cjs",
+        "tests/card-effects-ui.test.cjs",
+        "tests/card-effects.test.cjs",
+        "tests/card-flow.test.cjs",
+        "tests/card-game-ui.test.cjs",
+        "tests/card-motion.test.cjs",
+        "tests/card-selection.test.cjs",
+        "tests/card-source.test.cjs",
+        "tests/card-tuning.test.cjs",
+        "tests/card-ui.test.cjs",
+        "tests/combat-compact-ui.test.cjs",
+        "tests/combat-image-refresh.test.cjs",
+        "tests/combat-initial-refresh.test.cjs",
+        "tests/combat-persistence.test.cjs",
+        "tests/combat-status.test.cjs",
+        "tests/dev-collection.test.cjs",
+        "tests/dev-diagnostics.test.cjs",
+        "tests/dev-extended.test.cjs",
+        "tests/dev-tools.test.cjs",
+        "tests/economy-deep-flow.test.cjs",
+        "tests/economy-deep-tools.test.cjs",
+        "tests/economy-events.test.cjs",
+        "tests/economy-integration.test.cjs",
+        "tests/economy-stateful.test.cjs",
+        "tests/economy-ui.test.cjs",
+        "tests/economy.test.cjs",
+        "tests/education-delivery-reliability.test.cjs",
+        "tests/education-harmonized.test.cjs",
+        "tests/education-main.test.cjs",
+        "tests/education-recovery.test.cjs",
+        "tests/education-workspace.test.cjs",
+        "tests/education.test.cjs",
+        "tests/enemy-motion.test.cjs",
+        "tests/engine.test.cjs",
+        "tests/entrypoints.test.cjs",
+        "tests/focus-passive-log.test.cjs",
+        "tests/game-language.test.cjs",
+        "tests/game-question-policy.test.cjs",
+        "tests/google-issues.test.cjs",
+        "tests/google-sheets-practice.test.cjs",
+        "tests/google-sheets-receiver.test.cjs",
+        "tests/icon-clarity-ui.test.cjs",
+        "tests/icon-loading-integration.test.cjs",
+        "tests/icon-package.test.cjs",
+        "tests/icon-portable-semantics.test.cjs",
+        "tests/icon-readiness.test.cjs",
+        "tests/input-guard.test.cjs",
+        "tests/language.test.cjs",
+        "tests/learning-analytics.test.cjs",
+        "tests/learning-delivery.test.cjs",
+        "tests/learning-google.test.cjs",
+        "tests/learning-report.test.cjs",
+        "tests/learning-sync.test.cjs",
+        "tests/live-vfx-renderer.test.cjs",
+        "tests/live-vfx-ui.test.cjs",
+        "tests/live-vfx.test.cjs",
+        "tests/map-balance-advanced-experiments.test.cjs",
+        "tests/map-balance-advanced-replay.test.cjs",
+        "tests/map-balance-advanced-report.test.cjs",
+        "tests/map-balance-current.test.cjs",
+        "tests/map-balance-export.test.cjs",
+        "tests/map-balance-replay.test.cjs",
+        "tests/map-balance-source.test.cjs",
+        "tests/map-balance-structure.test.cjs",
+        "tests/map-integration.test.cjs",
+        "tests/map.test.cjs",
+        "tests/master-refresh-economy.test.cjs",
+        "tests/math-display.test.cjs",
+        "tests/math.test.cjs",
+        "tests/mechanics-integration.test.cjs",
+        "tests/mystery.test.cjs",
+        "tests/passive-limit.test.cjs",
+        "tests/passive-music-ui.test.cjs",
+        "tests/predict-bank.test.cjs",
+        "tests/question-clarity.test.cjs",
+        "tests/question-feedback-ui.test.cjs",
+        "tests/question-feedback.test.cjs",
+        "tests/question-language.test.cjs",
+        "tests/question-report.test.cjs",
+        "tests/release-build.test.cjs",
+        "tests/rich-text.test.cjs",
+        "tests/run-polish.test.cjs",
+        "tests/run-question-random.test.cjs",
+        "tests/shop-expansion.test.cjs",
+        "tests/shop-layout.test.cjs",
+        "tests/shop.test.cjs",
+        "tests/single-target.test.cjs",
+        "tests/status-explanation.test.cjs",
+        "tests/status-vfx.test.cjs",
+        "tests/texture-cache.test.cjs",
+        "tests/tutorial-media.test.cjs",
+        "tests/tutorial-ui.test.cjs",
+        "tests/tutorial.test.cjs",
+        "tests/ui.test.cjs",
+        "tests/visual-preload.test.cjs"
+      ],
+      "commandRecord": "full-node.json",
+      "log": "full-node.log",
+      "counts": {
+        "tests": 1175,
+        "PASS": 1173,
+        "FAIL": 2,
+        "SKIP": 0,
+        "CANCEL": 0
+      },
+      "sourceSHA": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194"
+    },
+    {
+      "label": "independent-reopen",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 2.706,
+      "command": [
+        "node",
+        "--test",
+        "/dev/shm/stm-all-evidence-20261025/qa/independent-reopen.cjs"
+      ],
+      "commandRecord": "independent-reopen.json",
+      "log": "independent-reopen.log",
+      "counts": {
+        "tests": 1,
+        "PASS": 1,
+        "FAIL": 0,
+        "SKIP": 0,
+        "CANCEL": 0
+      },
+      "sourceSHA": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194"
+    },
+    {
+      "label": "math-focused-tap",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 42.908,
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "tests/math-display.test.cjs"
+      ],
+      "commandRecord": "math-focused-tap.json",
+      "log": "math-focused-tap.log",
+      "counts": {
+        "tests": 3,
+        "PASS": 3,
+        "FAIL": 0,
+        "SKIP": 0,
+        "CANCEL": 0
+      },
+      "sourceSHA": "6ac5c8c47046296e57c6f2669ec71baf8a6bc194"
+    },
+    {
+      "label": "affected-tutorial-resource",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 4.295,
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "tests/tutorial.test.cjs",
+        "tests/tutorial-ui.test.cjs",
+        "tests/tutorial-media.test.cjs",
+        "tests/asset-manifest.test.cjs",
+        "tests/release-build.test.cjs"
+      ],
+      "commandRecord": "affected-tutorial-resource.json",
+      "log": "affected-tutorial-resource.log",
+      "counts": {
+        "tests": 28,
+        "PASS": 28,
+        "FAIL": 0,
+        "SKIP": 0,
+        "CANCEL": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "vfx-alignment",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 82.742,
+      "command": [
+        "npm",
+        "run",
+        "test:vfx-alignment-browser"
+      ],
+      "commandRecord": "vfx-alignment.json",
+      "log": "vfx-alignment.log",
+      "counts": {
+        "nativeCases": 16,
+        "actorChecks": 32,
+        "independentSourceProjections": 13,
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "continuity",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 25.684,
+      "command": [
+        "npm",
+        "run",
+        "test:combat-continuity-browser"
+      ],
+      "commandRecord": "continuity.json",
+      "log": "continuity.log",
+      "counts": {
+        "nativeChecks": 14,
+        "PASS": 14,
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "native-reports",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 53.906,
+      "command": [
+        "node",
+        "tests/question-report-browser.cjs"
+      ],
+      "commandRecord": "native-reports.json",
+      "log": "native-reports.log",
+      "counts": {
+        "flows": 6,
+        "geometryCases": 18,
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "native-google",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 62.523,
+      "command": [
+        "node",
+        "tests/google-sheets-browser.cjs"
+      ],
+      "commandRecord": "native-google.json",
+      "log": "native-google.log",
+      "counts": {
+        "mockedNativeFlows": 8,
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "native-portable",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 6.203,
+      "command": [
+        "node",
+        "tests/question-report-offline-browser.cjs"
+      ],
+      "commandRecord": "native-portable.json",
+      "log": "native-portable.log",
+      "counts": {
+        "nativeChecks": 2,
+        "httpRequests": 0,
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "production-dev",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 49.891,
+      "command": [
+        "npm",
+        "run",
+        "test:prod-dev-browser"
+      ],
+      "commandRecord": "production-dev.json",
+      "log": "production-dev.log",
+      "counts": {
+        "count": "Canonical script reports one aggregate PASS; no invented assertion total",
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "idle-blink",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 30.227,
+      "command": [
+        "npm",
+        "run",
+        "test:idle-browser"
+      ],
+      "commandRecord": "idle-blink.json",
+      "log": "idle-blink.log",
+      "counts": {
+        "actors": 12,
+        "actionsPerActor": 4,
+        "exactIdleReturn": true,
+        "blinkSpansMs": [
+          280,
+          280
+        ],
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "preload-production",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedSeconds": 28.495,
+      "command": [
+        "npm",
+        "run",
+        "test:preload-browser"
+      ],
+      "commandRecord": "preload-production.json",
+      "log": "preload-production.log",
+      "counts": {
+        "nativeGroups": 9,
+        "availableFiles": 760,
+        "nonPracticeFiles": 760,
+        "errors": 0
+      },
+      "sourceSHA": "acb152e30cca5e9b1f7064d7988b2e2860a4710a"
+    },
+    {
+      "label": "production-cold-navigation",
+      "status": "ABORTED_INCONCLUSIVE",
+      "sessionExitCode": 130,
+      "commandRecord": "production-cold-navigation-aborted.json",
+      "log": "production-cold-navigation.log",
+      "report": "NOT_EMITTED",
+      "exactProductionColdNavigation": "NOT_RUN"
+    }
+  ],
+  "failuresAndAborts": [
+    {
+      "id": "QA-250-FULL-MATH-01",
+      "command": "full-node",
+      "status": "FAIL_RETAINED",
+      "evidence": "full-node.log",
+      "fact": "math-display whole-file worker reported test failed at42579.076ms; spec reporter contains no exit signal.",
+      "classification": "Resource pressure plausible, NOT signal-proven. Cgroup8GiB limit/peak and historical oom5/kill1 observed; unrelated Chromium was present.",
+      "followup": "math-focused-tap3/3PASS with heap1792, identical source/assertions, memory counters unchanged; original command remains FAIL."
+    },
+    {
+      "id": "QA-250-TUTORIAL-PROVENANCE-01",
+      "command": "full-node",
+      "status": "FAIL_RETAINED_WITH_ACTUAL_REMEDIATION",
+      "fact": "Old screenshot manifest App8deab599... did not bind current App79df6cc2....",
+      "followup": "Actual owner98 recaptures EN49/MS49,40changedWebP+58identical. New manifest+normal/prod generation; final affected28/28PASS. No provenance relabel or assertion weakening."
+    },
+    {
+      "id": "QA-250-COLD-DIAGNOSTIC-01",
+      "status": "ABORTED_INCONCLUSIVE",
+      "fact": "Strict no-store external helper warm screenshot still preparing124/394files,19.9/95.2MB; warm75% prerequisite not proven. Layout-based gate may see menu behind overlay; no final report before controlled abort.",
+      "limits": "Combined goto/gate catch, unbounded close, no-store differs actual no-cache. Navigation/boot outcomes unknown; exact production subpath cold navigation and Pages NOT_RUN.",
+      "cleanup": "Origin session Ctrl-C exit130; all7ownedPIDs absent after. Cross-namespace signal attempt ineffective and explicitly recorded. No rerun."
+    }
+  ],
+  "carriedFindings": [
+    {
+      "id": "CI-247-01",
+      "severity": "P2",
+      "scope": "old tests/icon-package-browser.cjs readiness harness",
+      "freshStatus": "NOT_RUN",
+      "claim": "No fix/green claim."
+    },
+    {
+      "id": "QA-248-PRELOAD-01",
+      "severity": "P2",
+      "scope": "retained-count boundary timing",
+      "freshStatus": "Canonical final production preload9groupsPASS760/760; old issue retained, no race-fixed claim."
+    },
+    {
+      "id": "OWNER-COLD-URL-OFFLINE",
+      "severity": "P2/high known capability gap",
+      "scope": "Owner pilot6e records4cold-URLoffline FAIL on sourceb3dc dist across EN/MS/full/startup cache.",
+      "freshStatus": "Owner outcomes preserved6PASS4FAIL, not our2.50pilot. Exact SW/bootstrap same as b3dc; strict helper aborted; standalone portablePASS is a separate capability."
+    }
+  ],
+  "mapMetadata": "map-setup-final.json",
+  "producerEvidenceReferences": [
+    {
+      "path": "/dev/shm/stm-all-evidence-20261025/integration",
+      "ownership": "Root/RM/Auditor producer evidence; not counted as QA commands",
+      "records": [
+        "integration/after-normal-source-manifest.json",
+        "integration/after-production-source-manifest.json",
+        "integration/allStaged-diff-check.log",
+        "integration/authoredMarkdown-diff-check.log",
+        "integration/checkout-main.log",
+        "integration/clone.log",
+        "integration/fetch-complete-protocol.log",
+        "integration/fetch.log",
+        "integration/frozen-candidate.json",
+        "integration/generated-manifest-verification.json",
+        "integration/hardlink-plan.json",
+        "integration/history-preflight.json",
+        "integration/mcp-runnable-blob-plan.json",
+        "integration/media-frozen-candidate.json",
+        "integration/merge-combat.log",
+        "integration/merge-complete-protocol.log",
+        "integration/merge-education.log",
+        "integration/merge-protocol.log",
+        "integration/normal-build.json",
+        "integration/normal-build.log",
+        "integration/original-worktree-before.json",
+        "integration/package-union.json",
+        "integration/post-capture-normal-build.json",
+        "integration/post-capture-normal-build.log",
+        "integration/post-capture-production-build.json",
+        "integration/post-capture-production-build.log",
+        "integration/preliminary-integration.json",
+        "integration/prepared-links.json",
+        "integration/prepared-preservation.json",
+        "integration/production-build.json",
+        "integration/production-build.log",
+        "integration/production-immutable-hardlinks-final.json",
+        "integration/production-immutable-hardlinks.json",
+        "integration/protected-remote-refs.json",
+        "integration/registry-frozen-candidate.json",
+        "integration/remote-runtime-media-blobs.json",
+        "integration/transport-dry-run.json",
+        "integration/transport-dry-run.log",
+        "integration/tutorial-production-detach.json",
+        "integration/tutorial-refresh-preflight.json",
+        "integration/vfx-owner-handoff.json"
+      ]
+    },
+    {
+      "path": "/dev/shm/stm-all-evidence-20261025/tutorial-recapture",
+      "ownership": "Root/RM/Auditor producer evidence; not counted as QA commands",
+      "records": [
+        "tutorial-recapture/after-screenshots.json",
+        "tutorial-recapture/before-inputs.json",
+        "tutorial-recapture/capture-command.json",
+        "tutorial-recapture/capture-integrity.json",
+        "tutorial-recapture/capture.log",
+        "tutorial-recapture/output-hashes.json",
+        "tutorial-recapture/prior-screenshots.json"
+      ]
+    },
+    {
+      "path": "/dev/shm/stm-all-evidence-20261025/vfx-compat",
+      "ownership": "Root/RM/Auditor producer evidence; not counted as QA commands",
+      "records": [
+        "vfx-compat/after-inputs.json",
+        "vfx-compat/baseline-renderer.log",
+        "vfx-compat/before-inputs.json",
+        "vfx-compat/current-registration-green.log",
+        "vfx-compat/current-registration-red.log",
+        "vfx-compat/registration-measurement.json",
+        "vfx-compat/registration-measurement.log"
+      ]
+    }
+  ],
+  "screenshots": [
+    "continuity-artifacts/combat-1366.jpg",
+    "continuity-artifacts/combat-390.jpg",
+    "continuity-artifacts/passive-layers.jpg",
+    "idle-blink-artifacts/review-desktop.jpg",
+    "idle-blink-artifacts/review-phone.jpg",
+    "native-google-screenshots/google-collection-practice.png",
+    "native-google-screenshots/google-game-report.png",
+    "native-reports-screenshots/report-artifact-ms-390.png",
+    "native-reports-screenshots/report-mystery-ms-390.png",
+    "native-reports-screenshots/report-predict-en-1366.png",
+    "native-reports-screenshots/report-predict-ms-390.png",
+    "production-cold-navigation-artifacts/warm-startup.jpg",
+    "vfx-alignment-artifacts/bat-1366.jpg",
+    "vfx-alignment-artifacts/beetle-1366.jpg",
+    "vfx-alignment-artifacts/beetle-2048.jpg",
+    "vfx-alignment-artifacts/beetle-3840.jpg",
+    "vfx-alignment-artifacts/beetle-390.jpg",
+    "vfx-alignment-artifacts/beetle-844.jpg",
+    "vfx-alignment-artifacts/dealer-1366.jpg",
+    "vfx-alignment-artifacts/mimic-1366.jpg",
+    "vfx-alignment-artifacts/three-passives.jpg"
+  ],
+  "notRun": [
+    "Fresh full1175 rerun after media-only+registry delta (risk-based focused reuse; original fullFAIL retained).",
+    "Actual Google account/deployment/Sheetreceipt/live exec endpoint; only native mocked service boundary exercised.",
+    "Exact final hosted-production cold URL offline navigation, actual no-cache server variant, GitHub Pages deployment.",
+    "Native Codex project-agent loader/automatic cap enforcement; manual registry metadata only.",
+    "Owner pilot replay/new10casecohort, AItraining, new simulation campaigns, model retraining or numeric tuning.",
+    "Unchanged full75pose/fullanimation matrix; scoped VFX16/continuity14/Idle12 plus source guards used.",
+    "Physical mobile/desktop GPU/browser matrix, human/pupil usability, reference MODEL.zip visual matching.",
+    "Fresh old icon harness CI-247-01 execution.",
+    "No currentcandidate universal hardware/performance/win-rate claim."
+  ],
+  "noAggregateGreenClaim": "Original fullcommand1173PASS/2FAIL is preserved. Focused remediation and final native commands pass; no combined inflated total, no zero-defect guarantee.",
+  "noSourceMutationByQA": true,
+  "indexBuilderSetupObservation": "First evidence-index builder assertion assumed dist/assets/tutorial/ layout; actual owner paths are dist/assets/tutorial-shot-*.webp plus docs/tutorial/screenshots.json. External allowlist corrected to actual paths, retaining exact43path/count and canonical identity assertions; not a product/test failure."
+}

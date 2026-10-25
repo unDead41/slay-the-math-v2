@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Kuala_Lumpur",
+  "masterSor": "1.2.0",
+  "branch": "codex/education-delivery-reliability",
+  "version": "2.45.1-education.1",
+  "baseMain": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+  "sourceFingerprint": "935712b88edc1ef0c909df01f0c8afa4bb107e93cc59f94b4c856c875655e1b6",
+  "frozenInputFiles": 763,
+  "unchangedFrozenInputs": true,
+  "tests": {
+    "targeted": {
+      "tests": 191,
+      "pass": 191,
+      "fail": 0,
+      "skipped": 0
+    },
+    "practice120": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0
+    },
+    "distinctTotal": 197,
+    "fullSuite": "NOT_RUN: risk-scoped owner/UI/storage/collector/generated-release checks plus native consumers"
+  },
+  "native": {
+    "reportFlows": 6,
+    "reportGeometryStates": 18,
+    "googleBoundaryChecks": 8,
+    "liveGoogle": false,
+    "errors": [],
+    "webSecurityEnabled": true,
+    "offlinePortable": "PASS: BM report, zero HTTP and exact game save",
+    "productionDeveloper": "PASS: protected static subpath and actual --prod server"
+  },
+  "build": {
+    "production": "PASS",
+    "portableBytes": 306790565,
+    "syntax": "PASS"
+  },
+  "preservation": {
+    "assetFilesUnchanged": 626,
+    "canonicalBankUnchanged": true,
+    "gameplayOwnerDelta": []
+  },
+  "limits": [
+    "Actual Google URL unset; owner configuration/deployment/Sheet receipt unverified.",
+    "Older receiver deployment must be upgraded before new provenance-bearing payloads.",
+    "No new whole-bank mathematical/source/physical-device/pupil validation.",
+    "MODEL.zip unavailable and not read."
+  ],
+  "environment": {
+    "node": "v24.22.1",
+    "jsdom": "26.1.0 for final 197 tests",
+    "chromium": "153 (@sparticuz/chromium)",
+    "initialJsdom30": "Baseline focus incompatibility reproduced on main; original all120 run interrupted and excluded; fresh final suite uses26.1.0."
+  },
+  "logs": [
+    "before.log.gz",
+    "frozen-inputs.json",
+    "google-browser.json",
+    "jsdom26-focus.log",
+    "jsdom30-baseline-focus.log.gz",
+    "offline-browser.log",
+    "practice-120.log",
+    "production-browser.log",
+    "production-build.log",
+    "reports-browser.json",
+    "sharing-before.log.gz",
+    "syntax.log.gz",
+    "targeted.log"
+  ],
+  "finalReviewFix": {
+    "id": "NAV-001",
+    "problem": "Stored Overview replaced the explicit report Sharing target",
+    "reproduced": true,
+    "targetedSuiteRefreshed": true,
+    "nativeSuitesRefreshed": true,
+    "practiceBundleUnchanged": true
+  }
+}

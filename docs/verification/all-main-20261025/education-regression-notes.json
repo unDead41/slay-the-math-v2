@@ -1,0 +1,5 @@
+{
+  "red": "7 expected behavior failures,6 controlPASS before production fix",
+  "firstGreen": "One new test incorrectly required the word retry for a legitimate waiting state; changed to pending/waiting and no acknowledged wording. Earlier semantic re-enqueue/payload invariants unchanged. Raw first green retained.",
+  "generatedParity": "Direct node invocation of owner builder module does nothing because it exports a function; exported builder will be invoked before correctedGREEN."
+}

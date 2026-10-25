@@ -1,0 +1,88 @@
+{
+  "dateUTC": "2026-10-25T15:49:14.909377+00:00",
+  "main": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
+  "combat": "4e10e3d41ec439c15b75aceb754d1c7b352d3755",
+  "education": "ef09a6be9fad20cf54e8fc868b253b8ae71c603a",
+  "protocolPinned": "07033593d740a55a4c0eecb1eafd86761ec54ece",
+  "originalProtocolInstruction": "bce6de7815f9034018f454f48f4d9a54c66bd28c",
+  "protocolNoCollectorExecuted": true,
+  "records": [
+    {
+      "source": "4e10e3d41ec439c15b75aceb754d1c7b352d3755",
+      "label": "reviewed combat body alignment",
+      "conflicts": [
+        "MAIN-SEKARANG.html",
+        "dist/asset-manifest.json",
+        "dist/index.html",
+        "dist/release.js",
+        "docs/sor/11_ANIMATION_VFX_AUDIO.md",
+        "docs/sor/CHANGELOG.md",
+        "docs/sor/DECISIONS.md",
+        "index.html",
+        "package.json"
+      ],
+      "resolution": {
+        "MAIN-SEKARANG.html": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "dist/asset-manifest.json": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "dist/index.html": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "dist/release.js": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "docs/sor/11_ANIMATION_VFX_AUDIO.md": "Retained both main and incoming conflict blocks in order; historical records preserved.",
+        "docs/sor/CHANGELOG.md": "Retained both main and incoming conflict blocks in order; historical records preserved.",
+        "docs/sor/DECISIONS.md": "Retained both main and incoming conflict blocks in order; historical records preserved.",
+        "index.html": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "package.json": "Current-main package version and script commands plus additive source scripts."
+      },
+      "commit": "6ba41804101d02391ceff025935e1acb69e5fb65",
+      "tree": "7863b26b9494acdcf26e6b709478c0b860a7bff9"
+    },
+    {
+      "source": "ef09a6be9fad20cf54e8fc868b253b8ae71c603a",
+      "label": "education delivery reliability",
+      "conflicts": [
+        "MAIN-SEKARANG.html",
+        "dist/asset-manifest.json",
+        "dist/index.html",
+        "dist/release.js",
+        "docs/sor/CHANGELOG.md",
+        "docs/sor/DECISIONS.md",
+        "index.html",
+        "package.json"
+      ],
+      "resolution": {
+        "MAIN-SEKARANG.html": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "dist/asset-manifest.json": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "dist/index.html": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "dist/release.js": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "docs/sor/CHANGELOG.md": "Retained both main and incoming conflict blocks in order; historical records preserved.",
+        "docs/sor/DECISIONS.md": "Retained both main and incoming conflict blocks in order; historical records preserved.",
+        "index.html": "Keep newer main metadata temporarily; regenerate once from combined2.50 owner scripts after source-ready.",
+        "script:test:tutorial": "Kept current-main command; later final union review required.",
+        "script:test:tutorial-browser": "Kept current-main command; later final union review required.",
+        "script:test:ai": "Kept current-main command; later final union review required.",
+        "script:check:ai": "Kept current-main command; later final union review required.",
+        "script:test:icon-clarity": "Kept current-main command; later final union review required.",
+        "package.json": "Current-main package version and script commands plus additive source scripts."
+      },
+      "commit": "2261bba952cf0e043c2bdbfa05a617fb5fd1c27c",
+      "tree": "a1f51b2c96ba4756653ab843a85d86b09284f819"
+    },
+    {
+      "source": "07033593d740a55a4c0eecb1eafd86761ec54ece",
+      "label": "Master Map simulation protocol",
+      "conflicts": [
+        "docs/sor/CHANGELOG.md"
+      ],
+      "resolution": {
+        "docs/sor/CHANGELOG.md": "Retained both main and incoming conflict blocks in order; historical records preserved."
+      },
+      "commit": "cdbbac34780fd1b05f6a765c4d247d569bcda927",
+      "tree": "9b3302cf804c5360806abfede9663517f24178f0"
+    }
+  ],
+  "preliminarySHA": "92cd39efc065d988d5313651086325692ce565f9",
+  "preliminaryTree": "0de406a8acf18c63d190ffe40c9348982ce1ef6e",
+  "gitStatus": "",
+  "version": "2.50.0",
+  "generatedMetadata": "TEMPORARY main2.49.1 pending single source-ready build; this is not QA or publication candidate",
+  "shmFree": 1417691136
+}

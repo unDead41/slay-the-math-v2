@@ -1,5 +1,26 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-ALL-CANDIDATES-MAIN — Publish the three reviewed candidates
+
+- **DISAHKAN:** Ijamm requests integrating and publishing combat 4e10, education
+  ef09 and Master Map protocol 6e364 with main b3dc / 2.49.1 as **2.50.0**,
+  preserving all four historical specialist branches. This supersedes these
+  candidates' earlier branch-only publication boundaries.
+- **DITERUSKAN:** preserve the current Idle/blink/art, numerical and archived
+  save/RNG owners, loader/tutorial/AI and adapted Map tools. Correct the three
+  audited education recovery gaps and align VFX with the current registration.
+- **Verification:** scoped VALID with carried P2 limits. The original full Node
+  result remains 1,173/1,175 pass and two failures; controlled math 3/3, real 98
+  tutorial captures, affected checks 28/28 and eight canonical native families
+  pass. No aggregate full-green result is invented.
+- **Registry:** source 6e364 records COMPLETE, 6 PASS / 4 FAIL on its original
+  b3dc pilot, training-ineligible. Integrity is independently verified. The
+  distinct local HTTP cold-start P2 remains open; the extra current diagnostic is
+  inconclusive. No duplicate pilot, balance cohort or model update is performed.
+- **Publication:** PENDING exact-tree review and the sole writer's fresh-main,
+  expected-head update with force false. [Full evidence and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+
+
 ## DEC-20261025-IDLE-ROOT-BLINK — Correct the confirmed Idle defects
 
 - **DISAHKAN:** Ijamm requests slower eyelid motion and aligned Idle/action
@@ -13,6 +34,20 @@
 - **Verification:** meaningful RED/GREEN, production/native/offline tests and
   full-suite historical-input failure/recovery are retained, with inherited P2s.
   [Current audit](../audits/alyssa-motion/LATEST.md).
+
+## DEC-20261025-VFX-BODY-PLACEMENT — Fit effects to the installed actors
+
+- **DISAHKAN:** Ijamm supplies an actual combat screenshot and requests fixing
+  VFX placement relative to the models. Continue the combat-branch boundary;
+  no new main publication or deployment is authorized.
+- **DITERUSKAN:** calibrate all thirteen visible-body axes, floating bottoms and
+  body proportions in the registered source coordinates; use the same display
+  projection as the actor. Centre Passive at the boots on the arena floor.
+- Preserve all current main 2.49.0 art/icons, actor geometry and 75 source holds,
+  unique painters, fast reactions, numerical/save/RNG, tutorial/preload/AI and
+  language owners. [MOT-39](11_ANIMATION_VFX_AUDIO.md),
+  [actual scoped checks and remaining limits](../audits/combat-animation/LATEST.md).
+
 
 ## DEC-20261025-ICON-COMBAT-MAIN — Publish both completed follow-ups
 
@@ -121,6 +156,13 @@
 - **DITERUSKAN:** Main2.45.0/6c49f39 base, balance/master2.46.0-ai.1, sampled-turn-search-4. Reuse exact incoming projections; make Search/Burning Page/Read Ahead account for public composition and actual remaining payments. Preserve gameplay numerical owners and bounded simulation/observation rules.
 - **DITERUSKAN:** Offline source-bound small acquisition priors from fresh Combat factorial replay; training93, heldout701/702, exact runtime/difficulty/policy compatibility and safe fallback. Frozen OFF/ON terminal nonregression gate before default activation; no tuning on those validation outcomes. Map/Economy standardized exports remain diagnostic, not fitted route/economy learners.
 - **PERLU_VERIFIKASI:** Generalization, additional enemy/seed/deck coverage, physical-device performance and pupil90/70/50. [Evidence](../balance/master/AI_DATA_2026_10_25.md), [data handoff](../balance/SIMULATION_DATA_HANDOFF.md).
+
+## DEC-20261025-EDUCATION-DELIVERY — Current audit follow-up
+
+- **DISAHKAN:** Ijamm requests implementing the feasible relevant recommendations and updating the assistant branch. Publish only `codex/education-delivery-reliability`; no main update or live Google deployment.
+- **DITERUSKAN:** capped continuing retry with page/consent lifecycle, truthful shared BM/English report delivery messages and Sharing navigation, optional actual game/content provenance with legacy preservation, private appended Sheet diagnostics and the existing Pages origin.
+- **PERLU_VERIFIKASI:** actual owner `/exec` configuration, deployment/Sheet receipt and physical pupil/device understanding. Never fabricate a URL or stamp old reports with current versions.
+- Owner: [SOR13](13_TECH_ARCHITECTURE_DATA.md), [audit](../audits/education-delivery-reliability/LATEST.md).
 
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
@@ -981,3 +1023,16 @@ DISAHKAN: Ijamm’s “push ni kalau tak push lagi please” supersedes the earl
 ## DEC-20261025-AUTOMATIC-PRELOAD —75% important resources and automatic background
 
 DISAHKAN: Ijamm requests diagnosis of published downloads stopping,75% important resources at entry and suitable performance improvements. Implement on fix/automatic-background-preload based on main6c49f3980c3a832635d4d01a6c50a8df98ac4aad2.45.0, candidate2.46.0. DITERUSKAN implementation choice: byte-based early-game package plus100% hard core, bounded incremental automatic remaining downloads, real-run priority, one/two speculative transfers, pause/resume/retry and honest available-versus-verified counts. Practice remains on demand; no whole-game pre-entry requirement, atlas mass-decode, art/gameplay/save/RNG change or closed-tab download promise. Main publication is separate from this candidate. [Spec and audit](../audits/hosted-readiness/LATEST.md).
+
+
+## DEC-20261025-MAP-THREE-SIMULATION — Selective Map and reusable evidence
+
+DISAHKAN: Ijamm confirms maximum three subagents, selective Map adaptation preserving current-main tools, and an MD reference for current-source rechecks after stable integration. [Shared protocol](../simulation/SIMULATION_EVIDENCE_PROTOCOL.md). This task does not authorize remote push, numerical retuning, new campaigns or model activation.
+
+DITERUSKAN: prepare on maind77b3e0ce87d573de89e84a9b2374df97ad625b9/game2.49.0; adapt instruction/skill/profile concepts from Map8ca19526ec6a69d1183bae96803e461a77e3acfc to three, registry34/33/33, default one, no nested work and one collector. Preserve main adapted tools and all frozen historical cohorts.
+
+CADANGAN: an optional Simulation & Evidence chat coordinates registry and cross-module/browser evidence, consuming domain output without duplicate collection. Manual registry is not an atomic scheduler. No new chat/run/corpus/capture is claimed. Native host, balance, pupils/devices and live Google remain PERLU_VERIFIKASI.
+
+## DEC-20261025-MAP-THREE-BRANCH — Publish the prepared package
+
+DISAHKAN: Ijamm explicitly says “Push pakej itu ke branch sahaja. Jangan merge main dahulu.” Publish the reviewed Map cap3/config/skill and simulation-evidence instructions to `codex/master-map-simulation-protocol` only. This supersedes the no-remote-push boundary of the preceding preparation entry for this package; it does not authorize main, balance/map, numerical tuning, new campaigns, model activation or a global-skill update. Preserve main d77b3e0ce87d573de89e84a9b2374df97ad625b9/game2.49.0 and record actual remote ref/tree verification after publication.

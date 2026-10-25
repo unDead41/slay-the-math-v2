@@ -1,0 +1,28 @@
+{
+  "label": "independent-reopen",
+  "cwd": "/dev/shm/stm-all-main-20261025",
+  "command": [
+    "node",
+    "--test",
+    "/dev/shm/stm-all-evidence-20261025/qa/independent-reopen.cjs"
+  ],
+  "start": "2026-10-25T16:06:45Z",
+  "environment": {
+    "DOM_QA_MODULE": "/tmp/stm-icon-qa-deps/node_modules/jsdom",
+    "BROWSER_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "IMAGE_QA_MODULE": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp",
+    "NODE_PATH": "/tmp/stm-icon-qa-deps/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "QA_CHROMIUM_EXECUTABLE": "/tmp/chromium",
+    "QA_DISABLE_GPU": "1",
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "QA_OUTPUT": "/dev/shm/stm-all-evidence-20261025/qa/independent-reopen-artifacts",
+    "QA_SCREENSHOTS": "/dev/shm/stm-all-evidence-20261025/qa/independent-reopen-screenshots",
+    "QA_REPORT": "/dev/shm/stm-all-evidence-20261025/qa/independent-reopen-report.json",
+    "TMPDIR": "/dev/shm/stm-all-evidence-20261025/qa/tmp"
+  },
+  "overrides": {},
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "exitCode": 0,
+  "elapsedSeconds": 2.706,
+  "log": "/dev/shm/stm-all-evidence-20261025/qa/independent-reopen.log"
+}

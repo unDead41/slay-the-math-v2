@@ -1,0 +1,36 @@
+{
+  "scope": "Visual owner settled four files; no release-manager source modifications",
+  "files": [
+    {
+      "path": "dist/combat-vfx.js",
+      "bytes": 14450,
+      "sha256": "3e43efea0ac11fe263211db28d50667518f4cfaacd55d2d0b9be4496740b33a2"
+    },
+    {
+      "path": "tests/fixtures/vfx-body-reference.json",
+      "bytes": 9796,
+      "sha256": "9f95ed725c4e9ede3e703e3ea980b1164529316312e8239fc3c16f174f06a7bb"
+    },
+    {
+      "path": "tests/vfx-alignment-browser.cjs",
+      "bytes": 9743,
+      "sha256": "835d0d7b925b44699b0c9aaf054554d807438e9a5ade64e1ae34b78565846cf0"
+    },
+    {
+      "path": "tests/live-vfx-renderer.test.cjs",
+      "bytes": 16293,
+      "sha256": "43f3085f3845777ad83cc4f9f05397359f62f0476c5fcd7ac7b21e17c93dceee"
+    }
+  ],
+  "evidence": "../vfx-compat",
+  "baselinePass": 22,
+  "cleanRed": {
+    "passed": 21,
+    "failed": 2
+  },
+  "focusedGreen": {
+    "passed": 48,
+    "failed": 0
+  },
+  "combinedNative": "PENDING"
+}

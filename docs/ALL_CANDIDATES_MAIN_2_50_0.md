@@ -6,7 +6,9 @@
 The three candidates are integrated and the final affected/native checks pass.
 The original full Node command remains **FAIL: 1,173 passed / 2 failed out of
 1,175**, with both failures and their subsequent evidence retained below.
-**Main publication is PENDING** the final tree review and actual ref readback.
+**Game 2.50.0 main publication is VERIFIED** at runtime commit
+[`509be90a`](https://github.com/unDead41/slay-the-math-v2/commit/509be90a3f211004c29379c96469f4e3a70cc0a4).
+Its exact Pages run completed successfully. [Actual publication receipt](verification/all-main-20261025/publication.json).
 
 ## Scope and exact sources
 
@@ -115,11 +117,18 @@ capture manifest, asset manifest and registry document. All **3,212 tracked
 files**, production and portable bytes match before/after final native QA.
 Final documentation/evidence changes do not alter these runnable inputs.
 
-Native Git write authentication is unavailable. The GitHub API publication will
-therefore have a different commit SHA while preserving the exact reviewed tree.
-Its ordered parents are main b3dc, combat 4e10, education ef09 and protocol 6e364.
-The actual local-to-remote tree binding and ref readback belong in the publication
-receipt. No main update has occurred at this report checkpoint.
+Native Git write authentication was unavailable, so the GitHub API created a
+new commit identity while preserving the exact reviewed tree. Local final
+`399f8a1a4da7fa9ff1a062f8c9cf93ae40fdc7e2` and remote runtime publication
+`509be90a3f211004c29379c96469f4e3a70cc0a4` share tree
+`d1e837c632b432c01aa23ee14b061eba0c0ac1f1`. Primary API readback verifies the
+ordered parents main b3dc, combat 4e10, education ef09 and protocol 6e364, package
+2.50.0 and actual main ref. The three selected sources are immediate parents.
+All four historical specialist heads still match their initial captured values.
+
+The later publication.json is a readback receipt outside the closed 150-row
+evidence index; all indexed QA/evidence bytes remain unchanged. This one
+documentation followup preserves the published runnable/configuration/test tree.
 
 ## Owner pilot snapshot and open findings
 
@@ -152,8 +161,15 @@ public-browser inspection are separate from local production/native evidence.
 
 ## Publication
 
-**PENDING.** The sole writer must re-read main immediately, apply the expected-head
-update with `force: false`, and verify ref/tree/version/source ancestry afterward.
-If main moves, preserve the newer work and retest affected scope before a new GO.
-Pages results must be checked for the exact published SHA. A documentation-only
-receipt will close the active publication notes after verified success.
+**VERIFIED.** Main moved from
+`b3dc75005a89d6ce0248ddc125d6e0900351589a` to runtime publication
+`509be90a3f211004c29379c96469f4e3a70cc0a4` using the fresh expected head and
+`force: false`. Ref/tree/version and ordered source ancestry were read back.
+
+[Pages run 40215546653](https://github.com/unDead41/slay-the-math-v2/actions/runs/40215546653)
+completed **successfully for that exact runtime SHA**, observed at
+2026-10-25T17:17:06Z / 26 October 2026, 01:17 MYT. Public-browser inspection is
+NOT_RUN. This documentation receipt follows the runtime publication; its final
+head and Pages result are checked separately and reported after the ref write.
+No additional commit loop is needed to embed the receipt's own SHA or later
+workflow result. [Verified metadata and test/tree bindings](verification/all-main-20261025/publication.json).

@@ -3,7 +3,8 @@
 Version **2.50.0** integrates education delivery/recovery, body-aligned combat VFX
 and the Master Map three-agent simulation/evidence protocol while preserving the
 current Idle/blink, numerical, save/RNG and artwork owners. Scoped compatibility
-is VALID with recorded P2 limits; publication is pending actual main readback.
+is VALID with recorded P2 limits; game publication is verified at runtime commit
+`509be90a3f211004c29379c96469f4e3a70cc0a4` ([receipt](docs/verification/all-main-20261025/publication.json)).
 [Current integration, actual checks and limits](docs/ALL_CANDIDATES_MAIN_2_50_0.md).
 
 ## Earlier release notes — 2.47.0

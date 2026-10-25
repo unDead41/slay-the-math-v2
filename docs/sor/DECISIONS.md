@@ -17,8 +17,12 @@
   b3dc pilot, training-ineligible. Integrity is independently verified. The
   distinct local HTTP cold-start P2 remains open; the extra current diagnostic is
   inconclusive. No duplicate pilot, balance cohort or model update is performed.
-- **Publication:** PENDING exact-tree review and the sole writer's fresh-main,
-  expected-head update with force false. [Full evidence and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+- **Publication:** VERIFIED at runtime commit
+  `509be90a3f211004c29379c96469f4e3a70cc0a4`, exact reviewed tree d1e837,
+  with fresh expected-head force-false update and actual readback. Pages run
+  40215546653 completed successfully for that SHA. This docs-only receipt leaves
+  runnable/configuration/test inputs unchanged. [Actual metadata](../verification/all-main-20261025/publication.json);
+  [full evidence and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
 
 
 ## DEC-20261025-IDLE-ROOT-BLINK — Correct the confirmed Idle defects

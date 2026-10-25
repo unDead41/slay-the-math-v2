@@ -7,7 +7,7 @@ current Idle/blink/art, numerical/save/RNG and existing owners. Add recovery
 fixes, aligned body VFX, the three-agent protocol and the completed historical
 pilot snapshot. Real tutorial recapture and final affected/native checks pass;
 the original full Node failures remain recorded. Scoped status VALID with
-carried P2 findings; **publication PENDING**. [Results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md).
+carried P2 findings; **publication VERIFIED** at runtime commit `509be90a`. [Results and limits](../ALL_CANDIDATES_MAIN_2_50_0.md); [actual ref/tree/Pages receipt](../verification/all-main-20261025/publication.json).
 
 
 ## 2.49.1 — 25 October 2026

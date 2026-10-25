@@ -1,5 +1,13 @@
 # Changelog SOR — Slay the Math
 
+## 2.46.0 — 25 October2026
+
+Publish the approved illustrated tutorial from PR20:23 chapters, a ten-chapter
+Basics route,98 real English/BM captures and12 isolated practice chapters. Promote
+the verified candidate version and generated cache metadata. Fetch full Git
+history in verification CI so existing historical balance fixtures can load
+unchanged pinned sources. [Release/evidence](../TUTORIAL_MAIN_2_46_0.md).
+
 ## 2.46.0-tutorial.1 — 25 October2026
 
 Refresh from main2.45.0: ten-chapter beginner route,23 complete reference chapters,

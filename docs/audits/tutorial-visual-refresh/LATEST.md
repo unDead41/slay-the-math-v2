@@ -1,5 +1,18 @@
 # Tutorial visual refresh — final audit
 
+
+## Main publication addendum
+
+Ijamm now explicitly requests pushing this tutorial to main. Main was read again
+at6c49f3980c3a832635d4d01a6c50a8df98ac4aad /2.45.0; the reviewed feature remains
+aa3938eed9f343381c1becaf75fa95d4268c3504. Master SOR1.2.0 and current owners are
+unchanged. This supersedes the feature-only boundary below for this publication.
+Promote to2.46.0, preserve the exact tutorial/runtime/assets, and correct CI's
+shallow checkout of historical balance inputs. Source PR CI had1,087/1,089 passes
+and two missing-history errors, not a successful full run. See [main release and
+fresh checks](../../TUTORIAL_MAIN_2_46_0.md). The feature audit below is historical
+implementation evidence and remains intact.
+
 25 October 2026, Asia/Kuala_Lumpur. Master SOR **1.2.0**. Repository
 `unDead41/slay-the-math-v2`; main and implementation base
 `6c49f3980c3a832635d4d01a6c50a8df98ac4aad` (**2.45.0**), tree

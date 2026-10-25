@@ -1,5 +1,19 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-TUTORIAL-MAIN — Publish the completed illustrated tutorial
+
+- **DISAHKAN:** Ijamm now requests “okay push tutorial ni ke main”. This authorizes
+  main publication of PR20's completed tutorial and supersedes the prior
+  feature-branch-only boundary for this update.
+- **DITERUSKAN:** promote2.46.0-tutorial.1 to2.46.0 with generated release/cache
+  metadata. Main remains6c49f3980c3a832635d4d01a6c50a8df98ac4aad /2.45.0.
+  Preserve all tutorial runtime/media bytes and the existing numerical, save,
+  question, language, VFX and art owners.
+- **Publication repair:** PR CI's two failures are missing historical balance
+  Git objects with checkout fetch-depth1, not balance assertions. Fetch full
+  history for the existing tests; retain their pinned SHA and assertions.
+  [Main release, audit and actual checks](../TUTORIAL_MAIN_2_46_0.md).
+
 ## DEC-20261025-TUTORIAL-REFRESH — Current-game illustrated learning path
 
 - **DISAHKAN:** Ijamm requests updating the complete tutorial from current main,

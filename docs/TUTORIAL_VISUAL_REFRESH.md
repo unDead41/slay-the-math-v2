@@ -1,7 +1,8 @@
-# Illustrated tutorial — 2.46.0-tutorial.1
+# Illustrated tutorial — 2.46.0
 
 Based on main **2.45.0**, `6c49f3980c3a832635d4d01a6c50a8df98ac4aad`.
-Prepared on `tutorial-visual-refresh`. Open **Main Menu → Tutorial** or the
+Main publication is approved; see [release and checks](TUTORIAL_MAIN_2_46_0.md).
+Originally prepared on `tutorial-visual-refresh` as2.46.0-tutorial.1. Open **Main Menu → Tutorial** or the
 in-game Tutorial control. Learn keeps its existing automatic tutorial entry.
 
 ## Player flow

@@ -1,10 +1,11 @@
-# Slay the Math — 2.46.0-tutorial.1
+# Slay the Math — 2.46.0
 
-This tutorial candidate builds on **main2.45.0**. Tutorial now offers **Basics / Asas
+Version **2.46.0** publishes the illustrated tutorial on the main2.45.0 game. Tutorial now offers **Basics / Asas
 (10 chapters)** and a **23-chapter** full guide, manual English/BM real-game picture
 steps and12 isolated engine-backed practice chapters, including one complete turn.
 Original chapter progress is kept. Open **Main Menu → Tutorial**.
 [Guide, compatibility and actual checks](docs/TUTORIAL_VISUAL_REFRESH.md).
+[Main release and verification](docs/TUTORIAL_MAIN_2_46_0.md).
 
 Version **2.42.0** integrates the reviewed Master Balance/AI refresh: current-runtime map/economy observations, actual-cost artifact choices, frozen-offer Mystery/transform decisions and canonical next-combat buff valuation. Current numerical card/profile values, saves and original artwork are preserved. [Main release, source parity, verification and limits](docs/balance/master/MAIN_RELEASE_2_42_0.md).
 

@@ -226,7 +226,7 @@
       "runId": "SE-BREADTH-20261026-B3DC750-02",
       "kind": "BROWSER_INTEGRATION_BREADTH",
       "owner": "Simulation & Evidence / root",
-      "status": "RUNNING",
+      "status": "COMPLETE",
       "sourceBranch": "main",
       "sourceCommit": "b3dc75005a89d6ce0248ddc125d6e0900351589a",
       "sourceTree": "82b109bdc620b4b6604856002e8c7cb31bdca504",
@@ -236,7 +236,7 @@
       "fixturesSHA256": "ad6ef7f97e3c847c1bb863ef9a2304601acb96cd546d68ba4c23a6c730aafa8d",
       "plannedAt": "2026-10-25T16:56:14.458Z",
       "planned": 10,
-      "returned": 0,
+      "returned": 10,
       "budget": {
         "workers": 1,
         "browserProcesses": 1,
@@ -271,7 +271,8 @@
               "phase": "initial",
               "entryHash": "2a4f77a68bcf5da1be2c6501ad6bf927a91ad1fe1fc22900220226301fb79dab"
             }
-          ]
+          ],
+          "status": "FAIL"
         },
         {
           "caseId": "D2",
@@ -297,7 +298,8 @@
               "phase": "initial",
               "entryHash": "6a8b5ac98b735b5b8215218d9d46d559baf4de96b70898961e257f9e905e7f40"
             }
-          ]
+          ],
+          "status": "FAIL"
         },
         {
           "caseId": "E1",
@@ -323,7 +325,8 @@
               "phase": "initial",
               "entryHash": "1c08057e4bd3072b3ca5838cad7573cbb418b25dcffd896fd66b7e899a4008c0"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "E2",
@@ -349,7 +352,8 @@
               "phase": "initial",
               "entryHash": "40cb4746afe8bba78b3c934f4cb6a7ba6447ed7d23939f741dacdfca479b541d"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "F1",
@@ -380,7 +384,8 @@
               "phase": "initial",
               "entryHash": "ec161cc5ab021a4c6149a5228accd505d8466bb02b6d92d9ca4354a7cbb4eebb"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "F2",
@@ -406,7 +411,8 @@
               "phase": "initial",
               "entryHash": "c5ed89c4ad00e6bd6000921720403d7c6d0727180ff5e24aca0fb805ccc1ff59"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "G1",
@@ -432,7 +438,8 @@
               "phase": "initial",
               "entryHash": "5134a6dcac05ef2b74c77194040a2657dd6ec9ae07e51a1aa7d9b3a0b05d9962"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "G2",
@@ -458,7 +465,8 @@
               "phase": "initial",
               "entryHash": "e5aacc9b6ffd733583bbbf60ac45806ebba7b1a92eed881b0475c8df5c765790"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "H1",
@@ -484,7 +492,8 @@
               "phase": "initial",
               "entryHash": "e775dba19ae9b98d654ab6bce53a4de8ec8b41be4cd316f7a8ce11ab64cb920a"
             }
-          ]
+          ],
+          "status": "PASS"
         },
         {
           "caseId": "H2",
@@ -515,7 +524,8 @@
               "phase": "initial",
               "entryHash": "328b8801b4e9380a851785c5fbbc82e53ca5c498b288e54fa20e388ba9c07b49"
             }
-          ]
+          ],
+          "status": "PASS"
         }
       ],
       "trainingEligible": false,
@@ -554,7 +564,33 @@
         }
       ],
       "coordination": "User authorizes broad integration checks in ten-case batches; no numerical owner cohorts repeated. Prior ten-case source-bound evidence reused. Remote claims checked; unpublished cross-chat work not observable.",
-      "startedAt": "2026-10-25T16:59:49.777Z"
+      "startedAt": "2026-10-25T16:59:49.777Z",
+      "finishedAt": "2026-10-25T17:17:20.750Z",
+      "pass": 8,
+      "fail": 2,
+      "error": 0,
+      "missing": 0,
+      "censored": 0,
+      "assessment": "PERLU UPDATE: confirmed menu keyboard-focus issue in two configurations; other eight broad integration cases pass. Prior four cold-restart offline failures remain OPEN.",
+      "outputPath": "https://chatgpt.com/library?file_id=libfile_d93b80ef12188191aac0531234de82f0&account_id=personal",
+      "outputLibraryFileId": "libfile_d93b80ef12188191aac0531234de82f0",
+      "archiveBytes": 30702431,
+      "archiveSHA256": "17e08aaae2931a852aee24007a353e27c1466d6f86bfc73127100f6de0d361c1",
+      "evidenceIndex": "ZIP/evidence-index.json",
+      "coverageMatrix": "ZIP/coverage.json",
+      "evidence": {
+        "screenshots": 60,
+        "checks": 71,
+        "passedChecks": 69,
+        "failedChecks": 2,
+        "runtimeFilesHashVerified": 811,
+        "uniqueNewSeeds": 10,
+        "overlapWithPreviousSeeds": 0,
+        "recomputedTransitions": 8
+      },
+      "attemptHistory": "Original incomplete harness attempts retained; only incomplete cases resumed serially. Final negative focus findings remain FAIL; no duplicate collector or nested agent used.",
+      "actualGeneratedModuleState": "Practice Learning rngState/session stored in ZIP/raw/privileged/G1-practice-learning-session.json; Tutorial uses authored fixtures. Parent seed does not imply every module internal seed.",
+      "wallTimeSecondsAtRegistryUpdate": 1482
     }
   ]
 }

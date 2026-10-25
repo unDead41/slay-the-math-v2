@@ -13,3 +13,5 @@ Existing V5/Alyssa and VFX art/timing/geometry, numerical rules, questions, save
 Preview the work branch `fix/automatic-background-preload` using the existing `npm run start:prod` flow, then open the server URL it prints. This candidate is distinct from the public Pages deployment. [Current audit, exact evidence and publication](audits/hosted-readiness/LATEST.md) records the verified state.
 
 Validation:1,094/1,094 tests, no failures/skips;28 focused checks; production9 startup/background/cache/recovery cases, six other native suites including all75 V5 exposures, Practice120, strict17-chapter image verification, Developer Hub, mobile layout and portable mode. Exact source/prod678/679 entry hashes match; physical-device FPS remains unmeasured.
+
+Published candidate source: [ee11bd2](https://github.com/unDead41/slay-the-math-v2/commit/ee11bd2b93c909e2cd90ba81458fc22e24310178), exact tested tree, work branch only. Main stays2.45.0. The audit also records an inherited CI shallow-history prerequisite; GitHub CI execution is not claimed.

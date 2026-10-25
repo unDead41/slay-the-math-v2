@@ -190,8 +190,29 @@
     "MODEL.zip unavailable; PDFs available but unchanged math content not reread"
   ],
   "publication": {
-    "status": "pending work-branch push",
+    "status": "published work branch; main unchanged",
+    "branch": "fix/automatic-background-preload",
+    "sourceCommit": "ee11bd2b93c909e2cd90ba81458fc22e24310178",
+    "sourceTree": "b3619f630f8949cee1e8de61e7604d3d55295ac5",
+    "localVerifiedTreeCommit": "bf58f62516e6432b569331fdabce590ba017d691",
+    "remoteTreeExactlyMatchesLocal": true,
+    "parent": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+    "sourceRefReadback": true,
+    "commitTreeParentReadback": true,
+    "versionReadback": "2.46.0",
+    "mainBefore": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
+    "mainAfter": "6c49f3980c3a832635d4d01a6c50a8df98ac4aad",
     "mainChanged": false,
-    "force": false
+    "force": false,
+    "pagesDeployment": false,
+    "receipt": "Following documentation-only receipt; final ref/tree/version readback in terminal handoff",
+    "recordedAt": "2026-10-25T15:40:42.998458+08:00"
+  },
+  "ciPotentialRisk": {
+    "id": "CI-BG-01",
+    "priority": "P2",
+    "status": "BELUM DISAHKAN as an actual GitHub CI run",
+    "evidence": "menu-verification uses checkout d23441a without fetch-depth override; pinned action default1; balance loader needs Git2800. Local shallow clone reproduced2 failures, complete rerun passed after fetching history.",
+    "scope": "Inherited verification-workflow follow-up; no runtime/main or CI workflow change"
   }
 }

@@ -41,7 +41,13 @@ All original art/audio, V5 clip geometry/timing, VFX painters/quality, card/math
 
 ## Publication
 
-Work branch candidate only until a concrete verified publication is requested. Main and Pages2.45.0 remain separate from the local2.46.0 result. Final source/ref readback is recorded after an authorized push.
+Published candidate source [`ee11bd2`](https://github.com/unDead41/slay-the-math-v2/commit/ee11bd2b93c909e2cd90ba81458fc22e24310178), full SHA `ee11bd2b93c909e2cd90ba81458fc22e24310178`, on [fix/automatic-background-preload](https://github.com/unDead41/slay-the-math-v2/tree/fix/automatic-background-preload). Remote tree `b3619f630f8949cee1e8de61e7604d3d55295ac5` exactly matches the locally verified source/evidence tree atbf58f62516e6432b569331fdabce590ba017d691. Parent is current main6c49f3980c3a832635d4d01a6c50a8df98ac4aad. Source commit/tree/parent, branch ref and package2.46.0 were read back. Normal Git push lacked credentials; the authorized GitHub connector created exact content-addressed objects and the new ref, without a forced update.
+
+Main was6c49 before/after publication. No main push, merge or Pages deployment was performed: the public game remains separate from this2.46.0 work-branch candidate. The following documentation-only receipt records publication; final branch/tree/version and unchanged main are read back again in the terminal handoff.
+
+## Inherited CI follow-up
+
+**CI-BG-01, P2/medium, potential CI failure:** `.github/workflows/menu-verification.yml` uses pinned `actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803` without a history-depth override. The [pinned action definition](https://github.com/actions/checkout/blob/d23441a48e516b6c34aea4fa41551a30e30af803/action.yml) declares default fetch-depth1, while `tools/balance/loader.cjs` requires Git2800f9a. Local depth1 reproduction failed two tests until that exact historical commit was fetched. A future PR/manual verification may need the pinned history fetched or full history enabled; no such CI run is claimed here. This inherited workflow issue is outside the runtime-download correction and is recorded for its owner. The Pages workflow builds/syntax-checks main separately. This candidate does not change either workflow.
 
 ---
 

@@ -58,4 +58,6 @@ Gunakan skill ini pada permintaan recheck numerik seterusnya: bekukan runtime ma
 
 ## Penerbitan
 
-Receipt kandungan dan readback branch direkod selepas penerbitan dalam laporan berstruktur; hanya balance/map dibenarkan. Main tidak diubah.
+Kandungan diterbitkan pada commit `2326a548cd0df44d8046b7d99184875d31fbef58`, tree `ce74ccdbbcff1af0240080bec005cdc7a6567bc9`, dengan parent `280278ea1d67af0579a7c66f2103d885938207cc`. Diff remote mengesahkan tepat19 fail pakej/arahan/laporan;0 fail gameplay/data sejarah berubah. Update balance/map menggunakan expected-head tanpa force dan readback commit IDENTICAL. Commit resit susulan hanya mengemas kini handoff ini dan summary.json.
+
+Skill pengguna turut disimpan dan push pada `1314851cdec9d1e5790b5725af9e3b8b13a326c0`; HEAD/upstream sepadan dan working tree bersih. Hanya balance/map diterbitkan untuk game; main tidak diubah. Main semakan penutup kekal68d61e7/game2.48.0. Semua19 blob sepadan dengan Git SHA tempatan sebelum update ref.

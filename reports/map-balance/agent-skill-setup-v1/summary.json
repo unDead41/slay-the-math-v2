@@ -81,7 +81,9 @@
     "userSkillsPush": "SUCCEEDED",
     "files": 4,
     "scope": "Map only",
-    "duplicateDiscoveryWarning": "Select one copy if a host discovers both identical skill names."
+    "duplicateDiscoveryWarning": "Select one copy if a host discovers both identical skill names.",
+    "headMatchesUpstream": true,
+    "workingTreeClean": true
   },
   "validation": {
     "staticStatus": "PASS",
@@ -163,10 +165,19 @@
     ]
   },
   "publicationReceipt": {
-    "status": "READY_FOR_EXPECTED_HEAD_PUBLICATION",
+    "status": "VERIFIED",
+    "contentCommit": "2326a548cd0df44d8046b7d99184875d31fbef58",
+    "contentTree": "ce74ccdbbcff1af0240080bec005cdc7a6567bc9",
     "expectedPreviousSha": "280278ea1d67af0579a7c66f2103d885938207cc",
+    "verifiedBlobCount": 19,
+    "remoteDiffExactPaths": true,
+    "remoteRefReadback": "IDENTICAL",
     "force": false,
-    "mainPush": false
+    "mainPush": false,
+    "receiptCommitScope": [
+      "docs/MAP_AGENT_SKILL_HANDOFF.md",
+      "reports/map-balance/agent-skill-setup-v1/summary.json"
+    ]
   },
   "changedFiles": [
     ".agents/skills/slay-map-balance/SKILL.md",

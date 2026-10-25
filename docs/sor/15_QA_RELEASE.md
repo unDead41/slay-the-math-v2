@@ -1,5 +1,9 @@
 # 15 — QA, bukti semakan dan release
 
+## Icon loading follow-up — 2.45.1-icons.1
+
+For the assistant-branch update, reproduce the pending-priority and generic-fallback defects before fixing them. Exercise the complete bootstrap/verified loader/DOM path, two held background requests, no duplicate fetch/decode, decode with session retention disabled, 43 UI/six map meanings, source replacement, and unchanged ten status glyphs. Native production cases must cover real held HTTP responses, actual functional-image404s, BM/English and Normal/Large switching, named enabled controls, decoded glyphs and exact saved-game equality. Preserve original art, current motion/VFX and all numerical/question/RNG owners. Record full/syntax/build/resource checks, initial/final audit and physical-device/human limits; publish `codex/icon-clarity-audit` only. [Evidence owner](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 Status: CADANGAN. Pakej ini belum menjalankan ujian runtime game.
 
 ## Prinsip semakan

@@ -1,5 +1,9 @@
 # Runtime performance — approved scope
 
+## Image-priority boundary — 2.45.1-icons.1
+
+Ijamm authorizes the focused icon follow-up on `codex/icon-clarity-audit` only. A shared pending image preparation forwards a more urgent consumer priority to the existing loader job, without new fetch/hash/decode work. Once transfer finishes, a still-pending decode or ready image does not refetch. Keep existing concurrency, verification, cancellation and memory-budget owners. Regress with two held background transfers and with session retention disabled during decode. [Audit and scope](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 24 October 2026. Ijamm explicitly approves recommendations 1–3 from the performance assessment: retain combat canvases/controllers, reuse already-verified resources, and replace count-only texture caching with memory budgeting. Publication remains feature-branch only.
 
 Preserve the existing engine, exact seed/RNG/save progression, card/education/balance owners, original artwork/audio, fixed actor geometry and clip durations. Presentation never decides gameplay. Current main cb1bbcf688d9556b55bc8fe5522b5b652309640c (2.38.0), including Settings-only developer entry, education reports and clarified bilingual hints, stays intact.

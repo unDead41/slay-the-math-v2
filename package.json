@@ -1,6 +1,6 @@
 {
   "name": "duel-cube-math",
-  "version": "2.45.0",
+  "version": "2.45.1-icons.1",
   "private": true,
   "description": "Developer sandbox for scenes, card states and actor motion",
   "scripts": {
@@ -67,7 +67,8 @@
     "test:practice-workspace-browser": "node tests/education-workspace-browser.cjs",
     "test:game-questions-browser": "node tests/game-questions-browser.cjs",
     "test:game-question-render-browser": "node tests/game-question-render-browser.cjs",
-    "test:icon-clarity": "node --test --test-concurrency=1 tests/icon-clarity-ui.test.cjs tests/combat-status.test.cjs tests/status-explanation.test.cjs tests/icon-readiness.test.cjs",
+    "test:icon-clarity": "node --test --test-concurrency=1 tests/icon-clarity-ui.test.cjs tests/combat-status.test.cjs tests/status-explanation.test.cjs tests/icon-readiness.test.cjs tests/icon-loading-integration.test.cjs",
+    "test:icon-loading-browser": "node tests/icon-loading-browser.cjs",
     "test:icon-clarity-browser": "node tests/icon-clarity-browser.cjs",
     "test:status-explanation-browser": "node tests/status-explanation-browser.cjs",
     "audit:language": "node tools/audit-game-language.cjs"

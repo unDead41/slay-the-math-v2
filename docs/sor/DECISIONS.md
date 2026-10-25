@@ -1,5 +1,11 @@
 # Daftar keputusan — Slay the Math
 
+## DEC-20261025-ICON-LOADING — Latest-main follow-up, branch only
+
+- **DISAHKAN:** Ijamm says to implement the appropriate recommendations and push the assistant branch first. Publish `codex/icon-clarity-audit` only; this new set has no main publication authorization.
+- **DITERUSKAN:** Base on main `6c49f3980c3a832635d4d01a6c50a8df98ac4aad` /2.45.0. Forward pending image priorities, complete registered UI/map fallbacks and original-source identity, and add actual bootstrap/native regressions. Preserve original assets, ten status glyphs, V5/live VFX, bilingual/numerical/question/save/RNG owners and loader budgets.
+- **PERLU_VERIFIKASI:** Human recognition and physical-device performance remain field checks. Current DOC-001/002 and the broad verified-icon integration are already resolved; do not reopen their historical snapshots. [Scope/audit](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 ## DEC-20261025-ALYSSA-V5-MAIN — Apply the approved motion to the game
 
 - **DISAHKAN:** After approving the V5 HTML, Ijamm requests applying it in the game and pushing directly to main. This authorizes all five approved clips and their necessary registration/resource/fallback updates; the earlier preview-only scope is superseded for this set.

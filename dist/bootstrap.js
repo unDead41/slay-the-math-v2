@@ -24,9 +24,9 @@ function assetKey(url){const u=new URL(url,base);return manifest?.entries.find(e
 function assetURL(url){const key=assetKey(url);return key?visuals.get(key)?.url||EMPTY:EMPTY;}
 function decode(url,{priority=0}={}){
  const key=assetKey(url);if(!key)return Promise.reject(Error('Unknown image resource'));
- if(visuals.has(key)){const saved=visuals.get(key);visuals.delete(key);visuals.set(key,saved);return saved.promise;}
- const record={url:null,ready:false};
- record.promise=(async()=>{const response=await manager.fetchAsset(key,{priority});const objectURL=host.URL.createObjectURL(await response.blob());record.url=objectURL;const image=new host.Image();image.src=objectURL;await image.decode();if(!image.naturalWidth)throw Error('An image could not be prepared.');if(visuals.get(key)!==record){host.URL.revokeObjectURL(objectURL);throw Error('Image preparation was cancelled');}record.ready=true;return objectURL;})().catch(error=>{if(visuals.get(key)===record)visuals.delete(key);if(record.url)host.URL.revokeObjectURL(record.url);throw error;});
+ if(visuals.has(key)){const saved=visuals.get(key);if(saved.fetching&&priority<saved.priority){saved.priority=priority;manager.fetchAsset(key,{priority}).catch(()=>{});}visuals.delete(key);visuals.set(key,saved);return saved.promise;}
+ const record={url:null,ready:false,fetching:true,priority};
+ record.promise=(async()=>{const response=await manager.fetchAsset(key,{priority});record.fetching=false;const objectURL=host.URL.createObjectURL(await response.blob());record.url=objectURL;const image=new host.Image();image.src=objectURL;await image.decode();if(!image.naturalWidth)throw Error('An image could not be prepared.');if(visuals.get(key)!==record){host.URL.revokeObjectURL(objectURL);throw Error('Image preparation was cancelled');}record.ready=true;return objectURL;})().catch(error=>{if(visuals.get(key)===record)visuals.delete(key);if(record.url)host.URL.revokeObjectURL(record.url);throw error;});
  visuals.set(key,record);return record.promise;
 }
 function visibleImages(root){return [...root.querySelectorAll('img[data-stm-asset]')].filter(img=>!img.matches('.menu-ambience,.menu-backdrop')||img.classList.contains('active'));}

@@ -1,4 +1,51 @@
-# Latest main integration — 2.39.0
+# Icon loading follow-up — 2.45.1-icons.1
+
+| Field | Current audit |
+| --- | --- |
+| Date | 25 October 2026, Asia/Kuala_Lumpur |
+| Repository / target | unDead41/slay-the-math-v2 / codex/icon-clarity-audit |
+| Reviewed main | `6c49f3980c3a832635d4d01a6c50a8df98ac4aad`, 2.45.0 |
+| Original remote feature | `81533b38b8c7be1d897c3acc282f749df9beaeab`, already an ancestor of main |
+| Master SOR | 1.2.0; current main, AGENTS, domain owners and prior audits read |
+| Authorization | Implement the appropriate follow-ups; push assistant branch only |
+| Initial status | PERLU UPDATE — two reproduced P2 issues |
+| Final status | VALID within the recorded icon/loading scope; limits below |
+
+[Scope and behavior](../../ICON_LOADING_FOLLOWUP_2_45_1.md). This section governs this new branch update; older reports below remain historical evidence for their own snapshots.
+
+## MASALAH DISAHKAN
+
+| ID | Priority / confidence | Initial evidence, impact and scoped action |
+| --- | --- | --- |
+| FIX-ICON-01 | P2 / high | `bootstrap.js` reused a background decode promise without forwarding foreground priority. A real bootstrap/manager regression leaves a visible icon queued behind two held background transfers with spare capacity. Forward promotion during transfer; retain one transfer/decode and avoid refetching during decode. |
+| FIX-ICON-02 | P2 / high | `icon-readiness.js` gave 30/43 UI keys the generic warning. Map/legend images without semantic attributes lost meaning behind Blob placeholders. Add UI/map glyphs and original-source identity lookup; preserve all ten status glyphs and real controls/names. |
+
+## RISIKO BERPOTENSI
+
+| ID | Priority / confidence | State and remaining check |
+| --- | --- | --- |
+| ICON-R1 | P2 / medium | OPEN: pupil recognition and physical-device performance are unmeasured. Native 28/44/64px decoding and BM phone interaction do not measure these outcomes. |
+| ICON-R2 | P2 / high | CLOSED for the earlier integration concern: main 2.41.0 routes fifteen warmed icons through verified transport. FIX-ICON-01 addresses the narrower defect found afterward; keep its regression when Publish Handler changes. |
+
+DOC-001/DOC-002 were resolved in main 2.43.0 and are not reopened by historical tables. Wider download targets and unrelated VFX/motion work remain with their owners.
+
+## PENAMBAHBAIKAN
+
+Implemented: visible-priority forwarding, registered semantic fallbacks, original-source recovery, combined bootstrap/manager/DOM tests and native HTTP delay/404 checks. All original assets, V5 motion/live VFX and numerical/question/save/RNG owners remain intact. Human recognition remains proposed validation.
+
+## Final verification and diff audit
+
+The fresh full serial suite passes **1,085/1,085**, zero failed/skipped, in 477655ms. The focused run passes21/21. The five new cases are included in the full run. Clean before-fix replays fail as expected: priority1/2 and fallback3/6. Logs and exact source hashes: [integration.json](../../verification/icon-loading-20261025/integration.json).
+
+Native production checks pass all five recorded groups: held HTTP background responses/foreground Weak, all-functional-bitmap404s in real BM/Large combat and map, actual Normal/English→Large/BM switches, actual standalone boot/error fallback with zero HTTP, and all registered fallback meanings decoding at28/44/64px. Raw saved gameplay remains identical. A separate verified-image consumer check passes all31 Artifact Codex images, actual Passive/pose/reset and all17 Tutorial chapters, with no raw asset requests or page errors.
+
+Syntax and production/portable builds pass. All678 source and679 production manifest resources match their actual hashes; the production app matches the unchanged developer instrumentation. Final runtime bytes match the snapshot used during the full run. The final diff preserves all original assets, numerical/card/question/save/RNG owners, V5 motion/live VFX, language, audio, loader budgets and DOM patcher. Only two runtime implementations plus derived version/cache metadata, tests and scoped documentation change. No additional issue was found within this diff's checked scope.
+
+Main was rechecked at the reviewed6c49f39 snapshot before publication. The non-forced feature update uses the expected old feature head; actual branch commit/tree/version and unchanged main are read back in the final handoff. No main update is authorized.
+
+---
+
+# Historical main integration — 2.39.0
 
 Main publication is now explicitly authorized. The current integration audit
 and fresh evidence live in

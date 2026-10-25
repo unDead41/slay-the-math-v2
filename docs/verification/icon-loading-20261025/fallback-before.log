@@ -1,0 +1,75 @@
+✔ slow and failed status images retain their usable named control and receive a local semantic fallback once (56.621943ms)
+✔ a changed icon source can load normally after a prior failure without affecting card/artifact art (9.058429ms)
+✔ the Publish Handler integration exposes a bounded critical-icon list, with no cards, artifacts, sounds or questions (1.07752ms)
+✖ failed registered utility and map meanings never collapse to the unknown-resource symbol (0.737929ms)
+✖ actual failed buttons keep names and receive distinct Sword, Rest, Coin and seal-state glyphs (18.402639ms)
+✖ a map legend without an explicit semantic attribute uses the verified original source identity (6.401625ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 3
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 498.039052
+
+✖ failing tests:
+
+test at ../../../../tmp/stm-icon-fallback-before/tests/icon-readiness.test.cjs:17:1
+✖ failed registered utility and map meanings never collapse to the unknown-resource symbol (0.737929ms)
+  AssertionError [ERR_ASSERTION]: Missing semantic fallback: drawPile
+      at TestContext.<anonymous> (/tmp/stm-icon-fallback-before/tests/icon-readiness.test.cjs:19:71)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%22-3%20-3%2030%2030%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2214%22%20fill%3D%22%23102334%22%20stroke%3D%22%23e8c77a%22%2F%3E%3Cpath%20d%3D%22m12%203%2010%2018H2ZM12%208v6m0%203v1%22%20fill%3D%22none%22%20stroke%3D%22%23fff4d4%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E',
+    expected: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%22-3%20-3%2030%2030%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2214%22%20fill%3D%22%23102334%22%20stroke%3D%22%23e8c77a%22%2F%3E%3Cpath%20d%3D%22m12%203%2010%2018H2ZM12%208v6m0%203v1%22%20fill%3D%22none%22%20stroke%3D%22%23fff4d4%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../tmp/stm-icon-fallback-before/tests/icon-readiness.test.cjs:23:1
+✖ actual failed buttons keep names and receive distinct Sword, Rest, Coin and seal-state glyphs (18.402639ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  1 !== 5
+
+      at TestContext.<anonymous> (/tmp/stm-icon-fallback-before/tests/icon-readiness.test.cjs:25:327)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../../tmp/stm-icon-fallback-before/tests/icon-readiness.test.cjs:29:1
+✖ a map legend without an explicit semantic attribute uses the verified original source identity (6.401625ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+
+  'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%22-3%20-3%2030%2030%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2214%22%20fill%3D%22%23102334%22%20stroke%3D%22%23e8c77a%22%2F%3E%3Cpath%20d%3D%22m12%203%2010%2018H2ZM12%208v6m0%203v1%22%20fill%3D%22none%22%20stroke%3D%22%23fff4d4%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'
+      at TestContext.<anonymous> (/tmp/stm-icon-fallback-before/tests/icon-readiness.test.cjs:31:64)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%22-3%20-3%2030%2030%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2214%22%20fill%3D%22%23102334%22%20stroke%3D%22%23e8c77a%22%2F%3E%3Cpath%20d%3D%22m12%203%2010%2018H2ZM12%208v6m0%203v1%22%20fill%3D%22none%22%20stroke%3D%22%23fff4d4%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E',
+    expected: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%22-3%20-3%2030%2030%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2214%22%20fill%3D%22%23102334%22%20stroke%3D%22%23e8c77a%22%2F%3E%3Cpath%20d%3D%22m12%203%2010%2018H2ZM12%208v6m0%203v1%22%20fill%3D%22none%22%20stroke%3D%22%23fff4d4%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

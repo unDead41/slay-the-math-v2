@@ -1,5 +1,12 @@
 # Changelog SOR — Slay the Math
 
+## Icon loading follow-up — 2.45.1-icons.1, 25 October 2026
+
+- Promote a queued shared image preparation when it becomes visible; reuse its verified transfer/decode and avoid refetching during decode.
+- Give every registered UI/map meaning a local semantic fallback; retain original-source identity behind Blob URLs, named controls and all ten existing status glyphs.
+- Add real bootstrap/loader/DOM and native delay/404 regressions, actual BM/English and Normal/Large switches, diagnostic glyph sheets and initial/final audit evidence.
+- Preserve all original art and newer main motion/VFX, numerical, question and save/RNG owners. Publish the icon branch only; human/device validation remains open.
+
 ## Approved Alyssa V5 motion — game 2.45.0, 25 October 2026
 
 - Apply all five approved 15-slot clips to actual combat, preserving source bytes/timing and right-facing identity. Idle uses eight unique drawings with repeated breath/blink exposures; Kena Attack has fifteen unique poses.

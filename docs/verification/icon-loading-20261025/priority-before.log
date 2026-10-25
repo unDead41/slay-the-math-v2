@@ -1,0 +1,20 @@
+✖ a visible icon overtakes queued warming while two background transfers remain held (2085.935265ms)
+✔ foreground promotion during an existing decode does not fetch bytes again with session retention disabled (21.57628ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2443.231353
+
+✖ failing tests:
+
+test at tests/icon-loading-integration.test.cjs:5:1
+✖ a visible icon overtakes queued warming while two background transfers remain held (2085.935265ms)
+  Error: Expected resource state was not reached
+      at until (/workspace/scratch/495591b4a1bf/icon-clarity-fix/tests/helpers/hosted-images.cjs:7:163)
+      at async TestContext.<anonymous> (/workspace/scratch/495591b4a1bf/icon-clarity-fix/tests/icon-loading-integration.test.cjs:12:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

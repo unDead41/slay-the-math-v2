@@ -1,5 +1,15 @@
 # 06 — Ikon, emblem dan simbol matematik
 
+## Current follow-up — 2.45.1-icons.1, branch only
+
+**ICO-25:** Foreground use promotes existing queued image preparation through the shared verified loader. Keep one transfer/decode owner; do not fetch completed bytes again merely because decoding is pending.
+
+**ICO-26:** Registered UI/map meanings require semantic local SVG fallbacks. Keep all ten existing status glyphs and named usable controls. Distinguish Defend/Block, Focus/Predict, Tutorial/Skill, pile actions and open/closed Boss Seals; Rest/Camp may share their actual meaning. Unknown keys remain warnings.
+
+**ICO-27:** For images without semantic attributes, derive fallback meaning from the original registered asset identity, including `data-stm-asset`; never infer meaning from a Blob URL. Source replacement resets ownership. Keep card/artifact illustrations and original painted files under ICO-14.
+
+Ijamm authorizes fixes/tests/SOR and publication on `codex/icon-clarity-audit` only. Main base 2.45.0 retains all newer motion, VFX, language and balance owners. [Scope, actual checks and limits](../ICON_LOADING_FOLLOWUP_2_45_1.md).
+
 Versi: 2.3.0. Rujukan visual ialah [konsep kad](../../references/card_concepts_v001.jpeg), [sheet MC](../../references/mc_dungeon_concept_v001.jpeg) dan arahan Focus terkini Ijamm.
 
 ## Peranan

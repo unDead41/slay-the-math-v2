@@ -1,0 +1,4 @@
+# Project cap: three spawned subagents, excluding the primary agent.
+# ChatGPT Work requires the parent to enforce this cap with session tools.
+[agents]
+max_concurrent_threads_per_session = 3

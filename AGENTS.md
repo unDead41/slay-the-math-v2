@@ -77,3 +77,10 @@ For the integrated candidate, read `docs/sor/23_MASTER_BALANCE.md` and `docs/bal
 ## Single-enemy correction — 2.29.0
 
 Ijamm explicitly requests replacing AoE/random-enemy card effects and rebalancing the affected scope only. Read `docs/balance/master/SINGLE_TARGET_2_29_0.md`. `tools/cards/single-target.cjs` adapts archived supplier data before runtime generation: Rune Sweep is one hit and Fate Storm is three hits on the same enemy, without target RNG. Preserve IDs/artwork and the two cards' historical ordinary-mode receipts; do not delete old HP/RNG evidence. Master candidate.3 uses a separate identity/save key. Other card values, enemy profiles, economy, map and question rules remain under their existing owners.
+
+
+## Map and simulation coordination — 25 October 2026
+
+Ijamm confirms **maximum three spawned subagents total**, excluding the parent, with no nested agents. This covers Master roles and Map analysts together, not three per group. Default one when sufficient. Current project/user caps override an older installed Map skill. The parent enforces the Work cap; TOML does not configure its orchestrator automatically.
+
+Read [the shared simulation protocol](docs/simulation/SIMULATION_EVIDENCE_PROTOCOL.md) and owner audits before claiming new source/context/cases. Use one collector/journal owner, preserve negative outcomes and train/validation separation, and reuse valid specialist output. [Map uses three profiles](docs/MAP_THREE_AGENT_PROTOCOL.md). Current numerical/tools/assets/save/RNG owners remain unchanged; preparation is not a campaign, training run or remote publication.

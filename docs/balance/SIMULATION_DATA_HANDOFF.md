@@ -63,3 +63,10 @@ Use the same envelope with domain map/kind room and real recovery/route measurem
 ## Handoff checklist and interpretation
 
 Include command, current source hashes, protocol/version, fixed inputs/seed plan, planned/returned/terminal/invalid/censored totals, raw hashes, numeric/runtime compatibility and a README of confirmed issues/potential risks/improvements. Source drift requires fresh replay, not a changed label. Keep baseline and candidate, training and validation, and human versus synthetic evidence separate. Same seed is a matched scenario, not another independent pupil. No script silently learns from a player's save or changes game numbers.
+
+
+## Shared collection and visual evidence — 25 October 2026
+
+Read [the shared protocol](../simulation/SIMULATION_EVIDENCE_PROTOCOL.md) for ownership, source/case registration, stable-source rechecks and browser/tutorial capture. Maximum three subagents across Master/Map, default one, one collector. Registry coordination is manual, not a global lock.
+
+Schema/fitting support and historical seed plans above remain unchanged. A Map/Economy envelope PASS does not verify every semantic field/planned case or implement a supported learner; reconcile owner raw/context/schedule independently.

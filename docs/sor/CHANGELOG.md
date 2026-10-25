@@ -785,3 +785,8 @@ Review follow-up for2.42.0-balance.1: canonical ME08 queued buffs, explicit gros
 ## 2.46.0 work-branch candidate —25 October2026
 
 Automatic remaining resource downloads after entry; prepare at least75% of important build bytes plus all hard-core files before Enter. Shared incremental foreground-aware scheduler, combat/menu1/2 limits, visibility/offline/manual pause, reconnect/cancellation recovery, retention-aware progress and explicit online storage fallback. Existing V5/VFX/numerical/data/save owners preserved. [Current scoped evidence](../audits/hosted-readiness/LATEST.md); main deployment not implied by this entry.
+
+
+## 25 October 2026 — Map three-agent preparation and simulation reference
+
+Prepare a selective current-main Map package: cap3, three same-scope profiles, registry34/33/33 and default one. Pin historical handoffs; preserve adapted tools and game2.49. Add shared simulation ownership, manual run registration, source/seed/split integrity, learner limits, genuine browser capture metadata and token-saving batching. No new campaign/model, native-host activation or remote publication. [Handoff](../MAP_AGENT_SKILL_HANDOFF.md).

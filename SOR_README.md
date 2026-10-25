@@ -175,3 +175,12 @@ Current Mystery/Shop presentation and verification: [room UI 2.13.1](docs/ROOM_U
 AI Playtester on main, release 2.33.0: [operator guide](docs/AI_PLAYTESTER.md), [developer owner](docs/sor/20_DEVELOPER_TOOLS.md), [main integration and release verification](docs/AI_PLAYTESTER_MAIN_2026_10_24.md), [historical strategy verification](docs/verification/ai-strategy.json), [original baseline](docs/verification/ai-branch.json). No automatic tuning or pupil win-rate claim.
 
 Main release2.42.0 integrates the reviewed Master Balance/AI refresh after Ijamm's explicit main-publication instruction. [Release and verification](docs/balance/master/MAIN_RELEASE_2_42_0.md); original branch studies retain their own sources.
+
+
+## Map package and shared simulation reference — 25 October 2026
+
+Current preparation: [Map handoff](docs/MAP_AGENT_SKILL_HANDOFF.md), [three-agent protocol](docs/MAP_THREE_AGENT_PROTOCOL.md) and [shared simulation/data/evidence protocol](docs/simulation/SIMULATION_EVIDENCE_PROTOCOL.md). Ijamm confirms maximum three subagents and a current-source recheck workflow after integration stabilizes. Default one; historical four-agent setup and2.40 cohorts keep their original sources.
+
+The local candidate preserves main2.49 tools/runtime. It does not publish main, run campaigns, train a model or resolve education recovery findings. New measurements bind actual stable sources and predeclared cases.
+
+Subsequent authorization permits publishing this prepared package to `codex/master-map-simulation-protocol` only. The preparation restrictions above remain historical for their original checkpoint; main publication is still excluded. Read the handoff and audit for current scope and limits.

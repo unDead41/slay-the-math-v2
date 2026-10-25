@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "registryKind": "MANUAL_COORDINATION",
+  "owner": "Master / Simulation & Evidence",
+  "policy": "One parent writer; register exact source/context/case identity before execution; no atomic lock or scheduler implemented.",
+  "maxSpawnedSubagents": 3,
+  "defaultSpawnedSubagents": 1,
+  "maxAggregateNodeWorkers": 3,
+  "runs": []
+}

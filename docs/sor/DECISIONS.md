@@ -967,3 +967,16 @@ DISAHKAN: Ijamm’s “push ni kalau tak push lagi please” supersedes the earl
 ## DEC-20261025-AUTOMATIC-PRELOAD —75% important resources and automatic background
 
 DISAHKAN: Ijamm requests diagnosis of published downloads stopping,75% important resources at entry and suitable performance improvements. Implement on fix/automatic-background-preload based on main6c49f3980c3a832635d4d01a6c50a8df98ac4aad2.45.0, candidate2.46.0. DITERUSKAN implementation choice: byte-based early-game package plus100% hard core, bounded incremental automatic remaining downloads, real-run priority, one/two speculative transfers, pause/resume/retry and honest available-versus-verified counts. Practice remains on demand; no whole-game pre-entry requirement, atlas mass-decode, art/gameplay/save/RNG change or closed-tab download promise. Main publication is separate from this candidate. [Spec and audit](../audits/hosted-readiness/LATEST.md).
+
+
+## DEC-20261025-MAP-THREE-SIMULATION — Selective Map and reusable evidence
+
+DISAHKAN: Ijamm confirms maximum three subagents, selective Map adaptation preserving current-main tools, and an MD reference for current-source rechecks after stable integration. [Shared protocol](../simulation/SIMULATION_EVIDENCE_PROTOCOL.md). This task does not authorize remote push, numerical retuning, new campaigns or model activation.
+
+DITERUSKAN: prepare on maind77b3e0ce87d573de89e84a9b2374df97ad625b9/game2.49.0; adapt instruction/skill/profile concepts from Map8ca19526ec6a69d1183bae96803e461a77e3acfc to three, registry34/33/33, default one, no nested work and one collector. Preserve main adapted tools and all frozen historical cohorts.
+
+CADANGAN: an optional Simulation & Evidence chat coordinates registry and cross-module/browser evidence, consuming domain output without duplicate collection. Manual registry is not an atomic scheduler. No new chat/run/corpus/capture is claimed. Native host, balance, pupils/devices and live Google remain PERLU_VERIFIKASI.
+
+## DEC-20261025-MAP-THREE-BRANCH — Publish the prepared package
+
+DISAHKAN: Ijamm explicitly says “Push pakej itu ke branch sahaja. Jangan merge main dahulu.” Publish the reviewed Map cap3/config/skill and simulation-evidence instructions to `codex/master-map-simulation-protocol` only. This supersedes the no-remote-push boundary of the preceding preparation entry for this package; it does not authorize main, balance/map, numerical tuning, new campaigns, model activation or a global-skill update. Preserve main d77b3e0ce87d573de89e84a9b2374df97ad625b9/game2.49.0 and record actual remote ref/tree verification after publication.

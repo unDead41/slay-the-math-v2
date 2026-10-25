@@ -206,3 +206,12 @@ Arahan CLI dan verifier bebas ada dalam README eksperimen. Master perlu run semu
 ## Master integration — 2.27.0
 
 The full candidate adapter is now available through `tools/balance/master/loader.cjs` and `createReplay(runtime)` in the existing replay module. The new [Master SOR](../../../docs/sor/23_MASTER_BALANCE.md) and [handoff](../../../docs/balance/master/HANDOFF.md) own its measured campaign cohorts. Historical v1.2/v1.3 reports and default worker source remain baseline experiments; they are not relabeled as candidate trials. Topology, registered seeds and contextual map CP formula remain unchanged.
+
+
+## Map workflow addendum — 25 October 2026
+
+Historical numerical sections above retain their source/context. New work follows [the three-agent protocol](../../../docs/MAP_THREE_AGENT_PROTOCOL.md) and [shared evidence reference](../../../docs/simulation/SIMULATION_EVIDENCE_PROTOCOL.md): maximum three subagents across Master/Map, default one, no children and one parent-owned collector. This supersedes older concurrency examples for new work only.
+
+Main2.49 adapts Map364 runtime/identity/Gold/report contracts. Preserve current tools and frozen old config/raw. Recheck after stable integration with exact source/policy/config/input identities and predeclared cases. Source2.40 is not source2.49; Map policy is not automatically AI4.
+
+Historical [v1.4](https://github.com/unDead41/slay-the-math-v2/blob/364a844879b8cd9463c4771eac15291a3fd22075/docs/MAP_BALANCE_V1_4_HANDOFF.md), [v1.5](https://github.com/unDead41/slay-the-math-v2/blob/364a844879b8cd9463c4771eac15291a3fd22075/docs/MAP_BALANCE_V1_5_HANDOFF.md) and [validation index](https://github.com/unDead41/slay-the-math-v2/blob/364a844879b8cd9463c4771eac15291a3fd22075/reports/map-balance/validation-v1.5/validation-index.json) are SHA-pinned remote evidence. No current CP, pupil targets or speedup is measured by this setup.

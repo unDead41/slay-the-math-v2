@@ -1,3 +1,7 @@
+# 2.53.0-pet.1 — Emberlyn assistant candidate (27 October 2026)
+
+Integrates the original pet and protected Online API on Mathematics Slayer main2.52.0, reusing the canonical Online/Offline adapter and installer. Feature branch only; no main publication/live provider validation. Earlier2.52.0-pet.1 was a local interim candidate before the current main rename.
+
 # Changelog SOR — Mathematics Slayer
 
 ## 27 Oktober 2026 — pemulihan calon 2.52.0
@@ -23,6 +27,10 @@
   [Skop dan status](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 ## Sejarah keluaran terdahulu
+
+## 2.52.0-pet.1 — 27 October 2026, feature candidate
+
+Recover the original Emberlyn/API work on current2.51 main. Reuse the sole explicit-Online permission/help adapter and existing installer; add protected Responses transport, matching current/archived card facts, exact supported maths tools, local references and original-Hint-only active-question flow. Preserve numerical/save/RNG/learning/art/motion and simulation owners. New tutorial pictures use genuine current UI capture. Live credentials/deployment remain operator work. [SOR27](27_PET_ASSISTANT.md).
 
 ## 2.51.0 — 26 October 2026, Asia/Kuala_Lumpur — main publication
 

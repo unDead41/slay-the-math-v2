@@ -224,3 +224,6 @@ Current preparation: [Map handoff](docs/MAP_AGENT_SKILL_HANDOFF.md), [three-agen
 The local candidate preserves main2.49 tools/runtime. It does not publish main, run campaigns, train a model or resolve education recovery findings. New measurements bind actual stable sources and predeclared cases.
 
 Subsequent authorization permits publishing this prepared package to `codex/master-map-simulation-protocol` only. The preparation restrictions above remain historical for their original checkpoint; main publication is still excluded. Read the handoff and audit for current scope and limits.
+
+
+Feature candidate2.53.0-pet.1: original Emberlyn Online API/local help on Mathematics Slayer main2.52.0, with the existing permission/offline owners. No main publication. [SOR27](docs/sor/27_PET_ASSISTANT.md), [operator guide](docs/PET_ASSISTANT.md), [audit](docs/audits/pet-assistant/LATEST.md).

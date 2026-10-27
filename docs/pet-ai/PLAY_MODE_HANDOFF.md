@@ -97,3 +97,8 @@ See [owner design/audit](../ONLINE_OFFLINE_READINESS.md) and [latest verificatio
 ## Reviewed branch acceptance
 
 The gate now opens the same Settings modal when Offline preparation fails; explicitly selecting Online restarts normal entry. No duplicate mode control or implicit mode change is added. Every Ready transition rehashes actual reopened retained bytes, including warm install/audit and after receipt commit. Master evidence is in `docs/verification/online-offline-readiness/native-reviewed/report.json` (14checks), `review-gate-green.log`, `review-storage-green.log` and the final full suite. The complete candidate release contains769files/232,929,606bytes including the canonical manifest; readiness refers only to its reported release ID. Browser persistence protection was denied in native QA and is visibly disclosed. No external pet branch appears in the inspected37-branch inventory; this shared adapter still requires its pet/backend owner to register a live transport.
+
+
+## Pet implementation candidate — 27 October 2026
+
+Candidate2.53.0-pet.1 on ai/pet-online-20261025 consumes this published contract on Mathematics Slayer main2.52.0 (7a49fff). It registers the protected server transport, original Emberlyn widget and original-Hint callback without changing the permission/installer owners. All added public resources require the new release manifest/full verification. Earlier paragraphs describe their pinned source; no live provider deployment or main publication is implied. [Actual implementation/setup](../PET_ASSISTANT.md), [audit](../audits/pet-assistant/LATEST.md).

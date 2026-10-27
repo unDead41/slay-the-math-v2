@@ -1114,3 +1114,11 @@ CADANGAN: an optional Simulation & Evidence chat coordinates registry and cross-
 ## DEC-20261025-MAP-THREE-BRANCH — Publish the prepared package
 
 DISAHKAN: Ijamm explicitly says “Push pakej itu ke branch sahaja. Jangan merge main dahulu.” Publish the reviewed Map cap3/config/skill and simulation-evidence instructions to `codex/master-map-simulation-protocol` only. This supersedes the no-remote-push boundary of the preceding preparation entry for this package; it does not authorize main, balance/map, numerical tuning, new campaigns, model activation or a global-skill update. Preserve main d77b3e0ce87d573de89e84a9b2374df97ad625b9/game2.49.0 and record actual remote ref/tree verification after publication.
+
+## DEC-20261027-PET-API-RECOVERY
+
+DISAHKAN: Ijamm resumes the authorized Online API/original pet/game-maths work. Initial unpublished local candidate was pruned; no surviving final-review verdict is claimed. DITERUSKAN: reconstruct on current main ce5865/2.51.0 as2.52.0-pet.1, reusing the published permission/help/offline owners, exact original Emberlyn, protected Responses backend and canonical original Hint support. Preserve gameplay/save/RNG/bank/numerical/current-and-archived rules and simulation AI. PERLU_VERIFIKASI: real server key/model/origin/HTTPS activation, actual provider accuracy/latency/cost and physical/pupil use. [SOR27](27_PET_ASSISTANT.md), [audit](../audits/pet-assistant/LATEST.md). No main publication/deployment.
+
+## DEC-20261027-PET-MAIN-UPDATE — Adopt published identity
+
+Main advanced to7a49fff / Mathematics Slayer2.52.0 during pet QA. Adopt its display identity and byte-identical portable alias while preserving all internal IDs/storage/rules. Pet candidate is2.53.0-pet.1 on its own branch; previous-base measurements remain historical, affected checks/captures repeated. No main publication or paid service deployment is authorized by this integration.

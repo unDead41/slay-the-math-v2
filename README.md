@@ -3,7 +3,7 @@
 Nama rasmi baharu ialah **Mathematics Slayer**, dipersetujui Ijamm pada
 26 Oktober 2026. Calon pemulihan 27 Oktober menyelaraskan nama pemain, Practice,
 label laporan/eksport dan panduan. Repository/URL, storage keys, save/RNG,
-matematik/numerical dan aset asal kekal. **QA/penerbitan calon masih menunggu**;
+matematik/numerical dan aset asal kekal. **Pelaksanaan/QA terhad ialah VALID; penerbitan main masih PENDING**;
 [laporan semasa](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 `npm run build` menghasilkan `MATHEMATICS-SLAYER-OFFLINE.html` dan alias lama
@@ -108,7 +108,7 @@ npm run build
 `npm run build` builds `MATHEMATICS-SLAYER-OFFLINE.html` with embedded art/music and the byte-identical legacy alias `SLAY-THE-MATH-OFFLINE.html`.
 This generated file is no longer tracked: the current full-animation build exceeds GitHub’s single-file limit.
 Build it locally after checkout, or use `npm start` directly.
-DOM tests need jsdom via `DOM_QA_MODULE` (otherwise explicitly skipped); optional
+The selected branding/language DOM checks require jsdom via `DOM_QA_MODULE`; some older DOM tests explicitly skip when it is absent. Current focused coverage is recorded separately in the 2.52.0 report. Optional
 browser checks use Playwright via `BROWSER_QA_MODULE` and an installed Chromium.
 The game itself has no dependency on either QA package.
 

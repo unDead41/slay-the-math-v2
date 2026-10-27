@@ -1,0 +1,21 @@
+{
+  "candidateSHA": "d8e92d82e472dbdf1dde294e944049e902394140",
+  "candidateTree": "eea5bdefd0b4128ceff34273c037fc10c9aa29cb",
+  "originalCommand": "focused-final.json",
+  "originalStatus": "INCOMPLETE_CAPTURE; exit0; no final totals,170actual unique OK lines",
+  "originalObservedUniqueOK": 170,
+  "tailCommand": "focused-tail.json",
+  "tailStatus": "PASS",
+  "tailTotal": 30,
+  "tailPass": 30,
+  "tailFail": 0,
+  "tailSkip": 0,
+  "tailCancel": 0,
+  "tailObservedUniqueOK": 30,
+  "intersectionCount": 0,
+  "coveredUniqueNames": 200,
+  "tailMatchesUnrepresentedSourceNames": true,
+  "tailLogBytes": 6995,
+  "tailLogSHA256": "9a02a3728f5d6356dd97238db9bf69ddc8d8ee2ba30c36f0f6db4f2369e92446",
+  "interpretation": "170observed passing cases +30fresh disjoint tail passes =200unique covered cases on unchanged source; NOT one200/200 completed command. Original partial capture retained; nofull22repeat."
+}

@@ -1,0 +1,86 @@
+{
+  "game": "Mathematics Slayer",
+  "version": "2.52.0",
+  "decisionDateMYT": "26 October 2026",
+  "recoveryDateMYT": "27 October 2026",
+  "baseMain": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+  "localSource": "3a3a15e89ee29a4811183e185430c79d801657b8",
+  "captureSource": "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
+  "captureSourceTree": "a95870e458cd0152937b26c78e13e65a363d044a",
+  "localRuntime": "d8e92d82e472dbdf1dde294e944049e902394140",
+  "remoteRuntime": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+  "runtimeTree": "eea5bdefd0b4128ceff34273c037fc10c9aa29cb",
+  "qaStatus": "VALID_WITH_CARRIED_P2_AND_EXPLICIT_LIMITS",
+  "qaClosedUTC": "2026-10-27T04:53:20.552751+00:00",
+  "qaOriginalFiles": 86,
+  "qaOriginalBytes": 7984638,
+  "qaEvidenceSHA256": "2b18e913fa29248851fd736d0570c3489ddfd4a4b5dff86d21f1f08ee39497b8",
+  "qaIndexSHA256": "c3533a03da23982b87aff7c04f4b326d13cfb08ce9ea8f48016d8258aed2db27",
+  "qaPrivacySHA256": "ce978bfc2cb0064a0f5bba7f0e543f6d5ceb04826f97229aeb5f695b5bd5ff6a",
+  "focused": {
+    "observedOriginalOK": 170,
+    "originalCommand": "INCOMPLETE_CAPTURE; exit0; no final totals",
+    "freshDisjointTailPass": 30,
+    "intersection": 0,
+    "coveredUniqueCases": 200,
+    "one200of200CompletedCommand": false
+  },
+  "capture": {
+    "actual": 98,
+    "EN": 49,
+    "BM": 49,
+    "rawInputs": 107,
+    "rawDrift": 0,
+    "seconds": 422.855,
+    "changedBitmaps": 46,
+    "byteIdenticalActualRecaptures": 52,
+    "stdout": "PARTIAL20lines/9completion; cause unestablished; no invented lines",
+    "signalsDelivered": 0,
+    "retries": 0
+  },
+  "nativeOffline": {
+    "groupsPass": 14,
+    "seconds": 118.668
+  },
+  "portable": {
+    "casesPass": 2,
+    "devHubPass": 1,
+    "secondsCombined": 21.926,
+    "eachBytes": 312177121,
+    "eachSha256": "3273aac78a33b9ea6cc08091b41c90160f154c0ad8fbca004dc514d8fb790d05"
+  },
+  "bundle": {
+    "originalFiles": 124,
+    "originalBytes": 8427984,
+    "archiveBytes": 6959564,
+    "archiveSha256": "04b312304a60d5d2c9e848e52d53cc47abdbc36fc71fc316750e9c3b7ecdf520",
+    "roundtrip": "PASS all124 hash/size/path/mode",
+    "privacy": "PASS selected public bytes; private exports and recovered source copies excluded"
+  },
+  "inventory": {
+    "initialRefs": 38,
+    "originalNonMain": 37,
+    "ancestor": 19,
+    "exactTreeAdoptions": 14,
+    "selectiveHistorical": 3,
+    "supersededPreview": 1,
+    "addedTaskBranch": 1,
+    "totalRefsAfterCheckpoint": 39
+  },
+  "mainPublication": {
+    "status": "PENDING",
+    "expectedMain": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+    "intendedParent": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "force": false,
+    "pages": "NOT_RUN for2.52",
+    "publicBrowser": "NOT_RUN"
+  },
+  "limits": [
+    "CI-247-01 and QA-248-PRELOAD-01 P2/open",
+    "Historical D1/D2 not specifically closed",
+    "No full suite/pose matrix/campaign/training",
+    "No human audition/transcript/all-browser/physical/OS reboot/live Google/provider claims",
+    "Old4b raw artifacts lost; transcript not current QA",
+    "Three PDFs available not reread; only MODEL.zip unavailable"
+  ]
+}

@@ -1,8 +1,9 @@
 # MASTER SOR — Mathematics Slayer
 
 Nama rasmi ialah **Mathematics Slayer**, dipersetujui pada 26 Oktober 2026.
-Calon dipulihkan pada 27 Oktober selepas maintenance; source/capture/QA baharu
-mesti dipin semula. Penerbitan main masih **BELUM DITERBITKAN**.
+Calon dipulihkan pada 27 Oktober selepas maintenance. Pelaksanaan dan verifikasi
+terhad baharu ialah **DILAKSANAKAN / VALID**, dengan penemuan P2 dan jurang stdout
+asal dinyatakan. Penerbitan main masih **BELUM DITERBITKAN**.
 [Status pemulihan dan bukti](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 | Medan | Rekod |
@@ -67,7 +68,7 @@ Apabila arahan baharu sudah jelas, teruskan dalam skopnya tanpa meminta pengesah
 | Nama lama / sejarah | Slay the Math: Dungeon of Chance; Slay the Math. |
 | Repository teknikal | unDead41/slay-the-math-v2 |
 | Skop | Nama paparan pemain/panduan, metadata dan label eksport; game 2.52.0. |
-| Pelaksanaan / pelepasan | Calon pemulihan sedang disediakan; verifikasi dan penerbitan BELUM DISAHKAN. |
+| Pelaksanaan / pelepasan | DILAKSANAKAN dan VALID dalam skop QA calon d8e92d82 / checkpoint GitHub 39f8d130, tree eea5bdef; penerbitan main masih PENDING readback. |
 | Branch / main asas | release/mathematics-slayer-2.52.0; main ce586507dd5a5b55a72ee008ec60a547cd5c2b7e / 2.51.0. |
 
 **IDN-01:** Gunakan ejaan **Mathematics Slayer** dalam BM dan English; jangan

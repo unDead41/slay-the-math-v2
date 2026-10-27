@@ -5,7 +5,10 @@
 - Pulihkan nama rasmi dan panduan aktif selepas kehilangan scratch maintenance;
   gunakan enam blob GitHub yang dipadankan dengan SHA asal apabila tersedia.
 - Bezakan fakta QA dalam transkrip daripada raw artifacts yang hilang. Calon
-  pemulihan, 98 capture dan verifikasi baharu masih PENDING; tiada main push dibuat.
+  pemulihan kini mempunyai 98 actual capture source 26ecd dan QA terhad VALID:
+  170 retained OK + 30 fresh disjoint tail = 200 kes unik, native 14, dua portable
+  dan Dev Hub lulus. Stdout asal yang separa serta P2 inherited dikekalkan.
+  Penerbitan main masih PENDING; tiada main push dibuat.
 - Bukti baharu akan mempunyai pin dan indeks sendiri. Sejarah 26 Oktober di bawah
   dikekalkan; tiada log/capture/index yang hilang direka semula sebagai bukti lama.
 

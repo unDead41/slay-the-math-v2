@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "status": "VALID_WITH_CARRIED_P2_AND_EXPLICIT_LIMITS",
+  "qaWindow": "CLOSED",
+  "closedUTC": "2026-10-27T04:53:20.552751+00:00",
+  "gameName": "Mathematics Slayer",
+  "gameVersion": "2.52.0",
+  "baseMain": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+  "masterSOR": "1.2.0",
+  "testedCandidateSHA": "d8e92d82e472dbdf1dde294e944049e902394140",
+  "testedCandidateTree": "eea5bdefd0b4128ceff34273c037fc10c9aa29cb",
+  "equivalentRemoteRuntime": {
+    "sha": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "tree": "eea5bdefd0b4128ceff34273c037fc10c9aa29cb",
+    "equality": "whole tree exact per coordinator independent GitHub GET and native local tree; QA read the proof",
+    "proof": "../coordinator-runtime-equivalence.json",
+    "proofSHA256": "d840eda957ca77ff3708322c1ee17d5d25e7be7dc812dcb0109311ceb40fae44",
+    "mainUnchangedAtProof": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+    "localObjectNote": "Remote object not fetched into QA local Git; API readback is coordinator-owned, not a claimed independent QA network fetch"
+  },
+  "sourceClosure": {
+    "before": "final-source-before.json",
+    "after": "final-source-after.json",
+    "trackedFileCount": 3659,
+    "trackedDelta": [],
+    "generatedArtifactDelta": [],
+    "trackedCleanAtClosure": true,
+    "artifacts": {
+      "MATHEMATICS-SLAYER-OFFLINE.html": {
+        "bytes": 312177121,
+        "sha256": "3273aac78a33b9ea6cc08091b41c90160f154c0ad8fbca004dc514d8fb790d05"
+      },
+      "SLAY-THE-MATH-OFFLINE.html": {
+        "bytes": 312177121,
+        "sha256": "3273aac78a33b9ea6cc08091b41c90160f154c0ad8fbca004dc514d8fb790d05"
+      },
+      "release-prod/index.html": {
+        "bytes": 11497,
+        "sha256": "bee13ce767bd2ac05fdb97a4a7a9d9e202f09ed7e04ca54a9b05ed2245369f06"
+      },
+      "release-prod/asset-manifest.json": {
+        "bytes": 317538,
+        "sha256": "5911f6b27c7b0108573d72b272c043eecfffece145d9675562916004869b40c6"
+      }
+    }
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "jsdom": "26.1.0",
+    "playwright": "1.62.1",
+    "sharp": "0.35.5",
+    "chromium": "Chromium 153.0.8010.0",
+    "executable": "/workspace/scratch/e7745ff161c8/rename-recovery-tmp/chromium",
+    "fontConfig": "/etc/fonts",
+    "toolAdapter": "chromium-env.cjs",
+    "toolAdapterSHA256": "bb809736ff90e453d519f3d53d884b615c453817bd8ed0836d349089ae4f57fa",
+    "temporaryStorage": "task-owned disk; normal /dev/shm; no tmpfs-reboot persistence claim",
+    "proof": "environment.json",
+    "unusedFallback": "Chromium133 package installed/extracted/version-probed only; no133browser session or native acceptance"
+  },
+  "checks": [
+    {
+      "family": "focused original22-file command",
+      "status": "INCOMPLETE_CAPTURE",
+      "command": "focused-final.json",
+      "exitCode": 0,
+      "seconds": 31.708,
+      "observedUniquePassingCases": 170,
+      "observedFailLines": 0,
+      "finalTAPTotals": "ABSENT; overall completion/zero skips not asserted",
+      "rawLog": "focused-final.log"
+    },
+    {
+      "family": "only4unrepresented tail files",
+      "status": "PASS",
+      "command": "focused-tail.json",
+      "tests": 30,
+      "pass": 30,
+      "fail": 0,
+      "skip": 0,
+      "cancel": 0,
+      "rawLog": "focused-tail.log",
+      "seconds": 3.924
+    },
+    {
+      "family": "combined unique focused coverage",
+      "status": "VALID",
+      "uniqueCoveredCases": 200,
+      "method": "170observed passing names +30fresh disjoint tail passes on identical source. NOT one completed200/200command. Nofull22repeat.",
+      "proof": "focused-coverage.json"
+    },
+    {
+      "family": "real native hosted offline restart plus branding",
+      "status": "PASS",
+      "groups": 14,
+      "command": "offline-branding.json",
+      "report": "offline-branding-artifacts/report.json",
+      "seconds": 118.668,
+      "browserErrors": 0,
+      "coldNewName": "Mathematics Slayer",
+      "release": "2.52.0",
+      "scope": [
+        "new browser process/same persistent profile",
+        "stopped original server, blocked network and disabled HTTP cache; SW navigation200",
+        "one release; no false Ready on tested404/eviction/corruptbootstrap",
+        "120Practice questions with new host/frame titles",
+        "23chapters/114picture exposures/98unique EN/MS decodes",
+        "4stage/boss fixtures, actual actors/VFX/commands with exact battle/RNG/deck/stats equality",
+        "85MP3decodes and one muted real WebAudio source; no human audition",
+        "local controlled pet API mock success/failure and Offline block; no live provider"
+      ]
+    },
+    {
+      "family": "both standalone filenames and actual exports",
+      "status": "PASS",
+      "command": "portable-branding.json",
+      "report": "portable-branding-artifacts/report.json",
+      "seconds": 21.926,
+      "cases": [
+        {
+          "filename": "MATHEMATICS-SLAYER-OFFLINE.html",
+          "language": "en",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": "PASS",
+          "httpRequests": [],
+          "errors": [],
+          "oldStorageKey": "duel-cube-math.v1",
+          "stableLegacyDeckCount": 12,
+          "legacySaveAndRNGUnchanged": true,
+          "saveExport": {
+            "filename": "mathematics-slayer-save.json",
+            "bytes": 12023,
+            "sha256": "373b423d7ea03916b3ff54496c49f4a451f7663dd092b153077e4f370caf4ec2",
+            "payloadExactlyMatchesSavedRun": true
+          },
+          "learningBackup": {
+            "filename": "mathematics-slayer-learning-backup.json",
+            "bytes": 194817,
+            "sha256": "7d1d5f6f94ef92f779794e87dfb9bafaeae5ff0dd2ad860b2468995a1a8e7557",
+            "game": "Mathematics Slayer",
+            "analyticsGame": "Mathematics Slayer",
+            "schemaVersion": 1
+          },
+          "practice": {
+            "hostTitle": "Education Practice · Mathematics Slayer",
+            "frameTitle": "Mathematics Slayer — The Question Folio",
+            "questionOptions": 120
+          },
+          "screenshot": "en-practice.png"
+        },
+        {
+          "filename": "SLAY-THE-MATH-OFFLINE.html",
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": "PASS",
+          "httpRequests": [],
+          "errors": [],
+          "oldStorageKey": "duel-cube-math.v1",
+          "stableLegacyDeckCount": 12,
+          "legacySaveAndRNGUnchanged": true,
+          "saveExport": {
+            "filename": "mathematics-slayer-save.json",
+            "bytes": 12023,
+            "sha256": "b53e3f161a5dd10202d20e775dc5202b436749e47a4db6714bf5f827a7e2a386",
+            "payloadExactlyMatchesSavedRun": true
+          },
+          "learningBackup": {
+            "filename": "mathematics-slayer-learning-backup.json",
+            "bytes": 195231,
+            "sha256": "427666fca0b4f04fad02ab58beebaac58281b95ae09bb9533c75403d13a133c6",
+            "game": "Mathematics Slayer",
+            "analyticsGame": "Mathematics Slayer",
+            "schemaVersion": 1
+          },
+          "practice": {
+            "hostTitle": "Latihan Pendidikan · Mathematics Slayer",
+            "frameTitle": "Mathematics Slayer — The Question Folio",
+            "questionOptions": 120
+          },
+          "screenshot": "ms-practice.png"
+        }
+      ],
+      "scope": "Each file URL seeded separately with official synthetic12-card legacy fixture; no automatic cross-file-origin migration claim"
+    },
+    {
+      "family": "actual production Developer Hub branding",
+      "status": "PASS",
+      "command": "portable-branding.json",
+      "result": {
+        "status": "PASS",
+        "title": "Mathematics Slayer · Developer Hub",
+        "heading": "Mathematics Slayer Developer Hub",
+        "actualProductionSettingsGate": true,
+        "persistedThroughReload": true,
+        "scope": "visible branding/gate only; no simulation/model/balance commands",
+        "screenshot": "developer-hub.png"
+      }
+    },
+    {
+      "family": "pre-capture actual title/menu fit and legacy readback",
+      "status": "PASS",
+      "candidateSHA": "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
+      "candidateTree": "a95870e458cd0152937b26c78e13e65a363d044a",
+      "rows": 8,
+      "languages": [
+        "en",
+        "ms"
+      ],
+      "viewports": [
+        [
+          320,
+          568
+        ],
+        [
+          390,
+          844
+        ],
+        [
+          844,
+          390
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "scope": "Visible real startup gate/uppercase brand, new title/h1,7buttons >=44px/horizontally inbounds/reachable by ordinary scrolling. Not all7simultaneously visible within short viewport. Legacy stablekey/deck/RNG unchanged.",
+      "command": "branding-fit-ready.json",
+      "report": "branding-fit-ready-report.json",
+      "errors": 0,
+      "externalRequests": 0
+    },
+    {
+      "family": "actual owner capture98, root-owned",
+      "status": "PASS",
+      "sourceSHA": "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
+      "sourceTree": "a95870e458cd0152937b26c78e13e65a363d044a",
+      "seconds": 422.855,
+      "images": 98,
+      "uniquePairs": 98,
+      "languages": {
+        "en": 49,
+        "ms": 49
+      },
+      "runtimeInputCount": 107,
+      "runtimeDrift": [],
+      "allFreshProvenance": true,
+      "groupFailures": 0,
+      "proof": "../capture/owner-full.json",
+      "proofSHA256": "84d70edd1d77865c0acc1dcfddd1b97871a0494d59324536699693ba5e82c53e",
+      "rawLog": "../capture/owner-full.log",
+      "observedCaptureRowsInRawLog": 9,
+      "rawLogLimit": "Partial original log retained losslessly. Final98actual images/catalogue/provenance and owner completion metadata provide complete outcome. No fabricated completed log, no capture rerun, no actual interruption. Stale progress was not proven hang/crash."
+    },
+    {
+      "family": "production actual artifact bytes",
+      "status": "PASS",
+      "entries": 766,
+      "bytes": 232625346,
+      "mismatches": [],
+      "manifestId": "358fac5bac03b8876c1e9cc5",
+      "manifestSHA256": "5911f6b27c7b0108573d72b272c043eecfffece145d9675562916004869b40c6",
+      "proof": "production-after.json"
+    }
+  ],
+  "retainedFailures": [
+    {
+      "command": "branding-fit.json",
+      "status": "FAIL",
+      "candidateSHA": "3a3a15e89ee29a4811183e185430c79d801657b8",
+      "stage": "before any viewport row",
+      "cause": "External synthetic fixture passed capitalized Learn, not canonical learn. Corrected external fixture only; unchanged legacy/deck/RNG assertions.",
+      "resolution": "branding-fit-adaptation.json"
+    },
+    {
+      "command": "branding-fit-final.json",
+      "status": "FAIL",
+      "stage": "before first viewport acceptance",
+      "cause": "Tool fontconfig referenced absent global font location; native diagnostic showed visible loader/layout but blank text glyphs and emptyinnerText. Corrected only environment to existing systemfonts; visible exactuppercase source brand asserted. No game change.",
+      "resolution": "branding-fit-font-adaptation.json",
+      "diagnostic": "loading-boundary-report.json"
+    },
+    {
+      "command": "setup-chromium.json",
+      "status": "FAIL",
+      "stage": "environment setup only",
+      "cause": "CDN151download yielded195-byte unavailableHTML instead of ZIP; repeated5times by installer. Official134endpoint similarly unavailable. npm153 fallback and task-owned extraction succeeded. Not a game test failure.",
+      "rawLog": "setup-chromium.log"
+    }
+  ],
+  "evidenceFindings": [
+    {
+      "id": "REL252-TAP-CAPTURE",
+      "priority": "P3",
+      "status": "CARRIED_EVIDENCE_LIMIT",
+      "detail": "Original focused command exits0 but only170OKlines/no totals are available. Fourmissingtailfiles were freshly checked30/30 via directterminal+EOF-written raw log; source-bound disjoint coverage is200, not one200suite."
+    },
+    {
+      "id": "REL252-CAPTURE-LOG",
+      "priority": "P3",
+      "status": "CARRIED_EVIDENCE_LIMIT",
+      "detail": "Original owner log view is partial;98actual images/current provenance/complete owner metadata retained. Normal0-exit child processes and staleprogress did not establish hang/crash; unsuccessful external signal attempts delivered0signals per parent record."
+    }
+  ],
+  "carriedIssues": [
+    {
+      "id": "CI-247-01",
+      "priority": "P2",
+      "status": "OPEN/NOT_RUN oldiconCI harness; no fix claim"
+    },
+    {
+      "id": "QA-248-PRELOAD-01",
+      "priority": "P2",
+      "status": "OPEN/NOT_RUN transient retained-count boundary; nativePASS does not establish counter fix"
+    },
+    {
+      "id": "D1/D2 source-bound registry keyboard/focus",
+      "priority": "P2",
+      "status": "Historical originalsource findings retained; no dedicated current closure claimed"
+    }
+  ],
+  "privacy": {
+    "status": "PASS",
+    "proof": "privacy.json",
+    "publicRawSaveSessionRNGExportBodies": 0,
+    "realPlayerRecordsUsed": false,
+    "privateDownloadBodiesRemaining": 0,
+    "publicAllowlist": "artifact-index.json",
+    "exclusions": [
+      "task-private download/save/session bodies",
+      "browser profiles and caches",
+      "temporary files and dependency/binary directories",
+      "original lost4b artifacts, which are not reconstructed as raw evidence"
+    ]
+  },
+  "notRun": [
+    "full large Node suite or unchanged75pose/fullanimation matrix",
+    "new campaigns/collectors/model training or numerical retuning",
+    "liveGoogle/provider API, real account delivery or publicPages browser",
+    "physical devices/OS reboot/hardwareGPU/other browserfamilies/human audio recognition",
+    "MODEL.zip unavailable; no new reference-artmatching claim",
+    "Chromium133Practice diagnostic prepared but not run after original153owner capture completed successfully"
+  ],
+  "limits": [
+    "No zero-defect or unchangedrisk guarantee from selective testing. Only stated scenarios verified.",
+    "Repository slug/URLs/stable storagekeys/schemas/IDs remain technical identities; human-facing names and exportedfilenames updated.",
+    "Prior4b raw QA artifacts were lost in scratchmaintenance. Old transcript counts are history only; this handoff uses newly executed recovery checks.",
+    "Final release docs may follow; results transfer only after exact covered source/test/config/generated equivalence. QA performs no main/ref writes."
+  ]
+}

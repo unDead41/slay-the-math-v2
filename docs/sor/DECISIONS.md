@@ -8,8 +8,14 @@
   pemetaan penuh 173 blob dan raw QA/capture lama tidak dapat dipulihkan.
 - Calon dibina semula dan memerlukan bukti source/capture/QA baharu. Keputusan
   lama dalam transkrip tidak dilabel sebagai hasil atau lampiran calon baharu.
-- **Verifikasi/penerbitan:** BELUM DISAHKAN. Checkpoint recovery branch boleh
-  diterbitkan untuk ketahanan; main masih memerlukan exact-tree GO dan lease.
+- **Verifikasi:** DILAKSANAKAN / VALID dalam skop baharu d8e92d82, tree eea5bdef,
+  sama dengan checkpoint GitHub 39f8d130. 170 OK yang direkod + 30 fresh disjoint
+  tail menyokong 200 kes unik; bukan satu run lengkap 200/200. Native offline 14,
+  dua portable, export/save compatibility dan Dev Hub lulus. Capture 98 sebenar
+  source 26ecd mempunyai binding 107 input penuh; stdout capture dan command
+  focused asal separa, dipelihara dengan batas yang jelas.
+- **Penerbitan main:** PENDING exact-tree GO dan fresh non-forced expected-head
+  lease. Checkpoint branch bukan main publication.
   [Laporan semasa](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 ## DEC-20261026-MATHEMATICS-SLAYER — Nama rasmi dan pelepasan 2.52.0

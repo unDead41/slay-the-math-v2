@@ -1,0 +1,40 @@
+{
+  "createdUTC": "2026-10-27T04:54:30.602664+00:00",
+  "status": "PASS",
+  "jsonFilesStructurallyScanned": 39,
+  "forbiddenStructuredPrivateBodies": [],
+  "privateSourceDirectoryOutsideEvidence": "/workspace/scratch/e7745ff161c8/rename-recovery-tmp/branding-private-downloads",
+  "privateDownloadBodyCountAtClosure": 0,
+  "bodyFilesPublished": false,
+  "actualRealPlayerRecordsUsed": false,
+  "publicContentsAllowed": [
+    "task QA source/diffs",
+    "command metadata and raw diagnostic/TAP logs without private bodies",
+    "synthetic fixture seed/count/hash and asserted equality flags",
+    "download filenames/byte lengths/SHA256/schema/game labels",
+    "source/test/production SHA256 manifests",
+    "UI screenshots"
+  ],
+  "limits": "Structural plus reviewed report/code/log privacy check, not a universal secret detector. Real save/session/RNG/export bodies and browser profiles/temp/dependencies are outside the public allowlist.",
+  "finalReviewUTC": "2026-10-27T04:58:25.834583+00:00",
+  "rawLogsReviewed": [
+    "branding-fit-final-server.log",
+    "branding-fit-final.log",
+    "branding-fit-ready-server.log",
+    "branding-fit-ready.log",
+    "branding-fit-server.log",
+    "branding-fit.log",
+    "focused-final.log",
+    "focused-tail.log",
+    "loading-boundary.log",
+    "offline-branding.log",
+    "portable-branding.log",
+    "setup-chromium.log",
+    "setup-jsdom.log",
+    "setup-sparticuz-metadata.log",
+    "setup-sparticuz.log",
+    "setup-sparticuz133.log"
+  ],
+  "allPublicDataArtifactsReviewed": true,
+  "carrierMetadata": "artifact-index.json and handoff-hashes.json contain only allowlisted paths/hashes/counts and are separately assembled/reviewed; no raw bodies"
+}

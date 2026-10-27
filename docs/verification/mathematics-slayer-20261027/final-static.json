@@ -1,0 +1,198 @@
+{
+  "checkedAt": "2026-10-27T04:47:40.168425+00:00",
+  "status": "VALID for finite final static preservation, manifests, raw capture catalogue/file bindings and portable alias equivalence, with explicit partial stdout evidence gap; final runtime QA remains separate",
+  "main": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+  "sourceAuditCommit": "3a3a15e89ee29a4811183e185430c79d801657b8",
+  "durableCaptureCommit": "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
+  "candidate": "d8e92d82e472dbdf1dde294e944049e902394140",
+  "tree": "eea5bdefd0b4128ceff34273c037fc10c9aa29cb",
+  "trackedClean": true,
+  "sourcePreservationProofSHA256": "d99eda81c22bcea82628bda0d43df36d8bff032493eec6a44978b0a337f9bdc9",
+  "sourceAndDurableCheckpointTreeEqual": true,
+  "deltaFromCaptureSource": [
+    "dist/asset-manifest.json",
+    "dist/assets/tutorial-shot-attack-block-en.webp",
+    "dist/assets/tutorial-shot-attack-block-ms.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-en.webp",
+    "dist/assets/tutorial-shot-collection-artifacts-ms.webp",
+    "dist/assets/tutorial-shot-combat-en.webp",
+    "dist/assets/tutorial-shot-combat-ms.webp",
+    "dist/assets/tutorial-shot-draw-en.webp",
+    "dist/assets/tutorial-shot-draw-ms.webp",
+    "dist/assets/tutorial-shot-exhaust-en.webp",
+    "dist/assets/tutorial-shot-exhaust-ms.webp",
+    "dist/assets/tutorial-shot-help-en.webp",
+    "dist/assets/tutorial-shot-help-ms.webp",
+    "dist/assets/tutorial-shot-loading-en.webp",
+    "dist/assets/tutorial-shot-loading-ms.webp",
+    "dist/assets/tutorial-shot-map-en.webp",
+    "dist/assets/tutorial-shot-map-ms.webp",
+    "dist/assets/tutorial-shot-menu-en.webp",
+    "dist/assets/tutorial-shot-menu-ms.webp",
+    "dist/assets/tutorial-shot-modes-en.webp",
+    "dist/assets/tutorial-shot-modes-ms.webp",
+    "dist/assets/tutorial-shot-passive-detail-en.webp",
+    "dist/assets/tutorial-shot-passive-detail-ms.webp",
+    "dist/assets/tutorial-shot-passive-en.webp",
+    "dist/assets/tutorial-shot-passive-ms.webp",
+    "dist/assets/tutorial-shot-predict-en.webp",
+    "dist/assets/tutorial-shot-predict-ms.webp",
+    "dist/assets/tutorial-shot-predict-result-en.webp",
+    "dist/assets/tutorial-shot-predict-result-ms.webp",
+    "dist/assets/tutorial-shot-report-en.webp",
+    "dist/assets/tutorial-shot-report-ms.webp",
+    "dist/assets/tutorial-shot-rest-upgrade-en.webp",
+    "dist/assets/tutorial-shot-rest-upgrade-ms.webp",
+    "dist/assets/tutorial-shot-results-en.webp",
+    "dist/assets/tutorial-shot-results-ms.webp",
+    "dist/assets/tutorial-shot-retry-en.webp",
+    "dist/assets/tutorial-shot-retry-ms.webp",
+    "dist/assets/tutorial-shot-reward-taken-en.webp",
+    "dist/assets/tutorial-shot-reward-taken-ms.webp",
+    "dist/assets/tutorial-shot-settings-en.webp",
+    "dist/assets/tutorial-shot-settings-ms.webp",
+    "dist/assets/tutorial-shot-sound-en.webp",
+    "dist/assets/tutorial-shot-sound-ms.webp",
+    "dist/assets/tutorial-shot-status-detail-en.webp",
+    "dist/assets/tutorial-shot-status-detail-ms.webp",
+    "dist/assets/tutorial-shot-turn-en.webp",
+    "dist/assets/tutorial-shot-turn-ms.webp",
+    "docs/tutorial/screenshots.json"
+  ],
+  "deltaOnlyMediaCatalogueManifest": true,
+  "protectedGroups": {
+    "originalNonTutorialAssets": {
+      "count": 610,
+      "blobDelta": []
+    },
+    "rawMechanicsBankEvaluator": {
+      "count": 38,
+      "blobDelta": []
+    },
+    "cardSupplier": {
+      "count": 27,
+      "blobDelta": []
+    },
+    "numericalBalanceAIModel": {
+      "count": 82,
+      "blobDelta": []
+    },
+    "coreRuntime": {
+      "count": 14,
+      "blobDelta": []
+    },
+    "motionIdleVFXAudio": {
+      "count": 22,
+      "blobDelta": []
+    },
+    "consentDeliveryOffline": {
+      "count": 12,
+      "blobDelta": []
+    },
+    "mapGenerator": {
+      "count": 5,
+      "blobDelta": []
+    }
+  },
+  "manifests": {
+    "dist": {
+      "manifestId": "fcd105b66561a11ba08262da",
+      "manifestSHA256": "32792e04174328198e769da80768148db07835adfafb368e7b6c77ee66fc6781",
+      "manifestBytes": 317139,
+      "normalEntries": 765,
+      "offlineDeclaredFiles": 767,
+      "offlineFilesIncludingCanonicalManifest": 768,
+      "launchFiles": 317,
+      "shellAndContentReleaseIdentityMatch": true,
+      "allFileHashOrLengthErrors": [],
+      "referencedManifestAssetErrors": [],
+      "computedContentId": "fcd105b66561a11ba08262da",
+      "launchExactlyReconstructed": true,
+      "shellScriptAndStyleCacheHashesChecked": 104,
+      "shellCacheQueryHashErrors": []
+    },
+    "release-prod": {
+      "manifestId": "358fac5bac03b8876c1e9cc5",
+      "manifestSHA256": "5911f6b27c7b0108573d72b272c043eecfffece145d9675562916004869b40c6",
+      "manifestBytes": 317538,
+      "normalEntries": 766,
+      "offlineDeclaredFiles": 768,
+      "offlineFilesIncludingCanonicalManifest": 769,
+      "launchFiles": 318,
+      "shellAndContentReleaseIdentityMatch": true,
+      "allFileHashOrLengthErrors": [],
+      "referencedManifestAssetErrors": [],
+      "computedContentId": "358fac5bac03b8876c1e9cc5",
+      "launchExactlyReconstructed": true,
+      "shellScriptAndStyleCacheHashesChecked": 105,
+      "shellCacheQueryHashErrors": []
+    }
+  },
+  "captures": {
+    "catalogueSHA256": "0fccbb3507221c211f68a3444171dd49ba0fc8e789ad7a6af9794d9818bba9be",
+    "sourceCommit": "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
+    "sourceTree": "a95870e458cd0152937b26c78e13e65a363d044a",
+    "cleanAtCapture": true,
+    "images": 98,
+    "uniqueKeys": 98,
+    "languages": {
+      "en": 49,
+      "ms": 49
+    },
+    "changedBitmapBytes": 46,
+    "identicalActualRecaptureBytes": 52,
+    "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+    "runtimeInputCount": 107,
+    "rawInputDrift": [],
+    "appSHA256": "d76174a93ada8c088b100ac957f039e9b98b75a0e1fd27a63529ee279efba445",
+    "engineSHA256": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
+    "actualDimensionsChecked": 98,
+    "allImageHashLengthDimensionOrManifestErrors": [],
+    "ownerCommand": [
+      "node",
+      "tools/capture-tutorial.cjs"
+    ],
+    "ownerExitCode": 0,
+    "ownerDurationSeconds": 422.855,
+    "ownerStdoutSnapshot": {
+      "bytes": 470,
+      "lines": 20,
+      "capturingRows": 10,
+      "completedRows": 9,
+      "groupFailures": 0,
+      "note": "PARTIAL/NOT_COMPLETE: only first20lines (10 capture-start,9 completion rows) retained. Cause unestablished. Coordinator reports genuine terminal exit0/422.855seconds/98unique/freshProvenance/zero drift; auditor independently verifies full catalogue/actions/hash/dimensions/all107inputs. No stdout rows invented, no inferred product hang, delivered signal or capture retry."
+    },
+    "strictRawProvenanceGuardAndCLIUnchanged": true
+  },
+  "portable": [
+    {
+      "path": "MATHEMATICS-SLAYER-OFFLINE.html",
+      "bytes": 312177121,
+      "sha256": "3273aac78a33b9ea6cc08091b41c90160f154c0ad8fbca004dc514d8fb790d05"
+    },
+    {
+      "path": "SLAY-THE-MATH-OFFLINE.html",
+      "bytes": 312177121,
+      "sha256": "3273aac78a33b9ea6cc08091b41c90160f154c0ad8fbca004dc514d8fb790d05"
+    }
+  ],
+  "inheritedOpen": [
+    "CI-247-01 P2/open",
+    "QA-248-PRELOAD-01 P2/open"
+  ],
+  "limits": [
+    "No build, tests, browser, campaign or training run by Integration Auditor.",
+    "Final native/focused QA is separate and still pending in auditor scope.",
+    "Voice transcript absence, physical devices, live Google/provider, public browser/Pages not established.",
+    "Source raw Tutorial binding is not normalized; historical source 26ecd remains distinct from post-media candidate d8e."
+  ],
+  "evidenceGap": {
+    "id": "CAPTURE-STDOUT-PARTIAL",
+    "category": "Confirmed evidence retention gap; no product defect established",
+    "priority": "P3/evidence",
+    "confidence": "high",
+    "retained": "capture/owner-full.log original20lines; owner-full.json complete outcome/input receipt; current98 files/catalogue",
+    "missing": "Full CLI stdout after learning-help is not available in retained file or original tool result.",
+    "disposition": "Explicitly retain limitation. No duplicate98 run is required without another integrity concern; independently checked artifact/provenance checks pass."
+  }
+}

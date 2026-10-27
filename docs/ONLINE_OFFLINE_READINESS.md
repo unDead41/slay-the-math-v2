@@ -7,7 +7,12 @@ Nama ini sama dalam BM dan English. Kekalkan repo/URL, identifier, storage keys,
 schema, save/RNG, Alyssa, topik, angka, model dan aset asal. Portable utama ialah
 `MATHEMATICS-SLAYER-OFFLINE.html`; `SLAY-THE-MATH-OFFLINE.html` ialah alias
 byte-identical untuk laluan fail lama, bukan nama paparan semasa.
-**Verifikasi calon pemulihan dan penerbitan 2.52.0 masih BELUM DISAHKAN**.
+**DILAKSANAKAN; VALID dalam skop verifikasi yang dinyatakan, dengan P2 inherited
+dan jurang bukti stdout dikekalkan.** Calon tempatan d8e92d82 sama tree dengan
+checkpoint GitHub 39f8d130. 200 kes unik disokong oleh 170 OK yang direkod dan
+30 tail baharu yang disjoint, bukan satu command 200/200. Native offline 14,
+dua portable dan Dev Hub lulus. **Penerbitan main 2.52.0 masih PENDING** sehingga
+ref/tree/version sebenar disahkan; local QA bukan bukti Pages atau live services.
 [Skop, bukti dan status](RENAME_MATHEMATICS_SLAYER_2_52_0.md). Nota keluaran terdahulu di bawah ialah sejarah
 mengikut pin dan hasil asalnya; ujian lama bukan bukti calon pemulihan baharu.
 

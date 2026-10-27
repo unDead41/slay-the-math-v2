@@ -10,7 +10,7 @@ Untuk satu fail portable, jalankan `npm.cmd run build` dan buka
 **MATHEMATICS-SLAYER-OFFLINE.html**. **SLAY-THE-MATH-OFFLINE.html** ialah alias
 byte-identical bagi URL fail lama. Kekalkan laluan itu untuk storage browser
 terdahulu; Export/Import diperlukan untuk pemindahan disengajakan.
-[Status calon 2.52.0](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md): QA/penerbitan menunggu.
+[Status calon 2.52.0](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md): QA terhad VALID; penerbitan main masih PENDING readback.
 
 ## Sejarah panduan operasi — Slay the Math 2.20.0
 

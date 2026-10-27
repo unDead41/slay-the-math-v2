@@ -1,0 +1,224 @@
+{
+  "version": "2.53.0-pet.1",
+  "provider": "HTTP endpoint intercepted; no paid provider call",
+  "checks": [
+    {
+      "name": "1366: home controls are not covered",
+      "passed": true
+    },
+    {
+      "name": "1366: default Online is not API consent",
+      "passed": true
+    },
+    {
+      "name": "1366: unselected asks stay local",
+      "passed": true
+    },
+    {
+      "name": "1366: exactly one two-option mode group",
+      "passed": true
+    },
+    {
+      "name": "1366: explicit Online sends only whitelisted context",
+      "passed": true
+    },
+    {
+      "name": "1366: pet chat/keyboard preserve exact save and RNG",
+      "passed": true
+    },
+    {
+      "name": "1366: Clear removes the access code",
+      "passed": true
+    },
+    {
+      "name": "1366: pet native dialog works above Settings",
+      "passed": true
+    },
+    {
+      "name": "1366: Offline maths is local despite a real network",
+      "passed": true
+    },
+    {
+      "name": "1366: native focus returns to Settings",
+      "passed": true
+    },
+    {
+      "name": "1366: BM follows current language",
+      "passed": true
+    },
+    {
+      "name": "1366: pet dialog fits the screen",
+      "passed": true
+    },
+    {
+      "name": "1366: no chat/code in player storage",
+      "passed": true
+    },
+    {
+      "name": "390: home controls are not covered",
+      "passed": true
+    },
+    {
+      "name": "390: default Online is not API consent",
+      "passed": true
+    },
+    {
+      "name": "390: unselected asks stay local",
+      "passed": true
+    },
+    {
+      "name": "390: exactly one two-option mode group",
+      "passed": true
+    },
+    {
+      "name": "390: explicit Online sends only whitelisted context",
+      "passed": true
+    },
+    {
+      "name": "390: pet chat/keyboard preserve exact save and RNG",
+      "passed": true
+    },
+    {
+      "name": "390: Clear removes the access code",
+      "passed": true
+    },
+    {
+      "name": "390: pet native dialog works above Settings",
+      "passed": true
+    },
+    {
+      "name": "390: Offline maths is local despite a real network",
+      "passed": true
+    },
+    {
+      "name": "390: native focus returns to Settings",
+      "passed": true
+    },
+    {
+      "name": "390: BM follows current language",
+      "passed": true
+    },
+    {
+      "name": "390: pet dialog fits the screen",
+      "passed": true
+    },
+    {
+      "name": "phone cards are not covered by the pet",
+      "passed": true
+    },
+    {
+      "name": "390: no chat/code in player storage",
+      "passed": true
+    },
+    {
+      "name": "1366: home controls are not covered",
+      "passed": true
+    },
+    {
+      "name": "1366: en UNAUTHORIZED shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "1366: en VERSION_MISMATCH shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "1366: en recovery message fits the dialog",
+      "passed": true
+    },
+    {
+      "name": "1366: ms UNAUTHORIZED shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "1366: ms VERSION_MISMATCH shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "1366: ms recovery message fits the dialog",
+      "passed": true
+    },
+    {
+      "name": "1366: recovery retry excludes failed history and clears warning",
+      "passed": true
+    },
+    {
+      "name": "1366: recovery guidance and retry preserve exact save/RNG",
+      "passed": true
+    },
+    {
+      "name": "390: home controls are not covered",
+      "passed": true
+    },
+    {
+      "name": "390: en UNAUTHORIZED shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "390: en VERSION_MISMATCH shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "390: en recovery message fits the dialog",
+      "passed": true
+    },
+    {
+      "name": "390: ms UNAUTHORIZED shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "390: ms VERSION_MISMATCH shows recovery guidance with local help",
+      "passed": true
+    },
+    {
+      "name": "390: ms recovery message fits the dialog",
+      "passed": true
+    },
+    {
+      "name": "390: recovery retry excludes failed history and clears warning",
+      "passed": true
+    },
+    {
+      "name": "390: recovery guidance and retry preserve exact save/RNG",
+      "passed": true
+    },
+    {
+      "name": "1366: home controls are not covered",
+      "passed": true
+    },
+    {
+      "name": "active question disables free chat even with Online permission",
+      "passed": true
+    },
+    {
+      "name": "returning home preserves the pending-question guard",
+      "passed": true
+    },
+    {
+      "name": "original Hint records assistance without attempts/RNG/API changes",
+      "passed": true
+    },
+    {
+      "name": "the original Hint is visible to the player",
+      "passed": true
+    },
+    {
+      "name": "first portable pet click survives sound unlock",
+      "passed": true
+    },
+    {
+      "name": "unmodified portable embeds the exact pet and works without HTTP",
+      "passed": true
+    },
+    {
+      "name": "portable local mathematics help is available",
+      "passed": true
+    },
+    {
+      "name": "no uncaught browser errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:44925/"
+}

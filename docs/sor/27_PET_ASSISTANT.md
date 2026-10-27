@@ -10,3 +10,7 @@ DISAHKAN: Ijamm requests the exact existing ChatGPT pet, game/three-topic Form4 
 - PET-06: Separate mocked from live results, current from historical evidence, portable from installed browser readiness. Actual provider quality/latency/cost and physical/pupil verification remain distinct.
 
 [Implementation/setup](../PET_ASSISTANT.md), [Publisher handoff](../AI_PET_PUBLISHER_HANDOFF.md), [audit](../audits/pet-assistant/LATEST.md). Earlier main approvals apply to their own features, not this candidate.
+
+## 27 October 2026 — resumed recovery guidance
+
+PET-07: Online chat requires a hosted HTTP(S) game origin and its configured helper. A `file:` portable copy retains packaged local help; an HTTPS endpoint does not bypass the rejected `Origin: null`. Preserve the existing origin policy. The widget may map only HTTP401/UNAUTHORIZED and HTTP409/VERSION_MISMATCH to reviewed BM/English recovery instructions; arbitrary failed-response text stays hidden. Keep local fallback, manual retry, question/mode cancellation, and the current run intact. This closes the two deferred Minor findings without changing the shared mode/help/installer owners or authorizing live activation/main publication.

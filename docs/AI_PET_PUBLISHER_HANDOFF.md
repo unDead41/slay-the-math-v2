@@ -1,5 +1,7 @@
 # Publisher handoff — recovered pet API
 
+Resume follow-up,27 October: the two deferred Minor fixes are implemented on the same feature branch. The operator guide now explicitly requires a hosted HTTP(S) game URL for Online; remote HTTPS configuration does not enable file-origin chat. The widget maps only401/UNAUTHORIZED and409/VERSION_MISMATCH to reviewed localized recovery copy, retaining local fallback and manual retry. Existing source/production build owners regenerate their own content identities; do not reuse the earlier production5c4c7a receipt as proof for these changed bytes. [Current follow-up audit](audits/pet-assistant/LATEST.md) supersedes the earlier source-currentness/Minor-open statements below; no new live API or main deployment is implied.
+
 Ijamm requested Publisher instructions first; the original prompt was delivered before the initial implementation. Main has since published the actual shared Online/Offline/installation owners as2.51.0. This note supersedes the earlier proposed duplicate DCConnection/readiness module. **Use the current published contract in [PLAY_MODE_HANDOFF](pet-ai/PLAY_MODE_HANDOFF.md).**
 
 The pet now registers once via STMPetHelp.setTransport. All requests use the mandatory STMPlayMode.requestOnline boundary. Default Online is not API consent; player must explicitly choose Online in the sole existing Settings group. The pet has no second selector, and never derives permission/readiness from navigator.onLine. API failure leaves the selected mode unchanged and falls back locally.

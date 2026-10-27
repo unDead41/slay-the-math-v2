@@ -11,3 +11,40 @@ test('inside-modal launcher, native focus restoration, keyboard isolation and Se
 test('BM follows language; animation has one timer and stops for motion/visibility/destruction',t=>{const f=fixture(t);assert.equal(f.timers.size,1);for(let i=0;i<20;i++)f.pet.refresh();assert.equal(f.timers.size,1);f.setLanguage('ms');assert.match(f.d.querySelector('[data-pet-open]').getAttribute('aria-label'),/Tanya/);f.setMotion(false);assert.equal(f.timers.size,0);f.setMotion(true);assert.equal(f.timers.size,1);Object.defineProperty(f.d,'hidden',{configurable:true,value:true});f.d.dispatchEvent(new f.w.Event('visibilitychange'));assert.equal(f.timers.size,0);f.pet.destroy();assert.equal(f.timers.size,0);});
 test('a language change aborts an old-language reply and starts no replacement request',async t=>{let finish;const f=fixture(t,{fetcher:()=>new Promise(r=>finish=r)});f.w.STMPlayMode.set('online');f.click('[data-pet-open]');await f.send();f.setLanguage('ms');assert(f.calls[0][1].signal.aborted);finish({ok:true,json:async()=>({answer:'OLD ENGLISH REPLY'})});await new Promise(r=>setTimeout(r,8));assert.doesNotMatch(f.d.querySelector('[data-pet-reply]').textContent,/OLD ENGLISH/);assert.equal(f.calls.length,1);});
 test('normal game requests identify their running release for version-safe advice',async t=>{const f=fixture(t);f.w.DCRelease={version:'2.52.0-pet.1'};f.w.STMPlayMode.set('online');f.click('[data-pet-open]');await f.send();assert.equal(JSON.parse(f.calls[0][1].body).context.clientRelease,'2.52.0-pet.1');});
+
+// These catch losing actionable recovery guidance at the shared local-fallback boundary.
+for(const language of ['en','ms'])for(const [status,code,expected]of [
+ [401,'UNAUTHORIZED',{en:/classroom code.*teacher/i,ms:/kod.*kelas.*guru/i}],
+ [409,'VERSION_MISMATCH',{en:/versions.*finish your run.*update/i,ms:/versi.*run.*kemas kini/i}]
+])test(language+': '+code+' gives safe recovery guidance while local help remains usable',async t=>{
+ const f=fixture(t,{fetcher:async()=>({ok:false,status,json:async()=>({source:'local',code,answer:'PRIVATE_SERVER_TEXT <img src=x>'})})});
+ f.setLanguage(language);f.w.STMPlayMode.set('online');f.click('[data-pet-open]');await f.send('Explain Block.');
+ assert.match(f.d.querySelector('[data-pet-status]').textContent,expected[language]);
+ assert.match(f.d.querySelector('[data-pet-reply]').textContent,/Block/);
+ assert.doesNotMatch(f.d.body.textContent,/PRIVATE_SERVER_TEXT|<img src=x>/);
+ assert.equal(f.d.querySelector('[data-pet-code]').value,'test-classroom-access');
+ f.click('[data-pet-faq=sets]');assert.match(f.d.querySelector('[data-pet-reply]').textContent,/∩/);
+});
+for(const [status,code]of [[500,'UNAUTHORIZED'],[401,'VERSION_MISMATCH'],[409,'UNKNOWN_PRIVATE_ERROR']])test('unrecognized HTTP status/code pair '+status+'/'+code+' keeps generic local fallback',async t=>{
+ const f=fixture(t,{fetcher:async()=>({ok:false,status,json:async()=>({code,answer:'PRIVATE_SERVER_TEXT'})})});
+ f.w.STMPlayMode.set('online');f.click('[data-pet-open]');await f.send('Explain Block.');
+ assert.match(f.d.querySelector('[data-pet-status]').textContent,/Online chat is unavailable/);
+ assert.match(f.d.querySelector('[data-pet-reply]').textContent,/Block/);
+ assert.doesNotMatch(f.d.body.textContent,/PRIVATE_SERVER_TEXT|UNKNOWN_PRIVATE_ERROR/);
+});
+test('a corrected-code retry clears the warning and never forwards failed chat history',async t=>{
+ let attempts=0;const f=fixture(t,{fetcher:async()=>++attempts===1?{ok:false,status:401,json:async()=>({code:'UNAUTHORIZED'})}:{ok:true,status:200,json:async()=>({answer:'Block absorbs damage.'})}});
+ f.w.STMPlayMode.set('online');f.click('[data-pet-open]');await f.send('Explain Block.');
+ assert.match(f.d.querySelector('[data-pet-status]').textContent,/classroom code.*teacher/i);
+ await f.send('How does Block work?');assert.equal(f.calls.length,2);
+ assert.deepEqual(JSON.parse(f.calls[1][1].body).history,[]);
+ assert.equal(f.d.querySelector('[data-pet-reply]').textContent,'Block absorbs damage.');
+ assert.doesNotMatch(f.d.querySelector('[data-pet-status]').textContent,/not accepted|unavailable/);
+});
+test('late authorization errors cannot restore an old warning after choosing Offline',async t=>{
+ let finish;const f=fixture(t,{fetcher:()=>new Promise(r=>finish=r)});
+ f.w.STMPlayMode.set('online');f.click('[data-pet-open]');await f.send();f.w.STMPlayMode.set('offline');
+ finish({ok:false,status:401,json:async()=>({code:'UNAUTHORIZED'})});await new Promise(r=>setTimeout(r,8));
+ assert.match(f.d.querySelector('[data-pet-status]').textContent,/Select Online in Settings/);
+ assert.doesNotMatch(f.d.querySelector('[data-pet-status]').textContent,/not accepted|teacher/);
+});

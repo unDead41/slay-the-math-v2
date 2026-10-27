@@ -1,0 +1,37 @@
+✔ approved variants retain exact transparent padding and have verified native/export provenance (3147.492203ms)
+✔ DOM: importing a pending prediction clears unrelated success and restores exact question (1115.370809ms)
+✔ DOM: retry asks before replacing the terminal run (268.218806ms)
+✔ DOM: closing an untouched prediction consumes exposure and focuses End Turn (253.905321ms)
+✔ DOM: Music controls preserve volume, preview every track and return to game music (133.483248ms)
+✔ DOM: Unmute Music enables audio on that click when both channels were saved off (162.412904ms)
+✔ DOM: portable HTML boots without external scripts/styles and embeds all images (2839.254244ms)
+✔ DOM: artifact preview grants nothing, Challenge confirmation commits once and inventory uses the shared dialog (332.614223ms)
+✔ DOM: reward preview does not claim a card until Add is pressed (129.785198ms)
+✔ DOM: collection search, category, empty result, clear and pagination retain working details (213.959855ms)
+✔ DOM: tutorial practice gives feedback without changing the run or awarding Focus (229.16112ms)
+✔ DOM: Claim opens the actual bank question, saves incorrect/hint state and resumes it before the map (746.766372ms)
+✔ DOM: continue preserves an unfinished trial; New Run resets exclusion and keeps lifetime history (518.25867ms)
+✔ DOM: import preserves the pending question and unions local and imported exposure history (207.957691ms)
+✔ DOM: storage failure keeps the trial playable and warns that progress needs Export (322.240745ms)
+✔ DOM: corrupt question history is preserved and cannot silently reset the draw pool (119.938668ms)
+✔ DOM: a full hand exposes its cap, disabled-card inspection and the tenth-card shortcut (167.448348ms)
+✔ DOM: artifact counters project real card resolution and opening effects without replay (358.65051ms)
+✔ DOM: Collection tab keyboard focus survives the modal render frame (206.772698ms)
+✔ DOM: a corrupt Artifact Codex profile is preserved while the core run stays playable (117.685276ms)
+✔ DOM: Mystery Hint, one answer, final review, card removal and profile exposure survive restore (411.113589ms)
+✔ DOM: Shop tabs reveal one inventory and support arrow, Home and End navigation without spending (518.737848ms)
+✔ DOM: Shop tab purchases and removal retain sold state, confirmation and valid return to map (701.994291ms)
+✔ DOM: Mystery room text uses shared game terms and honest preview calculations before Start and in rewards (249.4221ms)
+✔ DOM: Mystery extra-draw preview explains the hand cap without starting a challenge (117.404598ms)
+✔ DOM: Mystery failed review distinguishes maximum HP loss from the capped current loss (300.58793ms)
+✔ DOM: Settings owns the menu language preference and carries BM into the real Artifact trial (336.551709ms)
+✔ DOM: in-game Hint retains the folio reference grid after solution, in both languages (131.599195ms)
+✔ warming the current actor reuses its decoded idle texture for the first canvas frame (5.452841ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15296.265986

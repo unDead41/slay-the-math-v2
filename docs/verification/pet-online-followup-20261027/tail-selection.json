@@ -1,0 +1,49 @@
+{
+  "count": 29,
+  "files": [
+    "tests/status-explanation.test.cjs",
+    "tests/ui.test.cjs",
+    "tests/visual-preload.test.cjs"
+  ],
+  "cases": [
+    "DOM: Claim opens the actual bank question, saves incorrect/hint state and resumes it before the map",
+    "DOM: Collection tab keyboard focus survives the modal render frame",
+    "DOM: Music controls preserve volume, preview every track and return to game music",
+    "DOM: Mystery Hint, one answer, final review, card removal and profile exposure survive restore",
+    "DOM: Mystery extra-draw preview explains the hand cap without starting a challenge",
+    "DOM: Mystery failed review distinguishes maximum HP loss from the capped current loss",
+    "DOM: Mystery room text uses shared game terms and honest preview calculations before Start and in rewards",
+    "DOM: Settings owns the menu language preference and carries BM into the real Artifact trial",
+    "DOM: Shop tab purchases and removal retain sold state, confirmation and valid return to map",
+    "DOM: Shop tabs reveal one inventory and support arrow, Home and End navigation without spending",
+    "DOM: Unmute Music enables audio on that click when both channels were saved off",
+    "DOM: a corrupt Artifact Codex profile is preserved while the core run stays playable",
+    "DOM: a full hand exposes its cap, disabled-card inspection and the tenth-card shortcut",
+    "DOM: artifact counters project real card resolution and opening effects without replay",
+    "DOM: artifact preview grants nothing, Challenge confirmation commits once and inventory uses the shared dialog",
+    "DOM: closing an untouched prediction consumes exposure and focuses End Turn",
+    "DOM: collection search, category, empty result, clear and pagination retain working details",
+    "DOM: continue preserves an unfinished trial; New Run resets exclusion and keeps lifetime history",
+    "DOM: corrupt question history is preserved and cannot silently reset the draw pool",
+    "DOM: import preserves the pending question and unions local and imported exposure history",
+    "DOM: importing a pending prediction clears unrelated success and restores exact question",
+    "DOM: in-game Hint retains the folio reference grid after solution, in both languages",
+    "DOM: portable HTML boots without external scripts/styles and embeds all images",
+    "DOM: retry asks before replacing the terminal run",
+    "DOM: reward preview does not claim a card until Add is pressed",
+    "DOM: storage failure keeps the trial playable and warns that progress needs Export",
+    "DOM: tutorial practice gives feedback without changing the run or awarding Focus",
+    "approved variants retain exact transparent padding and have verified native/export provenance",
+    "warming the current actor reuses its decoded idle texture for the first canvas frame"
+  ],
+  "argv": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-name-pattern=^(?:DOM:\\ Claim\\ opens\\ the\\ actual\\ bank\\ question,\\ saves\\ incorrect/hint\\ state\\ and\\ resumes\\ it\\ before\\ the\\ map|DOM:\\ Collection\\ tab\\ keyboard\\ focus\\ survives\\ the\\ modal\\ render\\ frame|DOM:\\ Music\\ controls\\ preserve\\ volume,\\ preview\\ every\\ track\\ and\\ return\\ to\\ game\\ music|DOM:\\ Mystery\\ Hint,\\ one\\ answer,\\ final\\ review,\\ card\\ removal\\ and\\ profile\\ exposure\\ survive\\ restore|DOM:\\ Mystery\\ extra\\-draw\\ preview\\ explains\\ the\\ hand\\ cap\\ without\\ starting\\ a\\ challenge|DOM:\\ Mystery\\ failed\\ review\\ distinguishes\\ maximum\\ HP\\ loss\\ from\\ the\\ capped\\ current\\ loss|DOM:\\ Mystery\\ room\\ text\\ uses\\ shared\\ game\\ terms\\ and\\ honest\\ preview\\ calculations\\ before\\ Start\\ and\\ in\\ rewards|DOM:\\ Settings\\ owns\\ the\\ menu\\ language\\ preference\\ and\\ carries\\ BM\\ into\\ the\\ real\\ Artifact\\ trial|DOM:\\ Shop\\ tab\\ purchases\\ and\\ removal\\ retain\\ sold\\ state,\\ confirmation\\ and\\ valid\\ return\\ to\\ map|DOM:\\ Shop\\ tabs\\ reveal\\ one\\ inventory\\ and\\ support\\ arrow,\\ Home\\ and\\ End\\ navigation\\ without\\ spending|DOM:\\ Unmute\\ Music\\ enables\\ audio\\ on\\ that\\ click\\ when\\ both\\ channels\\ were\\ saved\\ off|DOM:\\ a\\ corrupt\\ Artifact\\ Codex\\ profile\\ is\\ preserved\\ while\\ the\\ core\\ run\\ stays\\ playable|DOM:\\ a\\ full\\ hand\\ exposes\\ its\\ cap,\\ disabled\\-card\\ inspection\\ and\\ the\\ tenth\\-card\\ shortcut|DOM:\\ artifact\\ counters\\ project\\ real\\ card\\ resolution\\ and\\ opening\\ effects\\ without\\ replay|DOM:\\ artifact\\ preview\\ grants\\ nothing,\\ Challenge\\ confirmation\\ commits\\ once\\ and\\ inventory\\ uses\\ the\\ shared\\ dialog|DOM:\\ closing\\ an\\ untouched\\ prediction\\ consumes\\ exposure\\ and\\ focuses\\ End\\ Turn|DOM:\\ collection\\ search,\\ category,\\ empty\\ result,\\ clear\\ and\\ pagination\\ retain\\ working\\ details|DOM:\\ continue\\ preserves\\ an\\ unfinished\\ trial;\\ New\\ Run\\ resets\\ exclusion\\ and\\ keeps\\ lifetime\\ history|DOM:\\ corrupt\\ question\\ history\\ is\\ preserved\\ and\\ cannot\\ silently\\ reset\\ the\\ draw\\ pool|DOM:\\ import\\ preserves\\ the\\ pending\\ question\\ and\\ unions\\ local\\ and\\ imported\\ exposure\\ history|DOM:\\ importing\\ a\\ pending\\ prediction\\ clears\\ unrelated\\ success\\ and\\ restores\\ exact\\ question|DOM:\\ in\\-game\\ Hint\\ retains\\ the\\ folio\\ reference\\ grid\\ after\\ solution,\\ in\\ both\\ languages|DOM:\\ portable\\ HTML\\ boots\\ without\\ external\\ scripts/styles\\ and\\ embeds\\ all\\ images|DOM:\\ retry\\ asks\\ before\\ replacing\\ the\\ terminal\\ run|DOM:\\ reward\\ preview\\ does\\ not\\ claim\\ a\\ card\\ until\\ Add\\ is\\ pressed|DOM:\\ storage\\ failure\\ keeps\\ the\\ trial\\ playable\\ and\\ warns\\ that\\ progress\\ needs\\ Export|DOM:\\ tutorial\\ practice\\ gives\\ feedback\\ without\\ changing\\ the\\ run\\ or\\ awarding\\ Focus|approved\\ variants\\ retain\\ exact\\ transparent\\ padding\\ and\\ have\\ verified\\ native/export\\ provenance|warming\\ the\\ current\\ actor\\ reuses\\ its\\ decoded\\ idle\\ texture\\ for\\ the\\ first\\ canvas\\ frame)$",
+    "tests/status-explanation.test.cjs",
+    "tests/ui.test.cjs",
+    "tests/visual-preload.test.cjs"
+  ],
+  "selectionReason": "Current full-command retained PASS set is incomplete; exclude the already-passing Sharp probe, then replay only the remaining missing/failed cases."
+}

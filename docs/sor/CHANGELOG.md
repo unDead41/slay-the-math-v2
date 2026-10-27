@@ -874,3 +874,6 @@ Record the authorized retry/report/provenance improvements on main2.45.0; keep m
 ## 25 October 2026 — Map three-agent preparation and simulation reference
 
 Prepare a selective current-main Map package: cap3, three same-scope profiles, registry34/33/33 and default one. Pin historical handoffs; preserve adapted tools and game2.49. Add shared simulation ownership, manual run registration, source/seed/split integrity, learner limits, genuine browser capture metadata and token-saving batching. No new campaign/model, native-host activation or remote publication. [Handoff](../MAP_AGENT_SKILL_HANDOFF.md).
+## 27 October 2026 — pet recovery guidance follow-up
+
+On the existing pet feature branch, correct the file-origin Online setup advice and show reviewed BM/English recovery instructions for a rejected classroom code or mismatched game/helper version. Preserve local help, explicit Online permission, stale-request cancellation and current-run state. Candidate stays2.53.0-pet.1; no main/live-provider publication. [Current audit and evidence](../audits/pet-assistant/LATEST.md).

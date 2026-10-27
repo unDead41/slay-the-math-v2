@@ -1,0 +1,114 @@
+✔ unselected Online and Offline stay local; no duplicate preference is created (99.846773ms)
+✔ explicit Online uses the current adapter and sanitized public state only (34.692738ms)
+✔ active questions use original Hint callback with zero API work (29.440083ms)
+✔ the shared Settings helper also cannot bypass active-question guard (24.428982ms)
+✔ mode and question changes cancel and discard late responses even when transport ignores abort (59.030553ms)
+✔ plain text output, clear controls and no chat/code persistence (28.504275ms)
+✔ inside-modal launcher, native focus restoration, keyboard isolation and Settings callback (19.302551ms)
+✔ BM follows language; animation has one timer and stops for motion/visibility/destruction (27.687053ms)
+✔ a language change aborts an old-language reply and starts no replacement request (31.628661ms)
+✔ normal game requests identify their running release for version-safe advice (21.67921ms)
+✖ en: UNAUTHORIZED gives safe recovery guidance while local help remains usable (28.401181ms)
+✖ en: VERSION_MISMATCH gives safe recovery guidance while local help remains usable (27.486344ms)
+✖ ms: UNAUTHORIZED gives safe recovery guidance while local help remains usable (26.570824ms)
+✖ ms: VERSION_MISMATCH gives safe recovery guidance while local help remains usable (23.058166ms)
+✔ unrecognized HTTP status/code pair 500/UNAUTHORIZED keeps generic local fallback (20.111636ms)
+✔ unrecognized HTTP status/code pair 401/VERSION_MISMATCH keeps generic local fallback (20.778905ms)
+✔ unrecognized HTTP status/code pair 409/UNKNOWN_PRIVATE_ERROR keeps generic local fallback (19.571979ms)
+✖ a corrected-code retry clears the warning and never forwards failed chat history (24.782607ms)
+✔ late authorization errors cannot restore an old warning after choosing Offline (33.04756ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 14
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 968.306185
+
+✖ failing tests:
+
+test at tests/pet-ui.test.cjs:19:3
+✖ en: UNAUTHORIZED gives safe recovery guidance while local help remains usable (28.401181ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /classroom code.*teacher/i. Input:
+  
+  'Online chat is unavailable. Local help is still available.'
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/pet-ai-resume/tests/pet-ui.test.cjs:22:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Online chat is unavailable. Local help is still available.',
+    expected: /classroom code.*teacher/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/pet-ui.test.cjs:19:3
+✖ en: VERSION_MISMATCH gives safe recovery guidance while local help remains usable (27.486344ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /versions.*finish your run.*update/i. Input:
+  
+  'Online chat is unavailable. Local help is still available.'
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/pet-ai-resume/tests/pet-ui.test.cjs:22:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Online chat is unavailable. Local help is still available.',
+    expected: /versions.*finish your run.*update/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/pet-ui.test.cjs:19:3
+✖ ms: UNAUTHORIZED gives safe recovery guidance while local help remains usable (26.570824ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /kod.*kelas.*guru/i. Input:
+  
+  'Chat online tidak tersedia. Bantuan tempatan masih boleh digunakan.'
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/pet-ai-resume/tests/pet-ui.test.cjs:22:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Chat online tidak tersedia. Bantuan tempatan masih boleh digunakan.',
+    expected: /kod.*kelas.*guru/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/pet-ui.test.cjs:19:3
+✖ ms: VERSION_MISMATCH gives safe recovery guidance while local help remains usable (23.058166ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /versi.*run.*kemas kini/i. Input:
+  
+  'Chat online tidak tersedia. Bantuan tempatan masih boleh digunakan.'
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/pet-ai-resume/tests/pet-ui.test.cjs:22:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Chat online tidak tersedia. Bantuan tempatan masih boleh digunakan.',
+    expected: /versi.*run.*kemas kini/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/pet-ui.test.cjs:35:1
+✖ a corrected-code retry clears the warning and never forwards failed chat history (24.782607ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /classroom code.*teacher/i. Input:
+  
+  'Online chat is unavailable. Local help is still available.'
+  
+      at TestContext.<anonymous> (/workspace/scratch/50182eb5cf4b/pet-ai-resume/tests/pet-ui.test.cjs:38:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Online chat is unavailable. Local help is still available.',
+    expected: /classroom code.*teacher/i,
+    operator: 'match',
+    diff: 'simple'
+  }

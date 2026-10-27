@@ -1,4 +1,20 @@
-# Emberlyn API recovery audit — 27 October 2026
+# Emberlyn recovery guidance — latest, 27 October 2026
+
+**VALID within the follow-up scope; both deferred Minor/P3 findings are closed.** Continued from feature d27155a7544d3fccd5b68d35c506c9d6ee47f5ab on `codex/ai-pet-online-20261025`, candidate2.53.0-pet.1. Current main7a49fff83388347f0157616fc6b051ddbda4c694 /2.52.0, Master SOR1.3.0 read first. Branch-only continuation remains authorized; main/original ai and live-provider deployment remain outside scope.
+
+- Corrected the operator guide to require a hosted HTTP(S) game URL for Online. A remote endpoint does not make file-origin chat supported; Origin:null remains rejected, with portable local help intact.
+- The widget now maps only401/UNAUTHORIZED and409/VERSION_MISMATCH to reviewed BM/English recovery guidance. Arbitrary failed-response text is hidden; local help/manual retry and cancellation remain intact. No shared mode/help/installer/backend, numerical, bank, save/RNG or original-art owner changes.
+- Fresh checks:41/41 focused,54/54 native pet,15/15 production cold-offline, syntax and production/portable builds pass. New native error captures cover both languages at1366/390; two sampled images were inspected. Both portable aliases are identical,318,208,896bytes. Source manifestfe0fe42d3d8705ecb0f93b31 and production4599ce7cacd82477dc5e6525 independently verify all listed bytes; cold restart binds the production ID.
+- The project command exits1 with two recorded image QA failures: `all reviewed runtime derivatives decode with checked hashes, alpha padding and a common canvas` and `approved variants retain exact transparent padding and have verified native/export provenance`. The command omitted the Sharp QA path; both pass with the existing dependency configured. Retained full stdout has1236 distinct PASS names and no EOF summary. A corrected one-case image probe and29-case disjoint tail supply30 further distinct PASS cases: **1266 recorded PASS cases across commands, not a single-run full-green summary**. Exact selections, original failures and complete focused/tail logs are retained.
+- Earlier98 tutorial images remain tied to their original capture. App/engine/image bytes are unchanged;108/111 old input hashes match, while pet-assistant.js and generated index.html/release.js differ. No old capture is relabeled as new. Five build owners remain byte-identical.
+
+[Current findings, root cause, limits and QA](../../verification/pet-online-followup-20261027/README.md), [machine/source evidence](../../verification/pet-online-followup-20261027/evidence.json), [case ledger](../../verification/pet-online-followup-20261027/node-coverage.json). The final diff received coordinator review; no new independent review is claimed. No additional issue was found within the checked follow-up scope. Original inherited findings and live/pupil/device limits below remain open with their existing owners.
+
+Publication: prepared for the existing feature branch; exact post-push readback will be recorded separately. Previous a59/d271 publication receipts apply to their original snapshots.
+
+## Historical reconstruction audit at d27155a
+
+The following recovery record and its two-then-open Minor findings describe that earlier source. The follow-up above supersedes its currentness/open-status claims without changing its original evidence.
 
 **VALID within the checked feature scope, with two deferred Minor findings.** Mathematics Slayer main `7a49fff83388347f0157616fc6b051ddbda4c694` /2.52.0, Master SOR1.3.0 read first. Candidate **2.53.0-pet.1**, branch `codex/ai-pet-online-20261025`. Feature publication VERIFIED at a59c683302cc52b53813170a82e879e67254bdb1, exact tree4ae4d36e10be31826f7c0d04fc24dfb4683a45a5. Original main7a49fff and ai807be676 remain unchanged. [Actual publication readback](../../verification/pet-online-recovery/publication.json). No main publication, paid provider call or external deployment.
 

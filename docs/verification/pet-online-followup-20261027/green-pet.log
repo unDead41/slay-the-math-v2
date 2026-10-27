@@ -1,0 +1,54 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> duel-cube-math@2.53.0-pet.1 test:pet
+> node --test --test-concurrency=1 tests/pet-api.test.cjs tests/pet-ui.test.cjs tests/pet-app.test.cjs
+
+✔ unconfigured status and requests never reveal server secrets or call a provider (33.846751ms)
+✔ origin, code, malformed context/model and unknown card IDs reject before billing (17.088959ms)
+✔ Offline and active questions make zero provider calls (6.795457ms)
+✔ actual Responses wire is fixed, server-selected, private and bounded (5.302948ms)
+✔ unsupported topics remain local, and upstream errors are sanitized (5.994363ms)
+✔ current, archived and unversioned card advice use the actual matching rules (8.278342ms)
+✔ verified function outputs are returned through the real Responses continuation format (4.060918ms)
+✔ CORS preflight uses exact origins without paid calls (2.105347ms)
+✔ oversized bodies fail safely and the server remains usable (4.525951ms)
+✔ hourly cap and concurrency cap limit actual paid calls (9.862886ms)
+✔ timeout aborts upstream and releases the service (34.01434ms)
+✔ fraction arithmetic and truth/set operations use checked mathematical inputs (1.055478ms)
+✔ conditional drawing rejects an impossible conditioning event and set members ignore outer whitespace (0.156147ms)
+✔ falsy malformed history and hand fields are rejected rather than silently defaulted (11.615173ms)
+✔ server and client release mismatch fails closed before paid work (10.393223ms)
+✔ BM card names come from the selected canonical localization (4.582346ms)
+✔ unusable overlong classroom-code configuration is not advertised ready (1.977533ms)
+✔ valid restored original-card decks retain chat and canonical upgraded facts without state changes (11.87752ms)
+✔ unusable Unicode or whitespace classroom codes fail closed before billing (8.801002ms)
+✔ pending artifact stays guarded on Main Menu and pet Hint resumes its original owner (653.952139ms)
+✔ pending predict stays guarded on Main Menu and pet Hint resumes its original owner (546.756343ms)
+✔ pending mystery stays guarded on Main Menu and pet Hint resumes its original owner (269.830162ms)
+✔ unselected Online and Offline stay local; no duplicate preference is created (117.487286ms)
+✔ explicit Online uses the current adapter and sanitized public state only (29.913214ms)
+✔ active questions use original Hint callback with zero API work (25.27902ms)
+✔ the shared Settings helper also cannot bypass active-question guard (20.069345ms)
+✔ mode and question changes cancel and discard late responses even when transport ignores abort (51.637543ms)
+✔ plain text output, clear controls and no chat/code persistence (23.160302ms)
+✔ inside-modal launcher, native focus restoration, keyboard isolation and Settings callback (22.207761ms)
+✔ BM follows language; animation has one timer and stops for motion/visibility/destruction (16.560634ms)
+✔ a language change aborts an old-language reply and starts no replacement request (31.289587ms)
+✔ normal game requests identify their running release for version-safe advice (22.68265ms)
+✔ en: UNAUTHORIZED gives safe recovery guidance while local help remains usable (23.431292ms)
+✔ en: VERSION_MISMATCH gives safe recovery guidance while local help remains usable (21.522665ms)
+✔ ms: UNAUTHORIZED gives safe recovery guidance while local help remains usable (22.649925ms)
+✔ ms: VERSION_MISMATCH gives safe recovery guidance while local help remains usable (19.805065ms)
+✔ unrecognized HTTP status/code pair 500/UNAUTHORIZED keeps generic local fallback (17.40317ms)
+✔ unrecognized HTTP status/code pair 401/VERSION_MISMATCH keeps generic local fallback (17.781763ms)
+✔ unrecognized HTTP status/code pair 409/UNKNOWN_PRIVATE_ERROR keeps generic local fallback (18.476955ms)
+✔ a corrected-code retry clears the warning and never forwards failed chat history (34.051928ms)
+✔ late authorization errors cannot restore an old warning after choosing Offline (29.338814ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 41
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3326.514416

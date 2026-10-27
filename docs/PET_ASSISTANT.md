@@ -22,7 +22,7 @@ No real provider key/call or external backend deployment is established by this 
 2. Set `OPENAI_MODEL` to an available Responses/function-calling model in that API project. No model/costly default is guessed.
 3. Set a private `PET_ACCESS_CODE` of 12–200 ASCII letters, digits, underscores or hyphens and give that classroom code to intended players. It is a small-classroom shared boundary, not student accounts.
 4. Provide a Node backend with outbound HTTPS access to api.openai.com. For public use, configure HTTPS and exact game origins in `PET_ALLOWED_ORIGINS` (comma-separated, no wildcard/path). GitHub Pages needs a separate backend; it cannot execute Node.
-5. Set only the public backend base URL in `dist/pet-config.js` before building, e.g. `https://helper.example/api/pet/`. Default `/api/pet/` works on the same local Node origin. A file: portable copy needs an explicit remote HTTPS URL for online chat; its local FAQ needs no server.
+5. Set only the public backend base URL in `dist/pet-config.js` before building, e.g. `https://helper.example/api/pet/`. Default `/api/pet/` works on the same local Node origin. **Open the game through its hosted HTTP(S) URL for Online chat.** A `file:` portable copy sends `Origin: null`, which the helper rejects even when a remote HTTPS endpoint is configured. Its packaged local help needs no server; do not add a null-origin exception.
 
 Use a Node release supporting --env-file (tested with Node 24). Copy `.env.example` locally and fill it privately, or use hosting environment variables.
 
@@ -34,6 +34,8 @@ node --env-file=.env server.cjs --prod
 Deploy the repository backend (`server.cjs`, `tools/pet` and canonical runtime modules). Uploading static `release-prod` alone does not run the API. Local testing without a configured key remains fully playable; online requests fail closed and local help remains available.
 
 Build the game and backend from the same versioned source snapshot. Normal clients tag their game release; a mismatched server fails closed to local help, including an older cached client after a backend upgrade.
+
+The pet shows localized recovery guidance for a rejected classroom code (401/UNAUTHORIZED) or different game/helper versions (409/VERSION_MISMATCH). Check a rejected code with the teacher; finish the current run before asking the operator to check updates. Local help remains usable. Other errors keep generic guidance. The widget maps these two status/code pairs to its own reviewed copy; it never displays a rejected response's arbitrary server text, retries automatically or reloads the run.
 
 GET `/api/pet/status` reports the server release and configuration presence, not live model connectivity or billing. POST `/api/pet/ask` requires the classroom Bearer code, permitted Origin, bounded JSON and supported context/rule version. Provider URL/model/tools cannot be chosen by a player. HTTPS reverse proxies need their real game origin explicitly configured.
 
@@ -58,6 +60,6 @@ npm run test:pet-browser
 
 DOM tests need jsdom (`DOM_QA_MODULE` supported); browser tests need Playwright/Chromium (`BROWSER_QA_MODULE`, `QA_CHROMIUM_EXECUTABLE`). HTTP tests use real local HTTP and an injected fake provider. Native tests intercept only the tutor endpoint; game/engine/art/portable bytes are real. No fake result is described as live API validation. Original old candidate b497eb0 and its local QA were pruned before publication; old 1173/35 results remain historical only. Fresh results below are bound to this reconstruction on current main.
 
-Current recovery evidence:36 focused,36 native pet,15 production cold-offline and3 strict media checks pass;98 real bilingual captures and111 exact source bindings. Full Node command exits0 with1162 retained PASS names and a complete fresh disjoint95-case tail (1257 distinct recorded cases; original EOF summary unavailable). See the audit/evidence for exact scope, source/production release identities and the file-origin Online operator erratum.
+Original recovery evidence at d27155a:36 focused,36 native pet,15 production cold-offline and3 strict media checks pass;98 real bilingual captures and111 exact source bindings for that reconstruction. Its full Node command exits0 with1162 retained PASS names and a complete fresh disjoint95-case tail (1257 distinct recorded cases; original EOF summary unavailable). These remain historical receipts; the error-guidance follow-up has separate [current checks and source bindings](verification/pet-online-followup-20261027/README.md), including the corrected hosted-URL activation instructions above.
 
 Feature publication verified: [codex/ai-pet-online-20261025](https://github.com/unDead41/slay-the-math-v2/tree/codex/ai-pet-online-20261025), code a59c6833, version2.53.0-pet.1. Main and original ai refs remain unchanged; API activation still requires operator inputs. [Publication receipt](verification/pet-online-recovery/publication.json).

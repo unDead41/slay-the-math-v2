@@ -1,5 +1,11 @@
 # Daftar keputusan — Mathematics Slayer
 
+## DEC-20261027-PET-RECOVERY-GUIDANCE — Resume two deferred Minor fixes
+
+- **DITERUSKAN:** Ijamm asks to resume. Continue the existing pet feature scope on `codex/ai-pet-online-20261025`, starting at d27155a7544d3fccd5b68d35c506c9d6ee47f5ab; current main remains7a49fff83388347f0157616fc6b051ddbda4c694 /2.52.0, Master SOR1.3.0.
+- Correct the portable Online instructions: use a hosted HTTP(S) game URL; keep Origin:null rejected and portable help local. Show the widget's reviewed BM/English guidance only for401/UNAUTHORIZED or409/VERSION_MISMATCH, without displaying arbitrary server bodies or forwarding failed history. Manual retry and local help remain available; no automatic reload or run changes.
+- Keep candidate2.53.0-pet.1; existing content-derived build identities invalidate changed assets. No API schema, numerical/bank/AI-model, original-art, storage, mode/help or installer-owner changes. This is branch-only continuation, not permission for a paid provider call, external deployment or main publication. [Current audit and evidence](../audits/pet-assistant/LATEST.md).
+
 ## DEC-20261027-RENAME-RECOVERY — Pemulihan calon, bukan penerbitan
 
 - **DITERUSKAN:** arahan nama rasmi/push terdahulu kekal. Maintenance menghilangkan

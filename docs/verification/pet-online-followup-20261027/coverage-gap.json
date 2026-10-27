@@ -1,0 +1,97 @@
+{
+  "expectedCount": 1266,
+  "recordedPassCount": 1236,
+  "newUnexpectedCases": [],
+  "missingOrFailed": {
+    "DOM: Claim opens the actual bank question, saves incorrect/hint state and resumes it before the map": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Collection tab keyboard focus survives the modal render frame": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Music controls preserve volume, preview every track and return to game music": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Mystery Hint, one answer, final review, card removal and profile exposure survive restore": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Mystery extra-draw preview explains the hand cap without starting a challenge": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Mystery failed review distinguishes maximum HP loss from the capped current loss": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Mystery room text uses shared game terms and honest preview calculations before Start and in rewards": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Settings owns the menu language preference and carries BM into the real Artifact trial": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Shop tab purchases and removal retain sold state, confirmation and valid return to map": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Shop tabs reveal one inventory and support arrow, Home and End navigation without spending": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: Unmute Music enables audio on that click when both channels were saved off": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: a corrupt Artifact Codex profile is preserved while the core run stays playable": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: a full hand exposes its cap, disabled-card inspection and the tenth-card shortcut": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: artifact counters project real card resolution and opening effects without replay": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: artifact preview grants nothing, Challenge confirmation commits once and inventory uses the shared dialog": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: closing an untouched prediction consumes exposure and focuses End Turn": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: collection search, category, empty result, clear and pagination retain working details": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: continue preserves an unfinished trial; New Run resets exclusion and keeps lifetime history": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: corrupt question history is preserved and cannot silently reset the draw pool": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: import preserves the pending question and unions local and imported exposure history": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: importing a pending prediction clears unrelated success and restores exact question": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: in-game Hint retains the folio reference grid after solution, in both languages": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: portable HTML boots without external scripts/styles and embeds all images": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: retry asks before replacing the terminal run": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: reward preview does not claim a card until Add is pressed": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: storage failure keeps the trial playable and warns that progress needs Export": [
+      "tests/ui.test.cjs"
+    ],
+    "DOM: tutorial practice gives feedback without changing the run or awarding Focus": [
+      "tests/ui.test.cjs"
+    ],
+    "all reviewed runtime derivatives decode with checked hashes, alpha padding and a common canvas": [
+      "tests/icon-package.test.cjs"
+    ],
+    "approved variants retain exact transparent padding and have verified native/export provenance": [
+      "tests/status-explanation.test.cjs"
+    ],
+    "warming the current actor reuses its decoded idle texture for the first canvas frame": [
+      "tests/visual-preload.test.cjs"
+    ]
+  }
+}

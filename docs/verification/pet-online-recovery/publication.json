@@ -1,0 +1,60 @@
+{
+  "sessionDate": "2026-10-27",
+  "repository": "unDead41/slay-the-math-v2",
+  "scope": "FEATURE_BRANCH_ONLY",
+  "branch": "codex/ai-pet-online-20261025",
+  "codePublication": {
+    "status": "VERIFIED",
+    "sha": "a59c683302cc52b53813170a82e879e67254bdb1",
+    "tree": "4ae4d36e10be31826f7c0d04fc24dfb4683a45a5",
+    "parent": "ab750d223d9eb9d8c46f41b69886a3c8c2bf33eb",
+    "version": "2.53.0-pet.1",
+    "equivalentLocalCommit": "428ff50c1667396ec46990b94409e46edef9a312",
+    "exactLocalTreeMatch": true
+  },
+  "preservedRefs": {
+    "mainBefore": "7a49fff83388347f0157616fc6b051ddbda4c694",
+    "mainAfter": "7a49fff83388347f0157616fc6b051ddbda4c694",
+    "originalAIBefore": "807be6763cac1bc97134f86031d42e5dc720d6d1",
+    "originalAIAfter": "807be6763cac1bc97134f86031d42e5dc720d6d1",
+    "readback": "VERIFIED"
+  },
+  "method": {
+    "newRefCreated": true,
+    "force": false,
+    "priorTargetConfirmedAbsent": true,
+    "initialTarget": "ai/pet-online-20261025",
+    "initialAttempt": "422 Reference update failed; actual refs/heads/ai prefix conflict verified",
+    "existingHistoryReplaced": false
+  },
+  "captureSource": {
+    "local": "5f5c547aaa606f9dd790ae5e3b99acd86516b0b7",
+    "github": "1c4d86f4f876ccec4821c70acd12846e08ba09e0",
+    "tree": "6e9f20861b5c19fe272161daf4258d4113b77133",
+    "exactTreeEquality": "VERIFIED"
+  },
+  "verification": {
+    "focused": 36,
+    "native": 36,
+    "coldOffline": 15,
+    "strictMedia": 3,
+    "tutorialImages": 98,
+    "fullNodeCommandExit": 0,
+    "fullStdout": "INCOMPLETE_CAPTURE",
+    "retainedFullPassCases": 1162,
+    "freshDisjointTail": 95,
+    "distinctRecordedPassCases": 1257,
+    "singleRunTotalNotClaimed": true,
+    "importantUnresolved": 0,
+    "deferredMinor": 2
+  },
+  "deployment": {
+    "mainWrite": false,
+    "originalAIWrite": false,
+    "realProviderCall": "NOT_RUN",
+    "publicBackend": "NOT_DEPLOYED",
+    "hostedGameDeployment": "NOT_RUN_NOT_VERIFIED",
+    "reviewedPagesTrigger": "main only"
+  },
+  "receiptBoundary": "This receipt records verified code publication above. A later receipt-only commit preserves tested runnable/test/configuration bytes; its final ref/tree is verified separately without a self-referential commit loop."
+}

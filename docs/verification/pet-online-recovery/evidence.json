@@ -2,7 +2,7 @@
   "sessionDate": "2026-10-27",
   "baseMain": "7a49fff83388347f0157616fc6b051ddbda4c694",
   "masterSOR": "1.3.0",
-  "branch": "ai/pet-online-20261025",
+  "branch": "codex/ai-pet-online-20261025",
   "version": "2.53.0-pet.1",
   "captureSource": {
     "localCommit": "5f5c547aaa606f9dd790ae5e3b99acd86516b0b7",
@@ -161,5 +161,13 @@
     "Normal-flow support accounting only; no adversarial anti-cheat claim",
     "No real provider, whole-book/all120 audit, pupil/device/browser/audio acceptance, new ML/campaign or long-term persistence claim",
     "Inherited CI-247-01, QA-248-PRELOAD-01 and AM-U01 remain open"
-  ]
+  ],
+  "branchNaming": {
+    "initialTarget": "ai/pet-online-20261025",
+    "creationResult": "422 Reference update failed",
+    "confirmedExistingPrefixRef": "refs/heads/ai",
+    "existingAIHead": "807be6763cac1bc97134f86031d42e5dc720d6d1",
+    "compatibleTarget": "codex/ai-pet-online-20261025",
+    "originalAIRefUnchanged": true
+  }
 }

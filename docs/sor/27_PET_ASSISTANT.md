@@ -1,6 +1,6 @@
 # 27 — Emberlyn assistant
 
-DISAHKAN: Ijamm requests the exact existing ChatGPT pet, game/three-topic Form4 mathematics help through an Online API when selected in Settings, local Offline support, Publisher instructions first and secure activation inputs. Current resume uses main 7a49fff83388347f0157616fc6b051ddbda4c694/2.52.0. Candidate2.53.0-pet.1 on ai/pet-online-20261025; no main publication/deployment.
+DISAHKAN: Ijamm requests the exact existing ChatGPT pet, game/three-topic Form4 mathematics help through an Online API when selected in Settings, local Offline support, Publisher instructions first and secure activation inputs. Current resume uses main 7a49fff83388347f0157616fc6b051ddbda4c694/2.52.0. Candidate2.53.0-pet.1 on codex/ai-pet-online-20261025; no main publication/deployment.
 
 - PET-01: Reuse STMPlayMode/STMPetHelp; one Settings preference. Explicit Online plus a player request is required. Local packaged help works when blocked/offline/unavailable. Existing full installer is the readiness authority.
 - PET-02: Game plus Logical Reasoning, Operations on Sets and Probability of Combined Events; simple BM/English. Typed exact checks, matching current/archived rules and actual preview authority. No mutable tools, automatic training or simulation/model activation.

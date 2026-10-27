@@ -24,3 +24,5 @@ node --test --test-concurrency=1 tests/status-explanation.test.cjs tests/status-
 ```
 
 No API secret, real provider call, paid/public backend, whole-book/pupil/device/campaign/model outcome or main deployment is established by these files. The two deferred minors are the unsupported file-origin Online guide suggestion (use hosted Online; local portable works) and generic client error fallback.
+
+Publication target: `codex/ai-pet-online-20261025`. The initial `ai/...` name collides with existing `refs/heads/ai`; the422 attempt and verified original AI ref are recorded in evidence.json. Original AI/main history remains outside this feature write.

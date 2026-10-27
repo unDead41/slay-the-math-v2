@@ -1,6 +1,6 @@
 # Emberlyn — Online API and local learning help
 
-Candidate **2.53.0-pet.1**, branch `ai/pet-online-20261025`, based on actual main `7a49fff83388347f0157616fc6b051ddbda4c694` /2.52.0. Main remains outside this feature's publication scope. This conversational helper is separate from the existing developer playtester/model; no simulation campaign, balancing values or model training changes.
+Candidate **2.53.0-pet.1**, branch `codex/ai-pet-online-20261025`, based on actual main `7a49fff83388347f0157616fc6b051ddbda4c694` /2.52.0. Main remains outside this feature's publication scope. This conversational helper is separate from the existing developer playtester/model; no simulation campaign, balancing values or model training changes.
 
 ## Current integration
 

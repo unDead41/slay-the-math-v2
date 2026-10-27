@@ -29,3 +29,5 @@
 - Final: Ruling: deleted historical QA and main/deployment publication reconstruction unjudged — old results stay historical, root will verify current feature ref; no main write. Cost: historical missing stdout remains unavailable and branch push proves no deployment.
 
 - Final: Ruling: inherited CI-247-01/QA-248-PRELOAD-01/AM-U01 remediation unjudged — carried with existing owners, not silently fixed. Cost: their existing issues remain open.
+
+- Final: Ruling: GitHub cannot create ai/pet-online-20261025 because refs/heads/ai already exists (807be676); create_ref returned422 and actual prefix ref was verified. Use codex/ai-pet-online-20261025 for this feature — preserves original ai/main refs. Cost: users must use the new feature branch name; no existing history is replaced.

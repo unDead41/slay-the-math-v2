@@ -10,7 +10,7 @@
 
 [Current findings, root cause, limits and QA](../../verification/pet-online-followup-20261027/README.md), [machine/source evidence](../../verification/pet-online-followup-20261027/evidence.json), [case ledger](../../verification/pet-online-followup-20261027/node-coverage.json). The final diff received coordinator review; no new independent review is claimed. No additional issue was found within the checked follow-up scope. Original inherited findings and live/pupil/device limits below remain open with their existing owners.
 
-Publication: prepared for the existing feature branch; exact post-push readback will be recorded separately. Previous a59/d271 publication receipts apply to their original snapshots.
+Feature-only code publication **VERIFIED** at `b5026ceee84da7d66bf071b5e047f298df67677d`, exact tree `03d5ea75c102db513e95bc079b91ea8e6898adae`, expected-parent d27155a /force:false. Main7a49fff and original ai807be676 were independently read back unchanged; package2.53.0-pet.1 verified. [Actual publication receipt](../../verification/pet-online-followup-20261027/publication.json). This documentation-only closure preserves all checked runnable/test/configuration bytes. Previous a59/d271 receipts remain tied to their original snapshots; live activation/main deployment remain separate.
 
 ## Historical reconstruction audit at d27155a
 

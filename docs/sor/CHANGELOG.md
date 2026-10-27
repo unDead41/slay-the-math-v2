@@ -8,7 +8,7 @@
   pemulihan kini mempunyai 98 actual capture source 26ecd dan QA terhad VALID:
   170 retained OK + 30 fresh disjoint tail = 200 kes unik, native 14, dua portable
   dan Dev Hub lulus. Stdout asal yang separa serta P2 inherited dikekalkan.
-  Penerbitan main masih PENDING; tiada main push dibuat.
+  Penerbitan main VERIFIED pada `20df8844936fa265ee5c5da60606410ad0df505d`; exact-code Pages run 40453530679 SUCCESS. [Receipt](../verification/mathematics-slayer-20261027/publication.json).
 - Bukti baharu akan mempunyai pin dan indeks sendiri. Sejarah 26 Oktober di bawah
   dikekalkan; tiada log/capture/index yang hilang direka semula sebagai bukti lama.
 
@@ -19,7 +19,7 @@
 - Kekalkan identifier, URL, save/schema, sumber mekanik/aset serta semua sejarah
   bukti. Dokumentasikan portable utama baharu dan alias filename lama.
 - Audit branch sejarah kekal mengikut sumber; tiada dataset mentah, campaign atau
-  latihan diaktifkan semula. QA dan penerbitan calon masih **BELUM DISAHKAN**.
+  latihan diaktifkan semula. Scoped QA **VALID**; penerbitan main 2.52.0 **VERIFIED** pada 20df8844936fa265ee5c5da60606410ad0df505d dengan exact-code Pages SUCCESS.
   [Skop dan status](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 ## Sejarah keluaran terdahulu

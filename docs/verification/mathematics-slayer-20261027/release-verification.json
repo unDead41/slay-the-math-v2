@@ -68,12 +68,25 @@
     "totalRefsAfterCheckpoint": 39
   },
   "mainPublication": {
-    "status": "PENDING",
-    "expectedMain": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
-    "intendedParent": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "status": "VERIFIED_CODE_PUBLICATION",
+    "sha": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "tree": "f30c6a1e971feac28e0a48af12b16b901fc22dd9",
+    "version": "2.52.0",
+    "orderedParents": [
+      "39f8d1302173c1dd817442a865b2b0bbd504dd92"
+    ],
+    "expectedMainBeforeWrite": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
     "force": false,
-    "pages": "NOT_RUN for2.52",
-    "publicBrowser": "NOT_RUN"
+    "readback": "PASS",
+    "pagesCodeRun": {
+      "id": 40453530679,
+      "head": "20df8844936fa265ee5c5da60606410ad0df505d",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40453530679"
+    },
+    "publicBrowser": "NOT_RUN",
+    "receiptHeadWorkflow": "Verify separately after documentation receipt; no status-commit loop"
   },
   "limits": [
     "CI-247-01 and QA-248-PRELOAD-01 P2/open",

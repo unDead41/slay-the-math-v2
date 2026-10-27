@@ -14,8 +14,11 @@
   dua portable, export/save compatibility dan Dev Hub lulus. Capture 98 sebenar
   source 26ecd mempunyai binding 107 input penuh; stdout capture dan command
   focused asal separa, dipelihara dengan batas yang jelas.
-- **Penerbitan main:** PENDING exact-tree GO dan fresh non-forced expected-head
-  lease. Checkpoint branch bukan main publication.
+- **Penerbitan main:** VERIFIED pada `20df8844936fa265ee5c5da60606410ad0df505d`,
+  exact tree f30c6a1e971feac28e0a48af12b16b901fc22dd9, single parent 39f8d130.
+  Fresh expected-ce586 / force:false update dan readback PASS; Pages exact code
+  run 40453530679 SUCCESS. [Receipt](../verification/mathematics-slayer-20261027/publication.json).
+  Follow-up ini dokumentasi sahaja; workflow head akhir disahkan berasingan.
   [Laporan semasa](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 ## DEC-20261026-MATHEMATICS-SLAYER — Nama rasmi dan pelepasan 2.52.0
@@ -31,8 +34,8 @@
   `SLAY-THE-MATH-OFFLINE.html` untuk URL fail lama. Tiada migration/reset storage,
   raw merge branch sejarah, collector, campaign atau latihan model dibenarkan.
 - Master SOR naik **1.3.0**, berasingan daripada versi game **2.52.0**.
-  Verifikasi calon/penerbitan **BELUM DISAHKAN** sehingga bukti dan readback
-  sebenar tersedia. [Laporan semasa](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+  Verifikasi terhad **VALID** dan penerbitan **VERIFIED** pada main 20df8844936fa265ee5c5da60606410ad0df505d;
+  actual ref/tree/lease dan Pages code SUCCESS direkod dalam receipt di atas. [Laporan semasa](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 ## Sejarah keputusan terdahulu
 

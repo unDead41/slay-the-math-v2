@@ -1,7 +1,7 @@
 # Audit Mathematics Slayer — 2.52.0
 
 27 Oktober 2026, Asia/Kuala_Lumpur. **DILAKSANAKAN / VALID dalam skop yang diuji,
-dengan inherited P2 dan jurang stdout terbuka. Main publication PENDING.** Nama
+dengan inherited P2 dan jurang stdout terbuka. Main 2.52.0 publication VERIFIED pada 20df8844936fa265ee5c5da60606410ad0df505d; Pages code 40453530679 SUCCESS.** Nama
 rasmi dipersetujui 26 Oktober; main asas ce586507 / 2.51.0, Master SOR 1.2.0
 dibaca dahulu dan calon 1.3.0 memformalkan nama.
 
@@ -42,5 +42,8 @@ selepasnya.
   physical-device claims.
 
 Tiada isu source tambahan ditemukan dalam skop disemak. Final docs/evidence
-boundary dan actual main ref/tree/version/Pages masih gate berasingan. Main
-memerlukan fresh expected-head non-forced write selepas exact-tree GO Root.
+boundary telah disemak Root. Fresh expected-ce586 / force:false update dan
+actual main ref/tree/version/parent readback lulus; source publication tree ialah
+f30c6a1e971feac28e0a48af12b16b901fc22dd9. [Receipt](../../verification/mathematics-slayer-20261027/publication.json)
+mengekalkan original QA/archive/index; final receipt-head workflow disahkan
+berasingan selepas docs-only follow-up.

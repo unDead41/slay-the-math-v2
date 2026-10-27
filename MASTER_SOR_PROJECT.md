@@ -3,7 +3,9 @@
 Nama rasmi ialah **Mathematics Slayer**, dipersetujui pada 26 Oktober 2026.
 Calon dipulihkan pada 27 Oktober selepas maintenance. Pelaksanaan dan verifikasi
 terhad baharu ialah **DILAKSANAKAN / VALID**, dengan penemuan P2 dan jurang stdout
-asal dinyatakan. Penerbitan main masih **BELUM DITERBITKAN**.
+asal dinyatakan. Penerbitan main **DITERBITKAN / VERIFIED** pada
+`20df8844936fa265ee5c5da60606410ad0df505d`, game 2.52.0. Pages exact code run
+40453530679 SUCCESS; [receipt](docs/verification/mathematics-slayer-20261027/publication.json).
 [Status pemulihan dan bukti](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 | Medan | Rekod |
@@ -68,7 +70,7 @@ Apabila arahan baharu sudah jelas, teruskan dalam skopnya tanpa meminta pengesah
 | Nama lama / sejarah | Slay the Math: Dungeon of Chance; Slay the Math. |
 | Repository teknikal | unDead41/slay-the-math-v2 |
 | Skop | Nama paparan pemain/panduan, metadata dan label eksport; game 2.52.0. |
-| Pelaksanaan / pelepasan | DILAKSANAKAN dan VALID dalam skop QA calon d8e92d82 / checkpoint GitHub 39f8d130, tree eea5bdef; penerbitan main masih PENDING readback. |
+| Pelaksanaan / pelepasan | DILAKSANAKAN / DITERBITKAN; scoped QA VALID, main 20df8844936fa265ee5c5da60606410ad0df505d / 2.52.0, tree f30c6a1e971feac28e0a48af12b16b901fc22dd9 dan Pages code SUCCESS. |
 | Branch / main asas | release/mathematics-slayer-2.52.0; main ce586507dd5a5b55a72ee008ec60a547cd5c2b7e / 2.51.0. |
 
 **IDN-01:** Gunakan ejaan **Mathematics Slayer** dalam BM dan English; jangan

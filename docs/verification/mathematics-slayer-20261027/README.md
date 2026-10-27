@@ -3,7 +3,10 @@
 QA source tempatan `d8e92d82e472dbdf1dde294e944049e902394140` dan checkpoint
 GitHub `39f8d1302173c1dd817442a865b2b0bbd504dd92` mempunyai tree tepat
 `eea5bdefd0b4128ceff34273c037fc10c9aa29cb`. Pakej ini ialah bukti calon;
-main publication dan Pages masih PENDING sebelum actual readback.
+main 2.52.0 publication VERIFIED pada `20df8844936fa265ee5c5da60606410ad0df505d`,
+tree `f30c6a1e971feac28e0a48af12b16b901fc22dd9`; Pages code run 40453530679 SUCCESS.
+[Receipt](publication.json) ditambah di luar archive tertutup. Head dokumentasi
+akhir dan workflow-nya disahkan selepas follow-up, tanpa mengubah original QA.
 
 - Focused: 170 actual OK yang direkod + 30 fresh disjoint tail = 200 kes unik;
   bukan satu command lengkap 200/200. Original TAP kekal separa.

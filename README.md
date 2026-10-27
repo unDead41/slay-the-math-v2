@@ -3,7 +3,7 @@
 Nama rasmi baharu ialah **Mathematics Slayer**, dipersetujui Ijamm pada
 26 Oktober 2026. Calon pemulihan 27 Oktober menyelaraskan nama pemain, Practice,
 label laporan/eksport dan panduan. Repository/URL, storage keys, save/RNG,
-matematik/numerical dan aset asal kekal. **Pelaksanaan/QA terhad ialah VALID; penerbitan main masih PENDING**;
+matematik/numerical dan aset asal kekal. **Pelaksanaan/QA terhad VALID; main 2.52.0 VERIFIED** pada `20df8844936fa265ee5c5da60606410ad0df505d`, exact-code Pages 40453530679 SUCCESS. [Receipt sebenar](docs/verification/mathematics-slayer-20261027/publication.json);
 [laporan semasa](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 `npm run build` menghasilkan `MATHEMATICS-SLAYER-OFFLINE.html` dan alias lama

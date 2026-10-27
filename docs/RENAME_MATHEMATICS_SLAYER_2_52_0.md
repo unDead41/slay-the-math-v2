@@ -2,7 +2,8 @@
 
 27 Oktober 2026, Asia/Kuala_Lumpur. **DILAKSANAKAN; VALID dalam skop yang diuji,
 dengan P2 inherited dan jurang bukti stdout dikekalkan. Penerbitan main 2.52.0
-masih PENDING.** Ijamm mengarahkan nama rasmi **Mathematics Slayer** pada
+VERIFIED pada `20df8844936fa265ee5c5da60606410ad0df505d`; exact-code Pages
+run 40453530679 SUCCESS.** Ijamm mengarahkan nama rasmi **Mathematics Slayer** pada
 26 Oktober dan menegaskannya semula selepas pemulihan. Nama ini sama dalam
 English dan Bahasa Melayu. Tiada gameplay pending baharu perlu raw merge.
 
@@ -86,7 +87,7 @@ yang dilabel semula. Delta source 26ecd39 kepada runtime d8/39f8 tepat 48 path:
 | Source/production file integrity | 765 / 766 entries padan hash/length; semua declared offline files dan shell IDs disemak. Canonical manifest menambah satu fail kepada full retained set production 769. |
 | QA closure | 3,659 tracked files serta production dan kedua-dua portable tepat sebelum/selepas; 0 owned browser/server/private download bodies, privacy PASS. |
 | Full Node suite / 75-pose matrix / campaign / training | NOT_RUN semula; risiko terjejas diuji secara tertumpu dan pemilik yang tidak berubah dibuktikan. |
-| Main / Pages exact head / public browser | PENDING / NOT_RUN / NOT_RUN untuk 2.52.0; local QA dan workflow lama bukan bukti deploy baharu. |
+| Main / Pages exact code / public browser | VERIFIED / SUCCESS run 40453530679 pada 20df8844 / NOT_RUN. Workflow head receipt disahkan berasingan selepas follow-up. |
 
 Kedua-dua portable ialah **312,177,121 bytes**, SHA-256
 `3273aac78a33b9ea6cc08091b41c90160f154c0ad8fbca004dc514d8fb790d05`.
@@ -148,14 +149,26 @@ audit matematik baharu, pupil outcomes, semua browser/OS, OS reboot, peranti
 fizikal atau live Google/provider. Native ini Linux/Chromium 153, bukan pengguna
 Windows/peranti fizikal.
 
-## Penerbitan yang masih menunggu
+## Penerbitan sebenar dan receipt dokumentasi
 
-Root mesti meluluskan tree akhir selepas delta docs/evidence disemak. Main
-commit dirancang single-parent `39f8d1302173c1dd817442a865b2b0bbd504dd92`, yang
-sudah mempunyai ce586507 dalam ancestry. Release Manager membaca main sejurus
-write, menggunakan `expected_sha=ce586507dd5a5b55a72ee008ec60a547cd5c2b7e` dan
-`force:false`. Jika main bergerak, hentikan write dan audit delta, bukan retry
-lease buta. Actual ref/tree/version, source ancestry dan Pages exact head akan
-disahkan berasingan. Satu receipt dokumentasi boleh menutup PENDING tanpa
-rebuild, retest atau loop commit status. **Tiada main publication didakwa dalam
-calon dokumen ini.**
+Main bergerak daripada `ce586507dd5a5b55a72ee008ec60a547cd5c2b7e` kepada
+[`20df8844936fa265ee5c5da60606410ad0df505d`](https://github.com/unDead41/slay-the-math-v2/commit/20df8844936fa265ee5c5da60606410ad0df505d),
+versi **2.52.0**, exact reviewed tree `f30c6a1e971feac28e0a48af12b16b901fc22dd9`,
+single parent `39f8d1302173c1dd817442a865b2b0bbd504dd92`. Fresh read main, `expected_sha` ce586507,
+`force:false` dan actual ref/tree/version/parent readback lulus. Local reviewed
+4eb8c060 mempunyai tree sama; parent GitHub mengekalkan source/capture checkpoints
+39f8/26ecd dan main asas dalam ancestry.
+
+[Pages run 40453530679](https://github.com/unDead41/slay-the-math-v2/actions/runs/40453530679)
+COMPLETED/SUCCESS pada exact code SHA. Root mengesahkan secara bebas main, tree,
+parent, versi dan workflow pada 27 Oktober. Current 39 refs turut disemak: semua
+37 non-main head asal kekal dan task branch masih 39f8. Remote compare 39f8→20df
+ialah ahead 1 / behind 0, tepat 24 docs/evidence paths tanpa source delta.
+
+[Publication metadata](verification/mathematics-slayer-20261027/publication.json)
+ditambah di luar archive/index tertutup. Receipt ini hanya menutup status
+penerbitan dalam dokumentasi; semua runtime, test/config/generated, archive,
+indeks dan original QA bytes kekal. Workflow receipt-head akan disahkan selepas
+follow-up tanpa loop commit status. Public-browser atau live Google/provider
+success tidak disimpulkan daripada Pages. Tiada build atau suite dijalankan
+semula untuk receipt dokumentasi ini.

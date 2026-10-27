@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "game": "Mathematics Slayer",
+  "gameVersion": "2.52.0",
+  "masterSOR": "1.3.0",
+  "preparedAtUTC": "2026-10-27T05:11:57.977183+00:00",
+  "sourcePublication": {
+    "from": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+    "to": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "tree": "f30c6a1e971feac28e0a48af12b16b901fc22dd9",
+    "version": "2.52.0",
+    "orderedParents": [
+      "39f8d1302173c1dd817442a865b2b0bbd504dd92"
+    ],
+    "localReviewed": "4eb8c0605ab4455d7bceb514fda5a936df38d4b9",
+    "expected_sha": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+    "force": false,
+    "updateResult": {
+      "success": true
+    },
+    "mainReadback": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "scope": "Game source publication verified; Pages pending separate readback",
+    "qaRuntime": "d8e92d82e472dbdf1dde294e944049e902394140",
+    "qaRemoteEquivalent": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "observedAtUTC": "2026-10-27T05:07:37.129352+00:00"
+  },
+  "sourceParentChain": [
+    "20df8844936fa265ee5c5da60606410ad0df505d",
+    "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
+    "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e"
+  ],
+  "sourcePages": {
+    "id": 40453530679,
+    "head_sha": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "name": "Publish game to GitHub Pages",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40453530679",
+    "created_at": "2026-10-27T05:07:37Z",
+    "updated_at": "2026-10-27T05:08:34Z",
+    "event": "push"
+  },
+  "remoteCompare": {
+    "from": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "to": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "ahead": 1,
+    "behind": 0,
+    "paths": 24,
+    "scope": "docs/evidence only; no canonical runnable delta"
+  },
+  "independentCoordinatorReadback": {
+    "reportedBy": "Root",
+    "dateMYT": "27 October 2026",
+    "main": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "tree": "f30c6a1e971feac28e0a48af12b16b901fc22dd9",
+    "singleParent": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+    "version": "2.52.0",
+    "exactCodePages": "SUCCESS",
+    "refCount": 39,
+    "originalNonMainHeads": 37,
+    "allOriginalNonMainHeadsUnchanged": true,
+    "taskBranchHead": "39f8d1302173c1dd817442a865b2b0bbd504dd92"
+  },
+  "evidencePreserved": {
+    "archiveSHA256": "04b312304a60d5d2c9e848e52d53cc47abdbc36fc71fc316750e9c3b7ecdf520",
+    "indexSHA256": "8639eca581cd248a37ab9212729eb4b79f3da868d0d95a1fffcae684fd8c6d82",
+    "qaEvidenceSHA256": "2b18e913fa29248851fd736d0570c3489ddfd4a4b5dff86d21f1f08ee39497b8",
+    "originals": 124,
+    "privacy": "PASS; no private bodies",
+    "partialCaptureStdout": "Retained actual20lines/9completion, cause unknown",
+    "focused": "170 observed OK +30 fresh disjoint PASS, not one200command"
+  },
+  "receipt": {
+    "scope": "documentation only",
+    "intendedParent": "20df8844936fa265ee5c5da60606410ad0df505d",
+    "runtimeTestConfigGeneratedDelta": 0,
+    "archiveOrClosedIndexChanged": false,
+    "finalHeadAndWorkflow": "Read back separately after this receipt; no recursive status commit"
+  },
+  "limits": [
+    "Public-browser NOT_RUN",
+    "Live Google/provider NOT_RUN",
+    "No physical/all-browser/OS reboot/human-audio claims",
+    "No full-suite/campaign/training repeat",
+    "Inherited P2 and historical D1/D2 retained"
+  ]
+}

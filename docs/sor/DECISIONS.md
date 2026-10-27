@@ -1,5 +1,23 @@
 # Daftar keputusan — Mathematics Slayer
 
+## DEC-20261027-PET-MAIN — Terbitkan pakej Pet yang pending
+
+- **DISAHKAN:** Ijamm meminta audit dan push semua kerja yang benar-benar pending
+  ke main. Pet `07677f62ede996e2dd66d9b53f9fd5e152069863` ialah enam commit terus selepas
+  main `7a49fff83388347f0157616fc6b051ddbda4c694` / 2.52.0; integrasi stabil ialah **2.53.0**.
+  Ini supersedes sempadan branch-only Pet untuk integrasi ini sahaja.
+- Kekalkan pet/art asal, permission Online eksplisit melalui pemilik sedia ada,
+  original Hint/attempt accounting, local help, current/archived numerical rules,
+  save/RNG, bahasa, pendidikan, VFX/Idle dan semua sejarah/evidence asal.
+- Tiada raw merge branch specialist sejarah, key, live provider/backend, campaign,
+  latihan model atau perubahan nilai mekanik. Registry kekal pada source asal.
+- **Verifikasi gabungan:** VALID dalam skop calon tempatan 728d25e7 / tree
+  2bb0b762. 126 Node dengan EOF penuh, 54 native Pet, 15 cold-offline dan dua
+  portable PASS; Root memeriksa 4,163 parameter matematik secara berasingan.
+  **Penerbitan main:** PENDING.
+  Bukti feature terdahulu kekal berasingan daripada calon stabil baharu.
+  [Laporan semasa](../PET_MAIN_2_53_0.md).
+
 ## DEC-20261027-PET-RECOVERY-GUIDANCE — Resume two deferred Minor fixes
 
 - **DITERUSKAN:** Ijamm asks to resume. Continue the existing pet feature scope on `codex/ai-pet-online-20261025`, starting at d27155a7544d3fccd5b68d35c506c9d6ee47f5ab; current main remains7a49fff83388347f0157616fc6b051ddbda4c694 /2.52.0, Master SOR1.3.0.

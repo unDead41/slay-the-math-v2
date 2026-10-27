@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checkedUTC": "2026-10-27T13:54:16.442639+00:00",
+  "jsonFilesScanned": 18,
+  "forbiddenStructuredSaveSessionRNGBodies": [],
+  "rawLogsReviewed": [
+    "syntax-pet.log",
+    "native-pet.log",
+    "cold-offline.log",
+    "portable.log",
+    "focused.log",
+    "setup-jsdom.log",
+    "syntax-app.log",
+    "syntax-server.log"
+  ],
+  "nativeRawBodyFilesCreated": 0,
+  "realPlayerRecordsUsed": false,
+  "providerKeysUsed": "Only hardcoded fake fixtures inside automated tests; no live key or live provider call",
+  "classroomCodeBoundary": "Production expected auth configuration remains server-side; entered QA fake code stays browser tab memory/Bearer. No real classroom credential is recorded.",
+  "allowed": [
+    "QA scripts/diffs",
+    "complete command stdout/EOF and metadata",
+    "SHA256/byte counts and synthetic fixture equality flags",
+    "UI screenshots with QA fixtures only"
+  ],
+  "excluded": [
+    "browser profiles/caches/temp",
+    "dependency folders/binaries",
+    "raw full save/session/RNG/export bodies"
+  ],
+  "interpretation": "Scoped structural and manual report/log review; not a universal secret detector.",
+  "finalAllDataArtifactsReviewedUTC": "2026-10-27T13:57:19.525746+00:00",
+  "carrierReview": "Index/handoff contain only allowlisted paths/hashes/counts, no bodies."
+}

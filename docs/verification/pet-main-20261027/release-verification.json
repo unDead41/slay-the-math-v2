@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-27T14:00:11.743417+00:00",
+  "status": "VALID_WITH_CARRIED_FINDINGS_AND_EXPLICIT_LIMITS",
+  "publication": "PENDING",
+  "gameVersion": "2.53.0",
+  "masterSOR": "1.3.0",
+  "mainBase": "7a49fff83388347f0157616fc6b051ddbda4c694",
+  "feature": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+  "testedLocalCandidate": "728d25e7a9969b3570e7e8943664b9a6c43ce67c",
+  "testedLocalTree": "2bb0b762478cc76243097cc9aba7300bebab6524",
+  "localCheckpointNote": "Local SHA is not a claimed GitHub commit. API commit will be bound by exact tree and unchanged runnable bytes.",
+  "freshQA": {
+    "focusedNode": 126,
+    "nodeFail": 0,
+    "nodeSkip": 0,
+    "nodeCancel": 0,
+    "completeEOF": true,
+    "syntaxFiles": 7,
+    "nativePet": 54,
+    "coldOffline": 15,
+    "portable": 2,
+    "qaClosedUTC": "2026-10-27T13:53:17.315721Z",
+    "trackedHashesStable": 3750,
+    "ownedBrowserServerPIDs": [],
+    "privacy": "PASS",
+    "rawPrivateBodies": 0
+  },
+  "rootMathematicalOracle": {
+    "parameterChecks": 4163,
+    "fail": 0,
+    "separateFromNodeCases": true
+  },
+  "sourceManifest": {
+    "manifestSha256": "2352e6dc885c907b2e16547979a9d16354c4f78c177fda1032e92c7f2b3b325b",
+    "manifestBytes": 319111,
+    "manifestId": "2cd3983e582904c5dc632414",
+    "entries": 770
+  },
+  "productionManifest": {
+    "manifestSha256": "543cb3a9527b4e133c6b34f82308d09518abea770784795156f94297edbe67ef",
+    "manifestBytes": 319510,
+    "manifestId": "b0d1369647d48acbf3bd64fd",
+    "entries": 771
+  },
+  "portable": {
+    "MATHEMATICS-SLAYER-OFFLINE.html": {
+      "bytes": 318208878,
+      "sha256": "4811f778f856642811e4ecc234921ecb686abbca805286491941ccd89765a2aa"
+    },
+    "SLAY-THE-MATH-OFFLINE.html": {
+      "bytes": 318208878,
+      "sha256": "4811f778f856642811e4ecc234921ecb686abbca805286491941ccd89765a2aa"
+    }
+  },
+  "qaOriginals": {
+    "files": 47,
+    "bytes": 3310579,
+    "evidenceSHA256": "b0664555f568ae6767755b49ce6d0cb37c6cca989cda0f806aa90693eb0909de",
+    "indexSHA256": "5dbe369eb1c12dd513c85a70cc89f9949680777b2b0d7d2cc641b6930454138c",
+    "handoffSHA256": "4c824f8f2ad9ffa7f495a08419795b24b02d3ff3028e9a849ed8b5a0ec6c59d5"
+  },
+  "publicArchive": {
+    "file": "public-evidence.tar.gz",
+    "bytes": 2309088,
+    "sha256": "243cb6f9f40743a571a0f564c153dabd211a3946cc908fdd2862ed8ae6fbd83b"
+  },
+  "publicIndexSHA256": "cb5a3029637d3badca49566b15ce59dbc61485a9d0c0e014b5a77d2c97a83a28",
+  "publicOriginals": {
+    "count": 66,
+    "bytes": 3913411,
+    "roundtrip": "PASS"
+  },
+  "historicalCapture": {
+    "images": 98,
+    "inputs": 111,
+    "currentExact": 107,
+    "different": [
+      "education-practice.js",
+      "index.html",
+      "pet-assistant.js",
+      "release.js"
+    ],
+    "appEngineAndImageBytesExact": true,
+    "recaptured": false
+  },
+  "limits": [
+    "No fresh full Node suite/capture campaign/training/pupil/physical/human-audio validation",
+    "No live provider/backend/Google or public-browser activation",
+    "Inherited CI-247-01, QA-248-PRELOAD-01 and AM-U01 remain source-bound/open",
+    "Actual main/ref/tree and exact-head Pages require publication readback"
+  ]
+}

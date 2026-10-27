@@ -1,5 +1,21 @@
 # Emberlyn — Online API and local learning help
 
+## Main 2.53.0 — skop penerbitan semasa, 27 Oktober 2026
+
+Ijamm kini mengarahkan audit dan penerbitan semua pakej yang benar-benar pending.
+Ini membenarkan integrasi Emberlyn daripada `07677f62ede996e2dd66d9b53f9fd5e152069863`
+ke main `7a49fff83388347f0157616fc6b051ddbda4c694` / 2.52.0 sebagai **2.53.0**.
+Klausa branch-only/no-main di bawah kekal sejarah untuk sumber asalnya dan
+superseded bagi integrasi ini sahaja. Kontrak keselamatan, satu pemilik
+Online/Offline, local help, original Hint, save/RNG dan semua pemilik semasa kekal.
+**QA gabungan VALID dalam skop yang dinyatakan; penerbitan main PENDING**
+sehingga expected-head update dan readback sebenar tersedia. Calon tempatan
+`728d25e7a9969b3570e7e8943664b9a6c43ce67c` / tree
+`2bb0b762478cc76243097cc9aba7300bebab6524` mempunyai 126 focused Node,
+54 native Pet, 15 cold-offline dan dua portable PASS; ini bukan full suite atau
+live provider validation. Ini tidak mengaktifkan provider atau backend awam.
+[Skop, bukti dan had semasa](PET_MAIN_2_53_0.md).
+
 Candidate **2.53.0-pet.1**, branch `codex/ai-pet-online-20261025`, based on actual main `7a49fff83388347f0157616fc6b051ddbda4c694` /2.52.0. Main remains outside this feature's publication scope. This conversational helper is separate from the existing developer playtester/model; no simulation campaign, balancing values or model training changes.
 
 ## Current integration

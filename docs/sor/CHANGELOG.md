@@ -1,3 +1,16 @@
+# 2.53.0 — Emberlyn main integration (27 Oktober 2026)
+
+- Gabungkan pakej Pet yang pending dengan sejarah enam commit asal; promote
+  2.53.0-pet.1 kepada versi stabil 2.53.0 melalui build owners semasa.
+- Pet asal, local help, explicit Online permission, original Hint dan recovery
+  guidance dikekalkan. Kontrak aktivasi operator tidak diaktifkan secara automatik.
+- Tambah supersession skop main dan laporan baharu; keputusan/receipt/hasil ujian
+  lama kekal pada pin asal. QA terhad VALID: 126 Node, 54 native Pet,
+  15 cold-offline dan dua portable PASS pada calon 728d25e7; main PENDING.
+  [Skop dan bukti](../PET_MAIN_2_53_0.md).
+
+## Sejarah candidate Pet
+
 # 2.53.0-pet.1 — Emberlyn assistant candidate (27 October 2026)
 
 Integrates the original pet and protected Online API on Mathematics Slayer main2.52.0, reusing the canonical Online/Offline adapter and installer. Feature branch only; no main publication/live provider validation. Earlier2.52.0-pet.1 was a local interim candidate before the current main rename.

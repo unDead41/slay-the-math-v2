@@ -4,7 +4,7 @@ const template="<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf
 function createDocument(data,options={}){
 const payload=JSON.stringify({bank:data.bank,glossary:data.glossary,foundations:data.foundations}).replace(/</g,"\\u003c");
 const review=typeof options.reviewQuestionId==="string"&&data.bank.questions.some(q=>q.id===options.reviewQuestionId)?options.reviewQuestionId:null;
-const bootstrap="<script>window.DCRelease="+JSON.stringify({version:root.DCRelease?.version||"2.53.0-pet.1"})+";window.DCLearningCollectionConfig="+JSON.stringify({googleScriptUrl:root.DCLearningCollectionConfig?.googleScriptUrl||""}).replace(/</g,"\\u003c")+";window.DC_PRACTICE_INITIAL_REVIEW="+JSON.stringify(review)+";<\/script>";
+const bootstrap="<script>window.DCRelease="+JSON.stringify({version:root.DCRelease?.version||"2.53.0"})+";window.DCLearningCollectionConfig="+JSON.stringify({googleScriptUrl:root.DCLearningCollectionConfig?.googleScriptUrl||""}).replace(/</g,"\\u003c")+";window.DC_PRACTICE_INITIAL_REVIEW="+JSON.stringify(review)+";<\/script>";
 return template.replace("__DATA__",()=>payload).replace("</head>",()=>bootstrap+"</head>");
 }
 const api={createDocument};if(typeof module!=="undefined")module.exports=api;else root.DCEducationPractice=api;

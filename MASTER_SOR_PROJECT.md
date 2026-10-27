@@ -1,5 +1,21 @@
 # MASTER SOR — Mathematics Slayer
 
+## Main 2.53.0 — skop penerbitan semasa, 27 Oktober 2026
+
+Ijamm kini mengarahkan audit dan penerbitan semua pakej yang benar-benar pending.
+Ini membenarkan integrasi Emberlyn daripada `07677f62ede996e2dd66d9b53f9fd5e152069863`
+ke main `7a49fff83388347f0157616fc6b051ddbda4c694` / 2.52.0 sebagai **2.53.0**.
+Klausa branch-only/no-main di bawah kekal sejarah untuk sumber asalnya dan
+superseded bagi integrasi ini sahaja. Kontrak keselamatan, satu pemilik
+Online/Offline, local help, original Hint, save/RNG dan semua pemilik semasa kekal.
+**QA gabungan VALID dalam skop yang dinyatakan; penerbitan main PENDING**
+sehingga expected-head update dan readback sebenar tersedia. Calon tempatan
+`728d25e7a9969b3570e7e8943664b9a6c43ce67c` / tree
+`2bb0b762478cc76243097cc9aba7300bebab6524` mempunyai 126 focused Node,
+54 native Pet, 15 cold-offline dan dua portable PASS; ini bukan full suite atau
+live provider validation. Ini tidak mengaktifkan provider atau backend awam.
+[Skop, bukti dan had semasa](docs/PET_MAIN_2_53_0.md).
+
 Nama rasmi ialah **Mathematics Slayer**, dipersetujui pada 26 Oktober 2026.
 Calon dipulihkan pada 27 Oktober selepas maintenance. Pelaksanaan dan verifikasi
 terhad baharu ialah **DILAKSANAKAN / VALID**, dengan penemuan P2 dan jurang stdout

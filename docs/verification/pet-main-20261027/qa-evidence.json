@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "status": "VALID_WITH_CARRIED_FINDINGS_AND_EXPLICIT_LIMITS",
+  "qaWindow": "CLOSED",
+  "closedUTC": "2026-10-27T13:53:17.315721+00:00",
+  "gameName": "Mathematics Slayer",
+  "version": "2.53.0",
+  "MasterSOR": "1.3.0",
+  "baseMain": "7a49fff83388347f0157616fc6b051ddbda4c694",
+  "feature": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+  "testedCandidateSHA": "728d25e7a9969b3570e7e8943664b9a6c43ce67c",
+  "testedCandidateTree": "2bb0b762478cc76243097cc9aba7300bebab6524",
+  "readPins": [
+    {
+      "ref": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "path": "MASTER_SOR_PROJECT.md",
+      "gitBlob": "e69579f734606f5604bbe15a32456420296f09f3"
+    },
+    {
+      "ref": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "path": "AGENTS.md",
+      "gitBlob": "39d4458cbcfdd5fd3af580a268a8839650c5ed9b"
+    },
+    {
+      "ref": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "path": "docs/sor/00_GOVERNANCE.md",
+      "gitBlob": "1790edb24770f8fdb617e7a584d828c509451290"
+    },
+    {
+      "ref": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "path": "docs/sor/15_QA_RELEASE.md",
+      "gitBlob": "60b0de26f56a434419630c5ec66e08a7b6f7a46e"
+    },
+    {
+      "ref": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "path": "docs/sor/13_TECH_ARCHITECTURE_DATA.md",
+      "gitBlob": "d970b85bc39a8b6081a1896729ba778efc694016"
+    },
+    {
+      "ref": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "path": "docs/sor/DECISIONS.md",
+      "gitBlob": "cd12eebce3c4148b565bb97e74b77dc4dae18842"
+    },
+    {
+      "ref": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+      "path": "docs/sor/27_PET_ASSISTANT.md",
+      "gitBlob": "6cd5440df25692cae4ee6b286469abf8c29219ef"
+    },
+    {
+      "ref": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+      "path": "docs/PET_ASSISTANT.md",
+      "gitBlob": "ddf8e0948e2916c1302d5c607334f1d9918ccfc4"
+    },
+    {
+      "ref": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+      "path": "docs/AI_PET_PUBLISHER_HANDOFF.md",
+      "gitBlob": "6fcdf0ef2f549a3de2c1e5014e558907b98ec10b"
+    },
+    {
+      "ref": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+      "path": "docs/audits/pet-assistant/LATEST.md",
+      "gitBlob": "edcd47d949ede144a6959944d5245fc314ef3970"
+    },
+    {
+      "ref": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+      "path": "docs/verification/pet-online-followup-20261027/README.md",
+      "gitBlob": "5e4571f4430174252bad3905ad337470f94c334b"
+    }
+  ],
+  "sourceClosure": {
+    "trackedCount": 3750,
+    "trackedClean": true,
+    "trackedDelta": [],
+    "artifactDelta": [],
+    "before": "before.json",
+    "after": "after.json",
+    "artifacts": {
+      "MATHEMATICS-SLAYER-OFFLINE.html": {
+        "bytes": 318208878,
+        "sha256": "4811f778f856642811e4ecc234921ecb686abbca805286491941ccd89765a2aa"
+      },
+      "SLAY-THE-MATH-OFFLINE.html": {
+        "bytes": 318208878,
+        "sha256": "4811f778f856642811e4ecc234921ecb686abbca805286491941ccd89765a2aa"
+      },
+      "release-prod/index.html": {
+        "bytes": 11862,
+        "sha256": "c52ebccb70c4e03967fad2668867ddd4bf1543776bf0b8f405b8640c09d452c5"
+      },
+      "release-prod/asset-manifest.json": {
+        "bytes": 319510,
+        "sha256": "543cb3a9527b4e133c6b34f82308d09518abea770784795156f94297edbe67ef"
+      }
+    }
+  },
+  "currentResults": [
+    {
+      "family": "focused pet/dependent Node checks",
+      "status": "PASS",
+      "tests": 126,
+      "pass": 126,
+      "fail": 0,
+      "skip": 0,
+      "cancel": 0,
+      "command": "focused.json",
+      "log": "focused.log",
+      "completeEOF": true,
+      "seconds": 19.427,
+      "scope": "14files; includes41pet(API19/widget19/actualappconsumers3),branding4,sharedmode/installer/worker/release/assets/language/educationrecovery/strictmedia.41and4areincluded,notadditional126counts."
+    },
+    {
+      "family": "source syntax",
+      "status": "PASS",
+      "commands": [
+        "syntax-pet.json",
+        "syntax-app.json",
+        "syntax-server.json"
+      ],
+      "files": 7,
+      "scope": "petbackend/math/config/knowledge/widget plusactualapp/server"
+    },
+    {
+      "family": "native pet",
+      "status": "PASS",
+      "originalGroups": 54,
+      "command": "native-pet.json",
+      "log": "native-pet.log",
+      "report": "pet-browser-artifacts/report.json",
+      "seconds": 57.422,
+      "errors": 0,
+      "additionalAssertions": "ActualDCRelease2.53.0,MathSlayertitle/h1andactualPOSTclientRelease2.53.0.Original54checksretained; additionsarenotcountedasnewgroups.",
+      "scope": [
+        "defaultOnlineisnotconsent;explicitOnlineandlocalOfflinefallback",
+        "whitelistedpubliccontextandunchangedsave/RNG/keyboard",
+        "nativeinside-modaltrigger/focus/language/localmaths",
+        "BM/EN401UNAUTHORIZEDand409VERSION_MISMATCHallowlistedrecovery;arbitraryserverbodyhidden;retryexcludesfailedhistory",
+        "pendingquestionguardafterHome;originalHintrecordsassistancewithoutattempt/RNG/APIchanges",
+        "originalpetandportablelocalhelp"
+      ],
+      "layoutLimit": "Assertions/checknamesaboutdialogfitprovehorizontalboundsandactualreachablecontrols.Phonecontentmayrequireverticalscroll;noall-content-in-one-viewportclaim.",
+      "provider": "Controlled localHTTP interception only; no live provider/key/activation."
+    },
+    {
+      "family": "production retained installation/cold restart",
+      "status": "PASS",
+      "originalGroups": 15,
+      "command": "cold-offline.json",
+      "log": "cold-offline.log",
+      "report": "cold-offline-artifacts/report.json",
+      "seconds": 141.784,
+      "errors": 0,
+      "actualVersion": "2.53.0",
+      "actualManifestId": "b0d1369647d48acbf3bd64fd",
+      "retainedFilesIncludingCanonicalManifest": 774,
+      "retainedBytesIncludingCanonicalManifest": 237492918,
+      "newBrowserProcess": true,
+      "serverStopped": true,
+      "httpCacheDisabled": true,
+      "networkRoutesBlocked": true,
+      "serviceWorkerNavigation": true,
+      "scope": [
+        "originalEmberlynPNGdecode/localLogiczeroextraAPI",
+        "120Practicequestions",
+        "23chapters/114pictureexposures/98uniquehistoricalEN/BMframesdecode",
+        "4stage/bossfixtures,actualactors/VFX/Predict/actionswithexactbattle/RNG/deck/stats",
+        "85MP3decode,onerealmutedWebAudiosource(nohumanaudition)",
+        "actual404pause/resume,retainedreuse,evictionandcorruptbootstraprecovery"
+      ],
+      "additionalAssertions": "Actualcoldgameversion2.53.0/titleandownproductionmanifestbinding;all15originalassertiongroupsretained.",
+      "storageLimit": "Task-owned disk profile across browser-process restart; not OS reboot or permanent browser retention."
+    },
+    {
+      "family": "both standalone aliases",
+      "status": "PASS",
+      "cases": 2,
+      "command": "portable.json",
+      "log": "portable.log",
+      "report": "portable-artifacts/report.json",
+      "seconds": 11.157,
+      "casesSummary": [
+        {
+          "file": "MATHEMATICS-SLAYER-OFFLINE.html",
+          "language": "en",
+          "viewport": {
+            "width": 1366,
+            "height": 900
+          },
+          "status": "PASS",
+          "actualVersion": "2.53.0",
+          "httpRequests": [],
+          "errors": [],
+          "originalPet": {
+            "bytes": 4427889,
+            "sha256": "51ac96816818d22a27d469286926863f32b362e90c33dca5d62a1bbaa075a2fc",
+            "width": 1536
+          },
+          "localSetsHelp": true,
+          "explicitOffline": true,
+          "browserCacheReady": false,
+          "oldStorageKey": "duel-cube-math.v1",
+          "legacyDeckCount": 12,
+          "exactSaveAndRNGUnchanged": true,
+          "screenshot": "portable-en.jpg",
+          "layoutScope": "Horizontal bounds and reachable close/control flow; dialog may scroll vertically, not all content asserted visible simultaneously"
+        },
+        {
+          "file": "SLAY-THE-MATH-OFFLINE.html",
+          "language": "ms",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": "PASS",
+          "actualVersion": "2.53.0",
+          "httpRequests": [],
+          "errors": [],
+          "originalPet": {
+            "bytes": 4427889,
+            "sha256": "51ac96816818d22a27d469286926863f32b362e90c33dca5d62a1bbaa075a2fc",
+            "width": 1536
+          },
+          "localSetsHelp": true,
+          "explicitOffline": true,
+          "browserCacheReady": false,
+          "oldStorageKey": "duel-cube-math.v1",
+          "legacyDeckCount": 12,
+          "exactSaveAndRNGUnchanged": true,
+          "screenshot": "portable-ms.jpg",
+          "layoutScope": "Horizontal bounds and reachable close/control flow; dialog may scroll vertically, not all content asserted visible simultaneously"
+        }
+      ],
+      "scope": "EachfileURLseededseparatelywithofficialsyntheticlegacy12cardfixture.Noautomaticcross-file-originstoragemigrationclaim."
+    },
+    {
+      "family": "actual manifest bytes at closure",
+      "status": "PASS",
+      "proof": "closing-verification.json",
+      "builds": {
+        "source": {
+          "manifestId": "2cd3983e582904c5dc632414",
+          "gameVersion": "2.53.0",
+          "manifestSHA256": "2352e6dc885c907b2e16547979a9d16354c4f78c177fda1032e92c7f2b3b325b",
+          "entries": 770,
+          "offlineListedFiles": 772,
+          "uniqueFileDigestsChecked": 772,
+          "mismatches": []
+        },
+        "production": {
+          "manifestId": "b0d1369647d48acbf3bd64fd",
+          "gameVersion": "2.53.0",
+          "manifestSHA256": "543cb3a9527b4e133c6b34f82308d09518abea770784795156f94297edbe67ef",
+          "entries": 771,
+          "offlineListedFiles": 773,
+          "uniqueFileDigestsChecked": 773,
+          "mismatches": []
+        }
+      },
+      "mismatches": [],
+      "ownedActiveBrowserServerPIDs": []
+    }
+  ],
+  "historicalReuse": {
+    "independentAudit": "../integration-auditor/source-semantic-728d25e7.json",
+    "auditSHA256": "68687747a94bf82633a428cd3bf439012aa9ffc9b526c7e8b868fd2dc6c991ea",
+    "featureRuntimeSourceBindings": {
+      "count": 274,
+      "mismatches": []
+    },
+    "featureTestInputBindings": {
+      "count": 222,
+      "mismatches": []
+    },
+    "stableVsFeature": {
+      "total": 23,
+      "runtimeGeneratedVersionPaths": [
+        "MAIN-SEKARANG.html",
+        "dist/asset-manifest.json",
+        "dist/education-practice.js",
+        "dist/index.html",
+        "dist/release.js",
+        "index.html",
+        "modules/mechanics/integration-audit.json",
+        "package.json"
+      ],
+      "docsPaths": [
+        "AGENTS.md",
+        "MASTER_SOR_PROJECT.md",
+        "README.md",
+        "SOR_README.md",
+        "docs/AI_PET_PUBLISHER_HANDOFF.md",
+        "docs/PET_ASSISTANT.md",
+        "docs/PET_MAIN_2_53_0.md",
+        "docs/audits/pet-assistant/LATEST.md",
+        "docs/audits/pet-main/LATEST.md",
+        "docs/pet-ai/PLAY_MODE_HANDOFF.md",
+        "docs/sor/13_TECH_ARCHITECTURE_DATA.md",
+        "docs/sor/15_QA_RELEASE.md",
+        "docs/sor/27_PET_ASSISTANT.md",
+        "docs/sor/CHANGELOG.md",
+        "docs/sor/DECISIONS.md"
+      ],
+      "behaviorAndTestChange": false
+    },
+    "broadOwner": "1266distinctrecordedPASScasesacrosscommandsatownerfeature;originalfullcommandexit1with2SharpdependencyfailuresandnoEOF,onecorrectedimageprobe+disjoint29tailretained.DonotlabelonefullgreenorrecountasfreshstableQA.",
+    "originalLogsRemain": "docs/verification/pet-online-followup-20261027/",
+    "currentFullSuite": "NOT_RUN;unchangedmodules/source/testbindingsplusfreshselecteddependentsprovideproportionalscope,nounchanged-riskorzero-defectpromise.",
+    "tutorial": {
+      "catalogueSHA256": "6f8b3d5b40d1709f8bb5c46a738f9e4ff37dc05a447f16dad7d3dde88cd7accf",
+      "localCaptureCommit": "5f5c547aaa606f9dd790ae5e3b99acd86516b0b7",
+      "githubEquivalentCapture": "1c4d86f4f876ccec4821c70acd12846e08ba09e0",
+      "captureTree": "6e9f20861b5c19fe272161daf4258d4113b77133",
+      "gameVersionAtCapture": "2.53.0-pet.1",
+      "images": 98,
+      "languages": {
+        "en": 49,
+        "ms": 49
+      },
+      "runtimeInputs": 111,
+      "originalSourceInputErrors": [],
+      "featureInputMismatches": [
+        "index.html",
+        "pet-assistant.js",
+        "release.js"
+      ],
+      "stableInputMismatches": [
+        "education-practice.js",
+        "index.html",
+        "pet-assistant.js",
+        "release.js"
+      ],
+      "appAndEngineExact": true,
+      "all98ImageBytesDimensionsActionsAndOriginalBatchVerified": true,
+      "freshCaptureClaimed": false,
+      "strictRawTutorialTestAndOwnerCLIExact": true
+    },
+    "tutorialInterpretation": "98pictures/actions/batchesremainoriginalsource5f5/equivalentGitHub1c4d86,version2.53.0-pet.1.Stable107/111hashesmatch;fouralloweddifferenceseducation-practice.js,index.html,pet-assistant.js,release.js.App/engine/all98actualimagebytesunchanged.Strictmedia3freshPASS,nocapture/normalization/relabel."
+  },
+  "currentFailures": [],
+  "findings": [
+    {
+      "category": "Confirmeddocumentationprecision",
+      "priority": "P3",
+      "status": "FINAL_DOC_OWNER_FOLLOWUP",
+      "path": "docs/PET_MAIN_2_53_0.md",
+      "detail": "Expectedclassroomauthenticationconfigurationisserver-side;enteredcodeintentionallyexistsonlyintabmemory/Bearer.Clientcodeisnotproviderkey.Keepfinaldocsprecise;auditorfindingdoesnotrequireproductchange."
+    }
+  ],
+  "inherited": [
+    "CI-247-01 P2/open;noiconharnessfixclaimed",
+    "QA-248-PRELOAD-01 P2/open;freshnativepassdoesnotclosehistoricalretained-counterfinding",
+    "AM-U01 remainswithitsmotionowner"
+  ],
+  "privacy": {
+    "status": "PASS",
+    "proof": "privacy.json",
+    "realPlayerRecordsUsed": false,
+    "rawSaveSessionRNGExportBodiesPublished": 0,
+    "providerKeys": "No real provider key used; testfixtures only.",
+    "classroomCode": "No real classroom code used. Fake QA enteredcodeisnotpersisted;productionexpectedconfigurationandbrowserBearerareseparate.",
+    "exclusions": [
+      "taskprivatebodies/profiles/cache/temp",
+      "dependency/binarydirectories"
+    ]
+  },
+  "environment": {
+    "proof": "environment-preparation.json",
+    "node": "24.22.1",
+    "jsdom": "26.1.0",
+    "playwright": "1.62.1",
+    "sharp": "0.35.5",
+    "chromium": "153.0.8010.0",
+    "chromiumSHA256": "53a15d6c3a3d27dfb54c4ba60278b1683136f70cf1e67e989da7dfbd3d451ef0",
+    "FONTCONFIG_PATH": "/etc/fonts",
+    "IMAGE_QA_MODULE": "configuredexistingSharp",
+    "storage": "task-owneddisktmpwithnormal/dev/shm",
+    "recording": "ParentstdoutpipeandoneEOFlogwrite;allcurrentlogscomplete"
+  },
+  "notRun": [
+    "newfullNodesuite/98recapture/unchanged75posematrix",
+    "liveOpenAI/providerquality/accuracy/latency/billing/retention/publicbackendactivation",
+    "realclassroomauth/distributedorper-studentquota/HTTPSoperations",
+    "publicPagesbrowser/permanentcacheeviction/OSreboot/physicaldevices/otherbrowserfamilies",
+    "humanaudio/screenreader/pupilcomprehension/MODEL.zip",
+    "newAItraining/balancecampaign/simulation/collector"
+  ],
+  "releaseBoundary": "QAdoesnotpushrefs/main.Finaldocs/evidencemayfollow;resultsreuseonlywhenexactcoveredrunnable/test/config/generatedbytesarepreserved."
+}

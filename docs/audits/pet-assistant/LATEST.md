@@ -1,5 +1,21 @@
 # Emberlyn recovery guidance — latest, 27 October 2026
 
+## Main 2.53.0 — skop penerbitan semasa, 27 Oktober 2026
+
+Ijamm kini mengarahkan audit dan penerbitan semua pakej yang benar-benar pending.
+Ini membenarkan integrasi Emberlyn daripada `07677f62ede996e2dd66d9b53f9fd5e152069863`
+ke main `7a49fff83388347f0157616fc6b051ddbda4c694` / 2.52.0 sebagai **2.53.0**.
+Klausa branch-only/no-main di bawah kekal sejarah untuk sumber asalnya dan
+superseded bagi integrasi ini sahaja. Kontrak keselamatan, satu pemilik
+Online/Offline, local help, original Hint, save/RNG dan semua pemilik semasa kekal.
+**QA gabungan VALID dalam skop yang dinyatakan; penerbitan main PENDING**
+sehingga expected-head update dan readback sebenar tersedia. Calon tempatan
+`728d25e7a9969b3570e7e8943664b9a6c43ce67c` / tree
+`2bb0b762478cc76243097cc9aba7300bebab6524` mempunyai 126 focused Node,
+54 native Pet, 15 cold-offline dan dua portable PASS; ini bukan full suite atau
+live provider validation. Ini tidak mengaktifkan provider atau backend awam.
+[Skop, bukti dan had semasa](../../PET_MAIN_2_53_0.md).
+
 **VALID within the follow-up scope; both deferred Minor/P3 findings are closed.** Continued from feature d27155a7544d3fccd5b68d35c506c9d6ee47f5ab on `codex/ai-pet-online-20261025`, candidate2.53.0-pet.1. Current main7a49fff83388347f0157616fc6b051ddbda4c694 /2.52.0, Master SOR1.3.0 read first. Branch-only continuation remains authorized; main/original ai and live-provider deployment remain outside scope.
 
 - Corrected the operator guide to require a hosted HTTP(S) game URL for Online. A remote endpoint does not make file-origin chat supported; Origin:null remains rejected, with portable local help intact.

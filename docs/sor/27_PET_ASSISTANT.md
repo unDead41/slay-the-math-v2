@@ -1,5 +1,21 @@
 # 27 — Emberlyn assistant
 
+## Main 2.53.0 — skop penerbitan semasa, 27 Oktober 2026
+
+Ijamm kini mengarahkan audit dan penerbitan semua pakej yang benar-benar pending.
+Ini membenarkan integrasi Emberlyn daripada `07677f62ede996e2dd66d9b53f9fd5e152069863`
+ke main `7a49fff83388347f0157616fc6b051ddbda4c694` / 2.52.0 sebagai **2.53.0**.
+Klausa branch-only/no-main di bawah kekal sejarah untuk sumber asalnya dan
+superseded bagi integrasi ini sahaja. Kontrak keselamatan, satu pemilik
+Online/Offline, local help, original Hint, save/RNG dan semua pemilik semasa kekal.
+**QA gabungan VALID dalam skop yang dinyatakan; penerbitan main PENDING**
+sehingga expected-head update dan readback sebenar tersedia. Calon tempatan
+`728d25e7a9969b3570e7e8943664b9a6c43ce67c` / tree
+`2bb0b762478cc76243097cc9aba7300bebab6524` mempunyai 126 focused Node,
+54 native Pet, 15 cold-offline dan dua portable PASS; ini bukan full suite atau
+live provider validation. Ini tidak mengaktifkan provider atau backend awam.
+[Skop, bukti dan had semasa](../PET_MAIN_2_53_0.md).
+
 DISAHKAN: Ijamm requests the exact existing ChatGPT pet, game/three-topic Form4 mathematics help through an Online API when selected in Settings, local Offline support, Publisher instructions first and secure activation inputs. Current resume uses main 7a49fff83388347f0157616fc6b051ddbda4c694/2.52.0. Candidate2.53.0-pet.1 on codex/ai-pet-online-20261025; no main publication/deployment.
 
 - PET-01: Reuse STMPlayMode/STMPetHelp; one Settings preference. Explicit Online plus a player request is required. Local packaged help works when blocked/offline/unavailable. Existing full installer is the readiness authority.

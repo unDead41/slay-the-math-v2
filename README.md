@@ -1,4 +1,17 @@
-# Mathematics Slayer — 2.52.0
+# Mathematics Slayer — 2.53.0
+
+Emberlyn menggunakan pet asal, bantuan game/matematik BM dan English, local help
+Offline serta Online melalui backend yang dikonfigurasi operator. Settings ialah
+satu-satunya pilihan Online/Offline; Online mesti dipilih secara eksplisit sebelum
+permintaan API. Soalan aktif menggunakan Hint asal dengan rekod bantuan yang sama.
+Tiada key/provider/backend awam diaktifkan oleh penerbitan game statik.
+**QA terhad VALID; penerbitan main PENDING.** 126 focused Node, 54 native Pet,
+15 cold-offline dan dua portable lulus pada calon tempatan 728d25e7; full suite
+dan live provider tidak dijalankan.
+[Laporan integrasi](docs/PET_MAIN_2_53_0.md) ·
+[Panduan dan aktivasi selamat](docs/PET_ASSISTANT.md).
+
+## Sejarah keluaran — 2.52.0
 
 Nama rasmi baharu ialah **Mathematics Slayer**, dipersetujui Ijamm pada
 26 Oktober 2026. Calon pemulihan 27 Oktober menyelaraskan nama pemain, Practice,

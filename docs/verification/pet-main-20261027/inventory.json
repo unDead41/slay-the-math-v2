@@ -1,0 +1,474 @@
+{
+  "checkedAt": "2026-10-27T13:37:00.703271+00:00",
+  "timezone": "Asia/Kuala_Lumpur",
+  "repository": "unDead41/slay-the-math-v2",
+  "main": "7a49fff83388347f0157616fc6b051ddbda4c694",
+  "mainTree": "74cda213ad3d6c8783e98989ddd09489469fa89d",
+  "gameVersion": "2.52.0",
+  "masterSORVersion": "1.3.0",
+  "refCount": 40,
+  "nonMainCount": 39,
+  "original37Unchanged": true,
+  "priorEvidenceMain": "ce586507dd5a5b55a72ee008ec60a547cd5c2b7e",
+  "priorMainAncestor": true,
+  "counts": {
+    "ANCESTOR": 20,
+    "HISTORICAL_SELECTIVE": 3,
+    "PENDING_DESCENDANT": 1,
+    "ENTIRE_TREE_ADOPTION": 14,
+    "SUPERSEDED_LEGACY_PREVIEW": 1
+  },
+  "pending": [
+    "codex/ai-pet-online-20261025"
+  ],
+  "rows": [
+    {
+      "branch": "ai",
+      "sha": "807be6763cac1bc97134f86031d42e5dc720d6d1",
+      "tree": "c048f7266add84b286d0a49635ab42e105afa48e",
+      "ahead": 0,
+      "behind": 91,
+      "mergeBase": "807be6763cac1bc97134f86031d42e5dc720d6d1",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "balance/card-effects-20261024",
+      "sha": "bb5f93b180616add5c7e16bb85fc91d9621d37df",
+      "tree": "8ce1f81731d87c00e85101aeb84e158b2301fd03",
+      "ahead": 0,
+      "behind": 64,
+      "mergeBase": "bb5f93b180616add5c7e16bb85fc91d9621d37df",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "balance/combat",
+      "sha": "3a62324ba05de14bd27774a565a5a048e7aa404a",
+      "tree": "ffdb627e940ca9bb91c1ad09461e49f8df633e79",
+      "ahead": 2,
+      "behind": 69,
+      "mergeBase": "6376a222169815af582cf55aa4794f3c809a3515",
+      "classification": "HISTORICAL_SELECTIVE",
+      "reason": "Current main explicitly retains source findings/limits; historical candidate.4 raw data and source assertions must not restore obsolete Recall1 values."
+    },
+    {
+      "branch": "balance/economy",
+      "sha": "2e54f2b2107289925d936cb65d1ab86fd823ff96",
+      "tree": "23543609fe10856158c845c0c51cbccf67cdfc88",
+      "ahead": 2,
+      "behind": 69,
+      "mergeBase": "6376a222169815af582cf55aa4794f3c809a3515",
+      "classification": "HISTORICAL_SELECTIVE",
+      "reason": "Current main adopts canonical artifact checkout quote and gross Gold accounting; original candidate.4 cohorts and resume keys remain historical."
+    },
+    {
+      "branch": "balance/map",
+      "sha": "8ca19526ec6a69d1183bae96803e461a77e3acfc",
+      "tree": "eeb63328a12cbc29dbb89d1ab7e586c321b19ba4",
+      "ahead": 7,
+      "behind": 57,
+      "mergeBase": "b730cad0cb27b53ffbdf687d8fc9edaed143ef43",
+      "classification": "HISTORICAL_SELECTIVE",
+      "reason": "Main adopts Map364 runtime adapter/contracts and newer three-agent protocol; raw history and old four-agent package are not a new pending gameplay release."
+    },
+    {
+      "branch": "balance/master",
+      "sha": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91",
+      "tree": "da017945301dc4cf716a72ae363272980d681fb9",
+      "ahead": 0,
+      "behind": 40,
+      "mergeBase": "39ee5ab08d7f60ba9392bff0c3c3cab8eceefe91",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "codex/ai-pet-online-20261025",
+      "sha": "07677f62ede996e2dd66d9b53f9fd5e152069863",
+      "tree": "c2d3132ef4d990826c07f2c79bb60c5cdea09f7e",
+      "ahead": 6,
+      "behind": 0,
+      "mergeBase": "7a49fff83388347f0157616fc6b051ddbda4c694",
+      "classification": "PENDING_DESCENDANT"
+    },
+    {
+      "branch": "codex/boss-size",
+      "sha": "435d5bce85dc2020a386e0e2f74c793deba3fb40",
+      "tree": "c4f8f520cc08006c15d694b36dbd7452f4466124",
+      "ahead": 1,
+      "behind": 142,
+      "mergeBase": "4233d1d2cad547a6d48cda948ce3c10ddea1b4b8",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "085ae6e4aed070c2b58e600f2ee8993a6b6e30e0",
+        "tree": "c4f8f520cc08006c15d694b36dbd7452f4466124",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "codex/education-delivery-reliability",
+      "sha": "ef09a6be9fad20cf54e8fc868b253b8ae71c603a",
+      "tree": "6bc6d5c7d31aa86ce92268c7cd994eedd46ae592",
+      "ahead": 0,
+      "behind": 41,
+      "mergeBase": "ef09a6be9fad20cf54e8fc868b253b8ae71c603a",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "codex/icon-clarity-audit",
+      "sha": "e71efe1baa603314dd22da5890e8d53c3fdbbcdd",
+      "tree": "db9f16b6228758a4de700ce3f9f66852671cdbe3",
+      "ahead": 0,
+      "behind": 41,
+      "mergeBase": "e71efe1baa603314dd22da5890e8d53c3fdbbcdd",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "codex/master-map-simulation-protocol",
+      "sha": "e0574af7a4b705a90a31e4d4c360ebf95d15df3e",
+      "tree": "4b8d9dd60ffc7b8b95e71494d64f4df23a9f6b8e",
+      "ahead": 0,
+      "behind": 16,
+      "mergeBase": "e0574af7a4b705a90a31e4d4c360ebf95d15df3e",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "codex/mystery-events-v2",
+      "sha": "a54fc210b1b0070743bf2703a7c43de54107deca",
+      "tree": "16f2b42be9713bb99ab4843353f563a1528be54a",
+      "ahead": 1,
+      "behind": 144,
+      "mergeBase": "22495731dd70c271dc81c3a2c32eba40e8a9c42e",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "bf7263cbb4597830a406e6571f81c3c212517eb1",
+        "tree": "16f2b42be9713bb99ab4843353f563a1528be54a",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "codex/mystery-shop-ui",
+      "sha": "4e594b8a3c5ed472734c0274f53a45b2dcf7d5bd",
+      "tree": "e6126487bcf8487049da53ed8619bf38fed12209",
+      "ahead": 1,
+      "behind": 143,
+      "mergeBase": "bf7263cbb4597830a406e6571f81c3c212517eb1",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "4233d1d2cad547a6d48cda948ce3c10ddea1b4b8",
+        "tree": "e6126487bcf8487049da53ed8619bf38fed12209",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "combat-animation",
+      "sha": "4e10e3d41ec439c15b75aceb754d1c7b352d3755",
+      "tree": "2a3dec3ba8e8f9bacba612e8885f83e05838b4c1",
+      "ahead": 0,
+      "behind": 26,
+      "mergeBase": "4e10e3d41ec439c15b75aceb754d1c7b352d3755",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "dev-tools",
+      "sha": "8a44068dee260ae25aa8d27b368ec796f3ff22a4",
+      "tree": "bfcb24730de31470ce233446093e0f6dfa708bd5",
+      "ahead": 0,
+      "behind": 76,
+      "mergeBase": "8a44068dee260ae25aa8d27b368ec796f3ff22a4",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "dual-language-bm-bi",
+      "sha": "c42828d560c968500eb8a9071e41557608213e2a",
+      "tree": "54b97741a8f45097214db86955e98c82e92e76b3",
+      "ahead": 1,
+      "behind": 135,
+      "mergeBase": "a63b9e009c04a1be6ff3e79fcabea82991b6f619",
+      "classification": "SUPERSEDED_LEGACY_PREVIEW",
+      "reason": "Main whole-game language2.43 explicitly supersedes obsolete catalogue-only branch; preserve vendor source and historical preview rather than replaying it."
+    },
+    {
+      "branch": "education",
+      "sha": "db220d194e140e48e2d176c5776ab494b20e80e8",
+      "tree": "61acd742a2a97017c530936fb490e3828f69d559",
+      "ahead": 0,
+      "behind": 140,
+      "mergeBase": "db220d194e140e48e2d176c5776ab494b20e80e8",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "education-analytics",
+      "sha": "1acefda06bfd7694772fbfee60c9e6fa58d0e59b",
+      "tree": "f4326848b19983642847c144f7badb01aaa179e4",
+      "ahead": 0,
+      "behind": 113,
+      "mergeBase": "1acefda06bfd7694772fbfee60c9e6fa58d0e59b",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "education-google-sheets",
+      "sha": "a535a04d169837aa1402ae30b8d23ed1b3276cf9",
+      "tree": "809e0dde29d2aa446824a7094756f1663440d44b",
+      "ahead": 0,
+      "behind": 100,
+      "mergeBase": "a535a04d169837aa1402ae30b8d23ed1b3276cf9",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "education-report",
+      "sha": "6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0",
+      "tree": "7dd41f119dcd9988dd2576164c2c5a71bbfbbd66",
+      "ahead": 0,
+      "behind": 68,
+      "mergeBase": "6bfb4839177dedbf0dd5f5ea64fd40b7b1ccbcd0",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "feat/alyssa-animation-2-8-0",
+      "sha": "eb97f5911871e2d2c79e323686c0ff3f79d76742",
+      "tree": "873b942a842463d42b8313c2f693241c62413c16",
+      "ahead": 1,
+      "behind": 150,
+      "mergeBase": "e432ba1838c87efc00c0b701942bfee99a6406d4",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "28cac2095a851855b8d8600a2ba93a02220a8dfa",
+        "tree": "873b942a842463d42b8313c2f693241c62413c16",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "feat/artifact-richtext-2-6-0",
+      "sha": "f26163aac6e98b82714f035a97770b9cc7a59769",
+      "tree": "a69157dc1003e78f756536d7b057383daa690549",
+      "ahead": 1,
+      "behind": 152,
+      "mergeBase": "30a8d469b8665d1835f9179c43d9b35cba422daf",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "cc2f528dab3660f59931e72075df3c9a1f5412e2",
+        "tree": "a69157dc1003e78f756536d7b057383daa690549",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "feat/enemy-motion-both-stages-2-10-0",
+      "sha": "eb7aea52d0a0c02477912393d4b11ac14978c109",
+      "tree": "b23dde7433889e0ed81916f37526c061fb8366b9",
+      "ahead": 1,
+      "behind": 147,
+      "mergeBase": "f2bafc79ed15711bd30be35bffffe6a4912864cf",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "8e5ae698441a194ad296ec90c7e66d466297b56b",
+        "tree": "b23dde7433889e0ed81916f37526c061fb8366b9",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "feat/map-integration-2-11-0",
+      "sha": "ef19b19aff65868a8b971b64aeb1820a8b2e2af6",
+      "tree": "66d893b8f7c5de7db570aa749ef2316c14dd490d",
+      "ahead": 1,
+      "behind": 146,
+      "mergeBase": "8e5ae698441a194ad296ec90c7e66d466297b56b",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "07d03a678da16dfa67fe401e7f92a8866956f129",
+        "tree": "66d893b8f7c5de7db570aa749ef2316c14dd490d",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "feat/map-shop-boss-2-12",
+      "sha": "ff97346bd9a98d7b3fed6459661946d3b434e8a0",
+      "tree": "f08d45b9c867c62f56ac65ff520c0ee495a31d1c",
+      "ahead": 1,
+      "behind": 145,
+      "mergeBase": "07d03a678da16dfa67fe401e7f92a8866956f129",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "22495731dd70c271dc81c3a2c32eba40e8a9c42e",
+        "tree": "f08d45b9c867c62f56ac65ff520c0ee495a31d1c",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "feat/situation-art-2-5-2",
+      "sha": "423f79e7717d40bf4f2ec6751d1f41877cccf2a5",
+      "tree": "d383d40f48c85496e8424afdfe97964f42a66b70",
+      "ahead": 1,
+      "behind": 154,
+      "mergeBase": "54e98686acdf4b584264e95a2b4f8e633c1603f4",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "7fc6bae7153ff467445d5e94e3d37761d38356b6",
+        "tree": "d383d40f48c85496e8424afdfe97964f42a66b70",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "feat/stage1-animation-2-7-0",
+      "sha": "dfb09a16a1ec9301bbd52959842d22ebaa35a93e",
+      "tree": "ff1f5e2036cb5a48c01c6e79ac3864181772e317",
+      "ahead": 1,
+      "behind": 151,
+      "mergeBase": "cc2f528dab3660f59931e72075df3c9a1f5412e2",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "e432ba1838c87efc00c0b701942bfee99a6406d4",
+        "tree": "ff1f5e2036cb5a48c01c6e79ac3864181772e317",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "fix/alyssa-right-only-2-8-1",
+      "sha": "c2a7c6ec7e616749d3a0f4a678200d7de611242c",
+      "tree": "7885966887d1badf561731a79ac9f88e90bd21b8",
+      "ahead": 1,
+      "behind": 149,
+      "mergeBase": "28cac2095a851855b8d8600a2ba93a02220a8dfa",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "032b97a5e48de83f9813d1253b4f33160a8df64c",
+        "tree": "7885966887d1badf561731a79ac9f88e90bd21b8",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "fix/automatic-background-preload",
+      "sha": "82db6d57ce2f4b251601e260c0e6d861922a19a1",
+      "tree": "2e08bafa84b3ea7f9ede82aae55a8cff093ab924",
+      "ahead": 0,
+      "behind": 40,
+      "mergeBase": "82db6d57ce2f4b251601e260c0e6d861922a19a1",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "fix/hosted-readiness-input",
+      "sha": "61ca12635ae2bd23f04400b7cc6399a9836adfd8",
+      "tree": "2449a45ad37484eda382bfdcb78a7a6e67cb70ff",
+      "ahead": 0,
+      "behind": 59,
+      "mergeBase": "61ca12635ae2bd23f04400b7cc6399a9836adfd8",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "fix/menu-display-fit-2-5-1",
+      "sha": "a0453dd3a89f1372954c9624a64270215415054c",
+      "tree": "e2d89125f2dfc6cb1e10fd3b4d494df4a6ff7667",
+      "ahead": 3,
+      "behind": 155,
+      "mergeBase": "e28974b6323b5bf281104307a3785579915a422c",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "54e98686acdf4b584264e95a2b4f8e633c1603f4",
+        "tree": "e2d89125f2dfc6cb1e10fd3b4d494df4a6ff7667",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "fix/online-offline-readiness",
+      "sha": "e9411eba938dc819f12382fe636aa02ec5059271",
+      "tree": "ed02b59da74d3375b3bc31c1d772a6bfbbe3e3e2",
+      "ahead": 0,
+      "behind": 21,
+      "mergeBase": "e9411eba938dc819f12382fe636aa02ec5059271",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "fix/portrait-cards-2-5-3",
+      "sha": "00b5034073e83e0705eed0596ffcdc1c1661ac7b",
+      "tree": "6e3abde28c3c964762173d6718aa1a3b285fdbd7",
+      "ahead": 1,
+      "behind": 153,
+      "mergeBase": "7fc6bae7153ff467445d5e94e3d37761d38356b6",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "30a8d469b8665d1835f9179c43d9b35cba422daf",
+        "tree": "6e3abde28c3c964762173d6718aa1a3b285fdbd7",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "fix/skill-timer-hand-2-9-0",
+      "sha": "4651194df9ce2c902774e9a35be0ad27ec7c5011",
+      "tree": "267e717188fa2c4434643e9ebf70cfe0cc64b15e",
+      "ahead": 1,
+      "behind": 148,
+      "mergeBase": "032b97a5e48de83f9813d1253b4f33160a8df64c",
+      "classification": "ENTIRE_TREE_ADOPTION",
+      "adoption": {
+        "sha": "f2bafc79ed15711bd30be35bffffe6a4912864cf",
+        "tree": "267e717188fa2c4434643e9ebf70cfe0cc64b15e",
+        "ancestorOfMain": true,
+        "entireTreeEqual": true
+      }
+    },
+    {
+      "branch": "music",
+      "sha": "0bd0deb777413aa0ddf37cf1c60cb73dfba08f54",
+      "tree": "0ce8f20b139b5f4552cb801bcf87447a8891c345",
+      "ahead": 0,
+      "behind": 89,
+      "mergeBase": "0bd0deb777413aa0ddf37cf1c60cb73dfba08f54",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "release/ai-main-2.48.0-20261025",
+      "sha": "92182f73754e0de90d8edfc6cb0ff864d363d19d",
+      "tree": "f0d1f9730d3524c7d0d0688d682371e7e67af263",
+      "ahead": 0,
+      "behind": 32,
+      "mergeBase": "92182f73754e0de90d8edfc6cb0ff864d363d19d",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "release/mathematics-slayer-2.52.0",
+      "sha": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+      "tree": "eea5bdefd0b4128ceff34273c037fc10c9aa29cb",
+      "ahead": 0,
+      "behind": 2,
+      "mergeBase": "39f8d1302173c1dd817442a865b2b0bbd504dd92",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "tutorial",
+      "sha": "30154c9e354ce03ed18f4f0b507d394de0506d61",
+      "tree": "c0152b46675410d72c94553ce5358652b245aac4",
+      "ahead": 0,
+      "behind": 94,
+      "mergeBase": "30154c9e354ce03ed18f4f0b507d394de0506d61",
+      "classification": "ANCESTOR"
+    },
+    {
+      "branch": "tutorial-visual-refresh",
+      "sha": "416cc89ec056fec25856f3b4a228c9d61485b82b",
+      "tree": "ed3c0750ec60885c191f45684eaf09e06e710d1d",
+      "ahead": 0,
+      "behind": 40,
+      "mergeBase": "416cc89ec056fec25856f3b4a228c9d61485b82b",
+      "classification": "ANCESTOR"
+    }
+  ],
+  "checks": [
+    "Fresh GitHub exact refs snapshotted; all exact commit/tree objects checked in native full clone.",
+    "Every branch ahead/behind/merge-base recalculated. All 14 entire-tree adoption proofs independently rechecked.",
+    "Three selectively adopted specialist heads and one superseded BM preview remain unchanged; their current runtime status is separate from Git merge status."
+  ],
+  "limits": [
+    "This inventory does not claim full current runtime compatibility or reenact historical simulation results.",
+    "Current feature QA is recorded separately on the final stable candidate."
+  ]
+}

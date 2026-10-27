@@ -147,3 +147,6 @@ body[data-scene='battle']::before,body[data-scene='battle']>.ambient{display:non
 /* Rest uses the supplied blue campfire seal, shared with its map node. */
 .rest-layout .choice-panel[data-value='heal']>img.icon{width:68px;height:68px;object-fit:contain}
 @media(max-width:600px){.rest-layout .choice-panel[data-value='heal']>img.icon{width:60px;height:60px}}
+
+/* Keep the approved two-line game name within the existing responsive title. */
+.illustrated-home .home-title h1>span{display:block;font-size:1em;letter-spacing:inherit}

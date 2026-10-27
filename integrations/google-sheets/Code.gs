@@ -54,7 +54,7 @@ function setupCollector(){
    This function cannot be invoked by google.script.run. */
 function setupCollector_(){
  const lock=LockService.getScriptLock();if(!lock.tryLock(10000))throw Error('Collector is busy; retry setup.');
- try{const props=PropertiesService.getScriptProperties(),id=props.getProperty('SPREADSHEET_ID'),book=id?SpreadsheetApp.openById(id):SpreadsheetApp.create('Slay the Math — Learning & Comments');
+ try{const props=PropertiesService.getScriptProperties(),id=props.getProperty('SPREADSHEET_ID'),book=id?SpreadsheetApp.openById(id):SpreadsheetApp.create('Mathematics Slayer — Learning & Comments');
   for(const [name,headers] of Object.entries(STM_HEADERS))stmEnsureSheet_(book,name,headers);
   stmRefreshIssueBoard_(book);
   SpreadsheetApp.flush();props.setProperty('SPREADSHEET_ID',book.getId());console.log('Open your private collection Sheet: '+book.getUrl());return book.getUrl();
@@ -139,9 +139,9 @@ function stmRefreshIssueBoard_(book){
 }
 function doGet(e){
  const p=e&&e.parameter||{};
- if(!/^[a-f0-9]{64}$/.test(p.stmNonce||'')||!STM_ALLOWED_GAME_ORIGINS.includes(p.stmParentOrigin))return HtmlService.createHtmlOutput('Open this collection link from Slay the Math.');
+ if(!/^[a-f0-9]{64}$/.test(p.stmNonce||'')||!STM_ALLOWED_GAME_ORIGINS.includes(p.stmParentOrigin))return HtmlService.createHtmlOutput('Open this collection link from Mathematics Slayer.');
  const config=JSON.stringify({parentOrigin:p.stmParentOrigin,channel:p.stmNonce}).replace(/</g,'\\u003c');
- return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><title>Slay the Math collection</title><script>const STM_BRIDGE_CONFIG='+config+';\n'+STM_BRIDGE_SOURCE_+'<\/script>').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+ return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><title>Mathematics Slayer collection</title><script>const STM_BRIDGE_CONFIG='+config+';\n'+STM_BRIDGE_SOURCE_+'<\/script>').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 function stmProjection_(book,key,clientId,entry,receivedAt){
  const p=entry.payload;let name,row;
@@ -675,7 +675,7 @@ function stmValidateFeedback_(payload,questions,versions,topics){
    const questions=bank.questions.map(q=>({id:q.id,...metadata(q),totalQuestions:1,...aggregate(selected.filter(r=>r.questionId===q.id))}));
    return {schemaVersion:1,bankVersion:bank.bankVersion||bank.version,scope,language,minimumEvidence:MINIMUM_EVIDENCE,totals:{totalQuestions:bank.questions.length,...aggregate(selected)},topics,contentStandards,learningStandards,skills,sessions,recommendations,questions};
   }
-  function exportData(){persist();return {schemaVersion:1,game:'Slay the Math',purpose:'Learning observations',bankVersion:bank.bankVersion||bank.version,exportedAt:now(),sessionAliases:aliasData(aliases),records:records()};}
+  function exportData(){persist();return {schemaVersion:1,game:'Mathematics Slayer',purpose:'Learning observations',bankVersion:bank.bankVersion||bank.version,exportedAt:now(),sessionAliases:aliasData(aliases),records:records()};}
   function csv(){
    const cell=value=>{let valueText=String(value??'');if(/^[\s\uFEFF]*[=+@-]|^[\t\r]/.test(valueText))valueText="'"+valueText;return '"'+valueText.replace(/"/g,'""')+'"';};
    const rows=[['Occurrence ID','Question ID','Bank version','Source schema version','Scope','Session ID','Source','Language','Topic','Chapter','Learning standards','Skills','Basics','First captured at','Updated at','Question state','Attempts','Wrong attempts','First attempt correct','Independent first try','Completion category','Hint opened','More Hint opened','Basics opened','Steps opened']];

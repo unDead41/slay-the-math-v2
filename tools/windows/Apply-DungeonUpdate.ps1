@@ -13,7 +13,7 @@ $stmTarget = [IO.Path]::GetFullPath($ProjectPath).TrimEnd('\')
 $stmPackage = Join-Path $stmTarget 'package.json'
 if (!(Test-Path -LiteralPath $stmPackage -PathType Leaf)) { throw 'Folder projek asal tidak ditemui. Tiada folder projek baharu dibuat.' }
 $stmInfo = Get-Content -LiteralPath $stmPackage -Raw | ConvertFrom-Json
-if ($stmInfo.name -ne 'duel-cube-math') { throw 'Folder sasaran bukan projek Slay the Math.' }
+if ($stmInfo.name -ne 'duel-cube-math') { throw 'Folder sasaran bukan projek Mathematics Slayer.' }
 if ($stmManifest.schemaVersion -ne 1 -or $stmManifest.release -ne '2.3.0') { throw 'Manifest kemas kini tidak sah.' }
 $stmNode = (Get-Command node.exe -ErrorAction Stop).Source
 $stmNpm = (Get-Command npm.cmd -ErrorAction Stop).Source
@@ -66,7 +66,7 @@ if ($stmOwners.Count) {
     }
     if (!$stmOwnServer -or $stmOwners.Count -ne 1) { throw ('Port 4173 sedang digunakan oleh proses lain (PID ' + ($stmOwners -join ', ') + '). Hentikan server itu dengan Ctrl+C dahulu. Tiada fail diganti.') }
     $stmProcess = Get-CimInstance Win32_Process -Filter ('ProcessId = ' + $stmOwners[0])
-    if (!$stmProcess -or $stmProcess.Name -ne 'node.exe' -or $stmProcess.CommandLine -notmatch 'server\.cjs') { throw 'Pemilik port bukan server Slay the Math yang dijangka. Tiada proses dihentikan.' }
+    if (!$stmProcess -or $stmProcess.Name -ne 'node.exe' -or $stmProcess.CommandLine -notmatch 'server\.cjs') { throw 'Pemilik port bukan server Mathematics Slayer yang dijangka. Tiada proses dihentikan.' }
     Stop-Process -Id $stmOwners[0] -Force
     Write-Host 'Server lama untuk folder projek ini dihentikan.'
 }

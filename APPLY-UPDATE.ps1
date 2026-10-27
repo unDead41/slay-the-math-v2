@@ -8,7 +8,7 @@ if ($updateSource.Equals($updateTarget, [StringComparison]::OrdinalIgnoreCase)) 
 }
 $updatePackage = Join-Path $updateTarget 'package.json'
 if (!(Test-Path -LiteralPath $updatePackage -PathType Leaf)) {
-    throw 'ProjectPath mesti folder projek Slay the Math yang mengandungi package.json.'
+    throw 'ProjectPath mesti folder projek Mathematics Slayer yang mengandungi package.json.'
 }
 $updateMetadata = Get-Content -LiteralPath $updatePackage -Raw | ConvertFrom-Json
 if ($updateMetadata.name -ne 'duel-cube-math') { throw 'Identiti projek tidak sepadan. Tiada fail disalin.' }

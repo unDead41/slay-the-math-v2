@@ -1,4 +1,8 @@
-# Slay the Math: Dungeon of Chance
+# Mathematics Slayer
+
+Nama semasa ialah **Mathematics Slayer**. [Skop rename dan status](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+Baseline prototaip dan catatan versi di bawah ialah sejarah; pemilik SOR semasa
+mengawal topik, MC dan angka aktif. ID, URL dan save tidak ditukar kerana jenama.
 
 The user approved the in-chat design and explicitly requested complete implementation now. Build a simple-English single-player browser deckbuilder with two stages and two bosses, inspired by the genre rather than copied assets. Scope: one mage, twelve card types, four normal enemy types, two bosses, five map depths per stage, rewards, camp upgrades, events, exact probability forecasting, Focus, tutorial, local save/continue and stage checkpoint retry. No backend is needed.
 

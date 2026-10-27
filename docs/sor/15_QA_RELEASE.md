@@ -1,6 +1,23 @@
 # 15 — QA, bukti semakan dan release
 
-## Current main integration authorization — 2.51.0
+**QA-IDENTITY:** Semak copy BM/English, fit, generated/source/production/portable,
+label eksport dan pembacaan save lama. Buktikan portable alias sama bytes.
+Gunakan actual capture owner dan provenance strict. Bukti hilang tidak boleh
+relabeled; pemulihan perlu checkpoint dan QA baharu. Pilih semakan terjejas,
+kemudian verify ref/tree/version dan Pages exact head berasingan selepas push.
+
+## Identiti semasa — Mathematics Slayer 2.52.0
+
+Ijamm mengarahkan nama rasmi **Mathematics Slayer** pada 26 Oktober 2026.
+Nama ini sama dalam BM dan English. Kekalkan repo/URL, identifier, storage keys,
+schema, save/RNG, Alyssa, topik, angka, model dan aset asal. Portable utama ialah
+`MATHEMATICS-SLAYER-OFFLINE.html`; `SLAY-THE-MATH-OFFLINE.html` ialah alias
+byte-identical untuk laluan fail lama, bukan nama paparan semasa.
+**Verifikasi calon pemulihan dan penerbitan 2.52.0 masih BELUM DISAHKAN**.
+[Skop, bukti dan status](../RENAME_MATHEMATICS_SLAYER_2_52_0.md). Nota keluaran terdahulu di bawah ialah sejarah
+mengikut pin dan hasil asalnya; ujian lama bukan bukti calon pemulihan baharu.
+
+## Historical main integration authorization — 2.51.0
 
 Ijamm now requests listing the changes still pending and publishing them to main.
 This authorizes the combined Online/Offline feature e941 and immutable registry
@@ -17,7 +34,7 @@ No simulation campaign, collector or model update is included. [Current scope,
 evidence and limits](../ONLINE_OFFLINE_MAIN_2_51_0.md).
 
 
-## Current main integration authorization — 2.50.0
+## Historical main integration authorization — 2.50.0
 
 The current explicit user request authorizes combining combat, education and
 Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
@@ -189,7 +206,7 @@ Whole-question English/Bahasa Melayu is implemented on education. Source review,
 
 ## Education entry points — 2.16.1
 
-Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). Offline generated output is now SLAY-THE-MATH-OFFLINE.html.
+Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). The historical output was `SLAY-THE-MATH-OFFLINE.html`; 2.52.0 uses `MATHEMATICS-SLAYER-OFFLINE.html` with the old filename retained as an exact compatibility alias.
 
 
 ## Question menu — 2.17.0

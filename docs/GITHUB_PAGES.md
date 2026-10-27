@@ -1,4 +1,8 @@
-# Share Slay the Math through GitHub Pages
+# Share Mathematics Slayer through GitHub Pages
+
+Nama paparan semasa ialah **Mathematics Slayer**. Repo, Pages URL dan origin di
+bawah kekal. Kegagalan/kejayaan workflow lama ialah sejarah, bukan bukti deploy
+calon rename. [Status semasa](RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 DISAHKAN, 23 October 2026: Ijamm requests a public browser link for friends, using the latest main build. No game balance or save format changes are needed.
 

@@ -1,4 +1,25 @@
-# Changelog SOR — Slay the Math
+# Changelog SOR — Mathematics Slayer
+
+## 27 Oktober 2026 — pemulihan calon 2.52.0
+
+- Pulihkan nama rasmi dan panduan aktif selepas kehilangan scratch maintenance;
+  gunakan enam blob GitHub yang dipadankan dengan SHA asal apabila tersedia.
+- Bezakan fakta QA dalam transkrip daripada raw artifacts yang hilang. Calon
+  pemulihan, 98 capture dan verifikasi baharu masih PENDING; tiada main push dibuat.
+- Bukti baharu akan mempunyai pin dan indeks sendiri. Sejarah 26 Oktober di bawah
+  dikekalkan; tiada log/capture/index yang hilang direka semula sebagai bukti lama.
+
+## 2.52.0 — 26 Oktober 2026, Asia/Kuala_Lumpur — calon rename
+
+- Rekod arahan eksplisit Mathematics Slayer sebagai nama rasmi dalam Master SOR
+  1.3.0, AGENTS, pemilik identiti/bahasa/UI/release dan panduan aktif.
+- Kekalkan identifier, URL, save/schema, sumber mekanik/aset serta semua sejarah
+  bukti. Dokumentasikan portable utama baharu dan alias filename lama.
+- Audit branch sejarah kekal mengikut sumber; tiada dataset mentah, campaign atau
+  latihan diaktifkan semula. QA dan penerbitan calon masih **BELUM DISAHKAN**.
+  [Skop dan status](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+
+## Sejarah keluaran terdahulu
 
 ## 2.51.0 — 26 October 2026, Asia/Kuala_Lumpur — main publication
 

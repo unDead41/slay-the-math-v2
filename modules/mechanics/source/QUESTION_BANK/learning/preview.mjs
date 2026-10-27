@@ -109,7 +109,7 @@ function closeAnalyticsReport(){byId('practice-analytics-dialog').close();analyt
 function analyticsFile(){
  const data=analyticsStore.exportData(),status=analyticsStatus();
  const content=JSON.stringify({...data,questionFeedback:questionFeedback.exportData(),collection:{enabled:status.enabled,pendingEntries:status.pendingEntries||[]},ownerRecovery:{schemaVersion:1,scope:'practice',sessionId:practiceAnalyticsId,session:JSON.parse(JSON.stringify(session))}},null,2)+'\n';
- return new File([content],'slay-the-math-learning-backup-'+new Date().toISOString().slice(0,10)+'.json',{type:'application/json'});
+ return new File([content],'mathematics-slayer-learning-backup-'+new Date().toISOString().slice(0,10)+'.json',{type:'application/json'});
 }
 function downloadAnalytics(){
  try{

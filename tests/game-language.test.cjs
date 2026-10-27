@@ -17,7 +17,7 @@ test('global UI supports simple BM while preserving established game terms and i
  const L=require(file);
  assert.equal(L.translate('New Run','ms'),'Permainan baharu');
  assert.equal(L.translate('Save and Settings','ms'),'Simpanan dan tetapan');
- for(const word of ['HP','Energy','Block','Focus','Strength','Agility','Defense','Buff','Debuff','Slay the Math','Dungeon of Chance'])assert.equal(L.translate(word,'ms'),word);
+ for(const word of ['HP','Energy','Block','Focus','Strength','Agility','Defense','Buff','Debuff','Mathematics Slayer'])assert.equal(L.translate(word,'ms'),word);
  assert.equal(L.translate('New Run','en'),'New Run');
  assert.equal(L.normalize('bm'),'ms');assert.equal(L.normalize('bi'),'en');
  assert.equal(L.translate('Stage 2 · Room 9 · Turn 3','ms'),'Peringkat 2 · Bilik 9 · Giliran 3');

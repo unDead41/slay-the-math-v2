@@ -246,7 +246,7 @@ test('malformed source evidence cannot invent a score and empty entries do not d
 
 test('export is minimal immutable evidence and CSV neutralizes formulas, quotes and multiline cells',()=>{
  const target=store();observe(target,'PROB-001',['wrong'],{source:' =SUM(1,2)\n"note"'});
- const data=target.exportData();assert.equal(data.schemaVersion,1);assert.equal(data.game,'Slay the Math');assert.equal(data.records.length,1);assert.ok(A.validateRecord(data.records[0],{bank}));
+ const data=target.exportData();assert.equal(data.schemaVersion,1);assert.equal(data.game,'Mathematics Slayer');assert.equal(data.records.length,1);assert.ok(A.validateRecord(data.records[0],{bank}));
  const forged=clone(data.records[0]);forged.record.attempts[0].correct=true;assert.equal(A.validateRecord(forged,{bank}),false);
  assert.equal('prompt' in data.records[0],false);assert.equal('run' in data.records[0],false);assert.equal('seed' in data.records[0],false);
  const csv=target.csv();assert.ok(csv.startsWith('\uFEFF'));assert.ok(csv.includes('"\' =SUM(1,2)\n""note"""'));assert.ok(csv.endsWith('\r\n'));

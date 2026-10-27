@@ -84,7 +84,7 @@ function createCollector(options={}){
    reply(res,200,{acknowledged:body.entries.map(({id,revision})=>({id,revision}))});return true;
   }catch(error){reply(res,error.status||500,{error:error.status?error.message:'The receiver could not commit this batch.'});return true;}
  }
- function exportData(){return {schemaVersion:1,protocolVersion:1,game:'Slay the Math',purpose:'Diagnostic learning evidence and question improvements',exportedAt:now(),records:rows.all().map(row=>({clientId:row.client_id,id:row.id,revision:row.revision,kind:row.kind,payload:JSON.parse(row.payload_json),receivedAt:row.received_at}))};}
+ function exportData(){return {schemaVersion:1,protocolVersion:1,game:'Mathematics Slayer',purpose:'Diagnostic learning evidence and question improvements',exportedAt:now(),records:rows.all().map(row=>({clientId:row.client_id,id:row.id,revision:row.revision,kind:row.kind,payload:JSON.parse(row.payload_json),receivedAt:row.received_at}))};}
  function csv(){const cell=value=>{let text=String(value??'');if(/^[\s\uFEFF]*[=+@-]|^[\t\r]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};const output=[['Client ID','Entry ID','Revision','Kind','Question ID','Bank version','Scope','Session ID','Updated at','Received at','Comment','Deleted','Payload']];for(const row of exportData().records)output.push([row.clientId,row.id,row.revision,row.kind,row.payload.questionId,row.payload.bankVersion,row.payload.scope,row.payload.sessionId,row.payload.updatedAt,row.receivedAt,row.payload.comment,row.payload.deleted===true,JSON.stringify(row.payload)]);return '\uFEFF'+output.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';}
  return {handler,exportData,csv,close(){if(!closed){closed=true;db.close();}}};
 }

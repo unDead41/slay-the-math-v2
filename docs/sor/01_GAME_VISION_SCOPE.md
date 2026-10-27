@@ -1,10 +1,15 @@
 # 01 — Visi, identiti dan skop game
 
-Versi: 2.2.0. Rujuk [keputusan](DECISIONS.md) bagi sumber arahan dan cadangan. Arahan terkini menggunakan bank 120 item Tingkatan 4 Bab 9, 4 dan 3 selepas Claim Artifact. Implementasi aktif dalam game 2.5.0; pemilik peraturan dan batas ialah SOR 02.
+**VIS-IDENTITY (DISAHKAN, 26 Oktober 2026):** Nama rasmi ialah **Mathematics Slayer**
+dalam BM/English. Slay the Math: Dungeon of Chance ialah sejarah. [Master SOR 1.3.0](../../MASTER_SOR_PROJECT.md)
+dan [status rename](../RENAME_MATHEMATICS_SLAYER_2_52_0.md) memelihara Alyssa,
+topik, genre, dunia, mekanik, save dan ID/URL.
+
+Versi: 2.3.0. Rujuk [keputusan](DECISIONS.md) bagi sumber arahan dan cadangan. Arahan terkini menggunakan bank 120 item Tingkatan 4 Bab 9, 4 dan 3 selepas Claim Artifact. Implementasi aktif dalam game 2.5.0; pemilik peraturan dan batas ialah SOR 02.
 
 ## Identiti
 
-Slay the Math ialah permainan kad strategi matematik berasaskan web dengan tema dungeon. Pemain memilih laluan, membina deck, membaca intent dan menyelesaikan cabaran matematik yang jelas.
+Mathematics Slayer ialah permainan kad strategi matematik berasaskan web dengan tema dungeon. Pemain memilih laluan, membina deck, membaca intent dan menyelesaikan cabaran matematik yang jelas.
 
 Nama prototaip terdahulu Duel Cube Math — Menara Kemungkinan kekal rekod sejarah, bukan tajuk baharu. Rujukan Slay the Spire ialah genre; dunia, artwork, UI, bunyi dan kandungan mesti asal.
 

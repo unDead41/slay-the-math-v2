@@ -1,4 +1,8 @@
-# Google Sheets — Slay the Math
+# Google Sheets — Mathematics Slayer
+
+Rename paparan tidak membuat deployment Google atau memindahkan Sheet. Kekalkan
+URL/receiver/payload dan data sedia ada. Tiada live Google test didakwa oleh
+perubahan nama. Panduan versi terdahulu mengekalkan konteks asalnya.
 
 Keluaran main **2.38.0** (dikekalkan dalam **2.39.0**) menambah butang **Laporkan masalah**, Hint yang
 diperjelas dan tab **Issues** peribadi. Ikut [panduan main dan kemas kini penerima
@@ -50,7 +54,7 @@ Perubahan yang belum dicommit disimpan dalam stash. Jangan jalankan `stash pop` 
 ## 2. Cipta penerima Google sekali sahaja
 
 1. Buka [Google Apps Script](https://script.google.com/) menggunakan akaun Google yang akan memiliki data. Pilih **New project**.
-2. Buka fail repo **integrations/google-sheets/Code.gs**. Salin **seluruh fail** ke `Code.gs` dalam editor Apps Script, menggantikan kod contoh. Simpan projek sebagai `Slay the Math Collection`.
+2. Buka fail repo **integrations/google-sheets/Code.gs**. Salin **seluruh fail** ke `Code.gs` dalam editor Apps Script, menggantikan kod contoh. Bagi projek baharu, gunakan nama paparan `Mathematics Slayer Collection`. Projek/deployment lama tidak perlu dinamakan semula; kekalkan URL `/exec`, Script Properties, schema/payload dan rekod lama.
 3. Di bahagian atas fail terdapat `STM_ALLOWED_GAME_ORIGINS`. `http://localhost:4173` dan `http://127.0.0.1:4173` sudah disediakan. Jika game dihoskan, tambah origin tepat, misalnya `https://game-sekolah.example` — tanpa path atau slash terakhir. Domain contoh ini perlu diganti dengan domain sebenar anda.
 4. Pilih fungsi **setupCollector** (tanpa `_`) dalam dropdown editor, kemudian **Run**. Benarkan kebenaran Google yang diperlukan untuk mencipta dan mengubah Spreadsheet. Semak kod dan projek milik anda sebelum meneruskan paparan kebenaran Google.
 5. Buka **Execution log**. Pautan `Open your private collection Sheet: …` membawa ke Google Sheet baharu dalam Drive anda. Menjalankan setup sekali lagi akan menggunakan Sheet yang sama. Kekalkan kedua-dua fungsi `setupCollector` dan `setupCollector_` seperti dalam fail; tidak perlu menukar nama sebelum/selepas Run. Fungsi boleh dipilih itu menyemak akaun aktif berbanding akaun yang menjalankan skrip sebelum memanggil implementation private. Kebenaran identiti akaun hanya digunakan bagi semakan setup pemilik.

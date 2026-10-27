@@ -25,7 +25,7 @@ async function start(options={}){const app=createServer(options),port=options.po
 if(require.main===module){
  const args=process.argv.slice(2);if(args.some(value=>!['--prod'].includes(value))){process.stderr.write('Usage: node tools/analytics/server.cjs [--prod]. Use the ordinary development server for Dev sandbox.\n');process.exitCode=1;}
  else start({production:args.includes('--prod'),port:process.env.PORT===undefined?4173:process.env.PORT,host:process.env.STM_ANALYTICS_HOST||'127.0.0.1',databasePath:process.env.STM_ANALYTICS_DB||DEFAULT_DATABASE_PATH,origin:process.env.STM_ANALYTICS_ORIGIN}).then(({server})=>{
-  process.stdout.write('Slay the Math v'+require('../../package.json').version+' — optional education collector\n');process.stdout.write('Game: http://localhost:'+server.address().port+'\n');process.stdout.write('Listening: '+server.address().address+'\n');process.stdout.write('Sharing stays off until enabled in Learning Report. Closing this terminal stops the receiver.\n');
+  process.stdout.write('Mathematics Slayer v'+require('../../package.json').version+' — optional education collector\n');process.stdout.write('Game: http://localhost:'+server.address().port+'\n');process.stdout.write('Listening: '+server.address().address+'\n');process.stdout.write('Sharing stays off until enabled in Learning Report. Closing this terminal stops the receiver.\n');
   const close=()=>server.close(()=>process.exit(0));process.on('SIGINT',close);process.on('SIGTERM',close);
  }).catch(error=>{process.stderr.write(error.code==='EADDRINUSE'?'Port is in use. Stop the old game server with Ctrl+C, then start the collector server.\n':error.message+'\n');process.exitCode=1;});
 }

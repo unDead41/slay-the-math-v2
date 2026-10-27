@@ -4,7 +4,7 @@ Versi: 2.0.0. Prompt mesti membawa rujukan yang alat benar-benar boleh akses. De
 
 ## Permulaan sesi
 
-> Baca AGENTS.md, governance, DECISIONS dan 18_DESIGN_REFERENCES. Projek ialah Slay the Math bertema dungeon, dua stage dengan satu boss setiap stage, map bercabang dan tiga topik Probability, Expansion & Factorisation serta Indices. Semua teks game English mudah. Baca SOR modul terlibat dan kod semasa sebelum mengubahnya. Kekalkan statistik aktif jika tugasan hanya visual. Bezakan keputusan, rujukan draf dan cadangan; laporkan semakan sebenar.
+> Baca Master SOR main terkini dahulu, kemudian AGENTS.md, governance, DECISIONS, 18_DESIGN_REFERENCES dan audit/handoff berkaitan. Projek ialah Mathematics Slayer, dua stage dengan satu boss setiap stage dan map bercabang. Topik aktif mengikut SOR 02; nama dan BM/English mengikut SOR 26. Jangan ubah ID/URL/storage kerana rename paparan. Kekalkan statistik jika skop visual; laporkan semakan sebenar dan hadnya.
 
 ## Tugasan kod
 

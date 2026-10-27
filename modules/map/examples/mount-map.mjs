@@ -7,7 +7,7 @@ stylesheet.href = new URL('../styles/map.css', import.meta.url).href;
 document.head.append(stylesheet);
 
 const host = document.createElement('section');
-host.setAttribute('aria-label', 'Slay the Math map');
+host.setAttribute('aria-label', 'Mathematics Slayer map');
 document.body.append(host);
 
 const screen = mountMapScreen(host, {

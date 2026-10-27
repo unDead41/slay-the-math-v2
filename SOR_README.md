@@ -1,9 +1,20 @@
-# Slay the Math — Set of Rules
+# Mathematics Slayer — Set of Rules
 
-Current main release: [Online/Offline integration 2.51.0](docs/ONLINE_OFFLINE_MAIN_2_51_0.md), scoped VALID with carried P2 limits. Source publication and exact-code Pages are VERIFIED in [the actual receipt](docs/verification/online-main-20261026/publication.json). Earlier release records remain history.
+## Identiti semasa — Mathematics Slayer 2.52.0
+
+Ijamm mengarahkan nama rasmi **Mathematics Slayer** pada 26 Oktober 2026.
+Nama ini sama dalam BM dan English. Kekalkan repo/URL, identifier, storage keys,
+schema, save/RNG, Alyssa, topik, angka, model dan aset asal. Portable utama ialah
+`MATHEMATICS-SLAYER-OFFLINE.html`; `SLAY-THE-MATH-OFFLINE.html` ialah alias
+byte-identical untuk laluan fail lama, bukan nama paparan semasa.
+**Verifikasi calon pemulihan dan penerbitan 2.52.0 masih BELUM DISAHKAN**.
+[Skop, bukti dan status](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md). Nota keluaran terdahulu di bawah ialah sejarah
+mengikut pin dan hasil asalnya; ujian lama bukan bukti calon pemulihan baharu.
+
+Historical main release: [Online/Offline integration 2.51.0](docs/ONLINE_OFFLINE_MAIN_2_51_0.md), scoped VALID with carried P2 limits. Source publication and exact-code Pages are VERIFIED in [the actual receipt](docs/verification/online-main-20261026/publication.json). Earlier release records remain history.
 
 
-## Current main integration authorization — 2.50.0
+## Historical main integration authorization — 2.50.0
 
 The current explicit user request authorizes combining combat, education and
 Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
@@ -87,7 +98,7 @@ Runtime optimization candidate2.39.0: [SOR25](docs/sor/25_RUNTIME_OPTIMIZATION.m
 
 Hosted resource readiness candidate 2.38.0: [SOR 26](docs/sor/24_HOSTED_READINESS_INPUT.md) and [implementation guide](docs/HOSTED_READINESS_2_38_0.md). Feature-branch only: pre-menu resources, 180-second recovery, run-priority background loading, on-demand Practice and native input guards.
 
-Current cross-branch audit and project-wide guidance: [Master SOR](MASTER_SOR_PROJECT.md), version 1.2.0, 24 October 2026. Read it first, followed by the relevant latest audit/handoff, before branch work. Every branch update includes a scoped before/after review of confirmed problems, potential risks and improvements with evidence, priorities and limits. Read through [AGENTS.md](AGENTS.md); preserve the existing governance/domain owners. GitHub publication provides repository guidance, not automatic ChatGPT Project setup. Mathematics Slayer remains a proposed name; this documentation update does not rename the game.
+Current cross-branch audit and project-wide guidance: [Master SOR](MASTER_SOR_PROJECT.md), version 1.3.0, 27 October 2026. Read it first, followed by the relevant latest audit/handoff, before branch work. Every branch update includes a scoped before/after review of confirmed problems, potential risks and improvements with evidence, priorities and limits. Read through [AGENTS.md](AGENTS.md); preserve the existing governance/domain owners. GitHub publication provides repository guidance, not automatic ChatGPT Project setup. Mathematics Slayer is now approved; the current rename/recovery report distinguishes implementation, QA and publication.
 
 Earlier main card rules, game 2.34.0: [approved card effects](docs/CARD_EFFECTS_2_33_0.md), [main integration](docs/CARD_EFFECTS_MAIN_2_34_0.md). Percentage statuses apply throughout their attack phase; prior ordinary saves and historical reports retain their original definitions. That release uses Master candidate.4. AI incoming-damage estimates and support attribution use the active rules.
 
@@ -105,7 +116,7 @@ Current map balance audit: [Map SOR v1.3](modules/map/SOR/04_MAP_COMBAT_POWER.md
 
 Versi dokumen: **2.0.1** · Tarikh: **18 Oktober 2026 (Malaysia)** · Pemilik: **Ijamm**
 
-Pakej ini ialah rujukan bersama Ijamm dan pembantu AI sepanjang pembangunan Slay the Math. SOR bermaksud **Set of Rules**: peraturan yang boleh diterjemahkan kepada reka bentuk, data, kod dan semakan penerimaan.
+Pakej ini ialah rujukan bersama Ijamm dan pembantu AI sepanjang pembangunan Mathematics Slayer. SOR bermaksud **Set of Rules**: peraturan yang boleh diterjemahkan kepada reka bentuk, data, kod dan semakan penerimaan.
 
 **Keadaan semasa:** dokumentasi asas telah disediakan; game tidak diubah oleh pakej ini. Nilai balancing dan reka bentuk baharu ialah baseline untuk dicuba, bukan keputusan playtest yang telah terbukti.
 
@@ -160,7 +171,7 @@ Baca [ringkasan design](docs/sor/18_DESIGN_REFERENCES.md) dahulu jika menyambung
 
 ## Ayat untuk memulakan sesi pembangunan
 
-> Projek ini ialah Slay the Math. Baca AGENTS.md, indeks SOR, governance dan daftar keputusan dahulu. Kemudian baca SOR modul yang berkaitan dengan tugasan ini. Teruskan keputusan yang disahkan, nyatakan cadangan baharu, dan kemas kini dokumen pemilik apabila peraturan berubah. Laporkan perubahan dan bukti semakan sebenar.
+> Projek ini ialah Mathematics Slayer. Baca Master SOR main terkini dahulu, kemudian AGENTS.md, indeks SOR, governance dan daftar keputusan. Kemudian baca SOR modul yang berkaitan dengan tugasan ini. Teruskan keputusan yang disahkan, nyatakan cadangan baharu, dan kemas kini dokumen pemilik apabila peraturan berubah. Laporkan perubahan dan bukti semakan sebenar.
 
 ## Cara membaca status
 

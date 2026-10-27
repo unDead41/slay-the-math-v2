@@ -1,4 +1,37 @@
-# Daftar keputusan — Slay the Math
+# Daftar keputusan — Mathematics Slayer
+
+## DEC-20261027-RENAME-RECOVERY — Pemulihan calon, bukan penerbitan
+
+- **DITERUSKAN:** arahan nama rasmi/push terdahulu kekal. Maintenance menghilangkan
+  checkout dan bukti kerja 26 Oktober sebelum main diterbitkan. Main kekal ce586507.
+- Enam blob sumber/dokumen yang SHA-nya diketahui dipulihkan tepat daripada GitHub;
+  pemetaan penuh 173 blob dan raw QA/capture lama tidak dapat dipulihkan.
+- Calon dibina semula dan memerlukan bukti source/capture/QA baharu. Keputusan
+  lama dalam transkrip tidak dilabel sebagai hasil atau lampiran calon baharu.
+- **Verifikasi/penerbitan:** BELUM DISAHKAN. Checkpoint recovery branch boleh
+  diterbitkan untuk ketahanan; main masih memerlukan exact-tree GO dan lease.
+  [Laporan semasa](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+
+## DEC-20261026-MATHEMATICS-SLAYER — Nama rasmi dan pelepasan 2.52.0
+
+- **DISAHKAN:** Ijamm mengarahkan audit kerja branch yang masih pending,
+  penerbitan main dan pertukaran nama game kepada **Mathematics Slayer**.
+  Ini menggantikan status CADANGAN dalam keputusan/SOR terdahulu, yang kekal
+  sejarah. Main asas ialah `ce586507dd5a5b55a72ee008ec60a547cd5c2b7e` / 2.51.0.
+- **DITERUSKAN:** selaraskan teks pemain/panduan aktif, metadata paparan dan
+  label eksport dalam kedua-dua bahasa; kekalkan Alyssa, dunia, math/bank,
+  numerical/AI/model, artwork, save/RNG, URL/repository, namespace dan schema.
+- Portable utama `MATHEMATICS-SLAYER-OFFLINE.html` mempunyai alias byte-identical
+  `SLAY-THE-MATH-OFFLINE.html` untuk URL fail lama. Tiada migration/reset storage,
+  raw merge branch sejarah, collector, campaign atau latihan model dibenarkan.
+- Master SOR naik **1.3.0**, berasingan daripada versi game **2.52.0**.
+  Verifikasi calon/penerbitan **BELUM DISAHKAN** sehingga bukti dan readback
+  sebenar tersedia. [Laporan semasa](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+
+## Sejarah keputusan terdahulu
+
+Nama, status, sumber dan hasil di bawah kekal mengikut keputusan asal; keputusan
+rename di atas mengatasi klausa bahawa Mathematics Slayer masih cadangan.
 
 ## DEC-20261026-ONLINE-OFFLINE-MAIN — Publish the two current pending packages
 

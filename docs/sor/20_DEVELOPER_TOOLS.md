@@ -55,7 +55,7 @@ Actual plan reasons remain visible: Recall without discard or other context-sens
 
 The browser lists all current actor clips and uses DCActorAnimation.create with cloned metadata. It supports play/pause, restart, per-frame seek/step, speed, loop, scale multiplier, offsets, flip and floor/origin guides. Original and edited versions appear side by side. Authored per-frame durations, pivots and scales remain authoritative. Source images/configuration are never overwritten.
 
-Export Proposed Configuration includes build, actor, original metadata and proposed settings. Applying it to source is separate work. Full timeline authoring, per-frame pivot editing and synchronised VFX/audio event editing are not supplied by this inspector. MODEL.zip was unavailable in this session; no claim is made that Mathmon's motion editor has been imported. Existing Slay the Math motion data is used directly.
+Export Proposed Configuration includes build, actor, original metadata and proposed settings. Applying it to source is separate work. Full timeline authoring, per-frame pivot editing and synchronised VFX/audio event editing are not supplied by this inspector. MODEL.zip was unavailable in this session; no claim is made that Mathmon's motion editor has been imported. Existing Mathematics Slayer motion data is used directly, retaining its legacy asset/API identifiers.
 
 ## Presets and diagnostics
 

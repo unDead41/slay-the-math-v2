@@ -1,4 +1,19 @@
-# Slay the Math — 2.51.0
+# Mathematics Slayer — 2.52.0
+
+Nama rasmi baharu ialah **Mathematics Slayer**, dipersetujui Ijamm pada
+26 Oktober 2026. Calon pemulihan 27 Oktober menyelaraskan nama pemain, Practice,
+label laporan/eksport dan panduan. Repository/URL, storage keys, save/RNG,
+matematik/numerical dan aset asal kekal. **QA/penerbitan calon masih menunggu**;
+[laporan semasa](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+
+`npm run build` menghasilkan `MATHEMATICS-SLAYER-OFFLINE.html` dan alias lama
+`SLAY-THE-MATH-OFFLINE.html` yang byte-identical. Teruskan URL alias lama jika
+bergantung pada storage `file:` terdahulu; nama/lokasi baharu tidak memindahkan
+save secara automatik. Gunakan Export/Import untuk pemindahan disengajakan.
+
+## Sejarah keluaran — 2.51.0 dan lebih lama
+
+Nota versi di bawah mengekalkan keadaan asalnya, bukan nama atau bukti calon baharu.
 
 **Versi 2.51.0 diterbitkan ke main:** Settings Online/Offline, startup yang dipin kepada release dan pemasangan browser lengkap, bersama snapshot registry owner. Source dan exact-code Pages telah disahkan. [Receipt sebenar](docs/verification/online-main-20261026/publication.json) · [skop, bukti dan had](docs/ONLINE_OFFLINE_MAIN_2_51_0.md). Catatan 2.50.0 dan lebih lama di bawah kekal sejarah.
 
@@ -90,7 +105,7 @@ npm run test:maps
 npm run build
 ```
 
-`npm run build` rebuilds optional `SLAY-THE-MATH-OFFLINE.html` with embedded art/music.
+`npm run build` builds `MATHEMATICS-SLAYER-OFFLINE.html` with embedded art/music and the byte-identical legacy alias `SLAY-THE-MATH-OFFLINE.html`.
 This generated file is no longer tracked: the current full-animation build exceeds GitHub’s single-file limit.
 Build it locally after checkout, or use `npm start` directly.
 DOM tests need jsdom via `DOM_QA_MODULE` (otherwise explicitly skipped); optional

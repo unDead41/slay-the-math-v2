@@ -1,4 +1,8 @@
-# Slay the Math — Map Module for VS Code
+# Mathematics Slayer — Map Module for VS Code
+
+Nama game semasa ialah **Mathematics Slayer**. Folder ZIP, package/global IDs,
+seed snapshots dan data eksport ialah identifier legasi; jangan jana semula data
+kerana tajuk. Arahan ZIP dan hasil asal di bawah ialah konteks pakej sumber.
 
 Pakej sumber untuk modul peta: JavaScript, CSS, PNG dan SOR Markdown.
 

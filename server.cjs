@@ -9,4 +9,4 @@ const server=http.createServer(async(req,res)=>{let pathname;try{pathname=decode
 server.on('close',()=>aiPlaytester?.close());
 const port=Number(process.env.PORT||(dev?4174:4173));
 server.on('error',err=>{console.error(err.code==='EADDRINUSE'?'Port '+port+' sedang digunakan. Hentikan server game lama dengan Ctrl+C sebelum mulakan versi ini.':err.message);process.exitCode=1;});
-server.listen(port,'0.0.0.0',()=>{console.log('Slay the Math v'+require('./package.json').version);console.log('Project: '+__dirname);console.log('Mode: '+(dev?'DEVELOPMENT':prod?'PRODUCTION':'PLAYER'));console.log('Game: http://localhost:'+server.address().port);});
+server.listen(port,'0.0.0.0',()=>{console.log('Mathematics Slayer v'+require('./package.json').version);console.log('Project: '+__dirname);console.log('Mode: '+(dev?'DEVELOPMENT':prod?'PRODUCTION':'PLAYER'));console.log('Game: http://localhost:'+server.address().port);});

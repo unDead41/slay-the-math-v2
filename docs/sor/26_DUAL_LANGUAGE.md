@@ -1,5 +1,9 @@
 # 26 — Whole-game English / Bahasa Melayu
 
+Current identity amendment: **Mathematics Slayer**, per LANG-03 and Master SOR
+1.3.0. Earlier language rollout/source details below remain history.
+[Current implementation/QA/publication status](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+
 Status: DISAHKAN by Ijamm, 24 October 2026. Local implementation on `dual-language-bm-bi`, refreshed to main `45d2378302196d9b0b79af7b371e6f16d4f5768c` (game 2.41.0); initial audit used `ade5d3a` / 2.39.0. The initial local-only restriction is superseded by Ijamm’s subsequent “push ni kalau tak push lagi please” authorization. Integrate with main ee65fa24a7f70157a946608277fa641652fe0057 / 2.42.0 and publish as 2.43.0 after current-source checks. This supersedes earlier English-only presentation requirements. It does not replace numerical or educational owners.
 
 ## Reading level and identity
@@ -8,7 +12,7 @@ Status: DISAHKAN by Ijamm, 24 October 2026. Local implementation on `dual-langua
 
 **LANG-02:** Use short, direct sentences and familiar verbs. Aim for reading comprehension at Form 1 level in both languages. Explain one action or rule at a time. Keep precise school mathematics terms, then explain them in simple words. This is a copy target, not a measured readability score or a claim that every learner understands Form 4 mathematics.
 
-**LANG-03:** The active name is **Slay the Math: Dungeon of Chance**. Preserve Alyssa, character/stage/artifact proper names, canonical card identities and authored BM card names. Mathematics Slayer remains CADANGAN under the Master SOR. Never translate repository names, URLs, save keys, schemas, IDs, curriculum codes, answer bindings, asset paths or user-written comments. BM prompts do not change the bank's Form 4 curriculum level.
+**LANG-03:** The active official name is **Mathematics Slayer**, approved by Ijamm on 26 October 2026; use the same spelling in BM and English. The previous Slay the Math: Dungeon of Chance name/proposal state remains history. Preserve Alyssa, character/stage/artifact proper names, canonical card identities and authored BM card names. Never translate repository names, URLs, save keys, schemas, IDs, curriculum codes, answer bindings, asset paths or user-written comments. BM prompts do not change the bank's Form 4 curriculum level.
 
 ## Established game terms
 

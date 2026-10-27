@@ -107,7 +107,7 @@ function createQuestionFeedbackStore({storage,bankVersion,questionIds,provenance
    for(const [id,value]of dirty){if(value)latest.set(id,value);else latest.delete(id);}
    comments=[...latest.values()].sort((a,b)=>a.questionId.localeCompare(b.questionId)||a.bankVersion.localeCompare(b.bankVersion)).map(cloneEntry);
   }catch{}
-  return {schemaVersion:1,game:'Slay the Math',purpose:'Question improvements',exportedAt:now(),comments};
+  return {schemaVersion:1,game:'Mathematics Slayer',purpose:'Question improvements',exportedAt:now(),comments};
  }
  return {get,list,save,setReviewed,flush,exportData,get error(){return error;}};
 }

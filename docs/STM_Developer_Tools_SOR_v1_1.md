@@ -1,4 +1,8 @@
-# Slay the Math — Developer Tools SOR
+# Mathematics Slayer — Developer Tools SOR
+
+Current display identity: **Mathematics Slayer**. Legacy filename, `STM*` APIs and
+storage keys remain. Specification 1.1 below is historical; current implementation
+follows [SOR 20](sor/20_DEVELOPER_TOOLS.md) and the [rename report](RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 Version: 1.1  
 Date: 2026-10-23  

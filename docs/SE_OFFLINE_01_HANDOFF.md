@@ -1,6 +1,17 @@
 # SE-OFFLINE-01 — handoff untuk Simulation & Evidence
 
-## Current main integration authorization — 2.51.0
+## Identiti semasa — Mathematics Slayer 2.52.0
+
+Ijamm mengarahkan nama rasmi **Mathematics Slayer** pada 26 Oktober 2026.
+Nama ini sama dalam BM dan English. Kekalkan repo/URL, identifier, storage keys,
+schema, save/RNG, Alyssa, topik, angka, model dan aset asal. Portable utama ialah
+`MATHEMATICS-SLAYER-OFFLINE.html`; `SLAY-THE-MATH-OFFLINE.html` ialah alias
+byte-identical untuk laluan fail lama, bukan nama paparan semasa.
+**Verifikasi calon pemulihan dan penerbitan 2.52.0 masih BELUM DISAHKAN**.
+[Skop, bukti dan status](RENAME_MATHEMATICS_SLAYER_2_52_0.md). Nota keluaran terdahulu di bawah ialah sejarah
+mengikut pin dan hasil asalnya; ujian lama bukan bukti calon pemulihan baharu.
+
+## Historical main integration authorization — 2.51.0
 
 Ijamm now requests listing the changes still pending and publishing them to main.
 This authorizes the combined Online/Offline feature e941 and immutable registry

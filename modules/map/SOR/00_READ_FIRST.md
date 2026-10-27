@@ -1,7 +1,7 @@
 # SOR — Mula di sini
 
 Set of Rules ini ialah rujukan bagi Ijamm dan pembantu coding sepanjang
-pembangunan modul peta Slay the Math.
+pembangunan modul peta Mathematics Slayer.
 
 | Dokumen | Kandungan |
 | --- | --- |

@@ -1,5 +1,11 @@
 # 10 — UI, English mudah dan aksesibiliti
 
+**UX-IDENTITY (2.52.0):** Gunakan **Mathematics Slayer** pada tab/menu/loading,
+dialog, Practice/Folio dan label laporan/eksport. Ejaan sama dalam BM/English.
+Semak tajuk lebih panjang pada viewport kecil/besar tanpa menukar flow/focus.
+Capture baharu mesti source-bound; screenshot lama kekal sejarah.
+[Status dan bukti](../RENAME_MATHEMATICS_SLAYER_2_52_0.md).
+
 Current language policy: [26 — Whole-game English / Bahasa Melayu](26_DUAL_LANGUAGE.md), approved 24 October 2026. This supersedes the original English-only baseline.
 
 ## Production language
@@ -150,7 +156,7 @@ Whole-question English/Bahasa Melayu is implemented on education. Source review,
 
 ## Education entry points — 2.16.1
 
-Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). Offline generated output is now SLAY-THE-MATH-OFFLINE.html.
+Current menu language/Practice controls, shared learning presentation and stable versioned entry pages: [fix and actual checks](../EDUCATION_ENTRYPOINTS_2_16_1.md). The historical output was `SLAY-THE-MATH-OFFLINE.html`; 2.52.0 uses `MATHEMATICS-SLAYER-OFFLINE.html` with the old filename retained as an exact compatibility alias.
 
 
 ## Question menu — 2.17.0

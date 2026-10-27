@@ -51,7 +51,7 @@ function setupCollector(){
    This function cannot be invoked by google.script.run. */
 function setupCollector_(){
  const lock=LockService.getScriptLock();if(!lock.tryLock(10000))throw Error('Collector is busy; retry setup.');
- try{const props=PropertiesService.getScriptProperties(),id=props.getProperty('SPREADSHEET_ID'),book=id?SpreadsheetApp.openById(id):SpreadsheetApp.create('Slay the Math — Learning & Comments');
+ try{const props=PropertiesService.getScriptProperties(),id=props.getProperty('SPREADSHEET_ID'),book=id?SpreadsheetApp.openById(id):SpreadsheetApp.create('Mathematics Slayer — Learning & Comments');
   for(const [name,headers] of Object.entries(STM_HEADERS))stmEnsureSheet_(book,name,headers);
   stmRefreshIssueBoard_(book);
   SpreadsheetApp.flush();props.setProperty('SPREADSHEET_ID',book.getId());console.log('Open your private collection Sheet: '+book.getUrl());return book.getUrl();
@@ -136,9 +136,9 @@ function stmRefreshIssueBoard_(book){
 }
 function doGet(e){
  const p=e&&e.parameter||{};
- if(!/^[a-f0-9]{64}$/.test(p.stmNonce||'')||!STM_ALLOWED_GAME_ORIGINS.includes(p.stmParentOrigin))return HtmlService.createHtmlOutput('Open this collection link from Slay the Math.');
+ if(!/^[a-f0-9]{64}$/.test(p.stmNonce||'')||!STM_ALLOWED_GAME_ORIGINS.includes(p.stmParentOrigin))return HtmlService.createHtmlOutput('Open this collection link from Mathematics Slayer.');
  const config=JSON.stringify({parentOrigin:p.stmParentOrigin,channel:p.stmNonce}).replace(/</g,'\\u003c');
- return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><title>Slay the Math collection</title><script>const STM_BRIDGE_CONFIG='+config+';\n'+STM_BRIDGE_SOURCE_+'<\/script>').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+ return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><title>Mathematics Slayer collection</title><script>const STM_BRIDGE_CONFIG='+config+';\n'+STM_BRIDGE_SOURCE_+'<\/script>').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 function stmProjection_(book,key,clientId,entry,receivedAt){
  const p=entry.payload;let name,row;

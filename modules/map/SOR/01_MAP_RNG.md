@@ -1,4 +1,4 @@
-# Slay the Math — Set of Rules: Map RNG
+# Mathematics Slayer — Set of Rules: Map RNG
 
 Peraturan 1.0.0 · Katalog 1.1.0 · 18 Oktober 2026 · Menggantikan susunan peta ilustrasi statik terdahulu.
 

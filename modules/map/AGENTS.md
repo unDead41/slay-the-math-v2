@@ -1,4 +1,4 @@
-# Slay the Math map module
+# Mathematics Slayer map module
 
 - Read `SOR/00_READ_FIRST.md`, then the relevant SOR before changing this module.
 - Preserve the confirmed global room quotas and mandatory levels 5, 9 and 10.

@@ -232,7 +232,7 @@
    const questions=bank.questions.map(q=>({id:q.id,...metadata(q),totalQuestions:1,...aggregate(selected.filter(r=>r.questionId===q.id))}));
    return {schemaVersion:1,bankVersion:bank.bankVersion||bank.version,scope,language,minimumEvidence:MINIMUM_EVIDENCE,totals:{totalQuestions:bank.questions.length,...aggregate(selected)},topics,contentStandards,learningStandards,skills,sessions,recommendations,questions};
   }
-  function exportData(){persist();return {schemaVersion:1,game:'Slay the Math',purpose:'Learning observations',bankVersion:bank.bankVersion||bank.version,exportedAt:now(),sessionAliases:aliasData(aliases),records:records()};}
+  function exportData(){persist();return {schemaVersion:1,game:'Mathematics Slayer',purpose:'Learning observations',bankVersion:bank.bankVersion||bank.version,exportedAt:now(),sessionAliases:aliasData(aliases),records:records()};}
   function csv(){
    const cell=value=>{let valueText=String(value??'');if(/^[\s\uFEFF]*[=+@-]|^[\t\r]/.test(valueText))valueText="'"+valueText;return '"'+valueText.replace(/"/g,'""')+'"';};
    const rows=[['Occurrence ID','Question ID','Bank version','Source schema version','Scope','Session ID','Source','Language','Topic','Chapter','Learning standards','Skills','Basics','First captured at','Updated at','Question state','Attempts','Wrong attempts','First attempt correct','Independent first try','Completion category','Hint opened','More Hint opened','Basics opened','Steps opened']];

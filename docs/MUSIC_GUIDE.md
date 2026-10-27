@@ -1,4 +1,10 @@
-# Slay the Math — Dungeon Music Pack
+# Mathematics Slayer — panduan muzik
+
+Audio, filenames, provenance dan hash asal tidak berubah. Pakej sepuluh trek di
+bawah ialah sejarah Slay the Math, bukan keseluruhan inventori audio semasa.
+Tiada rakaman baharu, transcript atau human listening check didakwa.
+
+## Sejarah — Dungeon Music Pack asal
 
 Ten original instrumental tracks for a dungeon card RPG. No lyrics or third-party recordings.
 

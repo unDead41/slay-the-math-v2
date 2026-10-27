@@ -1,6 +1,17 @@
-# Arahan projek — Slay the Math
+# Arahan projek — Mathematics Slayer
 
-## Current main integration authorization — 2.51.0
+## Identiti semasa — Mathematics Slayer 2.52.0
+
+Ijamm mengarahkan nama rasmi **Mathematics Slayer** pada 26 Oktober 2026.
+Nama ini sama dalam BM dan English. Kekalkan repo/URL, identifier, storage keys,
+schema, save/RNG, Alyssa, topik, angka, model dan aset asal. Portable utama ialah
+`MATHEMATICS-SLAYER-OFFLINE.html`; `SLAY-THE-MATH-OFFLINE.html` ialah alias
+byte-identical untuk laluan fail lama, bukan nama paparan semasa.
+**Verifikasi calon pemulihan dan penerbitan 2.52.0 masih BELUM DISAHKAN**.
+[Skop, bukti dan status](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md). Nota keluaran terdahulu di bawah ialah sejarah
+mengikut pin dan hasil asalnya; ujian lama bukan bukti calon pemulihan baharu.
+
+## Historical main integration authorization — 2.51.0
 
 Ijamm now requests listing the changes still pending and publishing them to main.
 This authorizes the combined Online/Offline feature e941 and immutable registry
@@ -17,7 +28,7 @@ No simulation campaign, collector or model update is included. [Current scope,
 evidence and limits](docs/ONLINE_OFFLINE_MAIN_2_51_0.md).
 
 
-## Current main integration authorization — 2.50.0
+## Historical main integration authorization — 2.50.0
 
 The current explicit user request authorizes combining combat, education and
 Master Map protocol candidates with main 2.49.1 as 2.50.0. Scoped compatibility
@@ -34,7 +45,7 @@ Fail ini dibaca bersama [indeks SOR](SOR_README.md). Jika indeks dinamakan semul
 
 ## Tujuan
 
-Bantu Ijamm membina permainan kad strategi matematik berasaskan web. Kekalkan Slay the Math bertema dungeon, dua stage, satu boss setiap stage, map bercabang dan tiga topik aktif Tingkatan 4: Probability of Combined Events / Kebarangkalian Peristiwa Bergabung, Operations on Sets / Operasi Set, dan Logical Reasoning / Penaakulan Logik. Ini ialah pembetulan dokumentasi mengikut bank semasa, bukan pertukaran topik game. Teks pemain menyokong English dan Bahasa Melayu yang mudah difahami pada aras bacaan Tingkatan 1; kekalkan istilah game antarabangsa. Baca [SOR dwi bahasa](docs/sor/26_DUAL_LANGUAGE.md).
+Bantu Ijamm membina permainan kad strategi matematik berasaskan web. Kekalkan Mathematics Slayer bertema dungeon, dua stage, satu boss setiap stage, map bercabang dan tiga topik aktif Tingkatan 4: Probability of Combined Events / Kebarangkalian Peristiwa Bergabung, Operations on Sets / Operasi Set, dan Logical Reasoning / Penaakulan Logik. Ini ialah pembetulan dokumentasi mengikut bank semasa, bukan pertukaran topik game. Teks pemain menyokong English dan Bahasa Melayu yang mudah difahami pada aras bacaan Tingkatan 1; kekalkan istilah game antarabangsa. Baca [SOR dwi bahasa](docs/sor/26_DUAL_LANGUAGE.md).
 
 ## Bacaan minimum
 

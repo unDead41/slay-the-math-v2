@@ -18,4 +18,7 @@ const expectedVoiceCount=Object.values(registry.assets).filter(a=>a.bus==='voice
 if(Object.keys(music).length!==10||Object.keys(voice).length!==expectedVoiceCount)throw new Error('Portable audio does not match the registered music and voice assets');
 html=html.replace('<body>','<body><script>window.DC_ASSETS='+JSON.stringify(images)+';window.DC_MUSIC='+JSON.stringify(music)+';window.DC_VOICE='+JSON.stringify(voice)+';</script>');
 // Dynamic src attributes are produced by app.js. Resolve local asset names to embedded bytes.
-const out=path.join(root,'SLAY-THE-MATH-OFFLINE.html');fs.writeFileSync(out,html);console.log('Portable game generated: '+fs.statSync(out).size+' bytes');
+const out=path.join(root,'MATHEMATICS-SLAYER-OFFLINE.html');fs.writeFileSync(out,html);
+// Keep the old file URL available for players whose browser save is scoped to it.
+fs.copyFileSync(out,path.join(root,'SLAY-THE-MATH-OFFLINE.html'));
+console.log('Portable game generated: '+fs.statSync(out).size+' bytes');

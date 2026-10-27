@@ -1,4 +1,20 @@
-# Slay the Math — 2.20.0
+# Mathematics Slayer — 2.52.0
+
+## Jalankan salinan semasa
+
+Dalam folder repository asal, jalankan `npm.cmd start` dan buka
+**http://localhost:4173**. Folder/repo `slay-the-math-v2` tidak perlu ditukar.
+`MAIN-SEKARANG.html` dan `index.html` kekal launcher asal bersama runtime `dist/`.
+
+Untuk satu fail portable, jalankan `npm.cmd run build` dan buka
+**MATHEMATICS-SLAYER-OFFLINE.html**. **SLAY-THE-MATH-OFFLINE.html** ialah alias
+byte-identical bagi URL fail lama. Kekalkan laluan itu untuk storage browser
+terdahulu; Export/Import diperlukan untuk pemindahan disengajakan.
+[Status calon 2.52.0](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md): QA/penerbitan menunggu.
+
+## Sejarah panduan operasi — Slay the Math 2.20.0
+
+Nama, filename dan versi di bawah ialah rekod lama; arahan semasa di atas mengatasinya.
 
 ## Buka game terkini
 

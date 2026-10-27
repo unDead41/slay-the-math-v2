@@ -1,9 +1,14 @@
-# MASTER SOR — PROJEK PERMAINAN MATEMATIK
+# MASTER SOR — Mathematics Slayer
+
+Nama rasmi ialah **Mathematics Slayer**, dipersetujui pada 26 Oktober 2026.
+Calon dipulihkan pada 27 Oktober selepas maintenance; source/capture/QA baharu
+mesti dipin semula. Penerbitan main masih **BELUM DITERBITKAN**.
+[Status pemulihan dan bukti](docs/RENAME_MATHEMATICS_SLAYER_2_52_0.md).
 
 | Medan | Rekod |
 | --- | --- |
-| Versi SOR | 1.2.0 |
-| Tarikh | 24 Oktober 2026, Asia/Kuala_Lumpur |
+| Versi SOR | 1.3.0 |
+| Tarikh | 27 Oktober 2026, Asia/Kuala_Lumpur |
 | Pemilik keputusan | Ijamm |
 | Repository rujukan | https://github.com/unDead41/slay-the-math-v2 |
 | Branch utama | main |
@@ -57,11 +62,29 @@ Apabila arahan baharu sudah jelas, teruskan dalam skopnya tanpa meminta pengesah
 
 | Medan | Rekod pada versi SOR ini |
 | --- | --- |
-| Nama lama yang disebut pengguna | Slay the Math: Dungeon of Chance |
-| Nama calon yang disebut pengguna | Mathematics Slayer |
-| Kedudukan nama calon | CADANGAN; contoh pertukaran nama, belum dianggap arahan pelaksanaan. |
+| Nama rasmi | Mathematics Slayer |
+| Status keputusan | DIPERSETUJUI — arahan eksplisit Ijamm, 26 Oktober 2026; ditegaskan semula dalam sesi pemulihan 27 Oktober. |
+| Nama lama / sejarah | Slay the Math: Dungeon of Chance; Slay the Math. |
 | Repository teknikal | unDead41/slay-the-math-v2 |
-| Pertukaran identiti game dalam tugas ini | Tiada; hanya dokumentasi diterbitkan. |
+| Skop | Nama paparan pemain/panduan, metadata dan label eksport; game 2.52.0. |
+| Pelaksanaan / pelepasan | Calon pemulihan sedang disediakan; verifikasi dan penerbitan BELUM DISAHKAN. |
+| Branch / main asas | release/mathematics-slayer-2.52.0; main ce586507dd5a5b55a72ee008ec60a547cd5c2b7e / 2.51.0. |
+
+**IDN-01:** Gunakan ejaan **Mathematics Slayer** dalam BM dan English; jangan
+mengekalkan subtitle lama sebagai identiti aktif. Alyssa, nama watak/stage/kad,
+topik, artwork dan nilai mekanik kekal mengikut pemilik semasa.
+
+**IDN-02:** Kekalkan slug/URL/origin, package ID, storage keys (`duel-cube-*` dan
+`slay-the-math.*`), schema, global `STM*`/`DC*`, API/payload bindings dan asset IDs.
+Rename paparan tidak membenarkan migrasi/reset save atau namespace pemain baharu.
+
+**IDN-03:** Portable utama ialah `MATHEMATICS-SLAYER-OFFLINE.html`; alias
+`SLAY-THE-MATH-OFFLINE.html` mesti byte-identical untuk URL fail lama. Ini tidak
+menjanjikan storage berpindah antara origin/path. Bukti build/readback diperlukan.
+
+**IDN-04:** Rekod, source packs, dataset dan screenshot sejarah kekal nama/pin
+asal. Jangan relabel bukti lama atau mencipta lampiran hilang. Capture/QA baharu
+mempunyai identiti source dan indeks baharu.
 
 Apabila Ijamm mengarahkan penggunaan nama rasmi baharu, rekod ejaan tepat, tarikh keputusan, skop, branch pelaksanaan dan bukti pelepasan. Bezakan status DIPERSETUJUI, DILAKSANAKAN dan DITERBITKAN.
 
@@ -193,6 +216,7 @@ Gunakan MASTER_SOR_PROJECT.md yang tersedia dalam sumber projek sebagai SOR bers
 
 | Versi SOR | Tarikh | Perubahan |
 | --- | --- | --- |
+| 1.3.0 | 26–27 Oktober 2026 | Nama rasmi Mathematics Slayer, status implementasi/penerbitan berasingan, pemeliharaan ID/save/URL dan alias portable; pemulihan bukti selepas maintenance direkod tanpa menganggap hasil lama sebagai ujian calon baharu. |
 | 1.2.0 | 24 Oktober 2026 | Bacaan Master SOR dan audit terdahulu sebelum kerja lain; audit masalah, risiko dan penambahbaikan bagi setiap kemas kini branch, dengan bukti serta had skop. |
 | 1.1.0 | 24 Oktober 2026 | Integrasi repository melalui AGENTS.md dan indeks SOR; kekalkan governance/pemilik domain serta bezakan pemasangan repository daripada ChatGPT Project. |
 | 1.0 | 24 Oktober 2026 | SOR projek bersama dan prosedur audit; Mathematics Slayer direkod sebagai cadangan nama. |

@@ -10,7 +10,7 @@ Architecture: reuse STMPlayMode and STMPetHelp from main; every request goes thr
 
 1. [x] Recreate scoped knowledge/calculators/API with real HTTP RED→GREEN tests for secrets/access/origin/schema/caps/cancellation/math and current/archived card rules.
 2. [x] Integrate original animated pet through current adapter, with DOM RED→GREEN for explicit Online, zero calls Offline/unselected/active question, stale replies, plain text, language, motion, focus/keyboard, support accounting and no player-record writes. Keep existing offline owner.
-3. [ ] Update operator/Publisher handoff/SOR/audit; focused/native/portable/current offline checks, final full suite and one fresh whole-branch reviewer. Apply one Important/Critical test-backed fix pass; record all rulings/deferred minors. Leave main untouched.
+3. [x] Update operator/Publisher handoff/SOR/audit; focused/native/portable/current offline checks, final full suite and one fresh whole-branch reviewer. Apply one Important/Critical test-backed fix pass; record all rulings/deferred minors. Leave main untouched.
 
 Review focus: nested permission/request cancellation; active-question assistance accounting; read-only sanitized state/current-or-archived card facts; native dialog/focus/keyboard and mobile collisions; no browser credentials/provider model selection or open paid relay; current offline build includes every new resource and correct package identity. No model training or simulation campaign.
 

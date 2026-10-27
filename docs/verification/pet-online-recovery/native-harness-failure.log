@@ -1,0 +1,10 @@
+locator.click: Error: strict mode violation: locator('[data-action=saves]') resolved to 2 elements:
+    1) <button type="button" data-action="saves" id="resource-settings">Settings</button> aka getByLabel('Your dungeon is ready').getByText('Settings')
+    2) <button data-action="saves" class="nav-btn icon-only" aria-label="Save and Settings">…</button> aka getByRole('button', { name: 'Save and Settings' })
+
+Call log:
+[2m  - waiting for locator('[data-action=saves]')[22m
+
+    at /workspace/scratch/50182eb5cf4b/pet-ai-resume/tests/pet-browser.cjs:15:647 {
+  log: [ "  - waiting for locator('[data-action=saves]')" ]
+}

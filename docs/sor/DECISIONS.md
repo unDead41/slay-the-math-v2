@@ -1122,3 +1122,7 @@ DISAHKAN: Ijamm resumes the authorized Online API/original pet/game-maths work. 
 ## DEC-20261027-PET-MAIN-UPDATE — Adopt published identity
 
 Main advanced to7a49fff / Mathematics Slayer2.52.0 during pet QA. Adopt its display identity and byte-identical portable alias while preserving all internal IDs/storage/rules. Pet candidate is2.53.0-pet.1 on its own branch; previous-base measurements remain historical, affected checks/captures repeated. No main publication or paid service deployment is authorized by this integration.
+
+## DEC-20261027-PET-QA — Close reconstructed feature evidence
+
+Current candidate2.53.0-pet.1 on main7a49fff /2.52.0 passes the stated36 focused/36 native/15 cold-offline/3 media gates and genuine98 captures. The full Node command exits0 but retained stdout is incomplete:1162 distinct recorded passes plus95 fresh disjoint tail passes support1257 cases; not a fabricated single-run EOF total. Three Important findings fixed in one test-backed pass; two Minor findings and all source/operator limits remain explicit in the pet audit. Publication scope remains the feature branch; main and paid deployment remain excluded.

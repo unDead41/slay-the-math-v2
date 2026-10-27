@@ -1,0 +1,165 @@
+{
+  "sessionDate": "2026-10-27",
+  "baseMain": "7a49fff83388347f0157616fc6b051ddbda4c694",
+  "masterSOR": "1.3.0",
+  "branch": "ai/pet-online-20261025",
+  "version": "2.53.0-pet.1",
+  "captureSource": {
+    "localCommit": "5f5c547aaa606f9dd790ae5e3b99acd86516b0b7",
+    "tree": "6e9f20861b5c19fe272161daf4258d4113b77133",
+    "githubEquivalentCommit": "1c4d86f4f876ccec4821c70acd12846e08ba09e0",
+    "exactTreeEquality": true,
+    "cleanTrackedStart": true
+  },
+  "runtimeCandidate": "d980367260ee85359f475b3fbf08f05f98be580d",
+  "nativeHarnessCandidate": "874188a3904b34c3ba68b94d241b9eb2f6ae5cd7",
+  "focused": {
+    "tests": 36,
+    "pass": 36,
+    "components": {
+      "api": 19,
+      "widget": 10,
+      "realAppConsumers": 3,
+      "branding": 4
+    }
+  },
+  "reviewRegressions": {
+    "red": {
+      "pass": 27,
+      "fail": 5
+    },
+    "green": {
+      "pass": 32,
+      "fail": 0
+    }
+  },
+  "fullNode": {
+    "exitCode": 0,
+    "stdout": "INCOMPLETE_CAPTURE",
+    "recordedPassCases": 1162,
+    "freshDisjointTail": 95,
+    "distinctRecordedCases": 1257,
+    "singleRunTotalNotClaimed": true
+  },
+  "native": {
+    "browser": {
+      "checks": 36,
+      "errors": 0,
+      "reportSHA256": "c2f028d10262ef91dce25fdc41cf5ee90d8758e5a4a798241d5c95066ffe1847",
+      "exitCode": 0
+    },
+    "offline": {
+      "checks": 15,
+      "errors": 0,
+      "reportSHA256": "d55b2afa35c9ef3ec3aa23deec306cff599a340fe884960f8da869366dc01877",
+      "exitCode": 0
+    }
+  },
+  "tutorial": {
+    "images": 98,
+    "languages": {
+      "en": 49,
+      "ms": 49
+    },
+    "runtimeInputs": 111,
+    "allInputAndImageHashesMatch": true,
+    "strictMediaTests": 3
+  },
+  "build": {
+    "syntaxExitCode": 0,
+    "portableBuildExitCode": 0,
+    "productionBuildExitCode": 0,
+    "offlineFilesVerified": 772,
+    "manifestId": "545c496461a0a5cdf28d8a1e",
+    "offlineReleaseId": "545c496461a0a5cdf28d8a1e",
+    "production": {
+      "offlineFilesVerified": 773,
+      "manifestPlusRetainedFiles": 774,
+      "releaseId": "5c4c7a63452a6ceefdb74de4",
+      "appIndexExactlyMatchUnchangedBuildOwner": true,
+      "newPetFilesByteEqualToSource": true
+    },
+    "portable": {
+      "canonical": "MATHEMATICS-SLAYER-OFFLINE.html",
+      "alias": "SLAY-THE-MATH-OFFLINE.html",
+      "byteIdentical": true,
+      "bytes": 318208066,
+      "sha256": "5f2593c1f2a28ad15eab341386a15e9c1079c927519e0374aff92d23f971bbb7"
+    },
+    "unchangedBuildOwnersVerified": 5
+  },
+  "boundaries": {
+    "protectedTrackedFilesEqual": 839,
+    "practiceBundle": "only package version string differs",
+    "newPublicAssets": [
+      {
+        "url": "pet-config.js",
+        "bytes": 141,
+        "sha256": "ea136a201125cb639988472c9e0599f7bd335f885259633a91761cb6fdc913dd",
+        "pack": "core",
+        "kind": "code",
+        "required": true
+      },
+      {
+        "url": "pet-knowledge.js",
+        "bytes": 2657,
+        "sha256": "192e7f60b1fd47b61ed0270c9be89da506c5366a0117fe98842bfe1ae516b599",
+        "pack": "core",
+        "kind": "code",
+        "required": true
+      },
+      {
+        "url": "pet-assistant.js",
+        "bytes": 12842,
+        "sha256": "bcf29aeea0e785d9e2244c1e7ed996e29d80dc3a974989a31d8f7661c80da7cf",
+        "pack": "core",
+        "kind": "code",
+        "required": true
+      },
+      {
+        "url": "pet-assistant.css",
+        "bytes": 2714,
+        "sha256": "c120dc1ed23c1974919cf7614b6a6c4b429f4128aa1b9fa480aa7a28915ad6d3",
+        "pack": "core",
+        "kind": "code",
+        "required": true
+      },
+      {
+        "url": "assets/pet-emberlyn-original.png",
+        "bytes": 4427889,
+        "sha256": "51ac96816818d22a27d469286926863f32b362e90c33dca5d62a1bbaa075a2fc",
+        "pack": "common",
+        "kind": "image",
+        "required": false
+      }
+    ],
+    "productionContainsNoBackendToolsOrEnvFiles": true
+  },
+  "provider": {
+    "realPaidCall": "NOT_RUN",
+    "fakeUpstreamOnly": true,
+    "externalDeployment": "NOT_RUN"
+  },
+  "review": {
+    "status": "VALID_FEATURE_BRANCH_WITH_TWO_DEFERRED_MINORS",
+    "fixedImportant": [
+      "pending question guarded on Main Menu; original Continue/Hint accounting",
+      "restored original-card hand IDs and read-only engine.definition facts",
+      "unusable Unicode/whitespace classroom-code configuration rejected"
+    ],
+    "deferredMinor": [
+      "file-origin remote-Online guide suggestion is unsupported; audit erratum requires hosted Online",
+      "safe server error codes are replaced by generic client/local fallback"
+    ],
+    "evidenceCommit": "e67897a17a7e6d897f574ed6ce262ee4d536b95d",
+    "criticalUnresolved": 0,
+    "importantUnresolved": 0,
+    "report": "final-review.md"
+  },
+  "limits": [
+    "Shared code/in-memory per-process caps; no distributed/per-student quota claim",
+    "Normal-flow support accounting only; no adversarial anti-cheat claim",
+    "No real provider, whole-book/all120 audit, pupil/device/browser/audio acceptance, new ML/campaign or long-term persistence claim",
+    "Inherited CI-247-01, QA-248-PRELOAD-01 and AM-U01 remain open"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "sourceCommit": "26ecd39ffb411332ccd4e2216c06a6e8eb8300fe",
-  "gameVersion": "2.52.0",
+  "sourceCommit": "5f5c547aaa606f9dd790ae5e3b99acd86516b0b7",
+  "gameVersion": "2.53.0-pet.1",
   "viewport": {
     "width": 1440,
     "height": 1000
@@ -13,7 +13,7 @@
     "animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
     "animation.css": "1aa05e00d9d6da2910098779401f12966109e81b4b6d91ecb22fccb565b15241",
     "animation.js": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9",
-    "app.js": "d76174a93ada8c088b100ac957f039e9b98b75a0e1fd27a63529ee279efba445",
+    "app.js": "038a9e6fe99a13f2907c11193750847b768f8c97cc028eec371280a80be068ff",
     "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
     "artifact-ui.js": "4c8c8d1190f6e1394db36cc5ffb94d0fd9cf3f52bcba8664718005633b0d4556",
     "artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
@@ -53,7 +53,7 @@
     "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
     "economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
     "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
-    "education-practice.js": "a76149fe72ce8afc87be390fa9dafcccc4342b4dd39c9124e13d204c8219e04e",
+    "education-practice.js": "8831b9a6940b3eb42d109c26208dd7ea5e2dd4f9b812f7d10db6395a7c8a7d1a",
     "education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
     "education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
     "engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
@@ -64,7 +64,7 @@
     "icon-clarity.css": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd",
     "icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
     "icon-readiness.js": "f809819218b626e45d26cf141f459b080f73a6f00bf118bc99aad2e26b4fd539",
-    "index.html": "36d400f8f3b7dc65790f840c2e9fa7bf1ba877e5b03c0d7681e6dcacedf091f7",
+    "index.html": "4b290a26f6c5b1ab39f9c624ca1e3ae17365f14309b7afd26df47574cc70f3e4",
     "input-guard.css": "95ed26e45472e41d41107f9504ee14249a1385207c428e69e9d18ea416300048",
     "input-guard.js": "eae325489eeecc73c1dbd939c44beda6d2b58a9aa0eb66a9cade2c1c15ecae08",
     "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
@@ -91,7 +91,11 @@
     "mystery.js": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
     "offline-install.js": "0e53c55a7649365adab1250a40faaf93537049e227aad6192253c0f202f0957a",
     "passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+    "pet-assistant.css": "c120dc1ed23c1974919cf7614b6a6c4b429f4128aa1b9fa480aa7a28915ad6d3",
+    "pet-assistant.js": "bcf29aeea0e785d9e2244c1e7ed996e29d80dc3a974989a31d8f7661c80da7cf",
+    "pet-config.js": "ea136a201125cb639988472c9e0599f7bd335f885259633a91761cb6fdc913dd",
     "pet-help.js": "92879e97b25d2ddb51656137d77b06ce8c1b12b01fe0c761b0ace41c70b3f8f2",
+    "pet-knowledge.js": "192e7f60b1fd47b61ed0270c9be89da506c5366a0117fe98842bfe1ae516b599",
     "play-mode-ui.js": "9d926586e8ea6b3c881f351548bc7a83823f39f688bfe87c35e0bce4ad7b98bf",
     "play-mode.css": "3d0fb733b3419c137585282d78480148da5a8b29bb9624afb94edd160cbd19bd",
     "play-mode.js": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
@@ -100,7 +104,7 @@
     "question-language.js": "dc3018f08f6252dc4a3587cb7da3f790ba6546473d63318670fa7b0d47efad71",
     "question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
     "question-report.js": "55fac113b1bcd00de0a0617a94974fcaa06da7e8b0237ec7abd9c10794490cf5",
-    "release.js": "d8c1d3f8deab892d71e82ece4ce5ca9bc5f002aa0879a839a4660aece738fd40",
+    "release.js": "7355cb51e93c6dc430e1985a88a7c76a62367e4d4e33bc02b155bee2d23655ee",
     "rich-text-data.js": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df",
     "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
     "rich-text.js": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226",
@@ -116,15 +120,15 @@
     "tutorial.js": "52a7113884506796da7c05dce60102c68b5c03338e9ee8f2ba0338422f5a6937",
     "visuals.js": "0be6597746e629a7849043a7f276f64b50dee0eb77fca4470fcb3404bdff5a92"
   },
-  "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+  "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
   "runtimeSnapshots": {
-    "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6": {
+    "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c": {
       "analytics-ui.js": "fe50d50b433be6ed5ccc7389b132e96894279b76fe6bf47904443ef27986b4a1",
       "analytics.css": "1e63e501a80c9406c1272e44cc9fdf7bd2942c1b7677240c9862e8f835471237",
       "animation-data.js": "77ec096116bee316e6c13b755461fe7ffe1858a9e34a6418efd8b7430f39c46a",
       "animation.css": "1aa05e00d9d6da2910098779401f12966109e81b4b6d91ecb22fccb565b15241",
       "animation.js": "dd329da127465e5e0554cc3b8f02537da4946eb9f2f960b46c96b97ce3a694e9",
-      "app.js": "d76174a93ada8c088b100ac957f039e9b98b75a0e1fd27a63529ee279efba445",
+      "app.js": "038a9e6fe99a13f2907c11193750847b768f8c97cc028eec371280a80be068ff",
       "artifact-data.js": "63c0c5136c8f627c6a242fd01ce12c175b1aa546804e9cb01113904a572724da",
       "artifact-ui.js": "4c8c8d1190f6e1394db36cc5ffb94d0fd9cf3f52bcba8664718005633b0d4556",
       "artifacts.css": "e982f0a3de06f12faa0733db34bc161ca2a7df1b7fefe8699aae221c73547297",
@@ -164,7 +168,7 @@
       "economy-data.js": "bcc719b1c0a74b41f112b05d6fb617e8065eda9a1176071bc9bfeadf37988102",
       "economy.js": "83e157715eefcde364c52d12310027b1163451984d480e95712b04c3f572575d",
       "education-practice.css": "86b2d7c6ecb26f8e918ee6f8aa7aa22c2a5a68b766d05c759aaa3ff535e1c609",
-      "education-practice.js": "a76149fe72ce8afc87be390fa9dafcccc4342b4dd39c9124e13d204c8219e04e",
+      "education-practice.js": "8831b9a6940b3eb42d109c26208dd7ea5e2dd4f9b812f7d10db6395a7c8a7d1a",
       "education.css": "341ef8be5ae9a37ee27f31d6adf1bef547b7e33a681565d26d37a8dcbd30b0ec",
       "education.js": "cf5987dda4826a6715ee00c24575d5f6d718157d1b904afb17777abdd65638ed",
       "engine.js": "b6bf46d878555bfcf17051fe3a60473979e77449247895e36e9fe4c3ed570bcc",
@@ -175,7 +179,7 @@
       "icon-clarity.css": "70dda9224ab1c4209478061569e638a3ea88798f886fda1cfaa74793fe691fbd",
       "icon-package.css": "3849f36c32966eebfb37666487d5cd62e5d7701d4c84cf4f82f8a576171ea79f",
       "icon-readiness.js": "f809819218b626e45d26cf141f459b080f73a6f00bf118bc99aad2e26b4fd539",
-      "index.html": "36d400f8f3b7dc65790f840c2e9fa7bf1ba877e5b03c0d7681e6dcacedf091f7",
+      "index.html": "4b290a26f6c5b1ab39f9c624ca1e3ae17365f14309b7afd26df47574cc70f3e4",
       "input-guard.css": "95ed26e45472e41d41107f9504ee14249a1385207c428e69e9d18ea416300048",
       "input-guard.js": "eae325489eeecc73c1dbd939c44beda6d2b58a9aa0eb66a9cade2c1c15ecae08",
       "journey.css": "0b96eafc12d28d18e48106d3a4531853139d3d9d1fbb46bb8126b90ea39f4cbf",
@@ -202,7 +206,11 @@
       "mystery.js": "364a933906e97fdf142ebf891fe7d8a03c9738a619f4b7a257b8baf043111aec",
       "offline-install.js": "0e53c55a7649365adab1250a40faaf93537049e227aad6192253c0f202f0957a",
       "passive-music.css": "7de4528a8ecd3d43320964b495200e8f34982d011575c4c80d8e5994b37329e1",
+      "pet-assistant.css": "c120dc1ed23c1974919cf7614b6a6c4b429f4128aa1b9fa480aa7a28915ad6d3",
+      "pet-assistant.js": "bcf29aeea0e785d9e2244c1e7ed996e29d80dc3a974989a31d8f7661c80da7cf",
+      "pet-config.js": "ea136a201125cb639988472c9e0599f7bd335f885259633a91761cb6fdc913dd",
       "pet-help.js": "92879e97b25d2ddb51656137d77b06ce8c1b12b01fe0c761b0ace41c70b3f8f2",
+      "pet-knowledge.js": "192e7f60b1fd47b61ed0270c9be89da506c5366a0117fe98842bfe1ae516b599",
       "play-mode-ui.js": "9d926586e8ea6b3c881f351548bc7a83823f39f688bfe87c35e0bce4ad7b98bf",
       "play-mode.css": "3d0fb733b3419c137585282d78480148da5a8b29bb9624afb94edd160cbd19bd",
       "play-mode.js": "c862bca2d7599917f74380077d70f584ff6d521b377d74f0405bd824a58a4190",
@@ -211,7 +219,7 @@
       "question-language.js": "dc3018f08f6252dc4a3587cb7da3f790ba6546473d63318670fa7b0d47efad71",
       "question-report.css": "fd005a20abe3beb08f1f245ddb22b7f7d23967e96737caffcf574509eaafc796",
       "question-report.js": "55fac113b1bcd00de0a0617a94974fcaa06da7e8b0237ec7abd9c10794490cf5",
-      "release.js": "d8c1d3f8deab892d71e82ece4ce5ca9bc5f002aa0879a839a4660aece738fd40",
+      "release.js": "7355cb51e93c6dc430e1985a88a7c76a62367e4d4e33bc02b155bee2d23655ee",
       "rich-text-data.js": "5815bd4e3361f6352280fe63a5f12d8faf364b7a5cd6adec150e14daff0565df",
       "rich-text.css": "6222b0942c86aa05a31a8cecd31333f435b713d3d5b05e8df5d155e916834610",
       "rich-text.js": "fc8433f6fcc5b8f994205bdbb853cbab7b441cd4e2b868e4e4c8e8840aed0226",
@@ -236,9 +244,9 @@
       "file": "tutorial-shot-loading-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 19800,
-      "sha256": "837b2a94a17567b3b1a66860efbfd198846036218b3487826d89145f7a6a0985",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 19796,
+      "sha256": "95af5763aeb041528a23c5f86499332b823dab5bb5ea93107c335ce25e69b7d2",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#resource-loader",
       "crop": {
@@ -260,9 +268,9 @@
       "file": "tutorial-shot-menu-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 186036,
-      "sha256": "b6ca0f36814719f8b5af36f42b86ec33140970861f0d0d1fd202f2717d043901",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 185464,
+      "sha256": "d2a75f2a78da59b8e4d501a3e5ef83be6af97ac322dbdd8bee90e593f1bfdaa0",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": null,
       "crop": {
@@ -283,17 +291,17 @@
       "language": "en",
       "file": "tutorial-shot-modes-en.webp",
       "width": 560,
-      "height": 703,
-      "bytes": 33478,
-      "sha256": "b2fb15fcb2537a3417c1d4ed901b264d126715d444ae00dd3489f9f56129f040",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 755,
+      "bytes": 34632,
+      "sha256": "3cb7280170f4b95f6640192e5165027e97e8554e065c89870ea1325e98078717",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
         "x": 440,
-        "y": 148.984375,
+        "y": 122.984375,
         "width": 560,
-        "height": 702.015625
+        "height": 754.015625
       },
       "actions": [
         {
@@ -311,9 +319,9 @@
       "file": "tutorial-shot-settings-en.webp",
       "width": 560,
       "height": 976,
-      "bytes": 40072,
-      "sha256": "fe42066bcfb2d76132056d76b68d2087ffb79f0bba1278a14a541521602d6944",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 40558,
+      "sha256": "ab7974961db6af8a6cff03fffe49c682b32ff62a963b83b69989981648999fc5",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
@@ -343,17 +351,17 @@
       "language": "en",
       "file": "tutorial-shot-sound-en.webp",
       "width": 560,
-      "height": 850,
-      "bytes": 21772,
-      "sha256": "04e9674d65abb237dfaaa31be9c42e0e3911b09ee99ccfe1d531124e64c3b019",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 902,
+      "bytes": 22840,
+      "sha256": "293e0f9ac77f30c1831c3d8b4130cf26714e624b0c3e05086a236157b7574aa3",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
         "x": 440,
-        "y": 75.03125,
+        "y": 49.03125,
         "width": 560,
-        "height": 849.921875
+        "height": 901.921875
       },
       "actions": [
         {
@@ -383,14 +391,14 @@
       "file": "tutorial-shot-collection-en.webp",
       "width": 420,
       "height": 987,
-      "bytes": 48116,
-      "sha256": "9419073d6c484df64be679c4300f28cb57aa3cee62e1ed94a8d78c76f62473eb",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 48588,
+      "sha256": "dcbcd34261a0fb084474a408577521bffd0fd346484a54e1330a29c3050f90e1",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": ".collection-detail",
       "crop": {
         "x": 950.515625,
-        "y": 287.578125,
+        "y": 348.765625,
         "width": 418.671875,
         "height": 986.140625
       },
@@ -428,9 +436,9 @@
       "file": "tutorial-shot-collection-artifacts-en.webp",
       "width": 1384,
       "height": 976,
-      "bytes": 60746,
-      "sha256": "c67351434e04884e375e45d1d367441b5b37fbad7d191856aced35543e3ce94b",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 57790,
+      "sha256": "74383383e0bba8f013bab0fa7521743b7e1b8bcb912dbe659bfd6e2e5e37bedb",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
@@ -476,9 +484,9 @@
       "file": "tutorial-shot-report-en.webp",
       "width": 920,
       "height": 970,
-      "bytes": 37058,
-      "sha256": "8c18b73d9d2a2c6bef8cb4db46ec2349100b06961def4b3a39f9ddb5a25e21f0",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 38568,
+      "sha256": "6d7c1c1e2fe1b2401c633377b57572527405663efada2e789a072e6f06f9e61b",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
@@ -530,9 +538,9 @@
       "file": "tutorial-shot-learning-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 71780,
-      "sha256": "5e8895e21eb55f8c235db9106ef2c0d40f689039abf1e236a102d9ba20bfe632",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 75164,
+      "sha256": "a25a21c69b6a4c864849d7a63b2846aac5ec2dc60a1b36cb1a2995cefcf68389",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": null,
       "crop": {
@@ -590,9 +598,9 @@
       "file": "tutorial-shot-learning-help-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 56170,
-      "sha256": "b855e7163dba33ac7759e75bbe62cdc76dcf33fe3e9476b4a36feb2d12ebb792",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 58704,
+      "sha256": "9ef9b6cc607abfcf8eb5f0955364b724ff65fffecc042a3582163fcd14fc8eee",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": null,
       "crop": {
@@ -653,9 +661,9 @@
       "file": "tutorial-shot-map-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 135594,
-      "sha256": "883477391b8e285153a896c585127834dbdb30a978afeb611897733b5c4863d3",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 137212,
+      "sha256": "5959337df9236277d8501beb0f99f7a8318f3cbc61a6591cdf02227e889bfc0a",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "map",
       "selector": null,
       "crop": {
@@ -670,7 +678,7 @@
             "scene": "map",
             "seed": 7,
             "mode": "learn",
-            "sha256": "39dff2f6ca9d2550c141e444fb36e416d0eeeac7438ea8aa270dbaf312b87c44"
+            "sha256": "d9e9264426d2f487bc61444ead6af3715948e5f115f62855988ce2f1701b436a"
           },
           "language": "en"
         },
@@ -685,9 +693,9 @@
       "file": "tutorial-shot-combat-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 145144,
-      "sha256": "ec4d1d972ed0b01c020844f046c14720f22231eccd81302c39e8c865c093c92d",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 147442,
+      "sha256": "284d5f934ed4510de0ebcf75ebdb1a21f5cd9606caee06a9dd16cb83377cd7ff",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": null,
       "crop": {
@@ -702,7 +710,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -719,7 +727,7 @@
       "height": 599,
       "bytes": 29132,
       "sha256": "29ad56b552eb8b460b95d2b693bc551d4571bb24b059d6a9ca39527820293d12",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".enemy",
       "crop": {
@@ -734,7 +742,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -749,9 +757,9 @@
       "file": "tutorial-shot-resources-en.webp",
       "width": 1440,
       "height": 340,
-      "bytes": 57630,
-      "sha256": "ce4b8625fa817063e17fecf9279e24a9d2227148521219e2e7af6898941e5a26",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 60196,
+      "sha256": "49955d41142ebd2aa9c45128edc0746a766a5f4f61468caca38755f9e354a96d",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".combat-dock",
       "crop": {
@@ -766,7 +774,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -783,7 +791,7 @@
       "height": 240,
       "bytes": 14390,
       "sha256": "440bdf0e499895c4d4cc32ebc5aa8e88554808a4b19a6d5e6133207165af759b",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": "[data-action=play][data-id=\"c20\"]",
       "crop": {
@@ -798,7 +806,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -815,7 +823,7 @@
       "height": 183,
       "bytes": 5662,
       "sha256": "4e7de942be10c92c6076eb2c9a1b14cb552e020fdc09adeb1f7df9b24c1cf1a0",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".player .fighter-panel",
       "crop": {
@@ -830,7 +838,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -848,9 +856,9 @@
       "file": "tutorial-shot-attack-block-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 128812,
-      "sha256": "0d7462c469dccc71ef0e812895d1038575589425a266ba6d33e852e57e6882d2",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 131018,
+      "sha256": "012fe6e479131dc3246c5fc08867f9fa916669669e3d51675b7c2b2a50dedb89",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": null,
       "crop": {
@@ -865,7 +873,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -888,7 +896,7 @@
       "height": 54,
       "bytes": 2924,
       "sha256": "8c862a3d5f5a7cffeb161a196e7b367593d724297243f16303d57fc8cf348c47",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".enemy .fighter-panel",
       "crop": {
@@ -903,7 +911,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -924,9 +932,9 @@
       "file": "tutorial-shot-turn-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 151016,
-      "sha256": "67f0d418dd0b2e3bfc3107651e88200628f9d6035fb76e869d92950cd85472ea",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 153202,
+      "sha256": "0c4509d31a0e2c846583409d89abaa04e40b3e3438efbbd8e915c70c7bd6fbeb",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": null,
       "crop": {
@@ -941,7 +949,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -964,17 +972,17 @@
       "language": "en",
       "file": "tutorial-shot-draw-en.webp",
       "width": 1354,
-      "height": 712,
-      "bytes": 100838,
-      "sha256": "8427f751626597c88569b3e7057b2397e4b1b2257329b90b011652edc8211d88",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 776,
+      "bytes": 101904,
+      "sha256": "5b8b6ef01abc212970ec8cfe28703f46176f70653f3c45e5f9f85b65b526d270",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": "#dialog",
       "crop": {
         "x": 43.203125,
-        "y": 144.671875,
+        "y": 112.078125,
         "width": 1353.59375,
-        "height": 710.640625
+        "height": 775.828125
       },
       "actions": [
         {
@@ -982,7 +990,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "10f349777402ba1ad913d9b9d4a9e41e76854eaa676c615f53e6c11ee259b9bb"
+            "sha256": "764ba0c225e6e6b5541bf92f6a7bef1a0420c9eeff855b1a639ef298b01fcf70"
           },
           "language": "en"
         },
@@ -1009,9 +1017,9 @@
       "file": "tutorial-shot-exhaust-en.webp",
       "width": 1354,
       "height": 966,
-      "bytes": 75904,
-      "sha256": "d27a91bbe6e34be60e17511ffa7e4062771579732ddcad8551c7459031a6dda3",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 68426,
+      "sha256": "4b59f9fda0ae78b8b87fe0ac7752fb1c3b9e2e9a98ccc9c87d6ce3dfe0abae69",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "exhaust",
       "selector": "#dialog",
       "crop": {
@@ -1026,7 +1034,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "cc71916d726591fe9db11a54328504f9b28dbd1b998b5ec39d252eb9e609be9a"
+            "sha256": "7ad1d9b97010b3d59526eb8c8f8da1439dff0992fd86aa2ef78bb434f9822417"
           },
           "language": "en"
         },
@@ -1047,9 +1055,9 @@
       "file": "tutorial-shot-predict-en.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 40178,
-      "sha256": "065950e8b5910ed774a8e0480f6d7c66da1f65e8f22c1616baef23a55e519590",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 41190,
+      "sha256": "90da7b56181e41469d19855dbb01128612d62cb426f7f8f930c970a1b704e537",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
@@ -1064,7 +1072,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bfed8717a28cfb74fa46e11196c2828e2f6f8ca399a2924e609a412750e88bf6"
+            "sha256": "439bf6fa972b9161a71b87cb782fb4829034c3bd48837bafd912fce2ad8470c8"
           },
           "language": "en"
         },
@@ -1082,9 +1090,9 @@
       "file": "tutorial-shot-help-en.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 40430,
-      "sha256": "1b4f9158349c8af2d6f8ea3d698c93ab2956f0054293df619e7190173ddb684e",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 38318,
+      "sha256": "ab30e39e7c89be3819a3a5916bffdbc1ad21f3f639f3234eb201db1ec0bc11bf",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
@@ -1099,7 +1107,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bfed8717a28cfb74fa46e11196c2828e2f6f8ca399a2924e609a412750e88bf6"
+            "sha256": "439bf6fa972b9161a71b87cb782fb4829034c3bd48837bafd912fce2ad8470c8"
           },
           "language": "en"
         },
@@ -1123,9 +1131,9 @@
       "file": "tutorial-shot-retry-en.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 35344,
-      "sha256": "de97c3e6d2254e8e3436ddedb887e5c3033863ca5071be5e79aa736124fc60a5",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 36934,
+      "sha256": "3615bf33151f37a54a0263311fd9b829e88c052cf9fb039074dde5d528c7d0e1",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
@@ -1140,7 +1148,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bfed8717a28cfb74fa46e11196c2828e2f6f8ca399a2924e609a412750e88bf6"
+            "sha256": "439bf6fa972b9161a71b87cb782fb4829034c3bd48837bafd912fce2ad8470c8"
           },
           "language": "en"
         },
@@ -1182,17 +1190,17 @@
       "language": "en",
       "file": "tutorial-shot-predict-result-en.webp",
       "width": 1000,
-      "height": 910,
-      "bytes": 37566,
-      "sha256": "aa8a18f770a5f55558a7b2aa606911b56db48bcfdd458b42a427ae9c6c7b17ab",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 972,
+      "bytes": 39136,
+      "sha256": "638426cad14efa36c6979c3c099a73db2f5121499a2bbfcbe91c4398de66f287",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
         "x": 220,
-        "y": 45.078125,
+        "y": 14.484375,
         "width": 1000,
-        "height": 909.84375
+        "height": 971.03125
       },
       "actions": [
         {
@@ -1200,7 +1208,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bfed8717a28cfb74fa46e11196c2828e2f6f8ca399a2924e609a412750e88bf6"
+            "sha256": "439bf6fa972b9161a71b87cb782fb4829034c3bd48837bafd912fce2ad8470c8"
           },
           "language": "en"
         },
@@ -1259,9 +1267,9 @@
       "file": "tutorial-shot-report-problem-en.webp",
       "width": 620,
       "height": 976,
-      "bytes": 42476,
-      "sha256": "08390978d8245747fc09f1f12de87fbb2cb58635c34e7593c9ac187128a105b2",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 42632,
+      "sha256": "914a6f8d5cc580bf8190fc9430b9884175c7fb8de46be14e40d0ac8c9050edf6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#question-report-dialog",
       "crop": {
@@ -1276,7 +1284,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bfed8717a28cfb74fa46e11196c2828e2f6f8ca399a2924e609a412750e88bf6"
+            "sha256": "439bf6fa972b9161a71b87cb782fb4829034c3bd48837bafd912fce2ad8470c8"
           },
           "language": "en"
         },
@@ -1338,9 +1346,9 @@
       "file": "tutorial-shot-focus-en.webp",
       "width": 1440,
       "height": 340,
-      "bytes": 57716,
-      "sha256": "6091e357813a2fc1bfe416992558f8210662ac74e0cdcc708091363aa7171b6e",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 60252,
+      "sha256": "fb6c9583c03f378fbcc491dadcf9f0f34bea3b0e9af61ef831a1e7d30e22fce6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "focus",
       "selector": ".combat-dock",
       "crop": {
@@ -1355,7 +1363,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "3d5e3736345f637703b636b60f678462a4d7c094d2f1e187e470cc703e1898d8"
+            "sha256": "56b83a1a4b0c626442c590079a278fda1412081e3d81e968b78e9e9d457eb73b"
           },
           "language": "en"
         },
@@ -1370,9 +1378,9 @@
       "file": "tutorial-shot-focus-armed-en.webp",
       "width": 1440,
       "height": 340,
-      "bytes": 61986,
-      "sha256": "aae7bf9a3c792d1acd0ee958baba91dca7cbfd4ef647e49a6488a29f7ad1bf71",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 64396,
+      "sha256": "86e68f96275e4ccf50850185ca29ce9638da808af5b657f25463b27428a3422d",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "focus",
       "selector": ".combat-dock",
       "crop": {
@@ -1387,7 +1395,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "3d5e3736345f637703b636b60f678462a4d7c094d2f1e187e470cc703e1898d8"
+            "sha256": "56b83a1a4b0c626442c590079a278fda1412081e3d81e968b78e9e9d457eb73b"
           },
           "language": "en"
         },
@@ -1407,7 +1415,7 @@
       "height": 54,
       "bytes": 2880,
       "sha256": "b180870af2aa9faaac48fc005b94f049f786b7e3092d8322b402f953aa11d0a3",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "focus",
       "selector": ".enemy .fighter-panel",
       "crop": {
@@ -1422,7 +1430,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "3d5e3736345f637703b636b60f678462a4d7c094d2f1e187e470cc703e1898d8"
+            "sha256": "56b83a1a4b0c626442c590079a278fda1412081e3d81e968b78e9e9d457eb73b"
           },
           "language": "en"
         },
@@ -1443,9 +1451,9 @@
       "file": "tutorial-shot-passive-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 142980,
-      "sha256": "09b6c685b8d49af348c248a96f989026c10679d11e14f1d532bde5c716865b07",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 146320,
+      "sha256": "d8aa0af41b69f0342abcd1bc18c4ef25e221ad544cdefbe47c920e5cc20bec2a",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "passive",
       "selector": null,
       "crop": {
@@ -1460,7 +1468,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "ed7bc6fedc725891b9bbe6809012140f8aa1813f4b462d77bedffbed7f6e5195"
+            "sha256": "3202e2c2541adc1d067e8a6232da6c9b505890e852550541d686260a23fd18fd"
           },
           "language": "en"
         },
@@ -1477,17 +1485,17 @@
       "language": "en",
       "file": "tutorial-shot-passive-detail-en.webp",
       "width": 700,
-      "height": 520,
-      "bytes": 34684,
-      "sha256": "8ad9d6c2cecab11016d80a7d78767f9eaca3e84daeb7ae96fb89ce5b6781fe67",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 582,
+      "bytes": 35618,
+      "sha256": "bcc04852ffa792a1d0ae381d762a70745979d1283f7ef8bf69e38ec680bbf0f4",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "passive",
       "selector": "#dialog",
       "crop": {
         "x": 370,
-        "y": 250.546875,
+        "y": 219.953125,
         "width": 700,
-        "height": 518.890625
+        "height": 580.078125
       },
       "actions": [
         {
@@ -1495,7 +1503,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "ed7bc6fedc725891b9bbe6809012140f8aa1813f4b462d77bedffbed7f6e5195"
+            "sha256": "3202e2c2541adc1d067e8a6232da6c9b505890e852550541d686260a23fd18fd"
           },
           "language": "en"
         },
@@ -1518,7 +1526,7 @@
       "height": 599,
       "bytes": 43432,
       "sha256": "57d085e93bd27a566ec3c6de4b8ee002958be9c66cad019e606a8d552b508d5b",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "statuses",
       "selector": ".player",
       "crop": {
@@ -1533,7 +1541,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "d5b83516f32a20495cf1b538ccc7a95b8797c221c98e2739740458cc8b7f2d78"
+            "sha256": "aa746c365d836750a8a82133c74faa97864585a0150322f5835b7e457b146007"
           },
           "language": "en"
         },
@@ -1547,17 +1555,17 @@
       "language": "en",
       "file": "tutorial-shot-status-detail-en.webp",
       "width": 700,
-      "height": 394,
-      "bytes": 23148,
-      "sha256": "ed878368421c4be87c2c40ef00718c2acfae7992936ec038ffede8a4c6ac3b33",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 454,
+      "bytes": 24436,
+      "sha256": "7216c8b22887abd32916100e8c2ebdaf0c5503f82f5ae1497c3b39324ea168dd",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "statuses",
       "selector": "#dialog",
       "crop": {
         "x": 370,
-        "y": 303.953125,
+        "y": 273.359375,
         "width": 700,
-        "height": 392.078125
+        "height": 453.265625
       },
       "actions": [
         {
@@ -1565,7 +1573,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "d5b83516f32a20495cf1b538ccc7a95b8797c221c98e2739740458cc8b7f2d78"
+            "sha256": "aa746c365d836750a8a82133c74faa97864585a0150322f5835b7e457b146007"
           },
           "language": "en"
         },
@@ -1588,7 +1596,7 @@
       "height": 526,
       "bytes": 43066,
       "sha256": "52a7104693c8baad8c70af7a9a9ff0a40b68b73ca4cf07681d3461d100e077ef",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rewards",
       "selector": ".reward-main",
       "crop": {
@@ -1603,7 +1611,7 @@
             "scene": "reward",
             "seed": 7,
             "mode": "learn",
-            "sha256": "007ac143591bfb214fcdaf972b143d15a0d15ce1903ad23377f3afac62f095f9"
+            "sha256": "8527c840e3b4d3c1870f628d60d7e67f73758f7dc28dceb834560766c08e1d3e"
           },
           "language": "en"
         },
@@ -1618,9 +1626,9 @@
       "file": "tutorial-shot-reward-taken-en.webp",
       "width": 1354,
       "height": 966,
-      "bytes": 151590,
-      "sha256": "a778adacf619764e96088e566bf1fce365cb49248ae3aa104295e1ef2432be74",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 149202,
+      "sha256": "7f329ef234c42442e951abde94ca9f5a7208c4a0eb97b29c640ed9f64144452f",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rewards",
       "selector": "#dialog",
       "crop": {
@@ -1635,7 +1643,7 @@
             "scene": "reward",
             "seed": 7,
             "mode": "learn",
-            "sha256": "007ac143591bfb214fcdaf972b143d15a0d15ce1903ad23377f3afac62f095f9"
+            "sha256": "8527c840e3b4d3c1870f628d60d7e67f73758f7dc28dceb834560766c08e1d3e"
           },
           "language": "en"
         },
@@ -1659,9 +1667,9 @@
       "file": "tutorial-shot-shop-en.webp",
       "width": 810,
       "height": 757,
-      "bytes": 59724,
-      "sha256": "ca25ed82f6a65d87500ca648f543c16473649955f965e20082681dddeb91ed80",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 61536,
+      "sha256": "3b967f989bbd30bf6f6ed0a24b4b609b273cab6ed91ef6b3462c629b914bf913",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -1676,7 +1684,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "bb92d4eb0541e565e97af3d7b111a83cb10a4b875289fc48515501532f611cd1"
+            "sha256": "2ad5642e5bc7c6b4cc9ad6b9c098ab7f40e2d390f664c316c630521b711f18d5"
           },
           "language": "en"
         },
@@ -1694,9 +1702,9 @@
       "file": "tutorial-shot-shop-bought-en.webp",
       "width": 810,
       "height": 757,
-      "bytes": 58614,
-      "sha256": "fd6f810f859ff5bfff25ecdd4ff5252d352f90f17b7d30151776d67f216814ab",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 60410,
+      "sha256": "f2998d40bcb39471c8c05d2b1fbe73c72b136806d68760ec768d9b22bf401d07",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -1711,7 +1719,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "bb92d4eb0541e565e97af3d7b111a83cb10a4b875289fc48515501532f611cd1"
+            "sha256": "2ad5642e5bc7c6b4cc9ad6b9c098ab7f40e2d390f664c316c630521b711f18d5"
           },
           "language": "en"
         },
@@ -1732,9 +1740,9 @@
       "file": "tutorial-shot-shop-artifacts-en.webp",
       "width": 810,
       "height": 757,
-      "bytes": 42594,
-      "sha256": "74e7e1e97054c38ffc1161abcf3878ced53a4706ea072236ecb6b94479e30970",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 43724,
+      "sha256": "69808fc9dd3e9c7a719fbdfaf993ca6335b38b35b949c6d3810c828972818070",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -1749,7 +1757,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "bb92d4eb0541e565e97af3d7b111a83cb10a4b875289fc48515501532f611cd1"
+            "sha256": "2ad5642e5bc7c6b4cc9ad6b9c098ab7f40e2d390f664c316c630521b711f18d5"
           },
           "language": "en"
         },
@@ -1773,9 +1781,9 @@
       "file": "tutorial-shot-shop-remove-en.webp",
       "width": 810,
       "height": 757,
-      "bytes": 22044,
-      "sha256": "e1ef12f8ddfbfc64ad6be6ee3b0fe9397cecb82e3d2036ef5e940677a768ad78",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 23804,
+      "sha256": "97e3f913550f7ee0e143e34cce30a2f3876b9752d6c5688d7fcff8f6c1ce5d30",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -1790,7 +1798,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "bb92d4eb0541e565e97af3d7b111a83cb10a4b875289fc48515501532f611cd1"
+            "sha256": "2ad5642e5bc7c6b4cc9ad6b9c098ab7f40e2d390f664c316c630521b711f18d5"
           },
           "language": "en"
         },
@@ -1817,9 +1825,9 @@
       "file": "tutorial-shot-rest-en.webp",
       "width": 535,
       "height": 682,
-      "bytes": 20166,
-      "sha256": "d42cbdd28a39b0f2b8551be33a6c4bbd8877baf2186b34610c3611dc0a706427",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 20170,
+      "sha256": "b441361fa711681e0a543bac26b2abcc053c7f2d0243080d18861b4b04aa7d26",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rest",
       "selector": ".room-panel",
       "crop": {
@@ -1834,7 +1842,7 @@
             "scene": "camp",
             "seed": 7,
             "mode": "learn",
-            "sha256": "9177e4be63b1848e982e917a165e2575938efdbcf975f5f7ee9ea2fa7ebc483a"
+            "sha256": "4b72d6ff260137600a23706715a5b7d28ea86d00eb5502eb301c0606da74cfe1"
           },
           "language": "en"
         },
@@ -1848,17 +1856,17 @@
       "language": "en",
       "file": "tutorial-shot-rest-upgrade-en.webp",
       "width": 1354,
-      "height": 930,
-      "bytes": 166600,
-      "sha256": "665cd560179683674c29667759533dcb1c56b72d2167e43a899be879bf059518",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 966,
+      "bytes": 169620,
+      "sha256": "25b1da627a36e2307480e99c3c3705c73d14821bf5436803a95cac2d9c0a9df2",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rest",
       "selector": "#dialog",
       "crop": {
         "x": 43.203125,
-        "y": 35.15625,
+        "y": 17.5,
         "width": 1353.59375,
-        "height": 929.671875
+        "height": 965
       },
       "actions": [
         {
@@ -1866,7 +1874,7 @@
             "scene": "camp",
             "seed": 7,
             "mode": "learn",
-            "sha256": "9177e4be63b1848e982e917a165e2575938efdbcf975f5f7ee9ea2fa7ebc483a"
+            "sha256": "4b72d6ff260137600a23706715a5b7d28ea86d00eb5502eb301c0606da74cfe1"
           },
           "language": "en"
         },
@@ -1887,9 +1895,9 @@
       "file": "tutorial-shot-mystery-en.webp",
       "width": 739,
       "height": 750,
-      "bytes": 36044,
-      "sha256": "a8a16fcb313828b1e112fcf0e241648e0284b2620ba3350dfa313d14ca1cb109",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 37594,
+      "sha256": "d1a6dfd805a2942086fcd533f6cf20c8ef90ec7e8b0e6f11f20e546f0f39a1c8",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "mystery",
       "selector": ".mystery-panel",
       "crop": {
@@ -1904,7 +1912,7 @@
             "scene": "event",
             "seed": 7,
             "mode": "learn",
-            "sha256": "e6e49abc054969c904bb781a85f2426f7ab3793358f27dde509f9df123d8de51"
+            "sha256": "98b66c7a4c992954908f51cc6a3e4b2e0910cc04660c32dcd727fe3ed13ffd08"
           },
           "language": "en"
         },
@@ -1919,9 +1927,9 @@
       "file": "tutorial-shot-mystery-question-en.webp",
       "width": 739,
       "height": 750,
-      "bytes": 39090,
-      "sha256": "c51c489093684d1c0c213af5990333fbee78745c18b59a0a40371272e81726fe",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 40466,
+      "sha256": "d53a0b7d7f6a466efc94ba2c1c2982732d7be9630a5339290a160b963415e526",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "mystery",
       "selector": ".mystery-panel",
       "crop": {
@@ -1936,7 +1944,7 @@
             "scene": "event",
             "seed": 7,
             "mode": "learn",
-            "sha256": "e6e49abc054969c904bb781a85f2426f7ab3793358f27dde509f9df123d8de51"
+            "sha256": "98b66c7a4c992954908f51cc6a3e4b2e0910cc04660c32dcd727fe3ed13ffd08"
           },
           "language": "en"
         },
@@ -1956,7 +1964,7 @@
       "height": 62,
       "bytes": 3846,
       "sha256": "6c5ceb6ae1031b44a6bd661138e863a49321e29c2b2af6db75f2e1ae48c8303e",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "boss",
       "selector": ".seals",
       "crop": {
@@ -1971,7 +1979,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "d981ad1c1679a6bab710684262a333a475ff6a410dd86b37ac58a9315d95d56c"
+            "sha256": "94a91663e5532affea273ddad55368c0c0ac05823efa1dfb9399823486e548d6"
           },
           "language": "en"
         },
@@ -1988,7 +1996,7 @@
       "height": 62,
       "bytes": 3838,
       "sha256": "b17d4ab4e4f955b6176aa2b13286fd307013a23e06429618272c8e44e74a891d",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "boss",
       "selector": ".seals",
       "crop": {
@@ -2003,7 +2011,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "d981ad1c1679a6bab710684262a333a475ff6a410dd86b37ac58a9315d95d56c"
+            "sha256": "94a91663e5532affea273ddad55368c0c0ac05823efa1dfb9399823486e548d6"
           },
           "language": "en"
         },
@@ -2037,9 +2045,9 @@
       "file": "tutorial-shot-master-en.webp",
       "width": 756,
       "height": 857,
-      "bytes": 63138,
-      "sha256": "e2d1517b34db11518d0349df38c204fc5c8f862415178e9188db4b9938b19a8f",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 65244,
+      "sha256": "f501ae15ba6697d19a089a65ff2da91c5b830a67bc7618f509ab3c514fc2696e",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "master",
       "selector": ".artifact-choice-panel",
       "crop": {
@@ -2054,7 +2062,7 @@
             "scene": "master",
             "seed": 7,
             "mode": "challenge",
-            "sha256": "396e8dcc21e7a8b013f87a8c80f2666bba492894dc7261270590a1693c7b59a1"
+            "sha256": "8717ac223246ee2ebaf4e50b2578ec5dbccb8b1d32436d69e52e60bca745ece5"
           },
           "language": "en"
         },
@@ -2072,9 +2080,9 @@
       "file": "tutorial-shot-artifact-question-en.webp",
       "width": 796,
       "height": 808,
-      "bytes": 40516,
-      "sha256": "40d082399057910d4c88437c6d3ce52fbeb02fc25289c85aac868302c180069c",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 41442,
+      "sha256": "49656eca184268f186b32c198860e468707ff9f9ceb35a1dc8b4db223a775a3a",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "master",
       "selector": ".education-panel",
       "crop": {
@@ -2089,7 +2097,7 @@
             "scene": "master",
             "seed": 7,
             "mode": "challenge",
-            "sha256": "396e8dcc21e7a8b013f87a8c80f2666bba492894dc7261270590a1693c7b59a1"
+            "sha256": "8717ac223246ee2ebaf4e50b2578ec5dbccb8b1d32436d69e52e60bca745ece5"
           },
           "language": "en"
         },
@@ -2110,9 +2118,9 @@
       "file": "tutorial-shot-artifact-result-en.webp",
       "width": 796,
       "height": 808,
-      "bytes": 36284,
-      "sha256": "1fde02fc460f36774367628cf7f4aba4d1b0bfd6510248b5fe22ad5710ee83ae",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 37272,
+      "sha256": "c3fdc7997ecd47648211bd63320eea2e98a863c01a2febe9315c9c233e036126",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "master",
       "selector": ".education-panel",
       "crop": {
@@ -2127,7 +2135,7 @@
             "scene": "master",
             "seed": 7,
             "mode": "challenge",
-            "sha256": "396e8dcc21e7a8b013f87a8c80f2666bba492894dc7261270590a1693c7b59a1"
+            "sha256": "8717ac223246ee2ebaf4e50b2578ec5dbccb8b1d32436d69e52e60bca745ece5"
           },
           "language": "en"
         },
@@ -2157,9 +2165,9 @@
       "file": "tutorial-shot-results-en.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 157396,
-      "sha256": "d78fe8dd01fa94f5c800d5789733dbc044c8062c54d9b9d308eeddb6fbd62ca0",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 159228,
+      "sha256": "ce7d3a46b34c44d688372bc753a6b8f1b031d3b2f704a196fcdae5766f5f9e21",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "results",
       "selector": null,
       "crop": {
@@ -2174,7 +2182,7 @@
             "scene": "victory",
             "seed": 7,
             "mode": "learn",
-            "sha256": "adaa5057a3aaa661803bc63ebf2d4d56cfe742654ccc2390455a6d614ec5ca6e"
+            "sha256": "26128404433ff9d98aa70ade33f1243fea867b4a76345f412b158a8e30ce89fc"
           },
           "language": "en"
         },
@@ -2190,8 +2198,8 @@
       "width": 1440,
       "height": 1000,
       "bytes": 22644,
-      "sha256": "67a62741ff89607035b56d05ec9b1a9109389ab931687dbd961dae8545028181",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "sha256": "9fce2b2476f3fd951ce45702378ac8ef49c98bf25ac2e63b724270878a37add5",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#resource-loader",
       "crop": {
@@ -2213,9 +2221,9 @@
       "file": "tutorial-shot-menu-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 186568,
-      "sha256": "10bda658263d680ca1e8195edfca6a0caff31d522e767aef89ec3cc8e6c3ae53",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 188166,
+      "sha256": "0f3c3574bc1d93f4acdfc0c0daef2f06adda3fbc198c1c62e1d85869899836f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": null,
       "crop": {
@@ -2236,17 +2244,17 @@
       "language": "ms",
       "file": "tutorial-shot-modes-ms.webp",
       "width": 560,
-      "height": 744,
-      "bytes": 41010,
-      "sha256": "991435d22544119ba9ffb67f25b4374831e7dc447c49666a8fae47332ce14c79",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 796,
+      "bytes": 42300,
+      "sha256": "8ce705484c4f7d21c5aa34664f72a92bc463f80a718a336af41933e8db33aa4a",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
         "x": 440,
-        "y": 128.046875,
+        "y": 102.046875,
         "width": 560,
-        "height": 743.90625
+        "height": 795.90625
       },
       "actions": [
         {
@@ -2264,9 +2272,9 @@
       "file": "tutorial-shot-settings-ms.webp",
       "width": 560,
       "height": 976,
-      "bytes": 43734,
-      "sha256": "cf0fb1538fc5fff675145809db550712926f712693e6949df9129049f8d3155c",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 44934,
+      "sha256": "2846705b0da7e24e4420ec8d5ed03f1ac322a79160301f8c961048c21787c88e",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
@@ -2296,17 +2304,17 @@
       "language": "ms",
       "file": "tutorial-shot-sound-ms.webp",
       "width": 560,
-      "height": 850,
-      "bytes": 24078,
-      "sha256": "01f6b8ae78386acef31a8a8264c5238581b6272d7cb2a16994aa1f6c343200f0",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 902,
+      "bytes": 25202,
+      "sha256": "8794871ba941f820ae05ff57da9d4fdbfabc463e0810b1790c4a58b41932aac8",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
         "x": 440,
-        "y": 75.03125,
+        "y": 49.03125,
         "width": 560,
-        "height": 849.921875
+        "height": 901.921875
       },
       "actions": [
         {
@@ -2336,14 +2344,14 @@
       "file": "tutorial-shot-collection-ms.webp",
       "width": 420,
       "height": 1031,
-      "bytes": 48908,
-      "sha256": "9f6fdbb79fcc4ae355d8733c4983553490db7ddb16730eb52a5a1b7564562a33",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 48824,
+      "sha256": "664d8a1e5305f76e513f696e9414387a446b0500d2323e6200ba24934c93b139",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": ".collection-detail",
       "crop": {
         "x": 950.515625,
-        "y": 287.578125,
+        "y": 348.765625,
         "width": 418.671875,
         "height": 1029.640625
       },
@@ -2381,9 +2389,9 @@
       "file": "tutorial-shot-collection-artifacts-ms.webp",
       "width": 1384,
       "height": 976,
-      "bytes": 61074,
-      "sha256": "bf8bd6bc61818447bd9eaa4cad33d4d9a9703a94088f57ff21768bfb04161dce",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 58556,
+      "sha256": "cfff46f0f800ee584f9b094bade329f4f76c1732a057781c975a98c7b3ee34c3",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
@@ -2429,9 +2437,9 @@
       "file": "tutorial-shot-report-ms.webp",
       "width": 920,
       "height": 970,
-      "bytes": 40336,
-      "sha256": "dd3ad00f239ce6113223defa9785bf8b81d37b07bdcb47820f2fad25bb8673a3",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 42320,
+      "sha256": "6d262297542f900068c41aa7798762d9c1f3dcda50b7b98cb1cc671916eedb8c",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": "#dialog",
       "crop": {
@@ -2483,9 +2491,9 @@
       "file": "tutorial-shot-learning-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 86960,
-      "sha256": "070fbbea8163e9378a57e2458780ec1a380de64d158c473bde9315598ee54a86",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 89612,
+      "sha256": "529c26dd3efb7271a11ad7e967bfed9d785c2852c05c20c468fad780b81b8286",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": null,
       "crop": {
@@ -2543,9 +2551,9 @@
       "file": "tutorial-shot-learning-help-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 66648,
-      "sha256": "d8f410e7dc3ec9e9531df28372a9044936ce06fc9ad985999ca6356f1dd9a7d8",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 69380,
+      "sha256": "90d5f9104ac0c3ed50d362237427b54e47fd612631877a247333aef8d640c6eb",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "menu",
       "selector": null,
       "crop": {
@@ -2606,9 +2614,9 @@
       "file": "tutorial-shot-map-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 139550,
-      "sha256": "0ad8ad43d7f1bdac8d192d161d3f39a9ef9a09f2a7daa75e6f4c3bf4711668af",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 141428,
+      "sha256": "d727bfadacc5bd9bf1053e1ea08e52e14bc88689cad1a5bceadff1762123536d",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "map",
       "selector": null,
       "crop": {
@@ -2623,7 +2631,7 @@
             "scene": "map",
             "seed": 7,
             "mode": "learn",
-            "sha256": "2e1bcd26ebb712470e515ee68f59e47c9f933887f9310ac0888dbcad2f7811f3"
+            "sha256": "c7847e5b0708d1fc22d18f972c071149306a63d45be2ff5e0ad3717d4a25bcf4"
           },
           "language": "ms"
         },
@@ -2638,9 +2646,9 @@
       "file": "tutorial-shot-combat-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 149392,
-      "sha256": "ad77010ac53feed96dafb28f270d0d58a2c7f4f671ee3f732015fac3f1a01626",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 150710,
+      "sha256": "36731c07ef5e3e9a2bea7cdb22c760cf5dbc530ae53348c22639108eb090289c",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": null,
       "crop": {
@@ -2655,7 +2663,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2672,7 +2680,7 @@
       "height": 599,
       "bytes": 29214,
       "sha256": "896e865b3cc046470c290cd9b7e90aa23c5928b0d88ba2094aab00b3b8c9f302",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".enemy",
       "crop": {
@@ -2687,7 +2695,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2702,9 +2710,9 @@
       "file": "tutorial-shot-resources-ms.webp",
       "width": 1440,
       "height": 340,
-      "bytes": 59390,
-      "sha256": "7416ad0fe1706ca5b0bb40660d8a1fea352c74f4dc8553f551320946a9cf6db4",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 61382,
+      "sha256": "7f541f98608730ce5ca7e0eaacf5b09434527b251f7a9e5ad7fe2578469a70e9",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".combat-dock",
       "crop": {
@@ -2719,7 +2727,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2736,7 +2744,7 @@
       "height": 240,
       "bytes": 14346,
       "sha256": "d0377a1c80e8fe6fdf727a05022a09e47afd6bc3ce84fc43a9af56adb6c57cd3",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": "[data-action=play][data-id=\"c20\"]",
       "crop": {
@@ -2751,7 +2759,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2768,7 +2776,7 @@
       "height": 183,
       "bytes": 5778,
       "sha256": "66971a027ad97eff95ced3ea7567ad31fd36aeaea9731291b71e45c2260f771e",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".player .fighter-panel",
       "crop": {
@@ -2783,7 +2791,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2801,9 +2809,9 @@
       "file": "tutorial-shot-attack-block-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 131154,
-      "sha256": "78a88017ca80d8c7e65aa8c0da37900d5248adce1caac1b234fc17038579baf1",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 133576,
+      "sha256": "c96a9789e20ed843db81369fb5344307a9d4086180e23715410b9321df2be1d9",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": null,
       "crop": {
@@ -2818,7 +2826,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2841,7 +2849,7 @@
       "height": 54,
       "bytes": 2926,
       "sha256": "92408bef98f0e5e0db81ad98bb42aabfcb153860aa047b63f4fb41b89d7ac6ae",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": ".enemy .fighter-panel",
       "crop": {
@@ -2856,7 +2864,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2877,9 +2885,9 @@
       "file": "tutorial-shot-turn-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 153954,
-      "sha256": "ca7c510fccf67f2af1cdfc35e83145180161948e03feace63063bf4517cf8fd9",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 156300,
+      "sha256": "089ee90587b51a775875db347abb611856d8cf146617a3b1343ffa2892460032",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": null,
       "crop": {
@@ -2894,7 +2902,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2917,17 +2925,17 @@
       "language": "ms",
       "file": "tutorial-shot-draw-ms.webp",
       "width": 1354,
-      "height": 712,
-      "bytes": 101512,
-      "sha256": "d4292fc20fd5ad96f571934ebf7acf60c6cbcf06a551fbc19e23b894c3144732",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 776,
+      "bytes": 102608,
+      "sha256": "d0b1ba41371cd7b0bd57ac9d0a4b2dd717c6277021722627c60d4ac522562801",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "combat",
       "selector": "#dialog",
       "crop": {
         "x": 43.203125,
-        "y": 144.671875,
+        "y": 112.078125,
         "width": 1353.59375,
-        "height": 710.640625
+        "height": 775.828125
       },
       "actions": [
         {
@@ -2935,7 +2943,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "57e03500d292ab38e95ba6b21857cd496f03696fd2642fea84ba7d0646eff7e6"
+            "sha256": "414ecaf01b6917aca2d9f6418b496986df26ad2a8490e65e7aec32308fabacad"
           },
           "language": "ms"
         },
@@ -2962,9 +2970,9 @@
       "file": "tutorial-shot-exhaust-ms.webp",
       "width": 1354,
       "height": 966,
-      "bytes": 77530,
-      "sha256": "1b78b34c69e5f8f428f343f49035edce2905ed2bcf7479b857dd4424a4fd8510",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 69810,
+      "sha256": "c7f9030ea4a3b9f37919de1e00c58631885d9cd70844584214cdb2151a2394ac",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "exhaust",
       "selector": "#dialog",
       "crop": {
@@ -2979,7 +2987,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "f0817f75e32b1096d65f7b1475b91ae712fe22def1bb9b29b600b221a33da664"
+            "sha256": "bdf03febb900335044b093d8639a347f0b05c6c20b2be8cc2d382baf9116653b"
           },
           "language": "ms"
         },
@@ -3000,9 +3008,9 @@
       "file": "tutorial-shot-predict-ms.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 48570,
-      "sha256": "848105b3fede6f6785f8931ec32fe43ade2178dace83433eb82ffed29cdaa3b1",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 48734,
+      "sha256": "d2791ade8e5e7a7504d604403ae4db5877f44760b1503b6b3873f114870ad763",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
@@ -3017,7 +3025,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bc01b96c3ef198284bb78a4374f9a89332d619bdc0a278c129ac9cc4b831e26e"
+            "sha256": "329c3923caaae151006e88e93f63bfe744b2b5b922bd0107ff722a49322b340d"
           },
           "language": "ms"
         },
@@ -3035,9 +3043,9 @@
       "file": "tutorial-shot-help-ms.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 46386,
-      "sha256": "5657611c8a440d2ba12decf5e45899d70628bd4de1fb4788bfae0e0f97782936",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 43324,
+      "sha256": "105664bef16f4001879e2b79070583d64adca4d86da5a3cd5e655edd45e4ebd4",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
@@ -3052,7 +3060,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bc01b96c3ef198284bb78a4374f9a89332d619bdc0a278c129ac9cc4b831e26e"
+            "sha256": "329c3923caaae151006e88e93f63bfe744b2b5b922bd0107ff722a49322b340d"
           },
           "language": "ms"
         },
@@ -3076,9 +3084,9 @@
       "file": "tutorial-shot-retry-ms.webp",
       "width": 1000,
       "height": 976,
-      "bytes": 45352,
-      "sha256": "2d80f67c454ea5ca4ccd1ec00dd29aeee266d7341d6ce1807f1c4beade2d4411",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 45316,
+      "sha256": "71789186ab90914662466c0a7b377567aeea6ab79ba7140e99cabef1f39c6c90",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
@@ -3093,7 +3101,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bc01b96c3ef198284bb78a4374f9a89332d619bdc0a278c129ac9cc4b831e26e"
+            "sha256": "329c3923caaae151006e88e93f63bfe744b2b5b922bd0107ff722a49322b340d"
           },
           "language": "ms"
         },
@@ -3135,17 +3143,17 @@
       "language": "ms",
       "file": "tutorial-shot-predict-result-ms.webp",
       "width": 1000,
-      "height": 928,
-      "bytes": 47274,
-      "sha256": "855c859a426b17214ae6281ddf17316078034889c70dc217fc15184982e8056f",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 976,
+      "bytes": 49422,
+      "sha256": "4ffc1eedcdc080497f30d85267f17a9e74fad62e040bdd2cfcd6d8f5011c42b3",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#dialog",
       "crop": {
         "x": 220,
-        "y": 36,
+        "y": 12,
         "width": 1000,
-        "height": 927.984375
+        "height": 976
       },
       "actions": [
         {
@@ -3153,7 +3161,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bc01b96c3ef198284bb78a4374f9a89332d619bdc0a278c129ac9cc4b831e26e"
+            "sha256": "329c3923caaae151006e88e93f63bfe744b2b5b922bd0107ff722a49322b340d"
           },
           "language": "ms"
         },
@@ -3212,9 +3220,9 @@
       "file": "tutorial-shot-report-problem-ms.webp",
       "width": 620,
       "height": 976,
-      "bytes": 47922,
-      "sha256": "f2688ae0c2344564edd52195a59632423c2a76213e383489319ce2018ce5f623",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 48078,
+      "sha256": "87a62ca40779be52ecf554e208ad71001d2fa667992670ccd0f5623cfc827336",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "predict",
       "selector": "#question-report-dialog",
       "crop": {
@@ -3229,7 +3237,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "bc01b96c3ef198284bb78a4374f9a89332d619bdc0a278c129ac9cc4b831e26e"
+            "sha256": "329c3923caaae151006e88e93f63bfe744b2b5b922bd0107ff722a49322b340d"
           },
           "language": "ms"
         },
@@ -3291,9 +3299,9 @@
       "file": "tutorial-shot-focus-ms.webp",
       "width": 1440,
       "height": 340,
-      "bytes": 58690,
-      "sha256": "c3631123ed5c980277101aea2199952fc33d02df785d56c37785278e173f3c54",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 61242,
+      "sha256": "e8a2cfb35db12a5bbc24223758e2eb16ffbb8a7b89c26dd578b5fe059d4b0524",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "focus",
       "selector": ".combat-dock",
       "crop": {
@@ -3308,7 +3316,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "958231a3a8398d24f51d069cddd4ee5f9805a4520c844b986095dffc0b9429ed"
+            "sha256": "96a6cc3382e705550b0142795e0848b71ca84b4673f2d79c3262308d54674073"
           },
           "language": "ms"
         },
@@ -3323,9 +3331,9 @@
       "file": "tutorial-shot-focus-armed-ms.webp",
       "width": 1440,
       "height": 340,
-      "bytes": 63176,
-      "sha256": "68cd4a7351be40e5f8a3c7114f57117a13a2b4dbef76dfcc9e540b73b0277501",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 65722,
+      "sha256": "87f94dc80cdf7704fe8189843d9aff7fc17764181166c595b50e32a444dbeeb1",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "focus",
       "selector": ".combat-dock",
       "crop": {
@@ -3340,7 +3348,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "958231a3a8398d24f51d069cddd4ee5f9805a4520c844b986095dffc0b9429ed"
+            "sha256": "96a6cc3382e705550b0142795e0848b71ca84b4673f2d79c3262308d54674073"
           },
           "language": "ms"
         },
@@ -3360,7 +3368,7 @@
       "height": 54,
       "bytes": 2884,
       "sha256": "4b1f6fb1a9b819b3c03494d3d925587c47461a9bb58aebdd7ef57a58aeb09e42",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "focus",
       "selector": ".enemy .fighter-panel",
       "crop": {
@@ -3375,7 +3383,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "958231a3a8398d24f51d069cddd4ee5f9805a4520c844b986095dffc0b9429ed"
+            "sha256": "96a6cc3382e705550b0142795e0848b71ca84b4673f2d79c3262308d54674073"
           },
           "language": "ms"
         },
@@ -3396,9 +3404,9 @@
       "file": "tutorial-shot-passive-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 147956,
-      "sha256": "e2e2d3db0601496342bce65800508e33866734fd8de2662b3b36329a7e1ecf75",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 148214,
+      "sha256": "06c5e81861a530a89a73756995b1acc33bab7ab44119919ef678c648b2fd3d81",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "passive",
       "selector": null,
       "crop": {
@@ -3413,7 +3421,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "38a58465f61d024223d77f7e57ef685a39f5a697392319a5dc387018e759267e"
+            "sha256": "d80954d0686e2bdff591ea112ee44e0ec5086e5d7774ffc6cadbd28a5bf2d6d5"
           },
           "language": "ms"
         },
@@ -3430,17 +3438,17 @@
       "language": "ms",
       "file": "tutorial-shot-passive-detail-ms.webp",
       "width": 700,
-      "height": 520,
-      "bytes": 39126,
-      "sha256": "d45b73eb248a34871b1e4e864043994ceb02a5be4b7c2f317bfe413ca6c0b30d",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 582,
+      "bytes": 40152,
+      "sha256": "bce1a971ba9aee9951d3b6394375e9ddcecacce24c2372129539bcfcea4b66ca",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "passive",
       "selector": "#dialog",
       "crop": {
         "x": 370,
-        "y": 250.546875,
+        "y": 219.953125,
         "width": 700,
-        "height": 518.890625
+        "height": 580.078125
       },
       "actions": [
         {
@@ -3448,7 +3456,7 @@
             "scene": "battle",
             "seed": 31042026,
             "mode": "learn",
-            "sha256": "38a58465f61d024223d77f7e57ef685a39f5a697392319a5dc387018e759267e"
+            "sha256": "d80954d0686e2bdff591ea112ee44e0ec5086e5d7774ffc6cadbd28a5bf2d6d5"
           },
           "language": "ms"
         },
@@ -3471,7 +3479,7 @@
       "height": 599,
       "bytes": 43342,
       "sha256": "136592fc5090852c251d5dc84dc02239a523fd552c7c4f5483087e8d8f1ab131",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "statuses",
       "selector": ".player",
       "crop": {
@@ -3486,7 +3494,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "11bf08ba65d09711ac97ade0cad3f679736dafc369e5fc8481c3bc64c3d2d5ab"
+            "sha256": "7a0de4685f4670fa2c101422e94038693798e050f69876e380e297a7de77c655"
           },
           "language": "ms"
         },
@@ -3500,17 +3508,17 @@
       "language": "ms",
       "file": "tutorial-shot-status-detail-ms.webp",
       "width": 700,
-      "height": 418,
-      "bytes": 27772,
-      "sha256": "1527444a4f94deeb7e89c03a48a304f50b3f502ee24f063289cc0662408961bf",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 478,
+      "bytes": 28416,
+      "sha256": "3a6d273e43daacac73ffea7bad0986a8d9a2019efe97a90dfee92bc0e75fa910",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "statuses",
       "selector": "#dialog",
       "crop": {
         "x": 370,
-        "y": 291.953125,
+        "y": 261.359375,
         "width": 700,
-        "height": 416.078125
+        "height": 477.265625
       },
       "actions": [
         {
@@ -3518,7 +3526,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "11bf08ba65d09711ac97ade0cad3f679736dafc369e5fc8481c3bc64c3d2d5ab"
+            "sha256": "7a0de4685f4670fa2c101422e94038693798e050f69876e380e297a7de77c655"
           },
           "language": "ms"
         },
@@ -3541,7 +3549,7 @@
       "height": 526,
       "bytes": 43682,
       "sha256": "3173616d975b23240ed3ec7e444517a655a70b56514ad5cac72a9a6773874c55",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rewards",
       "selector": ".reward-main",
       "crop": {
@@ -3556,7 +3564,7 @@
             "scene": "reward",
             "seed": 7,
             "mode": "learn",
-            "sha256": "c40034a30ed3f90851bcc7b0b327f1e615963e2b4729f006c6120a4179716d27"
+            "sha256": "8cf519d326436d0a54d21cab58ef55b5f6815362038347bb27ec39a4abcf3a57"
           },
           "language": "ms"
         },
@@ -3571,9 +3579,9 @@
       "file": "tutorial-shot-reward-taken-ms.webp",
       "width": 1354,
       "height": 966,
-      "bytes": 154336,
-      "sha256": "63914a75b5af199d61727bb87c525c844ee5780db8c5efb68859fa08270c71cd",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 152696,
+      "sha256": "fcb6aa1db653ea3590f5329d857f865c70023ba35c59d74962227865c7a730e5",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rewards",
       "selector": "#dialog",
       "crop": {
@@ -3588,7 +3596,7 @@
             "scene": "reward",
             "seed": 7,
             "mode": "learn",
-            "sha256": "c40034a30ed3f90851bcc7b0b327f1e615963e2b4729f006c6120a4179716d27"
+            "sha256": "8cf519d326436d0a54d21cab58ef55b5f6815362038347bb27ec39a4abcf3a57"
           },
           "language": "ms"
         },
@@ -3612,9 +3620,9 @@
       "file": "tutorial-shot-shop-ms.webp",
       "width": 810,
       "height": 757,
-      "bytes": 60316,
-      "sha256": "8a4be053e06b1c8f6fb9bb10b92e5b751fe9208edb1d2e0a3209079f9bea8902",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 62216,
+      "sha256": "07f3c2b6a1c810ef9d44748ada7998d67e68708c7114501c6209848ddf9e5483",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -3629,7 +3637,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "dc2fd93fc3970ee38516aedabb27d4f7e23a6f437d6252dd0f14cd8ae2968579"
+            "sha256": "b1921d6e13c5b1c5b280d30b6c369d8b8391b53964db1f5890315188f2f234c8"
           },
           "language": "ms"
         },
@@ -3647,9 +3655,9 @@
       "file": "tutorial-shot-shop-bought-ms.webp",
       "width": 810,
       "height": 757,
-      "bytes": 59930,
-      "sha256": "cefae5dea987a808770f245d3bdd71fa066b8fc955d6c38afa1e918c85a831a0",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 61818,
+      "sha256": "5feabf9d7d080bd511e6968f14c164167d2876b47c306e7b44b7c3f1abd8d60f",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -3664,7 +3672,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "dc2fd93fc3970ee38516aedabb27d4f7e23a6f437d6252dd0f14cd8ae2968579"
+            "sha256": "b1921d6e13c5b1c5b280d30b6c369d8b8391b53964db1f5890315188f2f234c8"
           },
           "language": "ms"
         },
@@ -3685,9 +3693,9 @@
       "file": "tutorial-shot-shop-artifacts-ms.webp",
       "width": 810,
       "height": 757,
-      "bytes": 46244,
-      "sha256": "67cd2bb5ddafa9c2fb9769232e3fdd5ac048cd5eed0a44462883f0a62578dd93",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 47414,
+      "sha256": "173dc2cf9eeabda7172e9a07bd2eb01dd781aaba50b06739c8337a7ade3bba15",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -3702,7 +3710,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "dc2fd93fc3970ee38516aedabb27d4f7e23a6f437d6252dd0f14cd8ae2968579"
+            "sha256": "b1921d6e13c5b1c5b280d30b6c369d8b8391b53964db1f5890315188f2f234c8"
           },
           "language": "ms"
         },
@@ -3726,9 +3734,9 @@
       "file": "tutorial-shot-shop-remove-ms.webp",
       "width": 810,
       "height": 757,
-      "bytes": 24044,
-      "sha256": "5ec3e296cbd88cc6f3e0014deca3f63534eb1633f73d6dc01e2f471c96dbb123",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 26460,
+      "sha256": "d78738f28a57800080717cceddc39956b4e39aefd628e29c5a79032fd9d0c786",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "shop",
       "selector": ".shop-counter",
       "crop": {
@@ -3743,7 +3751,7 @@
             "scene": "shop",
             "seed": 7,
             "mode": "learn",
-            "sha256": "dc2fd93fc3970ee38516aedabb27d4f7e23a6f437d6252dd0f14cd8ae2968579"
+            "sha256": "b1921d6e13c5b1c5b280d30b6c369d8b8391b53964db1f5890315188f2f234c8"
           },
           "language": "ms"
         },
@@ -3770,9 +3778,9 @@
       "file": "tutorial-shot-rest-ms.webp",
       "width": 535,
       "height": 682,
-      "bytes": 21882,
-      "sha256": "7dc85e7ea23b8d477e857231601361a1b3b6cf56ddb2d3cac6b5b19e26be4c75",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 21868,
+      "sha256": "f8816c80fdf675335ff515f0de6733d796d7c1d43c41934626aaa64d6db375d1",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rest",
       "selector": ".room-panel",
       "crop": {
@@ -3787,7 +3795,7 @@
             "scene": "camp",
             "seed": 7,
             "mode": "learn",
-            "sha256": "528154a8dc3b5920189481a36bfe9e6f25dc15281d019bc6fcf9b2b9d0baaa5d"
+            "sha256": "5ac01f1f78e3f50acb4d0662b65ada98e2f837d58a586083def36b596b1efe0a"
           },
           "language": "ms"
         },
@@ -3801,17 +3809,17 @@
       "language": "ms",
       "file": "tutorial-shot-rest-upgrade-ms.webp",
       "width": 1354,
-      "height": 930,
-      "bytes": 169462,
-      "sha256": "8d12a8899889be45b48413bca78b09056b61bbe587f503c8d26123db92a8143f",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "height": 966,
+      "bytes": 173448,
+      "sha256": "07cdd1254c7a83a3f675d5b57e8b534e24595c8f5936eb7a2f369abf54223334",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "rest",
       "selector": "#dialog",
       "crop": {
         "x": 43.203125,
-        "y": 35.15625,
+        "y": 17.5,
         "width": 1353.59375,
-        "height": 929.671875
+        "height": 965
       },
       "actions": [
         {
@@ -3819,7 +3827,7 @@
             "scene": "camp",
             "seed": 7,
             "mode": "learn",
-            "sha256": "528154a8dc3b5920189481a36bfe9e6f25dc15281d019bc6fcf9b2b9d0baaa5d"
+            "sha256": "5ac01f1f78e3f50acb4d0662b65ada98e2f837d58a586083def36b596b1efe0a"
           },
           "language": "ms"
         },
@@ -3840,9 +3848,9 @@
       "file": "tutorial-shot-mystery-ms.webp",
       "width": 739,
       "height": 750,
-      "bytes": 42406,
-      "sha256": "f8c4f2bc9d1ae74ffa71fafc479df802bccd2d96ddee5927fc2c364e7c72c639",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 44284,
+      "sha256": "54f054eb343db863adbe4d32221f361bf75e774bbcc66448e1dc402e4de0b21c",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "mystery",
       "selector": ".mystery-panel",
       "crop": {
@@ -3857,7 +3865,7 @@
             "scene": "event",
             "seed": 7,
             "mode": "learn",
-            "sha256": "39736b37e99f8292f1fca31da9e4b80c6a58d80cab415bb25e2a9bd5e97564a1"
+            "sha256": "9aa9c272d1c9738a355a7ab3ec884e9e45c01e97f501a34dc8afccd46b2c870b"
           },
           "language": "ms"
         },
@@ -3872,9 +3880,9 @@
       "file": "tutorial-shot-mystery-question-ms.webp",
       "width": 739,
       "height": 750,
-      "bytes": 44654,
-      "sha256": "10b70258465cbdcc9e54db32a8f32d37f1f3a26b1574dee63767eb6efd52223c",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 46306,
+      "sha256": "c8be41f1c6a54a9dc8be3064bda300e0a9e9ff38e3dae9339f361692024b4255",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "mystery",
       "selector": ".mystery-panel",
       "crop": {
@@ -3889,7 +3897,7 @@
             "scene": "event",
             "seed": 7,
             "mode": "learn",
-            "sha256": "39736b37e99f8292f1fca31da9e4b80c6a58d80cab415bb25e2a9bd5e97564a1"
+            "sha256": "9aa9c272d1c9738a355a7ab3ec884e9e45c01e97f501a34dc8afccd46b2c870b"
           },
           "language": "ms"
         },
@@ -3909,7 +3917,7 @@
       "height": 76,
       "bytes": 4242,
       "sha256": "243a680db35f80f23e29f892c4d9678b2b250ca00fd4db3cb85fa92915e206aa",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "boss",
       "selector": ".seals",
       "crop": {
@@ -3924,7 +3932,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "5926a97a0ad6070e0ee1599240c36ee978958d57b4c85fabc685bc125a34dc3e"
+            "sha256": "484a431b97a8dc0d1c2e728beb1dfae1d9bab9e999d82bd1b8c48d390e15ab63"
           },
           "language": "ms"
         },
@@ -3941,7 +3949,7 @@
       "height": 76,
       "bytes": 4224,
       "sha256": "ddb108736886d94b479d9e89363a4812727322d534464f1d7f58735a86d0d6df",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "boss",
       "selector": ".seals",
       "crop": {
@@ -3956,7 +3964,7 @@
             "scene": "battle",
             "seed": 7,
             "mode": "learn",
-            "sha256": "5926a97a0ad6070e0ee1599240c36ee978958d57b4c85fabc685bc125a34dc3e"
+            "sha256": "484a431b97a8dc0d1c2e728beb1dfae1d9bab9e999d82bd1b8c48d390e15ab63"
           },
           "language": "ms"
         },
@@ -3990,9 +3998,9 @@
       "file": "tutorial-shot-master-ms.webp",
       "width": 756,
       "height": 866,
-      "bytes": 68922,
-      "sha256": "df9d1849768f1c1a4460a0c5a5060a3b7711416dce1a41d34481b1c2ccbd234c",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 71032,
+      "sha256": "36c9a3814dd51603afdf23bf3289fa38404bb1067e18474efb4912bf14ad4086",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "master",
       "selector": ".artifact-choice-panel",
       "crop": {
@@ -4007,7 +4015,7 @@
             "scene": "master",
             "seed": 7,
             "mode": "challenge",
-            "sha256": "ad75bb7d727b52151c056c89d4df13e2a41949e10c6d5d19dccd4b702f52d5ad"
+            "sha256": "12b7f497674c5fbec7310cd9f6391b1e803c605638f91da082964ec86512987b"
           },
           "language": "ms"
         },
@@ -4025,9 +4033,9 @@
       "file": "tutorial-shot-artifact-question-ms.webp",
       "width": 796,
       "height": 808,
-      "bytes": 43128,
-      "sha256": "1f7b38aa30b88aec7dedbe0ecf7896d4d47fc97615e1744d11cf69eca38b73fa",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 44076,
+      "sha256": "e67021f112d91656f429d744b70598dedc814a002824c708e2c35a4f97b31f62",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "master",
       "selector": ".education-panel",
       "crop": {
@@ -4042,7 +4050,7 @@
             "scene": "master",
             "seed": 7,
             "mode": "challenge",
-            "sha256": "ad75bb7d727b52151c056c89d4df13e2a41949e10c6d5d19dccd4b702f52d5ad"
+            "sha256": "12b7f497674c5fbec7310cd9f6391b1e803c605638f91da082964ec86512987b"
           },
           "language": "ms"
         },
@@ -4063,9 +4071,9 @@
       "file": "tutorial-shot-artifact-result-ms.webp",
       "width": 796,
       "height": 808,
-      "bytes": 40988,
-      "sha256": "78f8383e91f0170ad962f7965e8e97ed78bb1b344cbadf33fc67c45cecae7728",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 41974,
+      "sha256": "2a3765475430a4b7888beadbe219cb3fdb5964f7a576a30764e2cdf198df88c1",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "master",
       "selector": ".education-panel",
       "crop": {
@@ -4080,7 +4088,7 @@
             "scene": "master",
             "seed": 7,
             "mode": "challenge",
-            "sha256": "ad75bb7d727b52151c056c89d4df13e2a41949e10c6d5d19dccd4b702f52d5ad"
+            "sha256": "12b7f497674c5fbec7310cd9f6391b1e803c605638f91da082964ec86512987b"
           },
           "language": "ms"
         },
@@ -4110,9 +4118,9 @@
       "file": "tutorial-shot-results-ms.webp",
       "width": 1440,
       "height": 1000,
-      "bytes": 161130,
-      "sha256": "f948abc5098c7735d9f26344455def806c11890a38492f48270ed0feb2630570",
-      "inputDigest": "dad891b60c5a07a1e0e9d15ced5932d450a97f0fb126c748438b428ed44e27f6",
+      "bytes": 163260,
+      "sha256": "121d0c8de57f5b90dbf633f3e8278baf920979368aad4134fd501c883040abb2",
+      "inputDigest": "116193f65e448d227986d4dacb0635c63fb4dafa2539bd70ceec477de0243c3c",
       "group": "results",
       "selector": null,
       "crop": {
@@ -4127,7 +4135,7 @@
             "scene": "victory",
             "seed": 7,
             "mode": "learn",
-            "sha256": "2c4f8c810b57033d273274a6e9c8be86ede8a3a01fed1a0dbc6ac89ad5d90dbe"
+            "sha256": "578367a6450fc8ce1d686fcab51b21b9ee10b1a35460b6521fcb747c44d5711b"
           },
           "language": "ms"
         },

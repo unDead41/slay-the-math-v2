@@ -57,3 +57,5 @@ npm run test:pet-browser
 ```
 
 DOM tests need jsdom (`DOM_QA_MODULE` supported); browser tests need Playwright/Chromium (`BROWSER_QA_MODULE`, `QA_CHROMIUM_EXECUTABLE`). HTTP tests use real local HTTP and an injected fake provider. Native tests intercept only the tutor endpoint; game/engine/art/portable bytes are real. No fake result is described as live API validation. Original old candidate b497eb0 and its local QA were pruned before publication; old 1173/35 results remain historical only. Fresh results below are bound to this reconstruction on current main.
+
+Current recovery evidence:36 focused,36 native pet,15 production cold-offline and3 strict media checks pass;98 real bilingual captures and111 exact source bindings. Full Node command exits0 with1162 retained PASS names and a complete fresh disjoint95-case tail (1257 distinct recorded cases; original EOF summary unavailable). See the audit/evidence for exact scope, source/production release identities and the file-origin Online operator erratum.

@@ -5,7 +5,9 @@ Offline serta Online melalui backend yang dikonfigurasi operator. Settings ialah
 satu-satunya pilihan Online/Offline; Online mesti dipilih secara eksplisit sebelum
 permintaan API. Soalan aktif menggunakan Hint asal dengan rekod bantuan yang sama.
 Tiada key/provider/backend awam diaktifkan oleh penerbitan game statik.
-**QA terhad VALID; penerbitan main PENDING.** 126 focused Node, 54 native Pet,
+**QA terhad VALID; main 2.53.0 VERIFIED** pada
+`67ff7a999276d9c2398814dce45f02ad36d8c6d4`, Pages exact code 40517807037 SUCCESS.
+[Receipt actual](docs/verification/pet-main-20261027/publication.json). 126 focused Node, 54 native Pet,
 15 cold-offline dan dua portable lulus pada calon tempatan 728d25e7; full suite
 dan live provider tidak dijalankan.
 [Laporan integrasi](docs/PET_MAIN_2_53_0.md) ·

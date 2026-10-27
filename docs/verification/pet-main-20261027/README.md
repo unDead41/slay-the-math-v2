@@ -1,6 +1,8 @@
 # Pet main 2.53.0 — public evidence
 
-**QA scoped VALID; main publication PENDING.** Tested local candidate
+**QA scoped VALID; main 2.53.0 VERIFIED** at
+`67ff7a999276d9c2398814dce45f02ad36d8c6d4`, exact reviewed tree 97b8d00e.
+[Actual publication receipt](publication.json); [exact-code Pages 40517807037](https://github.com/unDead41/slay-the-math-v2/actions/runs/40517807037) SUCCESS. Tested local candidate
 `728d25e7a9969b3570e7e8943664b9a6c43ce67c`, tree
 `2bb0b762478cc76243097cc9aba7300bebab6524`. A later docs/evidence-only tree is
 reviewed separately; no local checkpoint is presented as a GitHub commit.
@@ -49,5 +51,6 @@ The 98 Tutorial images remain their original source captures, with 107/111 curre
 input hashes matching and four stated differences. No fresh 98 capture is claimed.
 Inherited findings and live/physical/pupil/all-browser/long-term eviction limits
 remain. [Derived release summary](release-verification.json) keeps publication
-PENDING until an actual expected-head write/readback; post-publication receipt
-stays outside this closed archive and index.
+VERIFIED after the actual expected-head write/readback. The publication receipt
+stays outside this closed archive and index; final receipt Pages is checked
+externally with no further status commits.

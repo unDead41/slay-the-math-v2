@@ -14,7 +14,10 @@
 - **Verifikasi gabungan:** VALID dalam skop calon tempatan 728d25e7 / tree
   2bb0b762. 126 Node dengan EOF penuh, 54 native Pet, 15 cold-offline dan dua
   portable PASS; Root memeriksa 4,163 parameter matematik secara berasingan.
-  **Penerbitan main:** PENDING.
+  **Penerbitan main:** VERIFIED pada `67ff7a999276d9c2398814dce45f02ad36d8c6d4`,
+  tree `97b8d00e4e383c710296bf1cac16319c873dfa8c`, single parent Pet 07677.
+  Expected-head 7a / force:false dan actual readback PASS; Pages 40517807037
+  SUCCESS. [Receipt actual](../verification/pet-main-20261027/publication.json).
   Bukti feature terdahulu kekal berasingan daripada calon stabil baharu.
   [Laporan semasa](../PET_MAIN_2_53_0.md).
 

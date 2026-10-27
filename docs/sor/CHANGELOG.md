@@ -6,7 +6,9 @@
   guidance dikekalkan. Kontrak aktivasi operator tidak diaktifkan secara automatik.
 - Tambah supersession skop main dan laporan baharu; keputusan/receipt/hasil ujian
   lama kekal pada pin asal. QA terhad VALID: 126 Node, 54 native Pet,
-  15 cold-offline dan dua portable PASS pada calon 728d25e7; main PENDING.
+  15 cold-offline dan dua portable PASS pada calon 728d25e7. Main 2.53.0 VERIFIED pada
+  `67ff7a999276d9c2398814dce45f02ad36d8c6d4`; Pages 40517807037 SUCCESS.
+  [Receipt actual](../verification/pet-main-20261027/publication.json).
   [Skop dan bukti](../PET_MAIN_2_53_0.md).
 
 ## Sejarah candidate Pet

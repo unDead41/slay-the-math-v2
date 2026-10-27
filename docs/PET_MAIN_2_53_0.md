@@ -1,9 +1,10 @@
 # Emberlyn — main 2.53.0
 
-**VALID dalam skop audit dan QA calon stabil; penerbitan main PENDING.**
+**VALID dalam skop audit dan QA calon stabil; main 2.53.0 VERIFIED.**
 Ijamm mengarahkan audit dan push semua pakej yang benar-benar pending.
-Hanya Pet ialah ciri semasa yang belum masuk main. Pengaktifan provider/backend
-awam tidak termasuk. Tarikh: 27 Oktober 2026, Asia/Kuala_Lumpur; Master SOR
+Audit **awal sebelum penerbitan** mendapati hanya Pet belum masuk main. Pet
+07677 kini ancestor code 67ff; **tiada pakej ciri aktif masih pending** pada
+snapshot penutupan ini. Pengaktifan provider/backend awam tidak termasuk. Tarikh: 27 Oktober 2026, Asia/Kuala_Lumpur; Master SOR
 **1.3.0** main dibaca dahulu.
 
 | Identiti | Pin |
@@ -21,10 +22,18 @@ merujuk calon ini; delta akhir hanya dokumentasi/evidence dan disemak berasingan
 
 ## Inventori branch
 
-40 refs sebenar terdiri daripada main dan 39 non-main. Kesemua 37 head asal
-kekal, ditambah task rename yang ancestral dan Pet. 39 non-main dikelaskan sebagai
-20 ancestor, 14 penerimaan seluruh tree sejarah, tiga specialist diterima terpilih,
-satu preview bahasa diganti dan satu Pet pending. Behind sahaja bukan kecacatan.
+**Inventori awal sebelum penerbitan:** 40 refs terdiri daripada main dan
+39 non-main. Kesemua 37 head asal kekal, ditambah task rename yang ancestral dan
+Pet. Pengelasan awal ialah 20 ancestor, 14 penerimaan seluruh tree sejarah, tiga
+specialist diterima terpilih, satu preview bahasa diganti dan satu Pet pending.
+Inventori JSON/archive asal kekal pada snapshot main 7a49fff8; ia tidak dilabel
+sebagai pengiraan selepas penerbitan. Behind sahaja bukan kecacatan.
+
+**Selepas code 67ff diterbitkan:** Pet 07677 ialah ancestor dan **0 pakej ciri
+aktif pending**. Antara 39 non-main, pengelasan semasa ialah **21 ancestor +
+14 penerimaan seluruh tree sejarah + tiga selective + satu superseded**. Semua
+39 head non-main masih sama; status adoption berubah kerana main bergerak. Ini
+bukan claim baki alat/data specialist sejarah telah diuji atau raw-merged.
 
 | Kerja bukan pending feature semasa | Disposisi |
 | --- | --- |
@@ -147,13 +156,31 @@ kegagalan URL mirror setup disimpan sebagai setup, bukan product/test failures.
 Tiga PDF textbook/DSKP tersedia; tidak dibaca baharu kerana bank/math unchanged.
 Review Pet asal selektif, bukan seluruh buku/120 soalan. MODEL.zip unavailable/
 unread. Tiada new campaign/training, win-rate, live Google/provider/backend,
-public browser, physical-device atau full-suite claim. Pages belum disahkan
-sehingga workflow untuk actual published SHA diperhatikan.
+public browser, physical-device atau full-suite claim. Pages exact code telah disahkan SUCCESS; public browser kekal NOT_RUN.
 
-## Penerbitan
+## Penerbitan sebenar
 
-**PENDING.** Root perlu meluluskan exact final tree; sole writer kemudian membaca
-main segera, memakai expected-head `7a49fff83388347f0157616fc6b051ddbda4c694`
-dan `force:false`, berhenti jika bergerak, serta readback ref/tree/version/parents.
-Sumber Pet dan semua branch asal dikekalkan. Pages exact head disemak berasingan;
-receipt dokumentasi hanya merekod fakta actual selepas write yang dibenarkan.
+| Fakta | Readback |
+| --- | --- |
+| Main code | `67ff7a999276d9c2398814dce45f02ad36d8c6d4` |
+| Exact reviewed tree | `97b8d00e4e383c710296bf1cac16319c873dfa8c` |
+| Single parent | `07677f62ede996e2dd66d9b53f9fd5e152069863` |
+| Game / package ID | 2.53.0 / `duel-cube-math` |
+| Update | Fresh expected `7a49fff83388347f0157616fc6b051ddbda4c694`, `force:false`, result success:true |
+| Ref preservation | Semua 40 refs dibaca; semua 39 non-main exact heads dikekalkan |
+| Feature ancestry | Compare Pet 07677 → code: ahead 1 / behind 0, merge base exact 07677 |
+| Code Pages | [Run 40517807037](https://github.com/unDead41/slay-the-math-v2/actions/runs/40517807037) completed/SUCCESS untuk exact code SHA |
+
+Pemerhatian Pages pada `2026-10-27T14:10:53.144Z` dan actual primary API readback
+berada dalam [receipt](verification/pet-main-20261027/publication.json). Root juga
+mengesahkan ref/tree/single parent/versi dan semua 40 refs melalui bacaan GitHub
+bebas. Source dan final local bf89df5 mempunyai exact tree yang sama; local SHA
+bukan pautan kepada commit GitHub yang tidak wujud.
+
+Satu follow-up ini hanya menutup current PENDING dan merekod fakta actual;
+archive/index serta semua original QA kekal byte-identical. Parent receipt ialah
+actual code di atas, dengan zero runnable/test/config/generated delta. Workflow
+Pages final receipt diperhatikan berasingan selepas write; tiada commit seterusnya
+semata-mata untuk status workflow. Public browser/live backend/provider kekal
+NOT_RUN. Rollback jika diperlukan melalui corrective commit yang direview dan
+dibenarkan, bukan reset shared main atau force-push.

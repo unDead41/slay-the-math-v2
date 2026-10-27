@@ -8,12 +8,13 @@ ke main `7a49fff83388347f0157616fc6b051ddbda4c694` / 2.52.0 sebagai **2.53.0**.
 Klausa branch-only/no-main di bawah kekal sejarah untuk sumber asalnya dan
 superseded bagi integrasi ini sahaja. Kontrak keselamatan, satu pemilik
 Online/Offline, local help, original Hint, save/RNG dan semua pemilik semasa kekal.
-**QA gabungan VALID dalam skop yang dinyatakan; penerbitan main PENDING**
-sehingga expected-head update dan readback sebenar tersedia. Calon tempatan
-`728d25e7a9969b3570e7e8943664b9a6c43ce67c` / tree
-`2bb0b762478cc76243097cc9aba7300bebab6524` mempunyai 126 focused Node,
-54 native Pet, 15 cold-offline dan dua portable PASS; ini bukan full suite atau
-live provider validation. Ini tidak mengaktifkan provider atau backend awam.
+**QA gabungan VALID dalam skop yang dinyatakan; main 2.53.0 VERIFIED** pada
+`67ff7a999276d9c2398814dce45f02ad36d8c6d4`, exact tree
+`97b8d00e4e383c710296bf1cac16319c873dfa8c`, single parent Pet 07677.
+Expected-head 7a / force:false update dan readback sebenar PASS; semua 39 head
+non-main dikekalkan. Pages exact code run 40517807037 **SUCCESS**.
+[Receipt actual](verification/pet-main-20261027/publication.json). Calon tempatan 728d25e7 mempunyai 126 focused Node,
+54 native Pet, 15 cold-offline dan dua portable PASS; bukan full suite/live API. Ini tidak mengaktifkan provider atau backend awam.
 [Skop, bukti dan had semasa](PET_MAIN_2_53_0.md).
 
 Resume follow-up,27 October: the two deferred Minor fixes are implemented on the same feature branch. The operator guide now explicitly requires a hosted HTTP(S) game URL for Online; remote HTTPS configuration does not enable file-origin chat. The widget maps only401/UNAUTHORIZED and409/VERSION_MISMATCH to reviewed localized recovery copy, retaining local fallback and manual retry. Existing source/production build owners regenerate their own content identities; do not reuse the earlier production5c4c7a receipt as proof for these changed bytes. [Current follow-up audit](audits/pet-assistant/LATEST.md) supersedes the earlier source-currentness/Minor-open statements below; no new live API or main deployment is implied.

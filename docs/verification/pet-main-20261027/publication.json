@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T14:11:51.726665+00:00",
+  "repository": "unDead41/slay-the-math-v2",
+  "game": "Mathematics Slayer",
+  "version": "2.53.0",
+  "masterSOR": "1.3.0",
+  "sourcePublication": {
+    "observedAt": "2026-10-27T14:05:25.275Z",
+    "from": "7a49fff83388347f0157616fc6b051ddbda4c694",
+    "to": "67ff7a999276d9c2398814dce45f02ad36d8c6d4",
+    "tree": "97b8d00e4e383c710296bf1cac16319c873dfa8c",
+    "parents": [
+      "07677f62ede996e2dd66d9b53f9fd5e152069863"
+    ],
+    "version": "2.53.0",
+    "packageName": "duel-cube-math",
+    "force": false,
+    "update": {
+      "success": true
+    },
+    "readbackMain": "67ff7a999276d9c2398814dce45f02ad36d8c6d4"
+  },
+  "readback": {
+    "observedAt": "2026-10-27T14:06:02.773Z",
+    "main": "67ff7a999276d9c2398814dce45f02ad36d8c6d4",
+    "tree": "97b8d00e4e383c710296bf1cac16319c873dfa8c",
+    "parents": [
+      "07677f62ede996e2dd66d9b53f9fd5e152069863"
+    ],
+    "version": "2.53.0",
+    "packageName": "duel-cube-math",
+    "refs": 40,
+    "nonMainChecked": 39,
+    "nonMainDrift": [],
+    "featureAncestry": {
+      "ahead": 1,
+      "behind": 0,
+      "mergeBase": "07677f62ede996e2dd66d9b53f9fd5e152069863"
+    },
+    "pages": [
+      {
+        "id": 40517807037,
+        "name": "Publish game to GitHub Pages",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "67ff7a999276d9c2398814dce45f02ad36d8c6d4",
+        "html_url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40517807037",
+        "updated_at": "2026-10-27T14:05:26Z"
+      }
+    ]
+  },
+  "codePages": {
+    "observedAt": "2026-10-27T14:10:53.144Z",
+    "id": 40517807037,
+    "name": "Publish game to GitHub Pages",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "67ff7a999276d9c2398814dce45f02ad36d8c6d4",
+    "html_url": "https://github.com/unDead41/slay-the-math-v2/actions/runs/40517807037",
+    "updated_at": "2026-10-27T14:10:27Z"
+  },
+  "coordinatorIndependentReadback": "PASS: Root separately read actual main/tree/single parent/version/all 40 refs through primary GitHub API, session transcript 27 October 2026.",
+  "localTreeMapping": {
+    "testedLocal": "728d25e7a9969b3570e7e8943664b9a6c43ce67c",
+    "testedTree": "2bb0b762478cc76243097cc9aba7300bebab6524",
+    "finalLocal": "bf89df5ae3dc6ce4e3eea7438db907482abe48a6",
+    "finalTree": "97b8d00e4e383c710296bf1cac16319c873dfa8c",
+    "remoteCode": "67ff7a999276d9c2398814dce45f02ad36d8c6d4",
+    "mapping": "Final local and remote exact tree. Final-vs-tested delta 24 docs/evidence only; 12 protected roots exact."
+  },
+  "receiptBoundary": {
+    "parent": "67ff7a999276d9c2398814dce45f02ad36d8c6d4",
+    "scope": "Documentation/evidence only; no runtime/test/config/generated changes.",
+    "closedPackageHashes": {
+      "public-evidence.tar.gz": "243cb6f9f40743a571a0f564c153dabd211a3946cc908fdd2862ed8ae6fbd83b",
+      "evidence-index.json": "cb5a3029637d3badca49566b15ce59dbc61485a9d0c0e014b5a77d2c97a83a28",
+      "qa-evidence.json": "b0664555f568ae6767755b49ce6d0cb37c6cca989cda0f806aa90693eb0909de",
+      "privacy.json": "18a25d8f502cd1ae33bcb6652cda3e0cddd55dabc207f91cf2f0b77d8f919ab3",
+      "static-preservation.json": "68687747a94bf82633a428cd3bf439012aa9ffc9b526c7e8b868fd2dc6c991ea",
+      "inventory.json": "d52523d96fdcbd6dae8e8cc75ffa30a8d97d1be4071564df6107d258f23c5f13",
+      "math-independent.json": "8728271a17a65ae87a9133f9c55bdfcca45fcee3abc38425444e7327bce1e950"
+    },
+    "outsideClosedArchiveAndIndex": true,
+    "noSelfReferenceOrStatusCommitLoop": true
+  },
+  "notRun": [
+    "public browser inspection",
+    "live provider/public backend/Google activation",
+    "new full Node suite/capture campaign/training/physical/pupil/human-audio validation"
+  ]
+}
